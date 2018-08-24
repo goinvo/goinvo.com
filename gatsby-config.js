@@ -7,13 +7,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'GoInvo.com',
+        short_name: 'GoInvo',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#fff',
+        theme_color: '#eE5651c',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

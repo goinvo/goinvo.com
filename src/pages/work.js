@@ -10,7 +10,7 @@ const WorkPage = ({
 }) => {
   return (
     <Layout>
-      Work:
+      <h1 className="header--xl">Work</h1>
       { edges.map(edge => {
         const name = edge.node.fileNode.name;
         return (

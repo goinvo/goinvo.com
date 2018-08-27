@@ -11,7 +11,7 @@ module.exports = {
         short_name: 'GoInvo',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#ff5622',
+        theme_color: '#e5651c',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png', // This path is relative to the root of the site.
       },

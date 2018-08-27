@@ -16,6 +16,11 @@ const IndexPage = () => (
       <br/>
       From some place
     </p>
+    <ul className="ul">
+      <li>One thing</li>
+      <li>Two thing</li>
+      <li>Three thing</li>
+    </ul>
     <Link to="/work/">Work</Link>
   </Layout>
 )

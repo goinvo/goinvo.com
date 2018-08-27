@@ -1,0 +1,9 @@
+a {
+  color: $color-secondary;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}

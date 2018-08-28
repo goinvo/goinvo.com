@@ -11,24 +11,7 @@ $divider-animated-width: 70;
 
   &-animated {
     display: block;
-    width: 100%;
-    margin: $spacing 0;
-
-    svg {
-      display: block;
-      margin: 0 auto;
-      width: #{$divider-animated-width}px;
-      stroke: $color-primary;
-      stroke-dasharray: $divider-animated-width;
-      stroke-dashoffset: $divider-animated-width;
-      animation: draw 2s linear;
-      animation-iteration-count: infinite;
-    }
-  }
-
-  @keyframes draw {
-    to {
-      stroke-dashoffset: -$divider-animated-width;
-    }
+    width: 70px;
+    margin: $spacing auto;
   }
 }

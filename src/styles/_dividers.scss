@@ -1,0 +1,34 @@
+$divider-animated-width: 70;
+
+.divider {
+  display: block;
+  margin: $spacing 0;
+  width: 100%;
+  height: 30px;
+  background-image: url('../assets/images/ekg-divider.svg');
+  background-size: cover;
+  background-position: center;
+
+  &-animated {
+    display: block;
+    width: 100%;
+    margin: $spacing 0;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      width: #{$divider-animated-width}px;
+      stroke: #E76E66;
+      stroke-dasharray: $divider-animated-width;
+      stroke-dashoffset: $divider-animated-width;
+      animation: draw 2s linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: -$divider-animated-width;
+    }
+  }
+}

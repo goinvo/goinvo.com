@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
+import Divider from '../components/divider';
 
 const IndexPage = () => (
   <Layout>
@@ -21,6 +22,8 @@ const IndexPage = () => (
       <li>Two thing</li>
       <li>Three thing</li>
     </ul>
+    <Divider />
+    <Divider animated />
     <Link to="/work/">Work</Link>
   </Layout>
 )

@@ -7,7 +7,7 @@ $color-orange: #e36216;
 $color-teal: #007385;
 
 $color-primary: $color-orange;
-$color-primary--light: lighten($color-orange, 27%);
-$color-primary--lightest: lighten($color-orange, 47%);
+$color-primary--light: lighten(saturate(adjust-hue($color-primary, -1), 17.67), 29.80);
+$color-primary--lightest: lighten(saturate(adjust-hue($color-primary, -1), 17.67), 48.43);
 
 $color-secondary: $color-teal;

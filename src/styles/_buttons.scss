@@ -1,0 +1,41 @@
+.button {
+  @extend .text--uppercase;
+  @extend .text--spacing;
+  display: inline-block;
+  min-width: 230px;
+  padding: .375rem 1rem;
+  background-color: transparent;
+  border: 1px solid $color-primary--light;
+  color: $color-primary;
+  font-size: $font-size--base;
+  font-weight: $font-weight--bold;
+  line-height: $line-height--base;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  transition:
+    background-color $transition-duration--button,
+    border-color $transition-duration--button,
+    color $transition-duration--button;
+
+  &:hover {
+    background-color: $color-primary--lightest;
+  }
+
+  &:focus {
+    // @include focus();
+    // outline: 0;
+  }
+
+  &:active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
+}

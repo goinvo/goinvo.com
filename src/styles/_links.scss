@@ -1,6 +1,7 @@
 a {
   color: $color-secondary;
   text-decoration: underline;
+  transition: color $transition-duration--button;
 
   &:hover,
   &:focus {

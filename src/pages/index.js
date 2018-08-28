@@ -24,6 +24,9 @@ const IndexPage = () => (
     </ul>
     <Divider />
     <Divider animated />
+    <div>
+      <button className="button">View all work</button>
+    </div>
     <Link to="/work/">Work</Link>
   </Layout>
 )

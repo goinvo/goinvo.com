@@ -18,7 +18,7 @@ $divider-animated-width: 70;
       display: block;
       margin: 0 auto;
       width: #{$divider-animated-width}px;
-      stroke: #E76E66;
+      stroke: $color-primary;
       stroke-dasharray: $divider-animated-width;
       stroke-dashoffset: $divider-animated-width;
       animation: draw 2s linear;

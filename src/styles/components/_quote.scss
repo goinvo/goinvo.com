@@ -1,0 +1,44 @@
+.quote {
+  margin: ($spacing * 4) 0;
+
+  &__content {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../assets/images/quote.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media only screen and (min-width: $breakpoint--lg) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &:before {
+      top: -25px;
+
+      @media only screen and (min-width: $breakpoint--lg) {
+        top: -35px;
+        left: -35px;
+      }
+    }
+
+    &:after {
+      bottom: -25px;
+      right: 0;
+      transform: rotateX(180deg) scaleX(-1);
+
+      @media only screen and (min-width: $breakpoint--lg) {
+        bottom: -35px;
+        right: -35px;
+      }
+    }
+  }
+}

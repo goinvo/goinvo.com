@@ -7,7 +7,7 @@
     "@mdx-js/mdx": "^0.15.0",
     "@mdx-js/tag": "^0.15.0",
     "gatsby": "next",
-    "gatsby-mdx": "^0.0.15",
+    "gatsby-mdx": "^0.1.1",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",

@@ -1,3 +1,7 @@
+---
+title: "This is a test file"
+---
+
 import Image from '../components/image';
 
 # Case Study

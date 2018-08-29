@@ -12,10 +12,10 @@ const WorkPage = ({
     <Layout>
       <h1 className="header--xl">Work</h1>
       { edges.map(edge => {
-        const name = edge.node.fileNode.name;
+        const name = edge.node.parent.name;
         return (
           <li key={ name }>
-            <Link to={`case-studies/${ name }`}>{ name }</Link>
+            <Link to={`case-studies/${ name }`}>{ edge.node.frontmatter.title }</Link>
           </li>
         )
       }) }
@@ -30,8 +30,13 @@ export const pageQuery = graphql`
     allMdx {
       edges {
         node {
-          fileNode {
-            name
+          parent {
+            ... on File {
+              name
+            }
+          }
+          frontmatter {
+            title
           }
         }
       }

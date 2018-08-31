@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/layouts/layout'
 import Divider from '../components/divider'
 import Quote from '../components/quote'
+import ImageBlock from '../components/image-block'
 
 const IndexPage = () => (
   <Layout>
@@ -30,6 +31,8 @@ const IndexPage = () => (
     <Quote quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">
       The GoInvo studio is one of the most talented group of designers I have ever met in the health care space. Not only are their ideas, designs, and graphics remarkable, but I haven’t yet figured out how they know so much about medicine and its future.
     </Quote>
+    <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before."/>
+    <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." clickable={true}/>
   </Layout>
 )
 

@@ -15,7 +15,7 @@ class Image extends Component {
       <img
         className={className}
         alt={alt}
-        srcset={srcset}
+        srcSet={srcset}
         sizes={sizes}
         src={`${src}?w=800`} />
     )

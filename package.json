@@ -19,7 +19,8 @@
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
     "rework": "^1.0.1",
-    "rework-pure-grids": "^1.0.0"
+    "rework-pure-grids": "^1.0.0",
+    "sass-mq": "^5.0.0"
   },
   "scripts": {
     "rework-css": "node ./src/rework-pure-grids.js",

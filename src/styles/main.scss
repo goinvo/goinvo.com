@@ -1,12 +1,12 @@
 @import '~purecss/build/base.css'; // This includes normalize.css
 @import '~purecss/build/grids.css';
 @import './vendor/pure-grids-responsive-reworked.css'; // Using rework to modify responsive grid breakpoints
+@import '~sass-mq/mq';
 
-
-@import 'variables/breakpoints';
 @import 'variables/colors';
-@import 'variables/layout';
 @import 'variables/typography';
+@import 'variables/breakpoints';
+@import 'variables/layout';
 @import 'variables/transitions';
 
 @import 'typography';

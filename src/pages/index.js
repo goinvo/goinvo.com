@@ -4,6 +4,7 @@ import Layout from '../components/layouts/layout'
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 import ImageBlock from '../components/image-block'
+import Card from '../components/card'
 
 const IndexPage = () => (
   <Layout>
@@ -31,8 +32,16 @@ const IndexPage = () => (
     <Quote quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">
       The GoInvo studio is one of the most talented group of designers I have ever met in the health care space. Not only are their ideas, designs, and graphics remarkable, but I haven’t yet figured out how they know so much about medicine and its future.
     </Quote>
-    <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before."/>
-    <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." clickable={true}/>
+    <ImageBlock image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before."/>
+    <Card link="#">
+      <ImageBlock hoverable="true" image="features/determinants-of-health/feature_banner.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." />
+    </Card>
+    <Card>
+      <ImageBlock image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." />
+    </Card>
+    <Card>
+      Here is a card with just some text in it or whatever.
+    </Card>
   </Layout>
 )
 

@@ -1,14 +1,15 @@
 import React from 'react'
+import Image from './image'
 
-import { imageUrl } from '../helpers'
-
-const ImageBlock = ({ image, title, caption, clickable = false }) => (
-  <div className={`image-block ${clickable ? 'image-block--clickable' : ''}`}>
+const ImageBlock = ({ image, title, caption, hoverable = false }) => (
+  <div className={`image-block ${hoverable ? 'image-block--hoverable' : ''}`}>
     <div className="image-block__image-container">
-      <div className="image-block__image" style={{backgroundImage: `url(${imageUrl(image)})`}}></div>
+      <Image src={image} className="image-block__image" />
     </div>
-    <p className={clickable ? 'text--bold' : 'header--lg'}>{title}</p>
-    <p className="text--caption">{caption}</p>
+    <div className="image-block__text">
+      <p className={hoverable ? 'text--bold' : 'header--lg'}>{title}</p>
+      <p className="text--caption">{caption}</p>
+    </div>
   </div>
 )
 

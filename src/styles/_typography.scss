@@ -21,6 +21,10 @@ body {
   color: $color-black;
 }
 
+.pure-g [class *= "pure-u"] {
+  font-family: $font-family--sans-serif;
+}
+
 .text {
   &--sm {
     font-size: .875rem;

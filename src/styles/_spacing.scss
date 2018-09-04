@@ -1,0 +1,97 @@
+$directions: 'top' 'bottom' 'left' 'right';
+
+.pad-all {
+  box-sizing: border-box;
+  padding: $spacing;
+
+  &--double {
+    padding: $spacing * 2;
+  }
+
+  &--half {
+    padding: $spacing / 2;
+  }
+}
+
+.pad-horizontal {
+  padding-left: $spacing;
+  padding-right: $spacing;
+
+  &--double {
+    padding-left: $spacing * 2;
+    padding-right: $spacing * 2;
+  }
+}
+
+.pad-vertical {
+  padding-top: $spacing;
+  padding-bottom: $spacing;
+
+  &--double {
+    padding-top: $spacing * 2;
+    padding-bottom: $spacing * 2;
+  }
+}
+
+.margin-all {
+  box-sizing: border-box;
+  margin: $spacing;
+}
+
+.margin-horizontal {
+  margin-left: $spacing;
+  margin-right: $spacing;
+
+  &--double {
+    margin-left: $spacing * 2;
+    margin-right: $spacing * 2;
+  }
+}
+
+.margin-vertical {
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+
+  &--double {
+    margin-top: $spacing * 2;
+    margin-bottom: $spacing * 2;
+  }
+}
+
+@each $direction in $directions {
+  .pad-#{$direction} {
+    padding-#{$direction}: $spacing;
+
+    &--half {
+      padding-#{$direction}: $spacing / 2;
+    }
+
+    &--double {
+      padding-#{$direction}: $spacing * 2;
+    }
+
+    &--none {
+      padding-#{$direction}: 0;
+    }
+  }
+
+  .margin-#{$direction} {
+    margin-#{$direction}: $spacing;
+
+    &--half {
+      margin-#{$direction}: $spacing / 2;
+    }
+
+    &--double {
+      margin-#{$direction}: $spacing * 2;
+    }
+
+    &--none {
+      margin-#{$direction}: 0;
+    }
+  }
+}
+
+.margin-none {
+  margin: 0;
+}

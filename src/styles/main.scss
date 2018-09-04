@@ -1,4 +1,7 @@
-@import '~normalize.css/normalize.css';
+@import '~purecss/build/base.css'; // This includes normalize.css
+@import '~purecss/build/grids.css';
+@import './vendor/pure-grids-responsive-reworked.css'; // Using rework to modify responsive grid breakpoints
+
 
 @import 'variables/breakpoints';
 @import 'variables/colors';
@@ -7,6 +10,7 @@
 @import 'variables/transitions';
 
 @import 'typography';
+@import 'spacing';
 @import 'lists';
 @import 'links';
 @import 'buttons';

@@ -42,6 +42,31 @@ const IndexPage = () => (
     <Card>
       Here is a card with just some text in it or whatever.
     </Card>
+    <div className="pure-g margin-vertical--double">
+      <div className="pure-u-1 pure-u-lg-1-3 pad-all">
+        <Card link="#">
+          <ImageBlock hoverable="true" image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." />
+        </Card>
+      </div>
+      <div className="pure-u-1 pure-u-lg-1-3 pad-all">
+        <Card link="#">
+          <ImageBlock hoverable="true" image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." />
+        </Card>
+      </div>
+      <div className="pure-u-1 pure-u-lg-1-3 pad-all">
+        <Card link="#">
+          <ImageBlock hoverable="true" image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." />
+        </Card>
+      </div>
+    </div>
+    <div className="pure-g margin-vertical--double">
+      <div className="pure-u-1 pure-u-md-1-2 pad-all">
+        <ImageBlock image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." />
+      </div>
+      <div className="pure-u-1 pure-u-md-1-2 pad-all">
+        <ImageBlock image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before." />
+      </div>
+    </div>
   </Layout>
 )
 

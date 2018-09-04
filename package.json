@@ -14,14 +14,19 @@
     "gatsby-plugin-sass": "^2.0.0-rc.0",
     "gatsby-source-filesystem": "^2.0.1-rc.0",
     "node-sass": "^4.9.3",
-    "normalize.css": "^8.0.0",
+    "purecss": "^1.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "rework": "^1.0.1",
+    "rework-pure-grids": "^1.0.0"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "rework-css": "node ./src/rework-pure-grids.js",
+    "gatsby-build": "gatsby build",
+    "build": "run-s rework-css gatsby-build",
+    "gatsby-develop": "gatsby develop",
+    "develop": "run-s rework-css gatsby-develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

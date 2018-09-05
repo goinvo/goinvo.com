@@ -33,7 +33,7 @@ $directions: 'top' 'bottom' 'left' 'right';
   }
 }
 
-.margin-all {
+.margin--all {
   box-sizing: border-box;
   margin: $spacing;
 }
@@ -92,6 +92,6 @@ $directions: 'top' 'bottom' 'left' 'right';
   }
 }
 
-.margin-none {
+.margin--none {
   margin: 0;
 }

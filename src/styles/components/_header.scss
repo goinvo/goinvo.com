@@ -127,7 +127,7 @@
   }
 
   &__list {
-    @extend .list-unstyled;
+    @extend .list--unstyled;
     padding: 0 $spacing;
   }
 

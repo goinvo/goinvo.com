@@ -1,0 +1,40 @@
+.topics-list {
+  $topics-list-border: 1px solid $color-gray;
+
+  @extend .list--unstyled;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    width: 90%;
+
+    &:last-of-type {
+      a {
+        border-bottom: $topics-list-border;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    padding: ($spacing / 2) 0;
+    border-top: $topics-list-border;
+  }
+
+  &--later-column {
+    li:first-of-type {
+      a {
+        border-top: 0;
+      }
+    }
+
+    @include mq($from: large) {
+      li:first-of-type {
+        a {
+          border-top: $topics-list-border;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Image from './image'
-import favicon from '../assets/images/favicon.png'
+import Logo from '../assets/images/logo-goinvo.inline.svg'
 
 class Hero extends Component {
   render() {
@@ -16,7 +16,9 @@ class Hero extends Component {
           <div className="hero__title">
             {
               withLogo ?
-                <img src={favicon} className="hero__logo" alt="GoInvo logo"/>
+                <div className="hero__logo">
+                  <Logo />
+                </div>
               : null
             }
             {children}

@@ -3,3 +3,9 @@
   list-style-image: url('../assets/images/bullet.svg');
   padding: 0;
 }
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

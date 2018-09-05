@@ -45,7 +45,7 @@ const IndexPage = () => (
       <Divider />
       <Divider animated />
       <div>
-        <button className="button">View all work</button>
+        <button className="button button--primary">View all work</button>
       </div>
       <Quote quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">
         The GoInvo studio is one of the most talented group of designers I have ever met in the health care space. Not only are their ideas, designs, and graphics remarkable, but I haven’t yet figured out how they know so much about medicine and its future.

@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+body {
+  &.has-overlay {
+    overflow-y: hidden;
+  }
+}
+
+.app {
+  padding-top: $header-height;
+}
+
 .max-width {
   max-width: 1020px;
   margin: 0 auto;
@@ -14,5 +24,17 @@
   @include mq($from: large) {
     padding-left: $spacing * 2;
     padding-right: $spacing * 2;
+  }
+}
+
+.hidden-large {
+  @include mq($from: large) {
+    display: none !important;
+  }
+}
+
+.hidden-small {
+  @include mq($until: large) {
+    display: none !important;
   }
 }

@@ -1,0 +1,154 @@
+.header-nav {
+  $parent: &;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: $header-height;
+  background-color: $color-white;
+  box-shadow: 0px 0px 20px 0px rgba(191, 181, 181, 0.5);
+  z-index: $z-index--header;
+
+  &__link {
+    @extend .header--sm;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    font-size: $font-size--base;
+    padding: 0 $spacing;
+    text-decoration: none;
+
+    &--active {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75px;
+    padding: 0 ($spacing / 2);
+    fill: $color-gray;
+
+    @include mq($from: large) {
+      margin-left: $spacing;
+    }
+  }
+
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+
+    svg {
+      width: 30px;
+      fill: $color-primary;
+    }
+  }
+
+  @include mq($from: large) {
+    justify-content: flex-end;
+
+    #{$parent}__logo {
+      margin-right: auto;
+    }
+  }
+
+  &--mobile-nav-open {
+    .mobile-nav {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparentize($color-black, .5);
+  pointer-events: none;
+  opacity: 0;
+  z-index: $z-index--overlay;
+  transition: opacity $transition-duration--nav;
+}
+
+.mobile-nav {
+  @extend .hidden-large;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  height: 100vh;
+  background-color: $color-white;
+  padding-top: 5rem;
+  z-index: $z-index--mobile-nav;
+  transform: translateX(100%);
+  transition: transform $transition-duration--nav;
+
+  &__close {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $spacing;
+
+    svg {
+      width: 1.5rem;
+      fill: $color-primary;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  &__list {
+    @extend .list-unstyled;
+    padding: 0 $spacing;
+  }
+
+  &__link {
+    @extend .header--lg;
+    display: block;
+    padding: $spacing;
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &__link-secondary {
+    @extend .header--md;
+    display: block;
+    padding: $spacing;
+    text-decoration: none;
+    color: $color-gray;
+  }
+
+  .divider {
+    width: 70px;
+    margin-left: $spacing * 2;
+  }
+}

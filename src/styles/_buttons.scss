@@ -2,11 +2,8 @@
   @extend .text--uppercase;
   @extend .text--spacing;
   display: inline-block;
-  min-width: 230px;
   padding: .375rem 1rem;
   background-color: transparent;
-  border: 1px solid $color-primary--light;
-  color: $color-primary;
   font-size: $font-size--base;
   font-weight: $font-weight--bold;
   line-height: $line-height--base;
@@ -19,23 +16,32 @@
     border-color $transition-duration--button,
     color $transition-duration--button;
 
-  &:hover {
-    background-color: $color-primary--lightest;
-  }
-
   &:focus {
     // @include focus();
     // outline: 0;
   }
 
-  &:active {
-    background-color: $color-primary;
-    border-color: $color-primary;
-    color: $color-white;
-  }
-
   &:disabled {
     opacity: 0.7;
     cursor: default;
+  }
+
+  &--primary {
+    border: 1px solid $color-primary--light;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary--lightest;
+    }
+
+    &:active {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &--transparent {
+    border: none;
   }
 }

@@ -8,6 +8,7 @@
 @import 'variables/typography';
 @import 'variables/breakpoints';
 @import 'variables/transitions';
+@import 'variables/z-indices';
 
 @import 'typography';
 @import 'spacing';
@@ -16,6 +17,7 @@
 @import 'links';
 @import 'buttons';
 
+@import 'components/header';
 @import 'components/hero';
 @import 'components/divider';
 @import 'components/quote';

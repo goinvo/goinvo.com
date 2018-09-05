@@ -37,8 +37,8 @@
 
   &__logo {
     @extend .margin-bottom;
-
-    width: 50px;
+    width: 70px;
+    fill: $color-blue;
   }
 
   .header--xl {

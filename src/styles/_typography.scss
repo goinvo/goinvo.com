@@ -26,6 +26,10 @@ body {
 }
 
 .text {
+  &--serif {
+    font-family: $font-family--serif;
+  }
+
   &--sm {
     font-size: .875rem;
   }
@@ -59,6 +63,10 @@ body {
 
   &--gray {
     color: $color-gray;
+  }
+
+  &--primary {
+    color: $color-primary;
   }
 
   &--caption {
@@ -102,9 +110,4 @@ body {
   &--xl {
     @extend .text--xl;
   }
-}
-
-.styled-period {
-  font-family: $font-family--serif;
-  color: $color-primary;
 }

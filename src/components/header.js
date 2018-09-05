@@ -83,7 +83,7 @@ class Header extends Component {
             <ul className="mobile-nav__list">
               <li>
                 <Link
-                  to="/careers/"
+                  to="/about/careers/"
                   className="mobile-nav__link-secondary"
                   activeClassName="mobile-nav__link--active">
                     Careers
@@ -91,7 +91,7 @@ class Header extends Component {
               </li>
               <li>
                 <Link
-                  to="/open-office-hours/"
+                  to="/about/open-office-hours/"
                   className="mobile-nav__link-secondary"
                   activeClassName="mobile-nav__link--active">
                     Open Office Hours

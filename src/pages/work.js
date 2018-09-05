@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
+import Hero from '../components/hero'
 
 const WorkPage = ({
   data: {
@@ -10,12 +11,17 @@ const WorkPage = ({
 }) => {
   return (
     <Layout>
-      <h1 className="header--xl">Work</h1>
+      <Hero image="home/family-doctor-visit-diabetes.jpg">
+        <h1 className="header--xl">
+          Patient tested<span className="text--serif text--primary">.</span><br/>
+          Clinician approved<span className="text--serif text--primary">.</span>
+        </h1>
+      </Hero>
       { edges.map(edge => {
         const name = edge.node.parent.name;
         return (
           <li key={ name }>
-            <Link to={`case-studies/${ name }`}>{ edge.node.frontmatter.title }</Link>
+            <Link to={`work/${ name }`}>{ edge.node.frontmatter.title }</Link>
           </li>
         )
       }) }

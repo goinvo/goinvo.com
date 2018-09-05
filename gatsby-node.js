@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         result.data.allMdx.edges.forEach(({ node }) => {
           createPage({
-            path: `/case-studies/${node.parent.name}`,
+            path: `/work/${node.parent.name}`,
             component: node.parent.absolutePath,
             context: { absPath: node.parent.absolutePath }
           });

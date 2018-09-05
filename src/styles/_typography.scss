@@ -72,6 +72,7 @@ body {
   &--lg,
   &--xl {
     font-family: $font-family--serif;
+    font-weight: $font-weight--normal;
   }
 
   &--sm {
@@ -100,4 +101,9 @@ body {
   &--xl {
     @extend .text--xl;
   }
+}
+
+.styled-period {
+  font-family: $font-family--serif;
+  color: $color-primary;
 }

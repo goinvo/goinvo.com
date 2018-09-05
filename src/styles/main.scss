@@ -3,18 +3,20 @@
 @import './vendor/pure-grids-responsive-reworked.css'; // Using rework to modify responsive grid breakpoints
 @import '~sass-mq/mq';
 
+@import 'variables/layout';
 @import 'variables/colors';
 @import 'variables/typography';
 @import 'variables/breakpoints';
-@import 'variables/layout';
 @import 'variables/transitions';
 
 @import 'typography';
 @import 'spacing';
+@import 'layout';
 @import 'lists';
 @import 'links';
 @import 'buttons';
 
+@import 'components/hero';
 @import 'components/divider';
 @import 'components/quote';
 @import 'components/image-block';

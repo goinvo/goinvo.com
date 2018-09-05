@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+.max-width {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.content-padding {
+  padding-left: $spacing;
+  padding-right: $spacing;
+
+  @include mq($from: large) {
+    padding-left: $spacing * 2;
+    padding-right: $spacing * 2;
+  }
+}

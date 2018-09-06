@@ -1,0 +1,29 @@
+.case-study-list {
+  $parent: &;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &--item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &--2 {
+    #{$parent}--item {
+      @include mq($from: large) {
+        flex-basis: calc(50% - #{$spacing / 2});
+      }
+    }
+  }
+
+  &--3 {
+    #{$parent}--item {
+      @include mq($from: large) {
+        flex-basis: calc(33.33% - #{$spacing});
+      }
+    }
+  }
+}

@@ -1,10 +1,13 @@
 ---
-title: "This is a test file"
+title: "Anvils from heaven"
+image: "home/culture-2017.jpg"
+client: "Acme Corp"
+caption: "Redesigned anvil ordering process to meet a high demand in toon town."
+categories: "derp"
+hidden: false
 ---
 
 import Image from '../components/image';
-
-# Case Study
 
 With some cool content and [links](https://www.google.com).
 

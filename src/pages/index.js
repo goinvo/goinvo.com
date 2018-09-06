@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
-import TopicsList from '../components/topics-list'
+import CategoriesList from '../components/categories-list'
+import CaseStudyList from '../components/case-study-list'
 
 const IndexPage = () => (
   <Layout>
@@ -55,9 +56,10 @@ const IndexPage = () => (
           <h2 className="header--xl margin--none">Our expertise in healthcare covers<span className="text--serif text--primary">...</span></h2>
         </div>
         <div className="pure-u-1 pure-u-lg-2-3 pad-top">
-          <TopicsList columns={2} asLinks />
+          <CategoriesList columns={2} asLinks />
         </div>
       </div>
+      <CaseStudyList columns={2} />
     </div>
   </Layout>
 )

@@ -1,5 +1,5 @@
-.topics-list {
-  $topics-list-border: 1px solid $color-gray;
+.categories-list {
+  $categories-list-border: 1px solid $color-gray;
 
   @extend .list--unstyled;
   display: flex;
@@ -10,7 +10,7 @@
 
     &:last-of-type {
       a {
-        border-bottom: $topics-list-border;
+        border-bottom: $categories-list-border;
       }
     }
   }
@@ -19,7 +19,8 @@
     display: block;
     width: 100%;
     padding: ($spacing / 2) 0;
-    border-top: $topics-list-border;
+    border-top: $categories-list-border;
+    text-decoration: none;
   }
 
   &--later-column {
@@ -32,7 +33,7 @@
     @include mq($from: large) {
       li:first-of-type {
         a {
-          border-top: $topics-list-border;
+          border-top: $categories-list-border;
         }
       }
     }

@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
@@ -14,6 +16,13 @@ exports.createPages = ({ graphql, actions }) => {
                       absolutePath
                     }
                   }
+                  frontmatter {
+                    title
+                    image
+                    client
+                    categories
+                    caption
+                  }
                 }
               }
             }
@@ -25,12 +34,35 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
         }
 
+        const caseStudyList = [];
+
         result.data.allMdx.edges.forEach(({ node }) => {
-          createPage({
-            path: `/work/${node.parent.name}`,
-            component: node.parent.absolutePath,
-            context: { absPath: node.parent.absolutePath }
-          });
+          if (!node.frontmatter.hidden) {
+            caseStudyList.push({
+              slug: node.parent.name,
+              title: node.frontmatter.title,
+              image: node.frontmatter.image,
+              client: node.frontmatter.client,
+              categories: node.frontmatter.categories,
+              caption: node.frontmatter.caption
+            });
+
+            createPage({
+              path: `/work/${node.parent.name}`,
+              component: node.parent.absolutePath,
+              context: { absPath: node.parent.absolutePath }
+            });
+          }
+
+          const caseStudyJson = JSON.stringify(caseStudyList);
+
+          fs.writeFile('src/data/case-study-list.json', caseStudyJson, 'utf8', function readFileCallback(err, data) {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log('Successfully wrote case study data to src/data/case-study-list.json');
+            }
+          })
         });
       })
     );

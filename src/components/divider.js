@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Divider extends Component {
   render() {
     return this.props.animated ? (
-      <svg className="divider-animated"
+      <svg className={`divider-animated ${this.props.className}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 47 22"
         fill="none"
@@ -29,7 +29,7 @@ class Divider extends Component {
             stroke="url(#grad-animate)" />
       </svg>
     ) : (
-      <div className="divider"></div>
+      <div className={`divider ${this.props.className}`}></div>
     )
   }
 }

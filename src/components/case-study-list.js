@@ -9,6 +9,7 @@ import caseStudies from '../data/case-study-list.json'
 // - Categories
 // - Option to specify which items to show
 // - Correct sorting (by featured, date?)
+// - Pass sizes to ImageBlock/Image to optimize image load
 
 class CaseStudyList extends Component {
   render() {

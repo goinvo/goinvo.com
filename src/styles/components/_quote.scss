@@ -1,5 +1,15 @@
 .quote {
-  margin: ($spacing * 4) 0;
+  @extend .background--gray;
+  padding: $spacing;
+
+  .divider {
+    &:first-of-type {
+      margin-bottom: $spacing * 3;
+    }
+    &:last-of-type {
+      margin-top: $spacing * 2;
+    }
+  }
 
   &__content {
     position: relative;

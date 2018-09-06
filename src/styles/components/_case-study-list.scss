@@ -13,7 +13,7 @@
 
   &--2 {
     #{$parent}--item {
-      @include mq($from: large) {
+      @include mq($from: medium) {
         flex-basis: calc(50% - #{$spacing / 2});
       }
     }

@@ -15,6 +15,17 @@ body {
 .max-width {
   max-width: 1020px;
   margin: 0 auto;
+
+  &--sm {
+    max-width: 600px;
+  }
+}
+
+.container {
+  &--center-children {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .content-padding {

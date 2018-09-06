@@ -5,6 +5,7 @@ import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import CategoriesList from '../components/categories-list'
 import CaseStudyList from '../components/case-study-list'
+import Quote from '../components/quote'
 
 const IndexPage = () => (
   <Layout>
@@ -60,6 +61,17 @@ const IndexPage = () => (
         </div>
       </div>
       <CaseStudyList columns={2} />
+      <div className="container--center-children margin-top margin-bottom--double">
+        <Link to="/work/" className="button button--primary button--lg">View all work</Link>
+      </div>
+    </div>
+    <Quote quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">
+      The GoInvo studio is one of the most talented groups of designers I have ever met in the health care space. Not only are their ideas, designs, and graphics remarkable, but I haven’t yet figured out how they know so much about medicine and its future.
+    </Quote>
+    <div className="max-width content-padding">
+      <div className="container--center-children margin-vertical">
+        <h2 className="header--xl">See the future<span className="text--serif text--primary">.</span></h2>
+      </div>
     </div>
   </Layout>
 )

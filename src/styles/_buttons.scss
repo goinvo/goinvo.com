@@ -9,6 +9,7 @@
   line-height: $line-height--base;
   text-align: center;
   vertical-align: middle;
+  text-decoration: none;
   user-select: none;
   cursor: pointer;
   transition:
@@ -43,5 +44,9 @@
 
   &--transparent {
     border: none;
+  }
+
+  &--lg {
+    min-width: 330px;
   }
 }

@@ -5,10 +5,10 @@ import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
-import Quote from '../components/quote'
-
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
+import Quote from '../components/quote'
+
 import caseStudies from '../data/case-study-list.json'
 
 const IndexPage = () => (
@@ -66,7 +66,7 @@ const IndexPage = () => (
           <h2 className="header--xl margin--none">Our expertise in healthcare covers<span className="text--serif text--primary">...</span></h2>
         </div>
         <div className="pure-u-1 pure-u-lg-2-3 pad-top">
-          <CategoriesList columns={2} asLinks />
+          <CategoriesList columns={2} />
         </div>
       </div>
       {
@@ -103,9 +103,9 @@ const IndexPage = () => (
         <h2 className="header--xl">See the future<span className="text--serif text--primary">.</span></h2>
       </div>
       <Columns columns={3}>
-        <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Health Reports" caption="Design concepts and objective analysis for grokking the evolving healthcare universe."/>
-        <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
-        <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="The Digital Life podcast" caption="An online radio show that explores important, timely topics in the world of digital design and technology."/>
+        <ImageBlock key={"1"} image="features/determinants-of-health/feature_banner.jpg" title="Health Reports" caption="Design concepts and objective analysis for grokking the evolving healthcare universe."/>
+        <ImageBlock key={"2"} image="features/determinants-of-health/feature_banner.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
+        <ImageBlock key={"3"} image="features/determinants-of-health/feature_banner.jpg" title="The Digital Life podcast" caption="An online radio show that explores important, timely topics in the world of digital design and technology."/>
       </Columns>
     </div>
   </Layout>

@@ -5,7 +5,6 @@
 
   &--item {
     display: flex;
-    flex-direction: column;
     flex-basis: 100%;
     margin-bottom: 1rem;
 
@@ -17,7 +16,7 @@
 
     &--3 {
       @include mq($from: large) {
-        flex-basis: calc(33.33% - #{$spacing});
+        flex-basis: calc(33.33% - #{$spacing * .66});
       }
     }
   }

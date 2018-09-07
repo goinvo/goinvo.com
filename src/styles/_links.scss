@@ -1,4 +1,4 @@
-a {
+%link {
   color: $color-secondary;
   text-decoration: underline;
   transition: color $transition-duration--button;
@@ -7,4 +7,8 @@ a {
   &:focus {
     color: $color-primary;
   }
+}
+
+a {
+  @extend %link;
 }

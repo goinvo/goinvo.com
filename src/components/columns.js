@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Columns extends Component {
 
   addColumnClassToChild = (child) => {
-    const className = `${child.props.className ? child.props.className + ' ' : ''}columns--item--${this.props.columns}`;
+    const className = `${child.props.className ? child.props.className + ' ' : ''}columns--item columns--item--${this.props.columns}`;
 
     return React.cloneElement(child, { className });
    }

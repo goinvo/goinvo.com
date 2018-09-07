@@ -1,5 +1,13 @@
 const fs = require('fs');
 
+const CATEGORIES = require('./src/data/categories.json');
+
+const extractCategories = (node) => {
+  return node.frontmatter.categories.split(",").map(catId => {
+    return CATEGORIES.find(cat => cat.id === catId.trim());
+  });
+}
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
@@ -43,7 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
               title: node.frontmatter.title,
               image: node.frontmatter.image,
               client: node.frontmatter.client,
-              categories: node.frontmatter.categories,
+              categories: extractCategories(node),
               caption: node.frontmatter.caption
             });
 

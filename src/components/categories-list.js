@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
-import { CATEGORIES_LIST } from '../../config'
+import CATEGORIES_LIST from '../data/categories.json'
 
 class CategoriesList extends Component {
   render() {
@@ -17,8 +17,14 @@ class CategoriesList extends Component {
                 <ul className={`categories-list ${ i > 0 ? 'categories-list--later-column' : '' }`}>
                   {
                     CATEGORIES_LIST.slice(i * numPerColumn, (i * numPerColumn) + numPerColumn).map((cat) => (
-                      <li key={cat.id}>
-                        <Link to={`/work/?category=${cat.id}`}>{cat.title}</Link>
+                      <li key={cat.id} className={`categories-list__category ${cat.id === this.props.selectedCategoryId ? 'categories-list__category--selected' : ''}`}>
+                        {
+                          this.props.onSelectCategory ?
+                            <button className="categories-list__link button button--link" onClick={() => this.props.onSelectCategory(cat.id)}>{cat.title}</button>
+                          :
+                            <Link className="categories-list__link" to={`/work/?category=${cat.id}`}>{cat.title}</Link>
+                        }
+                        <span className="categories-list__selected-indicator"></span>
                       </li>
                     ))
                   }
@@ -33,7 +39,8 @@ class CategoriesList extends Component {
 }
 
 CategoriesList.defaultProps = {
-  columns: 3
+  columns: 3,
+  onSelectCategory: null
 }
 
 export default CategoriesList

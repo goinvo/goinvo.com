@@ -1,21 +1,33 @@
 .categories-list {
+  $parent: &;
   $categories-list-border: 1px solid $color-gray;
 
   @extend .list--unstyled;
   display: flex;
   flex-wrap: wrap;
 
-  li {
+  &__category {
+    position: relative;
     width: 90%;
 
+    &--selected {
+      #{$parent}__link {
+        color: $color-primary;
+      }
+
+      #{$parent}__selected-indicator {
+        display: block;
+      }
+    }
+
     &:last-of-type {
-      a {
+      #{$parent}__link {
         border-bottom: $categories-list-border;
       }
     }
   }
 
-  a {
+  &__link {
     display: block;
     width: 100%;
     padding: ($spacing / 2) 0;
@@ -23,16 +35,28 @@
     text-decoration: none;
   }
 
+  &__selected-indicator {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: .6rem;
+    height: .6rem;
+    background-image: url('../assets/images/bullet.svg');
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+
   &--later-column {
     li:first-of-type {
-      a {
+      #{$parent}__link {
         border-top: 0;
       }
     }
 
     @include mq($from: large) {
       li:first-of-type {
-        a {
+        #{$parent}__link {
           border-top: $categories-list-border;
         }
       }

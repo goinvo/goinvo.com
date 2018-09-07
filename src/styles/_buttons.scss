@@ -42,11 +42,27 @@
     }
   }
 
+  &--link {
+    @extend %link;
+    padding: 0;
+    font-weight: $font-weight--normal;
+    letter-spacing: 0;
+    text-transform: none;
+    text-align: left;
+    user-select: auto;
+    border: none;
+  }
+
   &--transparent {
     border: none;
   }
 
   &--lg {
     min-width: 330px;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
   }
 }

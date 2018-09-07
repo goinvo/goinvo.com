@@ -4,9 +4,23 @@
   background-color: $color-white;
 
   &__image-container {
+    position: relative;
     width: 100%;
     height: 250px;
     overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: block;
+      background-color: $color-gray;
+      opacity: 0;
+      transition: opacity $transition-duration--card;
+    }
   }
 
   &__image {
@@ -34,8 +48,15 @@
     &:hover {
       cursor: pointer;
 
+      #{$parent}__image-container {
+
+        &:after {
+          opacity: 0.1;
+        }
+      }
+
       #{$parent}__image {
-        transform: scale(1.05);
+        transform: scale(1.02);
       }
     }
   }

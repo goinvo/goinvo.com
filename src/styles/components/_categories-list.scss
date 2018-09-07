@@ -1,10 +1,16 @@
 .categories-list {
   $parent: &;
-  $categories-list-border: 1px solid $color-gray;
+  $categories-list-border: 1px solid $color-gray--medium;
 
   @extend .list--unstyled;
   display: flex;
   flex-wrap: wrap;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 
   &__category {
     position: relative;
@@ -20,12 +26,6 @@
       }
     }
 
-    &:last-of-type {
-      #{$parent}__link {
-        border-bottom: $categories-list-border;
-      }
-    }
-
     @include mq($from: large) {
       width: 90%;
     }
@@ -35,7 +35,7 @@
     display: block;
     width: 100%;
     padding: ($spacing / 2) 2rem ($spacing / 2) 0;
-    border-top: $categories-list-border;
+    border-bottom: $categories-list-border;
     text-decoration: none;
   }
 
@@ -51,13 +51,7 @@
     transform: translateY(-50%);
   }
 
-  &--later-column {
-    li:first-of-type {
-      #{$parent}__link {
-        border-top: 0;
-      }
-    }
-
+  &--later-column-with-all {
     @include mq($from: large) {
       li:first-of-type {
         #{$parent}__link {

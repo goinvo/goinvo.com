@@ -81,9 +81,9 @@ class WorkPage extends Component {
             Clinician approved<span className="text--serif text--primary">.</span>
           </h1>
         </Hero>
-        <div className="pad-vertical--double pad-horizontal background--gray">
+        <div className="pad-all pad-bottom--double background--gray">
           <div className="max-width content-padding">
-            <CategoriesList columns={3} selectedCategoryId={this.state.categoryId} onSelectCategory={this.setSelectedCategory} />
+            <CategoriesList columns={3} selectedCategoryId={this.state.categoryId} onSelectCategory={this.setSelectedCategory} includeAll />
           </div>
         </div>
         <div className="max-width content-padding">

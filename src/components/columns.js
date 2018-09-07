@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
 
 class Columns extends Component {
-
-  addColumnClassToChild = (child) => {
-    const className = `${child.props.className ? child.props.className + ' ' : ''}columns--item columns--item--${this.props.columns}`;
-
-    return React.cloneElement(child, { className });
-   }
-
   render() {
     return (
       <div className="columns">
         { this.props.children.map(item => {
-          return this.addColumnClassToChild(item);
+          return (
+            <div className={`columns__item columns__item--${this.props.columns}`}>
+              { item }
+            </div>
+          )
         }) }
       </div>
     )

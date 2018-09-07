@@ -90,17 +90,15 @@ class WorkPage extends Component {
           <Columns columns={2}>
             { this.state.caseStudies.map(study => {
               return (
-                <div key={study.slug}>
-                  <Card link={`/work/${study.slug}`}>
-                    <ImageBlock
-                      title={study.title}
-                      image={study.image}
-                      client={study.client}
-                      categories={study.categories}
-                      caption={study.caption}
-                      hoverable />
-                  </Card>
-                </div>
+                <Card key={study.slug} link={`/work/${study.slug}`}>
+                  <ImageBlock
+                    title={study.title}
+                    image={study.image}
+                    client={study.client}
+                    categories={study.categories}
+                    caption={study.caption}
+                    hoverable />
+                </Card>
               )
             })}
           </Columns>

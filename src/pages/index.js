@@ -77,17 +77,15 @@ const IndexPage = () => (
       <Columns columns={2}>
         { caseStudies.map(study => {
           return (
-            <div key={study.slug}>
-              <Card link={`/work/${study.slug}`}>
-                <ImageBlock
-                  title={study.title}
-                  image={study.image}
-                  client={study.client}
-                  categories={study.categories}
-                  caption={study.caption}
-                  hoverable />
-              </Card>
-            </div>
+            <Card link={`/work/${study.slug}`} key={study.slug}>
+              <ImageBlock
+                title={study.title}
+                image={study.image}
+                client={study.client}
+                categories={study.categories}
+                caption={study.caption}
+                hoverable />
+            </Card>
           )
         })}
       </Columns>

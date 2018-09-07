@@ -4,6 +4,11 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 
+// TODO:
+// - Categories
+// - Option to specify which items to show
+// - Correct sorting (by featured, date?)
+
 const WorkPage = ({
   data: {
     allMdx: { edges },

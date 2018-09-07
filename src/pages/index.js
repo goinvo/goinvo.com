@@ -4,8 +4,12 @@ import { Link } from 'gatsby'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import CategoriesList from '../components/categories-list'
-import CaseStudyList from '../components/case-study-list'
+import Columns from '../components/columns'
 import Quote from '../components/quote'
+
+import Card from '../components/card'
+import ImageBlock from '../components/image-block'
+import caseStudies from '../data/case-study-list.json'
 
 const IndexPage = () => (
   <Layout>
@@ -52,6 +56,11 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
+    </div>
+    <Quote quotee="" quoteeSub="">
+      Placeholder
+    </Quote>
+    <div className="max-width content-padding">
       <div className="pure-g margin-vertical--double">
         <div className="pure-u-1 pure-u-lg-1-3">
           <h2 className="header--xl margin--none">Our expertise in healthcare covers<span className="text--serif text--primary">...</span></h2>
@@ -60,7 +69,28 @@ const IndexPage = () => (
           <CategoriesList columns={2} asLinks />
         </div>
       </div>
-      <CaseStudyList columns={2} />
+      {
+        // TODO:
+        // - Pick the featured four case studies here
+        // - Pass sizes to ImageBlock/Image to optimize image load
+      }
+      <Columns columns={2}>
+        { caseStudies.map(study => {
+          return (
+            <div key={study.slug}>
+              <Card link={`/work/${study.slug}`}>
+                <ImageBlock
+                  title={study.title}
+                  image={study.image}
+                  client={study.client}
+                  categories={study.categories}
+                  caption={study.caption}
+                  hoverable />
+              </Card>
+            </div>
+          )
+        })}
+      </Columns>
       <div className="container--center-children margin-top margin-bottom--double">
         <Link to="/work/" className="button button--primary button--lg">View all work</Link>
       </div>
@@ -72,6 +102,11 @@ const IndexPage = () => (
       <div className="container--center-children margin-vertical">
         <h2 className="header--xl">See the future<span className="text--serif text--primary">.</span></h2>
       </div>
+      <Columns columns={3}>
+        <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Health Reports" caption="Design concepts and objective analysis for grokking the evolving healthcare universe."/>
+        <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
+        <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="The Digital Life podcast" caption="An online radio show that explores important, timely topics in the world of digital design and technology."/>
+      </Columns>
     </div>
   </Layout>
 )

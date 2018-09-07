@@ -1,5 +1,4 @@
-.case-study-list {
-  $parent: &;
+.columns {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -9,18 +8,14 @@
     flex-direction: column;
     flex-basis: 100%;
     margin-bottom: 1rem;
-  }
 
-  &--2 {
-    #{$parent}--item {
+    &--2 {
       @include mq($from: medium) {
         flex-basis: calc(50% - #{$spacing / 2});
       }
     }
-  }
 
-  &--3 {
-    #{$parent}--item {
+    &--3 {
       @include mq($from: large) {
         flex-basis: calc(33.33% - #{$spacing});
       }

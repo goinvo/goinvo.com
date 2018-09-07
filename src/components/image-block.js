@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from './image'
 
-const ImageBlock = ({ title, image, client, categories, caption, hoverable = false }) => (
-  <div className={`image-block ${hoverable ? 'image-block--hoverable' : ''}`}>
+const ImageBlock = ({ title, image, client, categories, caption, className, hoverable = false }) => (
+  <div className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className}`}>
     <div className="image-block__image-container">
       <Image src={image} className="image-block__image" />
     </div>

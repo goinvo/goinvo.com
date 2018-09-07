@@ -87,21 +87,23 @@ class WorkPage extends Component {
           </div>
         </div>
         <div className="max-width content-padding">
-          <Columns columns={2}>
-            { this.state.caseStudies.map(study => {
-              return (
-                <Card key={study.slug} link={`/work/${study.slug}`}>
-                  <ImageBlock
-                    title={study.title}
-                    image={study.image}
-                    client={study.client}
-                    categories={study.categories}
-                    caption={study.caption}
-                    hoverable />
-                </Card>
-              )
-            })}
-          </Columns>
+          <div className="margin-top--double">
+            <Columns columns={2}>
+              { this.state.caseStudies.map(study => {
+                return (
+                  <Card key={study.slug} link={`/work/${study.slug}`}>
+                    <ImageBlock
+                      title={study.title}
+                      image={study.image}
+                      client={study.client}
+                      categories={study.categories}
+                      caption={study.caption}
+                      hoverable />
+                  </Card>
+                )
+              })}
+            </Columns>
+          </div>
           {
             this.state.categoryId === 'all' ?
               <div className="margin-top margin-bottom--double">

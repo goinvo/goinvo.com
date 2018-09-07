@@ -8,7 +8,7 @@
 
   &__category {
     position: relative;
-    width: 90%;
+    width: 100%;
 
     &--selected {
       #{$parent}__link {
@@ -25,12 +25,16 @@
         border-bottom: $categories-list-border;
       }
     }
+
+    @include mq($from: large) {
+      width: 90%;
+    }
   }
 
   &__link {
     display: block;
     width: 100%;
-    padding: ($spacing / 2) 0;
+    padding: ($spacing / 2) 2rem ($spacing / 2) 0;
     border-top: $categories-list-border;
     text-decoration: none;
   }

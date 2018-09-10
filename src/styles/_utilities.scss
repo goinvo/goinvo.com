@@ -6,3 +6,18 @@
     background-color: $color-blue--light;
   }
 }
+
+.flip {
+  $parent: &;
+  transition: transform $transition-duration--flip;
+
+  &--is-flipped {
+    transform: scaleY(-1);
+  }
+}
+
+.shadow {
+  &--header {
+    box-shadow: 0px 3px 5px 0px rgba(191, 181, 181, 0.1);
+  }
+}

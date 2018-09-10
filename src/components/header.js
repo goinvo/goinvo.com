@@ -30,7 +30,7 @@ class Header extends Component {
     ];
 
     return (
-      <div className={`header-nav ${ this.state.mobileNavOpen ? 'header-nav--mobile-nav-open' : '' }`}>
+      <div className={`header-nav ${ this.state.mobileNavOpen ? 'header-nav--mobile-nav-open' : '' }`} id="header">
         <Link to="/" className="header-nav__link header-nav__logo">
           <Logo />
         </Link>

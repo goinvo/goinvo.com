@@ -1,4 +1,5 @@
 .header-nav {
+  @extend .shadow--header;
   $parent: &;
   position: fixed;
   width: 100%;
@@ -7,7 +8,6 @@
   align-items: center;
   height: $header-height;
   background-color: $color-white;
-  box-shadow: 0px 0px 20px 0px rgba(191, 181, 181, 0.5);
   z-index: $z-index--header;
 
   &__link {

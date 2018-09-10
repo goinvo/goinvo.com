@@ -31,6 +31,10 @@
     border: 1px solid $color-primary--light;
     color: $color-primary;
 
+    .icon {
+      fill: $color-primary;
+    }
+
     &:hover {
       background-color: $color-primary--lightest;
     }
@@ -39,6 +43,10 @@
       background-color: $color-primary;
       border-color: $color-primary;
       color: $color-white;
+
+      .icon {
+        fill: $color-white;
+      }
     }
   }
 
@@ -53,6 +61,10 @@
     border: none;
   }
 
+  &--bg-white {
+    background-color: $color-white;
+  }
+
   &--transparent {
     border: none;
   }
@@ -64,5 +76,9 @@
   &--block {
     display: block;
     width: 100%;
+  }
+
+  .icon {
+    vertical-align: middle;
   }
 }

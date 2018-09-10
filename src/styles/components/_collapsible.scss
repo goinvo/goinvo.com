@@ -1,4 +1,25 @@
 .collapsible {
-  transition: height 300ms ease-in-out;
-  overflow: hidden;
+  $parent: &;
+
+  &__filler {
+    pointer-events: none;
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &--transition {
+    #{$parent}__filler,
+    #{$parent}__content {
+      transition: height $transition-duration--collapse-fast;
+    }
+  }
+
+  &--transition-slow {
+    #{$parent}__filler,
+    #{$parent}__content {
+      transition: height $transition-duration--collapse-slow;
+    }
+  }
 }

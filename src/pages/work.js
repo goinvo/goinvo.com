@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
-import CategoriesList from '../components/categories-list'
+import Sticky from '../components/sticky'
+import CategoriesList, { allCategory } from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import Collapsible from '../components/collapsible'
 
+import Caret from '../assets/images/icon-caret.inline.svg'
+
+import CATEGORIES_LIST from '../data/categories.json'
 import caseStudies from '../data/case-study-list.json'
 
 const upNextList = [
@@ -35,7 +39,7 @@ const upNextList = [
 const getCaseStudiesOfCategory = (catId) => {
   let newCaseStudies = [];
 
-  if (catId === 'all') {
+  if (catId === allCategory.id) {
     newCaseStudies = caseStudies;
   } else {
     newCaseStudies = caseStudies.filter(study => {
@@ -58,18 +62,38 @@ class WorkPage extends Component {
     super(props);
 
     const query = props.location && props.location.search ? props.location.search : null;
-    const categoryId = query ? query.substr(query.indexOf("=") + 1) : 'all';
+    const categoryId = query ? query.substr(query.indexOf("=") + 1) : allCategory.id;
+
+    const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
 
     this.state = {
-      categoryId,
-      caseStudies: getCaseStudiesOfCategory(categoryId)
+      selectedCategory,
+      caseStudies: getCaseStudiesOfCategory(categoryId),
+      categoriesStuck: false,
+      categoriesCollapsed: false,
+      suppressCollapseTransition: false,
     };
   }
 
-  setSelectedCategory = (catId) => {
+  handleCategoriesStickyStateChange = (isStuck) => {
     this.setState({
-      categoryId: catId,
-      caseStudies: getCaseStudiesOfCategory(catId)
+      suppressCollapseTransition: true,
+      categoriesStuck: isStuck,
+      categoriesCollapsed: isStuck
+    }, () => {
+      this.setState({ suppressCollapseTransition: false })
+    });
+  }
+
+  toggleCategories = () => {
+    this.setState({ categoriesCollapsed: !this.state.categoriesCollapsed });
+  }
+
+  setSelectedCategory = (cat) => {
+    this.setState({
+      selectedCategory: cat,
+      caseStudies: getCaseStudiesOfCategory(cat.id),
+      categoriesCollapsed: this.state.categoriesStuck ? true : false,
     });
   }
 
@@ -82,12 +106,29 @@ class WorkPage extends Component {
             Clinician approved<span className="text--serif text--primary">.</span>
           </h1>
         </Hero>
-        <div className="pad-all pad-bottom--double background--gray">
-          <div className="max-width content-padding">
-            <CategoriesList columns={3} selectedCategoryId={this.state.categoryId} onSelectCategory={this.setSelectedCategory} includeAll />
+        <Sticky top={50}
+                scrollOffset={50}
+                target="#target-stick"
+                zIndex={1000}
+                onStateChange={this.handleCategoriesStickyStateChange}>
+          {
+            this.state.categoriesStuck ?
+              <button className="button button--primary button--bg-white button--block" onClick={this.toggleCategories}>
+                {this.state.selectedCategory.title}
+                <Caret className={`icon icon--md margin-left flip ${!this.state.categoriesCollapsed ? 'flip--is-flipped' : ''}`} style={{ marginTop: '-1px' }} />
+              </button>
+            : null
+          }
+          <Collapsible collapsed={this.state.categoriesCollapsed} suppressTransition={this.state.suppressCollapseTransition}>
+          <div className="background--gray pad-top pad-bottom--double" id="categories-list">
+            <div className="max-width content-padding">
+                <CategoriesList columns={3} selectedCategoryId={this.state.selectedCategory.id} onSelectCategory={this.setSelectedCategory} includeAll />
+            </div>
           </div>
-        </div>
-        <Collapsible collapsed={this.state.categoryId === 'open-source' ? false : true}>
+          </Collapsible>
+        </Sticky>
+        <div id="target-stick"></div>
+        <Collapsible collapsed={this.state.selectedCategory.id === 'open-source' ? false : true} transitionSpeed="slow">
           <div className="background--blue">
             <div className="max-width content-padding pad-vertical">
               <h2 className="header--xl">Open source healthcare matters</h2>
@@ -132,7 +173,7 @@ class WorkPage extends Component {
             </Columns>
           </div>
           {
-            this.state.categoryId === 'all' ?
+            this.state.selectedCategory.id === allCategory.id ?
               <div className="margin-top margin-bottom--double">
                 <button className="button button--primary button--block">View more</button>
               </div>

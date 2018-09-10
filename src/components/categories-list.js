@@ -3,19 +3,18 @@ import { Link } from 'gatsby'
 
 import CATEGORIES_LIST from '../data/categories.json'
 
-const allCategory = {
+export const allCategory = {
   id: 'all',
   title: 'All'
 };
 
 class CategoriesList extends Component {
-
   renderCategory = (cat) => {
     return (
       <li key={cat.id} className={`categories-list__category ${cat.id === this.props.selectedCategoryId ? 'categories-list__category--selected' : ''}`}>
         {
           this.props.onSelectCategory ?
-            <button className="categories-list__link button button--link" onClick={() => this.props.onSelectCategory(cat.id)}>{cat.title}</button>
+            <button className="categories-list__link button button--link" onClick={() => this.props.onSelectCategory(cat)}>{cat.title}</button>
           :
             <Link className="categories-list__link" to={`/work/?category=${cat.id}`}>{cat.title}</Link>
         }
@@ -42,15 +41,7 @@ class CategoriesList extends Component {
                   }
                   {
                     CATEGORIES_LIST.slice(i * numPerColumn, (i * numPerColumn) + numPerColumn).map((cat) => (
-                      <li key={cat.id} className={`categories-list__category ${cat.id === this.props.selectedCategoryId ? 'categories-list__category--selected' : ''}`}>
-                        {
-                          this.props.onSelectCategory ?
-                            <button className="categories-list__link button button--link" onClick={() => this.props.onSelectCategory(cat.id)}>{cat.title}</button>
-                          :
-                            <Link className="categories-list__link" to={`/work/?category=${cat.id}`}>{cat.title}</Link>
-                        }
-                        <span className="categories-list__selected-indicator"></span>
-                      </li>
+                      this.renderCategory(cat)
                     ))
                   }
                 </ul>
@@ -65,7 +56,8 @@ class CategoriesList extends Component {
 
 CategoriesList.defaultProps = {
   columns: 3,
-  onSelectCategory: null
+  onSelectCategory: null,
+  includeAll: false
 }
 
-export default CategoriesList
+export default CategoriesList;

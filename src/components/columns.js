@@ -6,7 +6,7 @@ class Columns extends Component {
       <div className="columns">
         { this.props.children.map(item => {
           return (
-            <div className={`columns__item columns__item--${this.props.columns}`}>
+            <div key={item.key} className={`columns__item columns__item--${this.props.columns}`}>
               { item }
             </div>
           )

@@ -25,8 +25,8 @@ class Header extends Component {
     const navItems = [
       { link: "/work/", title: "Work" },
       { link: "/about/", title: "About" },
-      { link: "/services/", title: "Services", class: "hidden-small" },
-      { link: "/vision/", title: "Vision", class: "hidden-small" },
+      { link: "/services/", title: "Services", class: "hidden--until-lg hidden--until-lg" },
+      { link: "/vision/", title: "Vision", class: "hidden--until-lg" },
     ];
 
     return (
@@ -45,13 +45,13 @@ class Header extends Component {
             </Link>
           )
         })}
-        <button className="header-nav__hamburger button button--transparent hidden-large" onClick={this.toggleMobileNav}>
+        <button className="header-nav__hamburger button button--transparent hidden--lg" onClick={this.toggleMobileNav}>
           <Hamburger />
         </button>
-        <Link to="/contact/" className="header-nav__link hidden-small">
+        <Link to="/contact/" className="header-nav__link hidden--until-lg">
           <div className="button button--primary">Contact</div>
         </Link>
-        <div className="mobile-nav-overlay hidden-large"></div>
+        <div className="mobile-nav-overlay hidden--lg"></div>
         <div className="mobile-nav">
           <div className="button button--transparent mobile-nav__close" onClick={this.toggleMobileNav}>
             <Close />

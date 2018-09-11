@@ -77,9 +77,9 @@ const IndexPage = () => (
         // - Pass sizes to ImageBlock/Image to optimize image load
       }
       <Columns columns={2}>
-        { caseStudies.map(study => {
+        { caseStudies.map((study, i) => {
           return (
-            <Card link={`/work/${study.slug}`} key={study.slug}>
+            <Card link={`/work/${study.slug}`} key={study.slug} hidden={{ class: 'hidden--sm', condition: i > 1 }}>
               <ImageBlock
                 title={study.title}
                 image={study.image}

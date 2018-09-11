@@ -58,14 +58,25 @@ body {
   }
 }
 
-.hidden-large {
-  @include mq($from: large) {
-    display: none !important;
+.hidden {
+  &--sm {
+    @include mq($until: medium) {
+      display: none !important;
+    }
   }
-}
-
-.hidden-small {
-  @include mq($until: large) {
-    display: none !important;
+  &--md {
+    @include mq($until: large) {
+      display: none !important;
+    }
+  }
+  &--lg {
+    @include mq($from: large) {
+      display: none !important;
+    }
+  }
+  &--until-lg {
+    @include mq($until: large) {
+      display: none !important;
+    }
   }
 }

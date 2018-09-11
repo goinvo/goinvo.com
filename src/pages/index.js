@@ -8,6 +8,7 @@ import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
+import ContactForm from '../components/contact-form'
 
 import caseStudies from '../data/case-study-list.json'
 
@@ -105,6 +106,44 @@ const IndexPage = () => (
         <ImageBlock key={"2"} image="features/determinants-of-health/feature_banner.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
         <ImageBlock key={"3"} image="features/determinants-of-health/feature_banner.jpg" title="The Digital Life podcast" caption="An online radio show that explores important, timely topics in the world of digital design and technology."/>
       </Columns>
+    </div>
+    <div className="background--blue pad-vertical--double">
+      <div className="max-width content-padding">
+        <div className="pure-g">
+          <div className="pure-u-1 pure-u-lg-1-2">
+            <div className="pad-bottom--double pad-right--double">
+              <h2 className="header--xl">Let's work together.</h2>
+              <p className="text--gray">We work across the entire production process, applying the design method to reimagine your software, system, or service.</p>
+              <div className="pure-g">
+                <div className="pure-u-1-2">
+                  <p>
+                    Research<br/>
+                    User interviews<br/>
+                    Analysis<br/>
+                    User mapping<br/>
+                    Ideation<br/>
+                    UI & UX Design<br/>
+                  </p>
+                </div>
+                <div className="pure-u-1-2">
+                  <p>
+                    Prototyping<br/>
+                    User testing<br/>
+                    Front-end development<br/>
+                    Strategy consulting<br/>
+                    Workshop<br/>
+                    Graphic facilitation<br/>
+                  </p>
+                </div>
+              </div>
+              <a href="/services/">Learn more about our services</a>
+            </div>
+          </div>
+          <div className="pure-u-1 pure-u-lg-1-2">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
     </div>
   </Layout>
 )

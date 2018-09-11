@@ -1,6 +1,7 @@
 .icon {
   width: 1rem;
   height: 1rem;
+  transition: fill $transition-duration--button;
 
   &--md {
     width: 1.25rem;

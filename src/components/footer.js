@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 import Logo from '../assets/images/logo-goinvo.inline.svg'
+import Email from '../assets/images/icon-email.inline.svg'
+import Flickr from '../assets/images/icon-flickr.inline.svg'
+import LinkedIn from '../assets/images/icon-linkedin.inline.svg'
+import Medium from '../assets/images/icon-medium.inline.svg'
+import SoundCloud from '../assets/images/icon-soundcloud.inline.svg'
+import Twitter from '../assets/images/icon-twitter.inline.svg'
 
 class Footer extends Component {
   render() {
@@ -41,8 +47,28 @@ class Footer extends Component {
               </div>
             </div>
           </div>
-          <div className="footer__social-links container--center-children">
-            <Logo className="logo" />
+          <div className="footer__social-links">
+            <ul className="list--unstyled container container--justify-space-around container--align-center">
+              <li>
+                <a href="mailto:hello@goinvo.com"><Email className="icon icon--lg" /></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/goinvo/"><LinkedIn className="icon icon--lg" /></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/goinvo"><Twitter className="icon icon--lg" /></a>
+              </li>
+              <li><Logo className="logo" /></li>
+              <li>
+                <a href="https://medium.com/@goinvo"><Medium className="icon icon--lg" /></a>
+              </li>
+              <li>
+                <a href="https://www.flickr.com/photos/juhansonin/"><Flickr className="icon icon--lg" /></a>
+              </li>
+              <li>
+                <a href="https://soundcloud.com/involution-studios"><SoundCloud className="icon icon--lg" /></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

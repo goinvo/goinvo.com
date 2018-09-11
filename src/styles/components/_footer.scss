@@ -2,7 +2,36 @@
   border-bottom: 3rem solid #263238;
 
   &__social-links {
+    display: flex;
+    justify-content: center;
     height: 60px;
-    margin-top: $spacing;
+    margin-top: $spacing * 2;
+
+    ul {
+      max-width: 450px;
+    }
+
+    a {
+      display: flex;
+      padding: 10px;
+
+      &:hover {
+        .icon {
+          fill: $color-teal;
+        }
+      }
+    }
+
+    .icon {
+      fill: $color-black;
+    }
+
+    .logo {
+      margin: 0 1rem;
+
+      @include mq($from: medium) {
+        margin: 0 2rem;
+      }
+    }
   }
 }

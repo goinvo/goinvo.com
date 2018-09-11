@@ -25,9 +25,26 @@ body {
 }
 
 .container {
-  &--center-children {
-    display: flex;
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--justify-center {
     justify-content: center;
+  }
+
+  &--space-around {
+    justify-content: space-around;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--fill-height {
+    height: 100%;
   }
 }
 

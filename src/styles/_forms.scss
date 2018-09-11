@@ -14,4 +14,8 @@
     height: 8rem;
     resize: none;
   }
+
+  &--has-error {
+    border-color: $color-red;
+  }
 }

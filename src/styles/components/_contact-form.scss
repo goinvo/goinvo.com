@@ -15,11 +15,22 @@
   }
 
   .hs-input.error {
-    border-color: $color-red;
+    @extend .form-control--has-error;
   }
 
   textarea.hs-input {
     @extend .form-control--textarea;
+  }
+
+  .hs-error-msgs {
+    list-style: none;
+    padding-left: 0;
+    margin-top: -$spacing;
+
+    label {
+      @extend .text--sm;
+      color: $color-red;
+    }
   }
 
   .hs-form-required,

@@ -16,6 +16,7 @@ class ContactForm extends Component {
             submitButtonClass="button button--primary button--block"
             translations={{
               en: {
+                required: "Please fill out this field",
                 submitText: "Send"
               }
             }}

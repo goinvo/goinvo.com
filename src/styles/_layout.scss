@@ -9,7 +9,10 @@ body {
 }
 
 .app {
-  padding-top: $header-height;
+
+  &__body {
+    padding-top: $header-height;
+  }
 }
 
 .max-width {

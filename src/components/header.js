@@ -51,7 +51,7 @@ class Header extends Component {
         <Link to="/contact/" className="header-nav__link hidden--until-lg">
           <div className="button button--primary">Contact</div>
         </Link>
-        <div className="mobile-nav-overlay hidden--lg"></div>
+        <div className="mobile-nav-overlay hidden--lg" onClick={this.toggleMobileNav}></div>
         <div className="mobile-nav">
           <div className="button button--transparent mobile-nav__close" onClick={this.toggleMobileNav}>
             <Close />

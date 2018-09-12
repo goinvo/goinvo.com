@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
 import ImageBlock from '../../components/image-block'
-import Columns from '../../components/columns'
 import TeamMember from '../../components/team-member'
 
 import team from '../../data/team.json'

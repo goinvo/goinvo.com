@@ -3,6 +3,36 @@ import React, { Component } from 'react'
 import { imageUrl } from '../helpers'
 
 class Image extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      src: ''
+    }
+
+    this.img = React.createRef();
+  }
+
+  componentDidMount() {
+    if (this.props.onUpdate) {
+      this.img.current.addEventListener('load', this.handleUpdate);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.props.onUpdate) {
+      this.img.current.removeEventListener('load', this.handleUpdate);
+    }
+  }
+
+  handleUpdate = () => {
+    let src = typeof this.img.current.currentSrc !== 'undefined' ? this.img.current.currentSrc : this.img.current.src;
+    if (this.state.src !== src) {
+      this.setState({src});
+      this.props.onUpdate(src);
+    }
+  }
+
   render() {
     let { src, alt, className, dimensions, sizes } = this.props;
     src = imageUrl(src);
@@ -13,6 +43,7 @@ class Image extends Component {
 
     return (
       <img
+        ref={this.img}
         className={className}
         alt={alt}
         srcSet={srcset}

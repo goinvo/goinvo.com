@@ -1,5 +1,6 @@
 .gradient-image-columns {
   position: relative;
+  background-color: $color-black;
 
   .left {
     display: flex;
@@ -10,38 +11,38 @@
   }
 
   .right {
-    height: 300px;
-
     @include mq($from: large) {
-      height: 100%;
       order: 2;
     }
   }
 
-  &__content-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  &__content {
+    margin: 0 auto;
     padding-bottom: $spacing;
 
     @include mq($from: large) {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-  }
-
-  &__content {
-    @include mq($from: large) {
       margin-right: $spacing * 2;
+      margin-bottom: -($spacing * 2);
+      padding-bottom: 0;
     }
   }
 
   &__gradient {
     position: relative;
+    height: 300px;
+    width: calc(100% + #{($spacing * 2)});
+    margin-left: -$spacing;
+
+    @include mq($from: large) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 50%;
+      height: auto;
+      width: auto;
+      margin-left: 0;
+    }
 
     &:after {
       content: '';
@@ -56,9 +57,5 @@
         background: linear-gradient(to right, $color-black 0%, transparent 20%, transparent 100%);
       }
     }
-  }
-
-  @include mq($from: large) {
-    height: 550px;
   }
 }

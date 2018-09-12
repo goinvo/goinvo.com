@@ -70,7 +70,12 @@
   }
 
   &--lg {
-    min-width: 330px;
+    width: 100%;
+
+    @include mq($from: large){
+      width: auto;
+      min-width: 330px;
+    }
   }
 
   &--block {

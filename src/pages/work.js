@@ -111,7 +111,7 @@ class WorkPage extends Component {
         <Sticky top={50}
                 scrollOffset={50}
                 target="#target-stick"
-                zIndex={1000}
+                zIndex={500}
                 onStateChange={this.handleCategoriesStickyStateChange}>
           {
             this.state.categoriesStuck ?

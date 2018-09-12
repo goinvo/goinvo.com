@@ -50,23 +50,23 @@ class Footer extends Component {
           <div className="footer__social-links">
             <ul className="social-links list--unstyled container container--justify-space-around container--align-center">
               <li>
-                <a href="mailto:hello@goinvo.com"><Email className="icon icon--lg" /></a>
+                <a href="mailto:hello@goinvo.com"><Email className="icon" /></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/goinvo/"><LinkedIn className="icon icon--lg" /></a>
+                <a href="https://www.linkedin.com/company/goinvo/"><LinkedIn className="icon" /></a>
               </li>
               <li>
-                <a href="https://twitter.com/goinvo"><Twitter className="icon icon--lg" /></a>
+                <a href="https://twitter.com/goinvo"><Twitter className="icon" /></a>
               </li>
               <li><Logo className="logo" /></li>
               <li>
-                <a href="https://medium.com/@goinvo"><Medium className="icon icon--lg" /></a>
+                <a href="https://medium.com/@goinvo"><Medium className="icon" /></a>
               </li>
               <li>
-                <a href="https://www.flickr.com/photos/juhansonin/"><Flickr className="icon icon--lg" /></a>
+                <a href="https://www.flickr.com/photos/juhansonin/"><Flickr className="icon" /></a>
               </li>
               <li>
-                <a href="https://soundcloud.com/involution-studios"><SoundCloud className="icon icon--lg" /></a>
+                <a href="https://soundcloud.com/involution-studios"><SoundCloud className="icon" /></a>
               </li>
             </ul>
           </div>

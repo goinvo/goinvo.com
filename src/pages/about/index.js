@@ -36,13 +36,13 @@ const ethics = [
 
 const upNextList = [
   {
-    link: "/work/",
+    link: "/work/1",
     image: "features/determinants-of-health/feature_banner.jpg",
     title: "Open Source Healthcare Journal",
     caption: "OS will improve the healthcare system by empowering interoperability, with open data standards, for better patient outcomes."
   },
   {
-    link: "/work/",
+    link: "/work/2",
     image: "features/determinants-of-health/feature_banner.jpg",
     title: "Open source healthcare products",
     caption: "Learn about our opensource projects and why we’re passionate about making healthcare open."
@@ -112,7 +112,7 @@ const AboutPage = () => (
             <div className="pad-left--only-lg pad-top--double">
               <p className="text--bold margin-top--none margin-bottom--half">Your Career Awaits</p>
               <p className="text--gray margin--none">Designer and/or Engineer</p>
-              <p className="text--gray margin-top--none">If you’re looking to engage in meaningful work, learn from a diverse team  and thrive with autonomy on complex projects, we’d be a good fit.</p>
+              <p className="text--gray">If you’re looking to engage in meaningful work, learn from a diverse team  and thrive with autonomy on complex projects, we’d be a good fit.</p>
               <Link to="/about/careers/" className="button button--primary button--lg margin-bottom">Learn about careers</Link>
             </div>
           </div>
@@ -128,9 +128,9 @@ const AboutPage = () => (
         <ul className="ul flex-wrap flex-wrap--half">
           {ethics.map(ethic => {
             return (
-              <li key={ethic.title} className="margin-bottom--double">
+              <li key={ethic.title} className="margin-bottom">
                 <p>
-                  <div className="text--bold margin-bottom--half">{ethic.title}</div>
+                  <span className="display--block text--bold margin-bottom--half">{ethic.title}</span>
                   <span className="text--gray">{ethic.content}</span>
                 </p>
               </li>

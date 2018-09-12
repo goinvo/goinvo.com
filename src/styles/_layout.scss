@@ -85,3 +85,9 @@ body {
   display: grid;
   grid-auto-rows: 1fr;
 }
+
+.display {
+  &--block {
+    display: block;
+  }
+}

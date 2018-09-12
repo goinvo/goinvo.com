@@ -1,33 +1,25 @@
 .gradient-image-columns {
+  $parent: &;
+
   position: relative;
-  background-color: $color-black;
-
-  .left {
-    display: flex;
-
-    @include mq($from: large) {
-      order: 1;
-    }
-  }
-
-  .right {
-    @include mq($from: large) {
-      order: 2;
-    }
-  }
 
   &__content {
     margin: 0 auto;
     padding-bottom: $spacing;
 
     @include mq($from: large) {
-      margin-right: $spacing * 2;
-      margin-bottom: -($spacing * 2);
+      margin-left : $spacing * 2;
       padding-bottom: 0;
+    }
+
+    &--offset {
+      @include mq($from: large) {
+        margin-bottom: -($spacing * 2);
+      }
     }
   }
 
-  &__gradient {
+  &__image {
     position: relative;
     height: 300px;
     width: calc(100% + #{($spacing * 2)});
@@ -37,13 +29,15 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 0;
-      left: 50%;
+      right: 50%;
+      left: 0;
       height: auto;
       width: auto;
       margin-left: 0;
     }
+  }
 
+  &__gradient {
     &:after {
       content: '';
       position: absolute;
@@ -55,6 +49,34 @@
 
       @include mq($from: large) {
         background: linear-gradient(to right, $color-black 0%, transparent 20%, transparent 100%);
+      }
+    }
+  }
+
+  &--reverse {
+    #{$parent}__image {
+      @include mq($from: large) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 50%;
+        height: auto;
+        width: auto;
+        margin-left: 0;
+      }
+    }
+
+    #{$parent}__content {
+      @include mq($from: large) {
+        margin-right: $spacing * 2;
+        margin-left: 0;
+      }
+    }
+
+    @include mq($from: large) {
+      .left {
+        width: 0;
       }
     }
   }

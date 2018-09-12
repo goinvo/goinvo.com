@@ -80,3 +80,8 @@ body {
     }
   }
 }
+
+.equal-height-rows {
+  display: grid;
+  grid-auto-rows: 1fr;
+}

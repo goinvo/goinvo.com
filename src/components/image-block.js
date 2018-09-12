@@ -33,6 +33,13 @@ class ImageBlock extends Component {
             : null
           }
           <p className="text--caption">{caption}</p>
+          {
+            this.props.children ?
+              <div className="margin-top">
+                { this.props.children }
+              </div>
+            : null
+          }
         </div>
       </div>
     )

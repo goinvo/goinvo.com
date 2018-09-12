@@ -185,7 +185,7 @@ class WorkPage extends Component {
         <Quote quotee="Igor Gershfang" quoteeSub="Walgreens Emerging Tech Director">
           Invo beautifully helped shape our next generation clinician and patient experience.
         </Quote>
-        <GradientImageColumns image="home/culture-2017.jpg">
+        <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="black" gradient offsetContent reverse>
           <h2 className="header--xl text--white">Want to take your healthcare product to the next level?</h2>
           <ContactForm />
         </GradientImageColumns>

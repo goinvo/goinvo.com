@@ -15,7 +15,7 @@ class TeamMember extends Component {
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
             <div className="pad-right--only-lg margin-bottom">
-              <Image src={image} className="image__max-width" />
+              <Image src={image} className="image--max-width" />
             </div>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2">

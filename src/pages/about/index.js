@@ -75,7 +75,29 @@ const AboutPage = () => (
     </div>
     <div className="max-width content-padding">
       <h2 className="header--xl text--center">Our team</h2>
-      {team.map(member => <TeamMember key={member.name} member={member} />)}
+      {team.slice(0, 3).map(member => <TeamMember key={member.name} member={member} />)}
+    </div>
+    <div className="background--blue margin-bottom--double">
+      <div className="max-width content-padding">
+        <div className="pure-g">
+          <div className="pure-u-1 pure-u-lg-1-2">
+            <div className="pad-right--only-lg">
+              <Image src="team_photos/juhan_sonin.jpg" className="image--max-width" />
+            </div>
+          </div>
+          <div className="pure-u-1 pure-u-lg-1-2">
+            <div className="pad-left--only-lg pad-top--double">
+              <p className="text--bold margin-top--none margin-bottom--half">Your Career Awaits</p>
+              <p className="text--gray margin--none">Designer and/or Engineer</p>
+              <p className="text--gray margin-top--none">If you’re looking to engage in meaningful work, learn from a diverse team  and thrive with autonomy on complex projects, we’d be a good fit.</p>
+              <Link to="/about/careers/" className="button button--primary button--lg margin-bottom">Learn about careers</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="max-width content-padding">
+      {team.slice(3, team.length).map(member => <TeamMember key={member.name} member={member} />)}
     </div>
     <div className="background--gray pad-vertical--double">
       <div className="max-width content-padding">
@@ -108,7 +130,7 @@ const AboutPage = () => (
         </div>
         <div className="pure-u-1 pure-u-lg-1-2">
           <div className="container container--column container--justify-center container--fill-height pad-left--only-lg">
-            <Image src="new/test_2000.jpg" className="image__max-width" />
+            <Image src="new/test_2000.jpg" className="image--max-width" />
           </div>
         </div>
       </div>

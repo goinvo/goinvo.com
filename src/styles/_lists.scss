@@ -1,11 +1,30 @@
 .ul {
   list-style-position: outside;
-  list-style-image: url('../assets/images/bullet.svg');
+  list-style-type: none;
   padding: 0;
+
+  @include mq($from: large) {
+    list-style-image: url('../assets/images/bullet.svg');
+  }
 }
 
 .list--unstyled {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--half {
+
+    @include mq($from: medium) {
+      li {
+        flex-basis: calc(50% - #{$spacing});
+      }
+    }
+  }
 }

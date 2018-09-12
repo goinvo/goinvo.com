@@ -5,8 +5,32 @@ import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
 import ImageBlock from '../../components/image-block'
 import TeamMember from '../../components/team-member'
+import Image from '../../components/image'
 
 import team from '../../data/team.json'
+
+const ethics = [
+  {
+    title: 'Speak the truth',
+    content: 'We are honest, open, and genuine. Truth is the essence of goodness.'
+  },
+  {
+    title: 'Be curious creators',
+    content: 'We are curious creators who welcome new ideas and the input of others.'
+  },
+  {
+    title: 'Commit to community',
+    content: 'We fight inequality and stand to protect ideas, community and human-kind.'
+  },
+  {
+    title: 'Don\'t settle',
+    content: 'We are driven and committed to what we do. We strive to deliver exceptional results.'
+  },
+  {
+    title: 'Blend beautiful with useful',
+    content: 'We craft ideas and products that are both useful and beautiful.'
+  }
+]
 
 const AboutPage = () => (
   <Layout>
@@ -51,7 +75,43 @@ const AboutPage = () => (
     </div>
     <div className="max-width content-padding">
       <h2 className="header--xl text--center">Our team</h2>
-      {team.map(member => <TeamMember key={member.name.trim()} member={member} />)}
+      {team.map(member => <TeamMember key={member.name} member={member} />)}
+    </div>
+    <div className="background--gray pad-vertical--double">
+      <div className="max-width content-padding">
+        <h3 className="header--sm text--center">Code of Ethics</h3>
+        <ul className="ul flex-wrap flex-wrap--half">
+          {ethics.map(ethic => {
+            return (
+              <li key={ethic.title} className="margin-bottom--double">
+                <p>
+                  <div className="text--bold margin-bottom--half">{ethic.title}</div>
+                  <span className="text--gray">{ethic.content}</span>
+                </p>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </div>
+    <div className="max-width content-padding pad-vertical--double">
+      <div className="pure-g">
+        <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
+          <div className="pad-left--only-lg">
+            <h3 className="header--sm text--center">Our Story</h3>
+            <p className="text--gray margin-bottom pad-right--only-lg">
+              With early roots designing for Yahoo, Mcaffee, and Obama’s 2008 campaign, GoInvo is now focused exclusively on healthcare. We’ve delivered over 110 products with partners ranging from 3M, U.S. Department of Health and Human Services, Partners Healthcare, and a variety of startups.
+            </p>
+            <Link to="/about/history/" className="margin-right--double">Studio timeline</Link>
+            <Link to="/about/oral-history/">Oral history</Link>
+          </div>
+        </div>
+        <div className="pure-u-1 pure-u-lg-1-2">
+          <div className="container container--column container--justify-center container--fill-height pad-left--only-lg">
+            <Image src="new/test_2000.jpg" className="image__max-width" />
+          </div>
+        </div>
+      </div>
     </div>
   </Layout>
 )

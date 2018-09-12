@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Juhan Sonin",
+    "title": "Director",
+    "bio": "Juhan Sonin leads GoInvo with expertise in healthcare design and system engineering. He currently lectures on design and engineering at MIT. Previously he’s spent time at, Apple, the National Center for Supercomputing Applications (NCSA) and MITRE.  His work has been recognized by the New York Times, BBC International, and National Public Radio (NPR) and published in The Journal of Participatory Medicine and The Lancet.",
+    "social": {
+      "email": "juhan@goinvo.com",
+      "twitter": "https://twitter.com/jsonin",
+      "linkedin": "https://www.linkedin.com/in/juhansonin"
+    },
+    "image": "team_photos/juhan_sonin.jpg"
+  },
+  {
+    "name": "Eric Benoit",
+    "title": "Creative Director",
+    "bio": "Eric Benoit is the Creative Director of GoInvo, leading the studio’s UX creation process from concept to production. Eric works as an interaction designer, experience designer, and information architect, designing better products by thoroughly understanding user behaviors, expectations, and goals. Eric’s background and love for design in the context of human experience helps him transform complex information systems in healthcare and the enterprise into responsive and adaptive human-centered designs.",
+    "social": {
+      "email": "eric@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/ericbenoitdesigner"
+    },
+    "image": "team_photos/eric_benoit.jpg"
+  }
+]

@@ -11,21 +11,6 @@
       max-width: 450px;
     }
 
-    a {
-      display: flex;
-      padding: 10px;
-
-      &:hover {
-        .icon {
-          fill: $color-teal;
-        }
-      }
-    }
-
-    .icon {
-      fill: $color-black;
-    }
-
     .logo {
       margin: 0 1rem;
 

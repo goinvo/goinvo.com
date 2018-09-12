@@ -48,7 +48,7 @@ class Footer extends Component {
             </div>
           </div>
           <div className="footer__social-links">
-            <ul className="list--unstyled container container--justify-space-around container--align-center">
+            <ul className="social-links list--unstyled container container--justify-space-around container--align-center">
               <li>
                 <a href="mailto:hello@goinvo.com"><Email className="icon icon--lg" /></a>
               </li>

@@ -1,7 +1,6 @@
 .image-block {
   $parent: &;
   width: 100%;
-  background-color: $color-white;
 
   &__image-container {
     position: relative;

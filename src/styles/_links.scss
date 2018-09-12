@@ -12,3 +12,20 @@
 a {
   @extend %link;
 }
+
+.social-links {
+  a {
+    display: flex;
+    padding: 10px;
+
+    &:hover {
+      .icon {
+        fill: $color-teal;
+      }
+    }
+  }
+
+  .icon {
+    fill: $color-black;
+  }
+}

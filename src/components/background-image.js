@@ -9,6 +9,12 @@ class BackgroundImage extends Component {
     this.state = {
       src: ''
     }
+
+    this.img = React.createRef();
+  }
+
+  componentDidMount() {
+    this.setState({ src: this.img.current.getSrc() });
   }
 
   updateSrc = (src) => {
@@ -18,7 +24,7 @@ class BackgroundImage extends Component {
   render() {
     return (
       <div className="background-image" style={{ backgroundImage: `url(${this.state.src})` }}>
-        <Image src={ this.props.src } className="background-image__image" onUpdate={this.updateSrc} />
+        <Image src={ this.props.src } className="background-image__image" onUpdate={this.updateSrc} ref={this.img} />
       </div>
     )
   }

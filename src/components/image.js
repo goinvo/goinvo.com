@@ -26,11 +26,16 @@ class Image extends Component {
   }
 
   handleUpdate = () => {
-    let src = typeof this.img.current.currentSrc !== 'undefined' ? this.img.current.currentSrc : this.img.current.src;
+    const src = this.getSrc();
+
     if (this.state.src !== src) {
       this.setState({src});
       this.props.onUpdate(src);
     }
+  }
+
+  getSrc = () => {
+    return typeof this.img.current.currentSrc !== 'undefined' ? this.img.current.currentSrc : this.img.current.src;
   }
 
   render() {

@@ -62,7 +62,8 @@ class Header extends Component {
                 <Link
                   to="/"
                   className="mobile-nav__link"
-                  activeClassName="mobile-nav__link--active">
+                  activeClassName="mobile-nav__link--active"
+                  onClick={this.toggleMobileNav}>
                     Home
                 </Link>
               </li>
@@ -72,7 +73,8 @@ class Header extends Component {
                     <Link
                       to={navItem.link}
                       className={`mobile-nav__link`}
-                      activeClassName="mobile-nav__link--active">
+                      activeClassName="mobile-nav__link--active"
+                      onClick={this.toggleMobileNav}>
                         {navItem.title}
                     </Link>
                   </li>
@@ -85,7 +87,8 @@ class Header extends Component {
                 <Link
                   to="/about/careers/"
                   className="mobile-nav__link-secondary"
-                  activeClassName="mobile-nav__link--active">
+                  activeClassName="mobile-nav__link--active"
+                  onClick={this.toggleMobileNav}>
                     Careers
                 </Link>
               </li>
@@ -93,7 +96,8 @@ class Header extends Component {
                 <Link
                   to="/about/open-office-hours/"
                   className="mobile-nav__link-secondary"
-                  activeClassName="mobile-nav__link--active">
+                  activeClassName="mobile-nav__link--active"
+                  onClick={this.toggleMobileNav}>
                     Open Office Hours
                 </Link>
               </li>

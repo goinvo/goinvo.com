@@ -61,6 +61,10 @@ body {
     letter-spacing: 2px;
   }
 
+  &--white {
+    color: $color-white;
+  }
+
   &--gray {
     color: $color-gray;
   }

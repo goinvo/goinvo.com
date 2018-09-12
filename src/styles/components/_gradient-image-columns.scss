@@ -1,0 +1,64 @@
+.gradient-image-columns {
+  position: relative;
+
+  .left {
+    display: flex;
+
+    @include mq($from: large) {
+      order: 1;
+    }
+  }
+
+  .right {
+    height: 300px;
+
+    @include mq($from: large) {
+      height: 100%;
+      order: 2;
+    }
+  }
+
+  &__content-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: $spacing;
+
+    @include mq($from: large) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__content {
+    @include mq($from: large) {
+      margin-right: $spacing * 2;
+    }
+  }
+
+  &__gradient {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to top, $color-black 0%, transparent 20%, transparent 100%);
+
+      @include mq($from: large) {
+        background: linear-gradient(to right, $color-black 0%, transparent 20%, transparent 100%);
+      }
+    }
+  }
+
+  @include mq($from: large) {
+    height: 550px;
+  }
+}

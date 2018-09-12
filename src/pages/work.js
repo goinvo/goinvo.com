@@ -9,6 +9,8 @@ import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import Collapsible from '../components/collapsible'
+import ContactForm from '../components/contact-form'
+import GradientImageColumns from '../components/gradient-image-columns'
 
 import Caret from '../assets/images/icon-caret.inline.svg'
 
@@ -183,8 +185,12 @@ class WorkPage extends Component {
         <Quote quotee="Igor Gershfang" quoteeSub="Walgreens Emerging Tech Director">
           Invo beautifully helped shape our next generation clinician and patient experience.
         </Quote>
+        <GradientImageColumns image="home/culture-2017.jpg">
+          <h2 className="header--xl text--white">Want to take your healthcare product to the next level?</h2>
+          <ContactForm />
+        </GradientImageColumns>
         <div className="background--blue">
-          <div className="max-width content-padding pad-vertical">
+          <div className="max-width content-padding pad-vertical pad-top--crazy">
             <h4 className="header--sm">Up next</h4>
             <Columns columns={3}>
               { upNextList.map(item => {

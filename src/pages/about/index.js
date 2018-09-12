@@ -6,6 +6,8 @@ import Hero from '../../components/hero'
 import ImageBlock from '../../components/image-block'
 import TeamMember from '../../components/team-member'
 import Image from '../../components/image'
+import Columns from '../../components/columns'
+import Card from '../../components/card'
 
 import team from '../../data/team.json'
 
@@ -31,6 +33,27 @@ const ethics = [
     content: 'We craft ideas and products that are both useful and beautiful.'
   }
 ]
+
+const upNextList = [
+  {
+    link: "/work/",
+    image: "features/determinants-of-health/feature_banner.jpg",
+    title: "Open Source Healthcare Journal",
+    caption: "OS will improve the healthcare system by empowering interoperability, with open data standards, for better patient outcomes."
+  },
+  {
+    link: "/work/",
+    image: "features/determinants-of-health/feature_banner.jpg",
+    title: "Open source healthcare products",
+    caption: "Learn about our opensource projects and why we’re passionate about making healthcare open."
+  },
+  {
+    link: "/vision/",
+    image: "features/determinants-of-health/feature_banner.jpg",
+    title: "Why we cook and eat together",
+    caption: "Cause we like food."
+  }
+];
 
 const AboutPage = () => (
   <Layout>
@@ -133,6 +156,24 @@ const AboutPage = () => (
             <Image src="new/test_2000.jpg" className="image--max-width" />
           </div>
         </div>
+      </div>
+    </div>
+    <div className="background--blue">
+      <div className="max-width content-padding pad-vertical">
+        <h4 className="header--sm">Up next</h4>
+        <Columns columns={3}>
+          { upNextList.map(item => {
+            return (
+              <Card key={item.link} link={item.link}>
+                <ImageBlock
+                  title={item.title}
+                  image={item.image}
+                  caption={item.caption}
+                  hoverable />
+              </Card>
+            )
+          })}
+        </Columns>
       </div>
     </div>
   </Layout>

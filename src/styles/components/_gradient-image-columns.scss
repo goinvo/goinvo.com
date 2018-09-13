@@ -37,6 +37,23 @@
     }
   }
 
+  &__image--arrow {
+    @include mq($from: large) {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -.75rem;
+        top: $spacing * 3.5;
+        width: 0;
+        height: 0;
+        border-top: .75rem solid transparent;
+        border-bottom: .75rem solid transparent;
+        border-left: .75rem solid $color-primary;
+      }
+    }
+  }
+
   &__gradient {
     &:after {
       content: '';
@@ -64,6 +81,18 @@
         height: auto;
         width: auto;
         margin-left: 0;
+      }
+    }
+
+    #{$parent}__image--arrow {
+      @include mq($from: large) {
+        &:after {
+          content: '';
+          right: auto;
+          left: -.75rem;
+          border-left: 0;
+          border-right: .75rem solid $color-primary;
+        }
       }
     }
 

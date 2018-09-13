@@ -8,7 +8,7 @@ class GradientImageColumns extends Component {
       <div className={`gradient-image-columns ${this.props.backgroundColor ? `background--${this.props.backgroundColor}` : ''} ${this.props.reverse ? 'gradient-image-columns--reverse' : ''}`}>
         <div className="max-width content-padding">
           <div className="pure-u-1 pure-u-lg-1-2 left">
-            <div className={`gradient-image-columns__image ${this.props.gradient ? 'gradient-image-columns__gradient' : ''}`}>
+            <div className={`gradient-image-columns__image ${this.props.gradient ? 'gradient-image-columns__gradient' : ''} ${this.props.arrow ? 'gradient-image-columns__image--arrow' : ''}`}>
               <BackgroundImage src="home/culture-2017.jpg" />
             </div>
           </div>

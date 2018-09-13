@@ -52,6 +52,11 @@ $directions: 'top' 'bottom' 'left' 'right';
   margin-top: $spacing;
   margin-bottom: $spacing;
 
+  &--half {
+    margin-top: $spacing / 2;
+    margin-bottom: $spacing / 2;
+  }
+
   &--double {
     margin-top: $spacing * 2;
     margin-bottom: $spacing * 2;

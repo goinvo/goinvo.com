@@ -1,0 +1,22 @@
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    width: 25%;
+    height: 70px;
+
+    @include mq($from: medium) {
+      height: 80px;
+    }
+
+    @include mq($from: large) {
+      width: 20%;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

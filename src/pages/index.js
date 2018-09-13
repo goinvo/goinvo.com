@@ -10,6 +10,7 @@ import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import ContactForm from '../components/contact-form'
 import Image from '../components/image'
+import ClientLogos from '../components/client-logos'
 
 import caseStudies from '../data/case-study-list.json'
 
@@ -59,9 +60,11 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <Quote quotee="" quoteeSub="">
-      Placeholder
-    </Quote>
+    <div className="background--gray pad-vertical--double">
+      <div className="max-width content-padding">
+        <ClientLogos />
+      </div>
+    </div>
     <div className="max-width content-padding">
       <div className="pure-g margin-vertical--double">
         <div className="pure-u-1 pure-u-lg-1-3">

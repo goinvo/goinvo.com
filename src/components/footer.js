@@ -12,7 +12,7 @@ import Twitter from '../assets/images/icon-twitter.inline.svg'
 class Footer extends Component {
   render() {
     return (
-      <div className="footer background--gray">
+      <div className="footer">
         <div className="max-width content-padding pad-vertical pad-top--double">
           <div className="pure-g margin-top">
             <div className="pure-u-1 pure-u-lg-1-2">

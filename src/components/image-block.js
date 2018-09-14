@@ -14,7 +14,7 @@ class ImageBlock extends Component {
   }
 
   render() {
-    const { title, image, client, categories, caption, className, hoverable = false } = this.props;
+    const { title, image, client, date, categories, caption, className, hoverable = false } = this.props;
 
     return (
       <div className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className ? className : ''}`}>
@@ -24,11 +24,12 @@ class ImageBlock extends Component {
         <div className="image-block__text">
           <p className={hoverable ? 'text--bold' : 'header--lg'}>{title}</p>
           {
-            client || (categories && categories.length) ?
+            client || date || (categories && categories.length) ?
               <p className="text--caption">
                 { client ? <span>{client}</span> : null }
-                { client && (categories && categories.length) ? <span> | </span> : null }
+                { client && (date || (categories && categories.length)) ? <span> | </span> : null }
                 { (categories && categories.length) ? <span>{this.formatCategories(categories)}</span> : null }
+                { date ? <span>{date}</span> : null }
               </p>
             : null
           }

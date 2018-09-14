@@ -2,12 +2,20 @@
   background-color: $color-white;
   text-decoration: none;
   color: $color-black;
-  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.08);
-  transition: box-shadow $transition-duration--card;
 
   &:hover,
   &:focus {
     color: $color-black;
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &--shadow {
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.08);
+    transition: box-shadow $transition-duration--card;
+
+    &:hover,
+    &:focus {
+      box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+
   }
 }

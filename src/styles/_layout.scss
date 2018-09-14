@@ -91,3 +91,12 @@ body {
     display: block;
   }
 }
+
+.float {
+  &--left {
+    float: left;
+  }
+  &--right {
+    float: right;
+  }
+}

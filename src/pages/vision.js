@@ -121,14 +121,14 @@ const VisionPage = () => (
           </div>
         </div>
         <div className="pure-g">
-          <div className="pure-u-1 pure-u-lg-1-2 border--right pad-right--only-lg">
+          <div className="pure-u-1 pure-u-lg-1-2 border-right--only-lg pad-right--only-lg margin-bottom--double">
             <ImageBlock
               title="Keep up to date with us!"
               image="features/determinants-of-health/feature_banner.jpg"
               caption="Our posts cover everything from the theories behind messy desks to health data standardization." />
             <a className="float--right" href="https://medium.com/@goinvo" target="_blank" rel="noopener noreferrer">View all articles on Medium</a>
           </div>
-          <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
+          <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
             <ImageBlock
               title="The Digital Life"
               image="features/determinants-of-health/feature_banner.jpg"

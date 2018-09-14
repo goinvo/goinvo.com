@@ -37,7 +37,13 @@
 }
 
 .border {
-  &--right {
+  &-right {
     border-right: 1px solid $color-gray--medium;
+
+    &--only-lg {
+      @include mq($from: large) {
+        border-right: 1px solid $color-gray--medium;
+      }
+    }
   }
 }

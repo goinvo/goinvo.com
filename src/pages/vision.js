@@ -31,24 +31,26 @@ const VisionPage = () => (
     <div className="max-width content-padding pad-vertical--double">
       <h3 className="header--sm">Spotlight</h3>
       <div className="pure-g">
-        <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg">
-          <Card link="/vision/determinants-of-health" noShadow>
+        <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
+          <Card link="/vision/determinants-of-health" fillHeight>
             <ImageBlock
               title="Social determinants of health"
               image="features/determinants-of-health/feature_banner.jpg"
               client="Feature"
               date="Oct.2016"
-              caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health." />
+              caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
+              hoverable />
           </Card>
         </div>
-        <div className="pure-u-1 pure-u-lg-1-3 pad-left--only-lg">
-          <Card link="/vision/determinants-of-health" noShadow>
+        <div className="pure-u-1 pure-u-lg-1-3 margin-bottom">
+          <Card link="/vision/determinants-of-health" fillHeight>
             <ImageBlock
               title="Social determinants of health"
               image="features/determinants-of-health/feature_banner.jpg"
               client="Feature"
               date="Oct.2016"
-              caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health." />
+              caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
+              hoverable />
           </Card>
         </div>
       </div>
@@ -116,7 +118,7 @@ const VisionPage = () => (
           <div className="pure-u-1 pure-u-lg-1-2">
             <h3 className="header--sm">Blog & Article Posts</h3>
           </div>
-          <div className="pure-u-1 pure-u-lg-1-2">
+          <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
             <h3 className="header--sm">Podcast</h3>
           </div>
         </div>

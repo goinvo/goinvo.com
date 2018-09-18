@@ -64,7 +64,7 @@ class VisionPage extends Component {
   renderBlogFeed = () => {
     return this.state.blogPosts.map(post => {
       return (
-        <li>
+        <li key={post.link}>
           <Card link={post.link} className="pad-all margin-bottom">
             <div className="text--bold">{post.title}</div>
             <span className="text--gray">{post.date}</span>
@@ -150,7 +150,7 @@ class VisionPage extends Component {
           <div className="max-width content-padding">
             <h3 className="header--sm">Most recent features</h3>
             <Columns columns={3}>
-              <Card link="/vision/determinants-of-health">
+              <Card link="/vision/determinants-of-health" key="one">
                 <ImageBlock
                   title="Social determinants of health"
                   image="features/determinants-of-health/feature_banner.jpg"
@@ -159,7 +159,7 @@ class VisionPage extends Component {
                   caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
                   hoverable />
               </Card>
-              <Card link="/vision/determinants-of-health">
+              <Card link="/vision/determinants-of-health" key="two">
                 <ImageBlock
                   title="Social determinants of health"
                   image="features/determinants-of-health/feature_banner.jpg"
@@ -168,7 +168,7 @@ class VisionPage extends Component {
                   caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
                   hoverable />
               </Card>
-              <Card link="/vision/determinants-of-health">
+              <Card link="/vision/determinants-of-health" key="three">
                 <ImageBlock
                   title="Social determinants of health"
                   image="features/determinants-of-health/feature_banner.jpg"

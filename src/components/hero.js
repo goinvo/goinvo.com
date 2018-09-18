@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Image from './image'
+import BackgroundImage from './background-image'
 import Logo from '../assets/images/logo-goinvo.inline.svg'
 
 class Hero extends Component {
@@ -10,7 +10,7 @@ class Hero extends Component {
     return (
       <div className={`hero ${isLarge ? 'hero--large' : ''}`}>
         <div className="hero__image-container">
-          <Image src={image} className="hero__image" alt="" />
+          <BackgroundImage src={image} className="hero__image" />
         </div>
         { children ?
           <div className="hero__content max-width">

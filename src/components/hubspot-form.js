@@ -23,6 +23,7 @@ class HubspotForm extends Component {
               }
             }}
           />
+          { this.props.children }
         </div>
       </Card>
     )

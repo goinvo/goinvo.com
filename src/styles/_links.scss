@@ -29,3 +29,16 @@ a {
     fill: $color-black;
   }
 }
+
+.publication-links {
+  flex-wrap: wrap;
+
+  li {
+    flex-basis: 21%;
+    flex-grow: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}

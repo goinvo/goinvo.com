@@ -84,6 +84,12 @@ $directions: 'top' 'bottom' 'left' 'right';
         padding-#{$direction}: $spacing;
       }
     }
+
+    &--until-lg {
+      @include mq($until: large) {
+        padding-#{$direction}: $spacing;
+      }
+    }
   }
 
   .margin-#{$direction} {
@@ -103,6 +109,12 @@ $directions: 'top' 'bottom' 'left' 'right';
 
     &--only-lg {
       @include mq($from: large) {
+        margin-#{$direction}: $spacing;
+      }
+    }
+
+    &--until-lg {
+      @include mq($until: large) {
         margin-#{$direction}: $spacing;
       }
     }

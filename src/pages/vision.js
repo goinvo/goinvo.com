@@ -15,6 +15,14 @@ import Medium from '../assets/images/icon-medium.inline.svg'
 import SoundCloud from '../assets/images/icon-soundcloud.inline.svg'
 import Twitter from '../assets/images/icon-twitter.inline.svg'
 
+import atlantic from '../assets/images/publication-logos/logo-atlantic.png'
+import forbes from '../assets/images/publication-logos/logo-forbes.png'
+import lancet from '../assets/images/publication-logos/logo-lancet.png'
+import newScientist from '../assets/images/publication-logos/logo-new-scientist.png'
+import npr from '../assets/images/publication-logos/logo-npr.png'
+import ted from '../assets/images/publication-logos/logo-ted.png'
+import wired from '../assets/images/publication-logos/logo-wired.png'
+
 import config from '../../config'
 
 const VisionPage = () => (
@@ -30,8 +38,33 @@ const VisionPage = () => (
           <div className="pure-u-1 pure-u-lg-1-3">
             <h2 className="header--lg margin--none pad-right--double">Our design and analysis has been featured in<span className="text--serif text--primary">...</span></h2>
           </div>
-          <div className="pure-u-1 pure-u-lg-2-3">
-
+          <div className="pure-u-1 pure-u-lg-2-3 margin-top--until-lg">
+            {
+              // TODO: Need real links here.
+            }
+            <ul className="publication-links list--unstyled container container--justify-space-around container--align-center container--fill-height">
+              <li>
+                <a href="#"><img src={npr} /></a>
+              </li>
+              <li>
+                <a href="#"><img src={forbes} /></a>
+              </li>
+              <li>
+                <a href="#"><img src={atlantic} /></a>
+              </li>
+              <li className="hidden--until-lg">
+                <a href="#"><img src={ted} /></a>
+              </li>
+              <li>
+                <a href="#"><img src={lancet} /></a>
+              </li>
+              <li className="hidden--until-lg">
+                <a href="#"><img src={newScientist} /></a>
+              </li>
+              <li className="hidden--until-lg">
+                <a href="#"><img src={wired} /></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

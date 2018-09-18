@@ -8,6 +8,14 @@ import ImageBlock from '../components/image-block'
 import Columns from '../components/columns'
 import Image from '../components/image'
 import Quote from '../components/quote'
+import HubspotForm from '../components/hubspot-form'
+
+import Flickr from '../assets/images/icon-flickr.inline.svg'
+import Medium from '../assets/images/icon-medium.inline.svg'
+import SoundCloud from '../assets/images/icon-soundcloud.inline.svg'
+import Twitter from '../assets/images/icon-twitter.inline.svg'
+
+import config from '../../config'
 
 const VisionPage = () => (
   <Layout>
@@ -109,8 +117,39 @@ const VisionPage = () => (
         </div>
       </div>
     </div>
-    <div className="background--gray pad-vertical--double">
-
+    <div className="background--gray margin-top--double">
+      <div className="max-width content-padding">
+        <div className="pure-g">
+          <div className="pure-u-1 pure-u-lg-3-5">
+            <HubspotForm
+              formId={config.hubspotNewsletterFormId}
+              title="Get our latest ideas"
+              submitButtonText="Submit"
+              inline
+              className="margin-bottom"
+              breakout />
+          </div>
+          <div className="pure-u-1 pure-u-lg-2-5 pad-left--only-lg margin-top--only-sm">
+            <ul className="social-links list--unstyled container container--justify-space-around container--align-center container--fill-height">
+              <li className="margin-left--only-lg">
+                <span className="text--gray">Find us on:</span>
+              </li>
+              <li>
+                <a href="https://twitter.com/goinvo"><Twitter className="icon icon--lg" /></a>
+              </li>
+              <li>
+                <a href="https://medium.com/@goinvo"><Medium className="icon icon--lg" /></a>
+              </li>
+              <li>
+                <a href="https://www.flickr.com/photos/juhansonin/"><Flickr className="icon icon--lg" /></a>
+              </li>
+              <li>
+                <a href="https://soundcloud.com/involution-studios"><SoundCloud className="icon icon--lg" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <div className="background--blue pad-vertical--double">
       <div className="max-width content-padding">
@@ -140,7 +179,7 @@ const VisionPage = () => (
               width="100%"
               height="450"
               scrolling="no"
-              frameborder="no"
+              frameBorder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/14454933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
             </iframe>

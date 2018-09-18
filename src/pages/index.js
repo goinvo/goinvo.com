@@ -8,9 +8,11 @@ import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
-import ContactForm from '../components/contact-form'
+import HubspotForm from '../components/hubspot-form'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
+
+import config from '../../config'
 
 import caseStudies from '../data/case-study-list.json'
 
@@ -144,7 +146,7 @@ const IndexPage = () => (
             </div>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2">
-            <ContactForm />
+            <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
           </div>
         </div>
       </div>

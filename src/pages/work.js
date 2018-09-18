@@ -9,8 +9,10 @@ import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import Collapsible from '../components/collapsible'
-import ContactForm from '../components/contact-form'
+import HubspotForm from '../components/hubspot-form'
 import GradientImageColumns from '../components/gradient-image-columns'
+
+import config from '../../config'
 
 import Caret from '../assets/images/icon-caret.inline.svg'
 
@@ -187,7 +189,7 @@ class WorkPage extends Component {
         </Quote>
         <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="black" gradient offsetContent reverse>
           <h2 className="header--xl text--white">Want to take your healthcare product to the next level?</h2>
-          <ContactForm />
+          <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
         </GradientImageColumns>
         <div className="background--blue">
           <div className="max-width content-padding pad-vertical pad-top--crazy">

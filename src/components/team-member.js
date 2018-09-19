@@ -22,7 +22,7 @@ class TeamMember extends Component {
             <div className="pad-left--only-lg">
               <p className="text--bold margin-top--none margin-bottom--half">{name}</p>
               <p className="text--gray margin--none">{title}</p>
-              <ul className="social-links list--unstyled container container--justify-space-around container--align-center">
+              <ul className="social-links list--unstyled container container--align-center">
                 {
                   social.email ?
                     <li><a href={social.email}><Email className="icon icon--md" /></a></li>

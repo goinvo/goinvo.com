@@ -32,13 +32,44 @@ class BackgroundImage extends Component {
   }
 
   render() {
+    const backgroundImageUrl = this.props.notResponsive ? imageUrl(this.props.src) + '?w=800' : this.state.src;
+    const backgroundProperty = `
+      ${
+        this.props.gradient ?
+          'linear-gradient(' +
+            'to top,' +
+            '#F3F1F0 0%,' +
+            'rgba(237, 233, 230, 0.9932) 20%,' +
+            'rgba(234, 228, 225, 0.9893) 25%,' +
+            'rgba(234, 228, 225, 0.8979) 40%,' +
+            'rgba(234, 228, 225, 0.82) 55%,' +
+            'rgba(234, 228, 225, 0.538) 70%,' +
+            'rgba(234, 228, 225, 0) 100%' +
+          '), '
+        : ''
+      }
+      url(${backgroundImageUrl})
+      ${
+        this.props.gradient ?
+          ' top center / cover no-repeat'
+        : ''
+      }`;
+    const style = {};
+
+    if (this.props.gradient) {
+      style.background = backgroundProperty;
+    } else {
+      style.backgroundImage = backgroundProperty;
+    }
+
     return (
-      <div className="background-image" style={{ backgroundImage: `url(${this.props.notResponsive ? imageUrl(this.props.src) + '?w=800' : this.state.src})` }}>
+      <div className={`background-image`} style={style}>
         {
           !this.props.notResponsive ?
             <Image src={ this.props.src } className="background-image__image" onUpdate={this.updateSrc} ref={this.img} />
           : null
         }
+        { this.props.children }
       </div>
     )
   }

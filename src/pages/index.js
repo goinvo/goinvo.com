@@ -16,9 +16,14 @@ import config from '../../config'
 
 import caseStudies from '../data/case-study-list.json'
 
+const heroVideoSources = [
+  {src: "new/sdoh4_lg.mp4", format: "mp4"},
+  {src: "new/sdoh4_lg.webm", format: "webm"}
+]
+
 const IndexPage = () => (
   <Layout>
-    <Hero image="features/careplans/part3/hero_image.jpg" caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments." isLarge withLogo>
+    <Hero video={heroVideoSources} caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments." isLarge withLogo>
       <h1 className="header--xl">
         Designing<br/>
         the future of<br/>

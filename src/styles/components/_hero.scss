@@ -2,8 +2,20 @@
   $parent: &;
   display: block;
 
-  &__image-container {
+  &__image-container,
+  &__video-container {
     height: 300px;
+  }
+
+  &__video-container {
+    overflow: hidden;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
   }
 
   &__image {
@@ -51,7 +63,8 @@
   }
 
   &--large {
-    #{$parent}__image-container {
+    #{$parent}__image-container,
+    #{$parent}__video-container {
       @include mq($from: large) {
         height: 530px;
       }

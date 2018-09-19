@@ -3,15 +3,31 @@ import React, { Component } from 'react'
 import BackgroundImage from './background-image'
 import Logo from '../assets/images/logo-goinvo.inline.svg'
 
+import { videoUrl } from '../helpers'
+
 class Hero extends Component {
   render() {
-    let { image, caption, isLarge, withLogo, children } = this.props;
+    let { image, video, caption, isLarge, withLogo, children } = this.props;
 
     return (
       <div className={`hero ${isLarge ? 'hero--large' : ''}`}>
-        <div className="hero__image-container">
-          <BackgroundImage src={image} className="hero__image" />
-        </div>
+        {
+          image ?
+            <div className="hero__image-container">
+              <BackgroundImage src={image} className="hero__image" />
+            </div>
+          : null
+        }
+        {
+          video ?
+            <div className="hero__video-container">
+              <video className="hero__video" autoplay="true" muted="true">
+                {video.map(src => <source key={src.format} src={videoUrl(src.src)} type={`video/${src.format}`} />)}
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          : null
+        }
         { children ?
           <div className="hero__content max-width">
             <div className="hero__title">

@@ -19,7 +19,7 @@ const ContactPage = () => (
               target="_blank"
               rel="noopener noreferrer">
               <div>661 Massachusetts Ave, 3rd Floor,</div>
-              <div>Arlington, MA, 02476</div>
+              <div>Arlington, MA 02476</div>
             </a>
           </div>
         </HubspotForm>

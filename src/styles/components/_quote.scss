@@ -1,4 +1,5 @@
 .quote {
+  $parent: &;
   @extend .background--gray;
   padding: $spacing;
 
@@ -24,30 +25,41 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-
-      @include mq($from: large) {
-        width: 30px;
-        height: 30px;
-      }
     }
 
     &:before {
       top: -25px;
-
-      @include mq($from: large) {
-        top: -35px;
-        left: -35px;
-      }
     }
 
     &:after {
       bottom: -25px;
       right: 0;
       transform: rotateX(180deg) scaleX(-1);
+    }
+  }
 
-      @include mq($from: large) {
-        bottom: -35px;
-        right: -35px;
+  &--lg {
+    #{$parent}__content {
+      &:before,
+      &:after {
+        @include mq($from: large) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &:before {
+        @include mq($from: large) {
+          top: -35px;
+          left: -35px;
+        }
+      }
+
+      &:after {
+        @include mq($from: large) {
+          bottom: -35px;
+          right: -35px;
+        }
       }
     }
   }

@@ -2,8 +2,8 @@ import React from 'react'
 
 import Divider from './divider'
 
-const Quote = ({ quotee, quoteeSub, children }) => (
-  <div className="quote">
+const Quote = ({ quotee, quoteeSub, small, children }) => (
+  <div className={`quote ${small ? '' : 'quote--lg'}`}>
     <div className="quote__inner-container max-width max-width--sm">
       <Divider />
       <p className="quote__content header--lg">{children}</p>

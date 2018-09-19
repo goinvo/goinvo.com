@@ -41,7 +41,12 @@ class Footer extends Component {
               <div className="pure-u-1-2">
                 <ul className="list--unstyled">
                   <li><Link to="/contact/">Contact Us</Link></li>
-                  <li><a target="blank" href="https://www.google.com/maps/place/661+Massachusetts+Ave,+Arlington,+MA+02476/@42.4161234,-71.1563006,17z/">661 Mass Ave Arlington MA 02476</a></li>
+                  <li>
+                    <a target="blank" href="https://www.google.com/maps/place/661+Massachusetts+Ave,+Arlington,+MA+02476/@42.4161234,-71.1563006,17z/">
+                      661 Mass Ave<br/>
+                      Arlington, MA 02476
+                    </a>
+                  </li>
                   <li><a href="mailto:info@goinvo.com">info@goinvo.com</a></li>
                 </ul>
               </div>

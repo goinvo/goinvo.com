@@ -9,6 +9,8 @@ import Columns from '../components/columns'
 import Image from '../components/image'
 import Quote from '../components/quote'
 import HubspotForm from '../components/hubspot-form'
+import Carousel from '../components/carousel'
+import GradientImageColumns from '../components/gradient-image-columns'
 
 import Flickr from '../assets/images/icon-flickr.inline.svg'
 import Medium from '../assets/images/icon-medium.inline.svg'
@@ -274,14 +276,23 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--gray pad-vertical--double">
-          <div className="max-width content-padding">
-            <h3 className="header--sm text--center">Designing for Emerging Technologies</h3>
-            <Quote quotee="Carla Diana, Creative Technologist and Author">
-              This book is a must-read for anyone involved in innovative product design, new business creation, or technology research for near future applications. The wide collection of essays offers a wild ride across multiple disciplines.
-            </Quote>
-          </div>
+        <div className="max-width content-padding pad-top">
+          <h2 className="header--xl margin-bottom--none">Reviews for<span className="text--serif text--primary">...</span></h2>
         </div>
+        <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>
+          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+            <Quote quotee="Dan Saffer" quoteeSub="Author of Microinteractions" small>If you're looking for insights how to design the future today, look no further.</Quote>
+          </GradientImageColumns>
+          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+            <Quote quotee="Nobody" quoteeSub="Nothing" small>Quote about DOH</Quote>
+          </GradientImageColumns>
+          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+            <Quote quotee="Eric Topol" quoteeSub="Scripps Translational Science Institute" small>Designers at GoInvo have the right ideas for the smart medical home of the future.</Quote>
+          </GradientImageColumns>
+          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+            <Quote quotee="Janet Campbell" quoteeSub="Epic" small>I sent this around to our User Experience team here, and there was a lot of discussion and appreciation for the work you've done.</Quote>
+          </GradientImageColumns>
+        </Carousel>
       </Layout>
     )
   }

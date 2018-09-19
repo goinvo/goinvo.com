@@ -13,6 +13,7 @@
 
   &__menu-item {
     position: relative;
+    display: flex;
     border-top: $carousel-menu-item-border;
 
     .button {

@@ -8,8 +8,8 @@
   &--black {
     background-color: $color-black;
   }
-  &--semi-transparent {
-    background-color: transparentize($color-white, .2);
+  &--white {
+    background-color: $color-white;
   }
 }
 

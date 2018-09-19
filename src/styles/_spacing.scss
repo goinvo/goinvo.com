@@ -11,6 +11,10 @@ $directions: 'top' 'bottom' 'left' 'right';
   &--half {
     padding: $spacing / 2;
   }
+
+  &--quad {
+    padding: $spacing * 4;
+  }
 }
 
 .pad-horizontal {
@@ -30,6 +34,11 @@ $directions: 'top' 'bottom' 'left' 'right';
   &--double {
     padding-top: $spacing * 2;
     padding-bottom: $spacing * 2;
+  }
+
+  &--quad {
+    padding-top: $spacing * 4;
+    padding-bottom: $spacing * 4;
   }
 }
 
@@ -131,4 +140,10 @@ $directions: 'top' 'bottom' 'left' 'right';
 
 .pad-top--crazy {
   padding-top: $spacing * 4;
+}
+
+.pad--only-lg {
+  @include mq($until: large) {
+    padding: 0 !important;
+  }
 }

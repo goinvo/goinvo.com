@@ -24,7 +24,7 @@ body {
   }
 
   &--md {
-    max-width: 700px;
+    max-width: 775px;
   }
 }
 
@@ -59,6 +59,16 @@ body {
   @include mq($from: large) {
     padding-left: $spacing * 2;
     padding-right: $spacing * 2;
+  }
+
+  &--double {
+    padding-left: $spacing;
+    padding-right: $spacing;
+
+    @include mq($from: large) {
+      padding-left: $spacing * 4;
+      padding-right: $spacing * 4;
+    }
   }
 }
 

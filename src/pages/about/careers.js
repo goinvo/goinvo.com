@@ -57,9 +57,9 @@ class CareersPage extends Component {
           </GradientImageColumns>
         </Carousel>
         <BackgroundImage src="home/culture-2017.jpg" gradient>
-          <div className="pad-vertical--double">
-            <div className="background--white max-width max-width--md pad-all--double">
-              <h2 className="header--xl margin-top--none">Working together towards a health groove</h2>
+          <div className="pad-vertical--quad pad--only-lg">
+            <div className="background--white max-width max-width--md content-padding--double pad-vertical--quad">
+              <h2 className="header--xl margin-top--none">Working together towards a healthy groove</h2>
               <p>We’re looking for a designer and an engineer to join our intimate studio.</p>
               <p>If you’re familiar with our work, you know we design, build, and ship beautiful health software for companies of all sizes, like Apple, Johnson & Johnson, NIH (National Institutes of Health), and Walgreens, to micro startups. We are hyper-concerned about guiding people through tough decisions, and produce eyebrow-raising results.</p>
               <p>Our idealized candidate can be described in this way:</p>

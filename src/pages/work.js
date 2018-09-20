@@ -104,7 +104,7 @@ class WorkPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero image="home/family-doctor-visit-diabetes.jpg">
+        <Hero image="/images/work/dr-emily.jpg">
           <h1 className="header--xl">
             Patient tested<span className="text--serif text--primary">.</span><br/>
             Clinician approved<span className="text--serif text--primary">.</span>
@@ -160,6 +160,9 @@ class WorkPage extends Component {
         </Collapsible>
         <div className="max-width content-padding">
           <div className="margin-top--double">
+            {
+              // TODO: Real images here
+            }
             <Columns columns={2}>
               { this.state.caseStudies.map(study => {
                 return (
@@ -187,6 +190,9 @@ class WorkPage extends Component {
         <Quote quotee="Igor Gershfang" quoteeSub="Walgreens Emerging Tech Director">
           Invo beautifully helped shape our next generation clinician and patient experience.
         </Quote>
+        {
+          // TODO: Real image here
+        }
         <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="black" gradient offsetContent reverse>
           <h2 className="header--xl text--white">Want to take your healthcare product to the next level?</h2>
           <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
@@ -194,6 +200,9 @@ class WorkPage extends Component {
         <div className="background--blue">
           <div className="max-width content-padding pad-vertical pad-top--crazy">
             <h4 className="header--sm">Up next</h4>
+            {
+              // TODO: Real images here
+            }
             <Columns columns={3}>
               { upNextList.map(item => {
                 return (

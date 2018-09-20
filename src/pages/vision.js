@@ -34,7 +34,8 @@ class VisionPage extends Component {
     super(props);
 
     this.state = {
-      blogPosts: []
+      blogPosts: [],
+      recentBlogPostImage: '',
     }
   }
 
@@ -46,7 +47,6 @@ class VisionPage extends Component {
     axios.get(config.rssToJsonServiceUrl + config.hubspotBlogFeedUrl)
       .then(res => {
         const blogPosts = [];
-
         res.data.items.slice(0, 5).map(item => {
           return blogPosts.push({
             title: item.title,
@@ -55,7 +55,10 @@ class VisionPage extends Component {
           })
         })
 
-        this.setState({ blogPosts });
+        this.setState({
+          blogPosts,
+          recentBlogPostImage: res.data.items[0].thumbnail
+        });
       })
       .catch(err => {
         console.log("Couldn't fetch hubspot blog posts", err);
@@ -79,7 +82,7 @@ class VisionPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero image="products/hero.png">
+        <Hero image="/images/vision/vision-hero.jpg">
           <h1 className="header--xl">
             Seeing the future of health<span className="text--serif text--primary">.</span>
           </h1>
@@ -136,6 +139,9 @@ class VisionPage extends Component {
           <h3 className="header--sm">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
+              {
+                // TODO: Real images here
+              }
               <Card link="/vision/determinants-of-health" fillHeight>
                 <ImageBlock
                   title="Social determinants of health"
@@ -162,6 +168,9 @@ class VisionPage extends Component {
         <div className="background--blue pad-vertical--double">
           <div className="max-width content-padding">
             <h3 className="header--sm">Most recent features</h3>
+            {
+              // TODO: Real images here
+            }
             <Columns columns={3}>
               <Card link="/vision/determinants-of-health" key="one">
                 <ImageBlock
@@ -198,7 +207,7 @@ class VisionPage extends Component {
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
               <div className="container container--column container--justify-center container--fill-height">
-                <Image src="new/test_2000.jpg" className="image--max-width" />
+                <Image src="/images/vision/emerging-tech-books.jpg" className="image--max-width" />
               </div>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
@@ -261,7 +270,7 @@ class VisionPage extends Component {
               <div className="pure-u-1 pure-u-lg-1-2 border-right--only-lg pad-right--only-lg margin-bottom--double">
                 <ImageBlock
                   title="Keep up to date with us!"
-                  image="features/determinants-of-health/feature_banner.jpg"
+                  externalImage={this.state.recentBlogPostImage}
                   caption="Our posts cover everything from the theories behind messy desks to health data standardization." />
                 <ul className="list--unstyled">
                   { this.renderBlogFeed() }
@@ -269,6 +278,9 @@ class VisionPage extends Component {
                 <a className="float--right" href="https://yes.goinvo.com/articles">View all blog posts</a>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+                {
+                  // TODO: Real image here
+                }
                 <ImageBlock
                   title="The Digital Life"
                   image="features/determinants-of-health/feature_banner.jpg"
@@ -290,6 +302,9 @@ class VisionPage extends Component {
         <div className="max-width content-padding pad-top">
           <h2 className="header--xl margin-bottom--none">Reviews for<span className="text--serif text--primary">...</span></h2>
         </div>
+        {
+          // TODO: Real images here
+        }
         <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>
           <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote quotee="Dan Saffer" quoteeSub="Author of Microinteractions" small>If you're looking for insights how to design the future today, look no further.</Quote>

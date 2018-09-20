@@ -14,12 +14,16 @@ class ImageBlock extends Component {
   }
 
   render() {
-    const { title, image, sizes = null, client, date, categories, caption, className, hoverable = false } = this.props;
+    const { title, image, externalImage, sizes = null, client, date, categories, caption, className, hoverable = false } = this.props;
 
     return (
       <div className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className ? className : ''}`}>
         <div className="image-block__image-container">
-          <Image src={image} sizes={sizes} className="image-block__image" />
+          {
+            externalImage ?
+              <img src={externalImage} className="image-block__image" />
+            : <Image src={image} sizes={sizes} className="image-block__image" />
+          }
         </div>
         <div className="image-block__text">
           <p className={hoverable ? 'text--bold' : 'header--lg'}>{title}</p>

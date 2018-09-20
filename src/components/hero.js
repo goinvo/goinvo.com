@@ -21,7 +21,7 @@ class Hero extends Component {
         {
           video ?
             <div className="hero__video-container">
-              <video className="hero__video" autoPlay="true" muted="true">
+              <video className="hero__video" autoPlay muted playsInline>
                 {video.map(src => <source key={src.format} src={mediaUrl(src.src)} type={`video/${src.format}`} />)}
                 Your browser does not support the video tag.
               </video>

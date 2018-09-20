@@ -44,23 +44,23 @@ class VisionPage extends Component {
 
   getBlogFeed = () => {
     axios.get(config.rssToJsonServiceUrl + config.hubspotBlogFeedUrl)
-     .then(res => {
-       const blogPosts = [];
+      .then(res => {
+        const blogPosts = [];
 
-       res.data.items.slice(0, 5).map(item => {
-         blogPosts.push({
-           title: item.title,
-           date: formatDate(item.pubDate),
-           link: item.link,
-         })
-       })
+        res.data.items.slice(0, 5).map(item => {
+          return blogPosts.push({
+            title: item.title,
+            date: formatDate(item.pubDate),
+            link: item.link,
+          })
+        })
 
-       this.setState({ blogPosts });
-     })
-     .catch(err => {
-       console.log("Couldn't fetch hubspot blog posts", err);
-       setTimeout(this.getBlogFeed, 5000);
-     })
+        this.setState({ blogPosts });
+      })
+      .catch(err => {
+        console.log("Couldn't fetch hubspot blog posts", err);
+        setTimeout(this.getBlogFeed, 5000);
+      })
   }
 
   renderBlogFeed = () => {
@@ -91,30 +91,41 @@ class VisionPage extends Component {
                 <h2 className="header--lg margin--none pad-right--double">Our design and analysis has been featured in<span className="text--serif text--primary">...</span></h2>
               </div>
               <div className="pure-u-1 pure-u-lg-2-3 margin-top--until-lg">
-                {
-                  // TODO: Need real links here.
-                }
                 <ul className="publication-links list--unstyled container container--justify-space-around container--align-center container--fill-height">
                   <li>
-                    <a href="#"><img src={npr}alt="NPR logo" /></a>
+                    <a href="https://www.npr.org/sections/health-shots/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss" target="_blank" rel="noopener noreferrer">
+                      <img src={npr} alt="NPR logo" />
+                    </a>
                   </li>
                   <li>
-                    <a href="#"><img src={forbes}alt="Forbes logo" /></a>
+                    <a href="https://www.forbes.com/sites/oreillymedia/2014/03/07/defining-and-sculpting-interactions-between-man-and-technology/#23f6861d6571" target="_blank" rel="noopener noreferrer">
+                      <img src={forbes} alt="Forbes logo" />
+                    </a>
                   </li>
                   <li>
-                    <a href="#"><img src={atlantic}alt="The Atlantic logo" /></a>
+                    <a href="https://www.theatlantic.com/health/archive/2013/01/the-future-of-medical-records/267202/" target="_blank" rel="noopener noreferrer">
+                      <img src={atlantic} alt="The Atlantic logo" />
+                    </a>
                   </li>
                   <li className="hidden--until-lg">
-                    <a href="#"><img src={ted}alt="TED logo" /></a>
+                    <a href="https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes" target="_blank" rel="noopener noreferrer">
+                      <img src={ted} alt="TED logo" />
+                    </a>
                   </li>
                   <li>
-                    <a href="#"><img src={lancet}alt="The Lancet logo" /></a>
+                    <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)30154-X/fulltext" target="_blank" rel="noopener noreferrer">
+                      <img src={lancet} alt="The Lancet logo" />
+                    </a>
                   </li>
                   <li className="hidden--until-lg">
-                    <a href="#"><img src={newScientist}alt="New Scientist logo" /></a>
+                    <a href="https://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases/" target="_blank" rel="noopener noreferrer">
+                      <img src={newScientist} alt="New Scientist logo" />
+                    </a>
                   </li>
                   <li className="hidden--until-lg">
-                    <a href="#"><img src={wired} alt="Wired logo" /></a>
+                    <a href="https://www.wired.com/2013/01/medical-record-redesign/" target="_blank" rel="noopener noreferrer">
+                      <img src={wired} alt="Wired logo" />
+                    </a>
                   </li>
                 </ul>
               </div>

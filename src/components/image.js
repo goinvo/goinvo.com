@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { imageUrl } from '../helpers'
+import { mediaUrl } from '../helpers'
 
 class Image extends Component {
   constructor(props){
@@ -40,7 +40,7 @@ class Image extends Component {
 
   render() {
     let { src, alt, className, dimensions, sizes } = this.props;
-    src = imageUrl(src);
+    src = mediaUrl(src);
 
     let srcset = dimensions.map(dimension => {
       return `${src}?w=${dimension} ${dimension}w`

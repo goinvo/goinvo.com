@@ -6,9 +6,9 @@
     "social": {
       "email": "juhan@goinvo.com",
       "twitter": "https://twitter.com/jsonin",
-      "linkedin": "https://www.linkedin.com/in/juhansonin"
+      "linkedin": "https://www.linkedin.com/in/juhansonin/"
     },
-    "image": "team_photos/juhan_sonin.jpg"
+    "image": "/images/about/headshot-juhan-sonin.jpg"
   },
   {
     "name": "Eric Benoit",
@@ -16,71 +16,89 @@
     "bio": "Eric Benoit is the Creative Director of GoInvo, leading the studio’s UX creation process from concept to production. Eric works as an interaction designer, experience designer, and information architect, designing better products by thoroughly understanding user behaviors, expectations, and goals. Eric’s background and love for design in the context of human experience helps him transform complex information systems in healthcare and the enterprise into responsive and adaptive human-centered designs.",
     "social": {
       "email": "eric@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/ericbenoitdesigner"
+      "linkedin": "https://www.linkedin.com/in/ericbenoitdesigner/"
     },
-    "image": "team_photos/eric_benoit.jpg"
+    "image": "/images/about/headshot-eric-benoit.jpg"
   },
   {
-    "name": "Juhan Sonin",
-    "title": "Director",
-    "bio": "Juhan Sonin leads GoInvo with expertise in healthcare design and system engineering. He currently lectures on design and engineering at MIT. Previously he’s spent time at, Apple, the National Center for Supercomputing Applications (NCSA) and MITRE.  His work has been recognized by the New York Times, BBC International, and National Public Radio (NPR) and published in The Journal of Participatory Medicine and The Lancet.",
+    "name": "Jen Patel",
+    "title": "Designer, Engineer",
+    "bio": "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the Rochester Institute of Technology.",
     "social": {
-      "email": "juhan@goinvo.com",
-      "twitter": "https://twitter.com/jsonin",
-      "linkedin": "https://www.linkedin.com/in/juhansonin"
+      "email": "jen@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/jennifer-patel-bb118341/"
     },
-    "image": "team_photos/juhan_sonin.jpg"
+    "image": "/images/about/headshot-jen-patel.jpg"
   },
   {
-    "name": "Eric Benoit",
-    "title": "Creative Director",
-    "bio": "Eric Benoit is the Creative Director of GoInvo, leading the studio’s UX creation process from concept to production. Eric works as an interaction designer, experience designer, and information architect, designing better products by thoroughly understanding user behaviors, expectations, and goals. Eric’s background and love for design in the context of human experience helps him transform complex information systems in healthcare and the enterprise into responsive and adaptive human-centered designs.",
+    "name": "Edwin Choi",
+    "title": "Designer",
+    "bio": "Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of Washington University, and has a masters in biomedical design from Johns Hopkins University.",
     "social": {
-      "email": "eric@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/ericbenoitdesigner"
+      "email": "edwin@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/edwinchoi1/"
     },
-    "image": "team_photos/eric_benoit.jpg"
+    "image": "/images/about/headshot-edwin-choi.jpg"
   },
   {
-    "name": "Juhan Sonin",
-    "title": "Director",
-    "bio": "Juhan Sonin leads GoInvo with expertise in healthcare design and system engineering. He currently lectures on design and engineering at MIT. Previously he’s spent time at, Apple, the National Center for Supercomputing Applications (NCSA) and MITRE.  His work has been recognized by the New York Times, BBC International, and National Public Radio (NPR) and published in The Journal of Participatory Medicine and The Lancet.",
+    "name": "Parsuree Vatanasirisuk",
+    "title": "Designer, Illustrator",
+    "bio": "Parsuree is a user experience designer and illustrator with background in industrial design. She enjoys watercolor illustrations and Information design. Parsuree joined Invo in 2018 and is a MFA candidate of the Rochester Institute of Technology (RIT).",
     "social": {
-      "email": "juhan@goinvo.com",
-      "twitter": "https://twitter.com/jsonin",
-      "linkedin": "https://www.linkedin.com/in/juhansonin"
+      "email": "parsuree@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/parsuree-vatanasirisuk/"
     },
-    "image": "team_photos/juhan_sonin.jpg"
+    "image": "/images/about/headshot-parsuree-vatanasirisuk.jpg"
   },
   {
-    "name": "Eric Benoit",
-    "title": "Creative Director",
-    "bio": "Eric Benoit is the Creative Director of GoInvo, leading the studio’s UX creation process from concept to production. Eric works as an interaction designer, experience designer, and information architect, designing better products by thoroughly understanding user behaviors, expectations, and goals. Eric’s background and love for design in the context of human experience helps him transform complex information systems in healthcare and the enterprise into responsive and adaptive human-centered designs.",
+    "name": "Craig McGinley",
+    "title": "Engineer",
+    "bio": "Craig is an engineer devoted to full stack design and development. He brings skillful javascripting, front-end development techniques, and application logic design to software projects. Craig is a Launch Academy graduate, vegan, and a musician.",
     "social": {
-      "email": "eric@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/ericbenoitdesigner"
+      "email": "craig@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/craigmcginley/"
     },
-    "image": "team_photos/eric_benoit.jpg"
+    "image": "/images/about/headshot-craig-mcginley.jpg"
   },
   {
-    "name": "Juhan Sonin",
-    "title": "Director",
-    "bio": "Juhan Sonin leads GoInvo with expertise in healthcare design and system engineering. He currently lectures on design and engineering at MIT. Previously he’s spent time at, Apple, the National Center for Supercomputing Applications (NCSA) and MITRE.  His work has been recognized by the New York Times, BBC International, and National Public Radio (NPR) and published in The Journal of Participatory Medicine and The Lancet.",
+    "name": "Bryson Wong",
+    "title": "Designer",
+    "bio": "Bryson is a designer who spans the gamut of software strategy skills from user research to product design to usability. Bryson joined Invo in 2017 with a degree in Human Factors from Tufts University.",
     "social": {
-      "email": "juhan@goinvo.com",
-      "twitter": "https://twitter.com/jsonin",
-      "linkedin": "https://www.linkedin.com/in/juhansonin"
+      "email": "bryson@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/bryson-wong-0670b984/"
     },
-    "image": "team_photos/juhan_sonin.jpg"
+    "image": "/images/about/headshot-bryson-wong.jpg"
   },
   {
-    "name": "Eric Benoit",
-    "title": "Creative Director",
-    "bio": "Eric Benoit is the Creative Director of GoInvo, leading the studio’s UX creation process from concept to production. Eric works as an interaction designer, experience designer, and information architect, designing better products by thoroughly understanding user behaviors, expectations, and goals. Eric’s background and love for design in the context of human experience helps him transform complex information systems in healthcare and the enterprise into responsive and adaptive human-centered designs.",
+    "name": "Daniel Reeves",
+    "title": "Designer, Engineer",
+    "bio": "Daniel is a designer and developer with a diverse background in building interactive and science-based exhibits to academic research in interdisciplinary physics. He has a PhD in physics and quantitative biology from Brandeis University and held subsequent positions at Harvard and MIT. Daniel joined the GoInvo team in 2018 to build engaging biologic and healthcare services.",
     "social": {
-      "email": "eric@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/ericbenoitdesigner"
+      "email": "daniel@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/danielfreeves/"
     },
-    "image": "team_photos/eric_benoit.jpg"
+    "image": "/images/about/headshot-daniel-reeves.jpg"
+  },
+  {
+    "name": "Sharon Lee",
+    "title": "Designer",
+    "bio": "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia.",
+    "social": {
+      "email": "sharon@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/sharon-lee-a137199/"
+    },
+    "image": "/images/about/headshot-sharon-lee.jpg"
+  },
+  {
+    "name": "Jonathan Follett",
+    "title": "Principal",
+    "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",
+    "social": {
+      "email": "jon@goinvo.com",
+      "twitter": "https://twitter.com/jonfollett",
+      "linkedin": "https://www.linkedin.com/in/jonfollett/"
+    },
+    "image": "/images/about/headshot-jon-follett.jpg"
   }
 ]

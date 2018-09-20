@@ -6,6 +6,8 @@ import Email from '../assets/images/icon-email.inline.svg'
 import LinkedIn from '../assets/images/icon-linkedin.inline.svg'
 import Twitter from '../assets/images/icon-twitter.inline.svg'
 
+import config from '../../config'
+
 class TeamMember extends Component {
   render() {
     const { name, title, bio, social, image } = this.props.member;
@@ -15,7 +17,7 @@ class TeamMember extends Component {
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
             <div className="pad-right--only-lg margin-bottom">
-              <Image src={image} className="image--max-width" />
+              <Image src={image} sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} className="image--max-width" />
             </div>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2">
@@ -25,7 +27,7 @@ class TeamMember extends Component {
               <ul className="social-links list--unstyled container container--align-center">
                 {
                   social.email ?
-                    <li><a href={social.email}><Email className="icon icon--md" /></a></li>
+                    <li><a href={`mailto:${social.email}`}><Email className="icon icon--md" /></a></li>
                   : null
                 }
                 {

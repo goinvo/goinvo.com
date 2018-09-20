@@ -1,11 +1,7 @@
 import config from '../config.js'
 
-export function imageUrl(path) {
-  return `${config.cloudfrontUrl}images/${path}`
-}
-
-export function videoUrl(path) {
-  return `//goinvo.com/videos/${path}`
+export function mediaUrl(path) {
+  return `${config.cloudfrontUrl}${path}`
 }
 
 export function formatDate(date) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { imageUrl } from '../helpers'
+import { mediaUrl } from '../helpers'
 
 import Image from './image'
 
@@ -32,7 +32,7 @@ class BackgroundImage extends Component {
   }
 
   render() {
-    const backgroundImageUrl = this.props.notResponsive ? imageUrl(this.props.src) + '?w=800' : this.state.src;
+    const backgroundImageUrl = this.props.notResponsive ? mediaUrl(this.props.src) + '?w=800' : this.state.src;
     const backgroundProperty = `
       ${
         this.props.gradient ?

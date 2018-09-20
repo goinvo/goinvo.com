@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import BackgroundImage from './background-image'
 import Logo from '../assets/images/logo-goinvo.inline.svg'
 
-import { videoUrl } from '../helpers'
+import { mediaUrl } from '../helpers'
 
 class Hero extends Component {
   render() {
@@ -22,7 +22,7 @@ class Hero extends Component {
           video ?
             <div className="hero__video-container">
               <video className="hero__video" autoplay="true" muted="true">
-                {video.map(src => <source key={src.format} src={videoUrl(src.src)} type={`video/${src.format}`} />)}
+                {video.map(src => <source key={src.format} src={mediaUrl(src.src)} type={`video/${src.format}`} />)}
                 Your browser does not support the video tag.
               </video>
             </div>

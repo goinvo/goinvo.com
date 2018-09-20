@@ -11,6 +11,8 @@ import Card from '../../components/card'
 
 import team from '../../data/team.json'
 
+import config from '../../../config'
+
 const ethics = [
   {
     title: 'Speak the truth',
@@ -57,7 +59,7 @@ const upNextList = [
 
 const AboutPage = () => (
   <Layout>
-    <Hero image="products/health-axioms.png">
+    <Hero image="/images/about/care-cards-hand.jpg">
       <h1 className="header--xl">
         Our shared purpose:<br/>
         better health access +<br/>
@@ -78,11 +80,11 @@ const AboutPage = () => (
       <div className="max-width content-padding">
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-            <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Open office hours" caption="Stop by and receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction." />
+            <ImageBlock image="/images/about/beth-working.jpg" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} title="Open office hours" caption="Stop by and receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction." />
             <Link to="/about/open-office-hours/" className="button button--primary button--block margin-bottom--double hidden--lg">Schedule a visit</Link>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-            <ImageBlock image="features/determinants-of-health/feature_banner.jpg" title="Join the team" caption="If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler." />
+            <ImageBlock image="/images/about/bai-laughing.jpg" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} title="Join the team" caption="If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler." />
             <Link to="/about/careers/" className="button button--primary button--block margin-bottom--double hidden--lg">Careers</Link>
           </div>
         </div>
@@ -105,7 +107,7 @@ const AboutPage = () => (
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
             <div className="pad-right--only-lg">
-              <Image src="team_photos/juhan_sonin.jpg" className="image--max-width" />
+              <Image src="/images/about/silhouette.jpg" className="image--max-width" />
             </div>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2">
@@ -153,7 +155,7 @@ const AboutPage = () => (
         </div>
         <div className="pure-u-1 pure-u-lg-1-2">
           <div className="container container--column container--justify-center container--fill-height pad-left--only-lg">
-            <Image src="new/test_2000.jpg" className="image--max-width" />
+            <Image src="/images/about/bowling.jpg" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} className="image--max-width" />
           </div>
         </div>
       </div>

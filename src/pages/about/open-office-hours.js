@@ -20,7 +20,7 @@ class OpenOfficeHoursPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero image="features/careplans/part3/hero_image.jpg">
+        <Hero image="/images/about/open-office-hours/whiteboard.jpg">
           <h1 className="header--xl">
             Enjoy fresh ideas with a side of coffee<span className="text--serif text--primary">.</span>
           </h1>
@@ -48,7 +48,7 @@ class OpenOfficeHoursPage extends Component {
             </div>
           </div>
         </div>
-        <GradientImageColumns image="home/culture-2017.jpg" reverse backgroundColor="blue">
+        <GradientImageColumns image="/images/about/beth-working.jpg" reverse backgroundColor="blue">
           <div className="pad-vertical--double">
             <h2 className="header--lg">How can we help<span className="text--primary text--serif">?</span></h2>
             <ul className="list--unstyled text--gray">

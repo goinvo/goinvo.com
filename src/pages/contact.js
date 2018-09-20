@@ -8,7 +8,7 @@ import config from '../../config'
 
 const ContactPage = () => (
   <Layout>
-    <Hero image="studio-nav/live.png"></Hero>
+    <Hero image="/images/contact/studio.jpg"></Hero>
     <div className="background--blue pad-vertical--double">
       <div className="max-width max-width--sm content-padding" style={{ marginTop: '-7rem' }}>
         <HubspotForm formId={config.hubspotContactFormId} title="Get in touch">

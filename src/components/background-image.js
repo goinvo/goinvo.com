@@ -32,7 +32,7 @@ class BackgroundImage extends Component {
   }
 
   render() {
-    const backgroundImageUrl = this.props.notResponsive ? mediaUrl(this.props.src) + '?w=800' : this.state.src;
+    const backgroundImageUrl = this.props.notResponsive ? mediaUrl(this.props.src) + '?w=900' : this.state.src;
     const backgroundProperty = `
       ${
         this.props.gradient ?
@@ -66,7 +66,7 @@ class BackgroundImage extends Component {
       <div className={`background-image`} style={style}>
         {
           !this.props.notResponsive ?
-            <Image src={ this.props.src } className="background-image__image" onUpdate={this.updateSrc} ref={this.img} />
+            <Image src={this.props.src} sizes={this.props.sizes} className="background-image__image" onUpdate={this.updateSrc} ref={this.img} />
           : null
         }
         { this.props.children }

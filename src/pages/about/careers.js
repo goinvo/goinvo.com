@@ -16,7 +16,7 @@ class CareersPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero image="features/careplans/part3/hero_image.jpg">
+        <Hero image="/images/about/careers/jen-journeymap.jpg">
           <h1 className="header--xl">
             This is our job<span className="text--serif text--primary">!</span>
           </h1>
@@ -43,20 +43,20 @@ class CareersPage extends Component {
           <h2 className="header--xl margin-bottom--none">Experiencing GoInvo for<span className="text--serif text--primary">...</span></h2>
         </div>
         <Carousel menuItems={['a summer internship', '1 year', '3 years', '7 years']}>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/about/careers/lily-lunch.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote quotee="Lily Fan" quoteeSub="Design Intern" small>Interning at Invo made me realize the importance of not only working at an awesome company to help transform software in healthcare but the value of spending your every day in an extremely inclusive environment with a diverse range of people who genuinely want to see you succeed.</Quote>
           </GradientImageColumns>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/about/bai-laughing.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote quotee="Eric Bai" quoteeSub="Designer & Engineer" small>I started working at Invo as an engineer and gradually took on a greater design focus. My friends at Invo mentored and supported me as I learned design basics. But beyond just aiming for design competency, I was also challenged to consider the broader impact of the work -- its effect on patients, on access to healthcare, and on health as a whole. If you want to work at a place that challenges you, supports you, and infuses your work with a sense of purpose, come to Invo.</Quote>
           </GradientImageColumns>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/about/careers/beth-presentation.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote quotee="Beth Herlin" quoteeSub="Designer" small>GoInvo provided a incubator-like space to expand my toolbox of skills and practices while also giving me a kick in the pants to cultivate my own design principles, passions, and ethics. It was an inspiring environment to do meaningful work with a family of driven, talented people.</Quote>
           </GradientImageColumns>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/about/bai-laughing.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote quotee="Nobody" quoteeSub="Nothing" small>Who am I?</Quote>
           </GradientImageColumns>
         </Carousel>
-        <BackgroundImage src="home/culture-2017.jpg" gradient>
+        <BackgroundImage src="/images/contact/studio.jpg" gradient>
           <div className="pad-vertical--quad pad--only-lg">
             <div className="background--white max-width max-width--md content-padding--double pad-vertical--quad">
               <h2 className="header--xl margin-top--none">Working together towards a healthy groove</h2>
@@ -88,12 +88,12 @@ class CareersPage extends Component {
         </BackgroundImage>
         <div className="max-width content-padding pad-vertical--double">
           <Columns columns={3}>
-            <ImageBlock key={"1"} image="features/determinants-of-health/feature_banner.jpg" title="Break Bread" caption="We cook for one another and share meals together. Cooking and eating as a tribe makes us a closer, better tribe."/>
-            <ImageBlock key={"2"} image="features/determinants-of-health/feature_banner.jpg" title="Work & Play" caption="Design can be a grind. So is Life. Plan yours as you see fit. We don’t track vacation or sick days. Just be responsible."/>
-            <ImageBlock key={"3"} image="features/determinants-of-health/feature_banner.jpg" title="Makers & Shippers" caption="We explore with our hands, heads, and hearts. Tinkering with, building, and shipping things is part of our DNA."/>
+            <ImageBlock key={"1"} image="/images/about/careers/group-lunch.jpg" sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth} title="Break Bread" caption="We cook for one another and share meals together. Cooking and eating as a tribe makes us a closer, better tribe."/>
+            <ImageBlock key={"2"} image="/images/about/careers/7-years-beards.jpg" sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth} title="Work & Play" caption="Design can be a grind. So is Life. Plan yours as you see fit. We don’t track vacation or sick days. Just be responsible."/>
+            <ImageBlock key={"3"} image="/images/about/careers/drone-hands.jpg" sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth} title="Makers & Shippers" caption="We explore with our hands, heads, and hearts. Tinkering with, building, and shipping things is part of our DNA."/>
           </Columns>
         </div>
-        <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="black" gradient reverse>
+        <GradientImageColumns image="/images/about/careers/mockup-review.jpg" backgroundColor="black" gradient reverse>
           <div className="pad-vertical--double">
             <HubspotForm formId={config.hubspotApplicationFormId} title="Application" />
           </div>

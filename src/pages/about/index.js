@@ -36,6 +36,7 @@ const ethics = [
   }
 ]
 
+// TODO: Real images for this list
 const upNextList = [
   {
     link: "/work/1",

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import { mediaUrl } from '../helpers'
 
+import config from '../../config'
+
 class Image extends Component {
   constructor(props){
     super(props);
@@ -59,8 +61,8 @@ class Image extends Component {
 }
 
 Image.defaultProps = {
-  dimensions: [ 320, 480, 600, 900, 1200 ],
-  sizes: ['(max-width: 1200px) 100vw', '1200px']
+  dimensions: [ 320, 480, 600, 900, 1200, 1500, 2000 ],
+  sizes: config.sizes.full
 }
 
 export default Image

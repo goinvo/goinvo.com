@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import BackgroundImage from './background-image'
 
+import config from '../../config'
+
 // NOTE: backgroundNotResponsive prop helps fix a bug when using GradientImageColumns
 // within a Carousel component. The transition on the carousel gets fucked if
 // the BackgroundImage is attempting to calculate the responsive image to use.
@@ -21,7 +23,7 @@ class GradientImageColumns extends Component {
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 left">
               <div className={`gradient-image-columns__image ${this.props.gradient ? 'gradient-image-columns__gradient' : ''} ${this.props.arrow ? 'gradient-image-columns__image--arrow' : ''}`}>
-                <BackgroundImage src="home/culture-2017.jpg" {...backgroundProps} />
+                <BackgroundImage src={this.props.image} sizes={this.props.backgroundNotResponsive ? null : config.sizes.fullToHalfAtLarge} {...backgroundProps} />
               </div>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 right">

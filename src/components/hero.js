@@ -10,7 +10,7 @@ class Hero extends Component {
     let { image, video, caption, isLarge, withLogo, children } = this.props;
 
     return (
-      <div className={`hero ${isLarge ? 'hero--large' : ''}`}>
+      <div className={`hero ${isLarge ? 'hero--large' : ''} ${video ? 'hero--video' : ''}`}>
         {
           image ?
             <div className="hero__image-container">
@@ -21,7 +21,7 @@ class Hero extends Component {
         {
           video ?
             <div className="hero__video-container">
-              <video className="hero__video" autoplay="true" muted="true">
+              <video className="hero__video" autoPlay="true" muted="true">
                 {video.map(src => <source key={src.format} src={mediaUrl(src.src)} type={`video/${src.format}`} />)}
                 Your browser does not support the video tag.
               </video>

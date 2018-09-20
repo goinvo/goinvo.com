@@ -17,13 +17,13 @@ import config from '../../config'
 import caseStudies from '../data/case-study-list.json'
 
 const heroVideoSources = [
-  {src: "new/sdoh4_lg.mp4", format: "mp4"},
-  {src: "new/sdoh4_lg.webm", format: "webm"}
+  {src: "/videos/homepage/sdoh-hero.mp4", format: "mp4"},
+  {src: "/videos/homepage/sdoh-hero.webm", format: "webm"}
 ]
 
 const IndexPage = () => (
   <Layout>
-    <Hero video={heroVideoSources} caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments." isLarge withLogo>
+    <Hero video={heroVideoSources} caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments." withLogo>
       <h1 className="header--xl">
         Designing<br/>
         the future of<br/>
@@ -83,8 +83,9 @@ const IndexPage = () => (
       </div>
       {
         // TODO:
-        // - Pick the featured four case studies here
+        // - Real images here
         // - Pass sizes to ImageBlock/Image to optimize image load
+        // - Pick the featured four case studies here
       }
       <Columns columns={2}>
         { caseStudies.map((study, i) => {
@@ -112,6 +113,9 @@ const IndexPage = () => (
       <div className="container container--justify-center margin-vertical">
         <h2 className="header--xl">See the future<span className="text--serif text--primary">.</span></h2>
       </div>
+      {
+        // TODO: Real images here
+      }
       <Columns columns={3}>
         <ImageBlock key={"1"} image="features/determinants-of-health/feature_banner.jpg" title="Health Reports" caption="Design concepts and objective analysis for grokking the evolving healthcare universe."/>
         <ImageBlock key={"2"} image="features/determinants-of-health/feature_banner.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
@@ -160,7 +164,7 @@ const IndexPage = () => (
       <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2">
           <div className="container container--column container--justify-center container--fill-height pad-right--only-lg">
-            <Image src="new/test_2000.jpg" className="image--max-width" />
+            <Image src="/images/homepage/group-aug-2018.jpg" className="image--max-width" />
           </div>
         </div>
         <div className="pure-u-1 pure-u-lg-1-2">

@@ -18,6 +18,7 @@ const services = [
     title: "Healthcare product strategy",
     description: "We envision products and services through collaborative design exercises that will help frame your digital future.",
     methods: "vision workshops, design facilitation, ideation, concept work, product roadmapping",
+    image: "/images/services/personal-genome-ecosystem.jpg",
     example: {
       link: "/work/personal-genome-project",
       title: "Personal Genome Project"
@@ -27,6 +28,7 @@ const services = [
     title: "Research",
     description: "We uncover deep user insights with patients, clinicians, and industry experts that inform priorities, drive features, and inspire strategy.",
     methods: "user interviews, analytic reviews, journey mapping, market research, competitive analysis, survey creation",
+    image: "/images/services/wuxi-journey-map.jpg",
     example: {
       link: "/work/wuxi-next-code",
       title: "WuXi NextCODE"
@@ -36,6 +38,7 @@ const services = [
     title: "Product definition",
     description: "We define complex products and bring ideas to life by mapping systems, touchpoints, and features.",
     methods: "system mapping, use cases, persona development, storyboarding, user requirements",
+    image: "/images/services/shr-completeness.jpg",
     example: {
       link: "/work/mitre-shr",
       title: "Standard Health Record"
@@ -45,6 +48,7 @@ const services = [
     title: "User experience design",
     description: "We create product user experiences that are both functional and beautiful, crafting every detail from initial sketch to interactive prototype to front-end code.",
     methods: "UI and UX design, information architecture, wireframes, mockups, interactive prototypes, design systems",
+    image: "/images/services/hgraph-ipad.jpg",
     example: {
       link: "/work/hgraph",
       title: "hGraph"
@@ -54,6 +58,7 @@ const services = [
     title: "Usability and validation",
     description: "We test and iterate designs with users throughout a project to validate product features, functions, and designs.",
     methods: "expert reviews, A/B testing, usability testing, accessability testing",
+    image: "/images/services/glytec-ipad.jpg",
     example: {
       link: "/work/glytec",
       title: "Glytec"
@@ -63,7 +68,7 @@ const services = [
 
 const ServicesPage = () => (
   <Layout>
-    <Hero image="team/boston-user-experience-design.jpg">
+    <Hero image="/images/services/hand-drawing.jpg">
       <h1 className="header--xl">
         Disrupt from within,<br/>
         Reinvent your product,<br/>
@@ -73,7 +78,7 @@ const ServicesPage = () => (
     <div className="equal-height-rows">
       {services.map((service, i) => {
         return (
-          <GradientImageColumns key={service.title} image="home/culture-2017.jpg" backgroundColor="gray" reverse={ (i % 2 === 0) } arrow>
+          <GradientImageColumns key={service.title} image={service.image} backgroundColor="gray" reverse={ (i % 2 === 0) } arrow>
             <div className="pad-vertical--double">
               <h2 className="header--lg margin-bottom--none">{service.title}</h2>
               <hr className="hr hr--primary" />
@@ -134,6 +139,9 @@ const ServicesPage = () => (
       With Invo, design wasn't just design. It impacted our IP portfolio. It changed our business.
     </Quote>
     <div className="max-width content-padding pad-vertical--double">
+      {
+        // TODO: Real images here
+      }
       <Columns columns={3}>
         <ImageBlock key={"1"} image="features/determinants-of-health/feature_banner.jpg" title="Emerging technology" caption="We’ve worked on projects across the spectrum of emerging technology from artificial intelligence for medical coding to self-documenting voice encounters and wearable devices.">
           <div><Link to="/work/health-coding/">Health Coding Case Study</Link></div>

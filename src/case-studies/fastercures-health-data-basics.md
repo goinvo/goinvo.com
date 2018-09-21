@@ -1,3 +1,14 @@
+---
+title: "Health data Basics"
+image: "home/culture-2017.jpg"
+client: "Fastercures"
+caption: "Something about health data."
+categories:
+  - "public-health-and-policy"
+  - "open-source"
+hidden: false
+---
+
 import Hero from '../components/hero'
 
 <Hero image="/images/vision/vision-hero.jpg" />

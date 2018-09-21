@@ -1,9 +1,11 @@
 ---
-title: "Pure imagination"
-image: "home/culture-2017.jpg"
-client: "Willy Wonka's Chocolate Factory"
-caption: "Redesigned factory to expose spoiled children"
-categories: "health-it-and-infrastructure, patient-engagement"
+title: Pure imagination
+image: home/culture-2017.jpg
+client: Willy Wonka's Chocolate Factory
+caption: Redesigned factory to expose spoiled children
+categories:
+  - health-it-and-infrastructure
+  - patient-engagement
 hidden: false
 ---
 

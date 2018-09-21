@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
@@ -14,10 +15,11 @@ import GradientImageColumns from '../components/gradient-image-columns'
 
 import config from '../../config'
 
+import { extractCaseStudyDataFromQuery } from '../helpers'
+
 import Caret from '../assets/images/icon-caret.inline.svg'
 
 import CATEGORIES_LIST from '../data/categories.json'
-import caseStudies from '../data/case-study-list.json'
 
 const upNextList = [
   {
@@ -40,18 +42,16 @@ const upNextList = [
   }
 ];
 
-const getCaseStudiesOfCategory = (catId) => {
+const getCaseStudiesOfCategory = (caseStudies, catId) => {
   let newCaseStudies = [];
 
   if (catId === allCategory.id) {
     newCaseStudies = caseStudies;
   } else {
     newCaseStudies = caseStudies.filter(study => {
-      const matches = study.categories.filter(cat => {
-        return cat.id === catId;
-      });
-
-      return matches.length;
+      return study.categories.filter(cat => {
+        return cat === catId;
+      }).length;
     });
   }
 
@@ -65,14 +65,16 @@ class WorkPage extends Component {
   constructor(props) {
     super(props);
 
+    const caseStudies = extractCaseStudyDataFromQuery(props.data);
+
     const query = props.location && props.location.search ? props.location.search : null;
     const categoryId = query ? query.substr(query.indexOf("=") + 1) : allCategory.id;
-
     const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
 
     this.state = {
+      caseStudies,
       selectedCategory,
-      caseStudies: getCaseStudiesOfCategory(categoryId),
+      activeCaseStudies: getCaseStudiesOfCategory(caseStudies, selectedCategory.id),
       categoriesStuck: false,
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
@@ -96,7 +98,7 @@ class WorkPage extends Component {
   setSelectedCategory = (cat) => {
     this.setState({
       selectedCategory: cat,
-      caseStudies: getCaseStudiesOfCategory(cat.id),
+      activeCaseStudies: getCaseStudiesOfCategory(this.state.caseStudies, cat.id),
       categoriesCollapsed: this.state.categoriesStuck ? true : false,
     });
   }
@@ -164,7 +166,7 @@ class WorkPage extends Component {
               // TODO: Real images here
             }
             <Columns columns={2}>
-              { this.state.caseStudies.map(study => {
+              { this.state.activeCaseStudies.map(study => {
                 return (
                   <Card key={study.slug} link={`/work/${study.slug}`}>
                     <ImageBlock
@@ -222,5 +224,30 @@ class WorkPage extends Component {
     )
   }
 }
+
+export const workPageQuery = graphql`
+  query WorkQuery {
+    allMdx(
+      filter: { frontmatter: { hidden: { eq: false } } }
+    ) {
+      edges {
+        node {
+          parent {
+            ... on File {
+              name
+            }
+          }
+          frontmatter {
+            title
+            image
+            client
+            categories
+            caption
+          }
+        }
+      }
+    }
+  }
+`
 
 export default WorkPage

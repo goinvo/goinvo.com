@@ -3,7 +3,8 @@ title: "Anvils from heaven"
 image: "healthcare/wuxi.jpg"
 client: "Acme Corp"
 caption: "Redesigned anvil ordering process to meet a high demand in toon town."
-categories: "care-management"
+categories:
+  - "care-management"
 hidden: false
 ---
 

@@ -13,3 +13,12 @@ export function formatDate(date) {
 
   return `${day}.${month}.${year}`;
 }
+
+export function extractCaseStudyDataFromQuery(data)  {
+  return data.allMdx.edges.map(edge => {
+    return {
+      slug: edge.node.parent.name,
+      ...edge.node.frontmatter
+    };
+  });
+}

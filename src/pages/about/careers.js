@@ -25,15 +25,15 @@ class CareersPage extends Component {
           <div className="max-width content-padding">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-3 pad-right--only-lg">
-                <h3 className="header--md margin-bottom--half">We are open source</h3>
+                <h3 className="header--sm margin-bottom--half">We are open source</h3>
                 <p className="text--gray margin-top--half">We operate as an open company. Our finances are open. You own a part of the company the moment you walk in the door. And all of our products are licensed under open source licenses.</p>
               </div>
               <div className="pure-u-1 pure-u-lg-1-3 pad-left--only-lg pad-right--only-lg">
-                <h3 className="header--md margin-bottom--half">Design for action</h3>
+                <h3 className="header--sm margin-bottom--half">Design for action</h3>
                 <p className="text--gray margin-top--half">Design is not a theoretical exercise. Design like you give a damn and ship. Shippers change the world.</p>
               </div>
               <div className="pure-u-1 pure-u-lg-1-3 pad-left--only-lg">
-                <h3 className="header--md margin-bottom--half">Demand truth and justice</h3>
+                <h3 className="header--sm margin-bottom--half">Demand truth and justice</h3>
                 <p className="text--gray margin-top--half">Hunting for systemic problems, popping political blisters, and fighting for the right idea are parts of finding truth... and key to how we design.</p>
               </div>
             </div>

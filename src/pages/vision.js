@@ -136,7 +136,7 @@ class VisionPage extends Component {
           </div>
         </div>
         <div className="max-width content-padding pad-vertical--double">
-          <h3 className="header--sm">Spotlight</h3>
+          <h3 className="header--md">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
               {
@@ -167,7 +167,7 @@ class VisionPage extends Component {
         </div>
         <div className="background--blue pad-vertical--double">
           <div className="max-width content-padding">
-            <h3 className="header--sm">Most recent features</h3>
+            <h3 className="header--md">Most recent features</h3>
             {
               // TODO: Real images here
             }
@@ -260,10 +260,10 @@ class VisionPage extends Component {
           <div className="max-width content-padding">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
-                <h3 className="header--sm">Blog Posts</h3>
+                <h3 className="header--md">Blog Posts</h3>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                <h3 className="header--sm">Podcast</h3>
+                <h3 className="header--md">Podcast</h3>
               </div>
             </div>
             <div className="pure-g">

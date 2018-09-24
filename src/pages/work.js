@@ -201,7 +201,7 @@ class WorkPage extends Component {
         </GradientImageColumns>
         <div className="background--blue">
           <div className="max-width content-padding pad-vertical pad-top--crazy">
-            <h4 className="header--sm">Up next</h4>
+            <h4 className="header--md">Up next</h4>
             {
               // TODO: Real images here
             }

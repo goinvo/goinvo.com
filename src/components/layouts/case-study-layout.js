@@ -21,10 +21,10 @@ export default function CaseStudyLayout(props) {
             <h2 className="header--lg" {...props}>{children}</h2>
           ),
           h3: ({children, ...props}) => (
-            <h3 className="header--sm" {...props}>{children}</h3>
+            <h3 className="header--md" {...props}>{children}</h3>
           ),
           h4: ({children, ...props}) => (
-            <h4 className="header--md" {...props}>{children}</h4>
+            <h4 className="header--sm" {...props}>{children}</h4>
           ),
           hr: <Divider />,
           img: props => <Image {...props} />,

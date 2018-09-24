@@ -127,7 +127,7 @@ const AboutPage = () => (
     </div>
     <div className="background--gray pad-vertical--double">
       <div className="max-width content-padding">
-        <h3 className="header--sm text--center">Code of Ethics</h3>
+        <h3 className="header--md text--center">Code of Ethics</h3>
         <ul className="ul flex-wrap flex-wrap--half">
           {ethics.map(ethic => {
             return (
@@ -146,7 +146,7 @@ const AboutPage = () => (
       <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
           <div className="pad-left--only-lg">
-            <h3 className="header--sm text--center">Our Story</h3>
+            <h3 className="header--md text--center">Our Story</h3>
             <p className="text--gray margin-bottom pad-right--only-lg">
               With early roots designing for Yahoo, Mcaffee, and Obama’s 2008 campaign, GoInvo is now focused exclusively on healthcare. We’ve delivered over 110 products with partners ranging from 3M, U.S. Department of Health and Human Services, Partners Healthcare, and a variety of startups.
             </p>
@@ -166,7 +166,7 @@ const AboutPage = () => (
     </div>
     <div className="background--blue">
       <div className="max-width content-padding pad-vertical">
-        <h4 className="header--sm">Up next</h4>
+        <h4 className="header--md">Up next</h4>
         <Columns columns={3}>
           { upNextList.map(item => {
             return (

@@ -97,11 +97,11 @@ const ServicesPage = () => (
       })}
     </div>
     <div className="max-width content-padding pad-vertical--double">
-      <h3 className="header--sm">Approach</h3>
+      <h3 className="header--md">Approach</h3>
       <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
           <IconHealthcare className="icon--wide icon--secondary" />
-          <h4 className="header--md margin-top--none margin-bottom--half">We're focused on healthcare.</h4>
+          <h4 className="header--sm margin-top--none margin-bottom--half">We're focused on healthcare.</h4>
           <p className="text--gray margin-top--half">
             Healthcare is an exceedingly complex field that holds unique challenges both seen and unseen. At GoInvo, we’ve focused solely on this space for over a decade, designing more than 110 products and services during that time.
           </p>
@@ -109,7 +109,7 @@ const ServicesPage = () => (
         </div>
         <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
           <IconVision className="icon--wide icon--secondary" />
-          <h4 className="header--md margin-top--none margin-bottom--half">We'll help you envision the future.</h4>
+          <h4 className="header--sm margin-top--none margin-bottom--half">We'll help you envision the future.</h4>
           <p className="text--gray margin-top--half">
             We bring fresh ideas and a history of healthcare design and research to help our clients leverage emerging technologies, envision future products and services, and realize long-term goals.
           </p>
@@ -118,7 +118,7 @@ const ServicesPage = () => (
         </div>
         <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
           <IconTeam className="icon--wide icon--secondary" />
-          <h4 className="header--md margin-top--none margin-bottom--half">We deploy dedicated teams.</h4>
+          <h4 className="header--sm margin-top--none margin-bottom--half">We deploy dedicated teams.</h4>
           <p className="text--gray margin-top--half">
             At GoInvo, you’ll get a dedicated design team that collaborates with you throughout the course of your project, communicating openly and adapting quickly to new challenges. We’re adept at integrating our design efforts with your engineering and product teams to form a seamless whole.
           </p>
@@ -126,7 +126,7 @@ const ServicesPage = () => (
         </div>
         <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
           <IconComplexity className="icon--wide icon--secondary" />
-          <h4 className="header--md margin-top--none margin-bottom--half">We're comfortable with complexity.</h4>
+          <h4 className="header--sm margin-top--none margin-bottom--half">We're comfortable with complexity.</h4>
           <p className="text--gray margin-top--half">
             From enterprise-grade health IT to data-driven precision healthcare, GoInvo works closely with our clients and partners to transform messy problems into structured strategy and solutions.
           </p>

@@ -6,6 +6,7 @@ caption: Redesigned factory to expose spoiled children
 categories:
   - health-it-and-infrastructure
   - patient-engagement
+results: null
 hidden: false
 ---
 

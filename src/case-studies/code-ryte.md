@@ -5,5 +5,6 @@ client: "Coderyte"
 caption: "How our skunkworks for an ambitious start-up led to a $150M exit."
 categories:
   - "health-it-and-infrastructure"
+results: null
 hidden: false
 ---

@@ -15,6 +15,7 @@ class StudioTimelinePage extends Component {
           </Hero>
           <div className="max-width content-padding pad-vertical--double">
             <iframe
+              title="Invo Studio Timeline"
               src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1em1JKKCs47bf4bS54Arq2BYA-q8CbLEwW4K0-JZDQA8&font=Default&lang=en&initial_zoom=2&height=650'
               width='100%'
               height='650'

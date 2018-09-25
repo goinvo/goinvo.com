@@ -278,12 +278,9 @@ class VisionPage extends Component {
                 <a className="float--right" href="https://yes.goinvo.com/articles">View all blog posts</a>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
-                {
-                  // TODO: Real image here
-                }
                 <ImageBlock
                   title="The Digital Life"
-                  image="features/determinants-of-health/feature_banner.jpg"
+                  image="/images/vision/microphone.jpg"
                   caption="Explore our podcast on emerging technology and digital design." />
                 <iframe
                   title="GoInvo SoundCloud Embed"

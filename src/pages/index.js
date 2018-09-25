@@ -123,12 +123,12 @@ class IndexPage extends Component {
             <h2 className="header--xl">See the future<span className="text--serif text--primary">.</span></h2>
           </div>
           {
-            // TODO: Real images here
+            // TODO: Add Links here
           }
           <Columns columns={3}>
-            <ImageBlock key={"1"} image="features/determinants-of-health/feature_banner.jpg" title="Health Reports" caption="Design concepts and objective analysis for grokking the evolving healthcare universe."/>
-            <ImageBlock key={"2"} image="features/determinants-of-health/feature_banner.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
-            <ImageBlock key={"3"} image="features/determinants-of-health/feature_banner.jpg" title="The Digital Life podcast" caption="An online radio show that explores important, timely topics in the world of digital design and technology."/>
+            <ImageBlock key={"1"} image="/images/homepage/standardized-health-data-preview.jpg" title="Health Reports" caption="Design concepts and objective analysis for grokking the evolving healthcare universe."/>
+            <ImageBlock key={"2"} image="/images/vision/vision-hero.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
+            <ImageBlock key={"3"} image="/images/vision/microphone.jpg" title="The Digital Life podcast" caption="An online radio show that explores important, timely topics in the world of digital design and technology."/>
           </Columns>
         </div>
         <div className="background--blue pad-vertical--double">

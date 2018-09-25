@@ -24,19 +24,19 @@ import CATEGORIES_LIST from '../data/categories.json'
 const upNextList = [
   {
     link: "/services/",
-    image: "features/determinants-of-health/feature_banner.jpg",
+    image: "/images/services/shr-completeness.jpg",
     title: "Learn more about our services",
     caption: "No matter the size or structure of your team, we integrate to magnify your efforts."
   },
   {
     link: "/vision/",
-    image: "features/determinants-of-health/feature_banner.jpg",
+    image: "/images/homepage/standardized-health-data-preview.jpg",
     title: "Explore our research",
     caption: "We investigate the future of healthcare through our podcast, features, books, and articles. Check it out!"
   },
   {
     link: "/about/",
-    image: "features/determinants-of-health/feature_banner.jpg",
+    image: "/images/about/bowling.jpg",
     title: "Meet the team",
     caption: "We bring together the very best people and deploy them on your hardest digital problems."
   }
@@ -195,7 +195,7 @@ class WorkPage extends Component {
         {
           // TODO: Real image here
         }
-        <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="black" gradient offsetContent reverse>
+        <GradientImageColumns image="/images/work/eric-comp.jpg" backgroundColor="black" gradient offsetContent reverse>
           <h2 className="header--xl text--white">Want to take your healthcare product to the next level?</h2>
           <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
         </GradientImageColumns>

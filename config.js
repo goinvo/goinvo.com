@@ -13,6 +13,7 @@ export default {
     fullToHalfAtLarge: [`(min-width: 54em) 50vw`, '100vw'],
     fullToThirdAtLarge: [`(min-width: 54em) 50vw`, '100vw'],
     fullToHalfAtLargeInsideMaxWidth: [`(min-width: ${maxWidth}px) ${maxWidth / 2}px`, `(min-width: 54em) 50vw`, '100vw'],
-    fullToThirdAtLargeInsideMaxWidth: [`(min-width: ${maxWidth}px) ${maxWidth / 3}px`, `(min-width: 54em) 33vw`, '100vw']
+    fullToThirdAtLargeInsideMaxWidth: [`(min-width: ${maxWidth}px) ${maxWidth / 3}px`, `(min-width: 54em) 33vw`, '100vw'],
+    caseStudy: [`(min-width: 775px) 775px`, '100vw'],
   }
 }

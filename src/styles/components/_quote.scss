@@ -1,6 +1,5 @@
 .quote {
   $parent: &;
-  @extend .background--gray;
   padding: $spacing;
 
   .divider {

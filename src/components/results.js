@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Results extends Component {
   render() {
     return (
-      <div className="results pad-vertical--double background--blue">
+      <div className="results pad-top pad-bottom--double">
         <div className="max-width content-padding">
           <h2 className="header--lg text--center margin-bottom--half">Results</h2>
           <div className="pure-g">

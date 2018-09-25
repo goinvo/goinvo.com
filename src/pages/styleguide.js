@@ -47,7 +47,7 @@ const StyleguidePage = () => (
       <div>
         <button className="button button--primary">View all work</button>
       </div>
-      <Quote quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">
+      <Quote background="gray" quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">
         The GoInvo studio is one of the most talented group of designers I have ever met in the health care space. Not only are their ideas, designs, and graphics remarkable, but I haven’t yet figured out how they know so much about medicine and its future.
       </Quote>
       <ImageBlock image="home/culture-2017.jpg" title="Awesome project #1!" caption="Some really cool thing we've worked on some time before."/>

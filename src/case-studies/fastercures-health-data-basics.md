@@ -1,8 +1,8 @@
 ---
-title: "Health data Basics"
+title: "Health Data Basics"
 image: "/images/vision/vision-hero.jpg"
-client: "Fastercures"
-caption: "Something about health data."
+client: "FasterCures"
+caption: "Engaging patients to understand health."
 categories:
   - "public-health-and-policy"
   - "open-source"
@@ -36,11 +36,10 @@ GoInvo crafted two open source plug-ins built on educational frameworks, gamific
 #### Educational retention
 In a usability test for the educational materials conducted with 30 patients, 97% were able to recall the 5 main factors of health data, and 90% engaged with an online quiz.
 
-<span class="text--uppercase text--gray text--bold">Time:</span> 1 designer for 2.5 months<br/>
-<span class="text--uppercase text--gray text--bold">Tags:</span> Patient engagement
-
-<!-- TODO: This won't do! Needs to be a link -->
-<button href="#" class="button button--primary button--lg margin-top">View Demo</button>
+<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 2.5 months<br/>
+<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient engagement
+<br />
+<a href="#" class="button button--primary button--lg margin-top--double margin-bottom--half">View Demo</a>
 
 [view code on GitHub](https://github.com/goinvo/HealthDataBasics)
 
@@ -51,19 +50,21 @@ In a usability test for the educational materials conducted with 30 patients, 97
 #### Research through multiple techniques
 GoInvo and FasterCures conducted a survey of approximately 700 patients and in depth interviews with 15 industry experts that informed user needs, barriers, and motivations. In addition, we explored and reviewed the latest research on patient engagement, health literacy, and patient education. Insights gained helped the design team to understand the overall audience, their needs and motivations around understanding health data, as well as to formulate  a health data definition around the social determinants of health.
 
-<!-- TODO: Image -->
+![something](/images/vision/vision-hero.jpg)
 
 #### Generate a range of concepts
 GoInvo considered a variety of design methods to engage patients, generating early renderings and summaries of over 30 concepts, which included digital, physical, and social exhibits.
 
-<!-- TODO: Image -->
+![something](/images/vision/vision-hero.jpg)
 
 #### Prioritize rigorously
 We narrowed our 30 concepts based on reach, educational impact, and scalability. Then, in collaboration with FasterCures and a panel of patient stakeholders, we weighed these factors as well as the goals of the projects to select the right concept to pursue.
 
+<Divider />
+
 ## Insights & recommendations
 
-<!-- TODO: Image -->
+![something](/images/vision/vision-hero.jpg)
 
 #### Integrate Social Determinants of Health
 We identified the need for an expanded definition of health data that went beyond medical records and devices to include the social determinants of health. We have pushed this more accurate and holistic definition as a new norm.
@@ -74,18 +75,17 @@ Patients seek especially to understand health data to accomplish their larger go
 #### Uncover a market need for a data visualization
 As part of the ideation phase, we created a preliminary map of the health data ecosystem. This inspired a separate data visualization project that outlined the path to build a transparent, trusting, and collaborative ecosystem where patients were empowered to share their data.
 
-<Quote quotee="Taylor Cusher" quoteeSub="FasterCures Associate Director">
-Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.
-</Quote>
+<!-- TODO: NOT A REAL QUOTE -->
+<Quote quotee="Taylor Cusher" quoteeSub="FasterCures Associate Director">Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.</Quote>
 
 ## Solution
 
-<!-- TODO: Image -->
+![something](/images/vision/vision-hero.jpg)
 
 #### Educational open source plugins
 GoInvo crafted two open source plug-in designs built on educational frameworks, gamification, and behavior change. These are intended to be reused across app onboardings and web services.
 
-<!-- TODO: Image -->
+![something](/images/vision/vision-hero.jpg)
 
 #### Engagement through narrative
 The introduction hooks an individual with a graphic that appeals to their sense of curiosity to discover that there is more to health data than medical care. Individuals then unravel the surprising ways in which wellness and health data permeate life through an array of interactive examples.
@@ -93,7 +93,7 @@ The introduction hooks an individual with a graphic that appeals to their sense 
 #### Designed with behavior change frameworks
 The prototype integrates the Health Belief Model, covering the mental processes which inform whether an individual will make a change. These factors include benefits, susceptibility, severity, barriers and modifying variables, cues to action and self efficacy. For example, users that cite a lack of time as a barrier to exercise have their concerns addressed through a suggestion that individuals get off the bus stop one stop early.
 
-<!-- TODO: Image -->
+![something](/images/vision/vision-hero.jpg)
 
 #### Gamification for knowledge retention
 Quizzes encouraged interaction with information and as a result, knowledge retention. One technique appealed to an individual’s sense of caretaking with a sprout that grows into a plant for every correct answers, while another to an individual’s sense of novelty through guessing the health data sound and little  hearts that act as progress indicators.

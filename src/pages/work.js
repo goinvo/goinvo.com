@@ -189,7 +189,7 @@ class WorkPage extends Component {
             : null
           }
         </div>
-        <Quote quotee="Igor Gershfang" quoteeSub="Walgreens Emerging Tech Director">
+        <Quote background="gray" quotee="Igor Gershfang" quoteeSub="Walgreens Emerging Tech Director">
           Invo beautifully helped shape our next generation clinician and patient experience.
         </Quote>
         {

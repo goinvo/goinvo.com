@@ -44,16 +44,16 @@ class CareersPage extends Component {
         </div>
         <Carousel menuItems={['a summer internship', '1 year', '3 years', '7 years']}>
           <GradientImageColumns image="/images/about/careers/lily-lunch.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote quotee="Lily Fan" quoteeSub="Design Intern" small>Interning at Invo made me realize the importance of not only working at an awesome company to help transform software in healthcare but the value of spending your every day in an extremely inclusive environment with a diverse range of people who genuinely want to see you succeed.</Quote>
+            <Quote background="gray" quotee="Lily Fan" quoteeSub="Design Intern" small>Interning at Invo made me realize the importance of not only working at an awesome company to help transform software in healthcare but the value of spending your every day in an extremely inclusive environment with a diverse range of people who genuinely want to see you succeed.</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="/images/about/bai-laughing.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote quotee="Eric Bai" quoteeSub="Designer & Engineer" small>I started working at Invo as an engineer and gradually took on a greater design focus. My friends at Invo mentored and supported me as I learned design basics. But beyond just aiming for design competency, I was also challenged to consider the broader impact of the work -- its effect on patients, on access to healthcare, and on health as a whole. If you want to work at a place that challenges you, supports you, and infuses your work with a sense of purpose, come to Invo.</Quote>
+            <Quote background="gray" quotee="Eric Bai" quoteeSub="Designer & Engineer" small>I started working at Invo as an engineer and gradually took on a greater design focus. My friends at Invo mentored and supported me as I learned design basics. But beyond just aiming for design competency, I was also challenged to consider the broader impact of the work -- its effect on patients, on access to healthcare, and on health as a whole. If you want to work at a place that challenges you, supports you, and infuses your work with a sense of purpose, come to Invo.</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="/images/about/careers/beth-presentation.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote quotee="Beth Herlin" quoteeSub="Designer" small>GoInvo provided a incubator-like space to expand my toolbox of skills and practices while also giving me a kick in the pants to cultivate my own design principles, passions, and ethics. It was an inspiring environment to do meaningful work with a family of driven, talented people.</Quote>
+            <Quote background="gray" quotee="Beth Herlin" quoteeSub="Designer" small>GoInvo provided a incubator-like space to expand my toolbox of skills and practices while also giving me a kick in the pants to cultivate my own design principles, passions, and ethics. It was an inspiring environment to do meaningful work with a family of driven, talented people.</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="/images/about/bai-laughing.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote quotee="Nobody" quoteeSub="Nothing" small>Who am I?</Quote>
+            <Quote background="gray" quotee="Nobody" quoteeSub="Nothing" small>Who am I?</Quote>
           </GradientImageColumns>
         </Carousel>
         <BackgroundImage src="/images/contact/studio.jpg" gradient>

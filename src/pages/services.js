@@ -135,7 +135,7 @@ const ServicesPage = () => (
         </div>
       </div>
     </div>
-    <Quote quotee="Serban Georgescu, MD" quoteeSub="InfoBionic Director of Clinical Development">
+    <Quote background="gray" quotee="Serban Georgescu, MD" quoteeSub="InfoBionic Director of Clinical Development">
       With Invo, design wasn't just design. It impacted our IP portfolio. It changed our business.
     </Quote>
     <div className="max-width content-padding pad-vertical--double">

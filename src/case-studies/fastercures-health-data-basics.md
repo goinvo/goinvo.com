@@ -13,6 +13,10 @@ results:
     description: "Engagement with knowledge retention quiz"
   - stat: "8,760"
     description: "Yearly views of new health data definition"
+upNext:
+  - "code-ryte"
+  - "acme"
+  - "mitre-shr"
 hidden: false
 ---
 

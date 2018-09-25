@@ -23,6 +23,11 @@ hidden: false
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 
+<!-- TODO: -->
+<!-- Real images -->
+<!-- Real quote -->
+<!-- Real upNext list -->
+
 # Engaging patients to understand health
 
 ### Problem

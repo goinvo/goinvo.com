@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "author": "Craig McGinley <craig@goinvo.com>",
   "dependencies": {
-    "@mdx-js/mdx": "^0.15.0",
+    "@mdx-js/mdx": "^0.15.4",
     "@mdx-js/tag": "^0.15.0",
     "axios": "^0.18.0",
     "gatsby": "next",
-    "gatsby-mdx": "^0.1.1",
+    "gatsby-mdx": "^0.1.4",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",

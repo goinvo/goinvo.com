@@ -7,14 +7,14 @@ import { mediaUrl } from '../helpers'
 
 class Hero extends Component {
   render() {
-    let { image, video, caption, isLarge, withLogo, children } = this.props;
+    let { image, video, caption, isLarge, withLogo, position, children } = this.props;
 
     return (
       <div className={`hero ${isLarge ? 'hero--large' : ''} ${video ? 'hero--video' : ''}`}>
         {
           image ?
             <div className="hero__image-container">
-              <BackgroundImage src={image} className="hero__image" />
+              <BackgroundImage src={image} className="hero__image" position={position} />
             </div>
           : null
         }

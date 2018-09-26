@@ -22,18 +22,18 @@ class ClientLogos extends Component {
       <ul className="list--unstyled client-logos">
         <li><ThreeM /></li>
         <li><Partners /></li>
-        <li><BD /></li>
-        <li><InfoBionic /></li>
+        <li className="hidden--sm"><BD /></li>
+        <li className="hidden--sm"><InfoBionic /></li>
         <li><MGH /></li>
         <li><JohnsonAndJohnson /></li>
-        <li><MountSinai /></li>
+        <li className="hidden--sm"><MountSinai /></li>
         <li><Wuxi /></li>
         <li><Walgreens /></li>
-        <li><JournalOfParticipatoryMedicine /></li>
-        <li><NationalScienceFoundation /></li>
+        <li className="hidden--sm"><JournalOfParticipatoryMedicine /></li>
+        <li className="hidden--sm"><NationalScienceFoundation /></li>
         <li><NIH /></li>
-        <li><PersonalGenomeProject /></li>
-        <li><Mitre /></li>
+        <li className="hidden--sm"><PersonalGenomeProject /></li>
+        <li className="hidden--sm"><Mitre /></li>
         <li><Mass /></li>
       </ul>
     )

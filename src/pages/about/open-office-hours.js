@@ -20,7 +20,7 @@ class OpenOfficeHoursPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero image="/images/about/open-office-hours/whiteboard.jpg">
+        <Hero image="/images/about/open-office-hours/whiteboard.jpg" position="right center">
           <h1 className="header--xl">
             Enjoy fresh ideas with a side of coffee<span className="text--serif text--primary">.</span>
           </h1>

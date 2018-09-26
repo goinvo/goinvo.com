@@ -1,4 +1,5 @@
 .label {
+  @extend .text--sm;
   @extend .text--gray;
   display: block;
 }

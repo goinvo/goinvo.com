@@ -106,7 +106,7 @@ class WorkPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero image="/images/work/dr-emily.jpg">
+        <Hero image="/images/work/dr-emily.jpg" position="center top">
           <h1 className="header--xl">
             Patient tested<span className="text--serif text--primary">.</span><br/>
             Clinician approved<span className="text--serif text--primary">.</span>

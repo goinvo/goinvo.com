@@ -68,7 +68,7 @@ const services = [
 
 const ServicesPage = () => (
   <Layout>
-    <Hero image="/images/services/hand-drawing.jpg">
+    <Hero image="/images/services/hand-drawing.jpg" position="center top">
       <h1 className="header--xl">
         Disrupt from within,<br/>
         Reinvent your product,<br/>
@@ -86,10 +86,10 @@ const ServicesPage = () => (
                 {service.description}
               </p>
               <p className="text--gray">
-                <span className="text--bold text--uppercase">Methods: </span>{service.methods}
+                <span className="text--bold text--uppercase text--spacing">Methods: </span>{service.methods}
               </p>
               <p className="text--gray">
-                <span className="text--bold text--uppercase">Example: </span><Link to={service.example.link}>{service.example.title}</Link>
+                <span className="text--bold text--uppercase text--spacing">Example: </span><Link to={service.example.link}>{service.example.title}</Link>
               </p>
             </div>
           </GradientImageColumns>

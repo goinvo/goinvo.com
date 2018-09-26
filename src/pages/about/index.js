@@ -67,7 +67,7 @@ const AboutPage = () => (
         outcomes thru design<span className="text--serif text--primary">.</span>
       </h1>
     </Hero>
-    <div className="max-width content-padding">
+    <div className="max-width content-padding pad-vertical">
       <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2">
           <h2 className="header--lg pad-right--only-lg">GoInvo is a digital design studio in Boston, crafting the future of healthcare through strategy, creativity, and vision.</h2>

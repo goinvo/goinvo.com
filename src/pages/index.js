@@ -186,7 +186,7 @@ class IndexPage extends Component {
                   Ethics not optional.<br/>
                   Hyperfocused on healthcare.<br/>
                 </p>
-                <button className="button button--primary button--lg margin-bottom">Meet our team</button><br/>
+                <Link to="/about/" className="button button--primary button--lg margin-bottom">Meet our team</Link><br/>
                 <Link to="/about/open-office-hours/">Visit our open office hours</Link>
               </div>
             </div>

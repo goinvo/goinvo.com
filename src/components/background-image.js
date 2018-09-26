@@ -62,6 +62,10 @@ class BackgroundImage extends Component {
       style.backgroundImage = backgroundProperty;
     }
 
+    if (this.props.position) {
+      style.backgroundPosition = this.props.position;
+    }
+
     return (
       <div className={`background-image`} style={style}>
         {

@@ -4,7 +4,7 @@
   display: block;
 
   &__image-container {
-    height: 300px;
+    height: 275px;
   }
 
   &__video-container {
@@ -71,6 +71,12 @@
       @include mq($from: large) {
         position: absolute;
       }
+    }
+  }
+
+  @include mq($from: large) {
+    #{$parent}__image-container {
+      height: 325px;
     }
   }
 }

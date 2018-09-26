@@ -85,7 +85,7 @@ class CaseStudyLayout extends Component {
                           const study = findCaseStudyById(id, caseStudies);
 
                           return (
-                            <Card key={study.link} link={study.link}>
+                            <Card key={study.slug} link={`/work/${study.slug}`}>
                               <ImageBlock
                                 title={study.title}
                                 image={study.image}

@@ -24,6 +24,28 @@ $ brew update
 $ brew install node
 ```
 
+### NVM
+You may also find it helpful to use a tool to manage your Node installations. [nvm](https://github.com/creationix/nvm) is a good one. Follow the instructions there to install nvm. The command that looks like `curl -o- <url> | bash`
+
+Then you can check your Node versions with:
+```bash
+$ nvm ls
+```
+
+And install new Node versions with:
+```bash
+$ nvm install <version-number>
+
+For example:
+
+$ nvm install 8.11.4
+
+Or:
+
+$ nvm install --lts
+
+```
+
 ### Install Yarn
 Node comes with a package manager, [NPM](https://www.npmjs.com/), by default. However, this project chooses to use [Yarn](https://yarnpkg.com/en/) instead, namely because it's faster and more secure.
 

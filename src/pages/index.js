@@ -11,6 +11,7 @@ import Quote from '../components/quote'
 import HubspotForm from '../components/hubspot-form'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
+import Divider from '../components/divider'
 
 import config from '../../config'
 import { extractCaseStudyDataFromQuery } from '../helpers'
@@ -40,6 +41,7 @@ class IndexPage extends Component {
           </h1>
         </Hero>
         <div className="max-width content-padding">
+          <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
               <h2 className="header--xl margin--none pad-right--double">Our designs in healthcare are used every day<span className="text--serif text--primary">.</span></h2>

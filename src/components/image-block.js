@@ -29,7 +29,7 @@ class ImageBlock extends Component {
           <p className={hoverable ? 'text--bold' : 'header--lg'}>{title}</p>
           {
             client || date || (categories && categories.length) ?
-              <p className="text--caption">
+              <p className="text--gray">
                 { client ? <span>{client}</span> : null }
                 { client && (date || (categories && categories.length)) ? <span> | </span> : null }
                 { (categories && categories.length) ? <span>{this.formatCategories(categories)}</span> : null }
@@ -37,7 +37,7 @@ class ImageBlock extends Component {
               </p>
             : null
           }
-          <p className="text--caption">{caption}</p>
+          <p className="text--gray">{caption}</p>
           {
             this.props.children ?
               <div className="margin-top">

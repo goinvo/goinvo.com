@@ -5,6 +5,10 @@ client: "MITRE"
 caption: "Prototyping and envisioning future applications of a national health data standard."
 categories:
   - "public-health-and-policy"
-results: null
+results:
+- stat: "100%"
+  description: "of everything"
+upNext:
+  - "fastercures-health-data-basics"
 hidden: false
 ---

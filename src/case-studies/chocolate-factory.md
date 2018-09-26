@@ -6,7 +6,11 @@ caption: Redesigned factory to expose spoiled children
 categories:
   - health-it-and-infrastructure
   - patient-engagement
-results: null
+results:
+- stat: "100%"
+  description: "of everything"
+upNext:
+  - "fastercures-health-data-basics"
 hidden: false
 ---
 

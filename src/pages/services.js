@@ -87,7 +87,7 @@ const ServicesPage = () => (
       <div className="equal-height-rows">
         {services.map((service, i) => {
           return (
-            <div className="pure-g">
+            <div key={service.title} className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg margin-bottom">
                   <div className="pad-vertical--double">

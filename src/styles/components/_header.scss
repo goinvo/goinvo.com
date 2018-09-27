@@ -59,8 +59,6 @@
   }
 
   @include mq($from: large) {
-    justify-content: flex-end;
-
     #{$parent}__logo {
       margin-right: auto;
     }

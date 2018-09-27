@@ -35,7 +35,8 @@ class VisionPage extends Component {
 
     this.state = {
       blogPosts: [],
-      recentBlogPostImage: '',
+      // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
+      // recentBlogPostImage: '',
     }
   }
 
@@ -57,7 +58,8 @@ class VisionPage extends Component {
 
         this.setState({
           blogPosts,
-          recentBlogPostImage: res.data.items[0].thumbnail
+          // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
+          // recentBlogPostImage: res.data.items[0].thumbnail
         });
       })
       .catch(err => {
@@ -270,7 +272,7 @@ class VisionPage extends Component {
               <div className="pure-u-1 pure-u-lg-1-2 border-right--only-lg pad-right--only-lg margin-bottom--double">
                 <ImageBlock
                   title="Keep up to date with us!"
-                  externalImage={this.state.recentBlogPostImage}
+                  image="/images/homepage/standardized-health-data-preview-2.jpg"
                   caption="Our posts cover everything from the theories behind messy desks to health data standardization." />
                 <ul className="list--unstyled">
                   { this.renderBlogFeed() }

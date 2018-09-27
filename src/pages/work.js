@@ -42,11 +42,11 @@ const upNextList = [
   }
 ];
 
-const getCaseStudiesOfCategory = (caseStudies, catId) => {
+const getCaseStudiesOfCategory = (caseStudies, catId, viewMore = false) => {
   let newCaseStudies = [];
 
   if (catId === allCategory.id) {
-    newCaseStudies = caseStudies;
+    newCaseStudies = viewMore ? caseStudies : caseStudies.slice(0, 4);
   } else {
     newCaseStudies = caseStudies.filter(study => {
       return study.categories.filter(cat => {
@@ -70,15 +70,19 @@ class WorkPage extends Component {
     const query = props.location && props.location.search ? props.location.search : null;
     const categoryId = query ? query.substr(query.indexOf("=") + 1) : allCategory.id;
     const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
+    const activeCaseStudies = getCaseStudiesOfCategory(caseStudies, selectedCategory.id);
 
     this.state = {
       caseStudies,
       selectedCategory,
-      activeCaseStudies: getCaseStudiesOfCategory(caseStudies, selectedCategory.id),
+      activeCaseStudies,
       categoriesStuck: false,
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
+      partialView: true,
+      viewMoreCount: caseStudies.length - activeCaseStudies.length
     };
+
   }
 
   handleCategoriesStickyStateChange = (isStuck) => {
@@ -97,9 +101,18 @@ class WorkPage extends Component {
 
   setSelectedCategory = (cat) => {
     this.setState({
+      partialView: true,
       selectedCategory: cat,
       activeCaseStudies: getCaseStudiesOfCategory(this.state.caseStudies, cat.id),
       categoriesCollapsed: this.state.categoriesStuck ? true : false,
+    });
+  }
+
+  viewMore = () => {
+    this.setState({
+      partialView: false,
+      selectedCategory: allCategory,
+      activeCaseStudies: getCaseStudiesOfCategory(this.state.caseStudies, allCategory.id, true)
     });
   }
 
@@ -182,9 +195,9 @@ class WorkPage extends Component {
             </Columns>
           </div>
           {
-            this.state.selectedCategory.id === allCategory.id ?
+            this.state.selectedCategory.id === allCategory.id && this.state.partialView ?
               <div className="margin-top margin-bottom--double">
-                <button className="button button--primary button--block">View more</button>
+                <button className="button button--primary button--block" onClick={this.viewMore}>View more ({this.state.viewMoreCount})</button>
               </div>
             : null
           }

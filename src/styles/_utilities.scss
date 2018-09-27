@@ -37,6 +37,10 @@
   &--primary {
     background-color: $color-primary;
   }
+
+  &--thick {
+    height: 2px;
+  }
 }
 
 .border {

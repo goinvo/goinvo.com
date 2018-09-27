@@ -3,22 +3,26 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
-import GradientImageColumns from '../components/gradient-image-columns'
 import Quote from '../components/quote'
 import Columns from '../components/columns'
 import ImageBlock from '../components/image-block'
+import Image from '../components/image'
+import Divider from '../components/divider'
 
 import IconComplexity from '../assets/images/icon-complexity.inline.svg'
 import IconHealthcare from '../assets/images/icon-healthcare.inline.svg'
 import IconTeam from '../assets/images/icon-team.inline.svg'
 import IconVision from '../assets/images/icon-vision.inline.svg'
 
+import config from '../../config'
+
 const services = [
   {
     title: "Healthcare product strategy",
     description: "We envision products and services through collaborative design exercises that will help frame your digital future.",
     methods: "vision workshops, design facilitation, ideation, concept work, product roadmapping",
-    image: "/images/services/personal-genome-ecosystem.jpg",
+    image: "/images/services/pgp-green.jpg",
+    color: "#D6E8E2",
     example: {
       link: "/work/personal-genome-project",
       title: "Personal Genome Project"
@@ -28,7 +32,8 @@ const services = [
     title: "Research",
     description: "We uncover deep user insights with patients, clinicians, and industry experts that inform priorities, drive features, and inspire strategy.",
     methods: "user interviews, analytic reviews, journey mapping, market research, competitive analysis, survey creation",
-    image: "/images/services/wuxi-journey-map.jpg",
+    image: "/images/services/wuxi-blue.jpg",
+    color: "#D3DCEE",
     example: {
       link: "/work/wuxi-next-code",
       title: "WuXi NextCODE"
@@ -38,7 +43,8 @@ const services = [
     title: "Product definition",
     description: "We define complex products and bring ideas to life by mapping systems, touchpoints, and features.",
     methods: "system mapping, use cases, persona development, storyboarding, user requirements",
-    image: "/images/services/shr-completeness.jpg",
+    image: "/images/services/shr-red.jpg",
+    color: "#EAC5BA",
     example: {
       link: "/work/mitre-shr",
       title: "Standard Health Record"
@@ -48,7 +54,8 @@ const services = [
     title: "User experience design",
     description: "We create product user experiences that are both functional and beautiful, crafting every detail from initial sketch to interactive prototype to front-end code.",
     methods: "UI and UX design, information architecture, wireframes, mockups, interactive prototypes, design systems",
-    image: "/images/services/hgraph-ipad.jpg",
+    image: "/images/services/hgraph-gold.jpg",
+    color: "#EEE0CA",
     example: {
       link: "/work/hgraph",
       title: "hGraph"
@@ -58,7 +65,8 @@ const services = [
     title: "Usability and validation",
     description: "We test and iterate designs with users throughout a project to validate product features, functions, and designs.",
     methods: "expert reviews, A/B testing, usability testing, accessability testing",
-    image: "/images/services/glytec-ipad.jpg",
+    image: "/images/services/glytec-brown.jpg",
+    color: "#E2DACE",
     example: {
       link: "/work/glytec",
       title: "Glytec"
@@ -75,27 +83,43 @@ const ServicesPage = () => (
         Change the market<span className="text--serif text--primary">.</span>
       </h1>
     </Hero>
-    <div className="equal-height-rows">
-      {services.map((service, i) => {
-        return (
-          <GradientImageColumns key={service.title} image={service.image} backgroundColor="gray" reverse={ (i % 2 === 0) } arrow>
-            <div className="pad-vertical--double">
-              <h2 className="header--lg margin-bottom--none">{service.title}</h2>
-              <hr className="hr hr--primary" />
-              <p className="text--gray">
-                {service.description}
-              </p>
-              <p className="text--gray">
-                <span className="text--bold text--uppercase text--spacing">Methods: </span>{service.methods}
-              </p>
-              <p className="text--gray">
-                <span className="text--bold text--uppercase text--spacing">Example: </span><Link to={service.example.link}>{service.example.title}</Link>
-              </p>
+    <div className="max-width content-padding pad-vertical--double">
+      <div className="equal-height-rows">
+        {services.map((service, i) => {
+          return (
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-vertical--double">
+                    <h4 className="header--sm margin-bottom--none">{service.title}</h4>
+                    <hr className="hr hr--thick" style={{ backgroundColor: service.color }} />
+                    <p className="text--gray">
+                      {service.description}
+                    </p>
+                    <p className="text--gray">
+                      <span className="text--bold text--uppercase text--spacing">Methods: </span>{service.methods}
+                    </p>
+                    <p className="text--gray">
+                      <span className="text--bold text--uppercase text--spacing">Example: </span><Link to={service.example.link}>{service.example.title}</Link>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-left--only-lg">
+                  <div className="pad-vertical--double">
+                    <Image src={service.image} sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} className="image--max-width" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </GradientImageColumns>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
+    <Quote background="gray" quotee="Serban Georgescu, MD" quoteeSub="InfoBionic Director of Clinical Development">
+      With Invo, design wasn't just design. It impacted our IP portfolio. It changed our business.
+    </Quote>
     <div className="max-width content-padding pad-vertical--double">
       <h3 className="header--md">Approach</h3>
       <div className="pure-g">
@@ -134,10 +158,8 @@ const ServicesPage = () => (
           <Link to="/work/mitre-flux">Structured clinical notes</Link>
         </div>
       </div>
+      <Divider />
     </div>
-    <Quote background="gray" quotee="Serban Georgescu, MD" quoteeSub="InfoBionic Director of Clinical Development">
-      With Invo, design wasn't just design. It impacted our IP portfolio. It changed our business.
-    </Quote>
     <div className="max-width content-padding pad-vertical--double">
       {
         // TODO: Real images here
@@ -147,11 +169,11 @@ const ServicesPage = () => (
           <div><Link to="/work/health-coding/">Health Coding Case Study</Link></div>
           <div><Link to="/work/wuxi-next-code/">WuXi NextCODE</Link></div>
         </ImageBlock>
-        <ImageBlock key={"2"} image="features/determinants-of-health/feature_banner.jpg" title="Information visualizations" caption="We create beautiful printed and interactive health-related data visualizations that span payment dashboards to visualizing the social determinants of health to clinical practice guidelines for Zika.">
+        <ImageBlock key={"2"} image="/images/services/doh-preview.jpg" title="Information visualizations" caption="We create beautiful printed and interactive health-related data visualizations that span payment dashboards to visualizing the social determinants of health to clinical practice guidelines for Zika.">
           <div><Link to="/vision/determinants-of-health/">Determinants of Health</Link></div>
           <div><Link to="/vision/zika/">Clinical Practice Guidelines for Zika</Link></div>
         </ImageBlock>
-        <ImageBlock key={"3"} image="features/determinants-of-health/feature_banner.jpg" title="Open source healthcare products" caption="We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.">
+        <ImageBlock key={"3"} image="/images/services/inspired-ehrs-book.jpg" title="Open source healthcare products" caption="We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.">
         <div><Link to="/work/inspired-ehrs/">Inspired EHRs</Link></div>
         <div><Link to="/work/paintrakr/">Clinical Practice Guidelines for Zika</Link></div>
         <div><Link to="/work/?category=open-source">See all open source products</Link></div>

@@ -41,21 +41,28 @@ class Image extends Component {
   }
 
   render() {
-    let { src, alt, className, dimensions, sizes } = this.props;
-    src = mediaUrl(src);
+    let { src, externalImage, alt, className, dimensions, sizes } = this.props;
+    src = externalImage ? src : mediaUrl(src);
 
     let srcset = dimensions.map(dimension => {
       return `${src}?w=${dimension} ${dimension}w`
     })
 
     return (
-      <img
-        ref={this.img}
-        className={className}
-        alt={alt}
-        srcSet={srcset}
-        sizes={sizes}
-        src={`${src}?w=800`} />
+      externalImage ?
+        <img
+          ref={this.img}
+          className={className}
+          alt={alt}
+          src={src} />
+      :
+        <img
+          ref={this.img}
+          className={className}
+          alt={alt}
+          srcSet={srcset}
+          sizes={sizes}
+          src={`${src}?w=800`} />
     )
   }
 }

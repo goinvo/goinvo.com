@@ -70,7 +70,7 @@ class BackgroundImage extends Component {
       <div className={`background-image`} style={style}>
         {
           !this.props.notResponsive ?
-            <Image src={this.props.src} sizes={this.props.sizes} className="background-image__image" onUpdate={this.updateSrc} ref={this.img} />
+            <Image src={this.props.src} externalImage={this.props.externalImage} className="background-image__image" onUpdate={this.updateSrc} ref={this.img} />
           : null
         }
         { this.props.children }

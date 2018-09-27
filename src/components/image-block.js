@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Image from './image'
+import BackgroundImage from './background-image'
 
 class ImageBlock extends Component {
   formatCategories = (categories) => {
@@ -19,11 +19,7 @@ class ImageBlock extends Component {
     return (
       <div className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className ? className : ''}`}>
         <div className="image-block__image-container">
-          {
-            externalImage ?
-              <img src={externalImage} className="image-block__image" alt={alt || ""} />
-            : <Image src={image} sizes={sizes} className="image-block__image" alt={alt || ""}/>
-          }
+          <BackgroundImage src={image} externalImage={externalImage} sizes={sizes} className="image-block__image" alt={alt || ""} />
         </div>
         <div className="image-block__text">
           <p className={hoverable ? 'text--bold' : 'header--lg'}>{title}</p>

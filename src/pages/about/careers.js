@@ -42,7 +42,7 @@ class CareersPage extends Component {
         <div className="max-width content-padding pad-top">
           <h2 className="header--xl margin-bottom--none">Experiencing GoInvo for<span className="text--serif text--primary">...</span></h2>
         </div>
-        <Carousel menuItems={['a summer internship', '1 year', '3 years', '7 years']}>
+        <Carousel menuItems={['a summer internship', '1 year', '3 years']}>
           <GradientImageColumns image="/images/about/careers/lily-lunch.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Lily Fan" quoteeSub="Design Intern" small>Interning at Invo made me realize the importance of not only working at an awesome company to help transform software in healthcare but the value of spending your every day in an extremely inclusive environment with a diverse range of people who genuinely want to see you succeed.</Quote>
           </GradientImageColumns>
@@ -51,9 +51,6 @@ class CareersPage extends Component {
           </GradientImageColumns>
           <GradientImageColumns image="/images/about/careers/beth-presentation.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Beth Herlin" quoteeSub="Designer" small>GoInvo provided a incubator-like space to expand my toolbox of skills and practices while also giving me a kick in the pants to cultivate my own design principles, passions, and ethics. It was an inspiring environment to do meaningful work with a family of driven, talented people.</Quote>
-          </GradientImageColumns>
-          <GradientImageColumns image="/images/about/bai-laughing.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote background="gray" quotee="Nobody" quoteeSub="Nothing" small>Who am I?</Quote>
           </GradientImageColumns>
         </Carousel>
         <BackgroundImage src="/images/contact/studio.jpg" gradient>

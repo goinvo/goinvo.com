@@ -30,7 +30,7 @@ const upNextList = [
   },
   {
     link: "/vision/",
-    image: "/images/homepage/standardized-health-data-preview.jpg",
+    image: "/images/homepage/standardized-health-data-preview-2.jpg",
     title: "Explore our research",
     caption: "We investigate the future of healthcare through our podcast, features, books, and articles. Check it out!"
   },

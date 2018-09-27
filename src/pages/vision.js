@@ -303,16 +303,16 @@ class VisionPage extends Component {
           // TODO: Real images here
         }
         <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/vision/emerging-tech-wood.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Dan Saffer" quoteeSub="Author of Microinteractions" small>If you're looking for insights how to design the future today, look no further.</Quote>
           </GradientImageColumns>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/services/doh-preview.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Nobody" quoteeSub="Nothing" small>Quote about DOH</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Eric Topol" quoteeSub="Scripps Translational Science Institute" small>Designers at GoInvo have the right ideas for the smart medical home of the future.</Quote>
           </GradientImageColumns>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/services/inspired-ehrs-book.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Janet Campbell" quoteeSub="Epic" small>I sent this around to our User Experience team here, and there was a lot of discussion and appreciation for the work you've done.</Quote>
           </GradientImageColumns>
         </Carousel>

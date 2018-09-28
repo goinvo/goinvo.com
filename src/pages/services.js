@@ -137,8 +137,8 @@ const ServicesPage = () => (
           <p className="text--gray margin-top--half">
             We bring fresh ideas and a history of healthcare design and research to help our clients leverage emerging technologies, envision future products and services, and realize long-term goals.
           </p>
-          <Link to="/work/hgraph/" className="margin-right--double">Your health in one picture</Link>
-          <Link to="/vision/care-plans">Care plans</Link>
+          <Link to="/work/hgraph/" className="display--inline-block margin-right--double">Your health in one picture</Link>
+          <Link to="/vision/care-plans" className="display--inline-block">Care plans</Link>
         </div>
         <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
           <IconTeam className="icon--wide icon--secondary" />
@@ -154,8 +154,8 @@ const ServicesPage = () => (
           <p className="text--gray margin-top--half">
             From enterprise-grade health IT to data-driven precision healthcare, GoInvo works closely with our clients and partners to transform messy problems into structured strategy and solutions.
           </p>
-          <Link to="/work/mitre-shr" className="margin-right--double">Standard health record</Link>
-          <Link to="/work/mitre-flux">Structured clinical notes</Link>
+          <Link to="/work/mitre-shr" className="display--inline-block margin-right--double">Standard health record</Link>
+          <Link to="/work/mitre-flux" className="display--inline-block">Structured clinical notes</Link>
         </div>
       </div>
       <Divider />

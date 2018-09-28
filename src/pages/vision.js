@@ -231,7 +231,7 @@ class VisionPage extends Component {
                   title="Get our latest ideas"
                   submitButtonText="Submit"
                   inline
-                  className="margin-bottom"
+                  className="margin-bottom z-index--1"
                   breakout />
               </div>
               <div className="pure-u-1 pure-u-lg-2-5 pad-left--only-lg margin-top--only-sm">

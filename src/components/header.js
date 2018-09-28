@@ -24,8 +24,8 @@ class Header extends Component {
   render() {
     const navItems = [
       { link: "/work/", title: "Work" },
-      { link: "/about/", title: "About", class: "hidden--until-lg" },
       { link: "/services/", title: "Services", class: "hidden--until-lg" },
+      { link: "/about/", title: "About", class: "hidden--until-lg" },
       { link: "/vision/", title: "Vision" },
     ];
 

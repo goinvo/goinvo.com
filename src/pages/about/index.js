@@ -150,7 +150,7 @@ const AboutPage = () => (
             <p className="text--gray margin-bottom pad-right--only-lg">
               With early roots designing for Yahoo, Mcaffee, and Obama’s 2008 campaign, GoInvo is now focused exclusively on healthcare. We’ve delivered over 110 products with partners ranging from 3M, U.S. Department of Health and Human Services, Partners Healthcare, and a variety of startups.
             </p>
-            <Link className="display--inline-block" to="/about/studio-timeline/" className="margin-right--double">Studio timeline</Link>
+            <Link to="/about/studio-timeline/" className="display--inline-block margin-right--double">Studio timeline</Link>
             {
               // TODO: Real link here
             }

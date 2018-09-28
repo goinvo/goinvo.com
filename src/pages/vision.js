@@ -208,9 +208,7 @@ class VisionPage extends Component {
         <div className="max-width content-padding pad-vertical pad-bottom--double">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-              <div className="container container--column container--justify-center container--fill-height">
-                <Image src="/images/vision/emerging-tech-books.jpg" className="image--max-width" />
-              </div>
+              <Image src="/images/vision/emerging-tech-books.jpg" className="image--max-width" />
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
               <h2 className="header--xl">Design and Tech Publications</h2>

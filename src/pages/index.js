@@ -174,7 +174,7 @@ class IndexPage extends Component {
         <div className="max-width content-padding pad-vertical--double">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="container container--column container--justify-center container--fill-height pad-right--only-lg">
+              <div className="pad-right--only-lg">
                 <Image src="/images/homepage/group-aug-2018.jpg" className="image--max-width" />
               </div>
             </div>

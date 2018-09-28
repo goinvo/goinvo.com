@@ -77,8 +77,20 @@
     margin-top: -2rem;
 
     @include mq($from: large) {
-      margin-top: -1rem;
-      margin-bottom: -1rem;
+      margin-top: 0;
+    }
+  }
+}
+
+.vision-form-wrapper {
+  @include mq($from: large) {
+    position: relative;
+
+    .hubspot-form {
+      position: absolute;
+      top: -$spacing;
+      left: 0;
+      width: 100%;
     }
   }
 }

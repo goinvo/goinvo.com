@@ -225,16 +225,16 @@ class VisionPage extends Component {
         <div className="background--gray margin-top--double">
           <div className="max-width content-padding">
             <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-3-5">
+              <div className="pure-u-1 pure-u-lg-3-5 vision-form-wrapper">
                 <HubspotForm
                   formId={config.hubspotNewsletterFormId}
                   title="Get our latest ideas"
                   submitButtonText="Submit"
                   inline
-                  className="margin-bottom z-index--1"
+                  className="margin-bottom"
                   breakout />
               </div>
-              <div className="pure-u-1 pure-u-lg-2-5 pad-left--only-lg margin-top--only-sm">
+              <div className="pure-u-1 pure-u-lg-2-5 pad-left--only-lg pad-vertical margin-top--only-sm">
                 <ul className="social-links list--unstyled container container--justify-space-around container--align-center container--fill-height">
                   <li className="margin-left--only-lg">
                     <span className="text--gray">Find us on:</span>

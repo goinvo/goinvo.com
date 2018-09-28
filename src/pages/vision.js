@@ -259,25 +259,21 @@ class VisionPage extends Component {
         <div className="background--blue pad-vertical--double">
           <div className="max-width content-padding">
             <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2">
+              <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
                 <h3 className="header--md">Blog Posts</h3>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                <h3 className="header--md">Podcast</h3>
-              </div>
-            </div>
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2 border-right--only-lg pad-right--only-lg margin-bottom--double">
-                <ImageBlock
-                  title="Keep up to date with us!"
-                  image="/images/homepage/standardized-health-data-preview-2.jpg"
-                  caption="Our posts cover everything from the theories behind messy desks to health data standardization." />
-                <ul className="list--unstyled">
-                  { this.renderBlogFeed() }
-                </ul>
-                <a className="float--right" href="https://yes.goinvo.com/articles">View all blog posts</a>
+                <div className="border-right--only-lg pad-right--only-lg">
+                  <ImageBlock
+                    title="Keep up to date with us!"
+                    image="/images/homepage/standardized-health-data-preview-2.jpg"
+                    caption="Our posts cover everything from the theories behind messy desks to health data standardization." />
+                  <ul className="list--unstyled">
+                    { this.renderBlogFeed() }
+                  </ul>
+                  <a className="float--right" href="https://yes.goinvo.com/articles">View all blog posts</a>
+                </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+                <h3 className="header--md">Podcast</h3>
                 <ImageBlock
                   title="The Digital Life"
                   image="/images/vision/microphone.jpg"

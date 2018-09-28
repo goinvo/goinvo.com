@@ -5,11 +5,12 @@
 }
 
 .form-control {
-  border: 1px solid $color-gray--medium;
   display: block;
   width: 100%;
   height: 2.5rem;
   margin-bottom: $spacing;
+  border: 1px solid $color-gray--medium;
+  border-radius: 0;
 
   &--textarea {
     height: 8rem;

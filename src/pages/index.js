@@ -33,7 +33,12 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero video={heroVideoSources} caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments." withLogo>
+        <Hero
+          video={heroVideoSources}
+          poster="/images/homepage/doh-hero-poster.jpg"
+          fallback="/images/homepage/doh-hero-fallback.jpg"
+          caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments."
+          withLogo>
           <h1 className="header--xl">
             Designing<br/>
             the future of<br/>

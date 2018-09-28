@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 
 import BackgroundImage from './background-image'
+import Image from './image'
 import Logo from '../assets/images/logo-goinvo.inline.svg'
 
 import { mediaUrl } from '../helpers'
 
 class Hero extends Component {
   render() {
-    let { image, video, caption, isLarge, withLogo, position, children } = this.props;
+    let { image, video, poster, fallback, caption, isLarge, withLogo, position, children } = this.props;
 
     return (
       <div className={`hero ${isLarge ? 'hero--large' : ''} ${video ? 'hero--video' : ''}`}>
@@ -24,9 +25,9 @@ class Hero extends Component {
               {
                 // TODO: Add poster image / fallback here
               }
-              <video className="hero__video" autoPlay muted playsInline>
+              <video className="hero__video" poster={mediaUrl(poster)} autoPlay muted playsInline>
                 {video.map(src => <source key={src.format} src={mediaUrl(src.src)} type={`video/${src.format}`} />)}
-                Your browser does not support the video tag.
+                <Image src={fallback} alt="" />
               </video>
             </div>
           : null

@@ -25,6 +25,8 @@ import Quote from '../components/quote'
 <!-- TODO: figure out references / superscripts w/ links -->
 <!-- TODO: photoshoot for real life images instead of screenshots ??? -->
 
+# Designing an efficient IRB
+
 ### Problem
 
 Institutional review boards (IRBs) stand as gatekeepers of medical research, reviewing and ensuring proposed studies are ethical and legal, as they will eventually have a direct impact on long-term patient outcomes. Partners Healthcare, as the largest provider network in Massachusetts [1](#references), requires all Partners-affiliated investigators to submit their studies and have them approved by the Partners Human Research Committee (PHRC) [2](#references). Insight, PHRC's electronic IRB portal, is the central point of ingest and administration for medical research for six major research institutions [3](#references). The software and processes suffered from serious usability issues that would impede turnaround times and delay research for weeks at a time.

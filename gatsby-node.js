@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -43,3 +44,15 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 };
+
+exports.onCreateWebpackConfig = ({
+  getConfig,
+  stage,
+  actions,
+}) => {
+  if (stage === 'build-javascript') {
+    const config = getConfig()
+    config.entry.pack = path.resolve(__dirname, 'src/pack')
+    actions.replaceWebpackConfig(config)
+  }
+}

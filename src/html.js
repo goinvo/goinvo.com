@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { withPrefix } from 'gatsby'
 
 export default class HTML extends React.Component {
   render() {
@@ -14,6 +15,7 @@ export default class HTML extends React.Component {
           />
           <link rel="preload" href="https://use.typekit.net/lcb6luw.css" as="style" crossOrigin="crossorigin"></link>
           <link rel="stylesheet" href="https://use.typekit.net/lcb6luw.css"></link>
+          <script type="text/javascript" src={withPrefix('iframeResizer.min.js')}></script>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

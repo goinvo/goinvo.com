@@ -6,8 +6,6 @@ class Feature extends Component {
   constructor(props) {
     super(props);
 
-    console.log(props);
-
     this.iframe = React.createRef();
   }
 
@@ -20,7 +18,13 @@ class Feature extends Component {
   }
 
   resizeIFrameToMatchContentHeight = () => {
-    this.iframe.current.scrollHeight = this.iframe.current.contentWindow.document.body.scrollHeight;
+    if (window.iFrameResize && this.iframe) {
+      // const options = {
+      //   checkOrigin: false
+      // }
+
+      // window.iFrameResize(options, this.iframe.current);
+    }
   }
 
   render() {
@@ -32,7 +36,7 @@ class Feature extends Component {
           frameBorder="0"
           title="GoInvo.com Feature Article"
           className="feature__iframe"
-          src={`http://localhost:4567/${this.props["*"]}`}>
+          src={`http://old-features.goinvo.com.s3-website-us-east-1.amazonaws.com/${this.props["*"]}`}>
         </iframe>
       </Layout>
     )

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -22,6 +23,13 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+            allOldFeaturesJson {
+              edges {
+                node {
+                  route
+                }
+              }
+            }
           }
         `
       ).then(result => {
@@ -38,6 +46,14 @@ exports.createPages = ({ graphql, actions }) => {
               context: { absPath: node.parent.absolutePath }
             });
           }
+        });
+
+        result.data.allOldFeaturesJson.edges.forEach(({ node }) => {
+          createPage({
+            path: `/features/${node.route}/*`,
+            component: path.resolve(`src/pages/features/index.js`),
+            context: { route: node.route }
+          })
         });
       })
     );

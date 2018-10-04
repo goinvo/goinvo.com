@@ -18,6 +18,9 @@ upNext:
   - "acme"
   - "mitre-shr"
 hidden: false
+references:
+  - title: "derpy derp derp"
+    link: "https://www.google.com"
 ---
 
 import Divider from '../components/divider'
@@ -44,7 +47,7 @@ import Video from '../components/video'
 ### Problem
 
 #### Patients don't understand what health data is or why it's important
-Comprehension of health information is fundamental to well-being, patient empowerment, and decision making. However, a scant 12% of US adults are health literate, and only 41% of individuals have even accessed their medical record. Driven by their mission to place patients first, FasterCures partnered with GoInvo to educate and engage patients on health data.
+Comprehension of health information is fundamental to well-being, patient empowerment, and decision making. However, a scant 12% of US adults are health literate, and only 41% of individuals have even accessed their medical record. Driven by their mission to place patients first, FasterCures partnered with GoInvo to educate and engage patients on health data.[^1]
 
 ### Solution
 

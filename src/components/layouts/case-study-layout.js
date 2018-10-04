@@ -10,6 +10,7 @@ import Results from '../results'
 import Columns from '../columns'
 import Card from '../card'
 import ImageBlock from '../image-block'
+import References from '../references'
 
 import { extractCaseStudyDataFromQuery, findCaseStudyById } from '../../helpers'
 
@@ -97,6 +98,7 @@ class CaseStudyLayout extends Component {
                       </Columns>
                     </div>
                   </div>
+                  <References references={frontmatter.references} />
                 </div>
               </MDXProvider>
             </Layout>

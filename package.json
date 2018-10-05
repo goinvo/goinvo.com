@@ -6,6 +6,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^0.15.4",
     "@mdx-js/tag": "^0.15.0",
+    "aws-sdk": "^2.328.0",
     "axios": "^0.18.0",
     "gatsby": "^2.0.0-rc.28",
     "gatsby-mdx": "^0.1.4",
@@ -15,6 +16,7 @@
     "gatsby-plugin-react-svg": "^2.0.0-beta1",
     "gatsby-plugin-sass": "^2.0.0-rc.0",
     "gatsby-source-filesystem": "^2.0.1-rc.0",
+    "mime-types": "^2.1.20",
     "node-sass": "^4.9.3",
     "purecss": "^1.0.0",
     "react": "^16.4.2",
@@ -34,6 +36,7 @@
     "gatsby-develop": "gatsby develop",
     "develop": "run-s rework-css gatsby-develop",
     "format": "prettier --write '**/*.js'",
+    "upload": "node upload.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

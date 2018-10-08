@@ -37,6 +37,7 @@
     "develop": "run-s rework-css gatsby-develop",
     "format": "prettier --write '**/*.js'",
     "upload": "node upload.js",
+    "redirect": "node redirect.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

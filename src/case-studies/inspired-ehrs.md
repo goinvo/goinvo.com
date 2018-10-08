@@ -6,7 +6,7 @@ caption: "Revealing multifaceted, evidence-based designs for a new generation of
 categories:
   - "health-it-and-infrastructure"
 results:
-  - stat: "800"
+  - stat: "600"
     description: "visits / month today"
   - stat: " "
     description: " "

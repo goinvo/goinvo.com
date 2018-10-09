@@ -22,10 +22,6 @@ hidden: false
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 
-<!-- TODO: figure out references / superscripts w/ links -->
-<!-- TODO: get permission to post -->
-<!-- TODO: finish up images -->
-
 # Building a community for data donation
 
 ### Problem
@@ -42,7 +38,6 @@ The workshop led to a refocused mission and restructuring for the PGP and the cr
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 2 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics
-
 
 [OpenHumans](http://www.openhumans.org)
 

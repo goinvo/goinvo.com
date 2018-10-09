@@ -1,0 +1,84 @@
+---
+title: "OpenHumans"
+image: "/images/case-studies/personal-genome-project/pgp-ecosystem.jpg"
+client: "The Personal Genome Project"
+caption: "A strategy workshop that leads to a new business focus"
+categories:
+  - "precision-medicine-and-genomics"
+results:
+  - stat: " "
+    description: " "
+  - stat: " "
+    description: " "
+  - stat: " "
+    description: " "
+upNext:
+  - "code-ryte"
+  - "acme"
+  - "mitre-shr"
+hidden: false
+---
+
+import Divider from '../components/divider'
+import Quote from '../components/quote'
+
+<!-- TODO: figure out references / superscripts w/ links -->
+<!-- TODO: get permission to post -->
+<!-- TODO: finish up images -->
+
+# Building a community for data donation
+
+### Problem
+
+The Personal Genome Project (PGP) aimed to sequence 100,000 genomes to advance the understanding and management of human health and disease. Yet the founding members diverged on a clear path to realize their vision.
+
+### Solution
+
+To help understand how PGP could better fulfill its goals, GoInvo led the founders in a one-day exploratory workshop to facilitate discussion and ideation on how to design their services.
+
+### Results
+
+The workshop led to a refocused mission and restructuring for the PGP and the creation of a new partner organization – &mdash;OpenHumans.
+
+<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 2 weeks
+<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics
+
+
+[OpenHumans](http://www.openhumans.org)
+
+<Divider />
+
+## Process
+
+![current](/images/case-studies/personal-genome-project/pgp-current-ecosystem.jpg)
+
+#### Mapping the Problem
+
+GoInvo’s team met with the PGP’s founders to map the company’s existing ecosystem to identify pain points. Live sketching revealed the risks and benefits of PGP’s current strategies through the lends of their users. The workshop gave his team a forum to tease out their big ideas and their role in open genomics and research.
+
+<Quote quotee="Jason Bobe" quoteeSub="executive director of the PGP">It was time for us to step back and talk about what that overarching goal was, and we did that through this workshop. It was very helpful</Quote>
+
+![discussion](/images/case-studies/personal-genome-project/pgp-meeting2.jpg)
+
+*Lisa Caldwell leading user experience discussion.*
+
+## Insights
+
+#### Nurture membership
+
+PGP has a robust application process that provided a comprehensive education around consent and potential misuse of data. However, members received little to no feedback on if their information was being used, how it was being used, or the potential impact of their contributions. PGP needed a strategy beyond onboarding to retain membership and engage active participation.
+
+![sketch](/images/case-studies/personal-genome-project/pgp-sketch.jpg)
+
+## Solution
+
+#### Birth of OpenHumans.org
+Out team guided PGP in reimagining their organizational model and separating recruitment, data collection, and member retention into parallel strategies. OpenHumans, a separate web portal, would allow members to participate, manage their data, and see how it is used to advance science and medicine. Researchers, whether academic, independent, or citizen scientists, would then be able to access PGP’s database of genomes and medical histories via a separate interface.
+
+OpenHumans continues today, encouraging patients to get involved with their health data and to participate in research to help advance our understanding of human biology and medical science.
+
+<Quote quotee="Jason Bobe" quoteeSub="executive director of the PGP">I hope we get the opportunity to work with GoInvo again</Quote>
+
+![timeline](/images/case-studies/personal-genome-project/pgp-timeline2.jpg)
+
+*Kimberly Chang and Reshma Mehta, the GoInvo team, map out possible solutions to the current ecosystem.*

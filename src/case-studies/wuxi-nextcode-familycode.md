@@ -1,0 +1,118 @@
+---
+title: "Carrier screening for everyone"
+image: "/images/case-studies/wuxi/familycode/Familycode_hero.jpg"
+client: "WuXi NextCODE"
+caption: "Shifting from a behind the scenes genomics powerhouse to a consumer-friendly service."
+categories:
+  - "precision-medicine-and-genomics"
+results:
+  - stat: " "
+    description: " "
+  - stat: " "
+    description: " "
+  - stat: " "
+    description: " "
+upNext:
+  - "code-ryte"
+  - "acme"
+  - "mitre-shr"
+hidden: false
+---
+
+import Divider from '../components/divider'
+import Quote from '../components/quote'
+
+<!-- TODO: references -->
+
+# Carrier Screening for Everone
+
+### Problem
+
+Carrier screening results are complicated. People typically don't have the expertise to understand genetic results, let alone know what to do with them. In fact, only 14% of PCP's are confident in interpreting genetic test results. While genetic counselors can help clinicians with genetic interpretation, there is a severe shortage with only ~3,800 genetic counselors in the US, causing a limiting factor for clinician adoption.
+
+### Solution
+
+We designed a carrier screening service that patients and clinicians could understand and guide them through the process without requiring a degree in genomics.
+
+### Results
+
+Validated with 50+ individuals, from genetic counselors to clinicians to patients to research scientists. The first version of the service launched abroad with other countries to follow.
+
+<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 8 weeks
+<br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics
+
+<Divider />
+
+## Process
+
+WuXi NextCODE is the leader in powering Precision Medicine efforts around the globe, from Iceland, to China, to England, to the United States. While they are the leaders in academic and government genomics research, they have aspirations to expand into a patient-facing service. While their services worked for academics and governments, WuXi NextCODE knew a different approach was needed to break into the $2.2 billion genetic carrier screening market.
+
+#### A beautiful carrier screening experience awaits
+
+Our task was to create a beautiful, human-friendly carrier screening service that clinicians could offer to patients.
+
+We quickly surveyed the landscape of competitors in the field &mdash;identifying their strengths and weaknesses to see how a new carrier screening service could stand out.
+
+![analysis](/images/case-studies/wuxi/familycode/Familycode_competitiveanalysis.jpg)
+
+Today's carrier screening reports are riddled with industry jargon, ambiguous next steps, and unclear severity of results. The result is a heightened stress for patients in an already stressful situation.
+
+![report](/images/case-studies/wuxi/familycode/Familycode_report.jpg)
+
+## Insights & Solution
+
+#### Real-world experience drives design
+
+From the start, we leveraged people's firsthand experiences to lead the design journey. Since this was a new market for WuXi NextCODE, we didn't have pool of existing customers to reach out to. With a short timeline, we took a grassroots approach to recruiting our Patient and Clinician User Advisory Group which consisted of 10 patients, 8 clinicians, and 2 genetic counselors.
+
+With the advisory group in place, we began interviewing each participant to understand their experiences with carrier screening. We wanted to understand the pain points, clinical process, health literacy, experience with genomics, ordering tests, and the cultural, emotional, and financial barriers.
+
+What we heard in those interviews shaped our early concepts:
+
+<Quote quotee="Patient" quoteeSub="">I couldn't even read [my report] or pronounce it</Quote>
+
+<Quote quotee="Clinician" quoteeSub="">Patients are scared they'll be a carrier for something and that it's more significant than it really is.</Quote>
+
+A journey map summarized our learnings, documenting the end-to-end carrier screening process. From here, we started formulating a hypothesis for ironing out the friction points.
+
+![report](/images/case-studies/wuxi/familycode/Familycode_journeymap.jpg)
+
+#### Demystifying the carrier mystery
+
+When we consider that every human is a carrier of multiple diseases, being a carrier shouldn't be something to be feared, yet it is.
+
+When the results are available, we want to clearly communicate the recipient's results and the fact that it is normal to be a carrier. Second, we want to describe what this means for their future family. Finally, we want to educate the recipient on how this can impact their current family.
+
+![familycode](/images/case-studies/wuxi/familycode/Familycode_mockup.jpg)
+
+#### Establishing an industry standard
+
+In 30+ interviews, a series of patterns emerged that led us to outline guidelines that should serve as an industry standard for delivering a carrier screening service.
+
+#### 1. Always deliver results to patient
+
+Regardless of what the results are. Patients want clinical information for their own records, even if it is a negative result.
+
+#### 2. Results must be understandable by clinician and patient
+
+Assume genetic counselors are not available for the entire process. By simplifying the language for patients, results become easier for all parties to understand.
+
+#### 3. Deliver results before consultation
+
+Provide all parties sufficient time to read the report on their own and gather any questions they want to ask.
+
+#### 4. Spit kit for sample collection
+
+Saliva samples allow for a more consistently positive experience compared to blood samples.
+
+#### 5. Offer out-of-pocket payment for patients
+
+Dealing with insurance is time-consuming, costly, frustrating, and does not expand internationally.
+
+## Results
+
+#### Design changes business through research, validation, and evidence
+
+In 8 short weeks there was a clear direction on the experience the team could rally around. With the data validating the design, the WuXi leadership had the confidence to begin production on a carrier screening service.
+
+The first version of the service launched abroad with other countries to follow.

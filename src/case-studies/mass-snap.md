@@ -47,7 +47,7 @@ We designed an application that’s fully compliant with [WCAG](https://www.w3.o
 #### No one should have to worry about affording their next meal. 
 In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP [2](#references). Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in $1.80 in total economic activity.” 
 
-![A simple diagram we made to help communicate the process to SNAP applicants.](/images/mass/snap/mobile-car.jpg)
+![A simple diagram we made to help communicate the process to SNAP applicants.](/images/case-studies/mass/snap/mobile-car.jpg)
 
 #### Applying for and retaining support is paperwork-heavy 
 Even if a family has recognized their need and decided to look into options, the application pipeline is time-consuming and emotionally taxing. There are three primary steps to receive SNAP benefits: 
@@ -58,14 +58,14 @@ Even if a family has recognized their need and decided to look into options, the
 
 After eventually receiving benefits, snail-mail and recurring paperwork are a large part of retaining the monthly support. 
 
-![The original workflow of the screener and application.](/images/mass/snap/snap_old_process.jpg)
+![The original workflow of the screener and application.](/images/case-studies/mass/snap/snap_old_process.jpg)
 
 #### User driven design
 To reach our users most effectively, we spent time gathering information about those applying. We also immersed ourselves in the current state of SNAP locally and nationally. We gathered demographic data and reviewed research about designing government services for those of all language, age, skill, and stress levels. 
 
 Before the project began, we reached out to a colleague who had received SNAP benefits as an Americorps teacher (in certain regions, Americorps teachers are encouraged to apply to SNAP). Talking with her put a face to the project and shed light on a teacher’s perspective of SNAP. 
 
-![Whiteboard diagram about SNAP.](/images/mass/snap/snap_whiteboard.jpg)
+![Whiteboard diagram about SNAP.](/images/case-studies/mass/snap/snap_whiteboard.jpg)
 
 We reached out to national experts on SNAP policy and civic design for guidance and design feedback. Through Dana Chisnel, Co-Director of Center for Civic Design, the mantra of the design became “linear and literal.”
 
@@ -83,12 +83,12 @@ Although not originally tasked with updating the questions in the application, w
 
 Not all of our efforts made the cut. Accommodating genders beyond the limited ‘Male or Female’ was not an option. Although the whole team could understand how this question may inhibit people from applying, the question couldn’t be changed because it was tied to ingrained processes behind the scenes. 
 
-![Getting started - before and after. This example shows the amount of text that could be summarized and simplified down to one short screen.](/images/mass/snap/snap_before_after.jpg)
+![Getting started - before and after. This example shows the amount of text that could be summarized and simplified down to one short screen.](/images/case-studies/mass/snap/snap_before_after.jpg)
 
 #### Honing our approach
 Design isn’t limited to what the design is but also how the design happens. As weeks went by, it became more difficult to gather detailed feedback from all of those involved who often had diverse perspectives. We found a way to foster rich discussion and capture each person’s perspective by building a prototype of the SNAP application design and spending our meeting time in small groups. We pulled in laptops, iPads, and mobile phones of various sizes, giving everyone time to explore the design on their own. We focused on key questions in small groups and sometimes brought handouts to gather the response of individual members. This change in strategy propelled the design forward and gave us rich feedback from our client and stakeholders. 
 
-![Collecting feedback in small groups as we walk through the prototype with stakeholders.](/images/mass/snap/snap_dta_meeting.jpg)
+![Collecting feedback in small groups as we walk through the prototype with stakeholders.](/images/case-studies/mass/snap/snap_dta_meeting.jpg)
 
 #### Delivering on time
 Behavior, interactions, feedback loops, and accessibility standards all ultimately manifest in code. To best communicate how the software should perform, we created a reference implementation of the user interface for our engineering partners at Conduent. We built a fully functioning sandbox in React as well as many of the front-end components used in the production environment. Throughout the production cycle, we consulted and QA’ed for the engineering effort, providing supporting materials such as outlines for browser and accessibility testing. 

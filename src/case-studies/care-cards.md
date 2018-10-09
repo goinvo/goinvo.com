@@ -21,9 +21,6 @@ hidden: false
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 
-<!-- TODO: figure out references / superscripts w/ links -->
-
-
 # Care Cards
 
 ### Problem
@@ -61,7 +58,7 @@ Care Cards gives you habits to improve your health and well-being, literally cha
 ![sketches](/images/case-studies/goinvo/carecards/carecards-sketches2.jpg)
 *Sketching new axiom concepts before creating digital illustrations.*
 
-![sketches](/images/case-studies/goinvo/carecards/CareCards_Twirled.jpg)
+![deck](/images/case-studies/goinvo/carecards/CareCards_Twirled.jpg)
 
 <Divider />
 
@@ -82,18 +79,18 @@ Released to little fanfare, the Care Cards quickly took off and enjoyed viral su
 
 ## The Design
 
-![sketches](/images/case-studies/goinvo/carecards/carecards-moveMore.jpg)
+![move more](/images/case-studies/goinvo/carecards/carecards-moveMore.jpg)
 
 Easy-to-use, to take, to share.
 
 Possible Care Cards installations inside clinics.
 
-![sketches](/images/case-studies/goinvo/carecards/carecards-officeMockups2.jpg)
+![clinic installations](/images/case-studies/goinvo/carecards/carecards-officeMockups2.jpg)
 
-![sketches](/images/case-studies/goinvo/carecards/CareCards_Bulletin_Board.jpg)
+![pin it](/images/case-studies/goinvo/carecards/CareCards_Bulletin_Board.jpg)
 
-![sketches](/images/case-studies/goinvo/carecards/CareCards_Refrigerator.jpg)
+![stick it](/images/case-studies/goinvo/carecards/CareCards_Refrigerator.jpg)
 
-![sketches](/images/case-studies/goinvo/carecards/CareCards_Kid_Holding_Card.jpg)
+![fit for life](/images/case-studies/goinvo/carecards/CareCards_Kid_Holding_Card.jpg)
 
 Similar to a standard deck of cards, Care Cards fit into your pocket &mdash;and your life.

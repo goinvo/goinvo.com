@@ -21,9 +21,6 @@ hidden: false
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 
-<!-- TODO: figure out references / superscripts w/ links -->
-
-
 # hGraph
 
 ### Problem
@@ -56,25 +53,25 @@ hGraph is an open source tool that has been adopted by many organizations like W
 
 This [open source](https://github.com/goinvo/hGraph) visualization aggregates health data both on a personal and community level. It provides clinicians with at-a-glance analytics of a patient’s overall health, allowing doctors to spot patterns and red flags. It works by comparing a person’s health data against targeted health ranges based on factors like age and gender. Metrics that appear red are either lower or higher than the “good health” range. The hScore is an overall, aggregated score of health (1-100) that represents a person’s health status, or grade. In this deceptively simple fashion, hGraph enables the compilation and display of a considerable amount of information within a limited space.
 
-![hgraph](/images/case-studies/goinvo/hgraph/hgraph-mobile-health-design.jpg)
+![mobile hgraph](/images/case-studies/goinvo/hgraph/hgraph-mobile-health-design.jpg)
 
 #### Keeping the big picture in mind wherever you go
 
 hGraph can display everything from behavioral patterns to test data, giving the viewer a complete picture of a patient’s health. hGraph stores data from all medical providers making it easier for patients to follow up with their primary care physicians.
 
-![hgraph](/images/case-studies/goinvo/hgraph/hgraph_patterns.jpg)
+![patterns](/images/case-studies/goinvo/hgraph/hgraph_patterns.jpg)
 
 #### Visually identify patterns
 
 hGraph can also track data across generations, displaying behavioral and medical trends in families. Over time, doctors can identify patterns that could eventually lead to conditions like diabetes or hypertension.
 
-![hgraph](/images/case-studies/goinvo/hgraph/hgraph-labs-health-metrics.jpg)
+![lab metrics](/images/case-studies/goinvo/hgraph/hgraph-labs-health-metrics.jpg)
 
 #### People can zoom in to inspect each data point.
 
 Based on an individual’s health data, hGraph identifies where an individual’s health numbers are, and where they should be.
 
-![hgraph](/images/case-studies/goinvo/hgraph/hgraph-health-history-timeline.jpg)
+![hgraph as a health history](/images/case-studies/goinvo/hgraph/hgraph-health-history-timeline.jpg)
 
 <Divider />
 

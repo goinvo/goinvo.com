@@ -2,7 +2,7 @@
 title: "PainTrackr"
 image: "/images/case-studies/goinvo/paintrackr/PainTrackr_Hero.jpg"
 client: "Open Source, GoInvo"
-caption: "An intuitive tool for logging pain."
+caption: "A straightforward, tactile tool for logging pain."
 categories:
   - "patient-engagement"
 results:
@@ -20,8 +20,6 @@ hidden: false
 ---
 import Divider from '../components/divider'
 import Quote from '../components/quote'
-
-<!-- TODO: figure out references / superscripts w/ links -->
 
 # PainTrackr
 

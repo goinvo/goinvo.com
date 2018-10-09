@@ -47,7 +47,7 @@ We designed an application that’s fully compliant with [WCAG](https://www.w3.o
 #### No one should have to worry about affording their next meal. 
 In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP [2](#references). Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in $1.80 in total economic activity.” 
 
-![A simple diagram we made to help communicate the process to SNAP applicants.](/images/case-studies/mass/snap/mobile-car.jpg)
+![A simple diagram we made to help communicate the process to SNAP applicants.](/images/case-studies/mass/snap/snap_simple_process.jpg)
 
 #### Applying for and retaining support is paperwork-heavy 
 Even if a family has recognized their need and decided to look into options, the application pipeline is time-consuming and emotionally taxing. There are three primary steps to receive SNAP benefits: 

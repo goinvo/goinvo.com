@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 
 import BackgroundImage from './background-image'
-import Image from './image'
+import Video from './video'
 import Logo from '../assets/images/logo-goinvo.inline.svg'
-
-import { mediaUrl } from '../helpers'
 
 class Hero extends Component {
   render() {
@@ -25,10 +23,7 @@ class Hero extends Component {
               {
                 // TODO: Add poster image / fallback here
               }
-              <video className="hero__video" poster={mediaUrl(poster)} autoPlay muted playsInline>
-                {video.map(src => <source key={src.format} src={mediaUrl(src.src)} type={`video/${src.format}`} />)}
-                <Image src={fallback} alt="" />
-              </video>
+              <Video className="hero__video" sources={video} poster={poster} fallback={fallback} />
             </div>
           : null
         }

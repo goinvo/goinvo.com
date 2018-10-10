@@ -304,7 +304,7 @@ class VisionPage extends Component {
         </div>
         <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>
           <GradientImageColumns image="/images/vision/emerging-tech-wood.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote background="gray" quotee="Carla Diana" quoteeSub="Creative Technologist and Author" small>This book is a must-read for anyone involved in innovative product design, new business creation, or technology research for near future applications. The wide collection of essays offers a wild ride across multiple disciplines.</Quote>
+            <Quote background="gray" quotee="Dan Saffer" quoteeSub="Author of Microinteractions" small>If you’re looking for insights into how to design the future today, look no further.</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="/images/services/doh-preview.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Toyin Ajayi" quoteeSub="Chief Health Officer of Cityblock Health" small>The SDoH poster stands taped to the giant whiteboard outside my office [at Google Cityblock Health Labs], and will form the basis of many rich conversations among my team. Thank you!</Quote>

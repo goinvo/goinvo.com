@@ -24,7 +24,7 @@ import Quote from '../components/quote'
 
 <!-- TODO: references -->
 
-# Carrier Screening for Everone
+# Carrier Screening for Everyone
 
 ### Problem
 

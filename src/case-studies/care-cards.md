@@ -13,9 +13,9 @@ results:
   - stat: " "
     description: " "
 upNext:
-  - "code-ryte"
-  - "acme"
-  - "mitre-shr"
+  - "hgraph"
+  - "paintrackr"
+  - "fastercures-health-data-basics"
 hidden: false
 ---
 import Divider from '../components/divider'
@@ -44,8 +44,7 @@ Patient Safety & Quality Healthcare
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer, part time, across 2 years
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement
-
-[Get your own deck](www.carecards.me)
+<a href="www.carecards.me" class="button button--primary button--lg margin-top--double margin-bottom--half">Get your own deck</a>
 
 <Quote quotee="Roni Zeiger, MD" quoteeSub="former Chief Health Strategist at Google, co-founder of Smart Patients">Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.</Quote>
 
@@ -55,10 +54,10 @@ Our Chief Creative Officer, Juhan Sonin, was trying to live healthier. While he 
 
 Care Cards gives you habits to improve your health and well-being, literally changing your life. There are 54 cards in our deck. On the front of each is a beautiful illustration reminding you of a specific, healthful axiom. On the back are essential insights and tips that help you bring the axiom into your everyday life.
 
-![sketches](/images/case-studies/goinvo/carecards/carecards-sketches2.jpg)
+![sketches](/images/case-studies/goinvo/carecards/care-cards-sketches.jpg)
 *Sketching new axiom concepts before creating digital illustrations.*
 
-![deck](/images/case-studies/goinvo/carecards/CareCards_Twirled.jpg)
+![deck](/images/case-studies/goinvo/carecards/care-cards-twirled.jpg)
 
 <Divider />
 
@@ -79,18 +78,18 @@ Released to little fanfare, the Care Cards quickly took off and enjoyed viral su
 
 ## The Design
 
-![move more](/images/case-studies/goinvo/carecards/carecards-moveMore.jpg)
+![move more](/images/case-studies/goinvo/carecards/care-cards-move-more.jpg)
 
 Easy-to-use, to take, to share.
 
 Possible Care Cards installations inside clinics.
 
-![clinic installations](/images/case-studies/goinvo/carecards/carecards-officeMockups2.jpg)
+![clinic installations](/images/case-studies/goinvo/carecards/care-cards-office-mockups.jpg)
 
-![pin it](/images/case-studies/goinvo/carecards/CareCards_Bulletin_Board.jpg)
+![pin it](/images/case-studies/goinvo/carecards/care-cards-bulletin-board.jpg)
 
-![stick it](/images/case-studies/goinvo/carecards/CareCards_Refrigerator.jpg)
+![stick it](/images/case-studies/goinvo/carecards/care-cards-refrigerator.jpg)
 
-![fit for life](/images/case-studies/goinvo/carecards/CareCards_Kid_Holding_Card.jpg)
+![fit for life](/images/case-studies/goinvo/carecards/care-cards-kid-holding-card.jpg)
 
 Similar to a standard deck of cards, Care Cards fit into your pocket &mdash;and your life.

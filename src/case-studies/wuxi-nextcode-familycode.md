@@ -13,9 +13,9 @@ results:
   - stat: " "
     description: " "
 upNext:
-  - "code-ryte"
-  - "acme"
-  - "mitre-shr"
+  - "mt-sinai"
+  - "partners-geneinsight"
+  - "personal-genome-project"
 hidden: false
 ---
 

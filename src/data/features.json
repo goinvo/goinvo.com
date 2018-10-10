@@ -100,5 +100,21 @@
     "caption": "An illustrated process on personal protective equipment.",
     "image": "/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg",
     "link": "https://www.goinvo.com/features/ebola-care-guideline/"
+  },
+  {
+    "id": "carrier-testing",
+    "title": "Carrier testing",
+    "caption": "Open source design guidelines for delivering digitized carrier testing results.",
+    "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
+    "link": "http://www.genomicsdesign.com/",
+    "external": true
+  },
+  {
+    "id": "open-source-healthcare",
+    "title": "Open source healthcare",
+    "caption": "placeholder",
+    "image": "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",
+    "link": "http://www.opensourcehealthcare.org",
+    "external": true
   }
 ]

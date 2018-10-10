@@ -12,7 +12,9 @@ import Card from '../card'
 import ImageBlock from '../image-block'
 import References from '../references'
 
-import { extractCaseStudyDataFromQuery, findCaseStudyById } from '../../helpers'
+import features from '../../data/features'
+
+import { extractCaseStudyDataFromQuery } from '../../helpers'
 
 import config from '../../../config'
 
@@ -48,6 +50,7 @@ class CaseStudyLayout extends Component {
         `}
         render={data => {
           const caseStudies = extractCaseStudyDataFromQuery(data);
+          const caseStudiesWithFeatures = caseStudies.concat(features);
 
           return (
             <Layout>
@@ -87,14 +90,16 @@ class CaseStudyLayout extends Component {
                       <h3 className="header--md">Up next</h3>
                       <Columns columns={3}>
                         { frontmatter.upNext.map(id => {
-                          const study = findCaseStudyById(id, caseStudies);
+                          const nextItem = caseStudiesWithFeatures.find(item => item.slug === id || item.id === id);
+                          const nextItemLink = nextItem.slug ? `/work/${nextItem.slug}` : nextItem.link;
+                          const externalLink = nextItem.slug ? false : true;
 
                           return (
-                            <Card key={study.slug} link={`/work/${study.slug}`}>
+                            <Card key={nextItemLink} link={nextItemLink} externalLink={externalLink}>
                               <ImageBlock
-                                title={study.title}
-                                image={study.image}
-                                caption={study.caption}
+                                title={nextItem.title}
+                                image={nextItem.image}
+                                caption={nextItem.caption}
                                 hoverable />
                             </Card>
                           )

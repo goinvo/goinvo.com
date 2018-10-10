@@ -1,6 +1,6 @@
 ---
 title: "hGraph"
-image: "/images/case-studies/goinvo/hgraph/hgraph_hero.jpg"
+image: "/images/case-studies/goinvo/hgraph/hgraph-hero.jpg"
 client: "Open Source, GoInvo"
 caption: "Your health in one picture."
 categories:
@@ -37,11 +37,7 @@ hGraph is an open source tool that has been adopted by many organizations like W
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 9 months
 <br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement
-
-
-[View hGraph](http://www.hgraph.org)
-
-[View the GitHub](https://github.com/goinvo/hGraph)
+<br/> <a href="http://www.hgraph.org" class="button button--primary button--lg margin-top--double margin-bottom--half">View hGraph</a> <a href="https://github.com/goinvo/hGraph" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
 
 <Divider />
 
@@ -59,7 +55,7 @@ This [open source](https://github.com/goinvo/hGraph) visualization aggregates he
 
 hGraph can display everything from behavioral patterns to test data, giving the viewer a complete picture of a patient’s health. hGraph stores data from all medical providers making it easier for patients to follow up with their primary care physicians.
 
-![patterns](/images/case-studies/goinvo/hgraph/hgraph_patterns.jpg)
+![patterns](/images/case-studies/goinvo/hgraph/hgraph-patterns.jpg)
 
 #### Visually identify patterns
 

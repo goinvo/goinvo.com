@@ -77,7 +77,11 @@ class CaseStudyLayout extends Component {
                     {this.props.children}
                     <Divider />
                   </div>
-                  <Results stats={frontmatter.results} />
+                  {
+                    frontmatter.results ?
+                      <Results stats={frontmatter.results} />
+                    : null
+                  }
                   <div className="background--blue pad-vertical--double">
                     <div className="max-width content-padding">
                       <h3 className="header--md">Up next</h3>
@@ -98,7 +102,15 @@ class CaseStudyLayout extends Component {
                       </Columns>
                     </div>
                   </div>
-                  <References references={frontmatter.references} />
+                  {
+                    frontmatter.references ?
+                      <div className="background--gray pad-vertical">
+                        <div className="max-width content-padding">
+                          <References references={frontmatter.references} />
+                        </div>
+                      </div>
+                    : null
+                  }
                 </div>
               </MDXProvider>
             </Layout>

@@ -25,9 +25,21 @@ import npr from '../assets/images/publication-logos/logo-npr.png'
 import ted from '../assets/images/publication-logos/logo-ted.png'
 import wired from '../assets/images/publication-logos/logo-wired.png'
 
+import features from '../data/features.json'
+
 import config from '../../config'
 
 import { formatDate } from '../helpers.js'
+
+const spotlightFeature = features.find(feature => feature.id === 'determinants-of-health');
+
+const spotlightPodcast = {
+  title: "AI plays poker",
+  date: "20.May.2018",
+  caption: "Join us as we discuss poker, the application of AI to imperfect information games, and the possibilities for this kind of artificial intelligence to be used in negotiation and other real world scenarios.",
+  link: "https://soundcloud.com/involution-studios/ai-plays-poker",
+  image: "/images/vision/digital-life-episode-260.jpg"
+}
 
 class VisionPage extends Component {
   constructor(props) {
@@ -35,6 +47,8 @@ class VisionPage extends Component {
 
     this.state = {
       blogPosts: [],
+      recentFeatures: features.filter(feature => feature.id !== spotlightFeature.id).slice(0, 3),
+      showAllFeatures: false,
       // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
       // recentBlogPostImage: '',
     }
@@ -42,6 +56,13 @@ class VisionPage extends Component {
 
   componentDidMount() {
     this.getBlogFeed();
+  }
+
+  showAllFeatures = () => {
+    this.setState({
+      showAllFeatures: true,
+      recentFeatures: features.filter(feature => feature.id !== spotlightFeature.id),
+    })
   }
 
   getBlogFeed = () => {
@@ -141,27 +162,24 @@ class VisionPage extends Component {
           <h3 className="header--md">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
-              {
-                // TODO: Real images here
-              }
-              <Card link="/vision/determinants-of-health" fillHeight>
+              <Card link={spotlightFeature.link} fillHeight>
                 <ImageBlock
-                  title="Social determinants of health"
-                  image="features/determinants-of-health/feature_banner.jpg"
+                  title={spotlightFeature.title}
+                  image={spotlightFeature.image}
                   client="Feature"
-                  date="Oct.2016"
-                  caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
+                  date={spotlightFeature.date}
+                  caption={spotlightFeature.caption}
                   hoverable />
               </Card>
             </div>
             <div className="pure-u-1 pure-u-lg-1-3 margin-bottom">
-              <Card link="/vision/determinants-of-health" fillHeight>
+              <Card link={spotlightPodcast.link} fillHeight>
                 <ImageBlock
-                  title="Social determinants of health"
-                  image="features/determinants-of-health/feature_banner.jpg"
-                  client="Feature"
-                  date="Oct.2016"
-                  caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
+                  title={spotlightPodcast.title}
+                  image={spotlightPodcast.image}
+                  client="Podcast"
+                  date={spotlightPodcast.date}
+                  caption={spotlightPodcast.caption}
                   hoverable />
               </Card>
             </div>
@@ -170,39 +188,28 @@ class VisionPage extends Component {
         <div className="background--blue pad-vertical--double">
           <div className="max-width content-padding">
             <h3 className="header--md">Most recent features</h3>
-            {
-              // TODO: Real images here
-            }
             <Columns columns={3}>
-              <Card link="/vision/determinants-of-health" key="one">
-                <ImageBlock
-                  title="Social determinants of health"
-                  image="features/determinants-of-health/feature_banner.jpg"
-                  client="Feature"
-                  date="Oct.2016"
-                  caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
-                  hoverable />
-              </Card>
-              <Card link="/vision/determinants-of-health" key="two">
-                <ImageBlock
-                  title="Social determinants of health"
-                  image="features/determinants-of-health/feature_banner.jpg"
-                  client="Feature"
-                  date="Oct.2016"
-                  caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
-                  hoverable />
-              </Card>
-              <Card link="/vision/determinants-of-health" key="three">
-                <ImageBlock
-                  title="Social determinants of health"
-                  image="features/determinants-of-health/feature_banner.jpg"
-                  client="Feature"
-                  date="Oct.2016"
-                  caption="89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health."
-                  hoverable />
-              </Card>
+              {
+                this.state.recentFeatures.map(feature => {
+                  return (
+                    <Card link={feature.link} key={feature.id}>
+                      <ImageBlock
+                        title={feature.title}
+                        image={feature.image}
+                        client="Feature"
+                        date={feature.date}
+                        caption={feature.caption}
+                        hoverable />
+                    </Card>
+                  )
+                })
+              }
             </Columns>
-            <button className="button button--primary button--block margin-top">All features</button>
+            {
+              !this.state.showAllFeatures ?
+                <button className="button button--primary button--block margin-top" onClick={this.showAllFeatures}>All { features.length - 1 } features</button>
+              : null
+            }
           </div>
         </div>
         <div className="max-width content-padding pad-vertical pad-bottom--double">
@@ -296,7 +303,7 @@ class VisionPage extends Component {
           <h2 className="header--xl margin-bottom--none">Reviews for<span className="text--serif text--primary">...</span></h2>
         </div>
         {
-          // TODO: Real images here
+          // TODO: Real quotes here!
         }
         <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>
           <GradientImageColumns image="/images/vision/emerging-tech-wood.jpg" backgroundColor="gray" backgroundNotResponsive>
@@ -305,7 +312,7 @@ class VisionPage extends Component {
           <GradientImageColumns image="/images/services/doh-preview.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Nobody" quoteeSub="Nothing" small>Quote about DOH</Quote>
           </GradientImageColumns>
-          <GradientImageColumns image="home/culture-2017.jpg" backgroundColor="gray" backgroundNotResponsive>
+          <GradientImageColumns image="/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Eric Topol" quoteeSub="Scripps Translational Science Institute" small>Designers at GoInvo have the right ideas for the smart medical home of the future.</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="/images/services/inspired-ehrs-book.jpg" backgroundColor="gray" backgroundNotResponsive>

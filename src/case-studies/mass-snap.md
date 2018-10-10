@@ -7,17 +7,24 @@ categories:
   - "public-health-and-policy"
   - "open-source"
 results:
-  - stat: "97%"
-    description: "Recall of educational concepts"
-  - stat: "90%"
-    description: "Engagement with knowledge retention quiz"
-  - stat: "8,760"
-    description: "Yearly views of new health data definition"
+  - stat: ""
+    description: ""
+  - stat: ""
+    description: ""
+  - stat: ""
+    description: ""
 upNext:
-  - "code-ryte"
-  - "acme"
-  - "mitre-shr"
+  - "care-plans"
+  - "inspired-ehrs"
+  - "determinants-of-health"
 hidden: false
+references:
+  - title: ""
+    link: "http://www.projectbread.org/get-the-facts/reports-and-studies/"
+  - title: ""
+    link: "https://fns-prod.azureedge.net/sites/default/files/ops/Massachusetts.pdf"
+  - title: ""
+    link: "http://www.pewinternet.org/fact-sheet/mobile/"
 ---
 
 import Divider from '../components/divider'
@@ -29,7 +36,7 @@ import Quote from '../components/quote'
 # Closing the SNAP gap
 
 ### Problem
-Food insecurity takes a significant toll on public health across the country. Tragically, one out of ten of households in Massachusetts is ‘food insecure’ (as reported by Project Bread) [1](#references). The Massachusetts Department of Transitional Assistance (DTA) is hard at work to provide support for MA residents through the Supplemental Nutrition Assistance Program (SNAP), but the application process for both staff and applicant is grueling. In 2017, a two-person family typically encountered 90 questions just to get past the first step.
+Food insecurity takes a significant toll on public health across the country. Tragically, one out of ten of households in Massachusetts is ‘food insecure’ (as reported by Project Bread) [^1]. The Massachusetts Department of Transitional Assistance (DTA) is hard at work to provide support for MA residents through the Supplemental Nutrition Assistance Program (SNAP), but the application process for both staff and applicant is grueling. In 2017, a two-person family typically encountered 90 questions just to get past the first step.
 
 ### Solution
 Our project aimed to make this first step welcoming rather than prohibitive through a redesign of the online application. The redesign, conducted by the trio of MA DTA, Conduent, and GoInvo, focused on a mobile-first, non-intimidating, accessible, and quick service with multiple language options. Although the application is just one part of the whole, it serves as a key entry point for those in need. The ultimate goal was to increase food security for MA residents by making the SNAP application process accessible and approachable for all.
@@ -48,9 +55,9 @@ We designed an application that’s fully compliant with [WCAG](https://www.w3.o
 ## Understanding the problem
 
 #### No one should have to worry about affording their next meal.
-In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP [2](#references). Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in $1.80 in total economic activity.”
+In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP[^2]. Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in $1.80 in total economic activity.”
 
-![A simple diagram we made to help communicate the process to SNAP applicants.](/images/case-studies/mass/snap/snap_simple_process.jpg)
+![A simple diagram we made to help communicate the process to SNAP applicants.](/images/case-studies/mass/snap/snap-simple-process.jpg)
 
 #### Applying for and retaining support is paperwork-heavy
 Even if a family has recognized their need and decided to look into options, the application pipeline is time-consuming and emotionally taxing. There are three primary steps to receive SNAP benefits:
@@ -61,21 +68,21 @@ Even if a family has recognized their need and decided to look into options, the
 
 After eventually receiving benefits, snail-mail and recurring paperwork are a large part of retaining the monthly support.
 
-![The original workflow of the screener and application.](/images/case-studies/mass/snap/snap_old_process.jpg)
+![The original workflow of the screener and application.](/images/case-studies/mass/snap/snap-old-process.jpg)
 
 #### User driven design
 To reach our users most effectively, we spent time gathering information about those applying. We also immersed ourselves in the current state of SNAP locally and nationally. We gathered demographic data and reviewed research about designing government services for those of all language, age, skill, and stress levels.
 
 Before the project began, we reached out to a colleague who had received SNAP benefits as an Americorps teacher (in certain regions, Americorps teachers are encouraged to apply to SNAP). Talking with her put a face to the project and shed light on a teacher’s perspective of SNAP.
 
-![Whiteboard diagram about SNAP.](/images/case-studies/mass/snap/snap_whiteboard.jpg)
+![Whiteboard diagram about SNAP.](/images/case-studies/mass/snap/snap-whiteboard.jpg)
 
 We reached out to national experts on SNAP policy and civic design for guidance and design feedback. Through Dana Chisnel, Co-Director of Center for Civic Design, the mantra of the design became “linear and literal.”
 
 We shadowed case workers performing phone interviews and assisting applicants and administrators with their paperwork at the DTA field office in Salem. It was easy to see the stress, language barriers, and confusion that many applicants had throughout this process, which drove us to design the application to be as friendly and streamlined as possible.
 
 #### Why mobile first makes sense
-The Pew Research Center reported that 77% of U.S. adults owned smartphones as of January 10, 2018 [3](#references). Americans making less than $30,000 per year came in at a 67% ownership rate. While residents can access desktop computers at local libraries, many of those who would apply to SNAP have more immediate access to smartphones rather than desktop computers. Having a phone connects people to work opportunities and is a necessity in the modern world.
+The Pew Research Center reported that 77% of U.S. adults owned smartphones as of January 10, 2018[^3]. Americans making less than $30,000 per year came in at a 67% ownership rate. While residents can access desktop computers at local libraries, many of those who would apply to SNAP have more immediate access to smartphones rather than desktop computers. Having a phone connects people to work opportunities and is a necessity in the modern world.
 
 <Divider />
 
@@ -86,12 +93,12 @@ Although not originally tasked with updating the questions in the application, w
 
 Not all of our efforts made the cut. Accommodating genders beyond the limited ‘Male or Female’ was not an option. Although the whole team could understand how this question may inhibit people from applying, the question couldn’t be changed because it was tied to ingrained processes behind the scenes.
 
-![Getting started - before and after. This example shows the amount of text that could be summarized and simplified down to one short screen.](/images/case-studies/mass/snap/snap_before_after.jpg)
+![Getting started - before and after. This example shows the amount of text that could be summarized and simplified down to one short screen.](/images/case-studies/mass/snap/snap-before-after.jpg)
 
 #### Honing our approach
 Design isn’t limited to what the design is but also how the design happens. As weeks went by, it became more difficult to gather detailed feedback from all of those involved who often had diverse perspectives. We found a way to foster rich discussion and capture each person’s perspective by building a prototype of the SNAP application design and spending our meeting time in small groups. We pulled in laptops, iPads, and mobile phones of various sizes, giving everyone time to explore the design on their own. We focused on key questions in small groups and sometimes brought handouts to gather the response of individual members. This change in strategy propelled the design forward and gave us rich feedback from our client and stakeholders.
 
-![Collecting feedback in small groups as we walk through the prototype with stakeholders.](/images/case-studies/mass/snap/snap_dta_meeting.jpg)
+![Collecting feedback in small groups as we walk through the prototype with stakeholders.](/images/case-studies/mass/snap/snap-dtameeting.jpg)
 
 #### Delivering on time
 Behavior, interactions, feedback loops, and accessibility standards all ultimately manifest in code. To best communicate how the software should perform, we created a reference implementation of the user interface for our engineering partners at Conduent. We built a fully functioning sandbox in React as well as many of the front-end components used in the production environment. Throughout the production cycle, we consulted and QA’ed for the engineering effort, providing supporting materials such as outlines for browser and accessibility testing.
@@ -114,16 +121,3 @@ Diagrams at the beginning and end of the application help the user anticipate wh
 ## Results
 
 The redesigned application was deployed in July, 2018 and is still in its early stages of real world adoption, but for the first time ever at the MA DTA, the amount of applications coming from the web is larger than the amount completed in person.
-
-
-<Divider />
-
-## References
-
-<div id="references">
-
-1. http://www.projectbread.org/get-the-facts/reports-and-studies/
-2. https://fns-prod.azureedge.net/sites/default/files/ops/Massachusetts.pdf
-3. http://www.pewinternet.org/fact-sheet/mobile/
-
-</div>

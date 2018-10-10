@@ -8,14 +8,12 @@ categories:
 results:
   - stat: "600"
     description: "visits / month today"
-  - stat: " "
-    description: " "
   - stat: "28"
     description: "known code forks"
 upNext:
-  - "code-ryte"
-  - "acme"
   - "mitre-shr"
+  - "faster-cures-health-data-basics"
+  - "determinants-of-health"
 hidden: false
 ---
 import Divider from '../components/divider'
@@ -43,7 +41,7 @@ An open source, accessible, lightweight design policy for electronic health reco
 
 <Divider />
 
-![Book and timeline](/images/case-studies/nih/inspired-ehrs/ehr-bookandscreen.jpg)
+![Book and timeline](/images/case-studies/nih/inspired-ehrs/ehr-book-screen.jpg)
 
 ## Background
 
@@ -83,13 +81,13 @@ We originally designed early versions of the e-book for Apple format, using iBoo
 
 Because our core team was composed of physicians, nurses, and HCI experts, we could leverage their real-life experiences in our designs. We designed for, not only a provider’s thought processes, but also day-to-day tasks and workflows. By reducing cognitive overload and various interaction fatigues, we support patient safety and set the provider up to deliver the best care possible.
 
-![Medication list](/images/case-studies/nih/inspired-ehrs/ehr-medlist.jpg)
+![Medication list](/images/case-studies/nih/inspired-ehrs/ehr-medlist2.jpg)
 
 #### Focus on the patient
 
 Typically, a physician may be seeing a patient for a small handful of specific needs, and it can be difficult to see the larger picture of the patient’s life. A person may have several care providers tending to different health concerns, and those providers don’t always have a clear idea of what another is doing or why, and patients don’t always know or think to tell their cardiologist what their dermatologist is doing and vice versa. We designed our medication timeline to be easily scanned and provide “situational awareness” to any provider, as well as to quickly reorder the list to the medications they care most about. Miniature displays of the medication timeline give providers a quickly scanned visual reference to understand how long a patient has been taking a medication and changes in the prescribed therapy over a recent time period.
 
-![Medication timeline](/images/case-studies/nih/inspired-ehrs/ehr-timeline_noNav.jpg)
+![Medication timeline](/images/case-studies/nih/inspired-ehrs/ehr-timeline.jpg)
 
 #### Patient history as a blueprint for providing care today
 

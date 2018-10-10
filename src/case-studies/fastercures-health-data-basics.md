@@ -1,18 +1,18 @@
 ---
 title: "Health Data Basics"
-image: "/images/vision/vision-hero.jpg"
+image: "/images/case-studies/fastercures/health-data-basics/health-data-basics_hero.jpg"
 client: "FasterCures"
-caption: "Engaging patients to understand health."
+caption: "Open source designs, and assets to educate patients on health data."
 categories:
   - "public-health-and-policy"
   - "open-source"
 results:
   - stat: "97%"
-    description: "Recall of educational concepts"
+    description: "Recall of 5 key educational concepts"
   - stat: "90%"
     description: "Engagement with knowledge retention quiz"
   - stat: "8,760"
-    description: "Yearly views of new health data definition"
+    description: "Yearly views of health data definition"
 upNext:
   - "code-ryte"
   - "acme"
@@ -25,11 +25,11 @@ import Quote from '../components/quote'
 import Video from '../components/video'
 
 <!-- TODO: -->
-<!-- Real images -->
-<!-- Real quote -->
+<!-- buttons -->
+<!-- references -->
 <!-- Real upNext list -->
 
-# Engaging patients to understand health
+# Engaging Patients to Understand Health Data
 
 <!-- <Video
   sources={[
@@ -43,80 +43,84 @@ import Video from '../components/video'
 
 ### Problem
 
-#### Patients don't understand what health data is or why it's important
-Comprehension of health information is fundamental to well-being, patient empowerment, and decision making. However, a scant 12% of US adults are health literate, and only 41% of individuals have even accessed their medical record. Driven by their mission to place patients first, FasterCures partnered with GoInvo to educate and engage patients on health data.
+Comprehension of health information is fundamental to well-being, patient empowerment, and decision-making. However, a scant 12% of US adults are health literate, and only 41% of individuals have even accessed their medical record. Driven by their mission to place patients first, *FasterCures* partnered with GoInvo to educate and engage patients on health data.
 
 ### Solution
 
-#### Open source plugins for engagement
-GoInvo crafted two open source plug-ins built on educational frameworks, gamification, and behavior change. FasterCures now has the framework for a tool to effectively educate and engage a wide range of patients about health data.
+We crafted two open source prototypes built on educational frameworks, gamification, and behavior change to effectively educate and engage a wide range of patients about health data.
 
 ### Results
 
-#### Educational retention
-In a usability test for the educational materials conducted with 30 patients, 97% were able to recall the 5 main factors of health data, and 90% engaged with an online quiz.
+In a usability test of the prototypes, conducted with 30 patients, 97% were able to recall the 5 main factors of health data, and 90% engaged with an online quiz.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 2.5 months<br/>
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient engagement
+<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Public health and policy, Patient engagement, Open source
 <br />
-<a href="#" class="button button--primary button--lg margin-top--double margin-bottom--half">View Demo</a>
 
-[view code on GitHub](https://github.com/goinvo/HealthDataBasics)
+<!--<a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">View Demo</a>-->
+
+[View Demo](https://www.healthdatabasics.org/)
+[View code GitHub](https://github.com/goinvo/HealthDataBasics)
 
 <Divider />
 
 ## Process
 
 #### Research through multiple techniques
-GoInvo and FasterCures conducted a survey of approximately 700 patients and in depth interviews with 15 industry experts that informed user needs, barriers, and motivations. In addition, we explored and reviewed the latest research on patient engagement, health literacy, and patient education. Insights gained helped the design team to understand the overall audience, their needs and motivations around understanding health data, as well as to formulate  a health data definition around the social determinants of health.
+GoInvo and FasterCures surveyed approximately **700 patients and caretakers** and conducted in-depth interviews with **15 industry experts**, along with reviewing the latest research to understand patient needs, barriers, and motivations around health literacy and being engaged in one’s health. In addition, we polled industry experts on what health data means to them to galvanize a health data definition grounded in the determinants of health, including social determinants.
 
-![something](/images/vision/vision-hero.jpg)
+![sketches](/images/case-studies/fastercures/health-data-basics/health-data-basics_sketches.jpg)
 
-#### Generate a range of concepts
-GoInvo considered a variety of design methods to engage patients, generating early renderings and summaries of over 30 concepts, which included digital, physical, and social exhibits.
+#### Fail Fast & Early
+We began by generating as many concepts as possible as quickly as possible. In a workshop with our *FasterCures* partners, we sketched our as many ideas in rapid fire. Later we took those ideas, adding several new ones, sketching them out in more detail with a short description, environment, audience reached, and analysis of scalability and longevity, categorizing.
 
-![something](/images/vision/vision-hero.jpg)
+![decision chart](/images/case-studies/fastercures/health-data-basics/Health-data-basics_decisionchart.jpg)
 
 #### Prioritize rigorously
-We narrowed our 30 concepts based on reach, educational impact, and scalability. Then, in collaboration with FasterCures and a panel of patient stakeholders, we weighed these factors as well as the goals of the projects to select the right concept to pursue.
+To narrow our 30 concepts, we scored each in terms of reach, educational impact, scalability, and others. Together with our partners at *FasterCures* and a panel of patient organization stakeholders, we weighed these factors against project goals to identify the right course of action.
+
+#### Flexible Partnership that Adapts to Challenges
+Initially, two concepts emerged as contenders to educate on health data &mdash;on the digital side, a software plug-in that could be integrated into a variety of applications, and on the physical side, on-site clinical installations leveraging a series of environmental graphics. After several rounds of review, however, the concepts struggled to balance the needs for patient engagement with in-depth content. We took a step back to realign project goals and establish what FasterCures truly needed. Together, the team decided to focus on an open source educational plug-in.
 
 <Divider />
 
-## Insights & recommendations
+## Insights
 
-![something](/images/vision/vision-hero.jpg)
+![sources of health data](/images/case-studies/fastercures/health-data-basics/Health-data-basics_data.jpg)
 
 #### Integrate Social Determinants of Health
-We identified the need for an expanded definition of health data that went beyond medical records and devices to include the social determinants of health. We have pushed this more accurate and holistic definition as a new norm.
+Before this project, a definition of health data didn’t exist, or even a consensus by experts on what health data included. The most common notion of health data needed to be expanded to go beyond medical records and devices and include the social, environmental, and behavioral determinants of health.
 
-#### Start with health. Not health data.
-Patients seek especially to understand health data to accomplish their larger goal of living healthy but typically pursue an understanding of health data to help them with their larger goal of living well. With this knowledge, we were able to hone the approach and further focus the message.
+#### Start with health, not health data.
+Patients typically interact with health data to accomplish a larger goal of improving their health but also enhancing their quality of life. Knowing this, honed the approach and further focused the message to further motivate by appealing to goals.
 
-#### Uncover a market need for a data visualization
-As part of the ideation phase, we created a preliminary map of the health data ecosystem. This inspired a separate data visualization project that outlined the path to build a transparent, trusting, and collaborative ecosystem where patients were empowered to share their data.
-
-<!-- TODO: NOT A REAL QUOTE -->
-<Quote quotee="Taylor Cusher" quoteeSub="FasterCures Associate Director">Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.</Quote>
+#### Patients and families want their health data
+As part of the project, *FasterCures* brought in leaders from patient outreach groups as our advisory panel for the year long engagement. They gave input on problems, gave feedback on designs, co-created concepts, and offered insight into their patient groups. With their focus on rare disease and chronic conditions, their patients and families were more engaged in their health than your typical patient. Because of this engagement, many were demanding their health data whether to participate more actively in their health and understand their condition or treatment better, or to keep the medical staff in check as a safety and health need. In order to spread this basic health measure to more patients, they would need to get more engaged in their health and wellness.
 
 ## Solution
 
-![something](/images/vision/vision-hero.jpg)
+![legal right to your health data](/images/case-studies/fastercures/health-data-basics/health-data-basics_solution.jpg)
 
 #### Educational open source plugins
-GoInvo crafted two open source plug-in designs built on educational frameworks, gamification, and behavior change. These are intended to be reused across app onboardings and web services.
+GoInvo crafted two plug-in prototypes designed with techniques based on educational models, gamification, and behavior change research. The designs are open source so that designers and engineers can recycle and reuse them in web and mobile services, spreading health data education to their patients while promoting a single definition of health data.
 
-![something](/images/vision/vision-hero.jpg)
+To meet the needs for a wide array of behaviors and learning methods, we developed two approaches. One prototype was well suited for individuals who want just the basics on health data, while the other benefited individuals with a higher motivation to learn more and would pair with onboarding processes for health and wellness apps.
 
-#### Engagement through narrative
-The introduction hooks an individual with a graphic that appeals to their sense of curiosity to discover that there is more to health data than medical care. Individuals then unravel the surprising ways in which wellness and health data permeate life through an array of interactive examples.
+![life data stats](/images/case-studies/fastercures/health-data-basics/health-data-basics_narrative.jpg)
+
+#### Engagement through curiosity
+The introduction would hook the user with a suprising fact and graphic that medical care only composes 11% of health, appealing to their sense of curiosity to discover that there is more to health data than the medical aspect. Individuals could then unravel the surprising ways wellness and health data permeate life through an array of interactive examples.
 
 #### Designed with behavior change frameworks
-The prototype integrates the Health Belief Model, covering the mental processes which inform whether an individual will make a change. These factors include benefits, susceptibility, severity, barriers and modifying variables, cues to action and self efficacy. For example, users that cite a lack of time as a barrier to exercise have their concerns addressed through a suggestion that individuals get off the bus stop one stop early.
+The Health Belief Model (HBM), used by social scientists in public health, suggests that behavior change is more likely if messaging successfully targets barriers, benefits, self-efficacy, and threat. Providing individuals with feedback and suggestions that help break down barriers, and arms them with the ability to do it themselves. This model leads to higher rates of behavior change rather than providing them with just the facts. Different screens address the elements of models to encourage an individual to take action.
 
-![something](/images/vision/vision-hero.jpg)
+![gamification](/images/case-studies/fastercures/health-data-basics/health-data-basics_gamification.jpg)
 
 #### Gamification for knowledge retention
-Quizzes encouraged interaction with information and as a result, knowledge retention. One technique appealed to an individual’s sense of caretaking with a sprout that grows into a plant for every correct answers, while another to an individual’s sense of novelty through guessing the health data sound and little  hearts that act as progress indicators.
+Each prototype featured fun and engaging quizzes that allowed patients to interact with facts and tips, rather than reading static articles, leading to better knowledge retention. One set of questions planted a sprout that would grow with each correct answer, appealing to one’s sense of caretaking.
 
 #### Validation with patients
-Thirty patients reviewed the two prototypes, and completed a survey measuring trust, credibility, usability, and appearance. Twenty-nine out of thirty patients correctly identified the five factors of health data, demonstrating the  effectiveness of the educational tool.
+In order to test how successful each approach would be in the wild, thirty patients reviewed the prototypes and completed a survey measuring trust, credibility, usability, and appearance. Twenty-nine out of thirty patients correctly identified the five factors of health data, demonstrating the effectiveness of the educational tool.
+
+#### Next Steps
+Building upon the foundation of plug-in prototypes and open source assets, FasterCures and GoInvo are reaching out to partners to conduct further trials and implementation.

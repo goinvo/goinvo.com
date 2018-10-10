@@ -22,6 +22,7 @@ hidden: false
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
+import Video from '../components/video'
 
 <!-- TODO: -->
 <!-- Real images -->
@@ -29,6 +30,16 @@ import Quote from '../components/quote'
 <!-- Real upNext list -->
 
 # Engaging patients to understand health
+
+<!-- <Video
+  sources={[
+    {src: "/videos/homepage/sdoh-hero.mp4", format: "mp4"},
+    {src: "/videos/homepage/sdoh-hero.webm", format: "webm"}
+  ]}
+  poster="/images/homepage/doh-hero-poster.jpg"
+  fallback="/images/homepage/doh-hero-fallback.jpg"
+  loop
+/> -->
 
 ### Problem
 

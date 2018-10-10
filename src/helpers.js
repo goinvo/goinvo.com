@@ -22,7 +22,3 @@ export function extractCaseStudyDataFromQuery(data)  {
     };
   });
 }
-
-export function findCaseStudyById(id, caseStudies) {
-  return caseStudies.find(item => item.slug === id);
-}

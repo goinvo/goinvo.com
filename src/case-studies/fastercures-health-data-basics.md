@@ -16,7 +16,7 @@ results:
 upNext:
   - "code-ryte"
   - "acme"
-  - "mitre-shr"
+  - "killer-truths"
 hidden: false
 ---
 

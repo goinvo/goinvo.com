@@ -47,7 +47,7 @@ class VisionPage extends Component {
 
     this.state = {
       blogPosts: [],
-      recentFeatures: features.filter(feature => feature.id !== spotlightFeature.id).slice(0, 3),
+      recentFeatures: features.filter(feature => feature.id !== spotlightFeature.id && !feature.external).slice(0, 3),
       showAllFeatures: false,
       // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
       // recentBlogPostImage: '',
@@ -61,7 +61,7 @@ class VisionPage extends Component {
   showAllFeatures = () => {
     this.setState({
       showAllFeatures: true,
-      recentFeatures: features.filter(feature => feature.id !== spotlightFeature.id),
+      recentFeatures: features.filter(feature => feature.id !== spotlightFeature.id && !feature.external),
     })
   }
 
@@ -93,7 +93,7 @@ class VisionPage extends Component {
     return this.state.blogPosts.map(post => {
       return (
         <li key={post.link}>
-          <Card link={post.link} className="pad-all margin-bottom">
+          <Card link={post.link} className="pad-all margin-bottom" externalLink>
             <div className="text--bold">{post.title}</div>
             <span className="text--gray">{post.date}</span>
           </Card>
@@ -162,7 +162,7 @@ class VisionPage extends Component {
           <h3 className="header--md">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
-              <Card link={spotlightFeature.link} fillHeight>
+              <Card link={spotlightFeature.link} fillHeight externalLink>
                 <ImageBlock
                   title={spotlightFeature.title}
                   image={spotlightFeature.image}
@@ -173,7 +173,7 @@ class VisionPage extends Component {
               </Card>
             </div>
             <div className="pure-u-1 pure-u-lg-1-3 margin-bottom">
-              <Card link={spotlightPodcast.link} fillHeight>
+              <Card link={spotlightPodcast.link} fillHeight externalLink>
                 <ImageBlock
                   title={spotlightPodcast.title}
                   image={spotlightPodcast.image}
@@ -192,7 +192,7 @@ class VisionPage extends Component {
               {
                 this.state.recentFeatures.map(feature => {
                   return (
-                    <Card link={feature.link} key={feature.id}>
+                    <Card link={feature.link} key={feature.id} externalLink>
                       <ImageBlock
                         title={feature.title}
                         image={feature.image}

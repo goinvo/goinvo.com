@@ -302,15 +302,12 @@ class VisionPage extends Component {
         <div className="max-width content-padding pad-top">
           <h2 className="header--xl margin-bottom--none">Reviews for<span className="text--serif text--primary">...</span></h2>
         </div>
-        {
-          // TODO: Real quotes here!
-        }
         <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>
           <GradientImageColumns image="/images/vision/emerging-tech-wood.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote background="gray" quotee="Dan Saffer" quoteeSub="Author of Microinteractions" small>If you're looking for insights how to design the future today, look no further.</Quote>
+            <Quote background="gray" quotee="Carla Diana" quoteeSub="Creative Technologist and Author" small>This book is a must-read for anyone involved in innovative product design, new business creation, or technology research for near future applications. The wide collection of essays offers a wild ride across multiple disciplines.</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="/images/services/doh-preview.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote background="gray" quotee="Nobody" quoteeSub="Nothing" small>Quote about DOH</Quote>
+            <Quote background="gray" quotee="Toyin Ajayi" quoteeSub="Chief Health Officer of Cityblock Health" small>The SDoH poster stands taped to the giant whiteboard outside my office [at Google Cityblock Health Labs], and will form the basis of many rich conversations among my team. Thank you!</Quote>
           </GradientImageColumns>
           <GradientImageColumns image="/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Eric Topol" quoteeSub="Scripps Translational Science Institute" small>Designers at GoInvo have the right ideas for the smart medical home of the future.</Quote>

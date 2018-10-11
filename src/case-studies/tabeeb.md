@@ -14,12 +14,6 @@ hidden: false
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
-import Video from '../components/video'
-
-<!-- TODO: -->
-<!-- Real images -->
-<!-- Real quote -->
-<!-- Real upNext list -->
 
 # Connecting Rural Clinics with Expert Diagnosticians
 

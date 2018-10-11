@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
+import Image from '../../components/image'
 
 const DeterminantsOfHealthFeature = () => (
   <Layout>
@@ -127,10 +128,43 @@ const DeterminantsOfHealthFeature = () => (
           <h1 className="header--xl">Authors</h1>
 
           <div className="author">
-            <div className="authorImg"></div>
-            <div className="authorBio">
+            <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <Image src="/images/about/headshot-edwin-choi.jpg" className="image--max-width" />
+            </div>
+            <div className="authorBio pure-u-1 pure-u-lg-1-2">
               <p><strong>Edwin Choi</strong><span className="text--grey">, GoInvo</span></p>
               <p className="text--grey">Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of University of Washington, and has a masters in biomedical design from Johns Hopkins University.</p>
+            </div>
+          </div>
+
+          <div className="author">
+            <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <Image src="/images/features/determinants-of-health/headshot-hrothgar.jpg" className="image--max-width" />
+            </div>
+            <div className="authorBio pure-u-1 pure-u-lg-1-2">
+              <p><strong>Hrothgar</strong><span className="text--grey">, GoInvo</span></p>
+              <p className="text--grey">Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice University, and joined Invo in 2016 following doctoral studies at the University of Oxford.</p>
+            </div>
+          </div>
+
+          <div className="author">
+            <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <Image src="/images/about/headshot-juhan-sonin.jpg" className="image--max-width" />
+            </div>
+            <div className="authorBio pure-u-1 pure-u-lg-1-2">
+              <p><strong>Juhan Sonin</strong><span className="text--grey">, GoInvo, MIT</span></p>
+              <p className="text--grey">Juhan specialized in software design and system engineering. He operates, and is the director of, GoInvo. He has worked at Apple, National Center for Supercomputing Applications, Massachusetts Institute of Technology (MIT), and MITRE. Juhan co-founded Invo Boston in 2009 and is a graduate of the University of Illinois at Urbana-Champaign. He currently lectures at MIT.</p>
+            </div>
+          </div>
+
+          <h3 className="header--md">Contributors</h3>
+          <div className="author">
+            <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <Image src="/images/features/determinants-of-health/headshot-kelsey-kittelsen.jpg" className="image--max-width" />
+            </div>
+            <div className="authorBio pure-u-1 pure-u-lg-1-2">
+              <p><strong>Kelsey Kittelsen</strong><span className="text--grey">, Dartmouth College</span></p>
+              <p className="text--grey">Kelsey is a designer and engineer. She specializes in taking an analytical approach to problem solving while focusing on human needs. She is currently studying engineering with a concentration in human-centered design and product development at Dartmouth College.</p>
             </div>
           </div>
 

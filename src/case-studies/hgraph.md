@@ -5,13 +5,6 @@ client: "Open Source, GoInvo"
 caption: "Your health in one picture."
 categories:
   - "patient-engagement"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
   - "care-cards"
   - "paintrackr"

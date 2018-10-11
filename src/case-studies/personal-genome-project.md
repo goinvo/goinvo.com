@@ -5,6 +5,7 @@ client: "The Personal Genome Project"
 caption: "A strategy workshop that leads to a new business focus"
 categories:
   - "precision-medicine-and-genomics"
+  - "open-source"
 upNext:
   - "partners-geneinsight"
   - "carrier-testing"
@@ -30,7 +31,7 @@ To help understand how PGP could better fulfill its goals, GoInvo led the founde
 The workshop led to a refocused mission and restructuring for the PGP and the creation of a new partner organization &mdash;OpenHumans.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 2 weeks<br/>
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics
+<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics, Open Source
 
 [OpenHumans](http://www.openhumans.org)
 

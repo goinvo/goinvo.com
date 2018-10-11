@@ -29,9 +29,7 @@ references:
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
-
-<!-- TODO: add references as superscripts -->
-<!-- TODO: add videos -->
+import Video from '../components/video'
 
 # Closing the SNAP gap
 
@@ -42,7 +40,6 @@ Food insecurity takes a significant toll on public health across the country. Tr
 Our project aimed to make this first step welcoming rather than prohibitive through a redesign of the online application. The redesign, conducted by the trio of MA DTA, Conduent, and GoInvo, focused on a mobile-first, non-intimidating, accessible, and quick service with multiple language options. Although the application is just one part of the whole, it serves as a key entry point for those in need. The ultimate goal was to increase food security for MA residents by making the SNAP application process accessible and approachable for all.
 
 ### Results
-We designed an application that’s fully compliant with [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) and [508 accessibility standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/), and currently in use in Massachusetts.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 12 weeks, 2 engineers for 10 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Public health & policy
@@ -98,7 +95,7 @@ Not all of our efforts made the cut. Accommodating genders beyond the limited �
 #### Honing our approach
 Design isn’t limited to what the design is but also how the design happens. As weeks went by, it became more difficult to gather detailed feedback from all of those involved who often had diverse perspectives. We found a way to foster rich discussion and capture each person’s perspective by building a prototype of the SNAP application design and spending our meeting time in small groups. We pulled in laptops, iPads, and mobile phones of various sizes, giving everyone time to explore the design on their own. We focused on key questions in small groups and sometimes brought handouts to gather the response of individual members. This change in strategy propelled the design forward and gave us rich feedback from our client and stakeholders.
 
-![Collecting feedback in small groups as we walk through the prototype with stakeholders.](/images/case-studies/mass/snap/snap-dtameeting.jpg)
+![Collecting feedback in small groups as we walk through the prototype with stakeholders.](/images/case-studies/mass/snap/snap-dta-meeting.jpg)
 
 #### Delivering on time
 Behavior, interactions, feedback loops, and accessibility standards all ultimately manifest in code. To best communicate how the software should perform, we created a reference implementation of the user interface for our engineering partners at Conduent. We built a fully functioning sandbox in React as well as many of the front-end components used in the production environment. Throughout the production cycle, we consulted and QA’ed for the engineering effort, providing supporting materials such as outlines for browser and accessibility testing.
@@ -110,11 +107,26 @@ Behavior, interactions, feedback loops, and accessibility standards all ultimate
 #### Simple and accessible
 The design is optimized for screen readers, maintains WCAG 2.0 AAA contrast levels, and allows the user to translate the application. The streamlined format minimizes visual burden and reduces missed information.  
 
+<!-- TODO: "Before you start" video or image -->
+
 #### Reduced question fatigue.
 We grouped questions by topic into bite-sized sections, helping users work through the application more efficiently and with less confusion. We decreased the number of questions from about 90 to 40 (estimate for a household of two). The redesigned application uses logic as the user begins answering questions to filter out irrelevant questions.
 
+<!-- TODO: "How Close am I" video or image -->
+
 #### Contextual help
 Diagrams at the beginning and end of the application help the user anticipate what comes next. The user gets a chance to catch mistakes through summaries at the end of sections. Definitions and help text expand inline for easiest reading. The user can track their progress in the menu, as it doubles as a checklist.
+
+<!-- TODO: "Emergency" video needs to be sped up -->
+<Video
+  sources={[
+    {src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.mp4", format: "mp4"},
+    {src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.webm", format: "webm"}
+  ]}
+  poster="/images/homepage/doh-hero-poster.jpg"
+  fallback="/images/homepage/doh-hero-fallback.jpg"
+  loop
+/>
 
 <Divider />
 

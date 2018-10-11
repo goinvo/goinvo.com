@@ -5,31 +5,28 @@ client: "Partners Healthcare"
 caption: "A full redesign of the Partners Healthcare research administration platform"
 categories:
   - "health-it-and-infrastructure"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
-  - "code-ryte"
-  - "acme"
   - "mitre-shr"
+  - "mt-sinai"
+  - "glytec-glucommander"
 hidden: false
+references:
+  - title: ""
+    link: "https://www.bostonglobe.com/business/2018/02/27/partners-healthcare-adds-lifespan-rhode-island-expansion-plans/ALfeUv8KeejGWfKmH8omlI/story.html"
+  - title: ""
+    link: "https://www.partners.org/Medical-Research/Support-Offices/Human-Research-Committee-IRB/Default.aspx"
+  - title: ""
+    link: "https://www.partners.org/Medical-Research/Current-Research-at-Partners/Default.aspx"
 ---
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 
-<!-- TODO: figure out references / superscripts w/ links -->
-<!-- TODO: photoshoot for real life images instead of screenshots ??? -->
-
 # Designing an efficient IRB
 
 ### Problem
 
-Institutional review boards (IRBs) stand as gatekeepers of medical research, reviewing and ensuring proposed studies are ethical and legal, as they will eventually have a direct impact on long-term patient outcomes. Partners Healthcare, as the largest provider network in Massachusetts [1](#references), requires all Partners-affiliated investigators to submit their studies and have them approved by the Partners Human Research Committee (PHRC) [2](#references). Insight, PHRC's electronic IRB portal, is the central point of ingest and administration for medical research for six major research institutions [3](#references). The software and processes suffered from serious usability issues that would impede turnaround times and delay research for weeks at a time.
+Institutional review boards (IRBs) stand as gatekeepers of medical research, reviewing and ensuring proposed studies are ethical and legal, as they will eventually have a direct impact on long-term patient outcomes. Partners Healthcare, as the largest provider network in Massachusetts[^1], requires all Partners-affiliated investigators to submit their studies and have them approved by the Partners Human Research Committee (PHRC[^2]). Insight, PHRC's electronic IRB portal, is the central point of ingest and administration for medical research for six major research institutions[^3]. The software and processes suffered from serious usability issues that would impede turnaround times and delay research for weeks at a time.
 
 ### Solution
 
@@ -121,15 +118,3 @@ In returning to the same groups of reviewers and submitters, occasionally pullin
 As part of participating in the development, we created an inventory of all the screens, cataloged base components and reusable styles and consulted on front-end engineering, UAT, and QA. Currently, Insight 4.0 is now being rolled out to all of Partners research facilities.
 
 ![collaboration](/images/case-studies/partners/insight/insight-inventory.jpg)
-
-<Divider />
-
-## References
-
-<div id="references">
-
-1. https://www.bostonglobe.com/business/2018/02/27/partners-healthcare-adds-lifespan-rhode-island-expansion-plans/ALfeUv8KeejGWfKmH8omlI/story.html
-2. https://www.partners.org/Medical-Research/Support-Offices/Human-Research-Committee-IRB/Default.aspx
-3. https://www.partners.org/Medical-Research/Current-Research-at-Partners/Default.aspx
-
-</div>

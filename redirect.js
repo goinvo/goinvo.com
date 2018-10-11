@@ -2,10 +2,10 @@ var AWS = require('aws-sdk');
 AWS.config.update(config);
 
 var s3 = new AWS.S3({
-	params: {Bucket: 'old-features.goinvo.com'}
+	// params: {Bucket: 'www.goinvo.com'}
 });
 
-var jsonObj = require("./redirect.json");
+var jsonObj = require("./redirects.json");
 
 for(var myRedirect in jsonObj) {
 	s3.putObject ({

@@ -14,32 +14,24 @@ results:
   - stat: "8,760"
     description: "Yearly views of health data definition"
 upNext:
-  - "code-ryte"
-  - "acme"
-  - "mitre-shr"
+  - "open-source-healthcare"
+  - "snap"
+  - "determinants-of-health"
 hidden: false
+references:
+  - title: ""
+    link: "https://www.goinvo.com/features/determinants-of-health/"
+  - title: ""
+    link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4530978/"
+  - title: ""
+    link: "http://www.pewinternet.org/fact-sheet/mobile/"
 ---
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 import Video from '../components/video'
 
-<!-- TODO: -->
-<!-- buttons -->
-<!-- references -->
-<!-- Real upNext list -->
-
 # Engaging Patients to Understand Health Data
-
-<!-- <Video
-  sources={[
-    {src: "/videos/homepage/sdoh-hero.mp4", format: "mp4"},
-    {src: "/videos/homepage/sdoh-hero.webm", format: "webm"}
-  ]}
-  poster="/images/homepage/doh-hero-poster.jpg"
-  fallback="/images/homepage/doh-hero-fallback.jpg"
-  loop
-/> -->
 
 ### Problem
 
@@ -56,18 +48,15 @@ In a usability test of the prototypes, conducted with 30 patients, 97% were able
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 2.5 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Public health and policy, Patient engagement, Open source
 <br />
-
-<!--<a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">View Demo</a>-->
-
-[View Demo](https://www.healthdatabasics.org/)
-[View code GitHub](https://github.com/goinvo/HealthDataBasics)
+<a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">View Demo</a>
+<a href="https://github.com/goinvo/HealthDataBasics" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
 
 <Divider />
 
 ## Process
 
 #### Research through multiple techniques
-GoInvo and FasterCures surveyed approximately **700 patients and caretakers** and conducted in-depth interviews with **15 industry experts**, along with reviewing the latest research to understand patient needs, barriers, and motivations around health literacy and being engaged in one’s health. In addition, we polled industry experts on what health data means to them to galvanize a health data definition grounded in the determinants of health, including social determinants.
+GoInvo and FasterCures surveyed approximately **700 patients and caretakers** and conducted in-depth interviews with **15 industry experts**, along with reviewing the latest research to understand patient needs, barriers, and motivations around health literacy and being engaged in one’s health. In addition, we polled industry experts on what health data means to them to galvanize a health data definition grounded in the determinants of health, including social determinants[^1].
 
 ![sketches](/images/case-studies/fastercures/health-data-basics/health-data-basics_sketches.jpg)
 
@@ -89,7 +78,7 @@ Initially, two concepts emerged as contenders to educate on health data &mdash;o
 ![sources of health data](/images/case-studies/fastercures/health-data-basics/Health-data-basics_data.jpg)
 
 #### Integrate Social Determinants of Health
-Before this project, a definition of health data didn’t exist, or even a consensus by experts on what health data included. The most common notion of health data needed to be expanded to go beyond medical records and devices and include the social, environmental, and behavioral determinants of health.
+Before this project, a definition of health data didn’t exist, or even a consensus by experts on what health data included. The most common notion of health data needed to be expanded to go beyond medical records and devices and include the social, environmental, and behavioral determinants of health[^1].
 
 #### Start with health, not health data.
 Patients typically interact with health data to accomplish a larger goal of improving their health but also enhancing their quality of life. Knowing this, honed the approach and further focused the message to further motivate by appealing to goals.
@@ -112,7 +101,7 @@ To meet the needs for a wide array of behaviors and learning methods, we develop
 The introduction would hook the user with a suprising fact and graphic that medical care only composes 11% of health, appealing to their sense of curiosity to discover that there is more to health data than the medical aspect. Individuals could then unravel the surprising ways wellness and health data permeate life through an array of interactive examples.
 
 #### Designed with behavior change frameworks
-The Health Belief Model (HBM), used by social scientists in public health, suggests that behavior change is more likely if messaging successfully targets barriers, benefits, self-efficacy, and threat. Providing individuals with feedback and suggestions that help break down barriers, and arms them with the ability to do it themselves. This model leads to higher rates of behavior change rather than providing them with just the facts. Different screens address the elements of models to encourage an individual to take action.
+The Health Belief Model (HBM), used by social scientists in public health, suggests that behavior change is more likely if messaging successfully targets barriers, benefits, self-efficacy, and threat[^2]. Providing individuals with feedback and suggestions that help break down barriers, and arms them with the ability to do it themselves. This model leads to higher rates of behavior change rather than providing them with just the facts. Different screens address the elements of models to encourage an individual to take action.
 
 ![gamification](/images/case-studies/fastercures/health-data-basics/health-data-basics_gamification.jpg)
 

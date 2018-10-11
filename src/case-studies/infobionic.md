@@ -1,8 +1,8 @@
 ---
-title: "Visualizing real time cardiac arrhythmias"
+title: "Visualizing real-time cardiac arrhythmias"
 image: "/images/case-studies/infobionic/Infobionic-hero.jpg"
 client: "InfoBionic"
-caption: "A data rich view for a doctor to analyze and diagnose the patient remotely."
+caption: "A data-rich view for a doctor to analyze and diagnose the patient remotely."
 categories:
   - "care-management"
 upNext:

@@ -5,17 +5,10 @@ client: "Open Source, GoInvo"
 caption: "A straightforward, tactile tool for logging pain."
 categories:
   - "patient-engagement"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
-  - "code-ryte"
-  - "acme"
-  - "mitre-shr"
+  - "inspired-ehrs"
+  - "killer-truths"
+  - "tabeeb"
 hidden: false
 ---
 import Divider from '../components/divider'
@@ -37,15 +30,13 @@ We designed and built PainTrackr, an intuitive app which uses shades of red acro
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer and engineer for 6 months
 <br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement
-<br/><br/>
-
-[View it on iTunes](https://itunes.apple.com/us/app/paintrackr-track-pain-chronic/id566170561?mt=8)
+<br/>
 
 <Divider />
 
 ## Solution
 
-![Early concept](/images/case-studies/goinvo/paintrackr/PainTrackr_Solution2.jpg)
+![Early concept](/images/case-studies/goinvo/paintrackr/paintrackr-solution.jpg)
 
 *Early concept for tracking pain and intensity.*
 
@@ -53,12 +44,14 @@ PainTrackr is an open source app that tracks physical pain. A patient logs pain 
 
 PainTrackr seeks to make logging pain more intuitive, while eliminating the hassle of recording information via pen and paper. By providing a way for patients to easily enter data about their bodily pains, PainTrackr hopes to improve communication between patients and their healthcare providers.
 
-<Quote quotee="PainTrackr User" quoteeSub="">I love this app - especially the simplicity and ease of entry. I have ADD along with multiple chronic issues, and other apps have had too many areas to track, too many questions to answer.</Quote>
+<Quote quotee="PainTrackr User" quoteeSub="">I love this app &mdash;especially the simplicity and ease of entry. I have ADD along with multiple chronic issues, and other apps have had too many areas to track, too many questions to answer.</Quote>
 
-![Painting pain](/images/case-studies/goinvo/paintrackr/Paintrackr_Paint2.jpg)
+![Painting pain](/images/case-studies/goinvo/paintrackr/paintrackr-paint.jpg)
 
 *Next version of PainTrackr could evolve into painting your pain.*
 
-![History](/images/case-studies/goinvo/paintrackr/PainTrackr_History2.jpg)
+<br/>
+
+![History](/images/case-studies/goinvo/paintrackr/paintrackr-history.jpg)
 
 *Viewing the history of recorded pain.*

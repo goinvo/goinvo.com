@@ -5,12 +5,14 @@ client: "Open Source, GoInvo"
 caption: "Your health in one picture."
 categories:
   - "patient-engagement"
+  - "open-source"
 upNext:
   - "care-cards"
   - "paintrackr"
   - "mitre-shr"
 hidden: false
 ---
+
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 
@@ -29,7 +31,7 @@ hGraph displays a considerable amount of health information in a deceptively sim
 hGraph is an open source tool that has been adopted by many organizations like Walgreens, Crossover Health, NextGen, and Citizen Health to help clinicians swiftly spot problem areas within a patient’s health.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 9 months
-<br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement
+<br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
 <br/> <a href="http://www.hgraph.org" class="button button--primary button--lg margin-top--double margin-bottom--half">View hGraph</a> <a href="https://github.com/goinvo/hGraph" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
 
 <Divider />

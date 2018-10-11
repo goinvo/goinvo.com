@@ -24,7 +24,7 @@ const services = [
     image: "/images/services/pgp-green.jpg",
     color: "#D6E8E2",
     example: {
-      link: "/work/personal-genome-project",
+      link: "/work/personal-genome-project-vision",
       title: "Personal Genome Project"
     }
   },
@@ -35,7 +35,7 @@ const services = [
     image: "/images/services/wuxi-blue.jpg",
     color: "#D3DCEE",
     example: {
-      link: "/work/wuxi-next-code",
+      link: "/work/wuxi-nextcode-familycode",
       title: "WuXi NextCODE"
     }
   },
@@ -68,8 +68,8 @@ const services = [
     image: "/images/services/glytec-brown.jpg",
     color: "#E2DACE",
     example: {
-      link: "/work/glytec",
-      title: "Glytec"
+      link: "/work/mass-snap",
+      title: "Mass SNAP"
     }
   }
 ]
@@ -138,7 +138,7 @@ const ServicesPage = () => (
             We bring fresh ideas and a history of healthcare design and research to help our clients leverage emerging technologies, envision future products and services, and realize long-term goals.
           </p>
           <Link to="/work/hgraph/" className="display--inline-block margin-right--double">Your health in one picture</Link>
-          <Link to="/vision/care-plans" className="display--inline-block">Care plans</Link>
+          <a href="https://www.goinvo.com/features/careplans" className="display--inline-block">Care plans</a>
         </div>
         <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
           <IconTeam className="icon--wide icon--secondary" />
@@ -155,27 +155,27 @@ const ServicesPage = () => (
             From enterprise-grade health IT to data-driven precision healthcare, GoInvo works closely with our clients and partners to transform messy problems into structured strategy and solutions.
           </p>
           <Link to="/work/mitre-shr" className="display--inline-block margin-right--double">Standard health record</Link>
-          <Link to="/work/mitre-flux" className="display--inline-block">Structured clinical notes</Link>
+          <Link to="/work/partners-insight" className="display--inline-block">Partners Insight IRB</Link>
         </div>
       </div>
       <Divider />
     </div>
     <div className="max-width content-padding pad-vertical--double">
-      {
-        // TODO: Real images here
-      }
       <Columns columns={3}>
-        <ImageBlock key={"1"} image="features/determinants-of-health/feature_banner.jpg" title="Emerging technology" caption="We’ve worked on projects across the spectrum of emerging technology from artificial intelligence for medical coding to self-documenting voice encounters and wearable devices.">
-          <div><Link to="/work/health-coding/">Health Coding Case Study</Link></div>
-          <div><Link to="/work/wuxi-next-code/">WuXi NextCODE</Link></div>
+        {
+          // TODO: Still need image here!
+        }
+        <ImageBlock key={"1"} image="" title="Emerging technology" caption="We’ve worked on projects across the spectrum of emerging technology from artificial intelligence for medical coding to self-documenting voice encounters and wearable devices.">
+          <div><a href="https://www.goinvo.com/features/from-bathroom-to-healthroom/">From bathroom to healthroom</a></div>
+          <div><Link to="/work/wuxi-nextcode-familycode/">WuXi NextCODE</Link></div>
         </ImageBlock>
         <ImageBlock key={"2"} image="/images/services/doh-preview.jpg" title="Information visualizations" caption="We create beautiful printed and interactive health-related data visualizations that span payment dashboards to visualizing the social determinants of health to clinical practice guidelines for Zika.">
-          <div><Link to="/vision/determinants-of-health/">Determinants of Health</Link></div>
-          <div><Link to="/vision/zika/">Clinical Practice Guidelines for Zika</Link></div>
+          <div><a href="https://www.goinvo.com/features/determinants-of-health/">Determinants of Health</a></div>
+          <div><a href="https://www.goinvo.com/features/ebola-care-guideline/">Clinical Practice Guidelines for Zika</a></div>
         </ImageBlock>
         <ImageBlock key={"3"} image="/images/services/inspired-ehrs-book.jpg" title="Open source healthcare products" caption="We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.">
         <div><Link to="/work/inspired-ehrs/">Inspired EHRs</Link></div>
-        <div><Link to="/work/paintrakr/">Clinical Practice Guidelines for Zika</Link></div>
+        <div><Link to="/work/paintrackr/">PainTrackr</Link></div>
         <div><Link to="/work/?category=open-source">See all open source products</Link></div>
         </ImageBlock>
       </Columns>

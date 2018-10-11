@@ -139,9 +139,6 @@ class IndexPage extends Component {
           <div className="container container--justify-center margin-vertical">
             <h2 className="header--xl">See the future<span className="text--serif text--primary">.</span></h2>
           </div>
-          {
-            // TODO: Add Links here
-          }
           <Columns columns={3}>
             <ImageBlock
               key={"1"}

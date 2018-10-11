@@ -5,14 +5,15 @@ client: "University of Missouri, NIH, and CHCF"
 caption: "Revealing multifaceted, evidence-based designs for a new generation of electronic health records."
 categories:
   - "health-it-and-infrastructure"
+  - "open-source"
 results:
   - stat: "600"
     description: "visits / month today"
   - stat: "28"
     description: "known code forks"
 upNext:
-  - "mitre-shr"
-  - "faster-cures-health-data-basics"
+  - "miter-shr"
+  - "fastercures-health-data-basics"
   - "determinants-of-health"
 hidden: false
 ---
@@ -34,10 +35,10 @@ With a team of physicians, nurses, health IT, and HCI experts, GoInvo designed a
 An open source, accessible, lightweight design policy for electronic health records.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer and engineer over 18 months<br/>
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure
+<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure, Open Source
 <br />
-<a href="http://inspiredehrs.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">Read the book</a>
-<a href="https://github.com/goinvo/EHR" class="button button--primary button--lg margin-top--double margin-bottom--half">View the code</a>
+<a href="http://inspiredehrs.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">Read the book</a>   
+<br/><a href="https://github.com/goinvo/EHR" class="button button--primary button--lg margin-top--double margin-bottom--half">View the code</a>
 
 <Divider />
 

@@ -1,17 +1,11 @@
 ---
 title: "Care Cards"
-image: "/images/case-studies/goinvo/carecards/CareCards_Hero.jpg"
+image: "/images/case-studies/goinvo/carecards/care-cards-hero.jpg"
 client: "Open Source, GoInvo"
 caption: "Mantras for patients to change themselves, clinicians, and the healthcare system."
 categories:
   - "patient-engagement"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
+  - "open-source"
 upNext:
   - "hgraph"
   - "paintrackr"
@@ -43,7 +37,7 @@ Patient Safety & Quality Healthcare
 
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer, part time, across 2 years
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement
+<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
 <a href="www.carecards.me" class="button button--primary button--lg margin-top--double margin-bottom--half">Get your own deck</a>
 
 <Quote quotee="Roni Zeiger, MD" quoteeSub="former Chief Health Strategist at Google, co-founder of Smart Patients">Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.</Quote>

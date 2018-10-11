@@ -36,25 +36,26 @@ const ethics = [
   }
 ]
 
-// TODO: Real images for this list
 const upNextList = [
   {
-    link: "/work/1",
-    image: "features/determinants-of-health/feature_banner.jpg",
+    link: "http://www.opensourcehealthcare.org",
+    externalLink: true,
+    image: "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",
     title: "Open Source Healthcare Journal",
-    caption: "OS will improve the healthcare system by empowering interoperability, with open data standards, for better patient outcomes."
+    caption: "The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better."
   },
   {
-    link: "/work/2",
-    image: "features/determinants-of-health/feature_banner.jpg",
+    link: "/work/?category=open-source",
+    image: "/images/services/doh-preview.jpg",
     title: "Open source healthcare products",
     caption: "Learn about our opensource projects and why we’re passionate about making healthcare open."
   },
   {
-    link: "/vision/",
-    image: "features/determinants-of-health/feature_banner.jpg",
-    title: "Why we cook and eat together",
-    caption: "Cause we like food."
+    link: "https://www.goinvo.com/features/print-big/",
+    externalLink: true,
+    image: "/images/features/print-big-print-often/print-big-print-often-featured.jpg",
+    title: "Print big. Print often.",
+    caption: "Considering the bigger picture."
   }
 ];
 
@@ -170,7 +171,7 @@ const AboutPage = () => (
         <Columns columns={3}>
           { upNextList.map(item => {
             return (
-              <Card key={item.link} link={item.link}>
+              <Card key={item.link} link={item.link} externalLink={item.externalLink}>
                 <ImageBlock
                   title={item.title}
                   image={item.image}

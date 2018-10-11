@@ -5,24 +5,39 @@ client: "Mount Sinai Hospital"
 caption: "Crafting genetic reporting and electronic consent service for The Resilience Project, born at TED 2014."
 categories:
   - "precision-medicine-and-genomics"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
-  - "mt-sinai"
-  - "partners-geneinsight"
   - "personal-genome-project"
+  - "partners-insight"
+  - "care-plans"
 hidden: false
+references:
+  - title: ""
+    link: "http://en.wikipedia.org/wiki/Eric_Schadt"
+  - title: ""
+    link: "https://www.linkedin.com/pub/elissa-levin/4/888/aa"
+  - title: ""
+    link: "https://www.rmany.com/our-team/physicians/dr-alan-copperman"
+  - title: ""
+    link: "https://www.nytimes.com/2014/02/26/health/fda-meeting-considers-controversial-fertility-procedure.html?_r=0"
+  - title: ""
+    link: "http://www.washingtonpost.com/business/on-it/at-one-hospital-iphones-ipads-and-google-glass-become-key-medical-tools/2014/07/13/ce2657b0-0842-11e4-a0dd-f2b22a257353_story.html"
+  - title: ""
+    link : "http://www.pewinternet.org/fact-sheet/mobile/
+"
+  - title: ""
+    link: "http://groups.csail.mit.edu/mac/classes/6.805/student-papers/fall97-papers/fillingham-sig.html"
+  - title: ""
+    link: "http://en.wikipedia.org/wiki/Biometrics"
+  - title: ""
+    link: "http://www.resilienceproject.me/"
+  - title: ""
+    link: "https://en.wikipedia.org/wiki/Stephen_Friend"
+  - title: ""
+    link: "http://www.ted.com/talks/2004"
 ---
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
-
-<!-- TODO: references -->
 
 # A Search for Unexpected Genetic Heroes
 
@@ -45,9 +60,9 @@ The project was unveiled at TED with the presentation of a result report for The
 
 ## Process
 
-[Eric Schadt](http://en.wikipedia.org/wiki/Eric_Schadt), director of the Icahn Institute for Genomics and Multiscale Biology at Mount Sinai Hospital, and [Elissa Levin](https://www.linkedin.com/pub/elissa-levin/4/888/aa), assistant professor of Genetics and Genomic Sciences at Mount Sinai, tasked GoInvo to develop a smooth electronic consent platform for patients to participate in genomics studies. With consent as a highly regulated space and blessing from Mount Sinai Hospital’s IRB (institutional review board), open source eConsent would be a global coup for clinical research.
+Eric Schadt[^1], director of the Icahn Institute for Genomics and Multiscale Biology at Mount Sinai Hospital, and Elissa Levin[^2], assistant professor of Genetics and Genomic Sciences at Mount Sinai, tasked GoInvo to develop a smooth electronic consent platform for patients to participate in genomics studies. With consent as a highly regulated space and blessing from Mount Sinai Hospital’s IRB (institutional review board), open source eConsent would be a global coup for clinical research.
 
-We began by mapping out the ecosystem around eConsent, using genomics testing as a baseline. At Mount Sinai Hospital, genomics testing frequently occurs during the IVF process (in vitro fertilization). Not so coincidentally, [Dr. Alan Copperman](https://www.rmany.com/our-team/physicians/dr-alan-copperman) runs one of the busiest and most [progressive IVF clinics](https://www.nytimes.com/2014/02/26/health/fda-meeting-considers-controversial-fertility-procedure.html?_r=0) in mid-town Manhattan. He was our early adopter, our clinical feedback loop, and educator.
+We began by mapping out the ecosystem around eConsent, using genomics testing as a baseline. At Mount Sinai Hospital, genomics testing frequently occurs during the IVF process (in vitro fertilization). Not so coincidentally, Dr. Alan Copperman[^3] runs one of the busiest and most progressive IVF clinics[^4] in mid-town Manhattan. He was our early adopter, our clinical feedback loop, and educator.
 
 #### Experiencing the pain first hand
 
@@ -83,14 +98,14 @@ We took a systems approach to designing the consent experience, using what we le
 *System model of the CaaS (consent as a service) software.*
 
 #### A Push for Mobile Consent
-John Halamka, Beth Israel Deaconess Medical Center (BIDMC) CIO and Meaningful Use co-author, proclaimed, "[the laptop is dead, the desktop is gone.](http://www.washingtonpost.com/business/on-it/at-one-hospital-iphones-ipads-and-google-glass-become-key-medical-tools/2014/07/13/ce2657b0-0842-11e4-a0dd-f2b22a257353_story.html)” This rings most true for patients, where [77% of adults in the US have smartphones](http://www.pewinternet.org/fact-sheet/mobile/) in their pockets and likely much higher for IVF patients. Thus it was critical for the patient-facing e-consent to be a mobile service. It also needed to accommodate interactive educational lessons with different learning styles and adaptive content based on the patient's understanding and emotional response. We included a voice user interface (VUI) for listening to and answering questions (vs long-form reading) as well as voice signature capabilities (since digital voice signatures, a form of biometric signatures, offer stronger authentication than hand-written signatures: [A Comparison of Digital and Handwritten Signatures](http://groups.csail.mit.edu/mac/classes/6.805/student-papers/fall97-papers/fillingham-sig.html), [Biometrics Wiki](http://en.wikipedia.org/wiki/Biometrics)). The service also included expression comprehension, captured non-invasively via your phone's camera, to detect in near-real time how a patient was or was not consuming the lesson. The service would adjust content based on the emotional and heart rate response to better match the material and understanding level. Pretty rad, eh?
+John Halamka, Beth Israel Deaconess Medical Center (BIDMC) CIO and Meaningful Use co-author, proclaimed, "the laptop is dead, the desktop is gone.[^5]” This rings most true for patients, where 77% of adults in the US have smartphones[^6] in their pockets and likely much higher for IVF patients. Thus it was critical for the patient-facing e-consent to be a mobile service. It also needed to accommodate interactive educational lessons with different learning styles and adaptive content based on the patient's understanding and emotional response. We included a voice user interface (VUI) for listening to and answering questions (vs long-form reading) as well as voice signature capabilities (since digital voice signatures, a form of biometric signatures, offer stronger authentication than hand-written signatures: A Comparison of Digital and Handwritten Signatures[^7], Biometrics Wiki[^8]). The service also included expression comprehension, captured non-invasively via your phone's camera, to detect in near-real time how a patient was or was not consuming the lesson. The service would adjust content based on the emotional and heart rate response to better match the material and understanding level. Pretty rad, eh?
 
 <Quote quotee="Elissa Levin" quoteeSub="Head, Genomics and Integrative Health Innovations, Icahn School of Medicine at Mount Sinai">It was a big hit here at TED!</Quote>
 
 #### Trial Run at TED
-The CaaS (consent as a service) project dovetailed with Mount Sinai and Sage Bionetwork's [The Resilience Project](http://www.resilienceproject.me/), an initiative to sequence 1,000,000 entire human genomes for finding the rare people whom genetically show a condition, such as cystic fibrosis, but exhibit none of the physical attributes.
+The CaaS (consent as a service) project dovetailed with Mount Sinai and Sage Bionetwork's The Resilience Project[^9], an initiative to sequence 1,000,000 entire human genomes for finding the rare people whom genetically show a condition, such as cystic fibrosis, but exhibit none of the physical attributes.
 
-The mobile e-consent software would be the driving force in getting willing participants to sign up and allow their genomic data to be used for research. [Stephen Friend](https://en.wikipedia.org/wiki/Stephen_Friend), a co-Principal Investigator on The Resilience Project, took to the main [TED stage and showcased the hunt for unexpected heroes](http://www.ted.com/talks/2004).
+The mobile e-consent software would be the driving force in getting willing participants to sign up and allow their genomic data to be used for research. Stephen Friend[^10], a co-Principal Investigator on The Resilience Project, took to the main TED stage and showcased the hunt for unexpected heroes[^11].
 
 <!-- TODO: embed video -->
 
@@ -106,20 +121,3 @@ Outside the auditorium, Elissa and other Mount Sinai genomicists collected sampl
 
 #### Path Paved for Better Patient Consenting
 The success and scale of The Resilience Project hinged on electronic consent. The Mount Sinai team, together with GoInvo, saw a solution to bypass the crazy, analog, and impossible-to-distribute consent process and ultimately give patients an easy-to-understand report on their genetic traits and how their genes could impact their potential offspring.
-
-<!-- TODO: did up to #6 (excluding 2.)
-<Divider />
-
-## References
-
-<div id="references">
-  <ol>
-    <li id="fn-1"><a href="http://en.wikipedia.org/wiki/Eric_Schadt" target="blank">http://en.wikipedia.org/wiki/Eric_Schadt</a></li>
-    <li id="fn-2"><a href="https://www.linkedin.com/pub/elissa-levin/4/888/aa" target="blank">https://www.linkedin.com/pub/elissa-levin/4/888/aa</a></li>
-    <li id="fn-3"><a href="https://www.rmany.com/our-team/physicians/dr-alan-copperman" target="blank">https://www.rmany.com/our-team/physicians/dr-alan-copperman</a></li>
-    <li><a href="https://www.nytimes.com/2014/02/26/health/fda-meeting-considers-controversial-fertility-procedure.html?_r=0" target="blank">https://www.nytimes.com/2014/02/26/health/fda-meeting-considers-controversial-fertility-procedure.html?_r=0</a></li>
-    <li><a href="http://www.washingtonpost.com/business/on-it/at-one-hospital-iphones-ipads-and-google-glass-become-key-medical-tools/2014/07/13/ce2657b0-0842-11e4-a0dd-f2b22a257353_story.html" target="blank">http://www.washingtonpost.com/business/on-it/at-one-hospital-iphones-ipads-and-google-glass-become-key-medical-tools/2014/07/13/ce2657b0-0842-11e4-a0dd-f2b22a257353_story.html</a></li>
-  </ol>
-</div>
-
--->

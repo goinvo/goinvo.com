@@ -22,11 +22,11 @@ class ClientLogos extends Component {
       <ul className="list--unstyled client-logos">
         <li><ThreeM /></li>
         <li><Partners /></li>
-        <li className="hidden--sm"><BD /></li>
+        <li><BD /></li>
         <li className="hidden--sm"><InfoBionic /></li>
-        <li><MGH /></li>
+        <li className="hidden--sm"><MGH /></li>
         <li><JohnsonAndJohnson /></li>
-        <li className="hidden--sm"><MountSinai /></li>
+        <li><MountSinai /></li>
         <li><Wuxi /></li>
         <li><Walgreens /></li>
         <li className="hidden--sm"><JournalOfParticipatoryMedicine /></li>
@@ -34,7 +34,7 @@ class ClientLogos extends Component {
         <li><NIH /></li>
         <li className="hidden--sm"><PersonalGenomeProject /></li>
         <li className="hidden--sm"><Mitre /></li>
-        <li><Mass /></li>
+        <li className="hidden--sm"><Mass /></li>
       </ul>
     )
   }

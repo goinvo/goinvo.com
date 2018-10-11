@@ -5,24 +5,18 @@ client: "Partners Healthcare"
 caption: "A suite of tools for recording genetic information and building / accessing patient-specific reports."
 categories:
   - "precision-medicine-and-genomics"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
-  - "code-ryte"
-  - "acme"
-  - "mitre-shr"
+  - "wuxi-nextcode-familycode"
+  - "mtsinai"
+  - "hgraph"
 hidden: false
+references:
+  - title: ""
+    link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082613/"
 ---
+
 import Divider from '../components/divider'
 import Quote from '../components/quote'
-
-<!-- TODO: figure out references / superscripts w/ links -->
-<!-- TODO: photoshoot for real life images instead of screenshots ??? -->
 
 # Connecting Clinics to Genetic Testing Labs
 
@@ -32,7 +26,7 @@ Partners Healthcare sought to move GeneInsight out of their closed lab, making i
 
 ### Solution
 
-GoInvo redesigned GeneInsight as a straightforward and elegant tool for clinicians to connect with laboratories, perform genetic analysis, receive reports on findings, and continue to receive updated on variants detected.
+GoInvo redesigned GeneInsight as a straightforward and elegant tool for clinicians to connect with laboratories, perform genetic analysis, receive reports on findings, and continue to receive updated on variants detected[^1].
 
 ### Results
 
@@ -47,15 +41,19 @@ Partners Healthcare launched the GeneInsight Suite as commercial-grade software,
 
 To get a firm grasp on GeneInsight and its capabilities, we conducted usability reviews of the software used in labs. We met with more than two dozen key stakeholders to codify the product and user experience goals.
 
+<Divider />
+
 ## Insights
 
 #### Capturing and categorizing the human genome
 
-Genetic variants, mutations of the nucleotide sequence of the human genome, result in several different types of sequence changes  &mdash;having no effect, altering the product of a gene, or preventing proper functioning. These variants need to be captured, cataloged, and validated via a globally-accessible variant database and vetting process. GeneInsight streamlined this process for laboratory technicians and genetic research scientists.
+Genetic variants, mutations of the nucleotide sequence of the human genome, result in several different types of sequence changes &mdash;having no effect, altering the product of a gene, or preventing proper functioning. These variants need to be captured, cataloged, and validated via a globally-accessible variant database and vetting process. GeneInsight streamlined this process for laboratory technicians and genetic research scientists.
 
 #### Patient genetic reports are a critical component
 
 GeneInsight assisted clinical specialists in drafting patient-specific, molecular diagnostic test reports for geneticist review. In the previous version, reports were created based on a set of highly flexible, user-defined templates from the software’s extensive knowledge database. Composing a report consisted of lengthy, labor-intensive processes requiring advanced knowledge of the system and genetics. Interpretations, recommendations, and comments were more machine-readable than scannable and understood by a human.
+
+<Divider />
 
 ## Solutions
 
@@ -63,13 +61,13 @@ GeneInsight assisted clinical specialists in drafting patient-specific, molecula
 
 Reports could be drafted using a template builder that reduced the number of clicks and density of information from the previous version. By reducing information overload and simplifying workflow into a handful of steps, geneticists could draft reports and deliver them more quickly to providers and patients.
 
-![Report](/images/case-studies/partners/geneinsight/geneinsight_patientreport.jpg)
+![Report](/images/case-studies/partners/geneinsight/geneinsight-patient-report.jpg)
 
 #### Accessible reports
 
 The updated data, layout, and emphasis encouraged faster and more informed decision-making. Clinicians could enter GeneInsight, locate their patient and download a specific report. GeneInsight’s template builder worded output reports clearly so that a provider would be able to sit down with their patient, walk through the results, and quickly make informed clinical decisions.
 
-![Manual](/images/case-studies/partners/geneinsight/geneinsight_search_documentation.jpg)
+![Manual](/images/case-studies/partners/geneinsight/geneinsight-manual.jpg)
 
 #### Ease of first-time and 100th-time use
 

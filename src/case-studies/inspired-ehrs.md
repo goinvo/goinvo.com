@@ -23,7 +23,7 @@ import Quote from '../components/quote'
 
 ### Problem
 
-Current electronic health records (EHRs) are characterized by clumsy interfaces, poorly designed information, and cumbersome workflows, all of which distance clinicians from quality patient care. In most cases, these systems are set up for failure — clinicians for burnout and, patients for health risks.
+Current electronic health records (EHRs) are characterized by clumsy interfaces, poorly designed information, and cumbersome workflows, all of which distance clinicians from quality patient care. In most cases, these systems are set up for failure &mdash;clinicians for burnout and, patients for health risks.
 
 ### Solution
 
@@ -35,9 +35,9 @@ An open source, accessible, lightweight design policy for electronic health reco
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer and engineer over 18 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure
-
-[Read the book]:(http://inspiredehrs.org/)
-[View the code]:(https://github.com/goinvo/EHR)
+<br />
+<a href="http://inspiredehrs.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">Read the book</a>
+<a href="https://github.com/goinvo/EHR" class="button button--primary button--lg margin-top--double margin-bottom--half">View the code</a>
 
 <Divider />
 
@@ -47,9 +47,11 @@ An open source, accessible, lightweight design policy for electronic health reco
 
 EHRs (electronic health records) today are notorious for being difficult to use, though they play a critical role in providing health care across the United States. EHRs historically lacked intuitive interfaces, usable processes, and basic readability. As such, there’s plenty of room for improvement, informed by healthcare processes, human factors principles, and usability design. Jeff Belden, a family physician and professor at the University of Missouri, partnered with GoInvo to share this vision and inspire a change in EHR design standards. With support from the California Healthcare Foundation and the SHARP-C Project of the Office of the National Coordinator for Health IT, a team of physicians, humans factors and usability experts assembled to take on this challenge.
 
+<Divider />
+
 ## Process
 
-With our years of EHR design chops, as members of the CCHIT Personal Health Record Workgroup in 2007-2008, HIMSS EHR Usability Taskforce 2009-2012, and leading the HIMSS Mobile Design Taskforce in 2011- 2012, GoInvo provided software design expertise, usability and HCI guidelines, and design principles.
+With our years of EHR design chops, as members of the CCHIT Personal Health Record Workgroup in 2007-2008, HIMSS EHR Usability Taskforce 2009-2012, and leading the HIMSS Mobile Design Taskforce in 2011-2012, GoInvo provided software design expertise, usability and HCI guidelines, and design principles.
 
 #### A web-based e-book as our canvas
 
@@ -64,6 +66,8 @@ We facilitated workshops where the team, along with select physicians, nurses, a
 #### Writing for designers and engineers
 
 In addition to workshop facilitation, design, and prototyping, we also contributed to the content of the book. In addition to rounds of review with test readers, our team performed iterative rounds of editing of not just designs but also text. With selective word choice and tightening of text, the team was able to convey complex clinical situations to designers and engineers in clear, concise language.
+
+<Divider />
 
 ## Insights
 

@@ -12,7 +12,7 @@ results:
   - stat: "28"
     description: "known code forks"
 upNext:
-  - "miter-shr"
+  - "mitre-shr"
   - "fastercures-health-data-basics"
   - "determinants-of-health"
 hidden: false

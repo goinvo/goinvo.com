@@ -7,8 +7,8 @@ categories:
   - "health-it-and-infrastructure"
 upNext:
   - "mitre-shr"
-  - "mt-sinai"
-  - "glytec-glucommander"
+  - "mt-sinai-consent"
+  - "mass-snap"
 hidden: false
 references:
   - title: ""
@@ -83,7 +83,7 @@ The act of submission and review was often an iterative back and forth process, 
 
 Our goal was to reduce friction between reviewers and submitters in addition to shortening the time it takes to prepare, submit, review, and push a protocol to approval.
 
-![workflow](/images/case-studies/partners/insight/insight-sketchwall.jpg)
+![workflow](/images/case-studies/partners/insight/insight-sketches.jpg)
 
 #### Where is my protocol?!
 

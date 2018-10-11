@@ -15,7 +15,7 @@ results:
     description: "Yearly views of health data definition"
 upNext:
   - "open-source-healthcare"
-  - "snap"
+  - "mass-snap"
   - "determinants-of-health"
 hidden: false
 references:

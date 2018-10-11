@@ -7,7 +7,7 @@ categories:
   - "care-management"
 upNext:
   - "hgraph"
-  - "infobionic"
+  - "infobionic-heart-monitoring"
   - "understanding-ebola"
 hidden: false
 ---

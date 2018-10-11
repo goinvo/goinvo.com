@@ -6,7 +6,7 @@ caption: "Crafting genetic reporting and electronic consent service for The Resi
 categories:
   - "precision-medicine-and-genomics"
 upNext:
-  - "personal-genome-project"
+  - "personal-genome-project-vision"
   - "partners-insight"
   - "care-plans"
 hidden: false

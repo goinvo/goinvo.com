@@ -1,14 +1,14 @@
 ---
 title: "Carrier screening for everyone"
-image: "/images/case-studies/wuxi/familycode/Familycode_hero.jpg"
+image: "/images/case-studies/wuxi/familycode/familycode-hero.jpg"
 client: "WuXi NextCODE"
 caption: "Shifting from a behind the scenes genomics powerhouse to a consumer-friendly service."
 categories:
   - "precision-medicine-and-genomics"
 upNext:
-  - "mt-sinai"
+  - "mt-sinai-consent"
   - "carrier-testing"
-  - "coderyte"
+  - "3m-coderyte"
 hidden: false
 references:
   - title: "Global Carrier Screening Market - Segmented by Type of Test, Disease, and Geography - Growth, Trends and Forecasts. Retrieved July 24, 2018, from "

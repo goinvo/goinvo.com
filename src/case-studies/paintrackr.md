@@ -8,7 +8,7 @@ categories:
 upNext:
   - "inspired-ehrs"
   - "killer-truths"
-  - "tabeeb"
+  - "tabeeb-diagnostics"
 hidden: false
 ---
 import Divider from '../components/divider'

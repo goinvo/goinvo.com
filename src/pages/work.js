@@ -67,7 +67,9 @@ class WorkPage extends Component {
 
     const query = props.location && props.location.search ? props.location.search : null;
     const categoryId = query ? query.substr(query.indexOf("=") + 1) : allCategory.id;
-    const caseStudiesSorted = caseStudies.concat().sort((a, b) => caseStudiesOrder.indexOf(a.slug) > caseStudiesOrder.indexOf(b.slug))
+    const caseStudiesSorted = caseStudies.concat().sort((a, b) => {
+      return caseStudiesOrder.indexOf(a.slug) > caseStudiesOrder.indexOf(b.slug) ? 1 : -1;
+    })
     const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
     const activeCaseStudies = getCaseStudiesOfCategory(caseStudiesSorted, selectedCategory.id);
 

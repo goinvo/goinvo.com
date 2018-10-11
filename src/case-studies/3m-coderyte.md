@@ -6,8 +6,8 @@ caption: "A 180° turn for a $150M business. How our skunkworks for an ambitious
 categories:
   - "health-it-and-infrastructure"
 upNext:
-  - "code-ryte"
-  - "acme"
+  - "partners-insight"
+  - "inspired-ehrs"
   - "mitre-shr"
 hidden: false
 ---
@@ -50,7 +50,7 @@ However, Glenn and his executive cohorts saw a bigger opportunity: to take over 
 
 You and I are familiar with the open-backed gowns and terrible food, but what you might not be familiar with is how information moves inside the hospital, and how that pertains to billing. For the hospital to get paid, they must tag each record with unique diagnosis codes. Lots and lots of codes that drive insurance reimbursement. All of this is a manual process done by an army of “coders” at the hospital.
 
-![coder](/images/case-studies/goinvo/coderyte/coderyte-coders.jpg)
+![coder](/images/case-studies/coderyte/coderyte-coders.jpg)
 *One of the unsung heroes that makes the healthcare system run.*
 
 Coders are hardcore. They rely on their coding software six days a week, from 9-to-5. Sitting at the terminal, coding in for so many patients and what seems like countless relevant codes. CodeRyte provided part of their solution before, but the vision now was to offer the entire system &mdash;a system where dollars are counted in keystrokes. The fewer keystrokes to accomplish the same end task, the more profits for the hospitals. The faster those fewer keystrokes can take, the profits add up even more. Not to mention happier coders.

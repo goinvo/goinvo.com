@@ -5,16 +5,9 @@ client: "The Personal Genome Project"
 caption: "A strategy workshop that leads to a new business focus"
 categories:
   - "precision-medicine-and-genomics"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
-  - "code-ryte"
-  - "acme"
+  - "partners-geneinsight"
+  - "carrier-testing"
   - "mitre-shr"
 hidden: false
 ---
@@ -34,7 +27,7 @@ To help understand how PGP could better fulfill its goals, GoInvo led the founde
 
 ### Results
 
-The workshop led to a refocused mission and restructuring for the PGP and the creation of a new partner organization – &mdash;OpenHumans.
+The workshop led to a refocused mission and restructuring for the PGP and the creation of a new partner organization &mdash;OpenHumans.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 2 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics
@@ -57,6 +50,8 @@ GoInvo’s team met with the PGP’s founders to map the company’s existing ec
 
 *Lisa Caldwell leading user experience discussion.*
 
+<Divider />
+
 ## Insights
 
 #### Nurture membership
@@ -65,7 +60,11 @@ PGP has a robust application process that provided a comprehensive education aro
 
 ![sketch](/images/case-studies/personal-genome-project/pgp-sketch.jpg)
 
+<Divider />
+
 ## Solution
+
+![current](/images/case-studies/personal-genome-project/pgp-ecosystem.jpg)
 
 #### Birth of OpenHumans.org
 Out team guided PGP in reimagining their organizational model and separating recruitment, data collection, and member retention into parallel strategies. OpenHumans, a separate web portal, would allow members to participate, manage their data, and see how it is used to advance science and medicine. Researchers, whether academic, independent, or citizen scientists, would then be able to access PGP’s database of genomes and medical histories via a separate interface.

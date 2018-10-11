@@ -5,30 +5,28 @@ client: "WuXi NextCODE"
 caption: "Shifting from a behind the scenes genomics powerhouse to a consumer-friendly service."
 categories:
   - "precision-medicine-and-genomics"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
   - "mt-sinai"
-  - "partners-geneinsight"
-  - "personal-genome-project"
+  - "carrier-testing"
+  - "coderyte"
 hidden: false
+references:
+  - title: "Global Carrier Screening Market - Segmented by Type of Test, Disease, and Geography - Growth, Trends and Forecasts. Retrieved July 24, 2018, from "
+    link: "https://www.mordorintelligence.com/industry-reports/carrier-screening-market"
+  - title: "Delivery Of Cascade Screening For Hereditary Conditions: A Scoping Review Of The Literature. Retrieved July 24, 2018, from "
+    link: "https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2017.1630"
+  - title: "What It Means to Be a Carrier of a Genetic Disorder. Retrieved July 24, 2018, from"
+    link: "https://jscreen.org/blog/what-it-means-to-be-a-carrier-of-a-genetic-disorder/"
 ---
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
 
-<!-- TODO: references -->
-
 # Carrier Screening for Everyone
 
 ### Problem
 
-Carrier screening results are complicated. People typically don't have the expertise to understand genetic results, let alone know what to do with them. In fact, only 14% of PCP's are confident in interpreting genetic test results. While genetic counselors can help clinicians with genetic interpretation, there is a severe shortage with only ~3,800 genetic counselors in the US, causing a limiting factor for clinician adoption.
+Carrier screening results are complicated. People typically don't have the expertise to understand genetic results, let alone know what to do with them. In fact, only 14% of PCP's are confident in interpreting genetic test results[^2]. While genetic counselors can help clinicians with genetic interpretation, there is a severe shortage with only ~3,800 genetic counselors in the US[^3], causing a limiting factor for clinician adoption.
 
 ### Solution
 
@@ -45,7 +43,7 @@ Validated with 50+ individuals, from genetic counselors to clinicians to patient
 
 ## Process
 
-WuXi NextCODE is the leader in powering Precision Medicine efforts around the globe, from Iceland, to China, to England, to the United States. While they are the leaders in academic and government genomics research, they have aspirations to expand into a patient-facing service. While their services worked for academics and governments, WuXi NextCODE knew a different approach was needed to break into the $2.2 billion genetic carrier screening market.
+WuXi NextCODE is the leader in powering Precision Medicine efforts around the globe, from Iceland, to China, to England, to the United States. While they are the leaders in academic and government genomics research, they have aspirations to expand into a patient-facing service. While their services worked for academics and governments, WuXi NextCODE knew a different approach was needed to break into the $2.2 billion genetic carrier screening market[^1].
 
 #### A beautiful carrier screening experience awaits
 
@@ -53,11 +51,11 @@ Our task was to create a beautiful, human-friendly carrier screening service tha
 
 We quickly surveyed the landscape of competitors in the field &mdash;identifying their strengths and weaknesses to see how a new carrier screening service could stand out.
 
-![analysis](/images/case-studies/wuxi/familycode/Familycode_competitiveanalysis.jpg)
+![analysis](/images/case-studies/wuxi/familycode/familycode-competitive-analysis.jpg)
 
 Today's carrier screening reports are riddled with industry jargon, ambiguous next steps, and unclear severity of results. The result is a heightened stress for patients in an already stressful situation.
 
-![report](/images/case-studies/wuxi/familycode/Familycode_report.jpg)
+![report](/images/case-studies/wuxi/familycode/familycode-report.jpg)
 
 ## Insights & Solution
 
@@ -67,23 +65,25 @@ From the start, we leveraged people's firsthand experiences to lead the design j
 
 With the advisory group in place, we began interviewing each participant to understand their experiences with carrier screening. We wanted to understand the pain points, clinical process, health literacy, experience with genomics, ordering tests, and the cultural, emotional, and financial barriers.
 
-What we heard in those interviews shaped our early concepts:
+What we heard in those interviews shaped our early concepts.
 
 <Quote quotee="Patient" quoteeSub="">I couldn't even read [my report] or pronounce it</Quote>
+
+Clinicians offered their views on the patient experience as well.
 
 <Quote quotee="Clinician" quoteeSub="">Patients are scared they'll be a carrier for something and that it's more significant than it really is.</Quote>
 
 A journey map summarized our learnings, documenting the end-to-end carrier screening process. From here, we started formulating a hypothesis for ironing out the friction points.
 
-![report](/images/case-studies/wuxi/familycode/Familycode_journeymap.jpg)
+![report](/images/case-studies/wuxi/familycode/familycode-journey-map.jpg)
 
 #### Demystifying the carrier mystery
 
-When we consider that every human is a carrier of multiple diseases, being a carrier shouldn't be something to be feared, yet it is.
+When we consider that every human is a carrier of multiple diseases[^4], being a carrier shouldn't be something to be feared, yet it is.
 
 When the results are available, we want to clearly communicate the recipient's results and the fact that it is normal to be a carrier. Second, we want to describe what this means for their future family. Finally, we want to educate the recipient on how this can impact their current family.
 
-![familycode](/images/case-studies/wuxi/familycode/Familycode_mockup.jpg)
+![familycode](/images/case-studies/wuxi/familycode/familycode-mockup.jpg)
 
 #### Establishing an industry standard
 

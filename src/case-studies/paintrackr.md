@@ -1,6 +1,6 @@
 ---
 title: "PainTrackr"
-image: "/images/case-studies/goinvo/paintrackr/PainTrackr_Hero.jpg"
+image: "/images/case-studies/goinvo/paintrackr/paintrackr-hero.jpg"
 client: "Open Source, GoInvo"
 caption: "A straightforward, tactile tool for logging pain."
 categories:

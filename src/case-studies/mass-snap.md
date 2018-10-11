@@ -5,14 +5,6 @@ client: "MA Department of Transitional Assistance"
 caption: "A 50% increase in digital applications means more people are getting the food they need."
 categories:
   - "public-health-and-policy"
-  - "open-source"
-results:
-  - stat: ""
-    description: ""
-  - stat: ""
-    description: ""
-  - stat: ""
-    description: ""
 upNext:
   - "care-plans"
   - "inspired-ehrs"
@@ -108,11 +100,14 @@ Behavior, interactions, feedback loops, and accessibility standards all ultimate
 The design is optimized for screen readers, maintains WCAG 2.0 AAA contrast levels, and allows the user to translate the application. The streamlined format minimizes visual burden and reduces missed information.  
 
 <!-- TODO: "Before you start" video or image -->
+![Before you start](/images/case-studies/mass/snap/snap-before-you-start.jpg)
+
 
 #### Reduced question fatigue.
 We grouped questions by topic into bite-sized sections, helping users work through the application more efficiently and with less confusion. We decreased the number of questions from about 90 to 40 (estimate for a household of two). The redesigned application uses logic as the user begins answering questions to filter out irrelevant questions.
 
 <!-- TODO: "How Close am I" video or image -->
+![How Close am I](/images/case-studies/mass/snap/snap-how-close.jpg)
 
 #### Contextual help
 Diagrams at the beginning and end of the application help the user anticipate what comes next. The user gets a chance to catch mistakes through summaries at the end of sections. Definitions and help text expand inline for easiest reading. The user can track their progress in the menu, as it doubles as a checklist.
@@ -123,8 +118,8 @@ Diagrams at the beginning and end of the application help the user anticipate wh
     {src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.mp4", format: "mp4"},
     {src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.webm", format: "webm"}
   ]}
-  poster="/images/homepage/doh-hero-poster.jpg"
-  fallback="/images/homepage/doh-hero-fallback.jpg"
+  poster="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
+  fallback="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
   loop
 />
 

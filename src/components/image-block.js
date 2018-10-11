@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import BackgroundImage from './background-image'
 
+import CATEGORIES_LIST from '../data/categories.json'
+
 class ImageBlock extends Component {
   formatCategories = (categories) => {
     let str = '';
 
     categories.map((cat, i) => {
-      str += `${cat.title}${i < (categories.length - 1) ? ', ' : ''}`;
+      const catTitle = CATEGORIES_LIST.find(CAT => CAT.id === cat).title;
+      str += `${catTitle}${i < (categories.length - 1) ? ', ' : ''}`;
       return null;
     });
 

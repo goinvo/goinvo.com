@@ -16,6 +16,9 @@ import Divider from '../components/divider'
 import config from '../../config'
 import { extractCaseStudyDataFromQuery } from '../helpers'
 
+import features from '../data/features'
+import caseStudiesOrder from '../data/case-study-order.json'
+
 const heroVideoSources = [
   {src: "/videos/homepage/sdoh-hero.mp4", format: "mp4"},
   {src: "/videos/homepage/sdoh-hero.webm", format: "webm"}
@@ -25,8 +28,14 @@ class IndexPage extends Component {
   constructor(props) {
     super(props);
 
+    const workFeatures = features.filter(feature => !feature.hiddenWorkPage);
+
+    const workItems = extractCaseStudyDataFromQuery(props.data).concat(workFeatures).sort((a, b) => {
+      return caseStudiesOrder.indexOf(a.slug || a.id) > caseStudiesOrder.indexOf(b.slug || b.id) ? 1 : -1;
+    }).slice(0, 4)
+
     this.state = {
-      caseStudies: extractCaseStudyDataFromQuery(props.data).slice(0, 4)
+      workItems
     };
   }
 
@@ -99,20 +108,21 @@ class IndexPage extends Component {
           </div>
           {
             // TODO:
-            // - Real images here
             // - Pass sizes to ImageBlock/Image to optimize image load
-            // - Pick the featured four case studies here
           }
           <Columns columns={2}>
-            { this.state.caseStudies.map((study, i) => {
+            { this.state.workItems.map((item, i) => {
+              const link = item.slug ? `/work/${item.slug}` : item.link;
+              const externalLink = item.slug ? false : true
+
               return (
-                <Card link={`/work/${study.slug}`} key={study.slug} hidden={{ class: 'hidden--sm', condition: i > 1 }}>
+                <Card link={link} key={link} externalLink={externalLink} hidden={{ class: 'hidden--sm', condition: i > 1 }}>
                   <ImageBlock
-                    title={study.title}
-                    image={study.image}
-                    client={study.client}
-                    categories={study.categories}
-                    caption={study.caption}
+                    title={item.title}
+                    image={item.image}
+                    client={item.client}
+                    categories={item.categories}
+                    caption={item.caption}
                     hoverable />
                 </Card>
               )

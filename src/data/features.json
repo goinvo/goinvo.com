@@ -3,13 +3,19 @@
     "id": "print-big",
     "title": "Print big. Print often.",
     "date": "Mar.2018",
+    "categories": [],
     "image": "/images/features/print-big-print-often/print-big-print-often-featured.jpg",
-    "link": "https://www.goinvo.com/features/print-big/"
+    "link": "https://www.goinvo.com/features/print-big/",
+    "hiddenWorkPage": true
   },
   {
     "id": "killer-truths",
     "title": "Killer truths",
     "date": "Apr.2017",
+    "categories": [
+      "public-health-and-policy",
+      "open-source"
+    ],
     "caption": "How citizens of the USA really die (from 2007-2014).",
     "image": "/images/features/killer-truths/killer-truths-featured.jpg",
     "link": "https://www.goinvo.com/features/killer-truths/"
@@ -18,6 +24,10 @@
     "id": "determinants-of-health",
     "title": "Determinants of health",
     "date": "Oct.2016",
+    "categories": [
+      "public-health-and-policy",
+      "open-source"
+    ],
     "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health.",
     "image": "/images/services/doh-preview.jpg",
     "link": "https://www.goinvo.com/features/determinants-of-health/"
@@ -26,6 +36,11 @@
     "id": "care-plans",
     "title": "Care Plans that drive recovery",
     "date": "Mar.2016",
+    "categories": [
+      "patient-engagement",
+      "care-management",
+      "open-source"
+    ],
     "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
     "image": "/images/features/care-plans/care-plans-featured.jpg",
     "link": "https://www.goinvo.com/features/careplans/"
@@ -34,6 +49,10 @@
     "id": "understanding-zika",
     "title": "Understanding Zika",
     "date": "Feb.2016",
+    "categories": [
+      "public-health-and-policy",
+      "open-source"
+    ],
     "caption": "There are an estimated 1.6 million cases of Zika cirus in 33 countries.",
     "image": "/images/features/understanding-zika/understanding-zika-featured.jpg",
     "link": "https://www.goinvo.com/features/zika/"
@@ -42,13 +61,19 @@
     "id": "digital-healthcare",
     "title": "Digital healthcare in 2016",
     "date": "Jan.2016",
+    "categories": [],
     "caption": "8 guidelines to drive engagement in future health services.",
     "image": "/images/features/digital-healthcare/digital-healthcare-featured.jpg",
-    "link": "https://www.goinvo.com/features/digital-healthcare/"
+    "link": "https://www.goinvo.com/features/digital-healthcare/",
+    "hiddenWorkPage": true
   },
   {
     "id": "healing-us-healthcare",
     "title": "Healing U.S. healthcare",
+    "categories": [
+      "health-it-and-infrastructure",
+      "public-health-and-policy"
+    ],
     "date": "Sep.2015",
     "caption": "How do we heal an ailing system?",
     "image": "/images/features/healing-us-healthcare/healing-us-healthcare-featured.jpg",
@@ -58,14 +83,19 @@
     "id": "disrupt",
     "title": "Disrupt!",
     "date": "Jun.2015",
+    "categories": [],
     "caption": "Designing for emerging technologies.",
     "image": "/images/features/disrupt/disrupt-featured.jpg",
-    "link": "https://www.goinvo.com/features/disrupt/"
+    "link": "https://www.goinvo.com/features/disrupt/",
+    "hiddenWorkPage": true
   },
   {
     "id": "bathroom-to-healthroom",
     "title": "From bathroom to healthroom",
     "date": "Mar.2015",
+    "categories": [
+      "patient-engagement"
+    ],
     "caption": "How magical technology will revolutionize human health.",
     "image": "/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg",
     "link": "https://www.goinvo.com/features/from-bathroom-to-healthroom/"
@@ -74,21 +104,29 @@
     "id": "oral-history-goinvo",
     "title": "An oral history of GoInvo",
     "date": "Dec.2014",
+    "categories": [],
     "image": "/images/features/oral-history-goinvo/oral-history-goinvo-featured.jpg",
-    "link": "https://www.goinvo.com/features/an-oral-history/"
+    "link": "https://www.goinvo.com/features/an-oral-history/",
+    "hiddenWorkPage": true
   },
   {
     "id": "redesign-democracy",
     "title": "Redesign democracy",
     "date": "Oct.2014",
+    "categories": [],
     "caption": "A better solution for the digital era.",
     "image": "/images/features/redesign-democracy/redesign-democracy-featured.jpg",
-    "link": "https://www.goinvo.com/features/redesign-democracy/"
+    "link": "https://www.goinvo.com/features/redesign-democracy/",
+    "hiddenWorkPage": true
   },
   {
     "id": "understanding-ebola",
     "title": "Understanding Ebola",
     "date": "Oct.2014",
+    "categories": [
+      "public-health-and-policy",
+      "open-source"
+    ],
     "caption": "A visual guide.",
     "image": "/images/features/understanding-ebola/understanding-ebola-featured.jpg",
     "link": "https://www.goinvo.com/features/ebola/"
@@ -97,6 +135,10 @@
     "id": "ebola-care-guideline",
     "title": "Ebola care guideline",
     "date": "Oct.2014",
+    "categories": [
+      "public-health-and-policy",
+      "open-source"
+    ],
     "caption": "An illustrated process on personal protective equipment.",
     "image": "/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg",
     "link": "https://www.goinvo.com/features/ebola-care-guideline/"
@@ -104,6 +146,10 @@
   {
     "id": "carrier-testing",
     "title": "Carrier testing",
+    "categories": [
+      "precision-medicine-and-genomics",
+      "open-source"
+    ],
     "caption": "Open source design guidelines for delivering digitized carrier testing results.",
     "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
     "link": "http://www.genomicsdesign.com/",
@@ -112,7 +158,12 @@
   {
     "id": "open-source-healthcare",
     "title": "Open source healthcare",
-    "caption": "placeholder",
+    "categories": [
+      "health-it-and-infrastructure",
+      "open-source",
+      "public-health-and-policy"
+    ],
+    "caption": "The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.",
     "image": "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",
     "link": "http://www.opensourcehealthcare.org",
     "external": true

@@ -19,6 +19,7 @@ import { extractCaseStudyDataFromQuery } from '../helpers'
 
 import Caret from '../assets/images/icon-caret.inline.svg'
 
+import features from '../data/features'
 import CATEGORIES_LIST from '../data/categories.json'
 import caseStudiesOrder from '../data/case-study-order.json'
 
@@ -43,45 +44,46 @@ const upNextList = [
   }
 ];
 
-const getCaseStudiesOfCategory = (caseStudies, catId, viewMore = false) => {
-  let newCaseStudies = [];
+const getWorkItemsOfCategory = (workItems, catId, viewMore = false) => {
+  let newWorkItems = [];
 
   if (catId === allCategory.id) {
-    newCaseStudies = viewMore ? caseStudies : caseStudies.slice(0, 4);
+    newWorkItems = viewMore ? workItems : workItems.slice(0, 4);
   } else {
-    newCaseStudies = caseStudies.filter(study => {
-      return study.categories.filter(cat => {
+    newWorkItems = workItems.filter(item => {
+      return item.categories.filter(cat => {
         return cat === catId;
       }).length;
     });
   }
 
-  return newCaseStudies;
+  return newWorkItems;
 }
 
 class WorkPage extends Component {
   constructor(props) {
     super(props);
 
-    const caseStudies = extractCaseStudyDataFromQuery(props.data);
+    const workFeatures = features.filter(feature => !feature.hiddenWorkPage);
+
+    const workItems = extractCaseStudyDataFromQuery(props.data).concat(workFeatures).sort((a, b) => {
+      return caseStudiesOrder.indexOf(a.slug || a.id) > caseStudiesOrder.indexOf(b.slug || b.id) ? 1 : -1;
+    })
 
     const query = props.location && props.location.search ? props.location.search : null;
     const categoryId = query ? query.substr(query.indexOf("=") + 1) : allCategory.id;
-    const caseStudiesSorted = caseStudies.concat().sort((a, b) => {
-      return caseStudiesOrder.indexOf(a.slug) > caseStudiesOrder.indexOf(b.slug) ? 1 : -1;
-    })
     const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
-    const activeCaseStudies = getCaseStudiesOfCategory(caseStudiesSorted, selectedCategory.id);
+    const activeWorkItems = getWorkItemsOfCategory(workItems, selectedCategory.id);
 
     this.state = {
-      caseStudies: caseStudiesSorted,
+      workItems,
       selectedCategory,
-      activeCaseStudies,
+      activeWorkItems,
       categoriesStuck: false,
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
       partialView: true,
-      viewMoreCount: caseStudies.length - activeCaseStudies.length
+      viewMoreCount: workItems.length - activeWorkItems.length
     };
 
   }
@@ -104,7 +106,7 @@ class WorkPage extends Component {
     this.setState({
       partialView: true,
       selectedCategory: cat,
-      activeCaseStudies: getCaseStudiesOfCategory(this.state.caseStudies, cat.id),
+      activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
       categoriesCollapsed: this.state.categoriesStuck ? true : false,
     });
   }
@@ -113,7 +115,7 @@ class WorkPage extends Component {
     this.setState({
       partialView: false,
       selectedCategory: allCategory,
-      activeCaseStudies: getCaseStudiesOfCategory(this.state.caseStudies, allCategory.id, true)
+      activeWorkItems: getWorkItemsOfCategory(this.state.workItems, allCategory.id, true)
     });
   }
 
@@ -180,15 +182,18 @@ class WorkPage extends Component {
               // TODO: Real images here
             }
             <Columns columns={2}>
-              { this.state.activeCaseStudies.map(study => {
+              { this.state.activeWorkItems.map(item => {
+                const link = item.slug ? `/work/${item.slug}` : item.link;
+                const externalLink = item.slug ? false : true
+
                 return (
-                  <Card key={study.slug} link={`/work/${study.slug}`}>
+                  <Card key={link} link={link} externalLink={externalLink}>
                     <ImageBlock
-                      title={study.title}
-                      image={study.image}
-                      client={study.client}
-                      categories={study.categories}
-                      caption={study.caption}
+                      title={item.title}
+                      image={item.image}
+                      client={item.client || null}
+                      categories={item.categories}
+                      caption={item.caption}
                       hoverable />
                   </Card>
                 )

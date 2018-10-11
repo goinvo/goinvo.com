@@ -1,0 +1,66 @@
+---
+title: "Connecting Rural Clinics with Expert Diagnosticians"
+image: "/images/case-studies/tabeeb/tabeeb-hero.jpg"
+client: "Tabeeb"
+caption: "Engaging patients to understand health."
+categories:
+  - "care-management"
+upNext:
+  - "hgraph"
+  - "infobionic"
+  - "understanding-ebola"
+hidden: false
+---
+
+import Divider from '../components/divider'
+import Quote from '../components/quote'
+import Video from '../components/video'
+
+<!-- TODO: -->
+<!-- Real images -->
+<!-- Real quote -->
+<!-- Real upNext list -->
+
+# Connecting Rural Clinics with Expert Diagnosticians
+
+### Problem
+
+Doctors and nurses living and practicing in distant, rural settings run into complex health cases. They’re often not familiar with the symptoms, or don’t have the experience or equipment for high confidence diagnoses. With deep experience in Middle East telecommunications, Tabeeb needed a healthcare design counterpoint in developing a telemedicine service.
+
+### Solution
+
+GoInvo helped Tabeeb identify and create a first generation product. We drafted designs and iterated through feedback with clinicians and key stakeholders. We provided design, engineering, and product support as Tabeeb shipped an MVP.
+
+
+### Results
+
+We helped Tabeeb go from a draft business plan to their version 1 release in eight months. Our design acceleration consulting turned Tabeeb's vision into an innovative and scalable product.
+
+<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 5 months
+<br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Care Management
+<br/>
+
+<Divider />
+
+## The Process
+
+#### Harnessing the power of the smartphone to rural needs
+
+The smartphone is the doctor's bag for the 21st century. Its ability as a diagnostic tool, information repository, and rich, real-time communication device is unprecedented in the history of medicine. At the same time, healthcare for people in rural and remote areas has a larger gap compared to wealthy, urban areas, which has increased from the early days of modern medicine. Tabeeb saw an opportunity to create software with a mobile strategy, to give clinicians everywhere more access to experts. Tabeeb provided a critical service for primary care doctors in the field that care for the underserved.
+
+#### Kickstarting Tabeeb’s product vision
+
+Needing an expert in healthcare and telehealth software, Tabeeb asked GoInvo to help. We came in when the product was just an idea. GoInvo would take that raw idea, make it real, and turn it into exceptional software. We worked with Tabeeb to catalyze a realistic vision and then rapidly turn it into work prototypes.
+
+![All Patients](/images/case-studies/tabeeb/tabeeb-sketch.jpg)
+*Concept sketches for crowdsourcing a diagnosis.*
+
+#### Rapid testing with clinicians leads to an iterative rapid prototyping phase
+
+Building upon our experience in clinical spaces, we were able to save months compared to a typical research, design, and testing process.
+
+#### Shepherding design through development
+
+After the design phase, Tabeeb's internal team took the comprehensive architecture we provided and crafted the core engineering in-house. During this process, we met periodically to provide rapid and holistic guidance and feedback. Each time, a team of our product, design, and engineering professionals spent a few days providing a thorough review of the team's output. Over the course of many sprints, we honed in an experience rural clinicians could begin using in their day-to-day practice.
+
+![All Patients](/images/case-studies/tabeeb/tabeeb-workflow.jpg)

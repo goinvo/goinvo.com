@@ -35,16 +35,88 @@ const DeterminantsOfHealthFeature = () => (
           <p className="grey--text">Below is a description of the methodology used in creating the Determinants of Health visualization. It is also a record of versioned updates to the methodology and visualization based on continuing research and feedback. Thank you to those who have reached out and helped identify areas to improve.</p>
           <h4>v1 - 26.Jul.2017</h4>
           <p className="grey--text">The 5 main determinants of health (genetics, medical care, social circumstances, environment, and individual behavior) were chosen due to their consistency across the following 7 out of 8 organizations:</p>
-          <ul className="ul flex-wrap flex-wrap--half">
-            <li>NCHHSTP [^1]</li>
-            <li>WHO [2]</li>
-            <li>Healthy People [3]</li>
-            <li>Kaiser Family Foundation [4]</li>
-            <li>NEJM [5]</li>
-            <li>Health Affairs [6]</li>
-            <li>Institute of Medicine [7]</li>
-            <li>New South Wales Department of Health [8]</li>
+          <ul className="ul">
+            <li>NCHHSTP <sup><a href="#references">1</a></sup></li>
+            <li>WHO <sup><a href="#references">2</a></sup></li>
+            <li>Healthy People <sup><a href="#references">3</a></sup></li>
+            <li>Kaiser Family Foundation <sup><a href="#references">4</a></sup></li>
+            <li>NEJM <sup><a href="#references">5</a></sup></li>
+            <li>Health Affairs <sup><a href="#references">6</a></sup></li>
+            <li>Institute of Medicine <sup><a href="#references">7</a></sup></li>
+            <li>New South Wales Department of Health <sup><a href="#references">8</a></sup></li>
           </ul>
+          <p className="grey--text">The lists of determinants published from each of the previously mentioned organizations were compiled and compared <sup><a href="#references">1 - 8</a></sup>. There was no standard in terms of the number of determinants, hierarchical organization of the determinants, and the naming for the determinants (for example, quality of housing <sup><a href="#references">3</a></sup> vs residence quality <sup><a href="#references">7</a></sup>). The most thorough publication for the determinants came from the Institute of Medicine report <sup><a href="#references">7</a></sup>. Therefore this was the primary source from which the list of 95 determinants within the visualization originated.</p>
+          <p className="grey--text">The section below documents our analysis of the data and how we calculated the final impact percentages for the 5 main categories of determinants.</p>
+          <p className="grey--text">The relative contribution of each of the determinant categories to one’s health was found using the estimated values referenced by the seven primary sources listed below.</p>
+          <ul className="ul">
+            <li>DHHS <sup><a href="#references">9</a></sup></li>
+            <li>JAMA <sup><a href="#references">10, 12</a></sup></li>
+            <li>Health Affairs <sup><a href="#references">11</a></sup></li>
+            <li>PLoS <sup><a href="#references">13</a></sup></li>
+            <li>WHO <sup><a href="#references">14</a></sup></li>
+            <li>U.Wisconsin <sup><a href="#references">15</a></sup></li>
+          </ul>
+          <p>Each determinant category was then averaged based on the values from each of the aforementioned sources (the methodology in the primary sources were different depending on the source. The final percentages should therefore be an estimate and not be viewed as absolute numbers).</p>
+          <p>Behavior: <strong>(50 + 38 + 40 + 39 + 36 + 45 + 30) / 7 = 39.71*</strong>
+            <br />Social: <strong>(15 + 40) / 2 = 27.5</strong>
+            <br />Genetics: <strong>(20 + 30) / 2 = 25</strong>
+            <br />Medical care: <strong>(10 + 10 + 20) / 3 = 13.33</strong>
+            <br />Environment: <strong>(20 + 7 + 5 + 5.4 + 3 + 10) / 6 = 8.4</strong></p>
+          <p>*An original miscalculation of 'Behavior' has been rectified. The following values have subsequently been updated.</p>
+          <p>The ratio for each determinant was then found by taking the average values found for each of the determinant categories and dividing them by the total determinant value.</p>
+          <p>Behavior: <strong>39.71 / 113.94 = 34.85%</strong>
+            <br />Social: <strong>27.5 / 113.94 = 24.14%</strong>
+            <br />Genetics: <strong>25 / 113.94 = 21.94%</strong>
+            <br />Medical care: <strong>13.33 / 113.94 = 11.70%</strong>
+            <br />Environment: <strong>8.4 / 113.94 = 7.37%</strong>
+            <br />Total: <strong>34.85 + 24.14 + 21.94 + 11.70 + 7.37 = 100%</strong></p>
+          <p>The final percentages are as follows.</p>
+          <p>Behavioral determinants at <strong>35%.</strong>
+            <br />Social determinants at <strong>24%.</strong>
+            <br />Genetic determinants at <strong>22%.</strong>
+            <br />Medical care determinants at <strong>12%.</strong>
+            <br />Environmental determinants at <strong>7%.</strong></p>
+          <h4>v2 - 30.Aug.2017</h4>
+          <p>The following are updated calculations for the relative contributions of each of the determinant categories. The relative contribution of each of the determinant categories to one’s health was found using the values referenced from the six sources listed below.</p>
+          <ul className="ul">
+            <li>DHHS <sup><a href="#references">9</a></sup></li>
+            <li>JAMA <sup><a href="#references">10, 12</a></sup></li>
+            <li>Health Affairs <sup><a href="#references">11</a></sup></li>
+            <li>WHO <sup><a href="#references">14</a></sup></li>
+            <li>U.Wisconsin <sup><a href="#references">15</a></sup></li>
+          </ul>
+          <p>Each determinant category value is an average based on adding the values from each of the aforementioned sources.</p>
+          <p>Behavior: <strong>(50% [9] + 42% [10] + 40% [11] + 45% [12] + 30% [15]) / 5 = 41.4%</strong>
+            <br />Social: <strong>(15% [11] + 40% [15]) / 2 = 27.5%</strong>
+            <br />Genetics: <strong>(20% [9] + 30% [11]) / 2 = 25%</strong>
+            <br />Medical care: <strong>(10% [9] + 10% [11] + 20% [15]) / 3 = 13.33...%</strong>
+            <br />Environment: <strong>(20% [9] + 3% [10] + 5% [11] + 3.9% [14] + 10% [15]) / 5 = 8.38%</strong></p>
+          <p>Additional notes on the determinant category values: For source <sup><a href="#references">10</a></sup>, The environmental value of ~3% was based on dividing toxic agent deaths (60,000 deaths. Toxic agents were defined as occupational hazards, environmental pollutants, contaminants of food and water supplies, and components of commercial products) divided by total deaths for that year (2,120,000).</p>
+          <p>The average values found for each of the determinant categories were each divided by the total determinant value.</p>
+          <p>Total value: <strong>41.4% + 27.5% + 25% + 13.33...% + 8.38% = 115.6133</strong>
+            <br />Behavior: <strong>41.4% / 115.6133... = 35.81%</strong>
+            <br />Social: <strong>27.5% / 115.6133... = 23.79%</strong>
+            <br />Genetics: <strong>25% / 115.6133... = 21.62%</strong>
+            <br />Medical care: <strong>13.33...% / 115.6133... = 11.53%</strong>
+            <br />Environment: <strong>8.38% / 115.6133... = 7%</strong></p>
+          <p>The final percentages are as follows.</p>
+          <p>Behavioral determinants at <strong>36%</strong>
+            <br />Social determinants at <strong>24%</strong>
+            <br />Genetic determinants at <strong>22%</strong>
+            <br />Medical care determinants at <strong>11%</strong> (rounded down)
+            <br />Environmental determinants at <strong>7%</strong></p>
+
+          <h3 className="header--md">Additional Change</h3>
+          <h4>14.Feb.2018</h4>
+          <p>Race and ethnicity have been removed from the biology section due to a lack of standard objective criteria in the scientific community surrounding the use of genetics to define race and ethnicity. It has been added to the Social Circumstance section due to its continued social importance in describing groups based on similar characteristics. View the following literature for additional detail:</p>
+          <ul className="ul">
+            <li>Fujimura, J. H., & Rajagopalan, R. (2010). Different differences: The use of ‘genetic ancestry’ versus race in biomedical human genetic research. Social Studies of Science, 41(1), 5-30. doi:10.1177/0306312710379170</li>
+            <li>Long, J. C., & Kittles, R. A. (2003). Human Genetic Diversity and the Nonexistence of Biological Races. Human Biology, 75(4), 449-471. doi:10.1353/hub.2003.0058</li>
+            <li>AR, T. (2013). Biological races in humans. [Abstract]. Stud Hist Philos Biol Biomed Sci, 262-271. Retrieved February 14, 2018, from https://www.ncbi.nlm.nih.gov/pubmed/23684745.</li>
+            <li>Caprio, S., Daniels, S. R., Drewnowski, A., Kaufman, F. R., Palinkas, L. A., Rosenbloom, A. L.,... Kirkman, M. S. (2008). Influence of Race, Ethnicity, and Culture on Childhood Obesity: Implications for Prevention and Treatment. Obesity, 16(12), 2566-2577. doi:10.1038/oby.2008.398</li>
+          </ul>
+          <p>Discrimination can be further subdivided into racial, ethnic, gender, sexuality, and age based discrimination.</p>
+          <p>Poster images have been updated based on the updated Aug 2017 calculations.</p>
         </div>
       </div>
     </div>

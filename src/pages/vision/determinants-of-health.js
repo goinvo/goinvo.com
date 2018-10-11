@@ -8,29 +8,62 @@ const DeterminantsOfHealthFeature = () => (
   <Layout>
     <Hero image="/images/services/doh-preview.jpg"></Hero>
     <div className="pad-vertical--double">
-      <div className="max-width content-padding">
-        <div className="feature-introduction">
+      <div className="max-width max-width--md content-padding">
           <h1 className="header--xl">Determinants of Health</h1>
-
           <h3 className="header--md">Health is more than medical care</h3>
           <p className="text--grey">89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health. Despite their importance, attempts to integrate the determinants into a single visualization have been limited.</p>
           <p className="text--grey">GoInvo identified this gap based on their extensive work as a healthcare design studio and conducted a literature review of sources (World Health Organization and the Kaiser Family Foundation) and face to face interviews with public policy analysts, health IT experts, and clinical professionals. Relying on their experience of mapping complex systems within healthcare, GoInvo created a comprehensive open source visualization of the social determinants of health.</p>
+      </div>
+
+      <div className="max-width content-padding">
+          <div className="button-group">
+            <div class="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" className="button button--primary margin-top--double margin-bottom--half">Download</a></div>
+            <div class="pure-u-1 pure-u-lg-1-5"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" className="button button--primary margin-top--double margin-bottom--half">Buy Print</a></div>
+            <div class="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" className="button button--primary margin-top--double margin-bottom--half">On Github</a></div>
+            <div class="pure-u-1 pure-u-lg-1-5"><a href="#methodology" className="button button--primary margin-top--double margin-bottom--half">Methodology</a></div>
+            <div class="pure-u-1 pure-u-lg-1-5"><a href="#references" className="button button--primary margin-top--double margin-bottom--half">References</a></div>
+          </div>
+
+          <div className="divider"></div>
+      </div>
+
+      <div className="max-width max-width--md content-padding">
 
           <div>
-            <a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" className="button button--primary button--lg margin-top--double margin-bottom--half">Download Poster</a>
-            <a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" className="button button--primary button--lg margin-top--double margin-bottom--half">Buy Print</a>
-            <a href="https://github.com/goinvo/HealthDeterminants" target="_blank" className="button button--primary button--lg margin-top--double margin-bottom--half">On Github</a>
-            <a href="#methodology" className="button button--primary button--lg margin-top--double margin-bottom--half">Methodology</a>
-            <a href="#references" className="button button--primary button--lg margin-top--double margin-bottom--half">References</a>
+            <h1 className="header--xl center">Tap the categories to explore</h1>
+            chart goes here
           </div>
-        </div>
 
-        <div></div>
+          <div className="poster"><Image src="/images/features/determinants-of-health/determinants-of-health-poster.jpg" className="image--max-width" /></div>
+          <a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" className="button button--primary button--lg margin-top--double margin-bottom--half center">Download Poster</a>
+
+          <div>
+            <div className="authorImg pure-u-1 pure-u-lg-1-3 pad-right--only-lg">
+                <Image src="/images/features/determinants-of-health/determinants-of-health-mitre-poster.jpg" className="image--max-width" />
+            </div>
+            <div className="authorImg pure-u-1 pure-u-lg-1-3 pad-right--only-lg">
+                <Image src="/images/features/determinants-of-health/determinants-of-health-sxsw-poster.jpg" className="image--max-width" />
+            </div>
+            <div className="authorImg pure-u-1 pure-u-lg-1-3 pad-right--only-lg">
+                <Image src="/images/features/determinants-of-health/determinants-of-health-studio-poster.jpg" className="image--max-width" />
+            </div>
+          </div>
+          <p>The Determinants of Health is available as a poster, an installation, a download, and an interactive visualization.</p>
+
+          <div className="button-group">
+            <div className="pure-u-1 pure-u-lg-1-3"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" className="button button--primary margin-top--double margin-bottom--half">Buy Print</a></div>
+            <div className="pure-u-1 pure-u-lg-1-3"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" className="button button--primary margin-top--double margin-bottom--half">On Github</a></div>
+            <div className="pure-u-1 pure-u-lg-1-3"><a href="#methodology" className="button button--primary margin-top--double margin-bottom--half">Methodology</a></div>
+          </div>
+
+          <h4>About GoInvo</h4>
+          <p>GoInvo is a healthcare design company that crafts innovative digital and physical solutions. GoInvo’s deep expertise in Health IT, Genomics, and Open Source health has delivered results for the National Institute of Health, Walgreens, Mount Sinai and Partner Healthcare. Reach out for a custom installation or feedback.</p>
       </div>
     </div>
 
+
     <div className="background--blue pad-vertical--double">
-      <div className="max-width content-padding">
+      <div className="max-width max-width--md content-padding">
         <div id="methodology">
           <h1 className="header--xl">Methodology</h1>
           <p className="grey--text">Below is a description of the methodology used in creating the Determinants of Health visualization. It is also a record of versioned updates to the methodology and visualization based on continuing research and feedback. Thank you to those who have reached out and helped identify areas to improve.</p>
@@ -123,7 +156,7 @@ const DeterminantsOfHealthFeature = () => (
     </div>
 
     <div className="pad-vertical--double">
-      <div className="max-width content-padding">
+      <div className="max-width max-width--md content-padding">
         <div>
           <h1 className="header--xl">Authors</h1>
 
@@ -139,16 +172,6 @@ const DeterminantsOfHealthFeature = () => (
 
           <div className="author">
             <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                <Image src="/images/features/determinants-of-health/headshot-hrothgar.jpg" className="image--max-width" />
-            </div>
-            <div className="authorBio pure-u-1 pure-u-lg-1-2">
-              <p><strong>Hrothgar</strong><span className="text--grey">, GoInvo</span></p>
-              <p className="text--grey">Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice University, and joined Invo in 2016 following doctoral studies at the University of Oxford.</p>
-            </div>
-          </div>
-
-          <div className="author">
-            <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
                 <Image src="/images/about/headshot-juhan-sonin.jpg" className="image--max-width" />
             </div>
             <div className="authorBio pure-u-1 pure-u-lg-1-2">
@@ -158,6 +181,15 @@ const DeterminantsOfHealthFeature = () => (
           </div>
 
           <h3 className="header--md">Contributors</h3>
+          <div className="author">
+            <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <Image src="/images/features/determinants-of-health/headshot-hrothgar.jpg" className="image--max-width" />
+            </div>
+            <div className="authorBio pure-u-1 pure-u-lg-1-2">
+              <p><strong>Hrothgar</strong><span className="text--grey">, GoInvo</span></p>
+              <p className="text--grey">Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice University, and joined Invo in 2016 following doctoral studies at the University of Oxford.</p>
+            </div>
+          </div>
           <div className="author">
             <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
                 <Image src="/images/features/determinants-of-health/headshot-kelsey-kittelsen.jpg" className="image--max-width" />

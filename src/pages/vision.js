@@ -218,7 +218,7 @@ class VisionPage extends Component {
               <Image src="/images/vision/emerging-tech-books.jpg" className="image--max-width" />
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-              <h2 className="header--xl">Design and Tech Publications</h2>
+              <h2 className="header--xl" id="books">Design and Tech Publications</h2>
               <p className="text--gray">Preview our books on product design, emerging technology, prototyping, and the internet of things, published by O’reilly Media.</p>
               <div className="margin-bottom--half">
                 <a href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519" target="_blank" rel="noopener noreferrer">Designing for Emerging Technologies</a>

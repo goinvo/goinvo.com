@@ -143,9 +143,30 @@ class IndexPage extends Component {
             // TODO: Add Links here
           }
           <Columns columns={3}>
-            <ImageBlock key={"1"} image="/images/homepage/standardized-health-data-preview-2.jpg" title="Health Reports" caption="Design concepts and objective analysis for grokking the evolving healthcare universe."/>
-            <ImageBlock key={"2"} image="/images/vision/vision-hero.jpg" title="Publications" caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."/>
-            <ImageBlock key={"3"} image="/images/vision/microphone.jpg" title="The Digital Life podcast" caption="An online radio show that explores important, timely topics in the world of digital design and technology."/>
+            <ImageBlock
+              key={"1"}
+              image="/images/homepage/standardized-health-data-preview-2.jpg"
+              title="Health Reports"
+              caption="Design concepts and objective analysis for grokking the evolving healthcare universe.">
+              <a href="https://www.goinvo.com/features/determinants-of-health" target="_blank" rel="noopener noreferrer">Determinants of health</a><br/>
+              <Link to="/vision/">Explore all features</Link>
+            </ImageBlock>
+            <ImageBlock
+              key={"2"}
+              image="/images/vision/vision-hero.jpg"
+              title="Publications"
+              caption="Preview our books on product design, emerging technology, prototyping, and the internet of things.">
+              <a href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519" target="_blank" rel="noopener noreferrer">Designing for Emerging Technologies</a><br/>
+              <Link to="/vision/#books">View all books</Link>
+            </ImageBlock>
+            <ImageBlock
+              key={"3"}
+              image="/images/vision/microphone.jpg"
+              title="The Digital Life podcast"
+              caption="An online radio show that explores important, timely topics in the world of digital design and technology.">
+              <a href="https://soundcloud.com/involution-studios/ai-and-knowledge-work" target="_blank" rel="noopener noreferrer">AI & Knowledge Work</a><br/>
+              <a href="https://soundcloud.com/involution-studios/" target="_blank" rel="noopener noreferrer">Explore all episodes</a><br/>
+            </ImageBlock>
           </Columns>
         </div>
         <div className="background--blue pad-vertical--double">

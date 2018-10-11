@@ -1,17 +1,10 @@
 ---
 title: "Driving a National Health Data Standard"
-image: "/images/case-studies/mitre/shr/shr_header.jpg"
+image: "/images/case-studies/mitre/shr/shr-header.jpg"
 client: "MITRE Corporation"
 caption: "Prototyping and envisioning future applications of a national health data standard to drive its development."
 categories:
   - "health-it-and-infrastructure"
-results:
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
-  - stat: " "
-    description: " "
 upNext:
   - "fastercures-health-data-basics"
   - "determinants-of-health"
@@ -21,8 +14,6 @@ hidden: false
 
 import Divider from '../components/divider'
 import Quote from '../components/quote'
-
-<!-- TODO: references -->
 
 # Driving a National Health Data Standard
 
@@ -42,9 +33,9 @@ The design concepts of the SHR data schema and its use-cases played a key role i
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 21 designer for 8 months
 <br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & Infrastructure
-
-[SHR website](http://standardhealthrecord.org/ )
-[design on GitHub](https://github.com/standardhealth/shr_design/tree/master/design)
+<br />
+<a href="http://standardhealthrecord.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">SHR website</a>
+<a href="https://github.com/standardhealth/shr_design/tree/master/design" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
 
 <Divider />
 
@@ -62,6 +53,8 @@ We iterated through several rounds of sketching and **weekly validation cycles**
 #### Design validation from MITRE engineers and providers
 Working closely with the same team of MITRE engineers and providers, we created prototypes, storyboards, and assets that showed the power of the SHR and the services that would be enabled from its development, in order to generate collaboration at the provider, hospital, and state level.
 
+<Divider />
+
 ## Insights & Recommendations
 
 #### Represent the SHR structure to be human-readable
@@ -69,6 +62,8 @@ The organization of the SHR and its data structure was not immediately understan
 
 #### Show don’t tell, the future of interoperability
 GoInvo’s strength lies in showing the future of healthcare. Capturing stakeholder attention by envisioning the future with the SHR allowed MITRE to gain further buy-in at the executive level, gain funding, and build more partnerships to expand development efforts.
+
+<Divider />
 
 ## Solution
 
@@ -103,13 +98,19 @@ GoInvo created storyboards for several scenarios of care to show the future heal
 
 *A patient may initiate a personal health record that values patient data ownership and access.*
 
+<br/>
+
 ![SHR storyboards 2](/images/case-studies/mitre/shr/shr-storyboard-at-home.jpg)
 
 *Continuous at-home primary care service via a patient performing a self-assessment using conversational UI.*
 
+<br/>
+
 ![SHR storyboards 3](/images/case-studies/mitre/shr/shr-storyboard-emergency.jpg)
 
-*Remote care can also help in a emergency situation.*
+*Remote care can also help in an emergency situation.*
+
+<Divider />
 
 ## Results
 

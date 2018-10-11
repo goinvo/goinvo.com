@@ -72,14 +72,14 @@ class IndexPage extends Component {
                   <p className="pad-left--only-lg">
                     <span className="text--bold">700,000 Massachusetts residents</span><br/>
                     <span className="text--gray">count on our service design.</span><br/>
-                    <Link to="#">Read the case study</Link>
+                    <Link to="/work/mass-snap">Read the case study</Link>
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <p className="pad-right--only-lg">
                     <span className="text--bold">Wikipedia</span><br/>
                     <span className="text--gray">relies on our data visualization to explain complex health topics.</span><br/>
-                    <Link to="#">Social determinants of health</Link>
+                    <a href="https://en.wikipedia.org/wiki/Social_determinants_of_health" target="_blank" rel="noopener noreferrer">Social determinants of health</a>
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">

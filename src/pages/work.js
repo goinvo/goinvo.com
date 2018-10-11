@@ -20,6 +20,7 @@ import { extractCaseStudyDataFromQuery } from '../helpers'
 import Caret from '../assets/images/icon-caret.inline.svg'
 
 import CATEGORIES_LIST from '../data/categories.json'
+import caseStudiesOrder from '../data/case-study-order.json'
 
 const upNextList = [
   {
@@ -58,9 +59,6 @@ const getCaseStudiesOfCategory = (caseStudies, catId, viewMore = false) => {
   return newCaseStudies;
 }
 
-// TODO:
-// - Correct sorting (by featured, date?)
-
 class WorkPage extends Component {
   constructor(props) {
     super(props);
@@ -69,11 +67,12 @@ class WorkPage extends Component {
 
     const query = props.location && props.location.search ? props.location.search : null;
     const categoryId = query ? query.substr(query.indexOf("=") + 1) : allCategory.id;
+    const caseStudiesSorted = caseStudies.concat().sort((a, b) => caseStudiesOrder.indexOf(a.slug) > caseStudiesOrder.indexOf(b.slug))
     const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
-    const activeCaseStudies = getCaseStudiesOfCategory(caseStudies, selectedCategory.id);
+    const activeCaseStudies = getCaseStudiesOfCategory(caseStudiesSorted, selectedCategory.id);
 
     this.state = {
-      caseStudies,
+      caseStudies: caseStudiesSorted,
       selectedCategory,
       activeCaseStudies,
       categoriesStuck: false,

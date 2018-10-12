@@ -1,6 +1,6 @@
 ---
 title: "Gene Insight"
-image: "/images/case-studies/partners/geneinsight/geneinsight-hero.jpg"
+image: "/images/case-studies/partners/geneinsight/geneinsight-hero2.jpg"
 client: "Partners Healthcare"
 caption: "A suite of tools for recording genetic information and building / accessing patient-specific reports."
 categories:

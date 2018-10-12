@@ -96,6 +96,7 @@ class IndexPage extends Component {
         </div>
         <div className="background--gray pad-vertical--double">
           <div className="max-width content-padding">
+            <h3 className="header--md" style={{ marginTop: 0 }}>We've worked with...</h3>
             <ClientLogos />
           </div>
         </div>

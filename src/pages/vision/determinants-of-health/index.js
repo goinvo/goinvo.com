@@ -1,8 +1,11 @@
 import React from 'react'
 
-import Layout from '../../components/layouts/layout'
-import Hero from '../../components/hero'
-import Image from '../../components/image'
+import Layout from '../../../components/layouts/layout'
+import Hero from '../../../components/hero'
+import Image from '../../../components/image'
+
+import determinants from './visualization-data.json'
+import Chartdoh from './visualization.js'
 
 const DeterminantsOfHealthFeature = () => (
   <Layout>
@@ -18,9 +21,9 @@ const DeterminantsOfHealthFeature = () => (
 
         <div className="max-width content-padding">
             <div className="button-group margin-bottom--double">
-              <div class="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Download</a></div>
-              <div class="pure-u-1 pure-u-lg-1-5"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" className="button button--primary margin-top--double margin-bottom--half  button--block margin-right">Buy Print</a></div>
-              <div class="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">On Github</a></div>
+              <div class="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Download</a></div>
+              <div class="pure-u-1 pure-u-lg-1-5"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half  button--block margin-right">Buy Print</a></div>
+              <div class="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">On Github</a></div>
               <div class="pure-u-1 pure-u-lg-1-5"><a href="#methodology" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Methodology</a></div>
               <div class="pure-u-1 pure-u-lg-1-5"><a href="#references" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">References</a></div>
             </div>
@@ -31,12 +34,16 @@ const DeterminantsOfHealthFeature = () => (
         <div className="max-width max-width--md content-padding">
             <div>
               <h1 className="header--xl text--center margin-top--double">Tap the categories to explore</h1>
-              <div id="determinants-chart" className="margin-bottom--double margin-top--double">chart goes here</div>
+              <div id="determinants-chart" className="margin-bottom--double margin-top--double"><Chartdoh /></div>
+
+              <div className="chart-details">
+
+              </div>
             </div>
 
             <div className="poster margin-top--double"><Image src="/images/features/determinants-of-health/determinants-of-health-poster.jpg" className="image--max-width" /></div>
             <div className="button-group">
-              <a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" className="button button--primary button--lg margin-top--double margin-bottom--double button--block">Download Poster</a>
+              <a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary button--lg margin-top--double margin-bottom--double button--block">Download Poster</a>
             </div>
 
             <div>
@@ -53,8 +60,8 @@ const DeterminantsOfHealthFeature = () => (
             <p className="text--gray">The Determinants of Health is available as a poster, an installation, a download, and an interactive visualization.</p>
 
             <div className="button-group">
-              <div className="pure-u-1 pure-u-lg-1-3"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" className="button button--primary margin-top--double margin-bottom--half  button--block">Buy Print</a></div>
-              <div className="pure-u-1 pure-u-lg-1-3"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" className="button button--primary margin-top--double margin-bottom--half  button--block">On Github</a></div>
+              <div className="pure-u-1 pure-u-lg-1-3"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half  button--block">Buy Print</a></div>
+              <div className="pure-u-1 pure-u-lg-1-3"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half  button--block">On Github</a></div>
               <div className="pure-u-1 pure-u-lg-1-3"><a href="#methodology" className="button button--primary margin-top--double margin-bottom--half  button--block">Methodology</a></div>
             </div>
 

@@ -55,7 +55,7 @@ const upNextList = [
     externalLink: true,
     image: "/images/features/print-big-print-often/print-big-print-often-featured.jpg",
     title: "Print big. Print often.",
-    caption: "Considering the bigger picture."
+    caption: "In strategy, the pieces and parts are typically nested in different documents that do not allow everything to be seen at once. The ability to see everything at once, at anytime, is core to our approach."
   }
 ];
 
@@ -152,10 +152,7 @@ const AboutPage = () => (
               With early roots designing for Yahoo, Mcaffee, and Obama’s 2008 campaign, GoInvo is now focused exclusively on healthcare. We’ve delivered over 110 products with partners ranging from 3M, U.S. Department of Health and Human Services, Partners Healthcare, and a variety of startups.
             </p>
             <Link to="/about/studio-timeline/" className="display--inline-block margin-right--double">Studio timeline</Link>
-            {
-              // TODO: Real link here
-            }
-            <Link className="display--inline-block" to="/about/oral-history/">Oral history</Link>
+            <a href="https://www.goinvo.com/features/an-oral-history" className="display--inline-block" >Oral history</a>
           </div>
         </div>
         <div className="pure-u-1 pure-u-lg-1-2">

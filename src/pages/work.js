@@ -170,7 +170,7 @@ class WorkPage extends Component {
                     2. to be accessible for rapid innovation and evolution,<br/>
                     3. and to become more valuable as more patients, clinicians, clinics, companies, and governments engage in healthcare for all.
                   </p>
-                  <button className="button button--primary button--lg margin-top">Check out our open source journal</button>
+                  <a href="http://www.opensourcehealthcare.org" target="_blank" rel="noopener noreferrer" className="button button--primary button--lg margin-top">Check out our open source journal</a>
                 </div>
               </div>
             </div>
@@ -178,9 +178,6 @@ class WorkPage extends Component {
         </Collapsible>
         <div className="max-width content-padding">
           <div className="margin-top--double">
-            {
-              // TODO: Real images here
-            }
             <Columns columns={2}>
               { this.state.activeWorkItems.map(item => {
                 const link = item.slug ? `/work/${item.slug}` : item.link;
@@ -211,9 +208,6 @@ class WorkPage extends Component {
         <Quote background="gray" quotee="Igor Gershfang" quoteeSub="Walgreens Emerging Tech Director">
           Invo beautifully helped shape our next generation clinician and patient experience.
         </Quote>
-        {
-          // TODO: Real image here
-        }
         <GradientImageColumns image="/images/work/eric-comp.jpg" backgroundColor="black" gradient offsetContent reverse>
           <h2 className="header--xl text--white">Want to take your healthcare product to the next level?</h2>
           <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
@@ -221,9 +215,6 @@ class WorkPage extends Component {
         <div className="background--blue">
           <div className="max-width content-padding pad-vertical pad-top--crazy">
             <h4 className="header--md">Up next</h4>
-            {
-              // TODO: Real images here
-            }
             <Columns columns={3}>
               { upNextList.map(item => {
                 return (

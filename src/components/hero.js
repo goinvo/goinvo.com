@@ -1,32 +1,58 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 
 import BackgroundImage from './background-image'
 import Video from './video'
 import Logo from '../assets/images/logo-goinvo.inline.svg'
 
 class Hero extends Component {
+  renderHeroMedia = () => {
+    const { image, video, poster, fallback, position } = this.props;
+
+    if (image) {
+      return (
+        <div className="hero__image-container">
+          <BackgroundImage src={image} className="hero__image" position={position} />
+        </div>
+      )
+    }
+    if (video) {
+      return (
+        <div className="hero__video-container">
+          <Video className="hero__video" sources={video} poster={poster} fallback={fallback} />
+        </div>
+      )
+    }
+  }
+
+  renderHeroBlock = () => {
+    const { link = null, externalLink = false } = this.props;
+
+    if (link) {
+      if (externalLink) {
+        return (
+          <a href={link} target="_blank" rel="noopener noreferrer" className="hero__link">
+            { this.renderHeroMedia() }
+          </a>
+        )
+      } else {
+        return (
+          <Link to={link} className="hero__link">
+            { this.renderHeroMedia() }
+          </Link>
+        )
+      }
+    } else {
+      return this.renderHeroMedia()
+    }
+  }
+
   render() {
-    let { image, video, poster, fallback, caption, isLarge, withLogo, position, children } = this.props;
+    const { video, caption, isLarge, withLogo, children } = this.props;
 
     return (
       <div className={`hero ${isLarge ? 'hero--large' : ''} ${video ? 'hero--video' : ''}`}>
-        {
-          image ?
-            <div className="hero__image-container">
-              <BackgroundImage src={image} className="hero__image" position={position} />
-            </div>
-          : null
-        }
-        {
-          video ?
-            <div className="hero__video-container">
-              {
-                // TODO: Add poster image / fallback here
-              }
-              <Video className="hero__video" sources={video} poster={poster} fallback={fallback} />
-            </div>
-          : null
-        }
+        { this.renderHeroBlock() }
         { children ?
           <div className="hero__content max-width">
             <div className="hero__title">

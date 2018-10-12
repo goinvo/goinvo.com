@@ -2,6 +2,8 @@
   $parent: &;
   $max-height: 530px;
   display: block;
+  color: $color-black;
+  text-decoration: none;
 
   &__image-container {
     height: 275px;
@@ -24,6 +26,7 @@
 
   &__content {
     position: relative;
+    pointer-events: none;
   }
 
   &__title {
@@ -77,5 +80,9 @@
     #{$parent}__image-container {
       height: 325px;
     }
+  }
+
+  &:hover {
+    color: $color-black;
   }
 }

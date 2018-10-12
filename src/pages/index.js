@@ -43,6 +43,8 @@ class IndexPage extends Component {
     return (
       <Layout>
         <Hero
+          link="https://www.goinvo.com/features/determinants-of-health"
+          externalLink="true"
           video={heroVideoSources}
           poster="/images/homepage/doh-hero-poster.jpg"
           fallback="/images/homepage/doh-hero-fallback.jpg"

@@ -1,5 +1,7 @@
 .button-group {
   display: flex;
+  justify-content: center;
+  padding: 20px 0;
   .pure-u-lg-1-5 .button {
     width: 95%;
   }
@@ -12,7 +14,8 @@
   border: 15px #FFEEE4 solid;
 }
 
-.center {
-  margin: 20 auto;
-  text-align: center;
+.author {
+  .authorImg {
+    padding-top: 20px;
+  }
 }

@@ -12,6 +12,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/356419.js"></script>
           <link rel="preload" href="https://use.typekit.net/lcb6luw.css" as="style" crossOrigin="crossorigin"></link>
           <link rel="stylesheet" href="https://use.typekit.net/lcb6luw.css"></link>
           {this.props.headComponents}

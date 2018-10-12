@@ -1,6 +1,5 @@
 import React from 'react'
-import ReactDOM from "react-dom"
-import Chart from "react-google-charts"
+import Chart from 'react-google-charts'
 
 import determinants from './visualization-data.json'
 
@@ -27,7 +26,6 @@ const options = {
 class Chartdoh extends React.Component {
   render() {
     return (
-
         <Chart
           chartType="PieChart"
           width="100%"

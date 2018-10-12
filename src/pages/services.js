@@ -162,10 +162,7 @@ const ServicesPage = () => (
     </div>
     <div className="max-width content-padding pad-vertical--double">
       <Columns columns={3}>
-        {
-          // TODO: Still need image here!
-        }
-        <ImageBlock key={"1"} image="" title="Emerging technology" caption="We’ve worked on projects across the spectrum of emerging technology from artificial intelligence for medical coding to self-documenting voice encounters and wearable devices.">
+        <ImageBlock key={"1"} image="/images/services/emerging-tech-shr-layers.jpg" title="Emerging technology" caption="We’ve worked on projects across the spectrum of emerging technology from artificial intelligence for medical coding to self-documenting voice encounters and wearable devices.">
           <div><a href="https://www.goinvo.com/features/from-bathroom-to-healthroom/">From bathroom to healthroom</a></div>
           <div><Link to="/work/wuxi-nextcode-familycode/">WuXi NextCODE</Link></div>
         </ImageBlock>

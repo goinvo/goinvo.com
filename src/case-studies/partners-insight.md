@@ -1,8 +1,8 @@
 ---
-title: "Insight"
+title: "Designing an efficient IRB"
 image: "/images/case-studies/partners/insight/insight-hero.jpg"
 client: "Partners Healthcare"
-caption: "A full redesign of the Partners Healthcare research administration platform"
+caption: "A full redesign of the Partners Healthcare research administration platform, Insight."
 categories:
   - "health-it-and-infrastructure"
 upNext:
@@ -49,7 +49,7 @@ To gain a thorough understanding of how the current IRB system worked and identi
 
 #### The team of expert reviewers that make up the IRB
 
-We interviewed IRB reviewers, individuals often with clinical or administrative backgrounds tasked with inspecting protocols for errors or signs of unethical research and ultimately responsible for signing off on the protocols. Many of the reviewers, expedited reviewers in particular, spent a significant amount of their lives within Insight—at least five days a week, eight hours a day, often much more—working with tools that, unfortunately, did not support an efficient review process. On a typical day, a reviewer might need to examine dozens of studies, working closely with the frequently frustrated members of research teams who were trying to push their protocol through, and keeping track of recommendations and instructions for each of these studies over the course of the entire process, which could span several weeks.
+We interviewed IRB reviewers, individuals often with clinical or administrative backgrounds tasked with inspecting protocols for errors or signs of unethical research and ultimately responsible for signing off on the protocols. Many of the reviewers, expedited reviewers in particular, spent a significant amount of their lives within Insight &mdash;at least five days a week, eight hours a day, often much more &mdash;working with tools that, unfortunately, did not support an efficient review process. On a typical day, a reviewer might need to examine dozens of studies, working closely with the frequently frustrated members of research teams who were trying to push their protocol through, and keeping track of recommendations and instructions for each of these studies over the course of the entire process, which could span several weeks.
 
 ![interviews](/images/case-studies/partners/insight/insight-interview.jpg)
 
@@ -83,7 +83,7 @@ The act of submission and review was often an iterative back and forth process, 
 
 Our goal was to reduce friction between reviewers and submitters in addition to shortening the time it takes to prepare, submit, review, and push a protocol to approval.
 
-![workflow](/images/case-studies/partners/insight/insight-sketches.jpg)
+![collaboration](/images/case-studies/partners/insight/insight-inventory.jpg)
 
 #### Where is my protocol?!
 
@@ -117,4 +117,4 @@ In returning to the same groups of reviewers and submitters, occasionally pullin
 
 As part of participating in the development, we created an inventory of all the screens, cataloged base components and reusable styles and consulted on front-end engineering, UAT, and QA. Currently, Insight 4.0 is now being rolled out to all of Partners research facilities.
 
-![collaboration](/images/case-studies/partners/insight/insight-inventory.jpg)
+![workflow](/images/case-studies/partners/insight/insight-sketches.jpg)

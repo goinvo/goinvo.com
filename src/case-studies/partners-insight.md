@@ -83,7 +83,7 @@ The act of submission and review was often an iterative back and forth process, 
 
 Our goal was to reduce friction between reviewers and submitters in addition to shortening the time it takes to prepare, submit, review, and push a protocol to approval.
 
-![collaboration](/images/case-studies/partners/insight/insight-inventory.jpg)
+![workflow](/images/case-studies/partners/insight/insight-sketches.jpg)
 
 #### Where is my protocol?!
 
@@ -117,4 +117,4 @@ In returning to the same groups of reviewers and submitters, occasionally pullin
 
 As part of participating in the development, we created an inventory of all the screens, cataloged base components and reusable styles and consulted on front-end engineering, UAT, and QA. Currently, Insight 4.0 is now being rolled out to all of Partners research facilities.
 
-![workflow](/images/case-studies/partners/insight/insight-sketches.jpg)
+![collaboration](/images/case-studies/partners/insight/insight-inventory.jpg)

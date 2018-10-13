@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Helmet from 'react-helmet'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
@@ -105,6 +106,13 @@ class VisionPage extends Component {
   render() {
     return (
       <Layout>
+        <Helmet
+          title="GoInvo | Vision"
+          meta={[
+            { name: 'description', content: 'Our thoughts on design, technology, and healthcare.' },
+            { name: 'keywords', content: 'healthcare design, ux design, health ux design, boston ux design, designing for healthcare, boston ui design, goinvo articles' },
+          ]}
+        />
         <Hero image="/images/vision/vision-hero.jpg">
           <h1 className="header--xl">
             Seeing the future of health<span className="text--serif text--primary">.</span>

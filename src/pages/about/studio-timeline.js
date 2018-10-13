@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
@@ -8,6 +9,13 @@ class StudioTimelinePage extends Component {
     return (
       <div>
         <Layout>
+          <Helmet
+            title="GoInvo | Studio Timeline"
+            meta={[
+              { name: 'description', content: 'An interactive timeline of Invo\'s history.' },
+              { name: 'keywords', content: 'ui, ux, design, studio, history, timeline' },
+            ]}
+          />
           <Hero image="/images/about/studio-timeline/bookshelf.jpg">
             <h1 className="header--xl">
               Our studio timeline<span className="text--serif text--primary">.</span>

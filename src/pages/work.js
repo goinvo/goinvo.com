@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
@@ -122,6 +123,13 @@ class WorkPage extends Component {
   render() {
     return (
       <Layout>
+        <Helmet
+          title="GoInvo | Work"
+          meta={[
+            { name: 'description', content: 'We help healthcare organizations make clinical strength software for high-test, high stress environments.' },
+            { name: 'keywords', content: 'healthcare design, health design, healthcare UI design, healthcare UX design, designing healthcare systems, goinvo work' },
+          ]}
+        />
         <Hero image="/images/work/dr-emily.jpg" position="center top">
           <h1 className="header--xl">
             Patient tested<span className="text--serif text--primary">.</span><br/>

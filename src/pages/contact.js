@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
@@ -8,6 +9,13 @@ import config from '../../config'
 
 const ContactPage = () => (
   <Layout>
+    <Helmet
+      title="GoInvo | Contact"
+      meta={[
+        { name: 'description', content: 'Looking to do work with Invo or just want to chat? Shoot us an email and we\'ll do our best to get back to you within two business hours.' },
+        { name: 'keywords', content: 'boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design, goinvo contact' },
+      ]}
+    />
     <Hero image="/images/contact/studio.jpg"></Hero>
     <div className="background--blue pad-vertical--double">
       <div className="max-width max-width--sm content-padding" style={{ marginTop: '-7rem' }}>

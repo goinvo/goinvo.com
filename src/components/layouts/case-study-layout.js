@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { MDXProvider } from "@mdx-js/tag"
+import Helmet from 'react-helmet'
 
 import Layout from './layout'
 import Image from '../image'
@@ -51,9 +52,20 @@ class CaseStudyLayout extends Component {
         render={data => {
           const caseStudies = extractCaseStudyDataFromQuery(data);
           const caseStudiesWithFeatures = caseStudies.concat(features);
+          const meta = [];
+          if (frontmatter.description) {
+            meta.push({ name: 'description', content: frontmatter.description })
+          }
+          if (frontmatter.keywords) {
+            meta.push({ name: 'keywords', content: frontmatter.keywords })
+          }
 
           return (
             <Layout>
+              <Helmet
+                title={`GoInvo | ${frontmatter.title}`}
+                meta={meta}
+              />
               <MDXProvider
                 components={{
                   h1: ({children, ...props}) => (

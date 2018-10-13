@@ -80,6 +80,15 @@ class Header extends Component {
                   </li>
                 )
               })}
+              <li>
+                <Link
+                  to="/contact/"
+                  className="mobile-nav__link"
+                  activeClassName="mobile-nav__link--active"
+                  onClick={this.toggleMobileNav}>
+                    Contact
+                </Link>
+              </li>
             </ul>
             <Divider />
             <ul className="mobile-nav__list">

@@ -23,6 +23,7 @@ import Divider from '../components/divider'
 import Quote from '../components/quote'
 
 # Designing an efficient IRB
+for Partners Healthcare
 
 ### Problem
 

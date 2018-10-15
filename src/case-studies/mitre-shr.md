@@ -35,8 +35,8 @@ The design concepts of the SHR data schema and its use-cases played a key role i
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 21 designer for 8 months
 <br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & Infrastructure, Open Source
 <br />
-<a href="http://standardhealthrecord.org/" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">SHR website</a>
-<a href="https://github.com/standardhealth/shr_design/tree/master/design" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
+<a href="http://standardhealthrecord.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">SHR website</a>
+<a href="https://github.com/standardhealth/shr_design/tree/master/design" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
 
 <Divider />
 

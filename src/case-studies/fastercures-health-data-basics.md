@@ -59,7 +59,7 @@ In a usability test of the prototypes, conducted with 30 patients, 97% were able
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 2.5 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Public health and policy, Patient engagement, Open source
 <br />
-<a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">View Demo</a>
+<a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half  margin-right--only-lg">View Demo</a>
 <a href="https://github.com/goinvo/HealthDataBasics" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
 
 <Divider />
@@ -109,7 +109,7 @@ To meet the needs for a wide array of behaviors and learning methods, we develop
 ![life data stats](/images/case-studies/fastercures/health-data-basics/health-data-basics-narrative.jpg)
 
 #### Engagement through curiosity
-The introduction would hook the user with a suprising fact and graphic that medical care only composes 11% of health, appealing to their sense of curiosity to discover that there is more to health data than the medical aspect. Individuals could then unravel the surprising ways wellness and health data permeate life through an array of interactive examples.
+The introduction would hook the user with a surprising fact and graphic that medical care only composes 11% of health, appealing to their sense of curiosity to discover that there is more to health data than the medical aspect. Individuals could then unravel the surprising ways wellness and health data permeate life through an array of interactive examples.
 
 #### Designed with behavior change frameworks
 The Health Belief Model (HBM), used by social scientists in public health, suggests that behavior change is more likely if messaging successfully targets barriers, benefits, self-efficacy, and threat[^2]. Providing individuals with feedback and suggestions that help break down barriers, and arms them with the ability to do it themselves. This model leads to higher rates of behavior change rather than providing them with just the facts. Different screens address the elements of models to encourage an individual to take action.

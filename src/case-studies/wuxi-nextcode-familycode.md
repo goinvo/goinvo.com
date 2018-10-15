@@ -26,7 +26,7 @@ import Quote from '../components/quote'
 
 ### Problem
 
-Carrier screening results are complicated. People typically don't have the expertise to understand genetic results, let alone know what to do with them. In fact, only 14% of PCP's are confident in interpreting genetic test results[^2]. While genetic counselors can help clinicians with genetic interpretation, there is a severe shortage with only ~3,800 genetic counselors in the US[^3], causing a limiting factor for clinician adoption.
+Carrier screening results are complicated. People typically don't have the expertise to understand genetic results, let alone know what to do with them. In fact, only 14% of PCPs are confident in interpreting genetic test results[^2]. While genetic counselors can help clinicians with genetic interpretation, there is a severe shortage with only ~3,800 genetic counselors in the US[^3], causing a limiting factor for clinician adoption.
 
 ### Solution
 

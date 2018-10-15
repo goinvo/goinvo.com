@@ -37,8 +37,7 @@ const DeterminantsOfHealthFeature = () => (
               <div id="determinants-chart" className="margin-bottom--double margin-top--double"><Chartdoh /></div>
 
               <div className="chart-details">
-
-              </div>
+                </div>
             </div>
 
             <div className="poster margin-top--double"><Image src="/images/features/determinants-of-health/determinants-of-health-poster.jpg" className="image--max-width" /></div>

@@ -8,13 +8,9 @@
 
     @include mq($until: large) {
       width: 50%;
-      //margin-left: auto;
-      //margin-right: auto;
     }
     @include mq($until: small) {
       width: 100%;
-      //margin-left: auto;
-      //margin-right: auto;
     }
   }
 }

@@ -9,8 +9,9 @@ const data = [
   ["Social circumstances", 24],
   ["Genetics and Biology", 22],
   ["Medical Care", 11],
-  ["Environment", 7] // CSS-style declaration
+  ["Environment", 7]
 ];
+const currentSelection = 0;
 
 const options = {
   legend: { position: "labeled" },
@@ -38,8 +39,54 @@ class Chartdoh extends React.Component {
 }
 
 export default Chartdoh
-//const rootElement = document.getElementById("determinants-chart");
-//ReactDOM.render(<Chartdoh />, rootElement);
+
+/*google.visualization.events.addListener(chart, 'select', selectHandler);
+selectHandlerApplied = true;
+
+function selectHandler(e) {
+  var selectedItem = chart.getSelection()[0];
+  // console.log(selectedItem);
+
+  if (selectedItem) {
+    currentSelection = selectedItem.row;
+    $("#determinant-info").html(template({determinantIndex: currentSelection, data: chartData}));
+  }
+}
+
+class ChartDetails extends React.Component {
+  render() {
+    const { title, description, division } = this.props.determinant;
+    const { title, factor } = this.props.division;
+
+    return (
+      //for selected determinant
+      <div>
+      <h4> {determinant.title} </h4>
+      <p> {determinant.descriptions} </p>
+      <div className="divisions">
+
+          //loop through all divisions
+          <div className="factors">
+            //loop through all factors
+            <h5>{determinant.division.title}</h5>
+            <ul>
+              <li>{determinant.division.factor}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+google.visualization.events.addListener(chart, 'ready', function() {
+    // set the selection to the first row in the chart
+    chart.setSelection([{"row": 3}]);
+    $("#determinant-info").html(template({determinantIndex: 3, data: chartData}));
+});
+
+export default Chartdetails
+
+*/
 
 /*$(document).ready(function() {
   google.charts.load("current", {packages:["corechart"]});

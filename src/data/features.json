@@ -3,6 +3,7 @@
     "id": "print-big",
     "title": "Print big. Print often.",
     "date": "Mar.2018",
+    "client": "Feature",
     "categories": [],
     "caption": "In strategy, the pieces and parts are typically nested in different documents that do not allow everything to be seen at once. The ability to see everything at once, at anytime, is core to our approach.",
     "image": "/images/features/print-big-print-often/print-big-print-often-featured.jpg",
@@ -11,8 +12,9 @@
   },
   {
     "id": "killer-truths",
-    "title": "Killer truths",
+    "title": "Killer Truths",
     "date": "Apr.2017",
+    "client": "Feature",
     "categories": [
       "public-health-and-policy",
       "open-source"
@@ -23,8 +25,9 @@
   },
   {
     "id": "determinants-of-health",
-    "title": "Determinants of health",
+    "title": "Determinants of Health",
     "date": "Oct.2016",
+    "client": "Feature",
     "categories": [
       "public-health-and-policy",
       "open-source"
@@ -35,8 +38,9 @@
   },
   {
     "id": "care-plans",
-    "title": "Care Plans that drive recovery",
+    "title": "Care Plans that Drive Recovery",
     "date": "Mar.2016",
+    "client": "Feature",
     "categories": [
       "patient-engagement",
       "care-management",
@@ -50,6 +54,7 @@
     "id": "understanding-zika",
     "title": "Understanding Zika",
     "date": "Feb.2016",
+    "client": "Feature",
     "categories": [
       "public-health-and-policy",
       "open-source"
@@ -60,8 +65,9 @@
   },
   {
     "id": "digital-healthcare",
-    "title": "Digital healthcare in 2016",
+    "title": "Digital Healthcare in 2016",
     "date": "Jan.2016",
+    "client": "Feature",
     "categories": [],
     "caption": "8 guidelines to drive engagement in future health services.",
     "image": "/images/features/digital-healthcare/digital-healthcare-featured.jpg",
@@ -70,7 +76,8 @@
   },
   {
     "id": "healing-us-healthcare",
-    "title": "Healing U.S. healthcare",
+    "title": "Healing U.S. Healthcare",
+    "client": "Feature",
     "categories": [
       "health-it-and-infrastructure",
       "public-health-and-policy"
@@ -84,6 +91,7 @@
     "id": "disrupt",
     "title": "Disrupt!",
     "date": "Jun.2015",
+    "client": "Feature",
     "categories": [],
     "caption": "Designing for emerging technologies.",
     "image": "/images/features/disrupt/disrupt-featured.jpg",
@@ -92,8 +100,9 @@
   },
   {
     "id": "bathroom-to-healthroom",
-    "title": "From bathroom to healthroom",
+    "title": "From Bathroom to Healthroom",
     "date": "Mar.2015",
+    "client": "Feature",
     "categories": [
       "patient-engagement"
     ],
@@ -103,8 +112,9 @@
   },
   {
     "id": "oral-history-goinvo",
-    "title": "An oral history of GoInvo",
+    "title": "An Oral History of GoInvo",
     "date": "Dec.2014",
+    "client": "Feature",
     "categories": [],
     "image": "/images/features/oral-history-goinvo/oral-history-goinvo-featured.jpg",
     "link": "https://www.goinvo.com/features/an-oral-history/",
@@ -112,8 +122,9 @@
   },
   {
     "id": "redesign-democracy",
-    "title": "Redesign democracy",
+    "title": "Redesign Democracy",
     "date": "Oct.2014",
+    "client": "Feature",
     "categories": [],
     "caption": "A better solution for the digital era.",
     "image": "/images/features/redesign-democracy/redesign-democracy-featured.jpg",
@@ -124,6 +135,7 @@
     "id": "understanding-ebola",
     "title": "Understanding Ebola",
     "date": "Oct.2014",
+    "client": "Feature",
     "categories": [
       "public-health-and-policy",
       "open-source"
@@ -134,8 +146,9 @@
   },
   {
     "id": "ebola-care-guideline",
-    "title": "Ebola care guideline",
+    "title": "Ebola Care Guideline",
     "date": "Oct.2014",
+    "client": "Feature",
     "categories": [
       "public-health-and-policy",
       "open-source"
@@ -146,7 +159,9 @@
   },
   {
     "id": "carrier-testing",
-    "title": "Carrier testing",
+    "title": "Carrier Testing",
+    "date": "Oct.2018",
+    "client": "Feature",
     "categories": [
       "precision-medicine-and-genomics",
       "open-source"
@@ -158,7 +173,9 @@
   },
   {
     "id": "open-source-healthcare",
-    "title": "Open source healthcare",
+    "title": "Open Source Healthcare",
+    "date": "Oct.2018",
+    "client": "Feature",
     "categories": [
       "health-it-and-infrastructure",
       "open-source",

@@ -1,10 +1,11 @@
 ---
 title: "PainTrackr"
 image: "/images/case-studies/goinvo/paintrackr/paintrackr-hero.jpg"
-client: "Open Source, GoInvo"
+client: "GoInvo"
 caption: "A straightforward, tactile tool for logging pain."
 categories:
   - "patient-engagement"
+  - "open-source"
 upNext:
   - "inspired-ehrs"
   - "killer-truths"

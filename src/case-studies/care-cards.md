@@ -1,7 +1,7 @@
 ---
 title: "Care Cards"
 image: "/images/case-studies/goinvo/carecards/care-cards-hero.jpg"
-client: "Open Source, GoInvo"
+client: "GoInvo"
 caption: "Mantras for patients to change themselves, clinicians, and the healthcare system."
 categories:
   - "patient-engagement"

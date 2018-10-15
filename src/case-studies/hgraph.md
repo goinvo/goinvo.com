@@ -1,7 +1,7 @@
 ---
 title: "hGraph"
 image: "/images/case-studies/goinvo/hgraph/hgraph-hero.jpg"
-client: "Open Source, GoInvo"
+client: "GoInvo"
 caption: "Your health in one picture."
 categories:
   - "patient-engagement"

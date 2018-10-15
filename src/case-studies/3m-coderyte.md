@@ -140,7 +140,6 @@ The $30B company was a partner of CodeRyte’s for the past three years. Partner
 
 CodeRyte’s executives were thrilled to be rewarded for their hard work while having the chance to deliver their vision via a much larger delivery vehicle in 3M. As you might imagine, CodeRyte’s board and investors were pretty thrilled as well, greatly exceeding their multiples.
 
-<!-- TODO: CodeRyte video here -->
 <Video
   sources={[
     {src: "/videos/case-studies/coderyte/3m-coderyte-ui-demo.mp4", format: "mp4"},

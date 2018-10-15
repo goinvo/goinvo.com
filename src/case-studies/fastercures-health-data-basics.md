@@ -34,16 +34,6 @@ import Video from '../components/video'
 # Engaging Patients to Understand Health Data
 for *FasterCures*
 
-<!-- <Video
-  sources={[
-    {src: "/videos/homepage/sdoh-hero.mp4", format: "mp4"},
-    {src: "/videos/homepage/sdoh-hero.webm", format: "webm"}
-  ]}
-  poster="/images/homepage/doh-hero-poster.jpg"
-  fallback="/images/homepage/doh-hero-fallback.jpg"
-  loop
-/> -->
-
 ### Problem
 
 Comprehension of health information is fundamental to well-being, patient empowerment, and decision-making. However, a scant 12% of US adults are health literate, and only 41% of individuals have even accessed their medical record. Driven by their mission to place patients first, *FasterCures* partnered with GoInvo to educate and engage patients on health data.

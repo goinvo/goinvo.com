@@ -19,6 +19,7 @@ import Divider from '../components/divider'
 import Quote from '../components/quote'
 
 # Connecting Clinics to Genetic Testing Labs
+for Partners Healthcare
 
 ### Problem
 

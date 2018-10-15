@@ -21,6 +21,7 @@ import Divider from '../components/divider'
 import Quote from '../components/quote'
 
 # Inspired EHRs: Designing for Clinicians
+for Jeff Belden, MD at the University of Missouri, the National Institute of Health, and California Health Care Foundation
 
 ### Problem
 

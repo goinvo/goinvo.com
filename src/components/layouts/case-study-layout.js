@@ -69,7 +69,7 @@ class CaseStudyLayout extends Component {
               <MDXProvider
                 components={{
                   h1: ({children, ...props}) => (
-                    <h1 className="header--xl" {...props}>{children}</h1>
+                    <h1 className="header--xl margin-bottom--half" {...props}>{children}</h1>
                   ),
                   h2: ({children, ...props}) => (
                     <h2 className="header--lg text--center" {...props}>{children}</h2>

@@ -16,6 +16,7 @@ import Divider from '../components/divider'
 import Quote from '../components/quote'
 
 # Mobile health design for real-time cardiac arrhythmias
+for InfoBionic
 
 ### Problem
 

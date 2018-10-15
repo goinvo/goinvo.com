@@ -24,6 +24,7 @@ import Quote from '../components/quote'
 import Video from '../components/video'
 
 # Closing the SNAP gap
+for the Massachusetts Department of Transitional Assistance
 
 ### Problem
 Food insecurity takes a significant toll on public health across the country. Tragically, one out of ten of households in Massachusetts is ‘food insecure’ (as reported by Project Bread) [^1]. The Massachusetts Department of Transitional Assistance (DTA) is hard at work to provide support for MA residents through the Supplemental Nutrition Assistance Program (SNAP), but the application process for both staff and applicant is grueling. In 2017, a two-person family typically encountered 90 questions just to get past the first step.

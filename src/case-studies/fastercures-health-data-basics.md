@@ -58,7 +58,7 @@ In a usability test of the prototypes, conducted with 30 patients, 97% were able
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 2.5 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Public health and policy, Patient engagement, Open source
 <br />
-<a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">View Demo</a>
+<a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half  margin-right--only-lg">View Demo</a>
 <a href="https://github.com/goinvo/HealthDataBasics" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
 
 <Divider />

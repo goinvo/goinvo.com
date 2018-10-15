@@ -23,6 +23,8 @@ const options = {
   tooltip: { trigger: "none" },
   colors: ["#F9D7A7", "#B2E5E9", "#E8ED9D", "#F8CBC5", "#90EED4"]
 };
+const { title, description, division } = this.props.determinant;
+const { title, factor } = this.props.division;
 
 class Chartdoh extends React.Component {
   render() {
@@ -34,13 +36,30 @@ class Chartdoh extends React.Component {
           data={data}
           options={options}
         />
+
+          //for selected determinant
+          <ChartDetails>
+            <h4> {determinant.title} </h4>
+            <p> {determinant.descriptions} </p>
+            <div className="divisions">
+
+                //loop through all divisions
+                <div className="factors">
+                  //loop through all factors
+                  <h5>{determinant.division.title}</h5>
+                  <ul>
+                    <li>{determinant.division.factor}</li>
+                  </ul>
+                </div>
+            </div>
+          />
     );
   }
 }
 
 export default Chartdoh
 
-/*google.visualization.events.addListener(chart, 'select', selectHandler);
+google.visualization.events.addListener(chart, 'select', selectHandler);
 selectHandlerApplied = true;
 
 function selectHandler(e) {
@@ -52,41 +71,11 @@ function selectHandler(e) {
     $("#determinant-info").html(template({determinantIndex: currentSelection, data: chartData}));
   }
 }
-
-class ChartDetails extends React.Component {
-  render() {
-    const { title, description, division } = this.props.determinant;
-    const { title, factor } = this.props.division;
-
-    return (
-      //for selected determinant
-      <div>
-      <h4> {determinant.title} </h4>
-      <p> {determinant.descriptions} </p>
-      <div className="divisions">
-
-          //loop through all divisions
-          <div className="factors">
-            //loop through all factors
-            <h5>{determinant.division.title}</h5>
-            <ul>
-              <li>{determinant.division.factor}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
 google.visualization.events.addListener(chart, 'ready', function() {
     // set the selection to the first row in the chart
     chart.setSelection([{"row": 3}]);
     $("#determinant-info").html(template({determinantIndex: 3, data: chartData}));
 });
-
-export default Chartdetails
-
-*/
 
 /*$(document).ready(function() {
   google.charts.load("current", {packages:["corechart"]});

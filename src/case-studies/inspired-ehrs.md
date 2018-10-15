@@ -37,8 +37,8 @@ An open source, accessible, lightweight design policy for electronic health reco
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer and engineer over 18 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure, Open Source
 <br />
-<a href="http://inspiredehrs.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">Read the book</a>   
-<br/><a href="https://github.com/goinvo/EHR" class="button button--primary button--lg margin-top--double margin-bottom--half">View the code</a>
+<a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">Read the book</a>
+<a href="https://github.com/goinvo/EHR" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">View the code</a>
 
 <Divider />
 

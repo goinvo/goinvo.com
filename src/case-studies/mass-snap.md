@@ -36,7 +36,7 @@ Our project aimed to make this first step welcoming rather than prohibitive thro
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 12 weeks, 2 engineers for 10 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Public health & policy
 <br />
-<a href="https://dtaconnect.eohhs.mass.gov/?_ga=2.253579721.1938704760.1538663360-447556880.1535061795" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View live app</a>
+<a href="https://dtaconnect.eohhs.mass.gov/?_ga=2.253579721.1938704760.1538663360-447556880.1535061795" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View live app</a>
 
 <Divider />
 

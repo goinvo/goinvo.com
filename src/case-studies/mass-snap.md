@@ -1,6 +1,6 @@
 ---
 title: "Closing the SNAP gap"
-image: "/images/case-studies/mass/snap/mobile-car.jpg"
+image: "/images/case-studies/mass/snap/snap-cover.jpg"
 client: "MA Department of Transitional Assistance"
 caption: "A 50% increase in digital applications means more people are getting the food they need."
 categories:

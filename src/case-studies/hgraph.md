@@ -32,7 +32,7 @@ hGraph is an open source tool that has been adopted by many organizations like W
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 9 months
 <br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
-<br/> <a href="http://www.hgraph.org" class="button button--primary button--lg margin-top--double margin-bottom--half">View hGraph</a> <a href="https://github.com/goinvo/hGraph" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
+<br/> <a href="http://www.hgraph.org" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View hGraph</a> <a href="https://github.com/goinvo/hGraph" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
 
 <Divider />
 

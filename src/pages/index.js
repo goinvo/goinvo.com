@@ -75,7 +75,7 @@ class IndexPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <p className="pad-right--only-lg">
                     <span className="text--bold">160 million US residents</span><br/>
-                    <span className="text--gray">are analyzed, care planned, and risk adjusted with the software we design.</span><br/>
+                    <span className="text--gray">are analyzed, care planned, and risk adjusted with the software we designed.</span><br/>
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">

@@ -13,6 +13,9 @@ import Card from '../card'
 import ImageBlock from '../image-block'
 import References from '../references'
 
+import Quote from '../quote'
+import Video from '../video'
+
 import features from '../../data/features'
 
 import { extractCaseStudyDataFromQuery } from '../../helpers'

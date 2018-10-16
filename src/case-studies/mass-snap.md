@@ -19,9 +19,9 @@ references:
     link: "http://www.pewinternet.org/fact-sheet/mobile/"
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
-import Video from '../components/video'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
+import Video from 'components/video'
 
 # Closing the SNAP gap
 for the Massachusetts Department of Transitional Assistance

@@ -86,7 +86,7 @@ class CareersPage extends Component {
               <p>
                 Looking forward,<br/>
                 Juhan Sonin, Director<br/>
-                juhan@goinvo.com
+                <a href="mailto:juhan@goinvo.com">juhan@goinvo.com</a>
               </p>
             </div>
           </div>

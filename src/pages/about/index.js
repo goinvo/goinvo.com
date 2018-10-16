@@ -17,23 +17,23 @@ import config from '../../../config'
 const ethics = [
   {
     title: 'Speak the truth',
-    content: 'We are honest, open, and genuine. Truth is the essence of goodness.'
+    content: 'We will be honest and objective. We will be transparent, and provide insight into our thinking and work.'
   },
   {
-    title: 'Be curious creators',
-    content: 'We are curious creators who welcome new ideas and the input of others.'
+    title: 'Make the World Useful, Beautiful and Delightful',
+    content: 'We exercise the discipline required to produce ideas and things that are useful to and beautiful in the world.'
   },
   {
-    title: 'Commit to community',
-    content: 'We fight inequality and stand to protect ideas, community and human-kind.'
+    title: 'Learn, Build, and Share',
+    content: 'We are curious, open creators who welcome new ideas and the input of others.'
   },
   {
-    title: 'Don\'t settle',
-    content: 'We are driven and committed to what we do. We strive to deliver exceptional results.'
+    title: 'Commit to Community',
+    content: 'We protect the public by holding paramount the safety, health, welfare, and the rights of human beings.'
   },
   {
-    title: 'Blend beautiful with useful',
-    content: 'We craft ideas and products that are both useful and beautiful.'
+    title: 'Go like Hell',
+    content: 'We are driven and committed to what we do, putting in extra effort in our quest for exceptional results.'
   }
 ]
 
@@ -157,7 +157,7 @@ const AboutPage = () => (
           <div className="pad-left--only-lg">
             <h3 className="header--md text--center">Our Story</h3>
             <p className="text--gray margin-bottom pad-right--only-lg">
-              With early roots designing for Yahoo, Mcaffee, and Obama’s 2008 campaign, GoInvo is now focused exclusively on healthcare. We’ve delivered over 110 products with partners ranging from 3M, U.S. Department of Health and Human Services, Partners Healthcare, and a variety of startups.
+              With early roots designing for Apple, Microsoft, Oracle, and Obama’s 2008 campaign, GoInvo is now focused exclusively on healthcare. We’ve delivered over 110 products with partners ranging from 3M, U.S. Department of Health and Human Services, Partners Healthcare, and a variety of startups.
             </p>
             <Link to="/about/studio-timeline/" className="display--inline-block margin-right--double">Studio timeline</Link>
             <a href="https://www.goinvo.com/features/an-oral-history" className="display--inline-block" >Oral history</a>

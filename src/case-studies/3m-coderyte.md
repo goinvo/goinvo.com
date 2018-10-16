@@ -87,7 +87,7 @@ Orders quickly followed.
 
 <Divider />
 
-##S Going Live
+## Going Live
 
 #### Reality sets in: the first customer
 Memorial Hermann is a large not-for-profit healthcare system in Texas with 12 hospitals. They saw the potential of what CodeRyte was planning and signed up. More than being a first customer, they wanted to be a partner. That is the very best kind of customer.

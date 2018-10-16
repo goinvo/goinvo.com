@@ -2,7 +2,7 @@
   {
     "name": "Juhan Sonin",
     "title": "Director",
-    "bio": "Juhan Sonin leads GoInvo with expertise in healthcare design and system engineering. He currently lectures on design and engineering at MIT. Previously he’s spent time at, Apple, the National Center for Supercomputing Applications (NCSA) and MITRE.  His work has been recognized by the New York Times, BBC International, and National Public Radio (NPR) and published in The Journal of Participatory Medicine and The Lancet.",
+    "bio": "Juhan Sonin leads GoInvo with expertise in healthcare design and system engineering. He’s spent time at Apple, the National Center for Supercomputing Applications (NCSA), and MITRE.  His work has been recognized by the New York Times, BBC, and National Public Radio (NPR) and published in The Journal of Participatory Medicine and The Lancet. He currently lectures on design and engineering at MIT.",
     "social": {
       "email": "juhan@goinvo.com",
       "twitter": "https://twitter.com/jsonin",
@@ -39,6 +39,16 @@
       "linkedin": "https://www.linkedin.com/in/edwinchoi1/"
     },
     "image": "/images/about/headshot-edwin-choi.jpg"
+  },
+  {
+    "name": "Sharon Lee",
+    "title": "Designer",
+    "bio": "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia.",
+    "social": {
+      "email": "sharon@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/sharon-lee-a1371999/"
+    },
+    "image": "/images/about/headshot-sharon-lee.jpg"
   },
   {
     "name": "Parsuree Vatanasirisuk",
@@ -81,16 +91,6 @@
     "image": "/images/about/headshot-daniel-reeves.jpg"
   },
   {
-    "name": "Sharon Lee",
-    "title": "Designer",
-    "bio": "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia.",
-    "social": {
-      "email": "sharon@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/sharon-lee-a1371999/"
-    },
-    "image": "/images/about/headshot-sharon-lee.jpg"
-  },
-  {
     "name": "Jonathan Follett",
     "title": "Principal",
     "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",
@@ -99,6 +99,6 @@
       "twitter": "https://twitter.com/jonfollett",
       "linkedin": "https://www.linkedin.com/in/jonfollett/"
     },
-    "image": "/images/about/headshot-jon-follett.jpg"
+    "image": "/images/about/headshot-jon-follett3.jpg"
   }
 ]

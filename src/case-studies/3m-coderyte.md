@@ -29,7 +29,7 @@ Starting with a shorter proof of concept period, GoInvo designed a comprehensive
 
 ### Results
 
-Deployed for 250+ customers, hospitals saw a 200% increase in coding efficiency and productivity.
+Memorial Hermann Hospital saw a 200% increase in coding efficiency and productivity.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers and 1 engineer for 15 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure

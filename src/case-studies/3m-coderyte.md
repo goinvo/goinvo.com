@@ -16,7 +16,7 @@ import Divider from '../components/divider'
 import Quote from '../components/quote'
 import Video from '../components/video'
 
-# Natural language processing (NLP) software for 3M
+# Natural language processing (NLP) software for hospital billing
 for 3m
 
 ### Problem
@@ -150,7 +150,7 @@ CodeRyte’s executives were thrilled to be rewarded for their hard work while h
   loop
 />
 
-<Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled out customers for us</Quote>
+<Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled out customers for us.</Quote>
 
 #### P.S. the Morning After
 About two weeks after launch, CodeRyte got a frantic call from the lead manager at one of their largest customers. CodeRyte had completely stopped working in the middle of the coder’s shift. Our team was simultaneously getting a flood of emails via the app’s feedback mechanism: no patients were entering the system to be coded.
@@ -160,7 +160,7 @@ The software worked so well that the backlog of coding was passed and there was,
 
 Never in the history of this hospital system had this happened. The efficiency of the software turned the bureaucratic quagmire of massive backlogs of patient coding into a just-in-time system that required less manpower and delivered faster results.
 
-<Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">Your team kicks ass</Quote>
+<Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">Your team kicks ass!</Quote>
 
 The hospital system has since been able to change their procedure and conservatively estimates a 200% increase in efficiency in their coding workflow.
 

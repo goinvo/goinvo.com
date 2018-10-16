@@ -36,7 +36,7 @@ Memorial Hermann Hospital saw a 200% increase in coding efficiency and productiv
 
 <Divider />
 
-# Background
+## Background
 
 #### Glenn Tobin has a vision
 
@@ -58,7 +58,7 @@ Coders are hardcore. They rely on their coding software six days a week, from 9-
 
 <Divider />
 
-# Process
+## Process
 
 ![timeline](/images/case-studies/coderyte/coderyte-timeline.jpg)
 
@@ -87,7 +87,7 @@ Orders quickly followed.
 
 <Divider />
 
-# Going Live
+##S Going Live
 
 #### Reality sets in: the first customer
 Memorial Hermann is a large not-for-profit healthcare system in Texas with 12 hospitals. They saw the potential of what CodeRyte was planning and signed up. More than being a first customer, they wanted to be a partner. That is the very best kind of customer.

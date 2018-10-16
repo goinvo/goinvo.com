@@ -83,6 +83,8 @@ We designed and prototyped example components for an EHR modeled to support care
 
 We originally designed early versions of the e-book for Apple format, using iBooks Author to compose and iBooks to share and test the contents. As the project evolved, we saw that the web would be able to reach a much wider audience, no matter their device of choice, gave us greater control over content, updates, and allowed us to make the transition from e-book to prototyped examples as seamless as possible. We published the final product under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0).
 
+<Divider />
+
 ## Solution
 
 #### Provider and patient-centered design

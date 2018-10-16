@@ -58,6 +58,8 @@ Today's carrier screening reports are riddled with industry jargon, ambiguous ne
 
 ![report](/images/case-studies/wuxi/familycode/familycode-report.jpg)
 
+<Divider />
+
 ## Insights & Solution
 
 #### Real-world experience drives design
@@ -109,6 +111,8 @@ Saliva samples allow for a more consistently positive experience compared to blo
 #### 5. Offer out-of-pocket payment for patients
 
 Dealing with insurance is time-consuming, costly, frustrating, and does not expand internationally.
+
+<Divider />
 
 ## Results
 

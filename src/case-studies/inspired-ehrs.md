@@ -8,7 +8,9 @@ categories:
   - "open-source"
 results:
   - stat: "600"
-    description: "visits / month today"
+    description: "visits / month"
+  - stat: ""
+    description: ""
   - stat: "28"
     description: "known code forks"
 upNext:
@@ -109,3 +111,5 @@ _Inspired EHRs: Designing for Clinicians_ offers inspiration and design principl
 <Quote quotee="Xue Lee" quoteeSub="Marshfield Clinic User Experience Designer">Your human factors and design principle sections has convinced a lot of my bosses to go in a new direction with design.</Quote>
 
 ![Book](/images/case-studies/nih/inspired-ehrs/ehr-book.jpg)
+
+<div class="text--center"><a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg center">Read the book</a></div>

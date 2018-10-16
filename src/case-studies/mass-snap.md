@@ -118,6 +118,8 @@ Diagrams at the beginning and end of the application help the user anticipate wh
     {src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.mp4", format: "mp4"},
     {src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.webm", format: "webm"}
   ]}
+  width="100%"
+  height="480"
   poster="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
   fallback="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
   loop

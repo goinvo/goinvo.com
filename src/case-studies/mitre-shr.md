@@ -23,21 +23,21 @@ for MITRE Corporation
 
 The U.S. lacks a health data standard. Organizations cannot efficiently share or manage health data, costing the US healthcare system $80 billion a year.
 
-MITRE, a Federally Funded Research and Development Center (FFRDC) specializing in systems engineering, is developing a health data specification called the Standard Health Record (SHR). They needed help envisioning its architecture and the services and products built on top of SHR in order to drive its development and ultimately, national health IT policy.
+MITRE, a Federally Funded Research and Development Center (FFRDC) specializing in systems engineering, is developing a health data specification called the Standard Health Record (SHR). To drive development and national health IT policy, they needed help envisioning its technical architecture and imagining the services built on top of SHR.
 
 ### Solution
 
-GoInvo identified pain points in the current state of health data interoperability and health encounters, created a guideline for representing a human-readable view of the health data standard, and envisioned products and services to showcase the value of that standard.
+GoInvo identified pain points in the current state of health data interoperability and health encounters, created a series of system diagrams that showed the universe of options and who was affected by SHR, and envisioned products that showcase the value of the standard.
 
 ### Results
 
-The design concepts of the SHR data schema and its use-cases played a key role in providing MITRE a long-term vision. It communicated the value of the SHR and drove national adoption through its acceptance into the international FHIR standard in 2018 as a new oncology FHIR profile.
+The design concepts and SHR use cases played a key role in providing MITRE a long-term vision. It communicated the value of the SHR and continues to educate key players and organizations. In 2018, SHR was accepted into the international FHIR standard as a new oncology FHIR profile.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 21 designer for 8 months
+<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 18 months, ongoing
 <br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & Infrastructure, Open Source
 <br />
-<a href="http://standardhealthrecord.org/" class="button button--primary button--lg margin-top--double margin-bottom--half">SHR website</a>
-<a href="https://github.com/standardhealth/shr_design/tree/master/design" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
+<a href="http://standardhealthrecord.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">SHR website</a>
+<a href="https://github.com/standardhealth/shr_design/tree/master/design" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
 
 <Divider />
 
@@ -60,7 +60,7 @@ Working closely with the same team of MITRE engineers and providers, we created 
 ## Insights & Recommendations
 
 #### Represent the SHR structure to be human-readable
-The organization of the SHR and its data structure was not immediately understandable for those outside the core development team. A common visual language for communicating the SHR and its variations would need to be designed.
+The organization of the SHR and its data structure was not immediately understandable for those outside the core development team. A visual narrative for communicating the SHR and its variations would need to be designed.
 
 #### Show don’t tell, the future of interoperability
 GoInvo’s strength lies in showing the future of healthcare. Capturing stakeholder attention by envisioning the future with the SHR allowed MITRE to gain further buy-in at the executive level, gain funding, and build more partnerships to expand development efforts.
@@ -70,7 +70,7 @@ GoInvo’s strength lies in showing the future of healthcare. Capturing stakehol
 ## Solution
 
 #### Create a visual language for the SHR
-A tiered, modular design provided a human-readable representation of the SHR for the core MITRE team as well as outside partners and collaborators. With this model, health information could be organized into smaller elements, such as medication dose amount as a component of medication dosage, which in turn is a component of medications.
+Our design provided a graphic representation of the SHR for the core MITRE team as well as outside partners and collaborators. With this modular design, health information could be organized into smaller elements, such as medication dose amount as a component of medication dosage, which in turn is a component of medications.
 
 ![SHR visual language](/images/case-studies/mitre/SHR/shr-visual-language.jpg)
 
@@ -91,7 +91,7 @@ Filled squares represent captured health data, allowing patient record completen
 
 #### Apply the SHR visual language to real-world use-cases
 
-Communicating the flow of data for an outpatient journey allowed providers to relate to the clinical connections of the SHR. *Several primary care clinicians and system engineers* at MITRE reviewed and validated all designs.
+Communicating the flow of data for an outpatient journey allowed providers to relate to the clinical connections of the SHR. **Several primary care clinicians and system engineers** at MITRE reviewed and validated all designs.
 
 #### Disseminate the SHR through story
 GoInvo created storyboards for several scenarios of care to show the future health service experience made possible with the SHR. By sharing this vision with government leaders such as Charlie Baker, governor of Massachusetts, the SHR gained support at the state level in October 2016.

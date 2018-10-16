@@ -1,11 +1,11 @@
 [
   {
     "id": "care-management",
-    "title": "Care management"
+    "title": "Care Management"
   },
   {
     "id": "health-it-and-infrastructure",
-    "title": "Health IT & infrastructure"
+    "title": "Health IT & Infrastructure"
   },
   {
     "id": "patient-engagement",
@@ -13,14 +13,14 @@
   },
   {
     "id": "precision-medicine-and-genomics",
-    "title": "Precision medicine & genomics"
+    "title": "Precision Medicine & Genomics"
   },
   {
     "id": "public-health-and-policy",
-    "title": "Public health & policy"
+    "title": "Public Health & Policy"
   },
   {
     "id": "open-source",
-    "title": "Open source projects"
+    "title": "Open Source"
   }
 ]

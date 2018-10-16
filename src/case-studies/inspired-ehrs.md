@@ -8,7 +8,9 @@ categories:
   - "open-source"
 results:
   - stat: "600"
-    description: "visits / month today"
+    description: "visits / month"
+  - stat: ""
+    description: ""
   - stat: "28"
     description: "known code forks"
 upNext:
@@ -81,6 +83,8 @@ We designed and prototyped example components for an EHR modeled to support care
 
 We originally designed early versions of the e-book for Apple format, using iBooks Author to compose and iBooks to share and test the contents. As the project evolved, we saw that the web would be able to reach a much wider audience, no matter their device of choice, gave us greater control over content, updates, and allowed us to make the transition from e-book to prototyped examples as seamless as possible. We published the final product under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0).
 
+<Divider />
+
 ## Solution
 
 #### Provider and patient-centered design
@@ -109,3 +113,5 @@ _Inspired EHRs: Designing for Clinicians_ offers inspiration and design principl
 <Quote quotee="Xue Lee" quoteeSub="Marshfield Clinic User Experience Designer">Your human factors and design principle sections has convinced a lot of my bosses to go in a new direction with design.</Quote>
 
 ![Book](/images/case-studies/nih/inspired-ehrs/ehr-book.jpg)
+
+<div class="text--center"><a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg center">Read the book</a></div>

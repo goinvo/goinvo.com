@@ -1,6 +1,6 @@
 ---
 title: "Driving a National Health Data Standard"
-image: "/images/case-studies/mitre/SHR/shr-header.jpg"
+image: "/images/case-studies/mitre/SHR/shr-header2.jpg"
 client: "MITRE Corporation"
 caption: "Prototyping and envisioning future applications of a national health data standard to drive its development."
 categories:

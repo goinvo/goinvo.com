@@ -1,6 +1,6 @@
 ---
 title: "hGraph"
-image: "/images/case-studies/goinvo/hgraph/hgraph-hero.jpg"
+image: "/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg"
 client: "GoInvo"
 caption: "Your health in one picture."
 categories:

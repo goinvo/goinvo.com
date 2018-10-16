@@ -22,7 +22,7 @@ import Quote from '../components/quote'
 
 The U.S. lacks a health data standard. Organizations cannot efficiently share or manage health data, costing the US healthcare system $80 billion a year.
 
-MITRE, a Federally Funded Research and Development Center (FFRDC) specializing in systems engineering, is developing a health data specification called the Standard Health Record (SHR). To drive development and national health IT policy, they needed help envisioning seeing its technical architecture and imagining the services built on top of SHR.
+MITRE, a Federally Funded Research and Development Center (FFRDC) specializing in systems engineering, is developing a health data specification called the Standard Health Record (SHR). To drive development and national health IT policy, they needed help envisioning its technical architecture and imagining the services built on top of SHR.
 
 ### Solution
 

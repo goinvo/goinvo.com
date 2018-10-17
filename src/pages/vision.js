@@ -94,7 +94,7 @@ class VisionPage extends Component {
     return this.state.blogPosts.map(post => {
       return (
         <li key={post.link}>
-          <Card link={post.link} className="pad-all margin-bottom" externalLink>
+          <Card link={post.link} className="pad-all margin-bottom" externalLink suppressNewTab={true}>
             <div className="text--bold">{post.title}</div>
             <span className="text--gray">{post.date}</span>
           </Card>
@@ -170,7 +170,7 @@ class VisionPage extends Component {
           <h3 className="header--md">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
-              <Card link={spotlightFeature.link} fillHeight externalLink>
+              <Card link={spotlightFeature.link} fillHeight externalLink suppressNewTab={true}>
                 <ImageBlock
                   title={spotlightFeature.title}
                   image={spotlightFeature.image}
@@ -200,7 +200,7 @@ class VisionPage extends Component {
               {
                 this.state.recentFeatures.map(feature => {
                   return (
-                    <Card link={feature.link} key={feature.id} externalLink>
+                    <Card link={feature.link} key={feature.id} externalLink suppressNewTab={true}>
                       <ImageBlock
                         title={feature.title}
                         image={feature.image}

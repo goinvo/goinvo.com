@@ -105,9 +105,10 @@ class CaseStudyLayout extends Component {
                           const nextItem = caseStudiesWithFeatures.find(item => item.slug === id || item.id === id);
                           const nextItemLink = nextItem.slug ? `/work/${nextItem.slug}` : nextItem.link;
                           const externalLink = nextItem.slug ? false : true;
+                          const suppressNewTab = nextItem.external ? false : true;
 
                           return (
-                            <Card key={nextItemLink} link={nextItemLink} externalLink={externalLink}>
+                            <Card key={nextItemLink} link={nextItemLink} externalLink={externalLink} suppressNewTab={suppressNewTab}>
                               <ImageBlock
                                 title={nextItem.title}
                                 image={nextItem.image}

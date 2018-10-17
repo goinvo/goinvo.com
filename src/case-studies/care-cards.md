@@ -35,7 +35,7 @@ An estimated 7,000 Care Cards decks are in homes, clinics, and classes around th
 
 <br/><span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer, part time, across 2 years
 <br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
-<div class="container container--justify-center"><a href="www.carecards.me" class="button button--primary button--lg margin-top--double margin-bottom--half ">Get your own deck</a></div>
+<div class="container container--justify-center"><a href="http://www.carecards.me" class="button button--primary button--lg margin-top--double margin-bottom--half ">Get your own deck</a></div>
 
 <Quote quotee="Roni Zeiger, MD" quoteeSub="former Chief Health Strategist at Google, co-founder of Smart Patients">Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.</Quote>
 

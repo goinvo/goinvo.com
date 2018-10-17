@@ -15,8 +15,8 @@ references:
     link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082613/"
 ---
 
-import Divider from 'components/divider'
-import Quote from 'components/quote'
+
+
 
 # Connecting Clinics to Genetic Testing Labs
 for Partners Healthcare

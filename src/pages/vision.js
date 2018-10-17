@@ -120,7 +120,7 @@ class VisionPage extends Component {
         </Hero>
         <div className="background--gray">
           <div className="max-width content-padding">
-            <div className="pure-g pad-vertical--double">
+            <div className="pure-g pad-vertical--quad">
               <div className="pure-u-1 pure-u-lg-1-3">
                 <h2 className="header--lg margin--none pad-right--double">Our design and analysis has been featured in<span className="text--serif text--primary">...</span></h2>
               </div>
@@ -167,7 +167,7 @@ class VisionPage extends Component {
           </div>
         </div>
         <div className="max-width content-padding pad-vertical--double">
-          <h3 className="header--md">Spotlight</h3>
+          <h3 className="header--md pad-vertical--double">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
               <Card link={spotlightFeature.link} fillHeight externalLink suppressNewTab={true}>
@@ -193,9 +193,9 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--blue pad-vertical--double">
+        <div className="background--blue pad-vertical--quad">
           <div className="max-width content-padding">
-            <h3 className="header--md">Most recent features</h3>
+            <h3 className="header--md pad-bottom--double">Most recent features</h3>
             <Columns columns={3}>
               {
                 this.state.recentFeatures.map(feature => {
@@ -220,7 +220,7 @@ class VisionPage extends Component {
             }
           </div>
         </div>
-        <div className="max-width content-padding pad-vertical pad-bottom--double">
+        <div className="max-width content-padding pad-vertical--quad">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
               <Image src="/images/vision/emerging-tech-books.jpg" className="image--max-width" />
@@ -271,11 +271,11 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--blue pad-vertical--double">
+        <div className="background--blue pad-vertical--quad">
           <div className="max-width content-padding">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
-                <h3 className="header--md">Blog Posts</h3>
+                <h3 className="header--md pad-vertical">Blog Posts</h3>
                 <div className="border-right--only-lg pad-right--only-lg">
                   <ImageBlock
                     title="Keep up to date with us!"
@@ -288,7 +288,7 @@ class VisionPage extends Component {
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
-                <h3 className="header--md">Podcast</h3>
+                <h3 className="header--md pad-vertical">Podcast</h3>
                 <ImageBlock
                   title="The Digital Life"
                   image="/images/vision/microphone.jpg"
@@ -307,7 +307,7 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="max-width content-padding pad-top">
+        <div className="max-width content-padding pad-top--double">
           <h2 className="header--xl margin-bottom--none">Reviews for<span className="text--serif text--primary">...</span></h2>
         </div>
         <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>

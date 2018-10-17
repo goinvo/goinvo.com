@@ -131,10 +131,10 @@ const ServicesPage = () => (
     <Quote background="gray" quotee="Serban Georgescu, MD" quoteeSub="InfoBionic Director of Clinical Development">
       With Invo, design wasn't just design. It impacted our IP portfolio. It changed our business.
     </Quote>
-    <div className="max-width content-padding pad-vertical--double">
+    <div className="max-width content-padding pad-vertical--double margin-bottom--double">
       <h3 className="header--md">Approach</h3>
-      <div className="pure-g">
-        <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
+      <div className="pure-g pad-bottom--double">
+        <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double">
           <IconHealthcare className="icon--wide icon--secondary" />
           <h4 className="header--sm margin-top--none margin-bottom--half">We're focused on healthcare.</h4>
           <p className="text--gray margin-top--half">

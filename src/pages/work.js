@@ -184,7 +184,7 @@ class WorkPage extends Component {
             </div>
           </div>
         </Collapsible>
-        <div className="max-width content-padding">
+        <div className="max-width content-padding pad-vertical--double">
           <div className="margin-top--double">
             <Columns columns={2}>
               { this.state.activeWorkItems.map(item => {
@@ -222,7 +222,7 @@ class WorkPage extends Component {
           <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
         </GradientImageColumns>
         <div className="background--blue">
-          <div className="max-width content-padding pad-vertical pad-top--crazy">
+          <div className="max-width content-padding pad-vertical--quad pad-top--crazy">
             <h4 className="header--md">Up next</h4>
             <Columns columns={3}>
               { upNextList.map(item => {

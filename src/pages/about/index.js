@@ -77,7 +77,7 @@ const AboutPage = () => (
         outcomes thru design<span className="text--serif text--primary">.</span>
       </h1>
     </Hero>
-    <div className="max-width content-padding pad-vertical">
+    <div className="max-width content-padding pad-vertical--double">
       <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2">
           <h2 className="header--lg pad-right--only-lg">GoInvo is a digital design studio in Boston, crafting the future of healthcare through strategy, creativity, and vision.</h2>
@@ -87,7 +87,7 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
-    <div className="background--blue pad-vertical--double">
+    <div className="background--blue pad-vertical--quad">
       <div className="max-width content-padding">
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
@@ -110,7 +110,7 @@ const AboutPage = () => (
       </div>
     </div>
     <div className="max-width content-padding">
-      <h2 className="header--xl text--center">Our team</h2>
+      <h2 className="header--xl text--center pad-vertical--double">Our team</h2>
       {team.slice(0, 3).map(member => <TeamMember key={member.name} member={member} />)}
     </div>
     <div className="background--blue margin-bottom--double">
@@ -132,7 +132,7 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
-    <div className="max-width content-padding">
+    <div className="max-width content-padding pad-bottom--double">
       {team.slice(3, team.length).map(member => <TeamMember key={member.name} member={member} />)}
     </div>
     <div className="background--gray pad-vertical--double">
@@ -152,7 +152,7 @@ const AboutPage = () => (
         </ul>
       </div>
     </div>
-    <div className="max-width content-padding pad-vertical--double">
+    <div className="max-width content-padding pad-vertical--quad">
       <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
           <div className="pad-left--only-lg">
@@ -172,7 +172,7 @@ const AboutPage = () => (
       </div>
     </div>
     <div className="background--blue">
-      <div className="max-width content-padding pad-vertical">
+      <div className="max-width content-padding pad-vertical--quad">
         <h4 className="header--md">Up next</h4>
         <Columns columns={3}>
           { upNextList.map(item => {

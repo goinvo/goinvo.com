@@ -6,7 +6,7 @@ caption: "A full redesign of the Partners Healthcare research administration pla
 categories:
   - "health-it-and-infrastructure"
 upNext:
-  - "mitre-shr"
+  - "mitre-flux-notes"
   - "mt-sinai-consent"
   - "mass-snap"
 hidden: false

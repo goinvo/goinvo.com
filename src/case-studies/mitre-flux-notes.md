@@ -74,7 +74,7 @@ Personalize the presentation of the health record to the patient’s condition a
 
 <Divider />
 
-## Solutions
+## Solution
 
 ![Capturing data](/images/case-studies/mitre/fluxnotes/fluxnotes-structured-data-capture.jpg)
 
@@ -115,6 +115,8 @@ Instead of relying on tabs and clicks to navigate a complex patient record, a mi
 ![Note navigation](/images/case-studies/mitre/fluxnotes/fluxnotes-notes.jpg)
 
 The note navigation allows the provider to quickly access previous clinical notes at all times, without closing the patient record view. This way, the provider can browse the record while simultaneously authoring or viewing notes, allowing for a more streamlined workflow.
+
+<Divider />
 
 ## Results
 

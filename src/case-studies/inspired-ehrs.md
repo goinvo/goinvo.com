@@ -14,7 +14,7 @@ results:
   - stat: "28"
     description: "known code forks"
 upNext:
-  - "mitre-shr"
+  - "mitre-flux-notes"
   - "fastercures-health-data-basics"
   - "determinants-of-health"
 hidden: false

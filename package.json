@@ -9,7 +9,7 @@
     "aws-sdk": "^2.328.0",
     "axios": "^0.18.0",
     "gatsby": "^2.0.0-rc.28",
-    "gatsby-mdx": "^0.1.4",
+    "gatsby-mdx": "^0.2.0",
     "gatsby-plugin-google-analytics": "^2.0.6",
     "gatsby-plugin-manifest": "^2.0.2-rc.1",
     "gatsby-plugin-offline": "^2.0.0-rc.9",

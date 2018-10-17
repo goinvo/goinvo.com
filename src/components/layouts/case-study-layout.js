@@ -13,6 +13,9 @@ import Card from '../card'
 import ImageBlock from '../image-block'
 import References from '../references'
 
+import Quote from '../quote'
+import Video from '../video'
+
 import features from '../../data/features'
 
 import { extractCaseStudyDataFromQuery } from '../../helpers'
@@ -21,8 +24,6 @@ import config from '../../../config'
 
 class CaseStudyLayout extends Component {
   render() {
-    const frontmatter = this.props.pageContext.frontmatter;
-
     return (
       <StaticQuery
         query={graphql`
@@ -32,6 +33,7 @@ class CaseStudyLayout extends Component {
             ) {
               edges {
                 node {
+                  id
                   parent {
                     ... on File {
                       name
@@ -41,8 +43,17 @@ class CaseStudyLayout extends Component {
                     title
                     image
                     client
-                    categories
                     caption
+                    categories
+                    results {
+                      stat
+                      description
+                    }
+                    upNext
+                    references {
+                      title
+                      link
+                    }
                   }
                 }
               }
@@ -50,6 +61,9 @@ class CaseStudyLayout extends Component {
           }
         `}
         render={data => {
+          const frontmatter = data.allMdx.edges.filter(edge => {
+            return edge.node.id === this.props.pageContext.id
+          })[0].node.frontmatter;
           const caseStudies = extractCaseStudyDataFromQuery(data);
           const caseStudiesWithFeatures = caseStudies.concat(features);
           const meta = [];
@@ -83,7 +97,10 @@ class CaseStudyLayout extends Component {
                   p: ({children, ...props}) => (
                     <p className="text--gray margin-top--none margin-bottom--double">{children}</p>
                   ),
-                  img: props => <Image className="image--max-width" sizes={config.sizes.caseStudy} {...props} />
+                  img: props => <Image className="image--max-width" sizes={config.sizes.caseStudy} {...props} />,
+                  quote: Quote,
+                  divider: Divider,
+                  video: Video
                 }}
               >
                 <div className="case-study">

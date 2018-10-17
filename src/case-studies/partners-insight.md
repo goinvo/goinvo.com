@@ -19,8 +19,8 @@ references:
     link: "https://www.partners.org/Medical-Research/Current-Research-at-Partners/Default.aspx"
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
+
+
 
 # Designing an efficient IRB
 for Partners Healthcare

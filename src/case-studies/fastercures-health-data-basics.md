@@ -27,9 +27,9 @@ references:
     link: "http://www.pewinternet.org/fact-sheet/mobile/"
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
-import Video from '../components/video'
+
+
+
 
 # Engaging Patients to Understand Health Data
 for *FasterCures*

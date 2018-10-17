@@ -122,12 +122,12 @@ class IndexPage extends Component {
             // - Pass sizes to ImageBlock/Image to optimize image load
           }
           <Columns columns={2}>
-            { this.state.workItems.map((item, i) => {
+            {this.state.workItems.map((item, i) => {
               const link = item.slug ? `/work/${item.slug}` : item.link;
               const externalLink = item.slug ? false : true
 
               return (
-                <Card link={link} key={link} externalLink={externalLink} hidden={{ class: 'hidden--sm', condition: i > 1 }}>
+                <Card link={link} key={link} externalLink={externalLink} className={ i > 1 ? 'hidden--sm' : ''}>
                   <ImageBlock
                     title={item.title}
                     image={item.image}

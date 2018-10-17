@@ -66,6 +66,11 @@ class IndexPage extends Component {
         </Hero>
         <div className="max-width content-padding">
           <Divider animated className="hidden--lg" />
+          <video autoPlay playsInline muted>
+            <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'/>
+            <source src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'/>
+            HTML5 video not supported.
+          </video>
           <div className="pure-g margin-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
               <h2 className="header--xl margin--none pad-right--double">Our designs in healthcare are used every day<span className="text--serif text--primary">.</span></h2>

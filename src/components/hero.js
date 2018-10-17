@@ -26,12 +26,12 @@ class Hero extends Component {
   }
 
   renderHeroBlock = () => {
-    const { link = null, externalLink = false } = this.props;
+    const { link = null, externalLink = false, suppressNewTab = false } = this.props;
 
     if (link) {
       if (externalLink) {
         return (
-          <a href={link} target="_blank" rel="noopener noreferrer" className="hero__link">
+          <a href={link} target={suppressNewTab ? null : '_blank'} rel={suppressNewTab ? null : 'noopener noreferrer'} className="hero__link">
             { this.renderHeroMedia() }
           </a>
         )

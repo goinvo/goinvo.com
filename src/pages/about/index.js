@@ -54,6 +54,7 @@ const upNextList = [
   {
     link: "https://www.goinvo.com/features/print-big/",
     externalLink: true,
+    suppressNewTab: true,
     image: "/images/features/print-big-print-often/print-big-print-often-featured.jpg",
     title: "Print big. Print often.",
     caption: "In strategy, the pieces and parts are typically nested in different documents that do not allow everything to be seen at once. The ability to see everything at once, at anytime, is core to our approach."
@@ -176,7 +177,7 @@ const AboutPage = () => (
         <Columns columns={3}>
           { upNextList.map(item => {
             return (
-              <Card key={item.link} link={item.link} externalLink={item.externalLink}>
+              <Card key={item.link} link={item.link} externalLink={item.externalLink} suppressNewTab={item.suppressNewTab}>
                 <ImageBlock
                   title={item.title}
                   image={item.image}

@@ -53,6 +53,7 @@ class IndexPage extends Component {
         <Hero
           link="https://www.goinvo.com/features/determinants-of-health"
           externalLink="true"
+          suppressNewTab="true"
           video={heroVideoSources}
           poster="/images/homepage/doh-hero-poster.jpg"
           fallback="/images/homepage/doh-hero-fallback.jpg"
@@ -125,9 +126,10 @@ class IndexPage extends Component {
             { this.state.workItems.map((item, i) => {
               const link = item.slug ? `/work/${item.slug}` : item.link;
               const externalLink = item.slug ? false : true
+              const suppressNewTab = item.external ? false : true;
 
               return (
-                <Card link={link} key={link} externalLink={externalLink} hidden={{ class: 'hidden--sm', condition: i > 1 }}>
+                <Card link={link} key={link} externalLink={externalLink} suppressNewTab={suppressNewTab} hidden={{ class: 'hidden--sm', condition: i > 1 }}>
                   <ImageBlock
                     title={item.title}
                     image={item.image}

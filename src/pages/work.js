@@ -189,10 +189,11 @@ class WorkPage extends Component {
             <Columns columns={2}>
               { this.state.activeWorkItems.map(item => {
                 const link = item.slug ? `/work/${item.slug}` : item.link;
-                const externalLink = item.slug ? false : true
+                const externalLink = item.slug ? false : true;
+                const suppressNewTab = item.external ? false : true;
 
                 return (
-                  <Card key={link} link={link} externalLink={externalLink}>
+                  <Card key={link} link={link} externalLink={externalLink} suppressNewTab={suppressNewTab}>
                     <ImageBlock
                       title={item.title}
                       image={item.image}

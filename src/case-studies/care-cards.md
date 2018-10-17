@@ -29,14 +29,13 @@ Care Cards put you in touch with habits to improve your health, life, and well-b
 ### Results
 
 An estimated 7,000 Care Cards decks are in homes, clinics, and classes around the country. Cards have been used in presentations by Susannah Fox (while CTO of HHS), Eric Topol (of Scripps), Claudia Williams (former White House Office of Technology + former Director at HHS of HEIs), and many more.
-
 * Nancy Shute, NPR.org: [If A Picture's Worth 1,000 Words, Could It Help You Floss?](http://www.npr.org/blogs/health/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss)
 * Patient Safety & Quality Healthcare: [Health Axioms: Turning Advice into Lifestyle](http://psqh.com/news-health-axioms-turning-advice-into-lifestyle) -
 
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer, part time, across 2 years
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
-<a href="www.carecards.me" class="button button--primary button--lg margin-top--double margin-bottom--half">Get your own deck</a>
+<br/><span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer, part time, across 2 years
+<br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
+<div class="container container--justify-center"><a href="http://www.carecards.me" class="button button--primary button--lg margin-top--double margin-bottom--half ">Get your own deck</a></div>
 
 <Quote quotee="Roni Zeiger, MD" quoteeSub="former Chief Health Strategist at Google, co-founder of Smart Patients">Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.</Quote>
 

@@ -16,7 +16,7 @@ import Divider from '../components/divider'
 import Quote from '../components/quote'
 import Video from '../components/video'
 
-# Natural language processing (NLP) software for 3M
+# Natural language processing (NLP) software for hospital coding
 for 3m
 
 ### Problem
@@ -29,14 +29,14 @@ Starting with a shorter proof of concept period, GoInvo designed a comprehensive
 
 ### Results
 
-Deployed for 250+ customers, hospitals saw a 200% increase in coding efficiency and productivity.
+Memorial Hermann Hospital saw a 200% increase in coding efficiency and productivity.
 
 <span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers and 1 engineer for 15 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure
 
 <Divider />
 
-# Background
+## Background
 
 #### Glenn Tobin has a vision
 
@@ -58,7 +58,7 @@ Coders are hardcore. They rely on their coding software six days a week, from 9-
 
 <Divider />
 
-# Process
+## Process
 
 ![timeline](/images/case-studies/coderyte/coderyte-timeline.jpg)
 
@@ -87,7 +87,7 @@ Orders quickly followed.
 
 <Divider />
 
-# Going Live
+## Going Live
 
 #### Reality sets in: the first customer
 Memorial Hermann is a large not-for-profit healthcare system in Texas with 12 hospitals. They saw the potential of what CodeRyte was planning and signed up. More than being a first customer, they wanted to be a partner. That is the very best kind of customer.
@@ -150,7 +150,7 @@ CodeRyte’s executives were thrilled to be rewarded for their hard work while h
   loop
 />
 
-<Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled out customers for us</Quote>
+<Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled our customers for us.</Quote>
 
 #### P.S. the Morning After
 About two weeks after launch, CodeRyte got a frantic call from the lead manager at one of their largest customers. CodeRyte had completely stopped working in the middle of the coder’s shift. Our team was simultaneously getting a flood of emails via the app’s feedback mechanism: no patients were entering the system to be coded.
@@ -160,7 +160,7 @@ The software worked so well that the backlog of coding was passed and there was,
 
 Never in the history of this hospital system had this happened. The efficiency of the software turned the bureaucratic quagmire of massive backlogs of patient coding into a just-in-time system that required less manpower and delivered faster results.
 
-<Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">Your team kicks ass</Quote>
+<Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">Your team kicks ass!</Quote>
 
 The hospital system has since been able to change their procedure and conservatively estimates a 200% increase in efficiency in their coding workflow.
 

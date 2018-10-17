@@ -150,7 +150,7 @@ CodeRyte’s executives were thrilled to be rewarded for their hard work while h
   loop
 />
 
-<Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled out customers for us.</Quote>
+<Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled our customers for us.</Quote>
 
 #### P.S. the Morning After
 About two weeks after launch, CodeRyte got a frantic call from the lead manager at one of their largest customers. CodeRyte had completely stopped working in the middle of the coder’s shift. Our team was simultaneously getting a flood of emails via the app’s feedback mechanism: no patients were entering the system to be coded.

@@ -221,7 +221,7 @@ class IndexPage extends Component {
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2">
               <div className="pad-right--only-lg">
-                <Image src="/images/homepage/group-aug-2018.jpg" className="image--max-width" />
+                <Image src="/images/homepage/group-aug-2018-4.jpg" className="image--max-width" />
               </div>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2">

@@ -7,7 +7,7 @@ categories:
   - "precision-medicine-and-genomics"
 upNext:
   - "wuxi-nextcode-familycode"
-  - "mt-sinai-consent"
+  - "mount-sinai-consent"
   - "hgraph"
 hidden: false
 references:

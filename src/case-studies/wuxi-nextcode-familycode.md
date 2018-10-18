@@ -6,7 +6,7 @@ caption: "Shifting from a behind the scenes genomics powerhouse to a consumer-fr
 categories:
   - "precision-medicine-and-genomics"
 upNext:
-  - "mt-sinai-consent"
+  - "mount-sinai-consent"
   - "carrier-testing"
   - "3m-coderyte"
 hidden: false

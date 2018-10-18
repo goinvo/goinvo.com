@@ -7,7 +7,7 @@ categories:
   - "health-it-and-infrastructure"
 upNext:
   - "mitre-flux-notes"
-  - "mt-sinai-consent"
+  - "mount-sinai-consent"
   - "mass-snap"
 hidden: false
 references:

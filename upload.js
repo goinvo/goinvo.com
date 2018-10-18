@@ -1,9 +1,12 @@
+require('dotenv').config()
+
 const fs = require('fs');
 const path = require('path');
 const mime = require('mime-types');
-const s3SDK = require('aws-sdk/clients/s3');
-const s3 = new s3SDK();
-const bucket = 'www.goinvo.com-2018';
+const AWS = require('aws-sdk');
+const randomstring = require('randomstring');
+const s3 = new AWS.S3();
+const cloudfront = new AWS.CloudFront();
 
 const uploadFile = (filePath) => {
   fs.readFile(filePath, (err, data) => {
@@ -12,7 +15,7 @@ const uploadFile = (filePath) => {
     const s3Path = filePath.replace(__dirname + '/public/', '');
     const cacheControl = filePath.includes('public/static/') ? 'cache-control: public, max-age=31536000, immutable' : 'public, max-age=0, must-revalidate';
     const params = {
-      Bucket: bucket,
+      Bucket: process.env.GOINVO_COM_BUCKET_NAME,
       Body: '',
       Key: s3Path,
       ContentType: mime.lookup(filePath),
@@ -55,4 +58,28 @@ const uploadFromDirectory = (dir) => {
   });
 }
 
+const invalidateCloudfront = () => {
+  const reference = randomstring.generate(16);
+  const cloudfront = new AWS.CloudFront();
+  const params = {
+    DistributionId: process.env.GOINVO_COM_CLOUDFRONT_DISTRIBUTION_ID,
+    InvalidationBatch: {
+      CallerReference: reference,
+      Paths: {
+        Quantity: 1,
+        Items: [
+          '/*'
+        ]
+      }
+    }
+  };
+
+  cloudfront.createInvalidation(params, (err, data) => {
+    if (err) console.log(err, err.stack);
+    else     console.log(data);
+  });
+}
+
+
 uploadFromDirectory(path.join(__dirname + '/public/'));
+invalidateCloudfront();

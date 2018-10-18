@@ -10,7 +10,14 @@ const uploadFile = (filePath) => {
     if (err) { throw err };
 
     const s3Path = filePath.replace(__dirname + '/public/', '');
-    const params = { Bucket: bucket, Body: '', Key: s3Path, ContentType: mime.lookup(filePath) };
+    const cacheControl = filePath.includes('public/static/') ? 'cache-control: public, max-age=31536000, immutable' : 'public, max-age=0, must-revalidate';
+    const params = {
+      Bucket: bucket,
+      Body: '',
+      Key: s3Path,
+      ContentType: mime.lookup(filePath),
+      CacheControl: cacheControl
+    };
 
     const fileStream = fs.createReadStream(filePath);
     fileStream.on('error', (err) => {

@@ -1,16 +1,7 @@
 import React from 'react'
 import Chart from 'react-google-charts'
 
-/*TODO: use json to populate */
-const data = [
-  ["Determinant", "Percentage"],
-  ["Individual Behavior", 36],
-  ["Social circumstances", 24],
-  ["Genetics and Biology", 22],
-  ["Medical Care", 11],
-  ["Environment", 7]
-];
-const currentSelection = 0;
+import determinants from './visualization-data.json'
 
 const options = {
   legend: { position: "labeled" },
@@ -23,9 +14,31 @@ const options = {
   colors: ["#F9D7A7", "#B2E5E9", "#E8ED9D", "#F8CBC5", "#90EED4"]
 };
 
-class Chartdoh extends React.Component {
+class DOHChart extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.data = determinants.map(determinant => {
+      return [determinant.title, determinant.percentage]
+    })
+    this.data.unshift(["Determinant", "Percentage"]);
+  }
+
+  shouldComponentUpdate() {
+    // Meh. The component was always re-rendering, but not retriggering
+    // the 'ready' event, thus we were losing the internal
+    // chart's selection. This component is basically dumb so we shouldn't
+    // need to re-render, especially because I don't think there's an event
+    // to set the selection again.
+    return false
+  }
+
   handleSelect = ({ chartWrapper }) => {
     this.props.onSelect(chartWrapper.getChart().getSelection());
+  }
+
+  setSelection = ({ chartWrapper }) => {
+    chartWrapper.getChart().setSelection(this.props.selection)
   }
 
   render() {
@@ -34,9 +47,13 @@ class Chartdoh extends React.Component {
           chartType="PieChart"
           width="100%"
           height="400px"
-          data={data}
+          data={this.data}
           options={options}
           chartEvents={[
+            {
+              eventName: "ready",
+              callback: this.setSelection
+            },
             {
               eventName: "select",
               callback: this.handleSelect
@@ -47,4 +64,4 @@ class Chartdoh extends React.Component {
   }
 }
 
-export default Chartdoh
+export default DOHChart

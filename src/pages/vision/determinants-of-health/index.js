@@ -5,24 +5,25 @@ import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 
 import determinants from './visualization-data.json'
-import Chartdoh from './visualization.js'
+import DOHChart from './visualization.js'
 import DeterminantDetails from './determinant-details.js'
-
 
 class DeterminantsOfHealthFeature extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      chartSelection: [{ row:0, column: null }],
       selectedDeterminant: determinants[0]
     }
   }
 
   handleChartSelection = (selection) => {
-    const selectedRow = selection[0].row;
+    const selectedObj = selection[0];
 
     this.setState({
-      selectedDeterminant: determinants[selectedRow]
+      chartSelection: selectedObj,
+      selectedDeterminant: determinants[selectedObj.row]
     });
   }
 
@@ -55,7 +56,7 @@ class DeterminantsOfHealthFeature extends Component {
                 <div>
                   <h1 className="header--xl text--center margin-top--double">Tap the categories to explore</h1>
                   <div id="determinants-chart" className="margin-bottom--double margin-top--double">
-                    <Chartdoh onSelect={this.handleChartSelection}/>
+                    <DOHChart selection={this.state.chartSelection} onSelect={this.handleChartSelection}/>
                   </div>
 
                   <div className="chart-details">

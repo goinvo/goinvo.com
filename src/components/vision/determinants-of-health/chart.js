@@ -46,12 +46,12 @@ class DOHChart extends React.Component {
   }
 
   componentDidMount() {
-    this.setLegendType()
-    window.addEventListener("resize", this.setLegendType)
+    this.setChartOptions()
+    window.addEventListener("resize", this.setChartOptions)
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.setLegendType)
+    window.removeEventListener("resize", this.setChartOptions)
   }
 
   componentDidUpate() {
@@ -61,7 +61,10 @@ class DOHChart extends React.Component {
   }
 
   getLegendType = () => {
-    return window.innerWidth > 800 ? { position: "labeled" } : "none";
+    // This check is for the Gatsby build process, where window is not defined.
+    if (typeof window !== 'undefined') {
+      return window.innerWidth > 800 ? { position: "labeled" } : "none";
+    }
   }
 
   getChartOptions = () => {
@@ -69,13 +72,13 @@ class DOHChart extends React.Component {
     return {...options, ...newLegend}
   }
 
-  setLegendType = () => {
+  setChartOptions = () => {
     if (this.chart) {
       this.chart.setOptions(this.getChartOptions())
     }
   }
 
-  setSelection = ({ chartWrapper }) => {
+  initChart = ({ chartWrapper }) => {
     this.chart = chartWrapper;
     this.chart.getChart().setSelection([{ row: this.props.selectedIndex, column: null }])
   }
@@ -111,7 +114,7 @@ class DOHChart extends React.Component {
           chartEvents={[
             {
               eventName: "ready",
-              callback: this.setSelection
+              callback: this.initChart
             },
             {
               eventName: "select",

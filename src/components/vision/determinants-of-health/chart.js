@@ -1,7 +1,7 @@
 import React from 'react'
 import Chart from 'react-google-charts'
 
-import determinants from '../data/chart-data.json'
+import determinants from '../../../data/vision/determinants-of-health/chart-data.json'
 
 const options = {
   legend: { position: "labeled" },
@@ -38,7 +38,7 @@ class DOHChart extends React.Component {
   }
 
   setSelection = ({ chartWrapper }) => {
-    chartWrapper.getChart().setSelection(this.props.selection)
+    chartWrapper.getChart().setSelection([this.props.selection])
   }
 
   render() {

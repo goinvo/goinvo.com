@@ -6,26 +6,22 @@ import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 
-import determinants from './data/chart-data.json'
-import Chart from './components/chart'
-import DeterminantDetails from './components/determinant-details'
+import determinants from '../../../data/vision/determinants-of-health/chart-data.json'
+import Chart from '../../../components/vision/determinants-of-health/chart'
+import DeterminantDetails from '../../../components/vision/determinants-of-health/determinant-details'
 
 class DeterminantsOfHealthFeature extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      chartSelection: [{ row:0, column: null }],
-      selectedDeterminant: determinants[0]
+      chartSelection: { row: 0, column: null },
     }
   }
 
   handleChartSelection = (selection) => {
-    const selectedObj = selection[0];
-
     this.setState({
-      chartSelection: selectedObj,
-      selectedDeterminant: determinants[selectedObj.row]
+      chartSelection: selection[0],
     });
   }
 
@@ -62,7 +58,7 @@ class DeterminantsOfHealthFeature extends Component {
                   </div>
 
                   <div className="chart-details">
-                    <DeterminantDetails title={this.state.selectedDeterminant.title} description={this.state.selectedDeterminant.description} divisions={this.state.selectedDeterminant.divisions} />
+                    <DeterminantDetails determinant={determinants[this.state.chartSelection.row]} />
                   </div>
                 </div>
 

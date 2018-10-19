@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 class DOHDeterminantDetails extends Component {
   render() {
-    const { title, description, divisions } = this.props;
+    const { determinant } = this.props;
 
     return (
       <div>
-        <h3 className="determinant">{title}</h3>
-        <p className="description">{description}</p>
+        <h3 className="determinant">{determinant.title}</h3>
+        <p className="description">{determinant.description}</p>
         <div className="divisions">
-          {divisions.map(division => {
+          {determinant.divisions.map(division => {
             return (
               <div className="divisionSection" key={division.title}>
                 <h4 className="division">{division.title}</h4>

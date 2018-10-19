@@ -8,7 +8,14 @@ class References extends Component {
         <ol className="references">
           {this.props.references.map((ref, i) => {
             return (
-              <li key={ref.link} className="text--gray"><span id={`fn-${i + 1}`}>{ref.title}</span>: <a href={ref.link} target="_blank" rel="noopener noreferrer">{ref.link}</a></li>
+              <li key={ref.link} className="text--gray margin-bottom">
+                <span id={`fn-${i + 1}`}>{ref.title}</span>
+                {
+                  ref.link ?
+                    <span>: <a href={ref.link} target="_blank" rel="noopener noreferrer">{ref.link}</a></span>
+                  : null
+                }
+              </li>
             )
           })}
         </ol>

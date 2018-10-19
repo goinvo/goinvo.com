@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Image from '../../../components/image'
+import Divider from '../../../components/divider'
+import References from '../../../components/references'
 
 import determinants from './visualization-data.json'
 import DOHChart from './visualization.js'
@@ -49,7 +51,7 @@ class DeterminantsOfHealthFeature extends Component {
                   <div className="pure-u-1 pure-u-lg-1-5"><a href="#references" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">References</a></div>
                 </div>
 
-                <div className="divider"></div>
+                <Divider />
             </div>
 
             <div className="max-width max-width--md content-padding">
@@ -234,30 +236,67 @@ class DeterminantsOfHealthFeature extends Component {
 
               </div>
 
-              <div className="divider"></div>
+              <Divider />
 
               <div id="references">
-                 <h1 className="header--xl">References</h1>
-                 <ol className="text--grey">
-                   <li>NCHHSTP Social Determinants of Health. (2014). Retrieved March 14, 2016, from <a href=" http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html"> http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html</a></li>
-                   <li>The determinants of health. (n.d.). Retrieved March 14, 2016, from <a href=" http://www.who.int/hia/evidence/doh/en/"> http://www.who.int/hia/evidence/doh/en/</a></li>
-                   <li>Social Determinants of Health. (n.d.). Retrieved March 14, 2016, from <a href="https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health">https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health</a></li>
-                   <li>Beyond Health Care: The Role of Social Determinants in Promoting Health and Health Equity. (n.d.). Retrieved March 14, 2016, from  <a href="http://kff.org/disparities-policy/issue-brief/beyond-health-care-the-role-of-social-determinants-in-promoting-health-and-health-equity/">http://kff.org/disparities-policy/issue-brief/beyond-health-care-the-role-of-social-determinants-in-promoting-health-and-health-equity/</a></li>
-                   <li>Schroeder, S. A. (2007). We Can Do Better — Improving the Health of the American People. New England Journal of Medicine N Engl J Med,357(12), 1221-1228.</li>
-                   <li>The Relative Contribution of Multiple Determinants to Health Outcomes. (n.d.). Retrieved March 14, 2016, from <a href="http://healthaffairs.org/healthpolicybriefs/brief_pdfs/healthpolicybrief_123.pdf">http://healthaffairs.org/healthpolicybriefs/brief_pdfs/healthpolicybrief_123.pdf</a></li>
-                   <li>Capturing social and behavioral domains and measures in electronic health records: Phase 2. (2014). Washington D.C.: The National Academies Press.</li>
-                   <li>Gruszin, S., & Jorm, L. (2010, December). Public Health Classifications Project (Rep.). Retrieved March 15, 2016, from New South Wales Department of Health website: <a href="http://www.health.nsw.gov.au/hsnsw/Publications/classifications-project.pdf">http://www.health.nsw.gov.au/hsnsw/Publications/classifications-project.pdf</a></li>
-                   <li>DHHS, Public Health Service. “Ten Leading Causes of Death in the United States.” Atlanta (GA): Bureau of State Services, July 1980</li>
-                   <li>J.M.McGinnis and W.H.Foege. “Actual Causes of Death in the United States.” JAMA 270, No. 18 (1993):2207-12</li>
-                   <li>J.M.McGinnis et al, “The Case for More Active Policy Attention to Health Promotion.” Health Affairs 21, no.2 (2002):78-93</li>
-                   <li>A.Mokdad et al. “Actual Causes of Death in the United States 2000.” JAMA 291, no.10 (2004):1238-45</li>
-                   <li>G.Danaei et al, “The Preventable Cuases of Death in the United States: Comparative Risk Assessment of Dietary, Lifestyle, and Metabolic Risk Factors.” PLoS Medicine 6, no. 4 (2009):e1000058</li>
-                   <li>World Health Organization, Global Health Risks: Mortality and Burden of Disease Attributable to Selected Major Risks, Geneva: WHO, 2009</li>
-                   <li>B. Booske et al., “Different Perspectives for Assigning Weights to Determinants of Health.” County Health Rankings Working Paper. Madison (WI): University of Wisconsin Population Health Institute, 2010</li>
-                   <li>Schneiderman, N., Ironson, G., & Siegel, S. D. (2005). STRESS AND HEALTH: Psychological, Behavioral, and Biological Determinants. Annual Review of Clinical Psychology, 1, 607-628. Retrieved March 16, 2016, from <a href="http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy">http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy</a></li>
-                  </ol>
+                <References references={[
+                  {
+                    title: 'NCHHSTP Social Determinants of Health. (2014). Retrieved March 14, 2016',
+                    link: 'http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html'
+                  },
+                  {
+                    title: 'The determinants of health. (n.d.). Retrieved March 14, 2016',
+                    link: 'http://www.who.int/hia/evidence/doh/en/'
+                  },
+                  {
+                    title: 'Social Determinants of Health. (n.d.). Retrieved March 14, 2016',
+                    link: 'https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health'
+                  },
+                  {
+                    title: 'Beyond Health Care: The Role of Social Determinants in Promoting Health and Health Equity. (n.d.). Retrieved March 14, 2016',
+                    link: 'http://kff.org/disparities-policy/issue-brief/beyond-health-care-the-role-of-social-determinants-in-promoting-health-and-health-equity/'
+                  },
+                  {
+                    title: 'Schroeder, S. A. (2007). We Can Do Better — Improving the Health of the American People. New England Journal of Medicine N Engl J Med,357(12), 1221-1228.'
+                  },
+                  {
+                    title: 'The Relative Contribution of Multiple Determinants to Health Outcomes. (n.d.). Retrieved March 14, 2016',
+                    link: 'http://healthaffairs.org/healthpolicybriefs/brief_pdfs/healthpolicybrief_123.pdf'
+                  },
+                  {
+                    title: 'Capturing social and behavioral domains and measures in electronic health records: Phase 2. (2014). Washington D.C.: The National Academies Press.'
+                  },
+                  {
+                    title: 'Gruszin, S., & Jorm, L. (2010, December). Public Health Classifications Project (Rep.). Retrieved March 15, 2016, from New South Wales Department of Health website',
+                    link: 'http://www.health.nsw.gov.au/hsnsw/Publications/classifications-project.pdf'
+                  },
+                  {
+                    title: 'DHHS, Public Health Service. “Ten Leading Causes of Death in the United States.” Atlanta (GA): Bureau of State Services, July 1980'
+                  },
+                  {
+                    title: 'J.M.McGinnis and W.H.Foege. “Actual Causes of Death in the United States.” JAMA 270, No. 18 (1993):2207-12'
+                  },
+                  {
+                    title: 'J.M.McGinnis et al, “The Case for More Active Policy Attention to Health Promotion.” Health Affairs 21, no.2 (2002):78-93'
+                  },
+                  {
+                    title: 'A.Mokdad et al. “Actual Causes of Death in the United States 2000.” JAMA 291, no.10 (2004):1238-45'
+                  },
+                  {
+                    title: 'G.Danaei et al, “The Preventable Cuases of Death in the United States: Comparative Risk Assessment of Dietary, Lifestyle, and Metabolic Risk Factors.” PLoS Medicine 6, no. 4 (2009):e1000058'
+                  },
+                  {
+                    title: 'World Health Organization, Global Health Risks: Mortality and Burden of Disease Attributable to Selected Major Risks, Geneva: WHO, 2009'
+                  },
+                  {
+                    title: 'B. Booske et al., “Different Perspectives for Assigning Weights to Determinants of Health.” County Health Rankings Working Paper. Madison (WI): University of Wisconsin Population Health Institute, 2010'
+                  },
+                  {
+                    title: 'Schneiderman, N., Ironson, G., & Siegel, S. D. (2005). STRESS AND HEALTH: Psychological, Behavioral, and Biological Determinants. Annual Review of Clinical Psychology, 1, 607-628. Retrieved March 16, 2016',
+                    link: 'http://www.annualreviews.org/doi/abs/10.1146/annurev.clinpsy.1.102803.144141?url_ver=Z39.88-2003&rfr_dat=cr_pub=pubmed&rfr_id=ori:rid:crossref.org&journalCode=clinpsy'
+                  }
+                ]}/>
               </div>
-
             </div>
           </div>
 

@@ -15,13 +15,15 @@ class DeterminantsOfHealthFeature extends Component {
     super(props);
 
     this.state = {
-      chartSelection: { row: 0, column: null },
+      selectedDeterminantIndex: 0,
+      selectedDeterminant: determinants[0]
     }
   }
 
-  handleChartSelection = (selection) => {
+  handleChartSelection = (index) => {
     this.setState({
-      chartSelection: selection[0],
+      selectedDeterminantIndex: index,
+      selectedDeterminant: determinants[index]
     });
   }
 
@@ -54,11 +56,11 @@ class DeterminantsOfHealthFeature extends Component {
                 <div>
                   <h1 className="header--xl text--center margin-top--double">Tap the categories to explore</h1>
                   <div id="determinants-chart" className="margin-bottom--double margin-top--double">
-                    <Chart selection={this.state.chartSelection} onSelect={this.handleChartSelection}/>
+                    <Chart selectedIndex={this.state.selectedDeterminantIndex} onSelect={this.handleChartSelection}/>
                   </div>
 
                   <div className="chart-details">
-                    <DeterminantDetails determinant={determinants[this.state.chartSelection.row]} />
+                    <DeterminantDetails determinant={this.state.selectedDeterminant} />
                   </div>
                 </div>
 

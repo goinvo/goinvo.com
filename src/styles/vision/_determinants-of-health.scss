@@ -48,3 +48,17 @@
     }
   }
 }
+
+.doh {
+  &__chart-legend {
+    display: flex;
+
+    li {
+      flex: 1;
+    }
+  }
+
+  &__determinant-button {
+    width: 100%;
+  }
+}

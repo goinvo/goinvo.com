@@ -1,5 +1,6 @@
 [
   {
+    "id" : "individual-behavior",
     "title" : "Individual Behavior",
     "percentage" : 36,
     "description" : "Smoking habits, sleep and exercise patterns, sexual activity, and mood levels are all examples of individual behavior, which is a critical determinant for our physical health, mental health, and overall well being. Positive changes to our individual behavior can reduce the risk for developing a variety of diseases, and many public health interventions have already focused on altering dangerous behaviors.",
@@ -44,6 +45,7 @@
   },
 
   {
+    "id" : "social-circumstances",
     "title" : "Social Circumstances",
     "percentage" : 24,
     "description" : "Social circumstances are factors that reflect the social environment that we have lived and developed in. An individual's social status, early childhood development and culture impacts their social development and personal health. Poor social circumstances such as discrimination, concentrated poverty, and low education level often result in poor health outcomes and a lower quality-of-life.",
@@ -104,6 +106,7 @@
   },
 
   {
+    "id" : "genetics-and-biology",
     "title" : "Genetics and Biology",
     "percentage" : 22,
     "description" : "While they may be thought of as the primary components of health, genetic makeup, physical body structure, and bodily function in fact determine only about a fifth of our measurable health. In the future, genome sequencing will become more important for predicting and preparing for future health outcomes, but it is not feasible to sequence everyone's genome at this point in time. Some biological and genetic factors that have varying impacts on different segments of the population, and so variance must be considered when applying the determinants of health. The effects of aging and inherited conditions (sickle-cell anemia, cystic fibrosis, etc.) are examples of factors with varying levels of impact on the population.",
@@ -144,6 +147,7 @@
   },
 
   {
+    "id" : "medical-care",
     "title" : "Medical Care",
     "percentage" : 11,
     "description" : "Medical care are factors correlated with care by a trained provider, such as provider availability and quality of healthcare. However, often we fail to realize that medical care only contributes to a small portion of our overall health. The most prevalent issue in medical care today is simply the lack of access to health services, as well as a decreasing level of health literacy in the general population. This combination can be very dangerous since the high cost of care and lack of knowledge may cause patients to delay seeking medical treatment.",
@@ -174,6 +178,7 @@
   },
 
   {
+    "id" : "environment",
     "title" : "Environment",
     "percentage" : 7,
     "description" : "The environment refers to the natural and human environments we live in and includes everything from the infrastructure of our cities to the quality of the air we breathe. The physical environment is an important factor that contributes to our health, but has the smallest impact out of all the determinants. However it can still have a critical effect on our overall health. For example, increased levels of pollution can increase asthma in a given area, while physical barriers such as buildings without ramp access or elevators can have a negative impact on people with disabilities.",
@@ -210,13 +215,6 @@
       {
         "title" : "Allergens"
       }
-    ]
-  },
-  {
-    "title": "The Determinants",
-    "percentage": 0,
-    "description" : "Five separate categories are used to view how different aspects of our lives affect our health. From the order of greatest impact to least they are: individual behavior, social circumstances, genetics and biology, medical care, and physical environment.",
-    "divisions" : [
     ]
   }
 ]

@@ -105,7 +105,7 @@ class CaseStudyLayout extends Component {
                         { frontmatter.upNext.map(id => {
                           const nextItem = caseStudiesWithFeatures.find(item => item.slug === id || item.id === id);
                           const nextItemLink = nextItem.slug ? `/work/${nextItem.slug}` : nextItem.link;
-                          const externalLink = nextItem.slug ? false : true;
+                          const externalLink = nextItem.slug ? false : nextItem.link.includes('/vision/') ? false : true;
                           const suppressNewTab = nextItem.external ? false : true;
 
                           return (

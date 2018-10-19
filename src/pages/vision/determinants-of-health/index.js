@@ -6,9 +6,9 @@ import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 
-import determinants from './visualization-data.json'
-import DOHChart from './visualization.js'
-import DeterminantDetails from './determinant-details.js'
+import determinants from './data/chart-data.json'
+import Chart from './components/chart'
+import DeterminantDetails from './components/determinant-details'
 
 class DeterminantsOfHealthFeature extends Component {
   constructor(props) {
@@ -58,7 +58,7 @@ class DeterminantsOfHealthFeature extends Component {
                 <div>
                   <h1 className="header--xl text--center margin-top--double">Tap the categories to explore</h1>
                   <div id="determinants-chart" className="margin-bottom--double margin-top--double">
-                    <DOHChart selection={this.state.chartSelection} onSelect={this.handleChartSelection}/>
+                    <Chart selection={this.state.chartSelection} onSelect={this.handleChartSelection}/>
                   </div>
 
                   <div className="chart-details">

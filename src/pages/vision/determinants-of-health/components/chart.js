@@ -1,7 +1,7 @@
 import React from 'react'
 import Chart from 'react-google-charts'
 
-import determinants from './visualization-data.json'
+import determinants from '../data/chart-data.json'
 
 const options = {
   legend: { position: "labeled" },

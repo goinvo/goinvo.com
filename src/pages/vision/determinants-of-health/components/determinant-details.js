@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class DeterminantDetails extends Component {
+class DOHDeterminantDetails extends Component {
   render() {
     const { title, description, divisions } = this.props;
 
@@ -33,4 +33,4 @@ class DeterminantDetails extends Component {
   }
 }
 
-export default DeterminantDetails
+export default DOHDeterminantDetails

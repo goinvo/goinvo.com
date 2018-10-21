@@ -83,6 +83,9 @@ class CaseStudyLayout extends Component {
                   p: ({children, ...props}) => (
                     <p className="text--gray margin-top--none margin-bottom--double">{children}</p>
                   ),
+                  ul:({children, ...props}) => (
+                    <ul className="ul margin-top--none margin-bottom--double">{children}</ul>
+                  ),
                   img: props => <Image className="image--max-width" sizes={config.sizes.caseStudy} {...props} />
                 }}
               >

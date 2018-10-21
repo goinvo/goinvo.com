@@ -1,10 +1,11 @@
 .ul {
   list-style-position: outside;
   list-style-type: none;
-  padding: 0;
+  list-style-image: url('../assets/images/bullet.svg');
+  padding-left: 21px;
 
   @include mq($from: large) {
-    list-style-image: url('../assets/images/bullet.svg');
+    padding-left: 0;
   }
 }
 

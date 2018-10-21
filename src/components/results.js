@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import Divider from './divider'
 
 class Results extends Component {
   render() {
     return (
       <div className="results pad-top pad-bottom--double">
         <div className="max-width content-padding">
+          <div className="max-width max-width--md">
+            <Divider />
+          </div>
           <h2 className="header--lg text--center margin-bottom--half">Results</h2>
           <div className="pure-g">
             {this.props.stats.map(stat => {

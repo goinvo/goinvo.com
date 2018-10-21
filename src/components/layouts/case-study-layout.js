@@ -93,7 +93,6 @@ class CaseStudyLayout extends Component {
                   <Hero image={frontmatter.image} />
                   <div className="max-width max-width--md content-padding">
                     {this.props.children}
-                    <Divider />
                   </div>
                   {
                     frontmatter.results ?

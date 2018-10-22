@@ -56,6 +56,12 @@
     li {
       flex: 1;
     }
+
+    img {
+      display: block;
+      max-width: 60px;
+      margin: 0 auto;
+    }
   }
 
   &__determinant-button {

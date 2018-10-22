@@ -94,14 +94,14 @@ const ServicesPage = () => (
         Change the market<span className="text--serif text--primary">.</span>
       </h1>
     </Hero>
-    <div className="max-width content-padding pad-vertical--double">
+    <div className="max-width content-padding pad-vertical--double--only-lg">
       <div className="equal-height-rows">
         {services.map((service, i) => {
           return (
             <div key={service.title} className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double">
+                  <div className="pad-vertical--double--only-lg">
                     <h4 className="header--sm margin-bottom--none">{service.title}</h4>
                     <hr className="hr hr--thick" style={{ backgroundColor: service.color }} />
                     <p className="text--gray">
@@ -118,7 +118,7 @@ const ServicesPage = () => (
               </div>
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-left--only-lg">
-                  <div className="pad-vertical--double">
+                  <div className="pad-bottom--double pad-top--double--only-lg">
                     <Image src={service.image} sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} className="image--max-width" />
                   </div>
                 </div>
@@ -134,7 +134,7 @@ const ServicesPage = () => (
     <div className="max-width content-padding pad-vertical--double margin-bottom--double">
       <h3 className="header--md">Approach</h3>
       <div className="pure-g pad-bottom--double">
-        <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double">
+        <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
           <IconHealthcare className="icon--wide icon--secondary" />
           <h4 className="header--sm margin-top--none margin-bottom--half">We're focused on healthcare.</h4>
           <p className="text--gray margin-top--half">
@@ -142,7 +142,7 @@ const ServicesPage = () => (
           </p>
           <Link to="/work/">View all sectors</Link>
         </div>
-        <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+        <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
           <IconVision className="icon--wide icon--secondary" />
           <h4 className="header--sm margin-top--none margin-bottom--half">We'll help you envision the future.</h4>
           <p className="text--gray margin-top--half">

@@ -65,7 +65,7 @@ class IndexPage extends Component {
             healthcare<span className="text--serif text--primary">.</span>
           </h1>
         </Hero>
-        <div className="max-width content-padding pad-vertical--double">
+        <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
@@ -103,7 +103,7 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--gray margin-vertical--double pad-vertical--double">
+        <div className="background--gray  pad-vertical--double">
           <div className="max-width content-padding">
             <h3 className="header--md" style={{ marginTop: 0 }}>We've worked with...</h3>
             <ClientLogos />
@@ -179,7 +179,7 @@ class IndexPage extends Component {
             </ImageBlock>
           </Columns>
         </div>
-        <div className="background--blue pad-vertical--quad">
+        <div className="background--blue pad-vertical--quad--only-lg">
           <div className="max-width content-padding">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">

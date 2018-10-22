@@ -120,7 +120,7 @@ class VisionPage extends Component {
         </Hero>
         <div className="background--gray">
           <div className="max-width content-padding">
-            <div className="pure-g pad-vertical--quad">
+            <div className="pure-g pad-vertical pad-vertical--quad--only-lg">
               <div className="pure-u-1 pure-u-lg-1-3">
                 <h2 className="header--lg margin--none pad-right--double">Our design and analysis has been featured in<span className="text--serif text--primary">...</span></h2>
               </div>
@@ -166,7 +166,7 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="max-width content-padding pad-vertical--double">
+        <div className="max-width content-padding pad-vertical--double--only-lg">
           <h3 className="header--md pad-vertical--double">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
@@ -193,7 +193,7 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--blue pad-vertical--quad">
+        <div className="background--blue pad-vertical pad-vertical--quad--only-lg">
           <div className="max-width content-padding">
             <h3 className="header--md pad-bottom--double">Most recent features</h3>
             <Columns columns={3}>
@@ -271,7 +271,7 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--blue pad-vertical--quad">
+        <div className="background--blue pad-vertical--quad--only-lg">
           <div className="max-width content-padding">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">

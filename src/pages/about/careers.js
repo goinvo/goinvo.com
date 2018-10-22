@@ -91,7 +91,7 @@ class CareersPage extends Component {
             </div>
           </div>
         </BackgroundImage>
-        <div className="max-width content-padding pad-vertical--quad">
+        <div className="max-width content-padding pad-vertical--quad--only-lg">
           <Columns columns={3}>
             <ImageBlock key={"1"} image="/images/about/careers/group-lunch.jpg" sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth} title="Break Bread" caption="We cook for one another and share meals together. Cooking and eating as a tribe makes us a closer, better tribe."/>
             <ImageBlock key={"2"} image="/images/about/careers/7-years-beards.jpg" sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth} title="Work & Play" caption="Design can be a grind. So is Life. Plan yours as you see fit. We don’t track vacation or sick days. Just be responsible."/>

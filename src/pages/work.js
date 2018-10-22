@@ -222,7 +222,7 @@ class WorkPage extends Component {
           <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
         </GradientImageColumns>
         <div className="background--blue">
-          <div className="max-width content-padding pad-vertical--quad pad-top--crazy">
+          <div className="max-width content-padding pad-vertical pad-vertical--quad--only-lg">
             <h4 className="header--md">Up next</h4>
             <Columns columns={3}>
               { upNextList.map(item => {

@@ -35,14 +35,14 @@ class OpenOfficeHoursPage extends Component {
         </Hero>
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
-            <div className="max-width--half-left content-padding pad-vertical--double">
+            <div className="max-width--half-left content-padding pad-bottom--double pad-vertical--double--only-lg">
               <h2 className="header--lg">Open office hours are most Thursdays, 4-6pm</h2>
               <p className="text--gray">Our studio is open for anyone seeking design advice, career advice, or a chat with our team.</p>
               <a href="#calendly-open-office-hours" className="button button--primary button--lg">Choose a time to visit</a>
             </div>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 background--blue">
-            <div className="max-width--half-right content-padding pad-vertical--double">
+            <div className="max-width--half-right content-padding pad-vertical--double--only-lg">
               <div className="pad-vertical--double">
                 <a
                   href="https://www.google.com/maps/place/661+Massachusetts+Ave,+Arlington,+MA+02476/@42.4161195,-71.1563006,17z/"

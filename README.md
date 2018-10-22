@@ -89,7 +89,7 @@ Content images are managed with Dropbox and should not be added here. But now th
 ### Preparing your images
 **TODO:** Sharon to add details on picking proper images for the site.
 
-Export your image from Photoshop or similar with the 'for web' option. Use progressive JPEG filetype with 'High' quality setting (defaults to 'Quality: 60'). Ensure the image is 4000px wide. If you need the alpha channel, PNG format can be used.
+Export your image from Photoshop or similar with the 'for web' option. Use progressive JPEG filetype with 'High' quality setting (defaults to 'Quality: 60'). Ensure the image is 2000px wide. If you need the alpha channel, PNG format can be used.
 
 ### Adding images through Dropbox
 All the beautiful images you see throughout this site of our work, products, studio, and studioites are managed on our Dropbox account. Naturally you'll need access to our Dropbox account. Images for the website are stored in the `Graphics/goinvo.com/` folder.

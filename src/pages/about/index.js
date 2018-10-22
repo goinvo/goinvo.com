@@ -152,7 +152,7 @@ const AboutPage = () => (
         </ul>
       </div>
     </div>
-    <div className="max-width content-padding  pad-bottom--double pad-vertical--quad--only-lg">
+    <div className="max-width content-padding pad-bottom--double pad-vertical--quad--only-lg">
       <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
           <div className="pad-left--only-lg">

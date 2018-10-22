@@ -65,7 +65,7 @@ class IndexPage extends Component {
             healthcare<span className="text--serif text--primary">.</span>
           </h1>
         </Hero>
-        <div className="max-width content-padding">
+        <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
@@ -103,18 +103,18 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--gray pad-vertical--double">
+        <div className="background--gray  pad-vertical--double">
           <div className="max-width content-padding">
             <h3 className="header--md" style={{ marginTop: 0 }}>We've worked with...</h3>
             <ClientLogos />
           </div>
         </div>
-        <div className="max-width content-padding">
-          <div className="pure-g margin-vertical--double">
+        <div className="max-width content-padding pad-bottom--double">
+          <div className="pure-g margin-vertical--double pad-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
               <h2 className="header--xl margin--none pad-right--double">Our expertise in healthcare covers<span className="text--serif text--primary">...</span></h2>
             </div>
-            <div className="pure-u-1 pure-u-lg-2-3 pad-top">
+            <div className="pure-u-1 pure-u-lg-2-3">
               <CategoriesList columns={2} />
             </div>
           </div>
@@ -148,7 +148,7 @@ class IndexPage extends Component {
         <Quote background="gray" quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">
           The GoInvo studio is one of the most talented groups of designers I have ever met in the health care space. Not only are their ideas, designs, and graphics remarkable, but I haven’t yet figured out how they know so much about medicine and its future.
         </Quote>
-        <div className="max-width content-padding">
+        <div className="max-width content-padding pad-bottom--double">
           <div className="container container--justify-center margin-vertical">
             <h2 className="header--xl">See the future<span className="text--serif text--primary">.</span></h2>
           </div>
@@ -179,7 +179,7 @@ class IndexPage extends Component {
             </ImageBlock>
           </Columns>
         </div>
-        <div className="background--blue pad-vertical--double">
+        <div className="background--blue pad-vertical--quad--only-lg">
           <div className="max-width content-padding">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
@@ -211,13 +211,13 @@ class IndexPage extends Component {
                   <a href="/services/">Learn more about our services</a>
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-1-2">
+              <div className="pure-u-1 pure-u-lg-1-2 margin-vertical">
                 <HubspotForm formId={config.hubspotContactFormId} title="Get in touch" />
               </div>
             </div>
           </div>
         </div>
-        <div className="max-width content-padding pad-vertical--double">
+        <div className="max-width content-padding pad-vertical--quad">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2">
               <div className="pad-right--only-lg">

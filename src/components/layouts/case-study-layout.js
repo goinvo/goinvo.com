@@ -69,10 +69,10 @@ class CaseStudyLayout extends Component {
               <MDXProvider
                 components={{
                   h1: ({children, ...props}) => (
-                    <h1 className="header--xl margin-bottom--half" {...props}>{children}</h1>
+                    <h1 className="header--xl margin-top--double margin-bottom--half" {...props}>{children}</h1>
                   ),
                   h2: ({children, ...props}) => (
-                    <h2 className="header--lg text--center" {...props}>{children}</h2>
+                    <h2 className="header--lg margin-top--double text--center" {...props}>{children}</h2>
                   ),
                   h3: ({children, ...props}) => (
                     <h3 className="header--md margin-bottom--half" {...props}>{children}</h3>
@@ -99,7 +99,7 @@ class CaseStudyLayout extends Component {
                       <Results stats={frontmatter.results} />
                     : null
                   }
-                  <div className="background--blue pad-vertical--double">
+                  <div className="background--blue pad-vertical--double pad-bottom--quad">
                     <div className="max-width content-padding">
                       <h3 className="header--md">Up next</h3>
                       <Columns columns={3}>

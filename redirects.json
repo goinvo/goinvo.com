@@ -80,6 +80,9 @@
 
   "process/index.html": "/about/",
 
+  "thankyou/index.html": "/thank-you/",
+  "thankyou/index.html#career": "/thank-you/#career",
+
   "category/events/index.html": "http://yes.goinvo.com/articles/topic/events",
   "category/analysis/index.html": "http://yes.goinvo.com/articles/topic/analysis",
   "category/design/index.html": "http://yes.goinvo.com/articles/topic/design",

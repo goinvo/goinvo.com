@@ -189,7 +189,7 @@ class WorkPage extends Component {
             <Columns columns={2}>
               { this.state.activeWorkItems.map(item => {
                 const link = item.slug ? `/work/${item.slug}` : item.link;
-                const externalLink = item.slug ? false : true;
+                const externalLink = item.slug ? false : item.link.includes('/vision/') ? false : true;
                 const suppressNewTab = item.external ? false : true;
 
                 return (

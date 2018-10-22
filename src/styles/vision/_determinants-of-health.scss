@@ -1,0 +1,53 @@
+.determinants-of-health {
+  .poster {
+    border: 15px #FFEEE4 solid;
+  }
+
+  .author {
+    .authorImg {
+      padding-top: 20px;
+    }
+  }
+
+  .divisions {
+    display: block;
+    box-sizing: border-box;
+    column-count: 2;
+    column-gap: 0px;
+    column-fill: balance;
+    margin: 30px 0;
+
+    h4 {
+      margin: 0 0 5px 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .divisionSection {
+      margin-bottom: 30px;
+      break-inside: avoid-column;
+    }
+  }
+}
+
+.doh {
+  &__chart-legend {
+    display: flex;
+
+    li {
+      flex: 1;
+    }
+
+    img {
+      display: block;
+      max-width: 60px;
+      margin: 0 auto;
+    }
+  }
+
+  &__determinant-button {
+    width: 100%;
+  }
+}

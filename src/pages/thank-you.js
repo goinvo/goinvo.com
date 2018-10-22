@@ -10,7 +10,7 @@ class ThankYouPage extends Component {
     super(props);
 
     let career = false;
-    if (document.URL && document.URL.indexOf("#career") >= 0) {
+    if ((typeof document !== "undefined") && document.URL && document.URL.indexOf("#career") >= 0) {
       career = true
     }
 

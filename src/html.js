@@ -12,6 +12,15 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10273473-2"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-10273473-2');
+            gtag('config', 'AW-973476681');
+          </script>
           <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/356419.js"></script>
           <script type="text/javascript" dangerouslySetInnerHTML= {{ __html: `
             window._chatlio = window._chatlio||[];

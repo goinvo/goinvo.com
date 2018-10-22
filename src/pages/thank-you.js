@@ -15,20 +15,25 @@ class ThankYouPage extends Component {
     }
 
     this.state = {
-      message: career ? "Thank you for appyling to a position with us. We will get back to you shortly." : "Thank you for contacting us. We will get back to you as soon as possible."
+      message: career ? "Thank you for appyling." : "Thank you for contacting us."
     }
   }
 
   render() {
     return (
       <Layout>
-        <Helmet
-          title="GoInvo | Thank you"
-        />
+        <Helmet title="GoInvo | Thank you">
+          <script type="text-javascript">
+            {`gtag('event', 'conversion', {'send_to': 'AW-973476681/oygPCN6t2W4QyaaY0AM'});`}
+          </script>
+        </Helmet>
         <Hero image="/images/contact/studio.jpg"></Hero>
         <div className="background--blue pad-vertical--double">
           <div className="max-width max-width--sm content-padding">
-            <h1 className="header--xl">{this.state.message}</h1>
+            <h1 className="header--xl">
+              {this.state.message}<br/>
+              We will get back to you within 2 business hours.
+            </h1>
           </div>
           <noscript>
             <div style={{ display: 'inline' }}>
@@ -42,14 +47,3 @@ class ThankYouPage extends Component {
 }
 
 export default ThankYouPage
-
-// %script{:type => "text/javascript"}
-// /* <![CDATA[ */
-// var google_conversion_id = 973476681;
-// var google_conversion_language = "en";
-// var google_conversion_format = "3";
-// var google_conversion_color = "ffffff";
-// var google_conversion_label = "oygPCN6t2W4QyaaY0AM";
-// var google_remarketing_only = false;
-// /* ]]> */
-// %script{:type => "text/javascript", :src => "//www.googleadservices.com/pagead/conversion.js"}

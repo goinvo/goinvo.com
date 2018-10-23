@@ -38,12 +38,14 @@
   "work/shutterfly-studio-photo-management-ui-design/index.html": "/work/",
   "work/lithium-social-crm-ui-design/index.html": "/work/",
   "work/nomee-social-network-aggregator-ui-design/index.html": "/work/",
+  "work/affinnova/index.html": "/work/",
+  "work/dnc/index.html": "/work/",
 
   "work/3m/index.html": "/work/3m-coderyte/",
   "work/personalgenomeproject/index.html": "/work/personal-genome-project-vision/",
   "work/personal-genome-project-open-humans/index.html": "/work/personal-genome-project-vision/",
-  "work/numera/index.html": "/work/numera-social-health/",
-  "work/measured-health-social-fitness-app-design/index.html": "/work/numera-social-health/",
+  "work/numera/index.html": "/work/",
+  "work/measured-health-social-fitness-app-design/index.html": "/work/",
   "work/3m-natural-language-processing-application/index.html": "/work/3m-coderyte/",
   "work/hgraph-dares-to-revolutionize-health-and-healthcare-with-big-data-analytics/index.html": "/work/hgraph/",
   "work/mt-sinai-consent/index.html": "/work/mount-sinai-consent/",
@@ -53,12 +55,15 @@
   "healthcare/infobionic/index.html": "/work/infobionic-heart-monitoring/",
   "healthcare/inspired-ehrs/index.html": "/work/inspired-ehrs/",
   "healthcare/mount-sinai/index.html": "/work/mount-sinai-consent/",
-  "healthcare/numera/index.html": "/work/numera-social-health/",
+  "healthcare/numera/index.html": "/work/",
   "healthcare/partners-gene-insight/index.html": "/work/partners-geneinsight/",
   "healthcare/personal-genome-project/index.html": "/work/personal-genome-project-vision/",
   "healthcare/snap/index.html": "/work/mass-snap/",
   "healthcare/tabeeb/index.html": "/work/tabeeb-diagnostics/",
   "healthcare/wuxi/index.html": "/work/wuxi-nextcode-familycode/",
+  "healthcare/diabetes/index.html": "/work/",
+  "healthcare/segterra/index.html": "/work/",
+  "healthcare/enterprise/index.html": "/work/",
 
   "enterprise/dataxu/index.html": "/work/",
   "enterprise/dnc/index.html": "/work/",
@@ -82,6 +87,11 @@
 
   "thankyou/index.html": "/thank-you/",
   "thankyou/index.html#career": "/thank-you/#career",
+
+  "images/features/careplans/CarePlans_Whitepaper_Involution_Studios.pdf": "/old/images/features/careplans/CarePlans_Whitepaper_Involution_Studios.pdf",
+  "images/features/zika/understanding_zika.pdf": "/old/images/features/zika/understanding_zika.pdf",
+
+  "index.php": "/",
 
   "category/events/index.html": "http://yes.goinvo.com/articles/topic/events",
   "category/analysis/index.html": "http://yes.goinvo.com/articles/topic/analysis",
@@ -311,5 +321,19 @@
   "oscon-14-sneak-peek-involution-interview-on-opensource-com": "http://yes.goinvo.com/articles/oscon-14-sneak-peek-involution-interview-on-opensource-com",
   "africa-the-next-frontier/comment-page-1": "http://yes.goinvo.com/articles/africa-the-next-frontier",
   "techtalks/index.html": "http://yes.goinvo.com/articles/around-the-studio-tech-talks",
-  "car-sharing-comic-book-art-and-intellectual-jazz/comment-page-1/index.html": "http://yes.goinvo.com/articles/car-sharing-comic-book-art-and-intellectual-jazz"
+  "car-sharing-comic-book-art-and-intellectual-jazz/comment-page-1/index.html": "http://yes.goinvo.com/articles/car-sharing-comic-book-art-and-intellectual-jazz",
+  "boston-is-a-hub-of-marketing-software-the-next-big-tech-sector/index.html": "https://yes.goinvo.com/articles/boston-is-a-hub-of-marketing-software-the-next-big-tech-sector",
+  "involution%E2%80%99s-arlington-visual-budget-wins-mma-innovation-award/index.html": "https://yes.goinvo.com/articles/involution%E2%80%99s-arlington-visual-budget-wins-mma-innovation-award",
+  "what-the-ipad-retina-display-means-for-designers/index.html": "https://yes.goinvo.com/articles/what-the-ipad-retina-display-means-for-designers",
+  "involution-principal-discusses-design-for-emerging-technology-on-oreilly-radar-podcast/index.html": "https://yes.goinvo.com/articles/involution-principal-discusses-design-for-emerging-technology-on-oreilly-radar-podcast",
+  "blog/2013/03/helping-hires-excel/index.html": "/",
+  "blog/2013/03/helping-hires-excel/index.html": "/",
+  "blog/2012/07/applying-facio-behavioural-part-1-self-satisfaction-2/index.html": "/",
+  "blog/2012/07/on-thinking-and-feeling/index.html": "/",
+  "blog/2012/08/applying-facio-behavioural-part-3-behavioural-gap-2/index.html": "/",
+  "blog/2013/06/transparency-real-and-contrived/index.html": "/",
+  "blog/2012/11/being-mindful-and-present/index.html": "/",
+  "blog/2012/10/living-is-growing/index.html": "/",
+  "blog/2013/01/getting-a-better-start-introduction/index.html": "/",
+  "blog/2012/11/virtues-of-friction/index.html": "/"
 }

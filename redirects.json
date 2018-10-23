@@ -91,7 +91,7 @@
   "images/features/careplans/CarePlans_Whitepaper_Involution_Studios.pdf": "/old/images/features/careplans/CarePlans_Whitepaper_Involution_Studios.pdf",
   "images/features/zika/understanding_zika.pdf": "/old/images/features/zika/understanding_zika.pdf",
 
-  "index.php": "/",
+  "index.php/index.html": "/",
 
   "category/events/index.html": "http://yes.goinvo.com/articles/topic/events",
   "category/analysis/index.html": "http://yes.goinvo.com/articles/topic/analysis",
@@ -324,6 +324,7 @@
   "car-sharing-comic-book-art-and-intellectual-jazz/comment-page-1/index.html": "http://yes.goinvo.com/articles/car-sharing-comic-book-art-and-intellectual-jazz",
   "boston-is-a-hub-of-marketing-software-the-next-big-tech-sector/index.html": "https://yes.goinvo.com/articles/boston-is-a-hub-of-marketing-software-the-next-big-tech-sector",
   "involution%E2%80%99s-arlington-visual-budget-wins-mma-innovation-award/index.html": "https://yes.goinvo.com/articles/involution%E2%80%99s-arlington-visual-budget-wins-mma-innovation-award",
+  "involution’s-arlington-visual-budget-wins-mma-innovation-award/index.html": "https://yes.goinvo.com/articles/involution%E2%80%99s-arlington-visual-budget-wins-mma-innovation-award",
   "what-the-ipad-retina-display-means-for-designers/index.html": "https://yes.goinvo.com/articles/what-the-ipad-retina-display-means-for-designers",
   "involution-principal-discusses-design-for-emerging-technology-on-oreilly-radar-podcast/index.html": "https://yes.goinvo.com/articles/involution-principal-discusses-design-for-emerging-technology-on-oreilly-radar-podcast",
   "blog/2013/03/helping-hires-excel/index.html": "/",

@@ -1,6 +1,6 @@
 ---
 title: "Health Data Basics"
-image: "/images/case-studies/fastercures/health-data-basics/health-data-basics_hero.jpg"
+image: "/images/case-studies/fastercures/health-data-basics/health-data-basics-hero.jpg"
 client: "FasterCures"
 caption: "Open source designs, and assets to educate patients on health data."
 categories:
@@ -64,7 +64,7 @@ GoInvo and FasterCures surveyed approximately **700 patients and caretakers** an
 #### Fail Fast & Early
 We began by generating as many concepts as possible as quickly as possible. In a workshop with our *FasterCures* partners, we sketched our as many ideas in rapid fire. Later we took those ideas, adding several new ones, sketching them out in more detail with a short description, environment, audience reached, and analysis of scalability and longevity, categorizing.
 
-![decision chart](/images/case-studies/fastercures/health-data-basics/Health-data-basics-decision-chart.jpg)
+![decision chart](/images/case-studies/fastercures/health-data-basics/health-data-basics-decision-chart.jpg)
 
 #### Prioritize rigorously
 To narrow our 30 concepts, we scored each in terms of reach, educational impact, scalability, and others. Together with our partners at *FasterCures* and a panel of patient organization stakeholders, we weighed these factors against project goals to identify the right course of action.
@@ -76,7 +76,7 @@ Initially, two concepts emerged as contenders to educate on health data &mdash;o
 
 ## Insights
 
-![sources of health data](/images/case-studies/fastercures/health-data-basics/Health-data-basics-datasources.jpg)
+![sources of health data](/images/case-studies/fastercures/health-data-basics/health-data-basics-datasources2.jpg)
 
 #### Integrate Social Determinants of Health
 Before this project, a definition of health data didn’t exist, or even a consensus by experts on what health data included. The most common notion of health data needed to be expanded to go beyond medical records and devices and include the social, environmental, and behavioral determinants of health[^1].

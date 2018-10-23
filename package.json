@@ -29,7 +29,8 @@
     "rework": "^1.0.1",
     "rework-pure-grids": "^1.0.0",
     "sass-mq": "^5.0.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "smoothscroll-polyfill": "^0.4.3"
   },
   "scripts": {
     "rework-css": "node ./src/rework-pure-grids.js",

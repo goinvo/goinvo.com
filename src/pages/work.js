@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import smoothscroll from 'smoothscroll-polyfill';
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
@@ -24,6 +25,10 @@ import features from '../data/features'
 import CATEGORIES_LIST from '../data/categories.json'
 import caseStudiesOrder from '../data/case-study-order.json'
 
+if (typeof window !== 'undefined') {
+  smoothscroll.polyfill();
+}
+
 const upNextList = [
   {
     link: "/services/",
@@ -45,11 +50,11 @@ const upNextList = [
   }
 ];
 
-const getWorkItemsOfCategory = (workItems, catId, viewMore = false) => {
+const getWorkItemsOfCategory = (workItems, catId, initial = false) => {
   let newWorkItems = [];
 
   if (catId === allCategory.id) {
-    newWorkItems = viewMore ? workItems : workItems.slice(0, 4);
+    newWorkItems = initial ?  workItems.slice(0, 4) : workItems;
   } else {
     newWorkItems = workItems.filter(item => {
       return item.categories.filter(cat => {
@@ -72,9 +77,10 @@ class WorkPage extends Component {
     })
 
     const query = props.location && props.location.search ? props.location.search : null;
-    const categoryId = query ? query.substr(query.indexOf("=") + 1) : allCategory.id;
+    const categoryId = query && query.includes("category") ? query.substr(query.indexOf("=") + 1) : allCategory.id;
+    const expanded = query && query.includes("expanded") ? query.substr(query.indexOf("=") + 1) : false;
     const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
-    const activeWorkItems = getWorkItemsOfCategory(workItems, selectedCategory.id);
+    const activeWorkItems = getWorkItemsOfCategory(workItems, selectedCategory.id, !expanded);
 
     this.state = {
       workItems,
@@ -83,7 +89,7 @@ class WorkPage extends Component {
       categoriesStuck: false,
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
-      partialView: true,
+      partialView: !expanded,
       viewMoreCount: workItems.length - activeWorkItems.length
     };
 
@@ -105,10 +111,14 @@ class WorkPage extends Component {
 
   setSelectedCategory = (cat) => {
     this.setState({
-      partialView: true,
+      partialView: false,
       selectedCategory: cat,
       activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
       categoriesCollapsed: this.state.categoriesStuck ? true : false,
+    }, () => {
+      if (this.state.categoriesCollapsed) {
+        this.scrollWorkItemsIntoView();
+      }
     });
   }
 
@@ -116,8 +126,18 @@ class WorkPage extends Component {
     this.setState({
       partialView: false,
       selectedCategory: allCategory,
-      activeWorkItems: getWorkItemsOfCategory(this.state.workItems, allCategory.id, true)
+      activeWorkItems: getWorkItemsOfCategory(this.state.workItems, allCategory.id)
     });
+  }
+
+  scrollWorkItemsIntoView = () => {
+    if (typeof window !== 'undefined') {
+      window.scroll({
+        top: document.querySelector('#target-stick').offsetTop - 49,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
   }
 
   render() {

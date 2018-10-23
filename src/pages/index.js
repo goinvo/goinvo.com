@@ -140,7 +140,7 @@ class IndexPage extends Component {
             })}
           </Columns>
           <div className="container container--justify-center margin-top margin-bottom--double">
-            <Link to="/work/" className="button button--primary button--lg">View all work</Link>
+            <Link to="/work/?expanded=true" className="button button--primary button--lg">View all work</Link>
           </div>
         </div>
         <Quote background="gray" quotee="Eric Topol" quoteeSub="MD, Director, Scripps Translational Science Institute">

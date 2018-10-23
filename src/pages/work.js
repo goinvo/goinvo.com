@@ -25,7 +25,9 @@ import features from '../data/features'
 import CATEGORIES_LIST from '../data/categories.json'
 import caseStudiesOrder from '../data/case-study-order.json'
 
-smoothscroll.polyfill();
+if (typeof window !== 'undefined') {
+  smoothscroll.polyfill();
+}
 
 const upNextList = [
   {
@@ -129,11 +131,13 @@ class WorkPage extends Component {
   }
 
   scrollWorkItemsIntoView = () => {
-    window.scroll({
-      top: document.querySelector('#target-stick').offsetTop - 49,
-      left: 0,
-      behavior: 'smooth'
-    });
+    if (typeof window !== 'undefined') {
+      window.scroll({
+        top: document.querySelector('#target-stick').offsetTop - 49,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
   }
 
   render() {

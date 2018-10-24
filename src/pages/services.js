@@ -82,10 +82,6 @@ const ServicesPage = () => (
     }
     <Helmet
       title="GoInvo | Services"
-      meta={[
-        { name: 'description', content: '' },
-        { name: 'keywords', content: 'goinvo services' },
-      ]}
     />
     <Hero image="/images/services/hand-drawing.jpg" position="center top">
       <h1 className="header--xl">

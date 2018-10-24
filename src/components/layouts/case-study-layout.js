@@ -12,9 +12,7 @@ import Card from '../card'
 import ImageBlock from '../image-block'
 import References from '../references'
 
-import features from '../../data/features'
-
-import { extractCaseStudyDataFromQuery } from '../../helpers'
+import { extractWorkItemLinkDetails, concatCaseStudiesAndFeatures } from '../../helpers'
 
 import config from '../../../config'
 
@@ -49,8 +47,8 @@ class CaseStudyLayout extends Component {
           }
         `}
         render={data => {
-          const caseStudies = extractCaseStudyDataFromQuery(data);
-          const caseStudiesWithFeatures = caseStudies.concat(features);
+          const caseStudiesWithFeatures = concatCaseStudiesAndFeatures(data, false);
+
           const meta = [];
           if (frontmatter.description) {
             meta.push({ name: 'description', content: frontmatter.description })
@@ -104,12 +102,10 @@ class CaseStudyLayout extends Component {
                       <Columns columns={3}>
                         { frontmatter.upNext.map(id => {
                           const nextItem = caseStudiesWithFeatures.find(item => item.slug === id || item.id === id);
-                          const nextItemLink = nextItem.slug ? `/work/${nextItem.slug}` : nextItem.link;
-                          const externalLink = nextItem.slug ? false : nextItem.link.includes('/vision/') ? false : true;
-                          const suppressNewTab = nextItem.external ? false : true;
+                          const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(nextItem)
 
                           return (
-                            <Card key={nextItemLink} link={nextItemLink} externalLink={externalLink} suppressNewTab={suppressNewTab}>
+                            <Card key={link} link={link} externalLink={externalLink} suppressNewTab={suppressNewTab}>
                               <ImageBlock
                                 title={nextItem.title}
                                 image={nextItem.image}

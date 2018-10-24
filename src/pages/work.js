@@ -17,13 +17,11 @@ import GradientImageColumns from '../components/gradient-image-columns'
 
 import config from '../../config'
 
-import { extractCaseStudyDataFromQuery } from '../helpers'
+import { extractWorkItemLinkDetails, concatCaseStudiesAndFeatures } from '../helpers'
 
 import Caret from '../assets/images/icon-caret.inline.svg'
 
-import features from '../data/features'
 import CATEGORIES_LIST from '../data/categories.json'
-import caseStudiesOrder from '../data/case-study-order.json'
 
 if (typeof window !== 'undefined') {
   smoothscroll.polyfill();
@@ -70,12 +68,7 @@ class WorkPage extends Component {
   constructor(props) {
     super(props);
 
-    const workFeatures = features.filter(feature => !feature.hiddenWorkPage);
-
-    const workItems = extractCaseStudyDataFromQuery(props.data).concat(workFeatures).sort((a, b) => {
-      return caseStudiesOrder.indexOf(a.slug || a.id) > caseStudiesOrder.indexOf(b.slug || b.id) ? 1 : -1;
-    })
-
+    const workItems = concatCaseStudiesAndFeatures(props.data);
     const query = props.location && props.location.search ? props.location.search : null;
     const categoryId = query && query.includes("category") ? query.substr(query.indexOf("=") + 1) : allCategory.id;
     const expanded = query && query.includes("expanded") ? query.substr(query.indexOf("=") + 1) : false;
@@ -208,9 +201,7 @@ class WorkPage extends Component {
           <div className="margin-top--double">
             <Columns columns={2}>
               { this.state.activeWorkItems.map(item => {
-                const link = item.slug ? `/work/${item.slug}` : item.link;
-                const externalLink = item.slug ? false : item.link.includes('/vision/') ? false : true;
-                const suppressNewTab = item.external ? false : true;
+                const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
 
                 return (
                   <Card key={link} link={link} externalLink={externalLink} suppressNewTab={suppressNewTab}>

@@ -15,10 +15,7 @@ import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
 
 import config from '../../config'
-import { extractCaseStudyDataFromQuery } from '../helpers'
-
-import features from '../data/features'
-import caseStudiesOrder from '../data/case-study-order.json'
+import { extractWorkItemLinkDetails, concatCaseStudiesAndFeatures } from '../helpers'
 
 const heroVideoSources = [
   {src: "/videos/homepage/sdoh-hero.mp4", format: "mp4"},
@@ -29,11 +26,7 @@ class IndexPage extends Component {
   constructor(props) {
     super(props);
 
-    const workFeatures = features.filter(feature => !feature.hiddenWorkPage);
-
-    const workItems = extractCaseStudyDataFromQuery(props.data).concat(workFeatures).sort((a, b) => {
-      return caseStudiesOrder.indexOf(a.slug || a.id) > caseStudiesOrder.indexOf(b.slug || b.id) ? 1 : -1;
-    }).slice(0, 4)
+    const workItems = concatCaseStudiesAndFeatures(props.data).slice(0, 4);
 
     this.state = {
       workItems
@@ -122,9 +115,7 @@ class IndexPage extends Component {
           }
           <Columns columns={2}>
             { this.state.workItems.map((item, i) => {
-              const link = item.slug ? `/work/${item.slug}` : item.link;
-              const externalLink = item.slug ? false : item.link.includes('/vision/') ? false : true;
-              const suppressNewTab = item.external ? false : true;
+              const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
 
               return (
                 <Card link={link} key={link} externalLink={externalLink} suppressNewTab={suppressNewTab} hidden={{ class: 'hidden--sm', condition: i > 1 }}>

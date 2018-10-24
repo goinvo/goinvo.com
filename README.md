@@ -103,7 +103,7 @@ _NOTE:_ File names should have no spaces or funky characters. Just stick with le
 After moving your image(s) to Dropbox, you'll need to sync with S3. To do this, you need an Invo AWS account. If you don't have one, and you really want one, just say ["Nickelodeon Magazine, PLEASE!"](https://www.youtube.com/watch?v=Oel0zjpKCwE) You can also get a coworker who already has AWS access to help you sync the images.
 
 
-### Syncing images from Dropbox to S3
+### Syncing images and videos from Dropbox to S3
 To sync to S3, you'll need to add your AWS credentials to `~/.aws/credentials`. You can follow the instructions for that [here](https://aws.amazon.com/sdk-for-node-js/)].
 
 Once those are in place, open up your command line and navigate to your `Graphics/goinvo.com` Dropbox folder, then run:
@@ -111,9 +111,11 @@ Once those are in place, open up your command line and navigate to your `Graphic
 $ yarn upload
 ```
 
-That's it! You should see lots of messages like `Already exists: <file>`. Make sure your files were uploaded by scanning for the message `Successfully uploaded: <your-file>`. If so, your images are ready to use on the site.
+That's it! You should see lots of messages like `Already exists: <file>`. Make sure your files were uploaded by scanning for the message `Successfully uploaded: <your-file>`. If so, your images are ready to use on the site. Note that the upload will fail if any of your images are not exported at exactly 2000px wide.
 
-### Using images in React
+### Using images
+If you're looking to use an image in a case study, please skip to the next section. Otherwise...
+
 The project has an `<Image />` component which takes care of most of the image rendering process for you. Simply include the component with the path to your image (which corresponds to the Dropbox path) like so:
 ```js
 <Image src="/images/about/bowling.jpg" />
@@ -140,6 +142,44 @@ Learn more about the `sizes` attribute in a [nice article](https://ericportis.co
 To add images to your case study content, simply use the default markdown syntax. Use the path that corresponds with the directory structure in Dropbox. Be sure to include that meaningful [`alt text`](https://www.w3schools.com/tags/att_img_alt.asp)!
 ```md
 ![Invo employees happily pose as a group in a bowling alley](/images/about/bowling.jpg)
+```
+
+### Using icons, logos, and other small image files
+Sometimes, images are so small in file size, or in a format we don't need to process with the image service (like SVG), that we can include them directly in the project. Images less than 10kb will be rendered with data URIs by Gatsby, which is beneficial because it removes the request the browser would have to make to fetch the image. So in general, if the image is less than 10kb, or an SVG file, it can be included in the project directly. If uncertain if an image meets these criteria, ask for guidance. Be confident your image should be housed in the project before committing it in git. These types of images can be added at an appropriate location inside `src/assets/images/`. In general, following our [styling guide lines](https://playbook.goinvo.com/styling-guidelines/), image file names in the project are prefixed by their type or purpose, like `icon-email.svg` or `logo-npr.png`.
+
+Since these images will not run through the image service, we can use regular `img` tags to include them (instead of the `<Image />` React component). To use an image from the project, you can import it in your JavaScript file then use it as the `img` source:
+```js
+import logoNpr from '../assets/images/publication-logos/logo-npr.png'
+
+...
+
+<img src={logoNpr} alt="Logo for National Public Radio" />
+```
+
+SVG's can be used in a similar manner to above, but also can be included inline using a special syntax. This is similar to using SVG's from a sprite sheet in that it allows for adding classes and control of the SVG through CSS. The key here is to add `.inline` to your filename before `.svg`, like `icon-hamburger.inline.svg`. Then capitalize your import variable name, as you would with importing a JavaScript class or component, like so:
+```js
+import Hamburger from '../assets/images/icon-hamburger.inline.svg'
+
+...
+
+<Hamburger className="icon icon-hamburger" />
+```
+
+Now we can use CSS to style `icon` and `icon-hamburger`, like controlling the size or `fill` color of the icon, etc.
+
+### Using videos
+Videos are also managed through Dropbox and work similarly to images. The project makes use of a `<Video />` component. However, videos have a few extra requirements that images do not. First, videos need _two_ sources, one as `.mp4` filetype and one as `.webm` filetypes. This is to make sure there is a video format that supports every browser's needs. Check the syntax below for how to include these formats in JavaScript. Also, videos should have a poster image (displayed before video plays, while the video is loading), and a fallback image (used if the video element is not supported by the browser). Use the component with the sources of your video (which corresponds to the Dropbox path), the poster image, and the fallback image, like so:
+```js
+import Video from '../components/video'
+
+const heroVideoSources = [
+  {src: "/videos/homepage/sdoh-hero.mp4", format: "mp4"},
+  {src: "/videos/homepage/sdoh-hero.webm", format: "webm"}
+]
+
+...
+
+<Video sources={heroVideoSources} poster="/images/homepage/doh-hero-poster.jpg" fallback="/images/homepage/doh-hero-fallback.jpg" />
 ```
 
 ## Adding a case study

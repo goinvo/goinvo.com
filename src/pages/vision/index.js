@@ -73,7 +73,7 @@ class VisionPage extends Component {
         res.data.items.slice(0, 5).map(item => {
           return blogPosts.push({
             title: item.title,
-            date: formatDate(item.pubDate),
+            date: formatDate(item.pubDate.split(" ")[0]),
             link: item.link,
           })
         })

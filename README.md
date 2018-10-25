@@ -56,12 +56,12 @@ $ brew install yarn
 ### Clone repository
 Use the command line or your GitHub app to clone this project repository to your machine. When using the command line, make sure you're already in the folder you want the project downloaded to.
 ```bash
-$ git clone https://github.com/goinvo/goinvo.com-2018.git
+$ git clone https://github.com/goinvo/goinvo.com.git
 ```
 
 ### Install project dependencies
 ```bash
-$ cd goinvo.com-2018
+$ cd goinvo.com
 $ yarn
 ```
 
@@ -82,25 +82,32 @@ Head over to [http://localhost:8000/](http://localhost:8000/) and you should see
 
 
 ## Working with images
-**Do not add or commit images directly to this project.**
+**Do not add or commit images directly to this project!**
 
 Content images are managed with Dropbox and should not be added here. But now that that's clear, there _are_ a few exceptions. The only images found in this project are small images like icons and logos, many of which can often be included inline or as data URI's. When in doubt about where you should add an image, always ask for guidance!
 
 ### Preparing your images
 **TODO:** Sharon to add details on picking proper images for the site.
 
-Export your image from Photoshop or similar with the 'for web' option. Use progressive JPEG filetype with 'High' quality setting (defaults to 'Quality: 60'). Ensure the image is 2000px wide. If you need the alpha channel, PNG format can be used.
+Export your image (Photoshop example steps):
+- Ensure the image is 2000px wide.
+- Select 'File' > 'Save As'.
+- Name the image appropriately using all lowercase letters, numbers, and dashes (that means don't use uppercase or underscores, etc).
+- Use the 'JPEG' format (or 'PNG' if alpha channels are required), and click 'Save'.
+- Set the Quality to Maximum (12), or slightly lower if the file size will be too large. We aim for a file size around 1.2M or below, but this can be higher for more complex images. Use your best judgment here, but avoid massive file sizes.
+- Use 'Progressive' Format option with 3 scans.
+- Click 'OK' and your image will be saved.
 
 ### Adding images through Dropbox
-All the beautiful images you see throughout this site of our work, products, studio, and studioites are managed on our Dropbox account. Naturally you'll need access to our Dropbox account. Images for the website are stored in the `Graphics/goinvo.com/` folder.
+All the beautiful images you see throughout this site of our work, products, studio, and studioites are managed on our Dropbox account. Naturally you'll need access to our Dropbox account to work with these. Images for the website are stored in the `Graphics/goinvo.com/` folder.
 
-When adding an image, think about where it best belongs. The folders on Dropbox generally correspond with routes on the website. For instance, all photos for the 'About' page are in `Graphics/goinvo.com/images/about/`. In some cases, your image may be used in multiple spots throughout the site, but aim to place it where it feels most proper. For instance, if you have a hero image for the 'Vision' page, but it's also used in a card on the homepage, place it in the `vision/` folder. Do not add the same image file in two different locations, this is unnecessary and creates a slower loading experience for our visitors.
+When adding an image, think about where it best belongs. The folders on Dropbox generally correspond with routes on the website. For instance, all photos for the 'About' page are in `Graphics/goinvo.com/images/about/`. In some cases, your image may be used in multiple spots throughout the site, but aim to place it where it feels most proper. For instance, if you have a hero image for the 'Vision' page, but it's also used in a card on the homepage, place it in the `vision/` folder. Do not add the same image file in two different locations, this is unnecessary and creates a slower loading experience for our visitors. When creating new folders, use the same naming conventions as we use for images (lowercase letters, numbers, and dashes only).
 
-**IMPORTANT:** You should not replace or remove images on Dropbox, and they cannot be replaced on S3 (it is possible to remove/replace on S3 but you must have [_the power_](https://metaphysicsspeaks.com/wp-content/uploads/2017/06/10265-powerglove.jpg)). If you want to change an image somewhere on the site, simply name the file something new (i.e. rather than trying to replace an image called `eric-beard.jpg`, instead add a new image in the same folder called `eric-beard-2.jpg`, or whatever).
+**IMPORTANT:** You should not replace or remove images on Dropbox, and they cannot be replaced on S3 (it is possible to remove/replace on S3 but you must have [_the power_](https://metaphysicsspeaks.com/wp-content/uploads/2017/06/10265-powerglove.jpg)). If you want to change an image somewhere on the site, simply name the file something new (i.e. rather than trying to replace an image called `eric-beard.jpg`, instead add a new image in the same folder called `eric-beard-2.jpg`, or whatever. Keep in mind that you'll now have to update any reference of `eric-beard.jpg` in the codebase to `eric-beard-2.jpg`).
 
-_NOTE:_ File names should have no spaces or funky characters. Just stick with letters, numbers, and hyphens.
+_Again, remember that folders and file names should have no spaces or funky characters. Just stick with lowercase letters, numbers, and dashes. Use dashes where you might normally use a space._
 
-After moving your image(s) to Dropbox, you'll need to sync with S3. To do this, you need an Invo AWS account. If you don't have one, and you really want one, just say ["Nickelodeon Magazine, PLEASE!"](https://www.youtube.com/watch?v=Oel0zjpKCwE) You can also get a coworker who already has AWS access to help you sync the images.
+After moving your image(s) to Dropbox, you'll need to sync with S3. To do this, you need an Invo AWS account. If you don't have one, and you really want one, just say ["Nickelodeon Magazine, PLEASE!"](https://www.youtube.com/watch?v=Oel0zjpKCwE). You can also get a coworker who already has AWS access to help you sync the images.
 
 
 ### Syncing images and videos from Dropbox to S3
@@ -145,7 +152,7 @@ To add images to your case study content, simply use the default markdown syntax
 ```
 
 ### Using icons, logos, and other small image files
-Sometimes, images are so small in file size, or in a format we don't need to process with the image service (like SVG), that we can include them directly in the project. Images less than 10kb will be rendered with data URIs by Gatsby, which is beneficial because it removes the request the browser would have to make to fetch the image. So in general, if the image is less than 10kb, or an SVG file, it can be included in the project directly. If uncertain if an image meets these criteria, ask for guidance. Be confident your image should be housed in the project before committing it in git. These types of images can be added at an appropriate location inside `src/assets/images/`. In general, following our [styling guide lines](https://playbook.goinvo.com/styling-guidelines/), image file names in the project are prefixed by their type or purpose, like `icon-email.svg` or `logo-npr.png`.
+Sometimes, images are so small in file size, or in a format we don't need to process with the image service (like SVG), that we can include them directly in the project. Images less than 10kb will be rendered with data URIs by Gatsby, which is beneficial because it removes the request the browser would have to make to fetch the image. So in general, if the image is less than 10kb, or an SVG file, it can be included in the project directly. If uncertain if an image meets these criteria, ask for guidance. Be confident your image should be housed in the project before committing it in git. These types of images can be added at an appropriate location inside `src/assets/images/`. In general, following our [styling guidelines](https://playbook.goinvo.com/styling-guidelines/), image file names in the project are prefixed by their type or purpose, like `icon-email.svg` or `logo-npr.png`.
 
 Since these images will not run through the image service, we can use regular `img` tags to include them (instead of the `<Image />` React component). To use an image from the project, you can import it in your JavaScript file then use it as the `img` source:
 ```js
@@ -238,7 +245,7 @@ Controls whether the case study should show up as a page and be included in list
 _NOTE:_ For now, all frontmatter fields are required, even if you set them to `false`. If you don't fill them out accurately, the app may crash.
 
 ### Viewing your case study as you author content
-The case study you're working on will become accessible through the 'Work' page, or at `http://localhost:8000/work/<filename>` (filename without `.md` file extension).
+When you add a new markdown file, it is necessary to restart your development server. Use `ctrl + c` to kill your process then start it up again with `yarn develop`. This will add your new markdown file in the list of case studies. The case study you're working on will become accessible through the 'Work' page, or at `http://localhost:8000/work/<filename>` (filename without `.md` file extension).
 
 ### Add the content
 For the most part, just write plain old Markdown. If you're unfamiliar with Markdown, it's a very basic programming language, designed to make writing content a breeze. Read up on the syntax [here](https://daringfireball.net/projects/markdown/syntax).

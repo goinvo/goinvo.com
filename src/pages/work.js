@@ -109,6 +109,9 @@ class WorkPage extends Component {
       activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
       categoriesCollapsed: this.state.categoriesStuck ? true : false,
     }, () => {
+      if (typeof window !== 'undefined') {
+        window.history.pushState(null, null, `/work/?category=${cat.id}`)
+      }
       if (this.state.categoriesCollapsed) {
         this.scrollWorkItemsIntoView();
       }

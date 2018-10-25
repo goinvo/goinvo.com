@@ -48,7 +48,7 @@ class IndexPage extends Component {
           video={heroVideoSources}
           poster="/images/homepage/doh-hero-poster.jpg"
           fallback="/images/homepage/doh-hero-fallback.jpg"
-          caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments."
+          caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
           withLogo>
           <h1 className="header--xl">
             Designing<br/>

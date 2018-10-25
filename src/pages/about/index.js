@@ -16,11 +16,11 @@ import config from '../../../config'
 
 const ethics = [
   {
-    title: 'Speak the truth',
+    title: 'Speak the Truth',
     content: 'We will be honest and objective. We will be transparent, and provide insight into our thinking and work.'
   },
   {
-    title: 'Make the World Useful, Beautiful and Delightful',
+    title: 'Make the World Useful, Beautiful, and Delightful',
     content: 'We exercise the discipline required to produce ideas and things that are useful to and beautiful in the world.'
   },
   {

@@ -66,7 +66,7 @@ class Hero extends Component {
               {children}
               {
                 caption ?
-                  <p className="hero__caption">We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments.</p>
+                  <p className="hero__caption">{caption}</p>
                 : null
               }
             </div>

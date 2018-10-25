@@ -47,7 +47,7 @@ const upNextList = [
   },
   {
     link: "/work/?category=open-source",
-    image: "/images/services/doh-preview.jpg",
+    image: "/images/services/hgraph-ipad.jpg",
     title: "Open source healthcare products",
     caption: "Learn about our opensource projects and why we’re passionate about making healthcare open."
   },

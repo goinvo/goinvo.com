@@ -3,7 +3,7 @@ const rework = require('rework');
 const pureGrids = require('rework-pure-grids');
 
 let reworkedCss = rework('').use(pureGrids.units({
-    // These should correspond with values in client/src/styles/scss/common/variables/_breakpoints.scss
+    // These should be in sync with values in client/src/styles/scss/common/variables/_breakpoints.scss
     mediaQueries: {
         sm: 'screen and (min-width: 35.5em)',
         md: 'screen and (min-width: 48em)',

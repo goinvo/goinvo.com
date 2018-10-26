@@ -1,4 +1,22 @@
-const maxWidth = 1020;
+// NOTE: These are CSS derived variables, needed for JS crossover.
+// For things to behave as expected, the numbers should match the variables
+// in the SCSS files:
+// - styles/variables/_typography.scss (baseFontSize)
+// - styles/variables/_breakpoints.scss (mediaQueries)
+// - styles/_layout.scss (maxWidth)
+// TODO: Is there some fancy way we can share these without duplicating?
+const baseFontSize = 16;
+const mediaQueries = {
+  sm: '35.5em',
+  md: '48em',
+  lg: '54em',
+  xl: '80em'
+};
+const maxWidth = {
+  default: 1020,
+  sm: 600,
+  md: 775
+};
 
 export default {
   cloudfrontUrl: 'https://dd17w042cevyt.cloudfront.net',
@@ -7,13 +25,15 @@ export default {
   hubspotApplicationFormId: "953741a9-2774-4205-9b72-16f551c1139d",
   hubspotBlogFeedUrl: "https://yes.goinvo.com/articles/rss.xml",
   rssToJsonServiceUrl: "https://api.rss2json.com/v1/api.json?rss_url=",
-  maxWidth: maxWidth,
+  baseFontSize,
+  mediaQueries,
+  maxWidth,
   sizes: {
     full: ['100vw'],
-    fullToHalfAtLarge: [`(min-width: 54em) 50vw`, '100vw'],
-    fullToThirdAtLarge: [`(min-width: 54em) 50vw`, '100vw'],
-    fullToHalfAtLargeInsideMaxWidth: [`(min-width: ${maxWidth}px) ${maxWidth / 2}px`, `(min-width: 54em) 50vw`, '100vw'],
-    fullToThirdAtLargeInsideMaxWidth: [`(min-width: ${maxWidth}px) ${maxWidth / 3}px`, `(min-width: 54em) 33vw`, '100vw'],
-    caseStudy: [`(min-width: 775px) 775px`, '100vw'],
+    fullToHalfAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+    fullToThirdAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+    fullToHalfAtLargeInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${maxWidth.default / 2}px`, `(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+    fullToThirdAtLargeInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${maxWidth.default / 3}px`, `(min-width: ${mediaQueries.lg}) 33vw`, '100vw'],
+    caseStudy: [`(min-width: ${maxWidth.md}) ${maxWidth.md}`, '100vw'],
   }
 }

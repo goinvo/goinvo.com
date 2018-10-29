@@ -86,6 +86,7 @@ class WorkPage extends Component {
       categoriesStuck: false,
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
+      hasUsedFilter: false,
       partialView: !expanded,
       viewMoreCount: workItems.length - activeWorkItems.length,
     };
@@ -115,6 +116,9 @@ class WorkPage extends Component {
   }
 
   setSelectedCategory = (cat) => {
+    if (!this.state.hasUsedFilter) {
+      this.setState({ hasUsedFilter: true });
+    }
     this.setState({
       partialView: false,
       selectedCategory: cat,
@@ -174,7 +178,7 @@ class WorkPage extends Component {
           {
             this.state.categoriesStuck ?
               <button className="button button--primary button--bg-white button--block" onClick={this.toggleCategories} ref={this.categoryDropdownButton}>
-                {this.state.selectedCategory.title}
+                {this.state.categoriesCollapsed && !this.state.hasUsedFilter && this.state.selectedCategory.id === allCategory.id ? 'Add a filter' : this.state.selectedCategory.title}
                 <Caret className={`icon icon--md margin-left flip ${!this.state.categoriesCollapsed ? 'flip--is-flipped' : ''}`} style={{ marginTop: '-1px' }} />
               </button>
             : null

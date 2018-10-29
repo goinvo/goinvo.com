@@ -51,7 +51,7 @@ class Hero extends Component {
     const { video, caption, isLarge, withLogo, children } = this.props;
 
     return (
-      <div className={`hero ${isLarge ? 'hero--large' : ''} ${video ? 'hero--video' : ''}`}>
+      <div className={`hero ${isLarge ? 'hero--large' : ''} ${video ? 'hero--video' : ''}`} style={this.props.style}>
         { this.renderHeroBlock() }
         { children ?
           <div className="hero__content max-width">

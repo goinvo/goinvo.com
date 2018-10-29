@@ -28,6 +28,8 @@ if (typeof window !== 'undefined') {
   smoothscroll.polyfill();
 }
 
+const lgBreakPointPx = parseInt(config.mediaQueries.lg, 10) * parseInt(config.baseFontSize, 10);
+
 const upNextList = [
   {
     link: "/services/",
@@ -80,6 +82,7 @@ class WorkPage extends Component {
       workItems,
       selectedCategory,
       activeWorkItems,
+      heroPadding: 0,
       categoriesStuck: false,
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
@@ -87,15 +90,23 @@ class WorkPage extends Component {
       viewMoreCount: workItems.length - activeWorkItems.length,
     };
 
+    this.categoryDropdownButton = React.createRef();
   }
 
-  handleCategoriesStickyStateChange = (isStuck) => {
+  handleCategoriesStickyStateChange = (isStuck, stickyBasedOnWidth) => {
     this.setState({
       suppressCollapseTransition: true,
       categoriesStuck: isStuck,
       categoriesCollapsed: isStuck
     }, () => {
-      this.setState({ suppressCollapseTransition: false })
+      let heroPadding = 0;
+      if (this.categoryDropdownButton.current && stickyBasedOnWidth) {
+        heroPadding = this.categoryDropdownButton.current.offsetHeight
+      }
+      this.setState({
+        heroPadding,
+        suppressCollapseTransition: false
+      })
     });
   }
 
@@ -148,7 +159,7 @@ class WorkPage extends Component {
             { name: 'keywords', content: 'healthcare design, health design, healthcare UI design, healthcare UX design, designing healthcare systems, goinvo work' },
           ]}
         />
-        <Hero image="/images/work/dr-emily.jpg" position="center top">
+        <Hero image="/images/work/dr-emily.jpg" position="center top" style={{ marginTop: this.state.heroPadding }}>
           <h1 className="header--xl">
             Patient tested<span className="text--serif text--primary">.</span><br/>
             Clinician approved<span className="text--serif text--primary">.</span>
@@ -156,12 +167,13 @@ class WorkPage extends Component {
         </Hero>
         <Sticky top={50}
                 scrollOffset={50}
+                stickyUntilWidth={lgBreakPointPx}
                 target="#target-stick"
                 zIndex={500}
                 onStateChange={this.handleCategoriesStickyStateChange}>
           {
             this.state.categoriesStuck ?
-              <button className="button button--primary button--bg-white button--block" onClick={this.toggleCategories}>
+              <button className="button button--primary button--bg-white button--block" onClick={this.toggleCategories} ref={this.categoryDropdownButton}>
                 {this.state.selectedCategory.title}
                 <Caret className={`icon icon--md margin-left flip ${!this.state.categoriesCollapsed ? 'flip--is-flipped' : ''}`} style={{ marginTop: '-1px' }} />
               </button>
@@ -202,8 +214,8 @@ class WorkPage extends Component {
             </div>
           </div>
         </Collapsible>
-        <div className="max-width content-padding pad-vertical--double">
-          <div className="margin-top--double">
+        <div className="max-width content-padding pad-vertical--double--only-lg">
+          <div className="margin-top--only-lg">
             <Columns columns={2}>
               { this.state.activeWorkItems.map(item => {
                 const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)

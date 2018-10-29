@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { debounce } from '../helpers'
 
 class Sticky extends Component {
   constructor(props) {
@@ -15,28 +16,34 @@ class Sticky extends Component {
 
   componentDidMount() {
     this.setTargetOffset();
-    window.addEventListener("scroll", this.handleScroll);
-    window.addEventListener("resize", this.setTargetOffset);
+    window.addEventListener("scroll", debounce(this.checkStickyState, 50));
+    window.addEventListener("resize", debounce(this.setTargetOffset, 50));
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-    window.removeEventListener("resize", this.setTargetOffset);
+    window.removeEventListener("scroll", debounce(this.checkStickyState, 50));
+    window.removeEventListener("resize", debounce(this.setTargetOffset, 50));
   }
 
   setTargetOffset = () => {
     this.targetOffset = document.querySelector(this.props.target).offsetTop;
+    this.checkStickyState();
   }
 
-  // TODO: Should probably throttle this
-  handleScroll = () => {
-    if (window.pageYOffset + this.props.scrollOffset > this.targetOffset) {
+  checkStickyState = () => {
+    let stickyBasedOnWidth = false;
+    if (this.props.stickyUntilWidth && window.innerWidth <= this.props.stickyUntilWidth) {
+      stickyBasedOnWidth = true;
+    }
+    const stickyBasedOnScroll = window.pageYOffset + this.props.scrollOffset > this.targetOffset;
+
+    if (stickyBasedOnWidth || stickyBasedOnScroll) {
       if (!this.state.stuck) {
         this.setState({
           stuck: true,
-          contentHeight: this.container.current.scrollHeight
+          contentHeight: stickyBasedOnWidth ? 0 : this.container.current.scrollHeight
         }, () => {
-          this.props.onStateChange(this.state.stuck);
+          this.props.onStateChange(this.state.stuck, stickyBasedOnWidth);
         });
       }
     } else {
@@ -45,7 +52,7 @@ class Sticky extends Component {
           stuck: false,
           contentHeight: 0
         }, () => {
-          this.props.onStateChange(this.state.stuck);
+          this.props.onStateChange(this.state.stuck, stickyBasedOnWidth);
         });
       }
     }

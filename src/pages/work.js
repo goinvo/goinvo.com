@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import smoothscroll from 'smoothscroll-polyfill';
+import smoothscroll from 'smoothscroll-polyfill'
+import { connect } from "react-redux"
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
@@ -72,7 +73,7 @@ class WorkPage extends Component {
     const query = props.location && props.location.search ? props.location.search : null;
     const categoryId = query && query.includes("category") ? query.substr(query.indexOf("=") + 1) : allCategory.id;
     const expanded = query && query.includes("expanded") ? query.substr(query.indexOf("=") + 1) : false;
-    const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || allCategory;
+    const selectedCategory = CATEGORIES_LIST.find(cat => cat.id === categoryId) || props.selectedCategory || allCategory;
     const activeWorkItems = getWorkItemsOfCategory(workItems, selectedCategory.id, !expanded);
 
     this.state = {
@@ -83,7 +84,7 @@ class WorkPage extends Component {
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
       partialView: !expanded,
-      viewMoreCount: workItems.length - activeWorkItems.length
+      viewMoreCount: workItems.length - activeWorkItems.length,
     };
 
   }
@@ -109,9 +110,13 @@ class WorkPage extends Component {
       activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
       categoriesCollapsed: this.state.categoriesStuck ? true : false,
     }, () => {
+      if (typeof window !== 'undefined') {
+        window.history.replaceState(null, null, `/work/?category=${cat.id}`)
+      }
       if (this.state.categoriesCollapsed) {
         this.scrollWorkItemsIntoView();
       }
+      this.props.setCategory(cat);
     });
   }
 
@@ -280,4 +285,17 @@ export const workPageQuery = graphql`
   }
 `
 
-export default WorkPage
+const mapStateToProps = ({ selectedCategory }) => {
+  return { selectedCategory }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { setCategory: (value) => dispatch({ type: `SET_CATEGORY`, value }) }
+}
+
+const ConnectedWorkPage = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(WorkPage)
+
+export default ConnectedWorkPage

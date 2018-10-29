@@ -178,7 +178,7 @@ class DeterminantsOfHealthFeature extends Component {
                 <ul className="ul text--gray">
                   <li>Fujimura, J. H., & Rajagopalan, R. (2010). Different differences: The use of ‘genetic ancestry’ versus race in biomedical human genetic research. Social Studies of Science, 41(1), 5-30. doi:10.1177/0306312710379170</li>
                   <li>Long, J. C., & Kittles, R. A. (2003). Human Genetic Diversity and the Nonexistence of Biological Races. Human Biology, 75(4), 449-471. doi:10.1353/hub.2003.0058</li>
-                  <li>AR, T. (2013). Biological races in humans. [Abstract]. Stud Hist Philos Biol Biomed Sci, 262-271. Retrieved February 14, 2018, from https://www.ncbi.nlm.nih.gov/pubmed/23684745.</li>
+                  <li>AR, T. (2013). Biological races in humans. [Abstract]. Stud Hist Philos Biol Biomed Sci, 262-271. Retrieved February 14, 2018, from <a href="https://www.ncbi.nlm.nih.gov/pubmed/23684745" target="_blank" rel="noopener noreferrer" className="link--wrap">https://www.ncbi.nlm.nih.gov/pubmed/23684745</a>.</li>
                   <li>Caprio, S., Daniels, S. R., Drewnowski, A., Kaufman, F. R., Palinkas, L. A., Rosenbloom, A. L.,... Kirkman, M. S. (2008). Influence of Race, Ethnicity, and Culture on Childhood Obesity: Implications for Prevention and Treatment. Obesity, 16(12), 2566-2577. doi:10.1038/oby.2008.398</li>
                 </ul>
                 <p className="text--gray">Discrimination can be further subdivided into racial, ethnic, gender, sexuality, and age based discrimination.</p>

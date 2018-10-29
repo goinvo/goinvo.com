@@ -10,7 +10,7 @@ import iconMedicalCare from '../../../assets/images/vision/determinants-of-healt
 import iconEnvironment from '../../../assets/images/vision/determinants-of-health/icon-environment.svg'
 
 const options = {
-  chartArea: { width: '100%'},
+  chartArea: { left: 0, top: '10%', width: '100%', height: '85%' },
   legend: "none",
   pieHole: 0.25,
   pieSliceText: "none",
@@ -60,16 +60,16 @@ class DOHChart extends React.Component {
     }
   }
 
-  getLegendType = () => {
+  getNewChartOpts = () => {
     // This check is for the Gatsby build process, where window is not defined.
     if (typeof window !== 'undefined') {
-      return window.innerWidth > 800 ? { position: "labeled" } : "none";
+      return window.innerWidth > 800 ? { legend: { position: "labeled" }, pieSliceText: "none" } : { legend: { position: "none" }, pieSliceText: "percentage" };
     }
   }
 
   getChartOptions = () => {
-    const newLegend = { legend: this.getLegendType() };
-    return {...options, ...newLegend}
+    const newOpts = this.getNewChartOpts();
+    return {...options, ...newOpts}
   }
 
   setChartOptions = () => {
@@ -99,8 +99,8 @@ class DOHChart extends React.Component {
             return (
               <li key={d.id}>
                 <button className="button button--transparent doh__determinant-button" onClick={() => this.handleLegendSelect(i)}>
-                  <img src={icons[i]} alt={d.title} /><br/>
-                  <span className="text--gray text--sm" style={{ textTransform: 'none', letterSpacing: '0' }}>{d.shortTitle}</span>
+                  <img src={icons[i]} alt={d.title} />
+                  <span className=" doh__chart-legend__label text--gray text--sm" style={{ textTransform: 'none', letterSpacing: '0' }}>{d.shortTitle}</span>
                 </button>
               </li>
             )
@@ -109,7 +109,7 @@ class DOHChart extends React.Component {
         <Chart
           chartType="PieChart"
           width="100%"
-          height="450px"
+          height="300px"
           data={this.data}
           options={this.getChartOptions()}
           chartEvents={[

@@ -54,8 +54,8 @@ class DeterminantsOfHealthFeature extends Component {
 
             <div className="max-width max-width--md content-padding">
                 <div>
-                  <h1 className="header--xl text--center margin-top--double">Tap the categories to explore</h1>
-                  <div id="determinants-chart" className="margin-bottom--double margin-top--double">
+                  <h1 className="header--xl text--center margin-top--double margin-bottom--half">Tap the categories to explore</h1>
+                  <div id="determinants-chart">
                     <Chart selectedIndex={this.state.selectedDeterminantIndex} onSelect={this.handleChartSelection}/>
                   </div>
 

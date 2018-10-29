@@ -36,7 +36,7 @@ class OpenSourceHealthcareFeature extends Component {
                 <h4 className="header--sm margin-bottom--none">We have open standards for transportation</h4>
                 <p className="text--gray margin-top--none margin-bottom--double">because getting to your destination is a necessity.</p>
 
-                <h4 className="header--sm margin-bottom--none">We have open standards for healthcare</h4>
+                <h4 className="header--sm margin-bottom--none">We need open standards for healthcare</h4>
                 <p className="text--gray margin-top--none margin-bottom--double">because our lives depend on it.</p>
 
                 <p className="text--gray">Read our open source ethos,

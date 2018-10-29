@@ -4,7 +4,6 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
-//import References from '../../../components/references'
 
 class OpenSourceHealthcareFeature extends Component {
 

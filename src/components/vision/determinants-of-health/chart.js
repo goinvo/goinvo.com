@@ -99,7 +99,8 @@ class DOHChart extends React.Component {
             return (
               <li key={d.id}>
                 <button className="button button--transparent doh__determinant-button" onClick={() => this.handleLegendSelect(i)}>
-                  <img src={icons[i]} alt={d.title} />
+                  <img src={icons[i]} alt={d.title} /><br/>
+                  <span className="text--gray text--sm" style={{ textTransform: 'none', letterSpacing: '0' }}>{d.shortTitle}</span>
                 </button>
               </li>
             )

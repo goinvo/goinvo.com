@@ -40,13 +40,17 @@ class DeterminantsOfHealthFeature extends Component {
                 <p className="text--grey">GoInvo identified this gap based on their extensive work as a healthcare design studio and conducted a literature review of sources (World Health Organization and the Kaiser Family Foundation) and face to face interviews with public policy analysts, health IT experts, and clinical professionals. Relying on their experience of mapping complex systems within healthcare, GoInvo created a comprehensive open source visualization of the social determinants of health.</p>
             </div>
 
-            <div className="max-width content-padding">
-                <div className="button-group margin-bottom--double">
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Download</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half  button--block margin-right">Buy Print</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">On Github</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="#methodology" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Methodology</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="#references" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">References</a></div>
+            <div className="max-width max-width--md content-padding">
+                <div className="margin-bottom--double">
+                    <div className="pure-g button-group margin-bottom--double">
+                        <div className="pure-u-1 pure-u-lg-1-2"><a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Download</a></div>
+                        <div className="pure-u-1 pure-u-lg-1-2"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half  button--block margin-right">Buy Print</a></div>
+                    </div>
+                    <div className="pure-g pad-bottom text--center">
+                        <div className="pure-u-1 pure-u-lg-1-3"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" rel="noopener noreferrer">On Github</a></div>
+                        <div className="pure-u-1 pure-u-lg-1-3"><a href="#methodology">Methodology</a></div>
+                        <div className="pure-u-1 pure-u-lg-1-3"><a href="#references">References</a></div>
+                    </div>
                 </div>
 
                 <Divider />

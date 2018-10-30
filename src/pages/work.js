@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import smoothscroll from 'smoothscroll-polyfill'
 import { connect } from "react-redux"
@@ -212,7 +212,7 @@ class WorkPage extends Component {
                     2. to be accessible for rapid innovation and evolution,<br/>
                     3. and to become more valuable as more patients, clinicians, clinics, companies, and governments engage in healthcare for all.
                   </p>
-                  <a href="http://www.opensourcehealthcare.org" target="_blank" rel="noopener noreferrer" className="button button--primary button--lg margin-top">Check out our open source journal</a>
+                  <Link to="/vision/open-source-healthcare/" className="button button--primary button--lg margin-top">Check out our open source journal</Link>
                 </div>
               </div>
             </div>

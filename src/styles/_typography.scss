@@ -105,7 +105,6 @@ body {
 
     @include mq($from: large) {
       font-size: $font-size--md;
-      font-size: $font-size--base;
       line-height: 1.375rem;
     }
   }

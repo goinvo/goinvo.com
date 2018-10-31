@@ -1,0 +1,102 @@
+.loneliness-feature {
+  h3 {
+      &.text--lg {
+        font-size: 20px;
+        line-height: 1.5rem;
+      }
+  }
+
+  .stat.number--lg {
+    font-size: 80px;
+    padding: 10px 10px 10px 0;
+  }
+  .text-right, .text-below {
+    margin: 20px 0;
+  }
+  .text-right {
+    .stat {
+      display: inline-block;
+    }
+    .stat-desc {
+      display: inline-block;
+      width: 260px;
+    }
+  }
+  .text-below .stat {
+    margin: 10px 0;
+  }
+
+  .row {
+    margin: 40px 0;
+
+    @include mq($until: medium) {
+      margin: 0;
+    }
+  }
+  .risk-duo {
+    display: inline-block;
+    width: 50%;
+
+    @include mq($until: medium) {
+      width: 100%;
+    }
+  }
+  .risk-factor {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    &.risk-solo {
+      width: 100%;
+    }
+    .risk-text {
+      padding: 0 15px;
+    }
+    @include mq($until: medium) {
+      margin: 10px 0;
+    }
+  }
+  .icon-bubble {
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: solid 3px $color-orange--light;
+  }
+
+  .social-timeline {
+    border-left: solid 3px $color-orange--light;
+    z-index:-1;
+  }
+  .age-title {
+    &:before {
+      content: "";
+      box-sizing: border-box;
+      display: inline-block;
+      z-index: 1;
+      height: 20px;
+      width: 20px;
+      margin-right: 20px;
+      margin-left: -11px;
+      border-radius: 10px;
+      border: solid 2px $color-orange--light;
+      background-color: #fff;
+    }
+  }
+  .lonely-factor {
+    border-top: solid 3px $color-orange--light;
+  }
+  .lonely-factor-text {
+    display: inline-block;
+    width: 45%;
+  }
+  .lonely-factor-icon {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 45%;
+
+    @include mq($until: large) {
+      display: none;
+    }
+  }
+}

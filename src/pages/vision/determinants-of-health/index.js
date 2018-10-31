@@ -40,13 +40,17 @@ class DeterminantsOfHealthFeature extends Component {
                 <p className="text--grey">GoInvo identified this gap based on their extensive work as a healthcare design studio and conducted a literature review of sources (World Health Organization and the Kaiser Family Foundation) and face to face interviews with public policy analysts, health IT experts, and clinical professionals. Relying on their experience of mapping complex systems within healthcare, GoInvo created a comprehensive open source visualization of the social determinants of health.</p>
             </div>
 
-            <div className="max-width content-padding">
-                <div className="button-group margin-bottom--double">
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Download</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half  button--block margin-right">Buy Print</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">On Github</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="#methodology" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Methodology</a></div>
-                  <div className="pure-u-1 pure-u-lg-1-5"><a href="#references" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">References</a></div>
+            <div className="max-width max-width--md content-padding">
+                <div className="margin-bottom--double">
+                    <div className="pure-g button-group margin-bottom--double">
+                        <div className="pure-u-1 pure-u-lg-1-2"><a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half button--block margin-right">Download</a></div>
+                        <div className="pure-u-1 pure-u-lg-1-2"><a href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/" target="_blank" rel="noopener noreferrer" className="button button--primary margin-top--double margin-bottom--half  button--block margin-right">Buy Print</a></div>
+                    </div>
+                    <div className="pure-g pad-bottom text--center">
+                        <div className="pure-u-1 pure-u-lg-1-3"><a href="https://github.com/goinvo/HealthDeterminants" target="_blank" rel="noopener noreferrer">On Github</a></div>
+                        <div className="pure-u-1 pure-u-lg-1-3"><a href="#methodology">Methodology</a></div>
+                        <div className="pure-u-1 pure-u-lg-1-3"><a href="#references">References</a></div>
+                    </div>
                 </div>
 
                 <Divider />
@@ -54,8 +58,8 @@ class DeterminantsOfHealthFeature extends Component {
 
             <div className="max-width max-width--md content-padding">
                 <div>
-                  <h1 className="header--xl text--center margin-top--double">Tap the categories to explore</h1>
-                  <div id="determinants-chart" className="margin-bottom--double margin-top--double">
+                  <h1 className="header--xl text--center margin-top--double margin-bottom--half">Tap the categories to explore</h1>
+                  <div id="determinants-chart">
                     <Chart selectedIndex={this.state.selectedDeterminantIndex} onSelect={this.handleChartSelection}/>
                   </div>
 
@@ -178,7 +182,7 @@ class DeterminantsOfHealthFeature extends Component {
                 <ul className="ul text--gray">
                   <li>Fujimura, J. H., & Rajagopalan, R. (2010). Different differences: The use of ‘genetic ancestry’ versus race in biomedical human genetic research. Social Studies of Science, 41(1), 5-30. doi:10.1177/0306312710379170</li>
                   <li>Long, J. C., & Kittles, R. A. (2003). Human Genetic Diversity and the Nonexistence of Biological Races. Human Biology, 75(4), 449-471. doi:10.1353/hub.2003.0058</li>
-                  <li>AR, T. (2013). Biological races in humans. [Abstract]. Stud Hist Philos Biol Biomed Sci, 262-271. Retrieved February 14, 2018, from https://www.ncbi.nlm.nih.gov/pubmed/23684745.</li>
+                  <li>AR, T. (2013). Biological races in humans. [Abstract]. Stud Hist Philos Biol Biomed Sci, 262-271. Retrieved February 14, 2018, from <a href="https://www.ncbi.nlm.nih.gov/pubmed/23684745" target="_blank" rel="noopener noreferrer" className="link--wrap">https://www.ncbi.nlm.nih.gov/pubmed/23684745</a>.</li>
                   <li>Caprio, S., Daniels, S. R., Drewnowski, A., Kaufman, F. R., Palinkas, L. A., Rosenbloom, A. L.,... Kirkman, M. S. (2008). Influence of Race, Ethnicity, and Culture on Childhood Obesity: Implications for Prevention and Treatment. Obesity, 16(12), 2566-2577. doi:10.1038/oby.2008.398</li>
                 </ul>
                 <p className="text--gray">Discrimination can be further subdivided into racial, ethnic, gender, sexuality, and age based discrimination.</p>

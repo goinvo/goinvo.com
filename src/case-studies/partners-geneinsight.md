@@ -33,8 +33,8 @@ GoInvo redesigned GeneInsight as a straightforward and elegant tool for clinicia
 
 Partners Healthcare launched the GeneInsight Suite as commercial-grade software, used across multiple hospital systems in the United States.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers over 4 months<br/>
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers over 4 months<br/>
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Precision Medicine and Genomics
 
 <Divider />
 

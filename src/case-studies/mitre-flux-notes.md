@@ -31,8 +31,8 @@ GoInvo is working with the MITRE Corporation to design Flux Notes, a web applica
 
 Flux Notes demonstrates an innovative method of capturing high fidelity structured health data while presenting it in a human-readable format to reveal meaningful clinical insights. By using the SHR as the data standard within the application, Flux Notes provides an opportunity to further research and develop the SHR for clinical use.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2 designers for 10 months, ongoing
-<br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & Infrastructure, Open Source
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 10 months, ongoing
+<br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & Infrastructure, Open Source
 <br />
 <a href="https://fluxnotes.org/ " target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">Flux Notes website</a>
 <a href="https://github.com/FluxNotes/flux" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>

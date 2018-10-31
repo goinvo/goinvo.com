@@ -54,8 +54,8 @@ We designed a service that would allow patients to digitally decide if they want
 
 The project was unveiled at TED with the presentation of a result report for The Resilience Project and has helped to collect over 600,000 individuals.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 3 months
-<br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Precision Medicine and Genomics
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer for 3 months
+<br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Precision Medicine and Genomics
 
 <Divider />
 

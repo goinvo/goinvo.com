@@ -12,10 +12,6 @@ upNext:
 hidden: false
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
-import Video from '../components/video'
-
 # Natural language processing (NLP) software for hospital coding
 for 3m
 
@@ -56,7 +52,7 @@ You and I are familiar with the open-backed gowns and terrible food, but what yo
 
 Coders are hardcore. They rely on their coding software six days a week, from 9-to-5. Sitting at the terminal, coding in for so many patients and what seems like countless relevant codes. CodeRyte provided part of their solution before, but the vision now was to offer the entire system &mdash;a system where dollars are counted in keystrokes. The fewer keystrokes to accomplish the same end task, the more profits for the hospitals. The faster those fewer keystrokes can take, the profits add up even more. Not to mention happier coders.
 
-<Divider />
+<!-- <Divider /> -->
 
 ## Process
 
@@ -79,13 +75,13 @@ When they first saw our work, the CodeRyte executives lit up. They knew this pro
 
 We created over 15 different prototypes to test and iterate on our ideas and feedback.
 
-<Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.</Quote>
+<!-- <Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.</Quote> -->
 
 With CodeRyte galvanized behind the project, we started a new (again: small) 12-week project to make a working prototype. Evolving the design, getting in actual data, and as fully working web-based software. Not only did this improve the platform for the full design and implementation to come, but it also gave CodeRyte an exceptional sales tool that reinforced this would be real &mdash;not vaporware.
 
 Orders quickly followed.
 
-<Divider />
+<!-- <Divider /> -->
 
 ## Going Live
 
@@ -140,7 +136,7 @@ The $30B company was a partner of CodeRyte’s for the past three years. Partner
 
 CodeRyte’s executives were thrilled to be rewarded for their hard work while having the chance to deliver their vision via a much larger delivery vehicle in 3M. As you might imagine, CodeRyte’s board and investors were pretty thrilled as well, greatly exceeding their multiples.
 
-<Video
+<!-- <Video
   sources={[
     {src: "/videos/case-studies/coderyte/3m-coderyte-ui-demo.mp4", format: "mp4"},
     {src: "/videos/case-studies/coderyte/3m-coderyte-ui-demo.webm", format: "webm"}
@@ -148,9 +144,9 @@ CodeRyte’s executives were thrilled to be rewarded for their hard work while h
   poster="/images/case-studies/coderyte/coderyte-mockup2.jpg"
   fallback="/images/case-studies/coderyte/coderyte-mockup2.jpg"
   loop
-/>
+/> -->
 
-<Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled our customers for us.</Quote>
+<!-- <Quote quotee="Robert Schulz" quoteeSub="CodeRyte Inc.">GoInvo just handled our customers for us.</Quote> -->
 
 #### P.S. the Morning After
 About two weeks after launch, CodeRyte got a frantic call from the lead manager at one of their largest customers. CodeRyte had completely stopped working in the middle of the coder’s shift. Our team was simultaneously getting a flood of emails via the app’s feedback mechanism: no patients were entering the system to be coded.
@@ -160,7 +156,7 @@ The software worked so well that the backlog of coding was passed and there was,
 
 Never in the history of this hospital system had this happened. The efficiency of the software turned the bureaucratic quagmire of massive backlogs of patient coding into a just-in-time system that required less manpower and delivered faster results.
 
-<Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">Your team kicks ass!</Quote>
+<!-- <Quote quotee="George Moon" quoteeSub="VP of Product, CodeRyte Inc.">Your team kicks ass!</Quote> -->
 
 The hospital system has since been able to change their procedure and conservatively estimates a 200% increase in efficiency in their coding workflow.
 

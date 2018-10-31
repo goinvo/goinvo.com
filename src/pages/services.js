@@ -104,10 +104,10 @@ const ServicesPage = () => (
                       {service.description}
                     </p>
                     <p className="text--gray">
-                      <span className="text--bold text--uppercase text--spacing">Methods: </span>{service.methods}
+                      <span className="text--bold text--uppercase text--spacing text--md">Methods: </span>{service.methods}
                     </p>
                     <p className="text--gray">
-                      <span className="text--bold text--uppercase text--spacing">Example: </span><Link to={service.example.link}>{service.example.title}</Link>
+                      <span className="text--bold text--uppercase text--spacing text--md">Example: </span><Link to={service.example.link}>{service.example.title}</Link>
                     </p>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const ServicesPage = () => (
       With Invo, design wasn't just design. It impacted our IP portfolio. It changed our business.
     </Quote>
     <div className="max-width content-padding pad-vertical--double margin-bottom--double">
-      <h3 className="header--md">Approach</h3>
+      <h3 className="header--md margin-bottom--none margin-top--double">Approach</h3>
       <div className="pure-g pad-bottom--double">
         <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
           <IconHealthcare className="icon--wide icon--secondary" />

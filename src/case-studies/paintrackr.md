@@ -29,8 +29,8 @@ We created a way to indicate physical pain and share with healthcare providers f
 
 We designed and built PainTrackr, an intuitive app which uses shades of red across a map of the human body to help patients monitor their pain and share their pain history with their PCP.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer and engineer for 6 months
-<br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer and engineer for 6 months
+<br/> <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Patient Engagement
 <br/>
 
 <Divider />

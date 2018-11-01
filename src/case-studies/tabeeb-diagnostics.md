@@ -31,8 +31,8 @@ GoInvo helped Tabeeb identify and create a first generation product. We drafted 
 
 We helped Tabeeb go from a draft business plan to their version 1 release in eight months. Our design acceleration consulting turned Tabeeb's vision into an innovative and scalable product.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 5 months
-<br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Care Management
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer for 5 months
+<br/> <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Care Management
 <br/>
 
 <Divider />

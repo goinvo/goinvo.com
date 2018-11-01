@@ -46,8 +46,8 @@ We crafted two open source prototypes built on educational frameworks, gamificat
 
 In a usability test of the prototypes, conducted with 30 patients, 97% were able to recall the 5 main factors of health data, and 90% engaged with an online quiz.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 2.5 months<br/>
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Public health and policy, Patient engagement, Open source
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer for 2.5 months<br/>
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Public health and policy, Patient engagement, Open source
 <br />
 <a href="https://www.healthdatabasics.org/" class="button button--primary button--lg margin-top--double margin-bottom--half  margin-right--only-lg">View Demo</a>
 <a href="https://github.com/goinvo/HealthDataBasics" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>

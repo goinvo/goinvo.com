@@ -34,6 +34,10 @@ body {
     font-size: .875rem;
   }
 
+  &--md {
+    font-size: $font-size--md;
+  }
+
   &--lg {
     font-size: 1.5rem;
     line-height: 2.125rem;
@@ -88,7 +92,7 @@ body {
   &--lg,
   &--xl {
     font-family: $font-family--serif;
-    font-weight: $font-weight--normal;
+    font-weight: $font-weight--light;
   }
 
   &--md {
@@ -100,7 +104,7 @@ body {
     line-height: 1.1875rem;
 
     @include mq($from: large) {
-      font-size: $font-size--base;
+      font-size: $font-size--md;
       line-height: 1.375rem;
     }
   }

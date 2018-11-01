@@ -37,8 +37,8 @@ Starting with the IRB’s most complicated research module, Humans, GoInvo desig
 
 Validated with 91 individuals, from analysts to admins to program chairs to principal investigators, the research and submission stakeholders approved of the designs and anticipated the impending release of Insight 4.0.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 2-5 designers and engineers over 20 months total<br/>
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2-5 designers and engineers over 20 months total<br/>
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & infrastructure
 
 <Divider />
 

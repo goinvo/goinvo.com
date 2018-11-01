@@ -37,8 +37,8 @@ With a team of physicians, nurses, health IT, and HCI experts, GoInvo designed a
 
 An open source, accessible, lightweight design policy for electronic health records.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer and engineer over 18 months<br/>
-<span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Health IT & infrastructure, Open Source
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer and engineer over 18 months<br/>
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & infrastructure, Open Source
 <br />
 <a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">Read the book</a>
 <a href="https://github.com/goinvo/EHR" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">View the code</a>

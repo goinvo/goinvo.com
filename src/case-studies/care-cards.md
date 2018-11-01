@@ -33,8 +33,8 @@ An estimated 7,000 Care Cards decks are in homes, clinics, and classes around th
 * Patient Safety & Quality Healthcare: [Health Axioms: Turning Advice into Lifestyle](http://psqh.com/news-health-axioms-turning-advice-into-lifestyle) -
 
 
-<br/><span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer, part time, across 2 years
-<br /><span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
+<br/><span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer, part time, across 2 years
+<br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Patient Engagement, Open Source
 <div class="container container--justify-center"><a href="http://www.carecards.me" class="button button--primary button--lg margin-top--double margin-bottom--half ">Get your own deck</a></div>
 
 <Quote quotee="Roni Zeiger, MD" quoteeSub="former Chief Health Strategist at Google, co-founder of Smart Patients">Invo relentlessly refined concepts and found a way to meet all of our goals. Working with Invo has been a pleasure.</Quote>

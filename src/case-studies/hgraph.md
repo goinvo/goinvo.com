@@ -30,8 +30,8 @@ hGraph displays a considerable amount of health information in a deceptively sim
 
 hGraph is an open source tool that has been adopted by many organizations like Walgreens, Crossover Health, NextGen, and Citizen Health to help clinicians swiftly spot problem areas within a patient’s health.
 
-<span class="text--uppercase text--gray text--bold text--spacing">Time:</span> 1 designer for 9 months
-<br/> <span class="text--uppercase text--gray text--bold text--spacing">Tags:</span> Patient Engagement, Open Source
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer for 9 months
+<br/> <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Patient Engagement, Open Source
 <br/> <a href="http://www.hgraph.org" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View hGraph</a> <a href="https://github.com/goinvo/hGraph" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">View on GitHub</a>
 
 <Divider />

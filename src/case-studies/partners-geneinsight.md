@@ -13,6 +13,8 @@ hidden: false
 references:
   - title: ""
     link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082613/"
+metaDescription: "The PCPGM’s GeneInsight application assists clinical specialists in drafting patient-specific, molecular diagnostic test reports for geneticist review."
+metaKeywords: "partners geneinsight, healthcare, partners"
 ---
 
 import Divider from 'components/divider'

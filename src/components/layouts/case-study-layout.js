@@ -52,6 +52,8 @@ class CaseStudyLayout extends Component {
                       link
                     }
                     upNext
+                    metaDescription
+                    metaKeywords
                   }
                 }
               }
@@ -63,11 +65,11 @@ class CaseStudyLayout extends Component {
           const caseStudy = findCaseStudyById(data, this.props.pageContext.id);
 
           const meta = [];
-          if (caseStudy.frontmatter.description) {
-            meta.push({ name: 'description', content: caseStudy.frontmatter.description })
+          if (caseStudy.frontmatter.metaDescription) {
+            meta.push({ name: 'description', content: caseStudy.frontmatter.metaDescription })
           }
-          if (caseStudy.frontmatter.keywords) {
-            meta.push({ name: 'keywords', content: caseStudy.frontmatter.keywords })
+          if (caseStudy.frontmatter.metaKeywords) {
+            meta.push({ name: 'keywords', content: caseStudy.frontmatter.metaKeywords })
           }
 
           return (

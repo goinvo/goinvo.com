@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -30,6 +31,13 @@ class DeterminantsOfHealthFeature extends Component {
   render() {
     return (
       <Layout>
+        <Helmet
+          title="GoInvo | Determinants of Health"
+          meta={[
+            { name: 'description', content: 'A holistic view of human health.' },
+            { name: 'keywords', content: 'determinants of health, social determinants of health, SDOH, holistic health, environment, medical care, genetics and biology, individual behavior, social circumstances' },
+          ]}
+        />
         <Hero image="/images/services/doh-preview.jpg"></Hero>
         <div className="determinants-of-health">
           <div className="pad-vertical--double">

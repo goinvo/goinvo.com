@@ -11,6 +11,8 @@ upNext:
   - "killer-truths"
   - "tabeeb-diagnostics"
 hidden: false
+metaDescription: "PainTrackr allows you to easily track pain on a mobile device."
+metaKeywords: "PainTrackr, track pain, pain track, pain tracker, log pain, ios app, healthcare design"
 ---
 import Divider from 'components/divider'
 import Quote from 'components/quote'

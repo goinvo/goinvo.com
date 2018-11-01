@@ -12,6 +12,10 @@ upNext:
 hidden: false
 ---
 
+import Divider from 'components/divider'
+import Quote from 'components/quote'
+import Video from 'components/video'
+
 # Natural language processing (NLP) software for hospital coding
 for 3m
 

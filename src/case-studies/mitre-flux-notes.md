@@ -13,8 +13,8 @@ upNext:
 hidden: false
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
 
 # Health Data Capture at the Point of Care
 for MITRE Corporation

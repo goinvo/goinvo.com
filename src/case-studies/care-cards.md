@@ -12,8 +12,8 @@ upNext:
   - "fastercures-health-data-basics"
 hidden: false
 ---
-import Divider from '../components/divider'
-import Quote from '../components/quote'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
 
 # Care Cards
 

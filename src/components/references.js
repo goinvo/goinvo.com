@@ -7,8 +7,9 @@ class References extends Component {
         <h3 className="header--md">References</h3>
         <ol className="references">
           {this.props.references.map((ref, i) => {
+            const key = ref.link && ref.link.length ? ref.link : ref.title;
             return (
-              <li key={ref.title} className="text--gray margin-bottom">
+              <li key={key} className="text--gray margin-bottom">
                 <span id={`fn-${i + 1}`}>{ref.title}</span>
                 {
                   ref.link ?

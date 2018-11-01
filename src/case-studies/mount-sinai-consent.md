@@ -36,8 +36,8 @@ references:
     link: "http://www.ted.com/talks/2004"
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
 
 # A Search for Unexpected Genetic Heroes
 for Mount Sinai

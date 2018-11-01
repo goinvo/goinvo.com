@@ -25,6 +25,12 @@ export function extractCaseStudyDataFromQuery(data) {
   });
 }
 
+export function findCaseStudyById(data, id) {
+  return data.allMdx.edges.find(({node}) => {
+    return node.id === id
+  }).node;
+}
+
 export function extractWorkItemLinkDetails(item) {
   const link = item.slug ? `/work/${item.slug}` : item.link;
   const externalLink = item.slug ? false : item.link.includes('/vision/') ? false : true;

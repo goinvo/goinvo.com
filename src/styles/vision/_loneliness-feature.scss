@@ -15,11 +15,19 @@
   }
   .text-right {
     .stat {
-      display: inline-block;
+      text-align: center;
+      width: 260px;
+      @include mq($until: large) {
+        display: inline-block;
+        text-align: left;
+        width: auto;
+      }
     }
     .stat-desc {
-      display: inline-block;
       width: 260px;
+      @include mq($until: large) {
+        display: inline-block;
+      }
     }
   }
   .text-below .stat {

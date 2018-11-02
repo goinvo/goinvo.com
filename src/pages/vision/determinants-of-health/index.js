@@ -11,6 +11,8 @@ import determinants from '../../../data/vision/determinants-of-health/chart-data
 import Chart from '../../../components/vision/determinants-of-health/chart'
 import DeterminantDetails from '../../../components/vision/determinants-of-health/determinant-details'
 
+import config from '../../../../config'
+
 class DeterminantsOfHealthFeature extends Component {
   constructor(props) {
     super(props);
@@ -76,20 +78,31 @@ class DeterminantsOfHealthFeature extends Component {
                   </div>
                 </div>
 
-                <div className="poster margin-top--double"><Image src="/images/features/determinants-of-health/determinants-of-health-poster.jpg" className="image--max-width" /></div>
+                <div className="poster margin-top--double">
+                  <Image src="/images/features/determinants-of-health/determinants-of-health-poster.jpg" className="image--max-width" sizes={config.sizes.fullInsideMediumMaxWidth}/>
+                </div>
                 <div className="button-group">
                   <a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary button--lg margin-top--double margin-bottom--double button--block">Download Poster</a>
                 </div>
 
                 <div>
                   <div className="authorImg pure-u-1 pure-u-lg-1-3 pad-right--only-lg">
-                      <Image src="/images/features/determinants-of-health/determinants-of-health-mitre-poster.jpg" className="image--max-width" />
+                      <Image
+                        src="/images/features/determinants-of-health/determinants-of-health-mitre-poster.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth} />
                   </div>
                   <div className="authorImg pure-u-1 pure-u-lg-1-3 pad-right--only-lg">
-                      <Image src="/images/features/determinants-of-health/determinants-of-health-sxsw-poster3.jpg" className="image--max-width" />
+                      <Image
+                        src="/images/features/determinants-of-health/determinants-of-health-sxsw-poster3.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth} />
                   </div>
                   <div className="authorImg pure-u-1 pure-u-lg-1-3 pad-right--only-lg">
-                      <Image src="/images/features/determinants-of-health/determinants-of-health-studio-poster.jpg" className="image--max-width" />
+                      <Image
+                        src="/images/features/determinants-of-health/determinants-of-health-studio-poster.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth} />
                   </div>
                 </div>
                 <p className="text--gray">The Determinants of Health is available as a poster, an installation, a download, and an interactive visualization.</p>
@@ -206,7 +219,10 @@ class DeterminantsOfHealthFeature extends Component {
 
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                      <Image src="/images/about/headshot-edwin-choi.jpg" className="image--max-width" />
+                      <Image
+                        src="/images/about/headshot-edwin-choi.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth} />
                   </div>
                   <div className="authorBio pure-u-1 pure-u-lg-1-2">
                     <p><strong>Edwin Choi</strong><span className="text--grey">, GoInvo</span></p>
@@ -216,7 +232,10 @@ class DeterminantsOfHealthFeature extends Component {
 
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                      <Image src="/images/about/headshot-juhan-sonin.jpg" className="image--max-width" />
+                      <Image
+                        src="/images/about/headshot-juhan-sonin.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth} />
                   </div>
                   <div className="authorBio pure-u-1 pure-u-lg-1-2">
                     <p><strong>Juhan Sonin</strong><span className="text--grey">, GoInvo, MIT</span></p>
@@ -227,7 +246,10 @@ class DeterminantsOfHealthFeature extends Component {
                 <h3 className="header--md">Contributors</h3>
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                      <Image src="/images/features/determinants-of-health/headshot-hrothgar.jpg" className="image--max-width" />
+                      <Image
+                        src="/images/features/determinants-of-health/headshot-hrothgar.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth} />
                   </div>
                   <div className="authorBio pure-u-1 pure-u-lg-1-2">
                     <p><strong>Hrothgar</strong><span className="text--grey">, GoInvo</span></p>
@@ -236,7 +258,10 @@ class DeterminantsOfHealthFeature extends Component {
                 </div>
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                      <Image src="/images/features/determinants-of-health/headshot-kelsey-kittelsen.jpg" className="image--max-width" />
+                      <Image
+                        src="/images/features/determinants-of-health/headshot-kelsey-kittelsen.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth} />
                   </div>
                   <div className="authorBio pure-u-1 pure-u-lg-1-2">
                     <p><strong>Kelsey Kittelsen</strong><span className="text--grey">, Dartmouth College</span></p>

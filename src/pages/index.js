@@ -109,10 +109,6 @@ class IndexPage extends Component {
               <CategoriesList columns={2} />
             </div>
           </div>
-          {
-            // TODO:
-            // - Pass sizes to ImageBlock/Image to optimize image load
-          }
           <Columns columns={2}>
             { this.state.workItems.map((item, i) => {
               const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
@@ -125,6 +121,7 @@ class IndexPage extends Component {
                     client={item.client}
                     categories={item.categories}
                     caption={item.caption}
+                    sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
                     hoverable />
                 </Card>
               )
@@ -146,7 +143,8 @@ class IndexPage extends Component {
               key={"1"}
               image="/images/homepage/standardized-health-data-preview-2.jpg"
               title="Health Reports"
-              caption="Design concepts and objective analysis for grokking the evolving healthcare universe.">
+              caption="Design concepts and objective analysis for grokking the evolving healthcare universe."
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}>
               <a href="https://www.goinvo.com/features/determinants-of-health" target="_blank" rel="noopener noreferrer">Determinants of health</a><br/>
               <Link to="/vision/">Explore all features</Link>
             </ImageBlock>
@@ -154,7 +152,8 @@ class IndexPage extends Component {
               key={"2"}
               image="/images/vision/vision-hero.jpg"
               title="Publications"
-              caption="Preview our books on product design, emerging technology, prototyping, and the internet of things.">
+              caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}>
               <a href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519" target="_blank" rel="noopener noreferrer">Designing for Emerging Technologies</a><br/>
               <Link to="/vision/#books">View all books</Link>
             </ImageBlock>
@@ -162,7 +161,8 @@ class IndexPage extends Component {
               key={"3"}
               image="/images/vision/microphone.jpg"
               title="The Digital Life podcast"
-              caption="An online radio show that explores important, timely topics in the world of digital design and technology.">
+              caption="An online radio show that explores important, timely topics in the world of digital design and technology."
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}>
               <a href="https://soundcloud.com/involution-studios/ai-and-knowledge-work" target="_blank" rel="noopener noreferrer">AI & Knowledge Work</a><br/>
               <a href="https://soundcloud.com/involution-studios/" target="_blank" rel="noopener noreferrer">Explore all episodes</a><br/>
             </ImageBlock>
@@ -210,7 +210,7 @@ class IndexPage extends Component {
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2">
               <div className="pad-right--only-lg">
-                <Image src="/images/homepage/group-aug-2018-4.jpg" className="image--max-width" />
+                <Image src="/images/homepage/group-aug-2018-4.jpg" className="image--max-width" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}/>
               </div>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2">

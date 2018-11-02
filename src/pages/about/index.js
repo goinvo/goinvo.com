@@ -91,11 +91,19 @@ const AboutPage = () => (
       <div className="max-width content-padding">
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-            <ImageBlock image="/images/about/beth-working.jpg" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} title="Open office hours" caption="Stop by and receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction." />
+            <ImageBlock
+              image="/images/about/beth-working.jpg"
+              sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              title="Open office hours"
+              caption="Stop by and receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction." />
             <Link to="/about/open-office-hours/" className="button button--primary button--block margin-bottom--double hidden--lg">Schedule a visit</Link>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-            <ImageBlock image="/images/about/bai-laughing.jpg" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} title="Join the team" caption="If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler." />
+            <ImageBlock
+              image="/images/about/bai-laughing.jpg"
+              sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              title="Join the team"
+              caption="If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler." />
             <Link to="/about/careers/" className="button button--primary button--block margin-bottom--double hidden--lg">Careers</Link>
           </div>
         </div>
@@ -118,7 +126,7 @@ const AboutPage = () => (
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
             <div className="pad-right--only-lg">
-              <Image src="/images/about/silhouette.jpg" className="image--max-width" />
+              <Image src="/images/about/silhouette.jpg" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} className="image--max-width" />
             </div>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2">
@@ -182,6 +190,7 @@ const AboutPage = () => (
                   title={item.title}
                   image={item.image}
                   caption={item.caption}
+                  sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                   hoverable />
               </Card>
             )

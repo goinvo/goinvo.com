@@ -1,4 +1,5 @@
-const fs = require('fs');
+const path = require('path');
+const componentWithMDXScope = require("gatsby-mdx/component-with-mdx-scope");
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -10,11 +11,15 @@ exports.createPages = ({ graphql, actions }) => {
             allMdx {
               edges {
                 node {
+                  id
                   parent {
                     ... on File {
                       name
-                      absolutePath
+                      sourceInstanceName
                     }
+                  }
+                  code {
+                    scope
                   }
                   frontmatter {
                     hidden
@@ -34,8 +39,11 @@ exports.createPages = ({ graphql, actions }) => {
           if (!node.frontmatter.hidden) {
             createPage({
               path: `/work/${node.parent.name}`,
-              component: node.parent.absolutePath,
-              context: { absPath: node.parent.absolutePath }
+              component: componentWithMDXScope(
+                path.resolve("./src/components/layouts/case-study-layout.js"),
+                node.code.scope
+              ),
+              context: { id: node.id }
             });
           }
         });
@@ -43,3 +51,11 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+  })
+}

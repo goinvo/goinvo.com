@@ -17,11 +17,13 @@ references:
     link: "https://fns-prod.azureedge.net/sites/default/files/ops/Massachusetts.pdf"
   - title: ""
     link: "http://www.pewinternet.org/fact-sheet/mobile/"
+metaDescription: "Closing the SNAP gap for 760,000 MA residents."
+metaKeywords: "product strategy, ui design, ux design, research, software development, massachusetts, snap"
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
-import Video from '../components/video'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
+import Video from 'components/video'
 
 # Closing the SNAP gap
 for the Massachusetts Department of Transitional Assistance

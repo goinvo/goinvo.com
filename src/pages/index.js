@@ -118,7 +118,7 @@ class IndexPage extends Component {
               const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
 
               return (
-                <Card link={link} key={link} externalLink={externalLink} suppressNewTab={suppressNewTab} hidden={{ class: 'hidden--sm', condition: i > 1 }}>
+                <Card link={link} key={link} externalLink={externalLink} suppressNewTab={suppressNewTab} className={ i > 1 ? 'hidden--sm' : '' }>
                   <ImageBlock
                     title={item.title}
                     image={item.image}

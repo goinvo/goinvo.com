@@ -225,24 +225,28 @@ hidden: false
 You can also look at other existing case studies as examples.
 
 Let's break down the fields:
-1. `title`
+1. `title` (required)
 This is the title that will be shown on cards throughout the _rest_ of the site, not necessarily the title shown on the case study page (you'll make than with an h1 or `#` in Markdown).
-2. `image`
+2. `image` (required)
 The path to the image on Dropbox to be used as the hero and the card image on other pages.
-3. `client`
+3. `client` (required)
 The client we worked with on the project. For Invo projects you can use an empty string (`""`).
-4. `caption`
+4. `caption` (required)
 A one-liner describing the project.
-5. `categories`
+5. `categories` (required)
 A YAML array of ID's for the categories (or 'tags') associated with the project. These must be selected from a predefined list, located in `src/data/categories.json`. The exact ID string must be used or it won't work. See the example above.
 6. `results`
 A YAML array of objects including a `stat` and `description` for that stat. See the example above. Currently, the results only support text. In the future we'll work to add an option for including buttons/links.
-7. `upNext`
+7. `upNext` (required)
 A YAML array of ID's associated with other case studies to link to at the bottom of the page. The ID is simply the filename of the case study you'd like to link to without the extension. See the example above.
 8. `hidden`
 Controls whether the case study should show up as a page and be included in lists of case studies throughout the site. Set to `true` if this case study is a work in progress. Keep in mind that even though it will be hidden from the site, this content is still publicly accessible on GitHub, so never include any content that we don't have client approval on.
+9. `metaDescription` (not required, but you should really include this)
+A concise summary of the case study, usually only a sentence or two long, used for search engines and link details. For more information, read [how to create the right meta description](https://yoast.com/meta-descriptions/).
+10. `metaKeywords`
+A set of comma separated words or short phrases that help summarize the case study for searching purposes.
 
-_NOTE:_ For now, all frontmatter fields are required, even if you set them to `false`. If you don't fill them out accurately, the app may crash.
+_NOTE:_ If you don't include required frontmatter fields, the app may crash.
 
 ### Viewing your case study as you author content
 When you add a new markdown file, it is necessary to restart your development server. Use `ctrl + c` to kill your process then start it up again with `yarn develop`. This will add your new markdown file in the list of case studies. The case study you're working on will become accessible through the 'Work' page, or at `http://localhost:8000/work/<filename>` (filename without `.md` file extension).
@@ -260,8 +264,8 @@ All Markdown pages in this project make use of a wonderful plugin for Gatsby cal
 ... frontmatter stuff
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
 ```
 
 Then use them anywhere you like in your content:

@@ -18,9 +18,11 @@ upNext:
   - "fastercures-health-data-basics"
   - "determinants-of-health"
 hidden: false
+metaDescription: "Inspired EHRs is an open source ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies."
+metaKeywords: "inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health"
 ---
-import Divider from '../components/divider'
-import Quote from '../components/quote'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
 
 # Inspired EHRs: Designing for Clinicians
 for Jeff Belden, MD at the University of Missouri, the National Institute of Health, and California Health Care Foundation

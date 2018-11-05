@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { MDXProvider } from "@mdx-js/tag"
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import Helmet from 'react-helmet'
 
 import Layout from './layout'
@@ -12,14 +13,12 @@ import Card from '../card'
 import ImageBlock from '../image-block'
 import References from '../references'
 
-import { extractWorkItemLinkDetails, concatCaseStudiesAndFeatures } from '../../helpers'
+import { extractWorkItemLinkDetails, concatCaseStudiesAndFeatures, findCaseStudyById } from '../../helpers'
 
 import config from '../../../config'
 
 class CaseStudyLayout extends Component {
   render() {
-    const frontmatter = this.props.pageContext.frontmatter;
-
     return (
       <StaticQuery
         query={graphql`
@@ -29,10 +28,14 @@ class CaseStudyLayout extends Component {
             ) {
               edges {
                 node {
+                  id
                   parent {
                     ... on File {
                       name
                     }
+                  }
+                  code {
+                    body
                   }
                   frontmatter {
                     title
@@ -40,6 +43,17 @@ class CaseStudyLayout extends Component {
                     client
                     categories
                     caption
+                    results {
+                      stat
+                      description
+                    }
+                    references {
+                      title
+                      link
+                    }
+                    upNext
+                    metaDescription
+                    metaKeywords
                   }
                 }
               }
@@ -48,19 +62,20 @@ class CaseStudyLayout extends Component {
         `}
         render={data => {
           const caseStudiesWithFeatures = concatCaseStudiesAndFeatures(data, false);
+          const caseStudy = findCaseStudyById(data, this.props.pageContext.id);
 
           const meta = [];
-          if (frontmatter.description) {
-            meta.push({ name: 'description', content: frontmatter.description })
+          if (caseStudy.frontmatter.metaDescription) {
+            meta.push({ name: 'description', content: caseStudy.frontmatter.metaDescription })
           }
-          if (frontmatter.keywords) {
-            meta.push({ name: 'keywords', content: frontmatter.keywords })
+          if (caseStudy.frontmatter.metaKeywords) {
+            meta.push({ name: 'keywords', content: caseStudy.frontmatter.metaKeywords })
           }
 
           return (
             <Layout>
               <Helmet
-                title={`GoInvo | ${frontmatter.title}`}
+                title={`GoInvo | ${caseStudy.frontmatter.title}`}
                 meta={meta}
               />
               <MDXProvider
@@ -87,20 +102,20 @@ class CaseStudyLayout extends Component {
                 }}
               >
                 <div className="case-study">
-                  <Hero image={frontmatter.image} />
+                  <Hero image={caseStudy.frontmatter.image} />
                   <div className="max-width max-width--md content-padding">
-                    {this.props.children}
+                    <MDXRenderer>{caseStudy.code.body}</MDXRenderer>
                   </div>
                   {
-                    frontmatter.results ?
-                      <Results stats={frontmatter.results} />
+                    caseStudy.frontmatter.results ?
+                      <Results stats={caseStudy.frontmatter.results} />
                     : null
                   }
                   <div className="background--blue pad-vertical--double pad-bottom--quad">
                     <div className="max-width content-padding">
                       <h3 className="header--md">Up next</h3>
                       <Columns columns={3}>
-                        { frontmatter.upNext.map(id => {
+                        { caseStudy.frontmatter.upNext.map(id => {
                           const nextItem = caseStudiesWithFeatures.find(item => item.slug === id || item.id === id);
                           const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(nextItem)
 
@@ -118,10 +133,10 @@ class CaseStudyLayout extends Component {
                     </div>
                   </div>
                   {
-                    frontmatter.references ?
+                    caseStudy.frontmatter.references ?
                       <div className="background--gray pad-vertical">
                         <div className="max-width content-padding">
-                          <References references={frontmatter.references} />
+                          <References references={caseStudy.frontmatter.references} />
                         </div>
                       </div>
                     : null

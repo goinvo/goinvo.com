@@ -10,11 +10,13 @@ upNext:
   - "inspired-ehrs"
   - "mitre-shr"
 hidden: false
+metaDescription: "3M Health Information Systems, the leader in computer-assisted coding in healthcare, saw a reimagined design transform coder workflow efficiency by 200%."
+metaKeywords: "nlp, icd-9, icd-10, hospital coding, his, 3m, natural language processing, prototype, software development, ui design"
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
-import Video from '../components/video'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
+import Video from 'components/video'
 
 # Natural language processing (NLP) software for hospital coding
 for 3m

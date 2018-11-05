@@ -11,10 +11,12 @@ upNext:
   - "carrier-testing"
   - "mitre-shr"
 hidden: false
+metaDescription: "The Personal Genome Project Gains New Focus &amp; New Business with Invo Workshop."
+metaKeywords: "personalized health, genomics, user experience, user interface, workshop, product architecture, product strategy, personal genome project"
 ---
 
-import Divider from '../components/divider'
-import Quote from '../components/quote'
+import Divider from 'components/divider'
+import Quote from 'components/quote'
 
 # Building a community for data donation
 for the Personal Genome Project

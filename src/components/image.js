@@ -68,7 +68,7 @@ class Image extends Component {
 }
 
 Image.defaultProps = {
-  dimensions: [ 320, 480, 600, 900, 1200, 1500, 2000 ],
+  dimensions: [ 600, 900, 1200, 1500, 2000 ],
   sizes: config.sizes.full
 }
 

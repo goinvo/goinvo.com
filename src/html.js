@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class HTML extends React.Component {
   render() {
@@ -12,17 +12,33 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10273473-2"></script>
-          <script dangerouslySetInnerHTML= {{ __html: `
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-10273473-2"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'UA-10273473-2');
             gtag('config', 'AW-973476681');
-          `}}></script>
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/356419.js"></script>
-          <script type="text/javascript" dangerouslySetInnerHTML= {{ __html: `
+          `,
+            }}
+          />
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/356419.js"
+          />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
             window._chatlio = window._chatlio||[];
             !function() {
               var t=document.getElementById("chatlio-widget-embed");
@@ -32,9 +48,16 @@ export default class HTML extends React.Component {
               n.setAttribute('data-widget-id','413f13c1-0a3b-447f-45a6-f99b340d8c78');
               c.parentNode.insertBefore(n,c);
             }();
-          `}}></script>
-          <link rel="preload" href="https://use.typekit.net/lcb6luw.css" as="style" crossOrigin="crossorigin"></link>
-          <link rel="stylesheet" href="https://use.typekit.net/lcb6luw.css"></link>
+          `,
+            }}
+          />
+          <link
+            rel="preload"
+            href="https://use.typekit.net/lcb6luw.css"
+            as="style"
+            crossOrigin="crossorigin"
+          />
+          <link rel="stylesheet" href="https://use.typekit.net/lcb6luw.css" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

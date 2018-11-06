@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class DOHDeterminantDetails extends Component {
   render() {
-    const { determinant } = this.props;
+    const { determinant } = this.props
 
     return (
       <div>
@@ -13,17 +13,17 @@ class DOHDeterminantDetails extends Component {
             return (
               <div className="divisionSection" key={division.title}>
                 <h4 className="division">{division.title}</h4>
-                {
-                  division.factors ?
-                    <ul className="factors">
-                      {division.factors.map(factor => {
-                        return (
-                          <li key={factor} className="factor">{factor}</li>
-                        )
-                      })}
-                    </ul>
-                  : null
-                }
+                {division.factors ? (
+                  <ul className="factors">
+                    {division.factors.map(factor => {
+                      return (
+                        <li key={factor} className="factor">
+                          {factor}
+                        </li>
+                      )
+                    })}
+                  </ul>
+                ) : null}
               </div>
             )
           })}

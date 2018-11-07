@@ -6,6 +6,38 @@ import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 
+import organHeartIcon from '../../../assets/images/vision/loneliness-in-our-human-code/organ-heart.svg'
+import dementiaIcon from '../../../assets/images/vision/loneliness-in-our-human-code/dementia.svg'
+import arthritisIcon from '../../../assets/images/vision/loneliness-in-our-human-code/arthritis.svg'
+import diabetesIcon from '../../../assets/images/vision/loneliness-in-our-human-code/diabetes.svg'
+import suicideIcon from '../../../assets/images/vision/loneliness-in-our-human-code/suicide.svg'
+import bloodPressureIcon from '../../../assets/images/vision/loneliness-in-our-human-code/blood-pressure.svg'
+import cancerIcon from '../../../assets/images/vision/loneliness-in-our-human-code/cancer.svg'
+import strokeIcon from '../../../assets/images/vision/loneliness-in-our-human-code/stroke.svg'
+import depressionIcon from '../../../assets/images/vision/loneliness-in-our-human-code/depression.svg'
+import bloodVesselIcon from '../../../assets/images/vision/loneliness-in-our-human-code/blood-vessel.svg'
+import stressIcon from '../../../assets/images/vision/loneliness-in-our-human-code/stress.svg'
+import antibodyIcon from '../../../assets/images/vision/loneliness-in-our-human-code/antibody.svg'
+import cognitionIcon from '../../../assets/images/vision/loneliness-in-our-human-code/decreased-cognition.svg'
+import strollerIcon from '../../../assets/images/vision/loneliness-in-our-human-code/stroller-baby.svg'
+import cuddleIcon from '../../../assets/images/vision/loneliness-in-our-human-code/mom-cuddle-baby.svg'
+import treesIcon from '../../../assets/images/vision/loneliness-in-our-human-code/trees.svg'
+import moneyIcon from '../../../assets/images/vision/loneliness-in-our-human-code/money.svg'
+import singleParentIcon from '../../../assets/images/vision/loneliness-in-our-human-code/single-parent-family.svg'
+import conversationIcon from '../../../assets/images/vision/loneliness-in-our-human-code/conversation.svg'
+import sleepIcon from '../../../assets/images/vision/loneliness-in-our-human-code/sleep.svg'
+import familyIcon from '../../../assets/images/vision/loneliness-in-our-human-code/family.svg'
+import peerIcon from '../../../assets/images/vision/loneliness-in-our-human-code/peers.svg'
+import pathIcon from '../../../assets/images/vision/loneliness-in-our-human-code/path.svg'
+import healthBehaviorIcon from '../../../assets/images/vision/loneliness-in-our-human-code/health-behavior.svg'
+import substanceUseIcon from '../../../assets/images/vision/loneliness-in-our-human-code/substance-use.svg'
+import selfPreservationIcon from '../../../assets/images/vision/loneliness-in-our-human-code/self-preservation.svg'
+import heartBreakLossIcon from '../../../assets/images/vision/loneliness-in-our-human-code/heart-break-loss.svg'
+import elderlyIcon from '../../../assets/images/vision/loneliness-in-our-human-code/elderly.svg'
+import homeIcon from '../../../assets/images/vision/loneliness-in-our-human-code/home.svg'
+import longTermCoupleIcon from '../../../assets/images/vision/loneliness-in-our-human-code/long-term-couple.svg'
+
+
 class LonelinessFeature extends Component {
 
   render() {
@@ -35,21 +67,21 @@ class LonelinessFeature extends Component {
                 <div className="row">
                   <div className="risk-duo">
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon organ-heart-icon" src={organHeartIcon} alt="heart" /></div>
                         <div class="risk-text text--gray text--center">heart disease</div>
                       </div>
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon dementia-icon" src={dementiaIcon} alt="dementia" /></div>
                         <div class="risk-text text--gray text--center">dementia</div>
                       </div>
                   </div>
                   <div className="risk-duo">
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon arthritis-icon" src={arthritisIcon} alt="arthritis" /></div>
                         <div class="risk-text text--gray text--center">arthritis</div>
                       </div>
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon diabetes-icon" src={diabetesIcon} alt="diabetes" /></div>
                         <div class="risk-text text--gray text--center">type-2 diabetes</div>
                       </div>
                   </div>
@@ -57,28 +89,28 @@ class LonelinessFeature extends Component {
                 <div className="row">
                   <div className="risk-duo">
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon suicide-icon" src={suicideIcon} alt="suicide" /></div>
                         <div class="risk-text text--gray text--center">suicide</div>
                       </div>
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon blood-pressure-icon" src={bloodPressureIcon} alt="blood pressure" /></div>
                         <div class="risk-text text--gray text--center">high blood pressure</div>
                       </div>
                   </div>
                   <div className="risk-duo">
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon cancer-icon" src={cancerIcon} alt="cancer" /></div>
                         <div class="risk-text text--gray text--center">metastatic cancer</div>
                       </div>
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon stroke-icon" src={strokeIcon} alt="stroke" /></div>
                         <div class="risk-text text--gray text--center">stroke</div>
                       </div>
                   </div>
                 </div>
                 <div className="row">
                   <div class="risk-factor risk-solo">
-                    <div class="icon-bubble"></div>
+                    <div class="icon-bubble"><img className="risk-icon depression-icon" src={depressionIcon} alt="depression" /></div>
                     <div class="risk-text text--gray text--center">depression</div>
                   </div>
                 </div>
@@ -87,21 +119,21 @@ class LonelinessFeature extends Component {
                 <div className="row">
                   <div className="risk-duo">
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon blood-vessel-icon" src={bloodVesselIcon} alt="blood vessel" /></div>
                         <div class="risk-text text--gray text--center">narrowing blood vessels to preserve body heat</div>
                       </div>
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon stress-icon" src={stressIcon} alt="stress" /></div>
                         <div class="risk-text text--gray text--center">elevating levels of the stress hormone cortisol</div>
                       </div>
                   </div>
                   <div className="risk-duo">
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon antibody-icon" src={antibodyIcon} alt="antibody" /></div>
                         <div class="risk-text text--gray text--center">reducing antibody protection</div>
                       </div>
                       <div class="risk-factor">
-                        <div class="icon-bubble"></div>
+                        <div class="icon-bubble"><img className="risk-icon cognition-icon" src={cognitionIcon} alt="decreased cognition" /></div>
                         <div class="risk-text text--gray text--center">decreasing cognitive function</div>
                       </div>
                   </div>
@@ -138,7 +170,7 @@ class LonelinessFeature extends Component {
                   <div className="age-section">
                     <h3 className="age-title header--md text--lg text--primary">Infants</h3>
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon stroller-icon" src={strollerIcon} alt="baby in stroller" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Early Nurture</h3>
                         <p className="text--gray">Social connectedness begins when life begins, and is most impacted by the quality of early relationships with parents and caregivers<sup><a href="#fn-16">16</a></sup>.</p>
@@ -146,7 +178,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon cuddle-icon" src={cuddleIcon} alt="mom cuddling baby" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Separation for infants</h3>
                         <p className="text--gray">Physical attachment is crucial for infants, and separation can cause high levels of anxiety. One study showed that mothering and cuddling hospitalized infants can increase survival rate by 20%, despite the health risks of infection<sup><a href="#fn-16">16</a>,<a href="#fn-17">17</a></sup>.</p>
@@ -154,7 +186,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon trees-icon" src={treesIcon} alt="trees" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Neighborhood conditions</h3>
                         <p className="text--gray">Infants  who grow up in a stable neighborhood environment have an increase ability to develop social networks<sup><a href="#fn-18">18</a>,<a href="#fn-19">19</a>,<a href="#fn-20">20</a></sup>.</p>
@@ -165,7 +197,7 @@ class LonelinessFeature extends Component {
                   <div className="age-section">
                     <h3 className="age-title header--md text--lg text--primary">Children</h3>
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon money-icon" src={moneyIcon} alt="piggy bank" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Effects of poverty</h3>
                         <p className="text--gray">Children in poverty experience less social connected across race, culture, and class. This is because the poorest families often live in the highly segregated communities with many barriers to social, physical, emotional, educational, and economic resources<sup><a href="#fn-16">16</a>,<a href="#fn-21">21</a></sup>.</p>
@@ -173,7 +205,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon single-parent-icon" src={singleParentIcon} alt="single mother with child" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Single parents</h3>
                         <p className="text--gray">Children living in single-parent households have a doubled risk of emotional, physical, and educational neglect<sup><a href="#fn-16">16</a>,<a href="#fn-22">22</a></sup>.</p>
@@ -181,7 +213,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon conversation-icon" src={conversationIcon} alt="speed bubbles" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Speech and language</h3>
                         <p className="text--gray">Speech and language are the two most important aspects of early childhood development, and the foundations of social and emotional wellbeing. Parents and guardians can help with this by spending time with children, including making and having meals, reading, and playing sports<sup><a href="#fn-16">16</a></sup>.</p>
@@ -192,7 +224,7 @@ class LonelinessFeature extends Component {
                   <div className="age-section">
                     <h3 className="age-title header--md text--lg text--primary">Adolescents</h3>
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon sleep-icon" src={sleepIcon} alt="bed" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Sleep</h3>
                         <p className="text--gray">People who report getting enough sleep are 70-80% less likely to feel a lack of companionship. While this is true for all ages, adolescents are particularly at risk because they have a decreased production of melatonin (sleep hormone) in comparison to young children. Additionally, use of electronic devices late into the night have been found to impair sleep<sup><a href="#fn-23">23</a>,<a href="#fn-24">24</a></sup>.</p>
@@ -200,7 +232,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon family-icon" src={familyIcon} alt="child with two parents" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Parent-child relationship</h3>
                         <p className="text--gray">The relationship between a parent and child is crucial to lifelong health and well-being. In fact, those with a poor relationship with their father are 68% more likely to smoke, drink, and do drugs in their teenage years. Those living in single parent homes, particularly fatherless ones, have much higher risks of juvenile delinquency<sup><a href="#fn-22">22</a></sup>.</p>
@@ -208,7 +240,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon peer-icon" src={peerIcon} alt="three friends" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Peer influence</h3>
                         <p className="text--gray">A major component of adolescent growth is gaining independence and a sense of identity. Often, this leads to conflict with parents and a tendency to turn to peers for guidance and support. However, peers often exert positive and negative influences on adolescents, resulting in everything from a strong support system to a toxic environment<sup><a href="#fn-16">16</a>,<a href="#fn-25">25</a></sup>.</p>
@@ -219,7 +251,7 @@ class LonelinessFeature extends Component {
                   <div className="age-section">
                     <h3 className="age-title header--md text--lg text--primary">Emerging Adults</h3>
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon path-icon" src={pathIcon} alt="winding path with varying jobs and relationships" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">A time of change</h3>
                         <p className="text--gray">Emerging adulthood is a time of exploration and change, including exploring different careers, values, relationships, and geographic residences that may mean leaving family for the first time. This change is often characterized by the constant forming, breaking, and reforming of social bonds. This is why having a constant source of social support can have major impacts on health and life satisfaction. In fact, if one has a friend they see on most day, it is like earning an extra $100,00 of income<sup><a href="#fn-14">14</a>,<a href="#fn-16">16</a></sup>.</p>
@@ -227,7 +259,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon health-behavior-icon" src={healthBehaviorIcon} alt="activity, healthy food, and safe sex" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Healthy behaviors</h3>
                         <p className="text--gray">A feeling of connectedness and belonging is correlated with a host of healthy behaviors including exercise, a healthy diet, and safe sex<sup><a href="#fn-26">26</a></sup>.</p>
@@ -235,7 +267,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon substance-use-icon" src={substanceUseIcon} alt="pills, bottle, shotglass" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Substance use</h3>
                         <p className="text--gray">Many emerging adults still emphasize peer opinions and actions as guidance for their own. However, research has found that females and males have different tendencies toward risk behaviors. In terms of alcohol consumption, males disproportionately consider drinking-related activities as a way to foster intimacy and closeness while females rely more on sharing throughts or multiple activities<sup><a href="#fn-26">26</a>,<a href="#fn-27">27</a></sup>.</p>
@@ -246,7 +278,7 @@ class LonelinessFeature extends Component {
                   <div className="age-section">
                     <h3 className="age-title header--md text--lg text--primary">Adults</h3>
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon organ-heart-icon" src={organHeartIcon} alt="heart" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Heart Health</h3>
                         <p className="text--gray">Maintaining cardiovascular health is extremely important for people of all ages, but poor health outcomes are particularly risky for adults and seniors. In fact, loneliness is associated with all types of heart disease, including ischaemic heart disease, arrhythmia, heart failure, and heart valv disease. Among those with coronary artery disease, the lonely are two times more at risk of cardiac death<sup><a href="#fn-28">28</a>,<a href="#fn-29">29</a></sup>.</p>
@@ -254,7 +286,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon self-preservation-icon" src={selfPreservationIcon} alt="umbrella" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Self Preservation</h3>
                         <p className="text--gray">Lonely people focus more on self-preservation and get more defensive in the face of their environments. As a survival mechanism, the brain is wired to focus on the self instead of caring for those around. Unfortunately for the person, this can backfire and make themselves even more unpleasant to be around, leading to more and more negative social encounters<sup><a href="#fn-30">30</a></sup>.</p>
@@ -262,7 +294,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon heart-break-loss-icon" src={heartBreakLossIcon} alt="broken heart" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Social loss</h3>
                         <p className="text--gray">Because many people identify themselves in terms of their relationships, losing a spouse or friend to distance or death can be a very painful experience, both emotional and physical. While the likelihood of losing someone is equal across age groups, many adults see some of their friendships weaken as a product of building a family life or experience the passing of a parent or spouse. In terms of life satisfaction, when we break a social tie, it is similar to suffering $90,000 loss in annual income<sup><a href="#fn-14">14</a>,<a href="#fn-31">31</a></sup>.</p>
@@ -273,7 +305,7 @@ class LonelinessFeature extends Component {
                   <div className="age-section">
                     <h3 className="age-title header--md text--lg text--primary">Aging Adults</h3>
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon elderly-icon" src={elderlyIcon} alt="old man" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Companionship</h3>
                         <p className="text--gray">Aging adults are most lonely when they are not involved in acticities that build social connections such as volunteering, religious services, faily time, or other community organization. In fact, 40% of seniors report television as their main companion. While technology such as the internet and television can be a helpful tool to alleviate isolation, contacts with other humans brings the most fulfillment<sup><a href="#fn-16">16</a>,<a href="#fn-32">32</a></sup>.</p>
@@ -281,7 +313,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon home-icon" src={homeIcon} alt="house" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">The Home</h3>
                         <p className="text--gray">Being able to maintain one’s own home promotes confidence and wellbeing in older people. Not only does it offer a sense of control and contribution, but it demonstrates a level of independence that is strengthened by opportunities to stay active and gather with friends in their neighborhood<sup><a href="#fn-32">32</a></sup>.</p>
@@ -289,7 +321,7 @@ class LonelinessFeature extends Component {
                     </div>
 
                     <div className="lonely-factor">
-                      <div className="lonely-factor-icon"></div>
+                      <div className="lonely-factor-icon"><img className="timeline-icon long-term-couple-icon" src={longTermCoupleIcon} alt="elderly couple" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Long Term Partner</h3>
                         <p className="text--gray">Many people live with a long-term partner into old age, and a large majority of people rely on their partners as a primary source of social support. However, old age can bring unexpected medical events and even death, leaving the healthy or surviving partner to suffer harmful effects to mental and physical health. Additionally, the percent of widows living with a child has decreased significantly in the last 100 years: from 70% to 20%. This meants that aging adults who have lost their spouse are much more likely to live alone than with family<sup><a href="#fn-16">16</a>,<a href="#fn-33">33</a></sup>.</p>
@@ -472,227 +504,6 @@ class LonelinessFeature extends Component {
                     {
                       title: 'Coile, C.C.; Levine, P.B. (2011). Recessions, Social Security, and Living Arrangements of the Elderly. Retrieved August 21, 2018',
                       link: 'http://projects.nber.org/projects_backend/rrc/papers/orrc11-12'
-                    },
-                    {
-                      title: 'A Connected Scotland: tackling social isolation and loneliness and building stronger communities. Retrieved August 2018',
-                      link: 'https://www.gov.scot/publications/connected-scotland-tackling-social-isolation-loneliness-building-stronger-communities/pages/3/'
-                    },
-                    {
-                      title: 'Minnesota Healthy 2020 Framework project. Retrieved August 2018',
-                      link: 'http://www.health.state.mn.us/healthymnpartnership/docs/2022HealthyMNFramework.pdf'
-                    },
-                    {
-                      title: 'Massachusetts Department of Public Health Detmination of Need. Retrieved August 2018',
-                      link: 'https://www.mass.gov/determination-of-need-don'
-                    },
-                    {
-                      title: 'Measuring your impact on loneliness in later life, campaign to end loneliness. Retrieved August 2018',
-                      link: 'https://www.campaigntoendloneliness.org/measuring-loneliness/'
-                    },
-                    {
-                      title: 'Lee, Richard & Robbins, Steven. (1995). Measuring Belongingness: The Social Connectedness and the Social Assurance Scales. Journal of Counseling Psychology. 42. 232-241. 10.1037/0022-0167.42.2.232. Retrieved August 2018',
-                      link: 'https://www.researchgate.net/publication/232449927_Measuring_Belongingnes_The_social_connectedness_and_the_Social_Assurance_Scales'
-                    },
-                    {
-                      title: 'Bures, Regina M. PhD. (2003). Childhood residential stability and health at midlife. Am J Public Health. 2003;93(7):1144-8. Retrieved August 2018',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1447924/'
-                    },
-                    {
-                      title: 'Fergusson DM, Boden JM, Horwood LJ. Exposure to Single Parenthood in Childhood and Later Mental Health, Educational, Economic, and Criminal Behavior Outcomes. Arch Gen Psychiatry. 2007;64(9):1089–1095. doi:10.1001/archpsyc.64.9.1089. Retrieved August 2018',
-                      link: 'https://jamanetwork.com/journals/jamapsychiatry/fullarticle/482426'
-                    },
-                    {
-                      title: 'Islam, M. Mazharul. (2015). The Effects of Low Birth Weight on School Performance and Behavioral Outcomes of Elementary School Children in Oman. Oman Med J. 2015;30(4):241-51. Retrieved August 2018',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4561640/'
-                    },
-                    {
-                      title: 'Indicators of Child, Family, and Community Connections, Office of the Assistant Secretary for Planning and Evaluation U.S. Department of Health and Human Services. Retrieved August 2018',
-                      link: 'https://aspe.hhs.gov/system/files/pdf/73371/chartbook.pdf'
-                    },
-                    {
-                      title: 'Mass.gov, MA Parental Leave Act, Parental Leave in Massachusetts. Retrieved August 2018',
-                      link: 'https://www.mass.gov/service-details/parental-leave-in-massachusetts'
-                    },
-                    {
-                      title: 'State Education Reforms, National Center for Education Statistics. Retrieved August 2018',
-                      link: 'https://nces.ed.gov/programs/statereform/tab5_2.asp'
-                    },
-                    {
-                      title: 'Australian Department of Family and Community Services. (2000). Indicators Of Social and Family Functioning. Retrieved August 2018',
-                      link: 'https://www.dss.gov.au/sites/default/files/documents/indicators_of_social_and_family_functioning_full_report.pdf'
-                    },
-                    {
-                      title: 'Mickelson, K.D. & Kubzansky L.D. (2003). Social distribution of social support: the mediating roles of life events. American Journal of Community Psychology, 32, 265-281. Retrieved August 2018'
-                    },
-                    {
-                      title: '  Adelman, H. S., & Taylor, L. (2006). Mental Health in Schools and Public Health. Public Health Reports, 121(3), 294–298. Retrieved August 2018',
-                      link: 'http://journals.sagepub.com/doi/pdf/10.1177/003335490612100312'
-                    },
-                    {
-                      title: 'Benefits of Community Involvement in Early Childhood. Retrieved August 2018',
-                      link: 'https://www.all4kids.org/2018/03/02/benefits-of-community-involvement-in-early-childhood/'
-                    },
-                    {
-                      title: 'HealthyPeople.gov, Adolscent Health. Retrieved August 2018',
-                      link: 'https://www.healthypeople.gov/2020/topics-objectives/topic/Adolescent-Health'
-                    },
-                    {
-                      title: 'New Zealand Government, Social Report, Social Connectedness. Retrieved August 2018',
-                      link: 'http://socialreport.msd.govt.nz/documents/2005/sr05-social-connectedness.pdf'
-                    },
-                    {
-                      title: 'Lenhart, Amanda. (2015) Teens, Technology and Friendships. Retrieved August 2018',
-                      link: 'http://www.pewinternet.org/2015/08/06/teens-technology-and-friendships'
-                    },
-                    {
-                      title: 'Lin, L.Y.; Sidani, J.E.; Shensa, A.; et al. (2016) Association between social media use and depression among U.S. young adults. Retrieved August 2018',
-                      link: 'https://www.ncbi.nlm.nih.gov/pubmed/26783723'
-                    },
-                    {
-                      title: 'Corley, Heather. (2018). What\s the Difference Between a Baby, Newbord, Infant, and Toddler? Retrieved August 2018',
-                      link: 'https://www.verywellfamily.com/difference-between-baby-newborn-infant-toddler-293848'
-                    },
-                    {
-                      title: 'Age limits and adolescents. Paediatr Child Health. 2003;8(9):577-8. Retrieved August 2018',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2794325'
-                    },
-                    {
-                      title: 'Ages and Stages, healthychildren.org. Retrieved August 2018',
-                      link: 'https://www.healthychildren.org/English/ages-stages/Pages/default.aspx'
-                    },
-                    {
-                      title: 'World Health Organization, Consolidated ARV guidelines, June 2013. Retrieved August 2018',
-                      link: 'http://www.who.int/hiv/pub/guidelines/arv2013/intro/keyterms/en/'
-                    },
-                    {
-                      title: 'World Health Organization, Proposed working definition of an older person in Africa for the MDS Project. Retrieved August 2018',
-                      link: 'http://www.who.int/healthinfo/survey/ageingdefnolder/en/'
-                    },
-                    {
-                      title: 'Census Reporter, Arlington, MA. Retrieved August 2018',
-                      link: 'https://censusreporter.org/profiles/16000US2501640-arlington-ma'
-                    },
-                    {
-                      title: 'Murthy, Vivek. (2017). Work and the Loneliness Epidemic. Harvard Business Review. Retrieved August 2018',
-                      link: 'https://hbr.org/cover-story/2017/09/work-and-the-loneliness-epidemic'
-                    },
-                    {
-                      title: 'Arnett, Jeffrey. (2000). Emergine adulthood: A theory of development from the late teens through the twenties. American Psychologist, Col 55(5), August 2018, 469-480. Retrieved August 2018'
-                    },
-                    {
-                      title: 'Nauert, Rick, PhD. Social Connection in Young Adulthood Linked to Mid-Life Well-being, PsychCentral. Retrieved August 2018',
-                      link: 'https://psychcentral.com/news/2015/07/24/social-connection-in-young-adulthood-linked-to-mid-life-well-being/87272.html'
-                    },
-                    {
-                      title: 'Borsari B, Carey KB. How the quality of peer relationships influences college alcohol use. Drug Alcohol Rev. 2006;25(4):361-70. Retrieved August 2018',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2635065'
-                    },
-                    {
-                      title: 'Felmlee D.H. Social norms in same- and cross-gender friendships. Soc Psychol Q. 1999;62;53-67.'
-                    },
-                    {
-                      title: 'Ensminger ME, Juon HS, Lee R, Lo SY. Social Connections in the Inner City: Examination across the Life Course. Longit Life Course Stud. 2009;1(1):11-26.',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2876332'
-                    },
-                    {
-                      title: 'Reitzel LR, Kendzor DE, Castro Y, et al. The relation between social cohesion and smoking cessation among Black smokers, and the potential role of psychosocial mediators. Ann Behav Med. 2013;45(2):249-57.',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3587036'
-                    },
-                    {
-                      title: 'Umberson D, Montez JK. Social relationships and health: a flashpoint for health policy. J Health Soc Behav. 2010;51 Suppl(Suppl):S54-66.',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150158'
-                    },
-                    {
-                      title: 'Eraslan-Capan, Bahtiyar. Social Connectedness and Flourishing: The Mediating Role of Hopelessness. Universal Journal of Educational Research, v4 n5 p933-940 2016.',
-                      link: 'https://eric.ed.gov/?q=EJ1099669&id=EJ1099669'
-                    },
-                    {
-                      title: 'Armstrong, Kristi. (July 2018). Suicide attempts down at Arlington High, but suicides up statewide. WickedLocal Arlington',
-                      link: 'http://arlington.wickedlocal.com/news/20180725/suicide-attempts-down-at-arlington-high-but-suicides-up-statewide'
-                    },
-                    {
-                      title: 'Stagman, S.; Schwarz, S.W.; Powers, D. (May 2011). Adolescent Substance Use in the U.S. National Center for Children in Poverty.',
-                      link: 'http://www.nccp.org/publications/pub_1008.html'
-                    },
-                    {
-                      title: 'Suicide rising across the U.S. Centers for Disease Control and Prevention',
-                      link: 'https://www.cdc.gov/vitalsigns/suicide/index.html'
-                    },
-                    {
-                      title: 'Fuhrer, R.; Stansfeld S.A.; Chemali J.; Shipley M.J. (1999). Gender, social relations and mental health: prospective findings from an occupational cohort (Whitehall II study). ScienceDirect.',
-                      link: 'https://www.sciencedirect.com/science/article/pii/S0277953698002901'
-                    },
-                    {
-                      title: 'AARP Livability Index',
-                      link: 'https://livabilityindex.aarp.org/search#Arlington+MA+USA'
-                    },
-                    {
-                      title: 'Stone, W., Hulse, K. (2007) Housing and social cohesion: an empirical exploration, AHURI Final Report No. 100, Australian Housing and Urban Research Institute Limited, Melbourne',
-                      link: 'https://www.ahuri.edu.au/research/final-reports/100'
-                    },
-                    {
-                      title: 'Housing Corporation of Arlington',
-                      link: 'https://www.housingcorparlington.org/'
-                    },
-                    {
-                      title: 'Low birth weight babies by city and town ("County Subdivision"). 870,573,869,36,868,867,133,38,35,18/any/14279,14280. Retrieved August 2018.',
-                      link: 'https://datacenter.kidscount.org/data/tables/7239-low-birth-weight-babies-by-city-and-town-county-subdivision#detailed/2/any/false/'
-                    },
-                    {
-                      title: 'Bureau of Labor Statistics. Local Area Unemployment Statistics Map. Retrieved August 2018',
-                      link: 'https://data.bls.gov/map/MapToolServlet?survey=la'
-                    },
-                    {
-                      title: 'Economic Policy Institute. The Cose of Child Care. Retrieved August 2018',
-                      link: 'https://www.epi.org/child-care-costs-in-the-united-states/#/MA'
-                    },
-                    {
-                      title: 'Town of Arlington. Community Links. Retrieved August 2018',
-                      link: 'https://www.arlingtonma.gov/services/community-links'
-                    },
-                    {
-                      title: 'Youth Pass. Massachusetts Bay Transporation Authority. Retrieved August 2018',
-                      link: 'https://www.mbta.com/fares/reduced/youth-pass'
-                    },
-                    {
-                      title: 'Charles A. Emlet and Joane T. Moceri, “The Importance of Social Connectedness in Building Age-Friendly Communities,” Journal of Aging Research, vol. 2012, Article ID 173247, 9 pages, 2012',
-                      link: 'https://www.hindawi.com/journals/jar/2012/173247/'
-                    },
-                    {
-                      title: 'Age Friendly World. Global Database of Age-firnedly Practices. Retrieved August 2018',
-                      link: 'https://extranet.who.int/agefriendlyworld/afp/'
-                    },
-                    {
-                      title: 'Cornwell EY, Waite LJ. Measuring social isolation among older adults using multiple indicators from the NSHAP study. J Gerontol B Psychol Sci Soc Sci. 2009;64 Suppl 1(Suppl 1):i38-46.',
-                      link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2800811'
-                    },
-                    {
-                      title: 'Bram Lancee, Jonas Radl; Social Connectedness and the Transition From Work to Retirement, The Journals of Gerontology: Series B, Volume 67, Issue 4, 1 July 2012, Pages 481–490',
-                      link: 'https://academic.oup.com/psychsocgerontology/article/67/4/481/568468'
-                    },
-                    {
-                      title: 'A Profile of Social Connectedness in Older Adults. Retrieved August 2018',
-                      link: 'https://connect2affect.org/wp-content/uploads/2017/02/A-Profile-of-Social-Connectedness.pdf'
-                    },
-                    {
-                      title: 'National & Community Service. Retrieved August 2018',
-                      link: 'https://www.nationalservice.gov/vcla/state/Massachusetts'
-                    },
-                    {
-                      title: 'U.S. Department of Housing and Urban Development, 2014 Location Affordability Index v2018',
-                      link: 'http://www.locationaffordability.info/lai.aspx'
-                    },
-                    {
-                      title: 'Federal Transit Administration. The National Transit Database. Retrieved August 2018',
-                      link: 'https://www.transit.dot.gov/ntd'
-                    },
-                    {
-                      title: 'NAVTEQ private data (from AARP Livability Index). Retrieved August 2018',
-                      link: 'https://mapreporter.navteq.com/#dashboard'
-                    },
-                    {
-                      title: 'United States Department of Agriculture. Profile of SNAP Households. Retrieved August 2018',
-                      link: 'https://fns-prod.azureedge.net/sites/default/files/ops/Massachusetts.pdf'
                     }
                   ]}/>
                 </div>

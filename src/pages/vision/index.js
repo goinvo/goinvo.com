@@ -177,6 +177,7 @@ class VisionPage extends Component {
                   client="Feature"
                   date={spotlightFeature.date}
                   caption={spotlightFeature.caption}
+                  sizes={config.sizes.fullToTwoThirdsAtLargeInsideMaxWidth}
                   hoverable />
               </Card>
             </div>
@@ -188,6 +189,7 @@ class VisionPage extends Component {
                   client="Podcast"
                   date={spotlightPodcast.date}
                   caption={spotlightPodcast.caption}
+                  sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                   hoverable />
               </Card>
             </div>
@@ -207,6 +209,7 @@ class VisionPage extends Component {
                         client="Feature"
                         date={feature.date}
                         caption={feature.caption}
+                        sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                         hoverable />
                     </Card>
                   )
@@ -223,7 +226,7 @@ class VisionPage extends Component {
         <div className="max-width content-padding pad-vertical--quad">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-              <Image src="/images/vision/emerging-tech-books.jpg" className="image--max-width" />
+              <Image src="/images/vision/emerging-tech-books.jpg" className="image--max-width" sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth} />
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
               <h2 className="header--xl" id="books">Design and Tech Publications</h2>
@@ -280,6 +283,7 @@ class VisionPage extends Component {
                   <ImageBlock
                     title="Keep up to date with us!"
                     image="/images/homepage/standardized-health-data-preview-2.jpg"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     caption="Our posts cover everything from the theories behind messy desks to health data standardization." />
                   <ul className="list--unstyled">
                     { this.renderBlogFeed() }
@@ -292,6 +296,7 @@ class VisionPage extends Component {
                 <ImageBlock
                   title="The Digital Life"
                   image="/images/vision/microphone.jpg"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   caption="Explore our podcast on emerging technology and digital design." />
                 <iframe
                   title="GoInvo SoundCloud Embed"

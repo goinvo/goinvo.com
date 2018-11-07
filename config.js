@@ -32,8 +32,12 @@ export default {
     full: ['100vw'],
     fullToHalfAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
     fullToThirdAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
-    fullToHalfAtLargeInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${maxWidth.default / 2}px`, `(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
-    fullToThirdAtLargeInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${maxWidth.default / 3}px`, `(min-width: ${mediaQueries.lg}) 33vw`, '100vw'],
-    caseStudy: [`(min-width: ${maxWidth.md}) ${maxWidth.md}`, '100vw'],
+    fullInsideMediumMaxWidth: [`(min-width: ${maxWidth.md}) ${maxWidth.md}`, '100vw'],
+    fullToHalfAtLargeInsideMediumMaxWidth: [`(min-width: ${maxWidth.md}px) ${parseInt(maxWidth.md / 2, 10)}px`, `(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+    fullToThirdAtLargeInsideMediumMaxWidth: [`(min-width: ${maxWidth.md}px) ${parseInt(maxWidth.md / 3, 10)}px`, `(min-width: ${mediaQueries.lg}) 33vw`, '100vw'],
+    fullToHalfAtMediumInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${parseInt(maxWidth.default / 2, 10)}px`, `(min-width: ${mediaQueries.md}) 50vw`, '100vw'],
+    fullToHalfAtLargeInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${parseInt(maxWidth.default / 2, 10)}px`, `(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+    fullToTwoThirdsAtLargeInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${parseInt(maxWidth.default * .66, 10)}px`, `(min-width: ${mediaQueries.lg}) 66vw`, '100vw'],
+    fullToThirdAtLargeInsideMaxWidth: [`(min-width: ${maxWidth.default}px) ${parseInt(maxWidth.default / 3, 10)}px`, `(min-width: ${mediaQueries.lg}) 33vw`, '100vw'],
   }
 }

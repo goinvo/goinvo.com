@@ -169,18 +169,33 @@ const ServicesPage = () => (
     </div>
     <div className="max-width content-padding pad-vertical--double">
       <Columns columns={3}>
-        <ImageBlock key={"1"} image="/images/services/emerging-tech-shr-layers.jpg" title="Emerging technology" caption="We’ve worked on projects across the spectrum of emerging technology from artificial intelligence for medical coding to self-documenting voice encounters and wearable devices.">
+        <ImageBlock
+          key={"1"}
+          image="/images/services/emerging-tech-shr-layers.jpg"
+          title="Emerging technology"
+          caption="We’ve worked on projects across the spectrum of emerging technology from artificial intelligence for medical coding to self-documenting voice encounters and wearable devices."
+          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}>
           <div><a href="https://www.goinvo.com/features/from-bathroom-to-healthroom/">From bathroom to healthroom</a></div>
           <div><Link to="/work/wuxi-nextcode-familycode/">WuXi NextCODE</Link></div>
         </ImageBlock>
-        <ImageBlock key={"2"} image="/images/services/doh-preview.jpg" title="Information visualizations" caption="We create beautiful printed and interactive health-related data visualizations that span payment dashboards to visualizing the social determinants of health to clinical practice guidelines for Zika.">
+        <ImageBlock
+          key={"2"}
+          image="/images/services/doh-preview.jpg"
+          title="Information visualizations"
+          caption="We create beautiful printed and interactive health-related data visualizations that span payment dashboards to visualizing the social determinants of health to clinical practice guidelines for Zika."
+          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}>
           <div><a href="https://www.goinvo.com/features/determinants-of-health/">Determinants of Health</a></div>
           <div><a href="https://www.goinvo.com/features/ebola-care-guideline/">Clinical Practice Guidelines for Zika</a></div>
         </ImageBlock>
-        <ImageBlock key={"3"} image="/images/services/inspired-ehrs-book.jpg" title="Open source healthcare products" caption="We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.">
-        <div><Link to="/work/inspired-ehrs/">Inspired EHRs</Link></div>
-        <div><Link to="/work/paintrackr/">PainTrackr</Link></div>
-        <div><Link to="/work/?category=open-source">See all open source products</Link></div>
+        <ImageBlock
+          key={"3"}
+          image="/images/services/inspired-ehrs-book.jpg"
+          title="Open source healthcare products"
+          caption="We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development."
+          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}>
+          <div><Link to="/work/inspired-ehrs/">Inspired EHRs</Link></div>
+          <div><Link to="/work/paintrackr/">PainTrackr</Link></div>
+          <div><Link to="/work/?category=open-source">See all open source products</Link></div>
         </ImageBlock>
       </Columns>
     </div>

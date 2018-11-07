@@ -232,6 +232,7 @@ class WorkPage extends Component {
                       client={item.client || null}
                       categories={item.categories}
                       caption={item.caption}
+                      sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
                       hoverable />
                   </Card>
                 )
@@ -264,6 +265,7 @@ class WorkPage extends Component {
                       title={item.title}
                       image={item.image}
                       caption={item.caption}
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                       hoverable />
                   </Card>
                 )

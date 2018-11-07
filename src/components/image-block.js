@@ -17,7 +17,7 @@ class ImageBlock extends Component {
   }
 
   render() {
-    const { title, image, externalImage, sizes = null, alt, client, date, categories, caption, className, hoverable = false } = this.props;
+    const { title, image, externalImage, sizes, alt, client, date, categories, caption, className, hoverable = false } = this.props;
 
     return (
       <div className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className ? className : ''}`}>

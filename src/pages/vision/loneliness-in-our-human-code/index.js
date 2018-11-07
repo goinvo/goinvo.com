@@ -51,12 +51,12 @@ class LonelinessFeature extends Component {
 
                 <h3 className="header--md text--lg">Social Isolation <span className="text--primary">Costs Us</span></h3>
                 <div className="text-right pure-u-1 pure-u-lg-1-2">
-                  <div className="stat number--lg">8</div>
-                  <div className="stat-desc"><p className="text--gray">years of life lost, or the equivalent of <span className="text--gray">smoking 15 cigarettes a day</span><sup><a href="#fn-1">1</a></sup></p></div>
+                  <div className="stat"><span className="number--lg">8</span> years</div>
+                  <div className="stat-desc"><p className="text--gray">of life lost, or the equivalent of smoking 15 cigarettes a day<sup><a href="#fn-1">1</a></sup></p></div>
                 </div>
                 <div className="text-below pure-u-1 pure-u-lg-1-2">
                   <div className="stat number--lg">$6.7B</div>
-                  <div class="stat-desc"><p className="text--gray">dollars annually in federal spending<sup><a href="#fn-2">2</a></sup></p></div>
+                  <div class="stat-desc"><p className="text--gray">dollars in additional federal <br/>spending, every year<sup><a href="#fn-2">2</a></sup></p></div>
                 </div>
 
                 <Divider />
@@ -145,15 +145,15 @@ class LonelinessFeature extends Component {
 
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <h3 className="header--md">is a <span className="text--primary">Co-morbidity</span></h3>
-                  <p className="text--gray">We feel lonely when our current number of social relations (and the quality of those) do not match what we desire<sup><a href="#fn-8">8</a>,<a href="#fn-18">18</a></sup>. This feeling leads to our loss of belongingness, satisfaction with life, and onset of co-occuring physical and mental illnesses.</p>
+                  <p className="text--gray">We feel lonely when our current number of social relations (and the quality of those) do not match what we desire<sup><a href="#fn-8">8</a>,<a href="#fn-18">18</a></sup>. This feeling can lead to a loss of our sense of belongingness, satisfaction with life, and is associated with the onset of co-occuring physical and mental illnesses.</p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <h3 className="header--md">Manifests as <span className="text--primary">Physical Pain</span></h3>
-                  <p className="text--gray">A broken heart can feel like a broken leg because our brains process social rejection in the same location as physical pain<sup><a href="#fn-14">14</a>,<a href="#fn-15">15</a></sup>. Evolution has wired socialization into the brain’s automatic reflex because being with other humans dramatically increases our chances of survival<sup><a href="#fn-15">15</a></sup>.</p>
+                  <p className="text--gray">A broken heart exhibits similar physical pain levels as a broken limb because our nervous system processes social rejection in the same area of the brain as physical pain<sup><a href="#fn-14">14</a>,<a href="#fn-15">15</a></sup>. Evolution has wired socialization into the brain’s automatic reflexes on account of human contact dramatically increasing our chances of survival<sup><a href="#fn-15">15</a></sup>.</p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <h3 className="header--md">Is a <span className="text--primary">dysfunction of the brain</span></h3>
-                  <p className="text--gray">The default for the human brain is assessing and responding to our social context and stimuli, otherwise known as our “default network<sup><a href="#fn-11">11</a></sup>.” When we feel sociallt fulfilled, there is a boost in our brain’s reward center (activating dopamine and oxytocin), and healthy function in the parts of our brain that process social exclusion<sup><a href="#fn-11">11</a>,<a href="#fn-12">12</a>,<a href="#fn-13">13</a></sup>.</p>
+                  <p className="text--gray">The default for the human brain is to assess and respond to our social context and stimuli, otherwise known as our “default network"<sup><a href="#fn-11">11</a></sup>. When we feel socially fulfilled, there is a boost in our brain’s reward center (activating dopamine and oxytocin) along with healthy function in the parts of our brain that process social exclusion<sup><a href="#fn-11">11</a>,<a href="#fn-12">12</a>,<a href="#fn-13">13</a></sup>.</p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <h3 className="header--md">Can affect <span className="text--primary">Gene Expression</span></h3>
@@ -181,7 +181,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon cuddle-icon" src={cuddleIcon} alt="mom cuddling baby" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Separation for infants</h3>
-                        <p className="text--gray">Physical attachment is crucial for infants, and separation can cause high levels of anxiety. One study showed that mothering and cuddling hospitalized infants can increase survival rate by 20%, despite the health risks of infection<sup><a href="#fn-16">16</a>,<a href="#fn-17">17</a></sup>.</p>
+                        <p className="text--gray">Physical attachment is crucial for infants, and separation can cause high levels of anxiety. One study showed that mothering and cuddling hospitalized infants can increase survival rate by 20%, despite the risks of infection<sup><a href="#fn-16">16</a>,<a href="#fn-17">17</a></sup>.</p>
                       </div>
                     </div>
 
@@ -189,7 +189,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon trees-icon" src={treesIcon} alt="trees" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Neighborhood conditions</h3>
-                        <p className="text--gray">Infants  who grow up in a stable neighborhood environment have an increase ability to develop social networks<sup><a href="#fn-18">18</a>,<a href="#fn-19">19</a>,<a href="#fn-20">20</a></sup>.</p>
+                        <p className="text--gray">Infants who grow up in a stable neighborhood environment have an increased ability to develop strong social networks<sup><a href="#fn-18">18</a>,<a href="#fn-19">19</a>,<a href="#fn-20">20</a></sup>.</p>
                       </div>
                     </div>
                   </div>
@@ -200,7 +200,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon money-icon" src={moneyIcon} alt="piggy bank" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Effects of poverty</h3>
-                        <p className="text--gray">Children in poverty experience less social connected across race, culture, and class. This is because the poorest families often live in the highly segregated communities with many barriers to social, physical, emotional, educational, and economic resources<sup><a href="#fn-16">16</a>,<a href="#fn-21">21</a></sup>.</p>
+                        <p className="text--gray">Children affected by poverty experience fewer social connections across race, culture, and class. This is because the poorest families live in highly segregated communities with many barriers to social, physical, emotional, educational, and economic resources<sup><a href="#fn-16">16</a>,<a href="#fn-21">21</a></sup>.</p>
                       </div>
                     </div>
 
@@ -208,7 +208,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon single-parent-icon" src={singleParentIcon} alt="single mother with child" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Single parents</h3>
-                        <p className="text--gray">Children living in single-parent households have a doubled risk of emotional, physical, and educational neglect<sup><a href="#fn-16">16</a>,<a href="#fn-22">22</a></sup>.</p>
+                        <p className="text--gray">Children living in single-parent households (predominantly single-mothers) have a doubled risk of inadequate access to emotional, physical, and educational support<sup><a href="#fn-16">16</a>,<a href="#fn-22">22</a></sup>.</p>
                       </div>
                     </div>
 
@@ -216,7 +216,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon conversation-icon" src={conversationIcon} alt="speed bubbles" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Speech and language</h3>
-                        <p className="text--gray">Speech and language are the two most important aspects of early childhood development, and the foundations of social and emotional wellbeing. Parents and guardians can help with this by spending time with children, including making and having meals, reading, and playing sports<sup><a href="#fn-16">16</a></sup>.</p>
+                        <p className="text--gray">Speech and language are the two most important aspects of early childhood development, and the foundations of social and emotional well-being. Parents and guardians can help with this by spending time with children, including making and having meals, reading, and playing sports<sup><a href="#fn-16">16</a></sup>.</p>
                       </div>
                     </div>
                   </div>
@@ -227,7 +227,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon sleep-icon" src={sleepIcon} alt="bed" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Sleep</h3>
-                        <p className="text--gray">People who report getting enough sleep are 70-80% less likely to feel a lack of companionship. While this is true for all ages, adolescents are particularly at risk because they have a decreased production of melatonin (sleep hormone) in comparison to young children. Additionally, use of electronic devices late into the night have been found to impair sleep<sup><a href="#fn-23">23</a>,<a href="#fn-24">24</a></sup>.</p>
+                        <p className="text--gray">People who report getting enough sleep are 70-80% less likely to feel a lack of companionship. While this is true for all ages, adolescents are particularly at risk with a decreased production of melatonin (sleep hormone) compared to that of young children. Additionally, use of electronic devices late into the night have been found to impair sleep<sup><a href="#fn-23">23</a>,<a href="#fn-24">24</a></sup>.</p>
                       </div>
                     </div>
 
@@ -235,7 +235,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon family-icon" src={familyIcon} alt="child with two parents" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Parent-child relationship</h3>
-                        <p className="text--gray">The relationship between a parent and child is crucial to lifelong health and well-being. In fact, those with a poor relationship with their father are 68% more likely to smoke, drink, and do drugs in their teenage years. Those living in single parent homes, particularly fatherless ones, have much higher risks of juvenile delinquency<sup><a href="#fn-22">22</a></sup>.</p>
+                        <p className="text--gray">The relationship between a parent and child is crucial to lifelong health and well-being. In fact, those with a poor relationship with their father are 68% more likely to smoke, drink, and use drugs in their teenage years. Those living in single-parent homes, particularly fatherless ones, have much higher risks of juvenile delinquency<sup><a href="#fn-22">22</a></sup>.</p>
                       </div>
                     </div>
 
@@ -243,7 +243,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon peer-icon" src={peerIcon} alt="three friends" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Peer influence</h3>
-                        <p className="text--gray">A major component of adolescent growth is gaining independence and a sense of identity. Often, this leads to conflict with parents and a tendency to turn to peers for guidance and support. However, peers often exert positive and negative influences on adolescents, resulting in everything from a strong support system to a toxic environment<sup><a href="#fn-16">16</a>,<a href="#fn-25">25</a></sup>.</p>
+                        <p className="text--gray">A major component of adolescent growth is gaining independence and a sense of identity. Often, this leads to conflict with parents and a tendency to turn to peers for guidance and support. However, peers often exert positive and negative influences on adolescents, resulting in anything from strong support systems to toxic environments<sup><a href="#fn-16">16</a>,<a href="#fn-25">25</a></sup>.</p>
                       </div>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon path-icon" src={pathIcon} alt="winding path with varying jobs and relationships" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">A time of change</h3>
-                        <p className="text--gray">Emerging adulthood is a time of exploration and change, including exploring different careers, values, relationships, and geographic residences that may mean leaving family for the first time. This change is often characterized by the constant forming, breaking, and reforming of social bonds. This is why having a constant source of social support can have major impacts on health and life satisfaction. In fact, if one has a friend they see on most day, it is like earning an extra $100,00 of income<sup><a href="#fn-14">14</a>,<a href="#fn-16">16</a></sup>.</p>
+                        <p className="text--gray">Emerging adulthood is a time of exploration and change, including testing different careers, values, relationships, and geographic residences that may mean leaving family for the first time. This change is often characterized by the constant forming, breaking, and reforming of social bonds. This is why having a constant source of social support can have major impacts on health and life satisfaction. In fact, if a person has a friend they see on most days, it has a similar impact on life satisfaction as would earning an extra $100,00 of income<sup><a href="#fn-14">14</a>,<a href="#fn-16">16</a></sup>.</p>
                       </div>
                     </div>
 
@@ -270,7 +270,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon substance-use-icon" src={substanceUseIcon} alt="pills, bottle, shotglass" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Substance use</h3>
-                        <p className="text--gray">Many emerging adults still emphasize peer opinions and actions as guidance for their own. However, research has found that females and males have different tendencies toward risk behaviors. In terms of alcohol consumption, males disproportionately consider drinking-related activities as a way to foster intimacy and closeness while females rely more on sharing throughts or multiple activities<sup><a href="#fn-26">26</a>,<a href="#fn-27">27</a></sup>.</p>
+                        <p className="text--gray">Many emerging adults still emphasize peer opinions and actions as guidance for their own. However, research has found that females and males have different tendencies toward risk behaviors. Males disproportionately consider drinking-related activities as a way to foster intimacy and closeness with their peers, while females rely more on self-disclosure or sharing multiple activities<sup><a href="#fn-26">26</a>,<a href="#fn-27">27</a></sup>.</p>
                       </div>
                     </div>
                   </div>
@@ -281,7 +281,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon organ-heart-icon" src={organHeartIcon} alt="heart" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Heart Health</h3>
-                        <p className="text--gray">Maintaining cardiovascular health is extremely important for people of all ages, but poor health outcomes are particularly risky for adults and seniors. In fact, loneliness is associated with all types of heart disease, including ischaemic heart disease, arrhythmia, heart failure, and heart valv disease. Among those with coronary artery disease, the lonely are two times more at risk of cardiac death<sup><a href="#fn-28">28</a>,<a href="#fn-29">29</a></sup>.</p>
+                        <p className="text--gray">Maintaining cardiovascular health is extremely important for people of all ages, but poor health outcomes are particularly risky for adults and seniors. In fact, loneliness is associated with all types of heart disease, including ischemic heart disease, arrhythmia, heart failure, and heart valve disease. Among those with coronary artery disease, the lonely are two times more at risk of cardiac death<sup><a href="#fn-28">28</a>,<a href="#fn-29">29</a></sup>.</p>
                       </div>
                     </div>
 
@@ -289,7 +289,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon self-preservation-icon" src={selfPreservationIcon} alt="umbrella" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Self Preservation</h3>
-                        <p className="text--gray">Lonely people focus more on self-preservation and get more defensive in the face of their environments. As a survival mechanism, the brain is wired to focus on the self instead of caring for those around. Unfortunately for the person, this can backfire and make themselves even more unpleasant to be around, leading to more and more negative social encounters<sup><a href="#fn-30">30</a></sup>.</p>
+                        <p className="text--gray">Lonely people focus more on self-preservation and become more defensive in the face of their environments. As a survival mechanism, the brain is wired to focus on the self instead of caring for those around. Unfortunately for the person, this can backfire and make themselves even more unpleasant to be around, leading to more and more negative social encounters and fewer people willing to be around them<sup><a href="#fn-30">30</a></sup>.</p>
                       </div>
                     </div>
 
@@ -297,7 +297,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon heart-break-loss-icon" src={heartBreakLossIcon} alt="broken heart" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Social loss</h3>
-                        <p className="text--gray">Because many people identify themselves in terms of their relationships, losing a spouse or friend to distance or death can be a very painful experience, both emotional and physical. While the likelihood of losing someone is equal across age groups, many adults see some of their friendships weaken as a product of building a family life or experience the passing of a parent or spouse. In terms of life satisfaction, when we break a social tie, it is similar to suffering $90,000 loss in annual income<sup><a href="#fn-14">14</a>,<a href="#fn-31">31</a></sup>.</p>
+                        <p className="text--gray">Because many people identify themselves in terms of their relationships, losing a spouse or friend to distance or death can be a very painful experience, both emotional and physical. While the likelihood of losing someone is equal across age groups, many adults see some of their friendships weaken as a product of building a family or experience the passing of a parent or spouse. In terms of life satisfaction, when we break a social tie, it is similar to suffering $90,000 loss in annual income<sup><a href="#fn-14">14</a>,<a href="#fn-31">31</a></sup>.</p>
                       </div>
                     </div>
                   </div>
@@ -308,7 +308,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon elderly-icon" src={elderlyIcon} alt="old man" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Companionship</h3>
-                        <p className="text--gray">Aging adults are most lonely when they are not involved in acticities that build social connections such as volunteering, religious services, faily time, or other community organization. In fact, 40% of seniors report television as their main companion. While technology such as the internet and television can be a helpful tool to alleviate isolation, contacts with other humans brings the most fulfillment<sup><a href="#fn-16">16</a>,<a href="#fn-32">32</a></sup>.</p>
+                        <p className="text--gray">Aging adults are most lonely when they are not involved in activities that build social connections such as volunteering, religious services, family time, or other community participation. In fact, 40% of seniors report television as their main companion. While technology such as the internet and television can be a helpful tool to alleviate isolation, contact with other humans brings the most fulfillment<sup><a href="#fn-16">16</a>,<a href="#fn-32">32</a></sup>.</p>
                       </div>
                     </div>
 
@@ -316,7 +316,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon home-icon" src={homeIcon} alt="house" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">The Home</h3>
-                        <p className="text--gray">Being able to maintain one’s own home promotes confidence and wellbeing in older people. Not only does it offer a sense of control and contribution, but it demonstrates a level of independence that is strengthened by opportunities to stay active and gather with friends in their neighborhood<sup><a href="#fn-32">32</a></sup>.</p>
+                        <p className="text--gray">Being able to maintain one’s own home promotes confidence and well-being in older people. Not only does it offer a sense of control and contribution, but a level of independence strengthened by opportunities to stay active and gather with friends in their community<sup><a href="#fn-32">32</a></sup>.</p>
                       </div>
                     </div>
 
@@ -324,7 +324,7 @@ class LonelinessFeature extends Component {
                       <div className="lonely-factor-icon"><img className="timeline-icon long-term-couple-icon" src={longTermCoupleIcon} alt="elderly couple" /></div>
                       <div className="lonely-factor-text">
                         <h3 className="header--md text--primary">Long Term Partner</h3>
-                        <p className="text--gray">Many people live with a long-term partner into old age, and a large majority of people rely on their partners as a primary source of social support. However, old age can bring unexpected medical events and even death, leaving the healthy or surviving partner to suffer harmful effects to mental and physical health. Additionally, the percent of widows living with a child has decreased significantly in the last 100 years: from 70% to 20%. This meants that aging adults who have lost their spouse are much more likely to live alone than with family<sup><a href="#fn-16">16</a>,<a href="#fn-33">33</a></sup>.</p>
+                        <p className="text--gray">Many people live with a long-term partner into old age, and a large majority of people rely on their partners as a primary source of social support. However, aging can bring unexpected medical events and even death, leaving the healthy or surviving partner to suffer harmful effects to mental and physical health. Additionally, the percent of widows living with a child has decreased significantly in the last 100 years: from 70% to 20%. This means that aging adults who have lost their spouse are much more likely to live alone than with family<sup><a href="#fn-16">16</a>,<a href="#fn-33">33</a></sup>.</p>
                       </div>
                     </div>
                   </div>
@@ -342,7 +342,7 @@ class LonelinessFeature extends Component {
                     </div>
                     <div className="authorBio pure-u-1 pure-u-lg-1-2">
                       <p><strong>Vanessa Li</strong><span className="text--gray">, University of Washington</span></p>
-                      <p className="text--gray">Vanessa specializes in health systems and public health modeling, with an emphasis in substance abuse and disease prevention research. She graduated from the University of Southern California with a B.S. in Public Policy and a double minor in Business Economics and Global Health. Vanessa is at Invo for the current summer, and will continue on to complete her graduate degree in biostatistics at the University of Washington.</p>
+                      <p className="text--gray">Vanessa specializes in health systems and public health modeling, with an emphasis in substance abuse and disease prevention research. She graduated from the University of Southern California with a B.S. in Public Policy and a double minor in Business Economics and Global Health. Vanessa is working towards a graduate degree in biostatistics at the University of Washington.</p>
                     </div>
                   </div>
                   <div className="author">

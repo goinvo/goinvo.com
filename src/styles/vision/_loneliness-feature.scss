@@ -18,12 +18,18 @@
     }
   }
 
-  .stat.number--lg {
-    font-size: 80px;
+  .stat {
     padding: 10px 10px 10px 0;
+    font-size: 32px;
+  }
+  .number--lg {
+    font-size: 80px;
   }
   .text-right, .text-below {
     margin: 20px 0;
+  }
+  .text-below {
+    margin-top: 10px;
   }
   .text-right {
     .stat {
@@ -37,6 +43,9 @@
     }
     .stat-desc {
       width: 260px;
+      p {
+        margin-top: 0;
+      }
       @include mq($until: large) {
         display: inline-block;
       }
@@ -90,7 +99,9 @@
       width: 55px;
       height: auto;
 
-
+      &.organ-heart-icon {
+        margin-top: 15px;
+      }
       &.dementia-icon, &.stroke-icon {
         margin-top: 25px;
       }
@@ -140,10 +151,11 @@
   .lonely-factor-text {
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 30px;
     width: 50%;
 
     @include mq($until: large) {
-      width: 90%;
+      width: 100%;
       padding-left: 20px;
     }
   }
@@ -155,7 +167,7 @@
     width: 50%;
 
     @include mq($until: large) {
-      display: none;
+      width: 100%;
     }
   }
 
@@ -168,6 +180,9 @@
       margin-top: 30px;
       margin-bottom: 30px;
       height: 150px;
+    }
+    &.cuddle-icon {
+      margin-top: 40px;
     }
     &.money-icon {
       margin-top: 50px;
@@ -206,5 +221,28 @@
       margin-top: 90px;
       height: 190px;
     }
+
+    @include mq($until: large) {
+      margin-top: 20px;
+      &.stroller-icon,
+      &.cuddle-icon,
+      &.money-icon,
+      &.single-parent-icon,
+      &.conversation-icon,
+      &.sleep-icon,
+      &.self-preservation-icon,
+      &.family-icon,
+      &.substance-use-icon,
+      &.elderly-icon,
+      &.peer-icon,
+      &.path-icon,
+      &.health-behavior-icon,
+      &.organ-heart-icon,
+      &.heart-break-loss-icon,
+      &.long-term-couple-icon {
+        margin-top: 20px;
+      }
+    }
   }
+
 }

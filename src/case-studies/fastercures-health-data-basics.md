@@ -61,7 +61,7 @@ In a usability test of the prototypes, conducted with 30 patients, 97% were able
 
 #### Research through multiple techniques
 
-GoInvo and FasterCures surveyed approximately **700 patients and caretakers** and conducted in-depth interviews with **15 industry experts**, along with reviewing the latest research to understand patient needs, barriers, and motivations around health literacy and being engaged in one’s health. In addition, we polled industry experts on what health data means to them to galvanize a health data definition grounded in the determinants of health, including social determinants[^1].
+GoInvo and _FasterCures_ surveyed approximately **700 patients and caretakers** and conducted in-depth interviews with **15 industry experts**, along with reviewing the latest research to understand patient needs, barriers, and motivations around health literacy and being engaged in one’s health. In addition, we polled industry experts on what health data means to them to galvanize a health data definition grounded in the determinants of health, including social determinants[^1].
 
 ![sketches](/images/case-studies/fastercures/health-data-basics/health-data-basics-sketches.jpg)
 
@@ -77,7 +77,7 @@ To narrow our 30 concepts, we scored each in terms of reach, educational impact,
 
 #### Flexible Partnership that Adapts to Challenges
 
-Initially, two concepts emerged as contenders to educate on health data &mdash;on the digital side, a software plug-in that could be integrated into a variety of applications, and on the physical side, on-site clinical installations leveraging a series of environmental graphics. After several rounds of review, however, the concepts struggled to balance the needs for patient engagement with in-depth content. We took a step back to realign project goals and establish what FasterCures truly needed. Together, the team decided to focus on an open source educational plug-in.
+Initially, two concepts emerged as contenders to educate on health data &mdash;on the digital side, a software plug-in that could be integrated into a variety of applications, and on the physical side, on-site clinical installations leveraging a series of environmental graphics. After several rounds of review, however, the concepts struggled to balance the needs for patient engagement with in-depth content. We took a step back to realign project goals and establish what _FasterCures_ truly needed. Together, the team decided to focus on an open source educational plug-in.
 
 <Divider />
 
@@ -129,4 +129,4 @@ In order to test how successful each approach would be in the wild, thirty patie
 
 #### Next Steps
 
-Building upon the foundation of plug-in prototypes and open source assets, FasterCures and GoInvo are reaching out to partners to conduct further trials and implementation.
+Building upon the foundation of plug-in prototypes and open source assets, _FasterCures_ and GoInvo are reaching out to partners to conduct further trials and implementation.

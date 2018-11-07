@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
+import { mediaUrl } from '../../../helpers'
 
 class OpenSourceHealthcareFeature extends Component {
 
@@ -41,7 +42,7 @@ class OpenSourceHealthcareFeature extends Component {
                   <br /> with contributing articles by <a href="https://www.healthpopuli.com/2018/10/11/open-source-health-care-will-liberate-patients/" target="_blank" rel="noopener noreferrer">Jane Sarasohn-Kahn</a> and <a href="https://twitter.com/EricTopol" target="_blank" rel="noopener noreferrer">Eric Topol</a></p>
 
                   <div className="button-group margin-bottom--double">
-                    <div className="pure-u-1 pure-u-lg-1-2"><a href="https://www.dropbox.com/s/ozixx5mmki3xcvi/opensourcehealthcare_journal.pdf?dl=0" target="_blank" rel="noopener noreferrer" className="button button--primary button--lg margin-top--double margin-bottom--double button--block">Download 25 MB PDF</a></div>
+                    <div className="pure-u-1 pure-u-lg-1-2"><a href={mediaUrl('/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf')} className="button button--primary button--lg margin-top--double margin-bottom--double button--block">Download 25 MB PDF</a></div>
                     <div className="pure-u-1 pure-u-lg-1-2"><a href="http://www.blurb.com/b/8980724-open-source-healthcare-journal" target="_blank" rel="noopener noreferrer" className="button button--primary button--lg margin-top--double margin-bottom--double button--block">$12 Blurb Magazine</a></div>
                   </div>
                 <Divider />

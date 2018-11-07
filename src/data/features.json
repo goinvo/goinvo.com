@@ -27,20 +27,6 @@
     "link": "/vision/open-source-healthcare/"
   },
   {
-    "id": "carrier-testing",
-    "title": "Carrier Testing",
-    "date": "Oct.2018",
-    "client": "Feature",
-    "categories": [
-      "precision-medicine-and-genomics",
-      "open-source"
-    ],
-    "caption": "Open source design guidelines for delivering digitized carrier testing results.",
-    "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
-    "link": "http://www.genomicsdesign.com/",
-    "external": true
-  },
-  {
     "id": "print-big",
     "title": "Print big. Print often.",
     "date": "Mar.2018",
@@ -197,5 +183,19 @@
     "caption": "An illustrated process on personal protective equipment.",
     "image": "/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg",
     "link": "https://www.goinvo.com/features/ebola-care-guideline/"
+  },
+  {
+    "id": "carrier-testing",
+    "title": "Carrier Testing",
+    "date": "Oct.2018",
+    "client": "Feature",
+    "categories": [
+      "precision-medicine-and-genomics",
+      "open-source"
+    ],
+    "caption": "Open source design guidelines for delivering digitized carrier testing results.",
+    "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
+    "link": "http://www.genomicsdesign.com/",
+    "external": true
   }
 ]

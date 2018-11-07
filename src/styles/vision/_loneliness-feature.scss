@@ -5,6 +5,18 @@
         line-height: 1.5rem;
       }
   }
+  .pure-u-lg-1-2 {
+    padding-right: 20px;
+  }
+  sup a {
+    text-decoration: none;
+  }
+
+  .author {
+    .authorImg {
+      padding-top: 20px;
+    }
+  }
 
   .stat.number--lg {
     font-size: 80px;
@@ -73,7 +85,7 @@
   }
 
   .social-timeline {
-    border-left: solid 3px $color-orange--light;
+    border-left: solid 4px $color-orange--light;
     z-index:-1;
   }
   .age-title {
@@ -92,16 +104,21 @@
     }
   }
   .lonely-factor {
-    border-top: solid 3px $color-orange--light;
+    border-top: solid 2px $color-orange--light;
   }
   .lonely-factor-text {
     display: inline-block;
-    width: 45%;
+    width: 50%;
+
+    @include mq($until: large) {
+      width: 90%;
+      padding-left: 20px;
+    }
   }
   .lonely-factor-icon {
     box-sizing: border-box;
     display: inline-block;
-    width: 45%;
+    width: 50%;
 
     @include mq($until: large) {
       display: none;

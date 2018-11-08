@@ -61,9 +61,9 @@ class LonelinessFeature extends Component {
 
                 <Divider />
 
-                <h3 className="header--md text--lg">When We Feel Excluded <br /> We <span className="text--primary">Lose Our Fight</span> Against Disease</h3>
+                <h3 className="header--md text--lg margin-bottom--half">When We Feel Excluded, <br /> We <span className="text--primary">Lose Our Fight</span> Against Disease.</h3>
 
-                <h3 className="header--md">Increasing <span className="text--primary">Our Risk for</span><sup><a href="#fn-3">3</a>,<a href="#fn-4">4</a></sup></h3>
+                <h3 className="header--md">It Increases <span className="text--primary">Our Risk for</span><sup><a href="#fn-3">3</a>,<a href="#fn-4">4</a></sup></h3>
                 <div className="row">
                   <div className="risk-duo">
                       <div class="risk-factor">
@@ -115,7 +115,7 @@ class LonelinessFeature extends Component {
                   </div>
                 </div>
 
-                <h3 className="header--md">Impacting <span className="text--primary">Our Body Function</span><sup><a href="#fn-4">4</a>,<a href="#fn-5">5</a>,<a href="#fn-6">6</a>,<a href="#fn-7">7</a></sup></h3>
+                <h3 className="header--md">It Impacts <span className="text--primary">Our Body Function</span><sup><a href="#fn-4">4</a>,<a href="#fn-5">5</a>,<a href="#fn-6">6</a>,<a href="#fn-7">7</a></sup></h3>
                 <div className="row">
                   <div className="risk-duo">
                       <div class="risk-factor">
@@ -329,6 +329,22 @@ class LonelinessFeature extends Component {
                     </div>
                   </div>
 
+                </div>
+
+                <Divider />
+
+                <div className="closing">
+                  <h2 className="header--lg text--center">Resilience in Our Human Code</h2>
+                  <p className="text--gray">While these are statistically relevant, humans have the ability to survive and surpass their circumstances to live full and healthy lives. Loneliness, and other social, circumstantial, and behavioral determinants have as much impact on your health as your biology or genetics. If you or someone you know is feeling lonely, check out resources in your neighborhood or reach out to talk to someone. Sometimes a little bit of human contact can go a long way towards living a healthier life.</p>
+                  <div className="resources">
+                    <h3 className="header--md">Resources<sup><a href="#fn-32">33</a></sup></h3>
+                    <ul className="ul text--gray">
+                      <li><a href="https://www.nami.org/Find-Support/NAMI-Programs" target="_blank" rel="noopener noreferrer">The National Alliance on Mental Health</a> provides education, outreach, and advocacy and support services.</li>
+                      <li>Services like <a href="https://www.betterhelp.com/" target="_blank" rel="noopener noreferrer">BetterHelp</a> and <a href="https://www.talkspace.com/" target="_blank" rel="noopener noreferrer">TalkSpace</a> provide virtual counseling with a licensed therapist, making it easier than ever to find support.</li>
+                      <li><a href="https://www.meetup.com/" target="_blank" rel="noopener noreferrer">MeetUp.com</a> can help you find people or groups near you who share common interests.</li>
+                      <li>The <a href="https://www.aspca.org/adopt-pet" target="_blank" rel="noopener noreferrer">ASPCA</a> or your local animal shelter can help you find a furry best friend.</li>
+                    </ul>
+                  </div>
                 </div>
 
                 <Divider />

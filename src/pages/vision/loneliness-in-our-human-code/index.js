@@ -337,7 +337,7 @@ class LonelinessFeature extends Component {
                   <h2 className="header--lg text--center">Resilience in Our Human Code</h2>
                   <p className="text--gray">While these are statistically relevant, humans have the ability to survive and surpass their circumstances to live full and healthy lives. Loneliness, and other social, circumstantial, and behavioral determinants have as much impact on your health as your biology or genetics. If you or someone you know is feeling lonely, check out resources in your neighborhood or reach out to talk to someone. Sometimes a little bit of human contact can go a long way towards living a healthier life.</p>
                   <div className="resources">
-                    <h3 className="header--md">Resources<sup><a href="#fn-32">33</a></sup></h3>
+                    <h3 className="header--md">Resources<sup><a href="#fn-34">34</a></sup></h3>
                     <ul className="ul text--gray">
                       <li><a href="https://www.nami.org/Find-Support/NAMI-Programs" target="_blank" rel="noopener noreferrer">The National Alliance on Mental Health</a> provides education, outreach, and advocacy and support services.</li>
                       <li>Services like <a href="https://www.betterhelp.com/" target="_blank" rel="noopener noreferrer">BetterHelp</a> and <a href="https://www.talkspace.com/" target="_blank" rel="noopener noreferrer">TalkSpace</a> provide virtual counseling with a licensed therapist, making it easier than ever to find support.</li>
@@ -520,6 +520,10 @@ class LonelinessFeature extends Component {
                     {
                       title: 'Coile, C.C.; Levine, P.B. (2011). Recessions, Social Security, and Living Arrangements of the Elderly. Retrieved August 21, 2018',
                       link: 'http://projects.nber.org/projects_backend/rrc/papers/orrc11-12'
+                    },
+                    {
+                      title: 'Healthline. How to Deal with Loneliness in Today\'s World: Your Options for Support. Retrieved Nov 8, 2018',
+                      link: 'https://www.healthline.com/health/how-to-deal-with-loneliness#resources'
                     }
                   ]}/>
                 </div>

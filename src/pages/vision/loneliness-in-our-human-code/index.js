@@ -5,6 +5,7 @@ import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import { Link } from 'gatsby'
 
 import organHeartIcon from '../../../assets/images/vision/loneliness-in-our-human-code/organ-heart.svg'
 import dementiaIcon from '../../../assets/images/vision/loneliness-in-our-human-code/dementia.svg'
@@ -335,7 +336,7 @@ class LonelinessFeature extends Component {
 
                 <div className="closing">
                   <h2 className="header--lg text--center">Resilience in Our Human Code</h2>
-                  <p className="text--gray">While these are statistically relevant, humans have the ability to survive and surpass their circumstances to live full and healthy lives. Loneliness, and other social, circumstantial, and behavioral <a href="../determinants-of-health/">determinants</a> have as much impact on your health as your biology or genetics. If you or someone you know is feeling lonely, check out resources in your neighborhood or reach out to talk to someone. Sometimes a little bit of human contact can go a long way towards living a healthier life.</p>
+                  <p className="text--gray">While these are statistically relevant, humans have the ability to survive and surpass their circumstances to live full and healthy lives. Loneliness, and other social, circumstantial, and behavioral <Link to="/vision/determinants-of-health/">determinants</Link> have as much impact on your health as your biology or genetics. If you or someone you know is feeling lonely, check out resources in your neighborhood or reach out to talk to someone. Sometimes a little bit of human contact can go a long way towards living a healthier life.</p>
                   <div className="resources">
                     <h3 className="header--md">Resources<sup><a href="#fn-34">34</a></sup></h3>
                     <ul className="ul text--gray">
@@ -343,7 +344,7 @@ class LonelinessFeature extends Component {
                       <li>Services like <a href="https://www.betterhelp.com/" target="_blank" rel="noopener noreferrer">BetterHelp</a> and <a href="https://www.talkspace.com/" target="_blank" rel="noopener noreferrer">TalkSpace</a> provide virtual counseling with a licensed therapist, making it easier than ever to find support.</li>
                       <li><a href="https://www.meetup.com/" target="_blank" rel="noopener noreferrer">MeetUp.com</a> can help you find people or groups near you who share common interests.</li>
                       <li>The <a href="https://www.aspca.org/adopt-pet" target="_blank" rel="noopener noreferrer">ASPCA</a> or your local animal shelter can help you find a furry best friend.</li>
-                      <li>Learn more about the <a href="../determinants-of-health/">social determinants of health</a> and how it can impact your overall health.</li>
+                      <li>Learn more about the <Link to="/vision/determinants-of-health/">social determinants of health</Link> and how it can impact your overall health.</li>
                     </ul>
                   </div>
                 </div>

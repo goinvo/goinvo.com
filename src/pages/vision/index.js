@@ -12,6 +12,7 @@ import Quote from '../../components/quote'
 import HubspotForm from '../../components/hubspot-form'
 import Carousel from '../../components/carousel'
 import GradientImageColumns from '../../components/gradient-image-columns'
+import { Link } from 'gatsby'
 
 import Flickr from '../../assets/images/icon-flickr.inline.svg'
 import Medium from '../../assets/images/icon-medium.inline.svg'
@@ -318,7 +319,7 @@ class VisionPage extends Component {
         <Carousel menuItems={['Inspired EHRs', 'Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom']}>
           <GradientImageColumns image="/images/services/inspired-ehrs-book.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Janet Campbell" quoteeSub="Epic" small>I sent this around to our User Experience team here, and there was a lot of discussion and appreciation for the work you've done.</Quote>
-            <a href="../work/inspired-ehrs" className="button button--primary button--lg button--block">Read the Case Study</a>
+            <Link to="/work/inspired-ehrs" className="button button--primary button--lg button--block">Read the Case Study</Link>
           </GradientImageColumns>
           <GradientImageColumns image="/images/vision/emerging-tech-wood.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Dan Saffer" quoteeSub="Author of Microinteractions" small>If you’re looking for insights into how to design the future today, look no further.</Quote>
@@ -326,7 +327,7 @@ class VisionPage extends Component {
           </GradientImageColumns>
           <GradientImageColumns image="/images/services/doh-preview.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Toyin Ajayi" quoteeSub="Chief Health Officer of Cityblock Health" small>The SDoH poster stands taped to the giant whiteboard outside my office [at Google Cityblock Health Labs], and will form the basis of many rich conversations among my team. Thank you!</Quote>
-            <a href="./determinants-of-health/" className="button button--primary button--lg button--block">Read the Feature</a>
+            <Link to="/vision/determinants-of-health/" className="button button--primary button--lg button--block">Read the Feature</Link>
           </GradientImageColumns>
           <GradientImageColumns image="/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Eric Topol" quoteeSub="Scripps Translational Science Institute" small>Designers at GoInvo have the right ideas for the smart medical home of the future.</Quote>

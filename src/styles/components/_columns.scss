@@ -21,7 +21,7 @@
 
     &--3 {
       @include mq($from: large) {
-        flex-basis: calc(33.33% - #{$spacing * .66});
+        flex-basis: calc(33.33% - #{$spacing * 0.66});
       }
     }
   }

@@ -21,25 +21,27 @@ module.exports = {
       resolve: `gatsby-mdx`,
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/layouts/case-study-layout.js")
+          default: require.resolve(
+            './src/components/layouts/case-study-layout.js'
+          ),
         },
-        extensions: [".mdx", ".md"]
-      }
+        extensions: ['.mdx', '.md'],
+      },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "case-studies",
-        path: `${__dirname}/src/case-studies/`
-      }
+        name: 'case-studies',
+        path: `${__dirname}/src/case-studies/`,
+      },
     },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
-          rule: {
-            include: /\.inline\.svg$/
-          }
-      }
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
     },
   ],
 }

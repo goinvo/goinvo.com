@@ -1,30 +1,32 @@
 ---
-title: "Inspired EHRs"
-image: "/images/case-studies/nih/inspired-ehrs/ehr-hero.jpg"
-client: "University of Missouri, NIH, and CHCF"
-caption: "Revealing multifaceted, evidence-based designs for a new generation of electronic health records."
+title: 'Inspired EHRs'
+image: '/images/case-studies/nih/inspired-ehrs/ehr-hero.jpg'
+client: 'University of Missouri, NIH, and CHCF'
+caption: 'Revealing multifaceted, evidence-based designs for a new generation of electronic health records.'
 categories:
-  - "health-it-and-infrastructure"
-  - "open-source"
+  - 'health-it-and-infrastructure'
+  - 'open-source'
 results:
-  - stat: "600"
-    description: "visits / month"
-  - stat: ""
-    description: ""
-  - stat: "28"
-    description: "known code forks"
+  - stat: '600'
+    description: 'visits / month'
+  - stat: ''
+    description: ''
+  - stat: '28'
+    description: 'known code forks'
 upNext:
-  - "mitre-flux-notes"
-  - "fastercures-health-data-basics"
-  - "determinants-of-health"
+  - 'mitre-flux-notes'
+  - 'fastercures-health-data-basics'
+  - 'determinants-of-health'
 hidden: false
-metaDescription: "Inspired EHRs is an open source ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies."
-metaKeywords: "inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health"
+metaDescription: 'Inspired EHRs is an open source ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies.'
+metaKeywords: 'inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health'
 ---
+
 import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Inspired EHRs: Designing for Clinicians
+
 for Jeff Belden, MD at the University of Missouri, the National Institute of Health, and California Health Care Foundation
 
 ### Problem
@@ -110,6 +112,7 @@ The medication timeline allows a provider to view medication history in greater 
 We designed and engineered the e-book to be easily navigable within and between chapters. Readers could skip or dig into unobtrusive tidbits we dubbed “sidebars” or refer to other chapters where we go into deeper detail on a topic without losing their place. Though we load in a number of images into each chapter, page loads wouldn’t hamper readers, and images could be blown up to view more detail. The ebook can be accessed from desktop, laptop, tablet, or your phone and is designed to be simple and lightweight for your pocket and your brain.
 
 #### Inspiring designers and engineers to push the boundaries
+
 _Inspired EHRs: Designing for Clinicians_ offers inspiration and design principles to aim for EHRs designed with the clinician and patient in mind. We’ve used a lot of the research and designs in our own work at GoInvo and are always happy to hear from others in the industry how the e-book has helped their designs or organizations.
 
 <Quote quotee="Xue Lee" quoteeSub="Marshfield Clinic User Experience Designer">Your human factors and design principle sections has convinced a lot of my bosses to go in a new direction with design.</Quote>

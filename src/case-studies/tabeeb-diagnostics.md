@@ -1,23 +1,24 @@
 ---
-title: "Connecting Rural Clinics with Expert Diagnosticians"
-image: "/images/case-studies/tabeeb/tabeeb-hero.jpg"
-client: "Tabeeb"
-caption: "Engaging patients to understand health."
+title: 'Connecting Rural Clinics with Expert Diagnosticians'
+image: '/images/case-studies/tabeeb/tabeeb-hero.jpg'
+client: 'Tabeeb'
+caption: 'Engaging patients to understand health.'
 categories:
-  - "care-management"
+  - 'care-management'
 upNext:
-  - "hgraph"
-  - "infobionic-heart-monitoring"
-  - "understanding-ebola"
+  - 'hgraph'
+  - 'infobionic-heart-monitoring'
+  - 'understanding-ebola'
 hidden: false
-metaDescription: "Tabeeb: Bringing global medical specialists to rural communities with the flick of a finger."
-metaKeywords: "tabeeb, healthcare, telemedicine, remote doctor, rural clinics, crowdsourced diagnostics, mobile user experience"
+metaDescription: 'Tabeeb: Bringing global medical specialists to rural communities with the flick of a finger.'
+metaKeywords: 'tabeeb, healthcare, telemedicine, remote doctor, rural clinics, crowdsourced diagnostics, mobile user experience'
 ---
 
 import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Connecting Rural Clinics with Expert Diagnosticians
+
 for Tabeeb
 
 ### Problem
@@ -27,7 +28,6 @@ Doctors and nurses living and practicing in distant, rural settings run into com
 ### Solution
 
 GoInvo helped Tabeeb identify and create a first generation product. We drafted designs and iterated through feedback with clinicians and key stakeholders. We provided design, engineering, and product support as Tabeeb shipped an MVP.
-
 
 ### Results
 
@@ -50,7 +50,7 @@ The smartphone is the doctor's bag for the 21st century. Its ability as a diagno
 Needing an expert in healthcare and telehealth software, Tabeeb asked GoInvo to help. We came in when the product was just an idea. GoInvo would take that raw idea, make it real, and turn it into exceptional software. We worked with Tabeeb to catalyze a realistic vision and then rapidly turn it into work prototypes.
 
 ![All Patients](/images/case-studies/tabeeb/tabeeb-sketch.jpg)
-*Concept sketches for crowdsourcing a diagnosis.*
+_Concept sketches for crowdsourcing a diagnosis._
 
 #### Rapid testing with clinicians leads to an iterative rapid prototyping phase
 

@@ -1,9 +1,9 @@
 .loneliness-feature {
   h3 {
-      &.text--lg {
-        font-size: 20px;
-        line-height: 1.5rem;
-      }
+    &.text--lg {
+      font-size: 20px;
+      line-height: 1.5rem;
+    }
   }
   .pure-u-lg-1-2 {
     padding-right: 20px;
@@ -25,7 +25,8 @@
   .number--lg {
     font-size: 80px;
   }
-  .text-right, .text-below {
+  .text-right,
+  .text-below {
     margin: 20px 0;
   }
   .text-below {
@@ -102,7 +103,8 @@
       &.organ-heart-icon {
         margin-top: 15px;
       }
-      &.dementia-icon, &.stroke-icon {
+      &.dementia-icon,
+      &.stroke-icon {
         margin-top: 25px;
       }
       &.arthritis-icon {
@@ -127,11 +129,11 @@
 
   .social-timeline {
     border-left: solid 4px $color-orange--light;
-    z-index:-1;
+    z-index: -1;
   }
   .age-title {
     &:before {
-      content: "";
+      content: '';
       box-sizing: border-box;
       display: inline-block;
       z-index: 1;
@@ -191,10 +193,14 @@
     &.single-parent-icon {
       height: 150px;
     }
-    &.conversation-icon, &.sleep-icon, &.self-preservation-icon {
+    &.conversation-icon,
+    &.sleep-icon,
+    &.self-preservation-icon {
       margin-top: 60px;
     }
-    &.family-icon, &.substance-use-icon, &.elderly-icon {
+    &.family-icon,
+    &.substance-use-icon,
+    &.elderly-icon {
       margin-top: 60px;
       height: 150px;
     }
@@ -249,13 +255,12 @@
     margin: 50px 0;
   }
   .care-card {
-    width:  50%;
+    width: 50%;
     margin: 20px auto;
 
     img {
       border-radius: 15px;
-      box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
+      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     }
   }
-
 }

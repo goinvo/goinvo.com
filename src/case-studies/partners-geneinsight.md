@@ -1,26 +1,27 @@
 ---
-title: "Gene Insight"
-image: "/images/case-studies/partners/geneinsight/geneinsight-hero2.jpg"
-client: "Partners Healthcare"
-caption: "A suite of tools for recording genetic information and building / accessing patient-specific reports."
+title: 'Gene Insight'
+image: '/images/case-studies/partners/geneinsight/geneinsight-hero2.jpg'
+client: 'Partners Healthcare'
+caption: 'A suite of tools for recording genetic information and building / accessing patient-specific reports.'
 categories:
-  - "precision-medicine-and-genomics"
+  - 'precision-medicine-and-genomics'
 upNext:
-  - "wuxi-nextcode-familycode"
-  - "mount-sinai-consent"
-  - "hgraph"
+  - 'wuxi-nextcode-familycode'
+  - 'mount-sinai-consent'
+  - 'hgraph'
 hidden: false
 references:
-  - title: ""
-    link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082613/"
-metaDescription: "The PCPGM’s GeneInsight application assists clinical specialists in drafting patient-specific, molecular diagnostic test reports for geneticist review."
-metaKeywords: "partners geneinsight, healthcare, partners"
+  - title: ''
+    link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082613/'
+metaDescription: 'The PCPGM’s GeneInsight application assists clinical specialists in drafting patient-specific, molecular diagnostic test reports for geneticist review.'
+metaKeywords: 'partners geneinsight, healthcare, partners'
 ---
 
 import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Connecting Clinics to Genetic Testing Labs
+
 for Partners Healthcare
 
 ### Problem

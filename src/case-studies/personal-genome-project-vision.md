@@ -1,24 +1,25 @@
 ---
-title: "OpenHumans"
-image: "/images/case-studies/personal-genome-project/pgp-ecosystem.jpg"
-client: "The Personal Genome Project"
-caption: "A strategy workshop that leads to a new business focus"
+title: 'OpenHumans'
+image: '/images/case-studies/personal-genome-project/pgp-ecosystem.jpg'
+client: 'The Personal Genome Project'
+caption: 'A strategy workshop that leads to a new business focus'
 categories:
-  - "precision-medicine-and-genomics"
-  - "open-source"
+  - 'precision-medicine-and-genomics'
+  - 'open-source'
 upNext:
-  - "partners-geneinsight"
-  - "carrier-testing"
-  - "mitre-shr"
+  - 'partners-geneinsight'
+  - 'carrier-testing'
+  - 'mitre-shr'
 hidden: false
-metaDescription: "The Personal Genome Project Gains New Focus &amp; New Business with Invo Workshop."
-metaKeywords: "personalized health, genomics, user experience, user interface, workshop, product architecture, product strategy, personal genome project"
+metaDescription: 'The Personal Genome Project Gains New Focus &amp; New Business with Invo Workshop.'
+metaKeywords: 'personalized health, genomics, user experience, user interface, workshop, product architecture, product strategy, personal genome project'
 ---
 
 import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Building a community for data donation
+
 for the Personal Genome Project
 
 ### Problem
@@ -52,7 +53,7 @@ GoInvo’s team met with the PGP’s founders to map the company’s existing ec
 
 ![discussion](/images/case-studies/personal-genome-project/pgp-meeting2.jpg)
 
-*Lisa Caldwell leading user experience discussion.*
+_Lisa Caldwell leading user experience discussion._
 
 <Divider />
 
@@ -71,6 +72,7 @@ PGP has a robust application process that provided a comprehensive education aro
 ![current](/images/case-studies/personal-genome-project/pgp-ecosystem.jpg)
 
 #### Birth of OpenHumans.org
+
 Out team guided PGP in reimagining their organizational model and separating recruitment, data collection, and member retention into parallel strategies. OpenHumans, a separate web portal, would allow members to participate, manage their data, and see how it is used to advance science and medicine. Researchers, whether academic, independent, or citizen scientists, would then be able to access PGP’s database of genomes and medical histories via a separate interface.
 
 OpenHumans continues today, encouraging patients to get involved with their health data and to participate in research to help advance our understanding of human biology and medical science.
@@ -79,4 +81,4 @@ OpenHumans continues today, encouraging patients to get involved with their heal
 
 ![timeline](/images/case-studies/personal-genome-project/pgp-timeline2.jpg)
 
-*Kimberly Chang and Reshma Mehta, the GoInvo team, map out possible solutions to the current ecosystem.*
+_Kimberly Chang and Reshma Mehta, the GoInvo team, map out possible solutions to the current ecosystem._

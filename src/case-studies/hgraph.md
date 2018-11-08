@@ -1,18 +1,18 @@
 ---
-title: "hGraph"
-image: "/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg"
-client: "GoInvo"
-caption: "Your health in one picture."
+title: 'hGraph'
+image: '/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg'
+client: 'GoInvo'
+caption: 'Your health in one picture.'
 categories:
-  - "patient-engagement"
-  - "open-source"
+  - 'patient-engagement'
+  - 'open-source'
 upNext:
-  - "care-cards"
-  - "paintrackr"
-  - "mitre-shr"
+  - 'care-cards'
+  - 'paintrackr'
+  - 'mitre-shr'
 hidden: false
-metaDescription: "hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics"
-metaKeywords: "hgraph, health visualization, big data, patient health, health score, hscore, healthcare application"
+metaDescription: 'hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics'
+metaKeywords: 'hgraph, health visualization, big data, patient health, health score, hscore, healthcare application'
 ---
 
 import Divider from 'components/divider'
@@ -80,7 +80,7 @@ However, those waiting for the US Healthcare system to be the leaders of change 
 
 The hGraph project intends to change the way we manage and interact with our health, and in turn make the healthcare industry leaner, cheaper and more effective. As an open source program, hGraph has been utilized in pilot programs at a major retail pharmacy and at Facebook’s campus health clinic. These corporations lead a trend of big business improving worker productivity and their bottom lines by taking a more active role in monitoring their employees’ health.
 
-According to Mercer’s *“Worksite Medical Clinics 2012 Survey Report”* 37% of companies with more than 5,000 employees offer on-site health clinics, with an additional 15% planning to add their own health clinics in the next two years. Of these corporations 62% reported their top reason for continuing onsite health centers was because the clinics enhanced worker productivity. The second reason, according to 56% of those surveyed, was because the clinics reduced medical costs. Most corporate centers are taking a more active role in the management and coordination of employee wellness. Still, over half of organizations reported they were in need of tools to capture a holistic view of employee health to better integrate and coordinate their health programs with outside health centers.
+According to Mercer’s _“Worksite Medical Clinics 2012 Survey Report”_ 37% of companies with more than 5,000 employees offer on-site health clinics, with an additional 15% planning to add their own health clinics in the next two years. Of these corporations 62% reported their top reason for continuing onsite health centers was because the clinics enhanced worker productivity. The second reason, according to 56% of those surveyed, was because the clinics reduced medical costs. Most corporate centers are taking a more active role in the management and coordination of employee wellness. Still, over half of organizations reported they were in need of tools to capture a holistic view of employee health to better integrate and coordinate their health programs with outside health centers.
 
 #### Preventing medical errors
 
@@ -95,10 +95,11 @@ hGraph provides medical professionals and patients with Big Data Analytic power 
 To learn about what you can do with [hGraph](https://www.hgraph.org/) and how you can participate in its [development](https://github.com/goinvo/hGraph), contact us at [hgraph@goinvo.com](mailto:hgraph@goinvo.com).
 
 #### hGraph Press & Accolades
-* MITX Innovation Award Finalist, Most Insightful: Big Data and Analytics Innovations
-* Wired, How Restyling the Mundane Medical Record Could Improve Healthcare
-* National Health Datapalooza, Featured Entrant
-* Health IT Buzz, Winners of Patient Health Record Graphic Design Contest Announced
-* EContent Magazine, Digital Diagnosis: A New Generation of Healthcare Technology” in EContent Magazine
-* Gov Challenge: National Patient Record Redesign, Showcased Entry
-* O’Reilly Strata Conference on Big Data, Featured Presentation
+
+- MITX Innovation Award Finalist, Most Insightful: Big Data and Analytics Innovations
+- Wired, How Restyling the Mundane Medical Record Could Improve Healthcare
+- National Health Datapalooza, Featured Entrant
+- Health IT Buzz, Winners of Patient Health Record Graphic Design Contest Announced
+- EContent Magazine, Digital Diagnosis: A New Generation of Healthcare Technology” in EContent Magazine
+- Gov Challenge: National Patient Record Redesign, Showcased Entry
+- O’Reilly Strata Conference on Big Data, Featured Presentation

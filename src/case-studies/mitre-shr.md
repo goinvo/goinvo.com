@@ -1,15 +1,15 @@
 ---
-title: "Driving a National Health Data Standard"
-image: "/images/case-studies/mitre/SHR/shr-header2.jpg"
-client: "MITRE Corporation"
-caption: "Prototyping and envisioning future applications of a national health data standard to drive its development."
+title: 'Driving a National Health Data Standard'
+image: '/images/case-studies/mitre/SHR/shr-header2.jpg'
+client: 'MITRE Corporation'
+caption: 'Prototyping and envisioning future applications of a national health data standard to drive its development.'
 categories:
-  - "health-it-and-infrastructure"
-  - "open-source"
+  - 'health-it-and-infrastructure'
+  - 'open-source'
 upNext:
-  - "fastercures-health-data-basics"
-  - "determinants-of-health"
-  - "open-source-healthcare"
+  - 'fastercures-health-data-basics'
+  - 'determinants-of-health'
+  - 'open-source-healthcare'
 hidden: false
 ---
 
@@ -17,6 +17,7 @@ import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Driving a National Health Data Standard
+
 for MITRE Corporation
 
 ### Problem
@@ -44,6 +45,7 @@ The design concepts and SHR use cases played a key role in providing MITRE a lon
 ## Process
 
 #### Analyzing the Standard Health Record
+
 Working closely with the MITRE team of **more than 20 engineers and clinicians** provided us with an understanding of the SHR to accurately represent its structure.
 
 ![SHR spec](/images/case-studies/mitre/SHR/shr-spec.jpg)
@@ -53,6 +55,7 @@ We iterated through several rounds of sketching and **weekly validation cycles**
 ![SHR ecosystem](/images/case-studies/mitre/SHR/shr-ecosystem2.jpg)
 
 #### Design validation from MITRE engineers and providers
+
 Working closely with the same team of MITRE engineers and providers, we created prototypes, storyboards, and assets that showed the power of the SHR and the services that would be enabled from its development, in order to generate collaboration at the provider, hospital, and state level.
 
 <Divider />
@@ -60,9 +63,11 @@ Working closely with the same team of MITRE engineers and providers, we created 
 ## Insights & Recommendations
 
 #### Represent the SHR structure to be human-readable
+
 The organization of the SHR and its data structure was not immediately understandable for those outside the core development team. A visual narrative for communicating the SHR and its variations would need to be designed.
 
 #### Show don’t tell, the future of interoperability
+
 GoInvo’s strength lies in showing the future of healthcare. Capturing stakeholder attention by envisioning the future with the SHR allowed MITRE to gain further buy-in at the executive level, gain funding, and build more partnerships to expand development efforts.
 
 <Divider />
@@ -70,11 +75,13 @@ GoInvo’s strength lies in showing the future of healthcare. Capturing stakehol
 ## Solution
 
 #### Create a visual language for the SHR
+
 Our design provided a graphic representation of the SHR for the core MITRE team as well as outside partners and collaborators. With this modular design, health information could be organized into smaller elements, such as medication dose amount as a component of medication dosage, which in turn is a component of medications.
 
 ![SHR visual language](/images/case-studies/mitre/SHR/shr-visual-language.jpg)
 
 #### Apply the SHR visual language to real-world clinical scenarios
+
 Applying the SHR visual language to several health record ‘snapshots’ informed team understanding about how real-world health situations can be interpreted using the SHR model. Critical scenarios included evaluating patient health record completeness, specific clinical situations, and clinical domains.
 
 ![SHR visual language](/images/case-studies/mitre/SHR/shr-completeness-full.jpg)
@@ -94,30 +101,34 @@ Filled squares represent captured health data, allowing patient record completen
 Communicating the flow of data for an outpatient journey allowed providers to relate to the clinical connections of the SHR. **Several primary care clinicians and system engineers** at MITRE reviewed and validated all designs.
 
 #### Disseminate the SHR through story
+
 GoInvo created storyboards for several scenarios of care to show the future health service experience made possible with the SHR. By sharing this vision with government leaders such as Charlie Baker, governor of Massachusetts, the SHR gained support at the state level in October 2016.
 
 ![SHR storyboards 1](/images/case-studies/mitre/SHR/shr-storyboard-initiate.jpg)
-*A patient may initiate a personal health record that values patient data ownership and access.*
+_A patient may initiate a personal health record that values patient data ownership and access._
 
 <br />
 
 ![SHR storyboards 2](/images/case-studies/mitre/SHR/shr-storyboard-at-home.jpg)
-*Continuous at-home primary care service via a patient performing a self-assessment using conversational UI.*
+_Continuous at-home primary care service via a patient performing a self-assessment using conversational UI._
 
 <br/>
 
 ![SHR storyboards 3](/images/case-studies/mitre/SHR/shr-storyboard-emergency.jpg)
-*Remote care can also help in an emergency situation.*
+_Remote care can also help in an emergency situation._
 
 <Divider />
 
 ## Results
 
 #### HL7/FHIR adoption
+
 In 2018, the SHR was voted into the international FHIR standard as a new oncology profile. The vision communicated through the designs succeeded in helping drive the value of every US patient’s data by pushing national adoption and implementation.
 
 #### Circulate visualizations to drive awareness and understanding of the SHR
+
 Poster visualizations were installed within MITRE as a vehicle for sharing the team’s work and common vision for the SHR. System-level visualizations were used to communicate the SHR with the greater public at health IT conferences such as HIMSS, leading to hospital partnerships with organizations such as the Dana Farber Cancer Institute, and Brigham Women’s Hospital, where providers could test the SHR in real-life clinical settings.
 
 #### Validating the SHR at the point of care
+
 GoInvo’s design efforts led to buy-in for developing an oncology data curation interface, [Flux Notes](https://fluxnotes.org/), using real patient data to demonstrate efficacy and functionality.

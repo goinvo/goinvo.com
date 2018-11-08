@@ -1,28 +1,29 @@
 ---
-title: "Designing an efficient IRB"
-image: "/images/case-studies/partners/insight/insight-hero.jpg"
-client: "Partners Healthcare"
-caption: "A full redesign of the Partners Healthcare research administration platform, Insight."
+title: 'Designing an efficient IRB'
+image: '/images/case-studies/partners/insight/insight-hero.jpg'
+client: 'Partners Healthcare'
+caption: 'A full redesign of the Partners Healthcare research administration platform, Insight.'
 categories:
-  - "health-it-and-infrastructure"
+  - 'health-it-and-infrastructure'
 upNext:
-  - "mitre-flux-notes"
-  - "mount-sinai-consent"
-  - "mass-snap"
+  - 'mitre-flux-notes'
+  - 'mount-sinai-consent'
+  - 'mass-snap'
 hidden: false
 references:
-  - title: ""
-    link: "https://www.bostonglobe.com/business/2018/02/27/partners-healthcare-adds-lifespan-rhode-island-expansion-plans/ALfeUv8KeejGWfKmH8omlI/story.html"
-  - title: ""
-    link: "https://www.partners.org/Medical-Research/Support-Offices/Human-Research-Committee-IRB/Default.aspx"
-  - title: ""
-    link: "https://www.partners.org/Medical-Research/Current-Research-at-Partners/Default.aspx"
+  - title: ''
+    link: 'https://www.bostonglobe.com/business/2018/02/27/partners-healthcare-adds-lifespan-rhode-island-expansion-plans/ALfeUv8KeejGWfKmH8omlI/story.html'
+  - title: ''
+    link: 'https://www.partners.org/Medical-Research/Support-Offices/Human-Research-Committee-IRB/Default.aspx'
+  - title: ''
+    link: 'https://www.partners.org/Medical-Research/Current-Research-at-Partners/Default.aspx'
 ---
 
 import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Designing an efficient IRB
+
 for Partners Healthcare
 
 ### Problem

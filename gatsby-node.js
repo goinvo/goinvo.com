@@ -1,8 +1,8 @@
-const path = require('path');
-const componentWithMDXScope = require("gatsby-mdx/component-with-mdx-scope");
+const path = require('path')
+const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
     resolve(
       graphql(
@@ -31,8 +31,8 @@ exports.createPages = ({ graphql, actions }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
+          console.log(result.errors)
+          reject(result.errors)
         }
 
         result.data.allMdx.edges.forEach(({ node }) => {
@@ -40,17 +40,17 @@ exports.createPages = ({ graphql, actions }) => {
             createPage({
               path: `/work/${node.parent.name}`,
               component: componentWithMDXScope(
-                path.resolve("./src/components/layouts/case-study-layout.js"),
+                path.resolve('./src/components/layouts/case-study-layout.js'),
                 node.code.scope
               ),
-              context: { id: node.id }
-            });
+              context: { id: node.id },
+            })
           }
-        });
+        })
       })
-    );
-  });
-};
+    )
+  })
+}
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({

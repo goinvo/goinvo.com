@@ -1,23 +1,24 @@
 ---
-title: "Visualizing real-time cardiac arrhythmias"
-image: "/images/case-studies/infobionic/infobionic-hero3.jpg"
-client: "InfoBionic"
-caption: "A data-rich view for a doctor to analyze and diagnose the patient remotely."
+title: 'Visualizing real-time cardiac arrhythmias'
+image: '/images/case-studies/infobionic/infobionic-hero3.jpg'
+client: 'InfoBionic'
+caption: 'A data-rich view for a doctor to analyze and diagnose the patient remotely.'
 categories:
-  - "care-management"
+  - 'care-management'
 upNext:
-  - "3m-coderyte"
-  - "bathroom-to-healthroom"
-  - "inspired-ehrs"
+  - '3m-coderyte'
+  - 'bathroom-to-healthroom'
+  - 'inspired-ehrs'
 hidden: false
 metaDescription: "FDA approved remote patient monitoring of arrhythmia's secures $17M Series B financing."
-metaKeywords: "product strategy, ui design, ux design, research, heart monitoring, infobionic"
+metaKeywords: 'product strategy, ui design, ux design, research, heart monitoring, infobionic'
 ---
 
 import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Mobile health design for real-time cardiac arrhythmias
+
 for InfoBionic
 
 ### Problem
@@ -42,14 +43,14 @@ GoInvo delivered the vision for how doctors would use the product, and investors
 We worked closely with cardiac arrhythmia experts, including Mass General Hospital. Receiving continual feedback helped us pivot quickly and land on a solution that providers would gravitate towards.
 
 ![All Patients](/images/case-studies/infobionic/infobionic-dashboard.jpg)
-*Viewing all patients*
+_Viewing all patients_
 
 ## Solution
 
 Doctors and nurses can monitor a patient’s arrhythmias in real-time, remotely. Use of color in the real-time charts could effectively and quickly highlight problem areas. In seconds, a provider could see the status and health of all their patients and easily identify who needs their attention.
 
 ![All Patients](/images/case-studies/infobionic/infobionic-patient-report.jpg)
-*Viewing an individual patient*
+_Viewing an individual patient_
 
 The patient timeline along the top shows detected cardiac events, heart-rate, and physical activity across time to aid doctors in quickly understanding the patient's health. Machine- and patient-detected arrhythmias paired with important metadata such as physical activity and time of day to help providers diagnose an issue.
 

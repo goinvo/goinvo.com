@@ -340,13 +340,17 @@ class LonelinessFeature extends Component {
                   <div className="resources">
                     <h3 className="header--md">Resources<sup><a href="#fn-34">34</a></sup></h3>
                     <ul className="ul text--gray">
-                      <li><a href="https://www.nami.org/Find-Support/NAMI-Programs" target="_blank" rel="noopener noreferrer">The National Alliance on Mental Health</a> provides education, outreach, and advocacy and support services.</li>
+                      <li><a href="https://www.nami.org/Find-Support/NAMI-Programs" target="_blank" rel="noopener noreferrer">The National Alliance on Mental Health</a> provides education, outreach, and advocacy and support services. Call the NAMI helpline <a href="tel:800-950-6264">"800-950-NAMI</a> for immediate support.</li>
                       <li>Services like <a href="https://www.betterhelp.com/" target="_blank" rel="noopener noreferrer">BetterHelp</a> and <a href="https://www.talkspace.com/" target="_blank" rel="noopener noreferrer">TalkSpace</a> provide virtual counseling with a licensed therapist, making it easier than ever to find support.</li>
                       <li><a href="https://www.meetup.com/" target="_blank" rel="noopener noreferrer">MeetUp.com</a> can help you find people or groups near you who share common interests.</li>
                       <li>The <a href="https://www.aspca.org/adopt-pet" target="_blank" rel="noopener noreferrer">ASPCA</a> or your local animal shelter can help you find a furry best friend.</li>
                       <li>Learn more about the <Link to="/vision/determinants-of-health/">social determinants of health</Link> and how it can impact your overall health.</li>
                     </ul>
                   </div>
+                </div>
+
+                <div className="care-card">
+                  <Image src="/images/features/loneliness-in-our-human-code/care-card-tell-someone.jpg" className="image--max-width" />
                 </div>
 
                 <Divider />

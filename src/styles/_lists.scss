@@ -21,7 +21,6 @@
   justify-content: space-between;
 
   &--half {
-
     @include mq($from: medium) {
       li {
         flex-basis: calc(50% - #{$spacing});

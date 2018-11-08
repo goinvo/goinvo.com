@@ -1,4 +1,4 @@
-import { createStore as reduxCreateStore } from "redux"
+import { createStore as reduxCreateStore } from 'redux'
 import { allCategory } from '../components/categories-list'
 
 const reducer = (state, action) => {

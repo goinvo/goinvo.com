@@ -1,30 +1,31 @@
 ---
-title: "Carrier screening for everyone"
-image: "/images/case-studies/wuxi/familycode/familycode-hero.jpg"
-client: "WuXi NextCODE"
-caption: "Shifting from a behind the scenes genomics powerhouse to a consumer-friendly service."
+title: 'Carrier screening for everyone'
+image: '/images/case-studies/wuxi/familycode/familycode-hero.jpg'
+client: 'WuXi NextCODE'
+caption: 'Shifting from a behind the scenes genomics powerhouse to a consumer-friendly service.'
 categories:
-  - "precision-medicine-and-genomics"
+  - 'precision-medicine-and-genomics'
 upNext:
-  - "mount-sinai-consent"
-  - "carrier-testing"
-  - "3m-coderyte"
+  - 'mount-sinai-consent'
+  - 'carrier-testing'
+  - '3m-coderyte'
 hidden: false
 references:
-  - title: "Global Carrier Screening Market - Segmented by Type of Test, Disease, and Geography - Growth, Trends and Forecasts. Retrieved July 24, 2018, from "
-    link: "https://www.mordorintelligence.com/industry-reports/carrier-screening-market"
-  - title: "Delivery Of Cascade Screening For Hereditary Conditions: A Scoping Review Of The Literature. Retrieved July 24, 2018, from "
-    link: "https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2017.1630"
-  - title: "What It Means to Be a Carrier of a Genetic Disorder. Retrieved July 24, 2018, from"
-    link: "https://jscreen.org/blog/what-it-means-to-be-a-carrier-of-a-genetic-disorder/"
-metaDescription: "Launching a beautiful, human friendly carrier screening service for planning healthy families."
-metaKeywords: "product strategy, ui design, ux design, research, carrier screening, wuxi, nextcode, familycode"
+  - title: 'Global Carrier Screening Market - Segmented by Type of Test, Disease, and Geography - Growth, Trends and Forecasts. Retrieved July 24, 2018, from '
+    link: 'https://www.mordorintelligence.com/industry-reports/carrier-screening-market'
+  - title: 'Delivery Of Cascade Screening For Hereditary Conditions: A Scoping Review Of The Literature. Retrieved July 24, 2018, from '
+    link: 'https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2017.1630'
+  - title: 'What It Means to Be a Carrier of a Genetic Disorder. Retrieved July 24, 2018, from'
+    link: 'https://jscreen.org/blog/what-it-means-to-be-a-carrier-of-a-genetic-disorder/'
+metaDescription: 'Launching a beautiful, human friendly carrier screening service for planning healthy families.'
+metaKeywords: 'product strategy, ui design, ux design, research, carrier screening, wuxi, nextcode, familycode'
 ---
 
 import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Carrier Screening for Everyone
+
 for WuXi NextCODE
 
 ### Problem

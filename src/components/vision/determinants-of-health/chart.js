@@ -11,22 +11,22 @@ import iconEnvironment from '../../../assets/images/vision/determinants-of-healt
 
 const options = {
   chartArea: { left: 0, top: '10%', width: '100%', height: '85%' },
-  legend: "none",
+  legend: 'none',
   pieHole: 0.25,
-  pieSliceText: "none",
-  pieSliceTextStyle: { color: "#444", "font-size": "12px" },
-  fontName: "Open Sans",
-  fontColor: "#444",
-  tooltip: { trigger: "none" },
-  colors: ["#F9D7A7", "#B2E5E9", "#E8ED9D", "#F8CBC5", "#90EED4"]
-};
+  pieSliceText: 'none',
+  pieSliceTextStyle: { color: '#444', 'font-size': '12px' },
+  fontName: 'Open Sans',
+  fontColor: '#444',
+  tooltip: { trigger: 'none' },
+  colors: ['#F9D7A7', '#B2E5E9', '#E8ED9D', '#F8CBC5', '#90EED4'],
+}
 
 const icons = [
   iconIndividualBehavior,
   iconSocialCircumstances,
   iconGeneticsAndBiology,
   iconMedicalCare,
-  iconEnvironment
+  iconEnvironment,
 ]
 
 class DOHChart extends React.Component {
@@ -36,10 +36,10 @@ class DOHChart extends React.Component {
     this.data = determinants.map(determinant => {
       return [determinant.title, determinant.percentage]
     })
-    this.data.unshift(["Determinant", "Percentage"]);
+    this.data.unshift(['Determinant', 'Percentage'])
 
     this.state = {
-      legendType: "none"
+      legendType: 'none',
     }
 
     this.chart = null
@@ -47,29 +47,33 @@ class DOHChart extends React.Component {
 
   componentDidMount() {
     this.setChartOptions()
-    window.addEventListener("resize", this.setChartOptions)
+    window.addEventListener('resize', this.setChartOptions)
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.setChartOptions)
+    window.removeEventListener('resize', this.setChartOptions)
   }
 
   componentDidUpate() {
     if (this.chart) {
-      this.chart.getChart().setSelection([{ row: this.props.selectedIndex, column: null }])
+      this.chart
+        .getChart()
+        .setSelection([{ row: this.props.selectedIndex, column: null }])
     }
   }
 
   getNewChartOpts = () => {
     // This check is for the Gatsby build process, where window is not defined.
     if (typeof window !== 'undefined') {
-      return window.innerWidth > 800 ? { legend: { position: "labeled" }, pieSliceText: "none" } : { legend: { position: "none" }, pieSliceText: "percentage" };
+      return window.innerWidth > 800
+        ? { legend: { position: 'labeled' }, pieSliceText: 'none' }
+        : { legend: { position: 'none' }, pieSliceText: 'percentage' }
     }
   }
 
   getChartOptions = () => {
-    const newOpts = this.getNewChartOpts();
-    return {...options, ...newOpts}
+    const newOpts = this.getNewChartOpts()
+    return { ...options, ...newOpts }
   }
 
   setChartOptions = () => {
@@ -79,16 +83,18 @@ class DOHChart extends React.Component {
   }
 
   initChart = ({ chartWrapper }) => {
-    this.chart = chartWrapper;
-    this.chart.getChart().setSelection([{ row: this.props.selectedIndex, column: null }])
+    this.chart = chartWrapper
+    this.chart
+      .getChart()
+      .setSelection([{ row: this.props.selectedIndex, column: null }])
   }
 
-  handleLegendSelect = (index) => {
-    this.props.onSelect(index);
+  handleLegendSelect = index => {
+    this.props.onSelect(index)
   }
 
   handleChartSelect = ({ chartWrapper }) => {
-    this.props.onSelect(chartWrapper.getChart().getSelection()[0].row);
+    this.props.onSelect(chartWrapper.getChart().getSelection()[0].row)
   }
 
   render() {
@@ -98,9 +104,17 @@ class DOHChart extends React.Component {
           {determinants.map((d, i) => {
             return (
               <li key={d.id}>
-                <button className="button button--transparent doh__determinant-button" onClick={() => this.handleLegendSelect(i)}>
+                <button
+                  className="button button--transparent doh__determinant-button"
+                  onClick={() => this.handleLegendSelect(i)}
+                >
                   <img src={icons[i]} alt={d.title} />
-                  <span className=" doh__chart-legend__label text--gray text--sm" style={{ textTransform: 'none', letterSpacing: '0' }}>{d.shortTitle}</span>
+                  <span
+                    className=" doh__chart-legend__label text--gray text--sm"
+                    style={{ textTransform: 'none', letterSpacing: '0' }}
+                  >
+                    {d.shortTitle}
+                  </span>
                 </button>
               </li>
             )
@@ -114,17 +128,17 @@ class DOHChart extends React.Component {
           options={this.getChartOptions()}
           chartEvents={[
             {
-              eventName: "ready",
-              callback: this.initChart
+              eventName: 'ready',
+              callback: this.initChart,
             },
             {
-              eventName: "select",
-              callback: this.handleChartSelect
-            }
+              eventName: 'select',
+              callback: this.handleChartSelect,
+            },
           ]}
         />
       </div>
-    );
+    )
   }
 }
 

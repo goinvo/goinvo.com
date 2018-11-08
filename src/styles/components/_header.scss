@@ -82,7 +82,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: transparentize($color-black, .5);
+  background-color: transparentize($color-black, 0.5);
   pointer-events: none;
   opacity: 0;
   z-index: $z-index--overlay;

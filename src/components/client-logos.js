@@ -20,21 +20,51 @@ class ClientLogos extends Component {
   render() {
     return (
       <ul className="list--unstyled client-logos">
-        <li><ThreeM /></li>
-        <li><Partners /></li>
-        <li><BD /></li>
-        <li className="hidden--sm"><InfoBionic /></li>
-        <li className="hidden--sm"><MGH /></li>
-        <li><JohnsonAndJohnson /></li>
-        <li><MountSinai /></li>
-        <li><Wuxi /></li>
-        <li><Walgreens /></li>
-        <li className="hidden--sm"><JournalOfParticipatoryMedicine /></li>
-        <li className="hidden--sm"><NationalScienceFoundation /></li>
-        <li><NIH /></li>
-        <li className="hidden--sm"><PersonalGenomeProject /></li>
-        <li className="hidden--sm"><Mitre /></li>
-        <li className="hidden--sm"><Mass /></li>
+        <li>
+          <ThreeM />
+        </li>
+        <li>
+          <Partners />
+        </li>
+        <li>
+          <BD />
+        </li>
+        <li className="hidden--sm">
+          <InfoBionic />
+        </li>
+        <li className="hidden--sm">
+          <MGH />
+        </li>
+        <li>
+          <JohnsonAndJohnson />
+        </li>
+        <li>
+          <MountSinai />
+        </li>
+        <li>
+          <Wuxi />
+        </li>
+        <li>
+          <Walgreens />
+        </li>
+        <li className="hidden--sm">
+          <JournalOfParticipatoryMedicine />
+        </li>
+        <li className="hidden--sm">
+          <NationalScienceFoundation />
+        </li>
+        <li>
+          <NIH />
+        </li>
+        <li className="hidden--sm">
+          <PersonalGenomeProject />
+        </li>
+        <li className="hidden--sm">
+          <Mitre />
+        </li>
+        <li className="hidden--sm">
+          <Mass />
+        </li>
       </ul>
     )
   }

@@ -12,23 +12,48 @@ import config from '../../config'
 
 class GradientImageColumns extends Component {
   render() {
-
     const backgroundProps = {
-      notResponsive: this.props.backgroundNotResponsive ? true : false
-    };
+      notResponsive: this.props.backgroundNotResponsive ? true : false,
+    }
 
     return (
-      <div className={`gradient-image-columns ${this.props.backgroundColor ? `background--${this.props.backgroundColor}` : ''} ${this.props.reverse ? 'gradient-image-columns--reverse' : ''}`}>
+      <div
+        className={`gradient-image-columns ${
+          this.props.backgroundColor
+            ? `background--${this.props.backgroundColor}`
+            : ''
+        } ${this.props.reverse ? 'gradient-image-columns--reverse' : ''}`}
+      >
         <div className="max-width content-padding">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 left">
-              <div className={`gradient-image-columns__image ${this.props.gradient ? 'gradient-image-columns__gradient' : ''} ${this.props.arrow ? 'gradient-image-columns__image--arrow' : ''}`}>
-                <BackgroundImage src={this.props.image} sizes={this.props.backgroundNotResponsive ? null : config.sizes.fullToHalfAtLarge} {...backgroundProps} />
+              <div
+                className={`gradient-image-columns__image ${
+                  this.props.gradient ? 'gradient-image-columns__gradient' : ''
+                } ${
+                  this.props.arrow ? 'gradient-image-columns__image--arrow' : ''
+                }`}
+              >
+                <BackgroundImage
+                  src={this.props.image}
+                  sizes={
+                    this.props.backgroundNotResponsive
+                      ? null
+                      : config.sizes.fullToHalfAtLarge
+                  }
+                  {...backgroundProps}
+                />
               </div>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 right">
-              <div className={`gradient-image-columns__content ${this.props.offsetContent ? 'gradient-image-columns__content--offset' : ''}`}>
-                { this.props.children }
+              <div
+                className={`gradient-image-columns__content ${
+                  this.props.offsetContent
+                    ? 'gradient-image-columns__content--offset'
+                    : ''
+                }`}
+              >
+                {this.props.children}
               </div>
             </div>
           </div>

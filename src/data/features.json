@@ -4,10 +4,7 @@
     "title": "Loneliness in Our Human Code",
     "date": "Nov.2018",
     "client": "Feature",
-    "categories": [
-      "open-source",
-      "public-health-and-policy"
-    ],
+    "categories": ["open-source", "public-health-and-policy"],
     "caption": "Loneliness is more than a feeling, it can effect our overall health and increase our risk for certain conditions.",
     "image": "/images/features/loneliness-in-our-human-code/loneliness-featured.jpg",
     "link": "/vision/loneliness-in-our-human-code/"
@@ -42,10 +39,7 @@
     "title": "Killer Truths",
     "date": "Apr.2017",
     "client": "Feature",
-    "categories": [
-      "public-health-and-policy",
-      "open-source"
-    ],
+    "categories": ["public-health-and-policy", "open-source"],
     "caption": "How citizens of the USA really die (from 2007-2014).",
     "image": "/images/features/killer-truths/killer-truths-featured2.jpg",
     "link": "https://www.goinvo.com/features/killer-truths/"
@@ -55,10 +49,7 @@
     "title": "Determinants of Health",
     "date": "Oct.2018",
     "client": "Feature",
-    "categories": [
-      "public-health-and-policy",
-      "open-source"
-    ],
+    "categories": ["public-health-and-policy", "open-source"],
     "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health.",
     "image": "/images/services/doh-preview.jpg",
     "link": "/vision/determinants-of-health/"
@@ -68,11 +59,7 @@
     "title": "Care Plans that Drive Recovery",
     "date": "Mar.2016",
     "client": "Feature",
-    "categories": [
-      "patient-engagement",
-      "care-management",
-      "open-source"
-    ],
+    "categories": ["patient-engagement", "care-management", "open-source"],
     "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
     "image": "/images/features/care-plans/care-plans-featured2.jpg",
     "link": "https://www.goinvo.com/features/careplans/"
@@ -82,10 +69,7 @@
     "title": "Understanding Zika",
     "date": "Feb.2016",
     "client": "Feature",
-    "categories": [
-      "public-health-and-policy",
-      "open-source"
-    ],
+    "categories": ["public-health-and-policy", "open-source"],
     "caption": "There are an estimated 1.6 million cases of Zika cirus in 33 countries.",
     "image": "/images/features/understanding-zika/understanding-zika-featured.jpg",
     "link": "https://www.goinvo.com/features/zika/"
@@ -105,10 +89,7 @@
     "id": "healing-us-healthcare",
     "title": "Healing U.S. Healthcare",
     "client": "Feature",
-    "categories": [
-      "health-it-and-infrastructure",
-      "public-health-and-policy"
-    ],
+    "categories": ["health-it-and-infrastructure", "public-health-and-policy"],
     "date": "Sep.2015",
     "caption": "How do we heal an ailing system?",
     "image": "/images/features/healing-us-healthcare/healing-us-healthcare-featured.jpg",
@@ -130,9 +111,7 @@
     "title": "From Bathroom to Healthroom",
     "date": "Mar.2015",
     "client": "Feature",
-    "categories": [
-      "patient-engagement"
-    ],
+    "categories": ["patient-engagement"],
     "caption": "How magical technology will revolutionize human health.",
     "image": "/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg",
     "link": "https://www.goinvo.com/features/from-bathroom-to-healthroom/"
@@ -163,10 +142,7 @@
     "title": "Understanding Ebola",
     "date": "Oct.2014",
     "client": "Feature",
-    "categories": [
-      "public-health-and-policy",
-      "open-source"
-    ],
+    "categories": ["public-health-and-policy", "open-source"],
     "caption": "A visual guide.",
     "image": "/images/features/understanding-ebola/understanding-ebola-featured.jpg",
     "link": "https://www.goinvo.com/features/ebola/"
@@ -176,10 +152,7 @@
     "title": "Ebola Care Guideline",
     "date": "Oct.2014",
     "client": "Feature",
-    "categories": [
-      "public-health-and-policy",
-      "open-source"
-    ],
+    "categories": ["public-health-and-policy", "open-source"],
     "caption": "An illustrated process on personal protective equipment.",
     "image": "/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg",
     "link": "https://www.goinvo.com/features/ebola-care-guideline/"
@@ -189,10 +162,7 @@
     "title": "Carrier Testing",
     "date": "Oct.2018",
     "client": "Feature",
-    "categories": [
-      "precision-medicine-and-genomics",
-      "open-source"
-    ],
+    "categories": ["precision-medicine-and-genomics", "open-source"],
     "caption": "Open source design guidelines for delivering digitized carrier testing results.",
     "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
     "link": "http://www.genomicsdesign.com/",

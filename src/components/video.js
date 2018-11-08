@@ -7,8 +7,23 @@ import { mediaUrl } from '../helpers'
 class Video extends Component {
   render() {
     return (
-      <video height={this.props.height} width={this.props.width} className={`video ${this.props.className || null}`} poster={mediaUrl(this.props.poster)} autoPlay muted playsInline loop={this.props.loop || false}>
-        {this.props.sources.map(src => <source key={src.format} src={mediaUrl(src.src)} type={`video/${src.format}`} />)}
+      <video
+        height={this.props.height}
+        width={this.props.width}
+        className={`video ${this.props.className || null}`}
+        poster={mediaUrl(this.props.poster)}
+        autoPlay
+        muted
+        playsInline
+        loop={this.props.loop || false}
+      >
+        {this.props.sources.map(src => (
+          <source
+            key={src.format}
+            src={mediaUrl(src.src)}
+            type={`video/${src.format}`}
+          />
+        ))}
         <Image src={this.props.fallback} alt="" />
       </video>
     )

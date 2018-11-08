@@ -1,15 +1,15 @@
 ---
-title: "Health Data Capture at the Point of Care"
-image: "/images/case-studies/mitre/fluxnotes/fluxnotes-hero.jpg"
-client: "MITRE Corporation"
-caption: "Capturing structured health data at the point of care without increasing clinician burden."
+title: 'Health Data Capture at the Point of Care'
+image: '/images/case-studies/mitre/fluxnotes/fluxnotes-hero.jpg'
+client: 'MITRE Corporation'
+caption: 'Capturing structured health data at the point of care without increasing clinician burden.'
 categories:
-  - "health-it-and-infrastructure"
-  - "open-source"
+  - 'health-it-and-infrastructure'
+  - 'open-source'
 upNext:
-  - "fastercures-health-data-basics"
-  - "determinants-of-health"
-  - "open-source-healthcare"
+  - 'fastercures-health-data-basics'
+  - 'determinants-of-health'
+  - 'open-source-healthcare'
 hidden: false
 ---
 
@@ -17,6 +17,7 @@ import Divider from 'components/divider'
 import Quote from 'components/quote'
 
 # Health Data Capture at the Point of Care
+
 for MITRE Corporation
 
 ### Problem
@@ -70,7 +71,7 @@ Humans ingest, recall, and remember information better through narrative and sto
 Personalize the presentation of the health record to the patient’s condition and reason of visit, bringing the most relevant information to the provider's attention and maintaining a manageable and ingestible visual density of the EHR.
 
 ![EHR example](/images/case-studies/mitre/fluxnotes/fluxnotes-ehr-example2.jpg)
-*An example EHR interface. Too much information organized unsuitably for clinical workflows. There is no information hierarchy, and patient information is hidden behind tabs located on the bottom of the interface.*
+_An example EHR interface. Too much information organized unsuitably for clinical workflows. There is no information hierarchy, and patient information is hidden behind tabs located on the bottom of the interface._
 
 <Divider />
 

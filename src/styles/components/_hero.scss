@@ -34,7 +34,7 @@
     width: 100%;
     padding-top: ($spacing * 2);
     padding-bottom: ($spacing * 2);
-    background-color: transparentize($color-white, .3);
+    background-color: transparentize($color-white, 0.3);
 
     @include mq($from: large) {
       position: absolute;

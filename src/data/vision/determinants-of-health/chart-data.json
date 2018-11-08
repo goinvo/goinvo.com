@@ -1,14 +1,14 @@
 [
   {
-    "id" : "individual-behavior",
-    "title" : "Individual Behavior",
+    "id": "individual-behavior",
+    "title": "Individual Behavior",
     "shortTitle": "Behavior",
-    "percentage" : 36,
-    "description" : "Smoking habits, sleep and exercise patterns, sexual activity, and mood levels are all examples of individual behavior, which is a critical determinant for our physical health, mental health, and overall well being. Positive changes to our individual behavior can reduce the risk for developing a variety of diseases, and many public health interventions have already focused on altering dangerous behaviors.",
-    "divisions" : [
+    "percentage": 36,
+    "description": "Smoking habits, sleep and exercise patterns, sexual activity, and mood levels are all examples of individual behavior, which is a critical determinant for our physical health, mental health, and overall well being. Positive changes to our individual behavior can reduce the risk for developing a variety of diseases, and many public health interventions have already focused on altering dangerous behaviors.",
+    "divisions": [
       {
-        "title" : "Psychological Assets",
-        "factors" : [
+        "title": "Psychological Assets",
+        "factors": [
           "Conscientiousness level",
           "Self-efficacy",
           "Optimism level",
@@ -17,8 +17,8 @@
         ]
       },
       {
-        "title" : "Negative Mood and Affects",
-        "factors" : [
+        "title": "Negative Mood and Affects",
+        "factors": [
           "Stress level",
           "Hopelessness level",
           "Anxiety level",
@@ -26,35 +26,31 @@
         ]
       },
       {
-        "title" : "Other Risk Related Behavior",
-        "factors" : [
-          "Gun behavior",
-          "Sexual activity",
-          "Motor vehicle behavior"
-        ]
+        "title": "Other Risk Related Behavior",
+        "factors": ["Gun behavior", "Sexual activity", "Motor vehicle behavior"]
       },
       {
-        "title" : "Physical Activity"
+        "title": "Physical Activity"
       },
       {
-        "title" : "Sleep Patterns"
+        "title": "Sleep Patterns"
       },
       {
-        "title" : "Diet Patterns"
+        "title": "Diet Patterns"
       }
     ]
   },
 
   {
-    "id" : "social-circumstances",
-    "title" : "Social Circumstances",
+    "id": "social-circumstances",
+    "title": "Social Circumstances",
     "shortTitle": "Social",
-    "percentage" : 24,
-    "description" : "Social circumstances are factors that reflect the social environment that we have lived and developed in. An individual's social status, early childhood development and culture impacts their social development and personal health. Poor social circumstances such as discrimination, concentrated poverty, and low education level often result in poor health outcomes and a lower quality-of-life.",
-    "divisions" : [
+    "percentage": 24,
+    "description": "Social circumstances are factors that reflect the social environment that we have lived and developed in. An individual's social status, early childhood development and culture impacts their social development and personal health. Poor social circumstances such as discrimination, concentrated poverty, and low education level often result in poor health outcomes and a lower quality-of-life.",
+    "divisions": [
       {
-        "title" : "Social Connectedness",
-        "factors" : [
+        "title": "Social Connectedness",
+        "factors": [
           "Civic participation",
           "Intimate relationships",
           "Quality of family support",
@@ -63,8 +59,8 @@
         ]
       },
       {
-        "title" : "Social Status",
-        "factors" : [
+        "title": "Social Status",
+        "factors": [
           "Subjective social status",
           "Individual income level",
           "Language and literacy level",
@@ -73,8 +69,8 @@
         ]
       },
       {
-        "title" : "Culture and Tradition",
-        "factors" : [
+        "title": "Culture and Tradition",
+        "factors": [
           "Religious involvement",
           "Community cultural norms",
           "Family cultural norms"
@@ -84,39 +80,39 @@
         "title": "Race and ethnicity"
       },
       {
-        "title" : "Citizenship Status"
+        "title": "Citizenship Status"
       },
       {
-        "title" : "Sexual Orientation"
+        "title": "Sexual Orientation"
       },
       {
-        "title" : "Military Service"
+        "title": "Military Service"
       },
       {
-        "title" : "Gender Identity"
+        "title": "Gender Identity"
       },
       {
-        "title" : "History of Incarceration"
+        "title": "History of Incarceration"
       },
       {
-        "title" : "Discrimination"
+        "title": "Discrimination"
       },
       {
-        "title" : "Work Conditions"
+        "title": "Work Conditions"
       }
     ]
   },
 
   {
-    "id" : "genetics-and-biology",
-    "title" : "Genetics and Biology",
+    "id": "genetics-and-biology",
+    "title": "Genetics and Biology",
     "shortTitle": "Bio",
-    "percentage" : 22,
-    "description" : "While they may be thought of as the primary components of health, genetic makeup, physical body structure, and bodily function in fact determine only about a fifth of our measurable health. In the future, genome sequencing will become more important for predicting and preparing for future health outcomes, but it is not feasible to sequence everyone's genome at this point in time. Some biological and genetic factors that have varying impacts on different segments of the population, and so variance must be considered when applying the determinants of health. The effects of aging and inherited conditions (sickle-cell anemia, cystic fibrosis, etc.) are examples of factors with varying levels of impact on the population.",
-    "divisions" : [
+    "percentage": 22,
+    "description": "While they may be thought of as the primary components of health, genetic makeup, physical body structure, and bodily function in fact determine only about a fifth of our measurable health. In the future, genome sequencing will become more important for predicting and preparing for future health outcomes, but it is not feasible to sequence everyone's genome at this point in time. Some biological and genetic factors that have varying impacts on different segments of the population, and so variance must be considered when applying the determinants of health. The effects of aging and inherited conditions (sickle-cell anemia, cystic fibrosis, etc.) are examples of factors with varying levels of impact on the population.",
+    "divisions": [
       {
-        "title" : "Genetics",
-        "factors" : [
+        "title": "Genetics",
+        "factors": [
           "Single-gene",
           "Chromosomal",
           "Multifactorial",
@@ -125,17 +121,12 @@
         ]
       },
       {
-        "title" : "Body Structure",
-        "factors" : [
-          "Age",
-          "Height",
-          "Weight",
-          "Waist-Hip ratio"
-        ]
+        "title": "Body Structure",
+        "factors": ["Age", "Height", "Weight", "Waist-Hip ratio"]
       },
       {
-        "title" : "Body Function",
-        "factors" : [
+        "title": "Body Function",
+        "factors": [
           "Bone density",
           "Blood pressure",
           "Nutritional status",
@@ -150,15 +141,15 @@
   },
 
   {
-    "id" : "medical-care",
-    "title" : "Medical Care",
+    "id": "medical-care",
+    "title": "Medical Care",
     "shortTitle": "Med",
-    "percentage" : 11,
-    "description" : "Medical care are factors correlated with care by a trained provider, such as provider availability and quality of healthcare. However, often we fail to realize that medical care only contributes to a small portion of our overall health. The most prevalent issue in medical care today is simply the lack of access to health services, as well as a decreasing level of health literacy in the general population. This combination can be very dangerous since the high cost of care and lack of knowledge may cause patients to delay seeking medical treatment.",
-    "divisions" : [
+    "percentage": 11,
+    "description": "Medical care are factors correlated with care by a trained provider, such as provider availability and quality of healthcare. However, often we fail to realize that medical care only contributes to a small portion of our overall health. The most prevalent issue in medical care today is simply the lack of access to health services, as well as a decreasing level of health literacy in the general population. This combination can be very dangerous since the high cost of care and lack of knowledge may cause patients to delay seeking medical treatment.",
+    "divisions": [
       {
-        "title" : "Access to Healthcare",
-        "factors" : [
+        "title": "Access to Healthcare",
+        "factors": [
           "Distance to resources",
           "Provider availability",
           "Vaccines and immunizations",
@@ -166,31 +157,31 @@
         ]
       },
       {
-        "title" : "Quality of Healthcare",
-        "factors" : [
+        "title": "Quality of Healthcare",
+        "factors": [
           "Provider linguistic competancy",
           "Provider cultural competancy"
         ]
       },
       {
-        "title" : "Patient Engagement"
+        "title": "Patient Engagement"
       },
       {
-        "title" : "Health Literacy"
+        "title": "Health Literacy"
       }
     ]
   },
 
   {
-    "id" : "environment",
-    "title" : "Environment",
+    "id": "environment",
+    "title": "Environment",
     "shortTitle": "Geo",
-    "percentage" : 7,
-    "description" : "The environment refers to the natural and human environments we live in and includes everything from the infrastructure of our cities to the quality of the air we breathe. The physical environment is an important factor that contributes to our health, but has the smallest impact out of all the determinants. However it can still have a critical effect on our overall health. For example, increased levels of pollution can increase asthma in a given area, while physical barriers such as buildings without ramp access or elevators can have a negative impact on people with disabilities.",
-    "divisions" : [
+    "percentage": 7,
+    "description": "The environment refers to the natural and human environments we live in and includes everything from the infrastructure of our cities to the quality of the air we breathe. The physical environment is an important factor that contributes to our health, but has the smallest impact out of all the determinants. However it can still have a critical effect on our overall health. For example, increased levels of pollution can increase asthma in a given area, while physical barriers such as buildings without ramp access or elevators can have a negative impact on people with disabilities.",
+    "divisions": [
       {
-        "title" : "Pollution",
-        "factors" : [
+        "title": "Pollution",
+        "factors": [
           "Tobacco use exposure",
           "Air quality ",
           "Lead exposure levels",
@@ -199,8 +190,8 @@
         ]
       },
       {
-        "title" : "Location",
-        "factors" : [
+        "title": "Location",
+        "factors": [
           "Access to healthy foods",
           "Crime level",
           "Transportation quality",
@@ -215,10 +206,10 @@
         ]
       },
       {
-        "title" : "Exposure to Firearms"
+        "title": "Exposure to Firearms"
       },
       {
-        "title" : "Allergens"
+        "title": "Allergens"
       }
     ]
   }

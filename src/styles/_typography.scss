@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Open Sans';
   src: url('../assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
-       url('../assets/fonts/opensans-regular-webfont.woff') format('woff');
+    url('../assets/fonts/opensans-regular-webfont.woff') format('woff');
   font-weight: $font-weight--normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'Open Sans';
   src: url('../assets/fonts/opensans-semibold-webfont.woff2') format('woff2'),
-       url('../assets/fonts/opensans-semibold-webfont.woff') format('woff');
+    url('../assets/fonts/opensans-semibold-webfont.woff') format('woff');
   font-weight: $font-weight--bold;
   font-style: normal;
 }
@@ -21,7 +21,7 @@ body {
   color: $color-black;
 }
 
-.pure-g [class *= "pure-u"] {
+.pure-g [class*='pure-u'] {
   font-family: $font-family--sans-serif;
 }
 
@@ -31,7 +31,7 @@ body {
   }
 
   &--sm {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 
   &--md {

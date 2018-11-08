@@ -96,10 +96,10 @@ $directions: 'top' 'bottom' 'left' 'right';
 
     &--double {
       padding-#{$direction}: $spacing * 2;
-      
+
       &--only-lg {
         @include mq($from: large) {
-          padding-#{$direction}: $spacing*  2;
+          padding-#{$direction}: $spacing * 2;
         }
       }
 

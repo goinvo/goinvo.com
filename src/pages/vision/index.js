@@ -315,18 +315,22 @@ class VisionPage extends Component {
         <div className="max-width content-padding pad-top--double">
           <h2 className="header--xl margin-bottom--none">Reviews for<span className="text--serif text--primary">...</span></h2>
         </div>
-        <Carousel menuItems={['Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom', 'Inspired EHRs']}>
+        <Carousel menuItems={['Inspired EHRs', 'Designing for Emerging Techologies', 'Determinants of Health', 'Bathroom to Healthroom']}>
+          <GradientImageColumns image="/images/services/inspired-ehrs-book.jpg" backgroundColor="gray" backgroundNotResponsive>
+            <Quote background="gray" quotee="Janet Campbell" quoteeSub="Epic" small>I sent this around to our User Experience team here, and there was a lot of discussion and appreciation for the work you've done.</Quote>
+            <a href="../work/inspired-ehrs" className="button button--primary button--lg button--block">Read the Case Study</a>
+          </GradientImageColumns>
           <GradientImageColumns image="/images/vision/emerging-tech-wood.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Dan Saffer" quoteeSub="Author of Microinteractions" small>If you’re looking for insights into how to design the future today, look no further.</Quote>
+            <a href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519" target="_blank" rel="noopener noreferrer" className="button button--primary button--lg button--block">Check out the Book</a>
           </GradientImageColumns>
           <GradientImageColumns image="/images/services/doh-preview.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Toyin Ajayi" quoteeSub="Chief Health Officer of Cityblock Health" small>The SDoH poster stands taped to the giant whiteboard outside my office [at Google Cityblock Health Labs], and will form the basis of many rich conversations among my team. Thank you!</Quote>
+            <a href="./determinants-of-health/" className="button button--primary button--lg button--block">Read the Feature</a>
           </GradientImageColumns>
           <GradientImageColumns image="/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg" backgroundColor="gray" backgroundNotResponsive>
             <Quote background="gray" quotee="Eric Topol" quoteeSub="Scripps Translational Science Institute" small>Designers at GoInvo have the right ideas for the smart medical home of the future.</Quote>
-          </GradientImageColumns>
-          <GradientImageColumns image="/images/services/inspired-ehrs-book.jpg" backgroundColor="gray" backgroundNotResponsive>
-            <Quote background="gray" quotee="Janet Campbell" quoteeSub="Epic" small>I sent this around to our User Experience team here, and there was a lot of discussion and appreciation for the work you've done.</Quote>
+            <a href="https://www.goinvo.com/features/from-bathroom-to-healthroom/" className="button button--primary button--lg button--block">Read the Feature</a>
           </GradientImageColumns>
         </Carousel>
       </Layout>

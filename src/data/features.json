@@ -1,5 +1,32 @@
 [
   {
+    "id": "loneliness-in-our-human-code",
+    "title": "Loneliness in Our Human Code",
+    "date": "Nov.2018",
+    "client": "Feature",
+    "categories": [
+      "open-source",
+      "public-health-and-policy"
+    ],
+    "caption": "Loneliness is more than a feeling, it can effect our overall health and increase our risk for certain conditions.",
+    "image": "/images/features/loneliness-in-our-human-code/loneliness-featured.jpg",
+    "link": "/vision/loneliness-in-our-human-code/"
+  },
+  {
+    "id": "open-source-healthcare",
+    "title": "Open Source Healthcare",
+    "date": "Oct.2018",
+    "client": "Feature",
+    "categories": [
+      "health-it-and-infrastructure",
+      "open-source",
+      "public-health-and-policy"
+    ],
+    "caption": "The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.",
+    "image": "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",
+    "link": "/vision/open-source-healthcare/"
+  },
+  {
     "id": "print-big",
     "title": "Print big. Print often.",
     "date": "Mar.2018",
@@ -170,19 +197,5 @@
     "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
     "link": "http://www.genomicsdesign.com/",
     "external": true
-  },
-  {
-    "id": "open-source-healthcare",
-    "title": "Open Source Healthcare",
-    "date": "Oct.2018",
-    "client": "Feature",
-    "categories": [
-      "health-it-and-infrastructure",
-      "open-source",
-      "public-health-and-policy"
-    ],
-    "caption": "The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.",
-    "image": "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",
-    "link": "/vision/open-source-healthcare/"
   }
 ]

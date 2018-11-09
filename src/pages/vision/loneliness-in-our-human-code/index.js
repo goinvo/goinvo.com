@@ -429,12 +429,12 @@ class LonelinessFeature extends Component {
                     </div>
                     <div className="lonely-factor-text">
                       <h3 className="header--md text--primary">
-                        Separation for infants
+                        Physical closeness
                       </h3>
                       <p className="text--gray">
                         Physical attachment is crucial for infants, and
                         separation can cause high levels of anxiety. One study
-                        showed that mothering and cuddling hospitalized infants
+                        showed that tending to and cuddling hospitalized infants
                         can increase survival rate by 20%, despite the risks of
                         infection
                         <sup>
@@ -494,7 +494,7 @@ class LonelinessFeature extends Component {
                         as a barrier to social, physical, emotional,
                         educational, and economic resources since the poorest
                         communities have historically been and continue to be
-                        highly segregated.
+                        highly segregated
                         <sup>
                           <a href="#fn-16">16</a>,<a href="#fn-21">21</a>
                         </sup>
@@ -609,7 +609,7 @@ class LonelinessFeature extends Component {
                         Religious, community, big brother, and big sister
                         programs, as well as supportive educators are key at
                         this stage to fill any gaps that exist in a child's
-                        support system.
+                        support system
                         <sup>
                           <a href="#fn-22">22</a>
                         </sup>
@@ -638,7 +638,7 @@ class LonelinessFeature extends Component {
                         adolescents can be susceptible to peers who exert
                         negative influence. Finding a peer group that exerts
                         positive influences leads to building a strong support
-                        system.
+                        system
                         <sup>
                           <a href="#fn-16">16</a>,<a href="#fn-25">25</a>
                         </sup>
@@ -701,7 +701,7 @@ class LonelinessFeature extends Component {
                         with a host of healthy behaviors including exercise, a
                         wholesome diet, and safe sex. Supporting your body
                         strengthens your mind and increases your ability to
-                        emotionally connect with others.
+                        emotionally connect with others
                         <sup>
                           <a href="#fn-26">26</a>
                         </sup>

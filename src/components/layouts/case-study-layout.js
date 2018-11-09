@@ -17,6 +17,7 @@ import {
   extractWorkItemLinkDetails,
   concatCaseStudiesAndFeatures,
   findCaseStudyById,
+  mediaUrl,
 } from '../../helpers'
 
 import config from '../../../config'
@@ -80,7 +81,7 @@ class CaseStudyLayout extends Component {
             },
             {
               name: 'twitter:image',
-              content: caseStudy.frontmatter.image,
+              content: mediaUrl(caseStudy.frontmatter.image),
             },
             {
               name: 'twitter:title',

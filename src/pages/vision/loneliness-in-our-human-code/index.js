@@ -24,7 +24,6 @@ import strollerIcon from '../../../assets/images/vision/loneliness-in-our-human-
 import cuddleIcon from '../../../assets/images/vision/loneliness-in-our-human-code/mom-cuddle-baby.svg'
 import treesIcon from '../../../assets/images/vision/loneliness-in-our-human-code/trees.svg'
 import moneyIcon from '../../../assets/images/vision/loneliness-in-our-human-code/money.svg'
-import singleParentIcon from '../../../assets/images/vision/loneliness-in-our-human-code/single-parent-family.svg'
 import conversationIcon from '../../../assets/images/vision/loneliness-in-our-human-code/conversation.svg'
 import sleepIcon from '../../../assets/images/vision/loneliness-in-our-human-code/sleep.svg'
 import familyIcon from '../../../assets/images/vision/loneliness-in-our-human-code/family.svg'
@@ -506,15 +505,13 @@ class LonelinessFeature extends Component {
                   <div className="lonely-factor">
                     <div className="lonely-factor-icon">
                       <img
-                        className="timeline-icon single-parent-icon"
-                        src={singleParentIcon}
-                        alt="single mother with child"
+                        className="timeline-icon family-icon"
+                        src={familyIcon}
+                        alt="parents with child"
                       />
                     </div>
                     <div className="lonely-factor-text">
-                      <h3 className="header--md text--primary">
-                        Single parents
-                      </h3>
+                      <h3 className="header--md text--primary">Parents</h3>
                       <p className="text--gray">
                         Parents and guardians play a huge role in children's
                         overall wellbeing. Growing up with both parents present

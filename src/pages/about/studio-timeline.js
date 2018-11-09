@@ -10,7 +10,7 @@ class StudioTimelinePage extends Component {
       <div>
         <Layout>
           <Helmet
-            title="GoInvo | Studio Timeline"
+            title="Studio Timeline - GoInvo"
             meta={[
               {
                 name: 'description',

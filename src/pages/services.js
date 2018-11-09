@@ -87,10 +87,16 @@ const services = [
 
 const ServicesPage = () => (
   <Layout>
-    {
-      // TODO: Real meta info here
-    }
-    <Helmet title="GoInvo | Services" />
+    <Helmet
+      title="Boston UX Design Services - GoInvo"
+      meta={[
+        {
+          name: 'description',
+          content:
+            'GoInvo designs and builds beautiful healthcare products for startups and big brands like Johnson & Johnson, Partners HealthCare, and Walgreens.',
+        },
+      ]}
+    />
     <Hero image="/images/services/hand-drawing.jpg" position="center top">
       <h1 className="header--xl">
         Disrupt from within,

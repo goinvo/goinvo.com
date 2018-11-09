@@ -187,7 +187,7 @@ class WorkPage extends Component {
     return (
       <Layout>
         <Helmet
-          title="GoInvo | Work"
+          title="Work - GoInvo"
           meta={[
             {
               name: 'description',

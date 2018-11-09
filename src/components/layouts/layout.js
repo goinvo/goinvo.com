@@ -10,7 +10,7 @@ class Layout extends Component {
     return (
       <div className="app">
         <Helmet
-          title="GoInvo"
+          title="GoInvo is a Boston UX design studio focused in Healthcare"
           meta={[
             {
               name: 'description',

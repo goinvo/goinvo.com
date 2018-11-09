@@ -18,7 +18,7 @@ class CareersPage extends Component {
     return (
       <Layout>
         <Helmet
-          title="GoInvo | Careers"
+          title="Careers - GoInvo"
           meta={[
             {
               name: 'description',

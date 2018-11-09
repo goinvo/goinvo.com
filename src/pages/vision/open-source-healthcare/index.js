@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -9,6 +10,7 @@ class OpenSourceHealthcareFeature extends Component {
   render() {
     return (
       <Layout>
+        <Helmet title="Open Source Healthcare - GoInvo" />
         <Hero image="/images/features/open-source-healthcare/open-source-healthcare-hero.jpg" />
         <div className="oshc-feature">
           <div className="pad-vertical--double">

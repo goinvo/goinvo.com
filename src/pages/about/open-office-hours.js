@@ -22,7 +22,7 @@ class OpenOfficeHoursPage extends Component {
     return (
       <Layout>
         <Helmet
-          title="GoInvo | Open Office Hours"
+          title="Open Office Hours - GoInvo"
           meta={[
             {
               name: 'description',

@@ -27,7 +27,7 @@ class ThankYouPage extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title="GoInvo | Thank you">
+        <Helmet title="Thank you - GoInvo">
           <script type="text-javascript">
             {`gtag('event', 'conversion', {'send_to': 'AW-973476681/oygPCN6t2W4QyaaY0AM'});`}
           </script>

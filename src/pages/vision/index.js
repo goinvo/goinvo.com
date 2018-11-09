@@ -123,7 +123,7 @@ class VisionPage extends Component {
     return (
       <Layout>
         <Helmet
-          title="GoInvo | Vision"
+          title="Vision - GoInvo"
           meta={[
             {
               name: 'description',

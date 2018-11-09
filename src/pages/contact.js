@@ -10,7 +10,7 @@ import config from '../../config'
 const ContactPage = () => (
   <Layout>
     <Helmet
-      title="GoInvo | Contact"
+      title="Contact - GoInvo"
       meta={[
         {
           name: 'description',

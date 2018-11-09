@@ -34,7 +34,7 @@ class DeterminantsOfHealthFeature extends Component {
     return (
       <Layout>
         <Helmet
-          title="GoInvo | Determinants of Health"
+          title="Determinants of Health - GoInvo"
           meta={[
             {
               name: 'description',

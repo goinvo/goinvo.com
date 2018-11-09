@@ -74,7 +74,7 @@ const upNextList = [
 const AboutPage = () => (
   <Layout>
     <Helmet
-      title="GoInvo | About"
+      title="About - GoInvo"
       meta={[
         {
           name: 'description',

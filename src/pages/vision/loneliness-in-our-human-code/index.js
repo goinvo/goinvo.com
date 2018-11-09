@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -42,6 +44,7 @@ class LonelinessFeature extends Component {
   render() {
     return (
       <Layout>
+        <Helmet title="Loneliness in our Human Code - GoInvo" />
         <Hero image="/images/features/loneliness-in-our-human-code/loneliness-hero.jpg" />
         <div className="loneliness-feature">
           <div className="pad-vertical--double">

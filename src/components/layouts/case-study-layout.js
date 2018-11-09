@@ -69,12 +69,35 @@ class CaseStudyLayout extends Component {
           )
           const caseStudy = findCaseStudyById(data, this.props.pageContext.id)
 
-          const meta = []
+          const meta = [
+            {
+              name: 'twitter:site',
+              content: '@goinvo',
+            },
+            {
+              name: 'twitter:card',
+              content: 'summary_large_image',
+            },
+            {
+              name: 'twitter:image',
+              content: caseStudy.frontmatter.image,
+            },
+            {
+              name: 'twitter:title',
+              content: caseStudy.frontmatter.title,
+            },
+          ]
           if (caseStudy.frontmatter.metaDescription) {
-            meta.push({
-              name: 'description',
-              content: caseStudy.frontmatter.metaDescription,
-            })
+            meta.push(
+              {
+                name: 'description',
+                content: caseStudy.frontmatter.metaDescription,
+              },
+              {
+                name: 'twitter:description',
+                content: caseStudy.frontmatter.metaDescription,
+              }
+            )
           }
           if (caseStudy.frontmatter.metaKeywords) {
             meta.push({
@@ -86,7 +109,7 @@ class CaseStudyLayout extends Component {
           return (
             <Layout>
               <Helmet
-                title={`GoInvo | ${caseStudy.frontmatter.title}`}
+                title={`${caseStudy.frontmatter.title} - GoInvo`}
                 meta={meta}
               />
               <MDXProvider

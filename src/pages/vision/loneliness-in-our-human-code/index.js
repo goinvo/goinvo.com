@@ -48,6 +48,15 @@ class LonelinessFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Loneliness in our Human Code</h1>
 
+              <p>
+                Among social determinants of health, loneliness can hugely
+                impact a person’s mental state, physical health, and overall
+                wellbeing. In this brief, we explore ow social determinants of
+                health, with a focus on loneliness, affects health over the
+                course of lifespan, taking into consideration unique needs at
+                each stage of life.
+              </p>
+
               <h3 className="header--md text--lg">
                 Social Isolation <span className="text--primary">Costs Us</span>
               </h3>
@@ -151,12 +160,14 @@ class LonelinessFeature extends Component {
                   <div class="risk-factor">
                     <div class="icon-bubble">
                       <img
-                        className="risk-icon suicide-icon"
-                        src={suicideIcon}
-                        alt="suicide"
+                        className="risk-icon depression-icon"
+                        src={depressionIcon}
+                        alt="depression"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">suicide</div>
+                    <div class="risk-text text--gray text--center">
+                      depression
+                    </div>
                   </div>
                   <div class="risk-factor">
                     <div class="icon-bubble">
@@ -200,14 +211,12 @@ class LonelinessFeature extends Component {
                 <div class="risk-factor risk-solo">
                   <div class="icon-bubble">
                     <img
-                      className="risk-icon depression-icon"
-                      src={depressionIcon}
-                      alt="depression"
+                      className="risk-icon suicide-icon"
+                      src={suicideIcon}
+                      alt="suicide"
                     />
                   </div>
-                  <div class="risk-text text--gray text--center">
-                    depression
-                  </div>
+                  <div class="risk-text text--gray text--center">suicide</div>
                 </div>
               </div>
 
@@ -398,7 +407,10 @@ class LonelinessFeature extends Component {
                       <p className="text--gray">
                         Social connectedness begins when life begins, and is
                         most impacted by the quality of early relationships with
-                        parents and caregivers
+                        parents and caregivers. Close family ties including
+                        grandparents, siblings, aunts, and uncles can start
+                        building an infant's social support system by spending
+                        time with them in these formative years.
                         <sup>
                           <a href="#fn-16">16</a>
                         </sup>
@@ -476,11 +488,13 @@ class LonelinessFeature extends Component {
                         Effects of poverty
                       </h3>
                       <p className="text--gray">
-                        Children affected by poverty experience fewer social
-                        connections across race, culture, and class. This is
-                        because the poorest families live in highly segregated
-                        communities with many barriers to social, physical,
-                        emotional, educational, and economic resources
+                        Living in a diverse environment allows children to make
+                        social connections that open them up for stronger
+                        support systems that will grow over time. Poverty serves
+                        as a barrier to social, physical, emotional,
+                        educational, and economic resources since the poorest
+                        communities have historically been and continue to be
+                        highly segregated.
                         <sup>
                           <a href="#fn-16">16</a>,<a href="#fn-21">21</a>
                         </sup>
@@ -502,10 +516,11 @@ class LonelinessFeature extends Component {
                         Single parents
                       </h3>
                       <p className="text--gray">
-                        Children living in single-parent households
-                        (predominantly single-mothers) have a doubled risk of
-                        inadequate access to emotional, physical, and
-                        educational support
+                        Parents and guardians play a huge role in children's
+                        overall wellbeing. Growing up with both parents present
+                        and engaged in their child's life doubles the likelihood
+                        and increases the adequacy of access to emotional,
+                        physical, and educational support
                         <sup>
                           <a href="#fn-16">16</a>,<a href="#fn-22">22</a>
                         </sup>
@@ -586,12 +601,15 @@ class LonelinessFeature extends Component {
                       </h3>
                       <p className="text--gray">
                         The relationship between a parent and child is crucial
-                        to lifelong health and well-being. In fact, those with a
-                        poor relationship with their father are 68% more likely
-                        to smoke, drink, and use drugs in their teenage years.
-                        Those living in single-parent homes, particularly
-                        fatherless ones, have much higher risks of juvenile
-                        delinquency
+                        to lifelong health and well-being. In fact, having a
+                        strong connection with a father figure decreases the
+                        likelihood by 68% of consuming alcohol, tobacco
+                        products, and drugs in their teenage years, and are less
+                        likely to participate in juvenile delinquency.
+                        Religious, community, big brother, and big sister
+                        programs, as well as supportive educators are key at
+                        this stage to fill any gaps that exist in a child's
+                        support system.
                         <sup>
                           <a href="#fn-22">22</a>
                         </sup>
@@ -616,10 +634,11 @@ class LonelinessFeature extends Component {
                         A major component of adolescent growth is gaining
                         independence and a sense of identity. Often, this leads
                         to conflict with parents and a tendency to turn to peers
-                        for guidance and support. However, peers often exert
-                        positive and negative influences on adolescents,
-                        resulting in anything from strong support systems to
-                        toxic environments
+                        for guidance and support. However, at this time,
+                        adolescents can be susceptible to peers who exert
+                        negative influence. Finding a peer group that exerts
+                        positive influences leads to building a strong support
+                        system.
                         <sup>
                           <a href="#fn-16">16</a>,<a href="#fn-25">25</a>
                         </sup>
@@ -680,7 +699,9 @@ class LonelinessFeature extends Component {
                       <p className="text--gray">
                         A feeling of connectedness and belonging is correlated
                         with a host of healthy behaviors including exercise, a
-                        healthy diet, and safe sex
+                        wholesome diet, and safe sex. Supporting your body
+                        strengthens your mind and increases your ability to
+                        emotionally connect with others.
                         <sup>
                           <a href="#fn-26">26</a>
                         </sup>
@@ -702,13 +723,13 @@ class LonelinessFeature extends Component {
                         Substance use
                       </h3>
                       <p className="text--gray">
-                        Many emerging adults still emphasize peer opinions and
-                        actions as guidance for their own. However, research has
-                        found that females and males have different tendencies
-                        toward risk behaviors. Males disproportionately consider
+                        Many emerging adults value peer opinions and actions as
+                        guidance for their own. During this time, individuals
+                        may experiment with alcohol and drugs as part of
+                        socializing. Males disproportionately consider
                         drinking-related activities as a way to foster intimacy
-                        and closeness with their peers, while females rely more
-                        on self-disclosure or sharing multiple activities
+                        and closeness with peers, while females rely more on
+                        self-disclosure or sharing multiple activities
                         <sup>
                           <a href="#fn-26">26</a>,<a href="#fn-27">27</a>
                         </sup>
@@ -735,8 +756,8 @@ class LonelinessFeature extends Component {
                       <p className="text--gray">
                         Maintaining cardiovascular health is extremely important
                         for people of all ages, but poor health outcomes are
-                        particularly risky for adults and seniors. In fact,
-                        loneliness is associated with all types of heart
+                        particularly risky for both adults and seniors.
+                        Loneliness is associated with all types of heart
                         disease, including ischemic heart disease, arrhythmia,
                         heart failure, and heart valve disease. Among those with
                         coronary artery disease, the lonely are two times more
@@ -918,7 +939,7 @@ class LonelinessFeature extends Component {
                 </p>
                 <div className="resources">
                   <h3 className="header--md">
-                    Resources
+                    Take Steps Now
                     <sup>
                       <a href="#fn-34">34</a>
                     </sup>

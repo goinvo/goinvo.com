@@ -410,7 +410,7 @@ class LonelinessFeature extends Component {
                         parents and caregivers. Close family ties including
                         grandparents, siblings, aunts, and uncles can start
                         building an infant's social support system by spending
-                        time with them in these formative years.
+                        time with them in these formative years
                         <sup>
                           <a href="#fn-16">16</a>
                         </sup>

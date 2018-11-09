@@ -51,10 +51,10 @@ class LonelinessFeature extends Component {
               <p>
                 Among social determinants of health, loneliness can hugely
                 impact a person’s mental state, physical health, and overall
-                wellbeing. In this brief, we explore ow social determinants of
-                health, with a focus on loneliness, affects health over the
-                course of lifespan, taking into consideration unique needs at
-                each stage of life.
+                wellbeing. In this brief, we explore how social determinants of
+                health, with a focus on loneliness, affect health over the
+                course of a lifespan, taking into consideration the unique
+                circumstances and needs at each stage of life.
               </p>
 
               <h3 className="header--md text--lg">

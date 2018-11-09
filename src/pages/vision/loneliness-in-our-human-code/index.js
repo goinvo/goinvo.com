@@ -6,6 +6,7 @@ import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import { Link } from 'gatsby'
+import { mediaUrl } from '../../../helpers'
 
 import organHeartIcon from '../../../assets/images/vision/loneliness-in-our-human-code/organ-heart.svg'
 import dementiaIcon from '../../../assets/images/vision/loneliness-in-our-human-code/dementia.svg'
@@ -55,7 +56,16 @@ class LonelinessFeature extends Component {
                 course of a lifespan, taking into consideration the unique
                 circumstances and needs at each stage of life.
               </p>
-
+              <div className="button-group">
+                <a
+                  href={mediaUrl(
+                    '/pdf/vision/loneliness-in-our-human-code/loneliness-in-our-human-code.pdf'
+                  )}
+                  className="button button--primary margin-top--double margin-bottom--double"
+                >
+                  Download PDF
+                </a>
+              </div>
               <h3 className="header--md text--lg">
                 Social Isolation <span className="text--primary">Costs Us</span>
               </h3>

@@ -263,4 +263,22 @@
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     }
   }
+  .button-group {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    .button {
+      display: block;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      @include mq($until: large) {
+        width: 100%;
+      }
+    }
+  }
+
+  .divider {
+    margin: 50px 0;
+  }
 }

@@ -42,10 +42,22 @@ class Layout extends Component {
             },
             {
               name: 'twitter:title',
-              content: frontmatter.twitterTitle || frontmatter.metaTitle,
+              content: frontmatter.metaTitle,
             },
             {
               name: 'twitter:description',
+              content: frontmatter.metaDescription,
+            },
+            {
+              property: 'og:image',
+              content: mediaUrl(frontmatter.heroImage),
+            },
+            {
+              property: 'og:title',
+              content: frontmatter.metaTitle,
+            },
+            {
+              property: 'og:description',
               content: frontmatter.metaDescription,
             },
           ]}

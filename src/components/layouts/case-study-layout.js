@@ -79,12 +79,20 @@ class CaseStudyLayout extends Component {
               content: 'summary_large_image',
             },
             {
+              name: 'twitter:title',
+              content: caseStudy.frontmatter.title,
+            },
+            {
               name: 'twitter:image',
               content: mediaUrl(caseStudy.frontmatter.image),
             },
             {
-              name: 'twitter:title',
+              property: 'og:title',
               content: caseStudy.frontmatter.title,
+            },
+            {
+              property: 'og:image',
+              content: mediaUrl(caseStudy.frontmatter.image),
             },
           ]
           if (caseStudy.frontmatter.metaDescription) {
@@ -95,6 +103,10 @@ class CaseStudyLayout extends Component {
               },
               {
                 name: 'twitter:description',
+                content: caseStudy.frontmatter.metaDescription,
+              },
+              {
+                property: 'og:description',
                 content: caseStudy.frontmatter.metaDescription,
               }
             )

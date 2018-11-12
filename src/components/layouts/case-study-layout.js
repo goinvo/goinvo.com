@@ -56,7 +56,6 @@ class CaseStudyLayout extends Component {
                     }
                     upNext
                     metaDescription
-                    metaKeywords
                   }
                 }
               }
@@ -99,12 +98,6 @@ class CaseStudyLayout extends Component {
                 content: caseStudy.frontmatter.metaDescription,
               }
             )
-          }
-          if (caseStudy.frontmatter.metaKeywords) {
-            meta.push({
-              name: 'keywords',
-              content: caseStudy.frontmatter.metaKeywords,
-            })
           }
 
           return (

@@ -11,6 +11,7 @@ upNext:
   - 'determinants-of-health'
   - 'open-source-healthcare'
 hidden: false
+metaDescription: 'A standard health record for the United States.'
 ---
 
 import Divider from 'components/divider'

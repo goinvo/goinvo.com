@@ -11,7 +11,6 @@ upNext:
   - 'inspired-ehrs'
 hidden: false
 metaDescription: "FDA approved remote patient monitoring of arrhythmia's secures $17M Series B financing."
-metaKeywords: 'product strategy, ui design, ux design, research, heart monitoring, infobionic'
 ---
 
 import Divider from 'components/divider'

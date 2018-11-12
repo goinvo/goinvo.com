@@ -18,7 +18,6 @@ references:
   - title: 'What It Means to Be a Carrier of a Genetic Disorder. Retrieved July 24, 2018, from'
     link: 'https://jscreen.org/blog/what-it-means-to-be-a-carrier-of-a-genetic-disorder/'
 metaDescription: 'Launching a beautiful, human friendly carrier screening service for planning healthy families.'
-metaKeywords: 'product strategy, ui design, ux design, research, carrier screening, wuxi, nextcode, familycode'
 ---
 
 import Divider from 'components/divider'

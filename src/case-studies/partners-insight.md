@@ -17,6 +17,7 @@ references:
     link: 'https://www.partners.org/Medical-Research/Support-Offices/Human-Research-Committee-IRB/Default.aspx'
   - title: ''
     link: 'https://www.partners.org/Medical-Research/Current-Research-at-Partners/Default.aspx'
+metaDescription: 'A full redesign of the Partners Healthcare research administration platform, Insight.'
 ---
 
 import Divider from 'components/divider'

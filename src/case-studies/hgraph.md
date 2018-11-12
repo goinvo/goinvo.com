@@ -12,7 +12,6 @@ upNext:
   - 'mitre-shr'
 hidden: false
 metaDescription: 'hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics'
-metaKeywords: 'hgraph, health visualization, big data, patient health, health score, hscore, healthcare application'
 ---
 
 import Divider from 'components/divider'

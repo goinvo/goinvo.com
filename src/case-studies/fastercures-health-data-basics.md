@@ -26,7 +26,6 @@ references:
   - title: ''
     link: 'http://www.pewinternet.org/fact-sheet/mobile/'
 metaDescription: 'Discover a project to educate and engage patients about health data through, posters, icons, and app designs in partnership with FasterCures.'
-metaKeywords: 'health data basics, health data, health education, patient education, patient health, fastercures, goinvo'
 ---
 
 import Divider from 'components/divider'

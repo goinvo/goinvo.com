@@ -34,7 +34,7 @@ import config from '../../../config'
 import { formatDate } from '../../helpers.js'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'determinants-of-health'
+  feature => feature.id === 'loneliness-in-our-human-code'
 )
 
 const spotlightPodcast = {
@@ -56,7 +56,7 @@ class VisionPage extends Component {
         .filter(
           feature => feature.id !== spotlightFeature.id && !feature.external
         )
-        .slice(0, 3),
+        .slice(0, 6),
       showAllFeatures: false,
       // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
       // recentBlogPostImage: '',
@@ -263,13 +263,17 @@ class VisionPage extends Component {
               Most recent features
             </h3>
             <Columns columns={3}>
-              {this.state.recentFeatures.map(feature => {
+              {this.state.recentFeatures.map((feature, i) => {
                 return (
                   <Card
                     link={feature.link}
                     key={feature.id}
                     externalLink
                     suppressNewTab={true}
+                    hidden={{
+                      condition: !this.state.showAllFeatures && i > 2,
+                      class: 'hidden--until-lg',
+                    }}
                   >
                     <ImageBlock
                       title={feature.title}

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Helmet from 'react-helmet'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
@@ -71,24 +70,16 @@ const upNextList = [
   },
 ]
 
+const frontmatter = {
+  metaTitle: 'About - GoInvo',
+  metaDescription:
+    'A glimpse of the Invo studio and the awesome people who work here!',
+  heroImage: '/images/about/care-cards-hand.jpg',
+}
+
 const AboutPage = () => (
-  <Layout>
-    <Helmet
-      title="About - GoInvo"
-      meta={[
-        {
-          name: 'description',
-          content:
-            'A glimpse of the Invo studio and the awesome people who work here!',
-        },
-        {
-          name: 'keywords',
-          content:
-            'boston user interface design, boston ui design, boston web application design, boston application design, boston mobile design, boston mobile application design, boston software design, goinvo about',
-        },
-      ]}
-    />
-    <Hero image="/images/about/care-cards-hand.jpg">
+  <Layout frontmatter={frontmatter}>
+    <Hero image={frontmatter.heroImage}>
       <h1 className="header--xl">
         Our shared purpose:
         <br />

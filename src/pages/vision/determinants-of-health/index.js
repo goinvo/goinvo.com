@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -12,6 +11,12 @@ import Chart from '../../../components/vision/determinants-of-health/chart'
 import DeterminantDetails from '../../../components/vision/determinants-of-health/determinant-details'
 
 import config from '../../../../config'
+
+const frontmatter = {
+  metaTitle: 'Determinants of Health - GoInvo',
+  metaDescription: 'A holistic view of human health.',
+  heroImage: '/images/services/doh-preview.jpg',
+}
 
 class DeterminantsOfHealthFeature extends Component {
   constructor(props) {
@@ -32,22 +37,8 @@ class DeterminantsOfHealthFeature extends Component {
 
   render() {
     return (
-      <Layout>
-        <Helmet
-          title="Determinants of Health - GoInvo"
-          meta={[
-            {
-              name: 'description',
-              content: 'A holistic view of human health.',
-            },
-            {
-              name: 'keywords',
-              content:
-                'determinants of health, social determinants of health, SDOH, holistic health, environment, medical care, genetics and biology, individual behavior, social circumstances',
-            },
-          ]}
-        />
-        <Hero image="/images/services/doh-preview.jpg" />
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
         <div className="determinants-of-health">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

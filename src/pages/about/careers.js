@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
@@ -13,26 +12,18 @@ import BackgroundImage from '../../components/background-image'
 
 import config from '../../../config'
 
+const frontmatter = {
+  metaTitle: 'Careers - GoInvo',
+  metaDescription:
+    "We're looking for a designer and an engineer to join our intimate studio. Send us an application if you have a proven track record of designing software that has shipped; you love to design and build software; you love to solve crazy problems with 50 different crazy solutions; and making is in your DNA.",
+  heroImage: '/images/about/careers/jen-journeymap.jpg',
+}
+
 class CareersPage extends Component {
   render() {
     return (
-      <Layout>
-        <Helmet
-          title="Careers - GoInvo"
-          meta={[
-            {
-              name: 'description',
-              content:
-                "We're looking for a designer and an engineer to join our intimate studio. Send us an application if you have a proven track record of designing software that has shipped; you love to design and build software; you love to solve crazy problems with 50 different crazy solutions; and making is in your DNA.",
-            },
-            {
-              name: 'keywords',
-              content:
-                'boston ui designer job, boston ui engineer job, interface designer, interface engineer, ux designer job, ux engineer job, goinvo careers',
-            },
-          ]}
-        />
-        <Hero image="/images/about/careers/jen-journeymap.jpg">
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage}>
           <h1 className="header--xl">
             This is our job
             <span className="text--serif text--primary">!</span>

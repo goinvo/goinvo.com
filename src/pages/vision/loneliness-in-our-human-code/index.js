@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -40,12 +39,19 @@ import elderlyIcon from '../../../assets/images/vision/loneliness-in-our-human-c
 import homeIcon from '../../../assets/images/vision/loneliness-in-our-human-code/home.svg'
 import longTermCoupleIcon from '../../../assets/images/vision/loneliness-in-our-human-code/long-term-couple.svg'
 
+const frontmatter = {
+  metaTitle: 'Loneliness in our Human Code - GoInvo',
+  metaDescription:
+    'How loneliness and other social determinants affect our health.',
+  heroImage:
+    '/images/features/loneliness-in-our-human-code/loneliness-hero.jpg',
+}
+
 class LonelinessFeature extends Component {
   render() {
     return (
-      <Layout>
-        <Helmet title="Loneliness in our Human Code - GoInvo" />
-        <Hero image="/images/features/loneliness-in-our-human-code/loneliness-hero.jpg" />
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
         <div className="loneliness-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

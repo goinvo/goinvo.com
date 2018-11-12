@@ -1,17 +1,23 @@
 import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
 
+const frontmatter = {
+  metaTitle: 'Open Source Healthcare - GoInvo',
+  metaDescription:
+    'The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.',
+  heroImage:
+    '/images/features/open-source-healthcare/open-source-healthcare-hero.jpg',
+}
+
 class OpenSourceHealthcareFeature extends Component {
   render() {
     return (
-      <Layout>
-        <Helmet title="Open Source Healthcare - GoInvo" />
-        <Hero image="/images/features/open-source-healthcare/open-source-healthcare-hero.jpg" />
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
         <div className="oshc-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

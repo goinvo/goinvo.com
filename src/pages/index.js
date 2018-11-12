@@ -24,6 +24,13 @@ const heroVideoSources = [
   { src: '/videos/homepage/sdoh-hero.webm', format: 'webm' },
 ]
 
+const frontmatter = {
+  metaTitle: 'GoInvo is a Boston UX design studio focused in Healthcare',
+  metaDescription:
+    'GoInvo is a Boston user experience design firm. The software we design helps progressive healthcare companies create new markets and exploit future tech.',
+  heroImage: '/images/homepage/doh-hero-fallback.jpg',
+}
+
 class IndexPage extends Component {
   constructor(props) {
     super(props)
@@ -37,12 +44,12 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout frontmatter={frontmatter}>
         <Hero
           link="/vision/determinants-of-health/"
           video={heroVideoSources}
           poster="/images/homepage/doh-hero-poster.jpg"
-          fallback="/images/homepage/doh-hero-fallback.jpg"
+          fallback={frontmatter.heroImage}
           caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
           withLogo
         >

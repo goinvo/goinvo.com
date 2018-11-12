@@ -4,6 +4,13 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 
+const frontmatter = {
+  metaTitle: 'Thank you - GoInvo',
+  metaDescription:
+    'Thank you for contacting us! We will get back to your within 2 business hours.',
+  heroImage: '/images/contact/studio.jpg',
+}
+
 class ThankYouPage extends Component {
   constructor(props) {
     super(props)
@@ -26,13 +33,13 @@ class ThankYouPage extends Component {
 
   render() {
     return (
-      <Layout>
-        <Helmet title="Thank you - GoInvo">
+      <Layout frontmatter={frontmatter}>
+        <Helmet>
           <script type="text-javascript">
             {`gtag('event', 'conversion', {'send_to': 'AW-973476681/oygPCN6t2W4QyaaY0AM'});`}
           </script>
         </Helmet>
-        <Hero image="/images/contact/studio.jpg" />
+        <Hero image={frontmatter.heroImage} />
         <div className="background--blue pad-vertical--double">
           <div className="max-width max-width--sm content-padding">
             <h1 className="header--xl">

@@ -38,12 +38,12 @@ const spotlightFeature = features.find(
 )
 
 const spotlightPodcast = {
-  title: 'AI plays poker',
-  date: '20.May.2018',
+  title: 'AI + Science',
+  date: '12.Oct.2018',
   caption:
-    'Join us as we discuss poker, the application of AI to imperfect information games, and the possibilities for this kind of artificial intelligence to be used in negotiation and other real world scenarios.',
-  link: 'https://soundcloud.com/involution-studios/ai-plays-poker',
-  image: '/images/vision/digital-life-episode-260.jpg',
+    'Discussing the intersection of artificial intelligence and science with special guest is Dany DeGrave, founder of Unconventional Innovation.',
+  link: 'https://soundcloud.com/involution-studios/ai-and-science',
+  image: 'https://i1.sndcdn.com/artworks-000419931243-4y0rds-t500x500.jpg',
 }
 
 class VisionPage extends Component {
@@ -228,7 +228,7 @@ class VisionPage extends Component {
               <Card
                 link={spotlightFeature.link}
                 fillHeight
-                externalLink
+                // externalLink
                 suppressNewTab={true}
               >
                 <ImageBlock
@@ -247,6 +247,7 @@ class VisionPage extends Component {
                 <ImageBlock
                   title={spotlightPodcast.title}
                   image={spotlightPodcast.image}
+                  externalImage={true}
                   client="Podcast"
                   date={spotlightPodcast.date}
                   caption={spotlightPodcast.caption}

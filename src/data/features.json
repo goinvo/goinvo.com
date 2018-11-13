@@ -24,6 +24,16 @@
     "link": "/vision/open-source-healthcare/"
   },
   {
+    "id": "determinants-of-health",
+    "title": "Determinants of Health",
+    "date": "Oct.2018",
+    "client": "Feature",
+    "categories": ["public-health-and-policy", "open-source"],
+    "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health.",
+    "image": "/images/services/doh-preview.jpg",
+    "link": "/vision/determinants-of-health/"
+  },
+  {
     "id": "print-big",
     "title": "Print big. Print often.",
     "date": "Mar.2018",
@@ -43,16 +53,6 @@
     "caption": "How citizens of the USA really die (from 2007-2014).",
     "image": "/images/features/killer-truths/killer-truths-featured2.jpg",
     "link": "https://www.goinvo.com/features/killer-truths/"
-  },
-  {
-    "id": "determinants-of-health",
-    "title": "Determinants of Health",
-    "date": "Oct.2018",
-    "client": "Feature",
-    "categories": ["public-health-and-policy", "open-source"],
-    "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health.",
-    "image": "/images/services/doh-preview.jpg",
-    "link": "/vision/determinants-of-health/"
   },
   {
     "id": "care-plans",

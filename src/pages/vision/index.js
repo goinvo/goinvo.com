@@ -34,16 +34,16 @@ import config from '../../../config'
 import { formatDate } from '../../helpers.js'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'determinants-of-health'
+  feature => feature.id === 'loneliness-in-our-human-code'
 )
 
 const spotlightPodcast = {
-  title: 'AI plays poker',
-  date: '20.May.2018',
+  title: 'AI + Science',
+  date: '12.Oct.2018',
   caption:
-    'Join us as we discuss poker, the application of AI to imperfect information games, and the possibilities for this kind of artificial intelligence to be used in negotiation and other real world scenarios.',
-  link: 'https://soundcloud.com/involution-studios/ai-plays-poker',
-  image: '/images/vision/digital-life-episode-260.jpg',
+    'Discussing the intersection of artificial intelligence and science with special guest is Dany DeGrave, founder of Unconventional Innovation.',
+  link: 'https://soundcloud.com/involution-studios/ai-and-science',
+  image: 'https://i1.sndcdn.com/artworks-000419931243-4y0rds-t500x500.jpg',
 }
 
 class VisionPage extends Component {
@@ -56,7 +56,7 @@ class VisionPage extends Component {
         .filter(
           feature => feature.id !== spotlightFeature.id && !feature.external
         )
-        .slice(0, 3),
+        .slice(0, 6),
       showAllFeatures: false,
       // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
       // recentBlogPostImage: '',
@@ -228,7 +228,8 @@ class VisionPage extends Component {
               <Card
                 link={spotlightFeature.link}
                 fillHeight
-                externalLink
+                // NOTE: `externalLink` is optional based on where the spotlight feature is located
+                // externalLink
                 suppressNewTab={true}
               >
                 <ImageBlock
@@ -247,6 +248,7 @@ class VisionPage extends Component {
                 <ImageBlock
                   title={spotlightPodcast.title}
                   image={spotlightPodcast.image}
+                  externalImage={true}
                   client="Podcast"
                   date={spotlightPodcast.date}
                   caption={spotlightPodcast.caption}
@@ -263,13 +265,17 @@ class VisionPage extends Component {
               Most recent features
             </h3>
             <Columns columns={3}>
-              {this.state.recentFeatures.map(feature => {
+              {this.state.recentFeatures.map((feature, i) => {
                 return (
                   <Card
                     link={feature.link}
                     key={feature.id}
                     externalLink
                     suppressNewTab={true}
+                    hidden={{
+                      condition: !this.state.showAllFeatures && i > 2,
+                      class: 'hidden--until-lg',
+                    }}
                   >
                     <ImageBlock
                       title={feature.title}

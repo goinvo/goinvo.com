@@ -172,7 +172,7 @@ class IndexPage extends Component {
                   key={link}
                   externalLink={externalLink}
                   suppressNewTab={suppressNewTab}
-                  className={i > 1 ? 'hidden--sm' : ''}
+                  hidden={{ condition: i > 1, class: 'hidden--sm' }}
                 >
                   <ImageBlock
                     title={item.title}

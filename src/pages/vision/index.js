@@ -228,6 +228,7 @@ class VisionPage extends Component {
               <Card
                 link={spotlightFeature.link}
                 fillHeight
+                // NOTE: `externalLink` is optional based on where the spotlight feature is located
                 // externalLink
                 suppressNewTab={true}
               >

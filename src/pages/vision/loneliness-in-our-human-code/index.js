@@ -6,7 +6,7 @@ import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
-import { Link } from 'gatsby'
+
 import { mediaUrl } from '../../../helpers'
 
 import organHeartIcon from '../../../assets/images/vision/loneliness-in-our-human-code/organ-heart.svg'

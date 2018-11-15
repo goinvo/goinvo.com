@@ -654,6 +654,140 @@ class DeterminantsOfHealthFeature extends Component {
                   Poster images have been updated based on the updated Aug 2017
                   calculations.
                 </p>
+                <h4 className="header--sm margin-bottom--half">
+                  v3 - 15.Nov.2018
+                </h4>
+                <p className="text--gray">
+                  The following is a more detailed explanation of the values
+                  used to find the relative contributions of each of the
+                  determinant categories.
+                </p>
+                <p className="text--gray">
+                  Each determinant category value is an average based on adding
+                  the values from each of the aforementioned sources.
+                </p>
+                <p className="text--gray">
+                  Behavior:{' '}
+                  <strong className="text--primary">
+                    (50% [9] + 43% [10] + 40% [11] + 43% [12] + 30% [15]) / 5 =
+                    41.20%
+                  </strong>
+                  <br />
+                  Social:{' '}
+                  <strong className="text--primary">
+                    (15% [11] + 40% [15]) / 2 = 27.50%
+                  </strong>
+                  <br />
+                  Genetics:{' '}
+                  <strong className="text--primary">
+                    (20% [9] + 30% [11]) / 2 = 25.00%
+                  </strong>
+                  <br />
+                  Medical care:{' '}
+                  <strong className="text--primary">
+                    (10% [9] + 10% [11] + 20% [15]) / 3 = 13.33...%
+                  </strong>
+                  <br />
+                  Environment:{' '}
+                  <strong className="text--primary">
+                    (20% [9] + 3% [10] + 5% [11] + 4% [14] + 10% [15]) / 5 =
+                    8.40%
+                  </strong>
+                </p>
+                <p className="text--gray">
+                  The environmental value of ~3%
+                  <sup>
+                    <a href="#references">10</a>
+                  </sup>{' '}
+                  was based on dividing toxic agent deaths (60,000, defined as
+                  occupational hazards, environmental pollutants, contaminants
+                  of food and water supplies, and components of commercial
+                  products) divided by total deaths for the year of 1990
+                  (2,120,000).
+                </p>
+                <p className="text--gray">
+                  The behavior value of 42%
+                  <sup>
+                    <a href="#references">10</a>
+                  </sup>{' '}
+                  was based on taking the causes of death in 1990 based on
+                  behavior (50%, page 2208) and subtracting from the causes of
+                  death caused by microbial & toxic agents (4% + 3%, page 2208)
+                  = 43%
+                </p>
+                <p className="text--gray">
+                  The behavior value of 45%
+                  <sup>
+                    <a href="#references">12</a>
+                  </sup>{' '}
+                  was based on taking the causes of death in 2000 (48.2%, page
+                  1240), and subtracting from the causes of death caused by
+                  microbial & toxic agents (3.1% + 2.3%, page 1240) = 42.8% →
+                  43%
+                </p>
+                <p className="text--gray">
+                  The environment value of 4%
+                  <sup>
+                    <a href="#references">14</a>
+                  </sup>{' '}
+                  was based on global risk for burden of disease due to unsafe
+                  water, sanitation and hygiene (4%, page V)
+                </p>
+                <p className="text--gray">
+                  The average values found for each of the determinant
+                  categories were each divided by the total determinant value.
+                </p>
+                <p className="text--gray">
+                  Total value:{' '}
+                  <strong className="text--primary">
+                    41.2% + 27.5% + 25% + 13.33...% + 8.38% = 115.413...
+                  </strong>
+                  <br />
+                  Behavior:{' '}
+                  <strong className="text--primary">
+                    41.2% / 115.413... = 35.70%
+                  </strong>
+                  <br />
+                  Social:{' '}
+                  <strong className="text--primary">
+                    27.5% / 115.413... = 23.83%
+                  </strong>
+                  <br />
+                  Genetics:{' '}
+                  <strong className="text--primary">
+                    25% / 115.413... = 21.66%
+                  </strong>
+                  <br />
+                  Medical care:{' '}
+                  <strong className="text--primary">
+                    13.33...% / 115.413... = 11.55%
+                  </strong>
+                  <br />
+                  Environment:{' '}
+                  <strong className="text--primary">
+                    8.4% / 115.413... = 7.28%
+                  </strong>
+                </p>
+                <p className="text--gray">
+                  The final percentages are unchanged from v2.
+                </p>
+
+                <p className="text--gray">
+                  Behavioral determinants at{' '}
+                  <strong className="text--primary">36%</strong>
+                  <br />
+                  Social determinants at{' '}
+                  <strong className="text--primary">24%</strong>
+                  <br />
+                  Genetic determinants at{' '}
+                  <strong className="text--primary">22%</strong>
+                  <br />
+                  Medical care determinants at{' '}
+                  <strong className="text--primary">11%</strong> (rounded down)
+                  <br />
+                  Environmental determinants at{' '}
+                  <strong className="text--primary">7%</strong> (rounded down)
+                </p>
               </div>
             </div>
           </div>

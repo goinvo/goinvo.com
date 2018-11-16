@@ -71,9 +71,9 @@ const upNextList = [
 ]
 
 const frontmatter = {
-  metaTitle: 'About - GoInvo',
+  metaTitle: 'About GoInvo, a UX design company in Boston',
   metaDescription:
-    'A glimpse of the Invo studio and the awesome people who work here!',
+    'Over the past decade, we’ve created beautiful software for patients, clinicians, researchers, and administrators.',
   heroImage: '/images/about/care-cards-hand.jpg',
 }
 

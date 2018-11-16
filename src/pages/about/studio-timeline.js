@@ -4,7 +4,7 @@ import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
 
 const frontmatter = {
-  metaTitle: 'Studio Timeline - GoInvo',
+  metaTitle: 'Our Studio Timeline - GoInvo',
   metaDescrition: "An interactive timeline of Invo's history.",
   heroImage: '/images/about/studio-timeline/bookshelf.jpg',
 }

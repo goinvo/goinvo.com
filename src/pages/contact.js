@@ -7,9 +7,9 @@ import HubspotForm from '../components/hubspot-form'
 import config from '../../config'
 
 const frontmatter = {
-  metaTitle: 'Contact - GoInvo',
+  metaTitle: 'Contact GoInvo',
   metaDescrition:
-    "Looking to do work with Invo or just want to chat? Shoot us an email and we'll do our best to get back to you within two business hours.",
+    'Contact us with new project opportunities, speaker requests, portfolio reviews, and more.',
   heroImage: '/images/contact/studio.jpg',
 }
 

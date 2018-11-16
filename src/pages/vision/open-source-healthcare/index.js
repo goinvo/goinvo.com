@@ -6,9 +6,10 @@ import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
 
 const frontmatter = {
-  metaTitle: 'Open Source Healthcare - GoInvo',
+  metaTitle:
+    'We demand Open Source Healthcare! Healthcare is too important to be closed.',
   metaDescription:
-    'The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.',
+    'Here in the US, healthcare is sometimes amazing, often lifesaving, always expensive, and mostly closed. It’s our health. Our very lives are at stake.',
   heroImage:
     '/images/features/open-source-healthcare/open-source-healthcare-hero.jpg',
 }

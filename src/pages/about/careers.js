@@ -13,9 +13,9 @@ import BackgroundImage from '../../components/background-image'
 import config from '../../../config'
 
 const frontmatter = {
-  metaTitle: 'Careers - GoInvo',
+  metaTitle: 'Join our team of Healthcare UX designers & engineers',
   metaDescription:
-    "We're looking for a designer and an engineer to join our intimate studio. Send us an application if you have a proven track record of designing software that has shipped; you love to design and build software; you love to solve crazy problems with 50 different crazy solutions; and making is in your DNA.",
+    "If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler.",
   heroImage: '/images/about/careers/jen-journeymap.jpg',
 }
 

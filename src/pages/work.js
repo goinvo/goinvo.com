@@ -74,9 +74,9 @@ const getWorkItemsOfCategory = (workItems, catId, initial = false) => {
 }
 
 const frontmatter = {
-  metaTitle: 'Work - GoInvo',
+  metaTitle: 'Case Studies by UX Design Agency GoInvo',
   metaDescription:
-    'We help healthcare organizations make clinical strength software for high-test, high stress environments.',
+    'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
   heroImage: '/images/work/dr-emily.jpg',
 }
 

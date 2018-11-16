@@ -13,8 +13,9 @@ import DeterminantDetails from '../../../components/vision/determinants-of-healt
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Determinants of Health - GoInvo',
-  metaDescription: 'A holistic view of human health.',
+  metaTitle: 'Determinants of Health Visualized',
+  metaDescription:
+    'A comprehensive open source visualization of the social determinants of health. Order your poster today!',
   heroImage: '/images/services/doh-preview.jpg',
 }
 

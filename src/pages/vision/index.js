@@ -46,8 +46,9 @@ const spotlightPodcast = {
 }
 
 const frontmatter = {
-  metaTitle: 'Vision - GoInvo',
-  metaDescription: 'Our thoughts on design, technology, and healthcare.',
+  metaTitle: 'Our vision on the future of health - GoInvo',
+  metaDescription:
+    'Our thoughts on the intersection of design, technology, and healthcare.',
   heroImage: '/images/vision/vision-hero.jpg',
 }
 

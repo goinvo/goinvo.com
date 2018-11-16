@@ -5,9 +5,9 @@ import Hero from '../../components/hero'
 import GradientImageColumns from '../../components/gradient-image-columns'
 
 const frontmatter = {
-  metaTitle: 'Open Office Hours - GoInvo',
+  metaTitle: 'Open Office Hours for UX Design at GoInvo',
   metaDescription:
-    'Our studio is open for anyone needing design advice, every Thursday from 4-6p.',
+    'Our UX design company is open to anyone seeking advice on design, from students to startups. Sign up!',
   heroImage: '/images/about/open-office-hours/whiteboard.jpg',
 }
 

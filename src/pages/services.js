@@ -85,9 +85,9 @@ const services = [
 ]
 
 const frontmatter = {
-  metaTitle: 'Boston UX Design Services - GoInvo',
+  metaTitle: 'UX Design Services in Boston - GoInvo',
   metaDescription:
-    'GoInvo designs and builds beautiful healthcare products for startups and big brands like Johnson & Johnson, Partners HealthCare, and Walgreens.',
+    'Our UX design process is tailored to your project. Contact GoInvo today to get started in designing a beautiful UX for your product!',
   heroImage: '/images/services/hand-drawing.jpg',
 }
 

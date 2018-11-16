@@ -35,7 +35,6 @@ references:
   - title: ""
     link: "http://www.ted.com/talks/2004"
 metaDescription: "Designing a genetic reporting and electronic consent platform for Mount Sinai and Sage Bionetworks."
-metaKeywords: "mount sinai, genomics, genetic reporting design, sage bionetworks, resilience project, electronic consent, user interface design, ui design"
 ---
 
 import Divider from 'components/divider'

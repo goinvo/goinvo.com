@@ -12,7 +12,6 @@ upNext:
   - 'fastercures-health-data-basics'
 hidden: false
 metaDescription: 'Care Cards put you in touch with habits to improve your health, life, and well-being.'
-metaKeywords: 'Care Cards, design health, design healthcare, designing health, ux health, ui health, design behavior change'
 ---
 
 import Divider from 'components/divider'

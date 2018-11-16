@@ -1,28 +1,20 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
+
+const frontmatter = {
+  metaTitle: 'Our Studio Timeline - GoInvo',
+  metaDescrition: "An interactive timeline of Invo's history.",
+  heroImage: '/images/about/studio-timeline/bookshelf.jpg',
+}
 
 class StudioTimelinePage extends Component {
   render() {
     return (
       <div>
-        <Layout>
-          <Helmet
-            title="GoInvo | Studio Timeline"
-            meta={[
-              {
-                name: 'description',
-                content: "An interactive timeline of Invo's history.",
-              },
-              {
-                name: 'keywords',
-                content: 'ui, ux, design, studio, history, timeline',
-              },
-            ]}
-          />
-          <Hero image="/images/about/studio-timeline/bookshelf.jpg">
+        <Layout frontmatter={frontmatter}>
+          <Hero image={frontmatter.heroImage}>
             <h1 className="header--xl">
               Our studio timeline
               <span className="text--serif text--primary">.</span>

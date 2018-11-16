@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
-import Helmet from 'react-helmet'
 import smoothscroll from 'smoothscroll-polyfill'
 import { connect } from 'react-redux'
 
@@ -72,6 +71,13 @@ const getWorkItemsOfCategory = (workItems, catId, initial = false) => {
   }
 
   return newWorkItems
+}
+
+const frontmatter = {
+  metaTitle: 'Case Studies by UX Design Agency GoInvo',
+  metaDescription:
+    'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
+  heroImage: '/images/work/dr-emily.jpg',
 }
 
 class WorkPage extends Component {
@@ -185,24 +191,9 @@ class WorkPage extends Component {
 
   render() {
     return (
-      <Layout>
-        <Helmet
-          title="GoInvo | Work"
-          meta={[
-            {
-              name: 'description',
-              content:
-                'We help healthcare organizations make clinical strength software for high-test, high stress environments.',
-            },
-            {
-              name: 'keywords',
-              content:
-                'healthcare design, health design, healthcare UI design, healthcare UX design, designing healthcare systems, goinvo work',
-            },
-          ]}
-        />
+      <Layout frontmatter={frontmatter}>
         <Hero
-          image="/images/work/dr-emily.jpg"
+          image={frontmatter.heroImage}
           position="center top"
           style={{ marginTop: this.state.heroPadding }}
         >

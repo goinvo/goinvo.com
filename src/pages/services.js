@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Helmet from 'react-helmet'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
@@ -85,13 +84,16 @@ const services = [
   },
 ]
 
+const frontmatter = {
+  metaTitle: 'UX Design Services in Boston - GoInvo',
+  metaDescription:
+    'Our UX design process is tailored to your project. Contact GoInvo today to get started in designing a beautiful UX for your product!',
+  heroImage: '/images/services/hand-drawing.jpg',
+}
+
 const ServicesPage = () => (
-  <Layout>
-    {
-      // TODO: Real meta info here
-    }
-    <Helmet title="GoInvo | Services" />
-    <Hero image="/images/services/hand-drawing.jpg" position="center top">
+  <Layout frontmatter={frontmatter}>
+    <Hero image={frontmatter.heroImage} position="center top">
       <h1 className="header--xl">
         Disrupt from within,
         <br />

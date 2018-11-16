@@ -5,22 +5,60 @@ import Helmet from 'react-helmet'
 import Header from '../header'
 import Footer from '../footer'
 
+import { mediaUrl } from '../../helpers'
+
 class Layout extends Component {
   render() {
+    const frontmatter = Object.assign(
+      {
+        metaTitle: 'GoInvo is a Boston UX design studio focused in Healthcare',
+        metaDescription:
+          'GoInvo is a Boston user experience design firm. The software we design helps progressive healthcare companies create new markets and exploit future tech.',
+        heroImage: '/images/homepage/doh-hero-fallback.jpg',
+      },
+      this.props.frontmatter
+    )
+
     return (
       <div className="app">
         <Helmet
-          title="GoInvo"
+          title={frontmatter.metaTitle}
           meta={[
             {
               name: 'description',
-              content:
-                'GoInvo is a Boston user experience design firm. The software we design helps progressive healthcare companies create new markets and exploit future tech.',
+              content: frontmatter.metaDescription,
             },
             {
-              name: 'keywords',
-              content:
-                'boston ux design, boston user experience design, boston ui design, boston user interface design, boston software design, healthcare ux, healthcare design',
+              name: 'twitter:site',
+              content: '@goinvo',
+            },
+            {
+              name: 'twitter:card',
+              content: 'summary_large_image',
+            },
+            {
+              name: 'twitter:image',
+              content: mediaUrl(frontmatter.heroImage),
+            },
+            {
+              name: 'twitter:title',
+              content: frontmatter.metaTitle,
+            },
+            {
+              name: 'twitter:description',
+              content: frontmatter.metaDescription,
+            },
+            {
+              property: 'og:image',
+              content: mediaUrl(frontmatter.heroImage),
+            },
+            {
+              property: 'og:title',
+              content: frontmatter.metaTitle,
+            },
+            {
+              property: 'og:description',
+              content: frontmatter.metaDescription,
             },
           ]}
         >

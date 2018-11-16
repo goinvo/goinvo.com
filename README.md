@@ -290,8 +290,6 @@ Let's break down the fields:
    Controls whether the case study should show up as a page and be included in lists of case studies throughout the site. Set to `true` if this case study is a work in progress. Keep in mind that even though it will be hidden from the site, this content is still publicly accessible on GitHub, so never include any content that we don't have client approval on.
 9. `metaDescription` (not required, but you should really include this)
    A concise summary of the case study, usually only a sentence or two long, used for search engines and link details. For more information, read [how to create the right meta description](https://yoast.com/meta-descriptions/).
-10. `metaKeywords`
-    A set of comma separated words or short phrases that help summarize the case study for searching purposes.
 
 _NOTE:_ If you don't include required frontmatter fields, the app may crash.
 

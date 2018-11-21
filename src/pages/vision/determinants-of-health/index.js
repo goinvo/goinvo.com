@@ -539,11 +539,11 @@ class DeterminantsOfHealthFeature extends Component {
                   <sup>
                     <a href="#references">10</a>
                   </sup>
-                  , The environmental value of ~3% was based on dividing toxic
-                  agent deaths (60,000 deaths. Toxic agents were defined as
-                  occupational hazards, environmental pollutants, contaminants
-                  of food and water supplies, and components of commercial
-                  products) divided by total deaths for that year (2,120,000).
+                  , The environmental value of ~3% was based on using toxic
+                  agent deaths (60,000 deaths, defined as occupational hazards,
+                  environmental pollutants, contaminants of food and water
+                  supplies, and components of commercial products) divided by
+                  total deaths for that year (2,120,000).
                 </p>
                 <p className="text--gray">
                   The average values found for each of the determinant
@@ -600,60 +600,6 @@ class DeterminantsOfHealthFeature extends Component {
                   <strong className="text--primary">7%</strong>
                 </p>
 
-                <h3 className="header--md">Additional Change</h3>
-                <h4 className="header--sm margin-bottom--half">14.Feb.2018</h4>
-                <p className="text--gray">
-                  Race and ethnicity have been removed from the biology section
-                  due to a lack of standard objective criteria in the scientific
-                  community surrounding the use of genetics to define race and
-                  ethnicity. It has been added to the Social Circumstance
-                  section due to its continued social importance in describing
-                  groups based on similar characteristics. View the following
-                  literature for additional detail:
-                </p>
-                <ul className="ul text--gray">
-                  <li>
-                    Fujimura, J. H., & Rajagopalan, R. (2010). Different
-                    differences: The use of ‘genetic ancestry’ versus race in
-                    biomedical human genetic research. Social Studies of
-                    Science, 41(1), 5-30. doi:10.1177/0306312710379170
-                  </li>
-                  <li>
-                    Long, J. C., & Kittles, R. A. (2003). Human Genetic
-                    Diversity and the Nonexistence of Biological Races. Human
-                    Biology, 75(4), 449-471. doi:10.1353/hub.2003.0058
-                  </li>
-                  <li>
-                    AR, T. (2013). Biological races in humans. [Abstract]. Stud
-                    Hist Philos Biol Biomed Sci, 262-271. Retrieved February 14,
-                    2018, from{' '}
-                    <a
-                      href="https://www.ncbi.nlm.nih.gov/pubmed/23684745"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link--wrap"
-                    >
-                      https://www.ncbi.nlm.nih.gov/pubmed/23684745
-                    </a>
-                    .
-                  </li>
-                  <li>
-                    Caprio, S., Daniels, S. R., Drewnowski, A., Kaufman, F. R.,
-                    Palinkas, L. A., Rosenbloom, A. L.,... Kirkman, M. S.
-                    (2008). Influence of Race, Ethnicity, and Culture on
-                    Childhood Obesity: Implications for Prevention and
-                    Treatment. Obesity, 16(12), 2566-2577.
-                    doi:10.1038/oby.2008.398
-                  </li>
-                </ul>
-                <p className="text--gray">
-                  Discrimination can be further subdivided into racial, ethnic,
-                  gender, sexuality, and age based discrimination.
-                </p>
-                <p className="text--gray">
-                  Poster images have been updated based on the updated Aug 2017
-                  calculations.
-                </p>
                 <h4 className="header--sm margin-bottom--half">
                   v3 - 15.Nov.2018
                 </h4>
@@ -699,10 +645,10 @@ class DeterminantsOfHealthFeature extends Component {
                   <sup>
                     <a href="#references">10</a>
                   </sup>{' '}
-                  was based on dividing toxic agent deaths (60,000, defined as
+                  was based on taking toxic agent deaths (60,000, defined as
                   occupational hazards, environmental pollutants, contaminants
                   of food and water supplies, and components of commercial
-                  products) divided by total deaths for the year of 1990
+                  products) and dividing by total deaths for the year of 1990
                   (2,120,000).
                 </p>
                 <p className="text--gray">
@@ -710,10 +656,9 @@ class DeterminantsOfHealthFeature extends Component {
                   <sup>
                     <a href="#references">10</a>
                   </sup>{' '}
-                  was based on taking the causes of death in 1990 based on
-                  behavior (50%, page 2208) and subtracting from the causes of
-                  death caused by microbial & toxic agents (4% + 3%, page 2208)
-                  = 43%
+                  was based on taking the causes of death in 1990 due to
+                  behavior (50%, page 2208) and subtracting deaths caused by
+                  microbial & toxic agents (4% + 3%, page 2208) = 43%.
                 </p>
                 <p className="text--gray">
                   The behavior value of 45%
@@ -721,9 +666,8 @@ class DeterminantsOfHealthFeature extends Component {
                     <a href="#references">12</a>
                   </sup>{' '}
                   was based on taking the causes of death in 2000 (48.2%, page
-                  1240), and subtracting from the causes of death caused by
-                  microbial & toxic agents (3.1% + 2.3%, page 1240) = 42.8% →
-                  43%
+                  1240), and subtracting deaths caused by microbial & toxic
+                  agents (3.1% + 2.3%, page 1240) = 42.8% → 43%.
                 </p>
                 <p className="text--gray">
                   The environment value of 4%
@@ -731,7 +675,7 @@ class DeterminantsOfHealthFeature extends Component {
                     <a href="#references">14</a>
                   </sup>{' '}
                   was based on global risk for burden of disease due to unsafe
-                  water, sanitation and hygiene (4%, page V)
+                  water, sanitation and hygiene (4%, page V).
                 </p>
                 <p className="text--gray">
                   The average values found for each of the determinant
@@ -789,6 +733,60 @@ class DeterminantsOfHealthFeature extends Component {
                   <strong className="text--primary">7%</strong> (rounded down)
                 </p>
               </div>
+
+              <h3 className="header--md">Additional Changes</h3>
+              <h4 className="header--sm margin-bottom--half">14.Feb.2018</h4>
+              <p className="text--gray">
+                Race and ethnicity have been removed from the biology section
+                due to a lack of standard objective criteria in the scientific
+                community surrounding the use of genetics to define race and
+                ethnicity. It has been added to the Social Circumstance section
+                due to its continued social importance in describing groups
+                based on similar characteristics. View the following literature
+                for additional detail:
+              </p>
+              <ul className="ul text--gray">
+                <li>
+                  Fujimura, J. H., & Rajagopalan, R. (2010). Different
+                  differences: The use of ‘genetic ancestry’ versus race in
+                  biomedical human genetic research. Social Studies of Science,
+                  41(1), 5-30. doi:10.1177/0306312710379170
+                </li>
+                <li>
+                  Long, J. C., & Kittles, R. A. (2003). Human Genetic Diversity
+                  and the Nonexistence of Biological Races. Human Biology,
+                  75(4), 449-471. doi:10.1353/hub.2003.0058
+                </li>
+                <li>
+                  AR, T. (2013). Biological races in humans. [Abstract]. Stud
+                  Hist Philos Biol Biomed Sci, 262-271. Retrieved February 14,
+                  2018, from{' '}
+                  <a
+                    href="https://www.ncbi.nlm.nih.gov/pubmed/23684745"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link--wrap"
+                  >
+                    https://www.ncbi.nlm.nih.gov/pubmed/23684745
+                  </a>
+                  .
+                </li>
+                <li>
+                  Caprio, S., Daniels, S. R., Drewnowski, A., Kaufman, F. R.,
+                  Palinkas, L. A., Rosenbloom, A. L.,... Kirkman, M. S. (2008).
+                  Influence of Race, Ethnicity, and Culture on Childhood
+                  Obesity: Implications for Prevention and Treatment. Obesity,
+                  16(12), 2566-2577. doi:10.1038/oby.2008.398
+                </li>
+              </ul>
+              <p className="text--gray">
+                Discrimination can be further subdivided into racial, ethnic,
+                gender, sexuality, and age based discrimination.
+              </p>
+              <p className="text--gray">
+                Poster images have been updated based on the updated Aug 2017
+                calculations.
+              </p>
             </div>
           </div>
 

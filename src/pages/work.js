@@ -57,11 +57,11 @@ const upNextList = [
   },
 ]
 
-const getWorkItemsOfCategory = (workItems, catId, initial = false) => {
+const getWorkItemsOfCategory = (workItems, catId) => {
   let newWorkItems = []
 
   if (catId === allCategory.id) {
-    newWorkItems = initial ? workItems.slice(0, 4) : workItems
+    newWorkItems = workItems
   } else {
     newWorkItems = workItems.filter(item => {
       return item.categories.filter(cat => {
@@ -91,18 +91,13 @@ class WorkPage extends Component {
       query && query.includes('category')
         ? query.substr(query.indexOf('=') + 1)
         : allCategory.id
-    const expanded =
-      query && query.includes('expanded')
-        ? query.substr(query.indexOf('=') + 1)
-        : false
     const selectedCategory =
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       allCategory
     const activeWorkItems = getWorkItemsOfCategory(
       workItems,
-      selectedCategory.id,
-      !expanded
+      selectedCategory.id
     )
 
     this.state = {
@@ -114,8 +109,6 @@ class WorkPage extends Component {
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
       hasUsedFilter: false,
-      partialView: !expanded,
-      viewMoreCount: workItems.length - activeWorkItems.length,
     }
 
     this.categoryDropdownButton = React.createRef()
@@ -151,7 +144,6 @@ class WorkPage extends Component {
     }
     this.setState(
       {
-        partialView: false,
         selectedCategory: cat,
         activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
         categoriesCollapsed: this.state.categoriesStuck ? true : false,
@@ -166,17 +158,6 @@ class WorkPage extends Component {
         this.props.setCategory(cat)
       }
     )
-  }
-
-  viewMore = () => {
-    this.setState({
-      partialView: false,
-      selectedCategory: allCategory,
-      activeWorkItems: getWorkItemsOfCategory(
-        this.state.workItems,
-        allCategory.id
-      ),
-    })
   }
 
   scrollWorkItemsIntoView = () => {
@@ -312,7 +293,7 @@ class WorkPage extends Component {
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <div className="margin-top--only-lg">
             <Columns columns={2}>
-              {this.state.activeWorkItems.map(item => {
+              {this.state.activeWorkItems.map((item, i) => {
                 const {
                   link,
                   externalLink,
@@ -340,17 +321,6 @@ class WorkPage extends Component {
               })}
             </Columns>
           </div>
-          {this.state.selectedCategory.id === allCategory.id &&
-          this.state.partialView ? (
-            <div className="margin-top margin-bottom--double">
-              <button
-                className="button button--primary button--block"
-                onClick={this.viewMore}
-              >
-                View more ({this.state.viewMoreCount})
-              </button>
-            </div>
-          ) : null}
         </div>
         <Quote
           background="gray"

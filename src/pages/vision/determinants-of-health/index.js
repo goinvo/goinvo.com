@@ -263,11 +263,11 @@ class DeterminantsOfHealthFeature extends Component {
               <h4 className="header--sm margin-bottom--half">About GoInvo</h4>
               <p className="text--gray">
                 GoInvo is a healthcare design company that crafts innovative
-                digital and physical solutions. GoInvo’s deep expertise in
-                Health IT, Genomics, and Open Source health has delivered
-                results for the National Institute of Health, Walgreens, Mount
-                Sinai and Partners Healthcare. Reach out for a custom
-                installation or feedback.
+                digital and physical solutions. Our deep expertise in Health IT,
+                Genomics, and Open Source health has delivered results for the
+                National Institute of Health, Walgreens, Mount Sinai and
+                Partners Healthcare. Reach out for a custom installation or
+                feedback.
               </p>
             </div>
           </div>

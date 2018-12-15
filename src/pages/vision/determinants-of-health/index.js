@@ -207,7 +207,10 @@ class DeterminantsOfHealthFeature extends Component {
               </div>
 
               <Divider />
-              <h2>Working Draft of Determinants Compared to Spending</h2>
+
+              <h2 className="margin-top--double">
+                Working Draft of Determinants Compared to Spending
+              </h2>
               <Image
                 src="/images/features/determinants-of-health/sdoh-spend-mockup.jpg"
                 className="image--max-width margin-top--half"
@@ -263,7 +266,7 @@ class DeterminantsOfHealthFeature extends Component {
                 digital and physical solutions. GoInvo’s deep expertise in
                 Health IT, Genomics, and Open Source health has delivered
                 results for the National Institute of Health, Walgreens, Mount
-                Sinai and Partner Healthcare. Reach out for a custom
+                Sinai and Partners Healthcare. Reach out for a custom
                 installation or feedback.
               </p>
             </div>

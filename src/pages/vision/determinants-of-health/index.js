@@ -199,21 +199,75 @@ class DeterminantsOfHealthFeature extends Component {
                 <div className="pure-u-1 pure-u-lg-1-3">
                   <a
                     href="#methodology"
-                    className="button button--primary margin-top--double margin-bottom--half  button--block"
+                    className="button button--primary margin-top--double margin-bottom--double  button--block"
                   >
                     Methodology
                   </a>
                 </div>
               </div>
 
+              <Divider />
+
+              <h2 className="margin-top--double">
+                Working Draft of Determinants Compared to Spending
+              </h2>
+              <Image
+                src="/images/features/determinants-of-health/sdoh-spend-mockup.jpg"
+                className="image--max-width margin-top--half"
+                sizes={config.sizes.fullInsideMediumMaxWidth}
+              />
+              <div className="button-group">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <a
+                    href="https://github.com/goinvo/HealthDeterminants/raw/master/sdoh-spend/SDOH_to_spend_v12-01.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--primary margin-top--half margin-bottom--half  button--block"
+                  >
+                    Full Size Poster
+                  </a>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1_uY448KYzLdAXbbS7EzxHkpAukgWftsqt3gdIxJBGBk/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--primary margin-top--half margin-bottom--half  button--block"
+                  >
+                    References
+                  </a>
+                </div>
+              </div>
+
+              <h3 className="header--sm margin-bottom--half">
+                We'd Like Your Feedback
+              </h3>
+              <p className="text--gray">
+                We’ve mapped the most recent available federal, state, and
+                relevant private intervention spending to the determinants of
+                health. Where data is available, we’ve also compared United
+                States performance to a group of comparable countries (OECD
+                countries). Explore the poster and references then send your
+                feedback on this draft to{' '}
+                <a href="mailto:hello@goino.com"> hello@goinvo.com</a>
+              </p>
+
+              <p className="text--gray">
+                Note: Intervention spending is money spent to address the
+                problem. It is not total money spent in that area. For example,
+                we list reentry and education program spending for incarcerated
+                individuals and not the total cost of incarceration. Where data
+                is not available it is not displayed.
+              </p>
+
               <h4 className="header--sm margin-bottom--half">About GoInvo</h4>
               <p className="text--gray">
                 GoInvo is a healthcare design company that crafts innovative
-                digital and physical solutions. GoInvo’s deep expertise in
-                Health IT, Genomics, and Open Source health has delivered
-                results for the National Institute of Health, Walgreens, Mount
-                Sinai and Partner Healthcare. Reach out for a custom
-                installation or feedback.
+                digital and physical solutions. Our deep expertise in Health IT,
+                Genomics, and Open Source health has delivered results for the
+                National Institute of Health, Walgreens, Mount Sinai and
+                Partners Healthcare. Reach out for a custom installation or
+                feedback.
               </p>
             </div>
           </div>

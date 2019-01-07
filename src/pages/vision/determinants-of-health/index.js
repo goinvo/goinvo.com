@@ -249,7 +249,7 @@ class DeterminantsOfHealthFeature extends Component {
                 States performance to a group of comparable countries (OECD
                 countries). Explore the poster and references then send your
                 feedback on this draft to{' '}
-                <a href="mailto:hello@goino.com"> hello@goinvo.com</a>
+                <a href="mailto:hello@goinvo.com"> hello@goinvo.com</a>
               </p>
 
               <p className="text--gray">

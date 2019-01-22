@@ -11,6 +11,7 @@ upNext:
   - 'determinants-of-health'
   - 'open-source-healthcare'
 hidden: false
+metaDescription: 'Capturing health data during documentation without increasing clinician burden.'
 ---
 
 import Divider from 'components/divider'

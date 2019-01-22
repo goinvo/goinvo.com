@@ -5,11 +5,20 @@ import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
 
+const frontmatter = {
+  metaTitle:
+    'We demand Open Source Healthcare! Healthcare is too important to be closed.',
+  metaDescription:
+    'Here in the US, healthcare is sometimes amazing, often lifesaving, always expensive, and mostly closed. It’s our health. Our very lives are at stake.',
+  heroImage:
+    '/images/features/open-source-healthcare/open-source-healthcare-hero.jpg',
+}
+
 class OpenSourceHealthcareFeature extends Component {
   render() {
     return (
-      <Layout>
-        <Hero image="/images/features/open-source-healthcare/open-source-healthcare-hero.jpg" />
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
         <div className="oshc-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

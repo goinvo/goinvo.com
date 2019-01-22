@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
-import Helmet from 'react-helmet'
 import smoothscroll from 'smoothscroll-polyfill'
 import { connect } from 'react-redux'
 
@@ -58,11 +57,11 @@ const upNextList = [
   },
 ]
 
-const getWorkItemsOfCategory = (workItems, catId, initial = false) => {
+const getWorkItemsOfCategory = (workItems, catId) => {
   let newWorkItems = []
 
   if (catId === allCategory.id) {
-    newWorkItems = initial ? workItems.slice(0, 4) : workItems
+    newWorkItems = workItems
   } else {
     newWorkItems = workItems.filter(item => {
       return item.categories.filter(cat => {
@@ -72,6 +71,13 @@ const getWorkItemsOfCategory = (workItems, catId, initial = false) => {
   }
 
   return newWorkItems
+}
+
+const frontmatter = {
+  metaTitle: 'Case Studies by UX Design Agency GoInvo',
+  metaDescription:
+    'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
+  heroImage: '/images/work/dr-emily.jpg',
 }
 
 class WorkPage extends Component {
@@ -85,18 +91,13 @@ class WorkPage extends Component {
       query && query.includes('category')
         ? query.substr(query.indexOf('=') + 1)
         : allCategory.id
-    const expanded =
-      query && query.includes('expanded')
-        ? query.substr(query.indexOf('=') + 1)
-        : false
     const selectedCategory =
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       allCategory
     const activeWorkItems = getWorkItemsOfCategory(
       workItems,
-      selectedCategory.id,
-      !expanded
+      selectedCategory.id
     )
 
     this.state = {
@@ -108,8 +109,6 @@ class WorkPage extends Component {
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
       hasUsedFilter: false,
-      partialView: !expanded,
-      viewMoreCount: workItems.length - activeWorkItems.length,
     }
 
     this.categoryDropdownButton = React.createRef()
@@ -145,7 +144,6 @@ class WorkPage extends Component {
     }
     this.setState(
       {
-        partialView: false,
         selectedCategory: cat,
         activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
         categoriesCollapsed: this.state.categoriesStuck ? true : false,
@@ -162,17 +160,6 @@ class WorkPage extends Component {
     )
   }
 
-  viewMore = () => {
-    this.setState({
-      partialView: false,
-      selectedCategory: allCategory,
-      activeWorkItems: getWorkItemsOfCategory(
-        this.state.workItems,
-        allCategory.id
-      ),
-    })
-  }
-
   scrollWorkItemsIntoView = () => {
     if (typeof window !== 'undefined') {
       window.scroll({
@@ -185,24 +172,9 @@ class WorkPage extends Component {
 
   render() {
     return (
-      <Layout>
-        <Helmet
-          title="GoInvo | Work"
-          meta={[
-            {
-              name: 'description',
-              content:
-                'We help healthcare organizations make clinical strength software for high-test, high stress environments.',
-            },
-            {
-              name: 'keywords',
-              content:
-                'healthcare design, health design, healthcare UI design, healthcare UX design, designing healthcare systems, goinvo work',
-            },
-          ]}
-        />
+      <Layout frontmatter={frontmatter}>
         <Hero
-          image="/images/work/dr-emily.jpg"
+          image={frontmatter.heroImage}
           position="center top"
           style={{ marginTop: this.state.heroPadding }}
         >
@@ -321,7 +293,7 @@ class WorkPage extends Component {
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <div className="margin-top--only-lg">
             <Columns columns={2}>
-              {this.state.activeWorkItems.map(item => {
+              {this.state.activeWorkItems.map((item, i) => {
                 const {
                   link,
                   externalLink,
@@ -349,17 +321,6 @@ class WorkPage extends Component {
               })}
             </Columns>
           </div>
-          {this.state.selectedCategory.id === allCategory.id &&
-          this.state.partialView ? (
-            <div className="margin-top margin-bottom--double">
-              <button
-                className="button button--primary button--block"
-                onClick={this.viewMore}
-              >
-                View more ({this.state.viewMoreCount})
-              </button>
-            </div>
-          ) : null}
         </div>
         <Quote
           background="gray"

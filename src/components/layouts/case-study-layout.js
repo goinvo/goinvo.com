@@ -17,6 +17,7 @@ import {
   extractWorkItemLinkDetails,
   concatCaseStudiesAndFeatures,
   findCaseStudyById,
+  mediaUrl,
 } from '../../helpers'
 
 import config from '../../../config'
@@ -55,7 +56,6 @@ class CaseStudyLayout extends Component {
                     }
                     upNext
                     metaDescription
-                    metaKeywords
                   }
                 }
               }
@@ -69,24 +69,53 @@ class CaseStudyLayout extends Component {
           )
           const caseStudy = findCaseStudyById(data, this.props.pageContext.id)
 
-          const meta = []
+          const meta = [
+            {
+              name: 'twitter:site',
+              content: '@goinvo',
+            },
+            {
+              name: 'twitter:card',
+              content: 'summary_large_image',
+            },
+            {
+              name: 'twitter:title',
+              content: caseStudy.frontmatter.title,
+            },
+            {
+              name: 'twitter:image',
+              content: mediaUrl(caseStudy.frontmatter.image),
+            },
+            {
+              property: 'og:title',
+              content: caseStudy.frontmatter.title,
+            },
+            {
+              property: 'og:image',
+              content: mediaUrl(caseStudy.frontmatter.image),
+            },
+          ]
           if (caseStudy.frontmatter.metaDescription) {
-            meta.push({
-              name: 'description',
-              content: caseStudy.frontmatter.metaDescription,
-            })
-          }
-          if (caseStudy.frontmatter.metaKeywords) {
-            meta.push({
-              name: 'keywords',
-              content: caseStudy.frontmatter.metaKeywords,
-            })
+            meta.push(
+              {
+                name: 'description',
+                content: caseStudy.frontmatter.metaDescription,
+              },
+              {
+                name: 'twitter:description',
+                content: caseStudy.frontmatter.metaDescription,
+              },
+              {
+                property: 'og:description',
+                content: caseStudy.frontmatter.metaDescription,
+              }
+            )
           }
 
           return (
             <Layout>
               <Helmet
-                title={`GoInvo | ${caseStudy.frontmatter.title}`}
+                title={`${caseStudy.frontmatter.title} - GoInvo`}
                 meta={meta}
               />
               <MDXProvider

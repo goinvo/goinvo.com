@@ -91,6 +91,16 @@
     "image": "/images/about/headshot-daniel-reeves.jpg"
   },
   {
+    "name": "Patricia Nguyen",
+    "title": "Designer",
+    "bio": "Patricia Nguyen is a designer who works at the intersection of art and science to create beautiful and impactful healthcare software experiences. Born near Paris, she has lived in France and Canada. Patricia is a graduate of McMaster University with a BS in Kinesiology, and has a Masters in Biomedical Communications from the University of Toronto.",
+    "social": {
+      "email": "patricia@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/patricia-nguyen-281351a2"
+    },
+    "image": "/images/about/headshot-patricia-nguyen.jpg"
+  },
+  {
     "name": "Jonathan Follett",
     "title": "Principal",
     "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",

@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
 import GradientImageColumns from '../../components/gradient-image-columns'
+
+const frontmatter = {
+  metaTitle: 'Open Office Hours for UX Design at GoInvo',
+  metaDescription:
+    'Our UX design company is open to anyone seeking advice on design, from students to startups. Sign up!',
+  heroImage: '/images/about/open-office-hours/whiteboard.jpg',
+}
 
 class OpenOfficeHoursPage extends Component {
   componentDidMount() {
@@ -20,26 +26,8 @@ class OpenOfficeHoursPage extends Component {
 
   render() {
     return (
-      <Layout>
-        <Helmet
-          title="GoInvo | Open Office Hours"
-          meta={[
-            {
-              name: 'description',
-              content:
-                'Our studio is open for anyone needing design advice, every Thursday from 4-6p.',
-            },
-            {
-              name: 'keywords',
-              content:
-                'open office hours, design critiques, portfolio reviews, boston design studio, ux design, ux design studio, digital health',
-            },
-          ]}
-        />
-        <Hero
-          image="/images/about/open-office-hours/whiteboard.jpg"
-          position="right center"
-        >
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} position="right center">
           <h1 className="header--xl">
             Enjoy fresh ideas with a side of coffee
             <span className="text--serif text--primary">.</span>

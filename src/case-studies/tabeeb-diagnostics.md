@@ -11,7 +11,6 @@ upNext:
   - 'understanding-ebola'
 hidden: false
 metaDescription: 'Tabeeb: Bringing global medical specialists to rural communities with the flick of a finger.'
-metaKeywords: 'tabeeb, healthcare, telemedicine, remote doctor, rural clinics, crowdsourced diagnostics, mobile user experience'
 ---
 
 import Divider from 'components/divider'

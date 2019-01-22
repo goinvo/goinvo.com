@@ -19,7 +19,6 @@ upNext:
   - 'determinants-of-health'
 hidden: false
 metaDescription: 'Inspired EHRs is an open source ebook full of inspirational designs and techniques to push the limits of national electronic health record (EHR) companies.'
-metaKeywords: 'inspired EHRs, EHR, ebook, health record, electronic health record, design health, design healthcare, ux health, ui health'
 ---
 
 import Divider from 'components/divider'

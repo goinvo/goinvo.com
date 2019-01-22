@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
-import { Link } from 'gatsby'
+
 import { mediaUrl } from '../../../helpers'
 
 import organHeartIcon from '../../../assets/images/vision/loneliness-in-our-human-code/organ-heart.svg'
@@ -38,11 +39,19 @@ import elderlyIcon from '../../../assets/images/vision/loneliness-in-our-human-c
 import homeIcon from '../../../assets/images/vision/loneliness-in-our-human-code/home.svg'
 import longTermCoupleIcon from '../../../assets/images/vision/loneliness-in-our-human-code/long-term-couple.svg'
 
+const frontmatter = {
+  metaTitle: 'Loneliness in our Human Code - GoInvo',
+  metaDescription:
+    'How loneliness and other social determinants affect our health.',
+  heroImage:
+    '/images/features/loneliness-in-our-human-code/loneliness-hero.jpg',
+}
+
 class LonelinessFeature extends Component {
   render() {
     return (
-      <Layout>
-        <Hero image="/images/features/loneliness-in-our-human-code/loneliness-hero.jpg" />
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
         <div className="loneliness-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

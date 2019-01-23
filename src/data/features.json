@@ -1,15 +1,5 @@
 [
   {
-    "id": "virtual-primary-care",
-    "title": "Virtual Primary Care",
-    "date": "Feb.2019",
-    "client": "Feature",
-    "categories": ["open-source", "public-health-and-policy"],
-    "caption": "13 out of the top 15 reasons for office visits can be virtual.",
-    "image": "/images/features/virtual-primary-care/virtual-primary-care-hero.jpg",
-    "link": "/vision/virtual-primary-care/"
-  },
-  {
     "id": "loneliness-in-our-human-code",
     "title": "Loneliness in Our Human Code",
     "date": "Nov.2018",

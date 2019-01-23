@@ -11,7 +11,8 @@ class Layout extends Component {
   render() {
     const frontmatter = Object.assign(
       {
-        metaTitle: 'GoInvo is a Boston UX design studio focused in Healthcare',
+        metaTitle:
+          'GoInvo is a Boston UX design agency dedicated to healthcare innovation',
         metaDescription:
           'GoInvo is a Boston user experience design firm. The software we design helps progressive healthcare companies create new markets and exploit future tech.',
         heroImage: '/images/homepage/doh-hero-fallback.jpg',

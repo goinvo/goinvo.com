@@ -1,0 +1,284 @@
+.virtual-primary-care-feature {
+  h3 {
+    &.text--lg {
+      font-size: 20px;
+      line-height: 1.5rem;
+    }
+  }
+  .pure-u-lg-1-2 {
+    padding-right: 20px;
+  }
+  sup a {
+    text-decoration: none;
+  }
+
+  .author {
+    .authorImg {
+      padding-top: 20px;
+    }
+  }
+
+  .stat {
+    padding: 10px 10px 0 0;
+    font-size: 32px;
+  }
+  .number--lg {
+    font-size: 80px;
+  }
+  .text-right,
+  .text-below {
+    margin: 20px 0;
+  }
+  .text-below {
+    margin-top: 10px;
+  }
+  .text-right {
+    .stat {
+      text-align: center;
+      width: 260px;
+      @include mq($until: large) {
+        display: inline-block;
+        text-align: left;
+        width: auto;
+      }
+    }
+    .stat-desc {
+      width: 260px;
+      p {
+        margin-top: 0;
+      }
+      @include mq($until: large) {
+        display: inline-block;
+      }
+    }
+  }
+  .text-below .stat {
+    margin: 10px 0;
+  }
+
+  .row {
+    margin: 40px 0;
+
+    @include mq($until: medium) {
+      margin: 0;
+    }
+  }
+  .risk-duo {
+    display: inline-block;
+    width: 50%;
+    min-width: 320px;
+
+    @include mq($until: medium) {
+      width: 100%;
+    }
+  }
+  .risk-factor {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    &.risk-solo {
+      width: 100%;
+    }
+    .risk-text {
+      padding: 0 15px;
+    }
+    @include mq($until: medium) {
+      margin: 10px 0;
+    }
+  }
+  .icon-bubble {
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: solid 3px $color-orange--light;
+
+    .risk-icon {
+      display: block;
+      margin: 20px auto;
+      width: 55px;
+      height: auto;
+
+      &.organ-heart-icon {
+        margin-top: 15px;
+      }
+      &.dementia-icon,
+      &.stroke-icon {
+        margin-top: 25px;
+      }
+      &.arthritis-icon {
+        margin-top: 18px;
+      }
+      &.diabetes-icon {
+        margin-top: 30px;
+        width: 70px;
+      }
+      &.depression-icon {
+        margin-top: 5px;
+      }
+      &.blood-vessel-icon {
+        margin-top: 10px;
+      }
+      &.stress-icon {
+        width: 70px;
+        margin-top: 22px;
+      }
+    }
+  }
+
+  .social-timeline {
+    border-left: solid 4px $color-orange--light;
+    z-index: -1;
+  }
+  .age-title {
+    &:before {
+      content: '';
+      box-sizing: border-box;
+      display: inline-block;
+      z-index: 1;
+      height: 20px;
+      width: 20px;
+      margin-right: 20px;
+      margin-left: -11px;
+      border-radius: 10px;
+      border: solid 2px $color-orange--light;
+      background-color: #fff;
+    }
+  }
+  .lonely-factor {
+    border-top: solid 2px $color-orange--light;
+    min-height: 200px;
+  }
+  .lonely-factor-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 30px;
+    width: 50%;
+
+    @include mq($until: large) {
+      width: 100%;
+      padding-left: 20px;
+    }
+  }
+  .lonely-factor-icon {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 50%;
+
+    @include mq($until: large) {
+      width: 100%;
+    }
+  }
+
+  .timeline-icon {
+    display: block;
+    margin: 20px auto;
+    height: 120px;
+    width: auto;
+    &.stroller-icon {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: 150px;
+    }
+    &.cuddle-icon {
+      margin-top: 40px;
+    }
+    &.money-icon {
+      margin-top: 50px;
+      height: 110px;
+    }
+    &.single-parent-icon {
+      height: 150px;
+    }
+    &.conversation-icon,
+    &.sleep-icon,
+    &.self-preservation-icon {
+      margin-top: 60px;
+    }
+    &.family-icon,
+    &.substance-use-icon,
+    &.elderly-icon {
+      margin-top: 60px;
+      height: 150px;
+    }
+    &.peer-icon {
+      margin-top: 60px;
+      height: 100px;
+    }
+    &.path-icon {
+      margin-top: 100px;
+      height: 160px;
+    }
+    &.health-behavior-icon {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: 160px;
+    }
+    &.organ-heart-icon {
+      margin-top: 90px;
+    }
+    &.heart-break-loss-icon {
+      margin-top: 120px;
+    }
+    &.long-term-couple-icon {
+      margin-top: 90px;
+      height: 190px;
+    }
+
+    @include mq($until: large) {
+      margin-top: 20px;
+      &.stroller-icon,
+      &.cuddle-icon,
+      &.money-icon,
+      &.single-parent-icon,
+      &.conversation-icon,
+      &.sleep-icon,
+      &.self-preservation-icon,
+      &.family-icon,
+      &.substance-use-icon,
+      &.elderly-icon,
+      &.peer-icon,
+      &.path-icon,
+      &.health-behavior-icon,
+      &.organ-heart-icon,
+      &.heart-break-loss-icon,
+      &.long-term-couple-icon {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .resources {
+    margin: 50px 0;
+  }
+  .care-card {
+    width: 50%;
+    margin: 20px auto;
+
+    img {
+      border-radius: 15px;
+      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+  .button-group {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    .button {
+      display: block;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      @include mq($until: large) {
+        width: 100%;
+      }
+    }
+  }
+
+  .divider {
+    margin: 50px 0;
+  }
+}

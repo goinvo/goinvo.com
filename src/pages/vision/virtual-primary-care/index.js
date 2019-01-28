@@ -8,9 +8,16 @@ import References from '../../../components/references'
 
 import config from '../../../../config'
 
+import Smartphone from '../../../assets/images/vision/virtual-primary-care/icon-smartphone.inline.svg'
+import Clinic from '../../../assets/images/vision/virtual-primary-care/icon-clinic.inline.svg'
+import CheckboxRequired from '../../../assets/images/vision/virtual-primary-care/icon-checkbox-required.inline.svg'
+import CheckboxOptional from '../../../assets/images/vision/virtual-primary-care/icon-checkbox-optional.inline.svg'
+import Ekg from '../../../assets/images/vision/virtual-primary-care/icon-ekg.inline.svg'
+import BloodPressureCuff from '../../../assets/images/vision/virtual-primary-care/icon-blood-pressure-cuff.inline.svg'
+
 const frontmatter = {
-  metaTitle: 'Virtual Primary Care',
-  metaDescription: '46.4% of office visits can be conducted virtually.',
+  metaTitle: 'Office visits that are better suited for Virtual Primary Care',
+  metaDescription: '46% of office visits can be conducted virtually.',
   heroImage:
     '/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg',
 }
@@ -26,7 +33,7 @@ class VirtualPrimaryCareFeature extends Component {
               <div className="virtual-primary-care-title-area">
                 <h1 className="header--xl">Virtual Primary Care</h1>
                 <h2 className="text--primary">
-                  46.4% of office visits can be conducted virtually.
+                  46% of office visits can be conducted virtually.
                 </h2>
                 <p className="text--gray">
                   Half of all office visits are with a primary care physician
@@ -59,7 +66,7 @@ class VirtualPrimaryCareFeature extends Component {
               <h3 className="header--md text--lg">
                 The{' '}
                 <span className="text--primary">
-                  top 15 visits account for 49.8% (492,749)
+                  top 15 reasons for office visits account for 49.8% (492.7M)
                 </span>
                 <sup>
                   <a href="#references">10</a>
@@ -80,15 +87,6 @@ class VirtualPrimaryCareFeature extends Component {
 
               <div className="text-below pure-u-1 pure-u-lg-1-2">
                 <div className="stat">
-                  <span className="number--lg">2</span> office visits
-                </div>
-                <div class="stat-desc">
-                  <p className="text--gray">remain face-to-face</p>
-                </div>
-              </div>
-
-              <div className="text-below pure-u-1 pure-u-lg-1-2">
-                <div className="stat">
                   <span className="number--lg">86%</span>
                 </div>
                 <div class="stat-desc">
@@ -101,22 +99,368 @@ class VirtualPrimaryCareFeature extends Component {
           </div>
 
           <div className="pad-vertical--double">
-            <Image
-              src="/images/features/virtual-primary-care/virtual-primary-care-diagram.jpg"
-              className="image--max-width"
-              sizes={config.sizes.full}
-            />
+            <table width="100%">
+              <tr className="text--gray">
+                <td width="20%">Reason for Visit</td>
+                <td width="8%">Encounter &amp; Device</td>
+                <td width="8%">Text</td>
+                <td width="8%">Image</td>
+                <td width="8%">Audio</td>
+                <td width="8%">Video</td>
+                <td width="8%">Vitals</td>
+                <td width="8%">Labs</td>
+                <td width="8%">Imaging</td>
+                <td width="8%">Other</td>
+                <td width="8%">% of Visits</td>
+              </tr>
+              <tr>
+                <td>Routine health visit</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+
+                <td />
+
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>24.5%</td>
+              </tr>
+              <tr>
+                <td>Medication refill</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>3.6%</td>
+              </tr>
+              <tr>
+                <td>Joint pain (knee, shoulder, etc.)</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td>2.9%</td>
+              </tr>
+              <tr>
+                <td>Postoperative visit</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>2.6%</td>
+              </tr>
+              <tr>
+                <td>Cough</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>2.1%</td>
+              </tr>
+              <tr>
+                <td>Gynecological examination</td>
+                <td>
+                  <Clinic className="icon icon-clinic" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>Gynecologic exam (specialist)</td>
+                <td>2.1%</td>
+              </tr>
+              <tr>
+                <td>Prenatal examination, routine</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                  <br />
+                  Ultrasound
+                </td>
+                <td />
+                <td>1.8%</td>
+              </tr>
+              <tr>
+                <td>Back pain</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td>1.6%</td>
+              </tr>
+              <tr>
+                <td>Hypertension</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                  <BloodPressureCuff className="icon icon-blood-pressure-cuff" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                  <br />
+                  Blood pressure
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td>1.6%</td>
+              </tr>
+              <tr>
+                <td>Stomach and abdominal pain, cramps, and spasms</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                  <Ekg className="icon icon-ekg-required" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td>1.5%</td>
+              </tr>
+              <tr>
+                <td>Well baby examination</td>
+                <td>
+                  <Clinic className="icon icon-clinic" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>Milestones exam (specialist)</td>
+                <td>1.3%</td>
+              </tr>
+              <tr>
+                <td>Diabetes mellitus</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                  <br />
+                  Every 3 months Hemoglobin A1C. Every year fasting lipid
+                  profile, liver function tests, urine albumin excretion, serum
+                  creatinine.
+                </td>
+                <td />
+                <td />
+                <td>1.3%</td>
+              </tr>
+              <tr>
+                <td>Skin rash, lesion</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                  <br />
+                  Photo of rash/lesion
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>1.0%</td>
+              </tr>
+              <tr>
+                <td>Preoperative visit</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                  <Ekg className="icon icon-ekg-required" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td />
+                <td />
+                <td>EKG</td>
+                <td>1.0%</td>
+              </tr>
+              <tr>
+                <td>Symptoms referable to throat</td>
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>Strep test</td>
+                <td>0.9%</td>
+              </tr>
+              <tr>
+                <td>All other reasons</td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>50.2%</td>
+              </tr>
+            </table>
           </div>
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>
-                <h4>
+                <h2>
                   "Healthcare delayed is healthcare denied"
                   <sup>
                     <a href="#references">3</a>
                   </sup>
-                </h4>
+                </h2>
                 <p className="text--gray">
                   On average, it takes 24 days and 59.21 minutes (see Table 1)
                   for a patient to complete an office visit with their doctor.
@@ -200,7 +544,7 @@ class VirtualPrimaryCareFeature extends Component {
                   For primary care, that means going virtual.
                 </p>
 
-                <h4>Virtual primary care (VPC) is...</h4>
+                <h2>Virtual primary care (VPC) is...</h2>
 
                 <ul className="ul text--gray">
                   <li>Mobile-first healthcare via text, phone, or video.</li>
@@ -219,10 +563,10 @@ class VirtualPrimaryCareFeature extends Component {
                   At GoInvo, we wanted to identify which office visits could be
                   virtual, and if so, how. To frame this around the realities of
                   today, we started with the top 15 reasons for office visits
-                  from the National Ambulatory Medical Care Survey in 2015
-                  <sup>
-                    <a href="#references">10</a>
-                  </sup>
+                  from the{' '}
+                  <a href="https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf">
+                    National Ambulatory Medical Care Survey in 2015
+                  </a>
                   .
                 </p>
               </div>
@@ -286,6 +630,15 @@ class VirtualPrimaryCareFeature extends Component {
                 <p className="text--gray">
                   All other reasons (50.2%) = Knee symptoms (1.5%) + Shoulder
                   symptoms (0.9%) + All other reasons (47.8%)
+                </p>
+                <p className="text--gray">
+                  The section below documents how we calculated the 46% (rounded
+                  down) of office visits that can be conducted virtually.
+                </p>
+                <p className="text--gray">
+                  46.4% virtual office visits = 49.8% top 15 office visits -
+                  3.4% for the two reasons that remain office visits
+                  (Gynecological exam 2.1% + Well baby exam 1.3%).
                 </p>
               </div>
             </div>
@@ -437,7 +790,7 @@ class VirtualPrimaryCareFeature extends Component {
                     },
                     {
                       title:
-                        'FAMILY PHYSICIAN WORKFORCE REFORM: Recommendations of the American Academy of Family Physicians. Retrieved January 24, 2019',
+                        'Family Physician Workforce Reform: Recommendations of the American Academy of Family Physicians. Retrieved January 24, 2019',
                       link:
                         'https://www.aafp.org/about/policies/all/workforce-reform.html',
                     },

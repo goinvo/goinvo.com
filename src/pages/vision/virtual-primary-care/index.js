@@ -16,7 +16,7 @@ import Ekg from '../../../assets/images/vision/virtual-primary-care/icon-ekg.inl
 import BloodPressureCuff from '../../../assets/images/vision/virtual-primary-care/icon-blood-pressure-cuff.inline.svg'
 
 const frontmatter = {
-  metaTitle: 'Office visits that are better suited for Virtual Primary Care',
+  metaTitle: 'Office visits better suited for Virtual Primary Care',
   metaDescription: '46% of office visits can be conducted virtually.',
   heroImage:
     '/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg',

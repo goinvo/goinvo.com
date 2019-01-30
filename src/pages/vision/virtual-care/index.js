@@ -8,32 +8,32 @@ import References from '../../../components/references'
 
 import config from '../../../../config'
 
-import Smartphone from '../../../assets/images/vision/virtual-primary-care/icon-smartphone.inline.svg'
-import Clinic from '../../../assets/images/vision/virtual-primary-care/icon-clinic.inline.svg'
-import CheckboxRequired from '../../../assets/images/vision/virtual-primary-care/icon-checkbox-required.inline.svg'
-import CheckboxOptional from '../../../assets/images/vision/virtual-primary-care/icon-checkbox-optional.inline.svg'
-import Ekg from '../../../assets/images/vision/virtual-primary-care/icon-ekg.inline.svg'
-import BloodPressureCuff from '../../../assets/images/vision/virtual-primary-care/icon-blood-pressure-cuff.inline.svg'
+import Smartphone from '../../../assets/images/vision/virtual-care/icon-smartphone.inline.svg'
+import Clinic from '../../../assets/images/vision/virtual-care/icon-clinic.inline.svg'
+import CheckboxRequired from '../../../assets/images/vision/virtual-care/icon-checkbox-required.inline.svg'
+import CheckboxOptional from '../../../assets/images/vision/virtual-care/icon-checkbox-optional.inline.svg'
+import Ekg from '../../../assets/images/vision/virtual-care/icon-ekg.inline.svg'
+import BloodPressureCuff from '../../../assets/images/vision/virtual-care/icon-blood-pressure-cuff.inline.svg'
 
 const frontmatter = {
-  metaTitle: 'Office visits better suited for Virtual Primary Care',
+  metaTitle: 'Office visits better suited for Virtual Care',
   metaDescription: '46% of office visits can be conducted virtually.',
   heroImage:
     '/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg',
 }
 
-class VirtualPrimaryCareFeature extends Component {
+class VirtualCareFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
-        <div className="virtual-primary-care-feature">
+        <div className="virtual-care-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div className="virtual-primary-care-title-area">
-                <h1 className="header--xl">Virtual Primary Care</h1>
+              <div className="virtual-care-title-area">
+                <h1 className="header--xl">Virtual Care</h1>
                 <h2 className="text--primary">
-                  46% of office visits can be conducted virtually.
+                  46% of clinical office visits can be conducted virtually.
                 </h2>
                 <p className="text--gray">
                   Half of all office visits are with a primary care physician
@@ -66,7 +66,7 @@ class VirtualPrimaryCareFeature extends Component {
               <h3 className="header--md text--lg">
                 The{' '}
                 <span className="text--primary">
-                  top 15 reasons for office visits account for 49.8% (492.7M)
+                  top 15 reasons to visit a clinician account for half (492.7M)
                 </span>
                 <sup>
                   <a href="#references">10</a>
@@ -537,7 +537,7 @@ class VirtualPrimaryCareFeature extends Component {
                 <p className="text--gray">
                   Physicians don't scale.
                   <br />
-                  Software scales.
+                  Patients and software scales.
                 </p>
 
                 <p className="text--gray">
@@ -556,7 +556,7 @@ class VirtualPrimaryCareFeature extends Component {
                 </ul>
 
                 <h4 className="header--sm margin-bottom--none">
-                  Going Virtual (or not)
+                  Going Virtual
                 </h4>
 
                 <p className="text--gray">
@@ -811,4 +811,4 @@ class VirtualPrimaryCareFeature extends Component {
   }
 }
 
-export default VirtualPrimaryCareFeature
+export default VirtualCareFeature

@@ -17,7 +17,8 @@ import BloodPressureCuff from '../../../assets/images/vision/virtual-care/icon-b
 
 const frontmatter = {
   metaTitle: 'Office visits better suited for Virtual Care',
-  metaDescription: '46% of office visits can be conducted virtually.',
+  metaDescription:
+    '46% of face-to-face office visits can be conducted virtually.',
   heroImage:
     '/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg',
 }
@@ -33,73 +34,59 @@ class VirtualCareFeature extends Component {
               <div className="virtual-care-title-area">
                 <h1 className="header--xl">Virtual Care</h1>
                 <h2 className="text--primary">
-                  46% of clinical office visits can be conducted virtually.
+                  Half of face-to-face clinical office visits can be conducted
+                  virtually.
                 </h2>
-                <p className="text--gray">
-                  Half of all office visits are with a primary care physician
-                  (505.5M of 990.8M)
-                  <sup>
-                    <a href="#references">1</a>
-                  </sup>{' '}
+
+                <div className="text-below pure-u-1">
+                  <div className="stat">
+                    <span className="number--lg">990M</span>
+                  </div>
+                  <div class="stat-desc">
+                    <p className="text--gray">
+                      face-to-face office visits every year
+                      <sup>
+                        <a href="#references">1</a>
+                      </sup>{' '}
+                    </p>
+                  </div>
+                </div>
+                <div className="text-below pure-u-1">
+                  <div className="stat">
+                    <span className="number--lg">459M (46%)</span>
+                  </div>
+                  <div class="stat-desc">
+                    <p className="text--gray">can be conducted virtually</p>
+                  </div>
+                </div>
+                <h3 className="header--md text--lg margin-bottom--half">
+                  The{' '}
+                  <span className="text--primary">
+                    top 15 types of encounters
+                  </span>{' '}
+                  (like Routine checkups, medication refills, joint pain)
+                  account for{' '}
+                  <span className="text--primary">
+                    50% of face-to-face clinical office visits
+                  </span>
                   .
-                </p>
+                </h3>
                 <p className="text--gray">
-                  With 77%
-                  <sup>
-                    <a href="#references">2</a>
-                  </sup>{' '}
-                  of Americans owning a smartphone and 95%
-                  <sup>
-                    <a href="#references">2</a>
-                  </sup>{' '}
-                  owning a text-enabled phone, healthcare is already in our
-                  pocket.
+                  Armed with a smartphone or device, 13 of the top 15 encounters
+                  can be virtual visits.
+                  <br />
+                  The other two visits that remain face-to-face are
+                  Gynecological examinations and Well baby examinations.
                 </p>
-                <p className="text--gray">
-                  But we’re not using healthcare in the same way as banking,
-                  groceries, dating, transportation, and every other aspect of
-                  our daily lives. We're still getting dressed and visiting the
-                  doctor at the clinic.
-                </p>
-              </div>
-
-              <h3 className="header--md text--lg">
-                The{' '}
-                <span className="text--primary">
-                  top 15 reasons to visit a clinician account for half (492.7M)
-                </span>
-                <sup>
-                  <a href="#references">10</a>
-                </sup>{' '}
-                of total office visits.
-              </h3>
-
-              <div className="text-below pure-u-1 pure-u-lg-1-2">
-                <div className="stat">
-                  <span className="number--lg">13</span> virtual visits
-                </div>
-                <div class="stat-desc">
-                  <p className="text--gray">
-                    with a smartphone (3 with an additional device)
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-below pure-u-1 pure-u-lg-1-2">
-                <div className="stat">
-                  <span className="number--lg">86%</span>
-                </div>
-                <div class="stat-desc">
-                  <p className="text--gray">
-                    of the top 15 visits can be virtual
-                  </p>
-                </div>
+                <h2 className="text--primary">
+                  The Top 15 Encounters Breakdown
+                </h2>
               </div>
             </div>
           </div>
 
           <div className="pad-vertical--double">
-            <table width="100%">
+            <table width="100%" className="virtual-diagram">
               <tr className="text--gray">
                 <td width="20%">Reason for Visit</td>
                 <td width="8%">Encounter &amp; Device</td>
@@ -114,7 +101,7 @@ class VirtualCareFeature extends Component {
                 <td width="8%">% of Visits</td>
               </tr>
               <tr>
-                <td>Routine health visit</td>
+                <td>Routine checkups</td>
                 <td>
                   <Smartphone className="icon icon-smartphone" />
                 </td>
@@ -450,6 +437,40 @@ class VirtualCareFeature extends Component {
                 <td>50.2%</td>
               </tr>
             </table>
+            <table width="100%" className="legend">
+              <tr className="text--gray">
+                <td>
+                  <Smartphone className="icon icon-smartphone" />
+                  <br />
+                  Virtual Visit
+                </td>
+                <td>
+                  <Clinic className="icon icon-clinic" />
+                  <br />
+                  Face-to-face Visit
+                </td>
+                <td>
+                  <Ekg className="icon icon-ekg" />
+                  <br />
+                  EKG Monitor
+                </td>
+                <td>
+                  <BloodPressureCuff className="icon icon-blood-pressure-cuff" />
+                  <br />
+                  Blood Pressure Cuff
+                </td>
+                <td>
+                  <CheckboxRequired className="icon icon-checkbox-required" />
+                  <br />
+                  Required
+                </td>
+                <td>
+                  <CheckboxOptional className="icon icon-checkbox-optional" />
+                  <br />
+                  Optional
+                </td>
+              </tr>
+            </table>
           </div>
 
           <div className="pad-vertical--double">
@@ -458,80 +479,58 @@ class VirtualCareFeature extends Component {
                 <h2>
                   "Healthcare delayed is healthcare denied"
                   <sup>
-                    <a href="#references">3</a>
+                    <a href="#references">2</a>
                   </sup>
                 </h2>
                 <p className="text--gray">
                   On average, it takes 24 days and 59.21 minutes (see Table 1)
                   for a patient to complete an office visit with their doctor.
-                  And this assumes the patient already has a primary care
-                  doctor, which 26%
-                  <sup>
-                    <a href="#references">4</a>
-                  </sup>{' '}
-                  do not.
                 </p>
 
-                <p className="text--gray">
-                  Table 1. Time-to-diagnosis
-                  <table width="100%">
-                    <tr>
-                      <td>Waiting for appointment</td>
-                      <td>
-                        24 days
-                        <sup>
-                          <a href="#references">5</a>
-                        </sup>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Waiting for Dr in office</td>
-                      <td>
-                        41 minutes
-                        <sup>
-                          <a href="#references">6</a>
-                        </sup>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Consultation with Dr</td>
-                      <td>
-                        18.21 minutes
-                        <sup>
-                          <a href="#references">6</a>
-                        </sup>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Total</td>
-                      <td>24 days and 59.21 minutes</td>
-                    </tr>
-                  </table>
-                </p>
+                <table width="100%" className="text--gray">
+                  <tr>
+                    <td>Table 1. Time-to-diagnosis</td>
+                  </tr>
+                  <tr>
+                    <td>Waiting for appointment</td>
+                    <td>
+                      24 days
+                      <sup>
+                        <a href="#references">3</a>
+                      </sup>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Waiting for Dr in office</td>
+                    <td>
+                      41 minutes
+                      <sup>
+                        <a href="#references">4</a>
+                      </sup>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Consultation with Dr</td>
+                    <td>
+                      18.21 minutes
+                      <sup>
+                        <a href="#references">4</a>
+                      </sup>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td>24 days and 59.21 minutes</td>
+                  </tr>
+                </table>
 
                 <p className="text--gray">
-                  Given the high investment for receiving care, it's no surprise
-                  that 39.7%
+                  Given the time investment for receiving care, it's no surprise
+                  that 15.6%
                   <sup>
-                    <a href="#references">7</a>
+                    <a href="#references">5</a>
                   </sup>{' '}
-                  of patients avoid medical care due to high costs and time
-                  constraints. We're also experiencing a physician shortage of
-                  52,000
-                  <sup>
-                    <a href="#references">9</a>
-                  </sup>{' '}
-                  and it's worsening.
-                </p>
-
-                <p className="text--gray">
-                  Just a few factors that have 62M
-                  <sup>
-                    <a href="#references">8</a>
-                  </sup>{' '}
-                  Americans with no or inadequate access to healthcare.
-                  <br />
-                  Criminal some could argue.
+                  of patients avoid medical care due to time constraints.
                 </p>
 
                 <p className="text--gray">
@@ -540,35 +539,17 @@ class VirtualCareFeature extends Component {
                   Patients and software scales.
                 </p>
 
-                <p className="text--gray">
-                  For primary care, that means going virtual.
-                </p>
-
-                <h2>Virtual primary care (VPC) is...</h2>
+                <h2>Care must go virtual</h2>
 
                 <ul className="ul text--gray">
-                  <li>Mobile-first healthcare via text, phone, or video.</li>
                   <li>
-                    Cost-effective care delivered conveniently online from
-                    healthcare professionals.
+                    For patients to have better access, cost, and outcomes.
                   </li>
-                  <li>Healthcare anywhere, anytime.</li>
+                  <li>
+                    For clinicians to provide timely care for more people.
+                  </li>
+                  <li>and for personalized medicine and services.</li>
                 </ul>
-
-                <h4 className="header--sm margin-bottom--none">
-                  Going Virtual
-                </h4>
-
-                <p className="text--gray">
-                  At GoInvo, we wanted to identify which office visits could be
-                  virtual, and if so, how. To frame this around the realities of
-                  today, we started with the top 15 reasons for office visits
-                  from the{' '}
-                  <a href="https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf">
-                    National Ambulatory Medical Care Survey in 2015
-                  </a>
-                  .
-                </p>
               </div>
             </div>
           </div>
@@ -578,21 +559,31 @@ class VirtualCareFeature extends Component {
               <div id="methodology">
                 <h1 className="header--xl">Methodology</h1>
                 <p className="text--gray">
-                  Below is a description of the methodology used in creating the
-                  Virtual Primary Care diagram. It is also a record of versioned
-                  updates to the methodology based on continuing research and
-                  feedback. Thank you to those who have reached out and helped
-                  identify areas to improve.
+                  The Virtual Care diagram documents which office visits could
+                  be virtual, how they could be conducted, and what health
+                  information is necessary. The diagram examines the top 15
+                  reasons for office visits from the{' '}
+                  <a href="https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf">
+                    National Ambulatory Medical Care Survey in 2015
+                  </a>
+                  .
+                </p>
+                <p className="text--gray">
+                  Our{' '}
+                  <a href="https://docs.google.com/spreadsheets/d/1pez_Wy8TnsMmifLU1xFrJ87b1SoH65OnwL6eQUiNy_A/edit?usp=sharing">
+                    working document of research
+                  </a>{' '}
+                  is available for review and comment.
                 </p>
                 <h4 className="header--sm margin-bottom--half">
-                  v1 - 24.Jan.2019
+                  v1 - 31.Jan.2019
                 </h4>
                 <p className="text--gray">
                   The section below documents how we consolidated the 20 reasons
                   for office visits down to 15.
                 </p>
                 <p className="text--gray">
-                  'General health' label is new and represents:
+                  'Routine checkups' label is new and represents:
                   <ul className="ul text--gray">
                     <li>Progress visit, not otherwise specifed</li>
                     <li>General medical examination</li>
@@ -619,7 +610,7 @@ class VirtualCareFeature extends Component {
                   visits.
                 </p>
                 <p className="text--gray">
-                  General health (24.4%) = Progress visit, not otherwise
+                  Routine checkups (24.4%) = Progress visit, not otherwise
                   specifed (14.1%) + General medical examination (7.6%) +
                   Counseling, not otherwise specifed (2.7%)
                 </p>
@@ -690,11 +681,7 @@ class VirtualCareFeature extends Component {
                       production. Eric works as an interaction designer,
                       experience designer, and information architect, designing
                       better products by thoroughly understanding user
-                      behaviors, expectations, and goals. Eric’s background and
-                      love for design in the context of human experience helps
-                      him transform complex information systems in healthcare
-                      and the enterprise into responsive and adaptive
-                      human-centered designs.
+                      behaviors, expectations, and goals.
                     </p>
                   </div>
                 </div>
@@ -743,26 +730,15 @@ class VirtualCareFeature extends Component {
                   references={[
                     {
                       title:
-                        'Ambulatory Care Use and Physician office visits. (2015). Retrieved January 24, 2019',
+                        'National Ambulatory Medical Care Survey: 2015 State and National Summary Tables. (2015). Retrieved January 24, 2019',
                       link:
-                        'https://www.cdc.gov/nchs/fastats/physician-visits.htm',
-                    },
-                    {
-                      title:
-                        'Mobile Fact Sheet. (2018). Retrieved January 24, 2019',
-                      link: 'http://www.pewinternet.org/fact-sheet/mobile/',
+                        'https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf',
                     },
                     {
                       title:
                         'Why You Have to Wait Longer to Get a Doctor’s Appointment. (2017). Retrieved January 24, 2019',
                       link:
                         'https://www.healthline.com/health-news/why-you-have-to-wait-longer-to-get-a-doctors-appointment',
-                    },
-                    {
-                      title:
-                        'For millennials, a regular visit to the doctor’s office is not a primary concern. (2018). Retrieved January 24, 2019',
-                      link:
-                        'https://www.washingtonpost.com/national/health-science/for-millennials-a-regular-visit-to-the-doctors-office-is-not-a-primary-concern/2018/10/05/6b17c71a-aef3-11e8-9a6a-565d92a3585d_story.html',
                     },
                     {
                       title:
@@ -781,24 +757,6 @@ class VirtualCareFeature extends Component {
                         'Jennifer M. Taber, Ph.D., Bryan Leyva, B.A, and Alexander Persoskie, Ph.D. Why do People Avoid Medical Care? A Qualitative Study Using National Data. (2015). Retrieved January 24, 2019',
                       link:
                         'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351276/',
-                    },
-                    {
-                      title:
-                        'Access Is the Answer: Community Health Centers, Primary Care & the Future of American Health Care. (2014). Retrieved January 24, 2019',
-                      link:
-                        'http://www.nhchc.org/wp-content/uploads/2013/04/nachc-access-is-answer-brief.pdf',
-                    },
-                    {
-                      title:
-                        'Family Physician Workforce Reform: Recommendations of the American Academy of Family Physicians. Retrieved January 24, 2019',
-                      link:
-                        'https://www.aafp.org/about/policies/all/workforce-reform.html',
-                    },
-                    {
-                      title:
-                        'National Ambulatory Medical Care Survey: 2015 State and National Summary Tables. (2015). Retrieved January 24, 2019',
-                      link:
-                        'https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf',
                     },
                   ]}
                 />

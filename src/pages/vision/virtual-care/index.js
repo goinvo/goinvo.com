@@ -585,26 +585,26 @@ class VirtualCareFeature extends Component {
                 </p>
                 <p className="text--gray">
                   'Routine checkup' label is new and represents:
-                  <ul className="ul text--gray">
-                    <li>Progress visit, not otherwise specifed</li>
-                    <li>General medical examination</li>
-                    <li>Counseling, not otherwise specifed.</li>
-                  </ul>
                 </p>
+                <ul className="ul text--gray">
+                  <li>Progress visit, not otherwise specifed</li>
+                  <li>General medical examination</li>
+                  <li>Counseling, not otherwise specifed.</li>
+                </ul>
                 <p className="text--gray">
                   'Joint pain' label is new and represents:
-                  <ul className="ul text--gray">
-                    <li>Knee symptoms</li>
-                    <li>Shoulder symptoms</li>
-                  </ul>
                 </p>
+                <ul className="ul text--gray">
+                  <li>Knee symptoms</li>
+                  <li>Shoulder symptoms</li>
+                </ul>
                 <p className="text--gray">
                   'All other reasons' label existed but now also represents:
-                  <ul className="ul text--gray">
-                    <li>For other and unspecifed test results</li>
-                    <li>Other special examination</li>
-                  </ul>
                 </p>
+                <ul className="ul text--gray">
+                  <li>For other and unspecifed test results</li>
+                  <li>Other special examination</li>
+                </ul>
                 <p className="text--gray">
                   The section below documents how we calculated the 'Percent
                   distribution' due to the consolidation of reasons for office
@@ -642,7 +642,7 @@ class VirtualCareFeature extends Component {
                   spasms (1.5% | 15,026,000) + Diabetes mellitus (1.3% |
                   12,432,000) + Skin rash, lesion (1.0% | 9,464,000) +
                   Preoperative visit (1.0% | 9,443,000) + Symptoms referable to
-                  throat (0.9% | 9,346,000).
+                  throat (0.9% | 9,346,000)
                 </p>
               </div>
             </div>

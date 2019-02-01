@@ -16,9 +16,9 @@ import Ekg from '../../../assets/images/vision/virtual-care/icon-ekg.inline.svg'
 import BloodPressureCuff from '../../../assets/images/vision/virtual-care/icon-blood-pressure-cuff.inline.svg'
 
 const frontmatter = {
-  metaTitle: 'Office visits better suited for Virtual Care',
+  metaTitle: 'Clinical visits better suited for Virtual Care',
   metaDescription:
-    '46% of face-to-face office visits can be conducted virtually.',
+    '46% of face-to-face clinical office visits can be conducted virtually.',
   heroImage:
     '/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg',
 }
@@ -44,7 +44,7 @@ class VirtualCareFeature extends Component {
                   </div>
                   <div class="stat-desc">
                     <p className="text--gray">
-                      face-to-face office visits every year
+                      face-to-face clinical office visits every year
                       <sup>
                         <a href="#references">1</a>
                       </sup>{' '}
@@ -64,8 +64,8 @@ class VirtualCareFeature extends Component {
                   <span className="text--primary">
                     top 15 types of encounters
                   </span>{' '}
-                  (like Routine checkups, medication refills, joint pain)
-                  account for{' '}
+                  (like routine checkup, medication refill, joint pain) account
+                  for{' '}
                   <span className="text--primary">
                     50% of face-to-face clinical office visits
                   </span>
@@ -101,7 +101,7 @@ class VirtualCareFeature extends Component {
                 <td width="8%">% of Visits</td>
               </tr>
               <tr>
-                <td>Routine checkups</td>
+                <td>Routine checkup</td>
                 <td>
                   <Smartphone className="icon icon-smartphone" />
                 </td>
@@ -123,7 +123,7 @@ class VirtualCareFeature extends Component {
                 <td>24.5%</td>
               </tr>
               <tr>
-                <td>Medication refill</td>
+                <td>Medication, other and unspecifed kinds</td>
                 <td>
                   <Smartphone className="icon icon-smartphone" />
                 </td>
@@ -484,7 +484,8 @@ class VirtualCareFeature extends Component {
                 </h2>
                 <p className="text--gray">
                   On average, it takes 24 days and 59.21 minutes (see Table 1)
-                  for a patient to complete an office visit with their doctor.
+                  for a patient to complete an office visit with their
+                  clinician.
                 </p>
 
                 <table width="100%" className="text--gray">
@@ -501,7 +502,7 @@ class VirtualCareFeature extends Component {
                     </td>
                   </tr>
                   <tr>
-                    <td>Waiting for Dr in office</td>
+                    <td>Waiting for clinician in office</td>
                     <td>
                       41 minutes
                       <sup>
@@ -510,7 +511,7 @@ class VirtualCareFeature extends Component {
                     </td>
                   </tr>
                   <tr>
-                    <td>Consultation with Dr</td>
+                    <td>Consultation with clinician</td>
                     <td>
                       18.21 minutes
                       <sup>
@@ -548,7 +549,7 @@ class VirtualCareFeature extends Component {
                   <li>
                     For clinicians to provide timely care for more people.
                   </li>
-                  <li>and for personalized medicine and services.</li>
+                  <li>For personalized medicine and services.</li>
                 </ul>
               </div>
             </div>
@@ -562,7 +563,7 @@ class VirtualCareFeature extends Component {
                   The Virtual Care diagram documents which office visits could
                   be virtual, how they could be conducted, and what health
                   information is necessary. The diagram examines the top 15
-                  reasons for office visits from the{' '}
+                  reasons for clinical office visits from Table 11 in the{' '}
                   <a href="https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf">
                     National Ambulatory Medical Care Survey in 2015
                   </a>
@@ -583,7 +584,7 @@ class VirtualCareFeature extends Component {
                   for office visits down to 15.
                 </p>
                 <p className="text--gray">
-                  'Routine checkups' label is new and represents:
+                  'Routine checkup' label is new and represents:
                   <ul className="ul text--gray">
                     <li>Progress visit, not otherwise specifed</li>
                     <li>General medical examination</li>
@@ -610,26 +611,38 @@ class VirtualCareFeature extends Component {
                   visits.
                 </p>
                 <p className="text--gray">
-                  Routine checkups (24.4%) = Progress visit, not otherwise
-                  specifed (14.1%) + General medical examination (7.6%) +
-                  Counseling, not otherwise specifed (2.7%)
+                  Routine checkup (24.4% | 242,782,000) = Progress visit, not
+                  otherwise specifed (14.1% | 140,842,000) + General medical
+                  examination (7.6% | 75,412,000) + Counseling, not otherwise
+                  specifed (2.7% | 26,528,000)
                 </p>
                 <p className="text--gray">
-                  Joint pain (2.9%) = Knee symptoms (1.6%) + Shoulder symptoms
-                  (1.3%)
+                  Joint pain (2.9% | 28,860,000) = Knee symptoms (1.6% |
+                  16,241,000) + Shoulder symptoms (1.3% | 12,619,000)
                 </p>
                 <p className="text--gray">
-                  All other reasons (50.2%) = Knee symptoms (1.5%) + Shoulder
-                  symptoms (0.9%) + All other reasons (47.8%)
+                  All other reasons (50.2% | 498,058,000) = For other and
+                  unspecifed test results (1.5% | 15,159,000) + Other special
+                  examination (0.9% | 9,092,000) + All other reasons (47.8% |
+                  473,807,000)
                 </p>
                 <p className="text--gray">
                   The section below documents how we calculated the 46% (rounded
-                  down) of office visits that can be conducted virtually.
+                  down) and 459M (rounded up) of office visits that can be
+                  conducted virtually.
                 </p>
                 <p className="text--gray">
-                  46.4% virtual office visits = 49.8% top 15 office visits -
-                  3.4% for the two reasons that remain office visits
-                  (Gynecological exam 2.1% + Well baby exam 1.3%).
+                  Virtual office visits (46.4% | 458,798,000) = Routine checkup
+                  (24.5% | 242,782,000) + Medication, other and unspecifed kinds
+                  (3.6% | 35,232,000) + Joint pain (2.9% | 28,860,000) +
+                  Postoperative visit (2.6% | 25,441,000) + Cough (2.1% |
+                  20,984,000) + Prenatal examination, routine (1.8% |
+                  18,152,000) + Back pain (1.6% | 15,875,000) + Hypertension
+                  (1.6% | 15,762,000) + Stomach and abdominal pain, cramps, and
+                  spasms (1.5% | 15,026,000) + Diabetes mellitus (1.3% |
+                  12,432,000) + Skin rash, lesion (1.0% | 9,464,000) +
+                  Preoperative visit (1.0% | 9,443,000) + Symptoms referable to
+                  throat (0.9% | 9,346,000).
                 </p>
               </div>
             </div>
@@ -655,9 +668,9 @@ class VirtualCareFeature extends Component {
                       </span>
                     </p>
                     <p className="text--grey">
-                      Cameron is an Emergency Medicine physician with interests
-                      in improving healthcare through evidence-based practices,
-                      quality improvement, and clinical research.
+                      Cameron Gettel is an Emergency Medicine physician with
+                      interests in improving healthcare through evidence-based
+                      practices, quality improvement, and clinical research.
                     </p>
                   </div>
                 </div>
@@ -706,7 +719,7 @@ class VirtualCareFeature extends Component {
                       engineering. He operates, and is the director of, GoInvo.
                       He has worked at Apple, National Center for Supercomputing
                       Applications, Massachusetts Institute of Technology (MIT),
-                      and MITRE. Juhan co-founded Invo Boston in 2009 and is a
+                      and MITRE. Juhan co-founded GoInvo Boston in 2009 and is a
                       graduate of the University of Illinois at
                       Urbana-Champaign. He currently lectures at MIT.
                     </p>
@@ -718,8 +731,10 @@ class VirtualCareFeature extends Component {
                     GoInvo is a healthcare design company that crafts innovative
                     digital and physical solutions. Our deep expertise in Health
                     IT, Genomics, and Open Source health has delivered results
-                    for the National Institute of Health, Walgreens, Mount Sinai
-                    and Partners Healthcare.{' '}
+                    for the National Institute of Health, Walgreens, Mount
+                    Sinai, and Partners Healthcare.{' '}
+                  </p>
+                  <p className="text--gray">
                     <a href="/contact">Reach out with feedback.</a>
                   </p>
                 </div>

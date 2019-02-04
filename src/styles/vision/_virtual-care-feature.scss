@@ -82,37 +82,21 @@
   .number--lg {
     font-size: 80px;
     font-family: 'Adobe-Jenson-Pro', 'Georgia', serif;
-    line-height: 80px;
+    line-height: 70px;
   }
 
   .text-right,
   .text-below {
-    margin: 20px 0;
+    margin: 20px 0 0;
   }
 
   .text-below {
     margin-top: 10px;
   }
 
-  .text-right {
-    .stat {
-      text-align: center;
-      width: 260px;
-      @include mq($until: large) {
-        display: inline-block;
-        text-align: left;
-        width: auto;
-      }
-    }
-    .stat-desc {
-      width: 260px;
-      p {
-        margin-top: 0;
-      }
-      @include mq($until: large) {
-        display: inline-block;
-      }
-    }
+  .stat-desc {
+    width: 260px;
+    margin-top: -15px;
   }
 
   .text-below .stat {

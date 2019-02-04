@@ -11,7 +11,7 @@
       background-color: #f9f9f9;
     }
     td {
-      padding: 10px 0;
+      padding: 10px 5px;
     }
     td:first-child {
       padding-left: 20px;
@@ -35,6 +35,10 @@
     }
   }
 
+  td {
+    padding-right: 5px;
+  }
+
   h3 {
     &.text--lg {
       font-size: 20px;
@@ -50,6 +54,10 @@
 
   .pad-vertical--double:first-child {
     padding-bottom: 0;
+  }
+
+  .pad-vertical--double.vpc {
+    overflow-x: auto;
   }
 
   .pure-u-lg-1-2 {
@@ -74,6 +82,7 @@
   .number--lg {
     font-size: 80px;
     font-family: 'Adobe-Jenson-Pro', 'Georgia', serif;
+    line-height: 80px;
   }
 
   .text-right,

@@ -85,7 +85,7 @@ class VirtualCareFeature extends Component {
             </div>
           </div>
 
-          <div className="pad-vertical--double">
+          <div className="pad-vertical--double vpc">
             <table width="100%" className="virtual-diagram">
               <tr className="text--gray">
                 <td width="20%">Reason for Visit</td>

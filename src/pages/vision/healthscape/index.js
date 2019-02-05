@@ -5,6 +5,7 @@ import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
 
@@ -47,14 +48,16 @@ class Healthscape extends Component {
             <div className="max-width max-width--md content-padding">
               <div className="poster margin-top--double">
                 <Image
-                  src="/images/features/healthscape/healthscape-poster.jpg"
+                  src="/images/features/healthscape/healthscape-preview.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMediumMaxWidth}
                 />
               </div>
               <div className="button-group">
                 <a
-                  href=""
+                  href={mediaUrl(
+                    '/pdf/vision/healthscape/healthscape-preview.pdf'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
@@ -62,20 +65,20 @@ class Healthscape extends Component {
                   Download Poster
                 </a>
               </div>
-              <div>
-                <p className="text--gray">
+              <div className="text--sm text--gray">
+                <p>
                   *Tax exclusion $ amount is not added into the $3,500B national
                   health expenditure. Though it is a part of expenditure, it is
                   not included in many data sources and is unclear how it should
                   be best organized without causing contradictions in the
                   expenditure breakdowns.
                 </p>
-                <p className="text--gray">
+                <p>
                   *$168B in research is a higher $ amount than the category
                   breakdowns within it, as the $ amounts are taken from sources
                   from differing years.
                 </p>
-                <p className="text--gray">
+                <p>
                   *All $ amounts have been rounded to the nearest billionth for
                   readability and scanning purposes.
                 </p>
@@ -106,9 +109,11 @@ class Healthscape extends Component {
                 government to individual patients. Healthscape also provides a
                 canvas for professionals to use, projecting their services and
                 products on the map, to more effectively drive development that
-                aligns with our patient health avlues.
+                aligns with our patient health values.
               </p>
-              <h3 className="header--md">We’d love your feedback</h3>
+              <h3 className="header--md margin-top--double">
+                We’d love your feedback
+              </h3>
               <p>
                 The current draft of Healthscape maps some major players onto
                 one visualization. However, there are many parts of the system
@@ -136,32 +141,32 @@ class Healthscape extends Component {
             <div className="max-width max-width--md content-padding">
               <div id="methodology">
                 <h1 className="header--xl">Methodology</h1>
-                <p className="text--gray">
+                <p>
                   Below is a description of the methodology used in creating the
                   Healthscape visualization. It is updated based on continuing
                   research and feedback.
                 </p>
-                <h4 className="header--sm margin-bottom--half">
+                <h4 className="header--sm margin-bottom--half margin-top--double">
                   v1 - 30.Jan.2019
                 </h4>
-                <p className="text--gray">
+                <p>
                   The components of the healthcare system to include in the
                   visualization were primarily based on what public data was
                   available. Some expenditures were based on older estimates due
                   to difficulty in finding up to date data (such as
                   administrative costs for private health insurance).
                 </p>
-                <p className="text--gray">
+                <p>
                   Other expenditures, such as numbers on fraud waste and abuse
                   for health insurance programs, are best guesses based on a
                   range of estimates as referenced below.
                 </p>
 
-                <p>
-                  <span className="text--gray">
+                <p className="margin-top--double">
+                  <span className="text--gray text--sm">
                     Column 1, National health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$3,500B</strong>, 2017
                       National Health Expenditure
@@ -173,10 +178,10 @@ class Healthscape extends Component {
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 2, National health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$2,600B</strong>, 2017
                       National health insurance
@@ -216,10 +221,10 @@ class Healthscape extends Component {
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 3, National health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$1,200B</strong>, 2017
                       Private health insurance
@@ -259,26 +264,29 @@ class Healthscape extends Component {
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 4, National health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$1,030.8B</strong>, 2017
                       Patient benefits
                       <sup>
                         <a href="#references">5</a>
                       </sup>
-                    </li>
-                    <li>
-                      <strong className="text--primary">$3,500B</strong>, 2017
-                      private health insurance expenditure
-                      <sup>
-                        <a href="#references">1</a>
-                      </sup>
-                      minus <strong className="text--primary">$169.2B</strong>{' '}
-                      2017 estimated administrative costs in private health
-                      insurance.
+                      <ul>
+                        <li>
+                          <strong className="text--primary">$3,500B</strong>,
+                          2017 private health insurance expenditure
+                          <sup>
+                            <a href="#references">1</a>
+                          </sup>
+                          minus{' '}
+                          <strong className="text--primary">$169.2B</strong>{' '}
+                          2017 estimated administrative costs in private health
+                          insurance.
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <strong className="text--primary">$169.2B</strong>, 2017
@@ -286,19 +294,21 @@ class Healthscape extends Component {
                       <sup>
                         <a href="#references">5</a>
                       </sup>
-                    </li>
-                    <li>
-                      <strong className="text--primary">14.1%</strong> in
-                      private health insurance administrative costs
-                      <sup>
-                        <a href="#references">5</a>
-                      </sup>
-                      , multiplied by{' '}
-                      <strong className="text--primary">$3,500B</strong> 2017
-                      expenditure
-                      <sup>
-                        <a href="#references">1</a>
-                      </sup>
+                      <ul>
+                        <li>
+                          <strong className="text--primary">14.1%</strong> in
+                          private health insurance administrative costs
+                          <sup>
+                            <a href="#references">5</a>
+                          </sup>
+                          , multiplied by{' '}
+                          <strong className="text--primary">$3,500B</strong>{' '}
+                          2017 expenditure
+                          <sup>
+                            <a href="#references">1</a>
+                          </sup>
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <strong className="text--primary">$804.51B</strong>, 2017
@@ -353,10 +363,10 @@ class Healthscape extends Component {
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 5, National health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$534.64B</strong>, 2018
                       Insurance claims & indemnities for Medicare
@@ -384,15 +394,17 @@ class Healthscape extends Component {
                       <sup>
                         <a href="#references">8</a>
                       </sup>
-                    </li>
-                    <li>
-                      <strong className="text--primary">12.2%</strong> is mean
-                      administrative loss % for MCOs, multiplied by
-                      <strong className="text--primary">$582B</strong> 2017
-                      Medicaid expenditure
-                      <sup>
-                        <a href="#references">7</a>
-                      </sup>
+                      <ul>
+                        <li>
+                          <strong className="text--primary">12.2%</strong> is
+                          mean administrative loss % for MCOs, multiplied by
+                          <strong className="text--primary">$582B</strong> 2017
+                          Medicaid expenditure
+                          <sup>
+                            <a href="#references">7</a>
+                          </sup>
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <strong className="text--primary">$511B</strong>, 2017
@@ -400,24 +412,29 @@ class Healthscape extends Component {
                       <sup>
                         <a href="#references">8</a>
                       </sup>
+                      <ul>
+                        <li>
+                          <strong className="text--primary">$582B</strong>, 2017
+                          Medicaid expenditure
+                          <sup>
+                            <a href="#references">7</a>
+                          </sup>
+                          , minus{' '}
+                          <strong className="text--primary">$71B</strong> 2017
+                          administrative costs of Medicaid
+                          <sup>
+                            <a href="#references">8</a>
+                          </sup>
+                          , minus{' '}
+                          <strong className="text--primary">$46B</strong> 2017
+                          administrative costs of Medicaid
+                          <sup>
+                            <a href="#references">9</a>
+                          </sup>
+                        </li>
+                      </ul>
                     </li>
-                    <li>
-                      <strong className="text--primary">$582B</strong>, 2017
-                      Medicaid expenditure
-                      <sup>
-                        <a href="#references">7</a>
-                      </sup>
-                      , minus <strong className="text--primary">$71B</strong>{' '}
-                      2017 administrative costs of Medicaid
-                      <sup>
-                        <a href="#references">8</a>
-                      </sup>
-                      , minus <strong className="text--primary">$46B</strong>{' '}
-                      2017 administrative costs of Medicaid
-                      <sup>
-                        <a href="#references">9</a>
-                      </sup>
-                    </li>
+
                     <li>
                       <strong className="text--primary">$45.8B</strong>, 2014
                       Fraud, waste, abuse within Medicaid
@@ -442,47 +459,53 @@ class Healthscape extends Component {
                     <li>
                       <strong className="text--primary">$62B</strong>, 2017
                       Other health insurance programs not listed here
-                    </li>
-                    <li>
-                      <strong className="text--primary">$133B</strong>, 2017
-                      Other health insurance programs
-                      <sup>
-                        <a href="#references">1</a>
-                      </sup>
-                      , minus <strong className="text--primary">$63B</strong>{' '}
-                      2017 TRICARE
-                      <sup>
-                        <a href="#references">10</a>
-                      </sup>
-                      , minus <strong className="text--primary">$18B</strong>{' '}
-                      2017 CHIP
-                      <sup>
-                        <a href="#references">11</a>
-                      </sup>
+                      <ul>
+                        <li>
+                          <strong className="text--primary">$133B</strong>, 2017
+                          Other health insurance programs
+                          <sup>
+                            <a href="#references">1</a>
+                          </sup>
+                          , minus{' '}
+                          <strong className="text--primary">$63B</strong> 2017
+                          TRICARE
+                          <sup>
+                            <a href="#references">10</a>
+                          </sup>
+                          , minus{' '}
+                          <strong className="text--primary">$18B</strong> 2017
+                          CHIP
+                          <sup>
+                            <a href="#references">11</a>
+                          </sup>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 6, National health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$454.14B</strong>, 2018
                       Patient benefits for Medicare
                       <sup>
                         <a href="#references">12</a>
                       </sup>
-                    </li>
-                    <li>
-                      <strong className="text--primary">$534.64B</strong>,
-                      Insurance claims & indemnities, minus
-                      <strong className="text--primary">$80.5B</strong> 2018
-                      fraud, waste, and abuse
-                      <sup>
-                        <a href="#references">12</a>
-                      </sup>
+                      <ul>
+                        <li>
+                          <strong className="text--primary">$534.64B</strong>,
+                          Insurance claims & indemnities, minus
+                          <strong className="text--primary">$80.5B</strong> 2018
+                          fraud, waste, and abuse
+                          <sup>
+                            <a href="#references">12</a>
+                          </sup>
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <strong className="text--primary">$80.5B</strong>, 2018
@@ -490,28 +513,30 @@ class Healthscape extends Component {
                       <sup>
                         <a href="#references">12</a>
                       </sup>
-                    </li>
-                    <li>
-                      <strong className="text--primary">10%</strong> estimated
-                      fraud, waste, and abuse in 2012
-                      <sup>
-                        <a href="#references">12</a>
-                      </sup>
-                      , multiplied by{' '}
-                      <strong className="text--primary">$804.51B</strong>{' '}
-                      Medicare expenditure
-                      <sup>
-                        <a href="#references">6</a>
-                      </sup>
+                      <ul>
+                        <li>
+                          <strong className="text--primary">10%</strong>{' '}
+                          estimated fraud, waste, and abuse in 2012
+                          <sup>
+                            <a href="#references">12</a>
+                          </sup>
+                          , multiplied by{' '}
+                          <strong className="text--primary">$804.51B</strong>{' '}
+                          Medicare expenditure
+                          <sup>
+                            <a href="#references">6</a>
+                          </sup>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 1, Personal health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$2,800B</strong>, 2016
                       Personal health expenditure
@@ -523,10 +548,10 @@ class Healthscape extends Component {
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 2, Personal health expenditure section
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$1,070B</strong>, 2016
                       Hospital, personal health expenditure
@@ -574,10 +599,10 @@ class Healthscape extends Component {
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 1, Health and human services expenditure
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$1,110B</strong>, 2018
                       Health and human services expenditure
@@ -589,10 +614,10 @@ class Healthscape extends Component {
                 </p>
 
                 <p>
-                  <span className="text--gray">
+                  <span className="text--gray text--sm">
                     Column 2, Health and human services expenditure
                   </span>
-                  <ul className="ul">
+                  <ul className="ul margin-top--none">
                     <li>
                       <strong className="text--primary">$1T</strong>, 2018
                       Centers for Medicare & Medicaid Services

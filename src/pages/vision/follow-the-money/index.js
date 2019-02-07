@@ -10,7 +10,7 @@ import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Following Money in Healthcare',
+  metaTitle: 'Follow the Money',
   metaDescription:
     'Tracking the allocation and flow of money in the US healthcare system to reveal connections within.',
   heroImage: '/images/features/healthscape/healthscape-hero.jpg',
@@ -24,7 +24,7 @@ class Healthscape extends Component {
         <div className="healthscape">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">Following the Money in Healthcare</h1>
+              <h1 className="header--xl">Follow the Money</h1>
               <h3 className="header--md">
                 To Understand the Healthcare system, follow the money
               </h3>

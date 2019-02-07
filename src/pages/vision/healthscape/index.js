@@ -13,7 +13,7 @@ const frontmatter = {
   metaTitle: 'Healthscape',
   metaDescription:
     'A map of the allocation and flow of money in the US healthcare system and its components.',
-  heroImage: '/images/services/healthscape-hero.jpg',
+  heroImage: '/images/features/healthscape/healthscape-hero.jpg',
 }
 
 class Healthscape extends Component {

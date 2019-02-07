@@ -337,3 +337,168 @@ Wow I was right. A quote.
 ### Wrapping up
 
 Make commits to your branch adding content to your case study as you go, and make sure to push your branch to the GitHub repo. When finished, seek assistance getting your case study code reviewed and merged into the production website.
+
+## Adding a simple feature
+
+First and foremost, remember to make a new branch in Git. It is reasonable to name it something like `feature-<name>`.
+
+### Make a new file
+
+### Add the frontmatter
+
+```
+import React, { Component } from 'react'
+
+import Layout from '../../../components/layouts/layout'
+import Hero from '../../../components/hero'
+import Image from '../../../components/image'
+import Divider from '../../../components/divider'
+import References from '../../../components/references'
+import { mediaUrl } from '../../../helpers'
+
+import config from '../../../../config'
+
+const frontmatter = {
+  metaTitle: 'Where Your Health Dollars Go',
+  metaDescription:
+    'Tracking the allocation and flow of money in the US healthcare system to reveal connections within.',
+  heroImage: '/images/features/healthscape/healthscape-hero.jpg',
+}
+```
+
+You can also look at other existing case studies as examples.
+
+Let's break down the fields:
+
+1. `React` (required)
+   Allows React to work its magic.
+2. `Layout` (required)
+   More magic here. Layout magic.
+3. `Hero` (required)
+   Displays the hero standard to the rest of the GoInvo site.
+4. `Image`
+   Any good feature has an image. We'll go over how to add images below.
+5. `Divider`
+   If you want to use the `<Divider />` graphic consistent with the rest of the GoInvo site.
+6. `References`
+   Any good feature also has references. We'll go over how to add images below.
+7. `mediaURL`
+   Handles access to media items. For example, if we have a poster we want readers to be able to download, we store those in a media folder (covered below) and set up a download link or button.
+8. `config` (required)
+   More sorcery
+9. `metaTitle`
+   This is the title of your feature. You want to make this somewhat short, ideally <30 characters. Should match the header text and data in the `features.json` (We'll cover this in a bit too)
+10. `metaDescription`
+    A brief description about your feature. With the title, date, and tags, this should fit comfortably in a small card on the Vision page. Should match the header text and data in the `features.json`
+11. `heroImage`
+    Link to the hero image for your feature. We'll cover adding this with images.
+
+### Basic Styling
+
+We use classes to impart header styles defined in the GoInvo style guide. The typical breakdown is as follows:
+
+```
+h1 className="header--xl"
+h2 className="header--lg"
+h3 className="header-md"
+h4 className="header-sm"
+```
+
+Try to use one `<h1>` at the beginning of your feature to showcase the title. For following titles that you want to appear the same size, you can use an <h2> with the header-xl class.
+
+Try to use header-md only for categories. For descriptive titles, use header-sm.
+
+Adding buttons is as straightforward as adding a couple button classes to a link, but there's a button-group class to contain multiple buttons at once or centers a single button.
+
+```
+<div className="button-group">
+  <a
+    href={mediaUrl(
+      '/pdf/vision/loneliness-in-our-human-code/loneliness-in-our-human-code.pdf'
+    )}
+    className="button button--primary margin-top--double margin-bottom--double"
+  >
+    Download PDF
+  </a>
+</div>
+```
+
+### Adding images
+
+Pretty much the same as adding images for case studies. We'll just restate some of the basics. When exporting your images, you want them to be 2000px wide, progressive jpg, and ideally 72dpi (more pixels per inch will increase the filesize). Save them into our dropbox folder at Graphics/goinvo.com/images/features/[your-feature]/[your-image.jpg] using lowercase and dash separation. Add your hero image here too.
+
+You'll need AWS permissions to do this, so if you don't have what you need, check with Craig, Eric, or Jen. To upload your images, open a terminal in the goinvo.com dropbox folder and run
+
+```
+$ yarn upload
+```
+
+When adding the image to your feature, it will look like this:
+
+```
+<Image
+  src="/images/features/determinants-of-health/determinants-of-health-poster.jpg"
+  className="image--max-width"
+  sizes={config.sizes.fullInsideMediumMaxWidth}
+/>
+```
+
+### Adding links
+
+When linking away from the site, we generally want to open up a new tab to not disturb the reader's current position, so add `target="_blank"`. When linking externally, to a site that isn't secure (with https:// in the address), add `rel="noopener noreferrer"`
+
+```
+<a
+  href="https://github.com/goinvo/HealthDeterminants/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GitHub
+</a>
+```
+
+### Adding media
+
+So far, media has included pdf downloads of posters or reports associated with the feature. Unlike when adding images, these are not relegated to 2000px width and jpg format. Instead, these would typically be printable pdf quality. You would save these out similarly to Dropbox, in Graphics/goinvo.com/pdf/[your-feature]/[your-file.pdf]. These get uploaded with the `yarn upload` command as well.
+
+When adding a link to the media in your feature, it would look as follows:
+
+```
+<a href={mediaUrl(
+      '/pdf/vision/healthscape/healthscape-preview.pdf'
+    )}
+   target="_blank"
+   rel="noopener noreferrer"
+>Download</a>
+```
+
+### Adding references
+
+To add linkable references in your text that, when clicked, will scroll down to the references section.
+
+```
+<sup>
+  <a href="#references">8,18</a>
+</sup>
+```
+
+You would list your references at the bottom of your feature, just after the Authors section, and preferably with a `<Divider />` separating the two. When rendered, references will be listed in an ordered list format. For links, you need only add the url, such as https://github.com and the references component will take care of the rest. It is also helpful and good citation practice to indicate when the reference was last accessed during research for the feature.
+
+```
+<Divider />
+
+<div id="references">
+  <References
+    references={[
+      {
+        title: '[citation]',
+        link: '[url if there is one]'
+      },
+      {
+        title: '[citation]'
+      }
+    ]}
+  />
+</div>
+
+```

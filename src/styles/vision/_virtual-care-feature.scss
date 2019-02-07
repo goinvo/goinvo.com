@@ -1,15 +1,21 @@
 .virtual-care-feature {
-  .icon {
-    height: 20%;
-    width: 20%;
-    max-height: 30px;
-    min-width: 23px;
-  }
-
-  table.virtual-diagram {
+  table {
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+    td {
+      vertical-align: top;
+      padding-right: 5px;
+    }
+    .icon {
+      height: 20%;
+      width: 20%;
+      max-height: 30px;
+      min-width: 23px;
+    }
+  }
+
+  table.virtual-diagram {
     td {
       padding: 10px 5px;
     }
@@ -29,14 +35,10 @@
     border-top: 1px solid #eee;
     margin: 20px 0;
     td {
-      padding: 20px 0;
+      padding: 20px 5px;
       vertical-align: top;
       text-align: center;
     }
-  }
-
-  td {
-    padding-right: 5px;
   }
 
   h3 {
@@ -87,7 +89,7 @@
 
   .text-right,
   .text-below {
-    margin: 20px 0 0;
+    margin: 20px 0 0 0;
   }
 
   .text-below {

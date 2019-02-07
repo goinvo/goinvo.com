@@ -33,7 +33,7 @@ class VirtualCareFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div className="virtual-care-title-area">
                 <h1 className="header--xl">Virtual Care</h1>
-                <h2 className="text--primary">
+                <h2>
                   Half of face-to-face clinical office visits can be conducted
                   virtually.
                 </h2>
@@ -59,28 +59,25 @@ class VirtualCareFeature extends Component {
                     <p className="text--gray">can be conducted virtually</p>
                   </div>
                 </div>
-                <h3 className="header--md text--lg margin-bottom--half">
-                  The{' '}
-                  <span className="text--primary">
-                    top 15 types of encounters
-                  </span>{' '}
-                  (like routine checkup, medication refill, joint pain) account
-                  for{' '}
-                  <span className="text--primary">
-                    50% of face-to-face clinical office visits
-                  </span>
-                  .
-                </h3>
-                <p className="text--gray">
+                <h4 className="header--sm margin-bottom--half">
+                  The top 15 types of encounters (like routine checkup,
+                  medication refill, joint pain) account for 50% of face-to-face
+                  clinical office visits.
+                </h4>
+                <p className="text--gray margin-top--none">
                   Armed with a smartphone or device, 13 of the top 15 encounters
                   can be virtual visits.
                   <br />
                   The other two visits that remain face-to-face are
                   Gynecological examinations and Well baby examinations.
                 </p>
-                <h2 className="text--primary">
-                  The Top 15 Encounters Breakdown
-                </h2>
+                <h2>The Top 15 Encounters Breakdown</h2>
+
+                <p className="text--gray">
+                  The table below documents whether an encounter can be virtual
+                  or face-to-face, how it would be conducted using a spectrum of
+                  tools, and what health information is necessary to collect.
+                </p>
               </div>
             </div>
           </div>
@@ -483,14 +480,13 @@ class VirtualCareFeature extends Component {
                   </sup>
                 </h2>
                 <p className="text--gray">
-                  On average, it takes 24 days and 59.21 minutes (see Table 1)
-                  for a patient to complete an office visit with their
-                  clinician.
+                  On average, it takes 24 days and 59.21 minutes for a patient
+                  to complete an office visit with their clinician.
                 </p>
 
                 <table width="100%" className="text--gray">
                   <tr>
-                    <td>Table 1. Time-to-diagnosis</td>
+                    <td colspan="2">Time-to-diagnosis</td>
                   </tr>
                   <tr>
                     <td>Waiting for appointment</td>
@@ -560,10 +556,10 @@ class VirtualCareFeature extends Component {
               <div id="methodology">
                 <h1 className="header--xl">Methodology</h1>
                 <p className="text--gray">
-                  The Virtual Care diagram documents which office visits could
-                  be virtual, how they could be conducted, and what health
-                  information is necessary. The diagram examines the top 15
-                  reasons for clinical office visits from Table 11 in the{' '}
+                  The Virtual Care diagram documents which clinical office
+                  visits could be virtual, how they could be conducted, and what
+                  health information is necessary. The diagram examines the top
+                  15 reasons for clinical office visits from Table 11 in the{' '}
                   <a href="https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf">
                     National Ambulatory Medical Care Survey in 2015
                   </a>

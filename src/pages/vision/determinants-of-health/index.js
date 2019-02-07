@@ -44,7 +44,7 @@ class DeterminantsOfHealthFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Determinants of Health</h1>
-              <h3 className="header--md">Health is more than medical care</h3>
+              <h4 className="header--sm">Health is more than medical care</h4>
               <p className="text--grey">
                 89% of health occurs outside of the clinical space through our
                 genetics, behavior, environment and social circumstances. These
@@ -112,9 +112,9 @@ class DeterminantsOfHealthFeature extends Component {
 
             <div className="max-width max-width--md content-padding">
               <div>
-                <h1 className="header--xl text--center margin-top--double margin-bottom--half">
+                <h2 className="header--lg text--center margin-top--double margin-bottom--half">
                   Tap the categories to explore
-                </h1>
+                </h2>
                 <div id="determinants-chart">
                   <Chart
                     selectedIndex={this.state.selectedDeterminantIndex}
@@ -208,8 +208,8 @@ class DeterminantsOfHealthFeature extends Component {
 
               <Divider />
 
-              <h2 className="margin-top--double">
-                Working Draft of Determinants Compared to Spending
+              <h2 className="header--xl text--center margin-top--double">
+                Determinants Compared to Spending
               </h2>
               <Image
                 src="/images/features/determinants-of-health/sdoh-spend-mockup.jpg"
@@ -239,9 +239,9 @@ class DeterminantsOfHealthFeature extends Component {
                 </div>
               </div>
 
-              <h3 className="header--sm margin-bottom--half">
+              <h2 className="header--lg text--center margin-bottom--half margin-top--double">
                 We'd Like Your Feedback
-              </h3>
+              </h2>
               <p className="text--gray">
                 We’ve mapped the most recent available federal, state, and
                 relevant private intervention spending to the determinants of
@@ -260,7 +260,9 @@ class DeterminantsOfHealthFeature extends Component {
                 is not available it is not displayed.
               </p>
 
-              <h4 className="header--sm margin-bottom--half">About GoInvo</h4>
+              <h4 className="header--sm margin-bottom--half margin-top--double">
+                About GoInvo
+              </h4>
               <p className="text--gray">
                 GoInvo is a healthcare design company that crafts innovative
                 digital and physical solutions. Our deep expertise in Health IT,
@@ -275,7 +277,7 @@ class DeterminantsOfHealthFeature extends Component {
           <div className="background--blue pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div id="methodology">
-                <h1 className="header--xl">Methodology</h1>
+                <h2 className="header--xl text--center">Methodology</h2>
                 <p className="text--gray">
                   Below is a description of the methodology used in creating the
                   Determinants of Health visualization. It is also a record of
@@ -283,9 +285,9 @@ class DeterminantsOfHealthFeature extends Component {
                   on continuing research and feedback. Thank you to those who
                   have reached out and helped identify areas to improve.
                 </p>
-                <h4 className="header--sm margin-bottom--half">
+                <h3 className="header--md margin-bottom--half margin-top--double">
                   v1 - 26.Jul.2017
-                </h4>
+                </h3>
                 <p className="text--gray">
                   The 5 main determinants of health (genetics, medical care,
                   social circumstances, environment, and individual behavior)
@@ -424,25 +426,23 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Behavior:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (50 + 38 + 40 + 39 + 36 + 45 + 30) / 7 = 39.71*
                   </strong>
                   <br />
                   Social:{' '}
-                  <strong className="text--primary">
-                    (15 + 40) / 2 = 27.5
-                  </strong>
+                  <strong className="text--black">(15 + 40) / 2 = 27.5</strong>
                   <br />
                   Genetics:{' '}
-                  <strong className="text--primary">(20 + 30) / 2 = 25</strong>
+                  <strong className="text--black">(20 + 30) / 2 = 25</strong>
                   <br />
                   Medical care:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (10 + 10 + 20) / 3 = 13.33
                   </strong>
                   <br />
                   Environment:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (20 + 7 + 5 + 5.4 + 3 + 10) / 6 = 8.4
                   </strong>
                 </p>
@@ -457,32 +457,28 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Behavior:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     39.71 / 113.94 = 34.85%
                   </strong>
                   <br />
                   Social:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     27.5 / 113.94 = 24.14%
                   </strong>
                   <br />
                   Genetics:{' '}
-                  <strong className="text--primary">
-                    25 / 113.94 = 21.94%
-                  </strong>
+                  <strong className="text--black">25 / 113.94 = 21.94%</strong>
                   <br />
                   Medical care:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     13.33 / 113.94 = 11.70%
                   </strong>
                   <br />
                   Environment:{' '}
-                  <strong className="text--primary">
-                    8.4 / 113.94 = 7.37%
-                  </strong>
+                  <strong className="text--black">8.4 / 113.94 = 7.37%</strong>
                   <br />
                   Total:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     34.85 + 24.14 + 21.94 + 11.70 + 7.37 = 100%
                   </strong>
                 </p>
@@ -491,24 +487,24 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Behavioral determinants at{' '}
-                  <strong className="text--primary">35%.</strong>
+                  <strong className="text--black">35%.</strong>
                   <br />
                   Social determinants at{' '}
-                  <strong className="text--primary">24%.</strong>
+                  <strong className="text--black">24%.</strong>
                   <br />
                   Genetic determinants at{' '}
-                  <strong className="text--primary">22%.</strong>
+                  <strong className="text--black">22%.</strong>
                   <br />
                   Medical care determinants at{' '}
-                  <strong className="text--primary">12%.</strong>
+                  <strong className="text--black">12%.</strong>
                   <br />
                   Environmental determinants at{' '}
-                  <strong className="text--primary">7%.</strong>
+                  <strong className="text--black">7%.</strong>
                 </p>
 
-                <h4 className="header--sm margin-bottom--half">
+                <h3 className="header--md margin-bottom--half margin-top--double">
                   v2 - 30.Aug.2017
-                </h4>
+                </h3>
                 <p className="text--gray">
                   The following are updated calculations for the relative
                   contributions of each of the determinant categories. The
@@ -554,28 +550,28 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Behavior:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (50% [9] + 42% [10] + 40% [11] + 45% [12] + 30% [15]) / 5 =
                     41.4%
                   </strong>
                   <br />
                   Social:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (15% [11] + 40% [15]) / 2 = 27.5%
                   </strong>
                   <br />
                   Genetics:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (20% [9] + 30% [11]) / 2 = 25%
                   </strong>
                   <br />
                   Medical care:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (10% [9] + 10% [11] + 20% [15]) / 3 = 13.33...%
                   </strong>
                   <br />
                   Environment:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (20% [9] + 3% [10] + 5% [11] + 3.9% [14] + 10% [15]) / 5 =
                     8.38%
                   </strong>
@@ -598,32 +594,32 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Total value:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     41.4% + 27.5% + 25% + 13.33...% + 8.38% = 115.6133
                   </strong>
                   <br />
                   Behavior:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     41.4% / 115.6133... = 35.81%
                   </strong>
                   <br />
                   Social:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     27.5% / 115.6133... = 23.79%
                   </strong>
                   <br />
                   Genetics:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     25% / 115.6133... = 21.62%
                   </strong>
                   <br />
                   Medical care:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     13.33...% / 115.6133... = 11.53%
                   </strong>
                   <br />
                   Environment:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     8.38% / 115.6133... = 7%
                   </strong>
                 </p>
@@ -632,24 +628,24 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Behavioral determinants at{' '}
-                  <strong className="text--primary">36%</strong>
+                  <strong className="text--black">36%</strong>
                   <br />
                   Social determinants at{' '}
-                  <strong className="text--primary">24%</strong>
+                  <strong className="text--black">24%</strong>
                   <br />
                   Genetic determinants at{' '}
-                  <strong className="text--primary">22%</strong>
+                  <strong className="text--black">22%</strong>
                   <br />
                   Medical care determinants at{' '}
-                  <strong className="text--primary">11%</strong> (rounded down)
+                  <strong className="text--black">11%</strong> (rounded down)
                   <br />
                   Environmental determinants at{' '}
-                  <strong className="text--primary">7%</strong>
+                  <strong className="text--black">7%</strong>
                 </p>
 
-                <h4 className="header--sm margin-bottom--half">
+                <h3 className="header--md margin-bottom--half margin-top--double">
                   v3 - 15.Nov.2018
-                </h4>
+                </h3>
                 <p className="text--gray">
                   The following is a more detailed explanation of the values
                   used to find the relative contributions of each of the
@@ -661,28 +657,28 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Behavior:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (50% [9] + 43% [10] + 40% [11] + 43% [12] + 30% [15]) / 5 =
                     41.20%
                   </strong>
                   <br />
                   Social:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (15% [11] + 40% [15]) / 2 = 27.50%
                   </strong>
                   <br />
                   Genetics:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (20% [9] + 30% [11]) / 2 = 25.00%
                   </strong>
                   <br />
                   Medical care:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (10% [9] + 10% [11] + 20% [15]) / 3 = 13.33...%
                   </strong>
                   <br />
                   Environment:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     (20% [9] + 3% [10] + 5% [11] + 4% [14] + 10% [15]) / 5 =
                     8.40%
                   </strong>
@@ -730,32 +726,32 @@ class DeterminantsOfHealthFeature extends Component {
                 </p>
                 <p className="text--gray">
                   Total value:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     41.2% + 27.5% + 25% + 13.33...% + 8.38% = 115.413...
                   </strong>
                   <br />
                   Behavior:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     41.2% / 115.413... = 35.70%
                   </strong>
                   <br />
                   Social:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     27.5% / 115.413... = 23.83%
                   </strong>
                   <br />
                   Genetics:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     25% / 115.413... = 21.66%
                   </strong>
                   <br />
                   Medical care:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     13.33...% / 115.413... = 11.55%
                   </strong>
                   <br />
                   Environment:{' '}
-                  <strong className="text--primary">
+                  <strong className="text--black">
                     8.4% / 115.413... = 7.28%
                   </strong>
                 </p>
@@ -765,23 +761,25 @@ class DeterminantsOfHealthFeature extends Component {
 
                 <p className="text--gray">
                   Behavioral determinants at{' '}
-                  <strong className="text--primary">36%</strong>
+                  <strong className="text--black">36%</strong>
                   <br />
                   Social determinants at{' '}
-                  <strong className="text--primary">24%</strong>
+                  <strong className="text--black">24%</strong>
                   <br />
                   Genetic determinants at{' '}
-                  <strong className="text--primary">22%</strong>
+                  <strong className="text--black">22%</strong>
                   <br />
                   Medical care determinants at{' '}
-                  <strong className="text--primary">11%</strong> (rounded down)
+                  <strong className="text--black">11%</strong> (rounded down)
                   <br />
                   Environmental determinants at{' '}
-                  <strong className="text--primary">7%</strong> (rounded down)
+                  <strong className="text--black">7%</strong> (rounded down)
                 </p>
 
-                <h3 className="header--md">Additional Change</h3>
-                <h4 className="header--sm margin-bottom--half">14.Feb.2018</h4>
+                <h2 className="header--lg text--center margin-top--double">
+                  Additional Change
+                </h2>
+                <h3 className="header--md">14.Feb.2018</h3>
                 <p className="text--gray">
                   Race and ethnicity have been removed from the biology section
                   due to a lack of standard objective criteria in the scientific
@@ -841,7 +839,7 @@ class DeterminantsOfHealthFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>
-                <h1 className="header--xl">Authors</h1>
+                <h2 className="header--xl text--center">Authors</h2>
 
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">

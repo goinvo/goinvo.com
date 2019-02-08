@@ -13,15 +13,15 @@ const frontmatter = {
   metaTitle: 'Where Your Health Dollars Go',
   metaDescription:
     'Tracking the allocation and flow of money in the US healthcare system to reveal connections within.',
-  heroImage: '/images/features/healthscape/healthscape-hero.jpg',
+  heroImage: '/images/features/healthcare-dollars/healthcare-dollars-hero.jpg',
 }
 
-class Healthscape extends Component {
+class HealthcareDollars extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
-        <div className="healthscape">
+        <div className="healthcare-dollars">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Where Your Health Dollars Go</h1>
@@ -47,19 +47,25 @@ class Healthscape extends Component {
 
             <div className="max-width max-width--md content-padding">
               <div className="poster margin-top--double">
-                <Image
-                  src="/images/features/healthscape/healthscape-preview.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMediumMaxWidth}
-                />
+                <a
+                  href={mediaUrl(
+                    '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
+                  )}
+                  target="_blank"
+                >
+                  <Image
+                    src="/images/features/healthcare-dollars/healthcare-dollars-preview.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullInsideMediumMaxWidth}
+                  />
+                </a>
               </div>
               <div className="button-group">
                 <a
                   href={mediaUrl(
-                    '/pdf/vision/healthscape/healthscape-preview.pdf'
+                    '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
                   )}
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
                 >
                   Download Poster
@@ -124,7 +130,7 @@ class Healthscape extends Component {
               <p>
                 Send feedback on this draft to{' '}
                 <a
-                  href="mailto:hello@goinvo.com?subject=Healthscape"
+                  href="mailto:hello@goinvo.com?subject=Healthcare%20Dollars"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -157,7 +163,7 @@ class Healthscape extends Component {
                   administrative costs for private health insurance).
                 </p>
                 <p>
-                  Other expenditures, such as numbers on fraud waste and abuse
+                  Other expenditures, such as numbers on fraud, waste, and abuse
                   for health insurance programs, are best guesses based on a
                   range of estimates as referenced below.
                 </p>
@@ -413,8 +419,8 @@ class Healthscape extends Component {
                     </li>
 
                     <li>
-                      <strong>$45.8B</strong>, 2014 Fraud, waste, abuse within
-                      Medicaid
+                      <strong>$45.8B</strong>, 2014 Fraud, waste, and abuse
+                      within Medicaid
                       <sup>
                         <a href="#references">9</a>
                       </sup>
@@ -766,4 +772,4 @@ class Healthscape extends Component {
   }
 }
 
-export default Healthscape
+export default HealthcareDollars

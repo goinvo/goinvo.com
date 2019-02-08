@@ -45,21 +45,22 @@ class HealthcareDollars extends Component {
               </p>
             </div>
 
+            <div className="poster margin-top--double">
+              <a
+                href={mediaUrl(
+                  '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
+                )}
+                target="_blank"
+              >
+                <Image
+                  src="/images/features/healthcare-dollars/healthcare-dollars-preview.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMediumMaxWidth}
+                />
+              </a>
+            </div>
+
             <div className="max-width max-width--md content-padding">
-              <div className="poster margin-top--double">
-                <a
-                  href={mediaUrl(
-                    '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
-                  )}
-                  target="_blank"
-                >
-                  <Image
-                    src="/images/features/healthcare-dollars/healthcare-dollars-preview.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullInsideMediumMaxWidth}
-                  />
-                </a>
-              </div>
               <div className="button-group">
                 <a
                   href={mediaUrl(

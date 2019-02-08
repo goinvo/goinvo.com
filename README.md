@@ -393,6 +393,40 @@ Let's break down the fields:
 11. `heroImage`
     Link to the hero image for your feature. We'll cover adding this with images.
 
+### Starting the feature
+
+```
+class YourFeatureName extends Component {
+  render() {
+    return (
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
+        <div className="{your_feature_name}">
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+
+            // start coding your feature
+
+            </div>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+}
+
+export default YourFeatureName
+```
+
+1. `Hero` (required)
+   Grabs the URL we defined in the frontmatter to display the Hero based on the Layout component
+2. `your_feature_name` (required)
+   Lets you create styles specifically for this feature without overwriting styles elsewhere on the GoInvo site or in other features.
+3. `pad-vertical--double` and `max-width max-width--md content-padding` (required)
+   Anything inside of these divs will be constrained to the max width of content consistent with the rest of the site. If you want to set a style or image to bleed all the way to the edge, you'll want to close this and place it outside.
+4. `export`
+   Actually exports your feature, should match the feature name in `class YourFeatureName extends Component`
+
 ### Basic Styling
 
 We use classes to impart header styles defined in the GoInvo style guide. The typical breakdown is as follows:

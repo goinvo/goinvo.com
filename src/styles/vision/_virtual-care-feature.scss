@@ -1,17 +1,23 @@
 .virtual-care-feature {
-  .icon {
-    height: 20%;
-    width: 20%;
-    max-height: 30px;
-    min-width: 23px;
-  }
-
-  table.virtual-diagram {
+  table {
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
     td {
-      padding: 10px 0;
+      vertical-align: top;
+      padding-right: 5px;
+    }
+    .icon {
+      height: 20%;
+      width: 20%;
+      max-height: 30px;
+      min-width: 23px;
+    }
+  }
+
+  table.virtual-diagram {
+    td {
+      padding: 10px 5px;
     }
     td:first-child {
       padding-left: 20px;
@@ -29,7 +35,7 @@
     border-top: 1px solid #eee;
     margin: 20px 0;
     td {
-      padding: 20px 0;
+      padding: 20px 5px;
       vertical-align: top;
       text-align: center;
     }
@@ -50,6 +56,10 @@
 
   .pad-vertical--double:first-child {
     padding-bottom: 0;
+  }
+
+  .pad-vertical--double.horizontal-table-scroll {
+    overflow-x: auto;
   }
 
   .pure-u-lg-1-2 {
@@ -74,36 +84,21 @@
   .number--lg {
     font-size: 80px;
     font-family: 'Adobe-Jenson-Pro', 'Georgia', serif;
+    line-height: 70px;
   }
 
   .text-right,
   .text-below {
-    margin: 20px 0;
+    margin: 20px 0 0 0;
   }
 
   .text-below {
     margin-top: 10px;
   }
 
-  .text-right {
-    .stat {
-      text-align: center;
-      width: 260px;
-      @include mq($until: large) {
-        display: inline-block;
-        text-align: left;
-        width: auto;
-      }
-    }
-    .stat-desc {
-      width: 260px;
-      p {
-        margin-top: 0;
-      }
-      @include mq($until: large) {
-        display: inline-block;
-      }
-    }
+  .stat-desc {
+    width: 260px;
+    margin-top: -15px;
   }
 
   .text-below .stat {

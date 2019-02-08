@@ -33,14 +33,15 @@ class VirtualCareFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div className="virtual-care-title-area">
                 <h1 className="header--xl">Virtual Care</h1>
-                <h2>
+                <h4 className="header--sm">
                   Half of face-to-face clinical office visits can be conducted
                   virtually.
-                </h2>
+                </h4>
 
-                <div className="text-below pure-u-1">
+                <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="stat">
-                    <span className="number--lg">990M</span>
+                    <span className="header--xl">990</span>
+                    <span className="header--lg">M</span>
                   </div>
                   <div class="stat-desc">
                     <p className="text--gray">
@@ -51,9 +52,11 @@ class VirtualCareFeature extends Component {
                     </p>
                   </div>
                 </div>
-                <div className="text-below pure-u-1">
+                <div className="pure-u-1  pure-u-lg-1-2">
                   <div className="stat">
-                    <span className="number--lg">459M (46%)</span>
+                    <span className="header--xl">459</span>
+                    <span className="header--lg">M</span>
+                    <span className="header--xl"> (46%)</span>
                   </div>
                   <div class="stat-desc">
                     <p className="text--gray">can be conducted virtually</p>
@@ -71,13 +74,14 @@ class VirtualCareFeature extends Component {
                   The other two visits that remain face-to-face are
                   Gynecological examinations and Well baby examinations.
                 </p>
-                <h2>The Top 15 Encounters Breakdown</h2>
-
                 <p className="text--gray">
                   The table below documents whether an encounter can be virtual
                   or face-to-face, how it would be conducted using a spectrum of
                   tools, and what health information is necessary to collect.
                 </p>
+                <h3 className="header--md margin-top--double margin-bottom--none">
+                  The Top 15 Encounters Breakdown
+                </h3>
               </div>
             </div>
           </div>
@@ -473,12 +477,12 @@ class VirtualCareFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>
-                <h2>
+                <h4 className="header--sm">
                   "Healthcare delayed is healthcare denied"
                   <sup>
                     <a href="#references">2</a>
                   </sup>
-                </h2>
+                </h4>
                 <p className="text--gray">
                   On average, it takes 24 days and 59.21 minutes for a patient
                   to complete an office visit with their clinician.
@@ -536,7 +540,7 @@ class VirtualCareFeature extends Component {
                   Patients and software scales.
                 </p>
 
-                <h2>Care must go virtual</h2>
+                <h4 className="header--sm">Care must go virtual</h4>
 
                 <ul className="ul text--gray">
                   <li>
@@ -554,7 +558,7 @@ class VirtualCareFeature extends Component {
           <div className="background--blue pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div id="methodology">
-                <h1 className="header--xl">Methodology</h1>
+                <h2 className="header--xl text--center">Methodology</h2>
                 <p className="text--gray">
                   The Virtual Care diagram documents which clinical office
                   visits could be virtual, how they could be conducted, and what
@@ -646,7 +650,7 @@ class VirtualCareFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>
-                <h1 className="header--xl">Authors</h1>
+                <h2 className="header--xl text--center">Authors</h2>
 
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
@@ -695,7 +699,7 @@ class VirtualCareFeature extends Component {
                   </div>
                 </div>
 
-                <h3 className="header--md">Contributors</h3>
+                <h2 className="header--lg text--center">Contributors</h2>
 
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">

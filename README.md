@@ -346,9 +346,9 @@ First and foremost, remember to make a new branch in Git. It is reasonable to na
 
 As stated above, to review changes as you make them, just open a terminal and run `yarn develop`. Then you can view your work live at http://localhost:8000/
 
-Once in your new branch, create your feature directory in src/pages/vision/your-feature-url. Create a new file in this folder called index.js and get started.
+Once in your new branch, create your feature directory in `src/pages/vision/your-feature-url`. Create a new file in this folder called `index.js` and get started.
 
-As you go, you may make several commits to your branch and push them up to Github. If you want to share your feature with folks to review before going live, you may locate your branch in the list of branches, and create a new pull request. If you're not ready to go live yet, you can add a tag for "don't merge yet" and that'll indicate to reviewers not to approve and merge just yet. After automatic checks have passed, a netlify url will be generated for your branch and you can use this to check that your feature works and looks how it should, and it can be shared to others to review your work before it goes live. After that, you can continue to work and push as normal. When you're ready to go live, just remove the "don't merge yet" tag and let a reviewer know that you're ready for their review.
+As you go, you may make several commits to your branch and push them up to Github. If you want to share your feature with folks to review before going live, you may locate your branch in the list of branches, and create a new pull request. If you're not ready to go live yet, you can add a tag for `don't merge yet` and that'll indicate to reviewers not to approve and merge just yet. After automatic checks have passed, a netlify url will be generated for your branch and you can use this to check that your feature works and looks how it should, and it can be shared to others to review your work before it goes live. After that, you can continue to work and push as normal. When you're ready to go live, just remove the `don't merge yet` tag and let a reviewer know that you're ready for their review.
 
 ### Add the frontmatter
 
@@ -372,7 +372,7 @@ const frontmatter = {
 }
 ```
 
-You can also look at other existing case studies as examples.
+You can also look at other existing features as examples.
 
 Let's break down the fields:
 
@@ -428,27 +428,31 @@ export default YourFeatureName
    Grabs the URL we defined in the frontmatter to display the Hero based on the Layout component
 2. `your_feature_name` (required)
    Lets you create styles specifically for this feature without overwriting styles elsewhere on the GoInvo site or in other features.
-3. `pad-vertical--double` and `max-width max-width--md content-padding` (required)
+3. `pad-vertical--double` and `max-width max-width--md content-padding`
    Anything inside of these divs will be constrained to the max width of content consistent with the rest of the site. If you want to set a style or image to bleed all the way to the edge, you'll want to close this and place it outside.
-4. `export`
+4. `export` (required)
    Actually exports your feature, should match the feature name in `class YourFeatureName extends Component`
+
+Writing up a feature is a little different from a case study, because instead of markdown, we're using straight-up html.
 
 ### Basic Styling
 
 We use classes to impart header styles defined in the GoInvo style guide. The typical breakdown is as follows:
 
-```
-h1 className="header--xl"
-h2 className="header--lg"
-h3 className="header-md"
-h4 className="header-sm"
-```
+1. `h1 className="header--xl"`
+   Adobe Jenson Pro, font-size: 2.25rem;
+2. `h2 className="header--lg"`
+   Adobe Jenson Pro, font-size: 1.5rem;
+3. `h3 className="header-md"`
+   Open Sans, font-size: 15px;, font-weight: 600;, text-transform: uppercase;,
+4. `h4 className="header-sm"`
+   Open Sans, font-size: 16px;, font-weight: 600;
 
-Try to use one `<h1>` at the beginning of your feature to showcase the title. For following titles that you want to appear the same size, you can use an <h2> with the header-xl class.
+Try to use one `<h1>` at the beginning of your feature to showcase the title. For following titles that you want to appear the same size, you can use an `<h2>` with the `header-xl` class. To center text, add `text--center`.
 
-Try to use header-md only for categories. For descriptive titles, use header-sm.
+Try to use `header-md` only for categories. For descriptive titles, use `header-sm`.
 
-Adding buttons is as straightforward as adding a couple button classes to a link, but there's a button-group class to contain multiple buttons at once or centers a single button.
+Adding buttons is as straightforward as adding a `button` and `button-primary` classes to a link, but there's a `button-group`class to contain multiple buttons at once or centers a single button.
 
 ```
 <div className="button-group">
@@ -465,7 +469,7 @@ Adding buttons is as straightforward as adding a couple button classes to a link
 
 ### Adding images
 
-Pretty much the same as adding images for case studies. We'll just restate some of the basics. When exporting your images, you want them to be 2000px wide, progressive jpg, and ideally 72dpi (more pixels per inch will increase the filesize). Save them into our dropbox folder at Graphics/goinvo.com/images/features/[your-feature]/[your-image.jpg] using lowercase and dash separation. Add your hero image here too.
+Pretty much the same as adding images for case studies. We'll just restate some of the basics. When exporting your images, you want them to be 2000px wide, progressive jpg, and ideally 72dpi (more px per inch will increase the filesize). Save them into our dropbox folder at `Graphics/goinvo.com/images/features/your-feature-url/[your-feature-image.jpg` using lowercase and dash separation. Add your hero image here too.
 
 You'll need AWS permissions to do this, so if you don't have what you need, check with Craig, Eric, or Jen. To upload your images, open a terminal in the goinvo.com dropbox folder and run
 
@@ -499,9 +503,9 @@ When linking away from the site, we generally want to open up a new tab to not d
 
 ### Adding media
 
-So far, media has included pdf downloads of posters or reports associated with the feature. Unlike when adding images, these are not relegated to 2000px width and jpg format. Instead, these would typically be printable pdf quality. You would save these out similarly to Dropbox, in Graphics/goinvo.com/pdf/[your-feature]/[your-file.pdf]. These get uploaded with the `yarn upload` command as well.
+So far, media has included pdf downloads of posters or reports associated with the feature. Unlike when adding images, these are not relegated to 2000px width and jpg format. Instead, these would typically be printable pdf quality. You would save these out similarly to Dropbox, in `Graphics/goinvo.com/pdf/your-feature-url/your-feature-file.pdf`. These get uploaded with the `yarn upload` command as well.
 
-When adding a link to the media in your feature, it would look as follows:
+When adding a link to the media in your feature, use the following:
 
 ```
 <a href={mediaUrl(
@@ -545,7 +549,7 @@ You would list your references at the bottom of your feature, just after the Aut
 
 ### Adding your feature to the vision page
 
-Open up src/data/features.json and add your feature to the top as the following. Your title doesn't necessarily have to match the url, but they should be similar enough for readers to find it.
+Open up `src/data/features.json` and add your feature to the top as the following. Your title doesn't necessarily have to match the url, but they should be similar enough for readers to find it on the world wide web.
 
 ```
 {

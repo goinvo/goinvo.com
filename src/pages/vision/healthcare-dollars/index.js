@@ -25,9 +25,9 @@ class HealthcareDollars extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Where Your Health Dollars Go</h1>
-              <h3 className="header--md">
+              <h4 className="header--sm">
                 To Understand the Healthcare system, follow the money
-              </h3>
+              </h4>
               <p>
                 Healthscape is a map of the US healthcare system and its
                 components. By following the allocation and flow of money in

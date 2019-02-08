@@ -340,9 +340,15 @@ Make commits to your branch adding content to your case study as you go, and mak
 
 ## Adding a simple feature
 
-First and foremost, remember to make a new branch in Git. It is reasonable to name it something like `feature-<name>`.
+First and foremost, remember to make a new branch in Git. It is reasonable to name it something like `feature-<name>`. This section is mainly for adding simple features that follow the same general layout and styles as the rest of the GoInvo website.
 
 ### Make a new file
+
+As stated above, to review changes as you make them, just open a terminal and run `yarn develop`. Then you can view your work live at http://localhost:8000/
+
+Once in your new branch, create your feature directory in src/pages/vision/your-feature-url. Create a new file in this folder called index.js and get started.
+
+As you go, you may make several commits to your branch and push them up to Github. If you want to share your feature with folks to review before going live, you may locate your branch in the list of branches, and create a new pull request. If you're not ready to go live yet, you can add a tag for "don't merge yet" and that'll indicate to reviewers not to approve and merge just yet. After automatic checks have passed, a netlify url will be generated for your branch and you can use this to check that your feature works and looks how it should, and it can be shared to others to review your work before it goes live. After that, you can continue to work and push as normal. When you're ready to go live, just remove the "don't merge yet" tag and let a reviewer know that you're ready for their review.
 
 ### Add the frontmatter
 
@@ -359,10 +365,10 @@ import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Where Your Health Dollars Go',
+  metaTitle: 'Your Feature Title',
   metaDescription:
-    'Tracking the allocation and flow of money in the US healthcare system to reveal connections within.',
-  heroImage: '/images/features/healthscape/healthscape-hero.jpg',
+    'Brief feature description.',
+  heroImage: '/images/features/your-feature-url/your-feature-hero.jpg',
 }
 ```
 
@@ -387,9 +393,9 @@ Let's break down the fields:
 8. `config` (required)
    More sorcery
 9. `metaTitle`
-   This is the title of your feature. You want to make this somewhat short, ideally <30 characters. Should match the header text and data in the `features.json` (We'll cover this in a bit too)
+   This is the title of your feature. You want to make this somewhat short, ideally <30 characters. Should match the title feature in `features.json` (We'll cover this in a bit too)
 10. `metaDescription`
-    A brief description about your feature. With the title, date, and tags, this should fit comfortably in a small card on the Vision page. Should match the header text and data in the `features.json`
+    A brief description about your feature. With the title, date, and tags, this should fit comfortably in a small card on the Vision page. Should match the description in `features.json`
 11. `heroImage`
     Link to the hero image for your feature. We'll cover adding this with images.
 
@@ -448,11 +454,11 @@ Adding buttons is as straightforward as adding a couple button classes to a link
 <div className="button-group">
   <a
     href={mediaUrl(
-      '/pdf/vision/loneliness-in-our-human-code/loneliness-in-our-human-code.pdf'
+      '/pdf/vision/your-feature-url/your-feature.pdf'
     )}
     className="button button--primary margin-top--double margin-bottom--double"
   >
-    Download PDF
+    Download
   </a>
 </div>
 ```
@@ -471,7 +477,7 @@ When adding the image to your feature, it will look like this:
 
 ```
 <Image
-  src="/images/features/determinants-of-health/determinants-of-health-poster.jpg"
+  src="/images/features/your-feature-url/your-feature-poster.jpg"
   className="image--max-width"
   sizes={config.sizes.fullInsideMediumMaxWidth}
 />
@@ -499,7 +505,7 @@ When adding a link to the media in your feature, it would look as follows:
 
 ```
 <a href={mediaUrl(
-      '/pdf/vision/healthscape/healthscape-preview.pdf'
+      '/pdf/vision/your-feature-url/your-feature-preview.pdf'
     )}
    target="_blank"
    rel="noopener noreferrer"
@@ -536,3 +542,24 @@ You would list your references at the bottom of your feature, just after the Aut
 </div>
 
 ```
+
+### Adding your feature to the vision page
+
+Open up src/data/features.json and add your feature to the top as the following. Your title doesn't necessarily have to match the url, but they should be similar enough for readers to find it.
+
+```
+{
+  "id": "your-feature-url",
+  "title": "Your Feature Title",
+  "date": "Feb.2019",
+  "client": "Feature",
+  "categories": ["open-source", "public-health-and-policy"],
+  "caption": "Brief feature description.",
+  "image": "/images/features/your-feature-url/your-feature-hero-2.jpg",
+  "link": "/vision/your-feature-url/"
+},
+```
+
+### Going live
+
+When your feature is ready to go live, make sure to push up any final changes to the branch. Then, on Github, you may locate your branch in the list of branches, and create a new pull request and let a reviewer know that you're ready for their review. Once approved, the final reviewer will merge it into master.

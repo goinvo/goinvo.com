@@ -1,5 +1,15 @@
 [
   {
+    "id": "healthcare-dollars",
+    "title": "Where Your Health Dollars Go",
+    "date": "Feb.2019",
+    "client": "Feature",
+    "categories": ["open-source", "public-health-and-policy"],
+    "caption": "Tracking the allocation and flow of money in the US healthcare system to reveal connections within.",
+    "image": "/images/features/healthcare-dollars/healthcare-dollars-hero.jpg",
+    "link": "/vision/healthcare-dollars/"
+  },
+  {
     "id": "virtual-care",
     "title": "Virtual Care",
     "date": "Feb.2019",

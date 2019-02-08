@@ -123,3 +123,13 @@ body {
     @extend .text--xl;
   }
 }
+
+sup a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-black;
+    text-decoration: underline;
+  }
+}

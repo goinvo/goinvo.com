@@ -407,7 +407,7 @@ class YourFeatureName extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
-        <div className="{your_feature_name}">
+        <div className="{your-feature-name}">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
 
@@ -426,7 +426,7 @@ export default YourFeatureName
 
 1. `Hero` (required)
    Grabs the URL we defined in the frontmatter to display the Hero based on the Layout component
-2. `your_feature_name` (required)
+2. `your-feature-name` (required)
    Lets you create styles specifically for this feature without overwriting styles elsewhere on the GoInvo site or in other features.
 3. `pad-vertical--double` and `max-width max-width--md content-padding`
    Anything inside of these divs will be constrained to the max width of content consistent with the rest of the site. If you want to set a style or image to bleed all the way to the edge, you'll want to close this and place it outside.
@@ -436,6 +436,8 @@ export default YourFeatureName
 Writing up a feature is a little different from a case study, because instead of markdown, we're using straight-up html.
 
 ### Basic Styling
+
+In general, unless your feature needs specific styling, most of the website styles and utility classes should work for your feature. If you need specific styling, in `src/styles/vision`, add a new file `_your-feature-name.scss`. At the bottom of the `main.scss` add this stylesheet as `@import 'vision/your-feature-name';`. Start off the styles in your .scss file with `.your-feature-name { }`, consistent with the className you used at the beginning of your feature html, and add your feature's specific styles inside of the brackets.
 
 We use classes to impart header styles defined in the GoInvo style guide. The typical breakdown is as follows:
 
@@ -489,7 +491,7 @@ When adding the image to your feature, it will look like this:
 
 ### Adding links
 
-When linking away from the site, we generally want to open up a new tab to not disturb the reader's current position, so add `target="_blank"`. When linking externally, to a site that isn't secure (with https:// in the address), add `rel="noopener noreferrer"`
+When linking away from the site, we generally want to open up a new tab to not disturb the reader's current position, so add `target="_blank"`. When linking externally, to a site that isn't secure (with https:// in the address), add `rel="noopener noreferrer"` (also just good practice to add when linking externally).
 
 ```
 <a

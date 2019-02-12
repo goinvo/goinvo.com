@@ -390,8 +390,8 @@ Let's break down the fields:
    Any good feature also has references. We'll go over how to add images below.
 7. `mediaURL`
    Handles access to media items. For example, if we have a poster we want readers to be able to download, we store those in a media folder (covered below) and set up a download link or button.
-8. `config` (required)
-   More sorcery
+8. `config`
+   Needed when you have images. This helps with resizing images for different browser widths or mobile views.
 9. `metaTitle`
    This is the title of your feature. You want to make this somewhat short, ideally <30 characters. Should match the title feature in `features.json` (We'll cover this in a bit too)
 10. `metaDescription`
@@ -491,7 +491,7 @@ When adding the image to your feature, it will look like this:
 
 ### Adding links
 
-When linking away from the site, we generally want to open up a new tab to not disturb the reader's current position, so add `target="_blank"`. When linking externally, to a site that isn't secure (with https:// in the address), add `rel="noopener noreferrer"` (also just good practice to add when linking externally).
+When linking away from the site, we generally want to open up a new tab to not disturb the reader's current position, so add `target="_blank"`. When linking externally, or whenever using `target="_blank"`, add `rel="noopener noreferrer"`.
 
 ```
 <a

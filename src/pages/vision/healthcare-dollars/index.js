@@ -53,7 +53,7 @@ class HealthcareDollars extends Component {
                 target="_blank"
               >
                 <Image
-                  src="/images/features/healthcare-dollars/healthcare-dollars-preview.jpg"
+                  src="/images/features/healthcare-dollars/healthcare-dollars-preview-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMediumMaxWidth}
                 />
@@ -64,7 +64,7 @@ class HealthcareDollars extends Component {
               <div className="button-group">
                 <a
                   href={mediaUrl(
-                    '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
+                    '/pdf/vision/healthcare-dollars/healthcare-dollars-poster-2.pdf'
                   )}
                   target="_blank"
                   className="button button--primary button--lg margin-top--double margin-bottom--double button--block"

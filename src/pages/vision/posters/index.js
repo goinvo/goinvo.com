@@ -202,6 +202,40 @@ class Posters extends Component {
                   </div>
                 </div>
               </div>
+
+              <Divider />
+
+              <div className="poster-section pad-vertical--double">
+                <h2 className="header--lg margin-top--double margin-bottom--none">
+                  Standardization of Data Architecture
+                </h2>
+                <p className="text--gray poster-date margin-top--none">
+                  Feb 2017
+                </p>
+                <a
+                  href={mediaUrl(
+                    '/pdf/vision/posters/precision-prism-architecture-diagram.pdf'
+                  )}
+                >
+                  <Image
+                    src="/images/features/posters/precision-prism-architecture-diagram.jpg"
+                    className="image--max-width poster"
+                    sizes={config.sizes.fullInsideMediumMaxWidth}
+                  />
+                </a>
+                <div className="button-group">
+                  <div className="pure-u-1 pure-u-lg-1-3">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/precision-prism-architecture-diagram.pdf'
+                      )}
+                      className="button button--primary margin-top--double margin-bottom--half  button--block margin-right"
+                    >
+                      Download Poster
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

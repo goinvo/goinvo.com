@@ -208,7 +208,7 @@ class DeterminantsOfHealthFeature extends Component {
 
               <Divider />
 
-              <h2 className="margin-top--double">
+              <h2 className="margin-top--double" id="determinants-spending">
                 Working Draft of Determinants Compared to Spending
               </h2>
               <Image

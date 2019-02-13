@@ -337,3 +337,235 @@ Wow I was right. A quote.
 ### Wrapping up
 
 Make commits to your branch adding content to your case study as you go, and make sure to push your branch to the GitHub repo. When finished, seek assistance getting your case study code reviewed and merged into the production website.
+
+## Adding a simple feature
+
+First and foremost, remember to make a new branch in Git. It is reasonable to name it something like `feature-<name>`. This section is mainly for adding simple features that follow the same general layout and styles as the rest of the GoInvo website.
+
+### Make a new file
+
+As stated above, to review changes as you make them, just open a terminal and run `yarn develop`. Then you can view your work live at http://localhost:8000/
+
+Once in your new branch, create your feature directory in `src/pages/vision/your-feature-url`. Create a new file in this folder called `index.js` and get started.
+
+As you go, you may make several commits to your branch and push them up to Github. If you want to share your feature with folks to review before going live, you may locate your branch in the list of branches, and create a new pull request. If you're not ready to go live yet, you can add a tag for `don't merge yet` and that'll indicate to reviewers not to approve and merge just yet. After automatic checks have passed, a netlify url will be generated for your branch and you can use this to check that your feature works and looks how it should, and it can be shared to others to review your work before it goes live. After that, you can continue to work and push as normal. When you're ready to go live, just remove the `don't merge yet` tag and let a reviewer know that you're ready for their review.
+
+### Add the frontmatter
+
+```
+import React, { Component } from 'react'
+
+import Layout from '../../../components/layouts/layout'
+import Hero from '../../../components/hero'
+import Image from '../../../components/image'
+import Divider from '../../../components/divider'
+import References from '../../../components/references'
+import { mediaUrl } from '../../../helpers'
+
+import config from '../../../../config'
+
+const frontmatter = {
+  metaTitle: 'Your Feature Title',
+  metaDescription:
+    'Brief feature description.',
+  heroImage: '/images/features/your-feature-url/your-feature-hero.jpg',
+}
+```
+
+You can also look at other existing features as examples.
+
+Let's break down the fields:
+
+1. `React` (required)
+   Allows React to work its magic.
+2. `Layout` (required)
+   More magic here. Layout magic.
+3. `Hero` (required)
+   Displays the hero standard to the rest of the GoInvo site.
+4. `Image`
+   Any good feature has an image. We'll go over how to add images below.
+5. `Divider`
+   If you want to use the `<Divider />` graphic consistent with the rest of the GoInvo site.
+6. `References`
+   Any good feature also has references. We'll go over how to add images below.
+7. `mediaURL`
+   Handles access to media items. For example, if we have a poster we want readers to be able to download, we store those in a media folder (covered below) and set up a download link or button.
+8. `config`
+   Needed when you have images. This helps with resizing images for different browser widths or mobile views.
+9. `metaTitle`
+   This is the title of your feature. You want to make this somewhat short, ideally <30 characters. Should match the title feature in `features.json` (We'll cover this in a bit too)
+10. `metaDescription`
+    A brief description about your feature. With the title, date, and tags, this should fit comfortably in a small card on the Vision page. Should match the description in `features.json`
+11. `heroImage`
+    Link to the hero image for your feature. We'll cover adding this with images.
+
+### Starting the feature
+
+```
+class YourFeatureName extends Component {
+  render() {
+    return (
+      <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
+        <div className="{your-feature-name}">
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+
+            // start coding your feature
+
+            </div>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+}
+
+export default YourFeatureName
+```
+
+1. `Hero` (required)
+   Grabs the URL we defined in the frontmatter to display the Hero based on the Layout component
+2. `your-feature-name` (required)
+   Lets you create styles specifically for this feature without overwriting styles elsewhere on the GoInvo site or in other features.
+3. `pad-vertical--double` and `max-width max-width--md content-padding`
+   Anything inside of these divs will be constrained to the max width of content consistent with the rest of the site. If you want to set a style or image to bleed all the way to the edge, you'll want to close this and place it outside.
+4. `export` (required)
+   Actually exports your feature, should match the feature name in `class YourFeatureName extends Component`
+
+Writing up a feature is a little different from a case study, because instead of markdown, we're using straight-up html.
+
+### Basic Styling
+
+In general, unless your feature needs specific styling, most of the website styles and utility classes should work for your feature. If you need specific styling, in `src/styles/vision`, add a new file `_your-feature-name.scss`. At the bottom of the `main.scss` add this stylesheet as `@import 'vision/your-feature-name';`. Start off the styles in your .scss file with `.your-feature-name { }`, consistent with the className you used at the beginning of your feature html, and add your feature's specific styles inside of the brackets.
+
+We use classes to impart header styles defined in the GoInvo style guide. The typical breakdown is as follows:
+
+1. `h1 className="header--xl"`
+   Adobe Jenson Pro, font-size: 2.25rem;
+2. `h2 className="header--lg"`
+   Adobe Jenson Pro, font-size: 1.5rem;
+3. `h3 className="header-md"`
+   Open Sans, font-size: 15px;, font-weight: 600;, text-transform: uppercase;,
+4. `h4 className="header-sm"`
+   Open Sans, font-size: 16px;, font-weight: 600;
+
+Try to use one `<h1>` at the beginning of your feature to showcase the title. For following titles that you want to appear the same size, you can use an `<h2>` with the `header-xl` class. To center text, add `text--center`.
+
+Try to use `header-md` only for categories. For descriptive titles, use `header-sm`.
+
+Adding buttons is as straightforward as adding a `button` and `button-primary` classes to a link, but there's a `button-group`class to contain multiple buttons at once or centers a single button.
+
+```
+<div className="button-group">
+  <a
+    href={mediaUrl(
+      '/pdf/vision/your-feature-url/your-feature.pdf'
+    )}
+    className="button button--primary margin-top--double margin-bottom--double"
+  >
+    Download
+  </a>
+</div>
+```
+
+### Adding images
+
+Pretty much the same as adding images for case studies. We'll just restate some of the basics. When exporting your images, you want them to be 2000px wide, progressive jpg, and ideally 72dpi (more px per inch will increase the filesize). Save them into our dropbox folder at `Graphics/goinvo.com/images/features/your-feature-url/[your-feature-image.jpg` using lowercase and dash separation. Add your hero image here too.
+
+You'll need AWS permissions to do this, so if you don't have what you need, check with Craig, Eric, or Jen. To upload your images, open a terminal in the goinvo.com dropbox folder and run
+
+```
+$ yarn upload
+```
+
+When adding the image to your feature, it will look like this:
+
+```
+<Image
+  src="/images/features/your-feature-url/your-feature-poster.jpg"
+  className="image--max-width"
+  sizes={config.sizes.fullInsideMediumMaxWidth}
+/>
+```
+
+### Adding links
+
+When linking away from the site, we generally want to open up a new tab to not disturb the reader's current position, so add `target="_blank"`. When linking externally, or whenever using `target="_blank"`, add `rel="noopener noreferrer"`.
+
+```
+<a
+  href="https://github.com/goinvo/HealthDeterminants/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GitHub
+</a>
+```
+
+### Adding media
+
+So far, media has included pdf downloads of posters or reports associated with the feature. Unlike when adding images, these are not relegated to 2000px width and jpg format. Instead, these would typically be printable pdf quality. You would save these out similarly to Dropbox, in `Graphics/goinvo.com/pdf/your-feature-url/your-feature-file.pdf`. These get uploaded with the `yarn upload` command as well.
+
+When adding a link to the media in your feature, use the following:
+
+```
+<a href={mediaUrl(
+      '/pdf/vision/your-feature-url/your-feature-preview.pdf'
+    )}
+   target="_blank"
+   rel="noopener noreferrer"
+>Download</a>
+```
+
+### Adding references
+
+To add linkable references in your text that, when clicked, will scroll down to the references section.
+
+```
+<sup>
+  <a href="#references">8,18</a>
+</sup>
+```
+
+You would list your references at the bottom of your feature, just after the Authors section, and preferably with a `<Divider />` separating the two. When rendered, references will be listed in an ordered list format. For links, you need only add the url, such as https://github.com and the references component will take care of the rest. It is also helpful and good citation practice to indicate when the reference was last accessed during research for the feature.
+
+```
+<Divider />
+
+<div id="references">
+  <References
+    references={[
+      {
+        title: '[citation]',
+        link: '[url if there is one]'
+      },
+      {
+        title: '[citation]'
+      }
+    ]}
+  />
+</div>
+
+```
+
+### Adding your feature to the vision page
+
+Open up `src/data/features.json` and add your feature to the top as the following. Your title doesn't necessarily have to match the url, but they should be similar enough for readers to find it on the world wide web.
+
+```
+{
+  "id": "your-feature-url",
+  "title": "Your Feature Title",
+  "date": "Feb.2019",
+  "client": "Feature",
+  "categories": ["open-source", "public-health-and-policy"],
+  "caption": "Brief feature description.",
+  "image": "/images/features/your-feature-url/your-feature-hero-2.jpg",
+  "link": "/vision/your-feature-url/"
+},
+```
+
+### Going live
+
+When your feature is ready to go live, make sure to push up any final changes to the branch. Then, on Github, you may locate your branch in the list of branches, and create a new pull request and let a reviewer know that you're ready for their review. Once approved, the final reviewer will merge it into master.

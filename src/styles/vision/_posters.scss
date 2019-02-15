@@ -1,4 +1,7 @@
 .poster-feature {
+  .hero {
+    background-color: #e8f0ff;
+  }
   .pure-g {
     margin: 20px 0;
   }
@@ -9,11 +12,19 @@
     &:last-child {
       margin-right: 0;
     }
-    .posterInfo {
-      padding: 15px;
-    }
   }
   .poster-section {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  }
+  .poster {
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+  .posterInfo {
+    padding: 15px;
   }
 }

@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Image from '../../../components/image'
-import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
@@ -25,17 +24,19 @@ class Posters extends Component {
 
               <div className="pure-g">
                 <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
-                  <a
-                    href={mediaUrl(
-                      '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
-                    )}
-                  >
-                    <Image
-                      src="/images/features/healthcare-dollars/healthcare-dollars-preview.jpg"
-                      className="image--max-width poster"
-                      sizes={config.sizes.fullInsideMediumMaxWidth}
-                    />
-                  </a>
+                  <div className="poster">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
+                      )}
+                    >
+                      <Image
+                        src="/images/features/healthcare-dollars/healthcare-dollars-preview.jpg"
+                        className="background-image image-block__image"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
                   <div className="posterInfo">
                     <h4 className="header--sm margin-top--none margin-bottom--none">
                       Where Your Healthcare Dollars Go
@@ -58,17 +59,19 @@ class Posters extends Component {
                 </div>
 
                 <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
-                  <a
-                    href="https://github.com/goinvo/HealthDeterminants/raw/master/sdoh-spend/SDOH_to_spend_v12-01.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src="/images/features/determinants-of-health/sdoh-spend-mockup.jpg"
-                      className="image--max-width poster"
-                      sizes={config.sizes.fullInsideMediumMaxWidth}
-                    />
-                  </a>
+                  <div className="poster">
+                    <a
+                      href="https://github.com/goinvo/HealthDeterminants/raw/master/sdoh-spend/SDOH_to_spend_v12-01.png"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src="/images/features/determinants-of-health/sdoh-spend-mockup.jpg"
+                        className="background-image image-block__image"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
                   <div className="posterInfo">
                     <h4 className="header--sm margin-top--none margin-bottom--none">
                       Spending within the Determinants of Health
@@ -93,19 +96,21 @@ class Posters extends Component {
                 </div>
 
                 <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
-                  <a
-                    href={mediaUrl(
-                      '/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf'
-                    )}
-                  >
-                    <Image
-                      src="/images/features/posters/oshc-book.jpg"
-                      className="image--max-width poster"
-                      sizes={config.sizes.fullInsideMediumMaxWidth}
-                    />
-                  </a>
+                  <div className="poster">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf'
+                      )}
+                    >
+                      <Image
+                        src="/images/features/posters/oshc-book.jpg"
+                        className="background-image image-block__image"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--double margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--none">
                       Open Source Healthcare Journal
                     </h4>
                     <p className="text--gray text--sm poster-date margin-top--none">
@@ -136,15 +141,17 @@ class Posters extends Component {
 
               <div className="pure-g">
                 <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
-                  <a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf">
-                    <Image
-                      src="/images/features/determinants-of-health/determinants-of-health-poster.jpg"
-                      className="image--max-width poster margin-top--none"
-                      sizes={config.sizes.fullInsideMediumMaxWidth}
-                    />
-                  </a>
+                  <div className="poster">
+                    <a href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf">
+                      <Image
+                        src="/images/features/determinants-of-health/determinants-of-health-poster.jpg"
+                        className="background-image image-block__image"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--double margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--none">
                       Determinants of Health
                     </h4>
                     <p className="text--gray text--sm poster-date margin-top--none">
@@ -171,19 +178,21 @@ class Posters extends Component {
                 </div>
 
                 <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
-                  <a
-                    href={mediaUrl(
-                      '/pdf/vision/posters/precision-prism-architecture-diagram.pdf'
-                    )}
-                  >
-                    <Image
-                      src="/images/features/posters/precision-prism-architecture-diagram.jpg"
-                      className="image--max-width poster"
-                      sizes={config.sizes.fullInsideMediumMaxWidth}
-                    />
-                  </a>
+                  <div class="poster">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/precision-prism-architecture-diagram.pdf'
+                      )}
+                    >
+                      <Image
+                        src="/images/features/posters/precision-prism-architecture-diagram.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--double margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--none">
                       Standardization of Data Architecture
                     </h4>
                     <p className="text--gray text--sm poster-date margin-top--none">

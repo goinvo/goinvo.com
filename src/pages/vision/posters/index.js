@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
-import Hero from '../../../components/hero'
+//import Hero from '../../../components/hero'
+//<Hero image={frontmatter.heroImage} />
 import Image from '../../../components/image'
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -16,7 +17,6 @@ class Posters extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <Hero image={frontmatter.heroImage} />
         <div className="poster-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
@@ -38,12 +38,9 @@ class Posters extends Component {
                     </a>
                   </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none">
                       Where Your Healthcare Dollars Go
                     </h4>
-                    <p className="text--gray text--sm poster-date margin-top--none">
-                      Feb 2019
-                    </p>
                     <a
                       href={mediaUrl(
                         '/pdf/vision/healthcare-dollars/healthcare-dollars.pdf'
@@ -73,12 +70,9 @@ class Posters extends Component {
                     </a>
                   </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none">
                       Spending within the Determinants of Health
                     </h4>
-                    <p className="text--gray text--sm poster-date margin-top--none">
-                      Jan 2019
-                    </p>
                     <a
                       href="https://github.com/goinvo/HealthDeterminants/raw/master/sdoh-spend/SDOH_to_spend_v12-01.png"
                       target="_blank"
@@ -110,12 +104,9 @@ class Posters extends Component {
                     </a>
                   </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none">
                       Open Source Healthcare Journal
                     </h4>
-                    <p className="text--gray text--sm poster-date margin-top--none">
-                      Nov 2018
-                    </p>
                     <a
                       href={mediaUrl(
                         '/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf'
@@ -151,12 +142,9 @@ class Posters extends Component {
                     </a>
                   </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none">
                       Determinants of Health
                     </h4>
-                    <p className="text--gray text--sm poster-date margin-top--none">
-                      Feb 2018
-                    </p>
                     <a
                       href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf"
                       className="button button--primary margin-bottom--half button--block"
@@ -192,12 +180,9 @@ class Posters extends Component {
                     </a>
                   </div>
                   <div className="posterInfo">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none">
                       Standardization of Data Architecture
                     </h4>
-                    <p className="text--gray text--sm poster-date margin-top--none">
-                      Feb 2017
-                    </p>
                     <a
                       href={mediaUrl(
                         '/pdf/vision/posters/precision-prism-architecture-diagram.pdf'

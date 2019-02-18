@@ -113,15 +113,7 @@ class Posters extends Component {
                       )}
                       className="button button--primary button--block margin-bottom--half"
                     >
-                      Download 25MB
-                    </a>
-                    <a
-                      href="http://www.blurb.com/b/8980724-open-source-healthcare-journal"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button button--primary button--block"
-                    >
-                      $12 Magazine
+                      Download
                     </a>
                     <p className="text--center">
                       <a href="/vision/open-source-healthcare/">Learn More</a>
@@ -151,14 +143,6 @@ class Posters extends Component {
                     >
                       Download
                     </a>
-                    <a
-                      href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button button--primary button--block"
-                    >
-                      Buy Print
-                    </a>
                     <p className="text--center">
                       <a href="/vision/determinants-of-health/">Learn More</a>
                     </p>
@@ -181,7 +165,7 @@ class Posters extends Component {
                   </div>
                   <div className="posterInfo">
                     <h4 className="header--sm margin-top--none">
-                      Standardization of Data Architecture
+                      Open Healthcare Systems Model
                     </h4>
                     <a
                       href={mediaUrl(

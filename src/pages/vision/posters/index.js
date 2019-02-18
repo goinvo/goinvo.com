@@ -27,11 +27,11 @@ class Posters extends Component {
                   <div className="poster">
                     <a
                       href={mediaUrl(
-                        '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
+                        '/pdf/vision/healthcare-dollars/healthcare-dollars.pdf'
                       )}
                     >
                       <Image
-                        src="/images/features/healthcare-dollars/healthcare-dollars-preview.jpg"
+                        src="/images/features/healthcare-dollars/healthcare-dollars-preview-2.jpg"
                         className="background-image image-block__image"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
                       />
@@ -46,7 +46,7 @@ class Posters extends Component {
                     </p>
                     <a
                       href={mediaUrl(
-                        '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
+                        '/pdf/vision/healthcare-dollars/healthcare-dollars.pdf'
                       )}
                       className="button button--primary button--block"
                     >

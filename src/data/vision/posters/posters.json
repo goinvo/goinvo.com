@@ -18,7 +18,7 @@
     "learnMoreLink": "/vision/determinants-of-health/#determinants-spending"
   },
   {
-    "id": "",
+    "id": "open-source-healthcare",
     "title": "Open Source Healthcare Journal",
     "date": "Nov.2018",
     "caption": "",
@@ -27,7 +27,7 @@
     "learnMoreLink": "/vision/open-source-healthcare/"
   },
   {
-    "id": "",
+    "id": "determinants-of-health",
     "title": "Determinants of Health",
     "date": "Feb.2018",
     "caption": "",
@@ -36,7 +36,7 @@
     "learnMoreLink": "/vision/determinants-of-health/"
   },
   {
-    "id": "",
+    "id": "open-healthcare-systems",
     "title": "Open Healthcare Systems Model",
     "date": "",
     "caption": "",
@@ -45,7 +45,7 @@
     "learnMoreLink": ""
   },
   {
-    "id": "",
+    "id": "shr-medical-encounter",
     "title": "SHR Medical Encounter Journey Map",
     "date": "",
     "caption": "",
@@ -54,7 +54,7 @@
     "learnMoreLink": ""
   },
   {
-    "id": "",
+    "id": "hie-data-access",
     "title": "HIE Data Access Workflow",
     "date": "",
     "caption": "",
@@ -63,7 +63,7 @@
     "learnMoreLink": ""
   },
   {
-    "id": "",
+    "id": "ebola",
     "title": "Ebola Care Guideline",
     "date": "",
     "caption": "",

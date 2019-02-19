@@ -8,7 +8,7 @@ import PosterCard from '../../../components/vision/posters/PosterCard'
 import Image from '../../../components/image'
 import { mediaUrl } from '../../../helpers'
 
-import posterItems from '../../../data/vision/posters/posters.json'
+import posters from '../../../data/vision/posters/posters.json'
 
 import config from '../../../../config'
 
@@ -19,6 +19,14 @@ const frontmatter = {
 }
 
 class Posters extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      posterItems: posters,
+    }
+  }
+
   render() {
     return (
       <Layout frontmatter={frontmatter}>
@@ -26,7 +34,16 @@ class Posters extends Component {
           <div className="margin-top--only-lg">
             <Columns columns={3}>
               {this.state.posterItems.map((poster, i) => {
-                return <PosterCard />
+                return (
+                  <PosterCard
+                    title={poster.title}
+                    image={poster.image}
+                    learnMoreLink={poster.learnMoreLink}
+                    id={poster.id}
+                    downloadLink={poster.downloadLink}
+                    sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                  />
+                )
               })}
             </Columns>
           </div>

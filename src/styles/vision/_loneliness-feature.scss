@@ -1,59 +1,25 @@
 .loneliness-feature {
-  h3 {
-    &.text--lg {
-      font-size: 20px;
-      line-height: 1.5rem;
-    }
-  }
   .pure-u-lg-1-2 {
     padding-right: 20px;
   }
-  sup a {
-    text-decoration: none;
-  }
-
-  .author {
-    .authorImg {
-      padding-top: 20px;
-    }
-  }
 
   .stat {
-    padding: 10px 10px 10px 0;
-    font-size: 32px;
-  }
-  .number--lg {
-    font-size: 80px;
-  }
-  .text-right,
-  .text-below {
-    margin: 20px 0;
-  }
-  .text-below {
-    margin-top: 10px;
-  }
-  .text-right {
-    .stat {
-      text-align: center;
-      width: 260px;
-      @include mq($until: large) {
-        display: inline-block;
-        text-align: left;
-        width: auto;
-      }
-    }
-    .stat-desc {
-      width: 260px;
-      p {
-        margin-top: 0;
-      }
-      @include mq($until: large) {
-        display: inline-block;
-      }
+    @include mq($until: large) {
+      display: inline-block;
+      text-align: left;
+      width: auto;
+      margin-right: 10px;
     }
   }
-  .text-below .stat {
-    margin: 10px 0;
+  .stat-desc {
+    width: 260px;
+    p {
+      margin-top: 0;
+    }
+    @include mq($until: large) {
+      display: inline-block;
+      width: auto;
+    }
   }
 
   .row {

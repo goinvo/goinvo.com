@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //import Image from '../../image'
 import BackgroundImage from '../../background-image'
+import { mediaUrl } from '../../../helpers'
 
 class PosterCard extends Component {
   render() {
@@ -9,10 +10,13 @@ class PosterCard extends Component {
       id,
       title,
       image,
-      downloadLink = null,
       learnMoreLink = null,
       suppressNewTab = false,
     } = this.props
+
+    const downloadLink = this.props.downloadLink
+      ? mediaUrl(this.props.downloadLink)
+      : this.state.downloadLink
 
     return (
       <div className="poster-card">

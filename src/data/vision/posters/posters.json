@@ -5,7 +5,7 @@
     "date": "Feb.2019",
     "caption": "Tracking the allocation and flow of money in the US healthcare system to reveal connections within.",
     "image": "/images/features/healthcare-dollars/healthcare-dollars-hero.jpg",
-    "downloadLink": "{mediaUrl('/pdf/vision/healthcare-dollars/healthcare-dollars.pdf')}",
+    "downloadLink": "/pdf/vision/healthcare-dollars/healthcare-dollars.pdf",
     "learnMoreLink": "/vision/healthcare-dollars/"
   },
   {
@@ -14,7 +14,7 @@
     "date": "Jan.2019",
     "caption": "",
     "image": "/images/features/determinants-of-health/sdoh-spend-mockup.jpg",
-    "downloadLink": "https://github.com/goinvo/HealthDeterminants/raw/master/sdoh-spend/SDOH_to_spend_v12-01.png",
+    "downloadLink": "/pdf/vision/posters/sdoh-spend-v12.pdf",
     "learnMoreLink": "/vision/determinants-of-health/#determinants-spending"
   },
   {
@@ -23,7 +23,7 @@
     "date": "Nov.2018",
     "caption": "",
     "image": "/images/features/posters/oshc-book.jpg",
-    "downloadLink": "{mediaUrl('/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf')}",
+    "downloadLink": "/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf",
     "learnMoreLink": "/vision/open-source-healthcare/"
   },
   {
@@ -32,7 +32,7 @@
     "date": "Feb.2018",
     "caption": "",
     "image": "/images/features/determinants-of-health/determinants-of-health-poster.jpg",
-    "downloadLink": "https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf",
+    "downloadLink": "/pdf/vision/posters/health-determinants.pdf",
     "learnMoreLink": "/vision/determinants-of-health/"
   },
   {
@@ -41,7 +41,7 @@
     "date": "",
     "caption": "",
     "image": "/images/features/posters/precision-prism-architecture-diagram.jpg",
-    "downloadLink": "{mediaUrl('/pdf/vision/posters/precision-prism-architecture-diagram.pdf')}",
+    "downloadLink": "/pdf/vision/posters/precision-prism-architecture-diagram.pdf",
     "learnMoreLink": ""
   },
   {
@@ -50,7 +50,7 @@
     "date": "",
     "caption": "",
     "image": "/images/features/posters/shr-medical-encounter-journey-map.jpg",
-    "downloadLink": "{mediaUrl('/pdf/vision/posters/shr-medical-encounter-journey-map.pdf')}",
+    "downloadLink": "/pdf/vision/posters/shr-medical-encounter-journey-map.pdf",
     "learnMoreLink": ""
   },
   {
@@ -59,7 +59,7 @@
     "date": "",
     "caption": "",
     "image": "/images/features/posters/hie-data-access-workflow.jpg",
-    "downloadLink": "{mediaUrl('/pdf/vision/posters/hie-data-access-workflow.pdf')}",
+    "downloadLink": "/pdf/vision/posters/hie-data-access-workflow.pdf",
     "learnMoreLink": ""
   },
   {
@@ -68,7 +68,7 @@
     "date": "Mar.2016",
     "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
     "image": "/images/features/posters/careplans-process.jpg",
-    "downloadLink": "{mediaUrl('/pdf/vision/posters/careplans-process.pdf')}",
+    "downloadLink": "/pdf/vision/posters/careplans-process.pdf",
     "learnMoreLink": "https://www.goinvo.com/features/careplans/"
   },
   {
@@ -77,7 +77,7 @@
     "date": "Oct.2014",
     "caption": "An illustrated process on personal protective equipment.",
     "image": "/images/features/posters/ebola-care-guideline.jpg",
-    "downloadLink": "{mediaUrl('/pdf/vision/posters/ebola-care-guideline.pdf')}",
+    "downloadLink": "/pdf/vision/posters/ebola-care-guideline.pdf",
     "learnMoreLink": "https://www.goinvo.com/features/ebola-care-guideline/"
   }
 ]

@@ -34,6 +34,18 @@ class Posters extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Health Visualization Posters</h1>
+              <p className="text--gray text--sm">
+                All of the following works are open source, available to all
+                under a{' '}
+                <a
+                  href="https://creativecommons.org/licenses/by/3.0/us/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Creative Commons Attribution v3
+                </a>{' '}
+                license.
+              </p>
 
               <Columns columns={3}>
                 {this.state.posterItems.map((poster, i) => {

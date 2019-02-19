@@ -3,18 +3,18 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Columns from '../../../components/columns'
-import PosterCard from '../../../components/vision/posters/PosterCard'
+import PosterCard from '../../../components/vision/health-visualizations/PosterCard'
 //import Image from '../../../components/image'
 import { mediaUrl } from '../../../helpers'
 
-import posters from '../../../data/vision/posters/posters.json'
+import posters from '../../../data/vision/health-visualizations/posters.json'
 
 import config from '../../../../config'
 
 const frontmatter = {
   metaTitle: '',
   metaDescription: '',
-  heroImage: '/images/features/posters/poster-hero.jpg',
+  heroImage: '/images/features/posters/health-visualizations-hero.jpg',
 }
 
 class Posters extends Component {

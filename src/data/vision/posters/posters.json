@@ -63,12 +63,21 @@
     "learnMoreLink": ""
   },
   {
+    "id": "care-plans-process",
+    "title": "Care Planning Process",
+    "date": "Mar.2016",
+    "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
+    "image": "/images/features/posters/careplans-process.jpg",
+    "downloadLink": "{mediaUrl('/pdf/vision/posters/careplans-process.pdf')}",
+    "learnMoreLink": "https://www.goinvo.com/features/careplans/"
+  },
+  {
     "id": "ebola",
     "title": "Ebola Care Guideline",
-    "date": "",
-    "caption": "",
+    "date": "Oct.2014",
+    "caption": "An illustrated process on personal protective equipment.",
     "image": "/images/features/posters/ebola-care-guideline.jpg",
     "downloadLink": "{mediaUrl('/pdf/vision/posters/ebola-care-guideline.pdf')}",
-    "learnMoreLink": ""
+    "learnMoreLink": "https://www.goinvo.com/features/ebola-care-guideline/"
   }
 ]

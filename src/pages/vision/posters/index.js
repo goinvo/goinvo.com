@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
-//import Hero from '../../../components/hero'
-//<Hero image={frontmatter.heroImage} />
+import Hero from '../../../components/hero'
 import Columns from '../../../components/columns'
 import PosterCard from '../../../components/vision/posters/PosterCard'
-import Image from '../../../components/image'
+//import Image from '../../../components/image'
 import { mediaUrl } from '../../../helpers'
 
 import posters from '../../../data/vision/posters/posters.json'
@@ -30,6 +29,7 @@ class Posters extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
         <div className="poster-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

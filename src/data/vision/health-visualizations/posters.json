@@ -9,24 +9,6 @@
     "learnMoreLink": "/vision/healthcare-dollars/"
   },
   {
-    "id": "sdoh-spend",
-    "title": "Spending within the Determinants of Health",
-    "date": "Jan.2019",
-    "caption": "",
-    "image": "/images/features/determinants-of-health/sdoh-spend-mockup.jpg",
-    "downloadLink": "/pdf/vision/posters/sdoh-spend-v12.pdf",
-    "learnMoreLink": "/vision/determinants-of-health/#determinants-spending"
-  },
-  {
-    "id": "open-source-healthcare",
-    "title": "Open Source Healthcare Journal",
-    "date": "Nov.2018",
-    "caption": "",
-    "image": "/images/features/posters/oshc-book.jpg",
-    "downloadLink": "/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf",
-    "learnMoreLink": "/vision/open-source-healthcare/"
-  },
-  {
     "id": "determinants-of-health",
     "title": "Determinants of Health",
     "date": "Feb.2018",
@@ -45,13 +27,13 @@
     "learnMoreLink": ""
   },
   {
-    "id": "shr-medical-encounter",
-    "title": "SHR Medical Encounter Journey Map",
-    "date": "",
+    "id": "open-source-healthcare",
+    "title": "Open Source Healthcare Journal",
+    "date": "Nov.2018",
     "caption": "",
-    "image": "/images/features/posters/shr-medical-encounter-journey-map.jpg",
-    "downloadLink": "/pdf/vision/posters/shr-medical-encounter-journey-map.pdf",
-    "learnMoreLink": ""
+    "image": "/images/features/posters/oshc-book.jpg",
+    "downloadLink": "/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf",
+    "learnMoreLink": "/vision/open-source-healthcare/"
   },
   {
     "id": "hie-data-access",
@@ -63,13 +45,13 @@
     "learnMoreLink": ""
   },
   {
-    "id": "care-plans-process",
-    "title": "Care Planning Process",
-    "date": "Mar.2016",
-    "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
-    "image": "/images/features/posters/careplans-process.jpg",
-    "downloadLink": "/pdf/vision/posters/careplans-process.pdf",
-    "learnMoreLink": "https://www.goinvo.com/features/careplans/"
+    "id": "sdoh-spend",
+    "title": "Spending within the Determinants of Health",
+    "date": "Jan.2019",
+    "caption": "",
+    "image": "/images/features/determinants-of-health/sdoh-spend-mockup.jpg",
+    "downloadLink": "/pdf/vision/posters/sdoh-spend-v12.pdf",
+    "learnMoreLink": "/vision/determinants-of-health/#determinants-spending"
   },
   {
     "id": "ebola",
@@ -79,5 +61,23 @@
     "image": "/images/features/posters/ebola-care-guideline.jpg",
     "downloadLink": "/pdf/vision/posters/ebola-care-guideline.pdf",
     "learnMoreLink": "https://www.goinvo.com/features/ebola-care-guideline/"
+  },
+  {
+    "id": "care-plans-process",
+    "title": "Care Planning Process",
+    "date": "Mar.2016",
+    "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
+    "image": "/images/features/posters/careplans-process.jpg",
+    "downloadLink": "/pdf/vision/posters/careplans-process.pdf",
+    "learnMoreLink": "https://www.goinvo.com/features/careplans/"
+  },
+  {
+    "id": "shr-medical-encounter",
+    "title": "SHR Medical Encounter Journey Map",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/shr-medical-encounter-journey-map.jpg",
+    "downloadLink": "/pdf/vision/posters/shr-medical-encounter-journey-map.pdf",
+    "learnMoreLink": ""
   }
 ]

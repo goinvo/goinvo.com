@@ -15,10 +15,10 @@ class PosterCard extends Component {
     } = this.props
 
     return (
-      <div className="poster-card pad-vertical--double pure-u-1 pure-u-lg-1-3">
+      <div className="poster-card">
         <div className="poster-preview">
           <a href={downloadLink} target="_blank" rel="noopener noreferrer">
-            <div className={`image-block image-block--hoverable`}>
+            <div className="image-block image-block--hoverable margin-top--none">
               <div className="image-block__image-container">
                 <BackgroundImage
                   src={image}

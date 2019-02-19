@@ -19,7 +19,7 @@ class PosterCard extends Component {
       : this.state.downloadLink
 
     return (
-      <div className="poster-card">
+      <div className="poster-card margin-top--double">
         <div className="poster-preview">
           <a href={downloadLink} target="_blank" rel="noopener noreferrer">
             <div className="image-block image-block--hoverable margin-top--none">

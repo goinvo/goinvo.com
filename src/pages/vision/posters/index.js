@@ -33,8 +33,10 @@ class Posters extends Component {
         <div className="poster-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">Health Visualization Posters</h1>
-              <p className="text--gray text--sm">
+              <h1 className="header--xl margin-bottom--none">
+                Health Visualization Posters
+              </h1>
+              <p className="text--gray text--sm margin-top--none margin-bottom--double">
                 All of the following works are open source, available to all
                 under a{' '}
                 <a

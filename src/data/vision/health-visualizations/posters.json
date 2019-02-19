@@ -45,6 +45,24 @@
     "learnMoreLink": ""
   },
   {
+    "id": "sources-of-clinical-data",
+    "title": "Sources of Clinical Health Data",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/sources-of-clinical-health-data.jpg",
+    "downloadLink": "/pdf/vision/posters/sources-of-clinical-health-data.pdf",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "sources-of-data",
+    "title": "Sources of All Your Health Data",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/sources-of-data.jpg",
+    "downloadLink": "/pdf/vision/posters/sources-of-data.pdf",
+    "learnMoreLink": ""
+  },
+  {
     "id": "sdoh-spend",
     "title": "Spending within the Determinants of Health",
     "date": "Jan.2019",
@@ -61,6 +79,15 @@
     "image": "/images/features/posters/ebola-care-guideline.jpg",
     "downloadLink": "/pdf/vision/posters/ebola-care-guideline.pdf",
     "learnMoreLink": "https://www.goinvo.com/features/ebola-care-guideline/"
+  },
+  {
+    "id": "data-interop",
+    "title": "Standardized Data for Interoperability",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/standard-health-data.jpg",
+    "downloadLink": "/pdf/vision/posters/estandard-health-data.pdf",
+    "learnMoreLink": "https://yes.goinvo.com/articles/a-path-towards-standardized-health"
   },
   {
     "id": "care-plans-process",

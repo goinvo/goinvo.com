@@ -5,14 +5,7 @@ import { mediaUrl } from '../../../helpers'
 
 class PosterCard extends Component {
   render() {
-    const {
-      sizes,
-      id,
-      title,
-      image,
-      learnMoreLink = null,
-      suppressNewTab = false,
-    } = this.props
+    const { sizes, id, title, image, learnMoreLink = null } = this.props
 
     const downloadLink = this.props.downloadLink
       ? mediaUrl(this.props.downloadLink)
@@ -21,7 +14,7 @@ class PosterCard extends Component {
     return (
       <div className="poster-card margin-top--double">
         <div className="poster-preview">
-          <a href={downloadLink} target="_blank" rel="noopener noreferrer">
+          <a href={downloadLink}>
             <div className="image-block image-block--hoverable margin-top--none">
               <div className="image-block__image-container">
                 <BackgroundImage
@@ -39,8 +32,6 @@ class PosterCard extends Component {
           <a
             href={downloadLink}
             className="button button--primary button--block"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Download
           </a>

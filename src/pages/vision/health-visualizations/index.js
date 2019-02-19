@@ -5,7 +5,7 @@ import Hero from '../../../components/hero'
 import Columns from '../../../components/columns'
 import PosterCard from '../../../components/vision/health-visualizations/PosterCard'
 //import Image from '../../../components/image'
-import { mediaUrl } from '../../../helpers'
+//import { mediaUrl } from '../../../helpers'
 
 import posters from '../../../data/vision/health-visualizations/posters.json'
 

@@ -3,8 +3,13 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 //import Hero from '../../../components/hero'
 //<Hero image={frontmatter.heroImage} />
+import Columns from '../../../components/columns'
+import PosterCard from '../../../components/vision/posters/PosterCard'
 import Image from '../../../components/image'
 import { mediaUrl } from '../../../helpers'
+
+import posterItems from '../../../data/vision/posters/posters.json'
+
 import config from '../../../../config'
 
 const frontmatter = {
@@ -17,6 +22,16 @@ class Posters extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
+        <div className="max-width content-padding pad-vertical--double--only-lg">
+          <div className="margin-top--only-lg">
+            <Columns columns={3}>
+              {this.state.posterItems.map((poster, i) => {
+                return <PosterCard />
+              })}
+            </Columns>
+          </div>
+        </div>
+
         <div className="poster-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
@@ -170,6 +185,124 @@ class Posters extends Component {
                     <a
                       href={mediaUrl(
                         '/pdf/vision/posters/precision-prism-architecture-diagram.pdf'
+                      )}
+                      className="button button--primary button--block"
+                    >
+                      Download
+                    </a>
+                  </div>
+                </div>
+
+                <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
+                  <div class="poster">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/shr-medical-encounter-journey-map.pdf'
+                      )}
+                    >
+                      <Image
+                        src="/images/features/posters/shr-medical-encounter-journey-map.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
+                  <div className="posterInfo">
+                    <h4 className="header--sm margin-top--none">
+                      Open Healthcare Systems Model
+                    </h4>
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/shr-medical-encounter-journey-map.pdf'
+                      )}
+                      className="button button--primary button--block"
+                    >
+                      Download
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pure-g">
+                <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
+                  <div className="poster">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/hie-data-access-workflow.pdf'
+                      )}
+                    >
+                      <Image
+                        src="/images/features/posters/hie-data-access-workflow.jpg"
+                        className="background-image image-block__image"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
+                  <div className="posterInfo">
+                    <h4 className="header--sm margin-top--none">
+                      HIE Data Access Workflow
+                    </h4>
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/hie-data-access-workflow.pdf'
+                      )}
+                      className="button button--primary margin-bottom--half button--block"
+                    >
+                      Download
+                    </a>
+                  </div>
+                </div>
+
+                <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
+                  <div class="poster">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/ebola-care-guideline.pdf'
+                      )}
+                    >
+                      <Image
+                        src="/images/features/posters/ebola-care-guideline.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
+                  <div className="posterInfo">
+                    <h4 className="header--sm margin-top--none">
+                      Ebola Care Guideline
+                    </h4>
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/ebola-care-guideline.pdf'
+                      )}
+                      className="button button--primary button--block"
+                    >
+                      Download
+                    </a>
+                  </div>
+                </div>
+
+                <div className="poster-section pad-vertical--double pure-u-1 pure-u-lg-1-3">
+                  <div class="poster">
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/shr-medical-encounter-journey-map.pdf'
+                      )}
+                    >
+                      <Image
+                        src="/images/features/posters/shr-medical-encounter-journey-map-2.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </a>
+                  </div>
+                  <div className="posterInfo">
+                    <h4 className="header--sm margin-top--none">
+                      SHR Medical Encounter
+                    </h4>
+                    <a
+                      href={mediaUrl(
+                        '/pdf/vision/posters/shr-medical-encounter-journey-map.pdf'
                       )}
                       className="button button--primary button--block"
                     >

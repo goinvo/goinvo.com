@@ -1,0 +1,74 @@
+[
+  {
+    "id": "healthcare-dollars",
+    "title": "Where Your Health Dollars Go",
+    "date": "Feb.2019",
+    "caption": "Tracking the allocation and flow of money in the US healthcare system to reveal connections within.",
+    "image": "/images/features/healthcare-dollars/healthcare-dollars-hero.jpg",
+    "downloadLink": "{mediaUrl('/pdf/vision/healthcare-dollars/healthcare-dollars.pdf')}",
+    "learnMoreLink": "/vision/healthcare-dollars/"
+  },
+  {
+    "id": "sdoh-spend",
+    "title": "Spending within the Determinants of Health",
+    "date": "Jan.2019",
+    "caption": "",
+    "image": "/images/features/determinants-of-health/sdoh-spend-mockup.jpg",
+    "downloadLink": "https://github.com/goinvo/HealthDeterminants/raw/master/sdoh-spend/SDOH_to_spend_v12-01.png",
+    "learnMoreLink": "/vision/determinants-of-health/#determinants-spending"
+  },
+  {
+    "id": "",
+    "title": "Open Source Healthcare Journal",
+    "date": "Nov.2018",
+    "caption": "",
+    "image": "/images/features/posters/oshc-book.jpg",
+    "downloadLink": "{mediaUrl('/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf')}",
+    "learnMoreLink": "/vision/open-source-healthcare/"
+  },
+  {
+    "id": "",
+    "title": "Determinants of Health",
+    "date": "Feb.2018",
+    "caption": "",
+    "image": "/images/features/determinants-of-health/determinants-of-health-poster.jpg",
+    "downloadLink": "https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf",
+    "learnMoreLink": "/vision/determinants-of-health/"
+  },
+  {
+    "id": "",
+    "title": "Open Healthcare Systems Model",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/precision-prism-architecture-diagram.jpg",
+    "downloadLink": "{mediaUrl('/pdf/vision/posters/precision-prism-architecture-diagram.pdf')}",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "",
+    "title": "SHR Medical Encounter Journey Map",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/shr-medical-encounter-journey-map.jpg",
+    "downloadLink": "{mediaUrl('/pdf/vision/posters/shr-medical-encounter-journey-map.pdf')}",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "",
+    "title": "HIE Data Access Workflow",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/hie-data-access-workflow.jpg",
+    "downloadLink": "{mediaUrl('/pdf/vision/posters/hie-data-access-workflow.pdf')}",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "",
+    "title": "Ebola Care Guideline",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/ebola-care-guideline.jpg",
+    "downloadLink": "{mediaUrl('/pdf/vision/posters/ebola-care-guideline.pdf')}",
+    "learnMoreLink": ""
+  }
+]

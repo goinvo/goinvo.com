@@ -99,6 +99,33 @@
     "learnMoreLink": "https://yes.goinvo.com/articles/a-path-towards-standardized-health"
   },
   {
+    "id": "healthcare-is-a-human-right",
+    "title": "Healthcare is a Human Right",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/care-card-healthcare-is-a-human-right.jpg",
+    "downloadLink": "/pdf/vision/posters/care-card-healthcare-is-a-human-right.pdf",
+    "learnMoreLink": "http://carecards.me/#healthcare-human-right"
+  },
+  {
+    "id": "examine-yourself",
+    "title": "Examine Yourself",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/care-card-examine-yourself.jpg",
+    "downloadLink": "/pdf/vision/posters/care-card-examine-yourself.pdf",
+    "learnMoreLink": "http://carecards.me/#examine-yourself"
+  },
+  {
+    "id": "sugar-kills",
+    "title": "Sugar Kills",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/care-card-sugar-kills.jpg",
+    "downloadLink": "/pdf/vision/posters/care-card-sugar-kills.pdf",
+    "learnMoreLink": "http://carecards.me/#sugar-kills"
+  },
+  {
     "id": "care-plans-process",
     "title": "Care Planning Process",
     "date": "Mar.2016",

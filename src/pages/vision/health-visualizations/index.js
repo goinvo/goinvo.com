@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Columns from '../../../components/columns'
-import PosterCard from '../../../components/vision/health-visualizations/PosterCard'
+import PosterCard from '../../../components/vision/health-visualizations/poster-card'
 //import Image from '../../../components/image'
 //import { mediaUrl } from '../../../helpers'
 

@@ -27,6 +27,15 @@
     "learnMoreLink": ""
   },
   {
+    "id": "virtual-care-encounters",
+    "title": "Virtual Care Encounters",
+    "date": "Feb.2019",
+    "caption": "",
+    "image": "/images/features/posters/virtual-care-encounters.jpg",
+    "downloadLink": "/pdf/vision/posters/virtual-care-encounters.pdf",
+    "learnMoreLink": "/vision/virtual-care/"
+  },
+  {
     "id": "open-source-healthcare",
     "title": "Open Source Healthcare Journal",
     "date": "Nov.2018",
@@ -49,13 +58,13 @@
     "title": "Sources of Clinical Health Data",
     "date": "",
     "caption": "",
-    "image": "/images/features/posters/sources-of-clinical-health-data.jpg",
+    "image": "/images/features/posters/sources-of-clinical-health-data-2.jpg",
     "downloadLink": "/pdf/vision/posters/sources-of-clinical-health-data.pdf",
-    "learnMoreLink": ""
+    "learnMoreLink": "/work/fastercures-health-data-basics"
   },
   {
     "id": "sources-of-data",
-    "title": "Sources of All Your Health Data",
+    "title": "Sources of Your Personal Health Data",
     "date": "",
     "caption": "",
     "image": "/images/features/posters/sources-of-data.jpg",
@@ -105,6 +114,6 @@
     "caption": "",
     "image": "/images/features/posters/shr-medical-encounter-journey-map.jpg",
     "downloadLink": "/pdf/vision/posters/shr-medical-encounter-journey-map.pdf",
-    "learnMoreLink": ""
+    "learnMoreLink": "/work/mitre-shr"
   }
 ]

@@ -14,7 +14,7 @@ import config from '../../../../config'
 const frontmatter = {
   metaTitle: '',
   metaDescription: '',
-  heroImage: '/images/features/posters/health-visualizations-hero.jpg',
+  heroImage: '/images/features/posters/health-visualizations-hero-2.jpg',
 }
 
 class Posters extends Component {

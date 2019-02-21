@@ -37,14 +37,21 @@ class Posters extends Component {
                 Health Visualizations
               </h1>
               <p className="text--gray text--sm margin-top--none margin-bottom--double">
-                All of the following works are open source, available to all
-                under a{' '}
+                These infographics are open source, available to all under a≈{' '}
                 <a
                   href="https://creativecommons.org/licenses/by/3.0/us/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Creative Commons Attribution v3
+                </a>{' '}
+                license or for the SHR Journey Map and HIE diagram, under a{' '}
+                <a
+                  href="https://opensource.org/licenses/MIT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MIT
                 </a>{' '}
                 license.
               </p>

@@ -241,7 +241,7 @@ class VisionPage extends Component {
               >
                 <ImageBlock
                   title="Health Visualizations"
-                  image="/images/features/posters/health-visualizations-hero-2.jpg"
+                  image="/images/features/posters/health-viz-vision-preview-2.jpg"
                   caption="Open source visualizations on health and the healthcare industry."
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                   hoverable

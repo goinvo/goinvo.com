@@ -23,7 +23,7 @@ for MITRE Corporation
 
 ### Problem
 
-The U.S. lacks a health data standard. Organizations cannot efficiently share or manage health data, costing the US healthcare system $80 billion a year.
+The U.S. lacks a health data standard. Organizations cannot efficiently share or manage health data, costing the US healthcare system \$80 billion a year.
 
 MITRE, a Federally Funded Research and Development Center (FFRDC) specializing in systems engineering, is developing a health data specification called the Standard Health Record (SHR). To drive development and national health IT policy, they needed help envisioning its technical architecture and imagining the services built on top of SHR.
 
@@ -39,7 +39,7 @@ The design concepts and SHR use cases played a key role in providing MITRE a lon
 <br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & Infrastructure, Open Source
 <br />
 <a href="http://standardhealthrecord.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">SHR website</a>
-<a href="https://github.com/standardhealth/shr_design/tree/master/design" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
+<a href="https://github.com/standardhealth/shr_design/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
 
 <Divider />
 

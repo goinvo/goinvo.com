@@ -81,6 +81,15 @@
     "learnMoreLink": "/vision/determinants-of-health/#determinants-spending"
   },
   {
+    "id": "critical-mass",
+    "title": "Critical MASS",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/critical-mass.jpg",
+    "downloadLink": "/pdf/vision/posters/critical-mass.pdf",
+    "learnMoreLink": ""
+  },
+  {
     "id": "ebola",
     "title": "Ebola Care Guideline",
     "date": "Oct.2014",
@@ -151,15 +160,6 @@
     "image": "/images/features/posters/design-axiom-prototype-like-crazy.jpg",
     "downloadLink": "/pdf/vision/posters/design-axiom-prototype-like-crazy.pdf",
     "learnMoreLink": "http://designaxioms.com/"
-  },
-  {
-    "id": "critical-mass",
-    "title": "Critical MASS",
-    "date": "",
-    "caption": "",
-    "image": "/images/features/posters/critical-mass.jpg",
-    "downloadLink": "/pdf/vision/posters/critical-mass.pdf",
-    "learnMoreLink": ""
   },
   {
     "id": "care-plans-process",

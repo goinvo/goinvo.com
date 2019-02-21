@@ -69,7 +69,7 @@
     "caption": "",
     "image": "/images/features/posters/sources-of-data.jpg",
     "downloadLink": "/pdf/vision/posters/sources-of-data.pdf",
-    "learnMoreLink": ""
+    "learnMoreLink": "/work/fastercures-health-data-basics"
   },
   {
     "id": "sdoh-spend",
@@ -126,6 +126,42 @@
     "learnMoreLink": "http://carecards.me/#sugar-kills"
   },
   {
+    "id": "make-things",
+    "title": "Make Things",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/design-axiom-make-things.jpg",
+    "downloadLink": "/pdf/vision/posters/design-axiom-make-things.pdf",
+    "learnMoreLink": "http://designaxioms.com/"
+  },
+  {
+    "id": "let-data-scream",
+    "title": "Let Data Scream",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/design-axiom-let-data-scream.jpg",
+    "downloadLink": "/pdf/vision/posters/design-axiom-let-data-scream.pdf",
+    "learnMoreLink": "http://designaxioms.com/"
+  },
+  {
+    "id": "prototype-like-crazy",
+    "title": "Prototype Like Crazy",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/design-axiom-prototype-like-crazy.jpg",
+    "downloadLink": "/pdf/vision/posters/design-axiom-prototype-like-crazy.pdf",
+    "learnMoreLink": "http://designaxioms.com/"
+  },
+  {
+    "id": "critical-mass",
+    "title": "Critical MASS",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/critical-mass.jpg",
+    "downloadLink": "/pdf/vision/posters/critical-mass.pdf",
+    "learnMoreLink": ""
+  },
+  {
     "id": "care-plans-process",
     "title": "Care Planning Process",
     "date": "Mar.2016",
@@ -142,5 +178,14 @@
     "image": "/images/features/posters/shr-medical-encounter-journey-map.jpg",
     "downloadLink": "/pdf/vision/posters/shr-medical-encounter-journey-map.pdf",
     "learnMoreLink": "/work/mitre-shr"
+  },
+  {
+    "id": "care-plans-ecosystem",
+    "title": "Care Plans Ecosystem",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/careplans-ecosystem.jpg",
+    "downloadLink": "/pdf/vision/posters/careplans-ecosystem.pdf",
+    "learnMoreLink": "https://www.goinvo.com/features/careplans/"
   }
 ]

@@ -237,7 +237,7 @@ class VisionPage extends Component {
               <Card
                 link="/vision/health-visualizations"
                 fillHeight
-                externalLink
+                suppressNewTab={true}
               >
                 <ImageBlock
                   title="Health Visualizations"

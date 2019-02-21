@@ -37,7 +37,7 @@ class Posters extends Component {
                 Health Visualizations
               </h1>
               <p className="text--gray text--sm margin-top--none margin-bottom--double">
-                These infographics are open source, available to all under a≈{' '}
+                These infographics are open source, available to all under a{' '}
                 <a
                   href="https://creativecommons.org/licenses/by/3.0/us/"
                   target="_blank"

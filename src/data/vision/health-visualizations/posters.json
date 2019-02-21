@@ -1,0 +1,191 @@
+[
+  {
+    "id": "healthcare-dollars",
+    "title": "Where Your Health Dollars Go",
+    "date": "Feb.2019",
+    "caption": "Tracking the allocation and flow of money in the US healthcare system to reveal connections within.",
+    "image": "/images/features/healthcare-dollars/healthcare-dollars-hero.jpg",
+    "downloadLink": "/pdf/vision/healthcare-dollars/healthcare-dollars.pdf",
+    "learnMoreLink": "/vision/healthcare-dollars/"
+  },
+  {
+    "id": "determinants-of-health",
+    "title": "Determinants of Health",
+    "date": "Feb.2018",
+    "caption": "",
+    "image": "/images/features/determinants-of-health/determinants-of-health-poster.jpg",
+    "downloadLink": "/pdf/vision/posters/health-determinants.pdf",
+    "learnMoreLink": "/vision/determinants-of-health/"
+  },
+  {
+    "id": "open-healthcare-systems",
+    "title": "Open Healthcare Systems Model",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/precision-prism-architecture-diagram.jpg",
+    "downloadLink": "/pdf/vision/posters/precision-prism-architecture-diagram.pdf",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "virtual-care-encounters",
+    "title": "Virtual Care Encounters",
+    "date": "Feb.2019",
+    "caption": "",
+    "image": "/images/features/posters/virtual-care-encounters.jpg",
+    "downloadLink": "/pdf/vision/posters/virtual-care-encounters.pdf",
+    "learnMoreLink": "/vision/virtual-care/"
+  },
+  {
+    "id": "open-source-healthcare",
+    "title": "Open Source Healthcare Journal",
+    "date": "Nov.2018",
+    "caption": "",
+    "image": "/images/features/posters/oshc-book.jpg",
+    "downloadLink": "/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf",
+    "learnMoreLink": "/vision/open-source-healthcare/"
+  },
+  {
+    "id": "hie-data-access",
+    "title": "HIE Data Access Workflow",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/hie-data-access-workflow.jpg",
+    "downloadLink": "/pdf/vision/posters/hie-data-access-workflow.pdf",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "sources-of-clinical-data",
+    "title": "Sources of Clinical Health Data",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/sources-of-clinical-health-data-2.jpg",
+    "downloadLink": "/pdf/vision/posters/sources-of-clinical-health-data.pdf",
+    "learnMoreLink": "/work/fastercures-health-data-basics"
+  },
+  {
+    "id": "sources-of-data",
+    "title": "Sources of Your Personal Health Data",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/sources-of-data.jpg",
+    "downloadLink": "/pdf/vision/posters/sources-of-data.pdf",
+    "learnMoreLink": "/work/fastercures-health-data-basics"
+  },
+  {
+    "id": "sdoh-spend",
+    "title": "Spending within the Determinants of Health",
+    "date": "Jan.2019",
+    "caption": "",
+    "image": "/images/features/determinants-of-health/sdoh-spend-mockup.jpg",
+    "downloadLink": "/pdf/vision/posters/sdoh-spend-v12.pdf",
+    "learnMoreLink": "/vision/determinants-of-health/#determinants-spending"
+  },
+  {
+    "id": "critical-mass",
+    "title": "Critical MASS",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/critical-mass.jpg",
+    "downloadLink": "/pdf/vision/posters/critical-mass.pdf",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "ebola",
+    "title": "Ebola Care Guideline",
+    "date": "Oct.2014",
+    "caption": "An illustrated process on personal protective equipment.",
+    "image": "/images/features/posters/ebola-care-guideline.jpg",
+    "downloadLink": "/pdf/vision/posters/ebola-care-guideline.pdf",
+    "learnMoreLink": "https://www.goinvo.com/features/ebola-care-guideline/"
+  },
+  {
+    "id": "data-interop",
+    "title": "Standardized Data for Interoperability",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/standard-health-data.jpg",
+    "downloadLink": "/pdf/vision/posters/standard-health-data.pdf",
+    "learnMoreLink": "https://yes.goinvo.com/articles/a-path-towards-standardized-health"
+  },
+  {
+    "id": "healthcare-is-a-human-right",
+    "title": "Healthcare is a Human Right",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/care-card-healthcare-is-a-human-right.jpg",
+    "downloadLink": "/pdf/vision/posters/care-card-healthcare-is-a-human-right.pdf",
+    "learnMoreLink": "http://carecards.me/#healthcare-human-right"
+  },
+  {
+    "id": "examine-yourself",
+    "title": "Examine Yourself",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/care-card-examine-yourself-2.jpg",
+    "downloadLink": "/pdf/vision/posters/care-card-examine-yourself.pdf",
+    "learnMoreLink": "http://carecards.me/#examine-yourself"
+  },
+  {
+    "id": "sugar-kills",
+    "title": "Sugar Kills",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/care-card-sugar-kills.jpg",
+    "downloadLink": "/pdf/vision/posters/care-card-sugar-kills-2.pdf",
+    "learnMoreLink": "http://carecards.me/#sugar-kills"
+  },
+  {
+    "id": "make-things",
+    "title": "Make Things",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/design-axiom-make-things.jpg",
+    "downloadLink": "/pdf/vision/posters/design-axiom-make-things.pdf",
+    "learnMoreLink": "http://designaxioms.com/"
+  },
+  {
+    "id": "let-data-scream",
+    "title": "Let Data Scream",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/design-axiom-let-data-scream.jpg",
+    "downloadLink": "/pdf/vision/posters/design-axiom-let-data-scream.pdf",
+    "learnMoreLink": "http://designaxioms.com/"
+  },
+  {
+    "id": "prototype-like-crazy",
+    "title": "Prototype Like Crazy",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/design-axiom-prototype-like-crazy.jpg",
+    "downloadLink": "/pdf/vision/posters/design-axiom-prototype-like-crazy-2.pdf",
+    "learnMoreLink": "http://designaxioms.com/"
+  },
+  {
+    "id": "care-plans-process",
+    "title": "Care Planning Process",
+    "date": "Mar.2016",
+    "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
+    "image": "/images/features/posters/careplans-process.jpg",
+    "downloadLink": "/pdf/vision/posters/careplans-process.pdf",
+    "learnMoreLink": "https://www.goinvo.com/features/careplans/"
+  },
+  {
+    "id": "shr-medical-encounter",
+    "title": "SHR Medical Encounter Journey Map",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/shr-medical-encounter-journey-map.jpg",
+    "downloadLink": "/pdf/vision/posters/shr-medical-encounter-journey-map.pdf",
+    "learnMoreLink": "/work/mitre-shr"
+  },
+  {
+    "id": "care-plans-ecosystem",
+    "title": "Care Plans Ecosystem",
+    "date": "",
+    "caption": "",
+    "image": "/images/features/posters/careplans-ecosystem.jpg",
+    "downloadLink": "/pdf/vision/posters/careplans-ecosystem.pdf",
+    "learnMoreLink": "https://www.goinvo.com/features/careplans/"
+  }
+]

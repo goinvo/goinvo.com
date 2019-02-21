@@ -234,14 +234,15 @@ class VisionPage extends Component {
               </Card>
             </div>
             <div className="pure-u-1 pure-u-lg-1-3 margin-bottom">
-              <Card link={spotlightPodcast.link} fillHeight externalLink>
+              <Card
+                link="/vision/health-visualizations"
+                fillHeight
+                suppressNewTab={true}
+              >
                 <ImageBlock
-                  title={spotlightPodcast.title}
-                  image={spotlightPodcast.image}
-                  externalImage={true}
-                  client="Podcast"
-                  date={spotlightPodcast.date}
-                  caption={spotlightPodcast.caption}
+                  title="Health Visualizations"
+                  image="/images/features/posters/health-viz-vision-preview-2.jpg"
+                  caption="Open source visualizations on health and the healthcare industry."
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                   hoverable
                 />

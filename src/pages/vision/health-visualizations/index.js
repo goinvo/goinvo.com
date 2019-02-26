@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Columns from '../../../components/columns'
 import PosterCard from '../../../components/vision/health-visualizations/poster-card'
 //import Image from '../../../components/image'
@@ -70,6 +71,15 @@ class Posters extends Component {
                   )
                 })}
               </Columns>
+            </div>
+          </div>
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
         </div>

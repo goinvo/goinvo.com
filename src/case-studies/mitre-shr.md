@@ -39,7 +39,7 @@ The design concepts and SHR use cases played a key role in providing MITRE a lon
 <br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & Infrastructure, Open Source
 <br />
 <a href="http://standardhealthrecord.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">SHR website</a>
-<a href="https://github.com/standardhealth/shr_design/tree/master/design" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
+<a href="https://github.com/standardhealth/shr_design/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
 
 <Divider />
 

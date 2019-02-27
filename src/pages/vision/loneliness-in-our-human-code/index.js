@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -38,6 +39,8 @@ import heartBreakLossIcon from '../../../assets/images/vision/loneliness-in-our-
 import elderlyIcon from '../../../assets/images/vision/loneliness-in-our-human-code/elderly.svg'
 import homeIcon from '../../../assets/images/vision/loneliness-in-our-human-code/home.svg'
 import longTermCoupleIcon from '../../../assets/images/vision/loneliness-in-our-human-code/long-term-couple.svg'
+
+import config from '../../../../config'
 
 const frontmatter = {
   metaTitle: 'Loneliness in our Human Code - GoInvo',
@@ -941,9 +944,21 @@ class LonelinessFeature extends Component {
                   className="image--max-width"
                 />
               </div>
+            </div>
+          </div>
 
-              <Divider />
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
+            </div>
+          </div>
 
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
               <div>
                 <h2 className="header--xl text--center">Authors</h2>
 

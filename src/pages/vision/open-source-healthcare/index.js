@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
+
+import config from '../../../../config'
 
 const frontmatter = {
   metaTitle:
@@ -181,6 +184,15 @@ class OpenSourceHealthcareFeature extends Component {
                   governments engage in healthcare for all.
                 </p>
               </div>
+            </div>
+          </div>
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
         </div>

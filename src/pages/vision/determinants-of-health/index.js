@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -205,9 +206,21 @@ class DeterminantsOfHealthFeature extends Component {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <Divider />
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
+            </div>
+          </div>
 
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
               <h2 className="header--xl text--center margin-top--double">
                 Determinants Compared to Spending
               </h2>

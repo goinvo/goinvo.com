@@ -328,7 +328,7 @@ class VisionPage extends Component {
                 </a>
               </div>
               <div className="margin-bottom--half">
-                Creative Next podcast, on{' '}
+                <a href="https://creativenext.org" target="_blank" rel="noopener noreferrer">Creative Next</a> podcast, on{' '}
                 <a
                   href="https://itunes.apple.com/us/podcast/creative-next/id1451673481?mt=2"
                   target="_blank"

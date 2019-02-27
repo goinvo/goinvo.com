@@ -52,8 +52,8 @@ class Footer extends Component {
                     <Link to="/vision/">Vision</Link>
                   </li>
                   <li>
-                    <a target="blank" href="http://thedigitalife.com/">
-                      The Digital Life
+                    <a target="blank" rel="noopener noreferrer"href="https://creativenext.org/">
+                      Creative Next
                     </a>
                   </li>
                 </ul>

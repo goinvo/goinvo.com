@@ -318,13 +318,31 @@ class VisionPage extends Component {
                   Designing for Emerging Technologies
                 </a>
               </div>
-              <div>
+              <div className="margin-bottom--half">
                 <a
                   href="https://www.oreilly.com/design/free/future-of-product-design.csp"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   The Future of Product Design
+                </a>
+              </div>
+              <div className="margin-bottom--half">
+                <a href="https://creativenext.org" target="_blank" rel="noopener noreferrer">Creative Next</a> podcast, on{' '}
+                <a
+                  href="https://itunes.apple.com/us/podcast/creative-next/id1451673481?mt=2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  iTunes
+                </a>{' '}
+                and{' '}
+                <a
+                  href="https://open.spotify.com/show/3TEs0y2xkFhrdrftDj2LrH"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Spotify
                 </a>
               </div>
             </div>

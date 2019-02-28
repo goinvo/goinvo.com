@@ -25,10 +25,9 @@ const heroVideoSources = [
 ]
 
 const frontmatter = {
-  metaTitle:
-    'GoInvo is a Boston UX design agency dedicated to innovation in healthcare',
+  metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
   metaDescription:
-    'GoInvo is a Boston UX design agency dedicated to innovation in healthcare with deep expertise in Health IT, Genomics, and Open Source health.',
+    'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
   heroImage: '/images/homepage/doh-hero-fallback.jpg',
 }
 

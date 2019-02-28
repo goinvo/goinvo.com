@@ -5,7 +5,7 @@ import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 
 const frontmatter = {
-  metaTitle: 'Thank you - GoInvo',
+  metaTitle: 'Thank You - GoInvo',
   metaDescription:
     'Thank you for contacting us! We will get back to your within 2 business hours.',
   heroImage: '/images/contact/studio.jpg',

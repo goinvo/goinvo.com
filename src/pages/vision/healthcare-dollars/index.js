@@ -30,16 +30,16 @@ class HealthcareDollars extends Component {
                 To Understand the Healthcare system, follow the money
               </h4>
               <p>
-                Healthscape is a map of the US healthcare system and its
-                components. By following the allocation and flow of money in
-                healthcare, the thread of how the organizations, departments,
-                and major players are connected becomes apparent.
+                "Where your Health Dollars Go" is a map of the US healthcare
+                system and its components. By following the allocation and flow
+                of money in healthcare, the thread of how the organizations,
+                departments, and major players are connected becomes apparent.
               </p>
               <p>
-                Healthscape serves two purposes. The first is to provide the
-                public and professionals interested in the healthcare space a
-                way to increase understanding and explore how all the pieces fit
-                together. The second is to give providers, patient advocacy
+                The visualization serves two purposes. The first is to provide
+                the public and professionals interested in the healthcare space
+                a way to increase understanding and explore how all the pieces
+                fit together. The second is to give providers, patient advocacy
                 groups, health policymakers, and health economists a visual
                 communication tool to discuss issues at the higher health
                 systems level.
@@ -110,26 +110,25 @@ class HealthcareDollars extends Component {
                 have on the market or for patients in this wider view.
               </p>
               <p>
-                Healthscape provides a detailed high-level view of major
-                components within the US healthcare system and how they
-                interact. The map serves as a communication tool for health
+                "Where your Health Dollars Go" provides a detailed high-level
+                view of major components within the US healthcare system and how
+                they interact. The map serves as a communication tool for health
                 professionals, organizations, groups, and policymakers to
                 develop services and policies with the context of the larger
                 picture of how their plans may impact the nation from the
-                government to individual patients. Healthscape also provides a
-                canvas for professionals to use, projecting their services and
-                products on the map, to more effectively drive development that
-                aligns with our patient health values.
+                government to individual patients. The visualization also
+                provides a canvas for professionals to use, projecting their
+                services and products on the map, to more effectively drive
+                development that aligns with our patient health values.
               </p>
               <h2 className="header--lg margin-top--double text--center">
                 We’d love your feedback
               </h2>
               <p>
-                The current draft of Healthscape maps some major players onto
-                one visualization. However, there are many parts of the system
-                that have yet to be incorporated, and there may yet be improved
-                ways to represent those relationships than the approach taken
-                here.
+                The current draft of the visualization maps some of the major
+                players. However, there are many parts of the system that have
+                yet to be incorporated, and there may yet be improved ways to
+                represent those relationships than the approach taken here.
               </p>
               <p>
                 Send feedback on this draft to{' '}
@@ -163,8 +162,8 @@ class HealthcareDollars extends Component {
                 <h2 className="header--xl text--center">Methodology</h2>
                 <p>
                   Below is a description of the methodology used in creating the
-                  Healthscape visualization. It is updated based on continuing
-                  research and feedback.
+                  "Where your Health Dollars Go" visualization. It is updated
+                  based on continuing research and feedback.
                 </p>
                 <h4 className="header--sm margin-bottom--half margin-top--double">
                   v1 - 30.Jan.2019

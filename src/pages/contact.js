@@ -7,7 +7,7 @@ import HubspotForm from '../components/hubspot-form'
 import config from '../../config'
 
 const frontmatter = {
-  metaTitle: 'Contact GoInvo',
+  metaTitle: 'Contact GoInvo | Healthcare UX Design Agency',
   metaDescrition:
     'Contact us with new project opportunities, speaker requests, portfolio reviews, and more.',
   heroImage: '/images/contact/studio.jpg',

@@ -2,4 +2,22 @@
   &--max-width {
     max-width: 100%;
   }
+
+  &--max-width-half {
+    max-width: 50%;
+  }
+
+  &--max-width-med {
+    max-width: 500px;
+  }
+
+  &--max-width-small {
+    max-width: 250px;
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }

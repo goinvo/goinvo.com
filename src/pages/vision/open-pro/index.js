@@ -13,8 +13,7 @@ const frontmatter = {
   metaTitle: 'Your health. Your voice.',
   metaDescription:
     "The patient's unique and indispensible voice is too often lost in the complexity of modern healthcare. OpenPRO is promoting ways to healp her be heard!",
-  heroImage:
-    '/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg',
+  heroImage: '/images/features/open-pro/open-pro-hero.jpg',
   //  heroImage: /images/features/open-pro/pro-hero.jpg',
 }
 
@@ -265,6 +264,12 @@ class openPro extends Component {
               </ul>
 
               <Divider />
+              <Image
+                src="/images/features/open-pro/main-graphic.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMediumMaxWidth}
+              />
+
               <h2 className="header--xl">
                 openPRO: an open source project capturing the patient’s voice,
                 beautifully and simply.
@@ -319,6 +324,11 @@ class openPro extends Component {
                 are no publically available voice interfaces for collecting
                 PROMs or questionnaires.
               </p>
+              <Image
+                src="/images/features/open-pro/voice-pro.jpg"
+                className="image--max-width-med image--center"
+                sizes={config.sizes.fullInsideMediumMaxWidth}
+              />
               <h4 className="header--sm">Feature roadmap</h4>
               <ol>
                 <li>
@@ -377,7 +387,7 @@ class openPro extends Component {
                 or the Electronic Medical Record. Foreign language support will
                 help patients prepare a report in English before an appointment
                 so they can be more comfortable and confident in communicating
-                their experiences and needs.{' '}
+                their experiences and needs.
               </p>
               <p>
                 Similar products exist, but there are important differences.
@@ -396,6 +406,11 @@ class openPro extends Component {
                 tool such as openPRO - Symptom Reporter would help encourage
                 such integration.
               </p>
+              <Image
+                src="/images/features/open-pro/symptom.jpg"
+                className="image--max-width-med image--center"
+                sizes={config.sizes.fullInsideMediumMaxWidth}
+              />
               <h4 className="header--sm">Goals</h4>
               <ul className="ul">
                 <li>Improve communication between the patient and care team</li>
@@ -486,7 +501,11 @@ class openPro extends Component {
                   questions such as frequency, severity, and timing.
                 </li>
               </ul>
-
+              <Image
+                src="/images/features/open-pro/ros.jpg"
+                className="image--max-width-med image--center"
+                sizes={config.sizes.fullInsideMediumMaxWidth}
+              />
               <h4 className="header--sm">Goals</h4>
               <ul className="ul">
                 <li>Improve communication between the patient and care team</li>
@@ -573,6 +592,11 @@ class openPro extends Component {
                   ROS reporter, and Voice PROMs.
                 </li>
               </ul>
+              <Image
+                src="/images/features/open-pro/platform.jpg"
+                className="image--max-width-med image--center"
+                sizes={config.sizes.fullInsideMediumMaxWidth}
+              />
               <h4 className="header--sm">Components</h4>
               <ul className="ul">
                 <li>

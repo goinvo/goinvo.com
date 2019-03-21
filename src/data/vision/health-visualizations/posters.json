@@ -1,5 +1,23 @@
 [
   {
+    "id": "health-payment-system-complexity",
+    "title": "Health Payment System Complexity",
+    "date": "Mar.2019",
+    "caption": "See how the complexity of our payment system impacts healthcare spending.",
+    "image": "/images/features/posters/health-payment-system-complexity-hero.jpg",
+    "downloadLink": "/pdf/vision/posters/health-payment-system-complexity.pdf",
+    "learnMoreLink": ""
+  },
+  {
+    "id": "insuring-price-increase",
+    "title": "Insuring Price Increase",
+    "date": "Feb.2019",
+    "caption": "Hospitals and insurance set prices based on leverage and incentives.",
+    "image": "/images/features/posters/insuring-price-increase-hero.jpg",
+    "downloadLink": "/pdf/vision/posters/insuring-price-increase.pdf",
+    "learnMoreLink": ""
+  },
+  {
     "id": "healthcare-dollars",
     "title": "Where Your Health Dollars Go",
     "date": "Feb.2019",

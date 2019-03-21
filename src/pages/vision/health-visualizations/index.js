@@ -13,8 +13,9 @@ import posters from '../../../data/vision/health-visualizations/posters.json'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: '',
-  metaDescription: '',
+  metaTitle: 'Open Source Healthcare Visualizations',
+  metaDescription:
+    'A repo of open source health visualizations and graphics available to all for use or modification, under a Creative Commons Attribution v3 license or MIT license.',
   heroImage: '/images/features/posters/health-visualizations-hero-2.jpg',
 }
 

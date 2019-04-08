@@ -48,7 +48,7 @@ class OpenOfficeHoursPage extends Component {
                 href="#calendly-open-office-hours"
                 className="button button--primary button--lg"
               >
-                Choose a time to visit
+                Choose a time to chat
               </a>
             </div>
           </div>
@@ -102,7 +102,7 @@ class OpenOfficeHoursPage extends Component {
             id="calendly-open-office-hours"
             className="calendly-inline-widget"
             data-url="https://calendly.com/goinvo/open-office-hours"
-            style={{ minWidth: '320px', height: '580px' }}
+            style={{ minWidth: '320px', height: '800px' }}
           />
         </div>
       </Layout>

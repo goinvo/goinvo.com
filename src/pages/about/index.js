@@ -113,13 +113,13 @@ const AboutPage = () => (
               image="/images/about/beth-working.jpg"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               title="Open office hours"
-              caption="Stop by and receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction."
+              caption="Receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction."
             />
             <Link
               to="/about/open-office-hours/"
               className="button button--primary button--block margin-bottom--double hidden--lg"
             >
-              Schedule a visit
+              Schedule a chat
             </Link>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
@@ -143,7 +143,7 @@ const AboutPage = () => (
               to="/about/open-office-hours/"
               className="button button--primary button--block"
             >
-              Schedule a visit
+              Schedule a chat
             </Link>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left">

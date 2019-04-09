@@ -36,9 +36,7 @@ class OpenOfficeHoursPage extends Component {
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
             <div className="max-width--half-left content-padding pad-bottom--double pad-vertical--double--only-lg">
-              <h2 className="header--lg">
-                Open office hours are most Thursdays, 4-6pm
-              </h2>
+              <h2 className="header--lg">Open office hours</h2>
               <p className="text--gray">
                 Our studio is open to anyone seeking advice on design, from
                 students to startups, or chat with our passionate team on
@@ -48,7 +46,7 @@ class OpenOfficeHoursPage extends Component {
                 href="#calendly-open-office-hours"
                 className="button button--primary button--lg"
               >
-                Choose a time to visit
+                Choose a time to chat
               </a>
             </div>
           </div>
@@ -102,7 +100,7 @@ class OpenOfficeHoursPage extends Component {
             id="calendly-open-office-hours"
             className="calendly-inline-widget"
             data-url="https://calendly.com/goinvo/open-office-hours"
-            style={{ minWidth: '320px', height: '580px' }}
+            style={{ minWidth: '320px', height: '800px' }}
           />
         </div>
       </Layout>

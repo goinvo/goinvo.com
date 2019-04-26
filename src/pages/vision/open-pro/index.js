@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -25,11 +26,11 @@ class openPro extends Component {
         <div className="open-pro">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">openPRO</h1>
-              <h2 className="header--lg">
-                Your health. Your voice. The value of the patient-reported
-                outcome and how we are realizing it.
-              </h2>
+              <h1 className="header--xl">openPRO: Your health. Your voice.</h1>
+              <h4 className="header--sm">
+                The value of the patient-reported outcome and how we are
+                realizing it.
+              </h4>
 
               {/*
               <p className="text--gray text--sm">The Patient-Reported Outcome (PRO): “An instrument, scale, or single-item measure that gathers the information directly from the patient.” (CMS Quality Measures Inventory User Guide and Data Dictionary)</p>
@@ -37,42 +38,52 @@ class openPro extends Component {
               (U.S. FOOD AND DRUG ADMINISTRATION. Guidance for Industry.Patient-Reported Outcome Measures: Use in Medical Product Development to Support Labeling Claims. Federal Register 2009;74(35):65132-133.)</p>
               <p className="text--gray text--sm">“a health outcome directly reported by the patient who experienced it. It stands in contrast to an outcome reported by someone else, such as a physician-reported outcome, a nurse-reported outcome, and so on. PRO methods, such as questionnaires, are used in clinical trials or other clinical settings, to help better understand a treatment efficacy or effectiveness.“ (Wikipedia)</p>
 */}
-              <p className="text--black">
+              <p>
                 True patient-focused care requires listening to the VOICE of the
                 patient herself. As she travels from health to sickness and
                 hopefully back to health again, we must record and value her own
-                words as she describes her pains, her values, and her needs.{' '}
+                words as she describes her pains, her values, and her needs.
               </p>
-              <p className="text--gray text--sm text--center">
-                Patient-Reported Outcome (PRO): Any report on the status of a
-                patient's health coming directly from the patient without any
-                interpretation or interference.
+
+              <Divider />
+
+              <h2 className="header--lg text--center">
+                What is PRO and why is it important?
+              </h2>
+
+              <p>
+                <em>Patient-Reported Outcome (PRO): </em>
+                Any report on the status of a patient's health coming directly
+                from the patient without any interpretation or interference.
               </p>
-              <h4 className="header--sm">
+
+              <h4 className="header-sm">
+                {' '}
                 The Patient-Reported Outcome is the platform for the patient to
-                be heard. Why must we listen?
+                be heard. Why must we listen?{' '}
               </h4>
+
               <ul className="ul">
                 <li>
                   Our health system is moving toward focus on quality of care
                   from quantity of care. Quality is measured as a combination of
-                  lives saved, readmission, and medical outcomes, but must also
-                  include quality of life measures such as pain and mobility.
-                  But, the very words of the patient that define quality in the
-                  patient’s interest are too often ignored. We must center our
-                  care and attention on the patient’s needs, values, and
-                  experiences.
+                  lives saved, readmission, medical outcomes, as well as quality
+                  of life measures such as pain and mobility. However, the very
+                  words of the patient that define quality in the patient’s
+                  interest are too often ignored. We must center our care and
+                  attention on the patient’s needs, values, and experiences.
                 </li>
+
                 <li>
                   A curious thing about pain is how easily we forget it after
-                  the fact. The when, the where, the how much... all important
+                  the fact. When, where, how much... these are all important
                   details the doctor wants to know, and we find ourselves
-                  struggling to recall. We fill in the gaps with maybe-truths.
-                  It certainly would be helpful to record your pain{' '}
-                  <em>when it happens, where it happens</em>. Then at the
-                  doctor’s office, that record is already in the doctor’s hand.
-                  So much of the data needed to diagnose and treat comes from
-                  the patient.
+                  struggling to recall, filling in the gaps with maybe- truths.
+                  It certainly would be helpful to record pain{' '}
+                  <em>when it happens, where it happens</em>. At the doctor’s
+                  office, that record should already be in the doctor’s hand to
+                  be used that much more easily to diagnose and treat the
+                  patient.
                 </li>
               </ul>
 
@@ -82,33 +93,37 @@ class openPro extends Component {
                 regarding your care and the future of the health system.
               </p>
 
-              <h2 className="header--lg">The PRO enables the patient...</h2>
-              <h4 className="header-sm">to communicate</h4>
-              <p>
+              <h4 className="header-sm">The PRO enables...</h4>
+
+              <h4 className="header-sm">Improved communication</h4>
+              <p className="text--gray">
                 {' '}
                 The patient can initiate communication of relevant medical data
                 with the doctor to send outcomes, align priorities, and arrange
                 the care they need.{' '}
               </p>
+
               <h4 className="header-sm">
-                to focus the clinician’s time and attention
+                Less time on data entry and better time with the patient
               </h4>
-              <p>
+              <p className="text--gray">
                 The patient records her own experiences and pushes it to the
                 health record. Her doctor can then spend more face-to-face time
                 discussing her care, rather than conducting time-consuming
                 interviews and performing data entry.
               </p>
-              <h4 className="header-sm">to improve quality of treatment</h4>
-              <p>
+
+              <h4 className="header-sm">Improved quality of treatment</h4>
+              <p className="text--gray">
                 PRO tools allow the patient to report clinically relevant
                 information at the point of pain, when it is most reliable, to
                 inform the most appropriate treatments. Over the course of
                 treatment, the PRO promotes accurate recordings of outcomes to
                 advance changes when needed.
               </p>
-              <h4 className="header-sm">to personalize care</h4>
-              <p>
+
+              <h4 className="header-sm">Personalized care</h4>
+              <p className="text--gray">
                 The patient is able choose treatments, personalized to their
                 needs, by drawing on the past successes, experiences, and
                 self-reported outcomes of many similar patients who came before
@@ -117,14 +132,17 @@ class openPro extends Component {
                   <a href="#references">7,8,10</a>
                 </sup>
               </p>
-              <h4 className="header-sm">to improve health care for all</h4>
-              <p>
+
+              <h4 className="header-sm">Improved healthcare for all</h4>
+              <p className="text--gray">
                 The patient provides invaluable data on treatment outcomes. The
                 data is accurate, timely, and multi-dimensional. These qualities
-                of data are possible only many patients’ voices.
+                of data are possible only with many patients’ voices.
               </p>
 
-              <h2 className="header--lg">The current landscape</h2>
+              <Divider />
+
+              <h2 className="header--lg text--center">The current landscape</h2>
               <p>
                 <em>Patient portals</em> offer communication between the patient
                 and care team. Some EHR vendors offer the ability to send PRO
@@ -264,29 +282,44 @@ class openPro extends Component {
               </ul>
 
               <Divider />
+
+              <h2 className="header--lg text--center">Our solution: openPRO</h2>
+
+              <h4 className="header--sm text--center">
+                {' '}
+                An open source project capturing the patient’s voice,
+                beautifully and simply.{' '}
+              </h4>
+
               <Image
                 src="/images/features/open-pro/main-graphic.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
               />
 
-              <h2 className="header--xl">
-                openPRO: an open source project capturing the patient’s voice,
-                beautifully and simply.
-              </h2>
-              <h4 className="header-sm">
+              <div className="button-group">
                 <a
-                  href="https://github.com/goinvo/openPRO"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={mediaUrl('https://github.com/goinvo/openPRO')}
+                  className="button button--primary margin-top--double margin-bottom--double"
                 >
-                  contribute on GitHub
+                  Contribute on GitHub
                 </a>
-              </h4>
+              </div>
+
               <p>
                 We’ve conceived several projects seeking to overcome these
-                challenges and push PROs to realize their potential. The
-                benefits of being open source are three-fold. First, the
+                challenges and push PROs to realize their potential.
+              </p>
+
+              <ol>
+                <li>VoicePRO</li>
+                <li>Symptom Reporter</li>
+                <li>ROS Reporter</li>
+                <li>OpenPRO Platform</li>
+              </ol>
+
+              <p>
+                The benefits of being open source are three-fold. First, the
                 extended community provides verification, support, and feedback,
                 improving the quality and relevance of the process and product.
                 Second, the mature product will provide services as well as an
@@ -295,7 +328,8 @@ class openPro extends Component {
                 positive impact on medicine by building community and interest
                 in improving the state of PROs.
               </p>
-              <h2 className="header--lg">voicePRO</h2>
+
+              <h3 className="header--md">1. voicePRO</h3>
               <p>
                 <a
                   href="https://github.com/goinvo/openPRO/tree/master/voicePROM"
@@ -329,6 +363,7 @@ class openPro extends Component {
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
               />
+
               <h4 className="header--sm">Feature roadmap</h4>
               <ol>
                 <li>
@@ -350,6 +385,7 @@ class openPro extends Component {
                 <li>Integration into other openPRO products.</li>
                 <li>Reports are delivered as FHIR bundles.</li>
               </ol>
+
               <h4 className="header--sm">Current state: gestating</h4>
               <p>
                 Using the Alexa and AWS services from the Amazon ecosystem,
@@ -372,7 +408,7 @@ class openPro extends Component {
                 <span className="text--black">8 weeks, 1.0FTE</span>
               </p>
 
-              <h2 className="header--lg">Symptom Reporter</h2>
+              <h3 className="header--md">2. Symptom Reporter</h3>
               <p>
                 <a
                   href="https://github.com/goinvo/openPRO/tree/master/SymptomReporter"
@@ -411,6 +447,7 @@ class openPro extends Component {
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
               />
+
               <h4 className="header--sm">Goals</h4>
               <ul className="ul">
                 <li>Improve communication between the patient and care team</li>
@@ -424,6 +461,7 @@ class openPro extends Component {
                 </li>
                 <li>Provide foreign language support within the interface</li>
               </ul>
+
               <h4 className="header--sm">Components</h4>
               <ul className="ul">
                 <li>
@@ -452,7 +490,7 @@ class openPro extends Component {
                 <span className="text--black">6 weeks, 1.0FTE</span>
               </p>
 
-              <h2 className="header--lg">ROS Reporter</h2>
+              <h3 className="header--md">3. ROS Reporter</h3>
               <p>
                 A review of systems (ROS) is a gathering of targeted medical
                 information such as symptoms from a patient. Reimbursement
@@ -554,7 +592,7 @@ class openPro extends Component {
                 <span className="text--black">6 weeks, 1.0FTE</span>
               </p>
 
-              <h2 className="header--lg">openPRO Platform</h2>
+              <h3 className="header--md">4. openPRO Platform</h3>
               <p>
                 The{' '}
                 <a
@@ -678,6 +716,18 @@ class openPro extends Component {
                 Development of minimal service:{' '}
                 <span className="text--black">6 weeks, 1.0FTE</span>
               </p>
+            </div>
+            <div className="background--gray pad-vertical--double">
+              <div className="max-width max-width--md content-padding">
+                <HubspotForm
+                  formId={config.hubspotNewsletterFullFormId}
+                  title="Subscribe to our open source healthcare newsletter."
+                  submitButtonText="Subscribe"
+                />
+              </div>
+            </div>
+            <div className="max-width max-width--md content-padding">
+              <h2 className="header--xl text--center">Authors</h2>
 
               <Divider />
 

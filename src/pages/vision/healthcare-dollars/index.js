@@ -49,7 +49,7 @@ class HealthcareDollars extends Component {
             <div className="poster margin-top--double">
               <a
                 href={mediaUrl(
-                  '/pdf/vision/healthcare-dollars/healthcare-dollars-32x25.pdf'
+                  '/pdf/vision/healthcare-dollars/healthcare-dollars-poster.pdf'
                 )}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -8,6 +8,12 @@ import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import { mediaUrl } from '../../../helpers'
 
+import communicationIcon from '../../../assets/images/vision/open-pro/communication.svg'
+import healthcareIcon from '../../../assets/images/vision/open-pro/healthcare.svg'
+import patientIcon from '../../../assets/images/vision/open-pro/patient.svg'
+import personalizedCareIcon from '../../../assets/images/vision/open-pro/personalized-care.svg'
+import treatmentIcon from '../../../assets/images/vision/open-pro/treatment.svg'
+
 import config from '../../../../config'
 
 const frontmatter = {
@@ -57,7 +63,7 @@ class openPro extends Component {
                 from the patient without any interpretation or interference.
               </p>
 
-              <h4 className="header-sm">
+              <h4 className="header--sm">
                 {' '}
                 The Patient-Reported Outcome is the platform for the patient to
                 be heard. Why must we listen?{' '}
@@ -93,52 +99,75 @@ class openPro extends Component {
                 regarding your care and the future of the health system.
               </p>
 
-              <h4 className="header-sm">The PRO enables...</h4>
+              <div className="open-pro__enables">
+                <h4 className="header--sm">The PRO enables...</h4>
 
-              <h4 className="header-sm">Improved communication</h4>
-              <p className="text--gray">
-                {' '}
-                The patient can initiate communication of relevant medical data
-                with the doctor to send outcomes, align priorities, and arrange
-                the care they need.{' '}
-              </p>
+                <img
+                  src={communicationIcon}
+                  alt="icon of chat bubbles showing communication"
+                />
+                <h4 className="header--sm">Improved communication</h4>
+                <p className="text--gray">
+                  {' '}
+                  The patient can initiate communication of relevant medical
+                  data with the doctor to send outcomes, align priorities, and
+                  arrange the care they need.{' '}
+                </p>
 
-              <h4 className="header-sm">
-                Less time on data entry and better time with the patient
-              </h4>
-              <p className="text--gray">
-                The patient records her own experiences and pushes it to the
-                health record. Her doctor can then spend more face-to-face time
-                discussing her care, rather than conducting time-consuming
-                interviews and performing data entry.
-              </p>
+                <img
+                  src={patientIcon}
+                  alt="icon showing patient and doctor conversing"
+                />
+                <h4 className="header--sm">
+                  Less time on data entry and better time with the patient
+                </h4>
+                <p className="text--gray">
+                  The patient records her own experiences and pushes it to the
+                  health record. Her doctor can then spend more face-to-face
+                  time discussing her care, rather than conducting
+                  time-consuming interviews and performing data entry.
+                </p>
 
-              <h4 className="header-sm">Improved quality of treatment</h4>
-              <p className="text--gray">
-                PRO tools allow the patient to report clinically relevant
-                information at the point of pain, when it is most reliable, to
-                inform the most appropriate treatments. Over the course of
-                treatment, the PRO promotes accurate recordings of outcomes to
-                advance changes when needed.
-              </p>
+                <img
+                  src={treatmentIcon}
+                  alt="icon showing healthcare with a line graph trending upwards"
+                />
+                <h4 className="header--sm">Improved quality of treatment</h4>
+                <p className="text--gray">
+                  PRO tools allow the patient to report clinically relevant
+                  information at the point of pain, when it is most reliable, to
+                  inform the most appropriate treatments. Over the course of
+                  treatment, the PRO promotes accurate recordings of outcomes to
+                  advance changes when needed.
+                </p>
 
-              <h4 className="header-sm">Personalized care</h4>
-              <p className="text--gray">
-                The patient is able choose treatments, personalized to their
-                needs, by drawing on the past successes, experiences, and
-                self-reported outcomes of many similar patients who came before
-                them
-                <sup>
-                  <a href="#references">7,8,10</a>
-                </sup>
-              </p>
+                <img
+                  src={personalizedCareIcon}
+                  alt="icon showing a patient moving customization sliders"
+                />
+                <h4 className="header--sm">Personalized care</h4>
+                <p className="text--gray">
+                  The patient is able choose treatments, personalized to their
+                  needs, by drawing on the past successes, experiences, and
+                  self-reported outcomes of many similar patients who came
+                  before them
+                  <sup>
+                    <a href="#references">7,8,10</a>
+                  </sup>
+                </p>
 
-              <h4 className="header-sm">Improved healthcare for all</h4>
-              <p className="text--gray">
-                The patient provides invaluable data on treatment outcomes. The
-                data is accurate, timely, and multi-dimensional. These qualities
-                of data are possible only with many patients’ voices.
-              </p>
+                <img
+                  src={healthcareIcon}
+                  alt="icon of the world surrounded by a stethoscope"
+                />
+                <h4 className="header--sm">Improved healthcare for all</h4>
+                <p className="text--gray">
+                  The patient provides invaluable data on treatment outcomes.
+                  The data is accurate, timely, and multi-dimensional. These
+                  qualities of data are possible only with many patients’
+                  voices.
+                </p>
+              </div>
 
               <Divider />
 
@@ -174,7 +203,7 @@ class openPro extends Component {
                 selects questions in response to answers.
               </p>
 
-              <h4 className="header-sm">Progress</h4>
+              <h4 className="header--sm">Progress</h4>
               <ul className="ul">
                 <li>
                   Application to patient screening and monitoring
@@ -232,7 +261,7 @@ class openPro extends Component {
                   .
                 </li>
               </ul>
-              <h4 className="header-sm">Limitations</h4>
+              <h4 className="header--sm">Limitations</h4>
               <ul className="ul">
                 <li>
                   Limited portal integration of PROMs, with few exceptions.
@@ -247,7 +276,7 @@ class openPro extends Component {
                   implementation and integration into EHRs.
                 </li>
               </ul>
-              <h4 className="header-sm">Challenges</h4>
+              <h4 className="header--sm">Challenges</h4>
               <ul className="ul">
                 <li>
                   Lack of annotated libraries. Difficult to identify measures
@@ -728,6 +757,30 @@ class openPro extends Component {
             </div>
             <div className="max-width max-width--md content-padding">
               <h2 className="header--xl text--center">Authors</h2>
+
+              <div className="author">
+                <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                  <Image
+                    src="/images/about/headshot-daniel-reeves.jpg"
+                    className="image--max-width"
+                  />
+                </div>
+                <div className="authorBio pure-u-1 pure-u-lg-1-2">
+                  <p>
+                    <strong>Daniel Reeves</strong>
+                    <span className="text--gray">, GoInvo</span>
+                  </p>
+                  <p>
+                    Daniel is a designer and developer with a diverse background
+                    in building interactive and science-based exhibits to
+                    academic research in interdisciplinary physics. He has a PhD
+                    in physics and quantitative biology from Brandeis University
+                    and held subsequent positions at Harvard and MIT. Daniel
+                    joined the GoInvo team in 2018 to build engaging biologic
+                    and healthcare services.
+                  </p>
+                </div>
+              </div>
 
               <Divider />
 

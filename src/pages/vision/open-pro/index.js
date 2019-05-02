@@ -20,8 +20,7 @@ const frontmatter = {
   metaTitle: 'Your health. Your voice.',
   metaDescription:
     "The patient's unique and indispensible voice is too often lost in the complexity of modern healthcare. OpenPRO is promoting ways to healp her be heard!",
-  heroImage: '/images/features/open-pro/open-pro-hero.jpg',
-  //  heroImage: /images/features/open-pro/pro-hero.jpg',
+  heroImage: '/images/features/open-pro/open-pro-hero-v2.jpg',
 }
 
 class openPro extends Component {

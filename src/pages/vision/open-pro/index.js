@@ -805,6 +805,28 @@ class openPro extends Component {
                 <div className="author">
                   <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
                     <Image
+                      src="/images/about/headshot-jen-patel.jpg"
+                      className="image--max-width"
+                    />
+                  </div>
+                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
+                    <p>
+                      <strong>Jen Patel</strong>
+                      <span className="text--gray">, GoInvo</span>
+                    </p>
+                    <p>
+                      Jennifer is a designer-developer hybrid specializing in
+                      user interface design and front-end development. She
+                      creates beautiful designs using big and small data, often
+                      for health and enterprise services. Jennifer joined Invo
+                      in 2011 and is a graduate of the Rochester Institute of
+                      Technology.
+                    </p>
+                  </div>
+                </div>
+                <div className="author">
+                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                    <Image
                       src="/images/about/headshot-juhan-sonin.jpg"
                       className="image--max-width"
                     />

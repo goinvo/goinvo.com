@@ -33,8 +33,7 @@ class openPro extends Component {
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">openPRO: Your health. Your voice.</h1>
               <h4 className="header--sm">
-                The value of the patient-reported outcome and how we are
-                realizing it.
+                An open source framework for patient-reported outcomes.
               </h4>
 
               {/*

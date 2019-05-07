@@ -84,6 +84,11 @@ $directions: 'top' 'bottom' 'left' 'right';
     margin-top: $spacing * 2;
     margin-bottom: $spacing * 2;
   }
+
+  &--quad {
+    margin-top: $spacing * 4;
+    margin-bottom: $spacing * 4;
+  }
 }
 
 @each $direction in $directions {

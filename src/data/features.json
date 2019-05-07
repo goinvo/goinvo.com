@@ -1,5 +1,21 @@
 [
   {
+    "id": "open-pro",
+    "title": "openPRO: Your health. Your voice.",
+    "date": "May.2019",
+    "client": "Feature",
+    "categories": [
+      "care-management",
+      "health-it-and-infrastructure",
+      "patient-engagement",
+      "open-source"
+    ],
+    "caption": "An open source framework for patient-reported outcomes.",
+    "image": "/images/features/open-pro/open-pro-hero-v2.jpg",
+    "link": "/vision/open-pro/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "healthcare-dollars",
     "title": "Where Your Health Dollars Go",
     "date": "Feb.2019",

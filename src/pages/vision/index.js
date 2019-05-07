@@ -32,7 +32,7 @@ import config from '../../../config'
 
 import { formatDate } from '../../helpers.js'
 
-const spotlightFeature = features.find(feature => feature.id === 'virtual-care')
+const spotlightFeature = features.find(feature => feature.id === 'open-pro')
 
 const spotlightPodcast = {
   title: 'AI + Science',
@@ -328,7 +328,14 @@ class VisionPage extends Component {
                 </a>
               </div>
               <div className="margin-bottom--half">
-                <a href="https://creativenext.org" target="_blank" rel="noopener noreferrer">Creative Next</a> podcast, on{' '}
+                <a
+                  href="https://creativenext.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Creative Next
+                </a>{' '}
+                podcast, on{' '}
                 <a
                   href="https://itunes.apple.com/us/podcast/creative-next/id1451673481?mt=2"
                   target="_blank"

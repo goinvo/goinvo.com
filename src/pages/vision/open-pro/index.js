@@ -17,9 +17,9 @@ import treatmentIcon from '../../../assets/images/vision/open-pro/treatment.svg'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Your health. Your voice.',
+  metaTitle: 'openPRO: Your health. Your voice.',
   metaDescription:
-    "The patient's unique and indispensible voice is too often lost in the complexity of modern healthcare. OpenPRO is promoting ways to healp her be heard!",
+    "The patient's unique and indispensible voice is too often lost in the complexity of modern healthcare. Open Source Patient Reported Outcome (openPRO) is promoting ways to help her be heard!",
   heroImage: '/images/features/open-pro/open-pro-hero-v2.jpg',
 }
 
@@ -33,7 +33,8 @@ class openPro extends Component {
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">openPRO: Your health. Your voice.</h1>
               <h4 className="header--sm">
-                An open source framework for patient-reported outcomes.
+                Open source services for patients to capture and report their
+                health outcomes.
               </h4>
 
               {/*
@@ -326,7 +327,9 @@ class openPro extends Component {
 
               <div className="button-group">
                 <a
-                  href={mediaUrl('https://github.com/goinvo/openPRO')}
+                  href="https://github.com/goinvo/openPRO"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="button button--primary margin-top--double margin-bottom--double"
                 >
                   Contribute on GitHub
@@ -339,10 +342,10 @@ class openPro extends Component {
               </p>
 
               <ol>
-                <li>VoicePRO</li>
+                <li>VoicePROM</li>
                 <li>Symptom Reporter</li>
                 <li>ROS Reporter</li>
-                <li>OpenPRO Platform</li>
+                <li>openPRO Platform</li>
               </ol>
 
               <p>
@@ -356,14 +359,14 @@ class openPro extends Component {
                 in improving the state of PROs.
               </p>
 
-              <h3 className="header--md">1. voicePRO</h3>
+              <h3 className="header--md">1. voicePROM</h3>
               <p>
                 <a
                   href="https://github.com/goinvo/openPRO/tree/master/voicePROM"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  VoicePRO
+                  VoicePROM
                 </a>{' '}
                 is a voice-first platform that collects short, scheduled, and
                 structured data from the patient with convenient low-burden
@@ -623,7 +626,7 @@ class openPro extends Component {
               <p>
                 The{' '}
                 <a
-                  href="https://github.com/goinvo/openPRO/tree/master/ROSReporter"
+                  href="https://github.com/goinvo/openPRO/tree/master/proPlatform"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -926,6 +929,8 @@ class openPro extends Component {
                     {
                       title:
                         'Patel, Vaishali, and Christian Johnson. 2018. “Individuals’ Use of Online Medical Records and Technology for Health Needs.” ONC Data Brief 40. The Office of the National Coordinator for Health Information Technology.',
+                      link:
+                        'https://www.healthit.gov/sites/default/files/page/2018-03/HINTS-2017-Consumer-Data-Brief-3.21.18.pdf',
                     },
                     {
                       title:

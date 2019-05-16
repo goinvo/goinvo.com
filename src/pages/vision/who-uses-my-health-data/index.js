@@ -21,6 +21,7 @@ const frontmatter = {
 class HealthDataUseFeature extends Component {
   render() {
     return (
+      <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
         <div className="who-uses-my-health-data">
           <div className="pad-vertical--double">

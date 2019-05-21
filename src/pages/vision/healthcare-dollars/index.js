@@ -29,13 +29,13 @@ class HealthcareDollars extends Component {
               <h4 className="header--sm">
                 To Understand the Healthcare system, follow the money
               </h4>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 "Where your Health Dollars Go" is a map of the US healthcare
                 system and its components. By following the allocation and flow
                 of money in healthcare, the thread of how the organizations,
                 departments, and major players are connected becomes apparent.
               </p>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 The visualization serves two purposes. The first is to provide
                 the public and professionals interested in the healthcare space
                 a way to increase understanding and explore how all the pieces
@@ -96,7 +96,7 @@ class HealthcareDollars extends Component {
 
               <Divider />
 
-              <p className="margin-top--double">
+              <p className="margin-top--double text--gray">
                 The US healthcare system is extremely convoluted. To call it
                 “spaghetti” would be an understatement. Because of the
                 complexity, accurately capturing and following associative and
@@ -109,7 +109,7 @@ class HealthcareDollars extends Component {
                 primary, secondary or tertiary, downstream effects they will
                 have on the market or for patients in this wider view.
               </p>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 "Where your Health Dollars Go" provides a detailed high-level
                 view of major components within the US healthcare system and how
                 they interact. The map serves as a communication tool for health
@@ -124,13 +124,13 @@ class HealthcareDollars extends Component {
               <h2 className="header--lg margin-top--double text--center">
                 We’d love your feedback
               </h2>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 The current draft of the visualization maps some of the major
                 players. However, there are many parts of the system that have
                 yet to be incorporated, and there may yet be improved ways to
                 represent those relationships than the approach taken here.
               </p>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 Send feedback on this draft to{' '}
                 <a
                   href="mailto:hello@goinvo.com?subject=Healthcare%20Dollars"

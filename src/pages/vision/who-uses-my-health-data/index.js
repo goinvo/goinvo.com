@@ -14,7 +14,8 @@ import config from '../../../../config'
 
 const frontmatter = {
   metaTitle: 'Who Uses my Health Data - GoInvo',
-  metaDescription: 'Patient health data blahh',
+  metaDescription:
+    'The health data trade has quietly grown with little patient or doctor knowledge',
   heroImage: '/images/features/health-data-use/health-data-use-hero-2.jpg',
 }
 
@@ -26,33 +27,42 @@ class HealthDataUseFeature extends Component {
         <div className="who-uses-my-health-data">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">Who Uses my Health Data?</h1>
+              <h1 className="header--xl">Who Uses My Health Data?</h1>
               <p className="margin-bottom--none text--gray">
                 With all of the data they have about us, the U.S. tech giants
                 (Facebook, Google, Amazon, etc) wield market power that other
-                companies can only imagine. It is not difficult for that
-                imagination to run wild, as companies consider how similar
-                insights could transform their own business. The allure of
-                bigger data, better machine learning, and more powerful
-                analytics may stem from a vision for the future or perhaps a
-                fear of falling behind. Either way, the market for data on
-                consumers is thriving. A slew of companies have capitalized on
-                the mining and brokering of this data.
+                companies can only imagine. It is easy for that imagination to
+                run wild, as companies consider how similar insights could
+                transform their own business. The allure of bigger data, better
+                machine learning, and more powerful analytics may stem from a
+                vision for the future or perhaps a fear of falling behind.
+                Either way, the market for data on consumers is thriving. A slew
+                of companies have capitalized on the mining and brokering of
+                this data.
               </p>
               <p className="text--gray">
-                We consumers may grow to expect some data tracking in our
-                commercial lives. However, we may not realize that our
-                healthcare data, collected behind the safely closed doors of our
-                doctor’s office, travels through many hands for the profit of
-                others.
+                We consumers may grow to expect some data tracking. However, we
+                may not realize that our healthcare data, collected behind the
+                safely closed doors of our doctor’s office, travels through many
+                hands for the profit of others.
               </p>
             </div>
 
-            <Image
-              src="/images/features/health-data-use/health-data-use-poster-thin.jpg"
-              className="image--max-width"
-              sizes={config.sizes.fullInsideMediumMaxWidth}
-            />
+            <div className="poster margin-top--double">
+              <a
+                href={mediaUrl(
+                  '/pdf/vision/health-data-use/health-data-use-poster-medium.pdf'
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/images/features/health-data-use/health-data-use-poster-thin.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMediumMaxWidth}
+                />
+              </a>
+            </div>
 
             <div className="max-width max-width--md content-padding">
               <div className="button-group">
@@ -82,9 +92,9 @@ class HealthDataUseFeature extends Component {
                 must be de-identified when traded, as mandated by HIPAA. But it
                 does not prohibit the sale of your data, require that your
                 health data is only used for your health care, or protect your
-                healthdata outside of the health system (cite). In fact,
-                consumer companies such as DNA testing and analysis services are
-                not required to de-identify your data if they sell it to data
+                health data outside of the health system. In fact, consumer
+                companies such as DNA testing and analysis services are not
+                required to de-identify your data if they sell it to data
                 brokers.
                 <sup>
                   <a href="#references">13 </a>
@@ -122,7 +132,7 @@ class HealthDataUseFeature extends Component {
               </p>
               <p className="text--gray">
                 We patients need ownership over our health data, which is often
-                the most sentitive information about our lives. We need
+                the most sensitive information about our lives. We need
                 authority over its access and use. At the very least, we need to
                 know who is using and viewing our data. For those of us who are
                 healthy and in a financial position to entertain a myriad of
@@ -134,7 +144,7 @@ class HealthDataUseFeature extends Component {
               </p>
             </div>
 
-            <div className="background--gray pad-vertical--double">
+            <div className="background--gray pad-vertical--double margin-top--double">
               <div className="max-width max-width--md content-padding">
                 <HubspotForm
                   formId={config.hubspotNewsletterFullFormId}
@@ -158,7 +168,7 @@ class HealthDataUseFeature extends Component {
                     <strong>Sharon Lee</strong>
                     <span className="text--gray">, GoInvo</span>
                   </p>
-                  <p>
+                  <p className="text--gray">
                     Sharon is a designer with an eclectic background in
                     engineering, medicine, and art. Passionate about healthcare,
                     she has focused her efforts on human-centered software
@@ -180,7 +190,7 @@ class HealthDataUseFeature extends Component {
                     <strong>Juhan Sonin</strong>
                     <span className="text--gray">, GoInvo, MIT</span>
                   </p>
-                  <p>
+                  <p className="text--gray">
                     Juhan leads GoInvo with expertise in healthcare design and
                     system engineering. He’s spent time at Apple, the National
                     Center for Supercomputing Applications (NCSA), and MITRE.

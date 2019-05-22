@@ -43,7 +43,7 @@ class openPro extends Component {
               (U.S. FOOD AND DRUG ADMINISTRATION. Guidance for Industry.Patient-Reported Outcome Measures: Use in Medical Product Development to Support Labeling Claims. Federal Register 2009;74(35):65132-133.)</p>
               <p className="text--gray text--sm">“a health outcome directly reported by the patient who experienced it. It stands in contrast to an outcome reported by someone else, such as a physician-reported outcome, a nurse-reported outcome, and so on. PRO methods, such as questionnaires, are used in clinical trials or other clinical settings, to help better understand a treatment efficacy or effectiveness.“ (Wikipedia)</p>
 */}
-              <p>
+              <p className="margin-bottom--none text--gray">
                 True patient-focused care requires listening to the VOICE of the
                 patient herself. As she travels from health to sickness and
                 hopefully back to health again, we must record and value her own
@@ -56,7 +56,7 @@ class openPro extends Component {
                 What is PRO and why is it important?
               </h2>
 
-              <p>
+              <p className="margin-bottom--none text--gray">
                 <em>Patient-Reported Outcome (PRO): </em>
                 Any report on the status of a patient's health coming directly
                 from the patient without any interpretation or interference.
@@ -68,7 +68,7 @@ class openPro extends Component {
                 be heard. Why must we listen?{' '}
               </h4>
 
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Our health system is moving toward focus on quality of care
                   from quantity of care. Quality is measured as a combination of
@@ -92,11 +92,11 @@ class openPro extends Component {
                 </li>
               </ul>
 
-              <p>
+              <h4 className="content--padding">
                 Your Patient Reported Outcome is a direct connection between
                 you, the source of critical medical data, and the decisions
                 regarding your care and the future of the health system.
-              </p>
+              </h4>
 
               <div className="open-pro__enables">
                 <h4 className="header--sm">The PRO enables...</h4>
@@ -171,7 +171,7 @@ class openPro extends Component {
               <Divider />
 
               <h2 className="header--lg text--center">The current landscape</h2>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 <em>Patient portals</em> offer communication between the patient
                 and care team. Some EHR vendors offer the ability to send PRO
                 questionnaires to patients, and few (e.g. Partners HealthCare)
@@ -186,7 +186,7 @@ class openPro extends Component {
                 them. In total, 25% of all patients use portals and under 15% of
                 all patients use them to communicate with their care team.
               </p>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 <em>Patient-reported outcome measures (PROMs)</em> are
                 instruments developed to measure a particular condition or
                 outcome of a patient. They take the form of questionnaires,
@@ -203,7 +203,7 @@ class openPro extends Component {
               </p>
 
               <h4 className="header--sm">Progress</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Application to patient screening and monitoring
                   <sup>
@@ -261,7 +261,7 @@ class openPro extends Component {
                 </li>
               </ul>
               <h4 className="header--sm">Limitations</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Limited portal integration of PROMs, with few exceptions.
                 </li>
@@ -276,7 +276,7 @@ class openPro extends Component {
                 </li>
               </ul>
               <h4 className="header--sm">Challenges</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Lack of annotated libraries. Difficult to identify measures
                   appropriate for a particular patient
@@ -336,19 +336,19 @@ class openPro extends Component {
                 </a>
               </div>
 
-              <p>
+              <p className="margin-bottom--none text--gray">
                 We’ve conceived several projects seeking to overcome these
                 challenges and push PROs to realize their potential.
               </p>
 
-              <ol>
+              <ol className="text--gray">
                 <li>VoicePROM</li>
                 <li>Symptom Reporter</li>
                 <li>ROS Reporter</li>
                 <li>openPRO Platform</li>
               </ol>
 
-              <p>
+              <p className="margin-bottom--none text--gray">
                 The benefits of being open source are three-fold. First, the
                 extended community provides verification, support, and feedback,
                 improving the quality and relevance of the process and product.
@@ -360,7 +360,7 @@ class openPro extends Component {
               </p>
 
               <h3 className="header--md">1. voicePROM</h3>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 <a
                   href="https://github.com/goinvo/openPRO/tree/master/voicePROM"
                   target="_blank"
@@ -374,7 +374,7 @@ class openPro extends Component {
                 of care-plan adherence measures and standard questionnaire
                 formats
               </p>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 Voice-first solutions in the medical space are making slow but
                 focussed progress. Much of this progress is in the clinical
                 documentation realm, allowing clinicians to not only dictate
@@ -395,7 +395,7 @@ class openPro extends Component {
               />
 
               <h4 className="header--sm">Feature roadmap</h4>
-              <ol>
+              <ol className="text--gray">
                 <li>
                   Establish and demonstrate voice capture for a fixed set of
                   requests: medication adherence, sleep, daily Quality of Life
@@ -417,7 +417,7 @@ class openPro extends Component {
               </ol>
 
               <h4 className="header--sm">Current state: gestating</h4>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 Using the Alexa and AWS services from the Amazon ecosystem,
                 we’ve developed a simple smart speaker application. The patient
                 reports medication adherence and sleep, and the platform records
@@ -439,7 +439,7 @@ class openPro extends Component {
               </p>
 
               <h3 className="header--md">2. Symptom Reporter</h3>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 <a
                   href="https://github.com/goinvo/openPRO/tree/master/SymptomReporter"
                   target="_blank"
@@ -455,7 +455,7 @@ class openPro extends Component {
                 so they can be more comfortable and confident in communicating
                 their experiences and needs.
               </p>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 Similar products exist, but there are important differences.
                 There are many online symptom checking tools (WebMD.com, Isabel
                 symptomchecker.isabelhealthcare.com) that focus on providing a
@@ -479,7 +479,7 @@ class openPro extends Component {
               />
 
               <h4 className="header--sm">Goals</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>Improve communication between the patient and care team</li>
                 <li>
                   Improve fidelity of information by recording events closer to
@@ -493,7 +493,7 @@ class openPro extends Component {
               </ul>
 
               <h4 className="header--sm">Components</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Web interface to help identify symptoms and collect relevant
                   information: onset, intensity, location, etc.
@@ -521,7 +521,7 @@ class openPro extends Component {
               </p>
 
               <h3 className="header--md">3. ROS Reporter</h3>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 A review of systems (ROS) is a gathering of targeted medical
                 information such as symptoms from a patient. Reimbursement
                 models push doctors to ask more and more particular sets of
@@ -534,7 +534,7 @@ class openPro extends Component {
                 , creating an incomplete picture from which the doctor assesses
                 and plans treatment.
               </p>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 The{' '}
                 <a
                   href="https://github.com/goinvo/openPRO/tree/master/ROSReporter"
@@ -551,7 +551,7 @@ class openPro extends Component {
                 by a nurse. These questionnaires have several deficiencies:
               </p>
 
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   They feel irrelevant. The patient answers in the negative for
                   row after row of questions that are not related to the purpose
@@ -575,7 +575,7 @@ class openPro extends Component {
                 sizes={config.sizes.fullInsideMediumMaxWidth}
               />
               <h4 className="header--sm">Goals</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>Improve communication between the patient and care team</li>
                 <li>
                   Improve the fidelity and relevance of information from the
@@ -593,7 +593,7 @@ class openPro extends Component {
                 <li>Provide language and accessibility support</li>
               </ul>
               <h4 className="header--sm">Components</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Web interface to identify symptoms and collect relevant info
                   (onset, intensity, location, etc.). The questionnaire is
@@ -623,7 +623,7 @@ class openPro extends Component {
               </p>
 
               <h3 className="header--md">4. openPRO Platform</h3>
-              <p>
+              <p className="margin-bottom--none text--gray">
                 The{' '}
                 <a
                   href="https://github.com/goinvo/openPRO/tree/master/proPlatform"
@@ -641,7 +641,7 @@ class openPro extends Component {
                 clinic’s side.
               </p>
               <h4 className="header--sm">Goals</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Empower patients to administer and initiate their own PROs and
                   PROMs.
@@ -666,7 +666,7 @@ class openPro extends Component {
                 sizes={config.sizes.fullInsideMediumMaxWidth}
               />
               <h4 className="header--sm">Components</h4>
-              <ul className="ul">
+              <ul className="ul text--gray">
                 <li>
                   Front-end services:
                   <ul className="ul">
@@ -771,7 +771,7 @@ class openPro extends Component {
                     <strong>Daniel Reeves</strong>
                     <span className="text--gray">, GoInvo</span>
                   </p>
-                  <p>
+                  <p className="text--gray">
                     Daniel is a designer and developer with a diverse background
                     in building interactive and science-based exhibits to
                     academic research in interdisciplinary physics. He has a PhD
@@ -795,7 +795,7 @@ class openPro extends Component {
                       <strong>Sharon Lee</strong>
                       <span className="text--gray">, GoInvo</span>
                     </p>
-                    <p>
+                    <p className="text--gray">
                       Sharon is a designer with an eclectic background in
                       engineering, medicine, and art. Passionate about
                       healthcare, she has focused her efforts on human-centered
@@ -816,7 +816,7 @@ class openPro extends Component {
                       <strong>Jen Patel</strong>
                       <span className="text--gray">, GoInvo</span>
                     </p>
-                    <p>
+                    <p className="text--gray">
                       Jennifer is a designer-developer hybrid specializing in
                       user interface design and front-end development. She
                       creates beautiful designs using big and small data, often
@@ -838,7 +838,7 @@ class openPro extends Component {
                       <strong>Juhan Sonin</strong>
                       <span className="text--gray">, GoInvo</span>
                     </p>
-                    <p>
+                    <p className="text--gray">
                       Juhan leads GoInvo with expertise in healthcare design and
                       system engineering. He’s spent time at Apple, the National
                       Center for Supercomputing Applications (NCSA), and MITRE.

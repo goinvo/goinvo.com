@@ -27,7 +27,9 @@ class HealthDataUseFeature extends Component {
         <div className="who-uses-my-health-data">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">Who Uses My Health Data?</h1>
+              <h1 className="header--xl margin-top--half">
+                Who Uses My Health Data?
+              </h1>
               <p className="margin-bottom--none text--gray">
                 With all of the data they have about us, the U.S. tech giants
                 (Facebook, Google, Amazon, etc) wield market power that other
@@ -84,10 +86,10 @@ class HealthDataUseFeature extends Component {
                 </p>
               </div>
 
-              <h2 className="header--lg">
+              <h2 className="header--lg margin-top--quad margin-bottom--half">
                 HIPAA Limitations and Re-identification
               </h2>
-              <p className="text--gray">
+              <p className="text--gray margin-top--none">
                 Within the healthcare system, patient health information (PHI)
                 must be de-identified when traded, as mandated by HIPAA. But it
                 does not prohibit the sale of your data, require that your
@@ -117,10 +119,10 @@ class HealthDataUseFeature extends Component {
                 </sup>
               </p>
 
-              <h2 className="header--lg">
+              <h2 className="header--lg margin-top--quad margin-bottom--half">
                 Patients need Insight, Control, and Ownership
               </h2>
-              <p className="text--gray">
+              <p className="text--gray margin-top--none">
                 Many companies value health-related data whether it’s
                 de-identified or directly linked to patient names and addresses.
                 For some of these purposes, we patients may have zero

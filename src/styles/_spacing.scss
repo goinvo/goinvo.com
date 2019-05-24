@@ -143,6 +143,10 @@ $directions: 'top' 'bottom' 'left' 'right';
       margin-#{$direction}: $spacing * 2;
     }
 
+    &--quad {
+      margin-#{$direction}: $spacing * 4;
+    }
+
     &--none {
       margin-#{$direction}: 0;
     }

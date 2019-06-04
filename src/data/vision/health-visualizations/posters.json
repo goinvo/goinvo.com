@@ -1,5 +1,14 @@
 [
   {
+    "id": "who-uses-my-health-data",
+    "title": "Who Uses My Health Data?",
+    "date": "Jun.2019",
+    "caption": "The health data trade has quietly grown with little patient or doctor knowledge.",
+    "image": "/images/features/health-data-use/health-data-use-hero-2.jpg",
+    "downloadLink": "/pdf/vision/health-data-use/health-data-use-poster-medium.pdf",
+    "learnMoreLink": "/vision/who-uses-my-health-data/"
+  },
+  {
     "id": "health-payment-system-complexity",
     "title": "Health Payment System Complexity",
     "date": "Mar.2019",

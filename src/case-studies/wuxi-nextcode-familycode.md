@@ -46,7 +46,7 @@ Validated with 50+ individuals, from genetic counselors to clinicians to patient
 
 ## Process
 
-WuXi NextCODE is the leader in powering Precision Medicine efforts around the globe, from Iceland, to China, to England, to the United States. While they are the leaders in academic and government genomics research, they have aspirations to expand into a patient-facing service. While their services worked for academics and governments, WuXi NextCODE knew a different approach was needed to break into the \$2.2 billion genetic carrier screening market[^1].
+WuXi NextCODE is the leader in powering Precision Medicine efforts around the globe, from Iceland, to China, to England, to the United States. While they are the leaders in academic and government genomics research, they have aspirations to expand into a patient-facing service. While their services worked for academics and governments, WuXi NextCODE knew a different approach was needed to break into the $2.2 billion genetic carrier screening market[^1].
 
 #### A beautiful carrier screening experience awaits
 

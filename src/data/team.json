@@ -48,7 +48,7 @@
       "email": "sharon@goinvo.com",
       "linkedin": "https://www.linkedin.com/in/sharon-lee-a1371999/"
     },
-    "image": "/images/about/headshot-sharon-lee.jpg"
+    "image": "/images/about/headshot-sharon-lee-2.jpg"
   },
   {
     "name": "Parsuree Vatanasirisuk",
@@ -69,6 +69,16 @@
       "linkedin": "https://www.linkedin.com/in/craigmcginley/"
     },
     "image": "/images/about/headshot-craig-mcginley.jpg"
+  },
+  {
+    "name": "Farah Hamade",
+    "title": "Designer",
+    "bio": "Farah Hamade is a biomedical designer. She has a neurobio BS from from UC Davis, and is working on a MSc in BioMed from University of Toronto. Farah's skill combination of physiology, behavior, and illustration drives her healthcare design eye.",
+    "social": {
+      "email": "farah@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/farah-hamade-107abaa7/"
+    },
+    "image": "/images/about/headshot-farah-hamade.jpg"
   },
   {
     "name": "Daniel Reeves",

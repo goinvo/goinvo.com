@@ -65,7 +65,7 @@ class ConsentFeature extends Component {
               </p>
               <p>
                 Consent materials should cover both <strong>benefits</strong>{' '}
-                and <strong>Risks</strong> of participation
+                and <strong>risks</strong> of participation
                 <sup>
                   <a href="#references">2</a>
                 </sup>
@@ -87,12 +87,12 @@ class ConsentFeature extends Component {
               </p>
               <h4 className="header--sm">The gap in comprehension</h4>
               <p>
-                It is especially important in medicine and health related
-                services for informed consent to be achieved. Patients need to
-                adequately weigh the pros and cons of their involvement to make
-                the best choice for their health. Unfortunately, three issues
-                with traditional consent can prevent patients from fully
-                understanding what they are agreeing to.
+                Informed consent is especially important in medicine and health
+                related services. Patients need to adequately weigh the pros and
+                cons of their involvement to make the best choice for their
+                health. Unfortunately, three issues with traditional consent can
+                prevent patients from fully understanding what they are agreeing
+                to.
                 <ol>
                   <li>
                     <strong>

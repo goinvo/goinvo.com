@@ -454,7 +454,7 @@ Try to use one `<h1>` at the beginning of your feature to showcase the title. Fo
 
 Try to use `header-md` only for categories. For descriptive titles, use `header-sm`.
 
-Adding buttons is as straightforward as adding a `button` and `button-primary` classes to a link, but there's a `button-group`class to contain multiple buttons at once or centers a single button.
+Adding buttons is as straightforward as adding a `button` and `button-primary` classes to a link, but there's a `button-group` class to contain multiple buttons at once or centers a single button.
 
 ```
 <div className="button-group">
@@ -487,6 +487,12 @@ When adding the image to your feature, it will look like this:
   className="image--max-width"
   sizes={config.sizes.fullInsideMediumMaxWidth}
 />
+```
+
+Captioning your image is simple, with
+
+```
+<p className="text--caption">Caption away</p>
 ```
 
 ### Adding links

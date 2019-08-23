@@ -14,7 +14,7 @@ import config from '../../../../config'
 const frontmatter = {
   metaTitle: 'A Guide to Patient-Centered Consent - GoInvo',
   metaDescription: '',
-  heroImage: '/images/features/patient-centered-consent/consent-hero.jpg',
+  heroImage: '/images/features/patient-centered-consent/consent-hero2.jpg',
 }
 
 class ConsentFeature extends Component {

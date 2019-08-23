@@ -39,8 +39,12 @@ class ConsentFeature extends Component {
                 immensely on this journey.
               </p>
 
-              <h2 className="header--lg">Background</h2>
-              <h4 className="header--sm">What is Informed Consent?</h4>
+              <h2 className="header--xl text--center margin-top--quad margin-bottom--half">
+                Background
+              </h2>
+              <h2 className="header--lg margin-bottom--half">
+                What is Informed Consent?
+              </h2>
               <p>
                 "Informed consent: The process by which a patient learns about
                 and understands the purpose, benefits, and potential risks of a
@@ -85,7 +89,9 @@ class ConsentFeature extends Component {
                   <li>what rights the patient has over the shared data.</li>
                 </ul>
               </p>
-              <h4 className="header--sm">The gap in comprehension</h4>
+              <h2 className="header--lg margin-top--quad margin-bottom--half">
+                The gap in comprehension
+              </h2>
               <p>
                 Informed consent is especially important in medicine and health
                 related services. Patients need to adequately weigh the pros and
@@ -139,7 +145,9 @@ class ConsentFeature extends Component {
                   </li>
                 </ol>
               </p>
-              <h4 className="header--sm">An opportunity for re-design</h4>
+              <h2 className="header--lg margin-top--quad margin-bottom--half">
+                An opportunity for re-design
+              </h2>
               <p>
                 Pew Research Center found that 77% of Americans have smartphones
                 as of 2018
@@ -179,16 +187,20 @@ class ConsentFeature extends Component {
                 terms and conditions and towards truly meaningful consent.
               </p>
 
-              <p>
+              <p className="margin-bottom--double">
                 We hope that this list of guidelines to improve patient
                 comprehension can help to inform eConsent design.
               </p>
 
               <Divider />
 
-              <h2 className="header--lg">9 Guidelines for eConsent Design</h2>
+              <h2 className="header--xl text--center margin-top--quad">
+                9 Guidelines for eConsent Design
+              </h2>
 
-              <h4 className="header--sm">1. Meet Accessibility Standards</h4>
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
+                1. Meet Accessibility Standards
+              </h4>
               <p>
                 At the most basic level, the consent process must meet the needs
                 of those with disabilities (see{' '}
@@ -202,7 +214,9 @@ class ConsentFeature extends Component {
                 ).
               </p>
 
-              <h4 className="header--sm">2. Make Consent Front and Center</h4>
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
+                2. Make Consent Front and Center
+              </h4>
               <Image
                 src="/images/features/patient-centered-consent/consent-resilient-proj.jpg"
                 className="image--max-width"
@@ -228,7 +242,9 @@ class ConsentFeature extends Component {
                 supporting paper consent.
               </p>
 
-              <h4 className="header--sm">3. Use Plain, Concise Language</h4>
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
+                3. Use Plain, Concise Language
+              </h4>
               <Image
                 src="/images/features/patient-centered-consent/consent-pdua.jpg"
                 className="image--max-width"
@@ -263,7 +279,9 @@ class ConsentFeature extends Component {
                 .
               </p>
 
-              <h4 className="header--sm">4. Set Time Expectations</h4>
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
+                4. Set Time Expectations
+              </h4>
               <p>
                 Consent can feel like an endless stream of content. Cue patients
                 in on how long it will take them through a comment at the start,
@@ -272,7 +290,7 @@ class ConsentFeature extends Component {
                 process and can help prevent patients from rushing to the end.
               </p>
 
-              <h4 className="header--sm">
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
                 5. Organize Content into Bite-sized Sections
               </h4>
               <Image
@@ -313,7 +331,9 @@ class ConsentFeature extends Component {
                 skimming.
               </p>
 
-              <h4 className="header--sm">6. Use Visual Storytelling</h4>
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
+                6. Use Visual Storytelling
+              </h4>
               <Image
                 src="/images/features/patient-centered-consent/consent-allofus-consent.jpg"
                 className="image--max-width"
@@ -349,7 +369,9 @@ class ConsentFeature extends Component {
                 ."
               </p>
 
-              <h4 className="header--sm">7. Provide Real-Time Help</h4>
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
+                7. Provide Real-Time Help
+              </h4>
               <Image
                 src="/images/features/patient-centered-consent/consent-mpower.jpg"
                 className="image--max-width"
@@ -381,7 +403,7 @@ class ConsentFeature extends Component {
                 .
               </p>
 
-              <h4 className="header--sm">
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
                 8. Use "Repeat Back" to Engage the Brain
               </h4>
               <Image
@@ -410,7 +432,7 @@ class ConsentFeature extends Component {
                 takeaways of the agreement.
               </p>
 
-              <h4 className="header--sm">
+              <h4 className="header--sm margin-top--quad margin-bottom--half">
                 Bonus: 9. Keep Measuring + Iterating!
               </h4>
               <Image
@@ -433,8 +455,10 @@ class ConsentFeature extends Component {
                 measuring comprehension?
               </p>
 
-              <h2 className="header--lg">Recap</h2>
-              <ol>
+              <h2 className="header--lg margin-top--quad margin-bottom--half">
+                Recap
+              </h2>
+              <ol className="margin-bottom--double">
                 <li>Meet Accessibility Standards</li>
                 <li>Make Consent Front and Center</li>
                 <li>Use Plain, Concise Language</li>

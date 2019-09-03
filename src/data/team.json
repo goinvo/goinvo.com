@@ -21,6 +21,16 @@
     "image": "/images/about/headshot-eric-benoit.jpg"
   },
   {
+    "name": "Meghana Karande",
+    "title": "Medical Director",
+    "bio": "Meghana is a classically trained clinician via Cornell, Yale, and Mount Sinai who fights for truth and against tricknology. With 15 years deep in pharma, insurance, and gov sectors, she takes a system approach to solving healthcare problems. Before her clinical education, Meghana received a BS in Psychology from Cornell University.",
+    "social": {
+      "email": "meghana@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/meghana-karande-md/"
+    },
+    "image": "/images/about/headshot-meghana-karande.jpg"
+  },
+  {
     "name": "Jen Patel",
     "title": "Designer, Engineer",
     "bio": "Jennifer is a designer-developer hybrid specializing in user interface design and front-end development. She creates beautiful designs using big and small data, often for health and enterprise services. Jennifer joined Invo in 2011 and is a graduate of the Rochester Institute of Technology.",

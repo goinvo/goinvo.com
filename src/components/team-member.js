@@ -30,34 +30,36 @@ class TeamMember extends Component {
                 {name}
               </p>
               <p className="text--gray margin--none">{title}</p>
-              <ul className="social-links list--unstyled container container--align-center">
-                {social.email ? (
-                  <li>
-                    <a href={`mailto:${social.email}`}>
-                      <Email className="icon icon--md" />
-                    </a>
-                  </li>
-                ) : null}
-                {social.twitter ? (
-                  <li>
-                    <a href={social.twitter}>
-                      <Twitter className="icon icon--md" />
-                    </a>
-                  </li>
-                ) : null}
-                {social.linkedin ? (
-                  <li>
-                    <a href={social.linkedin}>
-                      <LinkedIn className="icon icon--md" />
-                    </a>
-                  </li>
-                ) : null}
-                {social.other ? (
-                  <li>
-                    <a href={social.other.link}>{social.other.text}</a>
-                  </li>
-                ) : null}
-              </ul>
+              {social ? (
+                <ul className="social-links list--unstyled container container--align-center">
+                  {social.email ? (
+                    <li>
+                      <a href={`mailto:${social.email}`}>
+                        <Email className="icon icon--md" />
+                      </a>
+                    </li>
+                  ) : null}
+                  {social.twitter ? (
+                    <li>
+                      <a href={social.twitter}>
+                        <Twitter className="icon icon--md" />
+                      </a>
+                    </li>
+                  ) : null}
+                  {social.linkedin ? (
+                    <li>
+                      <a href={social.linkedin}>
+                        <LinkedIn className="icon icon--md" />
+                      </a>
+                    </li>
+                  ) : null}
+                  {social.other ? (
+                    <li>
+                      <a href={social.other.link}>{social.other.text}</a>
+                    </li>
+                  ) : null}
+                </ul>
+              ) : null}
               <p className="text--gray margin-top--none">{bio}</p>
             </div>
           </div>

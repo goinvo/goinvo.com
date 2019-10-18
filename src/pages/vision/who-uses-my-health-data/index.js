@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -7,6 +6,7 @@ import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
 
@@ -158,52 +158,10 @@ class HealthDataUseFeature extends Component {
 
             <div className="max-width max-width--md content-padding">
               <h2 className="header--xl text--center">Authors</h2>
-              <div className="author">
-                <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <Image
-                    src="/images/about/headshot-sharon-lee.jpg"
-                    className="image--max-width"
-                  />
-                </div>
-                <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                  <p>
-                    <strong>Sharon Lee</strong>
-                    <span className="text--gray">, GoInvo</span>
-                  </p>
-                  <p className="text--gray">
-                    Sharon is a designer with an eclectic background in
-                    engineering, medicine, and art. Passionate about healthcare,
-                    she has focused her efforts on human-centered software
-                    design. She joined Invo in 2016 with a BS in Biomedical
-                    Engineering from the University of Virginia.
-                  </p>
-                </div>
-              </div>
-              <h3 className="header--md">Contributors</h3>
-              <div className="author">
-                <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <Image
-                    src="/images/about/headshot-juhan-sonin.jpg"
-                    className="image--max-width"
-                  />
-                </div>
-                <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                  <p>
-                    <strong>Juhan Sonin</strong>
-                    <span className="text--gray">, GoInvo, MIT</span>
-                  </p>
-                  <p className="text--gray">
-                    Juhan leads GoInvo with expertise in healthcare design and
-                    system engineering. He’s spent time at Apple, the National
-                    Center for Supercomputing Applications (NCSA), and MITRE.
-                    His work has been recognized by the New York Times, BBC, and
-                    National Public Radio (NPR) and published in The Journal of
-                    Participatory Medicine and The Lancet. He currently lectures
-                    on design and engineering at MIT.
-                  </p>
-                </div>
-                <Divider />
-              </div>
+              <Author name="Sharon Lee" />
+              <h3 className="header--md margin-top--double">Contributors</h3>
+              <Author name="Juhan Sonin" />
+              <Divider />
             </div>
 
             <div id="references">

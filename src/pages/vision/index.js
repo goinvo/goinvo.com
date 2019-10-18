@@ -36,14 +36,15 @@ const spotlightFeature = features.find(
   feature => feature.id === 'who-uses-my-health-data'
 )
 
-const spotlightPodcast = {
-  title: 'AI + Science',
-  date: '12.Oct.2018',
-  caption:
-    'Discussing the intersection of artificial intelligence and science with special guest is Dany DeGrave, founder of Unconventional Innovation.',
-  link: 'https://soundcloud.com/involution-studios/ai-and-science',
-  image: 'https://i1.sndcdn.com/artworks-000419931243-4y0rds-t500x500.jpg',
-}
+// NOTE: Not spotlighting podcasts for now...
+// const spotlightPodcast = {
+//   title: 'AI + Science',
+//   date: '12.Oct.2018',
+//   caption:
+//     'Discussing the intersection of artificial intelligence and science with special guest is Dany DeGrave, founder of Unconventional Innovation.',
+//   link: 'https://soundcloud.com/involution-studios/ai-and-science',
+//   image: 'https://i1.sndcdn.com/artworks-000419931243-4y0rds-t500x500.jpg',
+// }
 
 const frontmatter = {
   metaTitle: 'Our vision on the future of health - GoInvo',

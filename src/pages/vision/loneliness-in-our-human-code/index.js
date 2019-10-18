@@ -7,6 +7,7 @@ import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
 
@@ -961,102 +962,24 @@ class LonelinessFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div>
                 <h2 className="header--xl text--center">Authors</h2>
-
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/features/loneliness-in-our-human-code/headshot-vanessa-li.jpg"
-                      className="image--max-width"
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Vanessa Li</strong>
-                      <span className="text--gray">
-                        , University of Washington
-                      </span>
-                    </p>
-                    <p className="text--gray">
-                      Vanessa specializes in health systems and public health
-                      modeling, with an emphasis in substance abuse and disease
-                      prevention research. She graduated from the University of
-                      Southern California with a B.S. in Public Policy and a
-                      double minor in Business Economics and Global Health.
-                      Vanessa is working towards a graduate degree in
-                      biostatistics at the University of Washington.
-                    </p>
-                  </div>
-                </div>
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-jen-patel.jpg"
-                      className="image--max-width"
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Jennifer Patel</strong>
-                      <span className="text--gray">, GoInvo</span>
-                    </p>
-                    <p className="text--gray">
-                      Jennifer is a designer-developer hybrid specializing in
-                      user interface design and front-end development. She
-                      creates beautiful designs using big and small data, often
-                      for health and enterprise services. Jennifer joined Invo
-                      in 2011 and is a graduate of the Rochester Institute of
-                      Technology.
-                    </p>
-                  </div>
-                </div>
+                <Author
+                  name="Vanessa Li"
+                  company="University of Washington"
+                  image="/images/features/loneliness-in-our-human-code/headshot-vanessa-li.jpg"
+                >
+                  Vanessa specializes in health systems and public health
+                  modeling, with an emphasis in substance abuse and disease
+                  prevention research. She graduated from the University of
+                  Southern California with a B.S. in Public Policy and a double
+                  minor in Business Economics and Global Health. Vanessa is
+                  working towards a graduate degree in biostatistics at the
+                  University of Washington.
+                </Author>
+                <Author name="Jen Patel" />
 
                 <h3 className="header--md">Contributors</h3>
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-juhan-sonin.jpg"
-                      className="image--max-width"
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Juhan Sonin</strong>
-                      <span className="text--gray">, GoInvo, MIT</span>
-                    </p>
-                    <p className="text--gray">
-                      Juhan specialized in software design and system
-                      engineering. He operates, and is the director of, GoInvo.
-                      He has worked at Apple, National Center for Supercomputing
-                      Applications, Massachusetts Institute of Technology (MIT),
-                      and MITRE. Juhan co-founded Invo Boston in 2009 and is a
-                      graduate of the University of Illinois at
-                      Urbana-Champaign. He currently lectures at MIT.
-                    </p>
-                  </div>
-                </div>
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-parsuree-vatanasirisuk.jpg"
-                      className="image--max-width"
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Parsuree Vatanasirisuk</strong>
-                      <span className="text--gray">, GoInvo</span>
-                    </p>
-                    <p className="text--gray">
-                      Parsuree is a user experience designer and illustrator
-                      with background in industrial design. She makes the
-                      complex beautiful and approachable through illustration
-                      and information design. Parsuree joined Invo in 2018, and
-                      has a BA in Industrial Design from Chulalongkorn
-                      University and is a MFA candidate of the Rochester
-                      Institute of Technology (RIT).
-                    </p>
-                  </div>
-                </div>
+                <Author name="Juhan Sonin" company="GoInvo, MIT" />
+                <Author name="Parsuree Vatanasirisuk" />
               </div>
 
               <Divider />

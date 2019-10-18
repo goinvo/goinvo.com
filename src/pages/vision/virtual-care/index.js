@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
-import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 
 import config from '../../../../config'
 
@@ -662,79 +662,19 @@ class VirtualCareFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div>
                 <h2 className="header--xl text--center">Authors</h2>
-
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-cameron-gettel.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth}
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Cameron Gettel</strong>
-                      <span className="text--grey">
-                        , Resident Physician, Brown University
-                      </span>
-                    </p>
-                    <p className="text--grey">
-                      Cameron Gettel is an Emergency Medicine physician with
-                      interests in improving healthcare through evidence-based
-                      practices, quality improvement, and clinical research.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-eric-benoit.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth}
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Eric Benoit</strong>
-                      <span className="text--grey">, GoInvo</span>
-                    </p>
-                    <p className="text--grey">
-                      Eric Benoit is the Creative Director of GoInvo, leading
-                      the studio’s UX creation process from concept to
-                      production. Eric works as an interaction designer,
-                      experience designer, and information architect, designing
-                      better products by thoroughly understanding user
-                      behaviors, expectations, and goals.
-                    </p>
-                  </div>
-                </div>
-
+                <Author
+                  name="Cameron Gettel"
+                  company="Resident Physician, Brown University"
+                  image="/images/about/headshot-cameron-gettel.jpg"
+                >
+                  Cameron Gettel is an Emergency Medicine physician with
+                  interests in improving healthcare through evidence-based
+                  practices, quality improvement, and clinical research.
+                </Author>
+                <Author name="Eric Benoit" />
                 <h2 className="header--lg text--center">Contributors</h2>
-
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-juhan-sonin.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth}
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Juhan Sonin</strong>
-                      <span className="text--grey">, GoInvo, MIT</span>
-                    </p>
-                    <p className="text--grey">
-                      Juhan specialized in software design and system
-                      engineering. He operates, and is the director of, GoInvo.
-                      He has worked at Apple, National Center for Supercomputing
-                      Applications, Massachusetts Institute of Technology (MIT),
-                      and MITRE. Juhan co-founded GoInvo Boston in 2009 and is a
-                      graduate of the University of Illinois at
-                      Urbana-Champaign. He currently lectures at MIT.
-                    </p>
-                  </div>
+                <Author name="Juhan Sonin" company="GoInvo, MIT" />
+                <div>
                   <h4 className="header--sm margin-bottom--half">
                     About GoInvo
                   </h4>

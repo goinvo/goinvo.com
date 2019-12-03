@@ -2,12 +2,27 @@
   {
     "id": "patient-centered-consent",
     "title": "A Guide to Patient-Centered Consent",
-    "date": "Aug.2019",
+    "date": "Dec.2019",
     "client": "Feature",
     "categories": ["public-health-and-policy", "health-it-and-infrastructure"],
     "caption": "The health data trade has quietly grown with little patient or doctor knowledge.",
     "image": "/images/features/patient-centered-consent/consent-hero.jpg",
     "link": "/vision/patient-centered-consent/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "vapepocolypse",
+    "title": "Vapepocolypse",
+    "date": "Oct.2019",
+    "client": "Feature",
+    "categories": [
+      "public-health-and-policy",
+      "patient-engagement",
+      "open-source"
+    ],
+    "caption": "",
+    "image": "/images/features/vapepocolypse/vapepocolypse-hero.jpg",
+    "link": "/vision/vapepocolypse/",
     "hiddenWorkPage": true
   },
   {

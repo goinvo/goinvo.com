@@ -6,6 +6,7 @@ import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
@@ -660,30 +661,7 @@ class HealthcareDollars extends Component {
             <div className="max-width max-width--md content-padding">
               <div>
                 <h2 className="header--xl text--center">Author</h2>
-
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-edwin-choi.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMediumMaxWidth}
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Edwin Choi</strong>
-                      <span className="text--grey">, GoInvo</span>
-                    </p>
-                    <p className="text--grey">
-                      Edwin is a biologist turned designer. Combining the
-                      sciences and art, he orchestrates healthcare software
-                      experiences to be beautiful and clinically refined. Edwin
-                      joined Invo in 2015, is a graduate of University of
-                      Washington, and has a masters in biomedical design from
-                      Johns Hopkins University.
-                    </p>
-                  </div>
-                </div>
+                <Author name="Edwin Choi" />
               </div>
 
               <Divider />

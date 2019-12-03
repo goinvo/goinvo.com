@@ -53,7 +53,7 @@
   {
     "name": "Parsuree Vatanasirisuk",
     "title": "Designer, Illustrator",
-    "bio": "Parsuree is a user experience designer and illustrator with background in industrial design. She makes the complex beautiful and approachable through illustration and information design. Parsuree joined Invo in 2018, and has a BA in Industrial Design from Chulalongkorn University and is a MFA candidate of the Rochester Institute of Technology (RIT).",
+    "bio": "Parsuree is a user experience designer and illustrator with background in industrial design. She makes the complex beautiful and approachable through illustration and information design. Parsuree joined Invo in 2018, and has a BA in Industrial Design from Chulalongkorn University and a MFA from Rochester Institute of Technology (RIT).",
     "social": {
       "email": "parsuree@goinvo.com",
       "linkedin": "https://www.linkedin.com/in/parsuree-vatanasirisuk/"
@@ -71,14 +71,18 @@
     "image": "/images/about/headshot-craig-mcginley.jpg"
   },
   {
-    "name": "Farah Hamade",
+    "name": "Colleen Tang Poy",
     "title": "Designer",
-    "bio": "Farah Hamade is a biomedical designer. She has a neurobio BS from from UC Davis, and is working on a MSc in BioMed from University of Toronto. Farah's skill combination of physiology, behavior, and illustration drives her healthcare design eye.",
+    "bio": "Colleen is a designer at the intersection of art and science. Her mission is to make healthcare and health information more accessible through beautiful storytelling. Colleen joined Invo in 2019 and has a BS in Psychology and Neuroscience from McMaster University and a MS in Biomedical Communication at the University of Toronto.",
     "social": {
-      "email": "farah@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/farah-hamade-107abaa7/"
+      "email": "colleen@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/craigmcginley/",
+      "other": {
+        "link": "https://www.colspleen.com",
+        "text": "colspleen.com"
+      }
     },
-    "image": "/images/about/headshot-farah-hamade.jpg"
+    "image": "/images/about/headshot-colleen-tang-poy.jpg"
   },
   {
     "name": "Daniel Reeves",
@@ -89,6 +93,17 @@
       "linkedin": "https://www.linkedin.com/in/danielfreeves/"
     },
     "image": "/images/about/headshot-daniel-reeves.jpg"
+  },
+  {
+    "name": "Meghana Karande",
+    "title": "Medical Director",
+    "bio": "Meghana is a classically trained clinician via Yale and Mount Sinai who fights for truth and against tricknology. With 15 years in pharma, insurance, and gov sectors, she takes a system approach to solving healthcare problems. She provides deep clinical insights and medical experience for studio projects. Before her clinical education, Meghana received a BS in Psychology from Cornell University.",
+    "social": {
+      "email": "meghana@goinvo.com",
+      "twitter": "https://twitter.com/meghanakarande",
+      "linkedin": "https://www.linkedin.com/in/meghana-karande-md/"
+    },
+    "image": "/images/about/headshot-meghana-karande.jpg"
   },
   {
     "name": "Patricia Nguyen",

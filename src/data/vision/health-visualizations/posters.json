@@ -1,5 +1,14 @@
 [
   {
+    "id": "vapepocolypse",
+    "title": "Vapepocolypse",
+    "date": "Oct.2019",
+    "caption": "",
+    "image": "/images/features/vapepocolypse/vapepocolypse-hero.jpg",
+    "downloadLink": "/pdf/vision/vapepocolypse/Vapepocolypse.pdf",
+    "learnMoreLink": "/vision/vapepocolypse/"
+  },
+  {
     "id": "who-uses-my-health-data",
     "title": "Who Uses My Health Data?",
     "date": "Jun.2019",

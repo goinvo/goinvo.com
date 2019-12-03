@@ -52,6 +52,11 @@ class TeamMember extends Component {
                     </a>
                   </li>
                 ) : null}
+                {social.other ? (
+                  <li>
+                    <a href={social.other.link}>{social.other.text}</a>
+                  </li>
+                ) : null}
               </ul>
               <p className="text--gray margin-top--none">{bio}</p>
             </div>

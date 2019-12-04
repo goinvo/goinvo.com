@@ -7,6 +7,7 @@ import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
@@ -486,78 +487,13 @@ class ConsentFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div>
                 <h2 className="header--xl text--center">Authors</h2>
-
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-sharon-lee.jpg"
-                      className="image--max-width"
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Sharon Lee</strong>
-                      <span className="text--gray">, GoInvo</span>
-                    </p>
-                    <p className="text--gray">
-                      Sharon is a designer with an eclectic background in
-                      engineering, medicine, and art. Passionate about
-                      healthcare, she has focused her efforts on human-centered
-                      software design. She joined Invo in 2016 with a BS in
-                      Biomedical Engineering from the University of Virginia.
-                    </p>
-                  </div>
-                </div>
+                <Author name="Sharon Lee" />
+                <Author name="Jen Patel" />
 
                 <h3 className="header--md">Contributors</h3>
 
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-parsuree-vatanasirisuk.jpg"
-                      className="image--max-width"
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Parsuree Vatanasirisuk</strong>
-                      <span className="text--gray">, GoInvo</span>
-                    </p>
-                    <p className="text--gray">
-                      Parsuree is a user experience designer and illustrator
-                      with background in industrial design. She makes the
-                      complex beautiful and approachable through illustration
-                      and information design. Parsuree joined Invo in 2018, and
-                      has a BA in Industrial Design from Chulalongkorn
-                      University and is a MFA candidate of the Rochester
-                      Institute of Technology (RIT).
-                    </p>
-                  </div>
-                </div>
-
-                <div className="author">
-                  <div className="authorImg pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                    <Image
-                      src="/images/about/headshot-juhan-sonin.jpg"
-                      className="image--max-width"
-                    />
-                  </div>
-                  <div className="authorBio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Juhan Sonin</strong>
-                      <span className="text--gray">, GoInvo, MIT</span>
-                    </p>
-                    <p className="text--gray">
-                      Juhan specialized in software design and system
-                      engineering. He operates, and is the director of, GoInvo.
-                      He has worked at Apple, National Center for Supercomputing
-                      Applications, Massachusetts Institute of Technology (MIT),
-                      and MITRE. Juhan co-founded Invo Boston in 2009 and is a
-                      graduate of the University of Illinois at
-                      Urbana-Champaign. He currently lectures at MIT.
-                    </p>
-                  </div>
-                </div>
+                <Author name="Parsuree Vatanasirisuk" />
+                <Author name="Juhan Sonin" />
               </div>
 
               <Divider />

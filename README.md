@@ -360,6 +360,7 @@ import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
@@ -388,15 +389,17 @@ Let's break down the fields:
    If you want to use the `<Divider />` graphic consistent with the rest of the GoInvo site.
 6. `References`
    Any good feature also has references. We'll go over how to add images below.
-7. `mediaURL`
+7. `Author`
+   A nifty component for easily adding team members as authors to the feature!
+8. `mediaURL`
    Handles access to media items. For example, if we have a poster we want readers to be able to download, we store those in a media folder (covered below) and set up a download link or button.
-8. `config`
+9. `config`
    Needed when you have images. This helps with resizing images for different browser widths or mobile views.
-9. `metaTitle`
-   This is the title of your feature. You want to make this somewhat short, ideally <30 characters. Should match the title feature in `features.json` (We'll cover this in a bit too)
-10. `metaDescription`
+10. `metaTitle`
+    This is the title of your feature. You want to make this somewhat short, ideally <30 characters. Should match the title feature in `features.json` (We'll cover this in a bit too)
+11. `metaDescription`
     A brief description about your feature. With the title, date, and tags, this should fit comfortably in a small card on the Vision page. Should match the description in `features.json`
-11. `heroImage`
+12. `heroImage`
     Link to the hero image for your feature. We'll cover adding this with images.
 
 ### Starting the feature
@@ -522,6 +525,34 @@ When adding a link to the media in your feature, use the following:
    target="_blank"
    rel="noopener noreferrer"
 >Download</a>
+```
+
+### Adding Authors
+
+Thanks to the 'Authors' component we added earlier, adding authors is easier than ever. For active team members, all you need is their name to access their photo and bio. Optionally, you can include company and name on an author card.
+
+```
+<h3 className="header--md">Authors</h3>
+<Author name="Jen Patel" />
+<Author name="Juhan Sonin" company="GoInvo, MIT" />
+```
+
+For external contributors or authors, since we don't keep a photo and bio on hand for them, we have to write out the author card, which looks like this:
+
+```
+<Author
+  name="Vanessa Li"
+  company="University of Washington"
+  image="/images/features/your-feature/headshot-vanessa-li.jpg"
+>
+  Vanessa specializes in health systems and public health
+  modeling, with an emphasis in substance abuse and disease
+  prevention research. She graduated from the University of
+  Southern California with a B.S. in Public Policy and a double
+  minor in Business Economics and Global Health. Vanessa is
+  working towards a graduate degree in biostatistics at the
+  University of Washington.
+</Author>
 ```
 
 ### Adding references

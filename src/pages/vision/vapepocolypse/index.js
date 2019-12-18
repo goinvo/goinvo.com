@@ -64,7 +64,7 @@ class VapepocolypseFeature extends Component {
                     title:
                       'Truth Initiative. (April 2018). JUUL e-cigarettes gain popularity among youth, but awareness of nicotine presence remains low',
                     link:
-                      'https://truthinitiative.org/press/press-release/juul-e-cigarettes-gain-popularity-among-youth-awarenessnicotine-presence',
+                      'https://truthinitiative.org/press/press-release/juul-e-cigarettes-gain-popularity-among-youth-awareness-nicotine-presence',
                   },
                   {
                     title:

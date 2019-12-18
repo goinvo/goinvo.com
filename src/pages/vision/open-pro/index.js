@@ -376,7 +376,7 @@ class openPro extends Component {
               </p>
               <p className="margin-bottom--none text--gray">
                 Voice-first solutions in the medical space are making slow but
-                focussed progress. Much of this progress is in the clinical
+                focused progress. Much of this progress is in the clinical
                 documentation realm, allowing clinicians to not only dictate
                 medical notes, but capture the structure data needed in the EHRs
                 by voice (Nuance, Winscribe, and more). These however are

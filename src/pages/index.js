@@ -25,7 +25,6 @@ const frontmatter = {
     'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
   heroImage: '/images/homepage/hgraph-hero.jpg',
   heroButtonText: 'See Our Work',
-  className: 'homepage',
 }
 
 class IndexPage extends Component {
@@ -41,25 +40,23 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Layout frontmatter={frontmatter} className={frontmatter.className}>
-        <div className={`homeHero ${frontmatter.className}`}>
-          <Hero
-            link="/work/"
-            image={frontmatter.heroImage}
-            caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
-            button={frontmatter.heroButtonText}
-            isLarge
-          >
-            <h1 className="header--xl">
-              Designing
-              <br />
-              the future of
-              <br />
-              healthcare
-              <span className="text--serif text--primary">.</span>
-            </h1>
-          </Hero>
-        </div>
+      <Layout frontmatter={frontmatter}>
+        <Hero
+          link="/work/"
+          image={frontmatter.heroImage}
+          caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
+          button={frontmatter.heroButtonText}
+          isLarge
+        >
+          <h1 className="header--xl">
+            Designing
+            <br />
+            the future of
+            <br />
+            healthcare
+            <span className="text--serif text--primary">.</span>
+          </h1>
+        </Hero>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double">

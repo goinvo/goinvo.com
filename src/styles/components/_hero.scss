@@ -57,7 +57,17 @@
     @extend .text--gray;
   }
 
+  @include mq($from: large) {
+    #{$parent}__image-container {
+      height: 325px;
+    }
+  }
+
   &--large {
+    #{$parent}__image-container {
+      min-height: 250px;
+    }
+
     #{$parent}__image-container,
     #{$parent}__video-container {
       @include mq($from: large) {
@@ -71,12 +81,6 @@
       @include mq($from: large) {
         position: absolute;
       }
-    }
-  }
-
-  @include mq($from: large) {
-    #{$parent}__image-container {
-      height: 325px;
     }
   }
 

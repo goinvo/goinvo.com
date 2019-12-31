@@ -26,7 +26,6 @@
 
   &__content {
     position: relative;
-    pointer-events: none;
   }
 
   &__title {
@@ -56,10 +55,19 @@
 
   &__caption {
     @extend .text--gray;
-    margin-bottom: 0;
+  }
+
+  @include mq($from: large) {
+    #{$parent}__image-container {
+      height: 325px;
+    }
   }
 
   &--large {
+    #{$parent}__image-container {
+      min-height: 250px;
+    }
+
     #{$parent}__image-container,
     #{$parent}__video-container {
       @include mq($from: large) {
@@ -73,12 +81,6 @@
       @include mq($from: large) {
         position: absolute;
       }
-    }
-  }
-
-  @include mq($from: large) {
-    #{$parent}__image-container {
-      height: 325px;
     }
   }
 

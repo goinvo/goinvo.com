@@ -70,7 +70,7 @@ class Hero extends Component {
 
     return (
       <div
-        className={`${isLarge ? 'hero--large' : 'hero'} ${
+        className={`hero ${isLarge ? 'hero--large' : ''} ${
           video ? 'hero--video' : ''
         }`}
         style={this.props.style}

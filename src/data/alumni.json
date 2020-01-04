@@ -4,9 +4,185 @@
     "title": "Designer",
     "bio": "Farah Hamade is a biomedical designer. She has a neurobio BS from from UC Davis, and is working on a MSc in BioMed from University of Toronto. Farah's skill combination of physiology, behavior, and illustration drives her healthcare design eye.",
     "social": {
-      "email": "farah@goinvo.com",
       "linkedin": "https://www.linkedin.com/in/farah-hamade-107abaa7/"
     },
     "image": "/images/about/headshot-farah-hamade.jpg"
+  },
+  {
+    "name": "Bryson Wong",
+    "title": "Designer",
+    "bio": "Bryson is a designer who spans the gamut of software strategy skills from user research to product design to usability. Bryson joined Invo in 2017 with a degree in Human Factors from Tufts University.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/bryson-wong-0670b984/"
+    },
+    "image": "/images/about/headshot-bryson-wong.jpg"
+  },
+  {
+    "name": "Sarah Kaiser",
+    "title": "Designer",
+    "bio": "Sarah is an artist specializing in user interface design, motion graphics, and illustration. She creates beautiful interfaces in 2 and 3D space. Sarah joined Invo in 2011 and is a graduate of the Rochester Institute of Technology.",
+    "social": {
+      "linkedin": "http://www.linkedin.com/pub/sarah-kaiser/27/bb1/315"
+    },
+    "image": "/images/about/headshot-sarah-kaiser.jpg"
+  },
+  {
+    "name": "Vanessa Li",
+    "title": "Healthcare Design Strategist",
+    "bio": "Vanessa specializes in health systems and public health modeling, with an emphasis in substance abuse and disease prevention research. She graduated from the University of Southern California with a B.S. in Public Policy and a double minor in Business Economics and Global Health. Vanessa is at Invo for the current summer, and will continue on to complete her graduate degree in biostatistics at the University of Washington.",
+    "image": "/images/about/headshot-vanessa-li.jpg"
+  },
+  {
+    "name": "Eric Bai",
+    "title": "Engineer, MD Candidate",
+    "bio": "Eric is an engineer with a design itch. He knows full-stack development, has experience in building user-driven services, and brings a commitment to making software for the public good. Eric joined Invo in 2017 with a degree in computational biology from Brown. He is completing his medical degree and his masters in population medicine at Brown in 2022.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/heyericbai"
+    },
+    "image": "/images/about/headshot-eric-bai.jpg"
+  },
+  {
+    "name": "Karishma Bhatia",
+    "title": "Designer, MD Candidate",
+    "bio": "Karishma is a scientist with an artistic vein. She is building a future in which health information is presented in a more accessible, understandable, and beautiful way. She's designed a Patient Hospital Guide for an NGO in Mumbai and an open source healthcare dataset search engine. Karishma joined Invo in 2016 with a degree in Computer Science from Brown University and is completing her medical degree from Brown in 2020.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/karishma-bhatia-8487b974"
+    },
+    "image": "/images/about/headshot-karishma-bhatia.jpg"
+  },
+  {
+    "name": "Beth Rucker",
+    "title": "Product Designer",
+    "bio": "Beth is part designer, product strategist, and researcher. She concentrates on designing beautiful and surprising services and systems from the skintop to celltop to desktop. Beth is a graduate of Rice University and Carnegie Mellon University.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/pub/beth-herlin/39/19b/347"
+    },
+    "image": "/images/about/headshot-beth-rucker.jpg"
+  },
+  {
+    "name": "Hrothgar",
+    "title": "Designer, Engineer",
+    "bio": "Hrothgar is a designer and engineer. Trained as a mathematician, he combines elegance and rigor in software development and interface design. Hrothgar is a graduate of Rice University, and joined Invo in 2016 following doctoral studies at the University of Oxford.",
+    "image": "/images/about/headshot-hrothgar.jpg"
+  },
+  {
+    "name": "Brian Liston",
+    "title": "Designer",
+    "bio": "Brian is a designer and visual artist with a background in graphic design, film and art history. He specializes in time-based media design and strives to create beautiful things in every medium available to him. Brian is a graduate of Columbus College of Art & Design.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/pub/brian-liston/6/28a/9b8"
+    },
+    "image": "TODO"
+  },
+  {
+    "name": "Yanyang Zhou",
+    "title": "Engineer",
+    "bio": "Yanyang is a designer specializing in UI engineering and human-computer interaction (HCI). She crafts carefully constructed visualization and software prototypes using the latest frameworks. Yanyang joined Invo in 2015. She has a software engineering undergraduate degree from Dalian University in Dalian, China and a graduate HCI degree from University of Pittsburg.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/zhouyanyang"
+    },
+    "image": "TODO"
+  },
+  {
+    "name": "Michael Bester",
+    "title": "Engineer",
+    "bio": "Michael is a design-savvy software developer focussed on building humane user interfaces for screens of all shapes and sizes. Having worked with companies as diverse as Novartis, Warner Music and Playboy, he has been crafting code with Invo since 2011. A graduate of the University of Miami Frost School of Music, Michael is also a guitarist who enjoys playing jazz, rock and more recently, classical repertoire.",
+    "image": "/images/about/headshot-michael-bester.jpg"
+  },
+  {
+    "name": "Emily Twaddell",
+    "title": "Doyenne de l'Atelier",
+    "bio": "Emily is a mentor and leader specializing in instructional design. Since joining Invo in 2013 as studio manager, Emily manages daily operations, writes for the blog, consults on design, and creates whimsical art installations. Emily holds degrees from Trinity College, Lesley University, and The Center for Digital Imaging Arts at Boston University.",
+    "social": {
+      "linkedin": "http://www.linkedin.com/pub/emily-twaddell/6/b75/a03"
+    },
+    "image": "/images/about/headshot-emily-twaddell.jpg"
+  },
+  {
+    "name": "Lily Fan",
+    "title": "Design Intern",
+    "bio": "Lily is an Industrial Design student at the Rhode Island School of Design (RISD). Lily is interested in the collision of the physical, emotional, and digital. She is advancing her software design chops during the winter semester.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/lily-fan-07008a58"
+    },
+    "image": "TODO"
+  },
+  {
+    "name": "Courtney McGorrill",
+    "title": "Engineering Intern",
+    "bio": "Courtney is a computer science undergraduate at the Rochester Institute of Technology (RIT) and joins the studio for a fall coop. She's wrangling pixels and code while learning system engineering.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/courtneymcgorrill"
+    },
+    "image": "TODO"
+  },
+  {
+    "name": "Kelsey Kittelsen",
+    "title": "Design Intern",
+    "bio": "",
+    "image": "/images/about/headshot-kelsey-kittelsen.jpg"
+  },
+  {
+    "name": "Neil Rens"
+  },
+  {
+    "name": "Cecile Lu"
+  },
+  {
+    "name": "Pearl Twins"
+  },
+  {
+    "name": "Ben Salinas",
+    "title": "Designer, Engineer",
+    "bio": "Ben is a designer specializing in engineering and holistic design. He orchestrates exceptional outcomes in algorithm-driven software and specializes in transitioning beautiful designs from pixels to production code. Ben joined Invo in 2012 and is a graduate of the Olin College of Engineering. Ben also works to revolutionize the world of coffee brewing at his company, Luminaire Coffee.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/bensalinas"
+    },
+    "image": "/images/about/headshot-ben-salinas.jpg"
+  },
+  {
+    "name": "Adam Pere",
+    "title": "Engineer, Designer",
+    "bio": "Adam is an engineer specializing in data visualization and rapid prototyping. He provides smart software engineering and well-designed feedback loops using bleeding edge frameworks. Adam joined Invo in 2013 and is a graduate of Union College with a degree in Computer Science and Visual Arts.",
+    "social": {
+      "linkedin": "http://www.linkedin.com/in/adampere"
+    },
+    "image": "TODO"
+  },
+  {
+    "name": "Eli Rodriguez",
+    "title": "Business Admin",
+    "bio": "Eli is a multi-talented administrator specializing in organization and follow-through. She is the studio manager at Involution Studios Columbus. Eli joined Invo in 2012 from a similar role in New York City.",
+    "image": "TODO"
+  },
+  {
+    "name": "Xinyu Liu",
+    "title": "Designer",
+    "bio": "Xinyu is a designer with a background in crafting physical objects, conducting research, and influencing human behavior. She leverages invisible sensing tech, composes emotional feedback loops, and creates just-in-time graphic communication. Xinyu is a graduate of the Beijing Institute of Technology and the Rhode Island School of Design.",
+    "image": "/images/about/headshot-xinyu-liu.jpg"
+  },
+  {
+    "name": "Sein Woo",
+    "title": "Designer",
+    "bio": "Sein is an interface designer specializing in communication design and industrial design. She makes desirable interfaces that are honest in function and natural to people. She is a hands-on designer and regularly crafts furniture and jewelry. Sein joined Invo in 2013 and is a graduate of the Rhode Island School of Design.",
+    "social": {
+      "linkedin": "http://www.linkedin.com/in/seinwoo"
+    },
+    "image": "/images/about/headshot-sein-woo.jpg"
+  },
+  {
+    "name": "Roger Zhu",
+    "title": "Designer",
+    "bio": "Roger has a unique background of industrial design, user-centered research and design strategy. Experienced in bringing physical and digital products into people's life. Roger's focus is on complex medical and consumer healthcare solutions and data visualization. Roger has worked at Bosch Power Tool and MIT, and is a graduate of the Rhode Island School of Design.",
+    "social": {
+      "linkedin": "http://www.linkedin.com/pub/roger-zhu/16/660/528"
+    },
+    "image": "/images/about/headshot-roger-zhu.jpg"
+  },
+  {
+    "name": "Ben Listwon",
+    "title": "Engineer",
+    "bio": "Ben Listwon co-founded GoInvo in Silicon Valley, establishing the company’s technical practice. A founding member of notable technology companies like Yelp and various IdeaLab member companies, Ben has also held lead architect positions at eBay, PayPal, Nokia and Yahoo. He is happiest when delivering products which improve people's quality of life.",
+    "image": "/images/about/headshot-ben-listwon.jpg"
   }
 ]

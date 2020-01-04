@@ -64,6 +64,10 @@ class DeterminantsOfHealthFeature extends Component {
                 healthcare, GoInvo created a comprehensive open source
                 visualization of the social determinants of health.
               </p>
+              <p className="text--grey">
+                To cite: Determinants of Health, by Edwin Choi, Juhan Sonin,
+                2018, © GoInvo
+              </p>
             </div>
 
             <div className="max-width max-width--md content-padding">

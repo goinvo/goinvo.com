@@ -8,5 +8,15 @@
       "linkedin": "https://www.linkedin.com/in/farah-hamade-107abaa7/"
     },
     "image": "/images/about/headshot-farah-hamade.jpg"
+  },
+  {
+    "name": "Edwin Choi",
+    "title": "Designer",
+    "bio": "Edwin is a biologist turned designer. Combining the sciences and art, he orchestrates healthcare software experiences to be beautiful and clinically refined. Edwin joined Invo in 2015, is a graduate of Washington University, and has a masters in biomedical design from Johns Hopkins University.",
+    "social": {
+      "email": "edwin@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/edwinchoi1/"
+    },
+    "image": "/images/about/headshot-edwin-choi.jpg"
   }
 ]

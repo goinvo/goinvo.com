@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Image from './image'
 
 import team from '../data/team.json'
+import alumni from '../data/alumni.json'
 
 class Author extends Component {
   constructor(props) {
@@ -10,14 +11,18 @@ class Author extends Component {
 
     this.state = {
       // TODO: Also check 'alumni' once that is in
-      author: team.find(member => member.name === this.props.name),
+      author: team
+        .concat(alumni)
+        .find(member => member.name === this.props.name),
     }
   }
 
   componentDidUpdate() {
     if (this.state.author && this.state.author.name !== this.props.name) {
       this.setState({
-        author: team.find(member => member.name === this.props.name),
+        author: team
+          .concat(alumni)
+          .find(member => member.name === this.props.name),
       })
     }
   }

@@ -38,6 +38,8 @@ Our project aimed to make this first step welcoming rather than prohibitive thro
 
 ### Results
 
+We designed an application that’s fully compliant with [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) and [508 accessibility standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/), and currently in use in Massachusetts.
+
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 12 weeks, 2 engineers for 10 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Public health & policy
 <br />
@@ -49,7 +51,7 @@ Our project aimed to make this first step welcoming rather than prohibitive thro
 
 #### No one should have to worry about affording their next meal.
 
-In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP[^2]. Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in $1.80 in total economic activity.”
+In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP[^2]. Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in \$1.80 in total economic activity.”
 
 ![A simple diagram we made to help communicate the process to SNAP applicants.](/images/case-studies/mass/snap/snap-simple-process.jpg)
 
@@ -79,7 +81,7 @@ We shadowed case workers performing phone interviews and assisting applicants an
 
 #### Why mobile first makes sense
 
-The Pew Research Center reported that 77% of U.S. adults owned smartphones as of January 10, 2018[^3]. Americans making less than $30,000 per year came in at a 67% ownership rate. While residents can access desktop computers at local libraries, many of those who would apply to SNAP have more immediate access to smartphones rather than desktop computers. Having a phone connects people to work opportunities and is a necessity in the modern world.
+The Pew Research Center reported that 77% of U.S. adults owned smartphones as of January 10, 2018[^3]. Americans making less than \$30,000 per year came in at a 67% ownership rate. While residents can access desktop computers at local libraries, many of those who would apply to SNAP have more immediate access to smartphones rather than desktop computers. Having a phone connects people to work opportunities and is a necessity in the modern world.
 
 <Divider />
 

@@ -206,7 +206,7 @@ class ConsentFeature extends Component {
                 At the most basic level, the consent process must meet the needs
                 of those with disabilities (see{' '}
                 <a
-                  href={mediaUrl('https://www.w3.org/TR/WCAG21/')}
+                  href="https://www.w3.org/TR/WCAG21/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -227,9 +227,7 @@ class ConsentFeature extends Component {
                 The gateway to involvement in the Resilience Project is a 10
                 minute screening + consent process (
                 <a
-                  href={mediaUrl(
-                    'https://www.goinvo.com/work/mount-sinai-consent'
-                  )}
+                  href="https://www.goinvo.com/work/mount-sinai-consent"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -254,9 +252,7 @@ class ConsentFeature extends Component {
               <p className="text--caption">
                 These initial designs for (
                 <a
-                  href={mediaUrl(
-                    'https://github.com/patient-data-manager/pdm-designs/blob/master/pdm_data_use_agreement_storyboard.pdf'
-                  )}
+                  href="https://github.com/patient-data-manager/pdm-designs/blob/master/pdm_data_use_agreement_storyboard.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -302,9 +298,7 @@ class ConsentFeature extends Component {
               <p className="text--caption">
                 Above is Table 1 from "
                 <a
-                  href={mediaUrl(
-                    'https://poseidon01.ssrn.com/delivery.php?ID=722009025090070117080012101085114002000071009031061037125097088119009102109102119101099038107061010025028092092080122065098105007010093003076112103109116006085100029057035000100077107084125011002065028029127126094079096086083107104089069097105001078017&EXT=pdf'
-                  )}
+                  href="https://poseidon01.ssrn.com/delivery.php?ID=722009025090070117080012101085114002000071009031061037125097088119009102109102119101099038107061010025028092092080122065098105007010093003076112103109116006085100029057035000100077107084125011002065028029127126094079096086083107104089069097105001078017&EXT=pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -343,9 +337,7 @@ class ConsentFeature extends Component {
               <p className="text--caption">
                 Above are select screens from the{' '}
                 <a
-                  href={mediaUrl(
-                    'https://participant.joinallofus.org/#/dashboard'
-                  )}
+                  href="https://participant.joinallofus.org/#/dashboard"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -381,7 +373,7 @@ class ConsentFeature extends Component {
               <p className="text--caption">
                 The{' '}
                 <a
-                  href={mediaUrl('https://parkinsonmpower.org/study/overview')}
+                  href="https://parkinsonmpower.org/study/overview"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

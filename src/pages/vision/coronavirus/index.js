@@ -19,12 +19,12 @@ class CoronavirusFeature extends Component {
         <div className="coronavirus">
           <div className="desktop-feature hidden--until-lg">
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-part1.jpg"
+              src="/images/features/coronavirus/coronavirus-wk2-part1-2.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-part2.jpg"
+              src="/images/features/coronavirus/coronavirus-wk2-part2-2.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />

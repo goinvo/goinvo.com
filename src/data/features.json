@@ -1,5 +1,16 @@
 [
   {
+    "id": "coronavirus",
+    "title": "Understanding the 2019 Novel Coronavirus",
+    "date": "Feb.2020",
+    "client": "Feature",
+    "categories": ["public-health-and-policy"],
+    "caption": "A primer on the 2019 novel coronavirus with weekly updates",
+    "image": "/images/features/coronavirus/hero.jpg",
+    "link": "/vision/coronavirus/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "patient-centered-consent",
     "title": "A Guide to Patient-Centered Consent",
     "date": "Feb.2020",

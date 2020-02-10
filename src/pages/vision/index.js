@@ -32,9 +32,7 @@ import config from '../../../config'
 
 import { formatDate } from '../../helpers.js'
 
-const spotlightFeature = features.find(
-  feature => feature.id === 'vapepocolypse'
-)
+const spotlightFeature = features.find(feature => feature.id === 'coronavirus')
 
 // NOTE: Not spotlighting podcasts for now...
 // const spotlightPodcast = {

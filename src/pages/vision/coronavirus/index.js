@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Image from '../../../components/image'
+import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -70,6 +71,22 @@ class CoronavirusFeature extends Component {
             >
               Download PDF
             </a>
+          </div>
+
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <div>
+                <h2 className="header--xl text--center">Authors</h2>
+                <Author name="Patricia Nguyen" />
+                <Author name="Colleen Tang Poy" />
+                <Author name="Parsuree Vatanasirisuk" />
+
+                <h3 className="header--md">Contributors</h3>
+
+                <Author name="Meghana Karande" />
+                <Author name="Juhan Sonin" />
+              </div>
+            </div>
           </div>
         </div>
       </Layout>

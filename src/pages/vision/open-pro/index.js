@@ -747,16 +747,18 @@ class openPro extends Component {
                 <span className="text--black">6 weeks, 1.0FTE</span>
               </p>
             </div>
-            <div className="background--gray pad-vertical--double">
-              <div className="max-width max-width--md content-padding">
-                <HubspotForm
-                  formId={config.hubspotNewsletterFullFormId}
-                  title="Subscribe to our open source healthcare newsletter."
-                  submitButtonText="Subscribe"
-                />
-              </div>
+          </div>
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
+          </div>
 
+          <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h2 className="header--xl text--center">Authors</h2>
               <Author name="Daniel Reeves" />
@@ -767,117 +769,120 @@ class openPro extends Component {
               <Author name="Juhan Sonin" company="GoInvo, MIT" />
             </div>
 
-            <Divider />
+            <div className="max-width max-width--md content-padding">
+              <Divider />
 
-            <div id="references">
-              <References
-                references={[
-                  {
-                    title:
-                      'Basch, Ethan, Allison M. Deal, Amylou C. Dueck, Howard I. Scher, Mark G. Kris, Clifford Hudis, and Deborah Schrag. 2017. “Overall Survival Results of a Trial Assessing Patient-Reported Outcomes for Symptom Monitoring During Routine Cancer Treatment.” JAMA 318 (2): 197.',
-                    link: 'https://doi.org/10.1001/jama.2017.7156',
-                  },
-                  {
-                    title:
-                      'Bottomley, Andrew, Dave Jones, and Lily Claassens. 2009. “Patient-Reported Outcomes: Assessment and Current Perspectives of the Guidelines of the Food and Drug Administration and the Reflection Paper of the European Medicines Agency.” European Journal of Cancer (Oxford, England: 1990) 45 (3): 347–53.',
-                    link: 'https://doi.org/10.1016/j.ejca.2008.09.032',
-                  },
-                  {
-                    title:
-                      'Broderick, Joan, Esi Morgan DeWit, Nan Rothrock, Paul Crane, and Christopher B. Forrest. 2013. “Advances in Patient Reported Outcomes: The NIH PROMIS Measures.” EGEMs (Generating Evidence & Methods to Improve Patient Outcomes) 1 (1): 12.',
-                    link: 'https://doi.org/10.13063/2327-9214.1015',
-                  },
-                  {
-                    title:
-                      'Cella, David, Susan Yount, Nan Rothrock, Richard Gershon, Karon Cook, Bryce Reeve, Deborah Ader, et al. 2007. “The Patient-Reported Outcomes Measurement Information System (PROMIS): Progress of an NIH Roadmap Cooperative Group during Its First Two Years.” Medical Care 45 (5 Suppl 1): S3–11.',
-                    link: 'https://doi.org/10.1097/01.mlr.0000258615.42478.55',
-                  },
-                  {
-                    title:
-                      'Chu, Dominic, Marko Popovic, Edward Chow, David Cella, Jennifer L Beaumont, Henry Lam, Jasmine Nguyen, et al. 2014. “Development, Characteristics and Validity of the EORTC QLQ-PR25 and the FACT-P for Assessment of Quality of Life in Prostate Cancer Patients.” Journal of Comparative Effectiveness Research 3 (5): 523–31.',
-                    link: ' https://doi.org/10.2217/cer.14.41',
-                  },
-                  {
-                    title:
-                      'Chung, Arlene E, and Ethan M Basch. 2015. “Incorporating the Patient’s Voice into Electronic Health Records through Patient-Reported Outcomes as the ‘Review of Systems.’” Journal of the American Medical Informatics Association 22 (4): 914–16.',
-                    link: 'https://doi.org/10.1093/jamia/ocu007',
-                  },
-                  {
-                    title:
-                      'Greenhalgh, Joanne, Sonia Dalkin, Kate Gooding, Elizabeth Gibbons, Judy Wright, David Meads, Nick Black, Jose Maria Valderas, and Ray Pawson. 2017. Functionality and Feedback: A Realist Synthesis of the Collation, Interpretation and Utilisation of Patient-Reported Outcome Measures Data to Improve Patient Care. Health Services and Delivery Research. Southampton (UK): NIHR Journals Library.',
-                    link: 'http://www.ncbi.nlm.nih.gov/books/NBK409450/',
-                  },
-                  {
-                    title:
-                      'Grossman, Cynthia. 2018. “Patient-Reported Outcomes: Design with the End in Mind.” Milken Institute.',
-                    link: 'https://www.fastercures.org/reports/view/70',
-                  },
-                  {
-                    title:
-                      '“Guidance for Industry. Patient-Reported Outcome Measures: Use in Medical Product Development to Support Labeling Claims.” 2009. U.S. F.D.A.',
-                    link:
-                      'https://www.fda.gov/downloads/drugs/guidances/ucm193282.pdf',
-                  },
-                  {
-                    title:
-                      'Hostetter, Martha, and Sarah Klein. n.d. “Using Patient-Reported Outcomes to Improve Health Care Quality.” The Commonwealth Fund. Accessed March 13, 2019.',
-                    link:
-                      'https://www.commonwealthfund.org/publications/newsletter-article/using-patient-reported-outcomes-improve-health-care-quality',
-                  },
-                  {
-                    title:
-                      'Marquis, Patrick, Martine Caron, Marie-Pierre Emery, Jane A. Scott, Benoit Arnould, and Catherine Acquadro. 2011. “The Role of Health-Related Quality of Life Data in the Drug Approval Processes in the US and Europe: A Review of Guidance Documents and Authorizations of Medicinal Products from 2006 to 2010.” Pharmaceutical Medicine, May.',
-                    link:
-                      'http://link.galegroup.com/apps/doc/A260691605/AONE?sid=googlescholar',
-                  },
-                  {
-                    title:
-                      '“Patient Reported Outcomes FHIR Implementation Guide.” n.d. Accessed March 13, 2019.',
-                    link:
-                      'http://build.fhir.org/ig/HL7/patient-reported-outcomes/index.html',
-                  },
-                  {
-                    title: '“Patient-Reported Outcome.” 2019. Wikipedia.',
-                    link:
-                      'https://en.wikipedia.org/w/index.php?title=Patient-reported_outcome&oldid=883919582',
-                  },
-                  {
-                    title:
-                      'Patel, Vaishali, and Christian Johnson. 2018. “Individuals’ Use of Online Medical Records and Technology for Health Needs.” ONC Data Brief 40. The Office of the National Coordinator for Health Information Technology.',
-                    link:
-                      'https://www.healthit.gov/sites/default/files/page/2018-03/HINTS-2017-Consumer-Data-Brief-3.21.18.pdf',
-                  },
-                  {
-                    title:
-                      '“Patient Portals Suck.” n.d. Klara - Secure Medical Patient Communication. Accessed March 14, 2019.',
-                    link: 'https://klara.com/blog/patient-portals-suck',
-                  },
-                  {
-                    title:
-                      '“PROMIS.” n.d. PROMIS® (Patient-Reported Outcomes Measurement Information System). Accessed March 13, 2019.',
-                    link:
-                      'http://www.healthmeasures.net/explore-measurement-systems/promis',
-                  },
-                  {
-                    title:
-                      'Vesely, Rebecca. 2018. “Why Are Patient Portals Such Duds?” Association of Health Care Journalists (blog). August 6, 2018.',
-                    link:
-                      'https://healthjournalism.org/blog/2018/08/why-are-patient-portals-such-duds/',
-                  },
-                  {
-                    title:
-                      'Wagle, Neil W. 2017. “Implementing Patient-Reported Outcome Measures (PROMs).” NEJM Catalyst. October 12, 2017.',
-                    link:
-                      'https://catalyst.nejm.org/implementing-proms-patient-reported-outcome-measures/',
-                  },
-                  {
-                    title:
-                      '“Web-Based System for Self-Reporting Symptoms Helps Patients Live Longer.” 2017',
-                    link:
-                      'https://www.asco.org/about-asco/press-center/news-releases/web-based-system-self-reporting-symptoms-helps-patients-live',
-                  },
-                ]}
-              />
+              <div id="references">
+                <References
+                  references={[
+                    {
+                      title:
+                        'Basch, Ethan, Allison M. Deal, Amylou C. Dueck, Howard I. Scher, Mark G. Kris, Clifford Hudis, and Deborah Schrag. 2017. “Overall Survival Results of a Trial Assessing Patient-Reported Outcomes for Symptom Monitoring During Routine Cancer Treatment.” JAMA 318 (2): 197.',
+                      link: 'https://doi.org/10.1001/jama.2017.7156',
+                    },
+                    {
+                      title:
+                        'Bottomley, Andrew, Dave Jones, and Lily Claassens. 2009. “Patient-Reported Outcomes: Assessment and Current Perspectives of the Guidelines of the Food and Drug Administration and the Reflection Paper of the European Medicines Agency.” European Journal of Cancer (Oxford, England: 1990) 45 (3): 347–53.',
+                      link: 'https://doi.org/10.1016/j.ejca.2008.09.032',
+                    },
+                    {
+                      title:
+                        'Broderick, Joan, Esi Morgan DeWit, Nan Rothrock, Paul Crane, and Christopher B. Forrest. 2013. “Advances in Patient Reported Outcomes: The NIH PROMIS Measures.” EGEMs (Generating Evidence & Methods to Improve Patient Outcomes) 1 (1): 12.',
+                      link: 'https://doi.org/10.13063/2327-9214.1015',
+                    },
+                    {
+                      title:
+                        'Cella, David, Susan Yount, Nan Rothrock, Richard Gershon, Karon Cook, Bryce Reeve, Deborah Ader, et al. 2007. “The Patient-Reported Outcomes Measurement Information System (PROMIS): Progress of an NIH Roadmap Cooperative Group during Its First Two Years.” Medical Care 45 (5 Suppl 1): S3–11.',
+                      link:
+                        'https://doi.org/10.1097/01.mlr.0000258615.42478.55',
+                    },
+                    {
+                      title:
+                        'Chu, Dominic, Marko Popovic, Edward Chow, David Cella, Jennifer L Beaumont, Henry Lam, Jasmine Nguyen, et al. 2014. “Development, Characteristics and Validity of the EORTC QLQ-PR25 and the FACT-P for Assessment of Quality of Life in Prostate Cancer Patients.” Journal of Comparative Effectiveness Research 3 (5): 523–31.',
+                      link: ' https://doi.org/10.2217/cer.14.41',
+                    },
+                    {
+                      title:
+                        'Chung, Arlene E, and Ethan M Basch. 2015. “Incorporating the Patient’s Voice into Electronic Health Records through Patient-Reported Outcomes as the ‘Review of Systems.’” Journal of the American Medical Informatics Association 22 (4): 914–16.',
+                      link: 'https://doi.org/10.1093/jamia/ocu007',
+                    },
+                    {
+                      title:
+                        'Greenhalgh, Joanne, Sonia Dalkin, Kate Gooding, Elizabeth Gibbons, Judy Wright, David Meads, Nick Black, Jose Maria Valderas, and Ray Pawson. 2017. Functionality and Feedback: A Realist Synthesis of the Collation, Interpretation and Utilisation of Patient-Reported Outcome Measures Data to Improve Patient Care. Health Services and Delivery Research. Southampton (UK): NIHR Journals Library.',
+                      link: 'http://www.ncbi.nlm.nih.gov/books/NBK409450/',
+                    },
+                    {
+                      title:
+                        'Grossman, Cynthia. 2018. “Patient-Reported Outcomes: Design with the End in Mind.” Milken Institute.',
+                      link: 'https://www.fastercures.org/reports/view/70',
+                    },
+                    {
+                      title:
+                        '“Guidance for Industry. Patient-Reported Outcome Measures: Use in Medical Product Development to Support Labeling Claims.” 2009. U.S. F.D.A.',
+                      link:
+                        'https://www.fda.gov/downloads/drugs/guidances/ucm193282.pdf',
+                    },
+                    {
+                      title:
+                        'Hostetter, Martha, and Sarah Klein. n.d. “Using Patient-Reported Outcomes to Improve Health Care Quality.” The Commonwealth Fund. Accessed March 13, 2019.',
+                      link:
+                        'https://www.commonwealthfund.org/publications/newsletter-article/using-patient-reported-outcomes-improve-health-care-quality',
+                    },
+                    {
+                      title:
+                        'Marquis, Patrick, Martine Caron, Marie-Pierre Emery, Jane A. Scott, Benoit Arnould, and Catherine Acquadro. 2011. “The Role of Health-Related Quality of Life Data in the Drug Approval Processes in the US and Europe: A Review of Guidance Documents and Authorizations of Medicinal Products from 2006 to 2010.” Pharmaceutical Medicine, May.',
+                      link:
+                        'http://link.galegroup.com/apps/doc/A260691605/AONE?sid=googlescholar',
+                    },
+                    {
+                      title:
+                        '“Patient Reported Outcomes FHIR Implementation Guide.” n.d. Accessed March 13, 2019.',
+                      link:
+                        'http://build.fhir.org/ig/HL7/patient-reported-outcomes/index.html',
+                    },
+                    {
+                      title: '“Patient-Reported Outcome.” 2019. Wikipedia.',
+                      link:
+                        'https://en.wikipedia.org/w/index.php?title=Patient-reported_outcome&oldid=883919582',
+                    },
+                    {
+                      title:
+                        'Patel, Vaishali, and Christian Johnson. 2018. “Individuals’ Use of Online Medical Records and Technology for Health Needs.” ONC Data Brief 40. The Office of the National Coordinator for Health Information Technology.',
+                      link:
+                        'https://www.healthit.gov/sites/default/files/page/2018-03/HINTS-2017-Consumer-Data-Brief-3.21.18.pdf',
+                    },
+                    {
+                      title:
+                        '“Patient Portals Suck.” n.d. Klara - Secure Medical Patient Communication. Accessed March 14, 2019.',
+                      link: 'https://klara.com/blog/patient-portals-suck',
+                    },
+                    {
+                      title:
+                        '“PROMIS.” n.d. PROMIS® (Patient-Reported Outcomes Measurement Information System). Accessed March 13, 2019.',
+                      link:
+                        'http://www.healthmeasures.net/explore-measurement-systems/promis',
+                    },
+                    {
+                      title:
+                        'Vesely, Rebecca. 2018. “Why Are Patient Portals Such Duds?” Association of Health Care Journalists (blog). August 6, 2018.',
+                      link:
+                        'https://healthjournalism.org/blog/2018/08/why-are-patient-portals-such-duds/',
+                    },
+                    {
+                      title:
+                        'Wagle, Neil W. 2017. “Implementing Patient-Reported Outcome Measures (PROMs).” NEJM Catalyst. October 12, 2017.',
+                      link:
+                        'https://catalyst.nejm.org/implementing-proms-patient-reported-outcome-measures/',
+                    },
+                    {
+                      title:
+                        '“Web-Based System for Self-Reporting Symptoms Helps Patients Live Longer.” 2017',
+                      link:
+                        'https://www.asco.org/about-asco/press-center/news-releases/web-based-system-self-reporting-symptoms-helps-patients-live',
+                    },
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </div>

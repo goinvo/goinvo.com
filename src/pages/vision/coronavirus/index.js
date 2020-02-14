@@ -11,6 +11,7 @@ const frontmatter = {
   metaTitle: 'Understanding the Novel Coronavirus (2019-nCoV) - GoInvo',
   metaDescription:
     'Learn about 2019-nCoV, what it means for U.S. residents, and how you can protect yourself. Updated as new information emerges.',
+  heroImage: '/images/features/coronavirus/hero.jpg',
 }
 
 class CoronavirusFeature extends Component {

@@ -62,6 +62,11 @@ class CoronavirusFeature extends Component {
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
+            <Image
+              src="/images/features/coronavirus/coronavirus-wk3-mobile-part5.jpg"
+              sizes={config.sizes.full}
+              className="full-width-no-scroll"
+            />
           </div>
           <div className="max-width text--center">
             <a

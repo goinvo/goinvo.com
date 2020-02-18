@@ -21,44 +21,44 @@ class CoronavirusFeature extends Component {
         <div className="coronavirus">
           <div className="desktop-feature hidden--until-lg">
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-part1-2.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-part1.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-part2-2.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-part2.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-part3.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-part3.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-part4.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-part4.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
           </div>
           <div className="mobile-feature hidden--lg">
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-mobile-part1-2.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-mobile-part1.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-mobile-part2-2.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-mobile-part2.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-mobile-part3-2.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-mobile-part3.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
             <Image
-              src="/images/features/coronavirus/coronavirus-wk2-mobile-part4-2.jpg"
+              src="/images/features/coronavirus/coronavirus-wk3-mobile-part4.jpg"
               sizes={config.sizes.full}
               className="full-width-no-scroll"
             />
@@ -67,7 +67,7 @@ class CoronavirusFeature extends Component {
             <a
               className="button"
               href={mediaUrl(
-                '/pdf/vision/coronavirus/Understanding%20the%202019%20Novel%20Coronavirus-v2.pdf'
+                '/pdf/vision/coronavirus/Understanding%20the%202019%20Novel%20Coronavirus.v3.pdf'
               )}
             >
               Download PDF

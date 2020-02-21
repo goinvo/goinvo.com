@@ -57,12 +57,7 @@ class VisionPage extends Component {
 
     this.state = {
       blogPosts: [],
-      recentFeatures: features
-        .filter(
-          feature => feature.id !== spotlightFeature.id && !feature.external
-        )
-        .slice(0, 6),
-      showAllFeatures: false,
+      recentFeatures: features,
       // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
       // recentBlogPostImage: '',
     }
@@ -265,7 +260,6 @@ class VisionPage extends Component {
                     externalLink
                     suppressNewTab={true}
                     hidden={{
-                      condition: !this.state.showAllFeatures && i > 2,
                       class: 'hidden--until-lg',
                     }}
                   >
@@ -282,14 +276,6 @@ class VisionPage extends Component {
                 )
               })}
             </Columns>
-            {!this.state.showAllFeatures ? (
-              <button
-                className="button button--primary button--block margin-top"
-                onClick={this.showAllFeatures}
-              >
-                All {features.length - 1} features
-              </button>
-            ) : null}
           </div>
         </div>
         <div className="max-width content-padding pad-vertical--quad">

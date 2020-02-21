@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -8,7 +7,6 @@ import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
-import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
 

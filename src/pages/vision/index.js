@@ -57,7 +57,9 @@ class VisionPage extends Component {
 
     this.state = {
       blogPosts: [],
-      recentFeatures: features,
+      features: features.filter(
+        feature => feature.id !== spotlightFeature.id && !feature.external
+      ),
       // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
       // recentBlogPostImage: '',
     }
@@ -65,15 +67,6 @@ class VisionPage extends Component {
 
   componentDidMount() {
     this.getBlogFeed()
-  }
-
-  showAllFeatures = () => {
-    this.setState({
-      showAllFeatures: true,
-      recentFeatures: features.filter(
-        feature => feature.id !== spotlightFeature.id && !feature.external
-      ),
-    })
   }
 
   getBlogFeed = () => {
@@ -248,20 +241,15 @@ class VisionPage extends Component {
         </div>
         <div className="background--blue pad-vertical pad-vertical--quad--only-lg">
           <div className="max-width content-padding">
-            <h3 className="header--md pad-bottom--double">
-              Most recent features
-            </h3>
+            <h3 className="header--md pad-bottom--double">Features</h3>
             <Columns columns={3}>
-              {this.state.recentFeatures.map((feature, i) => {
+              {this.state.features.map((feature, i) => {
                 return (
                   <Card
                     link={feature.link}
                     key={feature.id}
                     externalLink
                     suppressNewTab={true}
-                    hidden={{
-                      class: 'hidden--until-lg',
-                    }}
                   >
                     <ImageBlock
                       title={feature.title}

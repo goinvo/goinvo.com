@@ -54,7 +54,7 @@ Our task was to create a beautiful, human-friendly carrier screening service tha
 
 We quickly surveyed the landscape of competitors in the field &mdash;identifying their strengths and weaknesses to see how a new carrier screening service could stand out.
 
-![analysis](/images/case-studies/wuxi/familycode/familycode-competitive-analysis.jpg)
+![analysis](/images/case-studies/wuxi/familycode/familycode-competitive-analysis-2.jpg)
 
 Today's carrier screening reports are riddled with industry jargon, ambiguous next steps, and unclear severity of results. The result is a heightened stress for patients in an already stressful situation.
 

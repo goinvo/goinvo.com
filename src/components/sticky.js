@@ -16,13 +16,15 @@ class Sticky extends Component {
 
   componentDidMount() {
     this.setTargetOffset()
-    window.addEventListener('scroll', debounce(this.checkStickyState, 50))
-    window.addEventListener('resize', debounce(this.setTargetOffset, 50))
+    this._debouncedCheck = debounce(this.checkStickyState, 50)
+    this._debouncedSet = debounce(this.setTargetOffset, 50)
+    window.addEventListener('scroll', this._debouncedCheck)
+    window.addEventListener('resize', this._debouncedSet)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', debounce(this.checkStickyState, 50))
-    window.removeEventListener('resize', debounce(this.setTargetOffset, 50))
+    window.removeEventListener('scroll', this._debouncedCheck)
+    window.removeEventListener('resize', this._debouncedSet)
   }
 
   setTargetOffset = () => {

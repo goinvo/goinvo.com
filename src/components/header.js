@@ -65,12 +65,12 @@ class Header extends Component {
           onClick={this.toggleMobileNav}
         />
         <div className="mobile-nav">
-          <div
+          <button
             className="button button--transparent mobile-nav__close"
             onClick={this.toggleMobileNav}
           >
             <Close />
-          </div>
+          </button>
           <div className="mobile-nav__content">
             <ul className="mobile-nav__list">
               <li>

@@ -1,5 +1,16 @@
 [
   {
+    "id": "health-design-thinking",
+    "title": "Health Design Thinking Book",
+    "date": "Mar.2020",
+    "client": "Feature",
+    "categories": [],
+    "caption": "GoInvo highlighted in Health Design Thinking Book",
+    "image": "/images/features/health-design-thinking/health-design-thinking-book-hero-5.jpg",
+    "link": "vision/health-design-thinking/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "coronavirus",
     "title": "Understanding the 2019 Novel Coronavirus",
     "date": "Feb.2020",

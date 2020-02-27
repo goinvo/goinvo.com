@@ -30,6 +30,7 @@ const upNextList = [
   {
     link: 'https://www.goinvo.com/features/ebola-care-guideline',
     externalLink: true,
+    suppressNewTab: true,
     image:
       '/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg',
     title: 'Ebola Care Guideline, page 55',
@@ -84,7 +85,7 @@ class HealthDesignThinkingBook extends Component {
                   Social Determinants of Health
                 </a>
                 , and instructional design work for{' '}
-                <a href="/features/ebola-care-guideline/">
+                <a href="https://www.goinvo.com/features/ebola-care-guideline">
                   Ebola medical team preparedness
                 </a>
                 .
@@ -97,8 +98,7 @@ class HealthDesignThinkingBook extends Component {
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <a
                       href="https://mitpress.mit.edu/books/health-design-thinking"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noreferrer"
                       className="button button--primary margin-top--double margin-bottom--half button--block margin-right"
                     >
                       Pre-Order At MIT Press
@@ -107,8 +107,7 @@ class HealthDesignThinkingBook extends Component {
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <a
                       href="https://www.eventbrite.com/e/making-healthcare-beautiful-by-design-tickets-91909456659"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noreferrer"
                       className="button button--primary margin-top--double margin-bottom--half  button--block margin-right"
                     >
                       Attend Book Launch
@@ -190,8 +189,7 @@ class HealthDesignThinkingBook extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
                     href="https://www.eventbrite.com/e/making-healthcare-beautiful-by-design-tickets-91909456659"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noreferrer"
                     className="button button--primary margin-top--double margin-bottom--half  button--block margin-right"
                   >
                     Attend Book Launch

@@ -7,7 +7,7 @@
     "categories": [],
     "caption": "GoInvo highlighted in Health Design Thinking Book",
     "image": "/images/features/health-design-thinking/health-design-thinking-book-hero-5.jpg",
-    "link": "vision/health-design-thinking/",
+    "link": "/vision/health-design-thinking/",
     "hiddenWorkPage": true
   },
   {
@@ -124,7 +124,7 @@
     "date": "Oct.2018",
     "client": "Feature",
     "categories": ["public-health-and-policy", "open-source"],
-    "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health.",
+    "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.",
     "image": "/images/services/doh-preview.jpg",
     "link": "/vision/determinants-of-health/"
   },

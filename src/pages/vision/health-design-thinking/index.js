@@ -19,7 +19,7 @@ const upNextList = [
     image: '/images/services/doh-preview.jpg',
     title: 'Determinants of Health, page 29-31',
     caption:
-      '89% of health occurs outside of the clinical space through our genetics, behavior, environment and social circumstances. These factors are known as the social determinants of health.',
+      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
   },
   {
     link: '../work/paintrackr',
@@ -28,7 +28,8 @@ const upNextList = [
     caption: 'A straightforward, tactile tool for logging pain.',
   },
   {
-    link: '/features/ebola-care-guideline',
+    link: 'https://www.goinvo.com/features/ebola-care-guideline',
+    externalLink: true,
     image:
       '/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg',
     title: 'Ebola Care Guideline, page 55',
@@ -46,7 +47,7 @@ const upNextList = [
 const frontmatter = {
   metaTitle: 'Health Design Thinking Book',
   metaDescription:
-    'GoInvo Studio&#39;s practice is highlighted in the diverse case studies that make up the new book "Health Design Thinking", co-written by Ellen Lupton and Dr. Bon Ku.',
+    'GoInvo Studio&#39;s practice is highlighted in the diverse case studies that make up the new book "Health Design Thinking," co-written by Ellen Lupton and Dr. Bon Ku.',
   heroImage:
     '/images/features/health-design-thinking/health-design-thinking-book-hero-5.jpg',
 }
@@ -70,7 +71,7 @@ class HealthDesignThinkingBook extends Component {
                 <a href="https://mitpress.mit.edu/books/health-design-thinking">
                   Health Design Thinking
                 </a>
-                ", co-written by Ellen Lupton and Dr. Bon Ku, and published by
+                ," co-written by Ellen Lupton and Dr. Bon Ku, and published by
                 Cooper Hewitt, Smithsonian Design Museum and MIT Press in March
                 2020.
               </p>
@@ -79,11 +80,11 @@ class HealthDesignThinkingBook extends Component {
                 human-centered design approach to solving healthcare challenges
                 — drawings, photographs, storyboards, and visualizations — such
                 as an infovis of the{' '}
-                <a href="../vision/determinants-of-health/">
+                <a href="/vision/determinants-of-health/">
                   Social Determinants of Health
                 </a>
                 , and instructional design work for{' '}
-                <a href="../features/ebola-care-guideline/">
+                <a href="/features/ebola-care-guideline/">
                   Ebola medical team preparedness
                 </a>
                 .
@@ -174,7 +175,7 @@ class HealthDesignThinkingBook extends Component {
                 rooms.
               </p>
               <p>
-                His new book, "Health Design Thinking", co-written by the
+                His new book, "Health Design Thinking," co-written by the
                 influential designer Ellen Lupton, shows ways to generate
                 creative ideas and solutions in the context of medicine.
                 Problems in health care often involve ambiguity and uncertainty,

@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import ImageBlock from '../../../components/image-block'
 import Quote from '../../../components/quote'
 import HubspotForm from '../../../components/hubspot-form'
-import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import Columns from '../../../components/columns'
 import Card from '../../../components/card'

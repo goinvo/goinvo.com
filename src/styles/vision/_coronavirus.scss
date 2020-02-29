@@ -1,4 +1,5 @@
 $corona-color--primary: #563c8d;
+$corona-color--primary-light: #fbf9ff;
 $corona-color--gray-dark: #424242;
 $corona-font-weight--base: 400;
 $corona-font-weight--bold: 600;
@@ -13,6 +14,69 @@ $corona-font-weight--extra-bold: 900;
     font-size: 18px;
   }
 
+  a {
+    color: $corona-color--primary;
+
+    &:hover,
+    &:focus {
+      color: #3b4e98;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: $corona-font-weight--bold;
+  }
+
+  h4 {
+    color: $corona-color--primary;
+    font-size: 16px;
+    margin-bottom: 0;
+
+    @include mq($from: large) {
+      font-size: 18px;
+    }
+  }
+
+  h4 + p {
+    margin-top: 0;
+  }
+
+  .button {
+    background-color: $corona-color--primary;
+    color: $color-white;
+    font-size: 24px;
+    padding: 2rem 4rem;
+    margin: 3rem auto;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: lighten($corona-color--primary, 10%);
+    }
+  }
+
+  &-text {
+    &--primary {
+      color: $corona-color--primary;
+    }
+
+    &--lg {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    &--bold {
+      font-weight: $corona-font-weight--bold !important;
+    }
+
+    &--regular {
+      font-weight: $corona-font-weight--base !important;
+    }
+  }
+
   .number-list-item {
     display: flex;
 
@@ -22,8 +86,8 @@ $corona-font-weight--extra-bold: 900;
 
     &--number {
       position: relative;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       margin: 0 auto;
       margin-top: calc(1em - 8px);
       color: $color-white;
@@ -35,19 +99,13 @@ $corona-font-weight--extra-bold: 900;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        font-weight: $corona-font-weight--bold;
       }
     }
 
     &--content {
       flex: 1;
     }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-weight: $corona-font-weight--bold;
   }
 
   .hero {
@@ -64,11 +122,6 @@ $corona-font-weight--extra-bold: 900;
       .hero__image-container {
         height: 150px;
         min-height: 0;
-      }
-
-      .background-image {
-        background-position: 80% 0%;
-        background-size: auto;
       }
 
       .coronavirus-header-container {
@@ -93,18 +146,20 @@ $corona-font-weight--extra-bold: 900;
     }
   }
 
-  h4 {
-    color: $corona-color--primary;
+  &-section-header {
+    display: inline-block;
+    min-width: 200px;
+    background-color: $corona-color--primary;
+    color: $color-white;
+    padding: 0.5em 1em;
     font-size: 16px;
-    margin-bottom: 0;
+    text-align: center;
+    border-radius: 50px;
 
     @include mq($from: large) {
+      margin-left: -1em;
       font-size: 18px;
     }
-  }
-
-  h4 + p {
-    margin-top: 0;
   }
 
   &-header-container {
@@ -147,22 +202,6 @@ $corona-font-weight--extra-bold: 900;
     }
   }
 
-  &-section-header {
-    display: inline-block;
-    min-width: 200px;
-    background-color: $corona-color--primary;
-    color: $color-white;
-    padding: 0.5em 1em;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 50px;
-
-    @include mq($from: large) {
-      margin-left: -1em;
-      font-size: 18px;
-    }
-  }
-
   .close-contact {
     @include mq($from: large) {
       margin-top: -250px;
@@ -176,7 +215,7 @@ $corona-font-weight--extra-bold: 900;
   }
 
   .stay-calm {
-    background-color: #fbf9ff;
+    background-color: $corona-color--primary-light;
     transform: translate3d(0, 0, 0);
 
     @include mq($from: large) {
@@ -185,17 +224,136 @@ $corona-font-weight--extra-bold: 900;
     }
   }
 
-  .button {
-    background-color: $corona-color--primary;
-    color: $color-white;
-    font-size: 24px;
-    padding: 2rem 4rem;
-    margin: 3rem auto;
+  &-prejudice,
+  &-masks {
+    margin-bottom: 1em;
+
+    @include mq($from: large) {
+      background-color: $corona-color--primary-light;
+    }
   }
 
-  &-text {
-    &--primary {
-      color: $corona-color--primary;
+  &-action-plan {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include mq($until: 1024px) {
+      background-position: 100vw 0;
+    }
+
+    @include mq($from: 1024px) {
+      min-height: 130vw;
+    }
+  }
+
+  &-around-the-world {
+    @include mq($from: 1024px) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+
+      p {
+        position: absolute;
+        max-width: 400px;
+        padding: 1em;
+
+        &:not(:first-of-type):not(:last-of-type) {
+          background-color: transparentize($color-white, 0.2);
+        }
+
+        &:first-of-type {
+          bottom: 80%;
+          left: calc(23vw - ((100vw - 1020px) / 2));
+          max-width: 600px;
+        }
+        &:nth-of-type(2) {
+          bottom: 55%;
+          left: calc(60vw - ((100vw - 1020px) / 2));
+        }
+        &:nth-of-type(3) {
+          bottom: 35%;
+          left: calc(65vw - ((100vw - 1020px) / 2));
+        }
+        &:nth-of-type(4) {
+          bottom: 20%;
+          left: calc(58vw - ((100vw - 1020px) / 2));
+        }
+        &:nth-of-type(5) {
+          bottom: 0;
+          left: calc(23vw - ((100vw - 1020px) / 2));
+          max-width: 750px;
+        }
+      }
+    }
+
+    &-mobile {
+      @include mq($from: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &-action-end {
+    position: relative;
+    height: 185vw;
+
+    .background-image {
+      background-position: center bottom;
+    }
+
+    .content {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100vw;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      content: '';
+      width: 100vw;
+      height: 50px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      @include mq($until: large) {
+        display: block;
+      }
+    }
+
+    @include mq($from: 620px) {
+      height: 165vw;
+    }
+
+    @include mq($from: 780px) {
+      height: 160vw;
+    }
+
+    @include mq($from: large) {
+      height: 83.3vw;
+    }
+  }
+
+  &-logo {
+    display: flex;
+    margin-bottom: 2em;
+
+    &--left {
+      @include mq($from: large) {
+        flex: 0 0 40%;
+      }
+    }
+
+    .hidden--until-lg {
+      padding-left: 2em;
     }
   }
 }

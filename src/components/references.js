@@ -4,9 +4,11 @@ class References extends Component {
   render() {
     return (
       <div>
-        <h2 className="header--lg text--center margin-top--double">
-          References
-        </h2>
+        {!this.props.hideTitle ? (
+          <h2 className="header--lg text--center margin-top--double">
+            References
+          </h2>
+        ) : null}
         <ol className="references">
           {this.props.references.map((ref, i) => {
             const key = ref.link && ref.link.length ? ref.link : ref.title

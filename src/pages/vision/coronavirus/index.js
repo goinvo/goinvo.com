@@ -48,7 +48,7 @@ class CoronavirusFeature extends Component {
                   the Novel Coronavirus
                 </h1>
                 <h2>COVID-19</h2>
-                <p>last update 25 February 2020</p>
+                <p>last update 29 February 2020</p>
               </div>
             </div>
           </div>
@@ -747,12 +747,8 @@ class CoronavirusFeature extends Component {
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
-                <a
-                  href={mediaUrl(
-                    '/pdf/vision/coronavirus/Airport%20Response.pdf'
-                  )}
-                >
-                  Download as PDF
+                <a href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_airports.pdf">
+                  Download PDF
                 </a>
               </div>
             </div>
@@ -786,12 +782,8 @@ class CoronavirusFeature extends Component {
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
-                <a
-                  href={mediaUrl(
-                    '/pdf/vision/coronavirus/Hospital%20Response.pdf'
-                  )}
-                >
-                  Download as PDF
+                <a href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_hospitals.pdf">
+                  Download PDF
                 </a>
               </div>
             </div>
@@ -852,10 +844,8 @@ class CoronavirusFeature extends Component {
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
-                <a
-                  href={mediaUrl('/pdf/vision/coronavirus/City%20Response.pdf')}
-                >
-                  Download as PDF
+                <a href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_cities.pdf">
+                  Download PDF
                 </a>
               </div>
             </div>
@@ -1070,13 +1060,19 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="max-width text--center">
+              <div className="margin-bottom">
+                <a
+                  className="button"
+                  href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_booklet.pdf"
+                >
+                  Download Booklet PDF
+                </a>
+              </div>
               <a
                 className="button"
-                href={mediaUrl(
-                  '/pdf/vision/coronavirus/Understanding%20the%202019%20Novel%20Coronavirus.v4.pdf'
-                )}
+                href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_poster.pdf"
               >
-                Download PDF
+                Download Poster PDF
               </a>
             </div>
           </section>
@@ -1224,9 +1220,11 @@ class CoronavirusFeature extends Component {
                 <Author name="Patricia Nguyen" />
                 <Author name="Colleen Tang Poy" />
                 <Author name="Parsuree Vatanasirisuk" />
+                <Author name="Craig McGinley" />
 
                 <h3 className="header--md">Contributors</h3>
 
+                <Author name="Jen Patel" />
                 <Author name="Meghana Karande" />
                 <Author name="Juhan Sonin" />
               </div>

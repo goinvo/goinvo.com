@@ -1268,8 +1268,18 @@ class CoronavirusFeature extends Component {
               </p>
               <p className="text--gray text--sm margin-top--quad pad-bottom--double">
                 Licensed under Creative Commons Attribution v3 | Created by
-                GoInvo |{' '}
-                <a href="mailto:coronavirus@goinvo.com">Send us Feedback</a>
+                GoInvo
+                <br />
+                <a href="mailto:coronavirus@goinvo.com">
+                  Send us Feedback
+                </a> |{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/goinvo/COVID19"
+                >
+                  Check out the GitHub repo
+                </a>
               </p>
               <div className="text--center margin-top--quad margin-bottom--quad">
                 <p>Have feedback? Reach us at</p>

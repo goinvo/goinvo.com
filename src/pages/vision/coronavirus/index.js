@@ -148,7 +148,7 @@ class CoronavirusFeature extends Component {
             </div>
             <div className="hidden--until-lg">
               <Image
-                src="/images/features/coronavirus/spread.jpg"
+                src="/images/features/coronavirus/spread-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -304,7 +304,7 @@ class CoronavirusFeature extends Component {
             </div>
             <div className="hidden--until-lg">
               <Image
-                src="/images/features/coronavirus/close-contact.jpg"
+                src="/images/features/coronavirus/close-contact-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -560,7 +560,7 @@ class CoronavirusFeature extends Component {
                   </p>
                   <div className="text--center">
                     <Image
-                      src="/images/features/coronavirus/surgical-mask.png"
+                      src="/images/features/coronavirus/surgical-mask-2.png"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -569,16 +569,16 @@ class CoronavirusFeature extends Component {
                     Helpful for{' '}
                     <strong>
                       preventing the sharing of germs if you are sick,
-                    </strong>
+                    </strong>{' '}
                     but <strong>may not protect you</strong> from airborne
-                    viruses that are transmitted through smaller particles
+                    viruses that are transmitted through smaller particles.
                   </p>
                   <p className="margin-top--quad margin-bottom--none">
                     <strong>N95 Respirators</strong>
                   </p>
                   <div className="text--center">
                     <Image
-                      src="/images/features/coronavirus/n95-respirator.png"
+                      src="/images/features/coronavirus/n95-respirator-2.png"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -594,7 +594,7 @@ class CoronavirusFeature extends Component {
                       does not effectively prevent you from sharing germs if you
                       are sick
                     </strong>{' '}
-                    due to the one-way breathing valve
+                    due to the one-way breathing valve.
                   </p>
                 </div>
                 <p>
@@ -721,7 +721,7 @@ class CoronavirusFeature extends Component {
             </div>
             <div className="hidden--lg">
               <Image
-                src="/images/features/coronavirus/mobile-local-ground-team.jpg"
+                src="/images/features/coronavirus/mobile-local-ground-team-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -816,7 +816,7 @@ class CoronavirusFeature extends Component {
               </p>
             </div>
             <Image
-              src="/images/features/coronavirus/response-hospital.jpg"
+              src="/images/features/coronavirus/response-hospital-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
             />
@@ -882,7 +882,7 @@ class CoronavirusFeature extends Component {
               </p>
             </div>
             <Image
-              src="/images/features/coronavirus/response-city.jpg"
+              src="/images/features/coronavirus/response-city-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
             />

@@ -427,7 +427,7 @@ class CoronavirusFeature extends Component {
                 </p>
                 <NumberListItem number="1">
                   <strong>Wash your hands often</strong> with soap and water for
-                  20 seconds. If unable and your hands are not visibly dirty,
+                  20 seconds. If unable to and your hands are not visibly dirty,
                   use an alcohol-based hand sanitizer (>60% alcohol). Avoid
                   touching your face with unwashed hands.
                 </NumberListItem>
@@ -529,13 +529,16 @@ class CoronavirusFeature extends Component {
                     sizes={config.sizes.full}
                   />
                   <p>
-                    While surgical masks filter sprays from sneezes and mucus
-                    from coughs, which is helpful for preventing the sharing of
-                    germs if you are sick.
+                    <strong>Surgical masks</strong> filter sprays from sneezes
+                    and mucus from coughs, which is helpful for preventing the
+                    sharing of germs if you are sick, but are not completely
+                    effective against airborne viruses that are transmitted
+                    through smaller particles.
                   </p>
                   <p>
-                    N95 respirators filter out 95% of small particles, the kind
-                    of particles airborne viruses are transmitted through.
+                    <strong>N95 respirators</strong> filter out at least 95% of
+                    small airborne particles, making it more effective for
+                    protecting against airborne viruses.
                   </p>
                 </div>
                 <div className="hidden--until-lg">
@@ -550,7 +553,8 @@ class CoronavirusFeature extends Component {
                     />
                   </div>
                   <p>
-                    Helpful for preventing the sharing of germs if you are sick,
+                    Filters sprays from sneezes and mucus from coughs, which is
+                    helpful for preventing the sharing of germs if you are sick,
                     but are <strong>not completely effective</strong> against
                     airborne viruses that are transmitted through smaller
                     particles.
@@ -566,8 +570,8 @@ class CoronavirusFeature extends Component {
                     />
                   </div>
                   <p>
-                    Filters out at least 95% of airborne particles, making it
-                    better at protecting against airborne viruses.
+                    Filters out at least 95% of small airborne particles, making
+                    it more effective for protecting against airborne viruses.
                   </p>
                 </div>
                 <p>
@@ -815,16 +819,16 @@ class CoronavirusFeature extends Component {
                 to prevent the spread of the virus. HHS has been allocated $250
                 million in emergency funds to help prevent the spread of
                 disease. The US has ordered all people who have traveled to
-                China in the last 14 days to be quarantined for 14 days—this has
-                led to 800 patients quarantined in 6 military bases across the
-                States so far.
+                China in the last 14 days to be quarantined for 14 days —this
+                has led to 800 patients quarantined in 6 military bases across
+                the States so far.
               </p>
               <p>
                 These military bases were chosen because they could comfortably
                 house hundreds of people. Patients are served 3 catered meals a
                 day and have access to a mental health counselor. They are
-                encouraged to keep 6 feet of distance at all time with other
-                people, and they regularly have their symptoms checked.
+                encouraged to maintain 6 feet of distance at all times with
+                other people, and they regularly have their symptoms checked.
               </p>
               <p className="margin-top--double">
                 <span className="coronavirus-text--primary coronavirus-text--bold margin">
@@ -833,11 +837,11 @@ class CoronavirusFeature extends Component {
                 <br />
                 In the US, it is very unlikely that the CDC would mandate an
                 entire city be quarantined. US policy is actually to avoid
-                place-based mass quarantines. Many experts have noted that the
-                effectiveness of a mass quarantine for disease may not be worth
-                the significant psychological and economic costs. However, in
-                the case that a mass quarantine is ordered, cities have a plan
-                manage the situation.
+                location-based mass quarantines. Many experts have noted that
+                the effectiveness of a mass quarantine for disease may not be
+                worth the significant psychological and economic costs. However,
+                in the case that a mass quarantine is ordered, cities have a
+                plan to manage the situation.
               </p>
             </div>
             <Image

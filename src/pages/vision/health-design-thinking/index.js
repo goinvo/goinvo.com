@@ -48,7 +48,7 @@ const frontmatter = {
   metaDescription:
     'GoInvo Studio’s practice is highlighted in the diverse case studies that make up the new book "Health Design Thinking," co-written by Ellen Lupton and Dr. Bon Ku.',
   heroImage:
-    '/images/features/health-design-thinking/health-design-thinking-book-hero-5.jpg',
+    '/images/features/health-design-thinking/health-design-thinking-book-hero-6.jpg',
 }
 
 class HealthDesignThinkingBook extends Component {

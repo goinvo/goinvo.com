@@ -163,7 +163,7 @@ class CoronavirusFeature extends Component {
               </p>
             </div>
           </section>
-          <section>
+          <section className="margin-top--quad">
             <div className="hero hero--small">
               <div className="hero__image-container">
                 <BackgroundImage
@@ -178,7 +178,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="max-width content-padding">
-              <p>
+              <p className="margin-top--double">
                 Outbreaks at this scale can be scary, but besides staying up to
                 date on the news, there are still a lot of things that you can
                 do to stay healthy and help stop the spread of disease!
@@ -257,17 +257,19 @@ class CoronavirusFeature extends Component {
                   to have COVID-19,
                   <br />
                   <strong>here’s what you can do to stay well:</strong>
-                </p>
-                <p>
-                  - <strong>Monitor your health</strong> starting for at least{' '}
-                  <strong>14 days</strong> after your last contact with the
-                  infected person.
-                </p>
-                <p>
-                  - Watch for these signs and symptoms
-                  <br />
-                  <strong>Contact your healthcare provider</strong> right away
-                  if you notice these signs:
+                  <ul>
+                    <li>
+                      <strong>Monitor your health</strong> starting for at least{' '}
+                      <strong>14 days</strong> after your last contact with the
+                      infected person.
+                    </li>
+                    <li>
+                      Watch for these signs and symptoms
+                      <br />
+                      <strong>Contact your healthcare provider</strong> right
+                      away if you notice these signs:
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>
@@ -330,9 +332,9 @@ class CoronavirusFeature extends Component {
                 </span>
               </h3>
               <p>
-                If you/someone you know becomes sick with COVID-19 and does not
-                require hospitalization or is determined medically stable to go
-                home,{' '}
+                If you or someone you know becomes sick with COVID-19 and does
+                not require hospitalization or is declared medically stable to
+                go home,{' '}
                 <strong>
                   here’s what you can do to take care and prevent further spread
                   of the disease
@@ -379,8 +381,8 @@ class CoronavirusFeature extends Component {
                 </NumberListItem>
                 <p>
                   Follow these precautions until you are fully recovered from
-                  COVID-19, to prevent the spread of disease and ensure that you
-                  get better!
+                  COVID-19, to prevent the spread of disease and ensure you get
+                  better!
                 </p>
               </div>
               <Image
@@ -439,12 +441,12 @@ class CoronavirusFeature extends Component {
                 </NumberListItem>
                 <p>
                   <strong>
-                    Healthcare providers, and state and local health departments
-                    must be consulted
+                    Healthcare providers as well as state and local health
+                    departments must be consulted
                   </strong>{' '}
                   to get permission to end home isolation. They will give their
                   permission when the patient’s risk of spreading COVID-19 to
-                  others is low; the timing differs from patient-to-patient.
+                  others is low; the timing differs from patient to patient.
                 </p>
                 <p>
                   <strong>Contact your state or local health department</strong>{' '}
@@ -494,10 +496,10 @@ class CoronavirusFeature extends Component {
                   other people from becoming sick with COVID-19.
                 </p>
                 <p>
-                  Only people who have <strong>traveled to China</strong>, or{' '}
-                  <strong>been in contact</strong> with someone confirmed or
-                  suspected to have COVID-19 in the last 14 days are at a higher
-                  risk of being infected.
+                  Only people who have <strong>traveled to China</strong> or{' '}
+                  <strong>have been in contact</strong> with someone confirmed
+                  or suspected to have COVID-19 in the last 14 days are at a
+                  higher risk of being infected.
                 </p>
                 <p>
                   <strong>
@@ -553,7 +555,7 @@ class CoronavirusFeature extends Component {
                     airborne viruses that are transmitted through smaller
                     particles.
                   </p>
-                  <p className="margin-bottom--none">
+                  <p className="margin-top--quad margin-bottom--none">
                     <strong>N95 Respirators</strong>
                   </p>
                   <div className="text--center">
@@ -636,8 +638,8 @@ class CoronavirusFeature extends Component {
                       World Health Organization
                     </span>
                     <br />
-                    Primary role is to direct international health and provide
-                    global leadership and guidance on how to manage. Its
+                    The WHO's primary role is to direct international health and
+                    provide global leadership and guidance on how to manage. Its
                     headquarters are located in Geneva, Switzerland.
                   </p>
                   <p>
@@ -645,20 +647,20 @@ class CoronavirusFeature extends Component {
                       Each country has a Regional WHO office
                     </span>
                     <br />
-                    In the US, our Regional in Washington, DC. Here, teams can
-                    communicate with the WHO headquarters and get up-to-date
-                    information about the emerging situation and consequently
-                    manage the outbreak response.
+                    In the US, our Regional office is in in Washington, DC.
+                    Here, teams can communicate with the WHO headquarters and
+                    get up-to-date information about the emerging situation and
+                    consequently manage the outbreak response.
                   </p>
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
-                      WHO uses its international network of collaborating
+                      The WHO uses its international network of collaborating
                       centers to collect information
                     </span>
                     <br />
-                    In the US, the Centers for Disease and Control in Atlanta,
-                    Georgia collects international and national data, analyzes,
-                    and synthesizes recommendations.
+                    In the US, the Centers for Disease and Control (CDC) in
+                    Atlanta, Georgia collects international and national data,
+                    analyzes that data, and synthesizes recommendations.
                   </p>
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
@@ -675,9 +677,9 @@ class CoronavirusFeature extends Component {
                       Local Emergency Operations Centers
                     </span>
                     <br />
-                    Day-to-day operations are managed by a the local ground
-                    team. These centers have a set of experts that work together
-                    to control the local situation.
+                    Day-to-day operations are managed by a local ground team.
+                    These centers have a set of experts that work together to
+                    control the local situation.
                   </p>
                 </div>
               </div>
@@ -762,15 +764,15 @@ class CoronavirusFeature extends Component {
                 Since the virus outbreak began outside of the US, the first line
                 of defense is to manage places where the disease could enter.
                 The CDC has ordered airlines to find out which passengers have
-                traveled to China in the last 14 days and major international
-                airports to screen all incoming travelers.
+                traveled to China in the last 14 days and for major
+                international airports to screen all incoming travelers.
               </p>
               <p className="margin-bottom--quad">
-                The three-part process begins with Custom and Border Protection
+                The three-part process begins with Customs and Border Protection
                 agents questioning travelers. Next, those at-risk are sent to a
                 secondary screening by health workers where their temperature is
                 taken. Then, those showing symptoms are evaluated and monitored
-                by the CDC— which may involve a 14-day quarantine. Travelers who
+                by the CDC —which may involve a 14-day quarantine. Travelers who
                 have been to China in the last 14 days are advised to stay home
                 and monitor their symptoms.
               </p>
@@ -794,15 +796,16 @@ class CoronavirusFeature extends Component {
                   respond<sup>2,12,15</sup>
                 </span>
                 <br />
-                If there is a suspected case of the COVID-19 in the region,
+                If there is a suspected case of COVID-19 in the region,
                 hospitals and local clinics should be trained in how to deal
-                with the virus. Mass General Hospital is 1 of 10 CDC designated
-                “regional ebola and special pathogen treatment centers” in the
-                US—meaning that they have expert knowledge in how to deal with
-                something like an outbreak. Many other hospitals have turned to
-                MGH as they update their emergency plans.
+                with the virus. Massachusetts General Hospital is 1 of 10 CDC
+                designated “regional ebola and special pathogen treatment
+                centers” in the US —meaning that they have expert knowledge in
+                how to deal with something like an outbreak. Many other
+                hospitals have turned to MGH as they update their emergency
+                plans.
               </p>
-              <p className="margin-top--quad">
+              <p className="margin-top--double">
                 <span className="coronavirus-text--primary coronavirus-text--bold">
                   The US has already taken aggressive quarantine measures
                   <sup>13</sup>
@@ -823,8 +826,8 @@ class CoronavirusFeature extends Component {
                 encouraged to keep 6 feet of distance at all time with other
                 people, and they regularly have their symptoms checked.
               </p>
-              <p>
-                <span className="coronavirus-text--primary coronavirus-text--bold">
+              <p className="margin-top--double">
+                <span className="coronavirus-text--primary coronavirus-text--bold margin">
                   But what does happen when a city shuts down?<sup>10,7</sup>
                 </span>
                 <br />

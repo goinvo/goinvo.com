@@ -2,13 +2,14 @@ $corona-color--primary: #563c8d;
 $corona-color--primary-light: #fbf9ff;
 $corona-color--gray-dark: #424242;
 $corona-font-weight--base: 400;
-$corona-font-weight--bold: 600;
+$corona-font-weight--bold: 700;
 $corona-font-weight--extra-bold: 900;
 
 .coronavirus {
   overflow-x: hidden;
   font-family: 'Montserrat', 'Open Sans', Sans-Serif;
   font-size: 16px;
+  font-weight: $corona-font-weight--base;
 
   @include mq($from: large) {
     font-size: 18px;
@@ -42,6 +43,20 @@ $corona-font-weight--extra-bold: 900;
 
   h4 + p {
     margin-top: 0;
+  }
+
+  ul {
+    padding-left: 18px;
+    @include mq($from: large) {
+      padding-left: 0;
+    }
+    li {
+      padding: 0 0 1rem 0;
+    }
+  }
+
+  strong {
+    font-weight: $corona-font-weight--bold !important;
   }
 
   .button {

@@ -502,11 +502,9 @@ class CoronavirusFeature extends Component {
                   or suspected to have COVID-19 in the last 14 days are at a
                   higher risk of being infected.
                 </p>
-                <p>
-                  <strong>
-                    Just because someone is of Asian descent does not mean that
-                    they have COVID-19!
-                  </strong>
+                <p className="text--bold">
+                  Just because someone is of Asian descent does not mean that
+                  they have COVID-19!
                 </p>
               </div>
             </div>
@@ -555,9 +553,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="hidden--until-lg">
-                  <p className="margin-bottom--none">
-                    <strong>Surgical Masks</strong>
-                  </p>
+                  <h4 className="margin-bottom--none">Surgical Masks</h4>
                   <div className="text--center">
                     <Image
                       src="/images/features/coronavirus/surgical-mask-2.png"
@@ -573,9 +569,9 @@ class CoronavirusFeature extends Component {
                     but <strong>may not protect you</strong> from airborne
                     viruses that are transmitted through smaller particles.
                   </p>
-                  <p className="margin-top--quad margin-bottom--none">
-                    <strong>N95 Respirators</strong>
-                  </p>
+                  <h4 className="margin-top--quad margin-bottom--none">
+                    N95 Respirators
+                  </h4>
                   <div className="text--center">
                     <Image
                       src="/images/features/coronavirus/n95-respirator-2.png"
@@ -600,6 +596,7 @@ class CoronavirusFeature extends Component {
                 <p>
                   However,{' '}
                   <strong>
+                    {' '}
                     the CDC does not recommend healthy public citizens to wear
                     either of these masks!
                   </strong>

@@ -13,9 +13,9 @@ import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Understanding the Novel Coronavirus (2019-nCoV) - GoInvo',
+  metaTitle: 'Understanding the Novel Coronavirus (COVID-19) - GoInvo',
   metaDescription:
-    'Learn about 2019-nCoV, what it means for U.S. residents, and how you can protect yourself. Updated as new information emerges.',
+    'Learn about COVID-19, what it means for U.S. residents, and how you can protect yourself. Updated as new information emerges.',
   heroImage: '/images/features/coronavirus/hero-2.jpg',
 }
 
@@ -68,7 +68,7 @@ class CoronavirusFeature extends Component {
               </p>
               <p>
                 However, this isn’t the first time the world has dealt with a
-                Coronavirus. Coronaviruses are a family of viruses that infect
+                coronavirus. Coronaviruses are a family of viruses that infect
                 birds and mammals (this includes humans!). Typically, they cause
                 mild respiratory symptoms similar to the common cold, but in
                 some cases—like in SARS or MERS—it can lead to death, often in
@@ -117,22 +117,23 @@ class CoronavirusFeature extends Component {
               <p>It can infect humans through...</p>
               <div className="hidden--lg">
                 <Image
-                  src="/images/features/coronavirus/mobile-spread-1.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.full}
-                />
-                <NumberListItem number="1">
-                  Through the air by coughing and sneezing. People who are
-                  nearby could inhale those droplets into their lungs.
-                </NumberListItem>
-                <Image
                   src="/images/features/coronavirus/mobile-spread-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
                 />
-                <NumberListItem number="2">
-                  Through close contact, at about 6 feet, including touching,
+                <NumberListItem number="1">
+                  ...close contact of 6 feet or less, including touching and
                   shaking hands.
+                </NumberListItem>
+                <Image
+                  src="/images/features/coronavirus/mobile-spread-1.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.full}
+                />
+                <NumberListItem number="2">
+                  ...the air by coughing and sneezing. People who are nearby
+                  could inhale droplets from coughs and sneezes into their
+                  lungs.
                 </NumberListItem>
                 <Image
                   src="/images/features/coronavirus/mobile-spread-3.jpg"
@@ -140,15 +141,14 @@ class CoronavirusFeature extends Component {
                   sizes={config.sizes.full}
                 />
                 <NumberListItem number="3">
-                  It is still unclear if you can get the COVID-19 by touching an
-                  object or surface contaminated by the virus, then touching
-                  your mouth, nose, or eyes.
+                  ...and by touching an object or surface contaminated by the
+                  virus, then touching one's mouth, nose, or eyes.
                 </NumberListItem>
               </div>
             </div>
             <div className="hidden--until-lg">
               <Image
-                src="/images/features/coronavirus/spread.jpg"
+                src="/images/features/coronavirus/spread-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -163,7 +163,7 @@ class CoronavirusFeature extends Component {
               </p>
             </div>
           </section>
-          <section>
+          <section className="margin-top--quad">
             <div className="hero hero--small">
               <div className="hero__image-container">
                 <BackgroundImage
@@ -178,7 +178,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="max-width content-padding">
-              <p>
+              <p className="margin-top--double">
                 Outbreaks at this scale can be scary, but besides staying up to
                 date on the news, there are still a lot of things that you can
                 do to stay healthy and help stop the spread of disease!
@@ -257,17 +257,19 @@ class CoronavirusFeature extends Component {
                   to have COVID-19,
                   <br />
                   <strong>here’s what you can do to stay well:</strong>
-                </p>
-                <p>
-                  - <strong>Monitor your health</strong> starting for at least{' '}
-                  <strong>14 days</strong> after your last contact with the
-                  infected person.
-                </p>
-                <p>
-                  - Watch for these signs and symptoms
-                  <br />
-                  <strong>Contact your healthcare provider</strong> right away
-                  if you notice these signs:
+                  <ul>
+                    <li>
+                      <strong>Monitor your health</strong> starting for at least{' '}
+                      <strong>14 days</strong> after your last contact with the
+                      infected person.
+                    </li>
+                    <li>
+                      Watch for these signs and symptoms
+                      <br />
+                      <strong>Contact your healthcare provider</strong> right
+                      away if you notice these signs:
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>
@@ -302,7 +304,7 @@ class CoronavirusFeature extends Component {
             </div>
             <div className="hidden--until-lg">
               <Image
-                src="/images/features/coronavirus/close-contact.jpg"
+                src="/images/features/coronavirus/close-contact-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -330,9 +332,9 @@ class CoronavirusFeature extends Component {
                 </span>
               </h3>
               <p>
-                If you/someone you know becomes sick with COVID-19 and does not
-                require hospitalization or is determined medically stable to go
-                home,{' '}
+                If you or someone you know becomes sick with COVID-19 and does
+                not require hospitalization or is told they are medically stable
+                to go home,{' '}
                 <strong>
                   here’s what you can do to take care and prevent further spread
                   of the disease
@@ -379,8 +381,8 @@ class CoronavirusFeature extends Component {
                 </NumberListItem>
                 <p>
                   Follow these precautions until you are fully recovered from
-                  COVID-19, to prevent the spread of disease and ensure that you
-                  get better!
+                  COVID-19, to prevent the spread of disease and ensure you get
+                  better!
                 </p>
               </div>
               <Image
@@ -425,7 +427,7 @@ class CoronavirusFeature extends Component {
                 </p>
                 <NumberListItem number="1">
                   <strong>Wash your hands often</strong> with soap and water for
-                  20 seconds. If unable and your hands are not visibly dirty,
+                  20 seconds. If unable to and your hands are not visibly dirty,
                   use an alcohol-based hand sanitizer (>60% alcohol). Avoid
                   touching your face with unwashed hands.
                 </NumberListItem>
@@ -439,12 +441,12 @@ class CoronavirusFeature extends Component {
                 </NumberListItem>
                 <p>
                   <strong>
-                    Healthcare providers, and state and local health departments
-                    must be consulted
+                    Healthcare providers and state/local health departments must
+                    be consulted
                   </strong>{' '}
                   to get permission to end home isolation. They will give their
                   permission when the patient’s risk of spreading COVID-19 to
-                  others is low; the timing differs from patient-to-patient.
+                  others is low; the timing differs from patient to patient.
                 </p>
                 <p>
                   <strong>Contact your state or local health department</strong>{' '}
@@ -494,16 +496,15 @@ class CoronavirusFeature extends Component {
                   other people from becoming sick with COVID-19.
                 </p>
                 <p>
-                  Only people who have <strong>traveled to China</strong>, or{' '}
-                  <strong>been in contact</strong> with someone confirmed or
-                  suspected to have COVID-19 in the last 14 days are at a higher
-                  risk of being infected.
+                  Only people who have{' '}
+                  <strong>traveled to high-risk areas</strong> or{' '}
+                  <strong>have been in contact</strong> with someone confirmed
+                  or suspected to have COVID-19 in the last 14 days are at a
+                  higher risk of being infected.
                 </p>
-                <p>
-                  <strong>
-                    Just because someone is of Asian descent does not mean that
-                    they have COVID-19!
-                  </strong>
+                <p className="text--bold">
+                  Just because someone is of Asian descent does not mean that
+                  they have COVID-19!
                 </p>
               </div>
             </div>
@@ -527,59 +528,92 @@ class CoronavirusFeature extends Component {
                     sizes={config.sizes.full}
                   />
                   <p>
-                    While surgical masks filter sprays from sneezes and mucus
-                    from coughs, which is helpful for preventing the sharing of
-                    germs if you are sick.
+                    <strong>Surgical masks</strong> filter sprays from sneezes
+                    and mucus from coughs, which is helpful for{' '}
+                    <strong>
+                      preventing the sharing of germs if you are sick,
+                    </strong>{' '}
+                    but <strong>may not protect you</strong> from airborne
+                    viruses that are transmitted through smaller particles.
                   </p>
                   <p>
-                    N95 respirators filter out 95% of small particles, the kind
-                    of particles airborne viruses are transmitted through.
+                    <strong>N95 respirators</strong> filter out at least 95% of
+                    small airborne particles, and has a valve for easier
+                    breathing. These are helpful for{' '}
+                    <strong>
+                      protecting you from inhaling airborne viruses if you are
+                      healthy,
+                    </strong>{' '}
+                    but{' '}
+                    <strong>
+                      does not effectively prevent you from sharing germs if you
+                      are sick
+                    </strong>{' '}
+                    due to the one-way breathing valve.
                   </p>
                 </div>
                 <div className="hidden--until-lg">
-                  <p className="margin-bottom--none">
-                    <strong>Surgical Masks</strong>
-                  </p>
+                  <h4 className="margin-bottom--none">Surgical Masks</h4>
                   <div className="text--center">
                     <Image
-                      src="/images/features/coronavirus/surgical-mask.png"
+                      src="/images/features/coronavirus/surgical-mask-2.png"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
                   </div>
                   <p>
-                    Helpful for preventing the sharing of germs if you are sick,
-                    but are <strong>not completely effective</strong> against
-                    airborne viruses that are transmitted through smaller
-                    particles.
+                    Helpful for{' '}
+                    <strong>
+                      preventing the sharing of germs if you are sick,
+                    </strong>{' '}
+                    but <strong>may not protect you</strong> from airborne
+                    viruses that are transmitted through smaller particles.
                   </p>
-                  <p className="margin-bottom--none">
-                    <strong>N95 Respirators</strong>
-                  </p>
+                  <h4 className="margin-top--quad margin-bottom--none">
+                    N95 Respirators
+                  </h4>
                   <div className="text--center">
                     <Image
-                      src="/images/features/coronavirus/n95-respirator.png"
+                      src="/images/features/coronavirus/n95-respirator-2.png"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
                   </div>
                   <p>
-                    Filters out at least 95% of airborne particles, making it
-                    better at protecting against airborne viruses.
+                    Helpful for{' '}
+                    <strong>
+                      protecting you from inhaling airborne viruses if you are
+                      healthy,
+                    </strong>{' '}
+                    but{' '}
+                    <strong>
+                      does not effectively prevent you from sharing germs if you
+                      are sick
+                    </strong>{' '}
+                    due to the one-way breathing valve.
                   </p>
                 </div>
                 <p>
                   However,{' '}
                   <strong>
-                    the CDC does not recommend public citizens to wear either of
-                    these masks!
+                    {' '}
+                    the CDC does not recommend healthy public citizens to wear
+                    either of these masks!
                   </strong>
+                </p>
+                <p>
+                  Please do not buy a mask unless you are recommended to, in
+                  order to maintain supply for the people who need it most.
                 </p>
                 <p>
                   For now, the CDC recommends only{' '}
                   <strong>healthcare providers</strong> taking care of patients{' '}
                   <strong>known to be infected with COVID-19</strong> to wear a
                   N95 respirator.
+                </p>
+                <p>
+                  Just remember, if you do buy a mask, make sure you buy the
+                  right one for you.
                 </p>
               </div>
             </div>
@@ -633,32 +667,32 @@ class CoronavirusFeature extends Component {
                 <div className="coronavirus-around-the-world">
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
-                      World Health Organization
+                      World Health Organization (WHO)
                     </span>
                     <br />
-                    Primary role is to direct international health and provide
-                    global leadership and guidance on how to manage. Its
+                    Their primary role is to direct international health and
+                    provide global leadership and guidance on how to manage. Its
                     headquarters are located in Geneva, Switzerland.
                   </p>
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
-                      Each country has a Regional WHO office
+                      Each country has a Regional WHO Office
                     </span>
                     <br />
-                    In the US, our Regional in Washington, DC. Here, teams can
-                    communicate with the WHO headquarters and get up-to-date
+                    The US Regional Office is in in Washington, DC. Here, teams
+                    can communicate with the WHO headquarters and get up-to-date
                     information about the emerging situation and consequently
                     manage the outbreak response.
                   </p>
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
-                      WHO uses its international network of collaborating
+                      The WHO uses its international network of collaborating
                       centers to collect information
                     </span>
                     <br />
-                    In the US, the Centers for Disease and Control in Atlanta,
-                    Georgia collects international and national data, analyzes,
-                    and synthesizes recommendations.
+                    In the US, the Centers for Disease and Control (CDC) in
+                    Atlanta, Georgia collects international and national data,
+                    analyzes that data, and synthesizes recommendations.
                   </p>
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
@@ -675,16 +709,16 @@ class CoronavirusFeature extends Component {
                       Local Emergency Operations Centers
                     </span>
                     <br />
-                    Day-to-day operations are managed by a the local ground
-                    team. These centers have a set of experts that work together
-                    to control the local situation.
+                    Day-to-day operations are managed by a local ground team.
+                    These centers have a set of experts that work together to
+                    control the local situation.
                   </p>
                 </div>
               </div>
             </div>
             <div className="hidden--lg">
               <Image
-                src="/images/features/coronavirus/mobile-local-ground-team.jpg"
+                src="/images/features/coronavirus/mobile-local-ground-team-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -747,7 +781,10 @@ class CoronavirusFeature extends Component {
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
-                <a href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_airports.pdf">
+                <a
+                  className="button button--sm"
+                  href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_airports.pdf"
+                >
                   Download PDF
                 </a>
               </div>
@@ -762,27 +799,30 @@ class CoronavirusFeature extends Component {
                 Since the virus outbreak began outside of the US, the first line
                 of defense is to manage places where the disease could enter.
                 The CDC has ordered airlines to find out which passengers have
-                traveled to China in the last 14 days and major international
-                airports to screen all incoming travelers.
+                traveled to China in the last 14 days and for major
+                international airports to screen all incoming travelers.
               </p>
               <p className="margin-bottom--quad">
-                The three-part process begins with Custom and Border Protection
+                The three-part process begins with Customs and Border Protection
                 agents questioning travelers. Next, those at-risk are sent to a
                 secondary screening by health workers where their temperature is
                 taken. Then, those showing symptoms are evaluated and monitored
-                by the CDC— which may involve a 14-day quarantine. Travelers who
+                by the CDC —which may involve a 14-day quarantine. Travelers who
                 have been to China in the last 14 days are advised to stay home
                 and monitor their symptoms.
               </p>
             </div>
             <Image
-              src="/images/features/coronavirus/response-hospital.jpg"
+              src="/images/features/coronavirus/response-hospital-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
-                <a href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_hospitals.pdf">
+                <a
+                  className="button button--sm"
+                  href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_hospitals.pdf"
+                >
                   Download PDF
                 </a>
               </div>
@@ -794,15 +834,16 @@ class CoronavirusFeature extends Component {
                   respond<sup>2,12,15</sup>
                 </span>
                 <br />
-                If there is a suspected case of the COVID-19 in the region,
+                If there is a suspected case of COVID-19 in the region,
                 hospitals and local clinics should be trained in how to deal
-                with the virus. Mass General Hospital is 1 of 10 CDC designated
-                “regional ebola and special pathogen treatment centers” in the
-                US—meaning that they have expert knowledge in how to deal with
-                something like an outbreak. Many other hospitals have turned to
-                MGH as they update their emergency plans.
+                with the virus. Massachusetts General Hospital (MGH) is 1 of 10
+                CDC designated “regional ebola and special pathogen treatment
+                centers” in the US —meaning that they have expert knowledge in
+                how to deal with something like an outbreak. Many other
+                hospitals have turned to MGH as they update their emergency
+                plans.
               </p>
-              <p className="margin-top--quad">
+              <p className="margin-top--double">
                 <span className="coronavirus-text--primary coronavirus-text--bold">
                   The US has already taken aggressive quarantine measures
                   <sup>13</sup>
@@ -811,40 +852,43 @@ class CoronavirusFeature extends Component {
                 After closing its borders to China, the US took strict measures
                 to prevent the spread of the virus. HHS has been allocated $250
                 million in emergency funds to help prevent the spread of
-                disease. The US has ordered all people who have traveled to
-                China in the last 14 days to be quarantined for 14 days—this has
-                led to 800 patients quarantined in 6 military bases across the
-                States so far.
+                disease. All people who have traveled to China within 14 days of
+                arrival to the US have been ordered to be quarantined for 14
+                days —this has led to more than 800 patients quarantined in 6
+                military bases across the States so far.
               </p>
               <p>
                 These military bases were chosen because they could comfortably
                 house hundreds of people. Patients are served 3 catered meals a
                 day and have access to a mental health counselor. They are
-                encouraged to keep 6 feet of distance at all time with other
-                people, and they regularly have their symptoms checked.
+                encouraged to maintain 6 feet of distance at all times with
+                other people, and they regularly have their symptoms checked.
               </p>
-              <p>
-                <span className="coronavirus-text--primary coronavirus-text--bold">
-                  But what does happen when a city shuts down?<sup>10,7</sup>
+              <p className="margin-top--double">
+                <span className="coronavirus-text--primary coronavirus-text--bold margin">
+                  If a city shuts down, what happens?<sup>10,7</sup>
                 </span>
                 <br />
                 In the US, it is very unlikely that the CDC would mandate an
                 entire city be quarantined. US policy is actually to avoid
-                place-based mass quarantines. Many experts have noted that the
-                effectiveness of a mass quarantine for disease may not be worth
-                the significant psychological and economic costs. However, in
-                the case that a mass quarantine is ordered, cities have a plan
-                manage the situation.
+                location-based mass quarantines. Many experts have noted that
+                the effectiveness of a mass quarantine for disease may not be
+                worth the significant psychological and economic costs. However,
+                in the case that a mass quarantine is ordered, cities have a
+                plan to manage the situation.
               </p>
             </div>
             <Image
-              src="/images/features/coronavirus/response-city.jpg"
+              src="/images/features/coronavirus/response-city-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
-                <a href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_cities.pdf">
+                <a
+                  className="button button--sm"
+                  href="https://github.com/goinvo/COVID19/raw/master/understandingcoronavirus_cities.pdf"
+                >
                   Download PDF
                 </a>
               </div>
@@ -1254,6 +1298,8 @@ class CoronavirusFeature extends Component {
                 Grace Cordovano
                 <br />
                 Dorian Freeman
+                <br />
+                Eric Moreno
                 <br />
                 Joey Nichols
                 <br />

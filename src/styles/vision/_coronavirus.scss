@@ -9,6 +9,7 @@ $corona-font-weight--extra-bold: 900;
   overflow-x: hidden;
   font-family: 'Montserrat', 'Open Sans', Sans-Serif;
   font-size: 16px;
+  font-weight: $corona-font-weight--base;
 
   @include mq($from: large) {
     font-size: 18px;
@@ -44,12 +45,31 @@ $corona-font-weight--extra-bold: 900;
     margin-top: 0;
   }
 
+  ul {
+    padding-left: 18px;
+    @include mq($from: large) {
+      padding-left: 0;
+    }
+    li {
+      padding: 0 0 1rem 0;
+    }
+  }
+
+  strong {
+    font-weight: $corona-font-weight--bold !important;
+  }
+
   .button {
     background-color: $corona-color--primary;
     color: $color-white;
     font-size: 24px;
     padding: 2rem 4rem;
     margin: 3rem auto;
+
+    &.button--sm {
+      font-size: 18px;
+      padding: 1.2rem 3.2rem;
+    }
 
     &:hover,
     &:focus {

@@ -12,6 +12,9 @@ import NumberListItem from '../../../components/vision/coronavirus/number-list-i
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
+import checkIcon from '../../../assets/images/vision/coronavirus/icon-check.svg'
+import xIcon from '../../../assets/images/vision/coronavirus/icon-x.svg'
+
 const frontmatter = {
   metaTitle: 'Understanding the Novel Coronavirus (COVID-19) - GoInvo',
   metaDescription:
@@ -48,7 +51,7 @@ class CoronavirusFeature extends Component {
                   the Novel Coronavirus
                 </h1>
                 <h2>COVID-19</h2>
-                <p>last update 29 February 2020</p>
+                <p>last update 6 March 2020</p>
               </div>
             </div>
           </div>
@@ -61,10 +64,11 @@ class CoronavirusFeature extends Component {
               </h3>
               <p>
                 The 2019 Novel Coronavirus, also known as{' '}
-                <strong>COVID-19</strong>, caused an outbreak of respiratory
-                illness in Wuhan, China and has since spread to other parts of
-                China and the world. There is still a lot that we don’t know
-                about COVID-19 and the situation is evolving day-by-day.
+                <strong>SARS-CoV-2</strong>, caused an outbreak of respiratory
+                illness called <strong>COVID-19</strong>, in Wuhan, China. It
+                has since spread to other parts of China and the world. There is
+                still a lot that we don’t know about COVID-19 and the situation
+                is evolving day-by-day.
               </p>
               <p>
                 However, this isn’t the first time the world has dealt with a
@@ -91,12 +95,143 @@ class CoronavirusFeature extends Component {
                   Timeline of the outbreak<sup>18</sup>
                 </span>
               </h3>
+              <div className="corona-timeline">
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">1 Dec 2019</span>
+                    <br />
+                    First patient confirmed in Wuhan, China
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">31 Dec 2019</span>
+                    <br />
+                    China sends urgent notice to WHO of unknown pneumonia cause
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">7 Jan 2020</span>
+                    <ul>
+                      <li>New virus identified as a coronavirus</li>
+                      <li>Europe’s first case confirmed in France</li>
+                    </ul>
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">11 Jan 2020</span>
+                    <br />
+                    First death announced in China
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">21 Jan 2020</span>
+                    <br />
+                    First case in the US confirmed; Snohomish County, Washington
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">24 Jan 2020</span>
+                    <br />
+                    First confirmed case of human-to-human transmission outside
+                    of China in Vietnam
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">30 Jan 2020</span>
+                    <ul>
+                      <li>
+                        World Health Organization declares the outbreak a global
+                        public-health emergency
+                      </li>
+                      <li>
+                        The United States reported the first confirmed instance
+                        of person-to-person spread
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">31 Jan 2020</span>
+                    <ul>
+                      <li>
+                        HHS Secretary declared a public health emergency (PHE)
+                        for the US
+                      </li>
+                      <li>
+                        President Trump enforced a 14-day quarantine preceding
+                        the entry of travelers from mainland China into the US
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">11 Feb 2020</span>
+                    <br />
+                    WHO announced a new official name for the disease as
+                    “COVID-19”
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">14 Feb 2020</span>
+                    <br />
+                    WHO announced a new official name for the disease as
+                    “COVID-19”
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">25 Feb 2020</span>
+                    <br />
+                    CDC warns community to prepare for the spread of COVID-19 in
+                    the US
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">29 Feb 2020</span>
+                    <br />
+                    First death in the US in King County, Washington
+                  </p>
+                </div>
+                <div className="timepoint time-highlight">
+                  <div class="dot" />
+                  <p>
+                    <span className="text--bold">1 Mar 2020</span>
+                    <br />
+                    UN releases $15 mill US from the Central Emergency Response
+                    Fund (CERF) to fund global efforts to contain the virus
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div class="dot dotted" />
+                  <p className="text--bold corona-text--primary">
+                    The COVID-19 outbreak is rapid, but not yet considered a
+                    pandemic
+                  </p>
+                </div>
+              </div>
             </div>
-            <Image
-              src="/images/features/coronavirus/timeline.jpg"
-              className="image--max-width"
-              sizes={config.sizes.full}
-            />
             <div className="max-width content-padding">
               <h3 className="margin-top--quad">
                 <span className="coronavirus-section-header">
@@ -131,9 +266,8 @@ class CoronavirusFeature extends Component {
                   sizes={config.sizes.full}
                 />
                 <NumberListItem number="2">
-                  ...the air by coughing and sneezing. People who are nearby
-                  could inhale droplets from coughs and sneezes into their
-                  lungs.
+                  ...the air by coughing and sneezing. People nearby may inhale
+                  droplets from coughs and sneezes into their lungs.
                 </NumberListItem>
                 <Image
                   src="/images/features/coronavirus/mobile-spread-3.jpg"
@@ -189,10 +323,10 @@ class CoronavirusFeature extends Component {
                 </span>
               </h3>
               <p>
-                COVID-19 has not become an epidemic in America yet,
+                COVID-19 has not become an epidemic in America yet;
                 <br />
                 <strong>
-                  and here’s what you can do to prevent it from becoming one:
+                  here’s what you can do to prevent it from becoming one:
                 </strong>
               </p>
             </div>
@@ -204,7 +338,7 @@ class CoronavirusFeature extends Component {
               />
               <div className="max-width content-padding">
                 <NumberListItem number="1">
-                  <strong>Stay home</strong> when you are sick.
+                  <strong>Stay home</strong> if you are sick.
                 </NumberListItem>
                 <NumberListItem number="2">
                   <strong>Wash your hands</strong> often with soap and warm
@@ -212,7 +346,7 @@ class CoronavirusFeature extends Component {
                   sanitizer.
                 </NumberListItem>
                 <NumberListItem number="3">
-                  <strong>Avoid close contact</strong> with people who are sick.
+                  <strong>Avoid close contact</strong> with those who are sick.
                 </NumberListItem>
                 <NumberListItem number="4">
                   <strong>Clean and disinfect</strong> frequently touched
@@ -285,7 +419,7 @@ class CoronavirusFeature extends Component {
                 <NumberListItem number="3">Shortness of breath</NumberListItem>
                 <p>
                   If you have any of these symptoms,{' '}
-                  <strong>*call your doctor ahead of time</strong> to tell
+                  <strong>call your doctor ahead of time</strong> to tell
                   them...
                 </p>
                 <p>
@@ -318,12 +452,15 @@ class CoronavirusFeature extends Component {
                   Remember, <strong>don't panic!</strong>
                 </p>
                 <p>
-                  Before an announcement of an epidemic, take care of yourself
-                  just like you would during the annual flu season.
+                  Before an announcement of an epidemic, take care of yourself{' '}
+                  <strong>
+                    just like you would during the annual flu season.
+                  </strong>
                 </p>
                 <p>
-                  Stay on top of the news and other credible sources to keep
-                  updated on if you need to do anything different.
+                  <strong>Stay on top of the news</strong> and other credible
+                  sources to keep updated on if you need to do anything
+                  different.
                 </p>
               </div>
               <h3 className="margin-top--quad">
@@ -370,7 +507,7 @@ class CoronavirusFeature extends Component {
                   your home and use a separate bathroom, if available.
                 </NumberListItem>
                 <NumberListItem number="3">
-                  <strong>*Call ahead</strong> before visiting your doctor.
+                  <strong>Call ahead</strong> before visiting your doctor.
                 </NumberListItem>
                 <NumberListItem number="4">
                   <strong>Wear a facemask.</strong>
@@ -390,6 +527,7 @@ class CoronavirusFeature extends Component {
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
+
               <div className="max-width content-padding">
                 <NumberListItem number="1">
                   Ensure shared spaces have <strong>good air flow.</strong>
@@ -454,6 +592,7 @@ class CoronavirusFeature extends Component {
                 </p>
               </div>
             </div>
+
             <div className="hidden--until-lg">
               <Image
                 src="/images/features/coronavirus/care.jpg"
@@ -471,9 +610,9 @@ class CoronavirusFeature extends Component {
                 </p>
                 <p>
                   <strong>
-                    Healthcare providers, and state and local health departments
-                    must be consulted
-                  </strong>{' '}
+                    Healthcare providers and state/local health departments must
+                    be consulted
+                  </strong>
                   to get permission to end home isolation. They will give their
                   permission when the patient’s risk of spreading COVID-19 to
                   others is low; the timing differs from patient-to-patient.
@@ -498,9 +637,9 @@ class CoronavirusFeature extends Component {
                 <p>
                   Only people who have{' '}
                   <strong>traveled to high-risk areas</strong> or{' '}
-                  <strong>have been in contact</strong> with someone confirmed
-                  or suspected to have COVID-19 in the last 14 days are at a
-                  higher risk of being infected.
+                  <strong>been in contact</strong> with someone confirmed or
+                  suspected to have COVID-19 in the last 14 days are at a higher
+                  risk of being infected.
                 </p>
                 <p className="text--bold">
                   Just because someone is of Asian descent does not mean that
@@ -523,97 +662,120 @@ class CoronavirusFeature extends Component {
                 </p>
                 <div className="hidden--lg">
                   <Image
-                    src="/images/features/coronavirus/mobile-masks.jpg"
+                    src="/images/features/coronavirus/mobile-masks-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.full}
                   />
                   <p>
-                    <strong>Surgical masks</strong> filter sprays from sneezes
-                    and mucus from coughs, which is helpful for{' '}
+                    Surgical masks filter the wearer's sprays from sneezes and
+                    mucus from coughs, which will help for{' '}
                     <strong>
-                      preventing the sharing of germs if you are sick,
+                      prevent the spread of COVID-19 if you are sick,
                     </strong>{' '}
-                    but <strong>may not protect you</strong> from airborne
-                    viruses that are transmitted through smaller particles.
+                    but <strong>does not effectively prevent catching</strong>{' '}
+                    COVID-19.
                   </p>
                   <p>
-                    <strong>N95 respirators</strong> filter out at least 95% of
-                    small airborne particles, and has a valve for easier
-                    breathing. These are helpful for{' '}
+                    N95 respirators filter out at least 95% of small airborne
+                    particles. These will help{' '}
+                    <strong>prevent against catching and spreading</strong>{' '}
+                    COVID-19, but{' '}
                     <strong>
-                      protecting you from inhaling airborne viruses if you are
-                      healthy,
+                      if it has a breathing valve, does not effectively prevent
+                      the spread
                     </strong>{' '}
-                    but{' '}
-                    <strong>
-                      does not effectively prevent you from sharing germs if you
-                      are sick
-                    </strong>{' '}
-                    due to the one-way breathing valve.
+                    of COVID-19 if you are sick.
                   </p>
                 </div>
                 <div className="hidden--until-lg">
-                  <h4 className="margin-bottom--none">Surgical Masks</h4>
-                  <div className="text--center">
-                    <Image
-                      src="/images/features/coronavirus/surgical-mask-2.png"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
+                  <div className="mask-half">
+                    <h4 className="margin-bottom--none">Surgical Masks</h4>
+                    <div className="text--center">
+                      <Image
+                        src="/images/features/coronavirus/surgical-mask-3.png"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </div>
+                    <div class="pro-con">
+                      <img
+                        className="pro-con-icon"
+                        src={checkIcon}
+                        alt="pros"
+                      />
+                      <p>
+                        Will help <strong>prevent the spread</strong> of
+                        COVID-19 if you are sick
+                      </p>
+                    </div>
+                    <div class="pro-con">
+                      <img className="pro-con-icon" src={xIcon} alt="cons" />
+                      <p>
+                        <strong>Does not effectively prevent catching</strong>{' '}
+                        COVID-19
+                      </p>
+                    </div>
                   </div>
-                  <p>
-                    Helpful for{' '}
-                    <strong>
-                      preventing the sharing of germs if you are sick,
-                    </strong>{' '}
-                    but <strong>may not protect you</strong> from airborne
-                    viruses that are transmitted through smaller particles.
-                  </p>
-                  <h4 className="margin-top--quad margin-bottom--none">
-                    N95 Respirators
-                  </h4>
-                  <div className="text--center">
-                    <Image
-                      src="/images/features/coronavirus/n95-respirator-2.png"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
+
+                  <div className="mask-half">
+                    <h4 className="margin-top--quad margin-bottom--none">
+                      N95 Respirators
+                    </h4>
+                    <div className="text--center">
+                      <Image
+                        src="/images/features/coronavirus/n95-respirator-3.png"
+                        className="image--max-width n95"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </div>
+                    <div class="pro-con">
+                      <img
+                        className="pro-con-icon"
+                        src={checkIcon}
+                        alt="pros"
+                      />
+                      <p>
+                        Will help{' '}
+                        <strong>prevent against catching and spreading</strong>{' '}
+                        COVID-19
+                      </p>
+                    </div>
+                    <div class="pro-con">
+                      <img className="pro-con-icon" src={xIcon} alt="cons" />
+                      <p>
+                        <strong>
+                          If it has a breathing valve, does not effectively
+                          prevent the spread
+                        </strong>{' '}
+                        of COVID-19 if you are sick
+                      </p>
+                    </div>
                   </div>
-                  <p>
-                    Helpful for{' '}
-                    <strong>
-                      protecting you from inhaling airborne viruses if you are
-                      healthy,
-                    </strong>{' '}
-                    but{' '}
-                    <strong>
-                      does not effectively prevent you from sharing germs if you
-                      are sick
-                    </strong>{' '}
-                    due to the one-way breathing valve.
-                  </p>
                 </div>
-                <p>
+                <p className="text--lg">
                   However,{' '}
                   <strong>
-                    {' '}
-                    the CDC does not recommend healthy public citizens to wear
-                    either of these masks!
+                    the CDC <i>does not</i> recommend healthy public citizens to
+                    weareither of these masks.
                   </strong>
                 </p>
                 <p>
-                  Please do not buy a mask unless you are recommended to, in
-                  order to maintain supply for the people who need it most.
+                  In order to maintain supply for the people who need it most,{' '}
+                  <strong>please do not hoard masks.</strong> Only wear a
+                  facemask <strong>if you are sick</strong> and need to go out
+                  in public or are <strong>caring for someone</strong> who is
+                  sick.
                 </p>
                 <p>
                   For now, the CDC recommends only{' '}
                   <strong>healthcare providers</strong> taking care of patients{' '}
                   <strong>known to be infected with COVID-19</strong> to wear a
-                  N95 respirator.
+                  N95 respirator or higher.
                 </p>
                 <p>
-                  Just remember, if you do buy a mask, make sure you buy the
-                  right one for you.
+                  Just remember, if you do buy a mask,{' '}
+                  <strong>be sensible</strong> and make sure it fits{' '}
+                  <strong>you</strong> and <strong>your needs.</strong>
                 </p>
               </div>
             </div>
@@ -702,7 +864,7 @@ class CoronavirusFeature extends Component {
                     This means that there are plenty of ways for diseases to
                     spread to other people and places. There is a fine balance
                     between protecting borders by quarantine and overreactions
-                    (that cause panics).
+                    (that cause panic).
                   </p>
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
@@ -721,6 +883,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/mobile-local-ground-team-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="An illustration of a local grount team working together to manage the outbreak. The Incident Manager oversees the entire EOC, provides leadership to ensure coordination between the team, and is a liason to the regional office. Environment experts study the environmental causes related to the disease. Policy makers ensure we have the regulations and permissions necessary to control the situation and may create new ones as needed. Scientists analyze lab samples, research, and learn about the disease. Communications oversee how information is being disseminated to the public to ensure a strong voice. Epidemiologists analyze the distribution and patterns of the disease so that we can understand how it is affecting the population."
               />
               <div className="max-width content-padding">
                 <NumberListItem number="1">
@@ -905,8 +1068,9 @@ class CoronavirusFeature extends Component {
               <div className="content">
                 <div className="max-width content-padding">
                   <p>
-                    However, more extreme measures <strong>have not</strong>{' '}
-                    been required to deal with Covid-19 in the US.
+                    However the situation is under control, and more extreme
+                    measures like this have not been required to deal with
+                    COVID-19 in the US.
                   </p>
                   <p>
                     For now, <strong>keep calm</strong>, follow regular flu
@@ -1056,7 +1220,7 @@ class CoronavirusFeature extends Component {
                 <div className="hidden--until-lg">
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
-                      Food and Drug Administration
+                      US Food and Drug Administration
                     </span>
                     <br />
                     <a
@@ -1090,7 +1254,7 @@ class CoronavirusFeature extends Component {
                     </span>
                     <br />
                     Provides latest guidance and up to date information on
-                    COVID19 from MA DPH and CDC.
+                    COVID-19 from MA DPH and CDC.
                     <br />
                     <a
                       target="_blank"

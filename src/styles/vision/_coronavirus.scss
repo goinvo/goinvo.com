@@ -238,7 +238,7 @@ $corona-font-weight--extra-bold: 900;
           border-radius: 12px;
           box-shadow: inset 0px 0px 0px 3px white;
           border: 1px solid;
-          margin: 0px 10px 0 -14px;
+          margin: 8px 10px 0 -14px;
         }
       }
 
@@ -246,14 +246,13 @@ $corona-font-weight--extra-bold: 900;
         display: inline-block;
         margin-top: -2px;
         margin-bottom: 24px;
-        padding-left: 5px;
-        margin-left: 5px;
+        padding: 10px;
         width: 90%;
       }
       .dot {
         display: inline-block;
         vertical-align: top;
-        margin: 0px 10px 0 -12px;
+        margin: 10px 10px 0 -12px;
         background: $corona-color--primary;
         height: 20px;
         width: 20px;

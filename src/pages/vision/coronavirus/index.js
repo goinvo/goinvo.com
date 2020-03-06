@@ -419,7 +419,7 @@ class CoronavirusFeature extends Component {
                 <NumberListItem number="3">Shortness of breath</NumberListItem>
                 <p>
                   If you have any of these symptoms,{' '}
-                  <strong>*call your doctor ahead of time</strong> to tell
+                  <strong>call your doctor ahead of time</strong> to tell
                   them...
                 </p>
                 <p>
@@ -507,7 +507,7 @@ class CoronavirusFeature extends Component {
                   your home and use a separate bathroom, if available.
                 </NumberListItem>
                 <NumberListItem number="3">
-                  <strong>*Call ahead</strong> before visiting your doctor.
+                  <strong>Call ahead</strong> before visiting your doctor.
                 </NumberListItem>
                 <NumberListItem number="4">
                   <strong>Wear a facemask.</strong>
@@ -610,8 +610,8 @@ class CoronavirusFeature extends Component {
                 </p>
                 <p>
                   <strong>
-                    Healthcare providers, and state and local health departments
-                    must be consulted
+                    Healthcare providers and state/local health departments must
+                    be consulted
                   </strong>
                   to get permission to end home isolation. They will give their
                   permission when the patient’s risk of spreading COVID-19 to

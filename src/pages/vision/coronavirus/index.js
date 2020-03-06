@@ -1068,8 +1068,9 @@ class CoronavirusFeature extends Component {
               <div className="content">
                 <div className="max-width content-padding">
                   <p>
-                    However, more extreme measures <strong>have not</strong>{' '}
-                    been required to deal with Covid-19 in the US.
+                    However the situation is under control, and more extreme
+                    measures like this have not been required to deal with
+                    COVID-19 in the US.
                   </p>
                   <p>
                     For now, <strong>keep calm</strong>, follow regular flu
@@ -1219,7 +1220,7 @@ class CoronavirusFeature extends Component {
                 <div className="hidden--until-lg">
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
-                      Food and Drug Administration
+                      US Food and Drug Administration
                     </span>
                     <br />
                     <a
@@ -1253,7 +1254,7 @@ class CoronavirusFeature extends Component {
                     </span>
                     <br />
                     Provides latest guidance and up to date information on
-                    COVID19 from MA DPH and CDC.
+                    COVID-19 from MA DPH and CDC.
                     <br />
                     <a
                       target="_blank"

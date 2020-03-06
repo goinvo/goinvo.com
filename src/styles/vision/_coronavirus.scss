@@ -1,4 +1,5 @@
 $corona-color--primary: #563c8d;
+$corona-color--primary-med: #d6d2ea;
 $corona-color--primary-light: #fbf9ff;
 $corona-color--gray-dark: #424242;
 $corona-font-weight--base: 400;
@@ -222,6 +223,55 @@ $corona-font-weight--extra-bold: 900;
     }
   }
 
+  .corona-timeline {
+    border-left: $corona-color--primary-med solid 3px;
+    .timepoint {
+      &.time-highlight {
+        p {
+          background: $corona-color--primary-med;
+          border-radius: 5px;
+        }
+        .dot {
+          height: 24px;
+          width: 24px;
+          border-radius: 12px;
+          box-shadow: inset 0px 0px 0px 3px white;
+          border: 1px solid;
+          margin: 0px 10px 0 -14px;
+        }
+      }
+
+      p {
+        display: inline-block;
+        margin-top: -2px;
+        margin-bottom: 24px;
+        padding-left: 5px;
+        margin-left: 5px;
+        width: 90%;
+      }
+      .dot {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0px 10px 0 -12px;
+        background: $corona-color--primary;
+        height: 20px;
+        width: 20px;
+        border-radius: 10px;
+        &.dotted {
+          background: #fff;
+          border: $corona-color--primary dashed 1px;
+        }
+      }
+      ul {
+        margin: 0 0 0 15px;
+        li {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
   .close-contact {
     @include mq($from: large) {
       margin-top: -250px;
@@ -250,6 +300,26 @@ $corona-font-weight--extra-bold: 900;
 
     @include mq($from: large) {
       background-color: $corona-color--primary-light;
+    }
+  }
+
+  .mask-half {
+    display: inline-block;
+    width: 50%;
+    .n95 {
+      width: 68%;
+    }
+    .pro-con {
+      p {
+        display: inline-block;
+        width: 75%;
+      }
+      .pro-con-icon {
+        display: inline-block;
+        height: 44px;
+        width: 44px;
+        margin-right: 20px;
+      }
     }
   }
 

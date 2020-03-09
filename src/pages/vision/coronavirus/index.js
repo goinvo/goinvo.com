@@ -191,15 +191,6 @@ class CoronavirusFeature extends Component {
                 <div className="timepoint">
                   <div class="dot" />
                   <p>
-                    <span className="text--bold">14 Feb 2020</span>
-                    <br />
-                    WHO announced a new official name for the disease as
-                    “COVID-19”
-                  </p>
-                </div>
-                <div className="timepoint">
-                  <div class="dot" />
-                  <p>
                     <span className="text--bold">25 Feb 2020</span>
                     <br />
                     CDC warns community to prepare for the spread of COVID-19 in
@@ -653,7 +644,7 @@ class CoronavirusFeature extends Component {
                   Physicians wear masks,
                   <br />
                   <span className="coronavirus-text--lg">
-                    but you shouldn't have to!<sup>1</sup>
+                    but you shouldn't have to unless you are sick!<sup>1</sup>
                   </span>
                 </h3>
                 <p>

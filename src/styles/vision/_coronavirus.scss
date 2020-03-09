@@ -392,30 +392,48 @@ $corona-font-weight--extra-bold: 900;
 
     .background-image {
       background-position: center bottom;
-      position: absolute;
-      @include mq($until: 400px) {
-        top: 180px;
-      }
-      @include mq($until: 450px) {
-        top: 80px;
-      }
     }
 
     .content {
       position: absolute;
-      top: 0;
+      top: 50px;
       left: 0;
       width: 100vw;
     }
 
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      content: '';
+      width: 100vw;
+      height: 80px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      @include mq($until: large) {
+        display: block;
+      }
+    }
+
+    @include mq($until: 400px) {
+      height: 300vw;
+    }
+    @include mq($from: 401px) {
+      height: 250vw;
+    }
+    @include mq($from: 450px) {
+      height: 200vw;
+    }
     @include mq($from: 620px) {
       height: 165vw;
     }
-
     @include mq($from: 780px) {
       height: 160vw;
     }
-
     @include mq($from: large) {
       height: 83.3vw;
     }

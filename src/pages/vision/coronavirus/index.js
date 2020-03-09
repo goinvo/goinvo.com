@@ -67,7 +67,7 @@ class CoronavirusFeature extends Component {
                 <strong>SARS-CoV-2</strong>, caused an outbreak of respiratory
                 illness called <strong>COVID-19</strong>, in Wuhan, China. It
                 has since spread to other parts of China and the world. There is
-                still a lot that we don’t know about COVID-19 and the situation
+                still a lot that we don’t know about COVID-19, and the situation
                 is evolving day-by-day.
               </p>
               <p>
@@ -76,7 +76,7 @@ class CoronavirusFeature extends Component {
                 birds and mammals (this includes humans!). Typically, they cause
                 mild respiratory symptoms similar to the common cold, but in
                 some cases—like in SARS or MERS—it can lead to death, often in
-                those that are already immunocompromised.
+                those who are already immunocompromised.
               </p>
               <h4>
                 Quick look : How does COVID-19 compare to the other
@@ -86,7 +86,7 @@ class CoronavirusFeature extends Component {
                 // TODO: Graph in code
               }
               <Image
-                src="/images/features/coronavirus/graph.jpg"
+                src="/images/features/coronavirus/graph-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -157,7 +157,7 @@ class CoronavirusFeature extends Component {
                         public-health emergency
                       </li>
                       <li>
-                        The United States reported the first confirmed instance
+                        The United States reports the first confirmed instance
                         of person-to-person spread
                       </li>
                     </ul>
@@ -169,11 +169,11 @@ class CoronavirusFeature extends Component {
                     <span className="text--bold">31 Jan 2020</span>
                     <ul>
                       <li>
-                        HHS Secretary declared a public health emergency (PHE)
+                        HHS Secretary declares a public health emergency (PHE)
                         for the US
                       </li>
                       <li>
-                        President Trump enforced a 14-day quarantine preceding
+                        President Trump enforces a 14-day quarantine preceding
                         the entry of travelers from mainland China into the US
                       </li>
                     </ul>
@@ -184,16 +184,7 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="text--bold">11 Feb 2020</span>
                     <br />
-                    WHO announced a new official name for the disease as
-                    “COVID-19”
-                  </p>
-                </div>
-                <div className="timepoint">
-                  <div class="dot" />
-                  <p>
-                    <span className="text--bold">14 Feb 2020</span>
-                    <br />
-                    WHO announced a new official name for the disease as
+                    WHO announces a new official name for the disease as
                     “COVID-19”
                   </p>
                 </div>
@@ -368,7 +359,7 @@ class CoronavirusFeature extends Component {
                 </NumberListItem>
                 <NumberListItem number="9">
                   Check CDC's COVID-19 <strong>travel health notices</strong>{' '}
-                  often and <strong>avoid</strong> nonessential travel to China.
+                  often and <strong>avoid</strong> nonessential travel.
                 </NumberListItem>
               </div>
             </div>
@@ -398,7 +389,7 @@ class CoronavirusFeature extends Component {
                       infected person.
                     </li>
                     <li>
-                      Watch for these signs and symptoms
+                      Watch for these signs and symptoms.
                       <br />
                       <strong>Contact your healthcare provider</strong> right
                       away if you notice these signs:
@@ -653,7 +644,7 @@ class CoronavirusFeature extends Component {
                   Physicians wear masks,
                   <br />
                   <span className="coronavirus-text--lg">
-                    but you shouldn't have to!<sup>1</sup>
+                    but you shouldn't have to unless you are sick!<sup>1</sup>
                   </span>
                 </h3>
                 <p>
@@ -668,7 +659,7 @@ class CoronavirusFeature extends Component {
                   />
                   <p>
                     Surgical masks filter the wearer's sprays from sneezes and
-                    mucus from coughs, which will help for{' '}
+                    mucus from coughs, which will help{' '}
                     <strong>
                       prevent the spread of COVID-19 if you are sick,
                     </strong>{' '}
@@ -718,12 +709,10 @@ class CoronavirusFeature extends Component {
                   </div>
 
                   <div className="mask-half">
-                    <h4 className="margin-top--quad margin-bottom--none">
-                      N95 Respirators
-                    </h4>
+                    <h4 className="margin-bottom--none">N95 Respirators</h4>
                     <div className="text--center">
                       <Image
-                        src="/images/features/coronavirus/n95-respirator-3.png"
+                        src="/images/features/coronavirus/n95-respirator-4.png"
                         className="image--max-width n95"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />
@@ -756,7 +745,7 @@ class CoronavirusFeature extends Component {
                   However,{' '}
                   <strong>
                     the CDC <i>does not</i> recommend healthy public citizens to
-                    weareither of these masks.
+                    wear either of these masks.
                   </strong>
                 </p>
                 <p>
@@ -1066,11 +1055,10 @@ class CoronavirusFeature extends Component {
                 className="hidden--until-lg"
               />
               <div className="content">
-                <div className="max-width content-padding">
+                <div className="max-width content-padding margin-top--none">
                   <p>
-                    However the situation is under control, and more extreme
-                    measures like this have not been required to deal with
-                    COVID-19 in the US.
+                    However, more extreme measures like this have not been
+                    required to deal with COVID-19 in the US.
                   </p>
                   <p>
                     For now, <strong>keep calm</strong>, follow regular flu

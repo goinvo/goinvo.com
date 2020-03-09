@@ -306,9 +306,7 @@ $corona-font-weight--extra-bold: 900;
   .mask-half {
     display: inline-block;
     width: 50%;
-    .n95 {
-      width: 68%;
-    }
+    vertical-align: top;
     .pro-con {
       p {
         display: inline-block;
@@ -408,7 +406,7 @@ $corona-font-weight--extra-bold: 900;
       display: none;
       content: '';
       width: 100vw;
-      height: 50px;
+      height: 80px;
       background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 1) 0%,
@@ -419,14 +417,21 @@ $corona-font-weight--extra-bold: 900;
       }
     }
 
+    @include mq($until: 400px) {
+      height: 300vw;
+    }
+    @include mq($from: 401px) {
+      height: 250vw;
+    }
+    @include mq($from: 450px) {
+      height: 200vw;
+    }
     @include mq($from: 620px) {
       height: 165vw;
     }
-
     @include mq($from: 780px) {
       height: 160vw;
     }
-
     @include mq($from: large) {
       height: 83.3vw;
     }

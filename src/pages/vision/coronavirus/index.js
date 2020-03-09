@@ -379,7 +379,7 @@ class CoronavirusFeature extends Component {
                 </h3>
                 <p>
                   If you come into close contact with someone who is confirmed
-                  to have COVID-19,
+                  to have COVID-19;
                   <br />
                   <strong>here’s what you can do to stay well:</strong>
                   <ul>
@@ -389,7 +389,7 @@ class CoronavirusFeature extends Component {
                       infected person.
                     </li>
                     <li>
-                      Watch for these signs and symptoms
+                      Watch for these signs and symptoms.
                       <br />
                       <strong>Contact your healthcare provider</strong> right
                       away if you notice these signs:

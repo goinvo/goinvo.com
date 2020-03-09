@@ -709,12 +709,10 @@ class CoronavirusFeature extends Component {
                   </div>
 
                   <div className="mask-half">
-                    <h4 className="margin-top--quad margin-bottom--none">
-                      N95 Respirators
-                    </h4>
+                    <h4 className="margin-bottom--none">N95 Respirators</h4>
                     <div className="text--center">
                       <Image
-                        src="/images/features/coronavirus/n95-respirator-3.png"
+                        src="/images/features/coronavirus/n95-respirator-4.png"
                         className="image--max-width n95"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />

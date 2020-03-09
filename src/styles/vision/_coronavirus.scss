@@ -392,31 +392,20 @@ $corona-font-weight--extra-bold: 900;
 
     .background-image {
       background-position: center bottom;
+      position: absolute;
+      @include mq($until: 400px) {
+        top: 180px;
+      }
+      @include mq($until: 450px) {
+        top: 80px;
+      }
     }
 
     .content {
       position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100vw;
-    }
-
-    &:after {
-      position: absolute;
       top: 0;
       left: 0;
-      display: none;
-      content: '';
       width: 100vw;
-      height: 50px;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      @include mq($until: large) {
-        display: block;
-      }
     }
 
     @include mq($from: 620px) {

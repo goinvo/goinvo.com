@@ -659,7 +659,7 @@ class CoronavirusFeature extends Component {
                   />
                   <p>
                     Surgical masks filter the wearer's sprays from sneezes and
-                    mucus from coughs, which will help for{' '}
+                    mucus from coughs, which will help{' '}
                     <strong>
                       prevent the spread of COVID-19 if you are sick,
                     </strong>{' '}
@@ -747,7 +747,7 @@ class CoronavirusFeature extends Component {
                   However,{' '}
                   <strong>
                     the CDC <i>does not</i> recommend healthy public citizens to
-                    weareither of these masks.
+                    wear either of these masks.
                   </strong>
                 </p>
                 <p>
@@ -1057,7 +1057,7 @@ class CoronavirusFeature extends Component {
                 className="hidden--until-lg"
               />
               <div className="content">
-                <div className="max-width content-padding">
+                <div className="max-width content-padding margin-top--none">
                   <p>
                     However the situation is under control, and more extreme
                     measures like this have not been required to deal with

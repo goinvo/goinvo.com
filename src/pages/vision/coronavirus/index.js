@@ -1057,9 +1057,8 @@ class CoronavirusFeature extends Component {
               <div className="content">
                 <div className="max-width content-padding margin-top--none">
                   <p>
-                    However the situation is under control, and more extreme
-                    measures like this have not been required to deal with
-                    COVID-19 in the US.
+                    However, more extreme measures like this have not been
+                    required to deal with COVID-19 in the US.
                   </p>
                   <p>
                     For now, <strong>keep calm</strong>, follow regular flu

@@ -1484,6 +1484,16 @@ class CoronavirusFeature extends Component {
                     link:
                       'https://www.cdc.gov/coronavirus/2019-nCoV/summary.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fwhat-you-should-do.html#anchor_1580064337377',
                   },
+                  {
+                    title:
+                      'The Novel Coronavirus Pneumonia Emergency Response Epidemiology Team. The Epidemiological Characteristics of an Outbreak of 2019 Novel Coronavirus Diseases (COVID-19) — China, 2020. China CDC Weekly, 2020, 2(8): 113-122.',
+                  },
+                  {
+                    title:
+                      'World Health Organization. (2020). Report of the Who-China Joint Mission on Coronavirus Disease 2019 (Covid-19) . Retrieved March 9, 2020',
+                    link:
+                      'https://www.who.int/docs/default-source/coronaviruse/who-china-joint-mission-on-covid-19-final-report.pdf',
+                  },
                 ]}
               />
             </div>

@@ -51,7 +51,7 @@ class CoronavirusFeature extends Component {
                   the Novel Coronavirus
                 </h1>
                 <h2>COVID-19</h2>
-                <p>last update 6 March 2020</p>
+                <p>last update 12 March 2020</p>
               </div>
             </div>
           </div>
@@ -403,11 +403,8 @@ class CoronavirusFeature extends Component {
                 </span>
               </h3>
               <p>
-                COVID-19 has not become an epidemic in America yet;
-                <br />
-                <strong>
-                  here’s what you can do to prevent it from becoming one:
-                </strong>
+                Here’s what you can do{' '}
+                <strong>to prevent COVID-19 from spreading to others:</strong>
               </p>
             </div>
             <div className="hidden--lg">
@@ -418,7 +415,7 @@ class CoronavirusFeature extends Component {
               />
               <div className="max-width content-padding">
                 <NumberListItem number="1">
-                  <strong>Stay home</strong> if you are sick.
+                  <strong>Stay home</strong> when you are sick.
                 </NumberListItem>
                 <NumberListItem number="2">
                   <strong>Wash your hands</strong> often with soap and warm
@@ -426,7 +423,7 @@ class CoronavirusFeature extends Component {
                   sanitizer.
                 </NumberListItem>
                 <NumberListItem number="3">
-                  <strong>Avoid close contact</strong> with those who are sick.
+                  <strong>Avoid close contact</strong> with people who are sick.
                 </NumberListItem>
                 <NumberListItem number="4">
                   <strong>Clean and disinfect</strong> frequently touched
@@ -454,7 +451,7 @@ class CoronavirusFeature extends Component {
             </div>
             <div className="hidden--until-lg">
               <Image
-                src="/images/features/coronavirus/prevention.jpg"
+                src="/images/features/coronavirus/prevention-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
@@ -473,7 +470,7 @@ class CoronavirusFeature extends Component {
                   <strong>here’s what you can do to stay well:</strong>
                   <ul>
                     <li>
-                      <strong>Monitor your health</strong> starting for at least{' '}
+                      <strong>Monitor your health</strong> for at least{' '}
                       <strong>14 days</strong> after your last contact with the
                       infected person.
                     </li>
@@ -602,6 +599,11 @@ class CoronavirusFeature extends Component {
                   better!
                 </p>
               </div>
+              <div className="max-width content-padding">
+                <p className="coronavirus-text--primary">
+                  For <strong>Caregivers</strong>
+                </p>
+              </div>
               <Image
                 src="/images/features/coronavirus/mobile-care-2.jpg"
                 className="image--max-width"
@@ -623,7 +625,7 @@ class CoronavirusFeature extends Component {
                 <NumberListItem number="4">
                   Understand and help the person{' '}
                   <strong>follow the healthcare provider's instructions</strong>{' '}
-                  for medical care.
+                  for medication and care.
                 </NumberListItem>
                 <NumberListItem number="5">
                   <strong>Dispose of contaminated items</strong> in a lined
@@ -761,8 +763,8 @@ class CoronavirusFeature extends Component {
                     <strong>prevent against catching and spreading</strong>{' '}
                     COVID-19, but{' '}
                     <strong>
-                      if it has a breathing valve, does not effectively prevent
-                      the spread
+                      if it has a breathing valve, it does not effectively
+                      prevent the spread
                     </strong>{' '}
                     of COVID-19 if you are sick.
                   </p>

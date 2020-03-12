@@ -1554,20 +1554,20 @@ class CoronavirusFeature extends Component {
                 <br />
                 Eric Moreno
                 <br />
-                Joey Nichols
+                Joey Nichols, MD
                 <br />
                 Martin Pitt
                 <br />
                 Corinne Pritchard
                 <br />
-                James Rini
+                James Rini, MD
                 <br />
                 Ernst-Jan van Woerden
                 <br />
               </p>
               <p className="text--gray text--sm margin-top--quad pad-bottom--double">
-                Licensed under Creative Commons Attribution v3 | Created by
-                GoInvo
+                Licensed under Creative Commons Attribution 4.0 license |
+                Created by GoInvo
                 <br />
                 <a href="mailto:coronavirus@goinvo.com">
                   Send us Feedback

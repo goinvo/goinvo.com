@@ -66,22 +66,90 @@ class CoronavirusFeature extends Component {
                 The 2019 Novel Coronavirus, also known as{' '}
                 <strong>SARS-CoV-2</strong>, caused an outbreak of respiratory
                 illness called <strong>COVID-19</strong>, in Wuhan, China. It
-                has since spread to other parts of China and the world. There is
-                still a lot that we don’t know about COVID-19, and the situation
-                is evolving day-by-day.
-              </p>
-              <p>
-                However, this isn’t the first time the world has dealt with a
-                coronavirus. Coronaviruses are a family of viruses that infect
-                birds and mammals (this includes humans!). Typically, they cause
-                mild respiratory symptoms similar to the common cold, but in
-                some cases—like in SARS or MERS—it can lead to death, often in
-                those who are already immunocompromised.
+                has since spread to other parts of China and the world.
+                Coronaviruses are a family of viruses that infect birds and
+                mammals (this includes humans!). Typically, they cause mild
+                respiratory symptoms similar to the common cold, but can lead to
+                death, often in those that are already immunocompromised.
               </p>
               <h4>
                 Quick look : How does COVID-19 compare to the other
                 coronaviruses?
               </h4>
+              <div className="corona-comparison">
+                <div className="corona">
+                  <p>
+                    <span className="title">SARS</span>
+                    <br />
+                    2002
+                    <br />
+                    <span className="text--lg">
+                      In{' '}
+                      <strong>
+                        8 mo
+                        <br />
+                        8,000
+                      </strong>
+                    </span>
+                    <br />
+                    confirmed cases
+                    <br />
+                    <span className="text--lg">
+                      <strong>9.6%</strong>
+                    </span>
+                    <br />
+                    death rate
+                  </p>
+                </div>
+                <div className="corona">
+                  <p>
+                    <span className="title">MERS</span>
+                    <br />
+                    2012
+                    <br />
+                    <span className="text--lg">
+                      In{' '}
+                      <strong>
+                        36 mo
+                        <br />
+                        2,484
+                      </strong>
+                    </span>
+                    <br />
+                    confirmed cases
+                    <br />
+                    <span className="text--lg">
+                      <strong>34.4%</strong>
+                    </span>
+                    <br />
+                    death rate
+                  </p>
+                </div>
+                <div className="corona">
+                  <p>
+                    <span className="title covid19">COVID-19</span>
+                    <br />
+                    2019
+                    <br />
+                    <span className="text--lg">
+                      So far in{' '}
+                      <strong>
+                        3 mo
+                        <br />
+                        +90,800
+                      </strong>
+                    </span>
+                    <br />
+                    confirmed cases
+                    <br />
+                    <span className="text--lg">
+                      <strong>3.5%</strong>
+                    </span>
+                    <br />
+                    death rate
+                  </p>
+                </div>
+              </div>
               {
                 // TODO: Graph in code
               }
@@ -90,9 +158,26 @@ class CoronavirusFeature extends Component {
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
+              <h4>
+                How deadly is COVID-19?<sup>19,20</sup>
+              </h4>
+              <p>
+                While COVID-19 is much more infectious, it appears to be less
+                deadly than SARS or MERS. However, it is more deadly than the
+                annual flu, which has a death rate of less than 1%. This is why
+                it is even more important that if you experience mild symptoms,
+                you should seek medical care right away, and practice hygienic
+                habits to slow the spread of germs and COVID-19 to the people
+                around you.
+              </p>
+              <Image
+                src="/images/features/coronavirus/mortality-by-age.jpg"
+                className="image--max-width"
+                sizes={config.sizes.full}
+              />
               <h3 className="margin-top--quad">
                 <span className="coronavirus-section-header">
-                  Timeline of the outbreak<sup>18</sup>
+                  The first few months of COVID-19<sup>18</sup>
                 </span>
               </h3>
               <div className="corona-timeline">
@@ -127,7 +212,7 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="text--bold">11 Jan 2020</span>
                     <br />
-                    First death announced in China
+                    First death is announced in China
                   </p>
                 </div>
                 <div className="timepoint">
@@ -135,7 +220,8 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="text--bold">21 Jan 2020</span>
                     <br />
-                    First case in the US confirmed; Snohomish County, Washington
+                    First case in the US is confirmed; Snohomish County,
+                    Washington
                   </p>
                 </div>
                 <div className="timepoint">
@@ -143,8 +229,8 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="text--bold">24 Jan 2020</span>
                     <br />
-                    First confirmed case of human-to-human transmission outside
-                    of China in Vietnam
+                    First case of human-to-human transmission is confirmed
+                    outside of China in Vietnam
                   </p>
                 </div>
                 <div className="timepoint">
@@ -205,23 +291,26 @@ class CoronavirusFeature extends Component {
                     First death in the US in King County, Washington
                   </p>
                 </div>
-                <div className="timepoint time-highlight">
+                <div className="timepoint">
                   <div class="dot" />
                   <p>
                     <span className="text--bold">1 Mar 2020</span>
                     <br />
-                    UN releases $15 mill US from the Central Emergency Response
-                    Fund (CERF) to fund global efforts to contain the virus
-                  </p>
-                </div>
-                <div className="timepoint">
-                  <div class="dot dotted" />
-                  <p className="text--bold corona-text--primary">
-                    The COVID-19 outbreak is rapid, but not yet considered a
-                    pandemic
+                    UN releases $15 million USD from the Central Emergency
+                    Response Fund (CERF) to fund global efforts to contain the
+                    virus
                   </p>
                 </div>
               </div>
+              <div className="corona-timeline timeline-dotted" />
+              <h4>What happens now?</h4>
+              <p>
+                So far, COVID-19 has spread from Asia to North America, South
+                America, Europe, Oceania, and Africa. The scale of the impact of
+                this disease is still to be determined. The world continues to
+                work towards treating the sick and containing the disease as we
+                learn more about it.
+              </p>
             </div>
             <div className="max-width content-padding">
               <h3 className="margin-top--quad">
@@ -239,7 +328,7 @@ class CoronavirusFeature extends Component {
                 The virus first came from an animal source, but it is now able
                 to spread from human to human.
               </p>
-              <h4>It’s an airborne virus</h4>
+              <h4>It travels through droplets in the air</h4>
               <p>It can infect humans through...</p>
               <div className="hidden--lg">
                 <Image

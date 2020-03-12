@@ -224,8 +224,39 @@ $corona-font-weight--extra-bold: 900;
     }
   }
 
+  .corona-comparison {
+    .corona {
+      display: block;
+      width: 100%;
+      @include mq($from: 420px) {
+        display: inline-block;
+        width: 50%;
+      }
+      @include mq($from: 590px) {
+        display: inline-block;
+        width: 30%;
+      }
+      .title {
+        background: $corona-color--gray-dark;
+        font-weight: $font-weight--bold;
+        color: #fff;
+        padding: 5px;
+        margin: -5px 0 5px -5px;
+        line-height: 2.5rem;
+        &.covid19 {
+          background: $corona-color--primary;
+        }
+      }
+    }
+  }
+
   .corona-timeline {
     border-left: $corona-color--primary-med solid 3px;
+    &.timeline-dotted {
+      display: block;
+      height: 90px;
+      border-left: $corona-color--primary-med dotted 3px;
+    }
     .timepoint {
       &.time-highlight {
         p {

@@ -529,7 +529,7 @@ class CoronavirusFeature extends Component {
                   Remember, <strong>don't panic!</strong>
                 </p>
                 <p>
-                  Before an announcement of an epidemic, take care of yourself{' '}
+                  Take care of yourself{' '}
                   <strong>
                     just like you would during the annual flu season.
                   </strong>

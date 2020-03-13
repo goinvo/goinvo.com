@@ -12,6 +12,29 @@ $corona-font-weight--extra-bold: 900;
   font-size: 16px;
   font-weight: $corona-font-weight--base;
 
+  .chart {
+    display: block;
+    width: 100%;
+  }
+
+  .Axis {
+    font-size: 16px;
+    font-family: 'Montserrat', 'Open Sans', Sans-Serif;
+
+    path,
+    line {
+      stroke: #e2e2e2;
+    }
+
+    text {
+      fill: #747070;
+    }
+
+    @include mq($from: large) {
+      font-size: 18px;
+    }
+  }
+
   @include mq($from: large) {
     font-size: 18px;
   }
@@ -82,6 +105,7 @@ $corona-font-weight--extra-bold: 900;
   &-text {
     &--primary {
       color: $corona-color--primary;
+      fill: $corona-color--primary;
     }
 
     &--lg {

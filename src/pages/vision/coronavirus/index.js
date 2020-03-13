@@ -8,6 +8,7 @@ import Author from '../../../components/author'
 import References from '../../../components/references'
 
 import NumberListItem from '../../../components/vision/coronavirus/number-list-item'
+import Chart from '../../../components/vision/coronavirus/chart'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -150,14 +151,10 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
               </div>
-              {
-                // TODO: Graph in code
-              }
-              <Image
-                src="/images/features/coronavirus/graph-2.jpg"
-                className="image--max-width"
-                sizes={config.sizes.full}
-              />
+              <div className="margin-top--double margin-bottom--double">
+                <h4>Live update of COVID-19 numbers</h4>
+                <Chart />
+              </div>
               <h4>
                 How deadly is COVID-19?<sup>19,20</sup>
               </h4>
@@ -182,7 +179,7 @@ class CoronavirusFeature extends Component {
               </h3>
               <div className="corona-timeline">
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">1 Dec 2019</span>
                     <br />
@@ -190,7 +187,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">31 Dec 2019</span>
                     <br />
@@ -198,7 +195,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">7 Jan 2020</span>
                     <ul>
@@ -208,7 +205,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">11 Jan 2020</span>
                     <br />
@@ -216,7 +213,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">21 Jan 2020</span>
                     <br />
@@ -225,7 +222,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">24 Jan 2020</span>
                     <br />
@@ -234,7 +231,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">30 Jan 2020</span>
                     <ul>
@@ -250,7 +247,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">31 Jan 2020</span>
                     <ul>
@@ -266,7 +263,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">11 Feb 2020</span>
                     <br />
@@ -275,7 +272,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">25 Feb 2020</span>
                     <br />
@@ -284,7 +281,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">29 Feb 2020</span>
                     <br />
@@ -292,7 +289,7 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
                 <div className="timepoint">
-                  <div class="dot" />
+                  <div className="dot" />
                   <p>
                     <span className="text--bold">1 Mar 2020</span>
                     <br />
@@ -779,7 +776,7 @@ class CoronavirusFeature extends Component {
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />
                     </div>
-                    <div class="pro-con">
+                    <div className="pro-con">
                       <img
                         className="pro-con-icon"
                         src={checkIcon}
@@ -790,7 +787,7 @@ class CoronavirusFeature extends Component {
                         COVID-19 if you are sick
                       </p>
                     </div>
-                    <div class="pro-con">
+                    <div className="pro-con">
                       <img className="pro-con-icon" src={xIcon} alt="cons" />
                       <p>
                         <strong>Does not effectively prevent catching</strong>{' '}
@@ -808,7 +805,7 @@ class CoronavirusFeature extends Component {
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />
                     </div>
-                    <div class="pro-con">
+                    <div className="pro-con">
                       <img
                         className="pro-con-icon"
                         src={checkIcon}
@@ -820,7 +817,7 @@ class CoronavirusFeature extends Component {
                         COVID-19
                       </p>
                     </div>
-                    <div class="pro-con">
+                    <div className="pro-con">
                       <img className="pro-con-icon" src={xIcon} alt="cons" />
                       <p>
                         <strong>

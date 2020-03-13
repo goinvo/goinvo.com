@@ -151,7 +151,8 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
               </div>
-              <div className="margin-top--double">
+              <div className="margin-top--double margin-bottom--double">
+                <h4>Live update of COVID-19 numbers</h4>
                 <Chart />
               </div>
               <h4>

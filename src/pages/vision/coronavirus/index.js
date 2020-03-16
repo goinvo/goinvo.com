@@ -87,8 +87,7 @@ class CoronavirusFeature extends Component {
                     <span className="text--lg">
                       In{' '}
                       <strong>
-                        8 mo
-                        <br />
+                        8 mo <br />
                         8,000
                       </strong>
                     </span>
@@ -111,8 +110,7 @@ class CoronavirusFeature extends Component {
                     <span className="text--lg">
                       In{' '}
                       <strong>
-                        36 mo
-                        <br />
+                        36 mo <br />
                         2,484
                       </strong>
                     </span>
@@ -135,8 +133,7 @@ class CoronavirusFeature extends Component {
                     <span className="text--lg">
                       So far in{' '}
                       <strong>
-                        3 mo
-                        <br />
+                        3 mo <br />
                         +90,800
                       </strong>
                     </span>
@@ -522,6 +519,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/close-contact-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="illustration of a sick person with symptoms of fever, coughing, and shortness of breath. Beside them, a person calling their doctor on the phone. Call your doctor ahead of time to tell them you’ve have close contact with someone confirmed to have COVID-19, and to call the local or state health departments. This helps your provider prevent other people from being infected."
               />
             </div>
             <div className="max-width content-padding">
@@ -578,6 +576,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/mobile-care-1.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="illustration of a patient in home care, isolated in their room"
               />
               <div className="max-width content-padding">
                 <NumberListItem number="1">
@@ -612,6 +611,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/mobile-care-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="illustration of a caregiver doing laundry for the patient wearing protective equipment and taking care of the common space of the home care house."
               />
 
               <div className="max-width content-padding">
@@ -684,6 +684,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/care.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="illustration of a patient in home care and their caregiver. The CDC recommends patients to 1. stay home except to get medical care, 2. stay in a different room from other people in your home and use a separate bathroom, if available, 3. call ahead before visiting your doctor, 4. wear a facemask, and 5. cover coughs and sneezes with your elbow or a tissue. Throw tissues in the trash and then wash your hands. For caregivers, 1. ensure shared spaces have good air flow, 2. only have people essential for providing care for the person in the home. Keep the elderly and those likely to get sick away from the patient, 3. clean all “high-touch” surfaces, 4. understand and help the person follow the healthcare provider’s instructions for medication and care, 5. dispose of contaminated items in a lined container before disposing them with other household waste, 6. wear at least a disposable facemask and gloves when you touch or have contact with the person’s blood, body fluids and/or secretions, and 7. wash laundry thoroughly. Immediately remove and wash clothes or bedding that have any body fluids and/or secretions or excretions on them. Both patients and caregivers should 1. Wash your hands often with soap and water for 20 seconds. If unable and your hands are not visibly dirty, use an alcohol-based hand sanitizer with more than 60% alcohol, and avoid touching your face with unwashed hands, 2. avoid sharing household items, and 3. monitor your symptoms, and seek medical attention as soon as possible if you notice any symptoms and/or if your illness worsens."
               />
               <div className="max-width content-padding">
                 <p>
@@ -751,6 +752,7 @@ class CoronavirusFeature extends Component {
                     src="/images/features/coronavirus/mobile-masks-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.full}
+                    alt="illustration of a surgical mask and a N95 respirator"
                   />
                   <p>
                     Surgical masks filter the wearer's sprays from sneezes and
@@ -781,6 +783,7 @@ class CoronavirusFeature extends Component {
                         src="/images/features/coronavirus/surgical-mask-3.png"
                         className="image--max-width"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                        alt="illustration of a surgical mask, showing the filter that protects wearers from sprays and mucus from sneezes and coughs"
                       />
                     </div>
                     <div className="pro-con">
@@ -810,6 +813,7 @@ class CoronavirusFeature extends Component {
                         src="/images/features/coronavirus/n95-respirator-4.png"
                         className="image--max-width n95"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                        alt="illustration of a N95 Respirator which has a filter for small particles"
                       />
                     </div>
                     <div className="pro-con">
@@ -908,6 +912,7 @@ class CoronavirusFeature extends Component {
                     src="/images/features/coronavirus/mobile-line-of-command.jpg"
                     className="image--max-width"
                     sizes={config.sizes.full}
+                    alt="An illustration of the Earth with a focus on the U.S"
                   />
                 </div>
                 <div className="coronavirus-around-the-world max-width content-padding">
@@ -1005,6 +1010,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/local-ground-team.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="An illustration of a local ground team working together to manage the outbreak. The Incident Manager oversees the entire EOC, provides leadership to ensure coordination between the team, and is a liason to the regional office. Environment experts study the environmental causes related to the disease. Policy makers ensure we have the regulations and permissions necessary to control the situation and may create new ones as needed. Scientists analyze lab samples, research, and learn about the disease. Communications oversee how information is being disseminated to the public to ensure a strong unified voice. Epidemiologists analyze the distribution and patterns of the disease so that we can understand how it is affecting the population."
               />
             </div>
             <div className="max-width content-padding">
@@ -1025,6 +1031,7 @@ class CoronavirusFeature extends Component {
               src="/images/features/coronavirus/response-airport.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
+              alt="A comic about how we protect our airports and borders. Since the virus outbreak started outside of the U.S., the first line of defense is to manage places where the virus could enter. Step 1: determine who is at risk. A Custom and Border Protection agent asks a traveler about if they have traveled to China in the last 14 days upon entering the U.S. Step 2: check the symptoms; if any risk is determined, a secondary screening is conducted to evaluate the traveler’s symptoms. Step 3: take action; travelers at risk are then evaluated and monitored by the Centers for Disease and Control which may involve a 14-day quarantine."
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
@@ -1063,6 +1070,7 @@ class CoronavirusFeature extends Component {
               src="/images/features/coronavirus/response-hospital-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
+              alt="A comic about how hospitals respond to quarantine. A doctor says “We’ve received training and have protocols on how to handle patients suspected of having COVID-19. The hospital has lots of sick people that may be at a greater risk from having severe symptoms of the virus. Respirators, disposable gloves, and other personal protection equipment are shown; they are crucial to health worker safety. For mild cases, a patient is shown in self-quarantine at home. For severe vases, a patient is shown isolated in a hospital. A nurse says “it’s important that everyone in the hospital environment is educated about the risks and how to deal with COVID-19. This includes not only doctors and nurses, but patients, administrators, and custodians too. We all play a part in keeping this disease controlled and people healthy."
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
@@ -1129,6 +1137,7 @@ class CoronavirusFeature extends Component {
               src="/images/features/coronavirus/response-city-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
+              alt="A comic about how a city would respond to quarantine. Based on their surveillance reports, the Centers for Disease and Control has identified a city to be quarantined. The incident manger on the phone says “Alright team, we’ve got our orders, we have to lock down the city. We have 5 days to do it.” 1. Shut down public places like malls, schools, and churches, 2. restrict mass transit, 3. encourage businesses to close and employees to stay home, 4. create checkpoints, curfews, travel permits, and issue health certificates, 5. enforce a quarantine, and 6. keep the public updated via text, cable television, radio, and door-to-door messages."
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
@@ -1198,6 +1207,7 @@ class CoronavirusFeature extends Component {
                       src="/images/features/coronavirus/logo-who.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
+                      alt="Logos for World Health Organization"
                     />
                   </a>
                 </div>
@@ -1232,6 +1242,7 @@ class CoronavirusFeature extends Component {
                       src="/images/features/coronavirus/logo-cdc.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
+                      alt="Logo for CDC"
                     />
                   </a>
                 </div>
@@ -1267,6 +1278,7 @@ class CoronavirusFeature extends Component {
                       src="/images/features/coronavirus/logo-nih.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
+                      alt="Logo for NIH"
                     />
                   </a>
                 </div>
@@ -1297,6 +1309,7 @@ class CoronavirusFeature extends Component {
                       src="/images/features/coronavirus/logo-fda.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
+                      alt="Logo for FDA"
                     />
                   </a>
                 </div>
@@ -1327,6 +1340,7 @@ class CoronavirusFeature extends Component {
                       src="/images/features/coronavirus/logo-mass-med.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
+                      alt="Logo for MassMed"
                     />
                   </a>
                 </div>

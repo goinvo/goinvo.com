@@ -332,6 +332,7 @@ class CoronavirusFeature extends Component {
                   src="/images/features/coronavirus/mobile-spread-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
+                  alt="llustration of a hand holding a child’s hand."
                 />
                 <NumberListItem number="1">
                   ...close contact of 6 feet or less, including touching and
@@ -341,6 +342,7 @@ class CoronavirusFeature extends Component {
                   src="/images/features/coronavirus/mobile-spread-1.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
+                  alt="llustration of a person sneezing."
                 />
                 <NumberListItem number="2">
                   ...the air by coughing and sneezing. People nearby may inhale
@@ -350,6 +352,7 @@ class CoronavirusFeature extends Component {
                   src="/images/features/coronavirus/mobile-spread-3.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
+                  alt="Illustration of a person holding a subway pole."
                 />
                 <NumberListItem number="3">
                   ...and by touching an object or surface contaminated by the
@@ -362,6 +365,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/spread-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="..close contact of 6 feet or less, including touching and shaking hands, and the air by coughing and sneezing. People nearby may inhale droplets from coughs and sneezes into their lungs. It is still unclear if you can get the COVID-19 by touching an object or surface contaminated by the virus, then touching your mouth, nose, or eyes."
               />
             </div>
             <div className="max-width content-padding">
@@ -409,6 +413,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/mobile-prevention.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="illustration of a subway scene depicting what the public can do to prevent the spread of disease"
               />
               <div className="max-width content-padding">
                 <NumberListItem number="1">
@@ -451,6 +456,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/prevention-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="illustration of a subway scene depicting what the public can do to prevent the spread of disease: 1. Stay home when you are sick, 2. Wash your hands often with soap and water. If unable to wash your hands, use alcohol-based hand sanitizer, 3. Avoid close contact with people who are sick, 4. Clean and disinfect frequently touched objects and surfaces, 5. Cover coughs and sneezes with your elbow or a tissue. Throw tissues in the trash, 6. Get your annual flu vaccine, 7. Take flu antivirals if prescribed, 8. Avoid touching your eyes, nose, and mouth with unwashed hands, and 9. Check CDC’s COVID-19 travel health notices often and avoid nonessential travel to China."
               />
             </div>
             <div className="max-width content-padding">
@@ -486,6 +492,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/mobile-close-contact.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
+                alt="illustration of a person showing symptoms of COVID-19"
               />
               <div className="max-width content-padding">
                 <NumberListItem number="1">Fever</NumberListItem>

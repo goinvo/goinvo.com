@@ -1007,7 +1007,7 @@ class CoronavirusFeature extends Component {
             </div>
             <div className="hidden--until-lg">
               <Image
-                src="/images/features/coronavirus/local-ground-team.jpg"
+                src="/images/features/coronavirus/local-ground-team-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
                 alt="An illustration of a local ground team working together to manage the outbreak. The Incident Manager oversees the entire EOC, provides leadership to ensure coordination between the team, and is a liason to the regional office. Environment experts study the environmental causes related to the disease. Policy makers ensure we have the regulations and permissions necessary to control the situation and may create new ones as needed. Scientists analyze lab samples, research, and learn about the disease. Communications oversee how information is being disseminated to the public to ensure a strong unified voice. Epidemiologists analyze the distribution and patterns of the disease so that we can understand how it is affecting the population."

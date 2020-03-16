@@ -1,5 +1,14 @@
 [
   {
+    "id": "washhands",
+    "title": "Wash Your Hands",
+    "date": "Mar.2020",
+    "caption": "A 20 second hand washing guide",
+    "image": "/images/features/coronavirus/wash-hands.jpg",
+    "downloadLink": "/pdf/vision/posters/understandingcoronavirus_wash-hands-poster.pdf",
+    "learnMoreLink": "/vision/coronavirus/"
+  },
+  {
     "id": "vapepocolypse",
     "title": "Vapepocolypse",
     "date": "Oct.2019",

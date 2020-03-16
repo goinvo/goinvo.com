@@ -903,7 +903,7 @@ class CoronavirusFeature extends Component {
                     sizes={config.sizes.full}
                   />
                 </div>
-                <div className="coronavirus-around-the-world">
+                <div className="coronavirus-around-the-world max-width content-padding">
                   <p>
                     <span className="coronavirus-text--primary coronavirus-text--bold">
                       World Health Organization (WHO)
@@ -957,10 +957,10 @@ class CoronavirusFeature extends Component {
             </div>
             <div className="hidden--lg">
               <Image
-                src="/images/features/coronavirus/mobile-local-ground-team-2.jpg"
+                src="/images/features/coronavirus/mobile-local-ground-team.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
-                alt="An illustration of a local grount team working together to manage the outbreak. The Incident Manager oversees the entire EOC, provides leadership to ensure coordination between the team, and is a liason to the regional office. Environment experts study the environmental causes related to the disease. Policy makers ensure we have the regulations and permissions necessary to control the situation and may create new ones as needed. Scientists analyze lab samples, research, and learn about the disease. Communications oversee how information is being disseminated to the public to ensure a strong voice. Epidemiologists analyze the distribution and patterns of the disease so that we can understand how it is affecting the population."
+                alt="An illustration of a local ground team working together to manage the outbreak. The Incident Manager oversees the entire EOC, provides leadership to ensure coordination between the team, and is a liason to the regional office. Environment experts study the environmental causes related to the disease. Policy makers ensure we have the regulations and permissions necessary to control the situation and may create new ones as needed. Scientists analyze lab samples, research, and learn about the disease. Communications oversee how information is being disseminated to the public to ensure a strong voice. Epidemiologists analyze the distribution and patterns of the disease so that we can understand how it is affecting the population."
               />
               <div className="max-width content-padding">
                 <NumberListItem number="1">

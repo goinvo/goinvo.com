@@ -176,7 +176,7 @@ class CoronavirusFeature extends Component {
               />
               <p>
                 Note: Diseases do not have a single case fatality rate; it
-                depends on context, and changes with time and location
+                depends on context, and changes with time and location.
               </p>
               <h3 className="margin-top--quad">
                 <span className="coronavirus-section-header">
@@ -919,17 +919,17 @@ class CoronavirusFeature extends Component {
                 <div className="hidden--lg">
                   <h3 className="margin-top--quad">
                     <span className="coronavirus-section-header">
-                      How does the world respond to an pandemic?<sup>16</sup>
+                      How does the world respond to a pandemic?<sup>16</sup>
                     </span>
                   </h3>
                 </div>
                 <div className="hidden--until-lg">
                   <h3 className="coronavirus-text--primary coronavirus-text--lg coronavirus-text--regular">
-                    How does the world respond to an pandemic?<sup>16</sup>
+                    How does the world respond to a pandemic?<sup>16</sup>
                   </h3>
                 </div>
                 <p>
-                  An pandemic in the world is pretty scary. But the good news is
+                  A pandemic in the world is pretty scary. But the good news is
                   that we have a plan on how to deal with situations like these.
                 </p>
                 <div className="coronavirus-around-the-world-mobile">

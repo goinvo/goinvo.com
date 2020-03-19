@@ -52,7 +52,7 @@ class CoronavirusFeature extends Component {
                   the Novel Coronavirus
                 </h1>
                 <h2>COVID-19</h2>
-                <p>last update 12 March 2020</p>
+                <p>last update 16 March 2020</p>
               </div>
             </div>
           </div>
@@ -77,6 +77,7 @@ class CoronavirusFeature extends Component {
                 Quick look : How does COVID-19 compare to the other
                 coronaviruses?
               </h4>
+              <p>2019–Mar 2020</p>
               <div className="corona-comparison">
                 <div className="corona">
                   <p>
@@ -164,11 +165,19 @@ class CoronavirusFeature extends Component {
                 habits to slow the spread of germs and COVID-19 to the people
                 around you.
               </p>
+              <h4>
+                China’s COVID-19 death rate by age as of 11 Feb 2020
+                <sup>19,20</sup>
+              </h4>
               <Image
                 src="/images/features/coronavirus/mortality-by-age.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
               />
+              <p>
+                Note: Diseases do not have a single case fatality rate; it
+                depends on context, and changes with time and location
+              </p>
               <h3 className="margin-top--quad">
                 <span className="coronavirus-section-header">
                   The first few months of COVID-19<sup>18</sup>
@@ -188,7 +197,8 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="text--bold">31 Dec 2019</span>
                     <br />
-                    China sends urgent notice to WHO of unknown pneumonia cause
+                    China sends urgent notice to WHO of unknown respiratory
+                    illness cause
                   </p>
                 </div>
                 <div className="timepoint">
@@ -233,12 +243,12 @@ class CoronavirusFeature extends Component {
                     <span className="text--bold">30 Jan 2020</span>
                     <ul>
                       <li>
-                        World Health Organization declares the outbreak a global
-                        public-health emergency
+                        WHO declares the outbreak a global public-health
+                        emergency (PHE)
                       </li>
                       <li>
-                        The United States reports the first confirmed instance
-                        of person-to-person spread
+                        The US reports the first confirmed instance of
+                        person-to-person spread
                       </li>
                     </ul>
                   </p>
@@ -248,10 +258,7 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="text--bold">31 Jan 2020</span>
                     <ul>
-                      <li>
-                        HHS Secretary declares a public health emergency (PHE)
-                        for the US
-                      </li>
+                      <li>HHS Secretary declares a PHE for the US</li>
                       <li>
                         President Trump enforces a 14-day quarantine preceding
                         the entry of travelers from mainland China into the US
@@ -295,15 +302,33 @@ class CoronavirusFeature extends Component {
                     virus
                   </p>
                 </div>
+                <div className="timepoint">
+                  <div className="dot" />
+                  <p>
+                    <span className="text--bold">11 Mar 2020</span>
+                    <br />
+                    WHO announces that the COVID-19 outbreak is a global
+                    pandemic
+                  </p>
+                </div>
+                <div className="timepoint">
+                  <div className="dot" />
+                  <p>
+                    <span className="text--bold">13 Mar 2020</span>
+                    <br />
+                    President Trummp declares a National Emergency, allowing
+                    those in charge to act faster in response to an emergency
+                  </p>
+                </div>
               </div>
               <div className="corona-timeline timeline-dotted" />
               <h4>What happens now?</h4>
               <p>
-                So far, COVID-19 has spread from Asia to North America, South
-                America, Europe, Oceania, and Africa. The scale of the impact of
-                this disease is still to be determined. The world continues to
-                work towards treating the sick and containing the disease as we
-                learn more about it.
+                COVID-19 has spread from Asia to North America, South America,
+                Europe, Oceania, and Africa. The world continues to work towards
+                treating the sick and containing the disease as we learn more
+                about it. For now, the public is encouraged to practice social
+                distancing and hygienic practices.
               </p>
             </div>
             <div className="max-width content-padding">
@@ -894,17 +919,17 @@ class CoronavirusFeature extends Component {
                 <div className="hidden--lg">
                   <h3 className="margin-top--quad">
                     <span className="coronavirus-section-header">
-                      How does the world respond to an epidemic?<sup>16</sup>
+                      How does the world respond to an pandemic?<sup>16</sup>
                     </span>
                   </h3>
                 </div>
                 <div className="hidden--until-lg">
                   <h3 className="coronavirus-text--primary coronavirus-text--lg coronavirus-text--regular">
-                    How does the world respond to an epidemic?<sup>16</sup>
+                    How does the world respond to an pandemic?<sup>16</sup>
                   </h3>
                 </div>
                 <p>
-                  An epidemic in the world is pretty scary. But the good news is
+                  An pandemic in the world is pretty scary. But the good news is
                   that we have a plan on how to deal with situations like these.
                 </p>
                 <div className="coronavirus-around-the-world-mobile">

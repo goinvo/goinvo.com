@@ -77,7 +77,6 @@ class CoronavirusFeature extends Component {
                 Quick look : How does COVID-19 compare to the other
                 coronaviruses?
               </h4>
-              <p>2019–Mar 2020</p>
               <div className="corona-comparison">
                 <div className="corona">
                   <p>
@@ -129,7 +128,7 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="title covid19">COVID-19</span>
                     <br />
-                    2019
+                    2019–Mar 2020
                     <br />
                     <span className="text--lg">
                       So far in{' '}

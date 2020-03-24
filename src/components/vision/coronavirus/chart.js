@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { scaleBand, scaleLinear } from 'd3-scale'
 import * as d3Fetch from 'd3-fetch'
+import { format } from 'd3-format'
 
 import Axis from './axis'
 import Bars from './bars'
@@ -12,7 +13,7 @@ const data = [
     date: 'Nov 2002 - July 2003',
     cases: 8098,
     deaths: 774,
-    recovered: null,
+    // recovered: null,
   },
   {
     id: 'mers',
@@ -20,7 +21,7 @@ const data = [
     date: 'Sep 2012 - 2015',
     cases: 2494,
     deaths: 858,
-    recovered: null,
+    // recovered: null,
   },
   {
     id: 'covid-19',
@@ -28,7 +29,7 @@ const data = [
     date: 'Dec 2019 - Present',
     cases: 111363,
     deaths: 3892,
-    recovered: 62683,
+    // recovered: 62683,
   },
 ]
 
@@ -41,14 +42,16 @@ const xAxisData = [
     key: 'deaths',
     title: 'Deaths',
   },
-  {
-    key: 'recovered',
-    title: 'Recovered',
-  },
+  // {
+  //   key: 'recovered',
+  //   title: 'Recovered',
+  // },
   {
     title: 'Death rate',
   },
 ]
+
+const commaFormat = format(',')
 
 class Chart extends Component {
   constructor(props) {
@@ -58,7 +61,7 @@ class Chart extends Component {
       containerWidth: null,
       cases: 0,
       deaths: 0,
-      recovered: 0,
+      // recovered: 0,
     }
 
     this.xScale = scaleBand()
@@ -74,16 +77,16 @@ class Chart extends Component {
 
     this.getDataFor(
       'cases',
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv'
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'
     )
     this.getDataFor(
       'deaths',
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv'
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
     )
-    this.getDataFor(
-      'recovered',
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
-    )
+    // this.getDataFor(
+    //   'recovered',
+    //   'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
+    // )
   }
 
   componentWillUnmount() {
@@ -130,9 +133,9 @@ class Chart extends Component {
       height: isMobile ? 500 : 700,
     }
     const { height, width } = svgDimensions
-    const { cases, deaths, recovered } = this.state
+    const { cases, deaths } = this.state
 
-    data[2] = Object.assign(data[2], { cases, deaths, recovered })
+    data[2] = Object.assign(data[2], { cases, deaths })
 
     data.forEach(d => (d.rate = d.deaths / d.cases))
 
@@ -261,7 +264,7 @@ class Chart extends Component {
                         fill={d.key === 'deaths' ? 'white' : ''}
                       >
                         {d.key
-                          ? v[d.key]
+                          ? commaFormat(v[d.key])
                           : ((v.deaths / v.cases) * 100).toFixed(1) + '%'}
                       </text>
                     </g>

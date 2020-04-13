@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import * as d3Fetch from 'd3-fetch'
+import { format, precisionRound } from 'd3-format'
 
 import Layout from '../../../components/layouts/layout'
 import BackgroundImage from '../../../components/background-image'
@@ -23,7 +25,53 @@ const frontmatter = {
   heroImage: '/images/features/coronavirus/hero-2.jpg',
 }
 
+const p = precisionRound(0.01, 1.01),
+  numFormat = format('.' + p + 's')
+
+function monthDiff(dateFrom, dateTo) {
+  return (
+    dateTo.getMonth() -
+    dateFrom.getMonth() +
+    12 * (dateTo.getFullYear() - dateFrom.getFullYear())
+  )
+}
+
+const months = monthDiff(new Date(2019, 11, 31), new Date())
+
 class CoronavirusFeature extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      cases: 0,
+      deaths: 0,
+    }
+  }
+
+  componentDidMount() {
+    this.getDataFor(
+      'cases',
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'
+    )
+    this.getDataFor(
+      'deaths',
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
+    )
+  }
+
+  getDataFor(type, url) {
+    d3Fetch.csv(url).then(data => {
+      const mostRecent = data.columns[data.columns.length - 1]
+      let total = 0
+
+      data.forEach(d => (total += parseInt(d[mostRecent])))
+
+      this.setState({
+        [type]: total,
+      })
+    })
+  }
+
   render() {
     return (
       <Layout frontmatter={frontmatter}>
@@ -52,7 +100,7 @@ class CoronavirusFeature extends Component {
                   the Novel Coronavirus
                 </h1>
                 <h2>COVID-19</h2>
-                <p>last update 16 March 2020</p>
+                <p>last update 31 March 2020</p>
               </div>
             </div>
           </div>
@@ -128,20 +176,26 @@ class CoronavirusFeature extends Component {
                   <p>
                     <span className="title covid19">COVID-19</span>
                     <br />
-                    2019–Mar 2020
+                    2019–Present
                     <br />
                     <span className="text--lg">
                       So far in{' '}
                       <strong>
-                        3 mo <br />
-                        +90,800
+                        {months} mo
+                        <br />
+                        {numFormat(this.state.cases)}
                       </strong>
                     </span>
                     <br />
                     confirmed cases
                     <br />
                     <span className="text--lg">
-                      <strong>3.5%</strong>
+                      <strong>
+                        {((this.state.deaths / this.state.cases) * 100).toFixed(
+                          1
+                        )}
+                        %
+                      </strong>
                     </span>
                     <br />
                     death rate
@@ -150,19 +204,21 @@ class CoronavirusFeature extends Component {
               </div>
               <div className="margin-top--double margin-bottom--double">
                 <h4>Live update of COVID-19 numbers</h4>
-                <Chart />
+                {this.state.cases > 0 && this.state.deaths > 0 ? (
+                  <Chart cases={this.state.cases} deaths={this.state.deaths} />
+                ) : null}
               </div>
               <h4>
                 How deadly is COVID-19?<sup>19,20</sup>
               </h4>
               <p>
                 While COVID-19 is much more infectious, it appears to be less
-                deadly than SARS or MERS. However, it is more deadly than the
-                annual flu, which has a death rate of less than 1%. This is why
-                it is even more important that if you experience mild symptoms,
-                you should seek medical care right away, and practice hygienic
-                habits to slow the spread of germs and COVID-19 to the people
-                around you.
+                deadly than SARS or MERS right now. However, it is more deadly
+                than the annual flu, which has a death rate of less than 1%.
+                This is why it is even more important that if you experience
+                mild symptoms, you should seek medical care right away, and
+                practice hygienic habits to slow the spread of germs and
+                COVID-19 to the people around you.
               </p>
               <h4>
                 China’s COVID-19 death rate by age as of 11 Feb 2020
@@ -761,10 +817,10 @@ class CoronavirusFeature extends Component {
             <div className="coronavirus-masks pad-vertical">
               <div className="max-width content-padding">
                 <h3 className="coronavirus-text--primary text--uppercase">
-                  Physicians wear masks,
+                  Hospitals desperately need masks
                   <br />
                   <span className="coronavirus-text--lg">
-                    but you shouldn't have to unless you are sick!<sup>1</sup>
+                    Save the masks for those who need them most!<sup>1</sup>
                   </span>
                 </h3>
                 <p>
@@ -865,29 +921,104 @@ class CoronavirusFeature extends Component {
                   </div>
                 </div>
                 <p className="text--lg">
-                  However,{' '}
-                  <strong>
-                    the CDC <i>does not</i> recommend healthy public citizens to
-                    wear either of these masks.
-                  </strong>
+                  For now, the CDC recommends only{' '}
+                  <strong>healthcare providers</strong> to wear surgical grade
+                  masks and N95 respirators, but{' '}
+                  <strong>this equipment is in short supply</strong>.
                 </p>
                 <p>
                   In order to maintain supply for the people who need it most,{' '}
-                  <strong>please do not hoard masks.</strong> Only wear a
-                  facemask <strong>if you are sick</strong> and need to go out
-                  in public or are <strong>caring for someone</strong> who is
-                  sick.
+                  <strong>please do not hoard masks.</strong> If you do not
+                  already have surgical masks or respirators,{' '}
+                  <strong>do not buy them.</strong>
                 </p>
                 <p>
-                  For now, the CDC recommends only{' '}
-                  <strong>healthcare providers</strong> taking care of patients{' '}
-                  <strong>known to be infected with COVID-19</strong> to wear a
-                  N95 respirator or higher.
+                  Instead, the CDC recommends the <strong>public</strong> to
+                  make their own <strong>cloth masks</strong> at home as an
+                  alternative to these masks to prevent the spread of germs.
+                </p>
+              </div>
+            </div>
+            <div className="coronavirus-masks pad-vertical">
+              <div className="max-width content-padding">
+                <h3 className="coronavirus-text--primary text--uppercase">
+                  Stay safe, stay well
+                  <br />
+                  <span className="coronavirus-text--lg">
+                    Making your own mask to wear in public<sup>21</sup>
+                  </span>
+                </h3>
+                <p>
+                  If you <strong>you need to go out in public</strong>, the CDC
+                  recommends wearing a <strong>cloth face covering</strong>{' '}
+                  which can be easily made with household items like t-shirts,
+                  bandanas, rubber bands, and coffee filters.
+                </p>
+                <div className="hidden--lg">
+                  <Image
+                    src="/images/features/coronavirus/mobile-cloth-masks-1.png"
+                    className="image--max-width"
+                    sizes={config.sizes.full}
+                    alt="illustration of home made mask materials, t-shirt, bandana, coffee filter, and rubber bands."
+                  />
+                </div>
+                <div className="hidden--until-lg">
+                  <Image
+                    src="/images/features/coronavirus/cloth-masks.png"
+                    className="image--max-width"
+                    sizes={config.sizes.full}
+                    alt="illustration of people wearing masks made out of t-shirts, bandanas, and coffee filters with rubber bands"
+                  />
+                </div>
+                <p>
+                  For instructions on how to make different variations of the
+                  masks, see the CDC's official instructions{' '}
+                  <strong>
+                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html">
+                      here
+                    </a>
+                    .
+                  </strong>
                 </p>
                 <p>
-                  Just remember, if you do buy a mask,{' '}
-                  <strong>be sensible</strong> and make sure it fits{' '}
-                  <strong>you</strong> and <strong>your needs.</strong>
+                  When making these coverings, keep in mind that they must...
+                  <br />
+                  1. ...fit <strong>snugly but comfortably</strong> against the
+                  side of the face
+                  <br />
+                  2. ...be secured with <strong>ties or ear loops</strong>
+                  <br />
+                  3. ...include <strong>multiple layers</strong> of fabric
+                  <br />
+                  4. ...allow for <strong>breathing without restriction</strong>
+                  <br />
+                  5. ...be <strong>machine washable and dryable</strong> without
+                  damage or change to shape
+                </p>
+                <div className="hidden--lg">
+                  <Image
+                    src="/images/features/coronavirus/mobile-cloth-masks-2.png"
+                    className="image--max-width"
+                    sizes={config.sizes.full}
+                    alt="illustration of people wearing home made masks"
+                  />
+                </div>
+                <p>
+                  For safety reasons, cloth face coverings{' '}
+                  <strong>should not be used</strong> by children{' '}
+                  <strong>under age 2</strong>, people with{' '}
+                  <strong>trouble breathing</strong>, or others that may not be
+                  able be able to take off the covering{' '}
+                  <strong>without assistance</strong>.
+                </p>
+                <p>
+                  Make sure you{' '}
+                  <strong>
+                    wash these face coverings thoroughly and often
+                  </strong>{' '}
+                  after use, and that when you remove them from your face, you{' '}
+                  <strong>do not touch your eyes, mouth, or face</strong> with
+                  your hands.
                 </p>
               </div>
             </div>
@@ -1123,27 +1254,6 @@ class CoronavirusFeature extends Component {
                 plans.
               </p>
               <p className="margin-top--double">
-                <span className="coronavirus-text--primary coronavirus-text--bold">
-                  The US has already taken aggressive quarantine measures
-                  <sup>13</sup>
-                </span>
-                <br />
-                After closing its borders to China, the US took strict measures
-                to prevent the spread of the virus. HHS has been allocated $250
-                million in emergency funds to help prevent the spread of
-                disease. All people who have traveled to China within 14 days of
-                arrival to the US have been ordered to be quarantined for 14
-                days —this has led to more than 800 patients quarantined in 6
-                military bases across the States so far.
-              </p>
-              <p>
-                These military bases were chosen because they could comfortably
-                house hundreds of people. Patients are served 3 catered meals a
-                day and have access to a mental health counselor. They are
-                encouraged to maintain 6 feet of distance at all times with
-                other people, and they regularly have their symptoms checked.
-              </p>
-              <p className="margin-top--double">
                 <span className="coronavirus-text--primary coronavirus-text--bold margin">
                   If a city shuts down, what happens?<sup>10,7</sup>
                 </span>
@@ -1353,40 +1463,6 @@ class CoronavirusFeature extends Component {
                   </p>
                 </div>
               </div>
-              <div className="coronavirus-logo">
-                <div className="coronavirus-logo--left">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="http://www.massmed.org/COVID-19/"
-                  >
-                    <Image
-                      src="/images/features/coronavirus/logo-mass-med.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.full}
-                      alt="Logo for MassMed"
-                    />
-                  </a>
-                </div>
-                <div className="hidden--until-lg">
-                  <p>
-                    <span className="coronavirus-text--primary coronavirus-text--bold">
-                      Massachusetts Medical Society
-                    </span>
-                    <br />
-                    Provides latest guidance and up to date information on
-                    COVID-19 from MA DPH and CDC.
-                    <br />
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="http://www.massmed.org/COVID-19/"
-                    >
-                      http://www.massmed.org/COVID-19/
-                    </a>
-                  </p>
-                </div>
-              </div>
             </div>
             <div className="max-width text--center">
               <div className="margin-bottom">
@@ -1535,6 +1611,12 @@ class CoronavirusFeature extends Component {
                       'World Health Organization. (2020). Report of the Who-China Joint Mission on Coronavirus Disease 2019 (Covid-19) . Retrieved March 9, 2020',
                     link:
                       'https://www.who.int/docs/default-source/coronaviruse/who-china-joint-mission-on-covid-19-final-report.pdf',
+                  },
+                  {
+                    title:
+                      'Centers for Disease and Control (2020, April 4). Use cloth face coverings to help slow the spread of COVID-19. Retrieved from',
+                    link:
+                      'https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html',
                   },
                 ]}
               />

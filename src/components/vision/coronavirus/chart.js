@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { scaleBand, scaleLinear } from 'd3-scale'
-import * as d3Fetch from 'd3-fetch'
 import { format } from 'd3-format'
 
 import Axis from './axis'
@@ -59,8 +58,6 @@ class Chart extends Component {
 
     this.state = {
       containerWidth: null,
-      cases: 0,
-      deaths: 0,
       // recovered: 0,
     }
 
@@ -74,36 +71,10 @@ class Chart extends Component {
   componentDidMount() {
     this.fitParentContainer()
     window.addEventListener('resize', this.fitParentContainer)
-
-    this.getDataFor(
-      'cases',
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'
-    )
-    this.getDataFor(
-      'deaths',
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
-    )
-    // this.getDataFor(
-    //   'recovered',
-    //   'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
-    // )
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.fitParentContainer)
-  }
-
-  getDataFor(type, url) {
-    d3Fetch.csv(url).then(data => {
-      const mostRecent = data.columns[data.columns.length - 1]
-      let total = 0
-
-      data.forEach(d => (total += parseInt(d[mostRecent])))
-
-      this.setState({
-        [type]: total,
-      })
-    })
   }
 
   fitParentContainer = () => {
@@ -133,7 +104,7 @@ class Chart extends Component {
       height: isMobile ? 500 : 700,
     }
     const { height, width } = svgDimensions
-    const { cases, deaths } = this.state
+    const { cases, deaths } = this.props
 
     data[2] = Object.assign(data[2], { cases, deaths })
 

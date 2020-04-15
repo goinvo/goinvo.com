@@ -54,6 +54,15 @@
     "learnMoreLink": "/vision/healthcare-dollars/"
   },
   {
+    "id": "determinants-of-health-spanish",
+    "title": "Determinantes de la Salud",
+    "date": "Apr.2020",
+    "caption": "",
+    "image": "/images/features/posters/determinantes_de_la_salud.jpg",
+    "downloadLink": "/pdf/vision/posters/determinantes_de_la_salud_42x50.pdf",
+    "learnMoreLink": "/vision/determinants-of-health/"
+  },
+  {
     "id": "determinants-of-health",
     "title": "Determinants of Health",
     "date": "Feb.2018",

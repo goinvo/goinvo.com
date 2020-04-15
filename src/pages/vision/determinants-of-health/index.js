@@ -866,6 +866,11 @@ class DeterminantsOfHealthFeature extends Component {
                   Poster images have been updated based on the updated Aug 2017
                   calculations.
                 </p>
+                <h3 className="header--md">14.Apr.2020</h3>
+                <p>
+                  Spanish poster version added, based on the updated Aug 2017
+                  calculations. Translation by Roberto Laureles.
+                </p>
               </div>
             </div>
           </div>
@@ -878,6 +883,8 @@ class DeterminantsOfHealthFeature extends Component {
                 <Author name="Juhan Sonin" company="GoInvo, MIT" />
 
                 <h3 className="header--md">Contributors</h3>
+                <Author name="Daniel Reeves" />
+                <Author name="Bryson Wong" />
                 <Author
                   name="Hrothgar"
                   company="GoInvo"

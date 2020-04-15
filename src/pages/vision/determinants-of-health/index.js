@@ -883,6 +883,14 @@ class DeterminantsOfHealthFeature extends Component {
                 <Author name="Juhan Sonin" company="GoInvo, MIT" />
 
                 <h3 className="header--md">Contributors</h3>
+                <div className="author">
+                  <div className="author__image pure-u-1 pure-u-lg-1-2 pad-right--only-lg"></div>
+                  <div className="author__bio pure-u-1 pure-u-lg-1-2">
+                    <p>
+                      <strong>Roberto Laureles</strong>
+                    </p>
+                  </div>
+                </div>
                 <Author name="Daniel Reeves" />
                 <Author name="Bryson Wong" />
                 <Author

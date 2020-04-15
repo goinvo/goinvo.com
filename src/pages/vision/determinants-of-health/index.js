@@ -884,12 +884,10 @@ class DeterminantsOfHealthFeature extends Component {
 
                 <h3 className="header--md">Contributors</h3>
                 <div className="author">
-                  <div className="author__image pure-u-1 pure-u-lg-1-2 pad-right--only-lg"></div>
-                  <div className="author__bio pure-u-1 pure-u-lg-1-2">
-                    <p>
-                      <strong>Roberto Laureles</strong>
-                    </p>
-                  </div>
+                  <p>
+                    Spanish poster translation by{' '}
+                    <strong>Roberto Laureles</strong>
+                  </p>
                 </div>
                 <Author name="Daniel Reeves" />
                 <Author name="Bryson Wong" />

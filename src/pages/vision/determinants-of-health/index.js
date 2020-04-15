@@ -68,7 +68,7 @@ class DeterminantsOfHealthFeature extends Component {
 
             <div className="max-width max-width--md content-padding">
               <div className="margin-bottom--double">
-                <div className="pure-g button-group margin-bottom--double">
+                <div className="pure-g button-group margin-bottom">
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <a
                       href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf"
@@ -89,6 +89,16 @@ class DeterminantsOfHealthFeature extends Component {
                       Buy Print
                     </a>
                   </div>
+                </div>
+                <div className="button-group">
+                  <a
+                    href="https://github.com/goinvo/HealthDeterminants/blob/master/poster/Spanish/determinantes_de_la_salud_42x50.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--primary button--lg margin-bottom--double button--block"
+                  >
+                    en Español
+                  </a>
                 </div>
                 <div className="pure-g pad-bottom text--center">
                   <div className="pure-u-1 pure-u-lg-1-3">
@@ -143,9 +153,19 @@ class DeterminantsOfHealthFeature extends Component {
                   href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
+                  className="button button--primary button--lg margin-top--double margin-bottom button--block"
                 >
                   Download Poster
+                </a>
+              </div>
+              <div className="button-group">
+                <a
+                  href="https://github.com/goinvo/HealthDeterminants/blob/master/poster/Spanish/determinantes_de_la_salud_42x50.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--primary button--lg margin-bottom--double button--block"
+                >
+                  en Español
                 </a>
               </div>
 
@@ -846,6 +866,11 @@ class DeterminantsOfHealthFeature extends Component {
                   Poster images have been updated based on the updated Aug 2017
                   calculations.
                 </p>
+                <h3 className="header--md">14.Apr.2020</h3>
+                <p>
+                  Spanish poster version added, based on the updated Aug 2017
+                  calculations. Translation by Roberto Laureles.
+                </p>
               </div>
             </div>
           </div>
@@ -858,6 +883,14 @@ class DeterminantsOfHealthFeature extends Component {
                 <Author name="Juhan Sonin" company="GoInvo, MIT" />
 
                 <h3 className="header--md">Contributors</h3>
+                <div className="author">
+                  <p>
+                    Spanish poster translation by{' '}
+                    <strong>Roberto Laureles</strong>
+                  </p>
+                </div>
+                <Author name="Daniel Reeves" />
+                <Author name="Bryson Wong" />
                 <Author
                   name="Hrothgar"
                   company="GoInvo"

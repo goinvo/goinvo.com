@@ -93,9 +93,17 @@ class ConsentFeature extends Component {
               </p>
               <div className="research-section">
                 <div className="research-chunk">
-                  <div className="research-graph"></div>
+                  <div className="research-graph-block">
+                    <div className="research-graph">
+                      <Image
+                        src="/images/features/burnout/chart-national-burnout.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </div>
+                  </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--none">
                       National Burnout Rate
                     </h4>
                     <p className="margin-top--none">
@@ -115,10 +123,19 @@ class ConsentFeature extends Component {
                     </p>
                   </div>
                 </div>
+
                 <div className="research-chunk">
-                  <div className="research-graph"></div>
+                  <div className="research-graph-block">
+                    <div className="research-graph">
+                      <Image
+                        src="/images/features/burnout/chart-depression-suicide.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </div>
+                  </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--none">
                       Depression & Suicide Report
                     </h4>
                     <p className="margin-top--none">
@@ -129,10 +146,19 @@ class ConsentFeature extends Component {
                     </p>
                   </div>
                 </div>
+
                 <div className="research-chunk">
-                  <div className="research-graph"></div>
+                  <div className="research-graph-block">
+                    <div className="research-graph">
+                      <Image
+                        src="/images/features/burnout/chart-academic-burnout.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </div>
+                  </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--none">
                       Burnout in Academic Physicians
                     </h4>
                     <p className="margin-top--none">
@@ -147,10 +173,19 @@ class ConsentFeature extends Component {
                     </p>
                   </div>
                 </div>
+
                 <div className="research-chunk">
-                  <div className="research-graph"></div>
+                  <div className="research-graph-block">
+                    <div className="research-graph">
+                      <Image
+                        src="/images/features/burnout/chart-physicians-symptoms.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMediumMaxWidth}
+                      />
+                    </div>
+                  </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--none">
                       Physicians with Symptoms
                     </h4>
                     <p className="margin-top--none">

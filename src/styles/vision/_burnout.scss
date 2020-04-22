@@ -1,0 +1,40 @@
+.research-section {
+  .research-chunk {
+    background: #f1f6f6;
+    margin: 20px 0;
+    .research-graph-block,
+    .research-text {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .research-graph-block {
+      background: #cbe1df;
+      width: 240px;
+      height: 100%;
+      .research-graph {
+        height: 195px;
+        margin: 0 auto;
+      }
+    }
+    .research-text {
+      width: 460px;
+      padding: 20px;
+    }
+
+    @include mq($until: medium) {
+      .research-graph,
+      .research-text {
+        display: block;
+      }
+      .research-graph-block {
+        height: 235px;
+        padding: 20px;
+        width: 100%;
+        .research-graph {
+          width: 240px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

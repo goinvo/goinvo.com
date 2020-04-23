@@ -103,7 +103,7 @@ class ConsentFeature extends Component {
                     </div>
                   </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--half">
                       National Burnout Rate
                     </h4>
                     <p className="margin-top--none">
@@ -135,7 +135,7 @@ class ConsentFeature extends Component {
                     </div>
                   </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--half">
                       Depression & Suicide Report
                     </h4>
                     <p className="margin-top--none">
@@ -158,7 +158,7 @@ class ConsentFeature extends Component {
                     </div>
                   </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--half">
                       Burnout in Academic Physicians
                     </h4>
                     <p className="margin-top--none">
@@ -185,7 +185,7 @@ class ConsentFeature extends Component {
                     </div>
                   </div>
                   <div className="research-text">
-                    <h4 className="header--sm margin-top--none margin-bottom--none">
+                    <h4 className="header--sm margin-top--none margin-bottom--half">
                       Physicians with Symptoms
                     </h4>
                     <p className="margin-top--none">
@@ -290,7 +290,7 @@ class ConsentFeature extends Component {
               </p>
 
               <h2 className="header--lg margin-top--quad margin-bottom--half">
-                Contributors
+                Contributors to Burnout
                 <sup>
                   <a href="#references">14,15</a>
                 </sup>

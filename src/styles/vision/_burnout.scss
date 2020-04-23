@@ -9,16 +9,18 @@
     }
     .research-graph-block {
       background: #cbe1df;
-      width: 240px;
+      width: 260px;
       height: 100%;
+      padding: 12px;
       .research-graph {
         height: 195px;
         margin: 0 auto;
       }
     }
     .research-text {
-      width: 460px;
+      max-width: 450px;
       padding: 20px;
+      padding-bottom: 0;
     }
 
     @include mq($until: medium) {
@@ -28,12 +30,15 @@
       }
       .research-graph-block {
         height: 235px;
-        padding: 20px;
         width: 100%;
         .research-graph {
-          width: 240px;
+          width: 260px;
           margin: 0 auto;
         }
+      }
+      .research-text {
+        max-width: 650px;
+        padding-bottom: 20px;
       }
     }
   }

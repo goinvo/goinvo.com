@@ -92,6 +92,9 @@ class ConsentFeature extends Component {
                 , published in Medscape.
               </p>
               <div className="research-section">
+                <h2 className="header--lg margin-top--quad margin-bottom--half">
+                  What the research shows
+                </h2>
                 <div className="research-chunk">
                   <div className="research-graph-block">
                     <div className="research-graph">

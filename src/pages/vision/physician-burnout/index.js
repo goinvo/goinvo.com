@@ -96,7 +96,7 @@ class ConsentFeature extends Component {
                   <div className="research-graph-block">
                     <div className="research-graph">
                       <Image
-                        src="/images/features/burnout/chart-national-burnout.jpg"
+                        src="/images/features/burnout/chart-national-burnout-2.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
                       />
@@ -151,7 +151,7 @@ class ConsentFeature extends Component {
                   <div className="research-graph-block">
                     <div className="research-graph">
                       <Image
-                        src="/images/features/burnout/chart-academic-burnout.jpg"
+                        src="/images/features/burnout/chart-academic-burnout-2.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
                       />
@@ -380,7 +380,7 @@ class ConsentFeature extends Component {
           </div>
 
           <Image
-            src="/images/features/burnout/contributors-desktop.jpg"
+            src="/images/features/burnout/contributors-desktop-2.jpg"
             className="image--max-width hidden--until-lg"
             sizes={config.sizes.fullInsideMediumMaxWidth}
             alt="A physician balancing the heavy burden of contributors to burnout. 1. EHRs are painful for clinicians to use. 2. Keeping up with high patient demand. Inability to care for patients properly due to factors beyond their control (lack of insurance, poverty, etc.). Rise in aging population. 3. Rising medical school debt with insufficient income. 4. Too much documentation, too little patient time. 5. Long work hours with too many patients. 6. Loss of autonomy. Feeling of being a cog in a wheel. Held accountable for factors out of their control. 7. Emotional stress and pressure. Second victim syndrome, where healthcare workers feel the emotional effects of involvement in an adverse event or medical error. Societal pressures for high performance and infallibility. Frequent exposure to deeply emotional situations without time or resources for healthy coping mechanisms. Fear or added stress of litigation. 8. Values taught in medical school are inconsistent with real world practice and external pressures -profits over patients."

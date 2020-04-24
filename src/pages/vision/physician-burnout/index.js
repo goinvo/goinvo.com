@@ -291,11 +291,15 @@ class ConsentFeature extends Component {
                 likely to be affected by patient safety incidents, twice as
                 likely to deliver suboptimal care to patients due to low
                 professionalism, and three times more likely to receive low
-                satisfaction ratings from patients. Patients on the receiving
-                end of erroneous care will no longer trust their attending
-                physician, leading to reduced compliance of following prescribed
-                therapies, distrust of the medical and healthcare system as a
-                whole, and added pressure on the clinician.
+                satisfaction ratings from patients.
+                <sup>
+                  <a href="#references">18</a>
+                </sup>{' '}
+                Patients on the receiving end of erroneous care will no longer
+                trust their attending physician, leading to reduced compliance
+                of following prescribed therapies, distrust of the medical and
+                healthcare system as a whole, and added pressure on the
+                clinician.
               </p>
 
               <h2 className="header--lg margin-top--quad margin-bottom--half">
@@ -647,7 +651,16 @@ class ConsentFeature extends Component {
               <p>
                 We need to give support and PPE to our physicians on the front
                 lines during this public health crisis that is now further
-                exacerbated by the Covid-19 pandemic.
+                exacerbated by the Covid-19 pandemic. While dealing with nearly
+                900,000 confirmed Covid-19 cases in the US that are growing
+                everyday (at the time this article was written), and dwindling
+                to non-existent resources, healthcare workers have contracted
+                the Covid-19 virus, and physician deaths have occurred with many
+                more imminent. Many of these deaths could be prevented. The
+                current death reports are an underestimate, limited by the
+                testing shortage and lack of uniform collecting and reporting of
+                data by state and federal agencies, including the Centers for
+                Disease Control and Prevention.
               </p>
 
               <p>
@@ -785,6 +798,12 @@ class ConsentFeature extends Component {
                         'Tuition and Student Fees Reports. Association of American Medical Colleges.',
                       link:
                         'https://www.aamc.org/data-reports/reporting-tools/report/tuition-and-student-fees-reports',
+                    },
+                    {
+                      title:
+                        'Panagioti M, Geraghty K, Johnson J, et al. Association Between Physician Burnout and Patient Safety, Professionalism, and Patient Satisfaction: A Systematic Review and Meta-analysis [published correction appears in JAMA Intern Med. 2019 Apr 1;179(4):596]. JAMA Intern Med. 2018;178(10):1317–1330. doi:10.1001/jamainternmed.2018.3713',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6233757/',
                     },
                   ]}
                 />

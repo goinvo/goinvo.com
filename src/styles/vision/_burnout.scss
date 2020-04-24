@@ -1,44 +1,51 @@
-.research-section {
-  .research-chunk {
-    background: #f1f6f6;
-    margin: 20px 0;
-    .research-graph-block,
-    .research-text {
-      display: inline-block;
-      vertical-align: top;
+.consent-feature {
+  @include mq($until: medium) {
+    p {
+      padding-right: 15px;
     }
-    .research-graph-block {
-      background: #cbe1df;
-      width: 260px;
-      height: 100%;
-      padding: 12px;
-      .research-graph {
-        height: 195px;
-        margin: 0 auto;
-      }
-    }
-    .research-text {
-      max-width: 450px;
-      padding: 20px;
-      padding-bottom: 0;
-    }
-
-    @include mq($until: medium) {
-      .research-graph,
+  }
+  .research-section {
+    .research-chunk {
+      background: #f1f6f6;
+      margin: 20px 0;
+      .research-graph-block,
       .research-text {
-        display: block;
+        display: inline-block;
+        vertical-align: top;
       }
       .research-graph-block {
-        height: 235px;
-        width: 100%;
+        background: #cbe1df;
+        width: 260px;
+        height: 100%;
+        padding: 12px;
         .research-graph {
-          width: 260px;
+          height: 195px;
           margin: 0 auto;
         }
       }
       .research-text {
-        max-width: 650px;
-        padding-bottom: 20px;
+        max-width: 450px;
+        padding: 20px;
+        padding-bottom: 0;
+      }
+
+      @include mq($until: medium) {
+        .research-graph,
+        .research-text {
+          display: block;
+        }
+        .research-graph-block {
+          height: 235px;
+          width: 100%;
+          .research-graph {
+            width: 260px;
+            margin: 0 auto;
+          }
+        }
+        .research-text {
+          max-width: 650px;
+          padding-bottom: 20px;
+        }
       }
     }
   }

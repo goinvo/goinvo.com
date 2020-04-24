@@ -39,9 +39,13 @@ class ConsentFeature extends Component {
                 <strong>2.37</strong> physicians to every <strong>1000</strong>{' '}
                 patients, and with early retirement that number will drop even
                 further to <strong>2.25</strong> physicians per{' '}
-                <strong>1000</strong> patients. This is a respective 4% and 8%
-                decline in the physician-to-population ratio (declining from
-                2.47 physicians per 1000 patients in 2017).
+                <strong>1000</strong> patients.
+                <sup>
+                  <a href="#references">9</a>
+                </sup>{' '}
+                This is a respective 4% and 8% decline in the
+                physician-to-population ratio (declining from 2.47 physicians
+                per 1000 patients in 2017).
               </p>
               <p>
                 Physician burnout is a problem that has been recognized for
@@ -50,7 +54,7 @@ class ConsentFeature extends Component {
                 after taking into account hours, work, age, sex, and other
                 factors.
                 <sup>
-                  <a href="#references">2</a>
+                  <a href="#references">3</a>
                 </sup>{' '}
                 Burnout is identified in physicians as emotional exhaustion,
                 depersonalization, cynicism, and job dissatisfaction,
@@ -75,10 +79,8 @@ class ConsentFeature extends Component {
                 waves through the world’s healthcare systems, more healthcare
                 workers than ever are on the front-lines, putting themselves at
                 risk to save lives and beat this virus. They are working long
-                hours, with a growing number of cases each day, with limited
-                (and dwindling) resources at hand. They often have no personal
-                protective equipment (PPE) or are asked to reuse equipment
-                designed for single use. Healthcare workers expressing concerns
+                hours, with limited resources, and the added burden of sourcing
+                PPE for their own safety. Healthcare workers expressing concerns
                 and advocating for safety are silenced and often retaliated
                 against, by way of termination of employment, when they do speak
                 up. Eric Topol, MD sums it up best in a perspective piece,{' '}
@@ -146,6 +148,9 @@ class ConsentFeature extends Component {
                       & Suicide Report, <strong>66%</strong> of physicians
                       reported feeling burned out (44%), colloquial depression
                       (11%), or clinical depression (11%).
+                      <sup>
+                        <a href="#references">16</a>
+                      </sup>
                     </p>
                   </div>
                 </div>
@@ -577,28 +582,34 @@ class ConsentFeature extends Component {
               </p>
 
               <h4 className="header-sm margin-bottom--none margin-top--double">
-                Expand medical education
+                Evolve medical education
               </h4>
               <p className="margin-top--none">
                 Medical education curriculum needs reform and to move away from
                 strictly a biological health-disease model to one that is
                 comprehensive to also include psychological, social, cultural,
-                and economic components of medicine. 11% of health is medical
-                care and 89% occurs outside the clinical space. Courses in the
-                business of healthcare need to be mandatory so new graduates are
-                skilled to navigate the complexities of the business of
-                healthcare. The cost of education also needs to be addressed.
-                Per AAMC 2019 report, the cost of medical education tuition and
-                fees ranges from $37,556 (public, in-state) to $62,194 (public,
+                and economic components of medicine. <strong>11%</strong> of
+                health is medical care and <strong>89%</strong> occurs outside
+                the clinical space. Courses in the business of healthcare need
+                to be mandatory so new graduates are skilled to navigate the
+                complexities of the business of healthcare.
+              </p>
+              <p>
+                Skyrocketing costs of education also need to be addressed. Per
+                AAMC 2019 report, the cost of medical education tuition and fees
+                ranges from $37,556 (public, in-state) to $62,194 (public,
                 out-of-state) yearly and with private school figures ranging
-                from $60,665 and $62,111 per year. Surgical specialties
-                compensate far greater than their non-surgical counterparts and
-                specialists are better rewarded than generalists and primary
-                care physicians. Physicians lag a decade in earnings as compared
-                to their non-physician colleagues. In combination, these can
-                lead physicians to pursue post-graduate training in more
-                financially lucrative specialties to pay off an insurmountable
-                debt.
+                from $60,665 and $62,111 per year.
+                <sup>
+                  <a href="#references">17</a>
+                </sup>{' '}
+                Surgical specialties compensate far greater than their
+                non-surgical counterparts and specialists are better rewarded
+                than generalists and primary care physicians. Physicians lag a
+                decade in earnings as compared to their non-physician
+                colleagues. In combination, these can lead physicians to pursue
+                post-graduate training in more financially lucrative specialties
+                to pay off an insurmountable debt.
               </p>
 
               <h4 className="header-sm margin-bottom--none margin-top--double">
@@ -633,18 +644,22 @@ class ConsentFeature extends Component {
                 The time to act is now
               </h2>
               <p>
-                We need to give support to our physicians on the front lines
-                during this public health crisis that is now further exacerbated
-                by the Covid-19 pandemic. The tide for the physician burnout
-                crisis is not turning. Physician burnout is only the tip of the
-                healthcare industry’s sickness. Physicians will become scarce in
-                ten years should we fail to end this epidemic with well-designed
-                approaches addressing both individual and organizational needs.
-                Patients unable to buy their way to the top may have to wait
-                years for a routine surgery or it may be internationally
-                outsourced. It is unacceptable that so many physicians are
-                painfully suffering in silence and dying. Even one physician
-                suicide is one loss too many.
+                We need to give support and PPE to our physicians on the front
+                lines during this public health crisis that is now further
+                exacerbated by the Covid-19 pandemic.
+              </p>
+
+              <p>
+                The tide for the physician burnout crisis is not turning.
+                Physician burnout is only the tip of the healthcare industry’s
+                sickness. Physicians will become scarce in ten years should we
+                fail to end this epidemic with well-designed approaches
+                addressing both individual and organizational needs. Patients
+                unable to buy their way to the top may have to wait years for a
+                routine surgery or it may be internationally outsourced. It is
+                unacceptable that so many physicians are painfully suffering in
+                silence and dying. Even one physician suicide is one loss too
+                many.
               </p>
             </div>
           </div>
@@ -675,8 +690,100 @@ class ConsentFeature extends Component {
                 <References
                   references={[
                     {
-                      title: '',
-                      link: '',
+                      title:
+                        'Ashish K. Jha, MD, MPH, et al., A Crisis in Health Care: A Call to Action on Physician Burnout, Partnership with the Massachusetts Medical Society, Massachusetts Health and Hospital Association, Harvard T.H. Chan School of Public Health, and Harvard Global Health Institute',
+                      link:
+                        'http://www.massmed.org/News-and-Publications/MMS-News-Releases/Physician-Burnout-Report-2018/',
+                    },
+                    {
+                      title:
+                        'Shanafelt TD, Boone S, Tan L, Dyrbye LN, Sotile W, Satele D, West CP, Sloan J, Oreskovich MR. Burnout and satisfaction with work-life balance among US physicians relative to the general US population. Arch Intern Med. 2012 Oct 8; 172(18):1377-85.',
+                    },
+                    {
+                      title:
+                        'Paul Griner, Seth Bilazarian, Peter Moskowitz. May 2013. Medscape Physician Lifestyle Report 2013.',
+                      link:
+                        'https://www.medscape.com/sites/public/lifestyle/2013',
+                    },
+                    {
+                      title:
+                        'Peckham C. Medscape Lifestyle Report 2017: race and ethnicity, bias and burnout. May 2018. Medscape Lifestyle Report 2017.',
+                      link:
+                        'https://www.medscape.com/features/slideshow/lifestyle/2017/',
+                    },
+                    {
+                      title:
+                        'Marcela Carmen. Factors Associated With Physician Burnout At an Academic Faculty Practice',
+                      link:
+                        'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2727998',
+                    },
+                    {
+                      title:
+                        'Hawkins M. 2018 Survey of America’s Physicians: Practice Patterns & Perspectives. 2018.',
+                      link:
+                        'https://physiciansfoundation.org/wp-content/uploads/2018/09/physicians-survey-results-final-2018.pdf',
+                    },
+                    {
+                      title:
+                        'Shanafelt, Tait D. et al. Changes in Burnout and Satisfaction With Work-Life Integration in Physicians and the General US Working Population Between 2011 and 2017. Mayo Clinic Proceedings, Volume 94, Issue 9, 1681 - 1694',
+                      link:
+                        'https://www.mayoclinicproceedings.org/article/S0025-6196(18)30938-8/fulltext',
+                    },
+                    {
+                      title:
+                        'Aaron Young, et al. A Census of Actively Licensed Physicians  in the United States, 2016. 2017. Federation of State Medical Boards.',
+                      link:
+                        'https://www.fsmb.org/siteassets/advocacy/publications/2016census.pdf',
+                    },
+                    {
+                      title:
+                        'IHS Markit Ltd. The 2019 Update: The Complexities of Physician Supply and Demand: Projections from 2017 to 2032. April 2019. Association of American Medical Colleges.',
+                      link:
+                        'https://www.aamc.org/system/files/c/2/31-2019_update_-_the_complexities_of_physician_supply_and_demand_-_projections_from_2017-2032.pdf',
+                    },
+                    {
+                      title:
+                        'Shasha Han, et al. Estimating the Attributable Cost of Physician Burnout in the United States. June 2019. Annals of Internal Medicine.',
+                      link:
+                        'https://annals.org/aim/article-abstract/2734784/estimating-attributable-cost-physician-burnout-united-states',
+                    },
+                    {
+                      title:
+                        'Tawfik DS, Profit J, Morgenthaler TI, et al. Physician Burnout, Well-being, and Work Unit Safety Grades in Relationship to Reported Medical Errors. Mayo Clin Proc. 2018;93(11):1571-1580. doi:10.1016/j .mayocp.2018.05.014',
+                    },
+                    {
+                      title:
+                        'Karolina Doulougeri, Katerina Georganta & Anthony Montgomery | Albert Lee (Reviewing Editor) (2016) “Diagnosing” burnout among healthcare professionals: Can we find consensus?, Cogent Medicine, 3:1, DOI: 10.1080/2331205X.2016.1237605',
+                      link:
+                        'https://www.tandfonline.com/doi/full/10.1080/2331205X.2016.1237605',
+                    },
+                    {
+                      title:
+                        'Panagioti, M., Panagopoulou, E., Bower, P., Lewith, G., Kontopantelis, E., Chew-Graham, C., . . . Esmail, A. (2017). Controlled Interventions to Reduce Burnout in Physicians A Systematic Review and Meta-analysis. JAMA Internal Medicine, 177(2), 195-205. doi:10.1001/jamainternmed.2016.7674',
+                    },
+                    {
+                      title:
+                        'Stehman CR, Testo Z, Gershaw RS, Kellogg AR. Burnout, Drop Out, Suicide: Physician Loss in Emergency Medicine, Part I [published correction appears in West J Emerg Med. 2019 Aug 21;20(5):840-841]. West J Emerg Med. 2019;20(3):485–494. doi:10.5811/westjem.2019.4.40970',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6526882/ ',
+                    },
+                    {
+                      title:
+                        'Kane, Leslie, MA. National Physician Bunout & Suicide Report 2020. Accessed March 2020.',
+                      link:
+                        'https://www.medscape.com/slideshow/2020-lifestyle-burnout-6012460#5',
+                    },
+                    {
+                      title:
+                        '2019 Lifestyle Burnout Depression slides. Medscape',
+                      link:
+                        'https://www.medscape.com/slideshow/2019-lifestyle-burnout-depression-6011056#2',
+                    },
+                    {
+                      title:
+                        'Tuition and Student Fees Reports. Association of American Medical Colleges.',
+                      link:
+                        'https://www.aamc.org/data-reports/reporting-tools/report/tuition-and-student-fees-reports',
                     },
                   ]}
                 />

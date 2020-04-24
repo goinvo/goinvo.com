@@ -12,7 +12,8 @@ import config from '../../../../config'
 
 const frontmatter = {
   metaTitle: 'Physician Burnout: The Silent Killer - GoInvo',
-  metaDescription: '',
+  metaDescription:
+    'Physician burnout is a public health crisis worsening by the day. To turn the tide, some changes must be made.',
   heroImage: '/images/features/burnout/hero.jpg',
 }
 

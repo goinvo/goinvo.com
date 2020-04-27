@@ -17,12 +17,12 @@ const frontmatter = {
   heroImage: '/images/features/burnout/hero.jpg',
 }
 
-class ConsentFeature extends Component {
+class BurnoutFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
-        <div className="consent-feature">
+        <div className="burnout-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">
@@ -71,7 +71,7 @@ class ConsentFeature extends Component {
               </p>
 
               <h2 className="header--lg margin-top--quad margin-bottom--half">
-                Covid-19 is intensifying the burnout crisis.
+                Covid-19 is intensifying the burnout crisis
               </h2>
               <p>
                 Pre-covid, we began 2020 with unprecedented rates of clinical
@@ -321,68 +321,63 @@ class ConsentFeature extends Component {
           </div>
 
           <div className="mobile hidden--lg">
-            <div className="pad-vertical--double">
-              <div className="max-width max-width--md content-padding">
-                <ol>
-                  <li>
-                    <strong>EHRs are painful</strong> for clinicians to use
-                  </li>
-                  <li>
-                    <strong>Keeping up with high patient demand</strong>
-                    <ul>
-                      <li>
-                        Inability to care for patients properly due to factors
-                        beyond their control (lack of insurance, poverty, etc.)
-                      </li>
-                      <li>Rise in aging population</li>
-                    </ul>
-                  </li>
-                  <li>
-                    Rising <strong>medical school debt</strong> with
-                    insufficient income
-                  </li>
-                  <li>
-                    <strong>Too much documentation,</strong> too little patient
-                    time
-                  </li>
-                  <li>
-                    <strong>Long work hours</strong> with too many patients
-                  </li>
-                  <li>
-                    <strong>Loss of autonomy</strong>
-                    <ul>
-                      <li>Feeling of being a cog in a wheel</li>
-                      <li>
-                        Held accountable for factors out of their control.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    Emotional stress and pressure
-                    <ul>
-                      <li>
-                        Second victim syndrome, where healthcare workers feel
-                        the emotional effects of involvement in an adverse event
-                        or medical error
-                      </li>
-                      <li>
-                        Societal pressures for high performance and
-                        infallibility
-                      </li>
-                      <li>
-                        Frequent exposure to deeply emotional situations without
-                        time or resources for healthy coping mechanisms
-                      </li>
-                      <li>Fear or added stress of litigation</li>
-                    </ul>
-                  </li>
-                  <li>
-                    Values taught in medical school are inconsistent with real
-                    world practice and external pressures &emdash;profits over
-                    patients
-                  </li>
-                </ol>
-              </div>
+            <div className="max-width max-width--md content-padding">
+              <ol className="contributor-list">
+                <li>
+                  <strong>EHRs are painful</strong> for clinicians to use
+                </li>
+                <li>
+                  <strong>Keeping up with high patient demand</strong>
+                  <ul>
+                    <li>
+                      Inability to care for patients properly due to factors
+                      beyond their control (lack of insurance, poverty, etc.)
+                    </li>
+                    <li>Rise in aging population</li>
+                  </ul>
+                </li>
+                <li>
+                  Rising <strong>medical school debt</strong> with insufficient
+                  income
+                </li>
+                <li>
+                  <strong>Too much documentation,</strong> too little patient
+                  time
+                </li>
+                <li>
+                  <strong>Long work hours</strong> with too many patients
+                </li>
+                <li>
+                  <strong>Loss of autonomy</strong>
+                  <ul>
+                    <li>Feeling of being a cog in a wheel</li>
+                    <li>Held accountable for factors out of their control.</li>
+                  </ul>
+                </li>
+                <li>
+                  Emotional stress and pressure
+                  <ul>
+                    <li>
+                      Second victim syndrome, where healthcare workers feel the
+                      emotional effects of involvement in an adverse event or
+                      medical error
+                    </li>
+                    <li>
+                      Societal pressures for high performance and infallibility
+                    </li>
+                    <li>
+                      Frequent exposure to deeply emotional situations without
+                      time or resources for healthy coping mechanisms
+                    </li>
+                    <li>Fear or added stress of litigation</li>
+                  </ul>
+                </li>
+                <li>
+                  Values taught in medical school are inconsistent with real
+                  world practice and external pressures &emdash;profits over
+                  patients
+                </li>
+              </ol>
             </div>
             <Image
               src="/images/features/burnout/contributors-mobile.jpg"
@@ -816,4 +811,4 @@ class ConsentFeature extends Component {
   }
 }
 
-export default ConsentFeature
+export default BurnoutFeature

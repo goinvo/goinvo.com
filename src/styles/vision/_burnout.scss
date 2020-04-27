@@ -1,4 +1,4 @@
-.consent-feature {
+.burnout-feature {
   @include mq($until: medium) {
     p {
       padding-right: 15px;
@@ -16,7 +16,6 @@
       .research-graph-block {
         background: #cbe1df;
         width: 260px;
-        height: 100%;
         padding: 12px;
         .research-graph {
           height: 195px;
@@ -39,7 +38,6 @@
           width: 100%;
           .research-graph {
             width: 260px;
-            margin: 0 auto;
           }
         }
         .research-text {
@@ -48,5 +46,11 @@
         }
       }
     }
+  }
+
+  .contributor-list {
+    margin-top: -30px;
+    margin-left: -22px;
+    padding-right: 10px;
   }
 }

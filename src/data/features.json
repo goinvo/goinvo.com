@@ -1,11 +1,22 @@
 [
   {
+    "id": "physician-burnout",
+    "title": "Physician Burnout: The Silent Killer",
+    "date": "Apr.2020",
+    "client": "Feature",
+    "categories": [],
+    "caption": "Physician burnout is a public health crisis worsening by the day",
+    "image": "/images/features/burnout/hero.jpg",
+    "link": "/vision/physician-burnout/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "health-design-thinking",
     "title": "Health Design Thinking Book",
     "date": "Mar.2020",
     "client": "Feature",
     "categories": [],
-    "caption": "GoInvo highlighted in Health Design Thinking Book",
+    "caption": "GoInvo highlighted in Health Design Thinking book",
     "image": "/images/features/health-design-thinking/health-design-thinking-book-thumbnail.jpg",
     "link": "/vision/health-design-thinking/",
     "hiddenWorkPage": true

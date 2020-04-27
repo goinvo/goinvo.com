@@ -84,6 +84,12 @@
     }
   }
 
+  &--higher-text-contrast {
+    #{$parent}__title {
+      background-color: transparentize($color-white, 0.1);
+    }
+  }
+
   &:hover {
     color: $color-black;
   }

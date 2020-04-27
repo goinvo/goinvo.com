@@ -23,7 +23,7 @@ const frontmatter = {
   metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
   metaDescription:
     'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
-  heroImage: '/images/homepage/hgraph-hero.jpg',
+  heroImage: '/images/homepage/hero-critical-mass.jpg',
   heroButtonText: 'See Our Work',
 }
 
@@ -42,11 +42,13 @@ class IndexPage extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero
+          className="hero--higher-text-contrast"
           link="/work/"
           image={frontmatter.heroImage}
           caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
           button={frontmatter.heroButtonText}
           isLarge
+          position="top center"
         >
           <h1 className="header--xl">
             Designing

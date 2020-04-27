@@ -66,13 +66,21 @@ class Hero extends Component {
   }
 
   render() {
-    const { video, caption, isLarge, withLogo, children, button } = this.props
+    const {
+      video,
+      caption,
+      isLarge,
+      withLogo,
+      children,
+      button,
+      className,
+    } = this.props
 
     return (
       <div
         className={`hero ${isLarge ? 'hero--large' : ''} ${
-          video ? 'hero--video' : ''
-        }`}
+          className ? className : ''
+        } ${video ? 'hero--video' : ''}`}
         style={this.props.style}
       >
         {this.renderHeroBlock()}

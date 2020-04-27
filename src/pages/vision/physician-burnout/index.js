@@ -102,7 +102,7 @@ class ConsentFeature extends Component {
                   <div className="research-graph-block">
                     <div className="research-graph">
                       <Image
-                        src="/images/features/burnout/chart-national-burnout-2.jpg"
+                        src="/images/features/burnout/chart-national-burnout-3.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
                       />
@@ -160,7 +160,7 @@ class ConsentFeature extends Component {
                   <div className="research-graph-block">
                     <div className="research-graph">
                       <Image
-                        src="/images/features/burnout/chart-academic-burnout-2.jpg"
+                        src="/images/features/burnout/chart-academic-burnout-3.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
                       />

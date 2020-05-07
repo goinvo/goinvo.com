@@ -34,9 +34,14 @@ class BurnoutFeature extends Component {
                 <sup>
                   <a href="#references">1</a>
                 </sup>{' '}
-                We’re losing physicians to burnout, drop out, and suicide at a
-                rate of <strong>28 to 40 per 100,000</strong>. By{' '}
-                <strong>2032</strong> with the status quo we will have{' '}
+                We’re losing physicians to burnout, drop out, and suicide. The
+                suicide rate alone in 2018 was at a rate of{' '}
+                <strong>28 to 40 per 100,000,</strong> triple the national
+                average
+                <sup>
+                  <a href="#references">19</a>
+                </sup>{' '}
+                . By <strong>2032</strong> with the status quo we will have{' '}
                 <strong>2.37</strong> physicians to every <strong>1000</strong>{' '}
                 patients, and with early retirement that number will drop even
                 further to <strong>2.25</strong> physicians per{' '}
@@ -799,6 +804,11 @@ class BurnoutFeature extends Component {
                         'Panagioti M, Geraghty K, Johnson J, et al. Association Between Physician Burnout and Patient Safety, Professionalism, and Patient Satisfaction: A Systematic Review and Meta-analysis [published correction appears in JAMA Intern Med. 2019 Apr 1;179(4):596]. JAMA Intern Med. 2018;178(10):1317–1330. doi:10.1001/jamainternmed.2018.3713',
                       link:
                         'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6233757/',
+                    },
+                    {
+                      title:
+                        'Pauline Anderson. Physicians Experience Highest Suicide Rate of Any Profession. Medscape Medical News.',
+                      link: 'https://www.medscape.com/viewarticle/896257',
                     },
                   ]}
                 />

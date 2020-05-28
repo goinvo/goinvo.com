@@ -453,7 +453,7 @@ class VisionPage extends Component {
             </Quote>
             <Link
               to="/work/inspired-ehrs"
-              className="button button--primary button--lg button--block"
+              className="button button--secondary button--lg button--block"
             >
               Read the Case Study
             </Link>
@@ -476,7 +476,7 @@ class VisionPage extends Component {
               href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519"
               target="_blank"
               rel="noopener noreferrer"
-              className="button button--primary button--lg button--block"
+              className="button button--secondary button--lg button--block"
             >
               Check out the Book
             </a>
@@ -498,7 +498,7 @@ class VisionPage extends Component {
             </Quote>
             <Link
               to="/vision/determinants-of-health/"
-              className="button button--primary button--lg button--block"
+              className="button button--secondary button--lg button--block"
             >
               Read the Feature
             </Link>
@@ -519,7 +519,7 @@ class VisionPage extends Component {
             </Quote>
             <a
               href="https://www.goinvo.com/features/from-bathroom-to-healthroom/"
-              className="button button--primary button--lg button--block"
+              className="button button--secondary button--lg button--block"
             >
               Read the Feature
             </a>

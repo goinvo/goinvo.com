@@ -75,7 +75,7 @@ class DeterminantsOfHealthFeature extends Component {
                       href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="button button--primary margin-top--double margin-bottom--half button--block margin-right"
+                      className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
                     >
                       Download
                     </a>
@@ -85,7 +85,7 @@ class DeterminantsOfHealthFeature extends Component {
                       href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="button button--primary margin-top--double margin-bottom--half  button--block margin-right"
+                      className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
                     >
                       Buy Print
                     </a>
@@ -98,7 +98,7 @@ class DeterminantsOfHealthFeature extends Component {
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button--primary button--lg margin-bottom--double button--block"
+                    className="button button--secondary button--lg margin-bottom--double button--block"
                   >
                     en Español
                   </a>
@@ -156,7 +156,7 @@ class DeterminantsOfHealthFeature extends Component {
                   href="https://github.com/goinvo/HealthDeterminants/raw/master/poster/health_determinants_poster_42x50.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button button--primary button--lg margin-top--double margin-bottom button--block"
+                  className="button button--secondary button--lg margin-top--double margin-bottom button--block"
                 >
                   Download Poster
                 </a>
@@ -168,7 +168,7 @@ class DeterminantsOfHealthFeature extends Component {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button button--primary button--lg margin-bottom--double button--block"
+                  className="button button--secondary button--lg margin-bottom--double button--block"
                 >
                   en Español
                 </a>
@@ -208,7 +208,7 @@ class DeterminantsOfHealthFeature extends Component {
                     href="https://www.amazon.com/Determinants-Health-Poster-24-35-75/dp/B06X1GFDH1/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button--primary margin-top--double margin-bottom--half  button--block"
+                    className="button button--secondary margin-top--double margin-bottom--half  button--block"
                   >
                     Buy Print
                   </a>
@@ -218,7 +218,7 @@ class DeterminantsOfHealthFeature extends Component {
                     href="https://github.com/goinvo/HealthDeterminants"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button--primary margin-top--double margin-bottom--half  button--block"
+                    className="button button--secondary margin-top--double margin-bottom--half  button--block"
                   >
                     On Github
                   </a>
@@ -226,7 +226,7 @@ class DeterminantsOfHealthFeature extends Component {
                 <div className="pure-u-1 pure-u-lg-1-3">
                   <a
                     href="#methodology"
-                    className="button button--primary margin-top--double margin-bottom--double  button--block"
+                    className="button button--secondary margin-top--double margin-bottom--double  button--block"
                   >
                     Methodology
                   </a>
@@ -261,7 +261,7 @@ class DeterminantsOfHealthFeature extends Component {
                     href="https://github.com/goinvo/HealthDeterminants/raw/master/sdoh-spend/SDOH_to_spend_v12-01.png"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button--primary margin-top--half margin-bottom--half  button--block"
+                    className="button button--secondary margin-top--half margin-bottom--half  button--block"
                   >
                     Full Size Poster
                   </a>
@@ -271,7 +271,7 @@ class DeterminantsOfHealthFeature extends Component {
                     href="https://docs.google.com/spreadsheets/d/1_uY448KYzLdAXbbS7EzxHkpAukgWftsqt3gdIxJBGBk/edit?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button--primary margin-top--half margin-bottom--half  button--block"
+                    className="button button--secondary margin-top--half margin-bottom--half  button--block"
                   >
                     References
                   </a>

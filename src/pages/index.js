@@ -353,7 +353,7 @@ class IndexPage extends Component {
                 </p>
                 <Link
                   to="/about/"
-                  className="button button--primary button--lg margin-bottom"
+                  className="button button--secondary button--lg margin-bottom"
                 >
                   Meet our team
                 </Link>

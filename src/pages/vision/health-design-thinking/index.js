@@ -97,7 +97,7 @@ class HealthDesignThinkingBook extends Component {
                     <a
                       href="https://mitpress.mit.edu/books/health-design-thinking"
                       rel="noreferrer"
-                      className="button button--primary margin-top--double margin-bottom--half button--block margin-right"
+                      className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
                     >
                       Pre-Order At MIT Press
                     </a>
@@ -106,7 +106,7 @@ class HealthDesignThinkingBook extends Component {
                     <a
                       href="https://www.eventbrite.com/e/making-healthcare-beautiful-by-design-tickets-91909456659"
                       rel="noreferrer"
-                      className="button button--primary margin-top--double margin-bottom--half  button--block margin-right"
+                      className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
                     >
                       Attend Book Launch
                     </a>
@@ -188,7 +188,7 @@ class HealthDesignThinkingBook extends Component {
                   <a
                     href="https://www.eventbrite.com/e/making-healthcare-beautiful-by-design-tickets-91909456659"
                     rel="noreferrer"
-                    className="button button--primary margin-top--double margin-bottom--half  button--block margin-right"
+                    className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
                   >
                     Attend Book Launch
                   </a>

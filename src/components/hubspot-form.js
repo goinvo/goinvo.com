@@ -21,7 +21,7 @@ class HubspotForm extends Component {
             portalId="356419"
             formId={this.props.formId}
             css=""
-            submitButtonClass="button button--primary button--block"
+            submitButtonClass="button button--secondary button--block"
             translations={{
               en: {
                 required: 'Please fill out this field',

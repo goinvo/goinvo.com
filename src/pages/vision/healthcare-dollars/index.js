@@ -71,7 +71,7 @@ class HealthcareDollars extends Component {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
+                  className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
                 >
                   Download Poster
                 </a>

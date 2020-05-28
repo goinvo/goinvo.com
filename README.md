@@ -465,7 +465,7 @@ Adding buttons is as straightforward as adding a `button` and `button-primary` c
     href={mediaUrl(
       '/pdf/vision/your-feature-url/your-feature.pdf'
     )}
-    className="button button--primary margin-top--double margin-bottom--double"
+    className="button button--secondary margin-top--double margin-bottom--double"
   >
     Download
   </a>

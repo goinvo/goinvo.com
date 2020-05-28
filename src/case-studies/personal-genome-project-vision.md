@@ -36,7 +36,7 @@ The workshop led to a refocused mission and restructuring for the PGP and the cr
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 2 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Precision Medicine and Genomics, Open Source
 <br />
-<a href="http://www.openhumans.org" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">OpenHumans</a>
+<a href="http://www.openhumans.org" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg">OpenHumans</a>
 
 <Divider />
 

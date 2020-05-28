@@ -42,7 +42,7 @@ class VapepocolypseFeature extends Component {
               <div className="button-group">
                 <a
                   href={mediaUrl('/pdf/vision/vapepocolypse/Vapepocolypse.pdf')}
-                  className="button button--primary margin-top--double margin-bottom--double"
+                  className="button button--secondary margin-top--double margin-bottom--double"
                 >
                   Download Poster
                 </a>

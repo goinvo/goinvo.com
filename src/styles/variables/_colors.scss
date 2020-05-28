@@ -11,6 +11,7 @@ $color-teal: #007385;
 $color-red: #d62e17;
 
 $color-primary: $color-orange;
+$color-primary--dark: darken($color-primary, 5%);
 $color-primary--light: lighten(
   saturate(adjust-hue($color-primary, -1), 17.67),
   29.8

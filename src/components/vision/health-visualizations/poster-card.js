@@ -31,7 +31,7 @@ class PosterCard extends Component {
           <h4 className="header--sm margin-top--none">{title}</h4>
           <a
             href={downloadLink}
-            className="button button--primary button--block"
+            className="button button--secondary button--block"
           >
             Download
           </a>

@@ -36,8 +36,8 @@ Flux Notes demonstrates an innovative method of capturing high fidelity structur
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 10 months, ongoing
 <br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & Infrastructure, Open Source
 <br />
-<a href="https://fluxnotes.org/ " target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">Flux Notes website</a>
-<a href="https://github.com/FluxNotes/flux" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
+<a href="https://fluxnotes.org/ " target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg">Flux Notes website</a>
+<a href="https://github.com/FluxNotes/flux" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
 
 <Divider />
 

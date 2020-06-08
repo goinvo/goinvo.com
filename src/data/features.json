@@ -1,5 +1,16 @@
 [
   {
+    "id": "test-treat-trace",
+    "title": "Test. Treat. Trace.",
+    "date": "Jun.2020",
+    "client": "Feature",
+    "categories": ["public-health-and-policy"],
+    "caption": "The strategy to defeat pandemic viruses.",
+    "image": "/images/features/test-treat-trace/test-treat-trace-header-1.jpg",
+    "link": "/vision/test-treat-trace/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "physician-burnout",
     "title": "Physician Burnout: The Silent Killer",
     "date": "May.2020",

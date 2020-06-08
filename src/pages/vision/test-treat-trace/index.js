@@ -10,7 +10,8 @@ import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Test. Treat. Trace. The strategy to defeat pandemic viruses.',
+  metaTitle:
+    'Test. Treat. Trace. The strategy to defeat pandemic viruses like COVID-19.',
   metaDescription:
     'As new treatments and vaccines are developed, containing virus spread is critical. We need a comprehensive approach of testing, treating, and tracing as a core backbone to response.',
   heroImage: '/images/features/test-treat-trace/test-treat-trace-header-1.jpg',
@@ -78,7 +79,7 @@ class TestTreatTraceFeature extends Component {
                     title:
                       'Simmons-Duffin, S. (2020, May 7). States Nearly Doubled Plans For Contact Tracers Since NPR Surveyed Them 10 Days Ago. Retrieved May 29, 2020, from',
                     link:
-                      'https://www.npr.org/sections/health-shots/2020/05/07/851610771/u-s-coronavirus-testing-still-falls-short-hows-your-state-doing#res851618829',
+                      'https://www.npr.org/sections/health-shots/2020/04/28/846736937/we-asked-all-50-states-about-their-contact-tracing-capacity-heres-what-we-learne',
                   },
                   {
                     title:

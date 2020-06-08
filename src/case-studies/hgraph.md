@@ -71,7 +71,9 @@ Based on an individual’s health data, hGraph identifies where an individual’
 
 #### Crunching the numbers of analytics
 
-According to McKinsey & Co. US healthcare costs topped $2.6 trillion in 2011 (The Big Data Revolution in US Healthcare). In the same year healthcare expenses represented 18.2% of GDP, a record high. That’s over $600 billion more than the expected benchmark for a nation of the United States’ size and wealth. They calculate early adoption of innovative tools like hGraph could help reduce the soaring cost of healthcare by $160-220 billion. Innovative, software-driven measures that target disease prevention and enable data adherence could save anywhere between $70–100 billion, while \$90-110 billion could be saved by programs that coordinate care across all healthcare providers and align those providers around proven pathways.
+<!-- prettier-ignore-start -->
+According to McKinsey & Co. US healthcare costs topped $2.6 trillion in 2011 (The Big Data Revolution in US Healthcare). In the same year healthcare expenses represented 18.2% of GDP, a record high. That’s over $600 billion more than the expected benchmark for a nation of the United States’ size and wealth. They calculate early adoption of innovative tools like hGraph could help reduce the soaring cost of healthcare by $160-220 billion. Innovative, software-driven measures that target disease prevention and enable data adherence could save anywhere between $70–100 billion, while $90-110 billion could be saved by programs that coordinate care across all healthcare providers and align those providers around proven pathways.
+<!-- prettier-ignore-end -->
 
 However, those waiting for the US Healthcare system to be the leaders of change might be in for a very long wait. Business, both big and small, are quicker when it comes to seeing the need and cost-saving opportunities of hGraph.
 

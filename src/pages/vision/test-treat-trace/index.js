@@ -50,7 +50,7 @@ class TestTreatTraceFeature extends Component {
                   href={mediaUrl(
                     '/pdf/vision/test-treat-trace/Test-Treat-Trace-8Jun2020.pdf'
                   )}
-                  className="button button--primary margin-top--double margin-bottom--double"
+                  className="button button--secondary margin-top--double margin-bottom--double"
                 >
                   Download Poster
                 </a>

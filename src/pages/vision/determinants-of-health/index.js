@@ -13,6 +13,7 @@ import Chart from '../../../components/vision/determinants-of-health/chart'
 import DeterminantDetails from '../../../components/vision/determinants-of-health/determinant-details'
 
 import config from '../../../../config'
+import { mediaUrl } from '../../../helpers'
 
 const frontmatter = {
   metaTitle: 'Determinants of Health Visualized',
@@ -92,7 +93,9 @@ class DeterminantsOfHealthFeature extends Component {
                 </div>
                 <div className="button-group">
                   <a
-                    href="https://github.com/goinvo/HealthDeterminants/blob/master/poster/Spanish/determinantes_de_la_salud_42x50.pdf"
+                    href={mediaUrl(
+                      '/pdf/vision/posters/determinantes_de_la_salud_42x50.pdf'
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button button--primary button--lg margin-bottom--double button--block"
@@ -160,7 +163,9 @@ class DeterminantsOfHealthFeature extends Component {
               </div>
               <div className="button-group">
                 <a
-                  href="https://github.com/goinvo/HealthDeterminants/blob/master/poster/Spanish/determinantes_de_la_salud_42x50.pdf"
+                  href={mediaUrl(
+                    '/pdf/vision/posters/determinantes_de_la_salud_42x50.pdf'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--primary button--lg margin-bottom--double button--block"

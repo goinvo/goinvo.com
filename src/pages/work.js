@@ -196,7 +196,7 @@ class WorkPage extends Component {
         >
           {this.state.categoriesStuck ? (
             <button
-              className="button button--primary button--bg-white button--block"
+              className="button button--secondary button--bg-white button--block"
               onClick={this.toggleCategories}
               ref={this.categoryDropdownButton}
             >
@@ -281,7 +281,7 @@ class WorkPage extends Component {
                   </p>
                   <Link
                     to="/vision/open-source-healthcare/"
-                    className="button button--primary button--lg margin-top"
+                    className="button button--secondary button--lg margin-top"
                   >
                     Check out our open source journal
                   </Link>
@@ -401,9 +401,6 @@ const mapDispatchToProps = dispatch => {
   return { setCategory: value => dispatch({ type: `SET_CATEGORY`, value }) }
 }
 
-const ConnectedWorkPage = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(WorkPage)
+const ConnectedWorkPage = connect(mapStateToProps, mapDispatchToProps)(WorkPage)
 
 export default ConnectedWorkPage

@@ -28,6 +28,32 @@
   }
 
   &--primary {
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    color: $color-white;
+
+    .icon {
+      fill: $color-white;
+    }
+
+    &:hover {
+      background-color: $color-primary--dark;
+      border: 1px solid $color-primary--dark;
+      color: $color-white;
+    }
+
+    &:active {
+      background-color: $color-primary--dark;
+      border-color: $color-primary--dark;
+      color: $color-white;
+
+      .icon {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &--secondary {
     border: 1px solid $color-primary--light;
     color: $color-primary;
 

@@ -114,7 +114,7 @@ class OpenSourceHealthcareFeature extends Component {
                       href={mediaUrl(
                         '/pdf/vision/open-source-healthcare/open-source-healthcare-journal.pdf'
                       )}
-                      className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
+                      className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
                     >
                       Download 25 MB PDF
                     </a>
@@ -124,7 +124,7 @@ class OpenSourceHealthcareFeature extends Component {
                       href="http://www.blurb.com/b/8980724-open-source-healthcare-journal"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
+                      className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
                     >
                       $12 Blurb Magazine
                     </a>

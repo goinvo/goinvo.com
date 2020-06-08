@@ -43,8 +43,8 @@ An open source, accessible, lightweight design policy for electronic health reco
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer and engineer over 18 months<br/>
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & infrastructure, Open Source
 <br />
-<a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">Read the book</a>
-<a href="https://github.com/goinvo/EHR" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half">View the code</a>
+<a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg">Read the book</a>
+<a href="https://github.com/goinvo/EHR" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half">View the code</a>
 
 <Divider />
 
@@ -118,4 +118,4 @@ _Inspired EHRs: Designing for Clinicians_ offers inspiration and design principl
 
 ![Book](/images/case-studies/nih/inspired-ehrs/ehr-book.jpg)
 
-<div class="text--center"><a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg center">Read the book</a></div>
+<div class="text--center"><a href="http://inspiredehrs.org/" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg center">Read the book</a></div>

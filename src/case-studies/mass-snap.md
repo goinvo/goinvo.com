@@ -43,7 +43,7 @@ We designed an application that’s fully compliant with [WCAG](https://www.w3.o
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 12 weeks, 2 engineers for 10 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Public health & policy
 <br />
-<a href="https://dtaconnect.eohhs.mass.gov/?_ga=2.253579721.1938704760.1538663360-447556880.1535061795" target="blank" rel="noopener noreferrer" class="button button--primary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View live app</a>
+<a href="https://dtaconnect.eohhs.mass.gov/?_ga=2.253579721.1938704760.1538663360-447556880.1535061795" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View live app</a>
 
 <Divider />
 

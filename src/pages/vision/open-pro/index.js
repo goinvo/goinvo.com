@@ -330,7 +330,7 @@ class openPro extends Component {
                   href="https://github.com/goinvo/openPRO"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button button--primary margin-top--double margin-bottom--double"
+                  className="button button--secondary margin-top--double margin-bottom--double"
                 >
                   Contribute on GitHub
                 </a>

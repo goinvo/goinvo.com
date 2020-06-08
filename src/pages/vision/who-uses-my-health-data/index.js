@@ -72,7 +72,7 @@ class HealthDataUseFeature extends Component {
                   href={mediaUrl(
                     '/pdf/vision/health-data-use/health-data-use-poster-medium.pdf'
                   )}
-                  className="button button--primary margin-top--double margin-bottom--double"
+                  className="button button--secondary margin-top--double margin-bottom--double"
                 >
                   Download Poster
                 </a>

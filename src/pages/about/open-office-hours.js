@@ -44,7 +44,7 @@ class OpenOfficeHoursPage extends Component {
               </p>
               <a
                 href="#calendly-open-office-hours"
-                className="button button--primary button--lg"
+                className="button button--secondary button--lg"
               >
                 Choose a time to chat
               </a>

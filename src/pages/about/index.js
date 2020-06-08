@@ -117,7 +117,7 @@ const AboutPage = () => (
             />
             <Link
               to="/about/open-office-hours/"
-              className="button button--primary button--block margin-bottom--double hidden--lg"
+              className="button button--secondary button--block margin-bottom--double hidden--lg"
             >
               Schedule a chat
             </Link>
@@ -131,7 +131,7 @@ const AboutPage = () => (
             />
             <Link
               to="/about/careers/"
-              className="button button--primary button--block margin-bottom--double hidden--lg"
+              className="button button--secondary button--block margin-bottom--double hidden--lg"
             >
               Careers
             </Link>
@@ -141,7 +141,7 @@ const AboutPage = () => (
           <div className="pure-u-1 pure-u-lg-1-2 pad-right">
             <Link
               to="/about/open-office-hours/"
-              className="button button--primary button--block"
+              className="button button--secondary button--block"
             >
               Schedule a chat
             </Link>
@@ -149,7 +149,7 @@ const AboutPage = () => (
           <div className="pure-u-1 pure-u-lg-1-2 pad-left">
             <Link
               to="/about/careers/"
-              className="button button--primary button--block"
+              className="button button--secondary button--block"
             >
               Careers
             </Link>
@@ -190,7 +190,7 @@ const AboutPage = () => (
               </p>
               <Link
                 to="/about/careers/"
-                className="button button--primary button--lg margin-bottom"
+                className="button button--secondary button--lg margin-bottom"
               >
                 Learn about careers
               </Link>

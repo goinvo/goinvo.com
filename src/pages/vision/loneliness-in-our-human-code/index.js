@@ -74,7 +74,7 @@ class LonelinessFeature extends Component {
                   href={mediaUrl(
                     '/pdf/vision/loneliness-in-our-human-code/loneliness-in-our-human-code.pdf'
                   )}
-                  className="button button--primary margin-top--double margin-bottom--double"
+                  className="button button--secondary margin-top--double margin-bottom--double"
                 >
                   Download PDF
                 </a>

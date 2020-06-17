@@ -14,7 +14,7 @@ const frontmatter = {
     'Test. Treat. Trace. The strategy to defeat pandemic viruses like COVID-19.',
   metaDescription:
     'As new treatments and vaccines are developed, containing virus spread is critical. We need a comprehensive approach of testing, treating, and tracing as a core backbone to response.',
-  heroImage: '/images/features/test-treat-trace/test-treat-trace-header-1.jpg',
+  heroImage: '/images/features/test-treat-trace/test-treat-trace-header-2.jpg',
 }
 
 class TestTreatTraceFeature extends Component {
@@ -32,13 +32,13 @@ class TestTreatTraceFeature extends Component {
               <div className="poster margin-top--double">
                 <a
                   href={mediaUrl(
-                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-8Jun2020.pdf'
+                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-17Jun2020.pdf'
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image
-                    src="/images/features/test-treat-trace/test-treat-trace-1.jpg"
+                    src="/images/features/test-treat-trace/test-treat-trace-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
                   />
@@ -48,7 +48,7 @@ class TestTreatTraceFeature extends Component {
               <div className="button-group">
                 <a
                   href={mediaUrl(
-                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-8Jun2020.pdf'
+                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-17Jun2020.pdf'
                   )}
                   className="button button--secondary margin-top--double margin-bottom--double"
                 >
@@ -98,6 +98,11 @@ class TestTreatTraceFeature extends Component {
                       'The National Association of County and City Health Officials’ Position Statement on Public Health Capacity for COVID-19 Contact Tracing Surge. Retrieved from',
                     link:
                       'https://www.naccho.org/uploads/downloadable-resources/Contact-Tracing-Position-Media-Release_4.16.20.pdf',
+                  },
+                  {
+                    title: 'Contact tracing. (n.d.). Retrieved from',
+                    link:
+                      'https://www.who.int/news-room/q-a-detail/contact-tracing',
                   },
                 ]}
               />

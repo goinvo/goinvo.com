@@ -62,11 +62,25 @@ class VisionPage extends Component {
       ),
       // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
       // recentBlogPostImage: '',
+      demands: [],
     }
   }
 
   componentDidMount() {
     this.getBlogFeed()
+    this.getDemands()
+  }
+
+  getDemands = () => {
+    axios
+      .get('https://listofdemands.us/GoInvo.json')
+      .then(res => {
+        console.log(res.data)
+        this.setState({ demands: res.data })
+      })
+      .catch(err => {
+        console.log("Couldn't fetch GoInvo demands from ListOfDemands.us", err)
+      })
   }
 
   getBlogFeed = () => {
@@ -201,6 +215,13 @@ class VisionPage extends Component {
           </div>
         </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">
+          {/* {this.state.demands.length ? (
+            <div>
+              {this.state.demands.map(demand => {
+                return <div>{demand.demand_description}</div>
+              })}
+            </div>
+          ) : null} */}
           <h3 className="header--md pad-vertical--double">Spotlight</h3>
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">

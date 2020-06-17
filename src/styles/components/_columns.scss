@@ -1,4 +1,5 @@
 .columns {
+  $parent: &;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -22,6 +23,20 @@
     &--3 {
       @include mq($from: large) {
         flex-basis: calc(33.33% - #{$spacing * 0.66});
+      }
+    }
+  }
+
+  &--strict {
+    #{$parent}__item--2 {
+      @include mq($from: medium) {
+        width: calc(50% - #{$spacing / 2});
+      }
+    }
+
+    #{$parent}__item--3 {
+      @include mq($from: large) {
+        width: calc(33.33% - #{$spacing * 0.66});
       }
     }
   }

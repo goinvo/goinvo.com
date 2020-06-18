@@ -32,7 +32,7 @@ class TestTreatTraceFeature extends Component {
               <div className="poster margin-top--double">
                 <a
                   href={mediaUrl(
-                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-17Jun2020.pdf'
+                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-18Jun2020.pdf'
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -48,7 +48,7 @@ class TestTreatTraceFeature extends Component {
               <div className="button-group">
                 <a
                   href={mediaUrl(
-                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-17Jun2020.pdf'
+                    '/pdf/vision/test-treat-trace/Test-Treat-Trace-18Jun2020.pdf'
                   )}
                   className="button button--secondary margin-top--double margin-bottom--double"
                 >

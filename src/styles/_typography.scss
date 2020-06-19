@@ -85,6 +85,14 @@ body {
     color: $color-black;
   }
 
+  &--demand-red {
+    color: $color-demand--red;
+  }
+
+  &--demand-blue {
+    color: $color-demand--blue;
+  }
+
   &--caption {
     @extend .text--gray;
     @extend .text--sm;

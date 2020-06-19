@@ -1,0 +1,26 @@
+.demand {
+  padding: $spacing $spacing 0;
+  word-break: break-word;
+
+  &__title {
+    @extend .text--lg;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: $font-weight--bold;
+  }
+
+  &--healthcare {
+    color: $color-demand--red;
+
+    &:hover {
+      color: $color-demand--red;
+    }
+  }
+  &--studio {
+    color: $color-demand--blue;
+
+    &:hover {
+      color: $color-demand--blue;
+    }
+  }
+}

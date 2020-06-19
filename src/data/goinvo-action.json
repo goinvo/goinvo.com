@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "demand_description": "Establish Health Picture",
+    "solution": "standard view of a patient"
+  },
+  {
+    "id": 2,
+    "demand_description": "Form National Health Literacy Agency",
+    "solution": "open source graphic vocabulary"
+  },
+  {
+    "id": 3,
+    "demand_description": "Design Data Ownership Contract",
+    "solution": "health literacy for digital clinical services"
+  },
+  {
+    "id": 4,
+    "demand_description": "Map the Healthcare System",
+    "solution": "public 'how it works' service"
+  },
+  {
+    "id": 5,
+    "demand_description": "Build Healthcare Symbol Set",
+    "solution": "national, open source figure collection"
+  }
+]

@@ -20,6 +20,13 @@ class Demand extends Component {
       >
         <h4 className="demand__title">{data.demand_description}</h4>
         <p>{data.solution}</p>
+        {data.link ? (
+          <div className="demand__link">
+            <a href={data.link} target="_blank" rel="noopener noreferrer">
+              See Legislation
+            </a>
+          </div>
+        ) : null}
       </Card>
     )
   }

@@ -55,6 +55,16 @@ class TestTreatTraceFeature extends Component {
                   Download Poster
                 </a>
               </div>
+              <div>
+                <h2 className="header--lg text--center margin-top--double">
+                  Feedback from...
+                </h2>
+                <ul className="ul">
+                  <li>Peter Jones</li>
+                  <li>Danny van Leeuwen</li>
+                  <li>Dafna Gold Melchior</li>
+                </ul>
+              </div>
               <References
                 references={[
                   {

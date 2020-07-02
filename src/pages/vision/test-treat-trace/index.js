@@ -57,7 +57,7 @@ class TestTreatTraceFeature extends Component {
               </div>
               <div>
                 <h2 className="header--lg text--center margin-top--double">
-                  Feedback from...
+                  Thank you for the feedback from...
                 </h2>
                 <ul className="ul">
                   <li>Peter Jones</li>

@@ -49,6 +49,9 @@ class PrecisionAutismFeature extends Component {
                   Download Poster
                 </a>
               </div>
+              <p className="text--center text--gray">
+                Licensed under Creative Commons Attribution v4
+              </p>
             </div>
             <div className="content-padding">
               <iframe

@@ -12,14 +12,14 @@ const frontmatter = {
   metaTitle: 'Precision Autism',
   metaDescription:
     'Our open source visual depiction of the history of autism, and how precision medicine will help to define, manage, and treat the condition.',
-  heroImage: '/images/features/precision-autism/precision-autism-hero.jpg',
+  heroImage: '/images/features/precision-autism/hero-precision-autism-2.jpg',
 }
 
 class PrecisionAutismFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <Hero image={frontmatter.heroImage} position="top center" />
+        <Hero image={frontmatter.heroImage} position="bottom center" />
         <div className="precision-autism">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

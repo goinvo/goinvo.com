@@ -1,5 +1,14 @@
 [
   {
+    "id": "precision-autism",
+    "title": "Precision Autism",
+    "date": "Aug.2020",
+    "caption": "Our open source visual depiction of the history of autism, and how precision medicine will help to define, manage, and treat the condition.",
+    "image": "/images/features/precision-autism/precision-autism.jpg",
+    "downloadLink": "/pdf/vision/precision-autism/Precision-Autism-25.Aug.2020.pdf",
+    "learnMoreLink": "/vision/precision-autism/"
+  },
+  {
     "id": "test-treat-trace",
     "title": "Test. Treat. Trace.",
     "date": "Jun.2020",

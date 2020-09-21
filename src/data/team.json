@@ -96,14 +96,14 @@
     "image": "/images/about/headshot-meghana-karande.jpg"
   },
   {
-    "name": "Patricia Nguyen",
-    "title": "Designer",
-    "bio": "Patricia Nguyen is a designer who works at the intersection of art and science to create beautiful and impactful healthcare software experiences. Born near Paris, she has lived in France and Canada. Patricia is a graduate of McMaster University with a BS in Kinesiology, and has a Masters in Biomedical Communications from the University of Toronto.",
+    "name": "Hannah Sennik",
+    "title": "Designer, Engineer",
+    "bio": "Hannah Sennik drives a rare trio of skills: bioengineering, systems design, and art. After a BASc of Systems Design Engineering from Waterloo, she joined Apple Computer to calibrate, instrument, and test hardware and software designs. A MSE in BioEngineering Design from Johns Hopkins University pushes Hannah's goal of combining design, healthcare, and system engineering into one brain.",
     "social": {
-      "email": "patricia@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/patricia-nguyen-281351a2"
+      "email": "hannah@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/hannah-sennik/"
     },
-    "image": "/images/about/headshot-patricia-nguyen.jpg"
+    "image": "/images/about/headshot-hannah-sennik.jpg"
   },
   {
     "name": "Jonathan Follett",

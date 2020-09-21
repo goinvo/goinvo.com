@@ -1,5 +1,15 @@
 [
   {
+    "name": "Patricia Nguyen",
+    "title": "Designer",
+    "bio": "Patricia Nguyen is a designer who works at the intersection of art and science to create beautiful and impactful healthcare software experiences. Born near Paris, she has lived in France and Canada. Patricia is a graduate of McMaster University with a BS in Kinesiology, and has a Masters in Biomedical Communications from the University of Toronto.",
+    "social": {
+      "email": "patricia@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/patricia-nguyen-281351a2"
+    },
+    "image": "/images/about/headshot-patricia-nguyen.jpg"
+  },
+  {
     "name": "Farah Hamade",
     "title": "Designer",
     "bio": "Farah Hamade is a biomedical designer. She has a neurobio BS from from UC Davis, and is working on a MSc in BioMed from University of Toronto. Farah's skill combination of physiology, behavior, and illustration drives her healthcare design eye.",

@@ -225,6 +225,18 @@ const AboutPage = () => (
     </div>
     <div className="max-width content-padding pad-bottom--double pad-vertical--quad--only-lg">
       <div className="pure-g">
+        <iframe
+          width="956"
+          height="538"
+          src="https://my.matterport.com/show/?m=dbnEE1ZHex8&brand=0"
+          frameborder="0"
+          allowfullscreen
+          allow="xr-spatial-tracking"
+        ></iframe>
+      </div>
+    </div>
+    <div className="max-width content-padding pad-bottom--double pad-vertical--quad--only-lg">
+      <div className="pure-g">
         <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
           <div className="pad-left--only-lg">
             <h3 className="header--md text--center text--md">Our Story</h3>

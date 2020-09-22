@@ -226,6 +226,7 @@ const AboutPage = () => (
     <div className="max-width content-padding pad-bottom--double pad-vertical--quad--only-lg">
       <div className="pure-g">
         <iframe
+          title="GoInvo Tour"
           width="956"
           height="538"
           src="https://my.matterport.com/show/?m=dbnEE1ZHex8&brand=0"

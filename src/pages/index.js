@@ -23,7 +23,7 @@ const frontmatter = {
   metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
   metaDescription:
     'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
-  heroImage: '/images/homepage/hero-critical-mass.jpg',
+  heroImage: '/images/homepage/hero-critical-mass-3.jpg',
   heroButtonText: 'See Our Work',
 }
 

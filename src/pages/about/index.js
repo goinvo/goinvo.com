@@ -229,7 +229,7 @@ const AboutPage = () => (
           title="GoInvo Tour"
           width="956"
           height="538"
-          src="https://my.matterport.com/show/?m=dbnEE1ZHex8&brand=0"
+          src="https://my.matterport.com/show/?m=KDRR1E7jZwf"
           frameborder="0"
           allowfullscreen
           allow="xr-spatial-tracking"

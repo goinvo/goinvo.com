@@ -67,7 +67,11 @@ class HealthDesignThinkingBook extends Component {
                 Work from the past decade of the GoInvo Studio's practice is
                 highlighted in the diverse case studies that make up the new
                 book "
-                <a href="https://mitpress.mit.edu/books/health-design-thinking">
+                <a
+                  href="https://mitpress.mit.edu/books/health-design-thinking"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Health Design Thinking
                 </a>
                 ," co-written by Ellen Lupton and Dr. Bon Ku, and published by
@@ -93,24 +97,14 @@ class HealthDesignThinkingBook extends Component {
             <div className="max-width max-width--md content-padding">
               <div className="margin-bottom--double">
                 <div className="pure-g button-group margin-bottom--double">
-                  <div className="pure-u-1 pure-u-lg-1-2">
-                    <a
-                      href="https://mitpress.mit.edu/books/health-design-thinking"
-                      rel="noreferrer"
-                      className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
-                    >
-                      Pre-Order At MIT Press
-                    </a>
-                  </div>
-                  <div className="pure-u-1 pure-u-lg-1-2">
-                    <a
-                      href="https://www.eventbrite.com/e/making-healthcare-beautiful-by-design-tickets-91909456659"
-                      rel="noreferrer"
-                      className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
-                    >
-                      Attend Book Launch
-                    </a>
-                  </div>
+                  <a
+                    href="https://mitpress.mit.edu/books/health-design-thinking"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
+                  >
+                    Order At MIT Press
+                  </a>
                 </div>
               </div>
             </div>
@@ -180,20 +174,6 @@ class HealthDesignThinkingBook extends Component {
                 attendees to think like designers and embrace the art of
                 listening and the joy of making.
               </p>
-            </div>
-
-            <div className="margin-bottom--double">
-              <div className="pure-g button-group margin-bottom--double">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <a
-                    href="https://www.eventbrite.com/e/making-healthcare-beautiful-by-design-tickets-91909456659"
-                    rel="noreferrer"
-                    className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
-                  >
-                    Attend Book Launch
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 

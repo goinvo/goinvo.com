@@ -28,6 +28,14 @@ class OpenSourceHealthcareFeature extends Component {
               <div className="oshc-title-area">
                 <h1 className="header--xl">Open Source Healthcare</h1>
                 <h4 className="header--sm">We must set healthcare free</h4>
+                <a
+                  href="https://opensourcehealthcare.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--double"
+                >
+                  Read now
+                </a>
                 <p className="text--gray">
                   Open source is something that anyone can change and share,
                   because it’s publicly available under a generous license.

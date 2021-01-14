@@ -87,11 +87,7 @@ class HealthDesignThinkingBook extends Component {
                   Social Determinants of Health
                 </a>
                 , and instructional design work for{' '}
-                <a
-                  href="https://www.goinvo.com/features/ebola-care-guideline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="https://www.goinvo.com/features/ebola-care-guideline">
                   Ebola medical team preparedness
                 </a>
                 .
@@ -178,21 +174,6 @@ class HealthDesignThinkingBook extends Component {
                 attendees to think like designers and embrace the art of
                 listening and the joy of making.
               </p>
-            </div>
-
-            <div className="margin-bottom--double">
-              <div className="pure-g button-group margin-bottom--double">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <a
-                    href="https://www.eventbrite.com/e/making-healthcare-beautiful-by-design-tickets-91909456659"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
-                  >
-                    Attend Book Launch
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 

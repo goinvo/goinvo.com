@@ -1,5 +1,16 @@
 [
   {
+    "id": "us-healthcare-problems",
+    "title": "US Healthcare Problems",
+    "date": "Jan.2021",
+    "client": "Feature",
+    "categories": [],
+    "caption": "The United States is home to some of the best and worst care. The list serves as a call to action for everyone to close the gap.",
+    "image": "/images/features/precision-autism/precision-autism.jpg",
+    "link": "/vision/us-healthcare-problems/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "precision-autism",
     "title": "Precision Autism",
     "date": "Aug.2020",

@@ -58,7 +58,7 @@ class USHealthcareProblemsFeature extends Component {
           <div className="max-width pad-vertical--double">
             <iframe
               class="airtable-embed"
-              src="https://airtable.com/embed/shrN0KZBQsPyNOB5X?backgroundColor=gray&viewControls=on"
+              src="https://airtable.com/embed/shrE0r9pF2A7UdkVB?backgroundColor=gray&viewControls=on"
               frameborder="0"
               onmousewheel=""
               width="100%"

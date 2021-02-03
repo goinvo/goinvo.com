@@ -84,8 +84,8 @@ MITRE open sourced the US Healthcare Dashboard experience so other government ag
 
 An analysis of current health indicators was compiled in a single online repository, available for anyone to use across the planet.
 
-![US health indicator research](/images/case-studies/mitre/state-of-us-healthcare/mitre_us_health_indicators_research.jpg)
-[View the Health Indicators spreadsheet](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing)
+[![US health indicator research](/images/case-studies/mitre/state-of-us-healthcare/mitre_us_health_indicators_research.jpg)](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing)
+[View the Health Indicators spreadsheett](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing)
 
 <Video
 sources={[

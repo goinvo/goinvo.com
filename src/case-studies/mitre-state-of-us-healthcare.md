@@ -28,7 +28,7 @@ The major issues and statistics for US healthcare are tough to understand and se
 
 ### Solution
 
-An interactive healthcare story engine that help scientists to showcase their work in context of national problem sets and information.
+An interactive healthcare story engine that help researchers and scientists to showcase their work in context of national problem sets and information.
 
 ### Results
 
@@ -37,7 +37,8 @@ We designed and shipped an open source touch screen service to show public healt
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2.5 designers/engineers for 12 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Public health & policy, Interactive wall, Open source
 <br />
-<a href="https://github.com/mitre/OpenHealthDashboard" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View demo</a>
+<a href="http://clients.goinvo.com/mitre/state-of-us-healthcare/" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right">View Demo</a>
+<a href="https://github.com/mitre/OpenHealthDashboard" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right">View Github</a>
 
 <Divider />
 
@@ -45,11 +46,11 @@ We designed and shipped an open source touch screen service to show public healt
 
 #### Seeing National Problems with a flick of a finger
 
-Located across the street from the Centers for Medicare and Medicaid in Baltimore, and a hub of healthcare policy meetings, the MITRE HealthLab needed an interactive, visual story engine to walkthrough national healthcare issues, statistics, and projects.
+Located across the street from the Centers for Medicare and Medicaid in Baltimore, the MITRE HealthLab, a hub of healthcare policy meetings, needed an interactive, visual story engine to walk through national healthcare issues, statistics, and projects.
 
 #### Look across the nation, act locally
 
-Using global, national, and local data sources, together we crafted key questions and US Healthcare storylines.
+Using global, national, and local data sources, we crafted key questions and US Healthcare storylines.
 
 ![A draft of the topics and categories for the dashboard.](/images/case-studies/mitre/state-of-us-healthcare/mitre_us_health_topics_and_metrics.jpg)
 
@@ -65,9 +66,9 @@ Storylines were first written in short paragraph form, evolved through and accom
 
 #### Large scale technical storytelling, for a technical audience
 
-A 12-LCD panel wide touchscreen data wall was the primary display for healthcare walk-throughs. The company that provided the interactive panels hogties the software by making it impossible to customize the customer experience… unless they are contracted to design and engineer the new functions. Their customer service for everyday problems was very good; the business model is a detriment to innovation, self-curation, and evolving the software from outside their firewall.
+A touchscreen data wall made up of 12 LCD panels side by side was the primary display for healthcare walkthroughs. Because the touchscreen software limited customizable experiences, we worked with the company that provided the interactive panels to design and engineer the new functions. Although their customer service for everyday problems was very good; the business model at the root of the software limitations is a detriment to innovation, self-curation, and evolving the software from outside their firewall.
 
-We worked around this closed “feature” by extending the built-in Chrome browser to extend contiguously across all 12 touch screens. We then build a custom experience using open web standards at a fraction of the cost, pain, and time.
+We worked around this closed “feature” by extending the built-in Chrome browser to extend contiguously across all 12 touchscreens. We then developed a custom experience using open web standards at a fraction of the cost, pain, and time.
 
 ![Visual walkthrough of the design.](/images/case-studies/mitre/state-of-us-healthcare/mitre_open_health_design_spec.jpg)
 
@@ -79,9 +80,12 @@ We worked around this closed “feature” by extending the built-in Chrome brow
 
 MITRE open sourced the US Healthcare Dashboard experience so other government agencies and healthcare companies can use, update, and evolve the interactive stories.
 
-#### “Wow... that’s amazing!”
+#### Global Health Indicators List
 
-Easily seen from 70 feet away from the entrance of the building, the US Healthcare Dashboard draws in visitors and staff.
+An analysis of current health indicators was compiled in a single online repository, available for anyone to use across the planet.
+
+![US health indicator research](/images/case-studies/mitre/state-of-us-healthcare/mitre_us_health_indicators_research.jpg)
+[View the Health Indicators spreadsheet](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing)
 
 <Video
 sources={[

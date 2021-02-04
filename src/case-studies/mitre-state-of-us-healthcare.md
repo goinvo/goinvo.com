@@ -68,7 +68,7 @@ Storylines were first written in short paragraph form, evolved through and accom
 
 A touchscreen data wall made up of 12 LCD panels side by side was the primary display for healthcare walkthroughs. Because the touchscreen software limited customizable experiences, we worked with the company that provided the interactive panels to design and engineer the new functions. Although their customer service for everyday problems was very good; the business model at the root of the software limitations is a detriment to innovation, self-curation, and evolving the software from outside their firewall.
 
-We worked around this closed “feature” by extending the built-in Chrome browser to extend contiguously across all 12 touchscreens. We then developed a custom experience using open web standards at a fraction of the cost, pain, and time.
+We worked around this closed “feature” by extending the built-in Chrome browser to expand contiguously across all 12 touchscreens. We then developed a custom experience using open web standards at a fraction of the cost, pain, and time.
 
 ![Visual walkthrough of the design.](/images/case-studies/mitre/state-of-us-healthcare/mitre_open_health_design_spec.jpg)
 
@@ -82,10 +82,12 @@ MITRE open sourced the US Healthcare Dashboard experience so other government ag
 
 #### Global Health Indicators List
 
-An analysis of current health indicators was compiled in a single online repository, available for anyone to use across the planet.
+We conducted an analysis on metrics necessary to measure population health, and compiled a comprehensive repository of current health indicators, available online for anyone across the planet to use as a resource.
 
 [![US health indicator research](/images/case-studies/mitre/state-of-us-healthcare/mitre_us_health_indicators_research.jpg)](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing)
 [View the Health Indicators spreadsheet](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing)
+
+#### See It In Action
 
 <Video
 sources={[
@@ -96,3 +98,4 @@ poster="/images/case-studies/mitre/state-of-us-healthcare/mitre_open_health_dash
 fallback="/images/case-studies/mitre/state-of-us-healthcare/mitre_open_health_dashboard_demo.jpg"
 loop
 />
+<a href="http://clients.goinvo.com/mitre/state-of-us-healthcare/" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-bottom--double margin-right">View Demo</a>

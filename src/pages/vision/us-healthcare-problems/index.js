@@ -93,7 +93,7 @@ class USHealthcareProblemsFeature extends Component {
                 <p className="text--gray">
                   The US Healthcare Problems list began as a google spreadsheet
                   research effort, with sources including “The Long Fix” by
-                  Vivan Lee, CDC, and CMS. Our team aimed to pool relevant
+                  Vivian Lee, CDC, and CMS. Our team aimed to pool relevant
                   quantitative and anecdotal information for each outlined
                   problem, making it possible to start to prioritize what needs
                   addressing. Ideally, the move away from a fee-for-service

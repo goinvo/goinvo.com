@@ -4,7 +4,7 @@
     "title": "US Healthcare Problems",
     "date": "Mar.2021",
     "client": "Feature",
-    "categories": [],
+    "categories": ["open-source", "public-health-and-policy"],
     "caption": "The United States is home to some of the best and worst care. The list serves as a call to action for everyone to close the gap.",
     "image": "/images/features/us-healthcare-problems/us_healthcare_problems_hero_draft.jpg",
     "link": "/vision/us-healthcare-problems/",

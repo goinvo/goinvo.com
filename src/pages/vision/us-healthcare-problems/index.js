@@ -118,6 +118,15 @@ class USHealthcareProblemsFeature extends Component {
                 <Author name="Juhan Sonin" company="GoInvo, MIT" />
               </div>
 
+              <h3 className="header--md">Additional Contributors</h3>
+              <p>
+                Brad Dumke
+                <br />
+                Megan Janas
+                <br />
+                Susan Woods, MD
+              </p>
+
               <Divider />
 
               <div id="references"></div>

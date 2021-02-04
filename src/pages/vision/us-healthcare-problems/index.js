@@ -15,7 +15,8 @@ const frontmatter = {
   metaTitle: 'US Healthcare Problems',
   metaDescription:
     'The United States is home to some of the best and worst care. The list serves as a call to action for everyone to close the gap.',
-  heroImage: '/images/services/doh-preview.jpg',
+  heroImage:
+    '/images/features/us-healthcare-problems/us_healthcare_problems_hero_draft.jpg',
 }
 
 class USHealthcareProblemsFeature extends Component {
@@ -36,38 +37,16 @@ class USHealthcareProblemsFeature extends Component {
                 redesigned.
               </p>
               <p>
-                GoInvo has spent the last two months researching and breaking
-                down these problems. The result is a list ranked based on
-                several quantitative indicators, such as number of deaths,
-                number of American people impacted, and dollars spent or lost.
-                The interconnected nature of the US healthcare system makes it
+                The result of our research is a list ranked based on several
+                quantitative indicators, such as number of deaths, number of
+                American people impacted, and dollars spent or lost. The
+                interconnected nature of the US healthcare system makes it
                 nearly impossible to fully separate these problems. GoInvo has
                 coupled analytical skills and interest in health policy to bring
                 to light this complex web of menacing realities. Unsurprisingly,
                 all problems can be attributed to the fee-for-service system in
                 some way.
               </p>
-              <p>
-                GoInvo encourages you to be appalled by these statistics... and
-                then do something about it.
-              </p>
-            </div>
-
-            <div className="max-width max-width--md content-padding">
-              <div className="margin-bottom--double">
-                <div className="pure-g button-group margin-bottom">
-                  <div className="pure-u-1">
-                    <a
-                      href="https://table2site.com/site/us-healthcare-problems"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button button--secondary margin-top--double margin-bottom button--block"
-                    >
-                      Visit USHealthcareProblems.com
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -121,25 +100,12 @@ class USHealthcareProblemsFeature extends Component {
                   system and towards a value-based approach would alleviate some
                   of this burden.
                 </p>
-                <p>
-                  Fee-for-service: payment is dependent on the quantity of care
-                </p>
-                <p>Value-based: payment is dependent on the quality of care</p>
-                <p>
+                <p className="text--gray">
                   The initial ranking is based on the quantitative data as well
                   as the prevalence of the problem as explained in research. The
-                  next iteration will implement a more robust algorithm that
-                  considers all of these factors using relative weightings.
+                  next iteration will implement a more robust rank-order that
+                  considers more factors with relative weightings.
                 </p>
-                <p>
-                  Stay tuned for V02 where we will showcase the top 50 problems,
-                  include a method of visually connecting related problems, and
-                  showcase the current status of a problem being addressed.
-                </p>
-                <h3 className="header--md margin-bottom--half margin-top--double">
-                  v1 - 21.Jan.2021
-                </h3>
-                <p className="text--gray">the the the...</p>
               </div>
             </div>
           </div>
@@ -150,33 +116,11 @@ class USHealthcareProblemsFeature extends Component {
                 <h2 className="header--xl text--center">Authors</h2>
                 <Author name="Hannah Sennik" />
                 <Author name="Juhan Sonin" company="GoInvo, MIT" />
-
-                <h3 className="header--md">Contributors</h3>
-                <Author
-                  name="Anyone else?"
-                  company="???"
-                  image="/images/features/determinants-of-health/headshot-hrothgar.jpg"
-                >
-                  can add bio here.
-                </Author>
               </div>
 
               <Divider />
 
-              <div id="references">
-                <References
-                  references={[
-                    {
-                      title: 'you can write the first reference here',
-                      link: 'full url here',
-                    },
-                    {
-                      title: 'you can write the second reference here',
-                      link: 'full url here',
-                    },
-                  ]}
-                />
-              </div>
+              <div id="references"></div>
             </div>
           </div>
         </div>

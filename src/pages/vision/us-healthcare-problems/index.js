@@ -16,7 +16,7 @@ const frontmatter = {
   metaDescription:
     'The United States is home to some of the best and worst care. The list serves as a call to action for everyone to close the gap.',
   heroImage:
-    '/images/features/us-healthcare-problems/us_healthcare_problems_hero_draft.jpg',
+    '/images/features/us-healthcare-problems/us_healthcare_problems_hero_v01.jpg',
 }
 
 class USHealthcareProblemsFeature extends Component {

@@ -51,6 +51,26 @@ class USHealthcareProblemsFeature extends Component {
           </div>
 
           <div className="max-width pad-vertical--double">
+            <div className="problem">
+              <h2>
+                1. COVID-19 Continues To Kill
+                <a href="#">
+                  <sup>5</sup>
+                </a>
+                ,
+                <a href="#">
+                  <sup>12</sup>
+                </a>
+              </h2>
+              <p>
+                471K lives have been lost, 1.7T US government dollars have been
+                spent, $3-4T in US GDP is projected to be lost over the next 2
+                years, and the US unemployment rate is almost double what it was
+                in 2019, with one-third of the total unemployed now categorized
+                as long-term.
+              </p>
+              <p>471K Deaths - 328M People - $1.8T Spent</p>
+            </div>
             <iframe
               class="airtable-embed"
               src="https://airtable.com/embed/shrE0r9pF2A7UdkVB?backgroundColor=gray&viewControls=on"

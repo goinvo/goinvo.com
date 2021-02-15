@@ -106,6 +106,16 @@
     "image": "/images/about/headshot-hannah-sennik.jpg"
   },
   {
+    "name": "Elle Marcus",
+    "title": "Designer, Engineer",
+    "bio": "Elle is an engineer with a design eye. With mechanical engineering genes in machine design and bio-procurement, she now focuses on human performance, system engineering, and healthcare design. Elle received a MechE degree from Case Western Reserve University in 2016 and is working on a Masters of Design Innovation from MassArt due in 2022. She works on global open source projects and designs while cooking.",
+    "social": {
+      "email": "elle@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/ellemarcus/"
+    },
+    "image": "/images/about/headshot-elle-marcus.jpg"
+  },
+  {
     "name": "Jonathan Follett",
     "title": "Principal",
     "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",

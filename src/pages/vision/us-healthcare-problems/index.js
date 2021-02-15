@@ -8,6 +8,9 @@ import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
 
+import ProblemCard from '../../../components/vision/us-healthcare-problems/problem-card'
+import problems from '../../../data/vision/us-healthcare-problems/problems.json'
+
 import config from '../../../../config'
 import { mediaUrl } from '../../../helpers'
 
@@ -20,6 +23,14 @@ const frontmatter = {
 }
 
 class USHealthcareProblemsFeature extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      problemItems: problems,
+    }
+  }
+
   render() {
     return (
       <Layout frontmatter={frontmatter}>
@@ -51,9 +62,24 @@ class USHealthcareProblemsFeature extends Component {
           </div>
 
           <div className="max-width pad-vertical--double">
+            {this.state.problemItems.map((problem, i) => {
+              return (
+                <ProblemCard
+                  id={problem.id}
+                  title={problem.title}
+                  description={problem.description}
+                  deaths={problem.deaths}
+                  peopleImpacted={problem.peopleImpacted}
+                  spending={problem.spending}
+                  tags={problem.tags}
+                  references={problem.references}
+                />
+              )
+            })}
+
             <div className="problem">
               <h2>
-                1. COVID-19 Continues To Kill
+                1. COVID-19 continues to kill
                 <a href="#">
                   <sup>5</sup>
                 </a>
@@ -70,6 +96,26 @@ class USHealthcareProblemsFeature extends Component {
                 as long-term.
               </p>
               <p>471K Deaths - 328M People - $1.8T Spent</p>
+            </div>
+            <div className="problem">
+              <h2>
+                2. We pay a lot for a little
+                <a href="#">
+                  <sup>5</sup>
+                </a>
+                ,
+                <a href="#">
+                  <sup>12</sup>
+                </a>
+              </h2>
+              <p>
+                471K lives have been lost, 1.7T US government dollars have been
+                spent, $3-4T in US GDP is projected to be lost over the next 2
+                years, and the US unemployment rate is almost double what it was
+                in 2019, with one-third of the total unemployed now categorized
+                as long-term.
+              </p>
+              <p>328M People - $3.8T Spent</p>
             </div>
             <iframe
               class="airtable-embed"

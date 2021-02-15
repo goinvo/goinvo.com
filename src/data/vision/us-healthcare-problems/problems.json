@@ -1,0 +1,32 @@
+[
+  {
+    "id": "covid-19-continues-to-kill",
+    "title": "COVID-19 continues to kill",
+    "description": "471K lives have been lost, 1.7T US government dollars have been spent, $3-4T in US GDP is projected to be lost over the next 2 years, and the US unemployment rate is almost double what it was in 2019, with one-third of the total unemployed now categorized as long-term.",
+    "deaths": "471K",
+    "peopleImpacted": "328M",
+    "spending": "$1.7T",
+    "tags": "cost",
+    "references": ""
+  },
+  {
+    "id": "we-pay-a-lot-for-a-little",
+    "title": "We pay a lot for a little",
+    "description": "The United States spends more on healthcare in terms of %GDP than any other country  — yet has the lowest life expectancy, highest suicide rates, highest chronic disease burden and highest obesity rate out of all countries in the OECD (Organisation for Economic Co-operation and Development).",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$3.8T",
+    "tags": "quality",
+    "references": ""
+  },
+  {
+    "id": "preventive-care-is-prevented",
+    "title": "Preventive care is prevented",
+    "description": "This leads to both health and economic impact. When preventive care is not prioritized, patients get sicker, end up having to pay more for their care, and in a lot of cases, die. Economic productivity decreases when patients need to take time off of work to address preventable illness.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$260B",
+    "tags": "quality",
+    "references": ""
+  }
+]

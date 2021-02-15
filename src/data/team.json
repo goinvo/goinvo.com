@@ -67,10 +67,7 @@
     "social": {
       "email": "colleen@goinvo.com",
       "linkedin": "https://www.linkedin.com/in/colleen-tang-poy-12410893/",
-      "other": {
-        "link": "https://www.colspleen.com",
-        "text": "colspleen.com"
-      }
+      "portfolio": "https://www.colspleen.com"
     },
     "image": "/images/about/headshot-colleen-tang-poy.jpg"
   },

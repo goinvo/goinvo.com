@@ -63,6 +63,7 @@ class USHealthcareProblemsFeature extends Component {
             {this.state.problemItems.map((problem, i) => {
               return (
                 <ProblemCard
+                  number={i}
                   id={problem.id}
                   title={problem.title}
                   description={problem.description}
@@ -119,6 +120,16 @@ class USHealthcareProblemsFeature extends Component {
                   as the prevalence of the problem as explained in research. The
                   next iteration will implement a more robust rank-order that
                   considers more factors with relative weightings.
+                </p>
+                <p>
+                  <iframe
+                    class="airtable-embed"
+                    src="https://airtable.com/embed/shrAt658WwPvlLJZw?backgroundColor=gray&viewControls=on"
+                    frameborder="0"
+                    onmousewheel=""
+                    width="100%"
+                    height="600"
+                  ></iframe>
                 </p>
               </div>
             </div>

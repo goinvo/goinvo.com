@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class ProblemCard extends Component {
   render() {
     const {
+      number,
       id,
       title,
       description,
@@ -16,6 +17,7 @@ class ProblemCard extends Component {
       <div className="problem">
         <div className={id}>
           <h2>
+            {number + 1}.&nbsp;
             {title}
             {references ? (
               <a href="#references">

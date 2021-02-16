@@ -5,6 +5,8 @@ import Image from './image'
 import Email from '../assets/images/icon-email.inline.svg'
 import LinkedIn from '../assets/images/icon-linkedin.inline.svg'
 import Twitter from '../assets/images/icon-twitter.inline.svg'
+import Instagram from '../assets/images/icon-instagram.inline.svg'
+import Portfolio from '../assets/images/icon-portfolio.inline.svg'
 
 import config from '../../config'
 
@@ -49,6 +51,20 @@ class TeamMember extends Component {
                   <li>
                     <a href={social.linkedin}>
                       <LinkedIn className="icon icon--md" />
+                    </a>
+                  </li>
+                ) : null}
+                {social.instagram ? (
+                  <li>
+                    <a href={social.instagram}>
+                      <Instagram className="icon icon--md" />
+                    </a>
+                  </li>
+                ) : null}
+                {social.portfolio ? (
+                  <li>
+                    <a href={social.portfolio}>
+                      <Portfolio className="icon icon--md" />
                     </a>
                   </li>
                 ) : null}

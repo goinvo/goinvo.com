@@ -1,34 +1,36 @@
 import React, { Component } from 'react'
-//import Image from '../../image'
-import BackgroundImage from '../../background-image'
-import { mediaUrl } from '../../../helpers'
 
 class ProblemCard extends Component {
   render() {
     const {
-      sizes,
       id,
       title,
       description,
       deaths,
       peopleImpacted,
       spending,
-      tags,
       references = null,
     } = this.props
 
-    // const downloadLink = this.props.downloadLink
-    //   ? mediaUrl(this.props.downloadLink)
-    //   : this.state.downloadLink
-
     return (
       <div className="problem">
-        <div>
-          <h2>{title}</h2>
+        <div className={id}>
+          <h2>
+            {title}
+            {references ? (
+              <a href="#references">
+                <sup>{references}</sup>
+              </a>
+            ) : null}
+          </h2>
           <p>{description}</p>
+
           <p>
-            {deaths} Deaths - {peopleImpacted} People Impacted - {spending}{' '}
-            Spent
+            {deaths ? <span>{deaths} Deaths - </span> : null}
+            {peopleImpacted ? (
+              <span>{peopleImpacted} People Impacted - </span>
+            ) : null}
+            {spending ? <span>{spending} Spending</span> : null}
           </p>
         </div>
       </div>

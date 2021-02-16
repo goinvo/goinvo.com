@@ -1,32 +1,132 @@
 [
   {
+    "id": "we-pay-a-lot-for-a-little",
+    "title": "1. We pay a lot for a little",
+    "description": "The United States spends more on healthcare in terms of %GDP than any other country  — yet has the lowest life expectancy, highest suicide rates, highest chronic disease burden and highest obesity rate out of all countries in the OECD (Organisation for Economic Co-operation and Development).",
+    "deaths": "0",
+    "peopleImpacted": "328M",
+    "spending": "$3.8T",
+    "tags": "quality",
+    "references": "6, 7"
+  },
+  {
     "id": "covid-19-continues-to-kill",
-    "title": "COVID-19 continues to kill",
+    "title": "2. COVID-19 continues to kill",
     "description": "471K lives have been lost, 1.7T US government dollars have been spent, $3-4T in US GDP is projected to be lost over the next 2 years, and the US unemployment rate is almost double what it was in 2019, with one-third of the total unemployed now categorized as long-term.",
     "deaths": "471K",
     "peopleImpacted": "328M",
     "spending": "$1.7T",
     "tags": "cost",
+    "references": "1, 2, 3, 4, 5"
+  },
+  {
+    "id": "spending-is-wasted",
+    "title": "3. Spending is wasted",
+    "description": "25% of healthcare spending is wasted on failure of care delivery, failure of care coordination, over-treatment or low-value care, pricing failure, fraud and abuse, and administrative complexity.",
+    "deaths": "0",
+    "peopleImpacted": "328M",
+    "spending": "$935B",
+    "tags": "cost",
+    "references": "8"
+  },
+  {
+    "id": "errors-cause-death",
+    "title": "4. Errors are 3rd leading cause of death",
+    "description": "Behind heart disease and cancer (and COVID-19 if we're counting). These errors include patient misdiagnosis, incorrect prescription of a drug or procedure, and hospital based infections. Most people will be subject to at least one diagnostic error during their lifetime. These errors often go unreported.",
+    "deaths": "250K",
+    "peopleImpacted": "328M",
+    "spending": "$750B",
+    "tags": "quality",
+    "references": "9, 12, 13"
+  },
+  {
+    "id": "prices-are-unknown",
+    "title": "5. Prices are unknown",
+    "description": "Most patients and physicians don't know the price of the care they are receiving or delivering. Healthcare is the only market where buyers pay for services they don't know the price of, and receive a surprise bill weeks later.",
+    "deaths": "0",
+    "peopleImpacted": "328M",
+    "spending": "$507B",
+    "tags": "cost",
+    "references": "9, 20, 21"
+  },
+  {
+    "id": "adults-good-sleep",
+    "title": "6. Adults aren't getting a good night's sleep",
+    "description": "One third of US adults report that they get less than the recommended amount of sleep (7 hours per 24-hour period). Not getting enough sleep may lead to many chronic diseases and conditions and can lead to motor vehicle crashes and mistakes at work, which contribute to injury and disability each year. Individuals who sleep fewer than six hours a night on average have a 13 per cent higher mortality risk than people who sleep at least seven hours. $411 billion in GDP is lost each year due to lack of sleep.",
+    "deaths": "0",
+    "peopleImpacted": "70M",
+    "spending": "$411B",
+    "tags": "quality",
     "references": ""
   },
   {
-    "id": "we-pay-a-lot-for-a-little",
-    "title": "We pay a lot for a little",
-    "description": "The United States spends more on healthcare in terms of %GDP than any other country  — yet has the lowest life expectancy, highest suicide rates, highest chronic disease burden and highest obesity rate out of all countries in the OECD (Organisation for Economic Co-operation and Development).",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$3.8T",
+    "id": "prescription-drugs-unaffordable",
+    "title": "7. Prescription drugs are unaffordable",
+    "description": "Half of the population regularly takes prescription drugs, 25% of which struggle to afford them. With drug patents driving a lack of competition in the pharmaceutical market, companies raise the prices of drugs arbitrarily.",
+    "deaths": "0",
+    "peopleImpacted": "40M",
+    "spending": "$335B",
     "tags": "quality",
-    "references": ""
+    "references": "22, 23, 24, 25"
+  },
+  {
+    "id": "physicians-are-administrators",
+    "title": "8. Physicians are administrators",
+    "description": "They spend more time with EHRs than with their patients. The average physician visit is about 8 minutes long. Administrative tasks, such as computer data entry and negotiating with insurance companies, take time away from physicians doing their actual job - providing care.",
+    "deaths": "0",
+    "peopleImpacted": "328M",
+    "spending": "$266B",
+    "tags": "quality",
+    "references": "9, 21, 35, 36"
   },
   {
     "id": "preventive-care-is-prevented",
-    "title": "Preventive care is prevented",
+    "title": "9. Preventive care is prevented",
     "description": "This leads to both health and economic impact. When preventive care is not prioritized, patients get sicker, end up having to pay more for their care, and in a lot of cases, die. Economic productivity decreases when patients need to take time off of work to address preventable illness.",
-    "deaths": "",
+    "deaths": "0",
     "peopleImpacted": "328M",
     "spending": "$260B",
     "tags": "quality",
+    "references": "8, 9"
+  },
+  {
+    "id": "healthcare-tied-to-employment",
+    "title": "10. Healthcare is tied to employment",
+    "description": "The US is the only country where healthcare is tied so closely to employment. Approximately 49% of Americans receive coverage through their employer, leading to issues such as job lock, inequity, and fragmentation of healthcare finance. This system was heavily implemented during the labor shortage and wage freeze in World War II to attract employees. It's remained the same ever since.",
+    "deaths": "0",
+    "peopleImpacted": "156M",
+    "spending": "$260B",
+    "tags": "access",
     "references": ""
+  },
+  {
+    "id": "alcohol-is-misused",
+    "title": "11. Alcohol is misused",
+    "description": "An estimated 95,000 people die from alcohol-related causes annually. In 2010, alcohol misuse cost the United States $249.0 billion, with three-quarters related to binge drinking. Approximately 14.1 million adults and 400,000 youth have alcohol use disorder (AUD).",
+    "deaths": "95K",
+    "peopleImpacted": "14.5M",
+    "spending": "$249B",
+    "tags": "quality",
+    "references": ""
+  },
+  {
+    "id": "prices-vary",
+    "title": "12. Prices vary",
+    "description": "Based on your insurance plan and health care facility, the price of an intervention can vary by as much as 65%. This is because the rate for every service is negotiated between payers and providers. Medicare prices are closest to the actual costs of care.",
+    "deaths": "0",
+    "peopleImpacted": "328M",
+    "spending": "$235B",
+    "tags": "cost",
+    "references": "9, 20"
+  },
+  {
+    "id": "patients-dont-understand-their-health",
+    "title": "13. Patients don't understand their health",
+    "description": "Personal health literacy, as defined by Healthy People 2030, is the degree to which individuals have the ability to find, understand, and use information and services to inform health-related decisions and actions for themselves and others. Adults with low health literacy experience 4 times higher health costs, 6% more hospital visits, and 2-day longer hospital stays.",
+    "deaths": "0",
+    "peopleImpacted": "118M",
+    "spending": "$226B",
+    "tags": "access",
+    "references": "16, 17"
   }
 ]

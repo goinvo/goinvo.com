@@ -1,0 +1,18 @@
+.us-healthcare-problems {
+  .problem {
+    padding: 1rem;
+    margin: 10px 0;
+  }
+  .airtable {
+    max-width: 85%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 768px) {
+    .airtable {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  }
+}

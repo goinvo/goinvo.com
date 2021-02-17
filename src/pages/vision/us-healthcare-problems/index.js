@@ -91,16 +91,6 @@ class USHealthcareProblemsFeature extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
-            <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
-                submitButtonText="Subscribe"
-              />
-            </div>
-          </div>
-
           <div className="background--blue pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div id="methodology">
@@ -121,17 +111,18 @@ class USHealthcareProblemsFeature extends Component {
                   next iteration will implement a more robust rank-order that
                   considers more factors with relative weightings.
                 </p>
-                <p>
-                  <iframe
-                    class="airtable-embed"
-                    src="https://airtable.com/embed/shrAt658WwPvlLJZw?backgroundColor=gray&viewControls=on"
-                    frameborder="0"
-                    onmousewheel=""
-                    width="100%"
-                    height="600"
-                  ></iframe>
-                </p>
               </div>
+            </div>
+
+            <div className="airtable">
+              <iframe
+                class="airtable-embed"
+                src="https://airtable.com/embed/shrAt658WwPvlLJZw?backgroundColor=gray&viewControls=on"
+                frameborder="0"
+                onmousewheel=""
+                width="100%"
+                height="600"
+              ></iframe>
             </div>
           </div>
 
@@ -151,9 +142,21 @@ class USHealthcareProblemsFeature extends Component {
                 <br />
                 Susan Woods, MD
               </p>
+            </div>
+          </div>
 
-              <Divider />
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
+            </div>
+          </div>
 
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
               <div id="references">
                 <References
                   references={[

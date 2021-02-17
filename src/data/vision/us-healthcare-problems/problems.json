@@ -7,7 +7,7 @@
     "peopleImpacted": "328M",
     "spending": "$3.8T",
     "tags": "quality",
-    "references": "6, 7"
+    "references": "1, 2"
   },
   {
     "id": "covid-19-continues-to-kill",
@@ -17,217 +17,7 @@
     "peopleImpacted": "328M",
     "spending": "$1.7T",
     "tags": "cost",
-    "references": "1, 2, 3, 4, 5"
-  },
-  {
-    "id": "spending-is-wasted",
-    "title": "Spending is wasted",
-    "description": "25% of healthcare spending is wasted on failure of care delivery, failure of care coordination, over-treatment or low-value care, pricing failure, fraud and abuse, and administrative complexity.",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$935B",
-    "tags": "cost",
-    "references": "8"
-  },
-  {
-    "id": "errors-cause-death",
-    "title": "Errors are 3rd leading cause of death",
-    "description": "Behind heart disease and cancer (and COVID-19 if we're counting). These errors include patient misdiagnosis, incorrect prescription of a drug or procedure, and hospital based infections. Most people will be subject to at least one diagnostic error during their lifetime. These errors often go unreported.",
-    "deaths": "250K",
-    "peopleImpacted": "328M",
-    "spending": "$750B",
-    "tags": "quality",
-    "references": "9, 12, 13"
-  },
-  {
-    "id": "prices-are-unknown",
-    "title": "Prices are unknown",
-    "description": "Most patients and physicians don't know the price of the care they are receiving or delivering. Healthcare is the only market where buyers pay for services they don't know the price of, and receive a surprise bill weeks later.",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$507B",
-    "tags": "cost",
-    "references": "9, 20, 21"
-  },
-  {
-    "id": "adults-good-sleep",
-    "title": "Adults aren't getting a good night's sleep",
-    "description": "One third of US adults report that they get less than the recommended amount of sleep (7 hours per 24-hour period). Not getting enough sleep may lead to many chronic diseases and conditions and can lead to motor vehicle crashes and mistakes at work, which contribute to injury and disability each year. Individuals who sleep fewer than six hours a night on average have a 13 per cent higher mortality risk than people who sleep at least seven hours. $411 billion in GDP is lost each year due to lack of sleep.",
-    "deaths": "",
-    "peopleImpacted": "70M",
-    "spending": "$411B",
-    "tags": "quality",
-    "references": ""
-  },
-  {
-    "id": "prescription-drugs-unaffordable",
-    "title": "Prescription drugs are unaffordable",
-    "description": "Half of the population regularly takes prescription drugs, 25% of which struggle to afford them. With drug patents driving a lack of competition in the pharmaceutical market, companies raise the prices of drugs arbitrarily.",
-    "deaths": "",
-    "peopleImpacted": "40M",
-    "spending": "$335B",
-    "tags": "quality",
-    "references": "22, 23, 24, 25"
-  },
-  {
-    "id": "physicians-are-administrators",
-    "title": "Physicians are administrators",
-    "description": "They spend more time with EHRs than with their patients. The average physician visit is about 8 minutes long. Administrative tasks, such as computer data entry and negotiating with insurance companies, take time away from physicians doing their actual job - providing care.",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$266B",
-    "tags": "quality",
-    "references": "9, 21, 35, 36"
-  },
-  {
-    "id": "preventive-care-is-prevented",
-    "title": "Preventive care is prevented",
-    "description": "This leads to both health and economic impact. When preventive care is not prioritized, patients get sicker, end up having to pay more for their care, and in a lot of cases, die. Economic productivity decreases when patients need to take time off of work to address preventable illness.",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$260B",
-    "tags": "quality",
-    "references": "8, 9"
-  },
-  {
-    "id": "healthcare-tied-to-employment",
-    "title": "Healthcare is tied to employment",
-    "description": "The US is the only country where healthcare is tied so closely to employment. Approximately 49% of Americans receive coverage through their employer, leading to issues such as job lock, inequity, and fragmentation of healthcare finance. This system was heavily implemented during the labor shortage and wage freeze in World War II to attract employees. It's remained the same ever since.",
-    "deaths": "",
-    "peopleImpacted": "156M",
-    "spending": "$260B",
-    "tags": "access",
-    "references": ""
-  },
-  {
-    "id": "alcohol-is-misused",
-    "title": "Alcohol is misused",
-    "description": "An estimated 95,000 people die from alcohol-related causes annually. In 2010, alcohol misuse cost the United States $249.0 billion, with three-quarters related to binge drinking. Approximately 14.1 million adults and 400,000 youth have alcohol use disorder (AUD).",
-    "deaths": "95K",
-    "peopleImpacted": "14.5M",
-    "spending": "$249B",
-    "tags": "quality",
-    "references": ""
-  },
-  {
-    "id": "prices-vary",
-    "title": "Prices vary",
-    "description": "Based on your insurance plan and health care facility, the price of an intervention can vary by as much as 65%. This is because the rate for every service is negotiated between payers and providers. Medicare prices are closest to the actual costs of care.",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$235B",
-    "tags": "cost",
-    "references": "9, 20"
-  },
-  {
-    "id": "patients-dont-understand-their-health",
-    "title": "Patients don't understand their health",
-    "description": "Personal health literacy, as defined by Healthy People 2030, is the degree to which individuals have the ability to find, understand, and use information and services to inform health-related decisions and actions for themselves and others. Adults with low health literacy experience 4 times higher health costs, 6% more hospital visits, and 2-day longer hospital stays.",
-    "deaths": "",
-    "peopleImpacted": "118M",
-    "spending": "$226B",
-    "tags": "access",
-    "references": "16, 17"
-  },
-  {
-    "id": "mental-health-is-not-treated-as-health",
-    "title": "Mental health is not treated as health",
-    "description": "20% of Americans don't receive required mental health services. Often they can't afford it or don't know how to seek help because it's treated completely separately from physical health. The most serious cases are seen among adults who are uninsured and living in poverty.",
-    "deaths": "48K",
-    "peopleImpacted": "66M",
-    "spending": "$225B",
-    "tags": "access",
-    "references": "9, 18, 19"
-  },
-  {
-    "id": "smoking-is-still-prevalent",
-    "title": "Smoking is still prevalent",
-    "description": "Tobacco use is the leading cause of preventable disease, disability, and death in the United States. 40 million US adults smoke cigarettes, and 4.7 million middle and high school students use at least one tobacco product, including e-cigarettes. Nearly half a million Americans die prematurely each year due to smoking or secondhand smoke. 16 million live with a serious illness caused by smoking. The United States spends nearly $170 billion each year to treat smoking-related disease in adults.",
-    "deaths": "500K",
-    "peopleImpacted": "44.7M",
-    "spending": "$170B",
-    "tags": "quality",
-    "references": ""
-  },
-  {
-    "id": "eating-habits-are-poor",
-    "title": "Eating habits are poor",
-    "description": "42.4% of U.S. adults have obesity. Obesity-related conditions include some of the leading causes of preventable death, including heart disease, stroke, type 2 diabetes and certain types of cancer. The medical costs for people who have obesity were approximately $1,429 higher than those of normal weight in 2008.",
-    "deaths": "",
-    "peopleImpacted": "88M",
-    "spending": "$147B",
-    "tags": "access",
-    "references": ""
-  },
-  {
-    "id": "physicians-over-treat",
-    "title": "Physicians over-treat to increase revenue",
-    "description": "The fee-for-service system rewards action instead of health outcomes. Physicians over-treat patients to increase their bottom line.",
-    "deaths": "",
-    "peopleImpacted": "",
-    "spending": "$101B",
-    "tags": "cost",
-    "references": "9"
-  },
-  {
-    "id": "physicians-engage-in-fraud",
-    "title": "Physicians engage in fraud",
-    "description": "This includes billing for services not provided, falsifying credentials, billing for duplicate services, and recommending services where they hold financial incentive.",
-    "deaths": "",
-    "peopleImpacted": "",
-    "spending": "$68B",
-    "tags": "quality",
-    "references": "12"
-  },
-  {
-    "id": "physicians-care-defensively",
-    "title": "Physicians care defensively",
-    "description": "Defensive spending includes over-testing and over-treating patients, as well as avoiding high-risk patients in order to decrease risk of malpractice law suits.",
-    "deaths": "",
-    "peopleImpacted": "",
-    "spending": "$50B",
-    "tags": "quality",
-    "references": ""
-  },
-  {
-    "id": "patient-data",
-    "title": "Patient data is not all in one place",
-    "description": "Although over 90% of care facilities have adopted EHRs, data still fails to be standardized across systems. This makes it difficult for physicians to have a holistic view of patient health and for patients to move their care to other facilities. Lack of standardization may result in duplicate services which are a major source of unnecessary costs.",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$30B",
-    "tags": "access",
-    "references": "36, 37, 38"
-  },
-  {
-    "id": "data-breaches",
-    "title": "Data breaches are frequent",
-    "description": "With the increase in digitization of healthcare data, ranging from credit card details to patient diagnoses, data breaches are frequent.",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "$6.2B",
-    "tags": "access",
-    "references": ""
-  },
-  {
-    "id": "physicians-are-emotionally-exhausted",
-    "title": "Physicians are emotionally exhausted",
-    "description": "Physician burnout is characterized by emotional exhaustion, depersonalization, and a sense of reduced accomplishment in day-to-day work. There is a strong relationship between burnout and errors, where burnout leads to errors and more errors exacerbate burnout. A physician suffering from burnout is less productive and likely to quit practicing, driving up costs associated with recruiting a new physician.",
-    "deaths": "120K",
-    "peopleImpacted": "420K",
-    "spending": "$4.6B",
-    "tags": "quality",
-    "references": ""
-  },
-  {
-    "id": "social-factors",
-    "title": "Social factors are not driving care",
-    "description": "Health is largely dependent on social factors determined outside of health care facilities, such as food security, access to housing, employment, exposure to violence, and availability of community resources. Only a quarter of hospitals and 16% of physician practices screen patients for social determinants of health.",
-    "deaths": "",
-    "peopleImpacted": "262M",
-    "spending": "$2.5B",
-    "tags": "quality",
-    "references": "10, 11"
+    "references": "3, 4, 5, 6, 7"
   },
   {
     "id": "death-is-premature",
@@ -237,17 +27,67 @@
     "peopleImpacted": "360K",
     "spending": "",
     "tags": "quality",
-    "references": "14, 15"
+    "references": "8, 9"
   },
   {
-    "id": "overdose-deaths",
-    "title": "We've overdosed on overdose deaths",
-    "description": "Over 81,000 drug overdose deaths were recorded in the 12 months ending in May 2020, the highest number ever recorded in a 12-month period. These numbers suggest an acceleration of overdose deaths during the pandemic.",
-    "deaths": "81K",
-    "peopleImpacted": "",
-    "spending": "",
+    "id": "errors-cause-death",
+    "title": "Errors are 3rd leading cause of death",
+    "description": "Behind heart disease and cancer (and COVID-19 if we're counting). These errors include patient misdiagnosis, incorrect prescription of a drug or procedure, and hospital based infections. Most people will be subject to at least one diagnostic error during their lifetime. These errors often go unreported.",
+    "deaths": "250K",
+    "peopleImpacted": "328M",
+    "spending": "$750B",
     "tags": "quality",
-    "references": ""
+    "references": "10, 11, 12"
+  },
+  {
+    "id": "spending-is-wasted",
+    "title": "Spending is wasted",
+    "description": "25% of healthcare spending is wasted on failure of care delivery, failure of care coordination, over-treatment or low-value care, pricing failure, fraud and abuse, and administrative complexity.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$935B",
+    "tags": "cost",
+    "references": "13, 14"
+  },
+  {
+    "id": "prices-vary",
+    "title": "Prices vary",
+    "description": "Based on your insurance plan and health care facility, the price of an intervention can vary by as much as 65%. This is because the rate for every service is negotiated between payers and providers. Medicare prices are closest to the actual costs of care.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$235B",
+    "tags": "cost",
+    "references": "11, 15"
+  },
+  {
+    "id": "preventive-care-is-prevented",
+    "title": "Preventive care is prevented",
+    "description": "This leads to both health and economic impact. When preventive care is not prioritized, patients get sicker, end up having to pay more for their care, and in a lot of cases, die. Economic productivity decreases when patients need to take time off of work to address preventable illness.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$260B",
+    "tags": "quality",
+    "references": "11, 13"
+  },
+  {
+    "id": "prices-are-unknown",
+    "title": "Prices are unknown",
+    "description": "Most patients and physicians don't know the price of the care they are receiving or delivering. Healthcare is the only market where buyers pay for services they don't know the price of, and receive a surprise bill weeks later.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$507B",
+    "tags": "cost",
+    "references": "11, 15, 16"
+  },
+  {
+    "id": "physicians-are-administrators",
+    "title": "Physicians are administrators",
+    "description": "They spend more time with EHRs than with their patients. The average physician visit is about 8 minutes long. Administrative tasks, such as computer data entry and negotiating with insurance companies, take time away from physicians doing their actual job - providing care.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$266B",
+    "tags": "quality",
+    "references": "11, 16, 17, 18"
   },
   {
     "id": "suicide",
@@ -257,37 +97,7 @@
     "peopleImpacted": "328M",
     "spending": "",
     "tags": "quality",
-    "references": "14"
-  },
-  {
-    "id": "high-costs-delay-treatment",
-    "title": "High costs delay treatment",
-    "description": "Almost 25% of Americans delay or stop medical treatment due to the associated high costs. In many cases, this leads to death.",
-    "deaths": "45K",
-    "peopleImpacted": "82M",
-    "spending": "",
-    "tags": "cost",
-    "references": "27, 31"
-  },
-  {
-    "id": "30-million-are-uninsured",
-    "title": "30 million are uninsured",
-    "description": "74% of the 30 million don't have health insurance because they can't afford it. Uninsured adults have worse health outcomes, higher rates of mortality and premature death, inadequate access to preventive services, and expensive medical bills.",
-    "deaths": "45K",
-    "peopleImpacted": "30M",
-    "spending": "",
-    "tags": "access",
-    "references": "23, 31, 34"
-  },
-  {
-    "id": "patients-dont-own-data",
-    "title": "Patients don't own and control their data",
-    "description": "",
-    "deaths": "",
-    "peopleImpacted": "328M",
-    "spending": "",
-    "tags": "access",
-    "references": ""
+    "references": "8"
   },
   {
     "id": "physicians-are-financial-decision-makers",
@@ -297,17 +107,17 @@
     "peopleImpacted": "328M",
     "spending": "",
     "tags": "cost",
-    "references": "9"
+    "references": "11"
   },
   {
-    "id": "insurance-doesnt-mean-coverage",
-    "title": "Insurance doesn't mean coverage",
-    "description": "The Americans who are covered by employer-provided or government health insurance are still under-insured. This means that their insurance doesn’t adequately cover the costs of health care for them, and they incur several out of pocket expenses. Employers picking the right insurance plan for their employees requires an understanding of the complex offerings and anticipation of healthcare needs for the coming year. This is extremely challenging to do, even for experts in the healthcare field.",
+    "id": "patient-data",
+    "title": "Patient data is not all in one place",
+    "description": "Although over 90% of care facilities have adopted EHRs, data still fails to be standardized across systems. This makes it difficult for physicians to have a holistic view of patient health and for patients to move their care to other facilities. Lack of standardization may result in duplicate services which are a major source of unnecessary costs.",
     "deaths": "",
-    "peopleImpacted": "298M",
-    "spending": "",
+    "peopleImpacted": "328M",
+    "spending": "$30B",
     "tags": "access",
-    "references": "9, 23"
+    "references": "18, 19, 20"
   },
   {
     "id": "coverage-is-unknown",
@@ -320,24 +130,64 @@
     "references": ""
   },
   {
-    "id": "patients-pay-more",
-    "title": "Patients pay more for coverage than employers",
-    "description": "Higher deductibles are raising the share that patients pay for their own care. This means lower monthly payments with an increased risk of large medical bills you can't afford for emergency care. High deductibles work fine for those who are generally healthy, but are unattractive to those in poorer health. Doctor office visits and preventive care screenings have seen reductions as patients pay more for care directly out of their own pocket.",
+    "id": "social-factors",
+    "title": "Social factors are not driving care",
+    "description": "Health is largely dependent on social factors determined outside of health care facilities, such as food security, access to housing, employment, exposure to violence, and availability of community resources. Only a quarter of hospitals and 16% of physician practices screen patients for social determinants of health.",
     "deaths": "",
-    "peopleImpacted": "156M",
-    "spending": "",
-    "tags": "cost",
-    "references": ""
+    "peopleImpacted": "262M",
+    "spending": "$2.5B",
+    "tags": "quality",
+    "references": "21, 22"
   },
   {
-    "id": "higher-paying-jobs",
-    "title": "Higher paying jobs lead to better coverage",
-    "description": "26% of Americans receive employee sponsored health insurance with no tax benefit at all because their income is too low. Only one-third of workers in the lowest fifth of the wage distribution are offered health benefits and less than 20 percent of them accept those offers. In contrast, more than 80 percent of workers in the top fifth of the wage distribution are offered health benefits and accept them.",
+    "id": "insurance-doesnt-mean-coverage",
+    "title": "Insurance doesn't mean coverage",
+    "description": "The Americans who are covered by employer-provided or government health insurance are still under-insured. This means that their insurance doesn’t adequately cover the costs of health care for them, and they incur several out of pocket expenses. Employers picking the right insurance plan for their employees requires an understanding of the complex offerings and anticipation of healthcare needs for the coming year. This is extremely challenging to do, even for experts in the healthcare field.",
     "deaths": "",
-    "peopleImpacted": "85M",
+    "peopleImpacted": "298M",
     "spending": "",
     "tags": "access",
-    "references": ""
+    "references": "11, 23"
+  },
+  {
+    "id": "patients-dont-own-data",
+    "title": "Patients don't own and control their data",
+    "description": "",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "",
+    "tags": "access",
+    "references": "24"
+  },
+  {
+    "id": "data-breaches",
+    "title": "Data breaches are frequent",
+    "description": "With the increase in digitization of healthcare data, ranging from credit card details to patient diagnoses, data breaches are frequent.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "$6.2B",
+    "tags": "access",
+    "references": "25"
+  },
+  {
+    "id": "smoking-is-still-prevalent",
+    "title": "Smoking is still prevalent",
+    "description": "Tobacco use is the leading cause of preventable disease, disability, and death in the United States. 40 million US adults smoke cigarettes, and 4.7 million middle and high school students use at least one tobacco product, including e-cigarettes. Nearly half a million Americans die prematurely each year due to smoking or secondhand smoke. 16 million live with a serious illness caused by smoking. The United States spends nearly $170 billion each year to treat smoking-related disease in adults.",
+    "deaths": "500K",
+    "peopleImpacted": "44.7M",
+    "spending": "$170B",
+    "tags": "quality",
+    "references": "26"
+  },
+  {
+    "id": "healthcare-tied-to-employment",
+    "title": "Healthcare is tied to employment",
+    "description": "The US is the only country where healthcare is tied so closely to employment. Approximately 49% of Americans receive coverage through their employer, leading to issues such as job lock, inequity, and fragmentation of healthcare finance. This system was heavily implemented during the labor shortage and wage freeze in World War II to attract employees. It's remained the same ever since.",
+    "deaths": "",
+    "peopleImpacted": "156M",
+    "spending": "$260B",
+    "tags": "access",
+    "references": "27, 28, 29"
   },
   {
     "id": "anxiety-and-depression",
@@ -350,24 +200,74 @@
     "references": ""
   },
   {
-    "id": "rural-patients-are-sicker",
-    "title": "Rural patients are sicker",
-    "description": "Rural patients lack convenient access to healthcare facilities and comprehensive insurance coverage. If medical services are covered, the coverage is insufficient. These factors contribute to serious health problems in rural areas.",
-    "deaths": "",
-    "peopleImpacted": "60M",
+    "id": "high-costs-delay-treatment",
+    "title": "High costs delay treatment",
+    "description": "Almost 25% of Americans delay or stop medical treatment due to the associated high costs. In many cases, this leads to death.",
+    "deaths": "45K",
+    "peopleImpacted": "82M",
     "spending": "",
-    "tags": "access",
-    "references": "12, 26"
+    "tags": "cost",
+    "references": "30, 31, 32"
   },
   {
-    "id": "food-access",
-    "title": "Food access crisis is worsening",
-    "description": "The number of Americans facing limited or uncertain access to sufficient, nutritious food for a healthy life have skyrocketed due to COVID-19. Food insecurity disproportionately affects low-income Americans and communities of color who are already at higher risk for preventable chronic diseases and negative health and economic outcomes associated with COVID-19.",
+    "id": "eating-habits-are-poor",
+    "title": "Eating habits are poor",
+    "description": "42.4% of U.S. adults have obesity. Obesity-related conditions include some of the leading causes of preventable death, including heart disease, stroke, type 2 diabetes and certain types of cancer. The medical costs for people who have obesity were approximately $1,429 higher than those of normal weight in 2008.",
     "deaths": "",
-    "peopleImpacted": "54M",
-    "spending": "",
+    "peopleImpacted": "88M",
+    "spending": "$147B",
     "tags": "access",
-    "references": ""
+    "references": "33"
+  },
+  {
+    "id": "patients-pay-more",
+    "title": "Patients pay more for coverage than employers",
+    "description": "Higher deductibles are raising the share that patients pay for their own care. This means lower monthly payments with an increased risk of large medical bills you can't afford for emergency care. High deductibles work fine for those who are generally healthy, but are unattractive to those in poorer health. Doctor office visits and preventive care screenings have seen reductions as patients pay more for care directly out of their own pocket.",
+    "deaths": "",
+    "peopleImpacted": "156M",
+    "spending": "",
+    "tags": "cost",
+    "references": "34, 35"
+  },
+  {
+    "id": "mental-health-is-not-treated-as-health",
+    "title": "Mental health is not treated as health",
+    "description": "20% of Americans don't receive required mental health services. Often they can't afford it or don't know how to seek help because it's treated completely separately from physical health. The most serious cases are seen among adults who are uninsured and living in poverty.",
+    "deaths": "48K",
+    "peopleImpacted": "66M",
+    "spending": "$225B",
+    "tags": "access",
+    "references": "11, 36, 37"
+  },
+  {
+    "id": "prescription-drugs-unaffordable",
+    "title": "Prescription drugs are unaffordable",
+    "description": "Half of the population regularly takes prescription drugs, 25% of which struggle to afford them. With drug patents driving a lack of competition in the pharmaceutical market, companies raise the prices of drugs arbitrarily.",
+    "deaths": "",
+    "peopleImpacted": "40M",
+    "spending": "$335B",
+    "tags": "quality",
+    "references": "23, 38, 39"
+  },
+  {
+    "id": "adults-good-sleep",
+    "title": "Adults aren't getting a good night's sleep",
+    "description": "One third of US adults report that they get less than the recommended amount of sleep (7 hours per 24-hour period). Not getting enough sleep may lead to many chronic diseases and conditions and can lead to motor vehicle crashes and mistakes at work, which contribute to injury and disability each year. Individuals who sleep fewer than six hours a night on average have a 13 per cent higher mortality risk than people who sleep at least seven hours. $411 billion in GDP is lost each year due to lack of sleep.",
+    "deaths": "",
+    "peopleImpacted": "70M",
+    "spending": "$411B",
+    "tags": "quality",
+    "references": "40, 41"
+  },
+  {
+    "id": "patients-dont-understand-their-health",
+    "title": "Patients don't understand their health",
+    "description": "Personal health literacy, as defined by Healthy People 2030, is the degree to which individuals have the ability to find, understand, and use information and services to inform health-related decisions and actions for themselves and others. Adults with low health literacy experience 4 times higher health costs, 6% more hospital visits, and 2-day longer hospital stays.",
+    "deaths": "",
+    "peopleImpacted": "118M",
+    "spending": "$226B",
+    "tags": "access",
+    "references": "42, 43"
   },
   {
     "id": "sicker-patients-pay-more",
@@ -377,7 +277,47 @@
     "peopleImpacted": "40M",
     "spending": "",
     "tags": "cost",
-    "references": "9, 28"
+    "references": "11, 44"
+  },
+  {
+    "id": "alcohol-is-misused",
+    "title": "Alcohol is misused",
+    "description": "An estimated 95,000 people die from alcohol-related causes annually. In 2010, alcohol misuse cost the United States $249.0 billion, with three-quarters related to binge drinking. Approximately 14.1 million adults and 400,000 youth have alcohol use disorder (AUD).",
+    "deaths": "95K",
+    "peopleImpacted": "14.5M",
+    "spending": "$249B",
+    "tags": "quality",
+    "references": "45"
+  },
+  {
+    "id": "higher-paying-jobs",
+    "title": "Higher paying jobs lead to better coverage",
+    "description": "26% of Americans receive employee sponsored health insurance with no tax benefit at all because their income is too low. Only one-third of workers in the lowest fifth of the wage distribution are offered health benefits and less than 20 percent of them accept those offers. In contrast, more than 80 percent of workers in the top fifth of the wage distribution are offered health benefits and accept them.",
+    "deaths": "",
+    "peopleImpacted": "85M",
+    "spending": "",
+    "tags": "access",
+    "references": "28"
+  },
+  {
+    "id": "physicians-are-emotionally-exhausted",
+    "title": "Physicians are emotionally exhausted",
+    "description": "Physician burnout is characterized by emotional exhaustion, depersonalization, and a sense of reduced accomplishment in day-to-day work. There is a strong relationship between burnout and errors, where burnout leads to errors and more errors exacerbate burnout. A physician suffering from burnout is less productive and likely to quit practicing, driving up costs associated with recruiting a new physician.",
+    "deaths": "120K",
+    "peopleImpacted": "420K",
+    "spending": "$4.6B",
+    "tags": "quality",
+    "references": "46, 47"
+  },
+  {
+    "id": "overdose-deaths",
+    "title": "We've overdosed on overdose deaths",
+    "description": "Over 81,000 drug overdose deaths were recorded in the 12 months ending in May 2020, the highest number ever recorded in a 12-month period. These numbers suggest an acceleration of overdose deaths during the pandemic.",
+    "deaths": "81K",
+    "peopleImpacted": "",
+    "spending": "",
+    "tags": "quality",
+    "references": "48"
   },
   {
     "id": "poorer-patients-are-sicker",
@@ -387,7 +327,57 @@
     "peopleImpacted": "40M",
     "spending": "",
     "tags": "access",
-    "references": "27, 28, 29, 30"
+    "references": "30, 44, 49, 50"
+  },
+  {
+    "id": "food-access",
+    "title": "Food access crisis is worsening",
+    "description": "The number of Americans facing limited or uncertain access to sufficient, nutritious food for a healthy life have skyrocketed due to COVID-19. Food insecurity disproportionately affects low-income Americans and communities of color who are already at higher risk for preventable chronic diseases and negative health and economic outcomes associated with COVID-19.",
+    "deaths": "",
+    "peopleImpacted": "54M",
+    "spending": "",
+    "tags": "access",
+    "references": "51, 52"
+  },
+  {
+    "id": "30-million-are-uninsured",
+    "title": "30 million are uninsured",
+    "description": "74% of the 30 million don't have health insurance because they can't afford it. Uninsured adults have worse health outcomes, higher rates of mortality and premature death, inadequate access to preventive services, and expensive medical bills.",
+    "deaths": "45K",
+    "peopleImpacted": "30M",
+    "spending": "",
+    "tags": "access",
+    "references": "23, 31, 53"
+  },
+  {
+    "id": "physicians-over-treat",
+    "title": "Physicians over-treat to increase revenue",
+    "description": "The fee-for-service system rewards action instead of health outcomes. Physicians over-treat patients to increase their bottom line.",
+    "deaths": "",
+    "peopleImpacted": "",
+    "spending": "$101B",
+    "tags": "cost",
+    "references": "11, 14"
+  },
+  {
+    "id": "rural-patients-are-sicker",
+    "title": "Rural patients are sicker",
+    "description": "Rural patients lack convenient access to healthcare facilities and comprehensive insurance coverage. If medical services are covered, the coverage is insufficient. These factors contribute to serious health problems in rural areas.",
+    "deaths": "",
+    "peopleImpacted": "60M",
+    "spending": "",
+    "tags": "access",
+    "references": "10, 54"
+  },
+  {
+    "id": "physicians-engage-in-fraud",
+    "title": "Physicians engage in fraud",
+    "description": "This includes billing for services not provided, falsifying credentials, billing for duplicate services, and recommending services where they hold financial incentive.",
+    "deaths": "",
+    "peopleImpacted": "",
+    "spending": "$68B",
+    "tags": "quality",
+    "references": "10, 14, 55"
   },
   {
     "id": "sicker-patients-arent-employable",
@@ -397,6 +387,16 @@
     "peopleImpacted": "40M",
     "spending": "",
     "tags": "access",
-    "references": ""
+    "references": "56"
+  },
+  {
+    "id": "physicians-care-defensively",
+    "title": "Physicians care defensively",
+    "description": "Defensive spending includes over-testing and over-treating patients, as well as avoiding high-risk patients in order to decrease risk of malpractice law suits.",
+    "deaths": "",
+    "peopleImpacted": "",
+    "spending": "$50B",
+    "tags": "quality",
+    "references": "11, 57, 58"
   }
 ]

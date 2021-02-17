@@ -169,6 +169,7 @@ class USHealthcareProblemsFeature extends Component {
                 <h2 className="header--xl text--center">Authors</h2>
                 <Author name="Hannah Sennik" />
                 <Author name="Juhan Sonin" company="GoInvo, MIT" />
+                <Author name="Eric Benoit" />
               </div>
 
               <h3 className="header--md">Additional Contributors</h3>

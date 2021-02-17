@@ -46,15 +46,20 @@ class USHealthcareProblemsFeature extends Component {
                 redesigned.
               </p>
               <p>
-                The result of our research is a list ranked based on several
-                quantitative indicators, such as number of deaths, number of
-                American people impacted, and dollars spent or lost. The
-                interconnected nature of the US healthcare system makes it
-                nearly impossible to fully separate these problems. GoInvo has
-                coupled analytical skills and interest in health policy to bring
-                to light this complex web of menacing realities. Unsurprisingly,
-                all problems can be attributed to the fee-for-service system in
-                some way.
+                GoInvo has spent the last two months researching and breaking
+                down these problems. The result is a list ranked based on
+                several quantitative indicators, such as number of deaths,
+                number of American people impacted, dollars spent or lost, and
+                number of related problems. The interconnected nature of the US
+                healthcare system makes it extremely challenging to separate
+                these problems. GoInvo has coupled analytical skills and
+                interest in health policy to bring to light this complex web of
+                menacing realities. Unsurprisingly, all problems can be
+                attributed to the fee-for-service system in some way.
+              </p>
+              <p>
+                GoInvo encourages you to be appalled by these statistics... and
+                then do something about it.
               </p>
             </div>
           </div>
@@ -83,9 +88,14 @@ class USHealthcareProblemsFeature extends Component {
               </h2>
               <p className="text--gray">
                 We’ve highlighted the top problems related to healthcare in the
-                US. Where data is available, we’ve also listed quantitative
-                metrics supporting the severity of each problem. Explore the
-                list and references then send your feedback on this draft to{' '}
+                US. We’d like to acknowledge that some of the problems you may
+                expect are not present; this may be due to ongoing research by
+                our team or inconclusive data. Racial inequities in healthcare
+                and medical bill errors are two prominent issues that are at the
+                top of our radar. Where data is available, we’ve listed
+                quantitative metrics supporting the severity of each problem. We
+                encourage you to explore the list and references, and send your
+                feedback on this draft to{' '}
                 <a href="mailto:hello@goinvo.com"> hello@goinvo.com</a>.
               </p>
             </div>
@@ -95,6 +105,9 @@ class USHealthcareProblemsFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div id="methodology">
                 <h2 className="header--xl text--center">Methodology</h2>
+                <h3 className="header--md margin-bottom--half margin-top--double">
+                  v1 - 11.Feb.2021
+                </h3>
                 <p className="text--gray">
                   The US Healthcare Problems list began as a google spreadsheet
                   research effort, with sources including “The Long Fix” by
@@ -106,10 +119,34 @@ class USHealthcareProblemsFeature extends Component {
                   of this burden.
                 </p>
                 <p className="text--gray">
+                  Fee-for-service: payment is dependent on the quantity of care
+                </p>
+                <p className="text--gray">
+                  Value-based: payment is dependent on the quality of care
+                </p>
+                <p className="text--gray">
                   The initial ranking is based on the quantitative data as well
-                  as the prevalence of the problem as explained in research. The
-                  next iteration will implement a more robust rank-order that
-                  considers more factors with relative weightings.
+                  as the prevalence of the problem as explained in research.
+                </p>
+                <h3 className="header--md margin-bottom--half margin-top--double">
+                  v2 - 17.Feb.2021
+                </h3>
+                <p className="text--gray">
+                  The list has been expanded to include the top 40 US healthcare
+                  problems. We have updated the ranking algorithm to consider a
+                  weighted average of each of the quantitative metrics.
+                </p>
+                <p className="text--gray">
+                  =0.25*(deaths/max(deaths))+0.25*(spending/max(spending))+0.25*(peopleimpacted/max(peopleimpacted))+0.25*(relatedprobs/max(relatedprobs))
+                </p>
+                <p className="text--gray">
+                  The equal (0.25) weighting may be adjusted over time with
+                  supporting literature.
+                </p>
+                <p className="text--gray">
+                  Stay tuned for V03 where we will include a visual
+                  representation of the connectedness of these problems, and
+                  showcase the current status of each problem being addressed.
                 </p>
               </div>
             </div>

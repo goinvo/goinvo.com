@@ -59,7 +59,7 @@ class USHealthcareProblemsFeature extends Component {
             </div>
           </div>
 
-          <div className="max-width pad-vertical--double">
+          <div className="max-width">
             {this.state.problemItems.map((problem, i) => {
               return (
                 <ProblemCard
@@ -162,6 +162,18 @@ class USHealthcareProblemsFeature extends Component {
                   references={[
                     {
                       title:
+                        'Martin, Anne B., et al. "National Health Care Spending In 2019: Steady Growth For The Fourth Consecutive Year: Study Examines National Health Care Spending for 2019." Health Affairs, vol. 40, no. 1, Jan. 2021, pp. 14–24. DOI.org (Crossref), doi:10.1377/hlthaff.2020.02022.',
+                      link:
+                        'https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/NationalHealthExpendData/NationalHealthAccountsHistorical',
+                    },
+                    {
+                      title:
+                        'U.S. Health Care from a Global Perspective, 2019 | Commonwealth Fund. doi:https://doi.org/10.26099/7avy-fc29',
+                      link:
+                        'https://www.commonwealthfund.org/publications/issue-briefs/2020/jan/us-health-care-global-perspective-2019',
+                    },
+                    {
+                      title:
                         '"COVID-19 Map." Johns Hopkins Coronavirus Resource Center',
                       link: 'https://coronavirus.jhu.edu/map.html',
                     },
@@ -188,52 +200,6 @@ class USHealthcareProblemsFeature extends Component {
                     },
                     {
                       title:
-                        'Martin, Anne B., et al. "National Health Care Spending In 2019: Steady Growth For The Fourth Consecutive Year: Study Examines National Health Care Spending for 2019." Health Affairs, vol. 40, no. 1, Jan. 2021, pp. 14–24. DOI.org (Crossref), doi:10.1377/hlthaff.2020.02022.',
-                      link:
-                        'https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/NationalHealthExpendData/NationalHealthAccountsHistorical',
-                    },
-                    {
-                      title:
-                        'U.S. Health Care from a Global Perspective, 2019 | Commonwealth Fund. doi:https://doi.org/10.26099/7avy-fc29',
-                      link:
-                        'https://www.commonwealthfund.org/publications/issue-briefs/2020/jan/us-health-care-global-perspective-2019',
-                    },
-                    {
-                      title:
-                        'https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Life-Sciences-Health-Care/gx-lshc-hc-outlook-2018.pdf',
-                      link:
-                        'https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Life-Sciences-Health-Care/gx-lshc-hc-outlook-2018.pdf',
-                    },
-                    {
-                      title:
-                        'Lee, Vivian S. The Long Fix: Solving America’s Health Care Crisis with Strategies That Work for Everyone. First edition, W.W. Norton & Company, 2020.',
-                      link: '',
-                    },
-                    {
-                      title:
-                        '"Hospitals Spent $2.5B on Social Determinant Programs from 2017 to 2019." Healthcare Dive',
-                      link:
-                        'https://www.healthcaredive.com/news/hospitals-spent-25b-on-social-determinant-programs-from-2017-to-2019/571646/',
-                    },
-                    {
-                      title:
-                        'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2751390',
-                      link:
-                        'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2751390',
-                    },
-                    {
-                      title: 'Problems of Health Care in the United States.',
-                      link:
-                        'https://saylordotorg.github.io/text_social-problems-continuity-and-change/s16-04-problems-of-health-care-in-the.html',
-                    },
-                    {
-                      title:
-                        'https://www.pinnaclecare.com/download/Human-Cost-Financial-Impact-Whitepaper.pdf',
-                      link:
-                        'https://www.pinnaclecare.com/download/Human-Cost-Financial-Impact-Whitepaper.pdf',
-                    },
-                    {
-                      title:
                         'https://www.americashealthrankings.org/explore/annual',
                       link:
                         'https://www.americashealthrankings.org/explore/annual',
@@ -244,28 +210,31 @@ class USHealthcareProblemsFeature extends Component {
                         'https://www.cdc.gov/media/releases/2014/p0501-preventable-deaths.html',
                     },
                     {
-                      title:
-                        '"Health Literacy Fact Sheets." Center for Health Care Strategies, 1 Oct. 2013',
+                      title: 'Problems of Health Care in the United States.',
                       link:
-                        'https://www.chcs.org/resource/health-literacy-fact-sheets/',
+                        'https://saylordotorg.github.io/text_social-problems-continuity-and-change/s16-04-problems-of-health-care-in-the.html',
                     },
                     {
                       title:
-                        'Health Literacy in Healthy People 2030 | Health.Gov.',
-                      link:
-                        'https://health.gov/our-work/healthy-people/healthy-people-2030/health-literacy-healthy-people-2030',
+                        'Lee, Vivian S. The Long Fix: Solving America’s Health Care Crisis with Strategies That Work for Everyone. First edition, W.W. Norton & Company, 2020.',
+                      link: '',
                     },
                     {
                       title:
-                        'Firth, Jamie and 2016. "Kaiser Health Tracking Poll: April 2016 - Substance Abuse and Mental Health." KFF, 3 May 2016',
+                        'https://www.pinnaclecare.com/download/Human-Cost-Financial-Impact-Whitepaper.pdf',
                       link:
-                        'kff.org/report-section/kaiser-health-tracking-poll-april-2016-substance-abuse-and-mental-health/',
+                        'https://www.pinnaclecare.com/download/Human-Cost-Financial-Impact-Whitepaper.pdf',
                     },
                     {
                       title:
-                        'MINDS, OPEN. 2019 U.S. Mental Health Spending Topped $225 Billion, With Per Capita Spending Ranging From $37 In Florida To $375 In Maine - OPEN MINDS Releases New Analysis.',
+                        'https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Life-Sciences-Health-Care/gx-lshc-hc-outlook-2018.pdf',
                       link:
-                        'https://www.prnewswire.com/news-releases/2019-us-mental-health-spending-topped-225-billion-with-per-capita-spending-ranging-from-37-in-florida-to-375-in-maine--open-minds-releases-new-analysis-301058381.html',
+                        'https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Life-Sciences-Health-Care/gx-lshc-hc-outlook-2018.pdf',
+                    },
+                    {
+                      title:
+                        'Shrank, William H., et al. "Waste in the US Health Care System: Estimated Costs and Potential for Savings." JAMA, vol. 322, no. 15, Oct. 2019, pp. 1501–09. PubMed, doi:10.1001/jama.2019.13978.',
+                      link: '',
                     },
                     {
                       title:
@@ -278,84 +247,6 @@ class USHealthcareProblemsFeature extends Component {
                         'Make Transparent Health Care Prices A Price Of Any Future Aid To The Health Care Industry | Health Affairs Blog.',
                       link:
                         'https://www.healthaffairs.org/do/10.1377/hblog20200615.566069/full/',
-                    },
-                    {
-                      title:
-                        '"What Are the Recent and Forecasted Trends in Prescription Drug Spending?" Peterson-KFF Health System Tracker, Accessed 5 Jan. 2021.',
-                      link:
-                        'https://www.healthsystemtracker.org/chart-collection/recent-forecasted-trends-prescription-drug-spending/?_sft_category=spending',
-                    },
-                    {
-                      title:
-                        'Hou, Chia-Yi. "What Are the Most Important Health Issues of 2020?" TheHill, 2 Jan. 2020',
-                      link:
-                        'https://thehill.com/changing-america/well-being/prevention-cures/476566-what-are-the-most-important-health-issues-of-2024',
-                    },
-                    {
-                      title:
-                        '"Prescription Drug Spending in U.S. 1960-2020." Statista',
-                      link:
-                        'https://www.statista.com/statistics/184914/prescription-drug-expenditures-in-the-us-since-1960/',
-                    },
-                    {
-                      title:
-                        'https://www.bloomberg.com/news/articles/2019-05-08/nearly-one-in-two-americans-takes-prescription-drugs-survey',
-                      link:
-                        'https://www.bloomberg.com/news/articles/2019-05-08/nearly-one-in-two-americans-takes-prescription-drugs-survey',
-                    },
-                    {
-                      title:
-                        '"Subsidized Coverage - HealthCare.Gov Glossary." HealthCare.Gov',
-                      link:
-                        'https://www.healthcare.gov/glossary/subsidized-coverage/',
-                    },
-                    {
-                      title:
-                        'Norbeck, Gary Price, MD, and Tim. "Poverty Does Not Have to Equal High Healthcare Spending." Forbes',
-                      link:
-                        'https://www.forbes.com/sites/physiciansfoundation/2017/12/04/poverty-does-not-have-to-equal-high-healthcare-spending/?sh=5aa202415cdb',
-                    },
-                    {
-                      title:
-                        'OHCHR | "Contempt for the Poor in US Drives Cruel Policies," Says UN Expert.',
-                      link:
-                        'https://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=23172&LangID=E',
-                    },
-                    {
-                      title:
-                        'Urban Institute. "How Are Income and Wealth Linked to Health and Longevity?"',
-                      link:
-                        'https://www.urban.org/sites/default/files/publication/49116/2000178-How-are-Income-and-Wealth-Linked-to-Health-and-Longevity.pdf',
-                    },
-                    {
-                      title:
-                        'Shaw, Kate M., et al. "Chronic Disease Disparities by County Economic Status and Metropolitan Classification, Behavioral Risk Factor Surveillance System, 2013." Preventing Chronic Disease, vol. 13, Sept. 2016. PubMed Central, doi:10.5888/pcd13.160088.',
-                      link:
-                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5008860/',
-                    },
-                    {
-                      title:
-                        'http://www.pnhp.org/excessdeaths/health-insurance-and-mortality-in-US-adults.pdf',
-                      link:
-                        'http://www.pnhp.org/excessdeaths/health-insurance-and-mortality-in-US-adults.pdf',
-                    },
-                    {
-                      title:
-                        'https://www.cdc.gov/nchs/data/nhis/earlyrelease/emergency_room_use_january-june_2011.pdf',
-                      link:
-                        'https://www.cdc.gov/nchs/data/nhis/earlyrelease/emergency_room_use_january-june_2011.pdf',
-                    },
-                    {
-                      title:
-                        'Carroll, Linda. "Declining Numbers of Americans Have a Primary Care Provider." Reuters, 16 Dec. 2019.',
-                      link:
-                        'https://www.reuters.com/article/us-health-pcp-trends/declining-numbers-of-americans-have-a-primary-care-provider-idUSKBN1YK1Z4',
-                    },
-                    {
-                      title:
-                        'Tolbert, Jennifer, et al. "Key Facts about the Uninsured Population." KFF, 6 Nov. 2020',
-                      link:
-                        'https://www.kff.org/uninsured/fact-sheet/key-facts-about-the-uninsured-population/',
                     },
                     {
                       title:
@@ -380,6 +271,225 @@ class USHealthcareProblemsFeature extends Component {
                         '"Industry Voices—Interoperability Can Cut Health Costs by $30B. But This Needs to Happen First." FierceHealthcare',
                       link:
                         'https://www.fiercehealthcare.com/tech/industry-voices-interoperability-can-reduce-healthcare-costs-by-30b-here-s-how',
+                    },
+                    {
+                      title:
+                        '"Hospitals Spent $2.5B on Social Determinant Programs from 2017 to 2019." Healthcare Dive',
+                      link:
+                        'https://www.healthcaredive.com/news/hospitals-spent-25b-on-social-determinant-programs-from-2017-to-2019/571646/',
+                    },
+                    {
+                      title:
+                        'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2751390',
+                      link:
+                        'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2751390',
+                    },
+                    {
+                      title:
+                        'Hou, Chia-Yi. "What Are the Most Important Health Issues of 2020?" TheHill, 2 Jan. 2020',
+                      link:
+                        'https://thehill.com/changing-america/well-being/prevention-cures/476566-what-are-the-most-important-health-issues-of-2024',
+                    },
+                    {
+                      title:
+                        'Farr, Christina. "Why, in the Midst of a U.S. Health Crisis, There Are Major Challenges for Doctors to Access Patient Records." CNBC, 15 May 2020',
+                      link:
+                        'https://www.cnbc.com/2020/05/15/poorly-connected-digitized-health-system-endangers-americas-health.html',
+                    },
+                    {
+                      title:
+                        'CDCTobaccoFree. "Data and Statistics." Centers for Disease Control and Prevention, 25 Aug. 2020',
+                      link:
+                        'https://www.cdc.gov/tobacco/data_statistics/index.htm',
+                    },
+                    {
+                      title:
+                        'Carroll, Aaron E. “The Real Reason the U.S. Has Employer-Sponsored Health Insurance.” The New York Times, 5 Sept. 2017. NYTimes.com',
+                      link:
+                        'https://www.nytimes.com/2017/09/05/upshot/the-real-reason-the-us-has-employer-sponsored-health-insurance.html',
+                    },
+                    {
+                      title:
+                        'Dolan, Ed. “The ‘Original Sin’ of the U.S. Health Care System.” Medium, 12 Nov. 2018',
+                      link:
+                        'https://medium.com/s/story/employer-sponsored-insurance-is-the-original-sin-of-the-american-health-care-system-330dcf6b170c',
+                    },
+                    {
+                      title:
+                        'How Many Americans Get Health Insurance from Their Employer?',
+                      link:
+                        'https://www.ehealthinsurance.com/resources/small-business/how-many-americans-get-health-insurance-from-their-employer',
+                    },
+                    {
+                      title:
+                        'Norbeck, Gary Price, MD, and Tim. “Poverty Does Not Have to Equal High Healthcare Spending.” Forbes',
+                      link:
+                        'https://www.forbes.com/sites/physiciansfoundation/2017/12/04/poverty-does-not-have-to-equal-high-healthcare-spending/',
+                    },
+                    {
+                      title:
+                        'http://www.pnhp.org/excessdeaths/health-insurance-and-mortality-in-US-adults.pdf',
+                      link:
+                        'http://www.pnhp.org/excessdeaths/health-insurance-and-mortality-in-US-adults.pdf',
+                    },
+                    {
+                      title:
+                        'Sainato, Michael. “The Americans Dying Because They Can’t Afford Medical Care.” The Guardian, 7 Jan. 2020. www.theguardian.com',
+                      link:
+                        'https://www.theguardian.com/us-news/2020/jan/07/americans-healthcare-medical-costs',
+                    },
+                    {
+                      title:
+                        'CDC. “Obesity Is a Common, Serious, and Costly Disease.” Centers for Disease Control and Prevention, 11 Feb. 2021',
+                      link: 'https://www.cdc.gov/obesity/data/adult.html',
+                    },
+                    {
+                      title:
+                        '“Deductible Relief Day: How Rising Deductibles Are Affecting People with Employer Coverage.” Peterson-KFF Health System Tracker',
+                      link:
+                        'https://www.healthsystemtracker.org/brief/deductible-relief-day-how-rising-deductibles-are-affecting-people-with-employer-coverage/',
+                    },
+                    {
+                      title:
+                        '“2015 Employer Health Benefits Survey - Summary Of Findings.” KFF, 22 Sept. 2015',
+                      link:
+                        'https://www.kff.org/report-section/ehbs-2015-summary-of-findings/',
+                    },
+                    {
+                      title:
+                        'Firth, Jamie and 2016. “Kaiser Health Tracking Poll: April 2016 - Substance Abuse and Mental Health.” KFF, 3 May 2016',
+                      link:
+                        'https://www.kff.org/report-section/kaiser-health-tracking-poll-april-2016-substance-abuse-and-mental-health/',
+                    },
+                    {
+                      title:
+                        'MINDS, OPEN. 2019 U.S. Mental Health Spending Topped $225 Billion, With Per Capita Spending Ranging From $37 In Florida To $375 In Maine - OPEN MINDS Releases New Analysis.',
+                      link:
+                        'https://www.prnewswire.com/news-releases/2019-us-mental-health-spending-topped-225-billion-with-per-capita-spending-ranging-from-37-in-florida-to-375-in-maine--open-minds-releases-new-analysis-301058381.html',
+                    },
+                    {
+                      title:
+                        '“What Are the Recent and Forecasted Trends in Prescription Drug Spending?” Peterson-KFF Health System Tracker',
+                      link:
+                        'https://www.healthsystemtracker.org/chart-collection/recent-forecasted-trends-prescription-drug-spending/',
+                    },
+                    {
+                      title:
+                        '“Prescription Drug Spending in U.S. 1960-2020.” Statista',
+                      link:
+                        'https://www.statista.com/statistics/184914/prescription-drug-expenditures-in-the-us-since-1960/',
+                    },
+                    {
+                      title:
+                        'https://www.bloomberg.com/news/articles/2019-05-08/nearly-one-in-two-americans-takes-prescription-drugs-survey',
+                      link:
+                        'https://www.bloomberg.com/news/articles/2019-05-08/nearly-one-in-two-americans-takes-prescription-drugs-survey',
+                    },
+                    {
+                      title:
+                        'CDC - Sleep Home Page - Sleep and Sleep Disorders. 30 June 2020',
+                      link: 'https://www.cdc.gov/sleep/index.html',
+                    },
+                    {
+                      title: 'The Costs of Insufficient Sleep.',
+                      link:
+                        'https://www.rand.org/randeurope/research/projects/the-value-of-the-sleep-economy.html',
+                    },
+                    {
+                      title:
+                        '“Health Literacy Fact Sheets.” Center for Health Care Strategies, 1 Oct. 2013',
+                      link:
+                        'https://www.chcs.org/resource/health-literacy-fact-sheets/',
+                    },
+                    {
+                      title:
+                        'Health Literacy in Healthy People 2030 | Health.Gov.',
+                      link:
+                        'https://health.gov/our-work/healthy-people/healthy-people-2030/health-literacy-healthy-people-2030',
+                    },
+                    {
+                      title:
+                        'OHCHR | "Contempt for the Poor in US Drives Cruel Policies,” Says UN Expert.',
+                      link:
+                        'https://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=23172&LangID=E',
+                    },
+                    {
+                      title:
+                        'Alcohol Facts and Statistics | National Institute on Alcohol Abuse and Alcoholism (NIAAA).',
+                      link:
+                        'https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/alcohol-facts-and-statistics',
+                    },
+                    {
+                      title:
+                        '“The Economic Cost of Physician Burnout.” HBS Working Knowledge, 25 Sept. 2019',
+                      link:
+                        'http://hbswk.hbs.edu/item/the-economic-cost-of-physician-burnout',
+                    },
+                    {
+                      title:
+                        'Patel, Rikinkumar S., et al. “Factors Related to Physician Burnout and Its Consequences: A Review.” Behavioral Sciences, vol. 8, no. 11, Oct. 2018. PubMed Central, doi:10.3390/bs8110098.',
+                      link: '',
+                    },
+                    {
+                      title:
+                        '“Coronavirus Disease 2019.” Centers for Disease Control and Prevention, 21 Dec. 2020',
+                      link:
+                        'https://www.cdc.gov/media/releases/2020/p1218-overdose-deaths-covid-19.html',
+                    },
+                    {
+                      title:
+                        'Urban Institute. "How Are Income and Wealth Linked to Health and Longevity?"',
+                      link: '',
+                    },
+                    {
+                      title:
+                        'Shaw, Kate M., et al. “Chronic Disease Disparities by County Economic Status and Metropolitan Classification, Behavioral Risk Factor Surveillance System, 2013.” Preventing Chronic Disease, vol. 13, Sept. 2016. PubMed Central, doi:10.5888/pcd13.160088.',
+                      link: '',
+                    },
+                    {
+                      title:
+                        '“54 Million People in America Face Food Insecurity during the Pandemic. It Could Have Dire Consequences for Their Health.” AAMC',
+                      link:
+                        'https://www.aamc.org/news-insights/54-million-people-america-face-food-insecurity-during-pandemic-it-could-have-dire-consequences-their',
+                    },
+                    {
+                      title:
+                        'Wolfson, Julia A., and Cindy W. Leung. “Food Insecurity During COVID-19: An Acute Crisis With Long-Term Health Implications.” American Journal of Public Health, vol. 110, no. 12, Sept. 2020, pp. 1763–65. ajph.aphapublications.org (Atypon), doi:10.2105/AJPH.2020.305953.',
+                      link: '',
+                    },
+                    {
+                      title:
+                        'Tolbert, Jennifer, et al. “Key Facts about the Uninsured Population.” KFF, 6 Nov. 2020',
+                      link:
+                        'https://www.kff.org/uninsured/issue-brief/key-facts-about-the-uninsured-population/',
+                    },
+                    {
+                      title:
+                        '“Subsidized Coverage - HealthCare.Gov Glossary.” HealthCare.Gov',
+                      link:
+                        'https://www.healthcare.gov/glossary/subsidized-coverage/',
+                    },
+                    {
+                      title: 'Consumer Info & Action - The NHCAA.',
+                      link:
+                        'https://www.nhcaa.org/resources/health-care-anti-fraud-resources/consumer-info-action.aspx',
+                    },
+                    {
+                      title:
+                        '“How Health Care Inequality Increases Costs for Everyone.” The Balance',
+                      link:
+                        'https://www.thebalance.com/health-care-inequality-facts-types-effect-solution-4174842',
+                    },
+                    {
+                      title:
+                        '“Defensive Medicine and How It Affects Healthcare Costs.” Verywell Health',
+                      link:
+                        'https://www.verywellhealth.com/defensive-medicine-2615160',
+                    },
+                    {
+                      title:
+                        'Vento, Sandro, et al. “Defensive Medicine: It Is Time to Finally Slow down an Epidemic.” World Journal of Clinical Cases, vol. 6, no. 11, Oct. 2018, pp. 406–09. PubMed Central, doi:10.12998/wjcc.v6.i11.406.',
+                      link: '',
                     },
                   ]}
                 />

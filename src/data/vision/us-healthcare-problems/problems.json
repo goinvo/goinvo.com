@@ -122,7 +122,7 @@
   {
     "id": "coverage-is-unknown",
     "title": "Coverage is unknown",
-    "description": "Deductibles, co-pays, co-insurance, out-of-pocket limits, out-of-network care are all just fancy words for.",
+    "description": "Deductibles, co-pays, co-insurance, out-of-pocket limits, out-of-network care are all just fancy words for 'I really have no clue what my insurance covers'.",
     "deaths": "",
     "peopleImpacted": "298M",
     "spending": "",
@@ -152,7 +152,7 @@
   {
     "id": "patients-dont-own-data",
     "title": "Patients don't own and control their data",
-    "description": "",
+    "description": "Patients don't have direct insight into how their provider is managing their care. This can lead to healthcare paternalism, where providers make care decisions that they believe are in the best interest of the patient, and the patient has little to no transparency on their entire health picture. This also means that data lives within the healthcare system rather than with the people who created it in the first place. Technically patients do own their data but they are unable to easily access it.",
     "deaths": "",
     "peopleImpacted": "328M",
     "spending": "",

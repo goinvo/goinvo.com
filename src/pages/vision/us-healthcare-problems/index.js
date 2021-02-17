@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
-import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
 
@@ -159,6 +158,7 @@ class USHealthcareProblemsFeature extends Component {
                 onmousewheel=""
                 width="100%"
                 height="600"
+                title="Airtable Top Healthcare Problems"
               ></iframe>
             </div>
           </div>
@@ -272,7 +272,7 @@ class USHealthcareProblemsFeature extends Component {
                     {
                       title:
                         'Shrank, William H., et al. "Waste in the US Health Care System: Estimated Costs and Potential for Savings." JAMA, vol. 322, no. 15, Oct. 2019, pp. 1501–09. PubMed, doi:10.1001/jama.2019.13978.',
-                      link: '',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/31589283/',
                     },
                     {
                       title:
@@ -466,7 +466,8 @@ class USHealthcareProblemsFeature extends Component {
                     {
                       title:
                         'Patel, Rikinkumar S., et al. “Factors Related to Physician Burnout and Its Consequences: A Review.” Behavioral Sciences, vol. 8, no. 11, Oct. 2018. PubMed Central, doi:10.3390/bs8110098.',
-                      link: '',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6262585/',
                     },
                     {
                       title:
@@ -477,12 +478,14 @@ class USHealthcareProblemsFeature extends Component {
                     {
                       title:
                         'Urban Institute. "How Are Income and Wealth Linked to Health and Longevity?"',
-                      link: '',
+                      link:
+                        'https://www.urban.org/sites/default/files/publication/49116/2000178-How-are-Income-and-Wealth-Linked-to-Health-and-Longevity.pdf',
                     },
                     {
                       title:
                         'Shaw, Kate M., et al. “Chronic Disease Disparities by County Economic Status and Metropolitan Classification, Behavioral Risk Factor Surveillance System, 2013.” Preventing Chronic Disease, vol. 13, Sept. 2016. PubMed Central, doi:10.5888/pcd13.160088.',
-                      link: '',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5008860/',
                     },
                     {
                       title:
@@ -493,7 +496,8 @@ class USHealthcareProblemsFeature extends Component {
                     {
                       title:
                         'Wolfson, Julia A., and Cindy W. Leung. “Food Insecurity During COVID-19: An Acute Crisis With Long-Term Health Implications.” American Journal of Public Health, vol. 110, no. 12, Sept. 2020, pp. 1763–65. ajph.aphapublications.org (Atypon), doi:10.2105/AJPH.2020.305953.',
-                      link: '',
+                      link:
+                        'https://ajph.aphapublications.org/doi/10.2105/AJPH.2020.305953',
                     },
                     {
                       title:
@@ -527,7 +531,14 @@ class USHealthcareProblemsFeature extends Component {
                     {
                       title:
                         'Vento, Sandro, et al. “Defensive Medicine: It Is Time to Finally Slow down an Epidemic.” World Journal of Clinical Cases, vol. 6, no. 11, Oct. 2018, pp. 406–09. PubMed Central, doi:10.12998/wjcc.v6.i11.406.',
-                      link: '',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163143/',
+                    },
+                    {
+                      title:
+                        'Panchal, Nirmita, et al. “The Implications of COVID-19 for Mental Health and Substance Use.” KFF, 10 Feb. 2021',
+                      link:
+                        'https://www.kff.org/coronavirus-covid-19/issue-brief/the-implications-of-covid-19-for-mental-health-and-substance-use/',
                     },
                   ]}
                 />

@@ -97,6 +97,19 @@ class USHealthcareProblemsFeature extends Component {
                 feedback on this draft to{' '}
                 <a href="mailto:hello@goinvo.com"> hello@goinvo.com</a>.
               </p>
+              <p className="text--gray">
+                Licensed under Creative Commons Attribution 4.0 license.
+              </p>
+              <h4 className="header--sm margin-bottom--half margin-top--double">
+                About GoInvo
+              </h4>
+              <p className="text--gray">
+                GoInvo is a healthcare design company that crafts innovative
+                digital and physical solutions. Our deep expertise in Health IT,
+                Genomics, and Open Source health has delivered results for the
+                National Institute of Health, Walgreens, Mount Sinai and
+                Partners Healthcare.
+              </p>
             </div>
           </div>
 

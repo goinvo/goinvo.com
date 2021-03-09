@@ -16,7 +16,7 @@ const frontmatter = {
   metaTitle: 'Join our team of Healthcare UX designers & engineers',
   metaDescription:
     "If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler.",
-  heroImage: '/images/about/careers/jen-journeymap.jpg',
+  heroImage: '/images/about/careers/jen-journeymap-2.jpg',
 }
 
 class CareersPage extends Component {

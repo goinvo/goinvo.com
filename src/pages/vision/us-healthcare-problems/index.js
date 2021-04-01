@@ -572,6 +572,82 @@ class USHealthcareProblemsFeature extends Component {
                       link:
                         'https://www.kff.org/coronavirus-covid-19/issue-brief/the-implications-of-covid-19-for-mental-health-and-substance-use/',
                     },
+                    {
+                      title:
+                        'https://www.cdc.gov/nchs/data/nhis/earlyrelease/emergency_room_use_january-june_2011.pdf',
+                      link:
+                        'https://www.cdc.gov/nchs/data/nhis/earlyrelease/emergency_room_use_january-june_2011.pdf',
+                    },
+                    {
+                      title:
+                        'Carroll, Linda. “Declining Numbers of Americans Have a Primary Care Provider.” Reuters, 16 Dec. 2019.',
+                      link:
+                        'https://www.reuters.com/article/us-health-pcp-trends/declining-numbers-of-americans-have-a-primary-care-provider-idUSKBN1YK1Z4',
+                    },
+                    {
+                      title:
+                        '"Hospital Bills and Overcharging.” Healthline, 18 Sept. 2018.',
+                      link:
+                        'https://www.healthline.com/health-news/80-percent-hospital-bills-have-errors-are-you-being-overcharged#Billing-mistakes',
+                    },
+                    {
+                      title:
+                        'Mar 04, Olivia Pham Published: and 2020. “Disparities in Health and Health Care: Five Key Questions and Answers.” KFF, 4 Mar. 2020',
+                      link:
+                        'https://www.kff.org/racial-equity-and-health-policy/issue-brief/disparities-in-health-and-health-care-five-key-questions-and-answers/',
+                    },
+                    {
+                      title:
+                        'Farr, Christina. “Hospital Execs Say They Are Getting Flooded with Requests for Your Health Data.” CNBC, 18 Dec. 2019',
+                      link:
+                        'https://www.cnbc.com/2019/12/18/hospital-execs-say-theyre-flooded-with-requests-for-your-health-data.html',
+                    },
+                    {
+                      title:
+                        'Tanner, Adam. “How Data Brokers Make Money Off Your Medical Records.” Scientific American, doi:10.1038/scientificamerican0216-26.',
+                      link:
+                        'https://www.scientificamerican.com/article/how-data-brokers-make-money-off-your-medical-records/',
+                    },
+                    {
+                      title: 'Lying-Patients.',
+                      link:
+                        'https://www.advisory.com/daily-briefing/2018/12/10/lying-patients',
+                    },
+                    {
+                      title:
+                        'Loneliness and Social Isolation Linked to Serious Health Conditions. 4 Nov. 2020.',
+                      link:
+                        'https://www.cdc.gov/aging/publications/features/lonely-older-adults.html',
+                    },
+                    {
+                      title:
+                        'Beilock, Sian Leah. “Why Young Americans Are Lonely.” Scientific American.',
+                      link:
+                        'https://www.scientificamerican.com/article/why-young-americans-are-lonely/',
+                    },
+                    {
+                      title:
+                        'Office, U. S. Government Accountability. Workplace Safety and Health: Additional Efforts Needed to Help Protect Health Care Workers from Workplace Violence.',
+                      link: 'https://www.gao.gov/products/gao-16-11',
+                    },
+                    {
+                      title:
+                        'Abelson, Reed. “Doctors Are Calling It Quits Under Stress of the Pandemic.” The New York Times, 15 Nov. 2020. NYTimes.com.',
+                      link:
+                        'https://www.nytimes.com/2020/11/15/health/Covid-doctors-nurses-quitting.html',
+                    },
+                    {
+                      title:
+                        '12% of Physicians Are Considering Leaving Medicine and 7 Other Findings about the US Physician COVID-19 Experience.',
+                      link:
+                        'https://www.beckershospitalreview.com/hospital-physician-relationships/12-of-physicians-are-considering-leaving-medicine-and-7-other-findings-about-the-us-physician-covid-19-experience.html',
+                    },
+                    {
+                      title:
+                        'Sharma, Raj. “Council Post: Who Really Owns Your Health Data?” Forbes.',
+                      link:
+                        'https://www.forbes.com/sites/forbestechcouncil/2018/04/23/who-really-owns-your-health-data/?sh=69a5de6f6d62',
+                    },
                   ]}
                 />
               </div>

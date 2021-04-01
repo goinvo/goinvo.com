@@ -51,14 +51,23 @@ class USHealthcareProblemsFeature extends Component {
                 number of American people impacted, dollars spent or lost, and
                 number of related problems. The interconnected nature of the US
                 healthcare system makes it extremely challenging to separate
-                these problems. GoInvo has coupled analytical skills and
-                interest in health policy to bring to light this complex web of
-                menacing realities. Unsurprisingly, all problems can be
-                attributed to the fee-for-service system in some way.
+                these problems. We have coupled analytical skills and interest
+                in health policy to bring to light this complex web of menacing
+                realities. Unsurprisingly, all problems can be attributed to the
+                fee-for-service system in some way.
               </p>
               <p>
-                GoInvo encourages you to be appalled by these statistics... and
-                then do something about it.
+                We encourage you to be appalled by these statistics... and then
+                do something about it.
+              </p>
+              <p>
+                Rally your friends (virtually), pick a problem, and dive in. Use
+                the "What's being done" column in Airtable to evaluate current
+                efforts and potentially join them. Copy over our Airtable and
+                continue researching, adding metrics, and brainstorming
+                solutions. However you choose to get started, this is an
+                opportunity to understand healthcare's complexity and contribute
+                to the efforts of improvement.
               </p>
             </div>
           </div>

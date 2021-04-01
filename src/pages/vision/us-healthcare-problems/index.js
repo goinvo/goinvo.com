@@ -127,27 +127,14 @@ class USHealthcareProblemsFeature extends Component {
               <div id="methodology">
                 <h2 className="header--xl text--center">Methodology</h2>
                 <h3 className="header--md margin-bottom--half margin-top--double">
-                  v1 - 11.Feb.2021
+                  v3 - 1.Apr.2021
                 </h3>
                 <p className="text--gray">
-                  The US Healthcare Problems list began as a google spreadsheet
-                  research effort, with sources including “The Long Fix” by
-                  Vivian Lee, CDC, and CMS. Our team aimed to pool relevant
-                  quantitative and anecdotal information for each outlined
-                  problem, making it possible to start to prioritize what needs
-                  addressing. Ideally, the move away from a fee-for-service
-                  system and towards a value-based approach would alleviate some
-                  of this burden.
-                </p>
-                <p className="text--gray">
-                  Fee-for-service: payment is dependent on the quantity of care
-                </p>
-                <p className="text--gray">
-                  Value-based: payment is dependent on the quality of care
-                </p>
-                <p className="text--gray">
-                  The initial ranking is based on the quantitative data as well
-                  as the prevalence of the problem as explained in research.
+                  The list has been expanded to include the top 50 US healthcare
+                  problems. We have started linking resources to organizations
+                  that are tackling these problems, and are exploring an API
+                  integration for Airtable so the list automatically updates as
+                  we make changes.
                 </p>
                 <h3 className="header--md margin-bottom--half margin-top--double">
                   v2 - 17.Feb.2021
@@ -170,14 +157,27 @@ class USHealthcareProblemsFeature extends Component {
                   showcase the current status of each problem being addressed.
                 </p>
                 <h3 className="header--md margin-bottom--half margin-top--double">
-                  v3 - 1.Apr.2021
+                  v1 - 11.Feb.2021
                 </h3>
                 <p className="text--gray">
-                  The list has been expanded to include the top 50 US healthcare
-                  problems. We have started linking resources to organizations
-                  that are tackling these problems, and are exploring an API
-                  integration for Airtable so the list automatically updates as
-                  we make changes.
+                  The US Healthcare Problems list began as a google spreadsheet
+                  research effort, with sources including “The Long Fix” by
+                  Vivian Lee, CDC, and CMS. Our team aimed to pool relevant
+                  quantitative and anecdotal information for each outlined
+                  problem, making it possible to start to prioritize what needs
+                  addressing. Ideally, the move away from a fee-for-service
+                  system and towards a value-based approach would alleviate some
+                  of this burden.
+                </p>
+                <p className="text--gray">
+                  Fee-for-service: payment is dependent on the quantity of care
+                </p>
+                <p className="text--gray">
+                  Value-based: payment is dependent on the quality of care
+                </p>
+                <p className="text--gray">
+                  The initial ranking is based on the quantitative data as well
+                  as the prevalence of the problem as explained in research.
                 </p>
               </div>
             </div>

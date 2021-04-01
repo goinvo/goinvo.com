@@ -160,6 +160,16 @@ class USHealthcareProblemsFeature extends Component {
                   representation of the connectedness of these problems, and
                   showcase the current status of each problem being addressed.
                 </p>
+                <h3 className="header--md margin-bottom--half margin-top--double">
+                  v3 - 1.Apr.2021
+                </h3>
+                <p className="text--gray">
+                  The list has been expanded to include the top 50 US healthcare
+                  problems. We have started linking resources to organizations
+                  that are tackling these problems, and are exploring an API
+                  integration for Airtable so the list automatically updates as
+                  we make changes.
+                </p>
               </div>
             </div>
 

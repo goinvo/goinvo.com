@@ -65,9 +65,9 @@ class USHealthcareProblemsFeature extends Component {
                 the "What's being done" column in Airtable to evaluate current
                 efforts and potentially join them. Copy over our Airtable and
                 continue researching, adding metrics, and brainstorming
-                solutions. However you choose to get started, this is an
-                opportunity to understand healthcare's complexity and contribute
-                to the efforts of improvement.
+                solutions. Create an interesting data viz. However you choose to
+                get started, this is an opportunity to understand healthcare's
+                complexity and contribute to the efforts of improvement.
               </p>
             </div>
           </div>

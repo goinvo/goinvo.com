@@ -51,14 +51,23 @@ class USHealthcareProblemsFeature extends Component {
                 number of American people impacted, dollars spent or lost, and
                 number of related problems. The interconnected nature of the US
                 healthcare system makes it extremely challenging to separate
-                these problems. GoInvo has coupled analytical skills and
-                interest in health policy to bring to light this complex web of
-                menacing realities. Unsurprisingly, all problems can be
-                attributed to the fee-for-service system in some way.
+                these problems. We have coupled analytical skills and interest
+                in health policy to bring to light this complex web of menacing
+                realities. Unsurprisingly, all problems can be attributed to the
+                fee-for-service system in some way.
               </p>
               <p>
-                GoInvo encourages you to be appalled by these statistics... and
-                then do something about it.
+                We encourage you to be appalled by these statistics... and then
+                do something about it.
+              </p>
+              <p>
+                Rally your friends (virtually), pick a problem, and dive in. Use
+                the "What's being done" column in Airtable to evaluate current
+                efforts and potentially join them. Copy over our Airtable and
+                continue researching, adding metrics, and brainstorming
+                solutions. Create an interesting data viz. However you choose to
+                get started, this is an opportunity to understand healthcare's
+                complexity and contribute to the efforts of improvement.
               </p>
             </div>
           </div>
@@ -118,6 +127,36 @@ class USHealthcareProblemsFeature extends Component {
               <div id="methodology">
                 <h2 className="header--xl text--center">Methodology</h2>
                 <h3 className="header--md margin-bottom--half margin-top--double">
+                  v3 - 1.Apr.2021
+                </h3>
+                <p className="text--gray">
+                  The list has been expanded to include the top 50 US healthcare
+                  problems. We have started linking resources to organizations
+                  that are tackling these problems, and are exploring an API
+                  integration for Airtable so the list automatically updates as
+                  we make changes.
+                </p>
+                <h3 className="header--md margin-bottom--half margin-top--double">
+                  v2 - 17.Feb.2021
+                </h3>
+                <p className="text--gray">
+                  The list has been expanded to include the top 40 US healthcare
+                  problems. We have updated the ranking algorithm to consider a
+                  weighted average of each of the quantitative metrics.
+                </p>
+                <p className="text--gray">
+                  =0.25*(deaths/max(deaths))+0.25*(spending/max(spending))+0.25*(peopleimpacted/max(peopleimpacted))+0.25*(relatedprobs/max(relatedprobs))
+                </p>
+                <p className="text--gray">
+                  The equal (0.25) weighting may be adjusted over time with
+                  supporting literature.
+                </p>
+                <p className="text--gray">
+                  Stay tuned for V03 where we will include a visual
+                  representation of the connectedness of these problems, and
+                  showcase the current status of each problem being addressed.
+                </p>
+                <h3 className="header--md margin-bottom--half margin-top--double">
                   v1 - 11.Feb.2021
                 </h3>
                 <p className="text--gray">
@@ -139,26 +178,6 @@ class USHealthcareProblemsFeature extends Component {
                 <p className="text--gray">
                   The initial ranking is based on the quantitative data as well
                   as the prevalence of the problem as explained in research.
-                </p>
-                <h3 className="header--md margin-bottom--half margin-top--double">
-                  v2 - 17.Feb.2021
-                </h3>
-                <p className="text--gray">
-                  The list has been expanded to include the top 40 US healthcare
-                  problems. We have updated the ranking algorithm to consider a
-                  weighted average of each of the quantitative metrics.
-                </p>
-                <p className="text--gray">
-                  =0.25*(deaths/max(deaths))+0.25*(spending/max(spending))+0.25*(peopleimpacted/max(peopleimpacted))+0.25*(relatedprobs/max(relatedprobs))
-                </p>
-                <p className="text--gray">
-                  The equal (0.25) weighting may be adjusted over time with
-                  supporting literature.
-                </p>
-                <p className="text--gray">
-                  Stay tuned for V03 where we will include a visual
-                  representation of the connectedness of these problems, and
-                  showcase the current status of each problem being addressed.
                 </p>
               </div>
             </div>
@@ -552,6 +571,82 @@ class USHealthcareProblemsFeature extends Component {
                         'Panchal, Nirmita, et al. “The Implications of COVID-19 for Mental Health and Substance Use.” KFF, 10 Feb. 2021',
                       link:
                         'https://www.kff.org/coronavirus-covid-19/issue-brief/the-implications-of-covid-19-for-mental-health-and-substance-use/',
+                    },
+                    {
+                      title:
+                        'https://www.cdc.gov/nchs/data/nhis/earlyrelease/emergency_room_use_january-june_2011.pdf',
+                      link:
+                        'https://www.cdc.gov/nchs/data/nhis/earlyrelease/emergency_room_use_january-june_2011.pdf',
+                    },
+                    {
+                      title:
+                        'Carroll, Linda. “Declining Numbers of Americans Have a Primary Care Provider.” Reuters, 16 Dec. 2019.',
+                      link:
+                        'https://www.reuters.com/article/us-health-pcp-trends/declining-numbers-of-americans-have-a-primary-care-provider-idUSKBN1YK1Z4',
+                    },
+                    {
+                      title:
+                        '"Hospital Bills and Overcharging.” Healthline, 18 Sept. 2018.',
+                      link:
+                        'https://www.healthline.com/health-news/80-percent-hospital-bills-have-errors-are-you-being-overcharged#Billing-mistakes',
+                    },
+                    {
+                      title:
+                        'Mar 04, Olivia Pham Published: and 2020. “Disparities in Health and Health Care: Five Key Questions and Answers.” KFF, 4 Mar. 2020',
+                      link:
+                        'https://www.kff.org/racial-equity-and-health-policy/issue-brief/disparities-in-health-and-health-care-five-key-questions-and-answers/',
+                    },
+                    {
+                      title:
+                        'Farr, Christina. “Hospital Execs Say They Are Getting Flooded with Requests for Your Health Data.” CNBC, 18 Dec. 2019',
+                      link:
+                        'https://www.cnbc.com/2019/12/18/hospital-execs-say-theyre-flooded-with-requests-for-your-health-data.html',
+                    },
+                    {
+                      title:
+                        'Tanner, Adam. “How Data Brokers Make Money Off Your Medical Records.” Scientific American, doi:10.1038/scientificamerican0216-26.',
+                      link:
+                        'https://www.scientificamerican.com/article/how-data-brokers-make-money-off-your-medical-records/',
+                    },
+                    {
+                      title: 'Lying-Patients.',
+                      link:
+                        'https://www.advisory.com/daily-briefing/2018/12/10/lying-patients',
+                    },
+                    {
+                      title:
+                        'Loneliness and Social Isolation Linked to Serious Health Conditions. 4 Nov. 2020.',
+                      link:
+                        'https://www.cdc.gov/aging/publications/features/lonely-older-adults.html',
+                    },
+                    {
+                      title:
+                        'Beilock, Sian Leah. “Why Young Americans Are Lonely.” Scientific American.',
+                      link:
+                        'https://www.scientificamerican.com/article/why-young-americans-are-lonely/',
+                    },
+                    {
+                      title:
+                        'Office, U. S. Government Accountability. Workplace Safety and Health: Additional Efforts Needed to Help Protect Health Care Workers from Workplace Violence.',
+                      link: 'https://www.gao.gov/products/gao-16-11',
+                    },
+                    {
+                      title:
+                        'Abelson, Reed. “Doctors Are Calling It Quits Under Stress of the Pandemic.” The New York Times, 15 Nov. 2020. NYTimes.com.',
+                      link:
+                        'https://www.nytimes.com/2020/11/15/health/Covid-doctors-nurses-quitting.html',
+                    },
+                    {
+                      title:
+                        '12% of Physicians Are Considering Leaving Medicine and 7 Other Findings about the US Physician COVID-19 Experience.',
+                      link:
+                        'https://www.beckershospitalreview.com/hospital-physician-relationships/12-of-physicians-are-considering-leaving-medicine-and-7-other-findings-about-the-us-physician-covid-19-experience.html',
+                    },
+                    {
+                      title:
+                        'Sharma, Raj. “Council Post: Who Really Owns Your Health Data?” Forbes.',
+                      link:
+                        'https://www.forbes.com/sites/forbestechcouncil/2018/04/23/who-really-owns-your-health-data/?sh=69a5de6f6d62',
                     },
                   ]}
                 />

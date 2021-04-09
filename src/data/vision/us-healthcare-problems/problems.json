@@ -13,7 +13,7 @@
     "id": "covid-19-continues-to-kill",
     "title": "COVID-19 continues to kill",
     "description": "471K lives have been lost, 1.7T US government dollars have been spent, $3-4T in US GDP is projected to be lost over the next 2 years, and the US unemployment rate is almost double what it was in 2019, with one-third of the total unemployed now categorized as long-term.",
-    "deaths": "471K",
+    "deaths": "552K",
     "peopleImpacted": "328M",
     "spending": "$1.7T",
     "tags": "cost",
@@ -31,8 +31,8 @@
   },
   {
     "id": "errors-cause-death",
-    "title": "Errors are 3rd leading cause of death",
-    "description": "Behind heart disease and cancer (and COVID-19 if we're counting). These errors include patient misdiagnosis, incorrect prescription of a drug or procedure, and hospital based infections. Most people will be subject to at least one diagnostic error during their lifetime. These errors often go unreported.",
+    "title": "Errors are 4th leading cause of death",
+    "description": "Behind heart disease, cancer, and COVID-19. These errors include patient misdiagnosis, incorrect prescription of a drug or procedure, and hospital based infections. Most people will be subject to at least one diagnostic error during their lifetime. These errors often go unreported.",
     "deaths": "250K",
     "peopleImpacted": "328M",
     "spending": "$750B",
@@ -120,6 +120,16 @@
     "references": "18, 19, 20"
   },
   {
+    "id": "anon-data",
+    "title": "Anonymized data doesn't always stay that way",
+    "description": "Research has shown how cross referencing from multiple datasets (anonymized and non-anonymized) can lead to identifying the individual that the data belongs to. This can lead to very obvious security concerns. ",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "",
+    "tags": "quality",
+    "references": "64, 65"
+  },
+  {
     "id": "coverage-is-unknown",
     "title": "Coverage is unknown",
     "description": "Deductibles, co-pays, co-insurance, out-of-pocket limits, out-of-network care are all just fancy words for 'I really have no clue what my insurance covers'.",
@@ -140,6 +150,26 @@
     "references": "21, 22"
   },
   {
+    "id": "selling-data",
+    "title": "Our medical data is for sale",
+    "description": "Very few healthcare professionals and patients know that the health data that they enter into the EHR or relates directly to them may be de-identified and sold over and over again to companies that use that data for various purposes: identifying untapped markets, tracking drug usage, etc.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "",
+    "tags": "quality",
+    "references": "65"
+  },
+  {
+    "id": "data-used-against-us",
+    "title": "Our medical data is used against us",
+    "description": "Health care companies or insurers may purchase customer data that helps them raise product prices for specific demographics.",
+    "deaths": "",
+    "peopleImpacted": "328M",
+    "spending": "",
+    "tags": "quality",
+    "references": "64"
+  },
+  {
     "id": "insurance-doesnt-mean-coverage",
     "title": "Insurance doesn't mean coverage",
     "description": "The Americans who are covered by employer-provided or government health insurance are still under-insured. This means that their insurance doesn’t adequately cover the costs of health care for them, and they incur several out of pocket expenses. Employers picking the right insurance plan for their employees requires an understanding of the complex offerings and anticipation of healthcare needs for the coming year. This is extremely challenging to do, even for experts in the healthcare field.",
@@ -152,12 +182,12 @@
   {
     "id": "patients-dont-own-data",
     "title": "Patients don't own and control their data",
-    "description": "Patients don't have direct insight into how their provider is managing their care. This can lead to healthcare paternalism, where providers make care decisions that they believe are in the best interest of the patient, and the patient has little to no transparency on their entire health picture. This also means that data lives within the healthcare system rather than with the people who created it in the first place. Technically patients do own their data but they are unable to easily access it.",
+    "description": "Patients don't have direct insight into how their provider is managing their care. This can lead to healthcare paternalism, where providers make care decisions that they believe are in the best interest of the patient, and the patient has little to no transparency on their entire health picture. This also means that data lives within the healthcare system rather than with the people who created it in the first place. New Hampshire is the only state where patients have been given ownership of their health data. Most states don't have any explicit laws outlining who owns health data.",
     "deaths": "",
     "peopleImpacted": "328M",
     "spending": "",
     "tags": "access",
-    "references": "24"
+    "references": "24, 72"
   },
   {
     "id": "data-breaches",
@@ -210,6 +240,16 @@
     "references": "30, 31, 32"
   },
   {
+    "id": "lonely",
+    "title": "People are lonely",
+    "description": "Loneliness and social isolation continue to be prominent challenges especially in a world where we are prescribed to socially distance ourselves from others. People experiencing these health impacts may be at higher risk of serious medical conditions such as dementia.",
+    "deaths": "",
+    "peopleImpacted": "127.5M",
+    "spending": "",
+    "tags": "quality",
+    "references": "67, 68"
+  },
+  {
     "id": "eating-habits-are-poor",
     "title": "Eating habits are poor",
     "description": "42.4% of U.S. adults have obesity. Obesity-related conditions include some of the leading causes of preventable death, including heart disease, stroke, type 2 diabetes and certain types of cancer. The medical costs for people who have obesity were approximately $1,429 higher than those of normal weight in 2008.",
@@ -238,6 +278,16 @@
     "spending": "$225B",
     "tags": "access",
     "references": "11, 36, 37"
+  },
+  {
+    "id": "patients-lie",
+    "title": "Patients lie",
+    "description": "Up to 81% of patients lie to their doctors in order to avoid judgment. These lies can have significant implications for patient health, especially if they have a chronic illness.",
+    "deaths": "",
+    "peopleImpacted": "169M",
+    "spending": "",
+    "tags": "quality",
+    "references": "66"
   },
   {
     "id": "prescription-drugs-unaffordable",
@@ -310,6 +360,16 @@
     "references": "46, 47"
   },
   {
+    "id": "medical-bill-errors",
+    "title": "80% of medical bills contain errors",
+    "description": "As many as 80 percent of hospital bills contain errors, leading to overcharging up to thousands of dollars for services. Doctors and admin must sift through thousands of diagnosis and procedure codes for billing. ",
+    "deaths": "",
+    "peopleImpacted": "",
+    "spending": "$210B",
+    "tags": "cost",
+    "references": "62"
+  },
+  {
     "id": "overdose-deaths",
     "title": "We've overdosed on overdose deaths",
     "description": "Over 81,000 drug overdose deaths were recorded in the 12 months ending in May 2020, the highest number ever recorded in a 12-month period. These numbers suggest an acceleration of overdose deaths during the pandemic.",
@@ -350,6 +410,16 @@
     "references": "23, 31, 53"
   },
   {
+    "id": "racial-disparities",
+    "title": "Racial disparities exist",
+    "description": "People of color and low-income individuals have faced  barriers to accessing care, including insurance, compared to Whites and those at higher incomes. Heart disease mortality rates among Blacks and diabetes mortality rates among American Indians and Alaska Natives have increased over time. These disparities are costly.",
+    "deaths": "",
+    "peopleImpacted": "",
+    "spending": "$135B",
+    "tags": "quality",
+    "references": "63"
+  },
+  {
     "id": "physicians-over-treat",
     "title": "Physicians over-treat to increase revenue",
     "description": "The fee-for-service system rewards action instead of health outcomes. Physicians over-treat patients to increase their bottom line.",
@@ -358,6 +428,16 @@
     "spending": "$101B",
     "tags": "cost",
     "references": "11, 14"
+  },
+  {
+    "id": "hospital-pcp",
+    "title": "Hospitals are used as primary care providers",
+    "description": "Declining number of patients have a primary care provider that isn't the emergency room.",
+    "deaths": "",
+    "peopleImpacted": "9M",
+    "spending": "",
+    "tags": "access",
+    "references": "60, 61"
   },
   {
     "id": "rural-patients-are-sicker",
@@ -398,5 +478,25 @@
     "spending": "$50B",
     "tags": "quality",
     "references": "11, 57, 58"
+  },
+  {
+    "id": "physicians-close-practice",
+    "title": "Physicians are closing up practice",
+    "description": "Several doctors are planning on leaving the medical profession or retiring earlier due to the pandemic.",
+    "deaths": "",
+    "peopleImpacted": "120K",
+    "spending": "",
+    "tags": "access",
+    "references": "70, 71"
+  },
+  {
+    "id": "healthcare-dangerous",
+    "title": "Healthcare is a dangerous profession",
+    "description": "Private-sector healthcare workers in settings such as the hospital experience workplace violence-related injuries at a rate 5 times higher than  the rate for private-sector workers overall. The most common types of reported assaults were hitting, kicking, and beating.",
+    "deaths": "",
+    "peopleImpacted": "15M",
+    "spending": "",
+    "tags": "quality",
+    "references": "69"
   }
 ]

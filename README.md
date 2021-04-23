@@ -31,6 +31,8 @@ $ brew install node
 
 You may also find it helpful to use a tool to manage your Node installations. [nvm](https://github.com/creationix/nvm) is a good one. Follow the instructions there to install nvm. The command that looks like `curl -o- <url> | bash`
 
+Alternatively, brew can install nvm with `$ brew install nvm`
+
 Then you can check your Node versions with:
 
 ```bash

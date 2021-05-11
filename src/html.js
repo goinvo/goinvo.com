@@ -37,6 +37,11 @@ export default class HTML extends React.Component {
           />
           <script
             type="text/javascript"
+            src="//script.crazyegg.com/pages/scripts/0105/6922.js"
+            async="async"
+          />
+          <script
+            type="text/javascript"
             dangerouslySetInnerHTML={{
               __html: `
             window._chatlio = window._chatlio||[];

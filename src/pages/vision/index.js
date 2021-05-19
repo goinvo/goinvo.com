@@ -123,85 +123,6 @@ class VisionPage extends Component {
             <span className="text--serif text--primary">.</span>
           </h1>
         </Hero>
-        <div className="background--gray">
-          <div className="max-width content-padding">
-            <div className="pure-g pad-vertical pad-vertical--quad--only-lg">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--lg margin--none pad-right--double">
-                  Our design and analysis has been featured in
-                  <span className="text--serif text--primary">...</span>
-                </h2>
-              </div>
-              <div className="pure-u-1 pure-u-lg-2-3 margin-top--until-lg">
-                <ul className="publication-links list--unstyled container container--justify-space-around container--align-center container--fill-height">
-                  <li>
-                    <a
-                      href="https://www.npr.org/sections/health-shots/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={npr} alt="NPR logo" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.forbes.com/sites/oreillymedia/2014/03/07/defining-and-sculpting-interactions-between-man-and-technology/#23f6861d6571"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={forbes} alt="Forbes logo" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.theatlantic.com/health/archive/2013/01/the-future-of-medical-records/267202/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={atlantic} alt="The Atlantic logo" />
-                    </a>
-                  </li>
-                  <li className="hidden--until-lg">
-                    <a
-                      href="https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={ted} alt="TED logo" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)30154-X/fulltext"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={lancet} alt="The Lancet logo" />
-                    </a>
-                  </li>
-                  <li className="hidden--until-lg">
-                    <a
-                      href="https://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={newScientist} alt="New Scientist logo" />
-                    </a>
-                  </li>
-                  <li className="hidden--until-lg">
-                    <a
-                      href="https://www.wired.com/2013/01/medical-record-redesign/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={wired} alt="Wired logo" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <h3 className="header--md pad-vertical--double">Spotlight</h3>
           <div className="pure-g">
@@ -329,6 +250,23 @@ class VisionPage extends Component {
                   Spotify
                 </a>
               </div>
+              <div className="margin-bottom--half">
+                <a
+                  href="https://thedigitalife.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Digital Life
+                </a>{' '}
+                podcast, on{' '}
+                <a
+                  href="https://soundcloud.com/involution-studios"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  SoundCloud
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -375,52 +313,81 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--blue pad-vertical--quad--only-lg">
+        <div className="background--gray">
           <div className="max-width content-padding">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
-                <h3 className="header--md pad-vertical">Blog Posts</h3>
-                <div className="border-right--only-lg pad-right--only-lg">
-                  <ImageBlock
-                    title="Keep up to date with us!"
-                    image="/images/homepage/standardized-health-data-preview-2.jpg"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    caption="Our posts cover everything from the theories behind messy desks to health data standardization."
-                  />
-                  <ul className="list--unstyled">{this.renderBlogFeed()}</ul>
-                  <a
-                    className="float--right"
-                    href="https://yes.goinvo.com/articles"
-                  >
-                    View all blog posts
-                  </a>
-                </div>
+            <div className="pure-g pad-vertical pad-vertical--quad--only-lg">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--lg margin--none pad-right--double">
+                  Our design and analysis has been featured in
+                  <span className="text--serif text--primary">...</span>
+                </h2>
               </div>
-              <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
-                <h3 className="header--md pad-vertical">Podcast</h3>
-                <ImageBlock
-                  title="The Digital Life"
-                  image="/images/vision/microphone.jpg"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  caption="Explore our podcast on emerging technology and digital design."
-                />
-                <iframe
-                  title="GoInvo SoundCloud Embed"
-                  width="100%"
-                  height="450"
-                  scrolling="no"
-                  frameBorder="no"
-                  allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/14454933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                />
-                <a
-                  className="float--right"
-                  href="https://soundcloud.com/involution-studios"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View all episodes on SoundCloud
-                </a>
+              <div className="pure-u-1 pure-u-lg-2-3 margin-top--until-lg">
+                <ul className="publication-links list--unstyled container container--justify-space-around container--align-center container--fill-height">
+                  <li>
+                    <a
+                      href="https://www.npr.org/sections/health-shots/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={npr} alt="NPR logo" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.forbes.com/sites/oreillymedia/2014/03/07/defining-and-sculpting-interactions-between-man-and-technology/#23f6861d6571"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={forbes} alt="Forbes logo" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.theatlantic.com/health/archive/2013/01/the-future-of-medical-records/267202/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={atlantic} alt="The Atlantic logo" />
+                    </a>
+                  </li>
+                  <li className="hidden--until-lg">
+                    <a
+                      href="https://www.ted.com/talks/stephen_friend_the_hunt_for_unexpected_genetic_heroes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={ted} alt="TED logo" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)30154-X/fulltext"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={lancet} alt="The Lancet logo" />
+                    </a>
+                  </li>
+                  <li className="hidden--until-lg">
+                    <a
+                      href="https://www.newscientist.com/article/dn25969-my-genes-could-help-cure-childhood-diseases/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={newScientist} alt="New Scientist logo" />
+                    </a>
+                  </li>
+                  <li className="hidden--until-lg">
+                    <a
+                      href="https://www.wired.com/2013/01/medical-record-redesign/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={wired} alt="Wired logo" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

@@ -58,71 +58,99 @@ class VisionPage extends Component {
     super(props)
 
     this.state = {
-      blogPosts: [],
       features: features.filter(
         feature => feature.id !== spotlightFeature.id && !feature.external
       ),
-      // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
-      // recentBlogPostImage: '',
     }
-  }
-
-  componentDidMount() {
-    this.getBlogFeed()
-  }
-
-  getBlogFeed = () => {
-    axios
-      .get(config.rssToJsonServiceUrl + config.hubspotBlogFeedUrl)
-      .then(res => {
-        const blogPosts = []
-        res.data.items.slice(0, 5).map(item => {
-          return blogPosts.push({
-            title: item.title,
-            date: formatDate(item.pubDate.split(' ')[0]),
-            link: item.link,
-          })
-        })
-
-        this.setState({
-          blogPosts,
-          // NOTE: For now 'recentBlogPostImage' is not in use but may come back later
-          // recentBlogPostImage: res.data.items[0].thumbnail
-        })
-      })
-      .catch(err => {
-        console.log("Couldn't fetch hubspot blog posts", err)
-        setTimeout(this.getBlogFeed, 5000)
-      })
-  }
-
-  renderBlogFeed = () => {
-    return this.state.blogPosts.map(post => {
-      return (
-        <li key={post.link}>
-          <Card
-            link={post.link}
-            className="pad-all margin-bottom"
-            externalLink
-            suppressNewTab={true}
-          >
-            <div className="text--bold">{post.title}</div>
-            <span className="text--gray">{post.date}</span>
-          </Card>
-        </li>
-      )
-    })
   }
 
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <Hero image={frontmatter.heroImage}>
-          <h1 className="header--xl">
-            Seeing the future of health
-            <span className="text--serif text--primary">.</span>
+        <div className="max-width content-padding pad-vertical--double--only-lg">
+          <h1 className="header--xl pad-bottom--double">
+            The future of healthcare is...
           </h1>
-        </Hero>
+          <h1 className="header--xl">
+            you step foot on US soil, you get healthcare,
+          </h1>
+          <h1 className="header--xl">
+            with a phone, you have 24-365 access to primary care,
+          </h1>
+          <h1 className="header--xl">clinicians can practice anywhere,</h1>
+          <h1 className="header--xl">EPIC is open source,</h1>
+          <h1 className="header--xl">patients own their health data,</h1>
+          <h1 className="header--xl">and people over profit.</h1>
+        </div>
+        <div className="max-width content-padding pad-vertical--double--only-lg">
+          <h3 className="header--md">What are we doing to get there?</h3>
+          <h2 className="header--lg">Our work is open source.</h2>
+        </div>
+        <div className="max-width content-padding pad-vertical--double--only-lg">
+          <div className="equal-height-rows">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-vertical--double--only-lg">
+                    <h2 className="header--lg">
+                      Design for patients as the drivers of their care, and
+                      clinicians as the guides for care teams.
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-left--only-lg">
+                  <div className="pad-bottom--double pad-top--double--only-lg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-width content-padding pad-vertical--double--only-lg">
+          <div className="equal-height-rows">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-bottom--double pad-top--double--only-lg"></div>
+                </div>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-left--only-lg">
+                  <div className="pad-vertical--double--only-lg">
+                    <h2 className="header--lg">
+                      Software kills.  Design like your life is on the line. And
+                      know the biases in it.
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-width content-padding pad-vertical--double--only-lg">
+          <div className="equal-height-rows">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-vertical--double--only-lg">
+                    <h2 className="header--lg">
+                      Nobody wants to think about health. So when we do, it
+                      should be beautiful.
+                    </h2>
+                    <p className="text--gray"></p>
+                    <p className="text--gray"></p>
+                  </div>
+                </div>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-left--only-lg">
+                  <div className="pad-bottom--double pad-top--double--only-lg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <h3 className="header--md pad-vertical--double">Spotlight</h3>
           <div className="pure-g">
@@ -204,7 +232,7 @@ class VisionPage extends Component {
               </h2>
               <p className="text--gray">
                 Preview our books on product design, emerging technology,
-                prototyping, and the internet of things, published by O’reilly
+                prototyping, and the internet of things, published by O’Reilly
                 Media.
               </p>
               <div className="margin-bottom--half">

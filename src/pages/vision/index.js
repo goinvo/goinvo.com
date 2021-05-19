@@ -101,7 +101,15 @@ class VisionPage extends Component {
               </div>
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg"></div>
+                  <div className="pad-bottom--double pad-top--double--only-lg">
+                    <a href="https://www.hgraph.org">
+                      <ImageBlock
+                        image="/images/vision/hgraph-ring.jpg"
+                        caption="hGraph: Your health in one picture."
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,7 +120,15 @@ class VisionPage extends Component {
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-bottom--double pad-top--double--only-lg"></div>
+                  <div className="pad-bottom--double pad-top--double--only-lg">
+                    <a href="https://opensourcehealthcare.org">
+                      <ImageBlock
+                        image="/images/vision/hgraph-ring.jpg"
+                        caption="Open Source Healthcare Journal"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2">
@@ -138,14 +154,20 @@ class VisionPage extends Component {
                       Nobody wants to think about health. So when we do, it
                       should be beautiful.
                     </h2>
-                    <p className="text--gray"></p>
-                    <p className="text--gray"></p>
                   </div>
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg"></div>
+                  <div className="pad-bottom--double pad-top--double--only-lg">
+                    <a href="/vision/precision-autism/">
+                      <ImageBlock
+                        image="/images/vision/precision-autism.jpg"
+                        caption="Precision Autism"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

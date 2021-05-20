@@ -30,7 +30,7 @@ export default {
   mediaQueries,
   maxWidth,
   sizes: {
-    half: ['30vw'],
+    half: ['20vw'],
     full: ['100vw'],
     fullToHalfAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
     fullToThirdAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],

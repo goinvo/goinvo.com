@@ -36,7 +36,7 @@ const frontmatter = {
   metaTitle: 'Our vision on the future of health - GoInvo',
   metaDescription:
     'Our thoughts on the intersection of design, technology, and healthcare.',
-  heroImage: '/images/vision/vision-hero.jpg',
+  heroImage: '/images/vision/precision-autism.jpg',
 }
 
 class VisionPage extends Component {
@@ -73,12 +73,38 @@ class VisionPage extends Component {
           </div>
           <div className="max-width content-padding pad-vertical--top--only-lg">
             <h3 className="header--md">What are we doing to get there?</h3>
-            <h2 className="header--lg">We are open source advocates.</h2>
-            <Image
-              src="/images/vision/orange-arrow.jpg"
-              sizes={config.sizes.half}
-              className="arrow"
-            />
+          </div>
+          <div className="max-width content-padding pad-vertical--only-lg">
+            <div className="equal-height-rows">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-1-2 vertical-middle">
+                  <div className="pad-right--only-lg">
+                    <div className="pad-vertical--double--only-lg">
+                      <h2 className="header--lg">
+                        Design like your life is on the line. And know the
+                        biases in it.
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-left--only-lg">
+                    <div className="pad-bottom--double pad-top--double--only-lg">
+                      <a href="https://opensourcehealthcare.org">
+                        <Image
+                          src="/images/vision/open-source-healthcare-journal.jpg"
+                          sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                          className="image--max-width"
+                        />
+                      </a>
+                      <a href="https://opensourcehealthcare.org">
+                        Open Source Healthcare Journal
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="max-width content-padding pad-vertical--double--only-lg">
             <div className="equal-height-rows">
@@ -119,40 +145,7 @@ class VisionPage extends Component {
                   <div className="pad-right--only-lg">
                     <div className="pad-vertical--double--only-lg">
                       <h2 className="header--lg">
-                        Software kills.  Design like your life is on the line.
-                        And know the biases in it.
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-left--only-lg">
-                    <div className="pad-bottom--double pad-top--double--only-lg">
-                      <a href="https://opensourcehealthcare.org">
-                        <Image
-                          src="/images/vision/open-source-healthcare-journal.jpg"
-                          sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                          className="image--max-width"
-                        />
-                      </a>
-                      <a href="https://opensourcehealthcare.org">
-                        Open Source Healthcare Journal
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="max-width content-padding pad-vertical--only-lg">
-            <div className="equal-height-rows">
-              <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2 vertical-middle">
-                  <div className="pad-right--only-lg">
-                    <div className="pad-vertical--double--only-lg">
-                      <h2 className="header--lg">
-                        Nobody wants to think about health.  So when we do, it
-                        should be beautiful.
+                        Practice open source healthcare.
                       </h2>
                     </div>
                   </div>

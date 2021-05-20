@@ -73,7 +73,7 @@ class VisionPage extends Component {
           </div>
           <div className="max-width content-padding pad-vertical--top--only-lg">
             <h3 className="header--md">What are we doing to get there?</h3>
-            <h2 className="header--lg">Our work is open source.</h2>
+            <h2 className="header--lg">We are open source advocates.</h2>
             <Image
               src="/images/vision/orange-arrow.jpg"
               sizes={config.sizes.half}

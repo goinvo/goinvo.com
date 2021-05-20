@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 import Layout from '../../components/layouts/layout'
-import Hero from '../../components/hero'
 import Card from '../../components/card'
 import ImageBlock from '../../components/image-block'
 import Columns from '../../components/columns'
@@ -29,8 +27,6 @@ import wired from '../../assets/images/publication-logos/logo-wired.png'
 import features from '../../data/features.json'
 
 import config from '../../../config'
-
-import { formatDate } from '../../helpers.js'
 
 const spotlightFeature = features.find(
   feature => feature.id === 'us-healthcare-problems'
@@ -75,9 +71,14 @@ class VisionPage extends Component {
               and people over profit.
             </h1>
           </div>
-          <div className="max-width content-padding pad-vertical--double--only-lg arrow">
+          <div className="max-width content-padding pad-vertical--top--only-lg">
             <h3 className="header--md">What are we doing to get there?</h3>
             <h2 className="header--lg">Our work is open source.</h2>
+            <Image
+              src="/images/vision/orange-arrow.jpg"
+              sizes={config.sizes.half}
+              className="arrow"
+            />
           </div>
           <div className="max-width content-padding pad-vertical--double--only-lg">
             <div className="equal-height-rows">

@@ -6,6 +6,7 @@ import ImageBlock from '../../components/image-block'
 import Columns from '../../components/columns'
 import Image from '../../components/image'
 import Quote from '../../components/quote'
+import Video from 'components/video'
 import HubspotForm from '../../components/hubspot-form'
 import Carousel from '../../components/carousel'
 import GradientImageColumns from '../../components/gradient-image-columns'
@@ -81,8 +82,10 @@ class VisionPage extends Component {
                   <div className="pad-right--only-lg">
                     <div className="pad-vertical--double--only-lg">
                       <h2 className="header--lg">
-                        Design like your life is on the line. And know the
-                        biases in it.
+                        Design like your life is on the line.
+                        <br />
+                        We need to see healthcare, accurately, quickly, and
+                        beautifully.
                       </h2>
                     </div>
                   </div>
@@ -90,15 +93,15 @@ class VisionPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-left--only-lg">
                     <div className="pad-bottom--double pad-top--double--only-lg">
-                      <a href="https://opensourcehealthcare.org">
+                      <a href="https://www.hgraph.org">
                         <Image
-                          src="/images/vision/open-source-healthcare-journal.jpg"
+                          src="/images/vision/hgraph-ring.jpg"
                           sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                           className="image--max-width"
                         />
                       </a>
-                      <a href="https://opensourcehealthcare.org">
-                        Open Source Healthcare Journal
+                      <a href="https://www.hgraph.org">
+                        hGraph: Your health in one picture.
                       </a>
                     </div>
                   </div>
@@ -113,8 +116,8 @@ class VisionPage extends Component {
                   <div className="pad-right--only-lg">
                     <div className="pad-vertical--double--only-lg">
                       <h2 className="header--lg">
-                        Design for patients as the drivers of their care, and
-                        clinicians as the guides for care teams.
+                        The patient drives the shared decisions with all care
+                        providers.
                       </h2>
                     </div>
                   </div>
@@ -122,15 +125,18 @@ class VisionPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-left--only-lg">
                     <div className="pad-bottom--double pad-top--only-lg">
-                      <a href="https://www.hgraph.org">
-                        <Image
-                          src="/images/vision/hgraph-ring.jpg"
-                          sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                          className="image--max-width"
-                        />
-                      </a>
-                      <a href="https://www.hgraph.org">
-                        hGraph: Your health in one picture.
+                      <iframe
+                        width="100%"
+                        height="315"
+                        src="https://www.youtube.com/embed/mpyuTRAy7ds"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                      <br />
+                      <a href="https://www.youtube.com/watch?v=mpyuTRAy7ds">
+                        Own Your Health: An Open Source Path
                       </a>
                     </div>
                   </div>
@@ -153,14 +159,16 @@ class VisionPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-left--only-lg">
                     <div className="pad-bottom--double pad-top--double--only-lg">
-                      <a href="/vision/precision-autism/">
+                      <a href="https://opensourcehealthcare.org">
                         <Image
-                          src="/images/vision/precision-autism.jpg"
+                          src="/images/vision/open-source-healthcare-journal.jpg"
                           sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                           className="image--max-width"
                         />
                       </a>
-                      <a href="/vision/precision-autism/">Precision Autism</a>
+                      <a href="https://opensourcehealthcare.org">
+                        Open Source Healthcare Journal
+                      </a>
                     </div>
                   </div>
                 </div>

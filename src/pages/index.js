@@ -23,9 +23,14 @@ const frontmatter = {
   metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
   metaDescription:
     'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
-  heroImage: '/images/homepage/hero-critical-mass-5.jpg',
+  heroImage: [
+    '/images/homepage/hero-critical-mass-5.jpg',
+    '/images/homepage/precision-autism-hero.jpg',
+  ],
   heroButtonText: 'See Our Work',
 }
+
+const randomHeroNumber = Math.floor(Math.random() * 2)
 
 class IndexPage extends Component {
   constructor(props) {
@@ -44,7 +49,7 @@ class IndexPage extends Component {
         <Hero
           className="hero--higher-text-contrast"
           link="/work/"
-          image={frontmatter.heroImage}
+          image={frontmatter.heroImage[randomHeroNumber]}
           caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
           button={frontmatter.heroButtonText}
           isLarge

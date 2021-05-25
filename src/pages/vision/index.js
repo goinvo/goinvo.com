@@ -54,7 +54,7 @@ class VisionPage extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="max-width content-padding pad-vertical--double--only-lg">
-          <h1 className="header--xl pad-bottom--double">
+          <h1 className="header--xl pad-vertical--double">
             The future of healthcare is...
           </h1>
           <h1 className="header--xl">

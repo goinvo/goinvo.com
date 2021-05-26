@@ -2,7 +2,7 @@
   {
     "id": "us-healthcare-problems",
     "title": "US Healthcare Problems",
-    "date": "Feb.2021",
+    "date": "Apr.2021",
     "client": "Feature",
     "categories": ["open-source", "public-health-and-policy"],
     "caption": "The United States is home to some of the best and worst care. The list serves as a call to action for everyone to close the gap.",
@@ -44,6 +44,16 @@
     "hiddenWorkPage": true
   },
   {
+    "id": "determinants-of-health",
+    "title": "Determinants of Health",
+    "date": "Apr.2020",
+    "client": "Feature",
+    "categories": ["public-health-and-policy", "open-source"],
+    "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.",
+    "image": "/images/services/doh-preview.jpg",
+    "link": "/vision/determinants-of-health/"
+  },
+  {
     "id": "health-design-thinking",
     "title": "Health Design Thinking Book",
     "date": "Mar.2020",
@@ -57,7 +67,7 @@
   {
     "id": "coronavirus",
     "title": "Understanding the 2019 Novel Coronavirus",
-    "date": "Feb.2020",
+    "date": "Mar.2020",
     "client": "Feature",
     "categories": ["public-health-and-policy"],
     "caption": "A primer on COVID-19 with weekly updates",
@@ -161,16 +171,6 @@
     "caption": "The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.",
     "image": "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",
     "link": "/vision/open-source-healthcare/"
-  },
-  {
-    "id": "determinants-of-health",
-    "title": "Determinants of Health",
-    "date": "Oct.2018",
-    "client": "Feature",
-    "categories": ["public-health-and-policy", "open-source"],
-    "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.",
-    "image": "/images/services/doh-preview.jpg",
-    "link": "/vision/determinants-of-health/"
   },
   {
     "id": "print-big",

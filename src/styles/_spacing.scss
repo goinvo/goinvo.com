@@ -182,3 +182,8 @@ $directions: 'top' 'bottom' 'left' 'right';
     padding: 0 !important;
   }
 }
+
+.vertical-middle {
+  display: flex;
+  align-items: center;
+}

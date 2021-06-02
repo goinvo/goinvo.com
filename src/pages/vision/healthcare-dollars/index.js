@@ -74,7 +74,7 @@ class HealthcareDollars extends Component {
                     rel="noopener noreferrer"
                     className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
                   >
-                    Download Poster
+                    Download
                   </a>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">

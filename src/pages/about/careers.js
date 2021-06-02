@@ -210,6 +210,12 @@ class CareersPage extends Component {
                 <br />
                 <a href="mailto:juhan@goinvo.com">juhan@goinvo.com</a>
               </p>
+              <div className="pad-vertical">
+                <HubspotForm
+                  formId={config.hubspotApplicationFormId}
+                  title="Application"
+                />
+              </div>
             </div>
           </div>
         </BackgroundImage>
@@ -238,19 +244,6 @@ class CareersPage extends Component {
             />
           </Columns>
         </div>
-        <GradientImageColumns
-          image="/images/about/careers/mockup-review.jpg"
-          backgroundColor="black"
-          gradient
-          reverse
-        >
-          <div className="pad-vertical--double">
-            <HubspotForm
-              formId={config.hubspotApplicationFormId}
-              title="Application"
-            />
-          </div>
-        </GradientImageColumns>
       </Layout>
     )
   }

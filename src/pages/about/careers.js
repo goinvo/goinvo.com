@@ -131,7 +131,7 @@ class CareersPage extends Component {
         </Carousel>
         <BackgroundImage src="/images/contact/studio.jpg" gradient>
           <div className="pad-vertical--quad pad--only-lg">
-            <div className="background--white max-width max-width--md content-padding--double pad-vertical--quad">
+            <div className="background--gray max-width max-width--md content-padding--double pad-vertical--quad">
               <h2 className="header--xl margin-top--none">
                 Working together towards a healthy groove
               </h2>

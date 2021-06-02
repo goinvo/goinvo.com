@@ -65,16 +65,28 @@ class HealthcareDollars extends Component {
 
             <div className="max-width max-width--md content-padding">
               <div className="button-group">
-                <a
-                  href={mediaUrl(
-                    '/pdf/vision/healthcare-dollars/healthcare-dollars-visualization.pdf'
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
-                >
-                  Download Poster
-                </a>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <a
+                    href={mediaUrl(
+                      '/pdf/vision/healthcare-dollars/healthcare-dollars-visualization.pdf'
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
+                  >
+                    Download
+                  </a>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <a
+                    href="https://www.amazon.com/dp/B07S3WT7ZR/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
+                  >
+                    Buy Print
+                  </a>
+                </div>
               </div>
               <div className="text--sm text--gray">
                 <p>

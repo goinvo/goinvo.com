@@ -210,7 +210,7 @@ class CareersPage extends Component {
                 <br />
                 <a href="mailto:juhan@goinvo.com">juhan@goinvo.com</a>
               </p>
-              <div className="pad-vertical">
+              <div className="pad-top">
                 <HubspotForm
                   formId={config.hubspotApplicationFormId}
                   title="Application"

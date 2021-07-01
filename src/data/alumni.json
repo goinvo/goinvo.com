@@ -1,5 +1,27 @@
 [
   {
+    "name": "Elle Marcus",
+    "title": "Designer, Engineer",
+    "bio": "Elle is an engineer with a design eye. With mechanical engineering genes in machine design and bio-procurement, she now focuses on human performance, system engineering, and healthcare design. Elle received a MechE degree from Case Western Reserve University in 2016 and is working on a Masters of Design Innovation from MassArt due in 2022. She works on global open source projects and designs while cooking.",
+    "social": {
+      "email": "elle@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/ellemarcus/",
+      "instagram": "https://www.instagram.com/simpletoscratch/"
+    },
+    "image": "/images/about/headshot-elle-marcus.jpg"
+  },
+  {
+    "name": "Meghana Karande",
+    "title": "Clinical Consultant",
+    "bio": "Meghana is a classically trained clinician via Yale and Mount Sinai who fights for truth and against tricknology. With 15 years in pharma, insurance, and gov sectors, she takes a system approach to solving healthcare problems. She provides deep clinical insights and medical experience for studio projects. Before her clinical education, Meghana received a BS in Psychology from Cornell University.",
+    "social": {
+      "email": "meghana@goinvo.com",
+      "twitter": "https://twitter.com/meghanakarande",
+      "linkedin": "https://www.linkedin.com/in/meghana-karande-md/"
+    },
+    "image": "/images/about/headshot-meghana-karande.jpg"
+  },
+  {
     "name": "Hannah Sennik",
     "title": "Designer, Engineer",
     "bio": "Hannah Sennik drives a rare trio of skills: bioengineering, systems design, and art. With a BASc of Systems Design Engineering from Waterloo, she joined Apple Computer to calibrate, instrument, and test hardware services. A MSE in BioEngineering Design from Johns Hopkins University pushes Hannah’s goal of melting design, healthcare, and system engineering into her wetware.",

@@ -23,14 +23,20 @@ const frontmatter = {
   metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
   metaDescription:
     'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
-  heroImage: [
-    '/images/homepage/hero-critical-mass-5.jpg',
-    '/images/homepage/precision-autism-hero.jpg',
-  ],
+  heroImage: '/images/homepage/mitre_open_health_dashboard_demo_3.jpg',
   heroButtonText: 'See Our Work',
 }
 
-const randomHeroNumber = Math.floor(Math.random() * 2)
+const heroVideoSources = [
+  {
+    src: '/videos/homepage/mitre_open_health_dashboard_demo_2.mp4',
+    format: 'mp4',
+  },
+  {
+    src: '/videos/homepage/mitre_open_health_dashboard_demo_2.webm',
+    format: 'webm',
+  },
+]
 
 class IndexPage extends Component {
   constructor(props) {
@@ -48,8 +54,10 @@ class IndexPage extends Component {
       <Layout frontmatter={frontmatter}>
         <Hero
           className="hero--higher-text-contrast"
-          link="/work/"
-          image={frontmatter.heroImage[randomHeroNumber]}
+          link="/work/mitre-state-of-us-healthcare"
+          video={heroVideoSources}
+          poster="/images/homepage/mitre_open_health_dashboard_demo_3.jpg"
+          fallback={frontmatter.heroImage}
           caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
           button={frontmatter.heroButtonText}
           isLarge

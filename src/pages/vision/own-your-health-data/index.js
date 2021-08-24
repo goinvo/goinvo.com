@@ -116,15 +116,25 @@ class OwnYourHealthDataFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div>
                 <h2 className="header--xl text--center">Authors</h2>
-                <Author name="Annie Lakey Becker" company=" " image="">
-                  Bio?
+                <Author
+                  name="Annie Lakey Becker"
+                  company=" "
+                  image="/images/features/own-your-health-data/headshot-annie-lakey-becker.jpg"
+                >
+                  Annie is a Product and Project Manager based in Seattle.
                 </Author>
                 <Author
                   name="Kim Nipp"
                   company=" "
                   image="/images/features/own-your-health-data/headshot-kim-nipp.jpg"
                 >
-                  Bio?
+                  Kim is a designer, illustrator, and animator specializing in
+                  scientific visualization. Originally trained in behavioural
+                  neuroscience at the University of British Columbia, Kim moved
+                  on to complete their Masters of Science in Biomedical
+                  Communications, an interdisciplinary graduate program for
+                  visual media design in science and medicine offered through
+                  the Faculty of Medicine at the University of Toronto.
                 </Author>
                 <Author name="Juhan Sonin" company="GoInvo, MIT" />
 

@@ -2,14 +2,11 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
-import Author from '../../../components/author'
 
 import config from '../../../../config'
-import { mediaUrl } from '../../../helpers'
 
 const frontmatter = {
   metaTitle: 'Own Your Health Data',
@@ -80,6 +77,7 @@ class OwnYourHealthDataFeature extends Component {
                       <a
                         href="https://docs.google.com/document/d/13j03-beeoOZujMK6smdjcicKAb1Jh_L6tn_NG91Nq4M/edit"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <Image
                           src="/images/features/own-your-health-data/own-your-health-data-whitepaper-cover.jpg"

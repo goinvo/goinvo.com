@@ -61,17 +61,6 @@
     "image": "/images/about/headshot-craig-mcginley.jpg"
   },
   {
-    "name": "Colleen Tang Poy",
-    "title": "Designer",
-    "bio": "Colleen is a designer at the intersection of art and science. Her mission is to make healthcare and health information more accessible through beautiful storytelling. Colleen joined Invo in 2019 and has a BS in Psychology and Neuroscience from McMaster University and a MS in Biomedical Communication at the University of Toronto.",
-    "social": {
-      "email": "colleen@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/colleen-tang-poy-12410893/",
-      "portfolio": "https://www.colspleen.com"
-    },
-    "image": "/images/about/headshot-colleen-tang-poy.jpg"
-  },
-  {
     "name": "Daniel Reeves",
     "title": "Designer, Engineer",
     "bio": "Daniel is a designer and developer with a diverse background in building interactive and science-based exhibits to academic research in interdisciplinary physics. He has a PhD in physics and quantitative biology from Brandeis University and held subsequent positions at Harvard and MIT. Daniel joined the GoInvo team in 2018 to build engaging biologic and healthcare services.",
@@ -100,6 +89,16 @@
       "linkedin": "https://www.linkedin.com/in/megan-hirsch/"
     },
     "image": "/images/about/headshot-megan-hirsch.jpg"
+  },
+  {
+    "name": "Claire Lin",
+    "title": "Designer, Engineer",
+    "bio": "Claire is a designer and developer rooted in principles of engineering and architecture. She has dedicated herself to social impact work since an early age — now addressing gaps in the healthcare system through interaction and information design. She joined Invo in 2021 with a BA in Mechanical Engineering from Brown University.",
+    "social": {
+      "email": "claire@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/byclairelin/"
+    },
+    "image": "/images/about/headshot-claire-lin.jpg"
   },
   {
     "name": "Vickie Hua",

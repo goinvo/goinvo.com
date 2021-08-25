@@ -334,6 +334,7 @@ class IndexPage extends Component {
                 <a
                   href="https://my.matterport.com/show/?m=KDRR1E7jZwf"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="/images/homepage/group-aug-2018-4.jpg"

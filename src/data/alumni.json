@@ -1,5 +1,15 @@
 [
   {
+    "name": "Vickie Hua",
+    "title": "Designer",
+    "bio": "Vickie is studying health & economics at The Wharton School of the University of Pennsylvania. She is jamming on the open source health picture and studying how illustrated faces help or hinder understanding health.",
+    "social": {
+      "email": "vickie@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/vickiehua/"
+    },
+    "image": "/images/about/headshot-vickie-hua.jpg"
+  },
+  {
     "name": "Colleen Tang Poy",
     "title": "Designer",
     "bio": "Colleen is a designer at the intersection of art and science. Her mission is to make healthcare and health information more accessible through beautiful storytelling. Colleen joined Invo in 2019 and has a BS in Psychology and Neuroscience from McMaster University and a MS in Biomedical Communication at the University of Toronto.",

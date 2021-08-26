@@ -245,7 +245,7 @@ class IndexPage extends Component {
               key={'3'}
               image="/images/features/health-design-thinking/health-design-thinking-book-thumbnail.jpg"
               title="Health Design Thinking Book"
-              caption="Work from the past decade of the GoInvo Studio's practice is highlighted in the diverse case studies that make up the new book Health Design Thinking, co-written by Ellen Lupton and Dr. Bon Ku."
+              caption="Work from the past decade of the GoInvo Studio's practice is highlighted in the diverse case studies that make up the book 'Health Design Thinking', co-written by Ellen Lupton and Dr. Bon Ku."
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
             >
               <a href="/vision/health-design-thinking/">

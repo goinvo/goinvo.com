@@ -243,25 +243,13 @@ class IndexPage extends Component {
             </ImageBlock>
             <ImageBlock
               key={'3'}
-              image="/images/vision/microphone.jpg"
-              title="The Digital Life podcast"
-              caption="An online radio show that explores important, timely topics in the world of digital design and technology."
+              image="/images/features/health-design-thinking/health-design-thinking-book-thumbnail.jpg"
+              title="Health Design Thinking Book"
+              caption="Work from the past decade of the GoInvo Studio's practice is highlighted in the diverse case studies that make up the book 'Health Design Thinking', co-written by Ellen Lupton and Dr. Bon Ku."
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
             >
-              <a
-                href="https://soundcloud.com/involution-studios/ai-and-knowledge-work"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                AI & Knowledge Work
-              </a>
-              <br />
-              <a
-                href="https://soundcloud.com/involution-studios/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Explore all episodes
+              <a href="/vision/health-design-thinking/">
+                Health Design Thinking Book
               </a>
               <br />
             </ImageBlock>

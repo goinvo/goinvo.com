@@ -247,13 +247,15 @@ class OwnYourHealthDataFeature extends Component {
                     },
                     {
                       title:
-                        '243 CMR 2.07(13), Medical Records (Massachusetts) ((a)...A licensee shall maintain a medical record for each patient that is complete, timely, legible, and adequate to enable the licensee or any other health care provider to provider proper diagnosis and treatment....)',
-                      link: '',
+                        'Code of Massachusetts Regulations Title 243. 243 CMR 2.07(13), Licensing and the practice of medicine.((a)...A licensee shall maintain a medical record for each patient that is complete, timely, legible, and adequate to enable the licensee or any other health care provider to provider proper diagnosis and treatment….). April 2020',
+                      link:
+                        'https://www.mass.gov/regulations/243-CMR-200-licensing-and-the-practice-of-medicine',
                     },
                     {
                       title:
-                        '105 CMR 130.370 Requirement on Massachusetts hospitals.',
-                      link: '',
+                        'Code of Massachusetts Regulations Title 105. 105 CMR 130.370, Hospital licensure. ((a) A hospital shall maintain records of the diagnosis and treatment of patients under its care for the retention period specified). July 2017',
+                      link:
+                        'https://www.mass.gov/regulations/105-CMR-13000-hospital-licensure',
                     },
                     {
                       title:
@@ -263,19 +265,20 @@ class OwnYourHealthDataFeature extends Component {
                     },
                     {
                       title:
-                        'Evans, B. J. (2011). Much ado about data ownership. Harvard Journal of Law & Technology, 25(1), 69-130.25 Harv. J. L. & Tech. 69 (2011-2012) Much Ado about Data Ownership.',
-                      link: '',
+                        'Evans, B. J. (2011). Much ado about data ownership. Harvard Journal of Law & Technology, 25(1), 69-130.25 Harv. J. L. & Tech. 69 (2011-2012) Much Ado about Data Ownership',
+                      link:
+                        'http://jolt.law.harvard.edu/articles/pdf/v25/25HarvJLTech69.pdf',
                     },
                     {
                       title:
-                        'Contreras, J., Health Data Ownership, 94 NYU Law Review 624 (October 2019).',
-                      link: '',
+                        'Contreras, J., Health Data Ownership, 94 NYU Law Review 624 (October 2019)',
+                      link:
+                        'https://www.nyulawreview.org/issues/volume-94-number-4/the-false-promise-of-health-data-ownership/',
                     },
                     {
                       title:
                         'Perzanowski, A., Schultz, J.  The End of Ownership: Personal Property in the Digital Economy. Pub Res Q 34, 154–155 (2018)',
-                      link:
-                        'https://doi-org.libproxy.lib.unc.edu/10.1007/s12109-018-9567-2',
+                      link: 'https://doi.org/10.7551/mitpress/10524.001.0001',
                     },
                     {
                       title:
@@ -345,8 +348,9 @@ class OwnYourHealthDataFeature extends Component {
                     },
                     {
                       title:
-                        'Kostyack P. T. (2002). The emergence of the Healthcare Information Trust. Health matrix (Cleveland, Ohio : 1991), 12(2), 393–447.',
-                      link: '',
+                        'Kostyack P. T. (2002). The emergence of the Healthcare Information Trust. Health matrix (Cleveland, Ohio : 1991), 12(2), 393–447',
+                      link:
+                        'https://scholarlycommons.law.case.edu/cgi/viewcontent.cgi?article=1419&context=healthmatrix',
                     },
                     {
                       title:

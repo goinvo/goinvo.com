@@ -304,7 +304,7 @@ class OwnYourHealthDataFeature extends Component {
                     },
                     {
                       title:
-                        'https://www.iab.com/wp-content/uploads/2018/12/IAB_The-State-of-Data-2018_2018-12-05_Final.pdf, see page 5.',
+                        'Winterberry Group. (2018). The State of Data 2018. PDF file, see page 5',
                       link:
                         'https://www.iab.com/wp-content/uploads/2018/12/IAB_The-State-of-Data-2018_2018-12-05_Final.pdf',
                     },

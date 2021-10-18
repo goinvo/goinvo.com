@@ -171,6 +171,16 @@ class OwnYourHealthDataFeature extends Component {
                 </p>
 
                 <p>
+                  <strong>Megan Hirsch</strong>
+                  <br />
+                  Megan is a designer-strategist that makes healthcare
+                  experiences enjoyable for patients and clinicians. She's
+                  dialing in her design and biology-trained eye to amplify her
+                  medical school experience in 2022. She joined Invo in 2021
+                  with a BS in Human Biology from Stanford University.
+                </p>
+
+                <p>
                   <strong>Juhan Sonin</strong>
                   <br />
                   Juhan Sonin leads GoInvo with expertise in healthcare design

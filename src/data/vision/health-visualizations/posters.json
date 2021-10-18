@@ -1,5 +1,14 @@
 [
   {
+    "id": "own-your-health-data",
+    "title": "Own Your Health Data",
+    "date": "Oct.2021",
+    "caption": "",
+    "image": "/images/features/own-your-health-data/patient-data-ownership.jpg",
+    "downloadLink": "/pdf/vision/own-your-health-data/OwnYourHealthData.pdf",
+    "learnMoreLink": "/vision/own-your-health-data/"
+  },
+  {
     "id": "how-to-vote-early",
     "title": "How To Vote Early",
     "date": "Sep.2020",

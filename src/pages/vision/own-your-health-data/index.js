@@ -6,6 +6,7 @@ import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 
+import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -54,10 +55,14 @@ class OwnYourHealthDataFeature extends Component {
                 <div className="pure-g button-group margin-bottom">
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="poster margin-top--double margin-right margin-left">
-                      <a href="https://github.com/goinvo/OwnYourHealthData/raw/main/OwnYourHealthData_Comic.pdf">
+                      <a
+                        href={mediaUrl(
+                          '/pdf/vision/own-your-health-data/OwnYourHealthData.pdf'
+                        )}
+                      >
                         <Image
-                          src="/images/features/own-your-health-data/own-your-health-data-comic-cover-3.jpg"
-                          className="image--max-width"
+                          src="/images/features/own-your-health-data/cover.jpg"
+                          className="image--max-width display--block"
                           sizes={
                             config.sizes.fullToHalfAtLargeInsideMediumMaxWidth
                           }
@@ -65,12 +70,23 @@ class OwnYourHealthDataFeature extends Component {
                       </a>
                     </div>
                     <a
-                      href="https://github.com/goinvo/OwnYourHealthData/raw/main/OwnYourHealthData_Comic.pdf"
+                      href={mediaUrl(
+                        '/pdf/vision/own-your-health-data/OwnYourHealthData.pdf'
+                      )}
                       rel="noopener noreferrer"
                       className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
                     >
                       Download Comic
                     </a>
+                    <div class="margin-top text--center">
+                      <a
+                        href="https://github.com/goinvo/OwnYourHealthData"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        On GitHub
+                      </a>
+                    </div>
                   </div>
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="poster margin-top--double margin-right margin-left">
@@ -81,7 +97,7 @@ class OwnYourHealthDataFeature extends Component {
                       >
                         <Image
                           src="/images/features/own-your-health-data/own-your-health-data-whitepaper-cover.jpg"
-                          className="image--max-width"
+                          className="image--max-width display--block"
                           sizes={
                             config.sizes.fullToHalfAtLargeInsideMediumMaxWidth
                           }

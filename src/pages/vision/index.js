@@ -53,112 +53,41 @@ class VisionPage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="max-width content-padding pad-vertical--double--only-lg">
-          <h1 className="header--xl pad-vertical--double">
-            The future of healthcare is...
-          </h1>
-          <h1 className="header--xl">
-            you step foot on US soil, you get healthcare,
-          </h1>
-          <h1 className="header--xl">
-            with a phone, you have 24-365 access to primary care,
-          </h1>
-          <h1 className="header--xl">clinicians can practice anywhere,</h1>
-          <h1 className="header--xl">EPIC is open source,</h1>
-          <h1 className="header--xl">patients own their health data,</h1>
-          <h1 className="header--xl pad-bottom--double">
-            and people over profit.
-          </h1>
-          <h3 className="header--md pad-top--double">
-            What are we doing to get there?
-          </h3>
-          <div className="pure-g">
-            <div className="pure-u-1 pure-u-lg-1-2 vertical-middle">
-              <div className="pad-right--only-lg">
-                <div className="pad-vertical--double--only-lg">
-                  <h2 className="header--lg">
-                    Design like your life is on the line.
-                    <br />
-                    We need to see healthcare, accurately, quickly, and
-                    beautifully.
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="pad-left--only-lg">
-                <div className="pad-bottom--double pad-top--double--only-lg">
-                  <a href="https://www.hgraph.org">
-                    <Image
-                      src="/images/vision/hgraph-ring.jpg"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                      className="image--max-width"
-                    />
-                  </a>
-                  <a href="https://www.hgraph.org">
-                    hGraph: Your health in one picture.
-                  </a>
-                </div>
-              </div>
-            </div>
+        <div className="pure-g">
+          <div className="pure-u-1-2 hidden--sm">
+            <Image
+              className="image--max-width"
+              src="/images/vision/vision-illustration-desktop-left.jpg"
+              alt=""
+            />
           </div>
-          <div className="pure-g">
-            <div className="pure-u-1 pure-u-lg-1-2 vertical-middle">
-              <div className="pad-right--only-lg">
-                <div className="pad-vertical--double--only-lg">
-                  <h2 className="header--lg">
-                    The patient drives the shared decisions with all care
-                    providers.
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="pad-left--only-lg">
-                <div className="pad-bottom--double pad-top--only-lg">
-                  <iframe
-                    width="100%"
-                    height="315"
-                    src="https://www.youtube.com/embed/mpyuTRAy7ds"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                  <br />
-                  <a href="https://www.youtube.com/watch?v=mpyuTRAy7ds">
-                    Own Your Health: An Open Source Path
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="pure-u-1-2 hidden--sm">
+            <Image
+              className="image--max-width"
+              src="/images/vision/vision-illustration-desktop-right.jpg"
+              alt=""
+            />
           </div>
-          <div className="pure-g">
-            <div className="pure-u-1 pure-u-lg-1-2 vertical-middle">
-              <div className="pad-right--only-lg">
-                <div className="pad-vertical--double--only-lg">
-                  <h2 className="header--lg">
-                    Practice open source healthcare.
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="pad-left--only-lg">
-                <div className="pad-bottom--double pad-top--double--only-lg">
-                  <a href="https://opensourcehealthcare.org">
-                    <Image
-                      src="/images/vision/open-source-healthcare-journal.jpg"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                      className="image--max-width"
-                    />
-                  </a>
-                  <a href="https://opensourcehealthcare.org">
-                    Open Source Healthcare Journal
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="pure-u-1 hidden--after-sm">
+            <Image
+              className="image--max-width"
+              src="/images/vision/vision-illustration-mobile-home.jpg"
+              alt=""
+            />
+          </div>
+          <div className="pure-u-1 hidden--after-sm">
+            <Image
+              className="image--max-width"
+              src="/images/vision/vision-illustration-mobile-practice.jpg"
+              alt=""
+            />
+          </div>
+          <div className="pure-u-1 hidden--after-sm">
+            <Image
+              className="image--max-width"
+              src="/images/vision/vision-illustration-mobile-country.jpg"
+              alt=""
+            />
           </div>
         </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">

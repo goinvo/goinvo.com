@@ -108,6 +108,11 @@ body {
       display: none !important;
     }
   }
+  &--after-sm {
+    @include mq($from: medium) {
+      display: none !important;
+    }
+  }
 }
 
 .equal-height-rows {

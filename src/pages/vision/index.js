@@ -36,7 +36,7 @@ const frontmatter = {
   metaTitle: 'Our vision on the future of health - GoInvo',
   metaDescription:
     'Our thoughts on the intersection of design, technology, and healthcare.',
-  heroImage: '/images/vision/precision-autism.jpg',
+  heroImage: '/images/vision/vision-illustration-preview.jpg',
 }
 
 class VisionPage extends Component {

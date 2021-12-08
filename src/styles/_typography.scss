@@ -28,6 +28,11 @@ body {
 .text {
   &--serif {
     font-family: $font-family--serif;
+
+    &.text--base {
+      font-size: $font-size--base * 1.3;
+      font-weight: 300;
+    }
   }
 
   &--sm {

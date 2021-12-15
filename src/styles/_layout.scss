@@ -121,6 +121,22 @@ body {
 }
 
 .display {
+  &--flex {
+    display: flex;
+
+    &--align {
+      &-center {
+        align-items: center;
+      }
+    }
+
+    &--justify {
+      &-center {
+        justify-content: center;
+      }
+    }
+  }
+
   &--block {
     display: block;
   }

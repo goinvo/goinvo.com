@@ -101,6 +101,26 @@
     "image": "/images/about/headshot-claire-lin.jpg"
   },
   {
+    "name": "Chloe Ma",
+    "title": "Designer",
+    "bio": "Chloe is a designer and researcher specializing in medical and scientific storytelling. She drives to improve healthcare equity, education, and accessibility through good design. Chloe joined Invo in 2021 with a BS in BioChemistry and Molecular Biology from Dalhousie University and a MSc in Biomedical Communication from University of Toronto.",
+    "social": {
+      "email": "chloe@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/chloexyma/"
+    },
+    "image": "/images/about/headshot-chloe-ma.jpg"
+  },
+  {
+    "name": "Ines Amri",
+    "title": "Designer",
+    "bio": "Ines is a designer and data analyst. She translates complex, often chaotic medical problems into elegant digital experiences. As an advocate for international women's health and human rights, Ines joined GoInvo in 2021 with a BA in Economics from Paris Dauphine University and an MSc in Digital Health and Data Analytics from the University of Reading.",
+    "social": {
+      "email": "ines@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/amri-ines/"
+    },
+    "image": "/images/about/headshot-ines-amri.jpg"
+  },
+  {
     "name": "Jonathan Follett",
     "title": "Principal",
     "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",

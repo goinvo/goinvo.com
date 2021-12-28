@@ -51,11 +51,6 @@ class Footer extends Component {
                   <li>
                     <Link to="/vision/">Vision</Link>
                   </li>
-                  <li>
-                    <a target="blank" rel="noopener noreferrer"href="https://creativenext.org/">
-                      Creative Next
-                    </a>
-                  </li>
                 </ul>
               </div>
               <div className="pure-u-1-2">

@@ -1,26 +1,32 @@
 [
   {
     "id": "care-management",
-    "title": "Care Management"
+    "title": "Care Management",
+    "link": "/work/?category=care-management"
   },
   {
     "id": "health-it-and-infrastructure",
-    "title": "Health IT & Infrastructure"
+    "title": "Health IT & Infrastructure",
+    "link": "/work/?category=health-it-and-infrastructure"
   },
   {
     "id": "patient-engagement",
-    "title": "Patient Engagement"
+    "title": "Patient Engagement",
+    "link": "/work/?category=patient-engagement"
   },
   {
     "id": "precision-medicine-and-genomics",
-    "title": "Precision Medicine & Genomics"
+    "title": "Precision Medicine & Genomics",
+    "link": "/work/?category=precision-medicine-and-genomics"
   },
   {
     "id": "public-health-and-policy",
-    "title": "Public Health & Policy"
+    "title": "Public Health & Policy",
+    "link": "/work/?category=public-health-and-policy"
   },
   {
     "id": "open-source",
-    "title": "Open Products & Innovation"
+    "title": "Open Products & Innovation",
+    "link": "/open-source-healthcare"
   }
 ]

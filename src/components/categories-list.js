@@ -27,10 +27,7 @@ class CategoriesList extends Component {
             {cat.title}
           </button>
         ) : (
-          <Link
-            className="categories-list__link"
-            to={`/work/?category=${cat.id}`}
-          >
+          <Link className="categories-list__link" to={cat.link}>
             {cat.title}
           </Link>
         )}
@@ -49,9 +46,7 @@ class CategoriesList extends Component {
           return (
             <div
               key={i}
-              className={`categories-list__column pure-u-1 pure-u-lg-1-${
-                this.props.columns
-              }`}
+              className={`categories-list__column pure-u-1 pure-u-lg-1-${this.props.columns}`}
             >
               <ul
                 className={`categories-list ${

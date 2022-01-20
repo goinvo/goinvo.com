@@ -84,7 +84,7 @@ class IndexPage extends Component {
                       designed.
                     </span>
                     <br />
-                    <Link to="/open-source-healthcare">
+                    <Link to="/open-source-healthcare/?category=open-source-healthcare-vision">
                       What is open source in healthcare?
                     </Link>
                   </p>

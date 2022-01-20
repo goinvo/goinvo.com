@@ -218,7 +218,7 @@ class WorkPage extends Component {
             suppressTransition={this.state.suppressCollapseTransition}
           >
             <div
-              className="background--gray pad-top pad-bottom--double"
+              className="background--blue pad-top pad-bottom--double"
               id="categories-list"
             >
               <div className="max-width content-padding">
@@ -290,6 +290,7 @@ class WorkPage extends Component {
             </div>
           </div>
         </Collapsible>
+
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <div className="margin-top--only-lg">
             <Columns columns={2}>

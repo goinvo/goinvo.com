@@ -1,6 +1,6 @@
 .categories-list {
   $parent: &;
-  $categories-list-border: 1px solid $color-gray--medium;
+  $categories-list-border: 1px solid $color-teal--light;
 
   @extend .list--unstyled;
   display: flex;

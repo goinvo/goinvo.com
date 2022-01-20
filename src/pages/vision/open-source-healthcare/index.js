@@ -98,7 +98,7 @@ class OpenSourceHealthcareFeature extends Component {
                 <p className="text--gray">
                   Read our open source ethos,
                   <br />
-                   with contributing articles by{' '}
+                  with contributing articles by{' '}
                   <a
                     href="https://www.healthpopuli.com/2018/10/11/open-source-health-care-will-liberate-patients/"
                     target="_blank"

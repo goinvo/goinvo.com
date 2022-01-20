@@ -1,0 +1,36 @@
+[
+  {
+    "id": "patient-centered-consent",
+    "title": "A Guide to Patient-Centered Consent",
+    "date": "Feb.2020",
+    "client": "Feature",
+    "categories": ["public-health-and-policy", "health-it-and-infrastructure"],
+    "caption": "A meaningful, informed consent process designed for patients",
+    "image": "/images/features/patient-centered-consent/consent-hero2.jpg",
+    "link": "/vision/patient-centered-consent/",
+    "hiddenWorkPage": true
+  },
+
+  {
+    "id": "virtual-care",
+    "title": "Virtual Care",
+    "date": "Feb.2019",
+    "client": "Feature",
+    "categories": ["open-source", "public-health-and-policy"],
+    "caption": "Half of face-to-face clinical office visits can be conducted virtually.",
+    "image": "/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg",
+    "link": "/vision/virtual-care/"
+  },
+
+  {
+    "id": "carrier-testing",
+    "title": "Carrier Testing",
+    "date": "Oct.2018",
+    "client": "Feature",
+    "categories": ["precision-medicine-and-genomics", "open-source"],
+    "caption": "Open source design guidelines for delivering digitized carrier testing results.",
+    "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
+    "link": "http://www.genomicsdesign.com/",
+    "external": true
+  }
+]

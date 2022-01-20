@@ -90,6 +90,9 @@ class VisionPage extends Component {
             />
           </div>
         </div>
+
+        {/* SPOTLIGHT */}
+
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <h3 className="header--md pad-vertical--double">Spotlight</h3>
           <div className="pure-g">
@@ -129,6 +132,9 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
+
+        {/* FEATURES */}
+
         <div className="background--blue pad-vertical pad-vertical--quad--only-lg">
           <div className="max-width content-padding">
             <h3 className="header--md pad-bottom--double">Features</h3>
@@ -156,6 +162,7 @@ class VisionPage extends Component {
             </Columns>
           </div>
         </div>
+
         <div className="max-width content-padding pad-vertical--quad">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">

@@ -80,10 +80,13 @@ class IndexPage extends Component {
                     <span className="text--bold">160 million US residents</span>
                     <br />
                     <span className="text--gray">
-                      are analyzed, care planned, and risk adjusted with the
-                      software we designed.
+                      are provided with better care with open source software we
+                      designed.
                     </span>
                     <br />
+                    <Link to="/open-source-healthcare">
+                      What is open source in healthcare?
+                    </Link>
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
@@ -93,7 +96,7 @@ class IndexPage extends Component {
                     </span>
                     <br />
                     <span className="text--gray">
-                      count on our service design.
+                      count on our expertise and service design.
                     </span>
                     <br />
                     <Link to="/work/mass-snap">Read the case study</Link>
@@ -125,13 +128,16 @@ class IndexPage extends Component {
                       will flow through the software we've designed in 2019.
                     </span>
                     <br />
+                    <Link to="/work/mass-snap">
+                      Explore our desgin products
+                    </Link>
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="background--gray  pad-vertical--double">
+        <div className="background--blue  pad-vertical--double">
           <div className="max-width content-padding">
             <h3 className="header--md" style={{ marginTop: 0 }}>
               We've worked with...
@@ -139,7 +145,10 @@ class IndexPage extends Component {
             <ClientLogos />
           </div>
         </div>
+
         <div className="max-width content-padding pad-bottom--double">
+          {/* WORK CATEGORIES */}
+
           <div className="pure-g margin-vertical--double pad-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
               <h2 className="header--xl margin--none pad-right--double">
@@ -151,6 +160,7 @@ class IndexPage extends Component {
               <CategoriesList columns={2} />
             </div>
           </div>
+
           <Columns columns={2}>
             {this.state.workItems.map((item, i) => {
               const {
@@ -180,6 +190,7 @@ class IndexPage extends Component {
               )
             })}
           </Columns>
+
           <div className="container container--justify-center margin-top margin-bottom--double">
             <Link
               to="/work/?expanded=true"
@@ -189,8 +200,9 @@ class IndexPage extends Component {
             </Link>
           </div>
         </div>
+
         <Quote
-          background="gray"
+          background="blue"
           quotee="Eric Topol"
           quoteeSub="MD, Director, Scripps Translational Science Institute"
         >
@@ -209,8 +221,8 @@ class IndexPage extends Component {
           <Columns columns={3}>
             <ImageBlock
               key={'1'}
-              image="/images/homepage/standardized-health-data-preview-2.jpg"
-              title="Health Reports"
+              image="/images/services/emerging-tech-shr-layers.jpg"
+              title="Open Designs & Research"
               caption="Design concepts and objective analysis for grokking the evolving healthcare universe."
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
             >
@@ -255,6 +267,7 @@ class IndexPage extends Component {
             </ImageBlock>
           </Columns>
         </div>
+
         <div className="background--blue pad-vertical--quad--only-lg">
           <div className="max-width content-padding">
             <div className="pure-g">

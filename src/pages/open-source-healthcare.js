@@ -772,7 +772,7 @@ class OpenPage extends Component {
         >
           <div>
             <div className="max-width content-padding pad-vertical">
-              <h2 className="header--xl">
+              <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Our Open Source products impact millions of people every day
               </h2>
               <div className="pure-u-1-3 content-padding">
@@ -887,7 +887,7 @@ class OpenPage extends Component {
                 </Link>
               </div>
               <div>
-                <h2 className="header--xl">
+                <h2 className="header--xl" style={{ color: '#E16226' }}>
                   Our Open Source products impact millions of people every day
                 </h2>
                 <Carousel
@@ -982,7 +982,7 @@ class OpenPage extends Component {
             </div>
 
             <div className="max-width content-padding pad-vertical">
-              <h2 className="header--xl">
+              <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Start making an impact today by starting on Github
               </h2>
               <div className="pure-u-1-2">

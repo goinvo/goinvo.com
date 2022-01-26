@@ -24,11 +24,7 @@ import featuresApp from '../data/os-features-app.json'
 
 import featuresDesign from '../data/os-features-design.json'
 import config from '../../config'
-import {
-  extractWorkItemLinkDetails,
-  concatCaseStudiesAndFeatures,
-} from '../helpers'
-import Caret from '../assets/images/icon-caret.inline.svg'
+import { concatCaseStudiesAndFeatures } from '../helpers'
 
 if (typeof window !== 'undefined') {
   smoothscroll.polyfill()
@@ -218,11 +214,6 @@ class OpenPage extends Component {
   }
 
   render() {
-    const style_1 = {
-      color: '#E16226',
-      fontStyle: 'italic',
-    }
-
     return (
       <Layout frontmatter={frontmatter}>
         <Hero

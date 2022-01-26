@@ -15,6 +15,8 @@ import Collapsible from '../components/collapsible'
 import HubspotForm from '../components/hubspot-form'
 import GradientImageColumns from '../components/gradient-image-columns'
 
+import categories from '../data/categories.json'
+
 import config from '../../config'
 
 import {
@@ -223,6 +225,7 @@ class WorkPage extends Component {
             >
               <div className="max-width content-padding">
                 <CategoriesList
+                  categories={categories}
                   columns={3}
                   selectedCategoryId={this.state.selectedCategory.id}
                   onSelectCategory={this.setSelectedCategory}

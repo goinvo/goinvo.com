@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import Sticky from '../components/sticky'
-import CategoriesList, { allCategory } from '../components/os-categories-list'
+import CategoriesList, { allCategory } from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
@@ -16,6 +16,7 @@ import Quote from '../components/quote'
 import ClientLogos from '../components/os-client-logos'
 import Collapsible from '../components/collapsible'
 import HubspotForm from '../components/hubspot-form'
+import HubspotStyle from '../components/os-form'
 import GradientImageColumns from '../components/gradient-image-columns'
 
 import CATEGORIES_LIST from '../data/os-categories.json'
@@ -240,46 +241,19 @@ class OpenPage extends Component {
           zIndex={500}
           onStateChange={this.handleCategoriesStickyStateChange}
         >
-          {this.state.categoriesStuck ? (
-            <button
-              className="button button--secondary button--bg-white button--block"
-              onClick={this.toggleCategories}
-              ref={this.categoryDropdownButton}
-            >
-              {this.state.categoriesCollapsed &&
-              !this.state.hasUsedFilter &&
-              this.state.selectedCategory.id === allCategory.id
-                ? 'Add a filter'
-                : this.state.selectedCategory.title}
-
-              <Caret
-                className={`icon icon--md margin-left flip ${
-                  !this.state.categoriesCollapsed ? 'flip--is-flipped' : ''
-                }`}
-                style={{ marginTop: '-1px' }}
-              />
-            </button>
-          ) : null}
-
-          <Collapsible
-            collapsed={this.state.categoriesCollapsed}
-            suppressTransition={this.state.suppressCollapseTransition}
+          <div
+            className="background--gray pad-top pad-bottom--double"
+            id="categories-list"
           >
-            {/* Top navigation bar */}
-
-            <div
-              className="background pad-top pad-bottom--double"
-              id="categories-list"
-            >
-              <div className="max-width content-padding">
-                <CategoriesList
-                  columns={4}
-                  selectedCategoryId={this.state.selectedCategory.id}
-                  onSelectCategory={this.setSelectedCategory}
-                />
-              </div>
+            <div className="max-width content-padding">
+              <CategoriesList
+                categories={CATEGORIES_LIST}
+                columns={4}
+                selectedCategoryId={this.state.selectedCategory.id}
+                onSelectCategory={this.setSelectedCategory}
+              />
             </div>
-          </Collapsible>
+          </div>
         </Sticky>
 
         <div id="target-stick" />
@@ -321,42 +295,44 @@ class OpenPage extends Component {
                 Innovation
               </h2>
               <div className="pure-u-1">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <Image
-                      src=""
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
+                <div className="pure-g pure-g--reverse--only-lg">
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <div className="pad-right--only-lg margin-bottom">
+                      <Image
+                        src=""
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <p
-                      style={{
-                        borderRadius: '50%',
-                        width: '36px',
-                        height: '36px',
-                        padding: '6px',
-                        background: '#E16226',
-                        textAlign: 'center',
-                        fontWeight: 'bold',
-                        fontSize: 20,
-                        color: '#fff',
-                      }}
-                    >
-                      1
-                    </p>
-                    <h3 className="">Innovation from the community</h3>
-                    <p className="text--gray">
-                      The community working on open source platforms, have
-                      countless ways and ideas on how to make it more
-                      performant, more secure, more robust. They share these
-                      ideas publicly and companies committed to open source
-                      innovation take on these ideas, test them and make them
-                      bullet-proof before integrating them to their solution.
-                    </p>
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <div className="pad-right--only-lg margin-bottom">
+                      <p
+                        style={{
+                          borderRadius: '50%',
+                          width: '36px',
+                          height: '36px',
+                          padding: '6px',
+                          background: '#E16226',
+                          textAlign: 'center',
+                          fontWeight: 'bold',
+                          fontSize: 20,
+                          color: '#fff',
+                        }}
+                      >
+                        1
+                      </p>
+                      <h3 className="">Innovation from the community</h3>
+                      <p className="text--gray">
+                        The community working on open source platforms, have
+                        countless ways and ideas on how to make it more
+                        performant, more secure, more robust. They share these
+                        ideas publicly and companies committed to open source
+                        innovation take on these ideas, test them and make them
+                        bullet-proof before integrating them to their solution.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -978,7 +954,7 @@ class OpenPage extends Component {
                   </GradientImageColumns>
                 </Carousel>
               </div>
-              Call to action - get involved
+              <HubspotStyle />
             </div>
 
             <div className="max-width content-padding pad-vertical">

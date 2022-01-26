@@ -142,3 +142,15 @@ body {
 .float-clear {
   clear: both;
 }
+
+.pure-g {
+  &--reverse {
+    flex-direction: row-reverse;
+
+    &--only-lg {
+      @include mq($from: large) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

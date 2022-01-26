@@ -13,6 +13,8 @@ import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
 
+import categories from '../data/categories.json'
+
 import config from '../../config'
 import {
   extractWorkItemLinkDetails,
@@ -157,7 +159,7 @@ class IndexPage extends Component {
               </h2>
             </div>
             <div className="pure-u-1 pure-u-lg-2-3">
-              <CategoriesList columns={2} />
+              <CategoriesList categories={categories} columns={2} />
             </div>
           </div>
 

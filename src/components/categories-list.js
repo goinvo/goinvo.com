@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-
-import CATEGORIES_LIST from '../data/categories.json'
+import parse from 'html-react-parser'
 
 export const allCategory = {
   id: 'all',
@@ -24,11 +23,11 @@ class CategoriesList extends Component {
             className="categories-list__link button button--link"
             onClick={() => this.props.onSelectCategory(cat)}
           >
-            {cat.title}
+            {parse(cat.title)}
           </button>
         ) : (
           <Link className="categories-list__link" to={cat.link}>
-            {cat.title}
+            {parse(cat.title)}
           </Link>
         )}
         <span className="categories-list__selected-indicator" />
@@ -37,7 +36,9 @@ class CategoriesList extends Component {
   }
 
   render() {
-    const numPerColumn = Math.ceil(CATEGORIES_LIST.length / this.props.columns)
+    const numPerColumn = Math.ceil(
+      this.props.categories.length / this.props.columns
+    )
     const columns = Array.apply(null, { length: this.props.columns })
 
     return (
@@ -58,10 +59,10 @@ class CategoriesList extends Component {
                 {i === 0 && this.props.includeAll
                   ? this.renderCategory(allCategory)
                   : null}
-                {CATEGORIES_LIST.slice(
-                  i * numPerColumn,
-                  i * numPerColumn + numPerColumn
-                ).map(cat => this.renderCategory(cat))}
+
+                {this.props.categories
+                  .slice(i * numPerColumn, i * numPerColumn + numPerColumn)
+                  .map(cat => this.renderCategory(cat))}
               </ul>
             </div>
           )

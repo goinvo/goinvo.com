@@ -52,7 +52,9 @@ class Footer extends Component {
                     <Link to="/vision/">Vision</Link>
                   </li>
                   <li>
-                    <Link to="/open-source-healthcare">Open Source</Link>
+                    <Link to="/open-source-healthcare/?category=open-source-healthcare-vision">
+                      Open Source
+                    </Link>
                   </li>
                 </ul>
               </div>

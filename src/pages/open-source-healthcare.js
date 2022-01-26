@@ -233,7 +233,8 @@ class OpenPage extends Component {
           onStateChange={this.handleCategoriesStickyStateChange}
         >
           <div
-            className="background--gray pad-top pad-bottom--double"
+            className="pad-bottom"
+            style={{ backgroundColor: '#f8fafe' }}
             id="categories-list"
           >
             <div className="max-width content-padding">
@@ -264,9 +265,10 @@ class OpenPage extends Component {
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Building better care with Open Source technologies
               </h2>
+
               <div className="pure-u-1">
                 <Image
-                  src=""
+                  src="/images/open_source/os-landing-page.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
@@ -280,17 +282,20 @@ class OpenPage extends Component {
                   improving the medical practice
                 </p>
               </div>
+
               <Divider />
+
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Solving the most pressing healtcare problems with Open Source
                 Innovation
               </h2>
+
               <div className="pure-u-1">
                 <div className="pure-g pure-g--reverse--only-lg">
                   <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-right--only-lg margin-bottom">
+                    <div className="pad-right--only-lg margin-top">
                       <Image
-                        src=""
+                        src="/images/open_source/os-community.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />
@@ -298,9 +303,10 @@ class OpenPage extends Component {
                   </div>
 
                   <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-right--only-lg margin-bottom">
+                    <div className="pad-right--only-lg pad-top pad-bottom">
                       <p
                         style={{
+                          margin: '0px',
                           borderRadius: '50%',
                           width: '36px',
                           height: '36px',
@@ -327,154 +333,176 @@ class OpenPage extends Component {
                   </div>
                 </div>
 
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <Image
-                      src=""
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
+                <div className="pure-g ">
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <div className="pad-right--only-lg margin-top">
+                      <Image
+                        src="/images/open_source/os-integration.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <div className="pad-right--only-lg pad-bottom pad-top">
+                      <p
+                        style={{
+                          margin: '0px',
+                          borderRadius: '50%',
+                          width: '36px',
+                          height: '36px',
+                          padding: '6px',
+                          background: '#E16226',
+                          textAlign: 'center',
+                          fontWeight: 'bold',
+                          fontSize: 20,
+                          color: '#fff',
+                        }}
+                      >
+                        2
+                      </p>
+                      <h3 className="">Innovation from integration </h3>
+                      <p className="text--gray">
+                        Our current healthcare system is fragmented with siloed
+                        application. Health data is abstructed, often outdated
+                        or duplicated. This creates a heavy burden to patients,
+                        care providers and hospitals,losing on resources and
+                        productivity. Open Source software are interoperable by
+                        design and can easily integrate with exsiting systems.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <p
-                      style={{
-                        borderRadius: '50%',
-                        width: '36px',
-                        height: '36px',
-                        padding: '6px',
-                        background: '#E16226',
-                        textAlign: 'center',
-                        fontWeight: 'bold',
-                        fontSize: 20,
-                        color: '#fff',
-                      }}
-                    >
-                      2
-                    </p>
-                    <h3 className="">Innovation from the community</h3>
-                    <p className="text--gray">
-                      The community working on open source platforms, have
-                      countless ways and ideas on how to make it more
-                      performant, more secure, more robust. They share these
-                      ideas publicly and companies committed to open source
-                      innovation take on these ideas, test them and make them
-                      bullet-proof before integrating them to their solution.
-                    </p>
+                <div className="pure-g pure-g--reverse--only-lg">
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <div className="pad-right--only-lg margin-top ">
+                      <Image
+                        src="/images/open_source/os-customization.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      />
+                    </div>
                   </div>
-                </div>
-
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <Image
-                      src=""
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <p
-                      style={{
-                        borderRadius: '50%',
-                        width: '36px',
-                        height: '36px',
-                        padding: '6px',
-                        background: '#E16226',
-                        textAlign: 'center',
-                        fontWeight: 'bold',
-                        fontSize: 20,
-                        color: '#fff',
-                      }}
-                    >
-                      3
-                    </p>
-                    <h3 className="">Innovation from the community</h3>
-                    <p className="text--gray">
-                      The community working on open source platforms, have
-                      countless ways and ideas on how to make it more
-                      performant, more secure, more robust. They share these
-                      ideas publicly and companies committed to open source
-                      innovation take on these ideas, test them and make them
-                      bullet-proof before integrating them to their solution.
-                    </p>
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <div className="pad-right--only-lg pad-bottom pad-top">
+                      <p
+                        style={{
+                          margin: '0px',
+                          borderRadius: '50%',
+                          width: '36px',
+                          height: '36px',
+                          padding: '6px',
+                          background: '#E16226',
+                          textAlign: 'center',
+                          fontWeight: 'bold',
+                          fontSize: 20,
+                          color: '#fff',
+                        }}
+                      >
+                        3
+                      </p>
+                      <h3 className="">Innovation from customisation </h3>
+                      <p className="text--gray">
+                        Each organisation, hopital, private practice or
+                        community care has it’s own way of working. The duty of
+                        any digital application is to swiftly adapt to processes
+                        of care and the people delivering it. And this is
+                        exaclty what is made possible with sotfware that are
+                        made open. Health IT leaders can see through them, tweak
+                        its parts, add and remove features as they see fit. IT
+                        Leaders have sovereignty over their systems.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <ColoredLine color="#E16226" />
-              <h2 className="header--xl" style={{ color: '#E16226' }}>
-                Success Stories
-              </h2>
-              <Carousel>
-                <GradientImageColumns
-                  image=""
-                  backgroundColor=""
-                  backgroundNotResponsive
-                >
-                  <h4>FHIR Standars</h4>
-                  <p>
-                    Fast Healthcare Interoperability Resources (FHIR) is an open
-                    source data format for healthcare. FHIR is developed and
-                    maintained by Health Level Seven International (HL7), a
-                    non-profit organization responsible for some of the most
-                    widely-adopted standards in healthcare technology around the
-                    world.{' '}
-                  </p>
-                </GradientImageColumns>
 
-                <GradientImageColumns
-                  image=""
-                  backgroundColor=""
-                  backgroundNotResponsive
-                >
-                  <h4>Open Humans</h4>
-                  <p>
-                    Open Humans is a platform that allows citizen scientists to
-                    share their health data in order to participate in research.
-                  </p>
-                </GradientImageColumns>
+              <div className="pad-top pad-bottom margin-top margin-bottom">
+                <ColoredLine color="#E16226" />
 
-                <GradientImageColumns
-                  image=""
-                  backgroundColor=""
-                  backgroundNotResponsive
-                >
-                  <h4>OpenEMRs</h4>
-                  <p>
-                    An open source electronic health record system that targets
-                    small to medium-sized outpatient providers, openEMR is
-                    certified by the Office of the National Coordinator for
-                    Health Information Technology. OpenEMR enjoys broad adoption
-                    globally at over 15,000 healthcare facilities with over
-                    45,000 practitioners serving over 90 million patients.{' '}
-                  </p>
-                </GradientImageColumns>
+                <h2 className="header--xl" style={{ color: '#E16226' }}>
+                  Success Stories
+                </h2>
 
-                <GradientImageColumns
-                  image=""
-                  backgroundColor=""
-                  backgroundNotResponsive
-                >
-                  <h4>Standard Health Record</h4>
-                  <p>
-                    The Standard Health Record provides a single standard for
-                    patient health data at a national level.{' '}
-                  </p>
-                </GradientImageColumns>
-              </Carousel>{' '}
-              <ColoredLine color="#E36216" />
+                <Carousel>
+                  <GradientImageColumns
+                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    backgroundNotResponsive
+                  >
+                    <h4>FHIR Standars</h4>
+                    <p>
+                      Fast Healthcare Interoperability Resources (FHIR) is an
+                      open source data format for healthcare. FHIR is developed
+                      and maintained by HL7, a non-profit organization
+                      responsible for some of the most widely-adopted standards
+                      in healthcare technology around the world. Data sharing is
+                      made simple between application, without the need for
+                      custom integrations.
+                    </p>
+                  </GradientImageColumns>
+
+                  <GradientImageColumns
+                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    backgroundNotResponsive
+                  >
+                    <h4>Open Humans</h4>
+                    <p>
+                      Open Humans is a platform that allows citizen scientists
+                      to share their health data. Participants' data is
+                      aggregated and made available, empowering individuals to
+                      engage in education and research.The data made available
+                      stimulates cross-border collaboration, improves quality of
+                      research and speed up scientific discoveries.
+                    </p>
+                  </GradientImageColumns>
+
+                  <GradientImageColumns
+                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    backgroundNotResponsive
+                  >
+                    <h4>OpenEMRs</h4>
+                    <p>
+                      An open source EHR that targets small to medium-sized
+                      outpatient providers, openEMR is certified by the Office
+                      of the National Coordinator for Health Information
+                      Technology. OpenEMR enjoys broad adoption globally at over
+                      15,000 healthcare facilities with over 45,000
+                      practitioners serving over 90 million patients.
+                    </p>
+                  </GradientImageColumns>
+
+                  <GradientImageColumns
+                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    backgroundNotResponsive
+                  >
+                    <h4>Standard Health Record</h4>
+                    <p>
+                      The Standard Health Record provides a single standard for
+                      patient health data at a national level, enabling greater
+                      transparency, empowerment, and clinical interoperability
+                      that supports patients, clinicians and health
+                      organizations. With a common open standard in place,
+                      organizations can benefit from better care coordination,
+                      and reductions in medical error.
+                    </p>
+                  </GradientImageColumns>
+                </Carousel>
+                <ColoredLine color="#E36216" />
+              </div>
+
               {/* SECTION 2 */}
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Beyond Open Source software, we want an Open Healthcare System
               </h2>
-              <div className="pure-u-1">
+
+              {/* SUB-SECTION 1 */}
+              <div className="pure-g pure-g--reverse--only-lg">
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src=""
+                      src="/images/open_source/os-information.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -482,7 +510,7 @@ class OpenPage extends Component {
                 </div>
 
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-right--only-lg pad-bottom pad-top">
                     <h3 className="">Open Health Information</h3>
                     <p className="text--gray">
                       Health information must be open and available to the right
@@ -495,67 +523,22 @@ class OpenPage extends Component {
                     </p>
                   </div>
                 </div>
+              </div>
 
+              {/* SUB-SECTION 2 */}
+              <div className="pure-g pure-g--reverse--only-lg">
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src=""
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />{' '}
-                  </div>{' '}
-                </div>
-
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <h3 className="">Open Health Processes</h3>
-                    <p className="text--gray">
-                      Encourage the participation of patients in their care
-                      journey by supporting them to take control and engage in
-                      their health and care. Open organiation collaborate
-                      internally and externally and are committed to learning
-                      and improvement. They provide care that does not vary in
-                      quality because of a person’s characteristics.
-                    </p>{' '}
-                  </div>{' '}
-                </div>
-
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <Image
-                      src=""
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />{' '}
-                  </div>{' '}
-                </div>
-
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <h3 className="">Open Health Standards</h3>
-                    <p className="text--gray">
-                      We need open standards for healthcare because our lives
-                      depend on it. Standards for interoperability and data
-                      format. Standardization of care plans will aid in
-                      communication and collaboration across care team members
-                      over time, providing high-quality longitudinal care with
-                      reduced risk for medical error.
-                    </p>{' '}
-                  </div>{' '}
-                </div>
-
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
-                    <Image
-                      src=""
+                      src="/images/open_source/os-application.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
-                  </div>{' '}
+                  </div>
                 </div>
 
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-bottom">
+                  <div className="pad-right--only-lg pad-bottom pad-top">
                     <h3 className="">Open Health Applications</h3>
                     <p className="text--gray">
                       Healthcare systems must evolve towards a more transparent
@@ -564,10 +547,69 @@ class OpenPage extends Component {
                       biases. No more siloed systems, applications must
                       communicate between each other and integrate in the
                       existing care ecosystem.
-                    </p>{' '}
-                  </div>{' '}
+                    </p>
+                  </div>
                 </div>
               </div>
+
+              {/* SUB-SECTION 3 */}
+
+              <div className="pure-g pure-g--reverse--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-right--only-lg margin-top ">
+                    <Image
+                      src="/images/open_source/os-standards.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-right--only-lg pad-bottom pad-top">
+                    <h3 className="">Open Health Standards</h3>
+                    <p className="text--gray">
+                      We need open standards for healthcare because our lives
+                      depend on it. Standards for interoperability and data
+                      format. Standardization of care plans will aid in
+                      communication and collaboration across care team members
+                      over time, providing high-quality longitudinal care with
+                      reduced risk for medical error.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* SUB-SECTION 4 */}
+
+              <div className="pure-g pure-g--reverse--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-right--only-lg margin-top ">
+                    <Image
+                      src="/images/open_source/os-proccess.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-right--only-lg pad-bottom pad-top">
+                    <h3 className="">Open Health Processes</h3>
+                    <p className="text--gray">
+                      Encourage the participation of patients in their care
+                      journey by supporting them to take control and engage in
+                      their health and care. Open organiation collaborate
+                      internally and externally and are committed to learning
+                      and improvement. They provide care that does not vary in
+                      quality because of a person’s characteristics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* END */}
+
               {/* SECTION 3 */}
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 A bold Mission for Open Source Healthcare
@@ -635,8 +677,8 @@ class OpenPage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text--gray">
-                  We provide hands-on support to our clients implementing our
-                  open source products
+                  We adapt our open source product to be mature enterprise
+                  services
                 </p>
               </div>
 
@@ -647,8 +689,8 @@ class OpenPage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text--gray">
-                  We provide hands-on support to our clients implementing our
-                  open source products
+                  We partner with world-class organisations to develop open
+                  research and design projects
                 </p>
               </div>
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
+import parse from 'html-react-parser'
 
 import CATEGORIES_LIST from '../data/os-categories.json'
 
@@ -13,28 +14,29 @@ class CategoriesList extends Component {
     return (
       <li
         key={cat.id}
-        className={`categories-list__category ${
+        className={`os-categories-list__category ${
           cat.id === this.props.selectedCategoryId
-            ? 'categories-list__category--selected'
+            ? 'os-categories-list__category--selected'
             : ''
         }`}
       >
         {this.props.onSelectCategory ? (
           <button
-            className="categories-list__link button button--link"
+            className="os-categories-list__link button button--link"
+            style={{ color: 'white' }}
             onClick={() => this.props.onSelectCategory(cat)}
           >
-            {cat.title}
+            {parse(cat.title)}
           </button>
         ) : (
           <Link
-            className="categories-list__link"
+            className="os-categories-list__link"
             to={`/work/?category=${cat.id}`}
           >
-            {cat.title}
+            {parse(cat.title)}
           </Link>
         )}
-        <span className="categories-list__selected-indicator" />
+        <span className="os-categories-list__selected-indicator" />
       </li>
     )
   }
@@ -49,12 +51,12 @@ class CategoriesList extends Component {
           return (
             <div
               key={i}
-              className={`categories-list__column pure-u-1 pure-u-lg-1-${this.props.columns}`}
+              className={`os-categories-list__column pure-u-1 pure-u-lg-1-${this.props.columns}`}
             >
               <ul
-                className={`categories-list ${
+                className={`os-categories-list ${
                   i > 0 && this.props.includeAll
-                    ? 'categories-list--later-column-with-all'
+                    ? 'os-categories-list--later-column-with-all'
                     : ''
                 }`}
               >

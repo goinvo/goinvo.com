@@ -130,9 +130,7 @@ class IndexPage extends Component {
                       will flow through the software we've designed in 2019.
                     </span>
                     <br />
-                    <Link to="/work/mass-snap">
-                      Explore our desgin products
-                    </Link>
+                    <Link to="/work/">Explore our work</Link>
                   </p>
                 </div>
               </div>
@@ -225,7 +223,9 @@ class IndexPage extends Component {
               key={'1'}
               image="/images/services/emerging-tech-shr-layers.jpg"
               title="Open Designs & Research"
-              caption="Design concepts and objective analysis for grokking the evolving healthcare universe."
+              caption="Start with the right foundation for your project with Open Source. 
+              Leverage our thoroughly researched and tested materials and supplement it 
+              to your current product to innovate quickly!"
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
             >
               <a
@@ -236,7 +236,9 @@ class IndexPage extends Component {
                 Determinants of health
               </a>
               <br />
-              <Link to="/vision/">Explore all features</Link>
+              <Link to="/open-source-healthcare/?category=open-designs-and-products">
+                Explore our Open Source portfolio
+              </Link>
             </ImageBlock>
             <ImageBlock
               key={'2'}

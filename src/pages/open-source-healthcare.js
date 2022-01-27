@@ -99,7 +99,7 @@ const frontmatter = {
   metaTitle: 'Open Source in Healthcare & GoInvo',
   metaDescription:
     'Healthcare needs to be open. We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.',
-  heroImage: '/images/services/emerging-tech-shr-layers.jpg',
+  heroImage: '/images/open_source/os-hero-2.jpg',
 }
 
 const ColoredLine = ({ color }) => (
@@ -234,10 +234,10 @@ class OpenPage extends Component {
         >
           <div
             className="pad-bottom"
-            style={{ backgroundColor: '#f8fafe' }}
+            style={{ backgroundColor: '#fff' }}
             id="categories-list"
           >
-            <div className="max-width content-padding">
+            <div className="max-width content-padding pad-top">
               <CategoriesList
                 categories={CATEGORIES_LIST}
                 columns={4}
@@ -268,7 +268,7 @@ class OpenPage extends Component {
 
               <div className="pure-u-1">
                 <Image
-                  src="/images/open_source/os-landing-page.jpg"
+                  src="/images/open_source/landing-page_4.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
@@ -293,9 +293,9 @@ class OpenPage extends Component {
               <div className="pure-u-1">
                 <div className="pure-g pure-g--reverse--only-lg">
                   <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-right--only-lg margin-top">
+                    <div className="pad-right--only-lg maring-bottom pad-bottom">
                       <Image
-                        src="/images/open_source/os-community.jpg"
+                        src="/images/open_source/community_5.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />
@@ -335,9 +335,9 @@ class OpenPage extends Component {
 
                 <div className="pure-g ">
                   <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-right--only-lg margin-top">
+                    <div className="pad-right--only-lg ">
                       <Image
-                        src="/images/open_source/os-integration.jpg"
+                        src="/images/open_source/integration_6.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />
@@ -345,7 +345,7 @@ class OpenPage extends Component {
                   </div>
 
                   <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-right--only-lg pad-bottom pad-top">
+                    <div className="pad-right--only-lg pad-bottom">
                       <p
                         style={{
                           margin: '0px',
@@ -379,14 +379,14 @@ class OpenPage extends Component {
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="pad-right--only-lg margin-top ">
                       <Image
-                        src="/images/open_source/os-customization.jpg"
+                        src="/images/open_source/Custom.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                       />
                     </div>
                   </div>
                   <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-right--only-lg pad-bottom pad-top">
+                    <div className="pad-right--only-lg pad-bottom ">
                       <p
                         style={{
                           margin: '0px',
@@ -502,7 +502,7 @@ class OpenPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src="/images/open_source/os-information.jpg"
+                      src="/images/open_source/os-info.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -530,7 +530,7 @@ class OpenPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src="/images/open_source/os-application.jpg"
+                      src="/images/open_source/os-app.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -586,7 +586,7 @@ class OpenPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src="/images/open_source/os-proccess.jpg"
+                      src="/images/open_source/os-process.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -594,7 +594,7 @@ class OpenPage extends Component {
                 </div>
 
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg pad-bottom pad-top">
+                  <div className="pad-right--only-lg pad-bottom pad-top margin-top--double">
                     <h3 className="">Open Health Processes</h3>
                     <p className="text--gray">
                       Encourage the participation of patients in their care

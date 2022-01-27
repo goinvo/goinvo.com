@@ -16,7 +16,6 @@ import Quote from '../components/quote'
 import ClientLogos from '../components/os-client-logos'
 import Collapsible from '../components/collapsible'
 import HubspotForm from '../components/hubspot-form'
-import HubspotStyle from '../components/os-form'
 import GradientImageColumns from '../components/gradient-image-columns'
 
 import CATEGORIES_LIST from '../data/os-categories.json'
@@ -609,9 +608,10 @@ class OpenPage extends Component {
               </div>
 
               {/* END */}
+              <Divider />
 
               {/* SECTION 3 */}
-              <h2 className="header--xl" style={{ color: '#E16226' }}>
+              <h2 className="header--xl pad-top" style={{ color: '#E16226' }}>
                 A bold Mission for Open Source Healthcare
               </h2>
               <div className="pure-u-1 content-padding--double ">
@@ -636,7 +636,6 @@ class OpenPage extends Component {
 
                 <div className="container container margin-top margin-bottom--double"></div>
               </div>
-              <Divider />
             </div>
           </div>
         </Collapsible>
@@ -651,121 +650,114 @@ class OpenPage extends Component {
           }
           transitionSpeed="slow"
         >
-          <div>
-            <div className="max-width content-padding pad-vertical">
-              <h2 className="header--xl" style={{ color: '#E16226' }}>
-                We made our best designs open and accessible for rapid
-                innovation
-              </h2>
+          <div className="max-width content-padding pad-vertical">
+            <h2 className="header--xl" style={{ color: '#E16226' }}>
+              We made our best designs open and accessible for rapid innovation
+            </h2>
 
-              <div className="pure-u-1-3 pad-all--double">
-                <Image
-                  src=""
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text--gray">
-                  We provide hands-on support to our clients implementing our
-                  open source products
-                </p>
-              </div>
-
-              <div className="pure-u-1-3 pad-all--double">
-                <Image
-                  src=""
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text--gray">
-                  We adapt our open source product to be mature enterprise
-                  services
-                </p>
-              </div>
-
-              <div className="pure-u-1-3 pad-all--double">
-                <Image
-                  src=""
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text--gray">
-                  We partner with world-class organisations to develop open
-                  research and design projects
-                </p>
-              </div>
-
-              <div className="background pad-vertical--double">
-                <div className="max-width content-padding">
-                  <h3 className="header--md" style={{ marginTop: 0 }}>
-                    We've worked with...
-                  </h3>
-                  <ClientLogos />
-                </div>
-              </div>
-              <Divider />
+            <div className="pure-u-1-3 pad-all--double">
+              <Image
+                src=""
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+              <p className="text--gray">
+                We provide hands-on support to our clients implementing our open
+                source products
+              </p>
             </div>
 
-            <div className="background pad-vertical pad-vertical--quad--only-lg">
+            <div className="pure-u-1-3 pad-all--double">
+              <Image
+                src=""
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+              <p className="text--gray">
+                We adapt our open source product to be mature enterprise
+                services
+              </p>
+            </div>
+
+            <div className="pure-u-1-3 pad-all--double">
+              <Image
+                src=""
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+              <p className="text--gray">
+                We partner with world-class organisations to develop open
+                research and design projects
+              </p>
+            </div>
+
+            <div className="background pad-vertical--double">
               <div className="max-width content-padding">
-                <h2>Open Applications</h2>
-                <p>Customize and supplement open software to your platform.</p>
-
-                <Columns columns={3}>
-                  {this.state.featuresApp.map((feature, i) => {
-                    return (
-                      <Card
-                        link={feature.link}
-                        key={feature.id}
-                        externalLink
-                        suppressNewTab={true}
-                      >
-                        <ImageBlock
-                          title={feature.title}
-                          image={feature.image}
-                          client="Feature"
-                          date={feature.date}
-                          caption={feature.caption}
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                          hoverable
-                        />
-                      </Card>
-                    )
-                  })}
-                </Columns>
+                <h3 className="header--md" style={{ marginTop: 0 }}>
+                  We've worked with...
+                </h3>
+                <ClientLogos />
               </div>
             </div>
+            <Divider />
+          </div>
 
-            <div className="background pad-vertical pad-vertical--quad--only-lg">
-              <div className="max-width content-padding">
-                <h2>Open Research and Design</h2>
-                <p>
-                  Leverage existing material quickly with the right foundation.
-                </p>
+          <div className="background pad-bottom ">
+            <div className="max-width content-padding">
+              <h2>Open Applications</h2>
+              <p>Customize and supplement open software to your platform.</p>
 
-                <Columns columns={3}>
-                  {this.state.featuresDesign.map((feature, i) => {
-                    return (
-                      <Card
-                        link={feature.link}
-                        key={feature.id}
-                        externalLink
-                        suppressNewTab={true}
-                      >
-                        <ImageBlock
-                          title={feature.title}
-                          image={feature.image}
-                          client="Feature"
-                          date={feature.date}
-                          caption={feature.caption}
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                          hoverable
-                        />
-                      </Card>
-                    )
-                  })}
-                </Columns>
-              </div>
+              <Columns columns={3}>
+                {this.state.featuresApp.map((feature, i) => {
+                  return (
+                    <Card
+                      link={feature.link}
+                      key={feature.id}
+                      externalLink
+                      suppressNewTab={true}
+                    >
+                      <ImageBlock
+                        title={feature.title}
+                        image={feature.image}
+                        client="Feature"
+                        date={feature.date}
+                        caption={feature.caption}
+                        sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                        hoverable
+                      />
+                    </Card>
+                  )
+                })}
+              </Columns>
             </div>
+          </div>
+
+          <div className="max-width content-padding">
+            <h2>Open Research and Design</h2>
+            <p>Leverage existing material quickly with the right foundation.</p>
+
+            <Columns columns={3}>
+              {this.state.featuresDesign.map((feature, i) => {
+                return (
+                  <Card
+                    link={feature.link}
+                    key={feature.id}
+                    externalLink
+                    suppressNewTab={true}
+                  >
+                    <ImageBlock
+                      title={feature.title}
+                      image={feature.image}
+                      client="Feature"
+                      date={feature.date}
+                      caption={feature.caption}
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                      hoverable
+                    />
+                  </Card>
+                )
+              })}
+            </Columns>
           </div>
         </Collapsible>
 
@@ -784,96 +776,111 @@ class OpenPage extends Component {
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Our Open Source products impact millions of people every day
               </h2>
-              <div className="pure-u-1-3 content-padding">
-                <p>
-                  <span
-                    className="header--xl"
-                    style={{ color: '#E16226', fontWeight: '900' }}
-                  >
-                    $1.8
-                  </span>
-                  <br />
-                  <span
-                    className="header--lg"
-                    style={{
-                      fontSize: '',
-                      font: '',
-                      color: '#E16226',
-                      fontWeight: '900',
-                    }}
-                  >
-                    Million
-                  </span>
-                  <br />
-                  <span>
-                    Studio internal investment in open source projects
-                  </span>
-                </p>
+
+              <div className="pure-g pad-left pad-bottom">
+                <div className="pure-u-1-3 ">
+                  <p>
+                    <span
+                      className="header--xl"
+                      style={{ color: '#E16226', fontWeight: '900' }}
+                    >
+                      $1.8
+                    </span>
+                    <br />
+                    <span
+                      className="header--lg"
+                      style={{
+                        fontSize: '',
+                        font: '',
+                        color: '#E16226',
+                        fontWeight: '900',
+                      }}
+                    >
+                      Million
+                    </span>
+                    <br />
+                    <span>
+                      Studio internal investment <br /> in open source projects
+                    </span>
+                  </p>
+                </div>
+                <div className=" pure-u-1-3">
+                  <p>
+                    <span
+                      className="header--xl"
+                      style={{ color: '#E16226', fontWeight: '900' }}
+                    >
+                      $2.5
+                    </span>
+                    <br />
+                    <span
+                      className="header--lg"
+                      style={{
+                        fontSize: '',
+                        font: '',
+                        color: '#E16226',
+                        fontWeight: '900',
+                      }}
+                    >
+                      Million
+                    </span>
+                    <br />
+                    <span>
+                      Clients investment <br /> in open source projectss
+                    </span>
+                  </p>
+                </div>
+                <div className="pure-u-1-3">
+                  <p>
+                    <span
+                      className="header--xl"
+                      style={{ color: '#E16226', fontWeight: '900' }}
+                    >
+                      +65
+                    </span>
+                    <br />
+                    <span
+                      className="header--lg"
+                      style={{
+                        fontSize: '',
+                        font: '',
+                        color: '#E16226',
+                        fontWeight: '900',
+                      }}
+                    >
+                      Projects
+                    </span>
+                    <br />
+                    <span className="padding-right">
+                      Since 2010, we invested in <br /> more than 60 open source
+                      projects
+                    </span>
+                  </p>
+                </div>
               </div>
-              <div className="pure-u-1-3">
-                <p>
-                  <span
-                    className="header--xl"
-                    style={{ color: '#E16226', fontWeight: '900' }}
-                  >
-                    $2.5
-                  </span>
-                  <br />
-                  <span
-                    className="header--lg"
-                    style={{
-                      fontSize: '',
-                      font: '',
-                      color: '#E16226',
-                      fontWeight: '900',
-                    }}
-                  >
-                    Million
-                  </span>
-                  <br />
-                  <span>Clients investment in open source projectss</span>
-                </p>
-              </div>
-              <div className="pure-u-1-3">
-                <p>
-                  <span
-                    className="header--xl"
-                    style={{ color: '#E16226', fontWeight: '900' }}
-                  >
-                    +65
-                  </span>
-                  <br />
-                  <span
-                    className="header--lg"
-                    style={{
-                      fontSize: '',
-                      font: '',
-                      color: '#E16226',
-                      fontWeight: '900',
-                    }}
-                  >
-                    Projects
-                  </span>
-                  <br />
-                  <span>Clients investment in open source projectss</span>
-                </p>
-              </div>
-              <Quote
-                background="gray"
+
+              {/* 
+              <div className="max-width pad-top--double pad-bottom--double ">
+                    <Quote
+                background="blue"
                 quotee="Eric Topol"
                 quoteeSub="MD, Director, Scripps Translational Science Institute"
               >
-                The GoInvo studio is one of the most talented groups of
-                designers I have ever met in the healthcare space. Not only are
-                their ideas, designs, and graphics remarkable, but I haven’t yet
-                figured out how they know so much about medicine and its future.
+                The GoInvo studio is one of the most talented groups of designers I
+                have ever met in the healthcare space. Not only are their ideas,
+                designs, and graphics remarkable, but I haven’t yet figured out how
+                they know so much about medicine and its future.
               </Quote>
-              <div>
-                <Image
-                  src=""
-                  className="image--max-width"
+              </div> */}
+
+              <Divider />
+
+              <div className="pad-top">
+                {/* <Image
+                  src="/images/open_source/os-app.jpg"
+                  className="image--max-width-half-only-lg"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+                /> */}
 
                 <p>
                   For all open source healthcare advocate, we wrote Nine
@@ -883,16 +890,19 @@ class OpenPage extends Component {
                   research, and data ownership. We also gathered points of view
                   of thought leaders and evidence around the world of nobable
                   Open Source projects in healthcare
-                  <br />
+                </p>
+
+                <div className="pad-bottom">
                   <Link to="/about/open-office-hours/">
                     Nine Organizing Principles for open source healthcare{' '}
                   </Link>
-                </p>
+                </div>
+
                 <Link
                   to="https://opensourcehealthcare.org"
                   className="button button--secondary button--lg margin-bottom"
                 >
-                  View more evidence{' '}
+                  View more evidence
                 </Link>
               </div>
               <div>
@@ -987,7 +997,10 @@ class OpenPage extends Component {
                   </GradientImageColumns>
                 </Carousel>
               </div>
-              <HubspotStyle />
+
+              {/* GET INVOLVED BUTTON */}
+
+              {/* <HubspotStyle /> */}
             </div>
 
             <div className="max-width content-padding pad-vertical">
@@ -1011,8 +1024,8 @@ class OpenPage extends Component {
               </div>
               <div className="pure-u-1-2">
                 <Image
-                  src=""
-                  className="image--max-width"
+                  src="/images/open_source/os-standards.jpg"
+                  className=""
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>

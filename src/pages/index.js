@@ -211,6 +211,7 @@ class IndexPage extends Component {
           designs, and graphics remarkable, but I haven’t yet figured out how
           they know so much about medicine and its future.
         </Quote>
+
         <div className="max-width content-padding pad-bottom--double">
           <div className="container container--justify-center margin-vertical">
             <h2 className="header--xl">

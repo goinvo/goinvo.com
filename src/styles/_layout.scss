@@ -20,6 +20,10 @@ body {
   max-width: 1020px;
   margin: 0 auto;
 
+  &--xs {
+    max-width: 400px;
+  }
+
   &--sm {
     max-width: 600px;
   }
@@ -33,6 +37,10 @@ body {
       max-width: 510px;
       margin: 0 0 0 auto;
     }
+  }
+
+  &--80 {
+    max-width: 80%;
   }
 
   &--half-right {
@@ -123,6 +131,10 @@ body {
 .display {
   &--flex {
     display: flex;
+
+    &--column {
+      flex-direction: column;
+    }
 
     &--align {
       &-center {

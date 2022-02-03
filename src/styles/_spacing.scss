@@ -115,6 +115,10 @@ $directions: 'top' 'bottom' 'left' 'right';
       }
     }
 
+    &--quad {
+      padding-#{$direction}: $spacing * 4;
+    }
+
     &--none {
       padding-#{$direction}: 0;
     }

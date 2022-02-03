@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
+import Hero from '../../../components/hero'
+import Divider from '../../../components/divider'
 import BackgroundImage from '../../../components/background-image'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
@@ -15,7 +17,7 @@ const frontmatter = {
   metaTitle: 'Faces in Health Communication - GoInvo',
   metaDescription:
     'The Benefits of Information Graphics and Human Faces for Improved Patient Understanding.',
-  heroImage: '/images/features/coronavirus/hero-2.jpg',
+  heroImage: '/images/features/faces-in-health-communication/hero.jpg',
 }
 
 class FacesInHealthCommunicationFeature extends Component {
@@ -73,380 +75,243 @@ class FacesInHealthCommunicationFeature extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="faces-in-health-communication">
-          <div className="max-width pad-horizontal margin-top pad-top">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-2-5">
-                <div className="pad-right--only-lg margin-bottom pad-bottom">
-                  <h1 className="header--xl">Faces in Health Communication</h1>
-                  <h2 className="header--lg">
-                    The Benefits of Information Graphics and Human Faces for
-                    Improved Patient Understanding
-                  </h2>
-                  <p>
-                    In healthcare, clear communication that’s easily understood
-                    by a broad patient audience is more important now than ever.
-                  </p>
-                  <p>
-                    But all too often complex medical information is
-                    unsuccessfully communicated to populations with poor health
-                    literacy. This can have devastating outcomes.
-                  </p>
-                  <p>
-                    Our research explores how the incorporation of visual
-                    information in healthcare communication, and specifically
-                    the use of human faces in health infographics, can improve
-                    patients' understanding of critical instructions and
-                    information.
-                  </p>
-                </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-3-5">
-                <Image
-                  src="/images/features/faces-in-health-communication/01-visuals-in-health-comm.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-              </div>
+          <Hero image={frontmatter.heroImage} />
+          <div className="max-width--sm pad-horizontal margin-top pad-top margin-auto">
+            <div className="margin-bottom pad-bottom">
+              <h1 className="header--xl">Faces in Health Communication</h1>
+              <p>
+                In healthcare, clear communication that can be easily understood
+                by a broad patient audience is more important now than ever.
+              </p>
+              <p>
+                But all too often, complex medical information is unsuccessfully
+                communicated to populations with poor health literacy, which can
+                have devastating outcomes.
+              </p>
+              <p>
+                Our research explores how incorporating visual information in
+                healthcare communication, and specifically the use of human
+                faces in health infographics, can improve patients'
+                understanding of critical instructions and information.
+              </p>
             </div>
-          </div>
-          <div className="background--gray pad-top--half pad-bottom--half pad-horizontal">
-            <h1 className="header--xl text--center">
-              Problem:
-              <br />
-              The High Cost of Low Health Literacy
-            </h1>
-          </div>
-          <div className="max-width pad-horizontal">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      The US Department of Health and Human Services (HHS)
-                      defines health literacy as
-                    </p>
-                    <p>
-                      “the degree to which individuals have the capacity to
-                      obtain, process, and understand basic health information
-                      needed to{' '}
-                      <span className="text--primary">
-                        make appropriate health decisions
-                      </span>
-                      .”
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/02-HHS-defines-health-literacy.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
-                </div>
-              </div>
+            <Divider />
+            <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+              <h1 className="max-width--xs header--xl text--center margin-auto">
+                Problem: The High Cost of Low Health Literacy
+              </h1>
             </div>
-
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/03-36.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      <span className="text--primary">
-                        More than a third of Americans, nearly 36%, have low
-                        health literacy
-                      </span>{' '}
-                      — which is particularly prevalent among the elderly,
-                      individuals with lower socioeconomic status, and those
-                      with low English proficiency.
-                    </p>
-                    <p>
-                      People with low health literacy are often unable to derive
-                      meaningful information from health education materials,
-                      which are in many instances written at a high school or a
-                      college level. <a href="#references">[1]</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="margin-auto pad-bottom max-width--80">
+              <Image
+                src="/images/features/faces-in-health-communication/02-HHS-defines-health-literacy.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
             </div>
-
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      Further, many Americans have{' '}
-                      <span className="text--primary">low numeracy skills</span>
-                      ,
-                    </p>
-                    <p>
-                      “making the cognitive demand greater whenever… patients
-                      are presented with risk statistics and are asked to make
-                      comparisons between the risks and benefits of multiple
-                      options and to make informed medical decisions.”{' '}
-                      <a href="#references">[4]</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/04-numerical-skill.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <p>
-              Perhaps not unexpectedly,{' '}
-              <span className="text--primary">
-                healthcare outcomes worsen and costs substantially increase
-              </span>{' '}
-              for Americans with low health literacy. Compared to those with
-              proficient health literacy, adults who have low health literacy
-              experience: <a href="#reference">[2]</a>
+              The U.S. Department of Health and Human Services (HHS) defines
+              health literacy as “the degree to which individuals have the
+              capacity to obtain, process, and understand basic health
+              information needed to make appropriate health decisions.”
             </p>
-
+            <div className="margin-auto pad-bottom pad-top--quad max-width--80">
+              <Image
+                src="/images/features/faces-in-health-communication/03-36.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+            </div>
+            <p>
+              More than a third of Americans have low health literacy,
+              especially among the elderly, individuals with lower socioeconomic
+              status, and those with low English proficiency.
+            </p>
+            <p>
+              People with low health literacy are often unable to derive
+              meaningful information from health education materials, which are
+              often written at high school or college level.
+              <a href="#references">[1]</a>
+            </p>
+            <div className="margin-auto pad-bottom pad-top--quad max-width--80">
+              <Image
+                src="/images/features/faces-in-health-communication/04-numerical-skill.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+            </div>
+            Many Americans have low numeracy skills, increasing the effort
+            patients exert in calculating risk and comparing options when making
+            medical decisions. 2 Not unexpectedly, healthcare outcomes worsen,
+            and costs substantially increase for Americans with low health
+            literacy. Compared to those with proficient health literacy, adults
+            who have low health literacy experience:
+            <p>
+              Many Americans have low numeracy skills, increasing the effort
+              patients exert in calculating risk and comparing options when
+              making medical decisions.<a href="#references">[4]</a>
+            </p>
+            <p className="margin-bottom--double">
+              Not unexpectedly, healthcare outcomes worsen, and costs
+              substantially increase for Americans with low health literacy.
+              Compared to those with proficient health literacy, adults who have
+              low health literacy experience:<a href="#reference">[3]</a>
+            </p>
             <Columns columns={3}>
-              <div className="margin-top">
+              <div className="max-width--60--until-lg margin-auto">
                 <Image
                   src="/images/features/faces-in-health-communication/05-236B-1.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
-                <div className="text--uppercase text--center margin-top">
+                <div className="text--uppercase text--center text--bold margin-top">
                   2-day longer hospital stays
                 </div>
               </div>
-              <div className="margin-top">
+              <div className="max-width--60--until-lg margin-auto">
                 <Image
                   src="/images/features/faces-in-health-communication/05-236B-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
-                <div className="text--uppercase text--center margin-top">
+                <div className="text--uppercase text--center text--bold margin-top">
                   6% more hospital visits
                 </div>
               </div>
-              <div className="margin-top">
+              <div className="max-width--60--until-lg margin-auto">
                 <Image
                   src="/images/features/faces-in-health-communication/05-236B-3.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
-                <div className="text--uppercase text--center margin-top">
-                  and an astounding 4x higher healthcare costs
+                <div className="text--uppercase text--center text--bold margin-top">
+                  4x higher healthcare costs
                 </div>
               </div>
             </Columns>
-
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-4">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p className="text--serif text--base">
-                      Through all of its impact - medical errors, increased
-                      illness and disability, loss of wages, and compromised
-                      public health - low health literacy is estimated to cost
-                      the U.S. economy up to
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-3-4">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/05-236B-4.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="pad-vertical--double">
+              <p>
+                <span className="text--serif text--base text--lg">
+                  Through all of its impact - medical errors, increased illness
+                  and disability, loss of wages, and compromised public health -
+                  low health literacy is estimated to cost the U.S. economy up
+                  to $238B per year.
+                </span>
+                <a href="#references">[4]</a>
+              </p>
             </div>
-          </div>
-          <div className="background--gray pad-top--half pad-bottom--half pad-horizontal">
-            <h1 className="header--xl text--center">
-              The Benefits of Incorporating Visual Information in Healthcare
-              Communication
-            </h1>
-          </div>
-          <div className="max-width pad-horizontal">
-            <p className="text--serif text--base">
+            <div className="margin-auto pad-bottom--double">
+              <Image
+                src="/images/features/faces-in-health-communication/05-236B-4.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+            </div>
+            <Divider />
+            <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+              <h1 className="header--xl text--center max-width--xs margin-auto">
+                The Benefits of Visual Healthcare Communication
+              </h1>
+            </div>
+            <p>
               When conveying complex information, there are a number of benefits
               that come from incorporating visuals.
             </p>
-
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-3">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/06-icon1.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
+                <div className="pad-right margin-top max-width--60 max-width--80--only-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/06-icon1.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      In general, incorporating images into communication{' '}
-                      <span className="text--primary">
-                        increases people’s understanding of information
-                      </span>{' '}
-                      significantly, from 70%{' '}
-                      <span className="text--primary">to 95%</span>.
-                    </p>
-                  </div>
+              <div className="pure-u-1 pure-u-lg-2-3 display--flex display--flex--column display--flex--justify-center">
+                <div className="pad-left">
+                  <p>
+                    Incorporating visuals adds several benefits in
+                    communication, increases people’s understanding of
+                    information significantly, from 70% to 95%.{' '}
+                    <a href="#references">[5]</a>
+                  </p>
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-3">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/06-icon2.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
+                <div className="pad-right margin-top max-width--60 max-width--80--only-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/06-icon2.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      In fact, people{' '}
-                      <span className="text--primary">
-                        following directions with text and illustration do 323%
-                        better
-                      </span>{' '}
-                      than people following directions without illustrations.{' '}
-                      <a href="#references">[6]</a>
-                    </p>
-                  </div>
+              <div className="pure-u-1 pure-u-lg-2-3 display--flex display--flex--column display--flex--justify-center">
+                <div className="pad-left">
+                  <p>
+                    People following directions with text and illustration do
+                    323% better than those without illustrations.
+                    <a href="#references">[6]</a>
+                  </p>
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-3">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/06-icon3.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
+                <div className="pad-right margin-top max-width--60 max-width--80--only-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/06-icon3.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      Overall,{' '}
-                      <span className="text--primary">
-                        visual information is simply faster and more effective
-                      </span>
-                      , taking nearly{' '}
-                      <span className="text--primary">
-                        1/10 of a second to process
-                      </span>{' '}
-                      in comparison to the 60 seconds needed to process an equal
-                      amount of written information.{' '}
-                      <a href="#references">[9]</a>
-                    </p>
-                  </div>
+              <div className="pure-u-1 pure-u-lg-2-3 display--flex display--flex--column display--flex--justify-center">
+                <div className="pad-left">
+                  <p>
+                    Overall, visual information is faster and more effective,
+                    taking nearly 1/10 of a second to process compared to the 60
+                    seconds needed to understand an equal amount of written
+                    information.<a href="#references">[7]</a>
+                  </p>
                 </div>
               </div>
             </div>
-
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/07-more-likely.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
+            <div className="pure-g margin-top--double">
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-right--only-lg pad-bottom--double pad-top--double--only-lg max-width--60--until-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/07-more-likely.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      Healthcare infographics should have visuals for
-                      individuals to best process the information at hand.
-                    </p>
-                    <p>
-                      In one study, published in the Annals of emergency
-                      medicine, patients were tested with{' '}
-                      <span className="text--primary">
-                        discharge instructions
-                      </span>{' '}
-                      with and without illustrations.
-                    </p>
-                    <p>
-                      Patients receiving discharge instructions are{' '}
-                      <span className="text--primary">
-                        <span className="text--lg">1.5x more likely</span> to
-                        understand those instructions when presented with
-                        illustrations than without
-                      </span>
-                      . <a href="#references">[7]</a>
-                    </p>
-                  </div>
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-left--only-lg margin-bottom">
+                  <p>
+                    Healthcare communications should have visuals for
+                    individuals to best process the information at hand.
+                  </p>
+                  <p>
+                    In one study published in the{' '}
+                    <i>Annals of Emergency Medicine</i>, patients were tested
+                    with <b>discharge instructions</b> with and without
+                    illustrations.
+                  </p>
+                  <p>
+                    Patients given illustrations were{' '}
+                    <b>
+                      <span className="text--xl">1.5x</span> more likely to
+                      choose 5 or more correct responses
+                    </b>{' '}
+                    than those without illustrations <b>(65% vs 43%)</b>.
+                    <a href="#references">[8]</a>
+                  </p>
                 </div>
               </div>
             </div>
-
             <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <div className="pad-right--only-lg margin-bottom">
-                  <div className="pad-vertical--double--only-lg">
-                    <p>
-                      Similarly, another study which utilized{' '}
-                      <span className="text--primary">
-                        wound care instructions
-                      </span>{' '}
-                      received similar results, with unanimously{' '}
-                      <span className="text--primary">
-                        better results for clarity, ease of understanding,
-                        correct answers, and compliance to care for
-                        illustrations
-                      </span>{' '}
-                      rather than no illustrations.{' '}
-                      <a href="#references">[8]</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <div className="pad-left--only-lg">
-                  <div className="pad-bottom--double pad-top--double--only-lg">
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-right--only-lg">
+                  <div className="pad-bottom--double pad-top--double--only-lg max-width--40--until-lg max-width--60--only-lg margin-auto">
                     <Image
                       src="/images/features/faces-in-health-communication/08-wound-care.jpg"
                       className="image--max-width"
@@ -455,59 +320,87 @@ class FacesInHealthCommunicationFeature extends Component {
                   </div>
                 </div>
               </div>
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pad-left--only-lg margin-bottom">
+                  <div className="pad-vertical--double--only-lg">
+                    <p>
+                      Similarly, another study that used{' '}
+                      <b>wound care instructions</b> received similar results,
+                      with{' '}
+                      <b>
+                        better results for clarity, ease of understanding,
+                        correct answers, and compliance to care
+                      </b>{' '}
+                      for illustrations rather than instructions with no
+                      illustrations.<a href="#references">[9]</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="background--gray pad-top--half pad-bottom--half pad-horizontal">
-            <h1 className="header--xl text--center">
-              Human Faces and Communication
-            </h1>
-          </div>
-          <div className="max-width pad-horizontal">
-            <Columns columns={4}>
-              <div>
-                <Image
-                  src="/images/features/faces-in-health-communication/09-born-to-look-at-faces1.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+            <Divider />
+            <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+              <h1 className="header--xl text--center max-width--xs margin-auto">
+                Human Faces and Communication
+              </h1>
+            </div>
+            <div className="pure-g">
+              <div className="pure-u-1-2 pure-u-lg-1-4">
+                <div className="max-width--60 max-width--80--only-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/09-born-to-look-at-faces1.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </div>
               </div>
-              <div>
-                <Image
-                  src="/images/features/faces-in-health-communication/09-born-to-look-at-faces2.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+              <div className="pure-u-1-2 pure-u-lg-1-4">
+                <div className="max-width--60 max-width--80--only-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/09-born-to-look-at-faces2.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </div>
               </div>
-              <div>
-                <Image
-                  src="/images/features/faces-in-health-communication/09-born-to-look-at-faces3.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+              <div className="pure-u-1-2 pure-u-lg-1-4">
+                <div className="max-width--60 max-width--80--only-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/09-born-to-look-at-faces3.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </div>
               </div>
-              <div>
-                <Image
-                  src="/images/features/faces-in-health-communication/09-born-to-look-at-faces4.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+              <div className="pure-u-1-2 pure-u-lg-1-4">
+                <div className="max-width--60 max-width--80--only-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/09-born-to-look-at-faces4.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </div>
               </div>
-            </Columns>
+            </div>
             <div className="text--center">
               <p className="text--serif text--lg">
                 Humans are born to look at faces.
               </p>
+              From the very beginning of our lives, we look to others’ faces to
+              ascertain vital information. CONSPEC/CONLERN, a two-process theory
+              of infant face recognition proposed by Johnson and Morton,
+              explains how newborns use innate knowledge about the structure of
+              faces. 10
               <p>
                 From the very beginning of our lives, we look to others’ faces
-                to ascertain important information.{' '}
-                <span className="text--primary">CONSPEC/CONLERN</span>, a
+                to ascertain vital information. <b>CONSPEC/CONLERN</b>, a
                 two-process theory of infant face recognition proposed by
                 Johnson and Morton,{' '}
-                <span className="text--primary">
-                  explains how newborns utilize innate information about the
-                  structure of faces
-                </span>
-                . <a href="#references">[10]</a>
+                <b>
+                  explains how newborns use innate knowledge about the structure
+                  of faces.
+                </b>
+                <a href="#references">[10]</a>
               </p>
             </div>
             <div className="pure-g" ref={this.grid}>
@@ -662,90 +555,76 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
               </div>
             </div>
-            <p className="text--serif text--lg text--center">
-              Interestingly, even though we may share the same biological
-              networks for processing faces,{' '}
-              <span className="text--primary">
-                individuals from different cultural backgrounds have different
-                methodologies for how we look at faces
+            <p className="text--center margin-bottom--double">
+              <span className="text--serif text--lg">
+                Although we may share the same biological networks for
+                processing faces,{' '}
+                <span className="text--primary">
+                  individuals from different cultural backgrounds have different
+                  methodologies for looking at faces.
+                </span>
               </span>
-              . <a href="#references">[23]</a>
+              <a href="#references">[23]</a>
             </p>
-            <div className="max-width--sm text--center margin-auto">
+            <div className="text--center margin-auto">
               <Columns columns={2}>
-                <div className="pad-right">
-                  <Image
-                    src="/images/features/faces-in-health-communication/11-how-we-look-at-face-circle.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                  <p>
-                    Western Caucasians tend to fixate more on the eyes and
-                    single details, forming a triangular scan of one’s face.{' '}
-                    <a href="#references">[24]</a>
-                  </p>
-                </div>
-                <div className="pad-left">
+                <div className="pad-right max-width--60--until-lg margin-auto">
                   <Image
                     src="/images/features/faces-in-health-communication/11-how-we-look-at-face-triangle.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p>
-                    East Asians tend to integrate information holistically from
-                    focusing on the center of the face.{' '}
+                    Western Caucasians tend to fixate more on the eyes and
+                    single details, forming a triangular scan of one’s face.
+                    <a href="#references">[24]</a>
+                  </p>
+                </div>
+                <div className="pad-left max-width--60--until-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/11-how-we-look-at-face-circle.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p>
+                    East Asians tend to integrate information holistically by
+                    focusing on the center of the face.
                     <a href="#references">[25]</a>
                   </p>
                 </div>
               </Columns>
             </div>
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-right--only-lg">
-                  <Image
-                    src="/images/features/faces-in-health-communication/12-ORB.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-left--only-lg">
-                  <p>
-                    Perhaps unsurprisingly, humans tend to gravitate towards
-                    faces similar to their own.
-                  </p>
-                  <p>
-                    Infants have shown the{' '}
-                    <span className="text--primary">own-race bias (ORB)</span>{' '}
-                    <a href="#references">[26]</a>, recognizing their own faces
-                    better than the faces of another race.
-                  </p>
-                  <p>
-                    Eye-tracking surveys revealed that infants consistently
-                    fixate longer on their own-race face regardless of age, in
-                    comparison to a decline in fixation time as they age for
-                    other-race faces. <a href="#references">[27]</a> This
-                    declining trend is associated with a decline in recognition
-                    memory for other race faces.
-                  </p>
-                </div>
-              </div>
+            <p>
+              Unsurprisingly, humans tend to gravitate towards faces similar to
+              their own. Infants have shown the <b>own-race bias (ORB)</b>
+              <a href="#references">[26]</a>, recognizing their own faces better
+              than the faces of another race.
+            </p>
+            <div className="max-width--60 margin-auto">
+              <Image
+                src="/images/features/faces-in-health-communication/12-ORB.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
             </div>
             <p>
-              This trend continues into adulthood — after thirty years of
-              investigating the own race bias,{' '}
-              <span className="text--primary">
-                ORB has been consistently found across different cultures and
-                races
-              </span>
-              , including individuals with Caucasian, African, and Asian
-              ancestry <a href="#references">[28]</a> and in both adults{' '}
-              <a href="#references">[29]</a> and children{' '}
-              <a href="#references">[30]</a> as young as 3-month old infants.{' '}
+              Eye-tracking surveys revealed that infants consistently fixate
+              longer on their own-race face regardless of age, compared to a
+              decline in fixation time as they age for other-race faces.
+              <a href="#references">[27]</a>
+            </p>
+            <p>
+              This declining trend is aassociated with decreased recognition
+              memory for other race faces. This trend continues into adulthood.
+              After thirty years of investigating the own race bias, ORB has
+              been consistently found across different cultures and races,
+              including individuals with Caucasian, African, and Asian ancestry
+              <a href="#references">[28]</a> and in both adults
+              <a href="#references">[29]</a> and children
+              <a href="#references">[30]</a> as young as 3-month old infants.
               <a href="#references">[31]</a>
             </p>
-            <div className="max-width--sm margin-auto">
+            <div className="max-width--50 margin-auto">
               <Image
                 src="/images/features/faces-in-health-communication/13-consistent-ORB.jpg"
                 className="image--max-width"
@@ -769,83 +648,84 @@ class FacesInHealthCommunicationFeature extends Component {
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
             </div>
-          </div>
-          <div className="background--gray pad-top--half pad-bottom--half pad-horizontal">
-            <h1 className="header--xl text--center">
-              The Benefits of Incorporating Visual Information in Healthcare
-              Communication
-            </h1>
-          </div>
-          <div className="max-width pad-horizontal">
-            <p className="text--serif text--lg">
-              When conveying complex information, there are a number of benefits
-              that come from incorporating visuals.
-            </p>
-            <div className="max-width--md margin-auto">
-              <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg">
-                    <p>
-                      <span className="text--primary">
-                        Healthcare graphics and health campaigns rely heavily on
-                        emotion to motivate behavior
-                      </span>
-                      . When individuals are exposed to these messages, they may
-                      express three pathways of emotions{' '}
-                      <a href="#references">[39]</a> — plot-referent,
-                      message-referent, and self-referent.
-                    </p>
-                  </div>
+            <Divider />
+            <div className="pad-top--half pad-bottom--half">
+              <h1 className="header--xl text--center">
+                Healthcare Graphics, Persuastion, and Emotion
+              </h1>
+            </div>
+            <div className="pure-g margin-bottom--double">
+              <div className="pure-u-1 pure-u-lg-2-5">
+                <div className="pad-right--only-lg">
+                  <Image
+                    src="/images/features/faces-in-health-communication/15-plot-message-self-referent1.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-left--only-lg">
-                    <Image
-                      src="/images/features/faces-in-health-communication/15-plot-message-self-referent1.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
+              </div>
+              <div className="pure-u-1 pure-u-lg-3-5">
+                <div className="pad-left--only-lg">
+                  <p>
+                    <b>
+                      Healthcare graphics and health campaigns rely heavily on
+                      emotion to motivate behavior.
+                    </b>{' '}
+                    When individuals are exposed to these messages, they may
+                    express three pathways of emotions
+                    <a href="#references">[32]</a> — plot-referent,
+                    message-referent, and self-referent.
+                  </p>
                 </div>
               </div>
             </div>
             <Columns columns={3}>
               <div className="text--center">
-                <p>Anti-smoking messaging and images</p>
-                <Image
-                  src="/images/features/faces-in-health-communication/15-plot-message-self-referent3.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+                <div className="max-width--60--until-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/15-plot-message-self-referent3.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </div>
+                <p className="text--sm">
+                  Anti-smoking messaging and images: Disgusted to the tar lining{' '}
+                </p>
                 <p className="text--uppercase">Message-referent</p>
               </div>
               <div className="text--center">
-                <p>Anger and sadness for the smoker</p>
-                <Image
-                  src="/images/features/faces-in-health-communication/15-plot-message-self-referent4.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+                <div className="max-width--60--until-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/15-plot-message-self-referent4.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </div>
+                <p className="text--sm">Anger and sadness for the smoker</p>
                 <p className="text--uppercase">Plot-referent</p>
               </div>
               <div className="text--center">
-                <p>Shame for their own smoking</p>
-                <Image
-                  src="/images/features/faces-in-health-communication/15-plot-message-self-referent5.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+                <div className="max-width--60--until-lg margin-auto">
+                  <Image
+                    src="/images/features/faces-in-health-communication/15-plot-message-self-referent5.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </div>
+                <p className="text--sm">Shame for their own smoking</p>
                 <p className="text--uppercase">Self-referent</p>
               </div>
             </Columns>
-          </div>
-          <div>
             <Image
               src="/images/features/faces-in-health-communication/16-PC-impact-what-we-believe.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
             />
-          </div>
-          <div className="max-width pad-horizontal">
+            {/* <Image
+              src="/images/features/faces-in-health-communication/16-mobile-impact-what-we-believe.jpg"
+              className="image--max-width"
+              sizes={config.sizes.full}
+            /> */}
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg">
@@ -859,51 +739,53 @@ class FacesInHealthCommunicationFeature extends Component {
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-left--only-lg">
                   <p>
-                    The discrete self-referent emotion is fully experienced when
-                    we recognize a relationship between a message and ourselves.
-                    This emotion then influences the perceived future risk about
-                    the likelihood of the outcome and the severity of its
-                    consequences <a href="#references">[40]</a>.{' '}
-                    <span className="text--primary">
-                      There is a clear distinction between the recognition of a
-                      risk that simply triggers the emotion, and the more
-                      “enduring perception of future risk” that is influenced by
-                      self-referential emotions
-                    </span>
-                    . <a href="#references">[41]</a>
+                    We fully experience the self-referent emotion when we
+                    recognize a relationship between a message and ourselves.
+                    This emotion influences how we perceive the possible
+                    outcomes and severity of consequences of an action.
+                    <a href="#references">[33]</a>{' '}
+                    <b>
+                      There is a clear distinction between recognizing a risk
+                      which triggers an emotional response and experiencing an
+                      "enduring perception of future risk" influenced by
+                      self-referential emotions.
+                    </b>
+                    <a href="#references">[34]</a>
                   </p>
                   <p>
-                    Indeed, with adult smokers, an increased perception of risk
-                    from smoking has been associated with a reduction in
-                    cigarette consumption and increased intentions and attempts
-                    to quit. <a href="#references">[42]</a>
+                    For example, adult smokers reduced cigarette consumption and
+                    increased intentions to quit when they could see themselves
+                    reflected in the messaging.<a href="#references">[35]</a>
                   </p>
                 </div>
               </div>
             </div>
             <p className="text--serif text--lg">
-              Since self-referent emotions will most often be triggered by a
-              narrative that relates to the readers,{' '}
+              Self-referent emotions surface when the reader relates to the
+              narrative,{' '}
               <span className="text--primary">
-                including diverse representation in infographics can ensure
-                these narratives are the most effective
+                diverse representation in infographics makes these narratives
+                more effective.
               </span>
-              .
             </p>
             <Image
               src="/images/features/faces-in-health-communication/18-diversity.jpg"
               className="image--max-width"
               sizes={config.sizes.fullInsideMaxWidth}
             />
-          </div>
-          <div className="background--gray pad-top--half pad-bottom--half pad-horizontal">
-            <h1 className="header--xl text--center">Conclusion</h1>
-          </div>
-          <div className="max-width pad-horizontal">
+            {/* <Image
+              src="/images/features/faces-in-health-communication/18-diversity.jpg"
+              className="image--max-width"
+              sizes={config.sizes.fullInsideMaxWidth}
+            /> */}
+            <Divider />
+            <div className="pad-top--half pad-bottom--half pad-horizontal">
+              <h1 className="header--xl text--center">Conclusion</h1>
+            </div>
             <div className="margin-vertical">
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-3 margin-top">
-                  <div className="pad-right--only-lg">
+                  <div className="max-width--60--until-lg max-width--80--only-lg pad-right--only-lg margin-auto">
                     <Image
                       src="/images/features/faces-in-health-communication/19-conclusion1.jpg"
                       className="image--max-width"
@@ -913,18 +795,17 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1 pure-u-lg-2-3 margin-top">
                   <div className="pad-left--only-lg">
-                    <p className="text--serif text--lg">
-                      To effectively communicate critical information to
-                      patients with low health literacy,{' '}
+                    <p className="text--serif text--lg margin-top--none">
                       <span className="text--primary">
-                        prioritize higher engagement
-                      </span>
-                      .
+                        Prioritize higher engagement
+                      </span>{' '}
+                      to effectively communicate critical information to
+                      patients with low health literacy.
                     </p>
                   </div>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-3 margin-top">
-                  <div className="pad-right--only-lg">
+                  <div className="max-width--60--until-lg max-width--80--only-lg pad-right--only-lg margin-auto">
                     <Image
                       src="/images/features/faces-in-health-communication/19-conclusion2.jpg"
                       className="image--max-width"
@@ -934,18 +815,18 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1 pure-u-lg-2-3 margin-top">
                   <div className="pad-left--only-lg">
-                    <p className="text--serif text--lg">
-                      To improve the uptake of health messaging and instruction,
-                      emphasize{' '}
+                    <p className="text--serif text--lg margin-top--none">
+                      Emphasize the{' '}
                       <span className="text--primary">
-                        the usage of infographics
-                      </span>
-                      .
+                        usage of infographics
+                      </span>{' '}
+                      to improve the understanding of health messaging and
+                      instruction.
                     </p>
                   </div>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-3 margin-top">
-                  <div className="pad-right--only-lg">
+                  <div className="max-width--60--until-lg max-width--80--only-lg pad-right--only-lg margin-auto">
                     <Image
                       src="/images/features/faces-in-health-communication/19-conclusion3.jpg"
                       className="image--max-width"
@@ -955,32 +836,32 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1 pure-u-lg-2-3 margin-top">
                   <div className="pad-left--only-lg">
-                    <p className="text--serif text--lg">
-                      The use of{' '}
+                    <p className="text--serif text--lg margin-top--none">
+                      Showing{' '}
                       <span className="text--primary">diverse human faces</span>{' '}
                       in healthcare communication can further engage readers,
-                      influence how they understand the message, and even elicit
-                      self-referent emotions that can encourage behavior change.
+                      influence how the message is understood, and elicit
+                      self-referent emotions that encourage behavior change.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="background--gray pad-top--half pad-bottom--half pad-horizontal">
-            <h1 className="header--xl text--center">
-              Appendix. A Lean Experiment Evaluating Healthcare Information
-              Graphics
-            </h1>
-          </div>
-          <div className="max-width pad-horizontal">
+            <Divider />
+            <div className="pad-top--half pad-bottom--half pad-horizontal">
+              <h1 className="header--xl text--center">
+                Appendix.
+                <br />A Lean Experiment Evaluating Healthcare Information
+                Graphics
+              </h1>
+            </div>
             <p className="text--serif text--lg">
               To learn more about how healthcare visuals and the use of faces in
               particular, improve engagement and emotional understanding, the
               GoInvo health design studio devised a lean experiment.
             </p>
             <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-3">
+              <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg">
                   <Image
                     src="/images/features/faces-in-health-communication/20-appendix.jpg"
@@ -989,30 +870,29 @@ class FacesInHealthCommunicationFeature extends Component {
                   />
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-2-3 ">
+              <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-left--only-lg">
                   <p>
-                    Using Amazon’s Mechanical Turk service, we conducted a
-                    national survey of over 400 people, age 18 and over, testing
-                    the comprehension of information graphics both with and
-                    without faces.
+                    Using Amazon’s Mechanical Turk (Mturk) service, we conducted
+                    a national survey of over 400 people, age 18 and over,
+                    testing the comprehension of information graphics both with
+                    and without faces.
                   </p>
                   <p>
-                    Findings from our survey showed that{' '}
-                    <span className="text--primary">
-                      respondents had a clear preference for information
-                      graphics that used faces, versus those that did not
-                    </span>
-                    .
+                    Findings from our survey showed that respondents had{' '}
+                    <b>
+                      a clear preference for information graphics that used
+                      faces
+                    </b>{' '}
+                    versus those that did not.
                   </p>
                   <p>
-                    Further,{' '}
-                    <span className="text--primary">
-                      the faces in the information graphics played an important
-                      role in how the respondents understood the emotional
-                      content of the message
-                    </span>
-                    .
+                    Additionally, the faces in the information graphics played{' '}
+                    <b>
+                      an important role in how the respondents understood the
+                      emotional content
+                    </b>{' '}
+                    of the message.
                   </p>
                 </div>
               </div>
@@ -1039,20 +919,9 @@ class FacesInHealthCommunicationFeature extends Component {
             </div>
             <p>
               When answering the question, “Is the boy happy after eating blob
-              A?”
-              <br />
-              Only 74% of those respondents who saw Option 1 (no face) selected
-              “yes”,
-              <br />
-              versus nearly 92% of those respondents who saw Option 2 (face).{' '}
-              <br />
-              In this first test,{' '}
-              <span className="text--primary">
-                the respondents’ emotional understanding of the content — that
-                the boy was happy eating the food represented by blob A —
-                increased due to the addition of a face in the infographic
-              </span>
-              .
+              A?” Only 74% of those respondents who saw the option without a
+              face selected “yes”, versus nearly 92% of those respondents who
+              saw the option showing a face.
             </p>
             <div>
               {

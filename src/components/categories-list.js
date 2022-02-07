@@ -18,7 +18,7 @@ class CategoriesList extends Component {
             : ''
         }`}
       >
-        {this.props.onSelectCategory ? (
+        {this.props.onSelectCategory && cat.id !== 'open-source' ? (
           <button
             className="categories-list__link button button--link"
             onClick={() => this.props.onSelectCategory(cat)}

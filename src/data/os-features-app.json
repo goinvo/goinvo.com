@@ -1,32 +1,33 @@
 [
   {
-    "id": "care-plans",
-    "title": "Care Plans that Drive Recovery",
-    "date": "Mar.2016",
-    "client": "Feature",
+    "id": "literacy-platform",
+    "title": "Effective health education platform",
+    "date": "",
+    "client": "FasterCures",
     "categories": ["patient-engagement", "care-management", "open-source"],
-    "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
-    "image": "/images/features/care-plans/care-plans-featured2.jpg",
-    "link": "https://www.goinvo.com/features/careplans/"
+    "caption": "Open source designs, and assets to educate patients on health data.",
+    "image": "/images/case-studies/fastercures/health-data-basics/health-data-basics-hero.jpg",
+    "link": "https://goinvo.com/work/fastercures-health-data-basics"
   },
   {
-    "id": "care-plans",
-    "title": "Care Plans that Drive Recovery",
-    "date": "Mar.2016",
-    "client": "Feature",
+    "id": "h-graphs",
+    "title": "hGraph: Full view of patients' state of health",
+    "date": "",
+    "client": "GoInvo",
     "categories": ["patient-engagement", "care-management", "open-source"],
-    "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
-    "image": "/images/features/care-plans/care-plans-featured2.jpg",
-    "link": "https://www.goinvo.com/features/careplans/"
+    "caption": "hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics",
+    "image": "/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg",
+    "link": "https://goinvo.com/work/hgraph"
   },
+
   {
-    "id": "care-plans",
-    "title": "Care Plans that Drive Recovery",
-    "date": "Mar.2016",
-    "client": "Feature",
+    "id": "flux-note",
+    "title": "Health Data Capture at the Point of Care",
+    "date": "",
+    "client": "MITRE Corporation",
     "categories": ["patient-engagement", "care-management", "open-source"],
-    "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
-    "image": "/images/features/care-plans/care-plans-featured2.jpg",
-    "link": "https://www.goinvo.com/features/careplans/"
+    "caption": "Capturing structured health data at the point of care without increasing clinician burden.",
+    "image": "/images/case-studies/mitre/fluxnotes/fluxnotes-hero.jpg",
+    "link": "https://goinvo.com/work/mitre-flux-notes"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "id": "patient-centered-consent",
     "title": "A Guide to Patient-Centered Consent",
-    "date": "Feb.2020",
+    "date": "",
     "client": "Feature",
     "categories": ["public-health-and-policy", "health-it-and-infrastructure"],
     "caption": "A meaningful, informed consent process designed for patients",
@@ -14,7 +14,7 @@
   {
     "id": "virtual-care",
     "title": "Virtual Care",
-    "date": "Feb.2019",
+    "date": "",
     "client": "Feature",
     "categories": ["open-source", "public-health-and-policy"],
     "caption": "Half of face-to-face clinical office visits can be conducted virtually.",
@@ -23,10 +23,10 @@
   },
 
   {
-    "id": "carrier-testing",
-    "title": "Carrier Testing",
-    "date": "Oct.2018",
-    "client": "Feature",
+    "id": "health-Manager",
+    "title": "Health Manager Service",
+    "date": "",
+    "client": "GoInvo",
     "categories": ["precision-medicine-and-genomics", "open-source"],
     "caption": "Open source design guidelines for delivering digitized carrier testing results.",
     "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",

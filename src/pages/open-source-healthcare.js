@@ -20,7 +20,7 @@ import GradientImageColumns from '../components/gradient-image-columns'
 
 import CATEGORIES_LIST from '../data/os-categories.json'
 import featuresApp from '../data/os-features-app.json'
-
+import featuresViz from '../data/os-features-visualization.json'
 import featuresDesign from '../data/os-features-design.json'
 import config from '../../config'
 import { concatCaseStudiesAndFeatures } from '../helpers'
@@ -35,7 +35,7 @@ const lgBreakPointPx =
 const mediaList = [
   {
     link: 'https://designmuseumfoundation.org/open-source-healthcare/',
-    image: '/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg',
+    image: '/images/open_source/Artboard-1_4-techtalks.jpg',
     title: 'It’s Time for Open Source Healthcare, we must set healthcare free.',
     caption:
       'Designers can and should shape the future of healthcare, from how products and systems work to the underlying infrastructure and standards these products and services are built upon.',
@@ -43,7 +43,7 @@ const mediaList = [
   {
     link:
       'https://marcus-baw.medium.com/open-source-is-the-only-way-for-medicine-9e698de0447e',
-    image: '/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg',
+    image: '/images/open_source/Artboard-1_2-techtalks.jpg',
     title: 'Open source is the only way for Medicine',
     caption:
       'We must educate other clinicians in open source software, and advocate openness in all areas — open governance, open algorithms, open standards, open data, and open organisations.',
@@ -51,28 +51,28 @@ const mediaList = [
   {
     link:
       'https://www.npr.org/sections/health-shots/2014/03/28/295734262/if-a-pictures-worth-1-000-words-could-it-help-you-floss?t=1642515653876',
-    image: '/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg',
+    image: '/images/open_source/Artboard-1-techtalks.jpg',
     title: 'If A Picture is Worth 1,000 Words, Could It Help You Floss?',
     caption:
       'A deck of cards that aims to help people to change their health habits for the better.',
   },
   {
     link: 'https://open.spotify.com/episode/5h69zFxQHdEXVTBg8oDt0f',
-    image: '/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg',
+    image: '/images/open_source/Artboard-1_1-techtalks.jpg',
     title: 'Own your experience, an Open Source Path',
     caption:
       'Podcast Episode with Juhan Sonin about the importance of open source in healthcare',
   },
   {
     link: 'https://www.youtube.com/watch?v=mpyuTRAy7ds/',
-    image: '/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg',
+    image: '/images/open_source/juhan-talk.jpg',
     title: 'Own Your Health An Open Source Path',
     caption:
       'Juhan Sonin discussed the importance of healthcare data and explaines what is included in health data and why people should demand to own their data and control access to it.',
   },
   {
     link: 'https://www.youtube.com/watch?v=vvnE6HyMY3E',
-    image: '/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg',
+    image: '/images/open_source/HIMSS.jpg',
     title: 'Open Source Healthcare at HIMSS',
     caption: 'NEHIMSS 2019 ANNUAL CONFERENCE Juhan Sonin',
   },
@@ -115,18 +115,22 @@ class OpenPage extends Component {
   constructor(props) {
     super(props)
 
+    const defaultCategory = CATEGORIES_LIST.find(
+      cat => (cat.id = 'open-source-healthcare-vision')
+    )
     const workItems = concatCaseStudiesAndFeatures(props.data)
     const query =
       props.location && props.location.search ? props.location.search : null
+
     const categoryId =
       query && query.includes('category')
         ? query.substr(query.indexOf('=') + 1)
-        : allCategory.id
+        : defaultCategory.id
 
     const selectedCategory =
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
-      allCategory
+      defaultCategory
     const activeWorkItems = getWorkItemsOfCategory(
       workItems,
       selectedCategory.id
@@ -140,6 +144,9 @@ class OpenPage extends Component {
         feature => feature.id !== !feature.external
       ),
       featuresDesign: featuresDesign.filter(
+        feature => feature.id !== !feature.external
+      ),
+      featuresViz: featuresViz.filter(
         feature => feature.id !== !feature.external
       ),
       heroPadding: 0,
@@ -267,9 +274,9 @@ class OpenPage extends Component {
 
               <div className="pure-u-1">
                 <Image
-                  src="/images/open_source/landing-page_4.jpg"
+                  src="/images/open_source/final-os-landing_pagefinal.jpg"
                   className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  sizes={config.sizes.full}
                 />
 
                 <p className="text--gray">
@@ -427,7 +434,7 @@ class OpenPage extends Component {
 
                 <Carousel>
                   <GradientImageColumns
-                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    image="/images/open_source/c-fhir.jpg"
                     backgroundNotResponsive
                   >
                     <h4>FHIR Standars</h4>
@@ -443,7 +450,7 @@ class OpenPage extends Component {
                   </GradientImageColumns>
 
                   <GradientImageColumns
-                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    image="/images/open_source/c-openhumans.jpg"
                     backgroundNotResponsive
                   >
                     <h4>Open Humans</h4>
@@ -458,7 +465,7 @@ class OpenPage extends Component {
                   </GradientImageColumns>
 
                   <GradientImageColumns
-                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    image="/images/open_source/c-openemr.jpg"
                     backgroundNotResponsive
                   >
                     <h4>OpenEMRs</h4>
@@ -473,7 +480,7 @@ class OpenPage extends Component {
                   </GradientImageColumns>
 
                   <GradientImageColumns
-                    image="/images/case-studies/goinvo/CareCards/care-cards-move-more.jpg"
+                    image="/images/open_source/c-shr.jpg"
                     backgroundNotResponsive
                   >
                     <h4>Standard Health Record</h4>
@@ -527,7 +534,7 @@ class OpenPage extends Component {
               {/* SUB-SECTION 2 */}
               <div className="pure-g pure-g--reverse--only-lg">
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-top ">
+                  <div className="pad-right--only-lg  ">
                     <Image
                       src="/images/open_source/os-app.jpg"
                       className="image--max-width"
@@ -557,7 +564,7 @@ class OpenPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src="/images/open_source/os-standards.jpg"
+                      src="/images/open_source/standard.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -704,6 +711,10 @@ class OpenPage extends Component {
 
           <div className="background pad-bottom ">
             <div className="max-width content-padding">
+              <h2 className="header--xl" style={{ color: '#E16226' }}>
+                Open Source Healthcare Portfolio
+              </h2>
+
               <h2>Open Applications</h2>
               <p>Customize and supplement open software to your platform.</p>
 
@@ -738,6 +749,37 @@ class OpenPage extends Component {
 
             <Columns columns={3}>
               {this.state.featuresDesign.map((feature, i) => {
+                return (
+                  <Card
+                    link={feature.link}
+                    key={feature.id}
+                    externalLink
+                    suppressNewTab={true}
+                  >
+                    <ImageBlock
+                      title={feature.title}
+                      image={feature.image}
+                      client="Feature"
+                      date={feature.date}
+                      caption={feature.caption}
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                      hoverable
+                    />
+                  </Card>
+                )
+              })}
+            </Columns>
+          </div>
+
+          <div className="max-width content-padding">
+            <h2>Open Health Visualization</h2>
+            <p>
+              Our illustrations are open for everyone to resuse for the greater
+              health benefits of all
+            </p>
+
+            <Columns columns={3}>
+              {this.state.featuresViz.map((feature, i) => {
                 return (
                   <Card
                     link={feature.link}
@@ -1045,7 +1087,7 @@ class OpenPage extends Component {
         >
           <div className="max-width content-padding pad-vertical">
             <h2 className="header--xl" style={{ color: '#E16226' }}>
-              Our Open Source products impact millions of people every day
+              Open Source products impact millions of people every day
             </h2>
           </div>
 

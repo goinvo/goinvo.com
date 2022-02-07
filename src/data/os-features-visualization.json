@@ -1,0 +1,36 @@
+[
+  {
+    "id": "own-your-health-data",
+    "title": "Own Your Health Data",
+    "date": "",
+    "client": "Feature",
+    "categories": ["public-health-and-policy", "health-it-and-infrastructure"],
+    "caption": "A meaningful, informed consent process designed for patients",
+    "image": "/images/features/own-your-health-data/patient-data-ownership.jpg",
+    "link": "/vision/own-your-health-data/",
+    "hiddenWorkPage": true
+  },
+
+  {
+    "id": "precision-autism",
+    "title": "Precision Autism",
+    "date": "",
+    "client": "Feature",
+    "categories": ["open-source", "public-health-and-policy"],
+    "caption": "Our open source visual depiction of the history of autism, and how precision medicine will help to define, manage, and treat the condition.",
+    "image": "/images/features/precision-autism/precision-autism.jpg",
+    "link": "/vision/precision-autism/"
+  },
+
+  {
+    "id": "determinants-of-health",
+    "title": "Determinants of Health",
+    "date": "",
+    "client": "GoInvo",
+    "categories": ["precision-medicine-and-genomics", "open-source"],
+    "caption": "A comprehensive open source visualization of the social determinants of health.",
+    "image": "/images/features/determinants-of-health/determinants-of-health-poster.jpg",
+    "link": "/vision/determinants-of-health/",
+    "external": true
+  }
+]

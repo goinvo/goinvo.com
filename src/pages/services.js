@@ -82,19 +82,19 @@ const services = [
       title: 'Mass SNAP',
     },
   },
-  {
-    title: 'Open Source development and support',
-    description:
-      'We help you take advantage of open source and integrate it to your existing products',
-    methods:
-      'Customization, Front-end development, Development support, Interactive prototypes, design system',
-    image: '/images/services/doh-preview.jpg',
-    color: '#ffb992',
-    example: {
-      link: '/work/mass-snap',
-      title: 'Patient Health Manager',
-    },
-  },
+  // {
+  //   title: 'Open Source development and support',
+  //   description:
+  //     'We help you take advantage of open source and integrate it to your existing products',
+  //   methods:
+  //     'Customization, Front-end development, Development support, Interactive prototypes, design system',
+  //   image: '/images/services/doh-preview.jpg',
+  //   color: '#ffb992',
+  //   example: {
+  //     link: '/work/mass-snap',
+  //     title: 'Patient Health Manager',
+  //   },
+  // },
 ]
 
 const frontmatter = {

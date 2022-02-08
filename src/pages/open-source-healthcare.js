@@ -46,7 +46,7 @@ const mediaList = [
     image: '/images/open_source/Artboard-1_2-techtalks.jpg',
     title: 'Open source is the only way for Medicine',
     caption:
-      'We must educate other clinicians in open source software, and advocate openness in all areas — open governance, open algorithms, open standards, open data, and open organisations.',
+      'We must educate other clinicians in open source software, and advocate openness in all areas — open governance, open algorithms, open standards, open data, and open organizations.',
   },
   {
     link:
@@ -283,7 +283,7 @@ class OpenPage extends Component {
                   Open source software is a software released under a license
                   that make it freely available for anyone to see, download,
                   change, and redistribute. It’s open! Open source is a strong
-                  driver for innovation. By democratising health technologies,
+                  driver for innovation. By democratizing health technologies,
                   we grant easy access to highly developed and tested tools for
                   improving the medical practice
                 </p>
@@ -292,7 +292,7 @@ class OpenPage extends Component {
               <Divider />
 
               <h2 className="header--xl" style={{ color: '#E16226' }}>
-                Solving the most pressing healtcare problems with Open Source
+                Solving the most pressing healthcare problems with Open Source
                 Innovation
               </h2>
 
@@ -328,10 +328,10 @@ class OpenPage extends Component {
                       </p>
                       <h3 className="">Innovation from the community</h3>
                       <p className="text--gray">
-                        The community working on open source platforms, have
+                        The community working on open source platforms have
                         countless ways and ideas on how to make it more
                         performant, more secure, more robust. They share these
-                        ideas publicly and companies committed to open source
+                        ideas publicly, and companies committed to open source
                         innovation take on these ideas, test them and make them
                         bullet-proof before integrating them to their solution.
                       </p>
@@ -409,25 +409,25 @@ class OpenPage extends Component {
                       >
                         3
                       </p>
-                      <h3 className="">Innovation from customisation </h3>
+                      <h3 className="">Innovation from customization </h3>
                       <p className="text--gray">
-                        Each organisation, hopital, private practice or
+                        Each organization, Hospital, private practice, or
                         community care has it’s own way of working. The duty of
-                        any digital application is to swiftly adapt to processes
-                        of care and the people delivering it. And this is
-                        exaclty what is made possible with sotfware that are
-                        made open. Health IT leaders can see through them, tweak
-                        its parts, add and remove features as they see fit. IT
-                        Leaders have sovereignty over their systems.
+                        any digital service is to swiftly adapt to processes of
+                        care and the people delivering it. And this is the exact
+                        intent of making software open. Health IT leaders can
+                        see through them, tweak parts, add and remove features
+                        as they see fit. IT leaders have sovereignty over their
+                        systems.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="pad-top pad-bottom margin-top margin-bottom">
-                <ColoredLine color="#E16226" />
+              {/* SUCCESS STORIES */}
 
+              <div className="pad-top pad-bottom margin-top pad-bottom--double">
                 <h2 className="header--xl" style={{ color: '#E16226' }}>
                   Open Source Success Stories
                 </h2>
@@ -437,14 +437,14 @@ class OpenPage extends Component {
                     image="/images/open_source/c-fhir.jpg"
                     backgroundNotResponsive
                   >
-                    <h4>FHIR Standars</h4>
+                    <h4>FHIR Standards</h4>
                     <p className="text--gray pad-right">
                       Fast Healthcare Interoperability Resources (FHIR) is an
                       open source data format for healthcare. It is developed
                       and maintained by HL7, a non-profit organization
                       responsible for some of the most widely-adopted standards
                       in healthcare technology. Data sharing is made simple
-                      between application, without the need for custom
+                      between applications, without the need for custom.
                       integrations.
                     </p>
                   </GradientImageColumns>
@@ -471,11 +471,11 @@ class OpenPage extends Component {
                     <h4>OpenEMRs</h4>
                     <p className="text--gray pad-right">
                       An open source EHR that targets small to medium-sized
-                      outpatient providers, openEMR is certified by the Office
+                      outpatient providers, OpenEMR is certified by the Office
                       of the National Coordinator for Health Information
                       Technology. OpenEMR enjoys broad adoption globally at over
-                      15,000 healthcare facilities with over 45,000
-                      practitioners serving over 90 million patients.
+                      15,000 healthcare facilities with 45,000 practitioners
+                      serving about 90 million patients.
                     </p>
                   </GradientImageColumns>
 
@@ -488,14 +488,13 @@ class OpenPage extends Component {
                       The SHR provides a single standard for patient health data
                       at a national level, enabling greater transparency,
                       empowerment, and clinical interoperability that supports
-                      patients, clinicians and health organizations. With a
+                      patients, clinicians, and health organizations. With a
                       common open standard in place, organizations can benefit
                       from better care coordination, and reductions in medical
                       error.
                     </p>
                   </GradientImageColumns>
                 </Carousel>
-                <ColoredLine color="#E36216" />
               </div>
 
               {/* SECTION 2 */}
@@ -525,7 +524,7 @@ class OpenPage extends Component {
                       environment. Patients own their data and are able to
                       contribute to the decision making process. Finally,
                       anonymous health data should be available for public
-                      scientific research
+                      scientific research.
                     </p>
                   </div>
                 </div>
@@ -545,7 +544,7 @@ class OpenPage extends Component {
 
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg">
-                    <h3 className="">Open Health Applications</h3>
+                    <h3 className="">Open Digital Health Services</h3>
                     <p className="text--gray">
                       Healthcare systems must evolve towards a more transparent
                       and democratic development process. Applications should be
@@ -580,7 +579,7 @@ class OpenPage extends Component {
                       format. Standardization of care plans will aid in
                       communication and collaboration across care team members
                       over time, providing high-quality longitudinal care with
-                      reduced risk for medical error.
+                      reduced risk for medical errors.
                     </p>
                   </div>
                 </div>
@@ -603,12 +602,12 @@ class OpenPage extends Component {
                   <div className="pad-right--only-lg pad-bottom pad-top margin-top--double">
                     <h3 className="">Open Health Processes</h3>
                     <p className="text--gray">
-                      Encourage the participation of patients in their care
-                      journey by supporting them to take control and engage in
-                      their health and care. Open organiation collaborate
-                      internally and externally and are committed to learning
-                      and improvement. They provide care that does not vary in
-                      quality because of a person’s characteristics.
+                      Encourage patients' participation in their care journey by
+                      supporting them to take control and engage in their health
+                      and care. Open organiations collaborate internally and
+                      externally and are committed to learning and improvement.
+                      They provide care that does not vary in quality because of
+                      a person’s characteristics.
                     </p>
                   </div>
                 </div>
@@ -619,7 +618,7 @@ class OpenPage extends Component {
 
               {/* SECTION 3 */}
               <h2 className="header--xl pad-top" style={{ color: '#E16226' }}>
-                A bold Mission for Open Source Healthcare
+                A Bold Mission for Open Source Healthcare
               </h2>
               <div className="pure-u-1 content-padding--double ">
                 <p className="text--gray">
@@ -699,7 +698,7 @@ class OpenPage extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="text--gray">
-                    We partner with world-class organisations to develop open
+                    We partner with world-class organizations to develop open
                     research and design projects
                   </p>
                 </div>
@@ -724,7 +723,9 @@ class OpenPage extends Component {
               </h2>
 
               <h2>Open Applications</h2>
-              <p>Customize and supplement open software to your platform.</p>
+              <p className="pad-bottom">
+                Customize and supplement open software to your platform.
+              </p>
 
               <Columns columns={3}>
                 {this.state.featuresApp.map((feature, i) => {
@@ -753,7 +754,9 @@ class OpenPage extends Component {
 
           <div className="max-width content-padding">
             <h2>Open Research and Design</h2>
-            <p>Leverage existing material quickly with the right foundation.</p>
+            <p className="pad-bottom">
+              Leverage existing material quickly with the right foundation.
+            </p>
 
             <Columns columns={3}>
               {this.state.featuresDesign.map((feature, i) => {
@@ -780,9 +783,9 @@ class OpenPage extends Component {
           </div>
 
           <div className="max-width content-padding">
-            <h2>Open Health Visualization</h2>
-            <p>
-              Our illustrations are open for everyone to resuse for the greater
+            <h2>Open Health Vizualization</h2>
+            <p className="pad-bottom">
+              Our illustrations are open for everyone to reuse for the greater
               health benefits of all
             </p>
 
@@ -917,13 +920,13 @@ class OpenPage extends Component {
                 />
 
                 <p className="text--gray">
-                  For all open source healthcare advocate, we wrote Nine
+                  For all open source healthcare advocates, we wrote Nine
                   Organizing Principles for open source healthcare. A framework
                   for responsible use and management of patient health data and
                   information for the advancement of health quality, health
                   research, and data ownership. We also gathered points of view
-                  of thought leaders and evidence around the world of nobable
-                  Open Source projects in healthcare
+                  from thought leaders and evidence around the world of notable
+                  Open Source projects in healthcare.
                 </p>
 
                 <div className="pad-bottom">
@@ -1013,10 +1016,10 @@ class OpenPage extends Component {
               <div className="pure-u-1-2 pad-right--double">
                 <h3 className="">Design is technical</h3>
                 <p className="text--gray">
-                  Global communitites support our open source products.
-                  Together, we contribute on writing better code, collaborate on
-                  projects, and make greater impact in our healthcare system.We
-                  want you to be part of our GoInvo community!
+                  Global communities support our open source products. Together,
+                  we contribute on writing better code, collaborating on
+                  projects, and making greater impact in our healthcare system.
+                  We want you to be part of our GoInvo community!
                 </p>
                 <div className="pad-top--double">
                   <Link

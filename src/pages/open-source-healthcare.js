@@ -950,7 +950,7 @@ class OpenPage extends Component {
                     backgroundNotResponsive
                   >
                     <h4>Own Your Health Data</h4>
-                    <p className="text--gray pad-right--double pad-bottom">
+                    <p className="text--gray pad-right--double">
                       As the future of our healthcare system moves towards
                       electronic healthcare records, we need patient data
                       ownership rights to protect patient care.
@@ -989,7 +989,7 @@ class OpenPage extends Component {
                     backgroundNotResponsive
                   >
                     <h4>Open Source Healthcare Journal</h4>
-                    <p className="text--gray pad-bottom">
+                    <p className="text--gray ">
                       We need open standards for healthcare because our lives
                       depend on it. Read our open source ethos, with
                       contributing articles by Jane Sarasohn-Kahn and Eric Topol

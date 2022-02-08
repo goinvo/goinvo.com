@@ -508,7 +508,7 @@ class OpenPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src="/images/open_source/os-info.jpg"
+                      src="/images/open_source/os-info-2.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -564,7 +564,7 @@ class OpenPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src="/images/open_source/standard.jpg"
+                      src="/images/open_source/os-std-2.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -664,7 +664,7 @@ class OpenPage extends Component {
 
             <div className="pure-u-1-3 pad-all--double">
               <Image
-                src=""
+                src="/images/open_source/os-support.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
@@ -676,7 +676,7 @@ class OpenPage extends Component {
 
             <div className="pure-u-1-3 pad-all--double">
               <Image
-                src=""
+                src="/images/open_source/os-enterprise.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
@@ -688,7 +688,7 @@ class OpenPage extends Component {
 
             <div className="pure-u-1-3 pad-all--double">
               <Image
-                src=""
+                src="/images/open_source/os-partnership.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
@@ -917,12 +917,12 @@ class OpenPage extends Component {
 
               <Divider />
 
-              <div className="pad-top">
-                {/* <Image
-                  src="/images/open_source/os-app.jpg"
-                  className="image--max-width-half-only-lg"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                /> */}
+              <div className="max-width pure-u-1 pad-top">
+                <Image
+                  src="/images/open_source/os-principles.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.full}
+                />
 
                 <p>
                   For all open source healthcare advocate, we wrote Nine
@@ -1045,11 +1045,11 @@ class OpenPage extends Component {
               {/* <HubspotStyle /> */}
             </div>
 
-            <div className="max-width content-padding pad-vertical">
+            <div className="max-width content-padding pad-top--double">
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Start making an impact today by starting on Github
               </h2>
-              <div className="pure-u-1-2">
+              <div className="pure-u-1-2 pad-right--double">
                 <h3 className="">Design is technical</h3>
                 <p className="text--gray">
                   Global communitites support our open source products.
@@ -1066,8 +1066,7 @@ class OpenPage extends Component {
               </div>
               <div className="pure-u-1-2">
                 <Image
-                  src="/images/open_source/os-standards.jpg"
-                  className=""
+                  src="/images/open_source/os-design-2.jpg"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>

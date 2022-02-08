@@ -26,7 +26,10 @@ class CategoriesList extends Component {
             {parse(cat.title)}
           </button>
         ) : (
-          <Link className="categories-list__link" to={cat.link}>
+          <Link
+            className="categories-list__link button button--link"
+            to={cat.link}
+          >
             {parse(cat.title)}
           </Link>
         )}

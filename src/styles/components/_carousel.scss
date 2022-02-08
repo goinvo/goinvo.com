@@ -1,6 +1,6 @@
 .carousel {
   $parent: &;
-  $carousel-menu-item-border: 1px solid $color-gray--medium;
+  $carousel-menu-item-border: 1px solid $color-teal--light;
 
   &__menu-items {
     margin: $spacing 0 ($spacing * 2) 0;
@@ -73,8 +73,8 @@
     &:before {
       content: '';
       display: none;
-      width: 100%;
-      height: 100%;
+      width: 50%;
+      height: 50%;
       background: url('../assets/images/icon-caret.svg');
       background-size: contain;
       background-repeat: no-repeat;
@@ -103,7 +103,7 @@
   }
 
   .slick-dots {
-    bottom: -37px;
+    bottom: -50px;
 
     li {
       button {

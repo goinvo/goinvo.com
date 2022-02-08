@@ -822,7 +822,7 @@ class OpenPage extends Component {
           transitionSpeed="slow"
         >
           <div>
-            <div className="max-width content-padding pad-vertical">
+            <div className="max-width content-padding">
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Open Source products impact millions of people every day
               </h2>
@@ -909,22 +909,6 @@ class OpenPage extends Component {
                 </div>
               </div>
 
-              {/* 
-              <div className="max-width pad-top--double pad-bottom--double ">
-                    <Quote
-                background="blue"
-                quotee="Eric Topol"
-                quoteeSub="MD, Director, Scripps Translational Science Institute"
-              >
-                The GoInvo studio is one of the most talented groups of designers I
-                have ever met in the healthcare space. Not only are their ideas,
-                designs, and graphics remarkable, but I haven’t yet figured out how
-                they know so much about medicine and its future.
-              </Quote>
-              </div> */}
-
-              <Divider />
-
               <div className="max-width pure-u-1 pad-top">
                 <Image
                   src="/images/open_source/os-principles.jpg"
@@ -932,7 +916,7 @@ class OpenPage extends Component {
                   sizes={config.sizes.full}
                 />
 
-                <p>
+                <p className="text--gray">
                   For all open source healthcare advocate, we wrote Nine
                   Organizing Principles for open source healthcare. A framework
                   for responsible use and management of patient health data and
@@ -947,77 +931,46 @@ class OpenPage extends Component {
                     Nine Organizing Principles for open source healthcare{' '}
                   </Link>
                 </div>
-
-                <Link
-                  to="https://opensourcehealthcare.org"
-                  className="button button--secondary button--lg margin-bottom"
-                >
-                  View more evidence
-                </Link>
               </div>
-              <div>
-                <h2 className="header--xl" style={{ color: '#E16226' }}>
-                  Our Open Source products impact millions of people every day
-                </h2>
+
+              <div className="pad-top">
                 <Carousel
                   menuItems={[
                     'Own Your Health Data',
-                    'Patient Data Manager',
-                    'Open Healthcare Infrastructure',
-                    'Open Source Healthcare',
+                    // 'Patient Data Manager',
+                    'Open Source Healthcare Journal',
                   ]}
                 >
                   <GradientImageColumns
-                    image="/images/services/inspired-ehrs-book.jpg"
-                    backgroundColor="gray"
+                    image="/images/features/own-your-health-data/patient-data-ownership.jpg"
+                    backgroundColor=""
                     backgroundNotResponsive
                   >
-                    <h4>FHIR Standars</h4>
-                    <p>
-                      Fast Healthcare Interoperability Resources is a standard
-                      describing data formats and elements and an application
-                      programming interface for exchanging electronic health
-                      records.
-                    </p>
-                    <Link
-                      to="/work/inspired-ehrs"
-                      className="button button--secondary button--lg button--block"
-                    >
-                      Read the Case Study
-                    </Link>
-                  </GradientImageColumns>
-                  <GradientImageColumns
-                    image="/images/vision/emerging-tech-wood.jpg"
-                    backgroundColor="gray"
-                    backgroundNotResponsive
-                  >
-                    <h4>FHIR Standars</h4>
-                    <p>
-                      Fast Healthcare Interoperability Resources is a standard
-                      describing data formats and elements and an application
-                      programming interface for exchanging electronic health
-                      records.
+                    <h4>Own Your Health Data</h4>
+                    <p className="text--gray pad-right--double pad-bottom">
+                      As the future of our healthcare system moves towards
+                      electronic healthcare records, we need patient data
+                      ownership rights to protect patient care.
                     </p>
                     <a
-                      href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519"
+                      href="https://goinvo.com/vision/own-your-health-data/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="button button--secondary button--lg button--block"
+                      className="button button--secondary button--lg button--block pad-top"
                     >
-                      Check out the Book
+                      Learn More
                     </a>
                   </GradientImageColumns>
-                  <GradientImageColumns
-                    image="/images/services/doh-preview.jpg"
-                    backgroundColor="gray"
+
+                  {/* <GradientImageColumns
+                    image="/images/open_source/patient-manager.jpg"
+                    backgroundColor=""
                     backgroundNotResponsive
                   >
-                    <h4>FHIR Standars</h4>
-                    <p>
-                      Fast Healthcare Interoperability Resources is a standard
-                      describing data formats and elements and an application
-                      programming interface for exchanging electronic health
-                      records.
+                    <h4>Patient Data Manager</h4>
+                    <p className="text--gray pad-bottom">
+                    Patient have full control and easy access to their health data. They are able to manage their
+                     care plan, including review after visit summaries, improve adherence to treatment regimen, receive appointment reminders
                     </p>
                     <Link
                       to="/vision/determinants-of-health/"
@@ -1025,24 +978,24 @@ class OpenPage extends Component {
                     >
                       Read the Feature
                     </Link>
-                  </GradientImageColumns>
+                  </GradientImageColumns> */}
+
                   <GradientImageColumns
-                    image="/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg"
-                    backgroundColor="gray"
+                    image="/images/features/open-source-healthcare/open-source-healthcare-featured.jpg"
+                    backgroundColor=""
                     backgroundNotResponsive
                   >
-                    <h4>FHIR Standars</h4>
-                    <p>
-                      Fast Healthcare Interoperability Resources is a standard
-                      describing data formats and elements and an application
-                      programming interface for exchanging electronic health
-                      records.
+                    <h4>Open Source Healthcare Journal</h4>
+                    <p className="text--gray pad-bottom">
+                      We need open standards for healthcare because our lives
+                      depend on it. Read our open source ethos, with
+                      contributing articles by Jane Sarasohn-Kahn and Eric Topol
                     </p>
                     <a
-                      href="https://www.goinvo.com/features/from-bathroom-to-healthroom/"
+                      href="https://opensourcehealthcare.org/downloads/"
                       className="button button--secondary button--lg button--block"
                     >
-                      Read the Feature
+                      Download Journal
                     </a>
                   </GradientImageColumns>
                 </Carousel>
@@ -1053,7 +1006,7 @@ class OpenPage extends Component {
               {/* <HubspotStyle /> */}
             </div>
 
-            <div className="max-width content-padding pad-top--double">
+            <div className="max-width content-padding pad-top--double pad-bottom">
               <h2 className="header--xl" style={{ color: '#E16226' }}>
                 Start making an impact today by starting on Github
               </h2>
@@ -1065,14 +1018,16 @@ class OpenPage extends Component {
                   projects, and make greater impact in our healthcare system.We
                   want you to be part of our GoInvo community!
                 </p>
-                <Link
-                  to="https://github.com/goinvo"
-                  className="button button--secondary button--lg button--block"
-                >
-                  Contribute on github
-                </Link>
+                <div className="pad-top--double">
+                  <Link
+                    to="https://github.com/goinvo"
+                    className="button button--primary button--lg "
+                  >
+                    Contribute on github
+                  </Link>
+                </div>
               </div>
-              <div className="pure-u-1-2">
+              <div className="pure-u-1-2 pad-bottom--double">
                 <Image
                   src="/images/open_source/os-design-2.jpg"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -1113,7 +1068,7 @@ class OpenPage extends Component {
 
         {/* CTA */}
 
-        <div className="background--blue pad-vertical--quad--only-lg">
+        <div className="background--blue pad-vertical--double">
           <div className="max-width content-padding">
             <div className="pure-g">
               <div className="pure-u-1 ">

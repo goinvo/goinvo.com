@@ -32,7 +32,7 @@ class Carousel extends Component {
     return (
       <div className="carousel">
         {this.props.menuItems && this.props.menuItems.length ? (
-          <div className="max-width content-padding">
+          <div className="max-width">
             <ul className="list--unstyled carousel__menu-items">
               {this.props.menuItems.map((item, i) => {
                 return (

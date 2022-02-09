@@ -56,13 +56,13 @@ class Footer extends Component {
                       Open Source
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/contact/">Contact Us</Link>
+                  </li>
                 </ul>
               </div>
               <div className="pure-u-1-2">
                 <ul className="list--unstyled">
-                  <li>
-                    <Link to="/contact/">Contact Us</Link>
-                  </li>
                   <li>
                     <a
                       target="blank"

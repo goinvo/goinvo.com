@@ -135,12 +135,6 @@ class FacesInHealthCommunicationFeature extends Component {
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
             </div>
-            Many Americans have low numeracy skills, increasing the effort
-            patients exert in calculating risk and comparing options when making
-            medical decisions. 2 Not unexpectedly, healthcare outcomes worsen,
-            and costs substantially increase for Americans with low health
-            literacy. Compared to those with proficient health literacy, adults
-            who have low health literacy experience:
             <p>
               Many Americans have low numeracy skills, increasing the effort
               patients exert in calculating risk and comparing options when

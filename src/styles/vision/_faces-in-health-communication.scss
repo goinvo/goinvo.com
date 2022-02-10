@@ -3,6 +3,35 @@
     max-width: 680px;
   }
 
+  .fihc-impact {
+    position: relative;
+
+    &__text-container {
+      position: absolute;
+
+      &--desktop {
+        top: 37%;
+        left: 0;
+        width: 100%;
+      }
+
+      &--mobile {
+        top: 40%;
+        left: 0;
+        width: 50%;
+
+        div {
+          margin-bottom: 40%;
+        }
+      }
+    }
+  }
+
+  .text--vertical {
+    width: 14px;
+    word-break: break-all;
+  }
+
   .max-width {
     &--40 {
       max-width: 40%;

@@ -39,35 +39,31 @@ class FacesInHealthCommunicationFeature extends Component {
   }
 
   sizeGrid = () => {
-    ;[...Array(5)].map((_, i) => {
-      let elements = this.grid.current.getElementsByClassName(
-        `fihc-row--${i + 1}`
-      )
-      elements = [...elements]
+    let elements = this.grid.current.getElementsByClassName('fihc-row--1')
+    elements = [...elements]
 
-      elements.forEach(el => {
-        el.style.height = `auto`
-      })
+    elements.forEach(el => {
+      el.style.height = `auto`
+    })
 
-      let mqPixels =
-        parseFloat(config.mediaQueries.lg) *
-        parseFloat(getComputedStyle(document.body).fontSize)
+    let mqPixels =
+      parseFloat(config.mediaQueries.lg) *
+      parseFloat(getComputedStyle(document.body).fontSize)
 
-      if (window.innerWidth < mqPixels) {
-        return
-      }
+    if (window.innerWidth < mqPixels) {
+      return
+    }
 
-      let height = elements.reduce(function(el, el2) {
-        return el.offsetHeight > el2.offsetHeight ? el : el2
-      }).offsetHeight
+    let height = elements.reduce(function(el, el2) {
+      return el.offsetHeight > el2.offsetHeight ? el : el2
+    }).offsetHeight
 
-      if (i === 2 || i === 4) {
-        height = height < 100 ? 250 : height
-      }
+    // if (i === 2 || i === 4) {
+    //   height = height < 100 ? 250 : height
+    // }
 
-      elements.forEach(el => {
-        el.style.height = `${height}px`
-      })
+    elements.forEach(el => {
+      el.style.height = `${height}px`
     })
   }
 
@@ -403,159 +399,188 @@ class FacesInHealthCommunicationFeature extends Component {
                 <a href="#references">[10]</a>
               </p>
             </div>
-            <div className="pure-g" ref={this.grid}>
-              <div className="pure-u-1 pure-u-lg-1-4 border border--light-gray border--heavy">
-                <div className="fihc-row--1 display--flex display--flex--align-center display--flex--justify-center background--gray pad-all text--center">
-                  <span className="text--serif text--xl">CONSPEC</span>
-                </div>
-                <div className="fihc-row--2 display--flex display--flex--align-center display--flex--justify-center text--sm pad-all border-bottom border--light-gray border--heavy text--center">
-                  <span>
-                    Guides an infant’s preferences for facelike patterns from
-                    birth. <a href="#references">[11][12][13][14][15][16]</a>
-                  </span>
-                </div>
-                <div className="fihc-row--3">
-                  <Image
-                    src="/images/features/faces-in-health-communication/10-baby1.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                  />
-                </div>
-                <div className="fihc-row--4 border-bottom border--light-gray border--heavy">
-                  <div className="background--gray pad-horizontal pad-vertical--half text--center text--uppercase text--bold">
-                    2 days old
-                  </div>
-                  <div className="pad-horizontal">
-                    <p>
-                      Newborns are able to{' '}
-                      <span className="text--primary">
-                        discriminate between averting eye gaze and direct gaze
-                      </span>
-                      .
-                      <br />
-                      They divert attention away from faces that are inverted or
-                      upside down and look longer at top-heavy stimulus.
-                    </p>
-                  </div>
-                </div>
-                <div className="fihc-row--5 pad-horizontal">
-                  <Image
-                    src="/images/features/faces-in-health-communication/10-brain1.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                  />
+            <div className="border border--light-gray border--heavy margin-top--double">
+              <div className="background--gray pad-all text--center">
+                <span className="text--serif text--xl">CONSPEC</span>
+                <div className="text--sm pad-top--half">
+                  Guides an infant’s preferences for facelike patterns from
+                  birth. <a href="#references">[11][12][13][14][15][16]</a>
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-3-4 pad-left--only-lg">
-                <div className="border border--blue border--heavy">
-                  <div className="fihc-row--1 display--flex display--flex--align-center display--flex--justify-center background--blue pad-all text--center">
-                    <span className="text--serif text--xl">CONLERN</span>
-                  </div>
-                  <div className="fihc-row--2 display--flex display--flex--align-center display--flex--justify-center text--sm pad-all border-bottom border--blue border--heavy text--center">
-                    A cortical visuomotor mechanism replaces CONSPEC which
-                    support the gradual emergence of specialized cortical
-                    circuits that we use as adults.
-                  </div>
-                  <div className="pure-g">
-                    <div className="pure-u-1 pure-u-lg-1-3 border-right border--blue border--heavy">
-                      <div className="fihc-row--3">
-                        <Image
-                          src="/images/features/faces-in-health-communication/10-baby2.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                        />
-                      </div>
-                      <div className="fihc-row--4 border-bottom border--blue border--heavy">
-                        <div className="background--blue pad-horizontal pad-vertical--half text--center text--uppercase text--bold">
-                          2 months old
-                        </div>
-                        <div className="pad-horizontal">
-                          <p>
-                            Infants learn to{' '}
-                            <span className="text--primary">
-                              prefer a proper human face
-                            </span>{' '}
-                            through their cortical visuomotor mechanism.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="fihc-row--5 pad-horizontal">
-                        <Image
-                          src="/images/features/faces-in-health-communication/10-brain2.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                        />
-                      </div>
-                    </div>
-                    <div className="pure-u-1 pure-u-lg-1-3 border-right border--blue border--heavy">
-                      <div className="fihc-row--3">
-                        <Image
-                          src="/images/features/faces-in-health-communication/10-baby3.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                        />
-                      </div>
-                      <div className="fihc-row--4 border-bottom border--blue border--heavy">
-                        <div className="background--blue pad-horizontal pad-vertical--half text--center text--uppercase text--bold">
-                          4 months old
-                        </div>
-                        <div className="pad-horizontal">
-                          <p>
-                            Infants are able to simulate neural responses in
-                            their temporal lobe to a level similar to adults.
-                            <br />
-                            <span className="text--primary">
-                              Non-face images are being analyzed
-                            </span>{' '}
-                            in the lower level of their visual processing system
-                            in the occipital lobe.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="fihc-row--5 pad-horizontal">
-                        <Image
-                          src="/images/features/faces-in-health-communication/10-brain3.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                        />
-                      </div>
-                    </div>
-                    <div className="pure-u-1 pure-u-lg-1-3">
-                      <div className="fihc-row--3">
-                        <Image
-                          src="/images/features/faces-in-health-communication/10-baby4.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                        />
-                      </div>
-                      <div className="fihc-row--4 border-bottom border--blue border--heavy">
-                        <div className="background--blue pad-horizontal pad-vertical--half text--center text--uppercase text--bold">
-                          9 months old
-                        </div>
-                        <div className="pad-horizontal">
-                          <p>
-                            Infants{' '}
-                            <span className="text--primary">
-                              develop joint attention
-                            </span>
-                            , where they can purposefully coordinate their
-                            attention with that of another person.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="fihc-row--5 pad-horizontal">
-                        <Image
-                          src="/images/features/faces-in-health-communication/10-brain4.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                        />
-                      </div>
-                    </div>
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
+                  <div className="text--center text--uppercase text--bold text--vertical">
+                    2<div className="pad-bottom"></div>
+                    days
+                    <div className="pad-bottom"></div>
+                    old
                   </div>
                 </div>
+                <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <div className="text--center text--uppercase text--bold">
+                      Frontal Lobe
+                    </div>
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-brain1.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+                <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-baby1.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
+                2 days old
+              </div>
+              <div className="pad-all border-top border--light-gray border--heavy">
+                Infants spend a longer time looking at face that are arranged
+                properly. As early as two days old, newborns are able to
+                discriminate between averting eye gaze and direct gaze.
               </div>
             </div>
-            <p className="text--center margin-bottom--double">
+            <div className="border border--blue border--heavy margin-top--double">
+              <div className="background--blue pad-all text--center">
+                <span className="text--serif text--xl">CONLERN</span>
+                <div className="text--sm pad-top--half">
+                  A cortical visuomotor mechanism. These subcortical structures
+                  support the development of specialized cortical circuits that
+                  we use as adults.{' '}
+                  <a href="#references">[17][18][19][20][21][22]</a>
+                </div>
+              </div>
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
+                  <div className="text--center text--uppercase text--bold text--vertical">
+                    2<div className="pad-bottom"></div>
+                    months
+                    <div className="pad-bottom"></div>
+                    old
+                  </div>
+                </div>
+                <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <div className="text--center text--uppercase text--bold">
+                      Motor Cortex
+                    </div>
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-brain2.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+                <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-baby2.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
+                2 months old
+              </div>
+              <div className="pad-all border-top border--light-gray border--heavy">
+                Infants learn to <b>prefer a realistic human face</b> through
+                their cortical visuomotor mechanism.
+              </div>
+            </div>
+            <div className="border border--blue border--heavy">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
+                  <div className="text--center text--uppercase text--bold text--vertical">
+                    4<div className="pad-bottom"></div>
+                    months
+                    <div className="pad-bottom"></div>
+                    old
+                  </div>
+                </div>
+                <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <div className="text--center text--uppercase text--bold">
+                      Occipital Lobe
+                    </div>
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-brain3.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+                <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-baby3.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
+                4 months old
+              </div>
+              <div className="pad-all border-top border--light-gray border--heavy">
+                Infants can simulate neural responses in their temporal lobe to
+                a level similar to adults.
+                <br />
+                The lower level of the visual processing system in the occipital
+                lobe is responsible for <b>analyzing non-facial images</b>.
+              </div>
+            </div>
+            <div className="border border--blue border--heavy">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
+                  <div className="text--center text--uppercase text--bold text--vertical">
+                    9<div className="pad-bottom"></div>
+                    months
+                    <div className="pad-bottom"></div>
+                    old
+                  </div>
+                </div>
+                <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <div className="text--center text--uppercase text--bold">
+                      Temporal Lobe
+                    </div>
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-brain4.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+                <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
+                  <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
+                    <Image
+                      src="/images/features/faces-in-health-communication/10-baby4.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
+                9 months old
+              </div>
+              <div className="pad-all border-top border--light-gray border--heavy">
+                Infants <b>develop joint attention</b>, where they can
+                purposefully coordinate their attention with that of another
+                person.
+              </div>
+            </div>
+            <p className="text--center margin-top--double margin-bottom--double">
               <span className="text--serif text--lg">
                 Although we may share the same biological networks for
                 processing faces,{' '}
@@ -614,7 +639,7 @@ class FacesInHealthCommunicationFeature extends Component {
               <a href="#references">[27]</a>
             </p>
             <p>
-              This declining trend is aassociated with decreased recognition
+              This declining trend is associated with decreased recognition
               memory for other race faces. This trend continues into adulthood.
               After thirty years of investigating the own race bias, ORB has
               been consistently found across different cultures and races,
@@ -633,12 +658,12 @@ class FacesInHealthCommunicationFeature extends Component {
             </div>
             <p>
               Our brains are wired to engage and respond to human faces, which
-              makes them critical to communication. Not only do humans naturally
-              gravitate to faces, but they are able to{' '}
-              <span className="text--primary">
-                better remember and mentally engage with information depicting
+              making them critical to communication. Not only do humans
+              naturally gravitate to faces, but they{' '}
+              <b>
+                remember better and mentally engage with information depicting
                 individuals who are similar to them
-              </span>
+              </b>
               .
             </p>
             <div className="margin-auto">
@@ -679,53 +704,90 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
               </div>
             </div>
-            <Columns columns={3}>
-              <div className="text--center">
-                <div className="max-width--60--until-lg margin-auto">
-                  <Image
-                    src="/images/features/faces-in-health-communication/15-plot-message-self-referent3.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
+            <div ref={this.grid}>
+              <Columns columns={3}>
+                <div className="text--center">
+                  <div className="max-width--60--until-lg margin-auto">
+                    <Image
+                      src="/images/features/faces-in-health-communication/15-plot-message-self-referent3.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-bottom--none">
+                    Anti-smoking messaging and images: Disgusted to the tar
+                    lining
+                  </p>
+                  <p className="text--uppercase margin-top--none">
+                    Message-referent
+                  </p>
                 </div>
-                <p className="text--sm">
-                  Anti-smoking messaging and images: Disgusted to the tar lining{' '}
-                </p>
-                <p className="text--uppercase">Message-referent</p>
-              </div>
-              <div className="text--center">
-                <div className="max-width--60--until-lg margin-auto">
-                  <Image
-                    src="/images/features/faces-in-health-communication/15-plot-message-self-referent4.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
+                <div className="text--center">
+                  <div className="max-width--60--until-lg margin-auto">
+                    <Image
+                      src="/images/features/faces-in-health-communication/15-plot-message-self-referent4.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-bottom--none">
+                    Anger and sadness for the smoker
+                  </p>
+                  <p className="text--uppercase margin-top--none">
+                    Plot-referent
+                  </p>
                 </div>
-                <p className="text--sm">Anger and sadness for the smoker</p>
-                <p className="text--uppercase">Plot-referent</p>
-              </div>
-              <div className="text--center">
-                <div className="max-width--60--until-lg margin-auto">
-                  <Image
-                    src="/images/features/faces-in-health-communication/15-plot-message-self-referent5.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
+                <div className="text--center">
+                  <div className="max-width--60--until-lg margin-auto">
+                    <Image
+                      src="/images/features/faces-in-health-communication/15-plot-message-self-referent5.jpg"
+                      className="image--max-width"
+                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-bottom--none">
+                    Shame for their own smoking
+                  </p>
+                  <p className="text--uppercase margin-top--none">
+                    Self-referent
+                  </p>
                 </div>
-                <p className="text--sm">Shame for their own smoking</p>
-                <p className="text--uppercase">Self-referent</p>
+              </Columns>
+            </div>
+            <div className="fihc-impact hidden--until-lg">
+              <Image
+                src="/images/features/faces-in-health-communication/16-PC-impact-what-we-believe.jpg"
+                className="image--max-width"
+                sizes={config.sizes.full}
+              />
+              <div className="fihc-impact__text-container fihc-impact__text-container--desktop pure-g text--bold">
+                <div className="pure-u-1-3 pad-horizontal">
+                  <p className="pad-horizontal">
+                    These narratives have the power to touch our emotions,
+                  </p>
+                </div>
+                <div className="pure-u-1-3 pad-horizontal">
+                  <p className="pad-horizontal">impact what we believe,</p>
+                </div>
+                <div className="pure-u-1-3 pad-horizontal">
+                  <p className="pad-horizontal">teach us new behaviors.</p>
+                </div>
               </div>
-            </Columns>
-            <Image
-              src="/images/features/faces-in-health-communication/16-PC-impact-what-we-believe.jpg"
-              className="image--max-width"
-              sizes={config.sizes.full}
-            />
-            {/* <Image
-              src="/images/features/faces-in-health-communication/16-mobile-impact-what-we-believe.jpg"
-              className="image--max-width"
-              sizes={config.sizes.full}
-            /> */}
+            </div>
+            <div className="fihc-impact hidden--lg">
+              <Image
+                src="/images/features/faces-in-health-communication/16-mobile-impact-what-we-believe.jpg"
+                className="image--max-width"
+                sizes={config.sizes.full}
+              />
+              <div className="fihc-impact__text-container fihc-impact__text-container--mobile text--bold">
+                <div className="pad-horizontal">
+                  These narratives have the power to touch our emotions,
+                </div>
+                <div className="pad-horizontal">impact what we believe,</div>
+                <div className="pad-horizontal">teach us new behaviors.</div>
+              </div>
+            </div>
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg">
@@ -768,16 +830,20 @@ class FacesInHealthCommunicationFeature extends Component {
                 more effective.
               </span>
             </p>
-            <Image
-              src="/images/features/faces-in-health-communication/18-diversity.jpg"
-              className="image--max-width"
-              sizes={config.sizes.fullInsideMaxWidth}
-            />
-            {/* <Image
-              src="/images/features/faces-in-health-communication/18-diversity.jpg"
-              className="image--max-width"
-              sizes={config.sizes.fullInsideMaxWidth}
-            /> */}
+            <div className="hidden--until-lg">
+              <Image
+                src="/images/features/faces-in-health-communication/18-diversity.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMaxWidth}
+              />
+            </div>
+            <div className="hidden--lg">
+              <Image
+                src="/images/features/faces-in-health-communication/18-mobile-diversity.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMaxWidth}
+              />
+            </div>
             <Divider />
             <div className="pad-top--half pad-bottom--half pad-horizontal">
               <h1 className="header--xl text--center">Conclusion</h1>
@@ -855,7 +921,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 Graphics
               </h1>
             </div>
-            <p className="text--serif text--lg">
+            <p className="text--serif text--lg margin-top--none">
               To learn more about how healthcare visuals and the use of faces in
               particular, improve engagement and emotional understanding, the
               GoInvo health design studio devised a lean experiment.
@@ -902,9 +968,11 @@ class FacesInHealthCommunicationFeature extends Component {
               graphics below.
             </p>
             <div>
-              {
-                // TODO: Image
-              }
+              <Image
+                src="/images/features/faces-in-health-communication/21-research.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
             </div>
             <p>
               We asked respondents to rank the boy’s emotions on a scale of 1-5,
@@ -913,9 +981,11 @@ class FacesInHealthCommunicationFeature extends Component {
               Option 2 (face) thought that the boy ranked at a 5 in happiness.
             </p>
             <div>
-              {
-                // TODO: Image
-              }
+              <Image
+                src="/images/features/faces-in-health-communication/22-scale.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
             </div>
             <p>
               When answering the question, “Is the boy happy after eating blob
@@ -924,33 +994,60 @@ class FacesInHealthCommunicationFeature extends Component {
               saw the option showing a face.
             </p>
             <div>
-              {
-                // TODO: Image
-              }
+              <Image
+                src="/images/features/faces-in-health-communication/23-happy.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+            </div>
+            <p>
+              In this first test — that the boy was happy eating blob A, the
+              respondents’{' '}
+              <b>
+                emotional understanding of the content increased due to
+                including a facial expression in the infographic.
+              </b>
+            </p>
+            <div>
+              <Image
+                src="/images/features/faces-in-health-communication/24-pie-chart.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
             </div>
             <p>
               For our second test, the addition of body language to the
               infographic gave respondents another piece of information to
               interpret.
               <br />
-              In regards to the boy eating blob B, 76.2% of respondents given
-              Option 1 (no face) ranked the boy at a 1 (unhappy), while 70.1% of
-              Option 2 respondents ranked the boy at a 1 (unhappy).
-              <br />
-              While the majority of respondents clearly understood that the boy
-              was unhappy, those who relied solely on the body language of the
-              boy indicated greater unhappiness than those who had the
-              additional facial information.
-              <br />
-              <span className="text--primary">
-                The addition of facial expression in this case, seemed to
-                mitigate the message that the boy was unhappy.
-              </span>
+              Regarding the boy eating blob B, 76.2% of respondents given the
+              without-a-face option ranked the boy at a 1 (unhappy), while 70.1%
+              of the showing-a-face option respondents ranked the boy at a 1
+              (unhappy).
             </p>
             <div>
-              {
-                // TODO: Image
-              }
+              <Image
+                src="/images/features/faces-in-health-communication/25-sad.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+            </div>
+            <p>
+              While the majority of respondents understood that the boy was
+              unhappy, those who relied solely on body language interpreted
+              greater unhappiness than those who had the additional facial
+              information.{' '}
+              <b>
+                The addition of facial expression in this case, seemed to
+                mitigate the message that the boy was unhappy.
+              </b>
+            </p>
+            <div>
+              <Image
+                src="/images/features/faces-in-health-communication/26-bar.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
             </div>
           </div>
         </div>

@@ -40,6 +40,10 @@ body {
     }
   }
 
+  &--xs {
+    font-size: 0.75rem;
+  }
+
   &--sm {
     font-size: 0.875rem;
   }
@@ -77,6 +81,10 @@ body {
 
   &--center {
     text-align: center;
+  }
+
+  &--right {
+    text-align: right;
   }
 
   &--white {

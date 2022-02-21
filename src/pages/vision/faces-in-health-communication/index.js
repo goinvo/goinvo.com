@@ -1043,8 +1043,8 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <div>
                 <h2 className="header--xl text--center">Authors</h2>
+                <Author name="Chloe Ma" company="GoInvo" />
                 <Author name="Vickie Hua" company="GoInvo" />
-                <Author name="Juhan Sonin" company="GoInvo, MIT" />
                 <Author name="Sharon Lee" company="GoInvo" />
 
                 <h3 className="header--md">Contributors</h3>
@@ -1057,6 +1057,8 @@ class FacesInHealthCommunicationFeature extends Component {
                   Craig McGinley
                   <br />
                   Eric Benoit
+                  <br />
+                  Juhan Sonin
                 </p>
               </div>
 

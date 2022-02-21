@@ -126,7 +126,9 @@ class FacesInHealthCommunicationFeature extends Component {
               People with low health literacy are often unable to derive
               meaningful information from health education materials, which are
               often written at high school or college level.
-              <a href="#references">[1]</a>
+              <sup>
+                <a href="#references">1</a>
+              </sup>
             </p>
             <div className="margin-auto pad-bottom pad-top--quad max-width--80">
               <Image
@@ -138,13 +140,19 @@ class FacesInHealthCommunicationFeature extends Component {
             <p>
               Many Americans have low numeracy skills, increasing the effort
               patients exert in calculating risk and comparing options when
-              making medical decisions.<a href="#references">[2]</a>
+              making medical decisions.
+              <sup>
+                <a href="#references">2</a>
+              </sup>
             </p>
             <p className="margin-bottom--double">
               Not unexpectedly, healthcare outcomes worsen, and costs
               substantially increase for Americans with low health literacy.
               Compared to those with proficient health literacy, adults who have
-              low health literacy experience:<a href="#reference">[3]</a>
+              low health literacy experience:
+              <sup>
+                <a href="#reference">3</a>
+              </sup>
             </p>
             <Columns columns={3}>
               <div className="max-width--60--until-lg margin-auto">
@@ -181,12 +189,14 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="pad-vertical--double">
               <p>
                 <span className="text--serif text--base text--lg">
-                  Through all of its impact - medical errors, increased illness
+                  Through all of its impact – medical errors, increased illness
                   and disability, loss of wages, and compromised public health -
                   low health literacy is estimated to cost the U.S. economy up
                   to $238B per year.
                 </span>
-                <a href="#references">[4]</a>
+                <sup>
+                  <a href="#references">4</a>
+                </sup>
               </p>
             </div>
             <div className="margin-auto pad-bottom--double">
@@ -222,7 +232,9 @@ class FacesInHealthCommunicationFeature extends Component {
                     Incorporating visuals adds several benefits in
                     communication, increases people’s understanding of
                     information significantly, from 70% to 95%.
-                    <a href="#references">[5]</a>
+                    <sup>
+                      <a href="#references">5</a>
+                    </sup>
                   </p>
                 </div>
               </div>
@@ -240,7 +252,9 @@ class FacesInHealthCommunicationFeature extends Component {
                   <p>
                     People following directions with text and illustration do
                     323% better than those without illustrations.
-                    <a href="#references">[6]</a>
+                    <sup>
+                      <a href="#references">6</a>
+                    </sup>
                   </p>
                 </div>
               </div>
@@ -259,7 +273,10 @@ class FacesInHealthCommunicationFeature extends Component {
                     Overall, visual information is faster and more effective,
                     taking nearly 1/10 of a second to process compared to the 60
                     seconds needed to understand an equal amount of written
-                    information.<a href="#references">[7]</a>
+                    information.
+                    <sup>
+                      <a href="#references">7</a>
+                    </sup>
                   </p>
                 </div>
               </div>
@@ -293,7 +310,9 @@ class FacesInHealthCommunicationFeature extends Component {
                       choose 5 or more correct responses
                     </b>{' '}
                     than those without illustrations <b>(65% vs 43%)</b>.
-                    <a href="#references">[8]</a>
+                    <sup>
+                      <a href="#references">8</a>
+                    </sup>
                   </p>
                 </div>
               </div>
@@ -322,7 +341,10 @@ class FacesInHealthCommunicationFeature extends Component {
                         correct answers, and compliance to care
                       </b>{' '}
                       for illustrations rather than instructions with no
-                      illustrations.<a href="#references">[9]</a>
+                      illustrations.
+                      <sup>
+                        <a href="#references">9</a>
+                      </sup>
                     </p>
                   </div>
                 </div>
@@ -385,7 +407,9 @@ class FacesInHealthCommunicationFeature extends Component {
                   explains how newborns use innate knowledge about the structure
                   of faces.
                 </b>
-                <a href="#references">[10]</a>
+                <sup>
+                  <a href="#references">10</a>
+                </sup>
               </p>
             </div>
             <div className="border border--light-gray border--heavy margin-top--double">
@@ -393,18 +417,16 @@ class FacesInHealthCommunicationFeature extends Component {
                 <span className="text--serif text--xl">CONSPEC</span>
                 <div className="text--sm pad-top--half">
                   Guides an infant’s preferences for facelike patterns from
-                  birth. <a href="#references">[11][12][13][14][15][16]</a>
+                  birth.{' '}
+                  <sup>
+                    <a href="#references">11, 12, 13, 14, 15,16</a>
+                  </sup>
                 </div>
               </div>
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+                2 Days Old
+              </div>
               <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
-                  <div className="text--center text--uppercase text--bold text--vertical">
-                    2<div className="pad-bottom"></div>
-                    days
-                    <div className="pad-bottom"></div>
-                    old
-                  </div>
-                </div>
                 <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
                     <div className="text--center text--uppercase text--bold">
@@ -427,9 +449,6 @@ class FacesInHealthCommunicationFeature extends Component {
                   </div>
                 </div>
               </div>
-              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
-                2 days old
-              </div>
               <div className="pad-all border-top border--light-gray border--heavy">
                 Infants spend a longer time looking at face that are arranged
                 properly. As early as two days old, newborns are able to
@@ -443,18 +462,15 @@ class FacesInHealthCommunicationFeature extends Component {
                   A cortical visuomotor mechanism. These subcortical structures
                   support the development of specialized cortical circuits that
                   we use as adults.{' '}
-                  <a href="#references">[17][18][19][20][21][22]</a>
+                  <sup>
+                    <a href="#references">17, 18, 19, 20, 21, 22</a>
+                  </sup>
                 </div>
               </div>
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+                2 Months Old
+              </div>
               <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
-                  <div className="text--center text--uppercase text--bold text--vertical">
-                    2<div className="pad-bottom"></div>
-                    months
-                    <div className="pad-bottom"></div>
-                    old
-                  </div>
-                </div>
                 <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
                     <div className="text--center text--uppercase text--bold">
@@ -477,24 +493,16 @@ class FacesInHealthCommunicationFeature extends Component {
                   </div>
                 </div>
               </div>
-              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
-                2 months old
-              </div>
               <div className="pad-all border-top border--light-gray border--heavy">
                 Infants learn to <b>prefer a realistic human face</b> through
                 their cortical visuomotor mechanism.
               </div>
             </div>
             <div className="border border--blue border--heavy">
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+                4 Months Old
+              </div>
               <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
-                  <div className="text--center text--uppercase text--bold text--vertical">
-                    4<div className="pad-bottom"></div>
-                    months
-                    <div className="pad-bottom"></div>
-                    old
-                  </div>
-                </div>
                 <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
                     <div className="text--center text--uppercase text--bold">
@@ -517,9 +525,6 @@ class FacesInHealthCommunicationFeature extends Component {
                   </div>
                 </div>
               </div>
-              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
-                4 months old
-              </div>
               <div className="pad-all border-top border--light-gray border--heavy">
                 Infants can simulate neural responses in their temporal lobe to
                 a level similar to adults.
@@ -529,15 +534,10 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
             </div>
             <div className="border border--blue border--heavy">
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+                9 Months Old
+              </div>
               <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-2-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center display--flex--align-center hidden--until-lg">
-                  <div className="text--center text--uppercase text--bold text--vertical">
-                    9<div className="pad-bottom"></div>
-                    months
-                    <div className="pad-bottom"></div>
-                    old
-                  </div>
-                </div>
                 <div className="pure-u-1-2 pure-u-lg-8-24 border-right border--light-gray border--heavy display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
                     <div className="text--center text--uppercase text--bold">
@@ -560,9 +560,6 @@ class FacesInHealthCommunicationFeature extends Component {
                   </div>
                 </div>
               </div>
-              <div className="pad-top--half pad-bottom--half pad-horizontal background--gray text--center text--uppercase text--bold hidden--lg">
-                9 months old
-              </div>
               <div className="pad-all border-top border--light-gray border--heavy">
                 Infants <b>develop joint attention</b>, where they can
                 purposefully coordinate their attention with that of another
@@ -578,7 +575,9 @@ class FacesInHealthCommunicationFeature extends Component {
                   methodologies for looking at faces.
                 </span>
               </span>
-              <a href="#references">[23]</a>
+              <sup>
+                <a href="#references">23</a>
+              </sup>
             </p>
             <div className="text--center margin-auto">
               <Columns columns={2}>
@@ -591,7 +590,9 @@ class FacesInHealthCommunicationFeature extends Component {
                   <p>
                     Western Caucasians tend to fixate more on the eyes and
                     single details, forming a triangular scan of one’s face.
-                    <a href="#references">[24]</a>
+                    <sup>
+                      <a href="#references">24</a>
+                    </sup>
                   </p>
                 </div>
                 <div className="pad-left max-width--60--until-lg margin-auto">
@@ -603,7 +604,9 @@ class FacesInHealthCommunicationFeature extends Component {
                   <p>
                     East Asians tend to integrate information holistically by
                     focusing on the center of the face.
-                    <a href="#references">[25]</a>
+                    <sup>
+                      <a href="#references">25</a>
+                    </sup>
                   </p>
                 </div>
               </Columns>
@@ -611,8 +614,11 @@ class FacesInHealthCommunicationFeature extends Component {
             <p>
               Unsurprisingly, humans tend to gravitate towards faces similar to
               their own. Infants have shown the <b>own-race bias (ORB)</b>
-              <a href="#references">[26]</a>, recognizing their own faces better
-              than the faces of another race.
+              <sup>
+                <a href="#references">26</a>
+              </sup>
+              , recognizing their own faces better than the faces of another
+              race.
             </p>
             <div className="max-width--60 margin-auto">
               <Image
@@ -625,7 +631,9 @@ class FacesInHealthCommunicationFeature extends Component {
               Eye-tracking surveys revealed that infants consistently fixate
               longer on their own-race face regardless of age, compared to a
               decline in fixation time as they age for other-race faces.
-              <a href="#references">[27]</a>
+              <sup>
+                <a href="#references">27</a>
+              </sup>
             </p>
             <p>
               This declining trend is associated with decreased recognition
@@ -633,10 +641,21 @@ class FacesInHealthCommunicationFeature extends Component {
               After thirty years of investigating the own race bias, ORB has
               been consistently found across different cultures and races,
               including individuals with Caucasian, African, and Asian ancestry
-              <a href="#references">[28]</a> and in both adults
-              <a href="#references">[29]</a> and children
-              <a href="#references">[30]</a> as young as 3-month old infants.
-              <a href="#references">[31]</a>
+              <sup>
+                <a href="#references">28</a>
+              </sup>{' '}
+              and in both adults
+              <sup>
+                <a href="#references">29</a>
+              </sup>{' '}
+              and children
+              <sup>
+                <a href="#references">30</a>
+              </sup>{' '}
+              as young as 3-month old infants.
+              <sup>
+                <a href="#references">31</a>
+              </sup>
             </p>
             <div className="max-width--50 margin-auto">
               <Image
@@ -687,8 +706,10 @@ class FacesInHealthCommunicationFeature extends Component {
                     </b>{' '}
                     When individuals are exposed to these messages, they may
                     express three pathways of emotions
-                    <a href="#references">[32]</a> — plot-referent,
-                    message-referent, and self-referent.
+                    <sup>
+                      <a href="#references">32</a>
+                    </sup>{' '}
+                    — plot-referent, message-referent, and self-referent.
                   </p>
                 </div>
               </div>
@@ -703,12 +724,12 @@ class FacesInHealthCommunicationFeature extends Component {
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
                   </div>
-                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-bottom--none">
+                  <p className="text--uppercase margin-bottom--none">
+                    Message-referent
+                  </p>
+                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-top--none">
                     Anti-smoking messaging and images: Disgusted to the tar
                     lining
-                  </p>
-                  <p className="text--uppercase margin-top--none">
-                    Message-referent
                   </p>
                 </div>
                 <div className="text--center">
@@ -719,11 +740,11 @@ class FacesInHealthCommunicationFeature extends Component {
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
                   </div>
-                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-bottom--none">
-                    Anger and sadness for the smoker
-                  </p>
-                  <p className="text--uppercase margin-top--none">
+                  <p className="text--uppercase margin-bottom--none">
                     Plot-referent
+                  </p>
+                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-top--none">
+                    Anger and sadness for the smoker
                   </p>
                 </div>
                 <div className="text--center">
@@ -734,11 +755,11 @@ class FacesInHealthCommunicationFeature extends Component {
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
                   </div>
-                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-bottom--none">
-                    Shame for their own smoking
-                  </p>
-                  <p className="text--uppercase margin-top--none">
+                  <p className="text--uppercase margin-bottom--none">
                     Self-referent
+                  </p>
+                  <p className="text--xs fihc-row--1 display--flex display--flex--column display--flex--justify-center margin-top--none">
+                    Shame for their own smoking
                   </p>
                 </div>
               </Columns>
@@ -794,19 +815,26 @@ class FacesInHealthCommunicationFeature extends Component {
                     recognize a relationship between a message and ourselves.
                     This emotion influences how we perceive the possible
                     outcomes and severity of consequences of an action.
-                    <a href="#references">[33]</a>{' '}
+                    <sup>
+                      <a href="#references">33</a>
+                    </sup>{' '}
                     <b>
                       There is a clear distinction between recognizing a risk
                       which triggers an emotional response and experiencing an
                       "enduring perception of future risk" influenced by
                       self-referential emotions.
                     </b>
-                    <a href="#references">[34]</a>
+                    <sup>
+                      <a href="#references">34</a>
+                    </sup>
                   </p>
                   <p>
                     For example, adult smokers reduced cigarette consumption and
                     increased intentions to quit when they could see themselves
-                    reflected in the messaging.<a href="#references">[35]</a>
+                    reflected in the messaging.
+                    <sup>
+                      <a href="#references">35</a>
+                    </sup>
                   </p>
                 </div>
               </div>

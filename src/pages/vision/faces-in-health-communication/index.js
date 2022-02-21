@@ -138,7 +138,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <p>
               Many Americans have low numeracy skills, increasing the effort
               patients exert in calculating risk and comparing options when
-              making medical decisions.<a href="#references">[4]</a>
+              making medical decisions.<a href="#references">[2]</a>
             </p>
             <p className="margin-bottom--double">
               Not unexpectedly, healthcare outcomes worsen, and costs
@@ -221,7 +221,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   <p>
                     Incorporating visuals adds several benefits in
                     communication, increases people’s understanding of
-                    information significantly, from 70% to 95%.{' '}
+                    information significantly, from 70% to 95%.
                     <a href="#references">[5]</a>
                   </p>
                 </div>
@@ -376,11 +376,6 @@ class FacesInHealthCommunicationFeature extends Component {
               <p className="text--serif text--lg">
                 Humans are born to look at faces.
               </p>
-              From the very beginning of our lives, we look to others’ faces to
-              ascertain vital information. CONSPEC/CONLERN, a two-process theory
-              of infant face recognition proposed by Johnson and Morton,
-              explains how newborns use innate knowledge about the structure of
-              faces. 10
               <p>
                 From the very beginning of our lives, we look to others’ faces
                 to ascertain vital information. <b>CONSPEC/CONLERN</b>, a
@@ -1042,6 +1037,223 @@ class FacesInHealthCommunicationFeature extends Component {
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
+            </div>
+          </div>
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <div>
+                <h2 className="header--xl text--center">Authors</h2>
+                <Author name="Vickie Hua" company="GoInvo" />
+                <Author name="Juhan Sonin" company="GoInvo, MIT" />
+                <Author name="Sharon Lee" company="GoInvo" />
+
+                <h3 className="header--md">Contributors</h3>
+
+                <p>
+                  Jen Patel
+                  <br />
+                  Jon Follett
+                  <br />
+                  Craig McGinley
+                  <br />
+                  Eric Benoit
+                </p>
+              </div>
+
+              <Divider />
+
+              <div id="references">
+                <References
+                  references={[
+                    {
+                      title:
+                        'Center for Healthcare Strategies, Inc. (2013, October). What is Health Literacy? Center for Health Care Strategies . What is Health Literacy?',
+                      link:
+                        'https://www.chcs.org/media/CHCS_Health_Literacy_Fact_Sheets_2013_1.pdf',
+                    },
+                    {
+                      title:
+                        'Angela Fagerlin, Brian J. Zikmund-Fisher, Peter A. Ubel, Helping Patients Decide: Ten Steps to Better Risk Communication, JNCI: Journal of the National Cancer Institute, Volume 103, Issue 19, 5 October 2011, Pages 1436–1443',
+                      link: 'https://doi.org/10.1093/jnci/djr318',
+                    },
+                    {
+                      title:
+                        'Mahadevan, R. (2019, July 18). Health Literacy Fact Sheets. Center for Health Care Strategies.',
+                      link:
+                        'https://www.chcs.org/resource/health-literacy-fact-sheets/',
+                    },
+                    {
+                      title:
+                        'Mahadevan, R. (2019, July 18). Health Literacy Fact Sheets. Center for Health Care Strategies.',
+                      link:
+                        'https://www.chcs.org/resource/health-literacy-fact-sheets/',
+                    },
+                    {
+                      title:
+                        'Levie, W.H., Lentz, R. Effects of text illustrations: A review of research. ECTJ 30, 195–232 (1982).',
+                      link: 'https://doi.org/10.1007/BF02765184',
+                    },
+                    {
+                      title:
+                        'Levie, W.H., Lentz, R. Effects of text illustrations: A review of research. ECTJ 30, 195–232 (1982).',
+                      link: 'https://doi.org/10.1007/BF02765184',
+                    },
+                    {
+                      title:
+                        'Ashton, D. (2019, December 16). 10 Reasons Why Visual Content Marketing Works. NeoMam Blog.',
+                      link: 'https://neomam.com/blog/13reasons/',
+                    },
+                    {
+                      title:
+                        'Austin, P. E., Matlack, R., 2nd, Dunn, K. A., Kesler, C., & Brown, C. K. (1995). Discharge instructions: do illustrations help our patients understand them?. Annals of Emergency Medicine, 25(3), 317–320.',
+                      link: 'https://doi.org/10.1016/s0196-0644(95)70286-5',
+                    },
+                    {
+                      title:
+                        'Delp, C., & Jones, J. (1996). Communicating information to patients: the use of cartoon illustrations to improve comprehension of instructions. Academic emergency medicine : official journal of the Society for Academic Emergency Medicine, 3(3), 264–270.',
+                      link:
+                        'https://doi.org/10.1111/j.1553-2712.1996.tb03431.x',
+                    },
+                    {
+                      title:
+                        "Johnson, M. H., Dziurawiec, S., Ellis, H., & Morton, J. (1991). Newborns' preferential tracking of face-like stimuli and its subsequent decline. Cognition, 40(1-2), 1–19.",
+                      link: 'https://doi.org/10.1016/0010-0277(91)90045-6',
+                    },
+                    {
+                      title:
+                        "Johnson, M. H., Dziurawiec, S., Ellis, H., & Morton, J. (1991). Newborns' preferential tracking of face-like stimuli and its subsequent decline. Cognition, 40(1-2), 1–19.",
+                      link: 'https://doi.org/10.1016/0010-0277(91)90045-6',
+                    },
+                    {
+                      title:
+                        'Lewis, T. L., Mondloch, C., Budreau , D. R., Maurer, D., Dannemiller, J., Stephens, B., & Kleiner-Gathercoal, K. (1999, September 1). Face Perception During Early Infancy - Catherine J. Mondloch, Terri L. Lewis, D. Robert Budreau, Daphne Maurer, James L. Dannemiller, Benjamin R. Stephens, Kathleen A. Kleiner-Gathercoal, 1999. SAGE Journals.',
+                      link:
+                        'https://journals.sagepub.com/doi/pdf/10.1111/1467-9280.00179?casa_token=sbisAKlzWxYAAAAA%3A-eJ0Ei1-hA8HC700yL7eeXmS521boJTVO-ZZlFBNaXaMQIVqhWO8ijxiGvYwVZxlnwGNmmPTDqhTrw',
+                    },
+                    {
+                      title:
+                        'Morton, J., & Johnson, M. H. (1991). CONSPEC and CONLERN: a two-process theory of infant face recognition. Psychological review, 98(2), 164–181.',
+                      link: 'https://doi.org/10.1037/0033-295x.98.2.164',
+                    },
+                    {
+                      title:
+                        'Looser, C. E., & Wheatley, T. (2010). The tipping point of animacy. How, when, and where we perceive life in a face. Psychological science, 21(12), 1854–1862.',
+                      link: 'https://doi.org/10.1177/0956797610388044',
+                    },
+                    {
+                      title:
+                        "Turati, C., Simion, F., & Macchi, C. V. (2004, June 1). Can a Nonspecific Bias Toward Top-Heavy Patterns Explain Newborns' Face Preference? - Cassia Viola Macchi, Chiara Turati, Francesca Simion, 2004. SAGE Journals.",
+                      link:
+                        'https://journals.sagepub.com/doi/10.1111/j.0956-7976.2004.00688.x?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed',
+                    },
+                    {
+                      title:
+                        'Farroni, T., Csibra, G., Simion, F., & Johnson, M. (2002, May 16). Eye contact detection in humans from birth. Proceedings of the National Academy of Sciences of the United States of America.',
+                      link: '',
+                    },
+                    {
+                      title:
+                        'Skrandies, W. (1987). The upper and lower visual field of man : Electrophysiological and functional differences. Core.Ac.Uk.',
+                      link: 'https://core.ac.uk/download/pdf/56349616.pdf',
+                    },
+                    {
+                      title:
+                        'Chien, S. H.-L. (2012, March). No more top-heavy bias: On early specialization process for face and race in infants. ResearchGate.',
+                      link:
+                        'https://www.researchgate.net/publication/285295014_No_more_top-heavy_bias_On_early_specialization_process_for_face_and_race_in_infants',
+                    },
+                    {
+                      title:
+                        'De Schonen, S., & Mathivet, E. (1989). First come, first served: A scenario about the development of hemispheric specialization in face recognition during infancy. Cahiers de Psychologie Cognitive/Current Psychology of Cognition, 9(1), 3–44.',
+                      link: '',
+                    },
+                    {
+                      title:
+                        "Frank, M. C., Vul, E., & Johnson, S. P. (2009). Development of infants' attention to faces during the first year. Cognition, 110(2), 160–170.",
+                      link: 'https://doi.org/10.1016/j.cognition.2008.11.010',
+                    },
+                    {
+                      title:
+                        "Faraz Farzin, Chuan Hou, Anthony M. Norcia; Piecing it together: Infants' neural responses to face and object structure. Journal of Vision 2012;12(13):6. doi",
+                      link: 'https://doi.org/10.1167/12.13.6',
+                    },
+                    {
+                      title:
+                        'Valley CoPA (Community of Practice in Autism). (2007, November). Joint Attention and Social Referencing . Infant VA.',
+                      link:
+                        'https://infantva.org/documents/CoPA-Nov-JointAttentionSocialRefer.pdf',
+                    },
+                    {
+                      title:
+                        'Blais, C. (2008, February). Culture shapes how we look at faces. ResearchGate.',
+                      link:
+                        'https://www.researchgate.net/publication/23181620_Culture_Shapes_How_We_Look_at_Faces',
+                    },
+                    {
+                      title:
+                        'Blais, C. (2008, February). Culture shapes how we look at faces. ResearchGate.',
+                      link:
+                        'https://www.researchgate.net/publication/23181620_Culture_Shapes_How_We_Look_at_Faces',
+                    },
+                    {
+                      title:
+                        'Blais, C. (2008, February). Culture shapes how we look at faces. ResearchGate.',
+                      link:
+                        'https://www.researchgate.net/publication/23181620_Culture_Shapes_How_We_Look_at_Faces',
+                    },
+                    {
+                      title:
+                        'Wong HK, Stephen ID and Keeble DRT (2020) The Own-Race Bias for Face Recognition in a Multiracial Society. Front. Psychol. 11:208. doi: 10.3389/fpsyg.2020.00208',
+                      link: '',
+                    },
+                    {
+                      title:
+                        'Shaoying Liu, Paul C. Quinn, Andrea Wheeler, Naiqi Xiao, Liezhong Ge, Kang Lee, Similarity and difference in the processing of same- and other-race faces as revealed by eye tracking in 4- to 9-month-olds, Journal of Experimental Child Psychology,Volume 108, Issue 1, 2011, Pages 180-189, ISSN 0022-0965',
+                      link: 'https://doi.org/10.1016/j.jecp.2010.06.008',
+                    },
+                    {
+                      title:
+                        'Meissner, C. A., & Brigham, J. C. (2001). Thirty years of investigating the own-race bias in memory for faces: A meta-analytic review. Psychology, Public Policy, and Law, 7(1), 3–35',
+                      link: 'https://doi.org/10.1037/1076-8971.7.1.3',
+                    },
+                    {
+                      title:
+                        'Tanaka, J.W., Pierce, L.J. The neural plasticity of other-race face recognition. Cognitive, Affective, & Behavioral Neuroscience 9, 122–131 (2009).',
+                      link: 'https://doi.org/10.3758/CABN.9.1.122',
+                    },
+                    {
+                      title:
+                        'Anzures, G., Kelly, D. J., Pascalis, O., Quinn, P. C., Slater, A. M., de Viviés, X., & Lee, K. (2014). Own- and other-race face identity recognition in children: The effects of pose and feature composition. Developmental Psychology, 50(2), 469–481.',
+                      link: 'https://doi.org/10.1037/a0033166',
+                    },
+                    {
+                      title:
+                        'Kelly, D.J., Quinn, P.C., Slater, A.M., Lee, K., Gibson, A., Smith, M., Ge, L. and Pascalis, O. (2005), Three-month-olds, but not newborns, prefer own-race faces. Developmental Science, 8: F31-F36',
+                      link: 'https://doi.org/10.1111/j.1467-7687.2005.0434a.x',
+                    },
+                    {
+                      title:
+                        'Sally Dunlop, Melanie Wakefield & Yoshi Kashima (2008) Can You Feel It? Negative Emotion, Risk, and Narrative in Health Communication, Media Psychology, 11:1, 52-75, DOI',
+                      link: 'https://doi.org/10.1080/15213260701853112',
+                    },
+                    {
+                      title:
+                        'Sally Dunlop, Melanie Wakefield & Yoshi Kashima (2008) Can You Feel It? Negative Emotion, Risk, and Narrative in Health Communication, Media Psychology, 11:1, 52-75, DOI',
+                      link: 'https://doi.org/10.1080/15213260701853112',
+                    },
+                    {
+                      title:
+                        'Sally Dunlop, Melanie Wakefield & Yoshi Kashima (2008) Can You Feel It? Negative Emotion, Risk, and Narrative in Health Communication, Media Psychology, 11:1, 52-75, DOI',
+                      link: 'https://doi.org/10.1080/15213260701853112',
+                    },
+                    {
+                      title:
+                        'Romer, D., & Jamieson, P. (2001). The role of perceived risk in starting and stopping smoking. In P. Slovic (Ed.), Smoking: Risk, perception, & policy (pp. 64–80). Sage Publications, Inc.',
+                      link: 'https://doi.org/10.4135/9781452232652.n4',
+                    },
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -11,6 +11,17 @@
     "hiddenWorkPage": true
   },
   {
+    "id": "faces-in-health-communication",
+    "title": "Faces in Health Communication",
+    "date": "Mar.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "The Benefits of Information Graphics and Human Faces for Improved Patient Understanding.",
+    "image": "/images/features/faces-in-health-communication/hero.jpg",
+    "link": "/vision/faces-in-health-communication/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "us-healthcare-problems",
     "title": "US Healthcare Problems",
     "date": "Apr.2021",

@@ -33,6 +33,10 @@ export default {
     full: ['100vw'],
     fullToHalfAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
     fullToThirdAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+    fullInsideMaxWidth: [
+      `(min-width: ${maxWidth.default}) ${maxWidth.default}`,
+      '100vw',
+    ],
     fullInsideMediumMaxWidth: [
       `(min-width: ${maxWidth.md}) ${maxWidth.md}`,
       '100vw',

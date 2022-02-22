@@ -24,5 +24,10 @@
         flex-basis: calc(33.33% - #{$spacing * 0.66});
       }
     }
+    &--4 {
+      @include mq($from: large) {
+        flex-basis: calc(25% - #{$spacing / 2});
+      }
+    }
   }
 }

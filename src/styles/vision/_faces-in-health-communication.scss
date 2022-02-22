@@ -1,0 +1,100 @@
+.faces-in-health-communication {
+  .max-width--sm {
+    max-width: 680px;
+  }
+
+  .fihc-impact {
+    position: relative;
+
+    &__text-container {
+      position: absolute;
+
+      &--desktop {
+        top: 37%;
+        left: 0;
+        width: 100%;
+      }
+
+      &--mobile {
+        top: 40%;
+        left: 0;
+        width: 50%;
+
+        div {
+          margin-bottom: 40%;
+        }
+      }
+    }
+  }
+
+  .text--vertical {
+    width: 14px;
+    word-break: break-all;
+  }
+
+  .max-width {
+    &--40 {
+      max-width: 40%;
+
+      &--only-lg {
+        @include mq($from: large) {
+          max-width: 40%;
+        }
+      }
+
+      &--until-lg {
+        @include mq($until: large) {
+          max-width: 40%;
+        }
+      }
+    }
+
+    &--50 {
+      max-width: 50%;
+
+      &--only-lg {
+        @include mq($from: large) {
+          max-width: 50%;
+        }
+      }
+
+      &--until-lg {
+        @include mq($until: large) {
+          max-width: 50%;
+        }
+      }
+    }
+
+    &--60 {
+      max-width: 60%;
+
+      &--only-lg {
+        @include mq($from: large) {
+          max-width: 60%;
+        }
+      }
+
+      &--until-lg {
+        @include mq($until: large) {
+          max-width: 60%;
+        }
+      }
+    }
+
+    &--80 {
+      max-width: 80%;
+
+      &--only-lg {
+        @include mq($from: large) {
+          max-width: 80%;
+        }
+      }
+
+      &--until-lg {
+        @include mq($until: large) {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}

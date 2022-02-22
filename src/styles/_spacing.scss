@@ -115,6 +115,10 @@ $directions: 'top' 'bottom' 'left' 'right';
       }
     }
 
+    &--quad {
+      padding-#{$direction}: $spacing * 4;
+    }
+
     &--none {
       padding-#{$direction}: 0;
     }
@@ -186,4 +190,8 @@ $directions: 'top' 'bottom' 'left' 'right';
 .vertical-middle {
   display: flex;
   align-items: center;
+}
+
+.margin-auto {
+  margin: auto;
 }

@@ -44,13 +44,40 @@
 }
 
 .border {
-  &-right {
-    border-right: 1px solid $color-gray--medium;
+  border: 1px solid;
 
-    &--only-lg {
-      @include mq($from: large) {
-        border-right: 1px solid $color-gray--medium;
-      }
+  &-top {
+    border-top: 1px solid;
+  }
+
+  &-bottom {
+    border-bottom: 1px solid;
+  }
+
+  &-left {
+    border-left: 1px solid;
+  }
+
+  &-right {
+    border-right: 1px solid;
+  }
+
+  &--gray {
+    color: $color-gray--medium;
+  }
+  &--light-gray {
+    border-color: $color-gray--light;
+  }
+  &--blue {
+    border-color: $color-blue--light;
+  }
+  &--heavy {
+    border-width: 2px;
+  }
+
+  &--only-lg {
+    @include mq($until: large) {
+      border: none;
     }
   }
 }

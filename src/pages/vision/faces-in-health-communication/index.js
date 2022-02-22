@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
-import BackgroundImage from '../../../components/background-image'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Columns from '../../../components/columns'
 
-import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -23,8 +20,6 @@ const frontmatter = {
 class FacesInHealthCommunicationFeature extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {}
 
     this.grid = React.createRef()
   }
@@ -57,10 +52,6 @@ class FacesInHealthCommunicationFeature extends Component {
     let height = elements.reduce(function(el, el2) {
       return el.offsetHeight > el2.offsetHeight ? el : el2
     }).offsetHeight
-
-    // if (i === 2 || i === 4) {
-    //   height = height < 100 ? 250 : height
-    // }
 
     elements.forEach(el => {
       el.style.height = `${height}px`
@@ -423,7 +414,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   </sup>
                 </div>
               </div>
-              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold text--center text--uppercase">
                 2 Days Old
               </div>
               <div className="pure-g">
@@ -467,7 +458,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   </sup>
                 </div>
               </div>
-              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold text--center text--uppercase">
                 2 Months Old
               </div>
               <div className="pure-g">
@@ -499,7 +490,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
             </div>
             <div className="border border--blue border--heavy">
-              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold text--center text--uppercase">
                 4 Months Old
               </div>
               <div className="pure-g">
@@ -534,7 +525,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
             </div>
             <div className="border border--blue border--heavy">
-              <div className="pad-all border-bottom border--light-gray border--heavy text--bold">
+              <div className="pad-all border-bottom border--light-gray border--heavy text--bold text--center text--uppercase">
                 9 Months Old
               </div>
               <div className="pure-g">
@@ -1075,7 +1066,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 <Author name="Vickie Hua" company="GoInvo" />
                 <Author name="Sharon Lee" company="GoInvo" />
 
-                <h3 className="header--md">Contributors</h3>
+                <h3 className="header--md margin-top--double">Contributors</h3>
 
                 <p>
                   Jen Patel

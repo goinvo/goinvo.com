@@ -385,8 +385,8 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
               </div>
             </div>
-            <div className="text--center">
-              <p className="text--serif text--lg">
+            <div className="text">
+              <p className="text--serif text--center text--lg">
                 Humans are born to look at faces.
               </p>
               <p>
@@ -410,7 +410,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   Guides an infant’s preferences for facelike patterns from
                   birth.{' '}
                   <sup>
-                    <a href="#references">11, 12, 13, 14, 15,16</a>
+                    <a href="#references">11, 12, 13, 14, 15, 16</a>
                   </sup>
                 </div>
               </div>
@@ -675,7 +675,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <Divider />
             <div className="pad-top--half pad-bottom--half">
               <h1 className="header--xl text--center">
-                Healthcare Graphics, Persuastion, and Emotion
+                Healthcare Graphics, Persuasion, and Emotion
               </h1>
             </div>
             <div className="pure-g margin-bottom--double">

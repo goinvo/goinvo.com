@@ -313,7 +313,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 <div className="pad-right--only-lg">
                   <div className="pad-bottom--double pad-top--double--only-lg max-width--40--until-lg max-width--60--only-lg margin-auto">
                     <Image
-                      src="/images/features/faces-in-health-communication/08-wound-care.jpg"
+                      src="/images/features/faces-in-health-communication/08-wound-care-b.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -1035,7 +1035,7 @@ class FacesInHealthCommunicationFeature extends Component {
             </p>
             <div>
               <Image
-                src="/images/features/faces-in-health-communication/25-sad.jpg"
+                src="/images/features/faces-in-health-communication/25-sad-b.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />

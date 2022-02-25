@@ -313,7 +313,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 <div className="pad-right--only-lg">
                   <div className="pad-bottom--double pad-top--double--only-lg max-width--40--until-lg max-width--60--only-lg margin-auto">
                     <Image
-                      src="/images/features/faces-in-health-communication/08-wound-care.jpg"
+                      src="/images/features/faces-in-health-communication/08-wound-care-b.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -385,8 +385,8 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
               </div>
             </div>
-            <div className="text--center">
-              <p className="text--serif text--lg">
+            <div className="text">
+              <p className="text--serif text--center text--lg">
                 Humans are born to look at faces.
               </p>
               <p>
@@ -410,7 +410,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   Guides an infant’s preferences for facelike patterns from
                   birth.{' '}
                   <sup>
-                    <a href="#references">11, 12, 13, 14, 15,16</a>
+                    <a href="#references">11, 12, 13, 14, 15, 16</a>
                   </sup>
                 </div>
               </div>
@@ -675,7 +675,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <Divider />
             <div className="pad-top--half pad-bottom--half">
               <h1 className="header--xl text--center">
-                Healthcare Graphics, Persuastion, and Emotion
+                Healthcare Graphics, Persuasion, and Emotion
               </h1>
             </div>
             <div className="pure-g margin-bottom--double">
@@ -1035,7 +1035,7 @@ class FacesInHealthCommunicationFeature extends Component {
             </p>
             <div>
               <Image
-                src="/images/features/faces-in-health-communication/25-sad.jpg"
+                src="/images/features/faces-in-health-communication/25-sad-b.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />

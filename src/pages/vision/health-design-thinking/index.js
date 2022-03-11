@@ -68,7 +68,7 @@ class HealthDesignThinkingBook extends Component {
                 highlighted in the diverse case studies that make up the new
                 book "
                 <a
-                  href="https://mitpress.mit.edu/books/health-design-thinking"
+                  href="https://mitpress.mit.edu/books/health-design-thinking-second-edition"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -96,14 +96,24 @@ class HealthDesignThinkingBook extends Component {
 
             <div className="max-width max-width--md content-padding">
               <div className="margin-bottom--double">
-                <div className="pure-g button-group margin-bottom--double">
+                <div className="pure-g button-group">
                   <a
                     href="https://mitpress.mit.edu/books/health-design-thinking"
                     target="_blank"
                     rel="noreferrer"
                     className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
                   >
-                    Order At MIT Press
+                    Order First Edition At MIT Press
+                  </a>
+                </div>
+                <div className="pure-g button-group margin-bottom--double">
+                  <a
+                    href="https://mitpress.mit.edu/books/health-design-thinking-second-edition"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
+                  >
+                    Order Second Edition At MIT Press
                   </a>
                 </div>
               </div>
@@ -117,7 +127,7 @@ class HealthDesignThinkingBook extends Component {
               GoInvo's influential user experience work and visualizations of
               the future of healthcare provide excellent examples of the
               real-world impact of health design. We're delighted they were able
-              to contribute work to Health Design Thinking.
+              to contribute work to Health Design Thinking (First Edition).
             </Quote>
 
             <div className="max-width max-width--md content-padding">
@@ -147,33 +157,6 @@ class HealthDesignThinkingBook extends Component {
                 </Columns>
               </div>
               <Divider />
-            </div>
-          </div>
-
-          <div className="max-width max-width--md content-padding">
-            <div>
-              <h2 class="header--lg margin-top--double text--center">
-                "Making Healthcare Beautiful by Design", Book Launch Event
-              </h2>
-              <p>
-                Join Dr. Bon Ku, an emergency medicine physician and Director of
-                the Health Design Lab at Thomas Jefferson University, in a
-                conversation about design and health care at the GoInvo Health
-                Design Studio in Arlington, Massachusetts on Thursday, March 26,
-                2020 at 7 PM. Bon will show how design has been applied to
-                real-world problems in health care — from gyn exams in the
-                emergency room to better pill bottles, hospital gowns and exam
-                rooms.
-              </p>
-              <p>
-                His new book, "Health Design Thinking," co-written by the
-                influential designer Ellen Lupton, shows ways to generate
-                creative ideas and solutions in the context of medicine.
-                Problems in health care often involve ambiguity and uncertainty,
-                lacking black-and-white answers. Bon’s talk will invite
-                attendees to think like designers and embrace the art of
-                listening and the joy of making.
-              </p>
             </div>
           </div>
 

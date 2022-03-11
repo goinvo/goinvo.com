@@ -75,8 +75,8 @@ class HealthDesignThinkingBook extends Component {
                   Health Design Thinking
                 </a>
                 ," co-written by Ellen Lupton and Dr. Bon Ku, and published by
-                Cooper Hewitt, Smithsonian Design Museum and MIT Press in March
-                2020.
+                Cooper Hewitt, Smithsonian Design Museum and MIT Press in
+                February 2022.
               </p>
               <p className="text--grey">
                 These include artifacts and examples from GoInvo's innovative,
@@ -96,16 +96,6 @@ class HealthDesignThinkingBook extends Component {
 
             <div className="max-width max-width--md content-padding">
               <div className="margin-bottom--double">
-                <div className="pure-g button-group">
-                  <a
-                    href="https://mitpress.mit.edu/books/health-design-thinking"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
-                  >
-                    Order First Edition At MIT Press
-                  </a>
-                </div>
                 <div className="pure-g button-group margin-bottom--double">
                   <a
                     href="https://mitpress.mit.edu/books/health-design-thinking-second-edition"
@@ -113,7 +103,7 @@ class HealthDesignThinkingBook extends Component {
                     rel="noreferrer"
                     className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
                   >
-                    Order Second Edition At MIT Press
+                    Order At MIT Press
                   </a>
                 </div>
               </div>

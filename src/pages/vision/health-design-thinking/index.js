@@ -89,32 +89,6 @@ class HealthDesignThinkingBook extends Component {
 
             <div className="max-width max-width--md content-padding">
               <div className="margin-bottom--double">
-                <div className="pure-g button-group margin-bottom--double">
-                  <a
-                    href="https://mitpress.mit.edu/books/health-design-thinking-second-edition"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
-                  >
-                    Order At MIT Press
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <Quote
-              background="gray"
-              quotee="Bon Ku, MD"
-              quoteeSub="A practicing emergency physician, is Assistant Dean for Health and Design at Sidney Kimmel Medical College at Thomas Jefferson University, where he is also Director of the Health Design Lab."
-            >
-              GoInvo's influential user experience work and visualizations of
-              the future of healthcare provide excellent examples of the
-              real-world impact of health design. We're delighted they were able
-              to contribute work to Health Design Thinking (First Edition).
-            </Quote>
-
-            <div className="max-width max-width--md content-padding">
-              <div className="margin-bottom--double">
                 <h4 class="header--sm margin-bottom--half">
                   Featured In The Book
                 </h4>
@@ -141,9 +115,35 @@ class HealthDesignThinkingBook extends Component {
               </div>
               <Divider />
             </div>
+
+            <div className="max-width max-width--md content-padding">
+              <div className="margin-bottom--double">
+                <div className="pure-g button-group margin-bottom--double">
+                  <a
+                    href="https://mitpress.mit.edu/books/health-design-thinking-second-edition"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
+                  >
+                    Order At MIT Press
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <Quote
+              background="gray"
+              quotee="Bon Ku, MD"
+              quoteeSub="A practicing emergency physician, is Assistant Dean for Health and Design at Sidney Kimmel Medical College at Thomas Jefferson University, where he is also Director of the Health Design Lab."
+            >
+              GoInvo's influential user experience work and visualizations of
+              the future of healthcare provide excellent examples of the
+              real-world impact of health design. We're delighted they were able
+              to contribute work to Health Design Thinking (First Edition).
+            </Quote>
           </div>
 
-          <div className="background--gray pad-vertical--double">
+          <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}

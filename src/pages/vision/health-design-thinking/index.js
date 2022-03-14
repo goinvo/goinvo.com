@@ -13,31 +13,24 @@ import config from '../../../../config'
 
 const upNextList = [
   {
-    link: '../vision/determinants-of-health/',
-    image: '/images/services/doh-preview.jpg',
-    title: 'Determinants of Health, page 29-31',
-    caption:
-      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+    link: '../../work/hgraph',
+    image: '/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg',
+    title: 'hGraph, page 46',
+    caption: 'Your health in one picture.',
   },
   {
-    link: '../work/paintrackr',
-    image: '/images/case-studies/goinvo/paintrackr/paintrackr-hero.jpg',
-    title: 'PainTrackr, page 41',
-    caption: 'A straightforward, tactile tool for logging pain.',
-  },
-  {
-    link: 'https://www.goinvo.com/features/ebola-care-guideline',
+    link: 'https://www.goinvo.com/features/careplans',
     externalLink: true,
     suppressNewTab: true,
-    image:
-      '/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg',
-    title: 'Ebola Care Guideline, page 55',
-    caption: 'An illustrated process on personal protective equipment.',
+    image: '/images/features/care-plans/care-plans-featured2.jpg',
+    title: 'Care Plans, page 100-103',
+    caption:
+      'A patient guide to manage day-to-day health based on health concerns, goals, and interventions.',
   },
   {
-    link: '../work/mitre-shr',
+    link: '../../work/mitre-shr',
     image: '/images/case-studies/mitre/SHR/shr-header2.jpg',
-    title: 'Standard Health Record, page 89-91, 95',
+    title: 'Standard Health Record, page 107',
     caption:
       'Prototyping and envisioning future applications of a national health data standard to drive its development.',
   },

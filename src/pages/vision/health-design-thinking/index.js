@@ -13,31 +13,24 @@ import config from '../../../../config'
 
 const upNextList = [
   {
-    link: '../vision/determinants-of-health/',
-    image: '/images/services/doh-preview.jpg',
-    title: 'Determinants of Health, page 29-31',
-    caption:
-      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+    link: '../../work/hgraph',
+    image: '/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg',
+    title: 'hGraph, page 46',
+    caption: 'Your health in one picture.',
   },
   {
-    link: '../work/paintrackr',
-    image: '/images/case-studies/goinvo/paintrackr/paintrackr-hero.jpg',
-    title: 'PainTrackr, page 41',
-    caption: 'A straightforward, tactile tool for logging pain.',
-  },
-  {
-    link: 'https://www.goinvo.com/features/ebola-care-guideline',
+    link: 'https://www.goinvo.com/features/careplans',
     externalLink: true,
     suppressNewTab: true,
-    image:
-      '/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg',
-    title: 'Ebola Care Guideline, page 55',
-    caption: 'An illustrated process on personal protective equipment.',
+    image: '/images/features/care-plans/care-plans-featured2.jpg',
+    title: 'Care Plans, page 100-103',
+    caption:
+      'A patient guide to manage day-to-day health based on health concerns, goals, and interventions.',
   },
   {
-    link: '../work/mitre-shr',
+    link: '../../work/mitre-shr',
     image: '/images/case-studies/mitre/SHR/shr-header2.jpg',
-    title: 'Standard Health Record, page 89-91, 95',
+    title: 'Standard Health Record, page 107',
     caption:
       'Prototyping and envisioning future applications of a national health data standard to drive its development.',
   },
@@ -68,15 +61,15 @@ class HealthDesignThinkingBook extends Component {
                 highlighted in the diverse case studies that make up the new
                 book "
                 <a
-                  href="https://mitpress.mit.edu/books/health-design-thinking"
+                  href="https://mitpress.mit.edu/books/health-design-thinking-second-edition"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Health Design Thinking
                 </a>
                 ," co-written by Ellen Lupton and Dr. Bon Ku, and published by
-                Cooper Hewitt, Smithsonian Design Museum and MIT Press in March
-                2020.
+                Cooper Hewitt, Smithsonian Design Museum and MIT Press in
+                February 2022.
               </p>
               <p className="text--grey">
                 These include artifacts and examples from GoInvo's innovative,
@@ -98,7 +91,7 @@ class HealthDesignThinkingBook extends Component {
               <div className="margin-bottom--double">
                 <div className="pure-g button-group margin-bottom--double">
                   <a
-                    href="https://mitpress.mit.edu/books/health-design-thinking"
+                    href="https://mitpress.mit.edu/books/health-design-thinking-second-edition"
                     target="_blank"
                     rel="noreferrer"
                     className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
@@ -117,7 +110,7 @@ class HealthDesignThinkingBook extends Component {
               GoInvo's influential user experience work and visualizations of
               the future of healthcare provide excellent examples of the
               real-world impact of health design. We're delighted they were able
-              to contribute work to Health Design Thinking.
+              to contribute work to Health Design Thinking (First Edition).
             </Quote>
 
             <div className="max-width max-width--md content-padding">
@@ -147,33 +140,6 @@ class HealthDesignThinkingBook extends Component {
                 </Columns>
               </div>
               <Divider />
-            </div>
-          </div>
-
-          <div className="max-width max-width--md content-padding">
-            <div>
-              <h2 class="header--lg margin-top--double text--center">
-                "Making Healthcare Beautiful by Design", Book Launch Event
-              </h2>
-              <p>
-                Join Dr. Bon Ku, an emergency medicine physician and Director of
-                the Health Design Lab at Thomas Jefferson University, in a
-                conversation about design and health care at the GoInvo Health
-                Design Studio in Arlington, Massachusetts on Thursday, March 26,
-                2020 at 7 PM. Bon will show how design has been applied to
-                real-world problems in health care — from gyn exams in the
-                emergency room to better pill bottles, hospital gowns and exam
-                rooms.
-              </p>
-              <p>
-                His new book, "Health Design Thinking," co-written by the
-                influential designer Ellen Lupton, shows ways to generate
-                creative ideas and solutions in the context of medicine.
-                Problems in health care often involve ambiguity and uncertainty,
-                lacking black-and-white answers. Bon’s talk will invite
-                attendees to think like designers and embrace the art of
-                listening and the joy of making.
-              </p>
             </div>
           </div>
 

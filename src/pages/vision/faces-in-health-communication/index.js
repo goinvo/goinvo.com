@@ -8,6 +8,7 @@ import Author from '../../../components/author'
 import References from '../../../components/references'
 import Columns from '../../../components/columns'
 
+import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -1056,6 +1057,18 @@ class FacesInHealthCommunicationFeature extends Component {
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
+            </div>
+            <Divider />
+            <div className="text--center margin-top--quad">
+              <a
+                href={mediaUrl(
+                  '/pdf/vision/faces-in-health-communication/faces-in-health-communication.pdf'
+                )}
+                className="button button--primary"
+              >
+                Download
+              </a>
+              <p className="margin-bottom--none">this article as a PDF</p>
             </div>
           </div>
           <div className="pad-vertical--double">

@@ -4,6 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
 
@@ -47,6 +48,12 @@ class VapepocolypseFeature extends Component {
                   Download Poster
                 </a>
               </div>
+
+              <div className="pad-vertical--double">
+                <h2 className="header--xl text--center">Authors</h2>
+                <Author name="Colleen Tang Poy" />
+              </div>
+
               <References
                 references={[
                   {

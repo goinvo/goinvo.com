@@ -1071,6 +1071,8 @@ class FacesInHealthCommunicationFeature extends Component {
                 <p>
                   Jen Patel
                   <br />
+                  Colleen Tang Poy
+                  <br />
                   Jon Follett
                   <br />
                   Craig McGinley

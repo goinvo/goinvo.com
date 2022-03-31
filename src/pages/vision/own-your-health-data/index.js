@@ -5,6 +5,7 @@ import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -145,22 +146,23 @@ class OwnYourHealthDataFeature extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
+              <div className="authors">
                 <h2 className="header--xl text--center">Authors</h2>
-                <p>
-                  <strong>Annie Lakey Becker</strong>
-                  <br />
+                <Author
+                  name="Annie Lakey Becker"
+                  image="/images/about/headshot-annie-becker.jpg"
+                >
                   Annie is a Mom, Product and Project Manager based in Seattle.
                   Passionate about Public Health and systems, her background
                   includes roles as an academic research scientist and
                   patient-focused neurodiagnostic technologist. She has a BS in
                   Public Health from the University of Washington and is
                   completing a Masters in Public Health at UNC Chapel Hill.
-                </p>
-
-                <p>
-                  <strong>Kim Nipp</strong>
-                  <br />
+                </Author>
+                <Author
+                  name="Kim Nipp"
+                  image="/images/about/headshot-kim-nipp.jpg"
+                >
                   Kim is a designer, illustrator, and animator specializing in
                   scientific visualization. Originally trained in behavioural
                   neuroscience at the University of British Columbia, Kim moved
@@ -168,31 +170,12 @@ class OwnYourHealthDataFeature extends Component {
                   Communications, an interdisciplinary graduate program for
                   visual media design in science and medicine offered through
                   the Faculty of Medicine at the University of Toronto.
-                </p>
-
-                <p>
-                  <strong>Megan Hirsch</strong>
-                  <br />
-                  Megan is a designer-strategist that makes healthcare
-                  experiences enjoyable for patients and clinicians. She's
-                  dialing in her design and biology-trained eye to amplify her
-                  medical school experience in 2022. She joined Invo in 2021
-                  with a BS in Human Biology from Stanford University.
-                </p>
-
-                <p>
-                  <strong>Juhan Sonin</strong>
-                  <br />
-                  Juhan Sonin leads GoInvo with expertise in healthcare design
-                  and system engineering. He’s spent time at Apple, the National
-                  Center for Supercomputing Applications (NCSA), and MITRE. His
-                  work has been recognized by the New York Times, BBC, and
-                  National Public Radio (NPR) and published in The Journal of
-                  Participatory Medicine and The Lancet. He currently lectures
-                  on design and engineering at MIT.
-                </p>
-
-                <h3 className="header--md">Contributors</h3>
+                </Author>
+                <Author name="Megan Hirsch" />
+                <Author name="Juhan Sonin" />
+                <h3 className="header--md pad-vertical--double">
+                  Contributors
+                </h3>
 
                 <p>
                   Eric Benoit
@@ -200,6 +183,8 @@ class OwnYourHealthDataFeature extends Component {
                   Kathy Mikk
                   <br />
                   Harry Sleeper
+                  <br />
+                  Colleen Tang Poy
                 </p>
               </div>
 

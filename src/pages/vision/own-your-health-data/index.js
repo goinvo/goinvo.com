@@ -173,8 +173,8 @@ class OwnYourHealthDataFeature extends Component {
                 </Author>
                 <Author name="Megan Hirsch" />
                 <Author name="Juhan Sonin" />
-                <div className="header--md pad-vertical--double">
-                  <h3>Contributors</h3>
+                <div className="pad-vertical--double">
+                  <h3 className="header--md">Contributors</h3>
 
                   <p>
                     Eric Benoit

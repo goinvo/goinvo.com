@@ -4,6 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Image from '../../../components/image'
 import References from '../../../components/references'
+import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
 
@@ -56,6 +57,11 @@ class TestTreatTraceFeature extends Component {
                 </a>
               </div>
               <div>
+                <div className="pad-vertical--double">
+                  <h2 className="header--xl text--center">Authors</h2>
+                  <Author name="Parsuree Vatanasirisuk" />
+                  <Author name="Juhan Sonin" />
+                </div>
                 <h2 className="header--lg text--center margin-top--double">
                   Thank you for the feedback from...
                 </h2>

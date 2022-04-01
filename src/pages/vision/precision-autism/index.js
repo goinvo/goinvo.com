@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Image from '../../../components/image'
+import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
 
@@ -77,6 +78,11 @@ class PrecisionAutismFeature extends Component {
                 </a>
               </div>
               <div>
+                <div className="pad-vertical--double">
+                  <h2 className="header--xl text--center">Authors</h2>
+                  <Author name="Parsuree Vatanasirisuk" />
+                  <Author name="Juhan Sonin" />
+                </div>
                 <h2 className="header--lg text--center margin-top--quad">
                   Special thanks to...
                 </h2>

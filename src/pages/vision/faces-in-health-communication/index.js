@@ -8,6 +8,7 @@ import Author from '../../../components/author'
 import References from '../../../components/references'
 import Columns from '../../../components/columns'
 
+import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -64,7 +65,7 @@ class FacesInHealthCommunicationFeature extends Component {
         <div className="faces-in-health-communication">
           <Hero image={frontmatter.heroImage} />
           <div className="max-width--sm pad-horizontal margin-top pad-top margin-auto">
-            <div className="margin-bottom pad-bottom">
+            <div className="margin-bottom">
               <h1 className="header--xl">Faces in Health Communication</h1>
               <p>
                 In healthcare, clear communication that can be easily understood
@@ -81,6 +82,16 @@ class FacesInHealthCommunicationFeature extends Component {
                 faces in health infographics, can improve patients'
                 understanding of critical instructions and information.
               </p>
+            </div>
+            <div className="text--center margin-bottom--double margin-top--double">
+              <a
+                href={mediaUrl(
+                  '/pdf/vision/faces-in-health-communication/faces-in-health-communication.pdf'
+                )}
+                className="button button--secondary"
+              >
+                Download PDF
+              </a>
             </div>
             <Divider />
             <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">

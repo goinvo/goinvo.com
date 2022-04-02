@@ -5,15 +5,14 @@ import { connect } from 'react-redux'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import Sticky from '../components/sticky'
-import CategoriesList, { allCategory } from '../components/categories-list'
+import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Carousel from '../components/carousel'
 import Divider from '../components/divider'
 import Image from '../components/image'
-import Quote from '../components/quote'
-import ClientLogos from '../components/os-client-logos'
+import ClientLogos from '../components/client-logos'
 import Collapsible from '../components/collapsible'
 import HubspotForm from '../components/hubspot-form'
 import GradientImageColumns from '../components/gradient-image-columns'
@@ -23,7 +22,6 @@ import featuresApp from '../data/os-features-app.json'
 import featuresViz from '../data/os-features-visualization.json'
 import featuresDesign from '../data/os-features-design.json'
 import config from '../../config'
-import { concatCaseStudiesAndFeatures } from '../helpers'
 
 if (typeof window !== 'undefined') {
   smoothscroll.polyfill()
@@ -78,38 +76,12 @@ const mediaList = [
   },
 ]
 
-const getWorkItemsOfCategory = (workItems, catId) => {
-  let newWorkItems = []
-
-  if (catId === allCategory.id) {
-    newWorkItems = workItems
-  } else {
-    newWorkItems = workItems.filter(item => {
-      return item.categories.filter(cat => {
-        return cat === catId
-      }).length
-    })
-  }
-
-  return newWorkItems
-}
-
 const frontmatter = {
   metaTitle: 'Open Source in Healthcare & GoInvo',
   metaDescription:
     'Healthcare needs to be open. We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.',
   heroImage: '/images/open_source/os-hero-2.jpg',
 }
-
-const ColoredLine = ({ color }) => (
-  <hr
-    style={{
-      backgroundColor: color,
-      height: 0.03,
-      borderColor: 'transparent',
-    }}
-  />
-)
 
 class OpenPage extends Component {
   constructor(props) {
@@ -118,7 +90,6 @@ class OpenPage extends Component {
     const defaultCategory = CATEGORIES_LIST.find(
       cat => (cat.id = 'open-source-healthcare-vision')
     )
-    const workItems = concatCaseStudiesAndFeatures(props.data)
     const query =
       props.location && props.location.search ? props.location.search : null
 
@@ -131,15 +102,10 @@ class OpenPage extends Component {
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       defaultCategory
-    const activeWorkItems = getWorkItemsOfCategory(
-      workItems,
-      selectedCategory.id
-    )
 
     this.state = {
-      workItems,
       selectedCategory,
-      activeWorkItems,
+
       featuresApp: featuresApp.filter(
         feature => feature.id !== !feature.external
       ),
@@ -152,35 +118,21 @@ class OpenPage extends Component {
       heroPadding: 0,
       categoriesStuck: false,
       categoriesCollapsed: false,
-      suppressCollapseTransition: false,
-      hasUsedFilter: false,
     }
-
-    this.categoryDropdownButton = React.createRef()
   }
 
   handleCategoriesStickyStateChange = (isStuck, stickyBasedOnWidth) => {
     this.setState(
       {
-        suppressCollapseTransition: true,
         categoriesStuck: isStuck,
-        categoriesCollapsed: isStuck,
       },
       () => {
         let heroPadding = 0
-        if (this.categoryDropdownButton.current && stickyBasedOnWidth) {
-          heroPadding = this.categoryDropdownButton.current.offsetHeight
-        }
         this.setState({
           heroPadding,
-          suppressCollapseTransition: false,
         })
       }
     )
-  }
-
-  toggleCategories = () => {
-    this.setState({ categoriesCollapsed: !this.state.categoriesCollapsed })
   }
 
   setSelectedCategory = cat => {
@@ -190,7 +142,6 @@ class OpenPage extends Component {
     this.setState(
       {
         selectedCategory: cat,
-        activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
         categoriesCollapsed: this.state.categoriesStuck ? true : false,
       },
       () => {
@@ -201,9 +152,8 @@ class OpenPage extends Component {
             `/open-source-healthcare/?category=${cat.id}`
           )
         }
-        if (this.state.categoriesCollapsed) {
-          this.scrollWorkItemsIntoView()
-        }
+        this.scrollWorkItemsIntoView()
+
         this.props.setCategory(cat)
       }
     )
@@ -707,7 +657,7 @@ class OpenPage extends Component {
                 <h3 className="header--md" style={{ marginTop: 0 }}>
                   We've worked with...
                 </h3>
-                <ClientLogos />
+                <ClientLogos openSource="true" />
               </div>
             </div>
             <Divider />

@@ -118,6 +118,25 @@ class WorkPage extends Component {
     this.categoryDropdownButton = React.createRef()
   }
 
+  componentDidUpdate = (prevProps, prevState, snapshot) => {
+    console.log('DID UPDATE:')
+    console.log(prevProps)
+    console.log(prevState)
+    console.log(snapshot)
+  }
+
+  // static getDerivedStateFromProps = (props, state) => {
+  //   console.log("DERIVED STATE BEFORE RENDER:")
+  //   console.log(props);
+  //   console.log(state);
+  // }
+
+  componentDidMount = () => {
+    console.log('DID MOUNT:')
+    console.log(this.props)
+    console.log(this.state)
+  }
+
   handleCategoriesStickyStateChange = (isStuck, stickyBasedOnWidth) => {
     this.setState(
       {

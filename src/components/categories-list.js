@@ -41,17 +41,16 @@ class CategoriesList extends Component {
 
   render() {
     const numPerColumn = Math.ceil(CATEGORIES_LIST.length / this.props.columns)
-    const columns = Array.apply(null, { length: this.props.columns })
+    // const columns = Array.apply(null, { length: this.props.columns })
+    const columns = ['one', 'two', 'three']
 
     return (
       <div className="pure-g">
-        {columns.map((_, i) => {
+        {columns.map((id, i) => {
           return (
             <div
-              key={i}
-              className={`categories-list__column pure-u-1 pure-u-lg-1-${
-                this.props.columns
-              }`}
+              key={id}
+              className={`categories-list__column pure-u-1 pure-u-lg-1-${this.props.columns}`}
             >
               <ul
                 className={`categories-list ${

@@ -135,6 +135,7 @@ class WorkPage extends Component {
     console.log('DID MOUNT:')
     console.log(this.props)
     console.log(this.state)
+    this.forceUpdate()
   }
 
   handleCategoriesStickyStateChange = (isStuck, stickyBasedOnWidth) => {

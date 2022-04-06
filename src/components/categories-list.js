@@ -10,6 +10,12 @@ export const allCategory = {
 
 class CategoriesList extends Component {
   renderCategory = cat => {
+    console.log('---------------------------------')
+    console.log('THIS:')
+    console.log(cat.id)
+    console.log('SELECTED:')
+    console.log(this.props.selectedCategoryId)
+
     return (
       <li
         key={cat.id}
@@ -43,10 +49,14 @@ class CategoriesList extends Component {
     const numPerColumn = Math.ceil(CATEGORIES_LIST.length / this.props.columns)
     // const columns = Array.apply(null, { length: this.props.columns })
     const columns = ['one', 'two', 'three']
+    console.log('RENDERING CATEGORIES LIST')
+    console.log(this.props.selectedCategoryId)
 
     return (
       <div className="pure-g">
         {columns.map((id, i) => {
+          console.log('==========================================')
+          console.log(id)
           return (
             <div
               key={id}

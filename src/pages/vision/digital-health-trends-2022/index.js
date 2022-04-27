@@ -180,7 +180,7 @@ class BurnoutFeature extends Component {
 
               <div className="margin-auto">
                 <Image
-                  src="/images/features/digital-health-trends-2022/2-advances-in-remote-a.jpg"
+                  src="/images/features/digital-health-trends-2022/3-virtualizing-primary-care-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
@@ -259,7 +259,7 @@ class BurnoutFeature extends Component {
 
               <div className="margin-auto">
                 <Image
-                  src="/images/features/digital-health-trends-2022/3-virtualizing-primary-care-a.jpg"
+                  src="/images/features/digital-health-trends-2022/5-managing-our-health-data-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
@@ -339,7 +339,7 @@ class BurnoutFeature extends Component {
 
               <div className="margin-auto">
                 <Image
-                  src="/images/features/digital-health-trends-2022/4-shift-to-local-a.jpg"
+                  src="/images/features/digital-health-trends-2022/2-advances-in-remote-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
@@ -396,7 +396,7 @@ class BurnoutFeature extends Component {
 
               <div className="margin-auto">
                 <Image
-                  src="/images/features/digital-health-trends-2022/5-managing-our-health-data-a.jpg"
+                  src="/images/features/digital-health-trends-2022/4-shift-to-local-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />

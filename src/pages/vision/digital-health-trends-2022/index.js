@@ -42,7 +42,7 @@ class BurnoutFeature extends Component {
                 The ongoing COVID pandemic has nearly exhausted the American
                 healthcare system. Healthcare workers are leaving the industry
                 in droves — down by 378,000 since February 2020, according to
-                the{' '}
+                the{'  '}
                 <a
                   href="https://www.bls.gov/news.release/pdf/empsit.pdf"
                   target="_blank"
@@ -55,7 +55,7 @@ class BurnoutFeature extends Component {
 
               <p>
                 The U.S. already has a significant shortage of doctors and
-                nurses — a problem that is not going away anytime soon.{' '}
+                nurses — a problem that is not going away anytime soon.{'  '}
                 <a
                   href="https://www.aamc.org/news-insights/press-releases/new-aamc-report-confirms-growing-physician-shortage"
                   target="_blank"
@@ -70,7 +70,7 @@ class BurnoutFeature extends Component {
 
               <p>
                 Add to this an aging population — by 2030, 1 of 5 Americans will
-                be at retirement age,{' '}
+                be at retirement age,{'  '}
                 <a
                   href="https://www.census.gov/newsroom/press-releases/2018/cb18-41-population-projections.html"
                   target="_blank"
@@ -125,7 +125,8 @@ class BurnoutFeature extends Component {
                 Every company making products for the home — from bathroom
                 fixtures to kitchen appliances to televisions — is now
                 potentially a digital health company or aspires to be a part of
-                the IoT (Internet of Things) network supporting your health.{' '}
+                the IoT (Internet of Things) network supporting your health.
+                {'  '}
                 <a
                   href="https://www.theverge.com/2022/1/4/22865640/lg-tv-telehealth-platform-independa"
                   target="_blank"
@@ -144,7 +145,7 @@ class BurnoutFeature extends Component {
                 The COVID pandemic has changed what people expect of their
                 homes, accelerating the trend towards multi-functional connected
                 spaces that support a variety of living and working activities
-                within them. In particular,{' '}
+                within them. In particular,{'  '}
                 <a
                   href="https://www.wsj.com/articles/high-tech-bathroom-11642720799"
                   target="_blank"
@@ -154,7 +155,8 @@ class BurnoutFeature extends Component {
                   evolving
                 </a>
                 . Already equipped with advanced devices to create a spa-like
-                atmosphere, the modern bathroom is well on its way to fully{' '}
+                atmosphere, the modern bathroom is well on its way to fully
+                {'  '}
                 <a
                   href="https://www.goinvo.com/features/from-bathroom-to-healthroom"
                   target="_blank"
@@ -193,7 +195,7 @@ class BurnoutFeature extends Component {
                 Services for remote care and monitoring will overlay and enhance
                 digital health at home, collecting data from a patient via
                 sensors and other digital technologies, like smart watches,
-                connected medical devices, and{' '}
+                connected medical devices, and{'  '}
                 <a
                   href="https://www.goinvo.com/work/infobionic-heart-monitoring"
                   target="_blank"
@@ -216,7 +218,7 @@ class BurnoutFeature extends Component {
               <p>
                 We can already see the strong connection between those companies
                 that will supply the infrastructure for digital health at home
-                and patient monitoring. For instance,{' '}
+                and patient monitoring. For instance,{'  '}
                 <a
                   href="https://www.cnbc.com/2021/10/12/best-buy-is-acquiring-british-health-care-company-current-health.html"
                   target="_blank"
@@ -235,7 +237,8 @@ class BurnoutFeature extends Component {
                   rel="noreferrer"
                 >
                   Alexa Together
-                </a>{' '}
+                </a>
+                {'  '}
                 is Amazon's endeavor into remote monitoring and assistance for
                 the family caring for their elderly relatives. Amazon
                 incorporates AI-driven remote healthcare monitoring —
@@ -271,7 +274,7 @@ class BurnoutFeature extends Component {
                 during the pandemic, enabling virtual visits when in-person
                 interactions were difficult, if not impossible, due to COVID.
                 According to a research report from the HHS Office of the
-                Assistant Secretary for Planning and Evaluation,{' '}
+                Assistant Secretary for Planning and Evaluation,{'  '}
                 <a
                   href="https://aspe.hhs.gov/sites/default/files/documents/a1d5d810fe3433e18b192be42dbf2351/medicare-telehealth-report.pdf"
                   target="_blank"
@@ -287,7 +290,7 @@ class BurnoutFeature extends Component {
               <p>
                 Virtual primary care is convenient and saves time for patients
                 and providers. You no longer need to see a doctor in person for
-                many types of interactions. In fact,{' '}
+                many types of interactions. In fact,{'  '}
                 <a
                   href="https://www.goinvo.com/vision/virtual-care/"
                   target="_blank"
@@ -311,8 +314,10 @@ class BurnoutFeature extends Component {
                   rel="noreferrer"
                 >
                   WellVia
-                </a>{' '}
-                are pioneering virtualized primary care while companies like{' '}
+                </a>
+                {'  '}
+                are pioneering virtualized primary care while companies like
+                {'  '}
                 <a
                   href="https://www.onemedical.com/"
                   target="_blank"
@@ -354,7 +359,7 @@ class BurnoutFeature extends Component {
                 pharmacies have begun to incorporate health services into their
                 offerings for basic healthcare consultations and immunizations.
                 CVS Health, Walgreens, RiteAid, and Walmart are leveraging their
-                existing footprint in communities{' '}
+                existing footprint in communities{'  '}
                 <a
                   href="https://www.jaxdailyrecord.com/article/walgreens-walmart-adding-medical-clinics"
                   target="_blank"
@@ -375,7 +380,7 @@ class BurnoutFeature extends Component {
                 These clinics, co-located with retail and pharmacy, are
                 particularly helpful for patients managing chronic conditions,
                 who can benefit from more frequent visits with a healthcare
-                provider and{' '}
+                provider and{'  '}
                 <a
                   href="https://www.goinvo.com/work/hgraph"
                   target="_blank"
@@ -401,7 +406,7 @@ class BurnoutFeature extends Component {
                 5. Managing our health data
               </h2>
               <p>
-                Our{' '}
+                Our{'  '}
                 <a
                   href="https://www.goinvo.com/vision/who-uses-my-health-data/"
                   target="_blank"
@@ -448,7 +453,7 @@ class BurnoutFeature extends Component {
                 Universally accepted and adopted data standards supporting
                 interoperability between electronic health records, patient data
                 use agreements that facilitate personal access and control, and
-                patient-centric software that allows for{' '}
+                patient-centric software that allows for{'  '}
                 <a
                   href="https://goinvo.com/vision/own-your-health-data/"
                   target="_blank"
@@ -467,7 +472,7 @@ class BurnoutFeature extends Component {
                 from one hospital to another.
               </p>
               <p>
-                But, it will be a long road to travel before we can{' '}
+                But, it will be a long road to travel before we can{'  '}
                 <a
                   href="https://www.statnews.com/2021/11/15/its-time-for-individuals-not-doctors-or-companies-to-own-their-health-data/"
                   target="_blank"
@@ -493,17 +498,20 @@ class BurnoutFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>
-                <h2 className="header--xl text--center">Authors</h2>
+                <h2 className="header--xl text--center">Author</h2>
                 <Author name="Jonathan Follett" />
-                <Author name="Jen Patel" />
-                <Author name="Huahua Zhu" />
-                <Author name="Juhan Sonin" />
                 <div className="pad-vertical--double">
                   <h3 className="header--md">Contributors</h3>
-
                   <p>
-                    Eric Benoit
+                    Huahua Zhu
                     <br />
+                    Jen Patel
+                    <br />
+                    Sharon Lee
+                    <br />
+                    Juhan Sonin
+                    <br />
+                    Eric Benoit
                   </p>
                 </div>
               </div>

@@ -1,5 +1,16 @@
 [
   {
+    "id": "digital-health-trends-2022",
+    "title": "Digital Health Trends to Watch in 2022 and Beyond",
+    "date": "Apr.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "GoInvo breaks down significant digital health trends you should watch in 2022 and the decade to come.",
+    "image": "/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg",
+    "link": "/vision/digital-health-trends-2022/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "own-your-health-data",
     "title": "Own Your Health Data",
     "date": "Oct.2021",

@@ -16,12 +16,12 @@ const frontmatter = {
     '/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg',
 }
 
-class BurnoutFeature extends Component {
+class DigitalHealthTrendsFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
-        <div className="burnout-feature">
+        <div className="digital-health-trends-2022-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">
@@ -523,4 +523,4 @@ class BurnoutFeature extends Component {
   }
 }
 
-export default BurnoutFeature
+export default DigitalHealthTrendsFeature

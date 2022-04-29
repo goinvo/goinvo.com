@@ -51,6 +51,28 @@ class Header extends Component {
             </Link>
           )
         })}
+        <Link
+          activeClassName="header-nav__link--active"
+          style={{
+            color: '#e36216',
+            textTransform: 'uppercase',
+            fontSize: 15,
+            lineHeight: 22,
+            fontWeight: 600,
+            letterSpacing: 2,
+            paddingLeft: 16,
+            paddingRight: 16,
+            textDecoration: 'none',
+            height: 50,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            position: 'relative',
+          }}
+          to="/open-source-healthcare/"
+        >
+          Open Design
+        </Link>
         <button
           className="header-nav__hamburger button button--transparent hidden--lg"
           onClick={this.toggleMobileNav}

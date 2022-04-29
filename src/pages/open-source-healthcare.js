@@ -196,7 +196,7 @@ class OpenPage extends Component {
             <div className="max-width content-padding pad-top">
               <CategoriesList
                 categories={CATEGORIES_LIST}
-                columns={4}
+                columns={3}
                 selectedCategoryId={this.state.selectedCategory.id}
                 onSelectCategory={this.setSelectedCategory}
               />
@@ -278,10 +278,10 @@ class OpenPage extends Component {
                       </p>
                       <h3 className="">Innovation from the community</h3>
                       <p className="text--gray">
-                        The community working on open source platforms have
-                        countless ways and ideas on how to make it more
-                        performant, more secure, more robust. Shared ideas are
-                        tested and refined before their integration to keep our
+                        The community working on open source products contribute
+                        their ideas and expertise to make more robust, secure,
+                        and better performing products. Shared ideas are tested
+                        and refined before their integration to keep our
                         products innovative.
                       </p>
                     </div>
@@ -378,7 +378,7 @@ class OpenPage extends Component {
 
               <div className="pad-top pad-bottom margin-top pad-bottom--double">
                 <h2 className="header--xl" style={{ color: '#E16226' }}>
-                  Open Source Success Stories
+                  Global Open Source Success Stories
                 </h2>
 
                 <Carousel>
@@ -392,7 +392,7 @@ class OpenPage extends Component {
                       developed and maintained by HL7, a non-profit organization
                       responsible for some of the most widely-adopted standards
                       in healthcare technology. Data sharing is made simple
-                      between applications, without the need for custom.
+                      between applications, without the need for custom
                       integrations.
                     </p>
                   </GradientImageColumns>
@@ -406,7 +406,7 @@ class OpenPage extends Component {
                       Open Humans is a platform that allows citizen scientists
                       to share their health data. Participants' data is
                       aggregated and made available, empowering individuals to
-                      engage in education and research.The data made available
+                      engage in education and research. The data made available
                       stimulates cross-border collaboration, improves quality of
                       research and speed up scientific discoveries.
                     </p>
@@ -454,15 +454,32 @@ class OpenPage extends Component {
               {/* SUB-SECTION 1 */}
               <div className="pure-g pure-g--reverse--only-lg">
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg">
+                  <div className="pad-left-pad-right--only-lg">
                     <Image
-                      src="/images/open_source/os-info-2.jpg"
-                      className="image--max-width"
+                      src="/images/open_source/os-std-2.jpg"
+                      className="pad-horizontal--double image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
                   </div>
                 </div>
 
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-right--only-lg">
+                    <h3 className="">Open Health Standards</h3>
+                    <p className="text--gray">
+                      We need open standards for healthcare. Standards for
+                      interoperability and data format. The standardization of
+                      care plans will aid in communication and collaboration
+                      across medical teams over time, providing high-quality
+                      longitudinal care with reduced risk for medical errors.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* SUB-SECTION 2 */}
+
+              <div className="pure-g pure-g--reverse--only-lg">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg">
                     <h3 className="">Open Health Information</h3>
@@ -477,14 +494,24 @@ class OpenPage extends Component {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              {/* SUB-SECTION 2 */}
-              <div className="pure-g pure-g--reverse--only-lg">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg  ">
                     <Image
-                      src="/images/open_source/os-app-3.jpg"
+                      src="/images/open_source/os-info-2.jpg"
+                      className="pad-horizontal image--max-width"
+                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* SUB-SECTION 3 */}
+
+              <div className="pure-g pure-g--reverse--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-right--only-lg margin-top ">
+                    <Image
+                      src="/images/open_source/os-process-dw2000.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
@@ -492,7 +519,25 @@ class OpenPage extends Component {
                 </div>
 
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg">
+                  <div className="pad-vertical--double pad-right--only-lg pad-bottom pad-top">
+                    <h3 className="">Open Health Processes</h3>
+                    <p className="text--gray">
+                      Encourage patients' participation in their care journey by
+                      supporting them to take control and engage in their health
+                      and care. Open organizations collaborate internally as
+                      well as externally and are committed to continous
+                      learning. They provide care that does not vary in quality
+                      because of a person’s characteristics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* SUB-SECTION 4 */}
+
+              <div className="pure-g pure-g--reverse--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="pad-right--only-lg pad-bottom pad-top margin-top--double">
                     <h3 className="">Open Digital Health Services</h3>
                     <p className="text--gray">
                       Healthcare systems must evolve towards a more transparent
@@ -504,59 +549,13 @@ class OpenPage extends Component {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              {/* SUB-SECTION 3 */}
-
-              <div className="pure-g pure-g--reverse--only-lg">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="pad-right--only-lg margin-top ">
                     <Image
-                      src="/images/open_source/os-std-2.jpg"
+                      src="/images/open_source/os-std-dw2000.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                     />
-                  </div>
-                </div>
-
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg pad-bottom pad-top">
-                    <h3 className="">Open Health Standards</h3>
-                    <p className="text--gray">
-                      We need open standards for healthcare. Standards for
-                      interoperability and data format. The standardization of
-                      care plans will aid in communication and collaboration
-                      across medical teams over time, providing high-quality
-                      longitudinal care with reduced risk for medical errors.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* SUB-SECTION 4 */}
-
-              <div className="pure-g pure-g--reverse--only-lg">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg margin-top ">
-                    <Image
-                      src="/images/open_source/os-process.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
-                </div>
-
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="pad-right--only-lg pad-bottom pad-top margin-top--double">
-                    <h3 className="">Open Health Processes</h3>
-                    <p className="text--gray">
-                      Encourage patients' participation in their care journey by
-                      supporting them to take control and engage in their health
-                      and care. Open organizations collaborate internally as
-                      well as externally and are committed to continous
-                      learning. They provide care that does not vary in quality
-                      because of a person’s characteristics.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -605,7 +604,7 @@ class OpenPage extends Component {
         >
           <div className="max-width content-padding pad-vertical">
             <h2 className="header--xl" style={{ color: '#E16226' }}>
-              We made our best designs open and accessible for rapid innovation
+              Empowering our clients through open source work
             </h2>
 
             <div className="pure-g ">
@@ -631,8 +630,8 @@ class OpenPage extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="text--gray">
-                    We adapt our open source product to be mature enterprise
-                    services
+                    We adapt our open source products for mature enterprise
+                    services”
                   </p>
                 </div>
               </div>
@@ -655,7 +654,7 @@ class OpenPage extends Component {
             <div className="background pad-vertical--double">
               <div className="max-width content-padding">
                 <h3 className="header--md" style={{ marginTop: 0 }}>
-                  We've worked with...
+                  We've worked on open source projects with...
                 </h3>
                 <ClientLogos openSource="true" />
               </div>
@@ -671,7 +670,8 @@ class OpenPage extends Component {
 
               <h2>Open Applications</h2>
               <p className="pad-bottom text--gray">
-                Customize and supplement open software to your platform.
+                Customize and integrate open source applications into your
+                product
               </p>
 
               <Columns columns={3}>
@@ -700,7 +700,7 @@ class OpenPage extends Component {
           </div>
 
           <div className="max-width content-padding">
-            <h2>Open Research and Design</h2>
+            <h2>Open Health Research</h2>
             <p className="pad-bottom text--gray">
               Leverage existing material quickly with the right foundation.
             </p>
@@ -826,7 +826,7 @@ class OpenPage extends Component {
                     </span>
                     <br />
                     <span className="text--gray">
-                      Clients investment <br /> in open source projectss
+                      Clients investment <br /> in open source projects
                     </span>
                   </p>
                 </div>
@@ -985,10 +985,31 @@ class OpenPage extends Component {
               </div>
             </div>
           </div>
+
+          <div className="max-width content-padding pad-top--double pad-bottom--double">
+            <h2 className="header--xl" style={{ color: '#E16226' }}>
+              Health Design Perspective on Open Source
+            </h2>
+            <Columns columns={2}>
+              {mediaList.map(item => {
+                return (
+                  <Card key={item.link} link={item.link}>
+                    <ImageBlock
+                      title={item.title}
+                      image={item.image}
+                      caption={item.caption}
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                      hoverable
+                    />
+                  </Card>
+                )
+              })}
+            </Columns>
+          </div>
         </Collapsible>
 
         {/* OPEN HEALTHCARE TECHTALKS */}
-
+        {/* 
         <Collapsible
           collapsed={
             this.state.selectedCategory.id === 'open-healthcare-techtalks'
@@ -1014,7 +1035,7 @@ class OpenPage extends Component {
               })}
             </Columns>
           </div>
-        </Collapsible>
+        </Collapsible> */}
 
         {/* CTA */}
 
@@ -1023,7 +1044,7 @@ class OpenPage extends Component {
             <div className="pure-g">
               <div className="pure-u-1 ">
                 <h2 className="header--xl" style={{ color: '#E16226' }}>
-                  Join us to start your Open Source Healthcare journey
+                  Join us to start your Open Health journey
                   <span style={{ color: 'black' }}>.</span>
                 </h2>
                 <p className="text--gray">

@@ -108,14 +108,14 @@ How do we assist the patient with habit-forming goals when it comes to food choi
 
 A nutrition agent, working on your behalf, to organize your food life and better your health, was a new avenue for Inside Tracker. By incorporating feedback from patients, stakeholders, scientists, and engineers, a software model for behavior and precision nutrition was created. Early concepts for the digital manifestation of the activity model were designed (ie how does Inside Tracker's nutrition agent behave on your phone and works with you). These concepts fed product and development teams next iteration of the software.
 
-![Blood Results](/images/case-studies/inside-tracker/insidetracker_blood_results_2.jpg)
+![Blood Results](/images/case-studies/inside-tracker/insidetracker_blood_results_4.jpg)
 
-![Information Architecture Design](/images/case-studies/inside-tracker/insidetracker_information_architecture.jpg)
+![Information Architecture Design](/images/case-studies/inside-tracker/insidetracker_information_architecture_3.jpg)
 
 ## Results
 
 #### A Design Injection
 
-One objective often desired by repeat customers is stimulating the product and executive teams with new concepts, push new areas of personal health, and evolve the business strategy to better align with patient needs. Most of our business is repeat: we built trust with company leaders, scientists, engineers, and product teams by delivering and shipping healthcare design… over and over again.
+One objective often desired by repeat customers is to stimulate the product and executive teams with new concepts, push new areas of personal health, and evolve the business strategy to better align with patient needs. Most of our business is repeat: we built trust with company leaders, scientists, engineers, and product teams by delivering and shipping compelling healthcare design... over and over again.
 
 Here's to eating right, based on a new level of precision!

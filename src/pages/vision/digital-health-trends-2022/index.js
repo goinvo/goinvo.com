@@ -339,7 +339,7 @@ class DigitalHealthTrendsFeature extends Component {
 
               <div className="margin-auto">
                 <Image
-                  src="/images/features/digital-health-trends-2022/2-advances-in-remote-a.jpg"
+                  src="/images/features/digital-health-trends-2022/4-shift-to-local-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
@@ -396,7 +396,7 @@ class DigitalHealthTrendsFeature extends Component {
 
               <div className="margin-auto">
                 <Image
-                  src="/images/features/digital-health-trends-2022/4-shift-to-local-a.jpg"
+                  src="/images/features/digital-health-trends-2022/2-advances-in-remote-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />

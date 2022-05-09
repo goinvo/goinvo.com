@@ -41,14 +41,14 @@ class DigitalHealthTrendsFeature extends Component {
               <p>
                 The ongoing COVID pandemic has nearly exhausted the American
                 healthcare system. Healthcare workers are leaving the industry
-                in droves — down by 378,000 since February 2020, according to
+                in droves — down by 298,000 since February 2020, according to
                 the{'  '}
                 <a
-                  href="https://www.bls.gov/news.release/pdf/empsit.pdf"
+                  href="https://www.bls.gov/news.release/archives/empsit_04012022.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Bureau of Labor Statistics January 2020 report
+                  Bureau of Labor Statistics March 2022 report
                 </a>
                 .
               </p>

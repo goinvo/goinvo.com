@@ -11,10 +11,12 @@ const frontmatter = {
 }
 
 const titleStyle = {
-  fontSize: 60,
+  fontSize: 58,
   color: '#24434D',
   lineHeight: 1.2,
   fontFamily: 'Adobe Jensen Pro',
+  marginTop: '0.3em',
+  marginBottom: '0.3em',
 }
 
 const subtitleStyle = {
@@ -22,6 +24,46 @@ const subtitleStyle = {
   color: '#506971',
   lineHeight: 1.8,
   fontFamily: 'Open Sans',
+  letterSpacing: 1,
+}
+
+const headerStyleCentered = {
+  fontSize: 40,
+  color: '#24434D',
+  lineHeight: 1.4,
+  fontFamily: 'Adobe Jensen Pro',
+  textAlign: 'center',
+}
+
+const npStyleCentered = {
+  fontSize: 16,
+  color: '#506971',
+  lineHeight: 1.8,
+  fontFamily: 'Open Sans',
+  textAlign: 'center',
+  letterSpacing: 1,
+}
+
+const npStyle = {
+  fontSize: 16,
+  color: '#C9461D',
+  lineHeight: 1.8,
+  fontFamily: 'Open Sans',
+  display: 'flex',
+  justifyContent: 'center',
+  textAlign: 'center',
+  letterSpacing: 1,
+}
+
+const numbersStyle = {
+  fontSize: 32,
+  color: '#C9461D',
+  fontFamily: 'Adobe Jensen Pro',
+  letterSpacing: 1,
+  lineHeight: 1.8,
+  fontWeight: 600,
+  display: 'flex',
+  justifyContent: 'center',
 }
 
 class OpenSourcePage extends Component {
@@ -34,18 +76,17 @@ class OpenSourcePage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="max-width pad-vertical">
+        <div className="max-width content-padding pad-vertical ">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 ">
               <h1 style={titleStyle}> Open Source Health Design</h1>
               <p style={subtitleStyle}>
-                Bringing Trust, Openness, Innovation &amp; <br></br> Design to
-                Healthcare
+                Bringing Trust, Openness, Innovation &amp; Design to Healthcare
               </p>
               <div>
                 <Link
                   to=""
-                  className="button button--primary button--lg"
+                  className="button button--primary button--lg "
                   style={{
                     width: 'auto',
                     minWidth: 0,
@@ -64,7 +105,7 @@ class OpenSourcePage extends Component {
                 </Link>
               </div>
             </div>
-            <div className="pure-u-1 pure-u-lg-1-2">
+            <div className="pure-u-1 pure-u-lg-1-2 ">
               <Image
                 src="/images/open_source/open-source.jpg"
                 className="image--max-width"
@@ -72,6 +113,53 @@ class OpenSourcePage extends Component {
               />
             </div>
           </div>
+
+          <div className="pad-vertical pad-horizontal--double">
+            <h2 style={headerStyleCentered}>
+              We envision a world where patients can be cared for with a
+              technology that can be trusted.
+            </h2>
+            <p style={npStyleCentered}>
+              For the past 10 years, we’ve partner with Federal and Non-profit
+              organizations to design more than 60 open source projects to the
+              solve most pressing healthcare issues.
+            </p>
+          </div>
+
+          <div className="pure-g">
+            <div className="pure-u-1-3 ">
+              <p>
+                <span className="" style={numbersStyle}>
+                  $1.8M
+                </span>
+                <span className="" style={npStyle}>
+                  Studio internal investment <br /> in open source projects
+                </span>
+              </p>
+            </div>
+            <div className=" pure-u-1-3">
+              <p>
+                <span className="" style={numbersStyle}>
+                  $2.5M
+                </span>
+                <span className="" style={npStyle}>
+                  Clients investment <br /> in open source projects
+                </span>
+              </p>
+            </div>
+            <div className="pure-u-1-3">
+              <p>
+                <span className="" style={numbersStyle}>
+                  65+
+                </span>
+                <span className="" style={npStyle}>
+                  Open Source projects <br />
+                  invested in since 2010
+                </span>
+              </p>
+            </div>
+          </div>
+          <ClientLogos openSource="true" />
         </div>
       </Layout>
     )

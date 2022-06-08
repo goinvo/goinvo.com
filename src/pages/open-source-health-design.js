@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layouts/layout'
 import config from '../../config'
 import Image from '../components/image'
+import ClientLogos from '../components/client-logos'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',

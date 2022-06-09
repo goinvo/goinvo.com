@@ -4,6 +4,7 @@ import Layout from '../components/layouts/layout'
 import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
+import NetworkChart from '../components/chart'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
@@ -159,6 +160,10 @@ class OpenSourcePage extends Component {
                 </span>
               </p>
             </div>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <NetworkChart />
           </div>
           <ClientLogos openSource="true" />
         </div>

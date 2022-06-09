@@ -5,6 +5,10 @@ import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import NetworkChart from '../components/chart'
+import Columns from '../components/columns'
+import ImageBlock from '../components/image-block'
+import Card from '../components/card'
+import Form from '../components/simple-form'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
@@ -20,6 +24,8 @@ const titleStyle = {
   marginTop: '0.3em',
   marginBottom: '0.3em',
 }
+
+const chartStyle = {}
 
 const subtitleStyle = {
   fontSize: 20,
@@ -49,6 +55,15 @@ const subheaderStyle = {
   color: '#24434D',
   lineHeight: 1.4,
   fontFamily: 'Adobe Jensen Pro',
+  fontWeight: 200,
+}
+const subheaderStyleCentered = {
+  fontSize: 30,
+  color: '#24434D',
+  lineHeight: 1.4,
+  fontFamily: 'Adobe Jensen Pro',
+  fontWeight: 200,
+  textAlign: 'center',
 }
 
 const npStyleCentered = {
@@ -92,7 +107,37 @@ const numbersStyle = {
 
 const bgStyle = {
   backgroundColor: '#FAF6F4',
+  marginTop: '4em',
+  marginBottom: '4em',
+  paddingTop: '0.01em',
+  paddingBottom: '1em',
+  paddingLeft: '3em',
+  paddingRight: '3em',
 }
+
+const projectSpotlight = [
+  {
+    link: '/vision/determinants-of-health/',
+    image: '/images/services/doh-preview.jpg',
+    title: 'Determinants of Health',
+    caption:
+      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+  },
+  {
+    link: '/vision/determinants-of-health/',
+    image: '/images/services/doh-preview.jpg',
+    title: 'Determinants of Health',
+    caption:
+      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+  },
+  {
+    link: '/vision/determinants-of-health/',
+    image: '/images/services/doh-preview.jpg',
+    title: 'Determinants of Health',
+    caption:
+      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+  },
+]
 
 class OpenSourcePage extends Component {
   constructor(props) {
@@ -188,7 +233,7 @@ class OpenSourcePage extends Component {
             </div>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="pad-vertical--double" style={chartStyle}>
             <NetworkChart />
           </div>
           <ClientLogos openSource="true" />
@@ -204,6 +249,27 @@ class OpenSourcePage extends Component {
               available to benefit communities and society as a whole
             </p>
             <h3 style={subheaderStyle}>Open Source Project Spotlight</h3>
+
+            <Columns columns={3}>
+              {projectSpotlight.map(item => {
+                return (
+                  <Card
+                    key={item.link}
+                    link={item.link}
+                    externalLink={item.externalLink}
+                    suppressNewTab={item.suppressNewTab}
+                  >
+                    <ImageBlock
+                      title={item.title}
+                      image={item.image}
+                      caption={item.caption}
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                      hoverable
+                    />
+                  </Card>
+                )
+              })}
+            </Columns>
           </div>
 
           <div>
@@ -218,10 +284,21 @@ class OpenSourcePage extends Component {
             </p>
           </div>
 
-          <div style={bgStyle}>
+          <div
+            style={{
+              textAlign: 'center',
+              marginTop: '4em',
+              marginBottom: '4em',
+              paddingTop: '0.01em',
+              paddingBottom: '1em',
+              paddingLeft: '3em',
+              paddingRight: '3em',
+              backgroundColor: '#FAF6F4',
+            }}
+          >
             <div>
-              <h2 style={headerStyle}>Open Health Projects</h2>
-              <h3 style={subheaderStyle}>We’re looking for funding!</h3>
+              <h2 style={headerStyleCentered}>Open Health Projects</h2>
+              <h3 style={subheaderStyleCentered}>We’re looking for funding!</h3>
 
               <p style={npStyleCentered}>
                 Build trust and make healthcare truly accessible and open to a
@@ -258,20 +335,34 @@ class OpenSourcePage extends Component {
             <div></div>
           </div>
 
-          <div>
+          <div
+            style={{
+              textAlign: 'center',
+              marginTop: '4em',
+              marginBottom: '4em',
+              paddingTop: '0.01em',
+              paddingBottom: '1em',
+              paddingLeft: '3em',
+              paddingRight: '3em',
+            }}
+          >
             <h2 style={headerStyle}>It’s Open Source!</h2>
             <p style={pStyle}>
               Our design work, health research and code are open-source. They
               are freely available for anyone to see, download, change, and
               redistribute. By democratizing health technologies, we grant easy
               access to highly developed and tested tools for improving medical
-              practice. We support and onboard individuals and organizations to
-              use our open source work.
+              practice.
+              <br />
+              <p style={{ color: '#C9461D', marginTop: '1.5em' }}>
+                We support and onboard individuals and organizations to use our
+                open source work.
+              </p>
             </p>
 
             <Link
               to=""
-              className="button button--tertiary button--lg "
+              className="button button--secondary button--lg "
               style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
             >
               Let's chat, we're here to help!
@@ -280,6 +371,27 @@ class OpenSourcePage extends Component {
 
           <div>
             <h3 style={subheaderStyle}>Open Health Design Conversations</h3>
+
+            <Columns columns={3}>
+              {projectSpotlight.map(item => {
+                return (
+                  <Card
+                    key={item.link}
+                    link={item.link}
+                    externalLink={item.externalLink}
+                    suppressNewTab={item.suppressNewTab}
+                  >
+                    <ImageBlock
+                      title={item.title}
+                      image={item.image}
+                      caption={item.caption}
+                      sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                      hoverable
+                    />
+                  </Card>
+                )
+              })}
+            </Columns>
           </div>
 
           <div style={bgStyle}>
@@ -293,6 +405,9 @@ class OpenSourcePage extends Component {
               designs, show your work and exchange ideas. Subscribe to our Open
               Source Health Design newsletter!
             </p>
+            <div className="pad-vertical">
+              <Form />
+            </div>
           </div>
         </div>
       </Layout>

@@ -5,14 +5,17 @@ import data from '../data/chartdata'
 
 class NetworkChart extends Component {
   render() {
-    const onClickNode = function(nodeId) {
-      window.alert(`Clicked node ${nodeId}`)
+    const onClickNode = function() {
+      window.open(
+        'https://www.goinvo.com/vision/determinants-of-health/',
+        '_blank'
+      )
     }
 
     return (
       <div>
         <Graph
-          id="test"
+          id="open-source-chart"
           data={data}
           config={config}
           onClickNode={onClickNode}

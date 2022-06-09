@@ -162,7 +162,7 @@ class OpenSourcePage extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="max-width content-padding pad-vertical ">
-          <div className="pure-g">
+          <div className="pure-g" style={{ marginTop: 70, marginBottom: 70 }}>
             <div className="pure-u-1 pure-u-lg-1-2 ">
               <h1 style={titleStyle}> Open Source Health Design</h1>
               <p style={subtitleStyle}>
@@ -245,7 +245,10 @@ class OpenSourcePage extends Component {
             </div>
           </div>
 
-          <div className="pad-vertical--double" style={chartStyle}>
+          <div
+            className="pure-g pure-u-1 pad-vertical--double"
+            style={chartStyle}
+          >
             <NetworkChart />
           </div>
           <ClientLogos openSource="true" />
@@ -309,15 +312,15 @@ class OpenSourcePage extends Component {
             }}
           >
             <div>
-              <h2 style={headerStyleCentered}>Open Health Projects</h2>
-              <h3 style={subheaderStyleCentered}>We’re looking for funding!</h3>
+              <h2 style={headerStyle}>Open Health Projects</h2>
+              <h3 style={subheaderStyle}>We’re looking for funding!</h3>
               <div className="pad-horizontal pure-u-1-3">
                 <Image
                   src="/images/open_source/trust.png"
                   className="image--max-width"
                   sizes={config.sizes.full}
                 />
-                <p style={npStyleCentered}>
+                <p style={pStyle}>
                   Build trust and make healthcare truly accessible and open to a
                   large community.
                 </p>
@@ -328,7 +331,7 @@ class OpenSourcePage extends Component {
                   className="image--max-width"
                   sizes={config.sizes.full}
                 />
-                <p style={npStyleCentered}>
+                <p style={pStyle}>
                   Innovate by leveraging validated, user-centric design that has
                   been improving for years.
                 </p>
@@ -340,7 +343,7 @@ class OpenSourcePage extends Component {
                   className="image--max-width"
                   sizes={config.sizes.full}
                 />
-                <p style={npStyleCentered}>
+                <p style={pStyle}>
                   Invest in projects in public health and pioneer cutting-edge
                   design for the common good
                 </p>
@@ -349,13 +352,25 @@ class OpenSourcePage extends Component {
               <Link
                 to=""
                 className="button button--tertiary button--lg "
-                style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
+                style={{
+                  width: 'auto',
+                  minWidth: 0,
+                  marginTop: 20,
+                  marginBottom: 48,
+                }}
               >
                 Get in touch
               </Link>
 
-              <div className="pure-u-1" style={{ textAlign: 'left' }}>
-                <div className="pure-u-lg-1-2 ">
+              <div
+                className="pure-u-1"
+                style={{
+                  textAlign: 'left',
+                  backgroundColor: 'white',
+                  marginBottom: 48,
+                }}
+              >
+                <div className="pure-u-lg-1-2" style={{ paddingLeft: 48 }}>
                   <h4 style={shStyle}>Living Health Lab</h4>
                   <p style={pStyle}>
                     Living Health Lab is a tool that helps people define and
@@ -363,6 +378,7 @@ class OpenSourcePage extends Component {
                     visualizing their data with the support of a health buddy so
                     that they can live their healthiest life
                   </p>
+                  <a>Learn more about the project</a>
                 </div>
 
                 <div className="pure-u-1 pure-u-lg-1-2 ">
@@ -374,17 +390,14 @@ class OpenSourcePage extends Component {
                 </div>
               </div>
 
-              <div className="pure-u-1" style={{ textAlign: 'left' }}>
-                <div className="pure-u-lg-1-2 ">
-                  <h4 style={shStyle}>Health Manager</h4>
-                  <p style={pStyle}>
-                    Rosie is an open source Health Manager to support user
-                    aggregate all their health data into a single location and
-                    share that data in their community to meet their health
-                    goals.
-                  </p>
-                </div>
-
+              <div
+                className="pure-u-1"
+                style={{
+                  textAlign: 'left',
+                  backgroundColor: 'white',
+                  marginBottom: 48,
+                }}
+              >
                 <div className="pure-u-lg-1-2 ">
                   <Image
                     src="/images/open_source/health-manager.png"
@@ -392,16 +405,35 @@ class OpenSourcePage extends Component {
                     sizes={config.sizes.full}
                   />
                 </div>
+
+                <div className="pure-u-lg-1-2" style={{ paddingRight: 48 }}>
+                  <h4 style={shStyle}>Health Manager</h4>
+                  <p style={pStyle}>
+                    Rosie is an open source Health Manager to support user
+                    aggregate all their health data into a single location and
+                    share that data in their community to meet their health
+                    goals.
+                  </p>
+                  <a>Learn more about the project</a>
+                </div>
               </div>
 
-              <div className="pure-u-1" style={{ textAlign: 'left' }}>
-                <div className="pure-u-lg-1-2 ">
+              <div
+                className="pure-u-1"
+                style={{
+                  textAlign: 'left',
+                  backgroundColor: 'white',
+                  marginBottom: 48,
+                }}
+              >
+                <div className="pure-u-lg-1-2" style={{ paddingLeft: 48 }}>
                   <h4 style={shStyle}>Health Picture</h4>
                   <p style={pStyle}>
                     Discover our open source library for visualizing health
                     data. Use hGraph for monitoring your patient population.
                     Give patients a beautiful view of their health.
                   </p>
+                  <a>Learn more about the project</a>
                 </div>
 
                 <div className="pure-u-lg-1-2">
@@ -413,16 +445,14 @@ class OpenSourcePage extends Component {
                 </div>
               </div>
 
-              <div className="pure-u-1" style={{ textAlign: 'left' }}>
-                <div className="pure-u-lg-1-2">
-                  <h4 style={shStyle}>Health Data Ownership</h4>
-                  <p style={pStyle}>
-                    We need patient data ownership rights to protect patient
-                    care. We've mapped out the needs for owning your health data
-                    and have illustrated them to be digestible for policy makers
-                    and the general public
-                  </p>
-                </div>
+              <div
+                className="pure-u-1"
+                style={{
+                  textAlign: 'left',
+                  backgroundColor: 'white',
+                  marginBottom: 20,
+                }}
+              >
                 <div className="pure-u-lg-1-2 ">
                   <Image
                     src="/images/open_source/health-data-ownership.png"
@@ -430,12 +460,28 @@ class OpenSourcePage extends Component {
                     sizes={config.sizes.full}
                   />
                 </div>
+
+                <div className="pure-u-lg-1-2" style={{ paddingRight: 48 }}>
+                  <h4 style={shStyle}>Health Data Ownership</h4>
+                  <p style={pStyle}>
+                    We need patient data ownership rights to protect patient
+                    care. We've mapped out the needs for owning your health data
+                    and have illustrated them to be digestible for policy makers
+                    and the general public
+                  </p>
+                  <a>Learn more about the project</a>
+                </div>
               </div>
 
               <Link
                 to=""
                 className="button button--tertiary button--lg "
-                style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
+                style={{
+                  width: 'auto',
+                  minWidth: 0,
+                  marginTop: 20,
+                  marginBottom: 25,
+                }}
               >
                 See more of our open work
               </Link>

@@ -23,6 +23,7 @@ const titleStyle = {
   fontFamily: 'Adobe Jensen Pro',
   marginTop: '0.3em',
   marginBottom: '0.3em',
+  letterSpacing: 1,
 }
 
 const chartStyle = {}
@@ -41,6 +42,7 @@ const headerStyleCentered = {
   lineHeight: 1.4,
   fontFamily: 'Adobe Jensen Pro',
   textAlign: 'center',
+  letterSpacing: 1,
 }
 
 const headerStyle = {
@@ -48,6 +50,7 @@ const headerStyle = {
   color: '#24434D',
   lineHeight: 1.4,
   fontFamily: 'Adobe Jensen Pro',
+  letterSpacing: 1,
 }
 
 const subheaderStyle = {
@@ -56,6 +59,15 @@ const subheaderStyle = {
   lineHeight: 1.4,
   fontFamily: 'Adobe Jensen Pro',
   fontWeight: 200,
+  letterSpacing: 1,
+}
+
+const shStyle = {
+  fontSize: 30,
+  color: '#24434D',
+  fontFamily: 'Adobe Jensen Pro',
+  fontWeight: 600,
+  letterSpacing: 1,
 }
 const subheaderStyleCentered = {
   fontSize: 30,
@@ -299,21 +311,40 @@ class OpenSourcePage extends Component {
             <div>
               <h2 style={headerStyleCentered}>Open Health Projects</h2>
               <h3 style={subheaderStyleCentered}>We’re looking for funding!</h3>
+              <div className="pad-horizontal pure-u-1-3">
+                <Image
+                  src="/images/open_source/trust.png"
+                  className="image--max-width"
+                  sizes={config.sizes.full}
+                />
+                <p style={npStyleCentered}>
+                  Build trust and make healthcare truly accessible and open to a
+                  large community.
+                </p>
+              </div>
+              <div className="pad-horizontal pure-u-1-3">
+                <Image
+                  src="/images/open_source/innovation.png"
+                  className="image--max-width"
+                  sizes={config.sizes.full}
+                />
+                <p style={npStyleCentered}>
+                  Innovate by leveraging validated, user-centric design that has
+                  been improving for years.
+                </p>
+              </div>
 
-              <p style={npStyleCentered}>
-                Build trust and make healthcare truly accessible and open to a
-                large community.
-              </p>
-
-              <p style={npStyleCentered}>
-                Innovate by leveraging validated, user-centric design that has
-                been improving for years.
-              </p>
-
-              <p style={npStyleCentered}>
-                Invest in projects in public health and pioneer cutting-edge
-                design for the common good
-              </p>
+              <div className="pad-horizontal pure-u-1-3">
+                <Image
+                  src="/images/open_source/public-good.png"
+                  className="image--max-width"
+                  sizes={config.sizes.full}
+                />
+                <p style={npStyleCentered}>
+                  Invest in projects in public health and pioneer cutting-edge
+                  design for the common good
+                </p>
+              </div>
 
               <Link
                 to=""
@@ -322,6 +353,84 @@ class OpenSourcePage extends Component {
               >
                 Get in touch
               </Link>
+
+              <div className="pure-u-1" style={{ textAlign: 'left' }}>
+                <div className="pure-u-lg-1-2 ">
+                  <h4 style={shStyle}>Living Health Lab</h4>
+                  <p style={pStyle}>
+                    Living Health Lab is a tool that helps people define and
+                    explore their personal health questions by tracking and
+                    visualizing their data with the support of a health buddy so
+                    that they can live their healthiest life
+                  </p>
+                </div>
+
+                <div className="pure-u-1 pure-u-lg-1-2 ">
+                  <Image
+                    src="/images/open_source/health-lab.png"
+                    className="image--max-width"
+                    sizes={config.sizes.full}
+                  />
+                </div>
+              </div>
+
+              <div className="pure-u-1" style={{ textAlign: 'left' }}>
+                <div className="pure-u-lg-1-2 ">
+                  <h4 style={shStyle}>Health Manager</h4>
+                  <p style={pStyle}>
+                    Rosie is an open source Health Manager to support user
+                    aggregate all their health data into a single location and
+                    share that data in their community to meet their health
+                    goals.
+                  </p>
+                </div>
+
+                <div className="pure-u-lg-1-2 ">
+                  <Image
+                    src="/images/open_source/health-manager.png"
+                    className="image--max-width"
+                    sizes={config.sizes.full}
+                  />
+                </div>
+              </div>
+
+              <div className="pure-u-1" style={{ textAlign: 'left' }}>
+                <div className="pure-u-lg-1-2 ">
+                  <h4 style={shStyle}>Health Picture</h4>
+                  <p style={pStyle}>
+                    Discover our open source library for visualizing health
+                    data. Use hGraph for monitoring your patient population.
+                    Give patients a beautiful view of their health.
+                  </p>
+                </div>
+
+                <div className="pure-u-lg-1-2">
+                  <Image
+                    src="/images/open_source/health-picture.png"
+                    className="image--max-width"
+                    sizes={config.sizes.full}
+                  />
+                </div>
+              </div>
+
+              <div className="pure-u-1" style={{ textAlign: 'left' }}>
+                <div className="pure-u-lg-1-2">
+                  <h4 style={shStyle}>Health Data Ownership</h4>
+                  <p style={pStyle}>
+                    We need patient data ownership rights to protect patient
+                    care. We've mapped out the needs for owning your health data
+                    and have illustrated them to be digestible for policy makers
+                    and the general public
+                  </p>
+                </div>
+                <div className="pure-u-lg-1-2 ">
+                  <Image
+                    src="/images/open_source/health-data-ownership.png"
+                    className="image--max-width"
+                    sizes={config.sizes.full}
+                  />
+                </div>
+              </div>
 
               <Link
                 to=""
@@ -394,17 +503,27 @@ class OpenSourcePage extends Component {
             </Columns>
           </div>
 
-          <div style={bgStyle}>
-            <h2 style={headerStyle}>Let’s build better care together!</h2>
-            <p style={pStyle}>
-              We’re a growing communtiy of healthcare professionals, designers
-              and engineers bringing our collective mind power together to
-              design products and policies to make our healthcare system better.
-              We regularly share updates on projects and organize online event
-              where you can connect with a diverse network, ask questions, share
-              designs, show your work and exchange ideas. Subscribe to our Open
-              Source Health Design newsletter!
-            </p>
+          <div className="pure-u-1" style={bgStyle}>
+            <div className="pure-u-lg-1-2 ">
+              <h2 style={headerStyle}>Let’s build better care together!</h2>
+              <p style={pStyle}>
+                We’re a growing communtiy of healthcare professionals, designers
+                and engineers. Subscribe to our Open Source Health Design
+                newsletter where we regularly share updates on projects and
+                organize online event giving you the opportunity to connect with
+                a diverse network, ask questions, show your work and exchange
+                ideas.
+              </p>
+            </div>
+
+            <div className="pure-u-lg-1-2" style={{ marginTop: 50 }}>
+              <Image
+                src="/images/open_source/cta-community.png"
+                className="image--max-width"
+                sizes={config.sizes.full}
+              />
+            </div>
+
             <div className="pad-vertical">
               <Form />
             </div>

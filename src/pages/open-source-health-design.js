@@ -37,6 +37,20 @@ const headerStyleCentered = {
   textAlign: 'center',
 }
 
+const headerStyle = {
+  fontSize: 40,
+  color: '#24434D',
+  lineHeight: 1.4,
+  fontFamily: 'Adobe Jensen Pro',
+}
+
+const subheaderStyle = {
+  fontSize: 30,
+  color: '#24434D',
+  lineHeight: 1.4,
+  fontFamily: 'Adobe Jensen Pro',
+}
+
 const npStyleCentered = {
   fontSize: 16,
   color: '#506971',
@@ -57,6 +71,14 @@ const npStyle = {
   letterSpacing: 1,
 }
 
+const pStyle = {
+  fontSize: 16,
+  color: '#506971',
+  lineHeight: 1.8,
+  fontFamily: 'Open Sans',
+  letterSpacing: 1,
+}
+
 const numbersStyle = {
   fontSize: 32,
   color: '#C9461D',
@@ -66,6 +88,10 @@ const numbersStyle = {
   fontWeight: 600,
   display: 'flex',
   justifyContent: 'center',
+}
+
+const bgStyle = {
+  backgroundColor: '#FAF6F4',
 }
 
 class OpenSourcePage extends Component {
@@ -166,6 +192,108 @@ class OpenSourcePage extends Component {
             <NetworkChart />
           </div>
           <ClientLogos openSource="true" />
+
+          <div style={bgStyle}>
+            <h2 style={headerStyle}>What is Open Source Health Design?</h2>
+            <p style={pStyle}>
+              Open Source Health Design is a benevolent initiative to design and
+              build products aligned with the goals set by the US Department of
+              Health and Human Services. We design and build orolects with
+              partners who commit to better healthcare and invest in open
+              source. This means making usable, useful and delightful designs
+              available to benefit communities and society as a whole
+            </p>
+            <h3 style={subheaderStyle}>Open Source Project Spotlight</h3>
+          </div>
+
+          <div>
+            <h2 style={headerStyleCentered}>A Word From Our Partners</h2>
+            <p style={npStyleCentered}>
+              The GoInvo studio is one of the most talented groups of designers
+              I have ever met in the healthcare space. Not only are their ideas,
+              designs, and graphics remarkable, but I haven’t yet figured out
+              how they know so much about medicine and its future.
+              <br /> - Eric Topol
+              <br /> MD, Director, Scripps Translational Science Institute
+            </p>
+          </div>
+
+          <div style={bgStyle}>
+            <div>
+              <h2 style={headerStyle}>Open Health Projects</h2>
+              <h3 style={subheaderStyle}>We’re looking for funding!</h3>
+
+              <p style={npStyleCentered}>
+                Build trust and make healthcare truly accessible and open to a
+                large community.
+              </p>
+
+              <p style={npStyleCentered}>
+                Innovate by leveraging validated, user-centric design that has
+                been improving for years.
+              </p>
+
+              <p style={npStyleCentered}>
+                Invest in projects in public health and pioneer cutting-edge
+                design for the common good
+              </p>
+
+              <Link
+                to=""
+                className="button button--tertiary button--lg "
+                style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
+              >
+                Get in touch
+              </Link>
+
+              <Link
+                to=""
+                className="button button--tertiary button--lg "
+                style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
+              >
+                See more of our open work
+              </Link>
+            </div>
+
+            <div></div>
+          </div>
+
+          <div>
+            <h2 style={headerStyle}>It’s Open Source!</h2>
+            <p style={pStyle}>
+              Our design work, health research and code are open-source. They
+              are freely available for anyone to see, download, change, and
+              redistribute. By democratizing health technologies, we grant easy
+              access to highly developed and tested tools for improving medical
+              practice. We support and onboard individuals and organizations to
+              use our open source work.
+            </p>
+
+            <Link
+              to=""
+              className="button button--tertiary button--lg "
+              style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
+            >
+              Let's chat, we're here to help!
+            </Link>
+          </div>
+
+          <div>
+            <h3 style={subheaderStyle}>Open Health Design Conversations</h3>
+          </div>
+
+          <div style={bgStyle}>
+            <h2 style={headerStyle}>Let’s build better care together!</h2>
+            <p style={pStyle}>
+              We’re a growing communtiy of healthcare professionals, designers
+              and engineers bringing our collective mind power together to
+              design products and policies to make our healthcare system better.
+              We regularly share updates on projects and organize online event
+              where you can connect with a diverse network, ask questions, share
+              designs, show your work and exchange ideas. Subscribe to our Open
+              Source Health Design newsletter!
+            </p>
+          </div>
         </div>
       </Layout>
     )

@@ -136,18 +136,45 @@ const projectSpotlight = [
       '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
   },
   {
-    link: '/vision/determinants-of-health/',
-    image: '/images/services/doh-preview.jpg',
-    title: 'Determinants of Health',
+    link: 'https://www.goinvo.com/work/hgraph',
+    image: '/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg',
+    title: 'hGraph',
     caption:
-      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+      'hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics',
   },
   {
-    link: '/vision/determinants-of-health/',
-    image: '/images/services/doh-preview.jpg',
-    title: 'Determinants of Health',
+    link: 'https://www.goinvo.com/work/fastercures-health-data-basics',
+    image:
+      '/images/case-studies/fastercures/health-data-basics/health-data-basics-hero.jpg',
+    title: 'Health Data Basics',
     caption:
-      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+      'Discover a project to educate and engage patients about health data through, posters, icons, and app designs in partnership with FasterCures.',
+  },
+]
+
+const openSourceConversations = [
+  {
+    link: 'https://designmuseumfoundation.org/open-source-healthcare/',
+    image: '/images/open_source/Artboard-1_4-techtalks.jpg',
+    title: 'It’s Time for Open Source Healthcare',
+    caption:
+      'Designers can and should shape the future of healthcare, from how products and systems work to the underlying infrastructure and standards these products and services are built upon.',
+  },
+  {
+    link: 'https://www.youtube.com/watch?v=vvnE6HyMY3E',
+    image: '/images/open_source/Artboard-1_3-techtalks.jpg',
+    title: 'NEHIMSS 2019 ANNUAL CONFERENCE Juhan Sonin',
+    caption:
+      'We demand open source healthcare.Because healthcare is too important to be closed. We, the atomic units of the health system,can bend it back to the light.',
+  },
+  {
+    link:
+      'https://opensourcehealthcare.org/static/open-source-healthcare-journal-557dd9ec213f654508564592e1ec74e8.pdf',
+    image:
+      '/images/features/open-source-healthcare/open-source-healthcare-featured.jpg',
+    title: 'Open Source Healthcare Journal',
+    caption:
+      'The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better',
   },
 ]
 
@@ -528,7 +555,7 @@ class OpenSourcePage extends Component {
             <h3 style={subheaderStyle}>Open Health Design Conversations</h3>
 
             <Columns columns={3}>
-              {projectSpotlight.map(item => {
+              {openSourceConversations.map(item => {
                 return (
                   <Card
                     key={item.link}

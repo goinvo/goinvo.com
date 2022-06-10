@@ -69,14 +69,6 @@ const shStyle = {
   fontWeight: 600,
   letterSpacing: 1,
 }
-const subheaderStyleCentered = {
-  fontSize: 30,
-  color: '#24434D',
-  lineHeight: 1.4,
-  fontFamily: 'Adobe Jensen Pro',
-  fontWeight: 200,
-  textAlign: 'center',
-}
 
 const npStyleCentered = {
   fontSize: 16,
@@ -339,15 +331,47 @@ class OpenSourcePage extends Component {
             }}
           >
             <div>
-              <h2 style={headerStyle}>Open Health Projects</h2>
-              <h3 style={subheaderStyle}>We’re looking for funding!</h3>
+              <h2
+                style={{
+                  fontSize: 40,
+                  color: '#24434D',
+                  lineHeight: 1.4,
+                  fontFamily: 'Adobe Jensen Pro',
+                  marginBottom: 0,
+                  letterSpacing: 1,
+                }}
+              >
+                Open Health Projects
+              </h2>
+              <h3
+                style={{
+                  fontSize: 30,
+                  color: '#24434D',
+                  lineHeight: 1.4,
+                  fontFamily: 'Adobe Jensen Pro',
+                  fontWeight: 200,
+                  margin: 0,
+                  letterSpacing: 1,
+                }}
+              >
+                We’re looking for funding!
+              </h3>
               <div className="pad-horizontal pure-u-1-3">
                 <Image
                   src="/images/open_source/trust.png"
                   className="image--max-width"
                   sizes={config.sizes.full}
                 />
-                <p style={pStyle}>
+                <p
+                  style={{
+                    fontSize: 16,
+                    color: '#506971',
+                    lineHeight: 1.8,
+                    fontFamily: 'Open Sans',
+                    letterSpacing: 1,
+                    marginTop: 0,
+                  }}
+                >
                   Build trust and make healthcare truly accessible and open to a
                   large community.
                 </p>
@@ -358,7 +382,16 @@ class OpenSourcePage extends Component {
                   className="image--max-width"
                   sizes={config.sizes.full}
                 />
-                <p style={pStyle}>
+                <p
+                  style={{
+                    fontSize: 16,
+                    color: '#506971',
+                    lineHeight: 1.8,
+                    fontFamily: 'Open Sans',
+                    letterSpacing: 1,
+                    marginTop: 0,
+                  }}
+                >
                   Innovate by leveraging validated, user-centric design that has
                   been improving for years.
                 </p>
@@ -370,7 +403,16 @@ class OpenSourcePage extends Component {
                   className="image--max-width"
                   sizes={config.sizes.full}
                 />
-                <p style={pStyle}>
+                <p
+                  style={{
+                    fontSize: 16,
+                    color: '#506971',
+                    lineHeight: 1.8,
+                    fontFamily: 'Open Sans',
+                    letterSpacing: 1,
+                    marginTop: 0,
+                  }}
+                >
                   Invest in projects in public health and pioneer cutting-edge
                   design for the common good
                 </p>

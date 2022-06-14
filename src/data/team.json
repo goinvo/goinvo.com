@@ -81,16 +81,6 @@
     "image": "/images/about/headshot-shayla-nettey.jpg"
   },
   {
-    "name": "Megan Hirsch",
-    "title": "Designer",
-    "bio": "Megan is a designer-strategist that makes healthcare experiences enjoyable for patients and clinicians. She's dialing in her design and biology-trained eye to amplify her medical school experience in 2022. She joined Invo in 2021 with a BS in Human Biology from Stanford University.",
-    "social": {
-      "email": "megan@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/megan-hirsch/"
-    },
-    "image": "/images/about/headshot-megan-hirsch.jpg"
-  },
-  {
     "name": "Claire Lin",
     "title": "Designer, Engineer",
     "bio": "Claire is a designer-engineer combining architecture and product design in making healthcare digital services. She works on local, public projects on clothing recycling and neighborhood health through Design for America. Claire joined Invo in 2021 with a BA in Mechanical Engineering from Brown University.",
@@ -139,6 +129,26 @@
       "linkedin": "https://www.linkedin.com/in/reyesmatthew/"
     },
     "image": "/images/about/headshot-matthew-reyes-2.jpg"
+  },
+  {
+    "name": "Arpna Ghanshani",
+    "title": "Designer",
+    "bio": "Arpna is a designer with a background in data science and public health. She strives to create beautiful, data-driven  primary self care services and improve access to healthcare. She joined Invo in 2022 while completing her BA in Data Science and BA in Public Health at the University of California, Berkeley.",
+    "social": {
+      "email": "arpna@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/arpna-g/"
+    },
+    "image": "/images/about/headshot-arpna-ghanshani.jpg"
+  },
+  {
+    "name": "Jenny Yi",
+    "title": "Designer",
+    "bio": "Jenny is a designer of urban infrastructures that impact public health. She designs spaces that incorporate new healthcare technologies to create seamless experiences for people’s access to healthcare services. She joined Invo in 2022 with a B.Arch from Cornell University and while working on her M.Des from Harvard Graduate School of Design.",
+    "social": {
+      "email": "jenny@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/jenny-yi-202020/"
+    },
+    "image": "/images/about/headshot-jenny-yi.jpg"
   },
   {
     "name": "Jonathan Follett",

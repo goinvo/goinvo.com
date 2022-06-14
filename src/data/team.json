@@ -141,6 +141,26 @@
     "image": "/images/about/headshot-matthew-reyes-2.jpg"
   },
   {
+    "name": "Arpna Ghanshani",
+    "title": "Designer",
+    "bio": "Arpna is a designer with a background in data science and public health. She strives to create beautiful, data-driven  primary self care services and improve access to healthcare. She joined Invo in 2022 while completing her BA in Data Science and BA in Public Health at the University of California, Berkeley.",
+    "social": {
+      "email": "arpna@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/arpna-g/"
+    },
+    "image": "/images/about/headshot-arpna-ghanshani.jpg"
+  },
+  {
+    "name": "Jenny Yi",
+    "title": "Designer",
+    "bio": "...",
+    "social": {
+      "email": "jenny@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/jenny-yi-202020/"
+    },
+    "image": "/images/about/headshot-jenny-yi.jpg"
+  },
+  {
     "name": "Jonathan Follett",
     "title": "Principal",
     "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",

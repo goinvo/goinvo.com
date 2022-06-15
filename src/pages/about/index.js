@@ -8,7 +8,6 @@ import TeamMember from '../../components/team-member'
 import Image from '../../components/image'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
-
 import team from '../../data/team.json'
 
 import config from '../../../config'

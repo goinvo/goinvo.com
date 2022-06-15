@@ -4,18 +4,18 @@ import Layout from '../components/layouts/layout'
 import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
-import NetworkChart from '../components/chart'
+import HubspotForm from '../components/hubspot-form'
 import Columns from '../components/columns'
 import ImageBlock from '../components/image-block'
+import ImageBlockSmall from '../components/image-block-small'
 import Card from '../components/card'
-import Form from '../components/simple-form'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
   metaDescription:
     'Healthcare needs to be open. We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.',
 }
-
+//Styles
 const titleStyle = {
   fontSize: 58,
   color: '#24434D',
@@ -25,9 +25,6 @@ const titleStyle = {
   marginBottom: '0.3em',
   letterSpacing: 1,
 }
-
-const chartStyle = {}
-
 const subtitleStyle = {
   fontSize: 20,
   color: '#506971',
@@ -35,7 +32,6 @@ const subtitleStyle = {
   fontFamily: 'Open Sans',
   letterSpacing: 1,
 }
-
 const headerStyleCentered = {
   fontSize: 40,
   color: '#24434D',
@@ -44,7 +40,6 @@ const headerStyleCentered = {
   textAlign: 'center',
   letterSpacing: 1,
 }
-
 const headerStyle = {
   fontSize: 40,
   color: '#24434D',
@@ -52,7 +47,6 @@ const headerStyle = {
   fontFamily: 'Adobe Jensen Pro',
   letterSpacing: 1,
 }
-
 const subheaderStyle = {
   fontSize: 30,
   color: '#24434D',
@@ -61,7 +55,6 @@ const subheaderStyle = {
   fontWeight: 200,
   letterSpacing: 1,
 }
-
 const shStyle = {
   fontSize: 30,
   color: '#24434D',
@@ -69,7 +62,6 @@ const shStyle = {
   fontWeight: 600,
   letterSpacing: 1,
 }
-
 const npStyleCentered = {
   fontSize: 16,
   color: '#506971',
@@ -78,7 +70,6 @@ const npStyleCentered = {
   textAlign: 'center',
   letterSpacing: 1,
 }
-
 const npStyle = {
   fontSize: 16,
   color: '#C9461D',
@@ -89,7 +80,6 @@ const npStyle = {
   textAlign: 'center',
   letterSpacing: 1,
 }
-
 const pStyle = {
   fontSize: 16,
   color: '#506971',
@@ -97,7 +87,6 @@ const pStyle = {
   fontFamily: 'Open Sans',
   letterSpacing: 1,
 }
-
 const numbersStyle = {
   fontSize: 32,
   color: '#C9461D',
@@ -108,7 +97,6 @@ const numbersStyle = {
   display: 'flex',
   justifyContent: 'center',
 }
-
 const bgStyle = {
   backgroundColor: '#FAF6F4',
   marginTop: '4em',
@@ -118,7 +106,7 @@ const bgStyle = {
   paddingLeft: '3em',
   paddingRight: '3em',
 }
-
+//Data
 const projectSpotlight = [
   {
     link: '/vision/determinants-of-health/',
@@ -143,7 +131,6 @@ const projectSpotlight = [
       'Discover a project to educate and engage patients about health data through, posters, icons, and app designs in partnership with FasterCures.',
   },
 ]
-
 const openSourceConversations = [
   {
     link: 'https://designmuseumfoundation.org/open-source-healthcare/',
@@ -181,7 +168,10 @@ class OpenSourcePage extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="max-width content-padding pad-vertical ">
-          <div className="pure-g" style={{ marginTop: 70, marginBottom: 70 }}>
+          <div
+            className="pure-g pure-g--reverse--only-lg"
+            style={{ marginTop: '10%', marginBottom: '10%' }}
+          >
             <div className="pure-u-1 pure-u-lg-1-2 ">
               <h1 style={titleStyle}> Open Source Health Design</h1>
               <p style={subtitleStyle}>
@@ -189,7 +179,7 @@ class OpenSourcePage extends Component {
               </p>
               <div>
                 <Link
-                  to=""
+                  to="#open-work"
                   className="button button--primary button--lg "
                   style={{
                     width: 'auto',
@@ -200,8 +190,9 @@ class OpenSourcePage extends Component {
                 >
                   Discover our projects
                 </Link>
+
                 <Link
-                  to=""
+                  to="/contact/"
                   className="button button--tertiary button--lg "
                   style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
                 >
@@ -209,6 +200,7 @@ class OpenSourcePage extends Component {
                 </Link>
               </div>
             </div>
+
             <div className="pure-u-1 pure-u-lg-1-2 ">
               <Image
                 src="/images/open_source/open-source.jpg"
@@ -223,7 +215,7 @@ class OpenSourcePage extends Component {
               We envision a world where patients can be cared for with a
               technology that can be trusted.
             </h2>
-            <p style={npStyleCentered}>
+            <p id="open-work" style={npStyleCentered}>
               For the past 10 years, we’ve partner with Federal and Non-profit
               organizations to design more than 60 open source projects to the
               solve most pressing healthcare issues.
@@ -233,42 +225,303 @@ class OpenSourcePage extends Component {
           <div className="pure-g">
             <div className="pure-u-1-3 ">
               <p>
-                <span className="" style={numbersStyle}>
-                  $1.8M
-                </span>
-                <span className="" style={npStyle}>
+                <span style={numbersStyle}>$1.8M</span>
+                <span style={npStyle}>
                   Studio internal investment <br /> in open source projects
                 </span>
               </p>
             </div>
-            <div className=" pure-u-1-3">
+            <div className="pure-u-1-3">
               <p>
-                <span className="" style={numbersStyle}>
-                  $2.5M
-                </span>
-                <span className="" style={npStyle}>
+                <span style={numbersStyle}>$2.5M</span>
+                <span style={npStyle}>
                   Clients investment <br /> in open source projects
                 </span>
               </p>
             </div>
             <div className="pure-u-1-3">
               <p>
-                <span className="" style={numbersStyle}>
-                  65+
-                </span>
-                <span className="" style={npStyle}>
+                <span style={numbersStyle}>65+</span>
+                <span style={npStyle}>
                   Open Source projects <br />
                   invested in since 2010
                 </span>
               </p>
             </div>
           </div>
-
+          {/* 
           <div
             className="pure-g pure-u-1 pad-vertical--double"
             style={chartStyle}
+          > */}
+
+          {/* Table view */}
+
+          <div
+            style={{ overflowX: 'auto', marginTop: '10%', marginBottom: '10%' }}
           >
-            <NetworkChart />
+            <table style={{ width: '100%' }}>
+              <tr>
+                <th
+                  style={{
+                    padding: 8,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    color: '#24434D',
+                    letterSpacing: 0.5,
+                    fontFamily: 'Adobe Jensen Pro',
+                    fontSize: '20px',
+                  }}
+                >
+                  Patient Engagement
+                </th>
+                <th
+                  style={{
+                    padding: 8,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    color: '#24434D',
+                    letterSpacing: 0.5,
+                    fontFamily: 'Adobe Jensen Pro',
+                    fontSize: '20px',
+                  }}
+                >
+                  Public Health
+                </th>
+                <th
+                  style={{
+                    padding: 8,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    color: '#24434D',
+                    letterSpacing: 0.5,
+                    fontFamily: 'Adobe Jensen Pro',
+                    fontSize: '20px',
+                  }}
+                >
+                  Clinical Tools
+                </th>
+                <th
+                  style={{
+                    padding: 8,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    color: '#24434D',
+                    letterSpacing: 0.5,
+                    fontFamily: 'Adobe Jensen Pro',
+                    fontSize: '20px',
+                  }}
+                >
+                  Health IT
+                </th>
+              </tr>
+              {/* Row 1 */}
+              <tr>
+                <td
+                  style={{
+                    padding: 8,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/work/care-cards">
+                    <ImageBlockSmall
+                      title="Care Cards"
+                      image="/images/case-studies/goinvo/carecards/care-cards-hero.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/features/us-healthcare/">
+                    <ImageBlockSmall
+                      title="Healing US healthcare"
+                      image="/images/features/healing-us-healthcare/healing-us-healthcare-featured.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/work/mitre-flux-notes">
+                    <ImageBlockSmall
+                      title="FluxNotes"
+                      image="/images/case-studies/mitre/fluxnotes/fluxnotes-hero.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/vision/virtual-care/">
+                    <ImageBlockSmall
+                      title="Virtual Care Matrix"
+                      image="/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+              </tr>
+              {/* Row 2 */}
+              <tr>
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/features/careplans/">
+                    <ImageBlockSmall
+                      title="Care Plans Design"
+                      image="/images/features/care-plans/care-plans-featured2.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/vision/determinants-of-health/">
+                    <ImageBlockSmall
+                      title="Determinants of Health"
+                      image="/images/services/doh-preview.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/vision/open-pro/">
+                    <ImageBlockSmall
+                      title="OpenPRO"
+                      image="/images/features/open-pro/open-pro-hero-v2.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/work/inspired-ehrs/">
+                    <ImageBlockSmall
+                      title="Inspired EHRs"
+                      image="/images/case-studies/nih/inspired-ehrs/ehr-hero.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+              </tr>
+              {/* Row 3 */}
+              <tr>
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/work/fastercures-health-data-basics">
+                    <ImageBlockSmall
+                      title="Health Data Basics "
+                      image="/images/case-studies/fastercures/health-data-basics/health-data-basics-hero.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/work/paintrackr/">
+                    <ImageBlockSmall
+                      title="PainTrackr"
+                      image="/images/case-studies/goinvo/paintrackr/paintrackr-paint.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/work/hgraph/">
+                    <ImageBlockSmall
+                      title="hGraph"
+                      image="/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+                <td
+                  style={{
+                    padding: 10,
+                    minWidth: 220,
+                    maxWidth: 220,
+                    fontSize: 15,
+                  }}
+                >
+                  <Card link="https://www.goinvo.com/work/mitre-shr">
+                    <ImageBlockSmall
+                      title="Standard Health Record"
+                      image="/images/features/posters/shr-medical-encounter-journey-map.jpg"
+                      hoverable
+                    />
+                  </Card>
+                </td>
+              </tr>
+            </table>
           </div>
           <ClientLogos openSource="true" />
 
@@ -419,7 +672,7 @@ class OpenSourcePage extends Component {
               </div>
 
               <Link
-                to=""
+                to="/contact/"
                 className="button button--tertiary button--lg "
                 style={{
                   width: 'auto',
@@ -447,7 +700,7 @@ class OpenSourcePage extends Component {
                     visualizing their data with the support of a health buddy so
                     that they can live their healthiest life
                   </p>
-                  <a>Learn more about the project</a>
+                  {/* <a>Learn more about the project</a> */}
                 </div>
 
                 <div className="pure-u-1 pure-u-lg-1-2 ">
@@ -483,7 +736,12 @@ class OpenSourcePage extends Component {
                     share that data in their community to meet their health
                     goals.
                   </p>
-                  <a>Learn more about the project</a>
+                  <a
+                    href="https://open-health-manager.github.io/Design/"
+                    target="_blank"
+                  >
+                    Learn more about the project
+                  </a>
                 </div>
               </div>
 
@@ -502,7 +760,7 @@ class OpenSourcePage extends Component {
                     data. Use hGraph for monitoring your patient population.
                     Give patients a beautiful view of their health.
                   </p>
-                  <a>Learn more about the project</a>
+                  {/* <a>Learn more about the project</a> */}
                 </div>
 
                 <div className="pure-u-lg-1-2">
@@ -538,12 +796,17 @@ class OpenSourcePage extends Component {
                     and have illustrated them to be digestible for policy makers
                     and the general public
                   </p>
-                  <a>Learn more about the project</a>
+                  <a
+                    href="https://goinvo.com/vision/own-your-health-data/"
+                    target="_blank"
+                  >
+                    Learn more about the project
+                  </a>
                 </div>
               </div>
 
               <Link
-                to=""
+                to="#open-work"
                 className="button button--tertiary button--lg "
                 style={{
                   width: 'auto',
@@ -585,7 +848,7 @@ class OpenSourcePage extends Component {
             </p>
 
             <Link
-              to=""
+              to="/contact/"
               className="button button--secondary button--lg "
               style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
             >
@@ -595,7 +858,6 @@ class OpenSourcePage extends Component {
 
           <div>
             <h3 style={subheaderStyle}>Open Health Design Conversations</h3>
-
             <Columns columns={3}>
               {openSourceConversations.map(item => {
                 return (
@@ -605,7 +867,7 @@ class OpenSourcePage extends Component {
                     externalLink={item.externalLink}
                     suppressNewTab={item.suppressNewTab}
                   >
-                    <ImageBlock
+                    <ImageBlockSmall
                       title={item.title}
                       image={item.image}
                       caption={item.caption}
@@ -618,6 +880,7 @@ class OpenSourcePage extends Component {
             </Columns>
           </div>
 
+          {/* CTA for the community  */}
           <div className="pure-u-1" style={bgStyle}>
             <div className="pure-u-lg-1-2 ">
               <h2 style={headerStyle}>Let’s build better care together!</h2>
@@ -638,10 +901,14 @@ class OpenSourcePage extends Component {
                 sizes={config.sizes.full}
               />
             </div>
+          </div>
 
-            <div className="pad-vertical">
-              <Form />
-            </div>
+          <div style={{ paddingBottom: '3em' }}>
+            <HubspotForm
+              formId={config.hubspotNewsletterFullFormId}
+              title="Subscribe to our Open Source Health Design Newsletter"
+              submitButtonText="Subscribe"
+            />
           </div>
         </div>
       </Layout>

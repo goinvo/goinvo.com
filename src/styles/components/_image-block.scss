@@ -9,6 +9,13 @@
     overflow: hidden;
   }
 
+  &__image-container-small {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+  }
+
   &__image {
     display: block;
     width: 100%;

@@ -1,7 +1,7 @@
 ---
 title: 'Your Food in Code'
 image: '/images/case-studies/inside-tracker/insidetracker_bloodwork_hero.jpg'
-client: 'Inside Tracker'
+client: 'InsideTracker'
 caption: 'Personalized food based on your DNA, blood, and habits.'
 categories:
   - 'precision-medicine-and-genomics'
@@ -19,7 +19,7 @@ import Quote from 'components/quote'
 
 # Your Food in Code
 
-for Inside Tracker
+for InsideTracker
 
 ### Problem
 
@@ -64,11 +64,11 @@ The food industry adds to the chaos by manufacturing calories that appeal to the
 
 Nutrition science rightly advocates for Michael Pollan's trio. And yet, personalized food choices, generated for you, based on chemistry, DNA, activity, biome, and goals are only just arriving based on peer-reviewed research.
 
-Inside Tracker is a quantified food and nutrition service, creating a hard science-based food engine, which along side your blood work and lifestyle, can synthesize a hyper-personalized food plan.
+InsideTracker is a quantified food and nutrition service, creating a hard science-based food engine, which alongside your blood work and lifestyle, can synthesize a hyper-personalized food plan.
 
-#### Show the Results, beautifully
+#### Show the results, beautifully
 
-Nutrition science is complicated. How foods interact with your chemistry and what food our particular bodies and minds need needs to be shown in straight-forward methods. It shouldn’t take a Masters degree in Nutrition to interpret your results.
+Nutrition science is complicated. How foods interact with your chemistry and what food our particular bodies and minds need must be shown in straightforward methods. It shouldn’t take a Masters degree in Nutrition to interpret your results.
 
 <Quote quotee="From Bathroom to Healthroom" quoteeSub="">Data let us live aware of our health. For example, when we are messaged that ice cream is high in fat, high in sugar, and high in cow's milk, we process that as "Okay, that's bad, but so what?" As soon as that message becomes quantified, and not by keeping annoying food diaries and looking up the nutrition content of every bite or sip, we get religion. Data take us by the shoulders and shake. We notice that eating this way, and continuing to do so, has taken days, or even a few years, off our precious life expectancy. That is when the entire world changes. But not before.</Quote>
 
@@ -76,7 +76,7 @@ Nutrition science is complicated. How foods interact with your chemistry and wha
 
 #### Straight-forward information design tops
 
-The reason patients use software like Inside Tracker is to get the data they want, in the right way, with as little delay or distraction as possible. The patient's mission is to understand the bio and nutrition data, be the data, and figure out how to make that data not just be, but to make a difference in their health outcomes.
+The reason patients use software like InsideTracker is to get the data they want, in the right way, with as little delay or distraction as possible. The patient's mission is to understand the bio and nutrition data, be the data, and figure out how to make that data not just be, but to make a difference in their health outcomes.
 
 #### Sequencing detailed results, step-by-step, is easier to digest
 
@@ -96,7 +96,7 @@ The bioassay results have resonated with InsideTracker patients as an easy-to-un
 
 #### Good design repeats itself
 
-10 years later and a 10x bigger company, Inside Tracker asked for another design bump. This time, the business wanted to grow services around health goals and everyday habits.
+10 years later and a 10x bigger company, InsideTracker asked for another design bump. This time, the business wanted to grow services around health goals and everyday habits.
 
 #### Key Question:
 
@@ -106,7 +106,7 @@ How do we assist the patient with habit-forming goals when it comes to food choi
 
 #### Blood draws occur yearly. Food choices happen daily.
 
-A nutrition agent, working on your behalf to organize your food life and better your health, was a new avenue for Inside Tracker. By incorporating feedback from patients, stakeholders, scientists, and engineers, a software model for behavior and precision nutrition was created. Early concepts for the digital manifestation of the activity model were designed (ie., how does Inside Tracker's nutrition agent behave on your phone and works with you). These concepts fed product and development teams next iteration of the software.
+A nutrition agent, working on your behalf to organize your food life and better your health, was a new avenue for InsideTracker. By incorporating feedback from patients, stakeholders, scientists, and engineers, a software model for behavior and precision nutrition was created. Early concepts for the digital manifestation of the activity model were designed (ie., how does InsideTracker's nutrition agent behave on your phone and works with you). These concepts fed product and development teams next iteration of the software.
 
 ![Blood Results](/images/case-studies/inside-tracker/insidetracker_blood_results_4.jpg)
 

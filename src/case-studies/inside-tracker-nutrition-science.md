@@ -68,7 +68,7 @@ InsideTracker is a quantified food and nutrition service, creating a hard scienc
 
 #### Show the results, beautifully
 
-Nutrition science is complicated. How foods interact with your chemistry and what food our particular bodies and minds need must be shown in straightforward methods. It shouldn’t take a Masters degree in Nutrition to interpret your results.
+Nutrition science is complicated. How foods interact with your chemistry and what food our particular bodies and minds need, should be shown in straightforward methods. It shouldn’t take a Masters degree in Nutrition to interpret your results.
 
 <Quote quotee="From Bathroom to Healthroom" quoteeSub="">Data let us live aware of our health. For example, when we are messaged that ice cream is high in fat, high in sugar, and high in cow's milk, we process that as "Okay, that's bad, but so what?" As soon as that message becomes quantified, and not by keeping annoying food diaries and looking up the nutrition content of every bite or sip, we get religion. Data take us by the shoulders and shake. We notice that eating this way, and continuing to do so, has taken days, or even a few years, off our precious life expectancy. That is when the entire world changes. But not before.</Quote>
 

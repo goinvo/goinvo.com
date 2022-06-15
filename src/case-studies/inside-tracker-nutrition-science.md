@@ -2,7 +2,7 @@
 title: 'Your Food in Code'
 image: '/images/case-studies/inside-tracker/insidetracker_bloodwork_hero.jpg'
 client: 'Inside Tracker'
-caption: 'Personalized Food based on your DNA, blood, and habits.'
+caption: 'Personalized food based on your DNA, blood, and habits.'
 categories:
   - 'precision-medicine-and-genomics'
   - 'patient-engagement'
@@ -11,7 +11,7 @@ upNext:
   - 'hgraph'
   - 'open-source-healthcare'
 hidden: false
-metaDescription: 'Personalized Food based on your DNA, blood, and habits.'
+metaDescription: 'Personalized food based on your DNA, blood, and habits.'
 ---
 
 import Divider from 'components/divider'
@@ -31,7 +31,7 @@ How does InsideTracker show your bioassay information and resulting nutrition ne
 ... so it actually has better health outcomes.
 <!-- prettier-ignore-end -->
 
-How does the InsideTracker food engine help patients pick the right food, at the right time, for my best health?
+How does the InsideTracker food engine help patients pick the right food, at the right time, for their best health?
 
 ### Solution
 
@@ -39,7 +39,7 @@ Our project focused on visualizing the bioassay results and food suggestions tha
 
 ### Results
 
-We designed an easy-to-read return of information service for your blood work and nutrition profile, that works for your first blood draw to a series of blood draws over time. We also delivered the first nutrition decision support service that fed suggestions from the InsideTracker science team to the patient food recommendation service.
+We designed an easy-to-read return of information service for your blood work and nutrition profile that works for your first blood draw to a series of blood draws over time. We also delivered the first nutrition decision support service that fed suggestions from the InsideTracker science team to the patient food recommendation service.
 
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1.25 designers for 2 months
 <br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Precision Medicine and Genomics, Patient Engagement
@@ -62,7 +62,7 @@ The food industry adds to the chaos by manufacturing calories that appeal to the
 
 #### Nutrition Science is... emerging
 
-Nutrition science rightly advocates for Michael Pollen's trio. And yet, personalized food choices, generated for you, based on chemistry, DNA, activity, biome, and goals are only just arriving based on peer-reviewed research.
+Nutrition science rightly advocates for Michael Pollan's trio. And yet, personalized food choices, generated for you, based on chemistry, DNA, activity, biome, and goals are only just arriving based on peer-reviewed research.
 
 Inside Tracker is a quantified food and nutrition service, creating a hard science-based food engine, which along side your blood work and lifestyle, can synthesize a hyper-personalized food plan.
 
@@ -76,11 +76,11 @@ Nutrition science is complicated. How foods interact with your chemistry and wha
 
 #### Straight-forward information design tops
 
-The reason patients use software like Inside Tracker is to get the data they want, in the right way, with as little delay or distraction as possible. The patient's mission is to understand the bio and nutrition data, be the data, and figure out how to make that data not just be, but to make a difference in my health outcomes.
+The reason patients use software like Inside Tracker is to get the data they want, in the right way, with as little delay or distraction as possible. The patient's mission is to understand the bio and nutrition data, be the data, and figure out how to make that data not just be, but to make a difference in their health outcomes.
 
 #### Sequencing detailed results, step-by-step, is easier to digest
 
-Bioassay results combined with precision nutrition advice are data rich. Revealing more and more detail as the patient understands more and more about their health and nutrition is a proven design technique. By deferring some advanced features to secondary actions (or screens), makes learning the service easier and makes errors less frequent.
+Bioassay results combined with precision nutrition advice are data rich. Revealing more detail as the patient understands more and more about their health and nutrition is a proven design technique. By deferring some advanced features to secondary actions (or screens), makes learning the service easier and makes errors less frequent.
 
 ![Bloodwork Design](/images/case-studies/inside-tracker/insidetracker_bloodwork_design_lg.jpg)
 
@@ -90,13 +90,13 @@ Bioassay results combined with precision nutrition advice are data rich. Reveali
 
 #### 10 years in the wild
 
-The bioassay results have resonated with InsideTracker patients as an easy-to-understand return-of-information visualization. The designed technique has been live and in-use for a decade!
+The bioassay results have resonated with InsideTracker patients as an easy-to-understand return of information visualization. The designed technique has been live and in-use for a decade!
 
 ## Round 2, a Decade Later
 
 #### Good design repeats itself
 
-10 years later and a 10x bigger company, Inside Tracker asked for another Design bump. This time, the business wanted to grow services around health goals and everyday habits.
+10 years later and a 10x bigger company, Inside Tracker asked for another design bump. This time, the business wanted to grow services around health goals and everyday habits.
 
 #### Key Question:
 
@@ -106,7 +106,7 @@ How do we assist the patient with habit-forming goals when it comes to food choi
 
 #### Blood draws occur yearly. Food choices happen daily.
 
-A nutrition agent, working on your behalf, to organize your food life and better your health, was a new avenue for Inside Tracker. By incorporating feedback from patients, stakeholders, scientists, and engineers, a software model for behavior and precision nutrition was created. Early concepts for the digital manifestation of the activity model were designed (ie how does Inside Tracker's nutrition agent behave on your phone and works with you). These concepts fed product and development teams next iteration of the software.
+A nutrition agent, working on your behalf to organize your food life and better your health, was a new avenue for Inside Tracker. By incorporating feedback from patients, stakeholders, scientists, and engineers, a software model for behavior and precision nutrition was created. Early concepts for the digital manifestation of the activity model were designed (ie., how does Inside Tracker's nutrition agent behave on your phone and works with you). These concepts fed product and development teams next iteration of the software.
 
 ![Blood Results](/images/case-studies/inside-tracker/insidetracker_blood_results_4.jpg)
 

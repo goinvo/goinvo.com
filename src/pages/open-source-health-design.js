@@ -169,39 +169,40 @@ class OpenSourcePage extends Component {
       <Layout frontmatter={frontmatter}>
         <div className="max-width content-padding pad-vertical ">
           <div
-            className="pure-g pure-g--reverse--only-lg"
-            style={{ marginTop: '10%', marginBottom: '10%' }}
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap-reverse',
+              marginTop: '10%',
+              marginBottom: '10%',
+            }}
           >
-            <div className="pure-u-1 pure-u-lg-1-2 ">
+            <div style={{ flex: '1 1 200px' }}>
               <h1 style={titleStyle}> Open Source Health Design</h1>
               <p style={subtitleStyle}>
                 Bringing Trust, Openness, Innovation &amp; Design to Healthcare
               </p>
-              <div>
-                <Link
-                  to="#open-work"
-                  className="button button--primary button--lg "
-                  style={{
-                    width: 'auto',
-                    minWidth: 0,
-                    marginRight: 15,
-                    marginTop: 20,
-                  }}
-                >
-                  Discover our projects
-                </Link>
-
-                <Link
-                  to="/contact/"
-                  className="button button--tertiary button--lg "
-                  style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
-                >
-                  Get Involved
-                </Link>
-              </div>
+              <Link
+                to="#open-work"
+                className="button button--primary button--lg "
+                style={{
+                  width: 'auto',
+                  minWidth: 0,
+                  marginRight: 15,
+                  marginTop: 20,
+                }}
+              >
+                Discover our projects
+              </Link>
+              <Link
+                to="/contact/"
+                className="button button--tertiary button--lg "
+                style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
+              >
+                Get Involved
+              </Link>
             </div>
 
-            <div className="pure-u-1 pure-u-lg-1-2 ">
+            <div style={{ flex: '1 1 200px' }}>
               <Image
                 src="/images/open_source/open-source.jpg"
                 className="image--max-width"

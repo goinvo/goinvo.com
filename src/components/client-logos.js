@@ -35,7 +35,7 @@ class ClientLogos extends Component {
             <li className="">
               <Mitre />
             </li>
-            <li className="">
+            <li className="hidden--sm">
               <Crossover />
             </li>
           </ul>

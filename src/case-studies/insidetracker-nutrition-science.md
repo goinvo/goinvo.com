@@ -82,7 +82,7 @@ The reason patients use software like InsideTracker is to get the data they want
 
 Bioassay results combined with precision nutrition advice are data rich. Revealing more detail as the patient understands more and more about their health and nutrition is a proven design technique. By deferring some advanced features to secondary actions (or screens), makes learning the service easier and makes errors less frequent.
 
-![Bloodwork Design](/images/case-studies/insidetracker/insidetracker_bloodwork_design_lg.jpg)
+![Bloodwork Design](/images/case-studies/insidetracker/insidetracker_bloodwork_design_lg_2.jpg)
 
 <Divider />
 

@@ -1,6 +1,6 @@
 ---
 title: 'Your Food in Code'
-image: '/images/case-studies/insidetracker/insidetracker_bloodwork_hero_2.jpg'
+image: '/images/case-studies/insidetracker/insidetracker_bloodwork_hero_3.jpg'
 client: 'InsideTracker'
 caption: 'Personalized food based on your DNA, blood, and habits.'
 categories:
@@ -82,7 +82,7 @@ The reason patients use software like InsideTracker is to get the data they want
 
 Bioassay results combined with precision nutrition advice are data rich. Revealing more detail as the patient understands more and more about their health and nutrition is a proven design technique. By deferring some advanced features to secondary actions (or screens), makes learning the service easier and makes errors less frequent.
 
-![Bloodwork Design](/images/case-studies/insidetracker/insidetracker_bloodwork_design_lg_2.jpg)
+![Bloodwork Design](/images/case-studies/insidetracker/insidetracker_bloodwork_design_lg_3.jpg)
 
 <Divider />
 

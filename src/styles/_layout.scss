@@ -174,3 +174,23 @@ body {
 .textAlign {
   text-align: center;
 }
+
+.titleResponsive {
+  @media screen and (min-width: 610px) {
+    color: yellow;
+    font-size: 4em;
+  }
+  @media screen and (max-width: 600px) {
+    color: aquamarine;
+    font-size: 3em;
+  }
+}
+
+.LayoutCenter {
+  @media screen and (min-width: 610px) {
+    text-align: left;
+  }
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
+}

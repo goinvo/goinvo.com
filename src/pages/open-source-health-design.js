@@ -17,7 +17,6 @@ const frontmatter = {
 }
 //Styles
 const titleStyle = {
-  fontSize: 58,
   color: '#24434D',
   lineHeight: 1.2,
   fontFamily: 'Adobe Jensen Pro',
@@ -165,17 +164,21 @@ class OpenSourcePage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="max-width content-padding pad-vertical ">
+        <div className="max-width content-padding pad-vertical LayoutCenter">
           <div
+            className="pad-horizontal"
             style={{
               display: 'flex',
               flexWrap: 'wrap-reverse',
-              marginTop: '10%',
-              marginBottom: '10%',
+              marginTop: '5%',
+              marginBottom: '5%',
             }}
           >
             <div style={{ flex: '1 1 200px' }}>
-              <h1 style={titleStyle}> Open Source Health Design</h1>
+              <h1 className="titleResponsive" style={titleStyle}>
+                {' '}
+                Open Source Health Design
+              </h1>
               <p style={subtitleStyle}>
                 Bringing Trust, Openness, Innovation &amp; Design to Healthcare
               </p>
@@ -185,7 +188,6 @@ class OpenSourcePage extends Component {
                 style={{
                   width: 'auto',
                   minWidth: 0,
-                  marginRight: 15,
                   marginTop: 20,
                 }}
               >
@@ -194,7 +196,13 @@ class OpenSourcePage extends Component {
               <Link
                 to="/contact/"
                 className="button button--tertiary button--lg "
-                style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
+                style={{
+                  width: 'auto',
+                  minWidth: 0,
+                  marginTop: 20,
+                  marginLeft: 15,
+                  marginRight: 15,
+                }}
               >
                 Get Involved
               </Link>

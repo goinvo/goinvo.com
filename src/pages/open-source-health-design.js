@@ -610,11 +610,11 @@ class OpenSourcePage extends Component {
               >
                 We’re looking for funding!
               </h3>
-              <div className="pad-horizontal pure-u-1-3">
+              <div className="pad-horizontal pure-u-lg-1-3">
                 <Image
                   src="/images/open_source/trust.png"
                   className="image--max-width"
-                  sizes={config.sizes.full}
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p
                   style={{
@@ -630,11 +630,11 @@ class OpenSourcePage extends Component {
                   large community.
                 </p>
               </div>
-              <div className="pad-horizontal pure-u-1-3">
+              <div className="pad-horizontal pure-u-lg-1-3">
                 <Image
                   src="/images/open_source/innovation.png"
                   className="image--max-width"
-                  sizes={config.sizes.full}
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p
                   style={{
@@ -651,11 +651,11 @@ class OpenSourcePage extends Component {
                 </p>
               </div>
 
-              <div className="pad-horizontal pure-u-1-3">
+              <div className="pad-horizontal pure-u-lg-1-3">
                 <Image
                   src="/images/open_source/public-good.png"
                   className="image--max-width"
-                  sizes={config.sizes.full}
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p
                   style={{

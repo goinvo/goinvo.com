@@ -233,7 +233,8 @@ class WorkPage extends Component {
           </Collapsible>
         </Sticky>
         <div id="target-stick" />
-        <Collapsible
+
+        {/* <Collapsible
           collapsed={
             this.state.selectedCategory.id === 'open-source' ? false : true
           }
@@ -289,7 +290,8 @@ class WorkPage extends Component {
               </div>
             </div>
           </div>
-        </Collapsible>
+        </Collapsible> */}
+
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <div className="margin-top--only-lg">
             <Columns columns={2}>

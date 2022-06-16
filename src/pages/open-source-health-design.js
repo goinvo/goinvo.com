@@ -157,8 +157,6 @@ const openSourceConversations = [
 class OpenSourcePage extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {}
   }
 
   render() {
@@ -265,7 +263,7 @@ class OpenSourcePage extends Component {
           {/* Table view */}
 
           <div
-            style={{ overflowX: 'auto', marginTop: '10%', marginBottom: '10%' }}
+            style={{ overflowX: 'auto', marginTop: '5%', marginBottom: '5%' }}
           >
             <table style={{ width: '100%' }}>
               <tr>

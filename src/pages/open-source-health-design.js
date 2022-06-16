@@ -46,6 +46,7 @@ const headerStyle = {
   lineHeight: 1.4,
   fontFamily: 'Adobe Jensen Pro',
   letterSpacing: 1,
+  marginTop: 0,
 }
 const subheaderStyle = {
   fontSize: 30,
@@ -61,6 +62,7 @@ const shStyle = {
   fontFamily: 'Adobe Jensen Pro',
   fontWeight: 600,
   letterSpacing: 1,
+  lineHeight: 1.4,
 }
 const npStyleCentered = {
   fontSize: 16,
@@ -99,12 +101,8 @@ const numbersStyle = {
 }
 const bgStyle = {
   backgroundColor: '#FAF6F4',
-  marginTop: '4em',
-  marginBottom: '4em',
-  paddingTop: '0.01em',
-  paddingBottom: '1em',
-  paddingLeft: '3em',
-  paddingRight: '3em',
+  marginTop: '4rem',
+  marginBottom: '4rem',
 }
 //Data
 const projectSpotlight = [
@@ -211,7 +209,7 @@ class OpenSourcePage extends Component {
             </div>
           </div>
 
-          <div className="pad-vertical pad-horizontal--double">
+          <div className="pad-vertical ">
             <h2 style={headerStyleCentered}>
               We envision a world where patients can be cared for with a
               technology that can be trusted.
@@ -223,8 +221,8 @@ class OpenSourcePage extends Component {
             </p>
           </div>
 
-          <div className="pure-g">
-            <div className="pure-u-1-3 ">
+          <div className="pure-g container--justify-center ">
+            <div className="pure-u-lg-1-3">
               <p>
                 <span style={numbersStyle}>$1.8M</span>
                 <span style={npStyle}>
@@ -232,7 +230,7 @@ class OpenSourcePage extends Component {
                 </span>
               </p>
             </div>
-            <div className="pure-u-1-3">
+            <div className="pure-u-lg-1-3">
               <p>
                 <span style={numbersStyle}>$2.5M</span>
                 <span style={npStyle}>
@@ -240,7 +238,7 @@ class OpenSourcePage extends Component {
                 </span>
               </p>
             </div>
-            <div className="pure-u-1-3">
+            <div className="pure-u-lg-1-3">
               <p>
                 <span style={numbersStyle}>65+</span>
                 <span style={npStyle}>
@@ -524,9 +522,10 @@ class OpenSourcePage extends Component {
               </tr>
             </table>
           </div>
+
           <ClientLogos openSource="true" />
 
-          <div style={bgStyle}>
+          <div className="content-padding pad-vertical" style={bgStyle}>
             <h2 style={headerStyle}>What is Open Source Health Design?</h2>
             <p style={pStyle}>
               Open Source Health Design is a benevolent initiative to design and
@@ -567,36 +566,17 @@ class OpenSourcePage extends Component {
               I have ever met in the healthcare space. Not only are their ideas,
               designs, and graphics remarkable, but I haven’t yet figured out
               how they know so much about medicine and its future.
-              <br /> - Eric Topol
+              <br /> <strong>- Eric Topol </strong>
               <br /> MD, Director, Scripps Translational Science Institute
             </p>
           </div>
 
           <div
-            style={{
-              textAlign: 'center',
-              marginTop: '4em',
-              marginBottom: '4em',
-              paddingTop: '0.01em',
-              paddingBottom: '1em',
-              paddingLeft: '3em',
-              paddingRight: '3em',
-              backgroundColor: '#FAF6F4',
-            }}
+            className="content-padding pad-vertical textAlign"
+            style={bgStyle}
           >
             <div>
-              <h2
-                style={{
-                  fontSize: 40,
-                  color: '#24434D',
-                  lineHeight: 1.4,
-                  fontFamily: 'Adobe Jensen Pro',
-                  marginBottom: 0,
-                  letterSpacing: 1,
-                }}
-              >
-                Open Health Projects
-              </h2>
+              <h2 style={headerStyle}>Open Health Projects</h2>
               <h3
                 style={{
                   fontSize: 30,
@@ -679,7 +659,7 @@ class OpenSourcePage extends Component {
                   width: 'auto',
                   minWidth: 0,
                   marginTop: 20,
-                  marginBottom: 48,
+                  marginBottom: 40,
                 }}
               >
                 Get in touch
@@ -690,10 +670,13 @@ class OpenSourcePage extends Component {
                 style={{
                   textAlign: 'left',
                   backgroundColor: 'white',
-                  marginBottom: 48,
+                  marginBottom: 35,
                 }}
               >
-                <div className="pure-u-lg-1-2" style={{ paddingLeft: 48 }}>
+                <div
+                  className="pure-u-lg-1-2 "
+                  style={{ paddingLeft: 40, paddingRight: 40 }}
+                >
                   <h4 style={shStyle}>Living Health Lab</h4>
                   <p style={pStyle}>
                     Living Health Lab is a tool that helps people define and
@@ -718,7 +701,7 @@ class OpenSourcePage extends Component {
                 style={{
                   textAlign: 'left',
                   backgroundColor: 'white',
-                  marginBottom: 48,
+                  marginBottom: 35,
                 }}
               >
                 <div className="pure-u-lg-1-2 ">
@@ -729,13 +712,21 @@ class OpenSourcePage extends Component {
                   />
                 </div>
 
-                <div className="pure-u-lg-1-2" style={{ paddingRight: 48 }}>
+                <div
+                  className="pure-u-lg-1-2"
+                  style={{
+                    paddingLeft: 40,
+                    paddingRight: 40,
+                    paddingBottom: '5%',
+                  }}
+                >
                   <h4 style={shStyle}>Health Manager</h4>
                   <p style={pStyle}>
                     Rosie is an open source Health Manager to support user
                     aggregate all their health data into a single location and
                     share that data in their community to meet their health
                     goals.
+                    <br />
                   </p>
                   <a
                     href="https://open-health-manager.github.io/Design/"
@@ -751,10 +742,13 @@ class OpenSourcePage extends Component {
                 style={{
                   textAlign: 'left',
                   backgroundColor: 'white',
-                  marginBottom: 48,
+                  marginBottom: 35,
                 }}
               >
-                <div className="pure-u-lg-1-2" style={{ paddingLeft: 48 }}>
+                <div
+                  className="pure-u-lg-1-2"
+                  style={{ paddingLeft: 40, paddingRight: 40 }}
+                >
                   <h4 style={shStyle}>Health Picture</h4>
                   <p style={pStyle}>
                     Discover our open source library for visualizing health
@@ -778,7 +772,7 @@ class OpenSourcePage extends Component {
                 style={{
                   textAlign: 'left',
                   backgroundColor: 'white',
-                  marginBottom: 20,
+                  marginBottom: 35,
                 }}
               >
                 <div className="pure-u-lg-1-2 ">
@@ -789,7 +783,14 @@ class OpenSourcePage extends Component {
                   />
                 </div>
 
-                <div className="pure-u-lg-1-2" style={{ paddingRight: 48 }}>
+                <div
+                  className="pure-u-lg-1-2"
+                  style={{
+                    paddingLeft: 40,
+                    paddingRight: 40,
+                    paddingBottom: '5%',
+                  }}
+                >
                   <h4 style={shStyle}>Health Data Ownership</h4>
                   <p style={pStyle}>
                     We need patient data ownership rights to protect patient
@@ -824,14 +825,10 @@ class OpenSourcePage extends Component {
           </div>
 
           <div
+            className="content-padding pad-vertical textAlign"
             style={{
-              textAlign: 'center',
               marginTop: '4em',
               marginBottom: '4em',
-              paddingTop: '0.01em',
-              paddingBottom: '1em',
-              paddingLeft: '3em',
-              paddingRight: '3em',
             }}
           >
             <h2 style={headerStyle}>It’s Open Source!</h2>
@@ -882,7 +879,10 @@ class OpenSourcePage extends Component {
           </div>
 
           {/* CTA for the community  */}
-          <div className="pure-u-1" style={bgStyle}>
+          <div
+            className="pure-u-1 content-padding pad-vertical"
+            style={bgStyle}
+          >
             <div className="pure-u-lg-1-2 ">
               <h2 style={headerStyle}>Let’s build better care together!</h2>
               <p style={pStyle}>
@@ -895,7 +895,7 @@ class OpenSourcePage extends Component {
               </p>
             </div>
 
-            <div className="pure-u-lg-1-2" style={{ marginTop: 50 }}>
+            <div className="pure-u-lg-1-2 hidden--sm" style={{ marginTop: 50 }}>
               <Image
                 src="/images/open_source/cta-community.png"
                 className="image--max-width"

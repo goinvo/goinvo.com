@@ -1,6 +1,6 @@
 ---
 title: 'Your Food in Code'
-image: '/images/case-studies/inside-tracker/insidetracker_bloodwork_hero.jpg'
+image: '/images/case-studies/insidetracker/insidetracker_bloodwork_hero_2.jpg'
 client: 'InsideTracker'
 caption: 'Personalized food based on your DNA, blood, and habits.'
 categories:
@@ -82,7 +82,7 @@ The reason patients use software like InsideTracker is to get the data they want
 
 Bioassay results combined with precision nutrition advice are data rich. Revealing more detail as the patient understands more and more about their health and nutrition is a proven design technique. By deferring some advanced features to secondary actions (or screens), makes learning the service easier and makes errors less frequent.
 
-![Bloodwork Design](/images/case-studies/inside-tracker/insidetracker_bloodwork_design_lg.jpg)
+![Bloodwork Design](/images/case-studies/insidetracker/insidetracker_bloodwork_design_lg.jpg)
 
 <Divider />
 
@@ -108,9 +108,9 @@ How do we assist the patient with habit-forming goals when it comes to food choi
 
 A nutrition agent, working on your behalf to organize your food life and better your health, was a new avenue for InsideTracker. By incorporating feedback from patients, stakeholders, scientists, and engineers, a software model for behavior and precision nutrition was created. Early concepts for the digital manifestation of the activity model were designed (ie., how does InsideTracker's nutrition agent behave on your phone and works with you). These concepts fed product and development teams next iteration of the software.
 
-![Blood Results](/images/case-studies/inside-tracker/insidetracker_blood_results_4.jpg)
+![Blood Results](/images/case-studies/insidetracker/insidetracker_blood_results_4.jpg)
 
-![Information Architecture Design](/images/case-studies/inside-tracker/insidetracker_information_architecture_3.jpg)
+![Information Architecture Design](/images/case-studies/insidetracker/insidetracker_information_architecture_3.jpg)
 
 ## Results
 

@@ -123,7 +123,7 @@ const AboutPage = () => (
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
             <ImageBlock
-              image="/images/about/beth-working.jpg"
+              image="/images/about/design-markup.jpg"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               title="Open office hours"
               caption="Receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction."
@@ -137,7 +137,7 @@ const AboutPage = () => (
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
             <ImageBlock
-              image="/images/about/bai-laughing.jpg"
+              image="/images/about/megan-and-claire-ultrasound.jpg"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               title="Join the team"
               caption="If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler."

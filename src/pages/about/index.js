@@ -137,7 +137,7 @@ const AboutPage = () => (
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
             <ImageBlock
-              image="/images/about/bai-laughing.jpg"
+              image="/images/about/megan-and-claire-ultrasound.jpg"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               title="Join the team"
               caption="If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler."

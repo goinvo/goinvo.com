@@ -1,12 +1,12 @@
 ---
 title: 'CDS Repository for Standards of Care '
-image: '/images/case-studies/mitre/SHR/shr-header2.jpg'
+image: '/images/case-studies/ahrq/CDS_connect_header_photo.jpg'
 client: 'AHRQ (Agency for Healthcare Research and Quality)'
 caption: 'Design a national repository for providers, developers, and researchers to disseminate and use implementable clinical decision support tools.'
 categories:
   - 'health-it-and-infrastructure'
 upNext:
-  - 'fastercures-health-data-basics'
+  - 'mitre-shr'
   - 'determinants-of-health'
   - 'open-source-healthcare'
 hidden: false
@@ -47,8 +47,6 @@ CDS Connect launched on September 2017. Starting with cardiovascular-based CDS t
 
 We held monthly workgroup meetings with 30 subject matter experts, consisting of health IT and public health advisors from AHRQ and the CDC to discuss project progress and validate design direction. In addition to the monthly meetings, we met on a weekly basis with engineers and physicians on the MITRE team to work closely with development, gather feedback on designs, and ensure clinical accuracy on concepts for CDS Connect.
 
-![SHR ecosystem](/images/case-studies/mitre/SHR/shr-ecosystem2.jpg)
-
 <Divider />
 
 ## Insights & Recommendations
@@ -57,9 +55,13 @@ We held monthly workgroup meetings with 30 subject matter experts, consisting of
 
 CDS Connect is most effective when the provider and health IT community creates and adds to the number of tools in the platform, as well as improve existing tools by providing feedback about their use. To promote this active community, CDS Connect needed to cater to new users by introducing them to the services it provides, using a series of introductory pages with clear visualizations that communicates the step-by-step process.
 
+![CDS Connect Dashboard UI](/images/case-studies/ahrq/cds_connect_insights_grid_view_2.jpg)
+
 #### Explorative clinical decision support
 
 At its core, CDS Connect is a platform for exploring CDS tools. Based on user needs captured from the monthly workgroup meetings, clinicians needed to be able to search by multiple factors such as clinical domain, publisher, and custom groupings.
+
+![CDS Artifact UI](/images/case-studies/ahrq/cds_connect_insights_artifact_2.jpg)
 
 #### Evidence-based
 
@@ -73,13 +75,21 @@ To be able to confidently apply a CDS tool to practice, implementers and clinici
 
 ## Solution
 
+![CDS Connect Lifecycle](/images/case-studies/ahrq/CDS_connect_insights_promotion.jpg)
+
 #### Promoting CDS Connect with education built in
 
 Along with a streamlined authorship experience, visually communicating the CDS Connect model allowed providers to quickly learn about the purpose of the repository and how to participate in building and improving CDS tools through community-driven governance.
 
+![Explore CDS Connect Artifacts](/images/case-studies/ahrq/CDS_connect_solution_search.jpg)
+
+![Cardiovascular Disease Prevention Artifacts UI](/images/case-studies/ahrq/CDS_connect_solution_topic.jpg)
+
 #### Using clinical mental models to explore the right tools
 
 The designs created a framework to organize CDS tools through use of topics, clinical categories, and tool types. This allowed for a simplified experience for providers to quickly jump to tools most relevant to them and their practice while still finding new and related ones that may be useful. Topics allowed providers to search for groups of clinically related CDS tools for a particular medical concept.
+
+![Artifact Creation and Usage UI](/images/case-studies/ahrq/CDS_connect_solution_artifact.jpg)
 
 #### Dive into the specifics of CDS tools with ease
 
@@ -95,8 +105,8 @@ Each CDS tool conveyed readiness for clinical use through knowledge level (denot
 
 #### Initial CDS tools jumpstarted repository
 
-Initially populated by 1 publisher with 6 cardiovascular CDS tools when released in September 2017, CDS Connect proved it was up to the task and continues to expand both inside and outside of the cardiovascular space.
+Initially populated by **1 publisher with 6 cardiovascular CDS tools** when released in September 2017, CDS Connect proved it was up to the task and continues to expand both inside and outside of the cardiovascular space.
 
 #### Expansion of the CDS Connect community
 
-Health organizations contributing to CDS Connect began with MITRE and AHRQ but now includes organizations such as the CDC, Children's Hospital of Philadelphia, Veterans Health Administration, and continues to expand. Today, in Nov 2018, there are 7 publishers on the repository, and more than 25 CDS tools across several domains including obesity, neurosurgery, and infectious disease.
+Health organizations contributing to CDS Connect began with MITRE and AHRQ but now includes organizations such as the CDC, Children's Hospital of Philadelphia, Veterans Health Administration, and continues to expand. Today, in Nov 2018, there are **7 publishers** on the repository, and **more than 25 CDS tools** across several domains including obesity, neurosurgery, and infectious disease.

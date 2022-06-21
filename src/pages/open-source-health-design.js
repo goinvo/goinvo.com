@@ -110,7 +110,7 @@ class OpenSourcePage extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="max-width content-padding pad-vertical LayoutCenter">
-          <OpenSourceGraph />
+          {/* <OpenSourceGraph /> */}
           <div
             className="pad-horizontal"
             style={{

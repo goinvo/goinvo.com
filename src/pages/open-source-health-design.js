@@ -10,6 +10,7 @@ import ImageBlock from '../components/image-block'
 import ImageBlockSmall from '../components/image-block-small'
 import Card from '../components/card'
 import Quote from '../components/quote'
+import OpenSourceGraph from '../assets/images/os-desktop.inline.svg'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
@@ -109,6 +110,7 @@ class OpenSourcePage extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="max-width content-padding pad-vertical LayoutCenter">
+          <OpenSourceGraph />
           <div
             className="pad-horizontal"
             style={{
@@ -281,9 +283,9 @@ class OpenSourcePage extends Component {
               color: '#24434D',
             }}
           >
-            For the past 10 years, we’ve partnered with Federal and nonprofit
-            organizations to design more than 65 open source projects to solve
-            most pressing healthcare issues.
+            For the past 10 years, we've partnered with federal and nonprofit
+            organizations to address the most pressing healthcare issues—with
+            over 60 open source projects
           </p>
           <div style={{ width: '80%', display: 'block', margin: 'auto' }}>
             <Image
@@ -445,10 +447,10 @@ class OpenSourcePage extends Component {
                       Living Health Lab
                     </h4>
                     <p className="text">
-                      Living Health Lab is a tool that helps people define and
-                      explore their personal health questions by tracking and
-                      visualizing their data with the support of a health buddy
-                      so that they can live their healthiest life
+                      Living Health Lab is a tool that combines personal
+                      science, data visualization, and community to empower
+                      individuals as they explore their own health questions and
+                      pursue their healthiest lives.
                     </p>
                   </div>
 
@@ -607,11 +609,9 @@ class OpenSourcePage extends Component {
               It’s Open Source!
             </h2>
             <p className="text">
-              Our design work, health research and code are open-source. They
-              are freely available for anyone to see, download, change, and
-              redistribute. By democratizing health technologies, we grant easy
-              access to highly developed and tested tools for improving medical
-              practice.
+              Our design work, health research and code are open-source. By
+              democratizing health technologies, we grant easy access to highly
+              developed and tested tools for improving medical practice.
               <br />
               <p
                 className="text"

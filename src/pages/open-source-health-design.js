@@ -609,9 +609,13 @@ class OpenSourcePage extends Component {
               It’s Open Source!
             </h2>
             <p className="text">
-              Our design work, health research and code are open-source. By
-              democratizing health technologies, we grant easy access to highly
-              developed and tested tools for improving medical practice.
+              Our design work, health research, and code are open source. They
+              are freely available for anyone to see, download, change, and
+              redistribute (licensed under Creative Commons Attribution v4 or
+              Apache v2). Much like how the internet works on open source
+              infrastructure, open source healthcare democratizes the
+              infrastructure of healthcare (healthIT), and will allow for a
+              global, healthcare operating system
               <br />
               <p
                 className="text"

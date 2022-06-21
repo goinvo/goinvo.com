@@ -272,7 +272,7 @@ class OpenSourcePage extends Component {
             className="header--xl"
             style={{ textAlign: 'center', color: '#24434D' }}
           >
-            Open Source Health Design Projects
+            Open Source Health Design <br /> projects
             <span className="text--serif text--primary">.</span>
           </h2>
           <p
@@ -320,7 +320,7 @@ class OpenSourcePage extends Component {
                   <ClientLogos openSource="true" />
                 </div>
               </div>
-              <h3 className="header--lg">
+              {/* <h3 className="header--lg">
                 Open Source Project Spotlight
                 <span className="text--serif text--primary">.</span>
               </h3>
@@ -344,7 +344,7 @@ class OpenSourcePage extends Component {
                     </Card>
                   )
                 })}
-              </Columns>
+              </Columns> */}
             </div>
           </div>
         </div>

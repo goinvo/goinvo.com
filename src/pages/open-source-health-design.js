@@ -285,7 +285,7 @@ class OpenSourcePage extends Component {
           >
             For the past 10 years, we've partnered with federal and nonprofit
             organizations to address the most pressing healthcare issues—with
-            over 60 open source projects
+            over 65 open source projects
           </p>
           <div style={{ width: '80%', display: 'block', margin: 'auto' }}>
             <Image

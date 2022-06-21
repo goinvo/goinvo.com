@@ -1,0 +1,22 @@
+.living-health-lab {
+  .list-steps {
+    li {
+      max-width: 300px;
+      text-align: center;
+      margin: 2rem auto 0;
+      margin-top: 2rem;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .lhl-image-max-width {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}

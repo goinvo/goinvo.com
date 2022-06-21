@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../../../components/layouts/layout'
-import BackgroundImage from '../../../components/background-image'
+import Hero from '../../../components/hero'
+import Carousel from '../../../components/carousel'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
@@ -14,7 +15,7 @@ import config from '../../../../config'
 const frontmatter = {
   metaTitle: 'Living Health Lab - GoInvo',
   metaDescription: 'Measure your life to improve your health.',
-  heroImage: '/images/features/coronavirus/hero-2.jpg',
+  heroImage: '/images/features/living-health-lab/hero.jpg',
 }
 
 class LivingHealthLabFeature extends Component {
@@ -36,17 +37,7 @@ class LivingHealthLabFeature extends Component {
           />
         </Helmet>
         <div className="living-health-lab">
-          <div className="hero">
-            <div className="hero__image-container">
-              {
-                //TODO: hero image
-              }
-              <BackgroundImage
-                src={frontmatter.heroImage}
-                className="hero__image"
-              />
-            </div>
-          </div>
+          <Hero image={frontmatter.heroImage} position={'top center'} isLarge />
           <div className="max-width pad-all">
             <h1>Living Health Lab</h1>
 
@@ -122,29 +113,51 @@ class LivingHealthLabFeature extends Component {
               seek answers to their own difficult health questions and concerns
               through five key actions of self-research<Reference>5</Reference>:
             </p>
-            {
-              // TODO: Images
-            }
-            <ol>
+            <ul className="list--unstyled list-steps">
               <li>
-                <b>Question</b> experiences, emotions, observations about one’s
-                own life
+                <Image
+                  src="/images/features/living-health-lab/step-1.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                />
+                1. <b>Question</b> experiences, emotions, observations about
+                one’s own life
               </li>
               <li>
-                <b>Design</b> the exploration
+                <Image
+                  src="/images/features/living-health-lab/step-2.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                />
+                2. <b>Design</b> the exploration
               </li>
               <li>
-                <b>Observe</b> the data collected, manually self-reported or
+                <Image
+                  src="/images/features/living-health-lab/step-3.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                />
+                3. <b>Observe</b> the data collected, manually self-reported or
                 collected by smart devices
               </li>
               <li>
-                <b>Reason</b> through the findings
+                <Image
+                  src="/images/features/living-health-lab/step-4.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                />
+                4. <b>Reason</b> through the findings
               </li>
               <li>
-                <b>Discover</b> practical actions to improve daily life and
+                <Image
+                  src="/images/features/living-health-lab/step-5.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                />
+                5. <b>Discover</b> practical actions to improve daily life and
                 share with others
               </li>
-            </ol>
+            </ul>
             <p>
               In our review of published work in the fields of personal science
               and self-tracking, we found that this approach has helped
@@ -164,9 +177,11 @@ class LivingHealthLabFeature extends Component {
 
             <h2>Design</h2>
 
-            {
-              // TODO: Timeline image
-            }
+            <Image
+              src="/images/features/living-health-lab/timeline.png"
+              className="image--max-width"
+              sizes={config.sizes.fullInsideMaxWidth}
+            />
             <p>
               Living Health Lab is an open source project in the early stages of
               the design process. In Stage 1, we completed an initial round of
@@ -270,9 +285,50 @@ class LivingHealthLabFeature extends Component {
               Living Health Lab and begin taking ownership of their health
               through the service.
             </p>
-            {
-              // TODO: Comic slideshow
-            }
+            <Carousel>
+              <div>
+                <Image
+                  src="/images/features/living-health-lab/comic-1.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/images/features/living-health-lab/comic-2.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/images/features/living-health-lab/comic-3.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/images/features/living-health-lab/comic-4.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/images/features/living-health-lab/comic-5.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/images/features/living-health-lab/comic-6.png"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </div>
+            </Carousel>
 
             <h3>3) Key Challenges</h3>
 
@@ -294,9 +350,11 @@ class LivingHealthLabFeature extends Component {
               direct individuals toward the self-tracking strategy that best
               aligns with where they are in their own “Health Journey.”
             </p>
-            {
-              // TODO: Image
-            }
+            <Image
+              src="/images/features/living-health-lab/health-journey.png"
+              className="image--max-width lhl-image-max-width"
+              sizes={config.sizes.fullInsideMaxWidth}
+            />
             <p>
               We propose the Health Journey as a general framework for how an
               individual can shift from a lack of awareness of a health problem
@@ -419,9 +477,11 @@ class LivingHealthLabFeature extends Component {
               questions and have <b>much to gain</b> may be the easiest to
               reach, but many others could also benefit from Living Health Lab:
             </p>
-            {
-              // TODO: Image
-            }
+            <Image
+              src="/images/features/living-health-lab/user-chart.png"
+              className="image--max-width lhl-image-max-width"
+              sizes={config.sizes.fullInsideMaxWidth}
+            />
             <p>
               Living Health Lab will be a collaborative tool for patients and
               their doctors as they “identify new trends, hypothesize about
@@ -579,14 +639,13 @@ class LivingHealthLabFeature extends Component {
                 },
               ]}
             />
-
-            <div id="#appendix">
+            <div id="appendix">
               <h2>Appendix</h2>
               <iframe
                 ref={this.appendix}
                 width="100%"
                 height="600px"
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
               ></iframe>
             </div>
           </div>

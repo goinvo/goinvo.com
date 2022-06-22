@@ -304,13 +304,14 @@ class OpenSourcePage extends Component {
             <div className="max-width content-padding pad-vertical">
               <h2 className="header--xl">What is Open Source Health Design?</h2>
               <p className="text">
-                Open Source Health Design is a benevolent initiative to design
-                and build products aligned with the goals set by the US
-                Department of Health and Human Services. We design and build
-                projects with partners who commit to better healthcare and
-                invest in open source. This means making usable, useful and
-                delightful designs available to benefit communities and society
-                as a whole.
+                Open Source Health Design is the design, testing, and deployment
+                of healthcare services where the inner workings are, from
+                strategy to user interfaces to operational code, open to
+                inspection, open to critique, open to improvement, and open to
+                continuous evolution. Over time, Open Source Healthcare Design
+                drives software transparency, generates greater trust, creates
+                higher quality health outcomes, and builds more reliable
+                healthcare services.
               </p>
               <div className="pad-vertical--double">
                 <div className="max-width content-padding">

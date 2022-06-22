@@ -69,7 +69,7 @@ const openSourceConversations = [
     image: '/images/open_source/Artboard-1_3-techtalks.jpg',
     title: 'NEHIMSS 2019 ANNUAL CONFERENCE Juhan Sonin',
     caption:
-      'We demand open source healthcare.Because healthcare is too important to be closed. We, the atomic units of the health system,can bend it back to the light.',
+      'We demand open source healthcare. Because healthcare is too important to be closed. We, the atomic units of the health system, can bend it back to the light.',
   },
   {
     link:
@@ -78,7 +78,7 @@ const openSourceConversations = [
       '/images/features/open-source-healthcare/open-source-healthcare-featured.jpg',
     title: 'Open Source Healthcare Journal',
     caption:
-      'The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better',
+      'Here is the debut issue of our Open Source Health Journal, advocating open source ideas to change healthcare for the better.',
   },
 ]
 
@@ -205,10 +205,10 @@ class OpenSourcePage extends Component {
               }}
             >
               <p className="text">
-                Our open source health design mission is to make our designs
-                (patterns, code, scripts, graphics, ideas, documents) available
-                to any designer, to any engineer, to any world citizen, to use
-                and modify without restriction.
+                Our open source health design mission is to make our patterns,
+                code, scripts, graphics, ideas, documents available to any
+                designer, to any engineer, to any world citizen, to use and
+                modify without restriction.
                 <p style={{ marginTop: '3%' }}>
                   We demand Open Source Health Design. <br /> Because healthcare
                   is too important to be closed. <br />
@@ -253,7 +253,7 @@ class OpenSourcePage extends Component {
                       color: '#24434D',
                     }}
                   >
-                    Clients investment <br /> in open source projects
+                    Clients' investment <br /> in open source projects
                   </span>
                 </p>
               </div>
@@ -298,7 +298,7 @@ class OpenSourcePage extends Component {
               color: '#24434D',
             }}
           >
-            For the past 10 years, we've partnered with federal and nonprofit
+            In the past 10 years, we've partnered with federal and nonprofit
             organizations to address the most pressing healthcare issues—with
             over 65 open source projects
           </p>
@@ -321,7 +321,7 @@ class OpenSourcePage extends Component {
                 <h2
                   className="header--xl"
                   style={{
-                    paddingRight: '7%',
+                    paddingRight: isDesktop ? '7%' : 0,
                     marginBottom: 0,
                   }}
                 >
@@ -352,7 +352,7 @@ class OpenSourcePage extends Component {
                     <br />
                     drives software transparency, <br />
                     builds greater trust, <br />
-                    creates more reliable healthcare services <br />
+                    creates more reliable healthcare services, <br />
                     and generates higher quality health outcomes for all.
                   </p>
                 </p>
@@ -417,7 +417,10 @@ class OpenSourcePage extends Component {
               }}
             >
               <div>
-                <h2 className="header--xl">We're looking for funding</h2>
+                <h2 className="header--xl">
+                  We're looking for funding
+                  <span className="text--serif text--primary">.</span>
+                </h2>
                 {/* <h3 className="header--lg">We’re looking for funding!</h3> */}
               </div>
 
@@ -455,20 +458,6 @@ class OpenSourcePage extends Component {
                   design for the common good.
                 </p>
               </div>
-
-              <Link
-                to="/contact/"
-                className="button button--tertiary button--lg "
-                style={{
-                  width: 'auto',
-                  minWidth: 0,
-                  marginTop: 20,
-
-                  marginBottom: 40,
-                }}
-              >
-                Get in touch
-              </Link>
 
               <div
                 className="pure-u-1"
@@ -544,7 +533,7 @@ class OpenSourcePage extends Component {
                       Health Manager
                     </h4>
                     <p className="text">
-                      Rosie is an open source Health Manager to support people
+                      Rosie is an open source health manager to support people
                       aggregate all their health data into a single location and
                       share that data in their care team to meet their health
                       goals.
@@ -562,7 +551,7 @@ class OpenSourcePage extends Component {
                   marginBottom: 35,
                 }}
               >
-                <Card link="/">
+                <Card link="https://www.goinvo.com/work/hgraph">
                   <div
                     className="pure-u-lg-1-2"
                     style={{
@@ -622,14 +611,27 @@ class OpenSourcePage extends Component {
                       Health Data Ownership
                     </h4>
                     <p className="text">
-                      We need patient data ownership rights to protect patient
-                      care. We've mapped out the needs for owning your health
-                      data and have illustrated them to be digestible for policy
-                      makers and the general public
+                      Establishing data ownership rights is critical to
+                      protecting patient care. We’ve mapped out the changes that
+                      need to happen and illustrated them to be accessible for
+                      both policy makers and the general public.
                     </p>
                   </div>
                 </Card>
               </div>
+              <Link
+                to="/contact/"
+                className="button button--tertiary button--lg "
+                style={{
+                  width: 'auto',
+                  minWidth: 0,
+                  marginTop: 20,
+
+                  marginBottom: 40,
+                }}
+              >
+                Get in touch
+              </Link>
               {/* 
               <Link
                 to="#open-work"
@@ -674,10 +676,10 @@ class OpenSourcePage extends Component {
               <p className="text">
                 They are freely available for anyone to see, download, change,
                 and redistribute (licensed under Creative Commons Attribution v4
-                or Apache v2). Much like how the internet works on open source
-                infrastructure, open source healthcare democratizes the
-                infrastructure of healthcare (healthIT), and will allow for a
-                global, healthcare operating system
+                or Apache v2). Just as the Internet is built on open source
+                technologies, open source healthcare democratizes the
+                infrastructure of healthcare (healthIT) and allows for a global
+                healthcare operating system.
                 <br />
                 {/* <p
                               className="text"
@@ -732,9 +734,11 @@ class OpenSourcePage extends Component {
             <div className="pure-u-lg-1-2" style={{ marginTop: '4%' }}>
               <h2 className="header--xl">Let’s build better care together!</h2>
               <p className="text">
-                Curious on how you can contribute to one of our open source
-                projects? <br />
-                Reach out to know more about the current partnership
+                Curious in using, contributing to, or funding these projects?{' '}
+                <br />
+                We help organizations and individuals set up and use our open
+                source work.
+                <br /> Reach out to know more about the current partnership
                 opportunities available!
                 {/* We’re a growing communitiy of healthcare professionals, designers
               and engineers. Subscribe to our Open Source Health Design

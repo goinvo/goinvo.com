@@ -147,6 +147,10 @@ $directions: 'top' 'bottom' 'left' 'right';
       margin-#{$direction}: $spacing * 2;
     }
 
+    &--trip {
+      margin-#{$direction}: $spacing * 3;
+    }
+
     &--quad {
       margin-#{$direction}: $spacing * 4;
     }

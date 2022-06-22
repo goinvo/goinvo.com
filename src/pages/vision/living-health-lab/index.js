@@ -8,6 +8,7 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Reference from '../../../components/reference'
+import Divider from '../../../components/divider'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -31,7 +32,7 @@ class LivingHealthLabFeature extends Component {
         <div className="living-health-lab">
           <Hero image={frontmatter.heroImage} position={'top center'} isLarge />
           <div className="max-width pad-all">
-            <h1>Living Health Lab</h1>
+            <h1 className="header--xl">Living Health Lab</h1>
 
             <h4>Measure your life to improve your health</h4>
             <p>
@@ -75,18 +76,19 @@ class LivingHealthLabFeature extends Component {
               .
             </p>
 
-            <h2>Introduction</h2>
+            <h2 className="header--lg margin-top--trip">Introduction</h2>
 
             <p>
               Chronic pain is a condition that affects over 50 million adults in
-              the United States.2 For many, managing chronic conditions is a
-              difficult process that involves a complex jumble of biological,
-              physical, emotional, mental, social, and cultural factors. With
-              more than 350,000 health and wellness-related applications
-              available to download worldwide, patients can easily monitor their
-              health, yet very few of these services help patients with chronic
-              health problems interpret their data or offer insights to improve
-              everyday health.<Reference>1</Reference>
+              the United States.<Reference>2</Reference> For many, managing
+              chronic conditions is a difficult process that involves a complex
+              jumble of biological, physical, emotional, mental, social, and
+              cultural factors. With more than 350,000 health and
+              wellness-related applications available to download worldwide,
+              patients can easily monitor their health, yet very few of these
+              services help patients with chronic health problems interpret
+              their data or offer insights to improve everyday health.
+              <Reference>1</Reference>
             </p>
             <p>
               Out of all chronic pain patients, one in three individuals faces
@@ -167,7 +169,7 @@ class LivingHealthLabFeature extends Component {
               through guided, thoughtfully-designed explorations.
             </p>
 
-            <h2>Design</h2>
+            <h2 className="header--lg margin-top--trip">Design</h2>
 
             <Image
               src="/images/features/living-health-lab/timeline.png"
@@ -183,7 +185,7 @@ class LivingHealthLabFeature extends Component {
               continue to update this feature as we move through each stage.
             </p>
 
-            <h3>1) Design Principles</h3>
+            <h3 className="header--md">1) Design Principles</h3>
 
             <p>
               The following design principles are based on findings and
@@ -267,7 +269,9 @@ class LivingHealthLabFeature extends Component {
               </li>
             </ul>
 
-            <h3>2) Visualizing the Patient Experience</h3>
+            <h3 className="header--md">
+              2) Visualizing the Patient Experience
+            </h3>
 
             <p>
               Storytelling is a powerful tool to represent the patient
@@ -277,52 +281,24 @@ class LivingHealthLabFeature extends Component {
               Living Health Lab and begin taking ownership of their health
               through the service.
             </p>
-            <Carousel>
-              <div>
-                <Image
-                  src="/images/features/living-health-lab/comic-1.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMaxWidth}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/images/features/living-health-lab/comic-2.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMaxWidth}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/images/features/living-health-lab/comic-3.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMaxWidth}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/images/features/living-health-lab/comic-4.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMaxWidth}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/images/features/living-health-lab/comic-5.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMaxWidth}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/images/features/living-health-lab/comic-6.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMaxWidth}
-                />
-              </div>
+            <Carousel infinite={false}>
+              {[...Array(6)].map((n, i) => {
+                return (
+                  <div>
+                    <div className="lhl-image-max-width">
+                      <Image
+                        src={`/images/features/living-health-lab/comic-${i +
+                          1}.png`}
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMaxWidth}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
             </Carousel>
 
-            <h3>3) Key Challenges</h3>
+            <h3 className="header--md">3) Key Challenges</h3>
 
             <h4>Helping the patient set up the right exploration</h4>
             <p>
@@ -454,9 +430,13 @@ class LivingHealthLabFeature extends Component {
               hope to build upon.
             </p>
 
-            <h2>Making Living Health Lab Real</h2>
+            <h2 className="header--lg margin-top--trip">
+              Making Living Health Lab Real
+            </h2>
 
-            <h3>Broader application for patients and providers</h3>
+            <h3 className="header--md">
+              Broader application for patients and providers
+            </h3>
             <p>
               We believe this empowered approach to managing one’s health is
               beneficial for every human. Initially, we plan to target those
@@ -471,7 +451,7 @@ class LivingHealthLabFeature extends Component {
             </p>
             <Image
               src="/images/features/living-health-lab/user-chart.png"
-              className="image--max-width lhl-image-max-width"
+              className="image--max-width lhl-image-max-width lhl-user-chart"
               sizes={config.sizes.fullInsideMaxWidth}
             />
             <p>
@@ -521,18 +501,18 @@ class LivingHealthLabFeature extends Component {
               people to explore their own health and seek answers.
             </p>
 
-            <h3>Open Source Health Design</h3>
+            <h3 className="header--md">Open Source Health Design</h3>
             <p>
-              As an Open Source Design project, Living Health Lab will strive to
-              be transparent: this project's content is available to the public
-              for free use under the Creative Commons Attribution 4.0
-              International License. Transparency affords us the benefits of
-              external input and engagement. By making all research, design, and
-              ultimately code publicly available, we hope to spread good ideas
-              and accelerate innovation for the public good.
+              As an Open Source Health Design project, Living Health Lab content
+              will be available to the public for free use under the Creative
+              Commons Attribution 4.0 International License. Transparency
+              affords us the benefits of external input and engagement. By
+              making all research, design, and ultimately code publicly
+              available, we hope to spread good ideas and accelerate innovation
+              for the public good.
             </p>
 
-            <h3>Get Involved</h3>
+            <h3 className="header--md">Get Involved</h3>
             <p>
               We are in the early stages of design and funding will be a vital
               component for continuing this project. If you’re interested in
@@ -552,17 +532,23 @@ class LivingHealthLabFeature extends Component {
                 How would you use Living Health Lab?
               </a>
             </div>
-
-            <div id="appendix">
-              <h2>Appendix</h2>
-              <iframe
-                width="100%"
-                height="600px"
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
-              ></iframe>
+          </div>
+          <div className="background--blue margin-top--quad">
+            <div className="max-width pad-all">
+              <div id="appendix">
+                <h2 className="header--lg text--center">Appendix</h2>
+                <iframe
+                  width="100%"
+                  height="600px"
+                  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
+                ></iframe>
+              </div>
             </div>
-
-            <h2>Authors</h2>
+          </div>
+          <div className="max-width pad-all">
+            <h2 className="header--lg text--center margin-top--trip">
+              Authors
+            </h2>
 
             <Author name="Sharon Lee" />
             <Author name="Shayla Nettey" />
@@ -571,7 +557,16 @@ class LivingHealthLabFeature extends Component {
             <Author name="Chloe Ma" />
             <Author name="Samantha Wuu" />
 
-            <h2 id="references">References</h2>
+            <div className="margin-top--trip">
+              <Divider />
+            </div>
+
+            <h2
+              className="header--lg margin-top--trip text--center"
+              id="references"
+            >
+              References
+            </h2>
             <References
               hideTitle
               references={[

@@ -16,7 +16,29 @@
 
   .lhl-image-max-width {
     display: block;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
+  }
+
+  .lhl-user-chart {
+    max-width: 100%;
+  }
+
+  .carousel {
+    &__carousel-container {
+      background-color: transparent;
+    }
+  }
+
+  .header--md {
+    margin-top: 2rem;
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+
+    + p {
+      margin-top: 0.5rem;
+    }
   }
 }

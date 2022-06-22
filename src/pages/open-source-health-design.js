@@ -4,13 +4,10 @@ import Layout from '../components/layouts/layout'
 import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
-import HubspotForm from '../components/hubspot-form'
 import Columns from '../components/columns'
-import ImageBlock from '../components/image-block'
 import ImageBlockSmall from '../components/image-block-small'
 import Card from '../components/card'
 import Quote from '../components/quote'
-import OpenSourceGraph from '../assets/images/os-desktop.inline.svg'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
@@ -31,31 +28,6 @@ const numbersStyle = {
 
 const imageUrl = 'https://i.ibb.co/Pztr3HW/bgtest2.png'
 
-//Data
-// const projectSpotlight = [
-//   {
-//     link: '/vision/determinants-of-health/',
-//     image: '/images/services/doh-preview.jpg',
-//     title: 'Determinants of Health',
-//     caption:
-//       '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
-//   },
-//   {
-//     link: 'https://www.goinvo.com/work/hgraph',
-//     image: '/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg',
-//     title: 'hGraph',
-//     caption:
-//       'hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics',
-//   },
-//   {
-//     link: 'https://www.goinvo.com/work/fastercures-health-data-basics',
-//     image:
-//       '/images/case-studies/fastercures/health-data-basics/health-data-basics-hero.jpg',
-//     title: 'Health Data Basics',
-//     caption:
-//       'Discover a project to educate and engage patients about health data through, posters, icons, and app designs in partnership with FasterCures.',
-//   },
-// ]
 const openSourceConversations = [
   {
     link: 'https://designmuseumfoundation.org/open-source-healthcare/',
@@ -114,6 +86,7 @@ class OpenSourcePage extends Component {
         <div
           className="pad-horizontal"
           style={{
+            color: '#24434D',
             backgroundImage: `url(${imageUrl})`,
             paddingTop: '2%',
             paddingBottom: '2%',
@@ -122,24 +95,21 @@ class OpenSourcePage extends Component {
           }}
         >
           <div className="max-width content-padding pad-vertical LayoutCenter">
-            {/* <OpenSourceGraph /> */}
             <div
               className="pad-horizontal"
               style={{
                 display: 'flex',
-
                 flexWrap: 'wrap-reverse',
-
                 marginTop: '5%',
                 marginBottom: '5%',
               }}
             >
               <div style={{ flex: '1 1 200px', marginTop: '5%', color: '#' }}>
-                <h1 className="header--xl " style={{ color: '#24434D' }}>
+                <h1 className="header--xl ">
                   Open Source Health Design
                   <span className="text--serif text--primary">.</span>
                 </h1>
-                <p className="text" style={{ color: '#24434D' }}>
+                <p>
                   Bringing Trust, Openness, Innovation &amp; Design to
                   Healthcare
                 </p>
@@ -155,18 +125,6 @@ class OpenSourcePage extends Component {
                 >
                   Get Involved
                 </Link>
-                {/* <Link
-                to="/contact/"
-                className="button button--tertiary button--lg "
-                style={{
-                  width: 'auto',
-                  minWidth: 0,
-                  marginTop: 20,
-                  marginRight: 15,
-                }}
-              >
-              
-              </Link> */}
               </div>
 
               <div style={{ flex: '1 1 200px' }}>
@@ -179,7 +137,7 @@ class OpenSourcePage extends Component {
             </div>
           </div>
         </div>
-        <div style={{ backgroundColor: '#FAF6F4' }}>
+        <div className="bg-light">
           <div className="max-width content-padding pad-vertical LayoutCenter">
             <div className="pure-u-lg-1-2">
               <h2
@@ -204,7 +162,7 @@ class OpenSourcePage extends Component {
                 paddingBottom: '4%',
               }}
             >
-              <p className="text">
+              <p className="text--teal">
                 Our open source health design mission is to make our patterns,
                 code, scripts, graphics, ideas, documents available to any
                 designer, to any engineer, to any world citizen, to use and
@@ -279,10 +237,7 @@ class OpenSourcePage extends Component {
           </div>
         </div>
 
-        <div
-          id="open-work text"
-          className="max-width content-padding pad-vertical LayoutCenter"
-        >
+        <div className="max-width content-padding pad-vertical LayoutCenter">
           <h2
             className="header--xl"
             style={{ textAlign: 'center', color: '#24434D' }}
@@ -314,8 +269,8 @@ class OpenSourcePage extends Component {
           </div>
         </div>
 
-        <div className="LayoutCenter">
-          <div style={{ backgroundColor: '#FAF6F4', color: '#24434D' }}>
+        <div className="LayoutCenter bg-light">
+          <div style={{ color: '#24434D' }}>
             <div className="max-width content-padding pad-vertical">
               <div className="pure-u-lg-1-2">
                 <h2
@@ -365,31 +320,6 @@ class OpenSourcePage extends Component {
                   <ClientLogos openSource="true" />
                 </div>
               </div>
-              {/* <h3 className="header--lg">
-                Open Source Project Spotlight
-                <span className="text--serif text--primary">.</span>
-              </h3>
-
-              <Columns columns={3}>
-                {projectSpotlight.map(item => {
-                  return (
-                    <Card
-                      key={item.link}
-                      link={item.link}
-                      externalLink={item.externalLink}
-                      suppressNewTab={item.suppressNewTab}
-                    >
-                      <ImageBlock
-                        title={item.title}
-                        image={item.image}
-                        caption={item.caption}
-                        sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                        hoverable
-                      />
-                    </Card>
-                  )
-                })}
-              </Columns> */}
             </div>
           </div>
         </div>
@@ -407,7 +337,7 @@ class OpenSourcePage extends Component {
           </Quote>
         </div>
 
-        <div style={{ backgroundColor: '#FAF6F4', color: '#24434D' }}>
+        <div className="bg-light" style={{ color: '#24434D' }}>
           <div className="max-width content-padding pad-vertical container--justify-center">
             <div
               style={{
@@ -421,7 +351,6 @@ class OpenSourcePage extends Component {
                   We're looking for funding
                   <span className="text--serif text--primary">.</span>
                 </h2>
-                {/* <h3 className="header--lg">We’re looking for funding!</h3> */}
               </div>
 
               <div className="pad-horizontal pure-u-lg-1-3">
@@ -465,6 +394,7 @@ class OpenSourcePage extends Component {
                   textAlign: 'left',
                   backgroundColor: 'white',
                   marginBottom: 35,
+                  marginTop: 50,
                 }}
               >
                 <Card link="/">
@@ -632,18 +562,6 @@ class OpenSourcePage extends Component {
               >
                 Get in touch
               </Link>
-              {/* 
-              <Link
-                to="#open-work"
-                className="button button--tertiary button--lg "
-                style={{
-                  width: 'auto',
-                  minWidth: 0,
-                  marginTop: 20,
-                }}
-              >
-                See more of our open work
-              </Link> */}
             </div>
 
             <div></div>
@@ -681,23 +599,8 @@ class OpenSourcePage extends Component {
                 infrastructure of healthcare (healthIT) and allows for a global
                 healthcare operating system.
                 <br />
-                {/* <p
-                              className="text"
-                              style={{ color: '#C9461D', marginTop: '1.5em' }}
-                            >
-                              We support and onboard individuals and organizations to use our
-                              open source work.
-                            </p> */}
               </p>
             </div>
-
-            {/* <Link
-              to="/contact/"
-              className="button button--secondary button--lg "
-              style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
-            >
-              Let's chat, we're here to help!
-            </Link> */}
           </div>
         </div>
         <div className="max-width content-padding pad-vertical">
@@ -727,9 +630,7 @@ class OpenSourcePage extends Component {
             </Columns>
           </div>
         </div>
-
-        {/* CTA for the community  */}
-        <div style={{ backgroundColor: '#FAF6F4', color: '#24434D' }}>
+        <div className="bg-light" style={{ color: '#24434D' }}>
           <div className="max-width content-padding pad-vertical">
             <div className="pure-u-lg-1-2" style={{ marginTop: '4%' }}>
               <h2 className="header--xl">Let’s build better care together!</h2>
@@ -740,12 +641,6 @@ class OpenSourcePage extends Component {
                 source work.
                 <br /> Reach out to know more about the current partnership
                 opportunities available!
-                {/* We’re a growing communitiy of healthcare professionals, designers
-              and engineers. Subscribe to our Open Source Health Design
-              newsletter where we regularly share updates on projects and
-              organize online events giving you the opportunity to connect with
-              a diverse network, ask questions, show your work, and exchange
-              ideas.. */}
               </p>
 
               <Link
@@ -760,12 +655,6 @@ class OpenSourcePage extends Component {
               >
                 Get Involved
               </Link>
-
-              {/* <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title=""
-                submitButtonText="Subscribe"
-              /> */}
             </div>
 
             <div className="pure-u-lg-1-2 hidden--sm">

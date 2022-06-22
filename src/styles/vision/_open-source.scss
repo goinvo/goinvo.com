@@ -1,0 +1,16 @@
+.textAlign {
+  text-align: center;
+}
+
+.LayoutCenter {
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  @media screen and (max-width: 500px) {
+    text-align: center;
+  }
+}
+
+.bg-light {
+  background-color: #faf6f4;
+}

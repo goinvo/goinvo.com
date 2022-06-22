@@ -170,16 +170,3 @@ body {
 .float-clear {
   clear: both;
 }
-
-.textAlign {
-  text-align: center;
-}
-
-.LayoutCenter {
-  @media screen and (min-width: 600px) {
-    text-align: left;
-  }
-  @media screen and (max-width: 600px) {
-    text-align: center;
-  }
-}

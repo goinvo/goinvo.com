@@ -165,7 +165,7 @@ class CaseStudyLayout extends Component {
                   ),
                 }}
               >
-                <div className="case-study">
+                <div className={`case-study ${caseStudy.parent.name}`}>
                   <Hero image={caseStudy.frontmatter.image} />
                   <div className="max-width max-width--md content-padding">
                     <MDXRenderer>{caseStudy.code.body}</MDXRenderer>

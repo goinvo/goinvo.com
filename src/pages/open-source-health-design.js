@@ -29,31 +29,33 @@ const numbersStyle = {
   justifyContent: 'center',
 }
 
+const imageUrl = 'https://i.ibb.co/Pztr3HW/bgtest2.png'
+
 //Data
-const projectSpotlight = [
-  {
-    link: '/vision/determinants-of-health/',
-    image: '/images/services/doh-preview.jpg',
-    title: 'Determinants of Health',
-    caption:
-      '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
-  },
-  {
-    link: 'https://www.goinvo.com/work/hgraph',
-    image: '/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg',
-    title: 'hGraph',
-    caption:
-      'hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics',
-  },
-  {
-    link: 'https://www.goinvo.com/work/fastercures-health-data-basics',
-    image:
-      '/images/case-studies/fastercures/health-data-basics/health-data-basics-hero.jpg',
-    title: 'Health Data Basics',
-    caption:
-      'Discover a project to educate and engage patients about health data through, posters, icons, and app designs in partnership with FasterCures.',
-  },
-]
+// const projectSpotlight = [
+//   {
+//     link: '/vision/determinants-of-health/',
+//     image: '/images/services/doh-preview.jpg',
+//     title: 'Determinants of Health',
+//     caption:
+//       '89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.',
+//   },
+//   {
+//     link: 'https://www.goinvo.com/work/hgraph',
+//     image: '/images/case-studies/goinvo/hgraph/hgraph-hero2.jpg',
+//     title: 'hGraph',
+//     caption:
+//       'hGraph, your health in one picture, improves health and healthcare with agile design and big data analytics',
+//   },
+//   {
+//     link: 'https://www.goinvo.com/work/fastercures-health-data-basics',
+//     image:
+//       '/images/case-studies/fastercures/health-data-basics/health-data-basics-hero.jpg',
+//     title: 'Health Data Basics',
+//     caption:
+//       'Discover a project to educate and engage patients about health data through, posters, icons, and app designs in partnership with FasterCures.',
+//   },
+// ]
 const openSourceConversations = [
   {
     link: 'https://designmuseumfoundation.org/open-source-healthcare/',
@@ -109,38 +111,51 @@ class OpenSourcePage extends Component {
 
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="max-width content-padding pad-vertical LayoutCenter">
-          {/* <OpenSourceGraph /> */}
-          <div
-            className="pad-horizontal"
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap-reverse',
-              marginTop: '5%',
-              marginBottom: '5%',
-            }}
-          >
-            <div style={{ flex: '1 1 200px', marginTop: '5%', color: '#' }}>
-              <h1 className="header--xl " style={{ color: '#24434D' }}>
-                Open Source Health Design
-                <span className="text--serif text--primary">.</span>
-              </h1>
-              <p className="text" style={{ color: '#24434D' }}>
-                Bringing Trust, Openness, Innovation &amp; Design to Healthcare
-              </p>
-              <Link
-                to="#open-work"
-                className="button button--primary button--lg "
-                style={{
-                  width: 'auto',
-                  minWidth: 0,
-                  marginTop: 20,
-                  marginRight: 15,
-                }}
-              >
-                Discover our projects
-              </Link>
-              <Link
+        <div
+          className="pad-horizontal"
+          style={{
+            backgroundImage: `url(${imageUrl})`,
+            paddingTop: '2%',
+            paddingBottom: '2%',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100%',
+          }}
+        >
+          <div className="max-width content-padding pad-vertical LayoutCenter">
+            {/* <OpenSourceGraph /> */}
+            <div
+              className="pad-horizontal"
+              style={{
+                display: 'flex',
+
+                flexWrap: 'wrap-reverse',
+
+                marginTop: '5%',
+                marginBottom: '5%',
+              }}
+            >
+              <div style={{ flex: '1 1 200px', marginTop: '5%', color: '#' }}>
+                <h1 className="header--xl " style={{ color: '#24434D' }}>
+                  Open Source Health Design
+                  <span className="text--serif text--primary">.</span>
+                </h1>
+                <p className="text" style={{ color: '#24434D' }}>
+                  Bringing Trust, Openness, Innovation &amp; Design to
+                  Healthcare
+                </p>
+                <Link
+                  to="/contact"
+                  className="button button--primary button--lg "
+                  style={{
+                    width: 'auto',
+                    minWidth: 0,
+                    marginTop: 20,
+                    marginRight: 15,
+                  }}
+                >
+                  Get Involved
+                </Link>
+                {/* <Link
                 to="/contact/"
                 className="button button--tertiary button--lg "
                 style={{
@@ -150,20 +165,20 @@ class OpenSourcePage extends Component {
                   marginRight: 15,
                 }}
               >
-                Get Involved
-              </Link>
-            </div>
+              
+              </Link> */}
+              </div>
 
-            <div style={{ flex: '1 1 200px' }}>
-              <Image
-                src="/images/open_source/open-source.jpg"
-                className="image--max-width"
-                sizes={config.sizes.full}
-              />
+              <div style={{ flex: '1 1 200px' }}>
+                <Image
+                  src="/images/open_source/open-source-bgd.png"
+                  className="image--max-width"
+                  sizes={config.sizes.full}
+                />
+              </div>
             </div>
           </div>
         </div>
-
         <div style={{ backgroundColor: '#FAF6F4' }}>
           <div className="max-width content-padding pad-vertical LayoutCenter">
             <div className="pure-u-lg-1-2">
@@ -195,7 +210,7 @@ class OpenSourcePage extends Component {
                 to any designer, to any engineer, to any world citizen, to use
                 and modify without restriction.
                 <p style={{ marginTop: '3%' }}>
-                  We demand open source health design. <br /> Because healthcare
+                  We demand Open Source Health Design. <br /> Because healthcare
                   is too important to be closed. <br />
                   When you use a healthcare service, <br />
                   you don't know how it works,
@@ -302,28 +317,47 @@ class OpenSourcePage extends Component {
         <div className="LayoutCenter">
           <div style={{ backgroundColor: '#FAF6F4', color: '#24434D' }}>
             <div className="max-width content-padding pad-vertical">
-              <h2 className="header--xl">What is Open Source Health Design?</h2>
-              <p className="text">
-                Open Source Health Design is
-                <br /> the design, testing, and deployment of healthcare
-                services
-                <br /> where the inner workings are,
-                <br />
-                from strategy to user interfaces to operational code,
-                <br /> open to inspection, <br /> open to critique, <br /> open
-                to improvement, <br />
-                and <br />
-                open to continuous evolution. <br />
-                Over time, <br />
-                Open Source Healthcare Design
-                <br />
-                drives software transparency, <br />
-                generates greater trust, <br />
-                creates higher quality health outcomes, <br />
-                and <br />
-                builds more reliable healthcare services.
-              </p>
-              <div className="pad-vertical--double">
+              <div className="pure-u-lg-1-2">
+                <h2
+                  className="header--xl"
+                  style={{
+                    paddingRight: '7%',
+                    marginBottom: 0,
+                  }}
+                >
+                  Open Source Health Design is an initiative to drive
+                  transparency and innovation in healthcare
+                  <span className="text--serif text--primary">.</span>
+                </h2>
+              </div>
+
+              <div className="pure-u-lg-1-2">
+                <p
+                  className="text"
+                  style={{
+                    paddingTop: '2%',
+                    paddingLeft: '4%',
+                    paddingBottom: '4%',
+                  }}
+                >
+                  Open Source Health Design is the design, testing, and
+                  deployment of healthcare services
+                  <br />
+                  from strategy to user interfaces to operational code,
+                  <br /> open to inspection, <br /> open to critique, <br />{' '}
+                  open to improvement, <br />
+                  and open to continuous evolution. <br />
+                  <p>
+                    Open Source Healthcare Design
+                    <br />
+                    drives software transparency, <br />
+                    builds greater trust, <br />
+                    creates more reliable healthcare services <br />
+                    and generates higher quality health outcomes for all.
+                  </p>
+                </p>
+              </div>
+              <div className="pad-vertical">
                 <div className="max-width content-padding">
                   <h3 className="header--md" style={{ marginTop: 0 }}>
                     We've worked with...
@@ -379,7 +413,7 @@ class OpenSourcePage extends Component {
               style={{
                 textAlign: 'center',
                 justifyContent: 'center',
-                paddingBottom: '4%',
+                paddingBottom: '2%',
               }}
             >
               <div>
@@ -596,7 +630,7 @@ class OpenSourcePage extends Component {
                   </div>
                 </Card>
               </div>
-
+              {/* 
               <Link
                 to="#open-work"
                 className="button button--tertiary button--lg "
@@ -607,7 +641,7 @@ class OpenSourcePage extends Component {
                 }}
               >
                 See more of our open work
-              </Link>
+              </Link> */}
             </div>
 
             <div></div>
@@ -615,40 +649,60 @@ class OpenSourcePage extends Component {
         </div>
 
         <div>
-          <div className=" max-width content-padding pad-vertical textAlign">
-            <h2 className="header--xl" style={{ color: '#24434D' }}>
-              It’s Open Source!
-            </h2>
-            <p className="text">
-              Our design work, health research, and code are open source. They
-              are freely available for anyone to see, download, change, and
-              redistribute (licensed under Creative Commons Attribution v4 or
-              Apache v2). Much like how the internet works on open source
-              infrastructure, open source healthcare democratizes the
-              infrastructure of healthcare (healthIT), and will allow for a
-              global, healthcare operating system
-              <br />
-              <p
-                className="text"
-                style={{ color: '#C9461D', marginTop: '1.5em' }}
+          <div className=" max-width content-padding pad-vertical">
+            <div className="pure-u-lg-1-2">
+              <h2
+                className="header--xl"
+                style={{
+                  color: '#24434D',
+                  paddingRight: '7%',
+                  marginBottom: 0,
+                }}
               >
-                We support and onboard individuals and organizations to use our
-                open source work.
+                Our design work, health research, and code are open source
+                <span className="text--serif text--primary">.</span>
+              </h2>
+            </div>
+            <div
+              className="pure-u-lg-1-2"
+              style={{
+                paddingTop: '2%',
+                paddingLeft: '4%',
+                paddingBottom: '4%',
+              }}
+            >
+              <p className="text">
+                They are freely available for anyone to see, download, change,
+                and redistribute (licensed under Creative Commons Attribution v4
+                or Apache v2). Much like how the internet works on open source
+                infrastructure, open source healthcare democratizes the
+                infrastructure of healthcare (healthIT), and will allow for a
+                global, healthcare operating system
+                <br />
+                {/* <p
+                              className="text"
+                              style={{ color: '#C9461D', marginTop: '1.5em' }}
+                            >
+                              We support and onboard individuals and organizations to use our
+                              open source work.
+                            </p> */}
               </p>
-            </p>
+            </div>
 
-            <Link
+            {/* <Link
               to="/contact/"
               className="button button--secondary button--lg "
               style={{ width: 'auto', minWidth: 0, marginTop: 20 }}
             >
               Let's chat, we're here to help!
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="max-width content-padding pad-vertical">
           <div style={{ paddingBottom: '4%', color: '#24434D' }}>
-            <h3 className="header--lg">Open Health Design Conversations</h3>
+            <h3 className="header--lg">
+              Open Source Health Design conversations
+            </h3>
             <Columns columns={3}>
               {openSourceConversations.map(item => {
                 return (
@@ -675,22 +729,39 @@ class OpenSourcePage extends Component {
         {/* CTA for the community  */}
         <div style={{ backgroundColor: '#FAF6F4', color: '#24434D' }}>
           <div className="max-width content-padding pad-vertical">
-            <h2 className="header--xl">Let’s build better care together!</h2>
-            <p className="text">
-              We’re a growing communitiy of healthcare professionals, designers
+            <div className="pure-u-lg-1-2" style={{ marginTop: '4%' }}>
+              <h2 className="header--xl">Let’s build better care together!</h2>
+              <p className="text">
+                Curious on how you can contribute to one of our open source
+                projects? <br />
+                Reach out to know more about the current partnership
+                opportunities available!
+                {/* We’re a growing communitiy of healthcare professionals, designers
               and engineers. Subscribe to our Open Source Health Design
               newsletter where we regularly share updates on projects and
               organize online events giving you the opportunity to connect with
               a diverse network, ask questions, show your work, and exchange
-              ideas..
-            </p>
+              ideas.. */}
+              </p>
 
-            <div className="pure-u-lg-1-2" style={{ marginTop: '4%' }}>
-              <HubspotForm
+              <Link
+                to="/contact"
+                className="button button--primary button--lg "
+                style={{
+                  width: 'auto',
+                  minWidth: 0,
+                  marginTop: 20,
+                  marginRight: 15,
+                }}
+              >
+                Get Involved
+              </Link>
+
+              {/* <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}
                 title=""
                 submitButtonText="Subscribe"
-              />
+              /> */}
             </div>
 
             <div className="pure-u-lg-1-2 hidden--sm">

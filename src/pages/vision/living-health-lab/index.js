@@ -19,14 +19,6 @@ const frontmatter = {
 }
 
 class LivingHealthLabFeature extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {}
-
-    this.appendix = React.createRef()
-  }
-
   render() {
     return (
       <Layout frontmatter={frontmatter}>
@@ -532,8 +524,8 @@ class LivingHealthLabFeature extends Component {
             <h3>Open Source Health Design</h3>
             <p>
               As an Open Source Design project, Living Health Lab will strive to
-              be transparent: any developed resources will be made available to
-              the public for free use under the Creative Commons Attribution 4.0
+              be transparent: this project's content is available to the public
+              for free use under the Creative Commons Attribution 4.0
               International License. Transparency affords us the benefits of
               external input and engagement. By making all research, design, and
               ultimately code publicly available, we hope to spread good ideas
@@ -561,6 +553,15 @@ class LivingHealthLabFeature extends Component {
               </a>
             </div>
 
+            <div id="appendix">
+              <h2>Appendix</h2>
+              <iframe
+                width="100%"
+                height="600px"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
+              ></iframe>
+            </div>
+
             <h2>Authors</h2>
 
             <Author name="Sharon Lee" />
@@ -568,9 +569,6 @@ class LivingHealthLabFeature extends Component {
             <Author name="Huahua Zhu" />
             <Author name="Megan Hirsch" />
             <Author name="Chloe Ma" />
-            {
-              // TODO: Add Sam to team
-            }
             <Author name="Samantha Wuu" />
 
             <h2 id="references">References</h2>
@@ -639,15 +637,6 @@ class LivingHealthLabFeature extends Component {
                 },
               ]}
             />
-            <div id="appendix">
-              <h2>Appendix</h2>
-              <iframe
-                ref={this.appendix}
-                width="100%"
-                height="600px"
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
-              ></iframe>
-            </div>
           </div>
         </div>
       </Layout>

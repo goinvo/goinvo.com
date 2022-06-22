@@ -40,13 +40,13 @@ class LivingHealthLabFeature extends Component {
               <br />
               With over 350,000 digital health applications available worldwide,
               there’s no shortage of options when it comes to individual health
-              data tracking.1 However, accurately interpreting this data to
-              address specific questions and create an effective health plan can
-              be a challenge. Individuals within the Quantified Self community
-              have established a systematic approach to self-tracking and
-              self-research called Personal Science. Through Living Health Lab,
-              we aim to extend the personal science process to anyone with
-              access to a smartphone.
+              data tracking.<Reference>1</Reference> However, accurately
+              interpreting this data to address specific questions and create an
+              effective health plan can be a challenge. Individuals within the
+              Quantified Self community have established a systematic approach
+              to self-tracking and self-research called Personal Science.
+              Through Living Health Lab, we aim to extend the personal science
+              process to anyone with access to a smartphone.
             </p>
             <p>
               <i>Development</i>

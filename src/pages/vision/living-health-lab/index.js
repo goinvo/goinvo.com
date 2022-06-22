@@ -540,6 +540,7 @@ class LivingHealthLabFeature extends Component {
                 <iframe
                   width="100%"
                   height="600px"
+                  scrolling="no"
                   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
                 ></iframe>
               </div>

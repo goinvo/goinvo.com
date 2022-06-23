@@ -1,0 +1,104 @@
+.network-diagram {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  list-style-type: none;
+  background-color: white;
+  color: #24434d;
+  filter: drop-shadow(0px 5px 3px rgba(56, 64, 84, 0.17));
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.link:hover {
+  filter: drop-shadow(0px 7px 7px rgba(57, 75, 94, 0.17));
+  transition: 0.3s;
+}
+
+.ehr {
+  position: static;
+  width: 173px;
+  height: 64px;
+  left: 684px;
+  top: 525px;
+}
+
+.flux {
+  position: static;
+  width: 97px;
+  height: 64px;
+  left: 152px;
+  top: 565px;
+}
+
+.hgraph {
+  position: static;
+  width: 82px;
+  height: 64px;
+  left: 364px;
+  top: 600px;
+}
+
+.pro {
+  position: static;
+  width: 104px;
+  height: 64px;
+  left: 59px;
+  top: 572px;
+}
+
+.category {
+  border-radius: 10px;
+  background-color: #24434d;
+  color: white;
+  filter: drop-shadow(0px 5px 3px rgba(56, 64, 84, 0.17));
+  padding: 0.5rem;
+  font-family: 'open sans';
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.tools {
+  position: static;
+  width: 121px;
+  height: 39px;
+  left: 475px;
+  top: 265px;
+}
+
+.std {
+  position: static;
+  width: 231px;
+  height: 39px;
+  left: 144px;
+  top: 578px;
+}
+
+.health {
+  position: static;
+  width: 224px;
+  height: 39px;
+  left: 470px;
+  top: 578px;
+}
+
+.software {
+  position: static;
+  width: 151px;
+  height: 39px;
+  left: 184px;
+  top: 265px;
+}
+
+.viz {
+  position: static;
+  width: 175px;
+  height: 39px;
+  left: 357px;
+  top: 846px;
+}

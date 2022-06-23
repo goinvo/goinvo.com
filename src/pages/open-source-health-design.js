@@ -8,6 +8,8 @@ import Columns from '../components/columns'
 import ImageBlockSmall from '../components/image-block-small'
 import Card from '../components/card'
 import Quote from '../components/quote'
+import Chart from '../components/chart'
+import OpenSource from '../assets/images/os-desktop.inline.svg'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
@@ -195,14 +197,18 @@ class OpenSourcePage extends Component {
             over 65 open source projects
           </p>
           <div style={{ width: '80%', display: 'block', margin: 'auto' }}>
-            <Image
+            {/* <Image
               src={
                 isDesktop
                   ? '/images/open_source/open-source-projects-desktop.jpg'
                   : '/images/open_source/open-source-projects-mobile.jpg'
               }
               className="image--max-width"
-            />
+            /> */}
+
+            {/* <Chart /> */}
+
+            <OpenSource />
           </div>
         </div>
 

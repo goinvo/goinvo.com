@@ -96,7 +96,7 @@ class OpenSourcePage extends Component {
                   <span className="text--serif text--primary">.</span>
                 </h1>
                 <p>
-                  Bringing Trust, Openness, Innovation &amp; Design to
+                  Bringing Trust, Openness, Innovation, &amp; Design to
                   Healthcare
                 </p>
                 <Link
@@ -182,8 +182,11 @@ class OpenSourcePage extends Component {
         </div>
 
         <div className="max-width content-padding pad-vertical LayoutCenter teal">
-          <h2 className="header--xl center ">
-            Open Source Health Design projects
+          <h2
+            className="header--xl center "
+            style={{ display: 'inline-block' }}
+          >
+            Open Source Health Design Projects
             <span className="text--serif text--primary">.</span>
           </h2>
           <p
@@ -194,7 +197,7 @@ class OpenSourcePage extends Component {
           >
             In the past 10 years, we've partnered with federal and nonprofit
             organizations to address the most pressing healthcare issues—with
-            over 65 open source projects
+            over 65 open source projects.
           </p>
           <div style={{ display: 'block', margin: 'auto' }}>
             {isDesktop ? <OpenSourceDesktop /> : <OpenSourceMobile />}
@@ -218,9 +221,8 @@ class OpenSourcePage extends Component {
                   deployment of healthcare services
                   <br />
                   from strategy to user interfaces to operational code,
-                  <br /> open to inspection, <br /> open to critique, <br />{' '}
-                  open to improvement, <br />
-                  and open to continuous evolution. <br />
+                  <br /> open to inspection, <br /> open to critique, <br />
+                  and open to continuous improvement. <br />
                   <p>
                     Open Source Healthcare Design
                     <br />
@@ -352,7 +354,7 @@ class OpenSourcePage extends Component {
                       <p className="text">
                         Rosie is an open source health manager to support people
                         aggregate all their health data into a single location
-                        and share that data in their care team to meet their
+                        and share that data with their care team to meet their
                         health goals.
                         <br />
                       </p>
@@ -367,9 +369,9 @@ class OpenSourcePage extends Component {
                     <div className="pure-u-md-1-2 teal flip-child textCard">
                       <h4 className="header--xl headerCard">Health Picture</h4>
                       <p className="text">
-                        Discover our open source library for visualizing health
-                        data. Use hGraph for monitoring your patient population.
-                        Give patients a beautiful view of their health.
+                        hGraph can help healthcare professionals closely monitor
+                        their patient population while giving their patients a
+                        meaningful picture of their health.
                       </p>
                     </div>
 
@@ -483,7 +485,7 @@ class OpenSourcePage extends Component {
                 Let’s build better care together!
               </h2>
               <p className="text">
-                Curious in using, contributing to, or funding these projects?
+                Interested in using, contributing to, or funding these projects?
                 <br />
                 We help organizations and individuals set up and use our open
                 source work.

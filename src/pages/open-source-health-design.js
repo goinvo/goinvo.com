@@ -8,8 +8,8 @@ import Columns from '../components/columns'
 import ImageBlockSmall from '../components/image-block-small'
 import Card from '../components/card'
 import Quote from '../components/quote'
-import Chart from '../components/chart'
-import OpenSource from '../assets/images/os-desktop.inline.svg'
+import OpenSourceDesktop from '../assets/images/os-desktop.inline.svg'
+import OpenSourceMobile from '../assets/images/os-mobile.inline.svg'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
@@ -183,7 +183,7 @@ class OpenSourcePage extends Component {
 
         <div className="max-width content-padding pad-vertical LayoutCenter teal">
           <h2 className="header--xl center ">
-            Open Source Health Design <br /> projects
+            Open Source Health Design projects
             <span className="text--serif text--primary">.</span>
           </h2>
           <p
@@ -196,19 +196,8 @@ class OpenSourcePage extends Component {
             organizations to address the most pressing healthcare issues—with
             over 65 open source projects
           </p>
-          <div style={{ width: '80%', display: 'block', margin: 'auto' }}>
-            {/* <Image
-              src={
-                isDesktop
-                  ? '/images/open_source/open-source-projects-desktop.jpg'
-                  : '/images/open_source/open-source-projects-mobile.jpg'
-              }
-              className="image--max-width"
-            /> */}
-
-            {/* <Chart /> */}
-
-            <OpenSource />
+          <div style={{ display: 'block', margin: 'auto' }}>
+            {isDesktop ? <OpenSourceDesktop /> : <OpenSourceMobile />}
           </div>
         </div>
 

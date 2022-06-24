@@ -182,12 +182,8 @@ class OpenSourcePage extends Component {
         </div>
 
         <div className="max-width content-padding pad-vertical LayoutCenter teal">
-          <h2
-            className="header--xl center "
-            style={{ display: 'inline-block' }}
-          >
+          <h2 className="header--xl center ">
             Open Source Health Design Projects
-            <span className="text--serif text--primary">.</span>
           </h2>
           <p
             className="text--gray pad-horizontal--double center "

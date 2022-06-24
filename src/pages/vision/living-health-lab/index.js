@@ -31,6 +31,10 @@ class LivingHealthLabFeature extends Component {
     this.carousel = React.createRef()
   }
 
+  beforeComicSlideChange = (current, next) => {
+    this.setState({ currentSlide: next })
+  }
+
   goToComicSlide = i => {
     this.setState({ currentSlide: i }, () => {
       this.carousel.current.slickGoTo(i, true)
@@ -306,6 +310,7 @@ class LivingHealthLabFeature extends Component {
               infinite={false}
               dots={false}
               arrows={false}
+              beforeChange={this.beforeComicSlideChange}
             >
               {comicSlides.map((n, i) => {
                 return (

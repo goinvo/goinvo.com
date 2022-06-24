@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -20,7 +21,25 @@ const frontmatter = {
 }
 
 class LivingHealthLabFeature extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      currentSlide: 0,
+    }
+
+    this.carousel = React.createRef()
+  }
+
+  goToComicSlide = i => {
+    this.setState({ currentSlide: i }, () => {
+      this.carousel.current.slickGoTo(i, true)
+    })
+  }
+
   render() {
+    const comicSlides = Array.from(Array(6), (x, i) => i)
+
     return (
       <Layout frontmatter={frontmatter}>
         <Helmet>
@@ -159,7 +178,8 @@ class LivingHealthLabFeature extends Component {
               with Parkinson’s disease in identifying personalized sleep and
               medication routines to improve symptoms of rigidity,
               <Reference>6</Reference> patients with irritable bowel syndrome in
-              determining possible food triggers,<Reference>7</Reference>,
+              determining possible food triggers,<Reference>7</Reference>
+              <sup>,</sup>
               <Reference>8</Reference> and patients trying to understand and
               better manage their migraines.<Reference>9</Reference> Living
               Health Lab’s mission is to build on this research and broadly
@@ -281,10 +301,15 @@ class LivingHealthLabFeature extends Component {
               Living Health Lab and begin taking ownership of their health
               through the service.
             </p>
-            <Carousel infinite={false}>
-              {[...Array(6)].map((n, i) => {
+            <SlickCarousel
+              ref={this.carousel}
+              infinite={false}
+              dots={false}
+              arrows={false}
+            >
+              {comicSlides.map((n, i) => {
                 return (
-                  <div>
+                  <div key={n}>
                     <div className="lhl-image-max-width">
                       <Image
                         src={`/images/features/living-health-lab/comic-${i +
@@ -296,7 +321,41 @@ class LivingHealthLabFeature extends Component {
                   </div>
                 )
               })}
-            </Carousel>
+            </SlickCarousel>
+            <div className="lhl-comic-nav">
+              <button
+                className={`button button--link lhl-comic-prev ${
+                  this.state.currentSlide === 0 ? 'disabled' : ''
+                }`}
+                onClick={() => this.goToComicSlide(this.state.currentSlide - 1)}
+              ></button>
+              {comicSlides.map((n, i) => {
+                return (
+                  <button
+                    key={n}
+                    className={`button button--link lhl-comic-button ${
+                      this.state.currentSlide === i ? 'active' : ''
+                    }`}
+                    onClick={() => this.goToComicSlide(i)}
+                  >
+                    <Image
+                      src={`/images/features/living-health-lab/comic-${i +
+                        1}.png`}
+                      className="image--max-width"
+                      sizes={config.sizes.fullInsideMaxWidth}
+                    />
+                  </button>
+                )
+              })}
+              <button
+                className={`button button--link lhl-comic-next ${
+                  this.state.currentSlide === comicSlides.length - 1
+                    ? 'disabled'
+                    : ''
+                }`}
+                onClick={() => this.goToComicSlide(this.state.currentSlide + 1)}
+              ></button>
+            </div>
 
             <h3 className="header--md">3) Key Challenges</h3>
 
@@ -332,8 +391,13 @@ class LivingHealthLabFeature extends Component {
               that’s already been done—we are particularly grateful to those in
               the Quantified Self as well as all the researchers in the patient
               self-tracking space for their foundational work.
-              <Reference>4</Reference>,<Reference>10</Reference>,
-              <Reference>7</Reference>,<Reference>8</Reference>
+              <Reference>4</Reference>
+              <sup>,</sup>
+              <Reference>10</Reference>
+              <sup>,</sup>
+              <Reference>7</Reference>
+              <sup>,</sup>
+              <Reference>8</Reference>
             </p>
             <p>
               The Health Journey consists of three phases: Notice, Investigate,

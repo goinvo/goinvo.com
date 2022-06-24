@@ -141,7 +141,7 @@ class OpenSourcePage extends Component {
                   When you use a healthcare service, <br />
                   you don't know how it works,
                   <br /> why it works,
-                  <br /> who it works best for, and if the results are true.
+                  <br /> who it works best for, or if the results are true.
                 </p>
                 It's our health. Our very lives are at stake.
               </p>

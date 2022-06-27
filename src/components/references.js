@@ -13,7 +13,11 @@ class References extends Component {
           {this.props.references.map((ref, i) => {
             const key = ref.link && ref.link.length ? ref.link : ref.title
             return (
-              <li key={key} className="text--gray margin-bottom">
+              <li
+                key={key}
+                className="text--gray margin-bottom"
+                id={`ref-${i + 1}`}
+              >
                 <span id={`fn-${i + 1}`}>{ref.title}</span>
                 {ref.link ? (
                   <span>

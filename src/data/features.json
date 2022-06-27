@@ -1,5 +1,15 @@
 [
   {
+    "id": "living-health-lab",
+    "title": "Living Health Lab",
+    "date": "Jul.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.",
+    "image": "/images/features/living-health-lab/hero.jpg",
+    "link": "/vision/living-health-lab/"
+  },
+  {
     "id": "digital-health-trends-2022",
     "title": "Digital Health Trends to Watch in 2022 and Beyond",
     "date": "May.2022",

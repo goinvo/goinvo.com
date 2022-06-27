@@ -7,7 +7,8 @@
     "categories": ["open-source"],
     "caption": "An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.",
     "image": "/images/features/living-health-lab/hero.jpg",
-    "link": "/vision/living-health-lab/"
+    "link": "/vision/living-health-lab/",
+    "hiddenWorkPage": true
   },
   {
     "id": "digital-health-trends-2022",

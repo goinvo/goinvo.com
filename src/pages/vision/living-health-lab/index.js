@@ -16,7 +16,8 @@ import config from '../../../../config'
 
 const frontmatter = {
   metaTitle: 'Living Health Lab - GoInvo',
-  metaDescription: 'Measure your life to improve your health.',
+  metaDescription:
+    'An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.',
   heroImage: '/images/features/living-health-lab/hero.jpg',
 }
 
@@ -57,7 +58,11 @@ class LivingHealthLabFeature extends Component {
           <div className="max-width pad-all">
             <h1 className="header--xl">Living Health Lab</h1>
 
-            <h4>Measure your life to improve your health</h4>
+            <h4>
+              An open source project to help people examine, understand, and
+              improve their day-to-day health through guided exploration,
+              self-tracking, and behavior change.
+            </h4>
             <p>
               <i>Design</i>
               <br />

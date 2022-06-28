@@ -79,6 +79,14 @@
   .chartLayout {
     display: block;
     margin: auto;
+
+    .link {
+      transition: 0.25s;
+
+      &:hover {
+        filter: drop-shadow(0px 7px 7px rgba(57, 75, 94, 0.17));
+      }
+    }
   }
 
   .imgMaxWidth {

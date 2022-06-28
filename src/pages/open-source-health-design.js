@@ -5,7 +5,7 @@ import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Columns from '../components/columns'
-import ImageBlockSmall from '../components/image-block-small'
+import ImageBlock from '../components/image-block'
 import Card from '../components/card'
 import Quote from '../components/quote'
 import OpenSourceDesktop from '../assets/images/os-desktop.inline.svg'
@@ -461,7 +461,8 @@ class OpenSourcePage extends Component {
                     externalLink={item.externalLink}
                     suppressNewTab={item.suppressNewTab}
                   >
-                    <ImageBlockSmall
+                    <ImageBlock
+                      isSmall={true}
                       title={item.title}
                       image={item.image}
                       caption={item.caption}

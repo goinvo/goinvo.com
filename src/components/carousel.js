@@ -12,6 +12,17 @@ class Carousel extends Component {
     this.carousel = React.createRef()
   }
 
+  afterChange = (oldIndex, activeIndex) => {
+    // NOTE: Have to use hacky timeout with beforeChange because of react-slick bug:
+    // afterChange is not called in certain configs (adaptiveHeight=true)
+    // Delaying til "afterChange" helps state be more consistent because the
+    // slick transition was being interupted by the state change for some reason
+    // (I guess repainting it before slick sets its new internal index?)
+    setTimeout(() => {
+      this.setState({ activeIndex })
+    }, 500)
+  }
+
   goTo = i => {
     this.setState({ activeIndex: i }, () => {
       this.carousel.current.slickGoTo(i)
@@ -26,7 +37,6 @@ class Carousel extends Component {
       slidesToShow: this.props.slidesToShow,
       slidesToScroll: this.props.slidesToScroll,
       adaptiveHeight: this.props.adaptiveHeight,
-      beforeChange: (current, next) => this.setState({ activeIndex: next }),
     }
 
     return (
@@ -58,7 +68,11 @@ class Carousel extends Component {
           </div>
         ) : null}
         <div className="carousel__carousel-container background--gray">
-          <SlickCarousel {...carouselSettings} ref={this.carousel}>
+          <SlickCarousel
+            {...carouselSettings}
+            ref={this.carousel}
+            beforeChange={this.afterChange}
+          >
             {this.props.children}
           </SlickCarousel>
         </div>

@@ -29,7 +29,7 @@ import features from '../../data/features.json'
 import config from '../../../config'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'digital-health-trends-2022'
+  feature => feature.id === 'living-health-lab'
 )
 
 const frontmatter = {

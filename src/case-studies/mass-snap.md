@@ -38,7 +38,7 @@ Our project aimed to make this first step welcoming rather than prohibitive thro
 
 ### Results
 
-We designed an application that’s fully compliant with [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) and [508 accessibility standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/), and currently in use in Massachusetts.
+We designed an application that's fully compliant with [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) and [508 accessibility standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/) – and is currently in use in Massachusetts. This work was highlighted in the third edition of [_Measuring the User Experience_](https://www.amazon.com/Measuring-User-Experience-Interactive-Technologies/dp/0128180803) by Bill Albert and Tom Tullis.
 
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 12 weeks, 2 engineers for 10 weeks<br/>
 <span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Public health & policy
@@ -151,4 +151,4 @@ loop
 
 ## Results
 
-The redesigned application was deployed in July, 2018 and is still in its early stages of real world adoption, but for the first time ever at the MA DTA, the amount of applications coming from the web is larger than the amount completed in person.
+The redesigned application was deployed in July 2018, and for the first time ever at the MA DTA, the volume of online applications exceeded that of applications completed in person.

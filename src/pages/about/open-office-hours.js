@@ -70,7 +70,7 @@ class OpenOfficeHoursPage extends Component {
           </div>
         </div>
         <GradientImageColumns
-          image="/images/about/beth-working.jpg"
+          image="/images/about/beckett-working.jpg"
           reverse
           backgroundColor="blue"
         >

@@ -111,13 +111,13 @@ class CareersPage extends Component {
             </Quote>
           </GradientImageColumns>
           <GradientImageColumns
-            image="/images/about/careers/beth-presentation.jpg"
+            image="/images/about/careers/beckett-presentation.jpg"
             backgroundColor="gray"
             backgroundNotResponsive
           >
             <Quote
               background="gray"
-              quotee="Beth Herlin"
+              quotee="Beckett Rucker"
               quoteeSub="Designer"
               small
             >

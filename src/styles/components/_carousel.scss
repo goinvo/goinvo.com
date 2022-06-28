@@ -84,6 +84,10 @@
         display: block;
       }
     }
+
+    &.slick-disabled {
+      pointer-events: none;
+    }
   }
 
   .slick-prev {
@@ -128,6 +132,10 @@
     .slick-prev,
     .slick-next {
       opacity: 1;
+
+      &.slick-disabled {
+        opacity: 0;
+      }
     }
   }
 }

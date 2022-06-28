@@ -270,7 +270,7 @@ class OpenSourcePage extends Component {
               <div className="pad-horizontal pure-u-sm-1-3">
                 <Image
                   src="/images/open_source/trust.png"
-                  className="image--max-width-medium"
+                  className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text">
@@ -281,7 +281,7 @@ class OpenSourcePage extends Component {
               <div className="pad-horizontal pure-u-sm-1-3">
                 <Image
                   src="/images/open_source/innovation.png"
-                  className="image--max-width-medium"
+                  className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text">
@@ -293,7 +293,7 @@ class OpenSourcePage extends Component {
               <div className="pad-horizontal pure-u-sm-1-3">
                 <Image
                   src="/images/open_source/public-good.png"
-                  className="image--max-width-medium"
+                  className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text">

@@ -40,7 +40,7 @@ class ImageBlock extends Component {
       >
         <div
           className={`image-block__image-container ${
-            isSmall ? 'image-block__image-container-small' : ''
+            isSmall ? 'image-block__image-container--small' : ''
           }`}
         >
           <BackgroundImage

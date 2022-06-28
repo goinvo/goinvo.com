@@ -93,11 +93,9 @@ The complexity of the diagram is telling. This stems from a few key challenges:
 As a secure and patient-centric health record app, CommonHealth was a promising place to store verifiable health records. We researched, designed, prototyped, tested, and iterated designs around patients adding these verifiable records to their CommonHealth app. Through this effort, we explored public sentiment around having to show health records for access to travel and more. We considered the value of verifiable records outside of the COVID-19 use cases, such as students needing to share immunization records with their schools. We also dug into the mental model around these new records—how should people hear about these verifiable records, and how should the records be organized in and added to CommonHealth? In a round of small-scale user feedback, we performed task testing and gathered qualitative input on the designs.
 
 ![SMART Health Cards UI workflow](/images/case-studies/commonhealth/common_health_2_screens.jpg)
-
 _Key screens from our proposed designs for adding SMART Health Cards (verifiable records) into the CommonHealth app, eventually scaled down during implementation._
 
 ![SMART Health Cards Sketches](/images/case-studies/commonhealth/common_health_3_sketch.jpg)
-
 _An early sketch exploring mental models around how we categorized these new verifiable vaccination and test result records - whether they should be grouped with or separate from non-verifiable vaccination and test result records. What concerns might individuals have?_
 
 <Divider />
@@ -109,7 +107,6 @@ _An early sketch exploring mental models around how we categorized these new ver
 Nielsen Norman advocates for smaller and more frequent tests with users over single large-scale testing. Interviewing at least five participants can be sufficient to get a general feedback pulse. While new insights can arise from each interview, the feedback tends to repeat after five sessions [^3]. Throughout the engagement, we conducted testing with eight to twelve participants to keep evaluating our design blind spots, discovering improvements, and validating what worked. Because SMART Health Cards could potentially reach a broad audience, we did our best to engage a range of perspectives across age, sex, state lines, professions, race and ethnicity, and Android vs. Apple users. Though incomprehensive, it helped us get a better range of perspectives in our feedback.
 
 ![CommonHealth User Testing Stats](/images/case-studies/commonhealth/common_health_4_about_testing.jpg)
-
 _A summary of participants from one round of user testing_
 
 #### 2. The challenge of creating a public service that works for everyone
@@ -137,7 +134,6 @@ From the team’s perspective, it was almost unfathomable that so many separate 
 A key priority was to include education throughout the SMART Health Card experience. However, we wanted to avoid burdening the uninterested patient with pages and pages of reading material. We kept the content concise and included a “learn more” button to address frequently asked questions. We identified these frequently asked questions and concerns from our initial research and updated them based on common questions and concerns during user testing. These ways to learn more were included on the main SMART Health Card page and at the bottom of each Card page.
 
 ![Patient education](/images/case-studies/commonhealth/common_health_6_edu.jpg)
-
 _Example showing one of the multiple ways for users to dig deeper and learn more about SMART Health Cards_
 
 <Divider />
@@ -145,7 +141,6 @@ _Example showing one of the multiple ways for users to dig deeper and learn more
 ## Results
 
 ![Walk through of SMART Health Cards](/images/case-studies/commonhealth/common_health_7_ch_build.jpg)
-
 _Walk through of SMART Health Cards displayed on the CommonHealth website, courtesy of TCP [^4]_
 
 Major health and tech companies coalesced around the VCI on an international level. CommonHealth was the primary, Android-based open source platform and reference implementation for people to access and store digital patient vaccine records, and the way for most people to add their records to their Google or Samsung wallet. Open data standards based on the SMART Health Card spec, along with commercial and government buy-in, drove the toolkit’s global adoption.

@@ -272,7 +272,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="pure-u-1 card marginTop">
-                  <Card link="/">
+                  <Card link="/vision/living-health-lab">
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 teal textCard flip-child">
                         <h4 className="header--xl headerCard">
@@ -325,7 +325,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="pure-u-1">
-                  <Card link="https://www.goinvo.com/work/hgraph">
+                  <Card link="/work/hgraph">
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 teal flip-child textCard">
                         <h4 className="header--xl headerCard">
@@ -350,7 +350,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="pure-u-1">
-                  <Card link="https://goinvo.com/vision/own-your-health-data/">
+                  <Card link="/vision/own-your-health-data/">
                     <div className="wrap-parent">
                       <div className="pure-u-md-1-2 wrap imgMaxWidth">
                         <Image

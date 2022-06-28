@@ -17,8 +17,6 @@ const frontmatter = {
     'Healthcare needs to be open. We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.',
 }
 
-const imageUrl = 'https://i.ibb.co/Pztr3HW/bgtest2.png'
-
 const openSourceConversations = [
   {
     link: 'https://designmuseumfoundation.org/open-source-healthcare/',
@@ -78,7 +76,6 @@ class OpenSourcePage extends Component {
           <div
             className="pad-horizontal teal background-image "
             style={{
-              backgroundImage: `url(${imageUrl})`,
               paddingTop: '2%',
               paddingBottom: '2%',
             }}

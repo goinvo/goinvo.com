@@ -51,44 +51,32 @@ class OpenSourcePage extends Component {
       isDesktop: false,
     }
 
-    this.updateValue = this.updateValue.bind(this)
+    this.setScreenLayout = this.setScreenLayout.bind(this)
   }
 
   componentDidMount() {
-    this.updateValue()
-    window.addEventListener('resize', this.updateValue)
+    this.setScreenLayout()
+    window.addEventListener('resize', this.setScreenLayout)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateValue)
+    window.removeEventListener('resize', this.setScreenLayout)
   }
 
-  updateValue() {
+  setScreenLayout() {
     this.setState({ isDesktop: window.innerWidth > 600 })
   }
 
   render() {
-    const isDesktop = this.state.isDesktop
+    const { isDesktop } = this.state
 
     return (
       <Layout frontmatter={frontmatter}>
         <div className="open-source-health-design">
-          <div
-            className="pad-horizontal teal background-image "
-            style={{
-              paddingTop: '2%',
-              paddingBottom: '2%',
-            }}
-          >
+          <div className="pad-horizontal teal background-image ">
             <div className="max-width content-padding pad-vertical LayoutCenter">
-              <div
-                className="pad-horizontal flip-parent"
-                style={{
-                  marginTop: '5%',
-                  marginBottom: '5%',
-                }}
-              >
-                <div className="flip-child" style={{ marginTop: '5%' }}>
+              <div className="pad-horizontal flip-parent container-spacing">
+                <div className="flip-child container-spacing">
                   <h1 className="header--xl ">
                     Open Source Health Design
                     <span className="text--serif text--primary">.</span>
@@ -99,10 +87,7 @@ class OpenSourcePage extends Component {
                   </p>
                   <Link
                     to="/contact"
-                    className="button button--primary button--lg ctaLayout"
-                    style={{
-                      marginTop: 20,
-                    }}
+                    className="button button--primary button--lg ctaLayout marginTop"
                   >
                     Get Involved
                   </Link>
@@ -133,7 +118,7 @@ class OpenSourcePage extends Component {
                   code, scripts, graphics, ideas, documents available to any
                   designer, to any engineer, to any world citizen, to use and
                   modify without restriction.
-                  <p style={{ marginTop: '3%' }}>
+                  <p className="marginTop">
                     We demand Open Source Health Design. <br /> Because
                     healthcare is too important to be closed. <br />
                     When you use a healthcare service, <br />
@@ -145,10 +130,7 @@ class OpenSourcePage extends Component {
                 </p>
               </div>
 
-              <div
-                className="container--justify-center"
-                style={{ paddingBottom: '3%' }}
-              >
+              <div className="container--justify-center">
                 <div className="pure-u-sm-1-3">
                   <p>
                     <span className="nbrStyle">$1.8M</span>
@@ -183,17 +165,12 @@ class OpenSourcePage extends Component {
             <h2 className="header--xl center ">
               Open Source Health Design Projects
             </h2>
-            <p
-              className="text--gray pad-horizontal--double center "
-              style={{
-                paddingBottom: '2%',
-              }}
-            >
+            <p className="text--gray pad-horizontal--double center ">
               In the past 10 years, we've partnered with federal and nonprofit
               organizations to address the most pressing healthcare issues—with
               over 65 open source projects.
             </p>
-            <div style={{ display: 'block', margin: 'auto' }}>
+            <div className="chartLayout">
               {isDesktop ? <OpenSourceDesktop /> : <OpenSourceMobile />}
             </div>
           </div>
@@ -229,9 +206,7 @@ class OpenSourcePage extends Component {
                 </div>
                 <div className="pad-vertical">
                   <div className="max-width content-padding">
-                    <h3 className="header--md" style={{ marginTop: 0 }}>
-                      We've worked with...
-                    </h3>
+                    <h3 className="header--md">We've worked with...</h3>
                     <ClientLogos openSource="true" />
                   </div>
                 </div>
@@ -253,11 +228,7 @@ class OpenSourcePage extends Component {
 
           <div className="bg-light teal">
             <div className="max-width content-padding pad-vertical container--justify-center center ">
-              <div
-                style={{
-                  paddingBottom: '2%',
-                }}
-              >
+              <div className="paddingBottom">
                 <div>
                   <h2 className="header--xl">
                     We're looking for funding
@@ -300,7 +271,7 @@ class OpenSourcePage extends Component {
                   </p>
                 </div>
 
-                <div className="pure-u-1 card" style={{ marginTop: '7%' }}>
+                <div className="pure-u-1 card marginTop">
                   <Card link="/">
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 teal textCard flip-child">
@@ -315,10 +286,7 @@ class OpenSourcePage extends Component {
                         </p>
                       </div>
 
-                      <div
-                        className=" pure-u-lg-1-2 flip-child"
-                        style={{ maxWidth: 400 }}
-                      >
+                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth">
                         <Image
                           src="/images/open_source/health-lab.png"
                           className="image--max-width"
@@ -332,10 +300,7 @@ class OpenSourcePage extends Component {
                 <div className="pure-u-1">
                   <Card link="https://open-health-manager.github.io/Design/">
                     <div className="wrap-parent">
-                      <div
-                        className="pure-u-md-1-2 wrap"
-                        style={{ maxWidth: 400 }}
-                      >
+                      <div className="pure-u-md-1-2 wrap imgMaxWidth">
                         <Image
                           src="/images/open_source/health-manager.png"
                           className="image--max-width"
@@ -373,10 +338,7 @@ class OpenSourcePage extends Component {
                         </p>
                       </div>
 
-                      <div
-                        className="pure-u-md-1-2 flip-child"
-                        style={{ maxWidth: 400 }}
-                      >
+                      <div className="pure-u-md-1-2 flip-child imgMaxWidth">
                         <Image
                           src="/images/open_source/health-picture.png"
                           className="image--max-width"
@@ -390,10 +352,7 @@ class OpenSourcePage extends Component {
                 <div className="pure-u-1">
                   <Card link="https://goinvo.com/vision/own-your-health-data/">
                     <div className="wrap-parent">
-                      <div
-                        className="pure-u-md-1-2 wrap"
-                        style={{ maxWidth: 400 }}
-                      >
+                      <div className="pure-u-md-1-2 wrap imgMaxWidth">
                         <Image
                           src="/images/open_source/health-data-ownership.png"
                           className="image--max-width"
@@ -450,7 +409,7 @@ class OpenSourcePage extends Component {
             </div>
           </div>
           <div className="max-width content-padding pad-vertical teal">
-            <div style={{ paddingBottom: '4%' }}>
+            <div className="paddingBottom">
               <h3 className="header--lg">
                 Open Source Health Design conversations
               </h3>

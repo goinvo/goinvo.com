@@ -1,7 +1,7 @@
 ---
 title: 'Vaccination Cards for the Nation '
-image: '/images/case-studies/common-health/common_health_hero.jpg'
-client: 'Common Health'
+image: '/images/case-studies/commonhealth/common_health_hero.jpg'
+client: 'CommonHealth'
 caption: 'Helping patients to access and use their health data and vaccination credentials through CommonHealth, an open source health record.'
 categories:
   - 'patient-engagement'
@@ -15,7 +15,7 @@ hidden: false
 references:
   - title: 'Manage Your Health Data. (n.d.). CommonHealth. Retrieved June 27, 2022, from'
     link: 'https://www.commonhealth.org'
-  - title: 'The Commons Project - About. (n.d.). Www.thecommonsproject.org. Retrieved June 27, 2022, from'
+  - title: 'The Commons Project - About. (n.d.). www.thecommonsproject.org. Retrieved June 27, 2022, from'
     link: 'https://www.thecommonsproject.org/about'
   - title: 'Nielsen, J. (2000, March 18). Why You Only Need to Test with 5 Users. Nielsen Norman Group'
     link: 'https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/'
@@ -29,7 +29,7 @@ import Quote from 'components/quote'
 
 # Vaccination Cards for the Nation
 
-for Common Health
+for CommonHealth
 
 ### Problem
 
@@ -80,7 +80,7 @@ Early on, we worked with The Commons Project to grasp the many moving parts of t
 
 It was immediately apparent that the user experience would be difficult to control. The verifiable record effort involved several different parties: the partners contributing to the development of SMART Health Cards, patient apps, COVID testing and vaccination sites, state and city government efforts, and more. The following diagram illustrates early thinking on how people could access these new records:
 
-![System Map: SHC Delivery Ecosystem](/images/case-studies/mitre/SHR/shr-completeness-record.jpg)
+![System Map: SHC Delivery Ecosystem](/images/case-studies/commonhealth/common_health_1_ecosystem.jpg)
 
 The complexity of the diagram is telling. This stems from a few key challenges:
 
@@ -92,13 +92,13 @@ The complexity of the diagram is telling. This stems from a few key challenges:
 
 As a secure and patient-centric health record app, CommonHealth was a promising place to store verifiable health records. We researched, designed, prototyped, tested, and iterated designs around patients adding these verifiable records to their CommonHealth app. Through this effort, we explored public sentiment around having to show health records for access to travel and more. We considered the value of verifiable records outside of the COVID-19 use cases, such as students needing to share immunization records with their schools. We also dug into the mental model around these new records—how should people hear about these verifiable records, and how should the records be organized in and added to CommonHealth? In a round of small-scale user feedback, we performed task testing and gathered qualitative input on the designs.
 
-![System Map: SHC Delivery Ecosystem](/images/case-studies/mitre/SHR/shr-completeness-record.jpg)
+![SMART Health Cards UI workflow](/images/case-studies/commonhealth/common_health_2_screens.jpg)
 
-Key screens from our proposed designs for adding SMART Health Cards (verifiable records) into the CommonHealth app, eventually scaled down during implementation.
+_Key screens from our proposed designs for adding SMART Health Cards (verifiable records) into the CommonHealth app, eventually scaled down during implementation._
 
-![System Map: SHC Delivery Ecosystem](/images/case-studies/mitre/SHR/shr-completeness-record.jpg)
+![SMART Health Cards Sketches](/images/case-studies/commonhealth/common_health_3_sketch.jpg)
 
-An early sketch exploring mental models around how we categorized these new verifiable vaccination and test result records - whether they should be grouped with or separate from non-verifiable vaccination and test result records. What concerns might individuals have?
+_An early sketch exploring mental models around how we categorized these new verifiable vaccination and test result records - whether they should be grouped with or separate from non-verifiable vaccination and test result records. What concerns might individuals have?_
 
 <Divider />
 
@@ -108,20 +108,21 @@ An early sketch exploring mental models around how we categorized these new veri
 
 Nielsen Norman advocates for smaller and more frequent tests with users over single large-scale testing. Interviewing at least five participants can be sufficient to get a general feedback pulse. While new insights can arise from each interview, the feedback tends to repeat after five sessions [^3]. Throughout the engagement, we conducted testing with eight to twelve participants to keep evaluating our design blind spots, discovering improvements, and validating what worked. Because SMART Health Cards could potentially reach a broad audience, we did our best to engage a range of perspectives across age, sex, state lines, professions, race and ethnicity, and Android vs. Apple users. Though incomprehensive, it helped us get a better range of perspectives in our feedback.
 
-![System Map: SHC Delivery Ecosystem](/images/case-studies/mitre/SHR/shr-completeness-record.jpg)
-A summary of participants from one round of user testing
+![CommonHealth User Testing Stats](/images/case-studies/commonhealth/common_health_4_about_testing.jpg)
+
+_A summary of participants from one round of user testing_
 
 #### 2. The challenge of creating a public service that works for everyone
 
 Since a vaccination record could be required of any traveler, the product needed to work for those lacking in technological literacy, those with privacy concerns, those without reliable access to the internet, those in need of screen reader accessibility, and more. These concerns showed up in secondary research as well as in user feedback. We encouraged the team to advocate for a printed version of the SHC to be given to patients directly and emailed as an attachment so patients wouldn’t be required to use the digital version.
 
-"I have friends who will never carry it on their phone. They'd be hard pressed to do anything themselves. They would have trouble printing something out - unless someone issues it to them." - Interviewee
+<Quote quotee="Interviewee" quoteeSub="">I have friends who will never carry it on their phone. They'd be hard pressed to do anything themselves. They would have trouble printing something out - unless someone issues it to them.</Quote>
 
 #### 3. Interest in sharing **digital** health records
 
 Despite concerns, people were more interested in having a digital version of their vaccination record than just a paper copy.
 
-![System Map: SHC Delivery Ecosystem](/images/case-studies/mitre/SHR/shr-completeness-record.jpg)
+![Digital versus paper vaccination record stat](/images/case-studies/commonhealth/common_health_5_digital.jpg)
 
 #### 4. Emotional tension around showing vaccination status
 
@@ -135,22 +136,22 @@ From the team’s perspective, it was almost unfathomable that so many separate 
 
 A key priority was to include education throughout the SMART Health Card experience. However, we wanted to avoid burdening the uninterested patient with pages and pages of reading material. We kept the content concise and included a “learn more” button to address frequently asked questions. We identified these frequently asked questions and concerns from our initial research and updated them based on common questions and concerns during user testing. These ways to learn more were included on the main SMART Health Card page and at the bottom of each Card page.
 
-![SHR completeness](/images/case-studies/mitre/SHR/shr-completeness-record.jpg)
+![Patient education](/images/case-studies/commonhealth/common_health_6_edu.jpg)
 
-Example showing one of the multiple ways for users to dig deeper and learn more about SMART Health Cards
+_Example showing one of the multiple ways for users to dig deeper and learn more about SMART Health Cards_
 
 <Divider />
 
 ## Results
 
-![SHR completeness](/images/case-studies/mitre/SHR/shr-completeness-record.jpg)
+![Walk through of SMART Health Cards](/images/case-studies/commonhealth/common_health_7_ch_build.jpg)
 
-Walk through of SMART Health Cards displayed on the CommonHealth website, courtesy of TCP [^4]
+_Walk through of SMART Health Cards displayed on the CommonHealth website, courtesy of TCP [^4]_
 
 Major health and tech companies coalesced around the VCI on an international level. CommonHealth was the primary, Android-based open source platform and reference implementation for people to access and store digital patient vaccine records, and the way for most people to add their records to their Google or Samsung wallet. Open data standards based on the SMART Health Card spec, along with commercial and government buy-in, drove the toolkit’s global adoption.
 
 Crisis can often instigate shock doctrine to the detriment of many. Instead, the VCI (and the C19HCC.org alliance), driven by private and nonprofit organizations along with The Commons Project, triggered an amazing mission that shipped: every US resident will have their verifiable vaccination record available on their phone, using open source specifications and software. While the US government struggled to perform in the midst of the chaos of a global pandemic, these alliances showed grace under pressure, delivering international aid to Washington instead of the other way around.
 
-Together with The Common Health project teams, a global open source healthcare service was launched—during an ever-changing, global crisis. Good design is critical to the success of public health programs: without thoughtful engineering, design, and execution, people can feel frustrated with, and even alienated by, routine processes.
+Together with The CommonHealth project teams, a global open source healthcare service was launched—during an ever-changing, global crisis. Good design is critical to the success of public health programs: without thoughtful engineering, design, and execution, people can feel frustrated with, and even alienated by, routine processes.
 
 It is our collective duty to design for all.

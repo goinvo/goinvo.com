@@ -28,6 +28,7 @@ class ImageBlock extends Component {
       categories,
       caption,
       className,
+      isSmall = false,
       hoverable = false,
     } = this.props
 
@@ -37,7 +38,11 @@ class ImageBlock extends Component {
           className ? className : ''
         }`}
       >
-        <div className="image-block__image-container">
+        <div
+          className={`image-block__image-container ${
+            isSmall ? 'image-block__image-container--small' : ''
+          }`}
+        >
           <BackgroundImage
             src={image}
             externalImage={externalImage}

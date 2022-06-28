@@ -103,6 +103,10 @@ body {
     color: $color-black;
   }
 
+  &--teal {
+    color: $color-dark-teal;
+  }
+
   &--caption {
     @extend .text--gray;
     @extend .text--sm;

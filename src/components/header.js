@@ -27,6 +27,11 @@ class Header extends Component {
       { link: '/services/', title: 'Services', class: 'hidden--until-lg' },
       { link: '/about/', title: 'About', class: 'hidden--until-lg' },
       { link: '/vision/', title: 'Vision' },
+      {
+        link: '/open-source-health-design/',
+        title: 'Open Design',
+        class: 'hidden--until-lg',
+      },
     ]
 
     return (

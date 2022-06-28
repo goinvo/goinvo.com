@@ -8,7 +8,6 @@ import TeamMember from '../../components/team-member'
 import Image from '../../components/image'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
-
 import team from '../../data/team.json'
 
 import config from '../../../config'
@@ -52,9 +51,9 @@ const upNextList = [
       'The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.',
   },
   {
-    link: '/work/?category=open-source',
+    link: '/open-source-health-design/',
     image: '/images/services/hgraph-ipad.jpg',
-    title: 'Open source healthcare products',
+    title: 'Open Source Health Design',
     caption:
       'Learn about our opensource projects and why we’re passionate about making healthcare open.',
   },

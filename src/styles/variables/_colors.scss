@@ -5,10 +5,12 @@ $color-gray--medium: #d0cfce;
 $color-gray--light: #f6f6f6;
 $color-blue: #4a5e88;
 $color-blue--light: #f8fafe;
-$color-orange: #e36216;
+$color-orange: #c9461d;
 $color-orange--light: #ffb992;
 $color-teal: #007385;
+$color-dark-teal: #24434d;
 $color-red: #d62e17;
+$color-dark-teal--lightest: #f6f9fa;
 
 $color-primary: $color-orange;
 $color-primary--dark: darken($color-primary, 5%);
@@ -22,3 +24,4 @@ $color-primary--lightest: lighten(
 );
 
 $color-secondary: $color-teal;
+$color-tertiary: $color-dark-teal;

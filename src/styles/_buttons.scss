@@ -76,6 +76,30 @@
     }
   }
 
+  &--tertiary {
+    border: 1px solid $color-tertiary;
+    color: $color-tertiary;
+
+    .icon {
+      fill: $color-tertiary;
+    }
+
+    &:hover {
+      background-color: $color-dark-teal--lightest;
+      color: $color-tertiary;
+    }
+
+    &:active {
+      background-color: $color-tertiary;
+      border-color: $color-tertiary;
+      color: $color-white;
+
+      .icon {
+        fill: $color-white;
+      }
+    }
+  }
+
   &--link {
     @extend %link;
     padding: 0;

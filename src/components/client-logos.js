@@ -15,57 +15,80 @@ import Partners from '../assets/images/client-logos/logo-partners.inline.svg'
 import PersonalGenomeProject from '../assets/images/client-logos/logo-pgp.inline.svg'
 import Walgreens from '../assets/images/client-logos/logo-walgreens.inline.svg'
 import Wuxi from '../assets/images/client-logos/logo-wuxinextcode.inline.svg'
+import Crossover from '../assets/images/client-logos/logo-crossover.inline.svg'
 
 class ClientLogos extends Component {
   render() {
     return (
-      <ul className="list--unstyled client-logos">
-        <li>
-          <ThreeM />
-        </li>
-        <li>
-          <Partners />
-        </li>
-        <li>
-          <BD />
-        </li>
-        <li className="hidden--sm">
-          <InfoBionic />
-        </li>
-        <li className="hidden--sm">
-          <MGH />
-        </li>
-        <li>
-          <JohnsonAndJohnson />
-        </li>
-        <li>
-          <MountSinai />
-        </li>
-        <li>
-          <Wuxi />
-        </li>
-        <li>
-          <Walgreens />
-        </li>
-        <li className="hidden--sm">
-          <JournalOfParticipatoryMedicine />
-        </li>
-        <li className="hidden--sm">
-          <NationalScienceFoundation />
-        </li>
-        <li>
-          <NIH />
-        </li>
-        <li className="hidden--sm">
-          <PersonalGenomeProject />
-        </li>
-        <li className="hidden--sm">
-          <Mitre />
-        </li>
-        <li className="hidden--sm">
-          <Mass />
-        </li>
-      </ul>
+      <div>
+        {this.props.openSource ? (
+          <ul className="list--unstyled client-logos">
+            <li>
+              <Walgreens />
+            </li>
+            <li>
+              <NIH />
+            </li>
+            <li className="">
+              <PersonalGenomeProject />
+            </li>
+            <li className="">
+              <Mitre />
+            </li>
+            <li className="hidden--sm">
+              <Crossover />
+            </li>
+          </ul>
+        ) : (
+          <ul className="list--unstyled client-logos">
+            <li>
+              <ThreeM />
+            </li>
+            <li>
+              <Partners />
+            </li>
+            <li>
+              <BD />
+            </li>
+            <li className="hidden--sm">
+              <InfoBionic />
+            </li>
+            <li className="hidden--sm">
+              <MGH />
+            </li>
+            <li>
+              <JohnsonAndJohnson />
+            </li>
+            <li>
+              <MountSinai />
+            </li>
+            <li>
+              <Wuxi />
+            </li>
+            <li>
+              <Walgreens />
+            </li>
+            <li className="hidden--sm">
+              <JournalOfParticipatoryMedicine />
+            </li>
+            <li className="hidden--sm">
+              <NationalScienceFoundation />
+            </li>
+            <li>
+              <NIH />
+            </li>
+            <li className="hidden--sm">
+              <PersonalGenomeProject />
+            </li>
+            <li className="hidden--sm">
+              <Mitre />
+            </li>
+            <li className="hidden--sm">
+              <Mass />
+            </li>
+          </ul>
+        )}
+      </div>
     )
   }
 }

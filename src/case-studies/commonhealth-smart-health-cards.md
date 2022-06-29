@@ -61,10 +61,10 @@ Our goals were to review the existing app design for CommonHealth and develop ne
 
 Our work primarily spanned the following areas:
 
-- **Patient Data Sharing** - developed designs and prototypes around informed patient data sharing
-- **UI/UX Design Review** - performed a review of the CommonHealth app and identified areas for improvement
-- **Clinical Notes and Insurance Data** - investigated what new data would be available via FHIR R4 and conducted research and design on how to present this information to patients using the CommonHealth app
-- **Verifiable Vaccination Records and Test Results** - contributed to and developed groundwork thinking on how patients obtain and share their vaccination records
+- **Patient Data Sharing**: developed designs and prototypes around informed patient data sharing
+- **UI/UX Design Review**: performed a review of the CommonHealth app and identified areas for improvement
+- **Clinical Notes and Insurance Data**: investigated what new data would be available via FHIR R4 and conducted research and design on how to present this information to patients using the CommonHealth app
+- **Verifiable Vaccination Records and Test Results**: contributed to and developed groundwork thinking on how patients obtain and share their vaccination records
 
 For each of the main projects, we infused our fast-paced timeline with crucial design steps: research, concept creation, design and prototyping, small-scale user feedback, iteration, documentation, and delivery. Thanks to our experience with a wide range of healthcare products and services, we were able to provide tactical as well as strategic support. We handled everything from identifying data elements that FHIR R4 resources would support to envisioning the patient experience of learning about and receiving their vaccination records.
 

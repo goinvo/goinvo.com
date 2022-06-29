@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import smoothscroll from 'smoothscroll-polyfill'
 import { connect } from 'react-redux'
 

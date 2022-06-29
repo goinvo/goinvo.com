@@ -107,6 +107,7 @@ const AboutPage = () => (
     <div className="max-width content-padding pad-vertical--double--only-lg">
       <div className="pure-g margin-bottom--double">
         <iframe
+          title="slides"
           src="https://docs.google.com/presentation/d/e/2PACX-1vQbOnDhq-ObLQhYTayN-sWzlR5MVk_Y9O12_HYPlgPBVs0xop6wF3Bs2Q6smWkSHpCCJ8Xv1SHNBmmb/embed?start=false&loop=true&delayms=3000"
           frameborder="0"
           width="960"

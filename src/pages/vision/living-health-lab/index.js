@@ -4,14 +4,12 @@ import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import Carousel from '../../../components/carousel'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Reference from '../../../components/reference'
 import Divider from '../../../components/divider'
 
-import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -334,6 +332,7 @@ class LivingHealthLabFeature extends Component {
             </SlickCarousel>
             <div className="lhl-comic-nav">
               <button
+                aria-label="previous slide"
                 className={`button button--link lhl-comic-prev ${
                   this.state.currentSlide === 0 ? 'disabled' : ''
                 }`}
@@ -343,6 +342,7 @@ class LivingHealthLabFeature extends Component {
                 return (
                   <button
                     key={n}
+                    aria-label={`jump to slide ${i + 1}`}
                     className={`button button--link lhl-comic-button ${
                       this.state.currentSlide === i ? 'active' : ''
                     }`}
@@ -358,6 +358,7 @@ class LivingHealthLabFeature extends Component {
                 )
               })}
               <button
+                aria-label="next slide"
                 className={`button button--link lhl-comic-next ${
                   this.state.currentSlide === comicSlides.length - 1
                     ? 'disabled'
@@ -612,6 +613,7 @@ class LivingHealthLabFeature extends Component {
               <div id="appendix">
                 <h2 className="header--lg text--center">Appendix</h2>
                 <iframe
+                  title="appendix"
                   width="100%"
                   height="600px"
                   scrolling="no"

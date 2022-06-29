@@ -18,7 +18,7 @@ const maxWidth = {
   md: 775,
 }
 
-export default {
+const config = {
   cloudfrontUrl: 'https://dd17w042cevyt.cloudfront.net',
   hubspotContactFormId: '888955e3-1618-46d8-b553-c06a855723be',
   hubspotNewsletterFormId: '7bb39794-e6f9-4c94-9b26-e7de3a81f716',
@@ -85,3 +85,5 @@ export default {
     ],
   },
 }
+
+export default config

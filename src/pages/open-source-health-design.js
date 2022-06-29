@@ -107,7 +107,7 @@ class OpenSourcePage extends Component {
             <div className="max-width content-padding pad-vertical LayoutCenter teal">
               <div className="pure-u-lg-1-2">
                 <h2 className="header--xl headerStyle ">
-                  We envision a world where patients can be cared for with a
+                  We envision a world where patients can be cared for with
                   technology that can be trusted
                   <span className="text--serif text--primary">.</span>
                 </h2>

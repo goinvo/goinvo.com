@@ -374,6 +374,7 @@ export const indexPageQuery = graphql`
     allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
       edges {
         node {
+          id
           parent {
             ... on File {
               name
@@ -385,6 +386,9 @@ export const indexPageQuery = graphql`
             client
             categories
             caption
+          }
+          fields {
+            slug
           }
         }
       }

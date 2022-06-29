@@ -18,13 +18,8 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: {
-          default: require.resolve(
-            './src/components/layouts/case-study-layout.js'
-          ),
-        },
         extensions: ['.mdx', '.md'],
       },
     },
@@ -33,6 +28,12 @@ module.exports = {
       options: {
         name: 'case-studies',
         path: `${__dirname}/src/case-studies/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/case-studies`,
       },
     },
     {

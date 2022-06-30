@@ -26,11 +26,15 @@ const frontmatter = {
   heroImage: [
     '/images/homepage/hero-critical-mass-5.jpg',
     '/images/homepage/precision-autism-hero.jpg',
+    '/images/homepage/common_health_hero.jpg',
+    '/images/features/living-health-lab/hero.jpg',
+    '/images/homepage/open-source-bgd-9.jpg',
+    '/images/homepage/doh-hero-fallback.jpg',
   ],
   heroButtonText: 'See Our Work',
 }
 
-const randomHeroNumber = Math.floor(Math.random() * 2)
+const randomHeroNumber = Math.floor(Math.random() * 6)
 
 class IndexPage extends Component {
   constructor(props) {

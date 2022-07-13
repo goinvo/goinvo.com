@@ -15,6 +15,7 @@ const frontmatter = {
   metaTitle: 'Open Source Health Design',
   metaDescription:
     'Healthcare needs to be open. We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.',
+  heroImage: '/images/open_source/open-source.jpg',
 }
 
 const openSourceConversations = [

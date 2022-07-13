@@ -4,14 +4,12 @@ import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import Carousel from '../../../components/carousel'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Reference from '../../../components/reference'
 import Divider from '../../../components/divider'
 
-import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -615,6 +613,7 @@ class LivingHealthLabFeature extends Component {
                   width="100%"
                   height="600px"
                   scrolling="no"
+                  title="Research Spreadsheet"
                   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
                 ></iframe>
               </div>

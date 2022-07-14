@@ -9,6 +9,7 @@ import Image from '../../components/image'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
 import team from '../../data/team.json'
+import HubspotForm from '../../components/hubspot-form'
 
 import config from '../../../config'
 
@@ -248,8 +249,9 @@ const AboutPage = () => (
         ></iframe>
       </div>
     </div>
-    <div className="max-width content-padding pad-bottom--double pad-vertical--quad--only-lg">
-      <div className="pure-g">
+
+    <div className="background--gray pad-vertical--double--only-lg pad-top--double">
+      <div className="max-width content-padding">
         <div className="pure-u-1 pure-u-lg-1-2 margin-bottom--double">
           <div className="pad-left--only-lg">
             <h3 className="header--md text--center text--md">Our Story</h3>
@@ -285,6 +287,17 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
+
+    <div className="pad-vertical--double">
+      <div className="max-width max-width--md content-padding">
+        <HubspotForm
+          formId={config.hubspotNewsletterFullFormId}
+          title="Subscribe to our open source healthcare newsletter."
+          submitButtonText="Subscribe"
+        />
+      </div>
+    </div>
+
     <div className="background--blue">
       <div className="max-width content-padding pad-vertical pad-vertical--quad--only-lg">
         <h4 className="header--md">Up next</h4>

@@ -237,49 +237,6 @@ class VisionPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--gray margin-top--double">
-          <div className="max-width content-padding">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-3-5 vision-form-wrapper">
-                <HubspotForm
-                  formId={config.hubspotNewsletterFormId}
-                  title="Get our latest ideas"
-                  submitButtonText="Submit"
-                  inline
-                  className="margin-bottom"
-                  breakout
-                />
-              </div>
-              <div className="pure-u-1 pure-u-lg-2-5 pad-left--only-lg pad-vertical margin-top--only-sm">
-                <ul className="social-links list--unstyled container container--justify-space-around container--align-center container--fill-height">
-                  <li className="margin-left--only-lg">
-                    <span className="text--gray">Find us on:</span>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/goinvo">
-                      <Twitter className="icon icon--lg" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://medium.com/@goinvo">
-                      <Medium className="icon icon--lg" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.flickr.com/photos/juhansonin/">
-                      <Flickr className="icon icon--lg" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://soundcloud.com/involution-studios">
-                      <SoundCloud className="icon icon--lg" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="background--gray">
           <div className="max-width content-padding">
             <div className="pure-g pad-vertical pad-vertical--quad--only-lg">
@@ -461,6 +418,16 @@ class VisionPage extends Component {
             </a>
           </GradientImageColumns>
         </Carousel>
+
+        <div className="pad-vertical--double">
+          <div className="max-width max-width--md content-padding">
+            <HubspotForm
+              formId={config.hubspotNewsletterFullFormId}
+              title="Subscribe to our open source healthcare newsletter."
+              submitButtonText="Subscribe"
+            />
+          </div>
+        </div>
       </Layout>
     )
   }

@@ -4,6 +4,7 @@ import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Carousel from '../../../components/carousel'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
@@ -618,6 +619,15 @@ class LivingHealthLabFeature extends Component {
                   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH-qmx5UMmEqMI74LUNS8rhSKT9mi1pjqDGrkNPLdOXyRQTZVYCjlmwpzxDdq1ZMqdgE2F1XeoqrE/pubhtml?widget=true&amp;headers=false"
                 ></iframe>
               </div>
+            </div>
+          </div>
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
           <div className="max-width pad-all">

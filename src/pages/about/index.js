@@ -112,6 +112,7 @@ const AboutPage = () => (
           frameborder="0"
           width="960"
           height="569"
+          title="GoInvo Studio Plan"
           allowfullscreen="true"
           mozallowfullscreen="true"
           webkitallowfullscreen="true"

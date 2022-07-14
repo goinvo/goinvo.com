@@ -11,11 +11,6 @@ import Carousel from '../../components/carousel'
 import GradientImageColumns from '../../components/gradient-image-columns'
 import { Link } from 'gatsby'
 
-import Flickr from '../../assets/images/icon-flickr.inline.svg'
-import Medium from '../../assets/images/icon-medium.inline.svg'
-import SoundCloud from '../../assets/images/icon-soundcloud.inline.svg'
-import Twitter from '../../assets/images/icon-twitter.inline.svg'
-
 import atlantic from '../../assets/images/publication-logos/logo-atlantic.png'
 import forbes from '../../assets/images/publication-logos/logo-forbes.png'
 import lancet from '../../assets/images/publication-logos/logo-lancet.png'

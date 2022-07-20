@@ -34,8 +34,6 @@ const frontmatter = {
   heroButtonText: 'See Our Work',
 }
 
-const randomHeroNumber = Math.floor(Math.random() * 6)
-
 class IndexPage extends Component {
   constructor(props) {
     super(props)
@@ -43,8 +41,18 @@ class IndexPage extends Component {
     const workItems = concatCaseStudiesAndFeatures(props.data).slice(0, 4)
 
     this.state = {
+      image: null,
       workItems,
     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      image:
+        frontmatter.heroImage[
+          Math.floor(Math.random() * frontmatter.heroImage.length)
+        ],
+    })
   }
 
   render() {
@@ -53,7 +61,7 @@ class IndexPage extends Component {
         <Hero
           className="hero--higher-text-contrast"
           link="/work/"
-          image={frontmatter.heroImage[randomHeroNumber]}
+          image={this.state.image}
           caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
           button={frontmatter.heroButtonText}
           isLarge

@@ -143,6 +143,8 @@ _Example showing one of the multiple ways for users to dig deeper and learn more
 ![Walk through of SMART Health Cards](/images/case-studies/commonhealth/common_health_7_ch_build.jpg)
 _Walk through of SMART Health Cards displayed on the CommonHealth website, courtesy of TCP [^4]_
 
+<Quote quotee="Eric Davis" quoteeSub="Senior Product and Program Manager, CommonHealth">GoInvo digested a complex landscape in astonishingly little time and returned with insightful and creative solutions. They were an absolute joy to work with and we look forward to working with them again soon.</Quote>
+
 Major health and tech companies coalesced around the VCI on an international level. CommonHealth was the primary, Android-based open source platform and reference implementation for people to access and store digital patient vaccine records, and the way for most people to add their records to their Google or Samsung wallet. Open data standards based on the SMART Health Card spec, along with commercial and government buy-in, drove the toolkit’s global adoption.
 
 Crisis can often instigate shock doctrine to the detriment of many. Instead, the VCI (and the C19HCC.org alliance), driven by private and nonprofit organizations along with The Commons Project, triggered an amazing mission that shipped: every US resident will have their verifiable vaccination record available on their phone, using open source specifications and software. While the US government struggled to perform in the midst of the chaos of a global pandemic, these alliances showed grace under pressure, delivering international aid to Washington instead of the other way around.

@@ -4,6 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
+import References from '../../../components/references'
 import Author from '../../../components/author'
 
 import config from '../../../../config'
@@ -88,10 +89,10 @@ class DigitalHealthTrendsFeature extends Component {
               <h1 className="header--xl margin-top--double">
                 Top 10 Primary Self Care Algorithms
               </h1>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top margin-bottom--none">
                 1. Vaccine Decision Aids
               </h2>
-              <p>
+              <p class="margin-top--none">
                 The global response to the COVID-19 pandemic highlighted just
                 how critical vaccination efforts are in mitigating the spread
                 and severity of infectious diseases. In 2020, COVID-19 rose to
@@ -110,8 +111,8 @@ class DigitalHealthTrendsFeature extends Component {
                 mistrust in the scientific community, lack of education, and
                 insufficient access.
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://decisions.dynamed.com/shared-decision-making/covid-19-vaccine-options">
                     COVID-19: Vaccine Options
@@ -147,10 +148,10 @@ class DigitalHealthTrendsFeature extends Component {
                   </ul>
                 </li>
               </ul>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top margin-bottom--none">
                 2. Blood Pressure Monitoring
               </h2>
-              <p>
+              <p class="margin-top--none">
                 Heart disease is the leading cause of death in the United States
                 with more than 659,000 lives lost each year. Coronary heart
                 disease, heart attacks, and other related heart conditions make
@@ -168,8 +169,8 @@ class DigitalHealthTrendsFeature extends Component {
                 </sup>
                 .
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening">
                     The USPSTF provides an A recommendation for screening for
@@ -201,8 +202,10 @@ class DigitalHealthTrendsFeature extends Component {
                   </ul>
                 </li>
               </ul>
-              <h2 className="header--lg margin-top">3. At-home Urinalysis</h2>
-              <p>
+              <h2 className="header--lg margin-top margin-bottom--none">
+                3. At-home Urinalysis
+              </h2>
+              <p class="margin-top--none">
                 Kidney disease affects more than 15% of the US population, or 1
                 in 7 people. However, 90% of affected individuals are unaware of
                 their condition as symptoms typically don’t appear until the
@@ -221,8 +224,8 @@ class DigitalHealthTrendsFeature extends Component {
                 preventative care measures or receive pre-dialysis treatment
                 options.
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://link.springer.com/article/10.1007/s00467-022-05556-8">
                     Healthy.io home-based urinalysis test kit and smartphone app
@@ -259,20 +262,11 @@ class DigitalHealthTrendsFeature extends Component {
                     <a href="#references">17</a>
                   </sup>
                 </li>
-                <li>
-                  <a href=""></a>
-                  <sup>
-                    <a href="#references"></a>
-                  </sup>
-                  <ul>
-                    <li></li>
-                  </ul>
-                </li>
               </ul>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top margin-bottom--none">
                 4. Mental Health Assessments
               </h2>
-              <p>
+              <p class="margin-top--none">
                 In the United States, 1 in 5 individuals live with a mental
                 illness, with a higher prevalence among minorities and young
                 adults; in 2020, only half of the 52.9 million affected people
@@ -291,8 +285,8 @@ class DigitalHealthTrendsFeature extends Component {
                 of 24, early identification and treatment are essential to
                 lowering suicide and suicide attempt rates.
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://www.psychiatrist.com/jcp/bipolar/computer-assisted-self-assessment-persons-severe-mental/">
                     Computer Assisted Self Assessment (CART) in persons with
@@ -317,18 +311,11 @@ class DigitalHealthTrendsFeature extends Component {
                     <li>Copyright © 2006 CMA Media Inc.</li>
                   </ul>
                 </li>
-                <li>
-                  <a href=""></a>
-                  <sup>
-                    <a href="#references"></a>
-                  </sup>
-                  <ul>
-                    <li></li>
-                  </ul>
-                </li>
               </ul>
-              <h2 className="header--lg margin-top">5. Vision Tests</h2>
-              <p>
+              <h2 className="header--lg margin-top margin-bottom--none">
+                5. Vision Tests
+              </h2>
+              <p class="margin-top--none">
                 Vision impairment and blindness impact 2.2 billion people around
                 the world, and more than half of these have not yet been
                 diagnosed
@@ -348,8 +335,8 @@ class DigitalHealthTrendsFeature extends Component {
                 self-management of comorbidities can prevent further vision
                 loss.
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://pubmed.ncbi.nlm.nih.gov/6175935/">
                     A modified Amsler Grid test: self-assessment test for
@@ -360,7 +347,7 @@ class DigitalHealthTrendsFeature extends Component {
                   </sup>
                 </li>
                 <li>
-                  <a href="">Home Acuity Test</a>
+                  <a href="https://www.homeacuitytest.org/">Home Acuity Test</a>
                   <sup>
                     <a href="#references">24</a>
                   </sup>
@@ -369,10 +356,10 @@ class DigitalHealthTrendsFeature extends Component {
                   </ul>
                 </li>
               </ul>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top margin-bottom--none">
                 6. Blood Glucose Monitoring
               </h2>
-              <p>
+              <p class="margin-top--none">
                 One of the most prevalent chronic conditions in the US, diabetes
                 is the seventh leading cause of death. There are 37.3 million
                 people currently living with diabetes in the country, and 38% of
@@ -388,8 +375,8 @@ class DigitalHealthTrendsFeature extends Component {
                 disease, which means that early diagnosis, treatment, and
                 lifestyle interventions are crucial.
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://pubmed.ncbi.nlm.nih.gov/33441946/">
                     Self monitored blood glucose in association with glycemic
@@ -412,8 +399,10 @@ class DigitalHealthTrendsFeature extends Component {
                   </ul>
                 </li>
               </ul>
-              <h2 className="header--lg margin-top">7. Breast Self-Exam</h2>
-              <p>
+              <h2 className="header--lg margin-top margin-bottom--none">
+                7. Breast Self-Exam
+              </h2>
+              <p class="margin-top--none">
                 Breast cancer is the most prevalent cancer in the US and the
                 second leading cause of cancer death in women. One in eight
                 women (13%) are at risk of developing breast cancer during their
@@ -428,10 +417,12 @@ class DigitalHealthTrendsFeature extends Component {
                 </sup>
                 .
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
-                  <a href="">Breast Self-Exam (BSE)</a>
+                  <a href="https://www.breastcancer.org/screening-testing/breast-self-exam-bse">
+                    Breast Self-Exam (BSE)
+                  </a>
                   <sup>
                     <a href="#references">19</a>
                   </sup>
@@ -456,10 +447,10 @@ class DigitalHealthTrendsFeature extends Component {
                   </ul>
                 </li>
               </ul>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top margin-bottom--none">
                 8. Birth Control Decision Aid
               </h2>
-              <p>
+              <p class="margin-top--none">
                 Globally, more than 200 million women face an unmet need for
                 family planning options and contraceptives, and 1.4 million
                 unplanned pregnancies occur each year
@@ -485,8 +476,8 @@ class DigitalHealthTrendsFeature extends Component {
                 </sup>
                 .
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://www.pcori.org/research-results/2013/decision-aid-help-women-choose-and-use-method-birth-control">
                     A Decision Aid to Help Women Choose and Use a Method of
@@ -516,8 +507,10 @@ class DigitalHealthTrendsFeature extends Component {
                   </ul>
                 </li>
               </ul>
-              <h2 className="header--lg margin-top">9. Air Quality Monitor</h2>
-              <p>
+              <h2 className="header--lg margin-top margin-bottom--none">
+                9. Air Quality Monitor
+              </h2>
+              <p class="margin-top--none">
                 Chronic respiratory diseases are the third leading cause of
                 death in the US and account for 7.5 million deaths worldwide
                 each year
@@ -534,8 +527,8 @@ class DigitalHealthTrendsFeature extends Component {
                 adolescence, making it especially crucial that CRD risk factors
                 are addressed early on.
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://sustainenvironres.biomedcentral.com/articles/10.1186/s42834-020-0047-y">
                     Indoor air quality monitoring systems for public health
@@ -551,8 +544,10 @@ class DigitalHealthTrendsFeature extends Component {
                   </ul>
                 </li>
               </ul>
-              <h2 className="header--lg margin-top">10. Pulse Oximetry</h2>
-              <p>
+              <h2 className="header--lg margin-top margin-bottom--none">
+                10. Pulse Oximetry
+              </h2>
+              <p class="margin-top--none">
                 A pulse oximeter is an electronic device that clips onto a
                 patient’s fingertip or ear to measure the saturation of oxygen
                 in their blood. The reading is noninvasive and painless, and
@@ -564,8 +559,8 @@ class DigitalHealthTrendsFeature extends Component {
                 it is used for routine screenings of pulmonary health, diabetes,
                 and sleep disorders.
               </p>
-              <h4 class="header--sm">Models</h4>
-              <ul>
+              <h4 class="header--sm margin-bottom--none">Models</h4>
+              <ul class="margin-top--none">
                 <li>
                   <a href="https://pubmed.ncbi.nlm.nih.gov/25880649/">
                     Overnight Pulse Oximetry to diagnose patients with moderate
@@ -600,19 +595,23 @@ class DigitalHealthTrendsFeature extends Component {
                 are provided as well as the most prevalent health condition
                 addressed.
               </p>
+            </div>
+          </div>
 
-              <div className="airtable">
-                <iframe
-                  class="airtable-embed"
-                  src="https://airtable.com/embed/shrWdnWlNj0SIuUzl?backgroundColor=blue&viewControls=on"
-                  frameborder="0"
-                  onmousewheel=""
-                  width="100%"
-                  height="600"
-                  title="Airtable Primary Self Care Algorithms"
-                ></iframe>
-              </div>
+          <div className="airtable content-padding--double">
+            <iframe
+              class="airtable-embed"
+              src="https://airtable.com/embed/shrWdnWlNj0SIuUzl?backgroundColor=blue&viewControls=on"
+              frameborder="0"
+              onmousewheel=""
+              width="100%"
+              height="500"
+              title="Airtable Primary Self Care Algorithms"
+            ></iframe>
+          </div>
 
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
               <h1 className="header--xl margin-top--double">Next Steps</h1>
               <p>
                 The future of the PSC Algorithms project will include expanding
@@ -639,6 +638,30 @@ class DigitalHealthTrendsFeature extends Component {
                 </sup>
                 .
               </p>
+              <h2 className="header--lg margin-top">
+                Ranking of Top 10 Algorithms
+              </h2>
+            </div>
+          </div>
+
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <div>
+                <h2 className="header--xl text--center">Authors</h2>
+                <Author name="Arpna Ghanshani" />
+                <Author name="Chloe Ma" />
+                <Author name="Juhan Sonin" />
+                <div className="pad-vertical--double">
+                  <h3 className="header--md">Contributors</h3>
+                  <p>
+                    Samantha Wuu
+                    <br />
+                    Huahua Zhu
+                    <br />
+                    Eric Benoit
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -654,21 +677,225 @@ class DigitalHealthTrendsFeature extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Author</h2>
-                <Author name="Arpna Ghanshani" />
-                <Author name="Chloe Ma" />
-                <Author name="Juhan Sonin" />
-                <div className="pad-vertical--double">
-                  <h3 className="header--md">Contributors</h3>
-                  <p>
-                    Samantha Wuu
-                    <br />
-                    Huahua Zhu
-                    <br />
-                    Eric Benoit
-                  </p>
-                </div>
+              <div id="references">
+                <References
+                  references={[
+                    {
+                      title:
+                        ' Narasimhan, Manjulaa, et al. “Self Care Interventions to Advance Health and Wellbeing: A Conceptual Framework to Inform Normative Guidance.” BMJ (Clinical Research Ed.), BMJ Publishing Group Ltd., 1 Apr. 2019',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6441866/',
+                    },
+                    {
+                      title:
+                        '“Who Coronavirus (COVID-19) Dashboard.” World Health Organization',
+                      link: 'https://covid19.who.int',
+                    },
+                    {
+                      title:
+                        '“Immunization Agenda 2030.” World Health Organization',
+                      link:
+                        'https://www.who.int/teams/immunization-vaccines-and-biologicals/strategies/ia2030',
+                    },
+                    {
+                      title:
+                        'Bruel, S, et al. Patient Decision Aid in Vaccination: A Systematic Review of the Literature. U.S. National Library of Medicine',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/32163307/',
+                    },
+                    {
+                      title: '“COVID-19: Vaccine Options.” Dynamed Decisions',
+                      link:
+                        'https://decisions.dynamed.com/shared-decision-making/covid-19-vaccine-options',
+                    },
+                    {
+                      title:
+                        '“Mental Illness.” National Institute of Mental Health, U.S. Department of Health and Human Services',
+                      link:
+                        'https://www.nimh.nih.gov/health/statistics/mental-illness',
+                    },
+                    {
+                      title:
+                        '“Suicide Statistics.” American Foundation for Suicide Prevention, 14 June 2022',
+                      link: 'https://afsp.org/suicide-statistics/',
+                    },
+                    {
+                      title:
+                        'Chinman, Matthew, et al. “Computer-Assisted Self-Assessment in Persons with Severe Mental Illness.” Psychiatrist.com, Physicians Postgraduate Press, Inc., 4 Feb. 2021',
+                      link:
+                        'https://www.psychiatrist.com/jcp/bipolar/computer-assisted-self-assessment-persons-severe-mental/',
+                    },
+                    {
+                      title:
+                        'Depp, Colin A, et al. “Technology to Assess and Support Self-Management in Serious Mental Illness.” Dialogues in Clinical Neuroscience, U.S. National Library of Medicine, 18 June 2018',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/27489457/',
+                    },
+                    {
+                      title:
+                        '“Heart Disease Facts.” Centers for Disease Control and Prevention, 15 July 2022',
+                      link: 'https://www.cdc.gov/heartdisease/facts.htm',
+                    },
+                    {
+                      title: 'CDC National Health Report Highlights',
+                      link:
+                        'https://www.cdc.gov/healthreport/publications/compendium.pdf',
+                    },
+                    {
+                      title:
+                        'Hypertension in Adults: Screening. US Preventive Services Taskforce, 27 Apr. 2021',
+                      link:
+                        'https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening',
+                    },
+                    {
+                      title:
+                        'Tucker, Katherine L, et al. “Self-Monitoring of Blood Pressure in Hypertension: A Systematic Review and Individual Patient Data Meta-Analysis.” PLoS Medicine, Public Library of Science, 19 Sept. 2017',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5604965/',
+                    },
+                    {
+                      title:
+                        '“Kidney Basics.” National Kidney Foundation, 28 July 2022',
+                      link: 'https://www.kidney.org/kidney-basics',
+                    },
+                    {
+                      title:
+                        'Erez, Daniella Levy, et al. “Dipping at Home: Is It Better, Easier, and More Convenient? A Feasibility and Acceptability Study of a Novel Home Urinalysis Using a Smartphone Application - Pediatric Nephrology.” SpringerLink, Springer Berlin Heidelberg, 21 Apr. 2022',
+                      link:
+                        'https://link.springer.com/article/10.1007/s00467-022-05556-8',
+                    },
+                    {
+                      title:
+                        '“10 Parameter Urinalysis Test at Home.” Diagnox Health: Innovative Wellness and Healthcare Products',
+                      link:
+                        'https://www.diagnoxhealth.com/blog/10-parameter-urinalysis-test-at-home',
+                    },
+                    {
+                      title: 'Olive Diagnostics',
+                      link: 'https://www.olive.earth/',
+                    },
+                    {
+                      title:
+                        '“Breast Cancer Statistics: How Common Is Breast Cancer?” American Cancer Society, 2022',
+                      link:
+                        'https://www.cancer.org/cancer/breast-cancer/about/how-common-is-breast-cancer.html',
+                    },
+                    {
+                      title:
+                        'Boraas, Marcia, and Sameer Gupta. “Breast Self-Exam (BSE).” BreastCancer.org, 29 June 2022',
+                      link:
+                        'https://www.breastcancer.org/screening-testing/breast-self-exam-bse',
+                    },
+                    {
+                      title:
+                        '“The Breast Cancer Risk Assessment Tool.” The National Cancer Institute',
+                      link: 'https://bcrisktool.cancer.gov/index.html',
+                    },
+                    {
+                      title:
+                        '“Vision Impairment and Blindness.” World Health Organization',
+                      link:
+                        'https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment',
+                    },
+                    {
+                      title:
+                        '“Vision Impairment and Chronic Health Conditions.” Centers for Disease Control and Prevention, 17 June 2020',
+                      link:
+                        'https://www.cdc.gov/visionhealth/living/index.html',
+                    },
+                    {
+                      title:
+                        'Yannuzzi, L A. A Modified Amsler Grid. A Self-Assessment Test for Patients with Macular Disease. U.S. National Library of Medicine',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/6175935/',
+                    },
+                    {
+                      title: 'https://www.homeacuitytest.org',
+                      link: 'https://www.homeacuitytest.org',
+                    },
+                    {
+                      title:
+                        '“National Diabetes Statistics Report.” Centers for Disease Control and Prevention, 18 Jan. 2022',
+                      link:
+                        'https://www.cdc.gov/diabetes/data/statistics-report/index.html',
+                    },
+                    {
+                      title:
+                        'Sia, Hon-Ke, et al. “Self-Monitoring of Blood Glucose in Association with Glycemic Control in Newly Diagnosed Non-Insulin-Treated Diabetes Patients: A Retrospective Cohort Study.” Nature News, Nature Publishing Group, 13 Jan. 2021',
+                      link:
+                        'https://www.nature.com/articles/s41598-021-81024-x',
+                    },
+                    {
+                      title: '“What Is Nightscout?” Nightscout',
+                      link: 'https://nightscout.github.io/#:~:text=Nightscout',
+                    },
+                    {
+                      title:
+                        '“The U.S. Government and International Family Planning &amp; Reproductive Health Efforts.” KFF, 24 June 2022',
+                      link:
+                        'https://www.kff.org/global-health-policy/fact-sheet/the-u-s-government-and-international-family-planning-reproductive-health-efforts/',
+                    },
+                    {
+                      title:
+                        'Stevenson, Amanda J, et al. The Impact of Contraceptive Access on High School Graduation. American Association for the Advancement of Science, 5 May 2021',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8099178/',
+                    },
+                    {
+                      title: '“Unmet Need for Contraception: Fact Sheet.” PRB',
+                      link:
+                        'https://www.prb.org/resources/unmet-need-for-contraception-fact-sheet/',
+                    },
+                    {
+                      title:
+                        '“A Decision Aid to Help Women Choose and Use a Method of Birth Control.” PCORI, 4 Mar. 2022',
+                      link:
+                        'https://www.pcori.org/research-results/2013/decision-aid-help-women-choose-and-use-method-birth-control',
+                    },
+                    {
+                      title:
+                        'Your Birth Control Choices - Reproductive Health Access Project. Reproductive Access Project, Oct. 2021',
+                      link:
+                        'https://www.reproductiveaccess.org/wp-content/uploads/2014/06/2020-09-contra-choices.pdf',
+                    },
+                    {
+                      title:
+                        'Ambrosino, Nicolino, and Enrica Bertella. Lifestyle Interventions in Prevention and Comprehensive Management of COPD. European Respiratory Society, Sept. 2018',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6118879/',
+                    },
+                    {
+                      title:
+                        'Saini, Jagriti, et al. “A Comprehensive Review on Indoor Air Quality Monitoring Systems for Enhanced Public Health - Sustainable Environment Research.” BioMed Central, BioMed Central, 29 Jan. 2020',
+                      link:
+                        'https://sustainenvironres.biomedcentral.com/articles/10.1186/s42834-020-0047-y',
+                    },
+                    {
+                      title: '“Pulse Oximetry.” Yale Medicine, 2 Mar. 2021',
+                      link:
+                        'https://www.yalemedicine.org/conditions/pulse-oximetry#:~:text=Basically%2C',
+                    },
+                    {
+                      title:
+                        'Hang, Liang-Wen, et al. “Validation of Overnight Oximetry to Diagnose Patients with Moderate to Severe Obstructive Sleep Apnea.” BMC Pulmonary Medicine, U.S. National Library of Medicine, 20 Mar. 2015',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/25880649/',
+                    },
+                    {
+                      title:
+                        'Luks, Andrew M, and Erik R Swenson. “Pulse Oximetry for Monitoring Patients with COVID-19 at Home. Potential Pitfalls and Practical Guidance.” Annals of the American Thoracic Society, U.S. National Library of Medicine, 17 Sept. 2020',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/32521167/',
+                    },
+                    {
+                      title:
+                        '“Evaluating Clinical Decision Support.” Rethinking Clinical Trials, 27 Dec. 2021',
+                      link:
+                        'https://rethinkingclinicaltrials.org/chapters/conduct/real-world-evidence-clinical-decision-support/evaluating-cds/',
+                    },
+                    {
+                      title:
+                        '“Immunization Calculation Engine (ICE).” CDS Connect',
+                      link:
+                        'https://cds.ahrq.gov/cdsconnect/artifact/immunization-calculation-engine-ice-0',
+                    },
+                  ]}
+                />
               </div>
             </div>
           </div>

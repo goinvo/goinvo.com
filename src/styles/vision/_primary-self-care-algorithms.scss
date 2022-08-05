@@ -1,4 +1,43 @@
 .primary-self-care-algorithms {
+  .algorithm-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__algorithm {
+      flex: 0 0 calc((100% - 4rem) / 5);
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 150ms, border-color 150ms;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.15);
+      }
+
+      &--active {
+        border-color: $color-primary;
+        background-color: transparentize(
+          $color: (
+            $color-primary,
+          ),
+          $amount: 0.98
+        );
+      }
+    }
+  }
+
+  .algorithm {
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
   .airtable {
     max-width: 85%;
     text-align: center;

@@ -1,0 +1,49 @@
+.psca-table-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+  }
+  tr,
+  th,
+  td {
+    vertical-align: top;
+    text-align: left;
+    background-color: #fff;
+  }
+  th,
+  td {
+    padding: 5px 10px;
+    border-collapse: unset;
+  }
+  th {
+    font-weight: normal;
+  }
+  table tbody tr:nth-child(odd),
+  table tbody tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+  }
+
+  tr > th,
+  tr > td {
+    &:first-child {
+      position: sticky;
+      left: 0;
+    }
+  }
+
+  &--shadow {
+    tr > th:first-child:after,
+    tr > td:first-child:after {
+      content: '';
+      box-shadow: 5px 0 5px -5px inset rgba(0, 0, 0, 0.25);
+      height: 100%;
+      top: 0;
+      right: -5px;
+      position: absolute;
+      width: 5px;
+    }
+  }
+}

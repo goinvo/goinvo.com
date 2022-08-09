@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
-import Image from '../../../components/image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
+import PscaTable from '../../../components/vision/primary-self-care-algorithms/psca-table'
 
 import config from '../../../../config'
 
@@ -76,8 +76,8 @@ const algorithms = [
 ]
 
 class DigitalHealthTrendsFeature extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
     this.state = {
       activeAlgorithm: ALGORITHMS.VACCINE_DECISION_AIDS,
@@ -242,7 +242,7 @@ class DigitalHealthTrendsFeature extends Component {
                     1. Vaccine Decision Aids
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   The global response to the COVID-19 pandemic highlighted just
                   how critical vaccination efforts are in mitigating the spread
                   and severity of infectious diseases. In 2020, COVID-19 rose to
@@ -261,8 +261,8 @@ class DigitalHealthTrendsFeature extends Component {
                   mistrust in the scientific community, lack of education, and
                   insufficient access.
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://decisions.dynamed.com/shared-decision-making/covid-19-vaccine-options">
                       COVID-19: Vaccine Options
@@ -313,7 +313,7 @@ class DigitalHealthTrendsFeature extends Component {
                     2. Blood Pressure Monitoring
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   Heart disease is the leading cause of death in the United
                   States with more than 659,000 lives lost each year. Coronary
                   heart disease, heart attacks, and other related heart
@@ -332,8 +332,8 @@ class DigitalHealthTrendsFeature extends Component {
                   </sup>
                   .
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening">
                       The USPSTF provides an A recommendation for screening for
@@ -379,7 +379,7 @@ class DigitalHealthTrendsFeature extends Component {
                     3. At-home Urinalysis
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   Kidney disease affects more than 15% of the US population, or
                   1 in 7 people. However, 90% of affected individuals are
                   unaware of their condition as symptoms typically don’t appear
@@ -398,8 +398,8 @@ class DigitalHealthTrendsFeature extends Component {
                   preventative care measures or receive pre-dialysis treatment
                   options.
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://link.springer.com/article/10.1007/s00467-022-05556-8">
                       Healthy.io home-based urinalysis test kit and smartphone
@@ -453,7 +453,7 @@ class DigitalHealthTrendsFeature extends Component {
                     4. Mental Health Assessments
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   In the United States, 1 in 5 individuals live with a mental
                   illness, with a higher prevalence among minorities and young
                   adults; in 2020, only half of the 52.9 million affected people
@@ -472,8 +472,8 @@ class DigitalHealthTrendsFeature extends Component {
                   of 24, early identification and treatment are essential to
                   lowering suicide and suicide attempt rates.
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://www.psychiatrist.com/jcp/bipolar/computer-assisted-self-assessment-persons-severe-mental/">
                       Computer Assisted Self Assessment (CART) in persons with
@@ -513,7 +513,7 @@ class DigitalHealthTrendsFeature extends Component {
                     5. Vision Tests
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   Vision impairment and blindness impact 2.2 billion people
                   around the world, and more than half of these have not yet
                   been diagnosed
@@ -533,8 +533,8 @@ class DigitalHealthTrendsFeature extends Component {
                   self-management of comorbidities can prevent further vision
                   loss.
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/6175935/">
                       A modified Amsler Grid test: self-assessment test for
@@ -571,7 +571,7 @@ class DigitalHealthTrendsFeature extends Component {
                     6. Blood Glucose Monitoring
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   One of the most prevalent chronic conditions in the US,
                   diabetes is the seventh leading cause of death. There are 37.3
                   million people currently living with diabetes in the country,
@@ -587,8 +587,8 @@ class DigitalHealthTrendsFeature extends Component {
                   disease, which means that early diagnosis, treatment, and
                   lifestyle interventions are crucial.
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/33441946/">
                       Self monitored blood glucose in association with glycemic
@@ -625,7 +625,7 @@ class DigitalHealthTrendsFeature extends Component {
                     7. Breast Self-Exam
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   Breast cancer is the most prevalent cancer in the US and the
                   second leading cause of cancer death in women. One in eight
                   women (13%) are at risk of developing breast cancer during
@@ -640,8 +640,8 @@ class DigitalHealthTrendsFeature extends Component {
                   </sup>
                   .
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://www.breastcancer.org/screening-testing/breast-self-exam-bse">
                       Breast Self-Exam (BSE)
@@ -685,7 +685,7 @@ class DigitalHealthTrendsFeature extends Component {
                     8. Birth Control Decision Aid
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   Globally, more than 200 million women face an unmet need for
                   family planning options and contraceptives, and 1.4 million
                   unplanned pregnancies occur each year
@@ -712,8 +712,8 @@ class DigitalHealthTrendsFeature extends Component {
                   </sup>
                   .
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://www.pcori.org/research-results/2013/decision-aid-help-women-choose-and-use-method-birth-control">
                       A Decision Aid to Help Women Choose and Use a Method of
@@ -757,7 +757,7 @@ class DigitalHealthTrendsFeature extends Component {
                     9. Air Quality Monitor
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   Chronic respiratory diseases are the third leading cause of
                   death in the US and account for 7.5 million deaths worldwide
                   each year
@@ -774,8 +774,8 @@ class DigitalHealthTrendsFeature extends Component {
                   formed in adolescence, making it especially crucial that CRD
                   risk factors are addressed early on.
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://sustainenvironres.biomedcentral.com/articles/10.1186/s42834-020-0047-y">
                       Indoor air quality monitoring systems for public health
@@ -805,7 +805,7 @@ class DigitalHealthTrendsFeature extends Component {
                     10. Pulse Oximetry
                   </h2>
                 )}
-                <p class="margin-top--none">
+                <p className="margin-top--none">
                   A pulse oximeter is an electronic device that clips onto a
                   patient’s fingertip or ear to measure the saturation of oxygen
                   in their blood. The reading is noninvasive and painless, and
@@ -817,8 +817,8 @@ class DigitalHealthTrendsFeature extends Component {
                   it is used for routine screenings of pulmonary health,
                   diabetes, and sleep disorders.
                 </p>
-                <h4 class="header--sm margin-bottom--none">Models</h4>
-                <ul class="margin-top--none">
+                <h4 className="header--sm margin-bottom--none">Models</h4>
+                <ul className="margin-top--none">
                   <li>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/25880649/">
                       Overnight Pulse Oximetry to diagnose patients with
@@ -842,295 +842,300 @@ class DigitalHealthTrendsFeature extends Component {
               <h1 className="header--xl margin-top--double">
                 Application of Primary Self Care Algorithms Across Life
               </h1>
-              <table>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>0-5 years old</th>
-                    <th>6-12</th>
-                    <th>13-20</th>
-                    <th>21-30</th>
-                    <th>31-40</th>
-                    <th>41-50</th>
-                    <th>51-60</th>
-                    <th>61-70</th>
-                    <th>71-80</th>
-                    <th>81-90</th>
-                    <th>90+</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Vaccinations</td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Blood Pressure</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Urinalysis</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Mental Health</td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vision Test</td>
-                    <td></td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Glucose Monitoring</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Breast Self Exam</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Air Quality Monitor</td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Pulse Oximetry</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                    <td>
-                      <CheckboxRequired className="icon icon-checkbox-required" />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
+            </div>
+            <div className="content-padding--double">
+              <PscaTable>
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>0-5 years old</th>
+                      <th>6-12</th>
+                      <th>13-20</th>
+                      <th>21-30</th>
+                      <th>31-40</th>
+                      <th>41-50</th>
+                      <th>51-60</th>
+                      <th>61-70</th>
+                      <th>71-80</th>
+                      <th>81-90</th>
+                      <th>90+</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Vaccinations</td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Blood Pressure</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Urinalysis</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Mental Health</td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Vision Test</td>
+                      <td></td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Glucose Monitoring</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Breast Self Exam</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Air Quality Monitor</td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Pulse Oximetry</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                      <td>
+                        <CheckboxRequired className="icon icon-checkbox-required" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </PscaTable>
+            </div>
+            <div className="max-width max-width--md content-padding">
               <h1 className="header--xl margin-top--double">
                 Database of Primary Self Care Algorithms
               </h1>
@@ -1147,10 +1152,10 @@ class DigitalHealthTrendsFeature extends Component {
 
           <div className="airtable content-padding--double">
             <iframe
-              class="airtable-embed"
+              className="airtable-embed"
               src="https://airtable.com/embed/shrWdnWlNj0SIuUzl?backgroundColor=blue&viewControls=on"
-              frameborder="0"
-              onmousewheel=""
+              frameBorder="0"
+              // onmousewheel=""
               width="100%"
               height="500"
               title="Airtable Primary Self Care Algorithms"
@@ -1185,137 +1190,144 @@ class DigitalHealthTrendsFeature extends Component {
                 </sup>
                 .
               </p>
-
-              <table>
-                <thead>
-                  <tr class="text--gray">
-                    <th width="25%">Criteria</th>
-                    <th width="15%">Weight (1-4)</th>
-                    <th width="20%">1</th>
-                    <th width="20%">0</th>
-                    <th width="20%">-1</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>Audience</strong>
-                      <br />
-                      How many patients & clinicians do/or can utilize this
-                      algorithm?
-                    </td>
-                    <td>2</td>
-                    <td>
-                      can utilized by the majority of people, regardless of
-                      health status
-                    </td>
-                    <td>utilized for common or highly prevalent conditions</td>
-                    <td>utilized for only rare conditions</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Effectiveness</strong>
-                      <br />
-                      How much of a difference can the algorithm make on
-                      someone’s health status regardless of condition
-                      progression?
-                    </td>
-                    <td>4</td>
-                    <td>high impact at many stages in disease progression</td>
-                    <td>
-                      moderate impact at some stages in disease progression
-                    </td>
-                    <td>
-                      low or no impact at many stages of disease progression
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Validity & Reliability</strong>
-                      <br />
-                      Has this algorithm been rigorously tested and have results
-                      been replicated?
-                    </td>
-                    <td>4</td>
-                    <td>
-                      validated and replicated by many credible institutions
-                    </td>
-                    <td>
-                      validated by some credible sources, limited replication
-                      studies
-                    </td>
-                    <td>not validated or replicated by credible sources</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Complexity</strong>
-                      <br />
-                      How easy is it to learn to use and understand results from
-                      an algorithm?
-                    </td>
-                    <td>2</td>
-                    <td>
-                      almost no learning curve, easy to implement and learn from
-                      results
-                    </td>
-                    <td>
-                      moderate learning curve and results are mostly manageable
-                      to interpret
-                    </td>
-                    <td>
-                      high learning curve to use and results are difficult to
-                      interpret
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Cost</strong>
-                      <br />
-                      How expensive are any necessary tools/services?
-                    </td>
-                    <td>3</td>
-                    <td>$ low cost or free</td>
-                    <td>$$</td>
-                    <td>$$$</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Availability</strong>
-                      <br />
-                      How readily available and accessible is this tool?
-                    </td>
-                    <td>1</td>
-                    <td>over the counter or diy</td>
-                    <td>
-                      some barrier to access (clinical treatment or
-                      prescription, specially ordered, etc.)
-                    </td>
-                    <td>still in development, not openly available</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Support</strong>
-                      <br />
-                      How much clinical support or guidance is required?
-                    </td>
-                    <td>2</td>
-                    <td>completely independent</td>
-                    <td>minimal community or clinical involvement</td>
-                    <td>requires clinical support or intervention</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Licensing</strong>
-                      <br />
-                      Is the algorithm open or closed source?{' '}
-                    </td>
-                    <td>2</td>
-                    <td>open</td>
-                    <td>unknown licensing</td>
-                    <td>closed</td>
-                  </tr>
-                </tbody>
-              </table>
+            </div>
+            <div className="content-padding--double">
+              <PscaTable>
+                <table>
+                  <thead>
+                    <tr className="text--gray">
+                      <th width="25%">Criteria</th>
+                      <th width="15%">Weight (1-4)</th>
+                      <th width="20%">1</th>
+                      <th width="20%">0</th>
+                      <th width="20%">-1</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <strong>Audience</strong>
+                        <br />
+                        How many patients & clinicians do/or can utilize this
+                        algorithm?
+                      </td>
+                      <td>2</td>
+                      <td>
+                        can utilized by the majority of people, regardless of
+                        health status
+                      </td>
+                      <td>
+                        utilized for common or highly prevalent conditions
+                      </td>
+                      <td>utilized for only rare conditions</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Effectiveness</strong>
+                        <br />
+                        How much of a difference can the algorithm make on
+                        someone’s health status regardless of condition
+                        progression?
+                      </td>
+                      <td>4</td>
+                      <td>high impact at many stages in disease progression</td>
+                      <td>
+                        moderate impact at some stages in disease progression
+                      </td>
+                      <td>
+                        low or no impact at many stages of disease progression
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Validity & Reliability</strong>
+                        <br />
+                        Has this algorithm been rigorously tested and have
+                        results been replicated?
+                      </td>
+                      <td>4</td>
+                      <td>
+                        validated and replicated by many credible institutions
+                      </td>
+                      <td>
+                        validated by some credible sources, limited replication
+                        studies
+                      </td>
+                      <td>not validated or replicated by credible sources</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Complexity</strong>
+                        <br />
+                        How easy is it to learn to use and understand results
+                        from an algorithm?
+                      </td>
+                      <td>2</td>
+                      <td>
+                        almost no learning curve, easy to implement and learn
+                        from results
+                      </td>
+                      <td>
+                        moderate learning curve and results are mostly
+                        manageable to interpret
+                      </td>
+                      <td>
+                        high learning curve to use and results are difficult to
+                        interpret
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Cost</strong>
+                        <br />
+                        How expensive are any necessary tools/services?
+                      </td>
+                      <td>3</td>
+                      <td>$ low cost or free</td>
+                      <td>$$</td>
+                      <td>$$$</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Availability</strong>
+                        <br />
+                        How readily available and accessible is this tool?
+                      </td>
+                      <td>1</td>
+                      <td>over the counter or diy</td>
+                      <td>
+                        some barrier to access (clinical treatment or
+                        prescription, specially ordered, etc.)
+                      </td>
+                      <td>still in development, not openly available</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Support</strong>
+                        <br />
+                        How much clinical support or guidance is required?
+                      </td>
+                      <td>2</td>
+                      <td>completely independent</td>
+                      <td>minimal community or clinical involvement</td>
+                      <td>requires clinical support or intervention</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Licensing</strong>
+                        <br />
+                        Is the algorithm open or closed source?{' '}
+                      </td>
+                      <td>2</td>
+                      <td>open</td>
+                      <td>unknown licensing</td>
+                      <td>closed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </PscaTable>
+            </div>
+            <div className="max-width max-width--md content-padding">
               <h2 className="header--lg margin-top--double margin-bottom--none">
                 Ranking of Top 10 Algorithms
               </h2>
@@ -1323,152 +1335,154 @@ class DigitalHealthTrendsFeature extends Component {
           </div>
 
           <div className="content-padding--double">
-            <table>
-              <thead>
-                <tr class="text--gray">
-                  <th>Criteria</th>
-                  <th>Weight (1-4)</th>
-                  <th>Vaccinations</th>
-                  <th>Blood Pressure</th>
-                  <th>Urinalysis</th>
-                  <th>Mental Health</th>
-                  <th>Vision Test</th>
-                  <th>Glucose Monitoring</th>
-                  <th>Breast Self Exam</th>
-                  <th>Birth Control</th>
-                  <th>Air Quality Monitor</th>
-                  <th>Pulse Oximetry</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Audience</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Effectiveness</td>
-                  <td>4</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>-1</td>
-                </tr>
-                <tr>
-                  <td>Validity/Reliability</td>
-                  <td>4</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>-1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Complexity</td>
-                  <td>3</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>-1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>-1</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Cost</td>
-                  <td>3</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Availability</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <td>Support</td>
-                  <td>2</td>
-                  <td>-1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>-1</td>
-                  <td>1</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <td>Licensing</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Weighted Totals</td>
-                  <td></td>
-                  <td>17</td>
-                  <td>16</td>
-                  <td>15</td>
-                  <td>15</td>
-                  <td>11</td>
-                  <td>11</td>
-                  <td>9</td>
-                  <td>8</td>
-                  <td>7</td>
-                  <td>-1</td>
-                </tr>
-              </tbody>
-            </table>
+            <PscaTable>
+              <table>
+                <thead>
+                  <tr className="text--gray">
+                    <th>Criteria</th>
+                    <th>Weight (1-4)</th>
+                    <th>Vaccinations</th>
+                    <th>Blood Pressure</th>
+                    <th>Urinalysis</th>
+                    <th>Mental Health</th>
+                    <th>Vision Test</th>
+                    <th>Glucose Monitoring</th>
+                    <th>Breast Self Exam</th>
+                    <th>Birth Control</th>
+                    <th>Air Quality Monitor</th>
+                    <th>Pulse Oximetry</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Audience</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Effectiveness</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>-1</td>
+                  </tr>
+                  <tr>
+                    <td>Validity/Reliability</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>-1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Complexity</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>-1</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Cost</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Availability</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Support</td>
+                    <td>2</td>
+                    <td>-1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>-1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Licensing</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Weighted Totals</td>
+                    <td></td>
+                    <td>17</td>
+                    <td>16</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>-1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </PscaTable>
           </div>
 
           <div className="pad-vertical--double">

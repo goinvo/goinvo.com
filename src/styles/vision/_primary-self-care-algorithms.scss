@@ -50,23 +50,4 @@
       padding: 0 1rem;
     }
   }
-  table {
-    width: 100%;
-  }
-  tr,
-  th,
-  td {
-    vertical-align: top;
-    text-align: left;
-  }
-  th,
-  td {
-    padding: 5px 5px;
-  }
-  th {
-    font-weight: normal;
-  }
-  table tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-  }
 }

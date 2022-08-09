@@ -21,12 +21,7 @@
 
       &--active {
         border-color: $color-primary;
-        background-color: transparentize(
-          $color: (
-            $color-primary,
-          ),
-          $amount: 0.98
-        );
+        background-color: transparentize($color: $color-primary, $amount: 0.98);
       }
     }
   }

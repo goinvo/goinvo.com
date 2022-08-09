@@ -1,5 +1,25 @@
 [
   {
+    "name": "Ines Amri",
+    "title": "Designer",
+    "bio": "Ines is a designer and data analyst. She translates complex, often chaotic medical problems into elegant digital experiences. As an advocate for international women's health and human rights, Ines joined GoInvo in 2021 with a BA in Economics from Paris Dauphine University and an MSc in Digital Health and Data Analytics from the University of Reading.",
+    "social": {
+      "email": "ines@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/amri-ines/"
+    },
+    "image": "/images/about/headshot-ines-amri.jpg"
+  },
+  {
+    "name": "Huahua Zhu",
+    "title": "Designer",
+    "bio": "Huahua is a designer who tells stories through illustration, animation and comics. She creates beautiful narratives to show how our healthcare should be treating all of us. She joined Invo in 2022 with a BFA from Rhode Island School of Design.",
+    "social": {
+      "email": "huahua@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/huahua-zhu-3523b21a2/"
+    },
+    "image": "/images/about/headshot-huahua-zhu.jpg"
+  },
+  {
     "name": "Megan Hirsch",
     "title": "Designer",
     "bio": "Megan is a designer-strategist that makes healthcare experiences enjoyable for patients and clinicians. She's dialing in her design and biology-trained eye to amplify her medical school experience in 2022. She joined Invo in 2021 with a BS in Human Biology from Stanford University.",

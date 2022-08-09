@@ -135,7 +135,7 @@ class DigitalHealthTrendsFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Primary Self Care Algorithms</h1>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top--double">
                 What is Primary Self Care?
               </h2>
               <p>
@@ -152,7 +152,9 @@ class DigitalHealthTrendsFeature extends Component {
                 </sup>
                 .
               </p>
-              <h2 className="header--lg margin-top">Why Primary Self Care?</h2>
+              <h2 className="header--lg margin-top--double">
+                Why Primary Self Care?
+              </h2>
               <p>
                 According to The World Health Organization, there will be a
                 shortage of 18 million physicians by 2030. Primary self care has
@@ -166,7 +168,7 @@ class DigitalHealthTrendsFeature extends Component {
                 personalize their care according to their needs and claim more
                 decision making power in their health.
               </p>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top--double">
                 What is a Primary Self Care algorithm?
               </h2>
               <p>
@@ -176,7 +178,7 @@ class DigitalHealthTrendsFeature extends Component {
                 clinical decision support (CDS) tools, patient decision aids,
                 health assessments, and screening and testing services.
               </p>
-              <h2 className="header--lg margin-top">
+              <h2 className="header--lg margin-top--double">
                 Why does the PSC Algorithms Project matter?
               </h2>
               <p>
@@ -238,7 +240,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     1. Vaccine Decision Aids
                   </h2>
                 )}
@@ -309,7 +311,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     2. Blood Pressure Monitoring
                   </h2>
                 )}
@@ -375,7 +377,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     3. At-home Urinalysis
                   </h2>
                 )}
@@ -449,7 +451,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     4. Mental Health Assessments
                   </h2>
                 )}
@@ -509,7 +511,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     5. Vision Tests
                   </h2>
                 )}
@@ -567,7 +569,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     6. Blood Glucose Monitoring
                   </h2>
                 )}
@@ -621,7 +623,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     7. Breast Self-Exam
                   </h2>
                 )}
@@ -681,7 +683,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     8. Birth Control Decision Aid
                   </h2>
                 )}
@@ -753,7 +755,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     9. Air Quality Monitor
                   </h2>
                 )}
@@ -801,7 +803,7 @@ class DigitalHealthTrendsFeature extends Component {
                 }`}
               >
                 {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top margin-bottom--none">
+                  <h2 className="header--lg margin-top--double margin-bottom--none">
                     10. Pulse Oximetry
                   </h2>
                 )}
@@ -840,7 +842,7 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <h1 className="header--xl margin-top--double">
-                Application of Primary Self Care Algorithms Across Life
+                Application of Primary Self Care Across Life
               </h1>
             </div>
             <div className="content-padding--double">
@@ -1150,7 +1152,7 @@ class DigitalHealthTrendsFeature extends Component {
             </div>
           </div>
 
-          <div className="airtable content-padding--double">
+          <div className="content-padding--double">
             <iframe
               className="airtable-embed"
               src="https://airtable.com/embed/shrWdnWlNj0SIuUzl?backgroundColor=blue&viewControls=on"
@@ -1165,7 +1167,7 @@ class DigitalHealthTrendsFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl margin-top--double">Methods</h1>
-              <h2 className="header--lg margin-top">Decision Matrix</h2>
+              <h2 className="header--lg margin-top--double">Decision Matrix</h2>
               <p>
                 The ranking of the 10 top Primary Self Care algorithms were
                 determined by rating each algorithm against the following
@@ -1314,7 +1316,7 @@ class DigitalHealthTrendsFeature extends Component {
               </PscaTable>
             </div>
             <div className="max-width max-width--md content-padding">
-              <h2 className="header--lg margin-top--double margin-bottom--none">
+              <h2 className="header--lg margin-top--double--double margin-bottom--none">
                 Ranking of Top 10 Algorithms
               </h2>
             </div>
@@ -1453,18 +1455,40 @@ class DigitalHealthTrendsFeature extends Component {
                     <td>0</td>
                   </tr>
                   <tr>
-                    <td>Weighted Totals</td>
+                    <td>
+                      <strong>Weighted Totals</strong>
+                    </td>
                     <td></td>
-                    <td>17</td>
-                    <td>16</td>
-                    <td>15</td>
-                    <td>15</td>
-                    <td>11</td>
-                    <td>11</td>
-                    <td>9</td>
-                    <td>8</td>
-                    <td>7</td>
-                    <td>-1</td>
+                    <td>
+                      <strong>17</strong>
+                    </td>
+                    <td>
+                      <strong>16</strong>
+                    </td>
+                    <td>
+                      <strong>15</strong>
+                    </td>
+                    <td>
+                      <strong>15</strong>
+                    </td>
+                    <td>
+                      <strong>11</strong>
+                    </td>
+                    <td>
+                      <strong>11</strong>
+                    </td>
+                    <td>
+                      <strong>9</strong>
+                    </td>
+                    <td>
+                      <strong>8</strong>
+                    </td>
+                    <td>
+                      <strong>7</strong>
+                    </td>
+                    <td>
+                      <strong>-1</strong>
+                    </td>
                   </tr>
                 </tbody>
               </table>

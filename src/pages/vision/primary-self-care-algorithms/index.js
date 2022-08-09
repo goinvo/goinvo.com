@@ -1524,6 +1524,8 @@ class DigitalHealthTrendsFeature extends Component {
                     Huahua Zhu
                     <br />
                     Eric Benoit
+                    <br />
+                    Craig McGinley
                   </p>
                 </div>
               </div>

@@ -5,12 +5,16 @@
     justify-content: space-between;
 
     &__algorithm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex: 0 0 calc((100% - 4rem) / 5);
       margin-bottom: 1rem;
       padding: 1rem;
       border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 6px;
       box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.08);
+      text-align: center;
       transition: box-shadow 150ms, border-color 150ms;
       cursor: pointer;
 
@@ -39,7 +43,19 @@
     display: block;
     margin: 0 auto;
   }
-  @media only screen and (max-width: 768px) {
+  .psca-table-applications {
+    table-layout: fixed;
+
+    tr > th,
+    tr > td {
+      width: 65px;
+
+      &:first-of-type {
+        width: 150px;
+      }
+    }
+  }
+  @include mq($until: large) {
     .airtable {
       max-width: 100%;
       padding: 0 1rem;

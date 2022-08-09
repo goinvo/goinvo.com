@@ -43,7 +43,7 @@ const algorithms = [
   },
   {
     id: ALGORITHMS.AT_HOME_URINALYSIS,
-    title: 'At Home Urinalysis',
+    title: 'At-Home Urinalysis',
   },
   {
     id: ALGORITHMS.MENTAL_HEALTH_ASSESSMENTS,
@@ -59,7 +59,7 @@ const algorithms = [
   },
   {
     id: ALGORITHMS.BREAST_SELF_EXAM,
-    title: 'Breast Self Exam',
+    title: 'Breast Self-Exam',
   },
   {
     id: ALGORITHMS.BIRTH_CONTROL_DECISION_AID,
@@ -845,7 +845,7 @@ class DigitalHealthTrendsFeature extends Component {
             </div>
             <div className="content-padding--double">
               <PscaTable>
-                <table>
+                <table className="psca-table-applications">
                   <thead>
                     <tr>
                       <th></th>
@@ -1046,7 +1046,7 @@ class DigitalHealthTrendsFeature extends Component {
                       </td>
                     </tr>
                     <tr>
-                      <td>Breast Self Exam</td>
+                      <td>Breast Self-Exam</td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -1164,20 +1164,6 @@ class DigitalHealthTrendsFeature extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl margin-top--double">Next Steps</h1>
-              <p>
-                The future of the PSC Algorithms project will include expanding
-                the algorithm database and refining the list of top ten
-                algorithms. The next iteration of rankings will also examine
-                applicability in global settings, compliance, error rates, and
-                variability in implementation, and it will also take a more
-                in-depth look at licensing. Additionally, this project will
-                inform the editing of Wikipedia’s{' '}
-                <a href="https://en.wikipedia.org/wiki/Self-care">self-care</a>{' '}
-                page, which does not currently distinguish between primary self
-                care and self-care.
-              </p>
-
               <h1 className="header--xl margin-top--double">Methods</h1>
               <h2 className="header--lg margin-top">Decision Matrix</h2>
               <p>
@@ -1347,7 +1333,7 @@ class DigitalHealthTrendsFeature extends Component {
                     <th>Mental Health</th>
                     <th>Vision Test</th>
                     <th>Glucose Monitoring</th>
-                    <th>Breast Self Exam</th>
+                    <th>Breast Self-Exam</th>
                     <th>Birth Control</th>
                     <th>Air Quality Monitor</th>
                     <th>Pulse Oximetry</th>
@@ -1487,6 +1473,20 @@ class DigitalHealthTrendsFeature extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
+              <h1 className="header--xl margin-top--double">Next Steps</h1>
+              <p>
+                The future of the PSC Algorithms project will include expanding
+                the algorithm database and refining the list of top ten
+                algorithms. The next iteration of rankings will also examine
+                applicability in global settings, compliance, error rates, and
+                variability in implementation, and it will also take a more
+                in-depth look at licensing. Additionally, this project will
+                inform the editing of Wikipedia’s{' '}
+                <a href="https://en.wikipedia.org/wiki/Self-care">self-care</a>{' '}
+                page, which does not currently distinguish between primary self
+                care and self-care.
+              </p>
+
               <div>
                 <h2 className="header--xl text--center">Authors</h2>
                 <Author name="Arpna Ghanshani" />

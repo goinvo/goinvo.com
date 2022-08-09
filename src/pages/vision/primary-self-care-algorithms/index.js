@@ -135,10 +135,10 @@ class DigitalHealthTrendsFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Primary Self Care Algorithms</h1>
-              <h2 className="header--lg margin-top--double">
+              <h2 className="header--lg margin-top--double margin-bottom--none">
                 What is Primary Self Care?
               </h2>
-              <p>
+              <p class="margin-top--none">
                 Primary self care (PSC) exists at the intersection of primary
                 health care and self-care. With an emphasis on self-management,
                 self-testing, and self-awareness, PSC enables individuals to
@@ -152,10 +152,10 @@ class DigitalHealthTrendsFeature extends Component {
                 </sup>
                 .
               </p>
-              <h2 className="header--lg margin-top--double">
+              <h2 className="header--lg margin-top--double margin-bottom--none">
                 Why Primary Self Care?
               </h2>
-              <p>
+              <p class="margin-top--none">
                 According to The World Health Organization, there will be a
                 shortage of 18 million physicians by 2030. Primary self care has
                 the potential to fill this gap and reduce the burden on
@@ -168,20 +168,20 @@ class DigitalHealthTrendsFeature extends Component {
                 personalize their care according to their needs and claim more
                 decision making power in their health.
               </p>
-              <h2 className="header--lg margin-top--double">
+              <h2 className="header--lg margin-top--double margin-bottom--none">
                 What is a Primary Self Care algorithm?
               </h2>
-              <p>
+              <p class="margin-top--none">
                 Primary self care algorithms are decision support tools for
                 individuals to better understand their health and the steps
                 needed to optimize their health status. PSC algorithms include
                 clinical decision support (CDS) tools, patient decision aids,
                 health assessments, and screening and testing services.
               </p>
-              <h2 className="header--lg margin-top--double">
+              <h2 className="header--lg margin-top--double margin-bottom--none">
                 Why does the PSC Algorithms Project matter?
               </h2>
-              <p>
+              <p class="margin-top--none">
                 Despite being at the core of self care interventions, primary
                 self care has been inconsistently defined. In light of the
                 growing number of at-home healthcare technologies and services,

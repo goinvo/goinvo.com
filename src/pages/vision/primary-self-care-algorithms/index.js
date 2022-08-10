@@ -239,11 +239,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    1. Vaccine Decision Aids
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  1. Vaccine Decision Aids
+                </h2>
                 <p className="margin-top--none">
                   The global response to the COVID-19 pandemic highlighted just
                   how critical vaccination efforts are in mitigating the spread
@@ -264,7 +262,7 @@ class DigitalHealthTrendsFeature extends Component {
                   insufficient access.
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://decisions.dynamed.com/shared-decision-making/covid-19-vaccine-options">
                       COVID-19: Vaccine Options
@@ -310,11 +308,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    2. Blood Pressure Monitoring
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  2. Blood Pressure Monitoring
+                </h2>
                 <p className="margin-top--none">
                   Heart disease is the leading cause of death in the United
                   States with more than 659,000 lives lost each year. Coronary
@@ -335,7 +331,7 @@ class DigitalHealthTrendsFeature extends Component {
                   .
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening">
                       The USPSTF provides an A recommendation for screening for
@@ -376,11 +372,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    3. At-home Urinalysis
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  3. At-Home Urinalysis
+                </h2>
                 <p className="margin-top--none">
                   Kidney disease affects more than 15% of the US population, or
                   1 in 7 people. However, 90% of affected individuals are
@@ -401,7 +395,7 @@ class DigitalHealthTrendsFeature extends Component {
                   options.
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://link.springer.com/article/10.1007/s00467-022-05556-8">
                       Healthy.io home-based urinalysis test kit and smartphone
@@ -450,11 +444,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    4. Mental Health Assessments
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  4. Mental Health Assessments
+                </h2>
                 <p className="margin-top--none">
                   In the United States, 1 in 5 individuals live with a mental
                   illness, with a higher prevalence among minorities and young
@@ -475,7 +467,7 @@ class DigitalHealthTrendsFeature extends Component {
                   lowering suicide and suicide attempt rates.
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://www.psychiatrist.com/jcp/bipolar/computer-assisted-self-assessment-persons-severe-mental/">
                       Computer Assisted Self Assessment (CART) in persons with
@@ -510,11 +502,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    5. Vision Tests
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  5. Vision Tests
+                </h2>
                 <p className="margin-top--none">
                   Vision impairment and blindness impact 2.2 billion people
                   around the world, and more than half of these have not yet
@@ -536,7 +526,7 @@ class DigitalHealthTrendsFeature extends Component {
                   loss.
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/6175935/">
                       A modified Amsler Grid test: self-assessment test for
@@ -568,11 +558,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    6. Blood Glucose Monitoring
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  6. Blood Glucose Monitoring
+                </h2>
                 <p className="margin-top--none">
                   One of the most prevalent chronic conditions in the US,
                   diabetes is the seventh leading cause of death. There are 37.3
@@ -590,7 +578,7 @@ class DigitalHealthTrendsFeature extends Component {
                   lifestyle interventions are crucial.
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/33441946/">
                       Self monitored blood glucose in association with glycemic
@@ -622,11 +610,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    7. Breast Self-Exam
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  7. Breast Self-Exam
+                </h2>
                 <p className="margin-top--none">
                   Breast cancer is the most prevalent cancer in the US and the
                   second leading cause of cancer death in women. One in eight
@@ -643,7 +629,7 @@ class DigitalHealthTrendsFeature extends Component {
                   .
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://www.breastcancer.org/screening-testing/breast-self-exam-bse">
                       Breast Self-Exam (BSE)
@@ -682,11 +668,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    8. Birth Control Decision Aid
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  8. Birth Control Decision Aid
+                </h2>
                 <p className="margin-top--none">
                   Globally, more than 200 million women face an unmet need for
                   family planning options and contraceptives, and 1.4 million
@@ -715,7 +699,7 @@ class DigitalHealthTrendsFeature extends Component {
                   .
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://www.pcori.org/research-results/2013/decision-aid-help-women-choose-and-use-method-birth-control">
                       A Decision Aid to Help Women Choose and Use a Method of
@@ -754,11 +738,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    9. Air Quality Monitor
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  9. Air Quality Monitor
+                </h2>
                 <p className="margin-top--none">
                   Chronic respiratory diseases are the third leading cause of
                   death in the US and account for 7.5 million deaths worldwide
@@ -777,7 +759,7 @@ class DigitalHealthTrendsFeature extends Component {
                   risk factors are addressed early on.
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://sustainenvironres.biomedcentral.com/articles/10.1186/s42834-020-0047-y">
                       Indoor air quality monitoring systems for public health
@@ -802,11 +784,9 @@ class DigitalHealthTrendsFeature extends Component {
                     : ''
                 }`}
               >
-                {this.state.allExpanded && (
-                  <h2 className="header--lg margin-top--double margin-bottom--none">
-                    10. Pulse Oximetry
-                  </h2>
-                )}
+                <h2 className="header--lg margin-top--none margin-bottom--none">
+                  10. Pulse Oximetry
+                </h2>
                 <p className="margin-top--none">
                   A pulse oximeter is an electronic device that clips onto a
                   patient’s fingertip or ear to measure the saturation of oxygen
@@ -820,7 +800,7 @@ class DigitalHealthTrendsFeature extends Component {
                   diabetes, and sleep disorders.
                 </p>
                 <h4 className="header--sm margin-bottom--none">Models</h4>
-                <ul className="margin-top--none">
+                <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/25880649/">
                       Overnight Pulse Oximetry to diagnose patients with
@@ -1499,17 +1479,37 @@ class DigitalHealthTrendsFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl margin-top--double">Next Steps</h1>
               <p>
-                The future of the PSC Algorithms project will include expanding
-                the algorithm database and refining the list of top ten
-                algorithms. The next iteration of rankings will also examine
-                applicability in global settings, compliance, error rates, and
-                variability in implementation, and it will also take a more
-                in-depth look at licensing. Additionally, this project will
-                inform the editing of Wikipedia’s{' '}
+                Future iterations of the PSC Algorithms Project will include an
+                even more comprehensive database and an updated ranking of the
+                top algorithms. The decision matrix will also be expanded to
+                include the applicability in global settings, compliance, error
+                rates, and variability in implementation; there will be a more
+                in-depth look at licensing information as well. Additionally,
+                this project will inform the editing of Wikipedia’s{' '}
                 <a href="https://en.wikipedia.org/wiki/Self-care">self-care</a>{' '}
                 page, which does not currently distinguish between primary self
                 care and self-care.
               </p>
+
+              <p>
+                The ultimate purpose of the Primary Self Care Algorithms Project
+                is to support:
+              </p>
+
+              <ol>
+                <li>
+                  <strong>Healthcare UX Designers</strong> creating intentional,
+                  patient-first tools and services.
+                </li>
+                <li>
+                  <strong>Providers</strong> tailoring medical care to patient
+                  needs.
+                </li>
+                <li>
+                  <strong>Patients</strong> seeking intuitive, value-adding
+                  tools as they take ownership over their health.{' '}
+                </li>
+              </ol>
 
               <div>
                 <h2 className="header--xl text--center">Authors</h2>

@@ -18,7 +18,7 @@ import { mediaUrl } from '../../../helpers'
 const frontmatter = {
   metaTitle: 'Determinants of Health Visualized',
   metaDescription:
-    'A comprehensive open source visualization of the social determinants of health. Order your poster today!',
+    'Explore our open source visualization of the 5 determinants of health. Order your poster today!',
   heroImage: '/images/services/doh-preview.jpg',
 }
 

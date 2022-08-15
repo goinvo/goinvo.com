@@ -16,7 +16,7 @@ const frontmatter = {
   metaTitle: 'Faces in Health Communication - GoInvo',
   metaDescription:
     'The Benefits of Information Graphics and Human Faces for Improved Patient Understanding.',
-  heroImage: '/images/features/faces-in-health-communication/hero.jpg',
+  heroImage: '/images/features/faces-in-health-communication/hero-2.jpg',
 }
 
 class FacesInHealthCommunicationFeature extends Component {

@@ -1,5 +1,16 @@
 [
   {
+    "id": "primary-self-care-algorithms",
+    "title": "Primary Self Care Algorithms",
+    "date": "Sep.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Primary self care algorithms are decision support tools for individuals to better understand their health and the steps needed to optimize their health status.",
+    "image": "/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero-draft-2.jpg",
+    "link": "/vision/primary-self-care-algorithms/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "living-health-lab",
     "title": "Living Health Lab",
     "date": "Jul.2022",

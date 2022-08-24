@@ -210,9 +210,6 @@ class DigitalHealthTrendsFeature extends Component {
                 </button>
               </div>
 
-              {
-                // TODO: Icons
-              }
               <ul className="list--unstyled algorithm-icons hidden--until-lg">
                 {algorithms.map(algorithm => {
                   return (

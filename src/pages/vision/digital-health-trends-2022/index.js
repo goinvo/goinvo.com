@@ -9,9 +9,9 @@ import Author from '../../../components/author'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Digital Health Trends to Watch in 2022 and Beyond - GoInvo',
+  metaTitle: 'Digital Health Trends to Watch - GoInvo',
   metaDescription:
-    'GoInvo breaks down significant digital health trends you should watch in 2022 and the decade to come.',
+    'GoInvo breaks down significant digital health trends you should watch for.',
   heroImage:
     '/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg',
 }
@@ -24,9 +24,7 @@ class DigitalHealthTrendsFeature extends Component {
         <div className="digital-health-trends-2022-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">
-                Digital Health Trends to Watch in 2022 and Beyond
-              </h1>
+              <h1 className="header--xl">Digital Health Trends to Watch</h1>
 
               <p>
                 We're at a major inflection point for digital health. The

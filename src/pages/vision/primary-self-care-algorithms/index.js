@@ -16,7 +16,7 @@ const frontmatter = {
   metaDescription:
     'Primary self care algorithms are decision support tools for individuals to better understand their health and the steps needed to optimize their health status.',
   heroImage:
-    '/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero-draft.jpg',
+    '/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero-draft-2.jpg',
 }
 
 const ALGORITHMS = {
@@ -132,7 +132,7 @@ class DigitalHealthTrendsFeature extends Component {
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
         <div className="primary-self-care-algorithms">
-          <div className="pad-vertical--double">
+          <div className="pad-vertical--double pad-bottom--none">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Primary Self Care Algorithms</h1>
               <h2 className="header--lg margin-top--double margin-bottom--none">
@@ -829,7 +829,7 @@ class DigitalHealthTrendsFeature extends Component {
             </div>
             <div className="content-padding--double">
               <PscaTable>
-                <table className="psca-table-applications">
+                <table className="psca-table-applications margin-bottom--double">
                   <thead>
                     <tr>
                       <th></th>
@@ -1119,7 +1119,7 @@ class DigitalHealthTrendsFeature extends Component {
                 </table>
               </PscaTable>
             </div>
-            <div className="max-width max-width--md content-padding">
+            <div className="max-width max-width--md content-padding margin-bottom--none">
               <h1 className="header--xl margin-top--double">
                 Database of Primary Self Care Algorithms
               </h1>
@@ -1163,7 +1163,7 @@ class DigitalHealthTrendsFeature extends Component {
             </div>
             <div className="content-padding--double">
               <PscaTable>
-                <table>
+                <table className="margin-bottom--double">
                   <thead>
                     <tr className="text--gray">
                       <th width="25%">Criteria</th>
@@ -1302,179 +1302,179 @@ class DigitalHealthTrendsFeature extends Component {
                 Ranking of Top 10 Algorithms
               </h2>
             </div>
-          </div>
 
-          <div className="content-padding--double">
-            <PscaTable>
-              <table>
-                <thead>
-                  <tr className="text--gray">
-                    <th>Criteria</th>
-                    <th>Weight (1-4)</th>
-                    <th>Vaccinations</th>
-                    <th>Blood Pressure</th>
-                    <th>Urinalysis</th>
-                    <th>Mental Health</th>
-                    <th>Vision Test</th>
-                    <th>Glucose Monitoring</th>
-                    <th>Breast Self-Exam</th>
-                    <th>Birth Control</th>
-                    <th>Air Quality Monitor</th>
-                    <th>Pulse Oximetry</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Audience</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>Effectiveness</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>-1</td>
-                  </tr>
-                  <tr>
-                    <td>Validity/Reliability</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>-1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>Complexity</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>-1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>-1</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>Cost</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>Availability</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <td>Support</td>
-                    <td>2</td>
-                    <td>-1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>-1</td>
-                    <td>1</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <td>Licensing</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Weighted Totals</strong>
-                    </td>
-                    <td></td>
-                    <td>
-                      <strong>17</strong>
-                    </td>
-                    <td>
-                      <strong>16</strong>
-                    </td>
-                    <td>
-                      <strong>15</strong>
-                    </td>
-                    <td>
-                      <strong>15</strong>
-                    </td>
-                    <td>
-                      <strong>11</strong>
-                    </td>
-                    <td>
-                      <strong>11</strong>
-                    </td>
-                    <td>
-                      <strong>9</strong>
-                    </td>
-                    <td>
-                      <strong>8</strong>
-                    </td>
-                    <td>
-                      <strong>7</strong>
-                    </td>
-                    <td>
-                      <strong>-1</strong>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </PscaTable>
+            <div className="content-padding--double">
+              <PscaTable>
+                <table>
+                  <thead>
+                    <tr className="text--gray">
+                      <th>Criteria</th>
+                      <th>Weight (1-4)</th>
+                      <th>Vaccinations</th>
+                      <th>Blood Pressure</th>
+                      <th>Urinalysis</th>
+                      <th>Mental Health</th>
+                      <th>Vision Test</th>
+                      <th>Glucose Monitoring</th>
+                      <th>Breast Self-Exam</th>
+                      <th>Birth Control</th>
+                      <th>Air Quality Monitor</th>
+                      <th>Pulse Oximetry</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Audience</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Effectiveness</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>-1</td>
+                    </tr>
+                    <tr>
+                      <td>Validity/Reliability</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Complexity</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Cost</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Availability</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Support</td>
+                      <td>2</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Licensing</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Weighted Totals</strong>
+                      </td>
+                      <td></td>
+                      <td>
+                        <strong>17</strong>
+                      </td>
+                      <td>
+                        <strong>16</strong>
+                      </td>
+                      <td>
+                        <strong>15</strong>
+                      </td>
+                      <td>
+                        <strong>15</strong>
+                      </td>
+                      <td>
+                        <strong>11</strong>
+                      </td>
+                      <td>
+                        <strong>11</strong>
+                      </td>
+                      <td>
+                        <strong>9</strong>
+                      </td>
+                      <td>
+                        <strong>8</strong>
+                      </td>
+                      <td>
+                        <strong>7</strong>
+                      </td>
+                      <td>
+                        <strong>-1</strong>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </PscaTable>
+            </div>
           </div>
 
           <div className="pad-vertical--double">

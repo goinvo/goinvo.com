@@ -16,7 +16,7 @@ const frontmatter = {
   metaDescription:
     'Primary self care algorithms are decision support tools for individuals to better understand their health and the steps needed to optimize their health status.',
   heroImage:
-    '/images/features/primary-self-care-algorithms/primary-self-care-algorithms.jpg',
+    '/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero-draft.jpg',
 }
 
 const ALGORITHMS = {

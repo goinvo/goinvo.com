@@ -204,6 +204,7 @@ class DigitalHealthTrendsFeature extends Component {
                 <button
                   className="button button--link hidden--until-lg"
                   onClick={this.toggleExpandAll}
+                  onKeyDown={this.toggleExpandAll}
                 >
                   {this.state.allExpanded ? 'collapse' : 'expand all'}
                 </button>
@@ -223,6 +224,7 @@ class DigitalHealthTrendsFeature extends Component {
                       }`}
                       key={algorithm.id}
                       onClick={() => this.handleAlgorithmSelect(algorithm.id)}
+                      onKeyDown={() => this.handleAlgorithmSelect(algorithm.id)}
                       role="button"
                     >
                       {algorithm.title}
@@ -1144,7 +1146,7 @@ class DigitalHealthTrendsFeature extends Component {
             ></iframe>
           </div>
 
-          <div className="pad-vertical--double">
+          <div className="background--blue pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl margin-top--double">Methods</h1>
               <h2 className="header--lg margin-top--double">Decision Matrix</h2>

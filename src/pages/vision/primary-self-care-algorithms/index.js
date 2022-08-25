@@ -333,9 +333,9 @@ class DigitalHealthTrendsFeature extends Component {
                 <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening">
-                      The USPSTF provides an A recommendation for screening for
-                      hypertension in adults 18 years or older without
-                      hypertension
+                      The USPSTF provides an A grade recommendation for
+                      screening for hypertension in adults 18 years or older
+                      without hypertension
                     </a>
                     <sup>
                       <a href="#references">12</a>
@@ -1180,7 +1180,7 @@ class DigitalHealthTrendsFeature extends Component {
                       </td>
                       <td>2</td>
                       <td>
-                        can utilized by the majority of people, regardless of
+                        can be utilized by the majority of people, regardless of
                         health status
                       </td>
                       <td>

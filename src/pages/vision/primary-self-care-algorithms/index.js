@@ -11,12 +11,23 @@ import config from '../../../../config'
 
 import CheckboxRequired from '../../../assets/images/vision/virtual-care/icon-checkbox-required.inline.svg'
 
+import AirQualityMonitor from '../../../assets/images/vision/primary-self-care-algorithms/air-quality-monitor.inline.svg'
+import AtHomeUrinalysis from '../../../assets/images/vision/primary-self-care-algorithms/at-home-urinalysis.inline.svg'
+import BirthControlDecisionAid from '../../../assets/images/vision/primary-self-care-algorithms/birth-control-decision-aid.inline.svg'
+import BloodGlucoseMonitoring from '../../../assets/images/vision/primary-self-care-algorithms/blood-glucose-monitoring.inline.svg'
+import BloodPressureMonitoring from '../../../assets/images/vision/primary-self-care-algorithms/blood-pressure-monitoring.inline.svg'
+import BreastSelfExam from '../../../assets/images/vision/primary-self-care-algorithms/breast-self-exam.inline.svg'
+import MentalHealthAssessments from '../../../assets/images/vision/primary-self-care-algorithms/mental-health-assessments.inline.svg'
+import PulseOximetry from '../../../assets/images/vision/primary-self-care-algorithms/pulse-oximetry.inline.svg'
+import VaccineDecisionAids from '../../../assets/images/vision/primary-self-care-algorithms/vaccine-decision-aids.inline.svg'
+import VisionTests from '../../../assets/images/vision/primary-self-care-algorithms/vision-tests.inline.svg'
+
 const frontmatter = {
   metaTitle: 'Primary Self Care Algorithms - GoInvo',
   metaDescription:
     'Primary self care algorithms are decision support tools for individuals to better understand their health and the steps needed to optimize their health status.',
   heroImage:
-    '/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero-draft-2.jpg',
+    '/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero.jpg',
 }
 
 const ALGORITHMS = {
@@ -36,44 +47,67 @@ const algorithms = [
   {
     id: ALGORITHMS.VACCINE_DECISION_AIDS,
     title: 'Vaccine Decision Aids',
+    icon: 'VaccineDecisionAids',
   },
   {
     id: ALGORITHMS.BLOOD_PRESSURE_MONITORING,
     title: 'Blood Pressure Monitoring',
+    icon: 'BloodPressureMonitoring',
   },
   {
     id: ALGORITHMS.AT_HOME_URINALYSIS,
     title: 'At-Home Urinalysis',
+    icon: 'AtHomeUrinalysis',
   },
   {
     id: ALGORITHMS.MENTAL_HEALTH_ASSESSMENTS,
     title: 'Mental Health Assessments',
+    icon: 'MentalHealthAssessments',
   },
   {
     id: ALGORITHMS.VISION_TESTS,
     title: 'Vision Tests',
+    icon: 'VisionTests',
   },
   {
     id: ALGORITHMS.BLOOD_GLUCOSE_MONITORING,
     title: 'Blood Glucose Monitoring',
+    icon: 'BloodGlucoseMonitoring',
   },
   {
     id: ALGORITHMS.BREAST_SELF_EXAM,
     title: 'Breast Self-Exam',
+    icon: 'BreastSelfExam',
   },
   {
     id: ALGORITHMS.BIRTH_CONTROL_DECISION_AID,
     title: 'Birth Control Decision Aid',
+    icon: 'BirthControlDecisionAid',
   },
   {
     id: ALGORITHMS.AIR_QUALITY_MONITOR,
     title: 'Air Quality Monitor',
+    icon: 'AirQualityMonitor',
   },
   {
     id: ALGORITHMS.PULSE_OXIMETRY,
     title: 'Pulse Oximetry',
+    icon: 'PulseOximetry',
   },
 ]
+
+const icons = {
+  AirQualityMonitor,
+  AtHomeUrinalysis,
+  BirthControlDecisionAid,
+  BloodGlucoseMonitoring,
+  BloodPressureMonitoring,
+  BreastSelfExam,
+  MentalHealthAssessments,
+  PulseOximetry,
+  VaccineDecisionAids,
+  VisionTests,
+}
 
 class DigitalHealthTrendsFeature extends Component {
   constructor() {
@@ -212,19 +246,23 @@ class DigitalHealthTrendsFeature extends Component {
 
               <ul className="list--unstyled algorithm-icons hidden--until-lg">
                 {algorithms.map(algorithm => {
+                  const Icon = icons[algorithm.icon]
                   return (
-                    <li
-                      className={`algorithm-icons__algorithm ${
-                        this.state.activeAlgorithm === algorithm.id
-                          ? 'algorithm-icons__algorithm--active'
-                          : ''
-                      }`}
-                      key={algorithm.id}
-                      onClick={() => this.handleAlgorithmSelect(algorithm.id)}
-                      onKeyDown={() => this.handleAlgorithmSelect(algorithm.id)}
-                      role="button"
-                    >
-                      {algorithm.title}
+                    <li key={algorithm.id}>
+                      <button
+                        className={`algorithm-icons__algorithm ${
+                          this.state.activeAlgorithm === algorithm.id
+                            ? 'algorithm-icons__algorithm--active'
+                            : ''
+                        }`}
+                        onClick={() => this.handleAlgorithmSelect(algorithm.id)}
+                        onKeyDown={() =>
+                          this.handleAlgorithmSelect(algorithm.id)
+                        }
+                      >
+                        <Icon />
+                        {algorithm.title}
+                      </button>
                     </li>
                   )
                 })}
@@ -333,9 +371,9 @@ class DigitalHealthTrendsFeature extends Component {
                 <ul className="margin-top--none margin-bottom--double">
                   <li>
                     <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening">
-                      The USPSTF provides an A recommendation for screening for
-                      hypertension in adults 18 years or older without
-                      hypertension
+                      The USPSTF provides an A grade recommendation for
+                      screening for hypertension in adults 18 years or older
+                      without hypertension
                     </a>
                     <sup>
                       <a href="#references">12</a>
@@ -829,7 +867,7 @@ class DigitalHealthTrendsFeature extends Component {
                 <table className="psca-table-applications margin-bottom--double">
                   <thead>
                     <tr>
-                      <th></th>
+                      <th> </th>
                       <th>0-5 years old</th>
                       <th>6-12</th>
                       <th>13-20</th>
@@ -1180,7 +1218,7 @@ class DigitalHealthTrendsFeature extends Component {
                       </td>
                       <td>2</td>
                       <td>
-                        can utilized by the majority of people, regardless of
+                        can be utilized by the majority of people, regardless of
                         health status
                       </td>
                       <td>

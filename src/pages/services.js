@@ -91,17 +91,25 @@ const frontmatter = {
   heroImage: '/images/services/hand-drawing.jpg',
 }
 
+const calendlyScriptId = 'calendly-script'
+
 class ServicesPage extends Component {
   componentDidMount() {
-    if (!window.Calendly) {
-      const script = document.createElement('script')
-      script.src = 'https://assets.calendly.com/assets/external/widget.js'
-      script.async = true
+    const head = document.querySelector('head')
+    const script = document.createElement('script')
+    script.setAttribute(
+      'src',
+      'https://assets.calendly.com/assets/external/widget.js'
+    )
+    script.setAttribute('id', calendlyScriptId)
+    head.appendChild(script)
+  }
 
-      document.body.appendChild(script)
-    } else {
-      window.Calendly.createInlineWidgets()
-    }
+  componentWillUnmount() {
+    const head = document.querySelector('head')
+    const script = document.getElementById(calendlyScriptId)
+
+    head.removeChild(script)
   }
 
   render() {

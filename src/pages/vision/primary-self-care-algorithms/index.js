@@ -224,11 +224,10 @@ class DigitalHealthTrendsFeature extends Component {
                 <sup>
                   <a href="#references">1</a>
                 </sup>
-                . A publicly-available, validated knowledge base of PSC
-                algorithms can serve as an instrumental resource for patients,
-                policy makers, and healthcare workers. This project will also
-                reveal the current gaps in research and implementation of PSC
-                models.
+                . A publicly-available knowledge base of PSC algorithms can
+                serve as an instrumental resource for patients, policy makers,
+                and healthcare workers. This project will also reveal the
+                current gaps in research and implementation of PSC models.
               </p>
 
               <div className="display--flex display--flex--justify-space-between display--flex--align-baseline">

@@ -1,0 +1,631 @@
+import React, { Component } from 'react'
+
+import SlickCarousel from 'react-slick'
+import Scrollspy from 'react-scrollspy'
+
+import Layout from '../../../components/layouts/layout'
+import Hero from '../../../components/hero'
+import Divider from '../../../components/divider'
+import Image from '../../../components/image'
+import Author from '../../../components/author'
+import References from '../../../components/references'
+import Reference from '../../../components/reference'
+// import Columns from '../../../components/columns'
+
+import { mediaUrl } from '../../../helpers'
+import config from '../../../../config'
+
+const frontmatter = {
+  metaTitle: 'Public Restroom to Public Healthroom  - GoInvo',
+  metaDescription: 'Preventative Health Infrastructure for cities and towns.',
+  heroImage: '/images/features/faces-in-health-communication/hero-2.jpg',
+}
+
+const prototypeFrames = [
+  {
+    id: 1,
+    image: 'entry',
+    transform: 'scale(1)',
+    transformOrigin: 'center',
+    height: '1.15%',
+  },
+  {
+    id: 2,
+    image: 'entry',
+    transform: 'scale(2.5) translate(0px, -8%)',
+    transformOrigin: 'center 65%',
+    overlay: 'enter',
+    height: '4.15%',
+  },
+  {
+    id: 3,
+    image: 'entry',
+    transform: 'scale(2.5) translate(0px, -8%)',
+    transformOrigin: 'center 65%',
+    overlay: 'default',
+    height: '4.6%',
+  },
+  {
+    id: 4,
+    image: 'entry',
+    transform: 'scale(2.5) translate(0px, -8%)',
+    transformOrigin: 'top right',
+    overlay: 'exit',
+    height: '8.3%',
+  },
+  {
+    id: 5,
+    image: 'entry',
+    transform: 'scale(1) translate(0px, 0px)',
+    transformOrigin: 'center',
+    height: '0.825%',
+  },
+  {
+    id: 6,
+    image: 'entry-open-door',
+    transformOrigin: 'center',
+    height: '1.4%',
+  },
+  {
+    id: 7,
+    image: 'entry-open-door-lidar',
+    transformOrigin: 'center',
+    height: '20%',
+  },
+  {
+    id: 8,
+    image: 'body-scan',
+    height: '0%',
+  },
+  {
+    id: 9,
+    image: 'body-scan-active',
+    height: '0%',
+  },
+  {
+    id: 10,
+    image: 'body-scan',
+    height: '0%',
+  },
+  {
+    id: 11,
+    image: 'body-scan-open-door',
+    height: '0%',
+  },
+  {
+    id: 12,
+    image: 'toilet',
+    height: '0%',
+  },
+  {
+    id: 13,
+    image: 'using-toilet',
+    height: '0%',
+  },
+  {
+    id: 14,
+    image: 'toilet',
+    height: '0%',
+  },
+  {
+    id: 15,
+    image: 'toilet-door-open',
+    height: '0%',
+  },
+  {
+    id: 16,
+    image: 'bloodvision',
+    height: '0%',
+  },
+  {
+    id: 17,
+    image: 'exit',
+    height: '0%',
+  },
+]
+
+const prototypeFrameIds = prototypeFrames.map(frame => frame.id)
+
+const prototypeImages = [...new Set(prototypeFrames.map(frame => frame.image))]
+
+class PublicHealthroom extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      currentFrame: prototypeFrames[0],
+      backwards: false,
+      overlay: false,
+      offset: -40,
+    }
+
+    this.imageRefsArray = prototypeImages.map(image => {
+      return {
+        id: image,
+        ref: React.createRef(),
+      }
+    })
+
+    this.systemRefsArray = prototypeFrames.map(frame => {
+      return {
+        id: frame.id,
+        ref: React.createRef(),
+      }
+    })
+
+    this.carousel = React.createRef()
+    this.prototypeSystems = React.createRef()
+  }
+
+  componentDidMount() {
+    this.setState({
+      offset: -(window.innerHeight / 2),
+    })
+    this.calculateOffset()
+
+    window.addEventListener('resize', this.calculateOffset)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.calculateOffset)
+  }
+
+  calculateOffset = () => {
+    const width = window.innerWidth
+    const mqPixels =
+      parseFloat(config.mediaQueries.lg) *
+      parseFloat(getComputedStyle(document.body).fontSize)
+    const height = window.innerHeight
+    const percentage = width < mqPixels ? 0.75 : 0.5
+
+    this.setState({
+      offset: -(height * percentage),
+    })
+  }
+
+  onScrollSpyUpdate = el => {
+    if (el) {
+      const frameId = parseInt(el['id'])
+      const frame = prototypeFrames.find(frame => frame.id === frameId)
+      let backwards = false
+      let overlay = false
+
+      const ref = this.imageRefsArray.find(ref => ref.id === frame.image).ref
+      const index = ref.current
+        .closest('[data-index]')
+        .getAttribute('data-index')
+      const image = ref.current.querySelector('div')
+
+      if (frameId < this.state.currentFrame.id) {
+        backwards = true
+      }
+
+      if (frame.overlay) {
+        overlay = frame.overlay
+      }
+
+      if (frame.overlay) {
+        this.setState(
+          {
+            currentFrame: frame,
+            backwards,
+            overlay,
+          },
+          () => {
+            setTimeout(() => {
+              this.carousel.current.slickGoTo(index)
+              image.style.transform = frame.transform
+            }, 0)
+          }
+        )
+      } else {
+        this.setState(
+          {
+            currentFrame: frame,
+            backwards,
+          },
+          () => {
+            setTimeout(() => {
+              this.carousel.current.slickGoTo(index)
+              image.style.transform = frame.transform
+            }, 0)
+
+            setTimeout(() => {
+              this.setState({
+                overlay,
+              })
+            }, 500)
+          }
+        )
+      }
+    }
+  }
+
+  renderOverlay = frame => {
+    return (
+      <div className={`public-healthroom__overlay-container`}>
+        <div
+          className={`public-healthroom__entry-menu ${
+            this.state.currentFrame.id === 2
+              ? 'public-healthroom__entry-menu--visible'
+              : ''
+          }`}
+        >
+          <Image
+            src="/images/features/public-healthroom/menu-1.png"
+            className="image--max-width"
+            sizes={config.sizes.fullToHalfAtLarge}
+          />
+        </div>
+        <div
+          className={`public-healthroom__entry-menu ${
+            this.state.currentFrame.id === 3
+              ? 'public-healthroom__entry-menu--visible'
+              : ''
+          }`}
+        >
+          <Image
+            src="/images/features/public-healthroom/menu-2.png"
+            className="image--max-width"
+            sizes={config.sizes.fullToHalfAtLarge}
+          />
+        </div>
+        <div
+          className={`public-healthroom__entry-menu ${
+            this.state.currentFrame.id === 4
+              ? 'public-healthroom__entry-menu--visible'
+              : ''
+          }`}
+        >
+          <Image
+            src="/images/features/public-healthroom/menu-3.png"
+            className="image--max-width"
+            sizes={config.sizes.fullToHalfAtLarge}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  getOverlayClass = () => {
+    let className = ''
+
+    switch (this.state.overlay) {
+      case 'enter':
+        className = this.state.backwards
+          ? 'public-healthroom__prototype-frame--exit'
+          : 'public-healthroom__prototype-frame--enter'
+        break
+      case 'exit':
+        className = this.state.backwards
+          ? 'public-healthroom__prototype-frame--enter'
+          : 'public-healthroom__prototype-frame--exit'
+        break
+      default:
+        className = ''
+    }
+
+    return className
+  }
+
+  render() {
+    return (
+      <Layout frontmatter={frontmatter}>
+        <div className="public-healthroom">
+          <Hero image={frontmatter.heroImage} />
+          <div className="max-width--md pad-horizontal margin-top pad-top margin-auto">
+            <h1 className="header--xl">Public Restroom to Public Healthroom</h1>
+            <p>
+              Infrastructure is public health, preventive health, and personal
+              health. Historically, we see this relationship in everything from
+              the reduction of waterborne disease through water sanitation
+              systems to the one-year extension to New York City citizens’
+              lifespan with added bike lanes.<Reference>1</Reference> As
+              healthcare shifts from a focus on treatment to prevention, from
+              quantity to quality, and from mega-medical campuses to local
+              community centers, new infrastructural opportunities continue to
+              arise.
+            </p>
+            <h3 className="header--md">The Public Healthroom Concept</h3>
+            <p>
+              One such opportunity is the screening and prevention of chronic
+              illnesses—specifically by evolving the role of public restrooms in
+              health. The public healthroom is a one-stop shop for US residents
+              to access basic health screening through daily encounters. The
+              room is composed of devices and communication tools that provide
+              screening and risk assessment for common chronic diseases like
+              diabetes and heart attacks. These devices collect the resident’s
+              biometric data to generate a personal health “receipt” that can
+              indicate health abnormalities, suggest further testing, and
+              provide useful information for follow-up with a primary care
+              physician.
+            </p>
+            <h3 className="header--md">
+              The public healthroom follows four primary principles:
+            </h3>
+            <div className="max-width--80">
+              <ol>
+                <li>
+                  Residents own their health data. The public healthroom is a
+                  means for individuals to access and understand their key
+                  physical health indicators, but it does not store historical
+                  data with the intent of selling to third-party buyers.
+                </li>
+                <li>
+                  All residents should have easy access to preventive care. No
+                  one should have to ignore health concerns because of
+                  geographic or socioeconomic barriers.
+                </li>
+                <li>
+                  Preventive care must meet residents where they are. The public
+                  healthroom bridges the gap between complete self-care and
+                  professional hospital care. Based on analysis of a resident’s
+                  biometrics across time, the healthroom provides detailed
+                  recommendations on seeking the appropriate level of care.
+                </li>
+                <li>
+                  Personal health is relative. The public healthroom helps each
+                  individual detect abnormalities in the context of their own
+                  history (e.g., sudden weight fluctuation, height loss, vision
+                  loss). Uncovering hidden signals can help prevent
+                  deterioration of various diseases (e.g., blindness caused by
+                  diabetes).
+                </li>
+              </ol>
+            </div>
+            <Divider />
+            <h2 className="max-width--xs header--lg text--center margin-auto">
+              Who benefits from Public Healthroom?
+            </h2>
+            <h3 className="header--md">Individuals</h3>
+            <p>
+              In 2015, only 8% of Americans age 35 or older received all
+              high-priority preventive services recommended by providers, and
+              nearly 5% received none. The year before, 60% of US residents had
+              at least one chronic disease. (CDC)
+            </p>
+            <p>
+              Lack of preventive care use is a long-established issue in the US,
+              and little has changed despite increased coverage through the
+              Affordable Care Act. A 2018 survey identified lack of trust in
+              physicians, long wait times, and work and family obligations as
+              reasons for missing care. (Borsky et. al, 2018) The public
+              healthroom can provide residents with easy access to health
+              screening and assistance as they attempt to navigate the complex
+              healthcare system and receive necessary care.
+            </p>
+            <h3 className="header--md">Cities/Towns</h3>
+            <p>
+              Instead of being a strictly clinical effort, preventive primary
+              care should be integrated into the community.
+            </p>
+            <p>
+              It is time to “shift delivery into the community, reaching people
+              where they live, work, learn, and play.” (Krist et. al, 2015)
+            </p>
+            <h3 className="header--md">State/Federal Government</h3>
+            <p>
+              Responsible for setting data-driven national health objectives for
+              the decade, Healthy People 2030 reported little progress when it
+              came to increasing preventive care delivery and access. The target
+              is to provide evidence-based preventive care to 11.5% of the
+              population by 2030.<Reference>2</Reference>
+            </p>
+            <p>Currently, it is at 6.5%.</p>
+            <Divider />
+            <h2 className="max-width--xs header--lg text--center margin-auto">
+              Who benefits from Public Healthroom?
+            </h2>
+            <h3 className="header--md">
+              Health Screening as Daily Encounters by…
+            </h3>
+            <ul>
+              <li>
+                Conduct a primary care checkup, following state guidelines.
+              </li>
+              <li>Knowing and understanding a snapshot of your health.</li>
+              <li>
+                Increase access to screening and further assistance if
+                necessary.
+              </li>
+            </ul>
+            <h3 className="header--md">
+              Increase Awareness for Preventative Health by…
+            </h3>
+            <ul>
+              <li>
+                To bring awareness on further steps taken after health
+                screening.
+              </li>
+              <li>
+                To promote relevant, micro-lifestyle changes that could prevent
+                illnesses.
+              </li>
+            </ul>
+            <Divider />
+            <h2 className="max-width--xs header--lg text--center margin-auto">
+              What should Public Healthroom measure?
+            </h2>
+          </div>
+          <div className="pad-top pad-horizontal--double max-width--">
+            <div className="max-width">
+              <iframe
+                width="100%"
+                height="600px"
+                title="Public Healthroom Measurements Database"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPI3YSZRKH6QSzM5DO5oGjdAePOLgJK_Dx4_ehEyQjF9pi9Ed6EUj2JInu3tjr59yzEvBiEl0oy2Yy/pubhtml?widget=true&amp;headers=false"
+              ></iframe>
+            </div>
+          </div>
+          <div className="max-width--sm pad-horizontal margin-top pad-top margin-auto">
+            <Divider />
+            <h2 className="max-width--xs header--lg text--center margin-auto">
+              How should Public Healthroom measure?
+            </h2>
+            <p>
+              Amongst the various methods to accomplish measurement goals
+              detailed above, the following is one possible version of the
+              screening episode: it is a fully-guided, automated sequence. The
+              room itself is build modularly, so components can be updated with
+              newer versions of machines or replaced from deterioration
+              overtime.
+            </p>
+          </div>
+          <div className="pad-all public-healthroom__prototype-wrapper">
+            <div className="public-healthroom__indicator"></div>
+            <div
+              className={`public-healthroom__prototype-frame-sticky ${this.getOverlayClass()}`}
+            >
+              <SlickCarousel
+                ref={this.carousel}
+                infinite={false}
+                dots={false}
+                arrows={false}
+                fade={true}
+              >
+                {prototypeImages.map((image, i) => {
+                  const bgImage = mediaUrl(
+                    `/images/features/public-healthroom/pubhrm-${image}.jpg`
+                  )
+                  return (
+                    <div className="public-healthroom__prototype-frame-container">
+                      <div
+                        key={image}
+                        ref={this.imageRefsArray[i].ref}
+                        className={`public-healthroom__prototype-frame ${
+                          this.state.backwards
+                            ? 'public-healthroom__prototype-frame--backwards'
+                            : ''
+                        }`}
+                      >
+                        <div
+                          className="public-healthroom__prototype-frame__image"
+                          style={{ backgroundImage: `url(${bgImage}` }}
+                        ></div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </SlickCarousel>
+              {this.renderOverlay()}
+            </div>
+            <div className="public-healthroom__system-logic">
+              <Image
+                src="/images/features/public-healthroom/system-logic-test-1.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLarge}
+              />
+              <Scrollspy
+                items={prototypeFrameIds}
+                offset={this.state.offset}
+                onUpdate={this.onScrollSpyUpdate}
+                className="public-healthroom__section-container"
+              >
+                {prototypeFrames.map((frame, i) => {
+                  return (
+                    <li
+                      key={frame.id}
+                      id={frame.id}
+                      className="public-healthroom__section"
+                      ref={this.systemRefsArray[i].ref}
+                      style={{ height: frame.height }}
+                    ></li>
+                  )
+                })}
+              </Scrollspy>
+            </div>
+          </div>
+          <div className="max-width--md pad-horizontal margin-top pad-top margin-auto">
+            <Divider />
+            <h2 className="max-width--xs header--lg text--center margin-auto">
+              Final Thoughts
+            </h2>
+            <p>
+              In the fiscal year 2021-2022, the operation cost of public toilets
+              by San Francisco Public Works was $12.7 million or $113,000 per
+              year per portable toilet that opens 40 hr/week.
+              <Reference>3</Reference> Using this as a baseline, the public
+              healthroom is indeed susceptible to higher costs to engineer,
+              build and operate. Yet, there is significant value in developing a
+              preventative health infrastructure that transitions US healthcare
+              spendings from its immense quantity to quality. In next steps, a
+              MVP must be developed with analysis on potential funding
+              structures (private vs public vs hybrid).
+            </p>
+            <p>
+              One MVP is to develop the lowest-cost version that aggregates
+              current off-the-shelf technologies but maximizes experience in
+              ease of use. Another is to develop each tool separately:
+            </p>
+            <ul>
+              <li>
+                Refurbishing public restrooms or restrooms in community center
+                (YMCA, Student Centers, retail toilets) with urine/stool
+                analysis toilets
+              </li>
+              <li>
+                Developing a software for screening recommendations based on age
+                and sex, used for retail healthcare (CVS MinuteClinic, Walgreens
+                Health, Walmart Health Center), and integrating with their
+                screening/lab test services
+              </li>
+              <li>
+                Aggregating at-home test/finger-prick test vendors into one
+                physical vending machine at retailers and community health
+                centers
+              </li>
+            </ul>
+            <p>
+              As policy makers, product designers, providers, we are always
+              trying to make people healthier by pushing the public to change
+              their lifestyle, behaviours, awareness for preventative care. The
+              public healthroom pushes us to think of how to do this seamlessly
+              and invisibly.
+            </p>
+          </div>
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <Divider />
+              <div>
+                <h2 className="header--lg text--center">Authors</h2>
+                <Author name="Jenny Yi" company="GoInvo" />
+                <Author name="Juhan Sonin" company="GoInvo" />
+
+                <h3 className="header--md margin-top--double">Contributors</h3>
+
+                <p>Samantha Wu</p>
+              </div>
+
+              <Divider />
+
+              <div id="references">
+                <References
+                  references={[
+                    {
+                      title: 'Bike lanes are a sound public health investment',
+                      link:
+                        'https://www.reuters.com/article/us-health-costbenefit-bike-lanes/bike-lanes-are-a-sound-public-health-investment-idUSKCN11Z23A',
+                    },
+                    {
+                      title: 'Healthy People 2030',
+                      link:
+                        'https://health.gov/healthypeople/objectives-and-data/browse-objectives/preventive-care',
+                    },
+                    {
+                      title:
+                        'Two cities’ approaches to increasing public bathrooms',
+                      link:
+                        'https://www.smartcitiesdive.com/news/two-cities-approaches-to-increasing-public-bathrooms/628387/',
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+}
+
+export default PublicHealthroom

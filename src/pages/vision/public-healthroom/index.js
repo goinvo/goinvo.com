@@ -26,107 +26,158 @@ const prototypeFrames = [
     id: 1,
     image: 'entry',
     transform: 'scale(1)',
-    transformOrigin: 'center',
-    height: '1.15%',
   },
   {
     id: 2,
     image: 'entry',
     transform: 'scale(2.5) translate(0px, -8%)',
-    transformOrigin: 'center 65%',
     overlay: 'enter',
-    height: '4.15%',
   },
   {
     id: 3,
     image: 'entry',
     transform: 'scale(2.5) translate(0px, -8%)',
-    transformOrigin: 'center 65%',
     overlay: 'default',
-    height: '4.6%',
   },
   {
     id: 4,
     image: 'entry',
     transform: 'scale(2.5) translate(0px, -8%)',
-    transformOrigin: 'top right',
     overlay: 'exit',
-    height: '8.3%',
   },
   {
     id: 5,
     image: 'entry',
     transform: 'scale(1) translate(0px, 0px)',
-    transformOrigin: 'center',
-    height: '0.825%',
   },
   {
     id: 6,
     image: 'entry-open-door',
-    transformOrigin: 'center',
-    height: '1.4%',
   },
   {
     id: 7,
     image: 'entry-open-door-lidar',
-    transformOrigin: 'center',
-    height: '20%',
   },
   {
     id: 8,
     image: 'body-scan',
-    height: '0%',
+    overlay: 'default',
   },
   {
     id: 9,
     image: 'body-scan-active',
-    height: '0%',
   },
   {
     id: 10,
     image: 'body-scan',
-    height: '0%',
+    overlay: 'default',
   },
   {
     id: 11,
     image: 'body-scan-open-door',
-    height: '0%',
   },
   {
     id: 12,
     image: 'toilet',
-    height: '0%',
+    backgroundPosition: 'right 10% bottom 0vw',
+    transform: 'scale(1)',
   },
   {
     id: 13,
-    image: 'using-toilet',
-    height: '0%',
+    image: 'toilet',
+    backgroundPosition: 'right 40% bottom 2vw',
+    transform: 'scale(1.5)',
   },
   {
     id: 14,
-    image: 'toilet',
-    height: '0%',
+    image: 'using-toilet',
   },
   {
     id: 15,
-    image: 'toilet-door-open',
-    height: '0%',
+    image: 'toilet',
+    backgroundPosition: 'left 30% top 3vw',
+    transform: 'scale(1.2)',
+    overlay: 'default',
   },
   {
     id: 16,
-    image: 'bloodvision',
-    height: '0%',
+    image: 'toilet',
+    backgroundPosition: 'left 0% bottom 0vw',
+    transform: 'scale(2) translate(0%, -24%)',
   },
   {
     id: 17,
+    image: 'toilet-door-open',
+  },
+  {
+    id: 18,
+    image: 'bloodvision',
+  },
+  {
+    id: 19,
+    image: 'bloodvision',
+  },
+  {
+    id: 20,
+    image: 'bloodvision',
+    backgroundPosition: 'right -75% top -3vw',
+    transform: 'scale(1.8)',
+  },
+  {
+    id: 21,
+    image: 'bloodvision',
+    backgroundPosition: 'right 31% top 0vw',
+    transform: 'scale(1.8)',
+  },
+  {
+    id: 22,
+    image: 'bloodvision',
+    backgroundPosition: 'left -40% top -5vw',
+    transform: 'scale(1.8)',
+  },
+  {
+    id: 23,
+    image: 'bloodvision',
+  },
+  {
+    id: 24,
+    image: 'bloodvision',
+    overlay: 'default',
+  },
+  {
+    id: 25,
     image: 'exit',
-    height: '0%',
+  },
+  {
+    id: 26,
+    image: 'exit',
+    transform: 'scale(3) translate(-32%, -9%)',
+    overlay: 'default',
+  },
+  {
+    id: 27,
+    image: 'exit',
+  },
+  {
+    id: 28,
+    image: 'none',
+    overlay: 'default',
   },
 ]
 
-const prototypeFrameIds = prototypeFrames.map(frame => frame.id)
+const prototypeFrameIds = prototypeFrames.map(frame => frame.id.toString())
 
 const prototypeImages = [...new Set(prototypeFrames.map(frame => frame.image))]
+
+const transition = (carouselRef, index, frame, image) => {
+  carouselRef.current.slickGoTo(index)
+  image.style.transform = frame.transform
+    ? frame.transform
+    : 'scale(1) translate(0, 0)'
+  image.style.backgroundPosition = frame.backgroundPosition
+    ? frame.backgroundPosition
+    : 'center'
+}
 
 class PublicHealthroom extends Component {
   constructor(props) {
@@ -202,9 +253,7 @@ class PublicHealthroom extends Component {
 
       if (frame.overlay) {
         overlay = frame.overlay
-      }
 
-      if (frame.overlay) {
         this.setState(
           {
             currentFrame: frame,
@@ -213,8 +262,7 @@ class PublicHealthroom extends Component {
           },
           () => {
             setTimeout(() => {
-              this.carousel.current.slickGoTo(index)
-              image.style.transform = frame.transform
+              transition(this.carousel, index, frame, image)
             }, 0)
           }
         )
@@ -226,8 +274,7 @@ class PublicHealthroom extends Component {
           },
           () => {
             setTimeout(() => {
-              this.carousel.current.slickGoTo(index)
-              image.style.transform = frame.transform
+              transition(this.carousel, index, frame, image)
             }, 0)
 
             setTimeout(() => {
@@ -242,13 +289,18 @@ class PublicHealthroom extends Component {
   }
 
   renderOverlay = frame => {
+    const { id } = this.state.currentFrame
     return (
-      <div className={`public-healthroom__overlay-container`}>
+      <div
+        className={`public-healthroom__overlay-container ${
+          id === 24 || id === 28
+            ? 'public-healthroom__overlay-container--dimmed'
+            : ''
+        }`}
+      >
         <div
-          className={`public-healthroom__entry-menu ${
-            this.state.currentFrame.id === 2
-              ? 'public-healthroom__entry-menu--visible'
-              : ''
+          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${
+            id === 2 ? 'public-healthroom__overlay-image--visible' : ''
           }`}
         >
           <Image
@@ -258,10 +310,8 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__entry-menu ${
-            this.state.currentFrame.id === 3
-              ? 'public-healthroom__entry-menu--visible'
-              : ''
+          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${
+            id === 3 ? 'public-healthroom__overlay-image--visible' : ''
           }`}
         >
           <Image
@@ -271,14 +321,54 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__entry-menu ${
-            this.state.currentFrame.id === 4
-              ? 'public-healthroom__entry-menu--visible'
-              : ''
+          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${
+            id === 4 ? 'public-healthroom__overlay-image--visible' : ''
           }`}
         >
           <Image
             src="/images/features/public-healthroom/menu-3.png"
+            className="image--max-width"
+            sizes={config.sizes.fullToHalfAtLarge}
+          />
+        </div>
+        <div
+          className={`public-healthroom__overlay-image public-healthroom__holding-phone ${
+            id === 4 ||
+            id === 8 ||
+            id === 10 ||
+            id === 15 ||
+            id === 24 ||
+            id === 26 ||
+            id === 28
+              ? 'public-healthroom__overlay-image--visible'
+              : ''
+          }
+          ${id === 28 ? 'public-healthroom__holding-phone--center' : ''}`}
+        >
+          <Image
+            src="/images/features/public-healthroom/holding-phone.png"
+            className="image--max-width"
+            sizes={config.sizes.fullToHalfAtLarge}
+          />
+        </div>
+        <div
+          className={`public-healthroom__overlay-image public-healthroom__message-1 ${
+            id === 24 ? 'public-healthroom__overlay-image--visible' : ''
+          }`}
+        >
+          <Image
+            src="/images/features/public-healthroom/message-1.png"
+            className="image--max-width"
+            sizes={config.sizes.fullToHalfAtLarge}
+          />
+        </div>
+        <div
+          className={`public-healthroom__overlay-image public-healthroom__message-2 ${
+            id === 28 ? 'public-healthroom__overlay-image--visible' : ''
+          }`}
+        >
+          <Image
+            src="/images/features/public-healthroom/message-2.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
           />
@@ -472,7 +562,6 @@ class PublicHealthroom extends Component {
             </p>
           </div>
           <div className="pad-all public-healthroom__prototype-wrapper">
-            <div className="public-healthroom__indicator"></div>
             <div
               className={`public-healthroom__prototype-frame-sticky ${this.getOverlayClass()}`}
             >
@@ -484,13 +573,18 @@ class PublicHealthroom extends Component {
                 fade={true}
               >
                 {prototypeImages.map((image, i) => {
-                  const bgImage = mediaUrl(
-                    `/images/features/public-healthroom/pubhrm-${image}.jpg`
-                  )
+                  const bgImage =
+                    image === 'none'
+                      ? ''
+                      : mediaUrl(
+                          `/images/features/public-healthroom/pubhrm-${image}.jpg`
+                        )
                   return (
-                    <div className="public-healthroom__prototype-frame-container">
+                    <div
+                      className="public-healthroom__prototype-frame-container"
+                      key={image}
+                    >
                       <div
-                        key={image}
                         ref={this.imageRefsArray[i].ref}
                         className={`public-healthroom__prototype-frame ${
                           this.state.backwards
@@ -510,11 +604,7 @@ class PublicHealthroom extends Component {
               {this.renderOverlay()}
             </div>
             <div className="public-healthroom__system-logic">
-              <Image
-                src="/images/features/public-healthroom/system-logic-test-1.jpg"
-                className="image--max-width"
-                sizes={config.sizes.fullToHalfAtLarge}
-              />
+              <div className="public-healthroom__indicator"></div>
               <Scrollspy
                 items={prototypeFrameIds}
                 offset={this.state.offset}
@@ -528,8 +618,13 @@ class PublicHealthroom extends Component {
                       id={frame.id}
                       className="public-healthroom__section"
                       ref={this.systemRefsArray[i].ref}
-                      style={{ height: frame.height }}
-                    ></li>
+                    >
+                      <Image
+                        src={`/images/features/public-healthroom/logic/${frame.id}.jpg`}
+                        className="image--max-width"
+                        sizes={config.sizes.fullToHalfAtLarge}
+                      />
+                    </li>
                   )
                 })}
               </Scrollspy>

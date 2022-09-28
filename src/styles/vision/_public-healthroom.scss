@@ -29,7 +29,7 @@
   &__prototype-frame {
     position: relative;
     width: 100%;
-    max-width: 50vh;
+    max-width: calc(50vh - #{$header-height});
     aspect-ratio: 1 / 1;
     overflow: hidden;
     margin: 0 auto;
@@ -50,27 +50,76 @@
 
   &__overlay-container {
     position: absolute;
-    width: 90%;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: calc(50vh - #{$header-height});
+    aspect-ratio: 1 / 1;
+    background-color: rgba(0, 0, 0, 0);
+    transform: translate(-50%, -50%);
+    transition: background-color 0.5s;
+
+    &--dimmed {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @include mq($from: large) {
+      width: 90%;
+      max-width: 75vh;
+    }
   }
 
-  &__entry-menu {
+  &__overlay-image {
     position: absolute;
-    width: 44.2%;
-    top: 50%;
-    left: 51.5%;
     opacity: 0;
-    transform: translate(-50%, -50%);
     transition: opacity 0.25s;
+
+    img {
+      display: block;
+    }
 
     &--visible {
       opacity: 1;
     }
   }
 
+  &__entry-menu {
+    width: 44.2%;
+    top: 50%;
+    left: 51.5%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__holding-phone {
+    width: 40%;
+    bottom: 0;
+    right: 0;
+
+    &--center {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__message-1 {
+    width: 32%;
+    top: 23%;
+    right: 4%;
+  }
+
+  &__message-2 {
+    width: 32%;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__system-logic {
     position: relative;
     width: 100%;
     z-index: 0;
+    margin-top: 8vh;
 
     @include mq($from: large) {
       width: 50%;
@@ -82,15 +131,12 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
   }
 
   &__section {
-    border-bottom: 1px solid rgba(200, 0, 0, 0.5);
+    img {
+      display: block;
+    }
   }
 
   .public-healthroom__prototype-frame--enter {
@@ -98,7 +144,7 @@
       transition: all 0.5s;
     }
 
-    .public-healthroom__entry-menu {
+    .public-healthroom__overlay-image {
       transition: opacity 0.25s 0.5s;
     }
   }
@@ -108,13 +154,17 @@
       transition: all 0.5s 0.25s;
     }
 
-    .public-healthroom__entry-menu {
+    .public-healthroom__overlay-image {
       transition: opacity 0.25s;
     }
   }
 
   &__prototype-wrapper {
     position: relative;
+
+    @include mq($from: large) {
+      display: flex;
+    }
   }
 
   &__indicator {
@@ -128,7 +178,7 @@
     @include mq($from: large) {
       top: 50vh;
       left: 50%;
-      width: 50%;
+      width: 100%;
     }
   }
 }

@@ -702,6 +702,7 @@ class PublicHealthroom extends Component {
                 <h3 className="header--md margin-top--double">Contributors</h3>
 
                 <p>Samantha Wu</p>
+                <p>Craig McGinley</p>
               </div>
 
               <Divider />

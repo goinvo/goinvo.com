@@ -18,7 +18,7 @@ import config from '../../../../config'
 const frontmatter = {
   metaTitle: 'Public Restroom to Public Healthroom  - GoInvo',
   metaDescription: 'Preventative Health Infrastructure for cities and towns.',
-  heroImage: '/images/features/faces-in-health-communication/hero-2.jpg',
+  heroImage: '/images/features/public-healthroom/pubhrm-hero-1.jpg',
 }
 
 const prototypeFrames = [
@@ -438,8 +438,8 @@ class PublicHealthroom extends Component {
                 <li>
                   Residents own their health data. The public healthroom is a
                   means for individuals to access and understand their key
-                  physical health indicators, but it does not store historical
-                  data with the intent of selling to third-party buyers.
+                  physical health indicators, but it protects your privacy and
+                  does not sell historical data to third-parties.
                 </li>
                 <li>
                   All residents should have easy access to preventive care. No
@@ -464,8 +464,8 @@ class PublicHealthroom extends Component {
               </ol>
             </div>
             <Divider />
-            <h2 className="max-width--xs header--lg text--center margin-auto">
-              Who benefits from Public Healthroom?
+            <h2 className="max-width--sm header--lg text--center margin-auto">
+              Who benefits from a Public Healthroom?
             </h2>
             <h3 className="header--md">Individuals</h3>
             <p>
@@ -503,8 +503,8 @@ class PublicHealthroom extends Component {
             </p>
             <p>Currently, it is at 6.5%.</p>
             <Divider />
-            <h2 className="max-width--xs header--lg text--center margin-auto">
-              Who benefits from Public Healthroom?
+            <h2 className="max-width--sm header--lg text--center margin-auto">
+              How does the Public Healthroom help?
             </h2>
             <h3 className="header--md">
               Health Screening as Daily Encounters by…
@@ -533,8 +533,8 @@ class PublicHealthroom extends Component {
               </li>
             </ul>
             <Divider />
-            <h2 className="max-width--xs header--lg text--center margin-auto">
-              What should Public Healthroom measure?
+            <h2 className="max-width--sm header--lg text--center margin-auto">
+              What should the Public Healthroom measure?
             </h2>
           </div>
           <div className="pad-top pad-horizontal--double max-width--">
@@ -549,8 +549,8 @@ class PublicHealthroom extends Component {
           </div>
           <div className="max-width--sm pad-horizontal margin-top pad-top margin-auto">
             <Divider />
-            <h2 className="max-width--xs header--lg text--center margin-auto">
-              How should Public Healthroom measure?
+            <h2 className="max-width--sm header--lg text--center margin-auto">
+              How should the Public Healthroom measure?
             </h2>
             <p>
               Amongst the various methods to accomplish measurement goals
@@ -632,7 +632,7 @@ class PublicHealthroom extends Component {
           </div>
           <div className="max-width--md pad-horizontal margin-top pad-top margin-auto">
             <Divider />
-            <h2 className="max-width--xs header--lg text--center margin-auto">
+            <h2 className="max-width--sm header--lg text--center margin-auto">
               Final Thoughts
             </h2>
             <p>
@@ -671,11 +671,17 @@ class PublicHealthroom extends Component {
               </li>
             </ul>
             <p>
-              As policy makers, product designers, providers, we are always
-              trying to make people healthier by pushing the public to change
-              their lifestyle, behaviours, awareness for preventative care. The
-              public healthroom pushes us to think of how to do this seamlessly
-              and invisibly.
+              By promoting lifestyle changes and increasing preventive care
+              awareness and access, policy makers and care providers are
+              constantly striving to support better health outcomes for all—the
+              Public Healthroom opens up a conversation around seamlessly
+              integrating health into our daily encounters via the built
+              environment. As emergent technologies develop and preventive care
+              needs increase in the next five years, success in implementation
+              and public utilization will rely heavily on design, and on how
+              thoroughly we consider how the experience of engaging with one's
+              health can be seamless and timely without over-complications in
+              technology.
             </p>
           </div>
           <div className="pad-vertical--double">

@@ -1,4 +1,7 @@
 .public-healthroom {
+  .header--md {
+    margin-top: $spacing * 2;
+  }
   &__prototype-frame-sticky {
     position: sticky;
     display: flex;

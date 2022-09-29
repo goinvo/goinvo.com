@@ -56,7 +56,7 @@ const prototypeFrames = [
   },
   {
     id: 7,
-    image: 'entry-open-door-lidar',
+    image: 'entry-lidar',
   },
   {
     id: 8,
@@ -111,37 +111,37 @@ const prototypeFrames = [
   },
   {
     id: 18,
-    image: 'bloodvision',
+    image: 'blood-vision',
   },
   {
     id: 19,
-    image: 'bloodvision',
+    image: 'blood-vision',
   },
   {
     id: 20,
-    image: 'bloodvision',
+    image: 'blood-vision',
     backgroundPosition: 'right -75% top -3vw',
     transform: 'scale(1.8)',
   },
   {
     id: 21,
-    image: 'bloodvision',
+    image: 'blood-vision',
     backgroundPosition: 'right 31% top 0vw',
     transform: 'scale(1.8)',
   },
   {
     id: 22,
-    image: 'bloodvision',
+    image: 'blood-vision',
     backgroundPosition: 'left -40% top -5vw',
     transform: 'scale(1.8)',
   },
   {
     id: 23,
-    image: 'bloodvision',
+    image: 'blood-vision',
   },
   {
     id: 24,
-    image: 'bloodvision',
+    image: 'blood-vision',
     overlay: 'default',
   },
   {
@@ -561,6 +561,13 @@ class PublicHealthroom extends Component {
               overtime.
             </p>
           </div>
+          <div className="max-width">
+            <Image
+              src={`/images/features/public-healthroom/pubhrm-plan.jpg`}
+              className="image--max-width"
+              sizes={config.sizes.fullInsideMaxWidth}
+            />
+          </div>
           <div className="pad-all public-healthroom__prototype-wrapper">
             <div
               className={`public-healthroom__prototype-frame-sticky ${this.getOverlayClass()}`}
@@ -577,7 +584,7 @@ class PublicHealthroom extends Component {
                     image === 'none'
                       ? ''
                       : mediaUrl(
-                          `/images/features/public-healthroom/pubhrm-${image}.jpg`
+                          `/images/features/public-healthroom/${image}.jpg`
                         )
                   return (
                     <div

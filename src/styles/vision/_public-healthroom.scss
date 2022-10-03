@@ -1,4 +1,13 @@
 .public-healthroom {
+  .hero {
+    &__image-container {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 200 / 51; // Preferred aspect ratio until max-height is reached
+      max-height: 500px;
+    }
+  }
+
   .header--md {
     margin-top: $spacing * 2;
   }

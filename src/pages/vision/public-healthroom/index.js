@@ -402,7 +402,7 @@ class PublicHealthroom extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="public-healthroom">
-          <Hero image={frontmatter.heroImage} />
+          <Hero image={frontmatter.heroImage} position="center bottom" />
           <div className="max-width--md pad-horizontal margin-top pad-top margin-auto">
             <h1 className="header--xl">Public Restroom to Public Healthroom</h1>
             <p>

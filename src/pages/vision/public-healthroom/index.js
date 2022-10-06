@@ -10,7 +10,6 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Reference from '../../../components/reference'
-// import Columns from '../../../components/columns'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -563,7 +562,7 @@ class PublicHealthroom extends Component {
           </div>
           <div className="max-width">
             <Image
-              src={`/images/features/public-healthroom/pubhrm-plan.jpg`}
+              src={`/images/features/public-healthroom/pubhrm-plan.png`}
               className="image--max-width"
               sizes={config.sizes.fullInsideMaxWidth}
             />

@@ -31,19 +31,34 @@ class ServicesPage extends Component {
             <p className="margin-top--none">
               As you and your organization begin the process of finding the
               right design partner for your health software project, there are
-              several factors to be considered. One element of particular
-              importance is the design firm’s ability to understand an
-              often-complex problem space and user base, then translate features
-              into a product experience that is usable, efficient, even
-              beautiful. You’ll need a vision to drive the product design, one
-              that is compelling enough to earn buy-in from your executives and
-              product team, and realizable in a buildable user experience within
-              a realistic timeframe. Equipped with an in-depth understanding of
-              digital transformation in healthcare and insight into trends and
-              tech advances, GoInvo can guide and inform your product design.
+              several factors to be considered.
             </p>
 
-            <p>
+            <ul>
+              <li>
+                One element of particular importance is the design firm's
+                ability to understand an often-complex problem space and user
+                base, then translate features into a product experience that is
+                usable, efficient, even beautiful.
+              </li>
+              <li>
+                You'll need a vision to drive the product design, one that is
+                compelling enough to earn buy-in from your executives and
+                product team, and realizable in a buildable user experience
+                within a realistic timeframe.
+              </li>
+              <li>
+                Equipped with an in-depth understanding of digital
+                transformation in healthcare and insight into trends and tech
+                advances, GoInvo can guide and inform your product design.
+              </li>
+            </ul>
+
+            <h2 className="header--lg margin-bottom--none margin-top--none">
+              A multi-disciplinary approach to digital health design
+            </h2>
+
+            <p className="margin-top--none">
               GoInvo is a unique firm with multiple areas of expertise necessary
               for digital health product design. Our multidisciplinary approach
               to clinical software leverages our skills in user experience
@@ -53,7 +68,11 @@ class ServicesPage extends Component {
               health policy changes, and the intricacies of health data.
             </p>
 
-            <p>
+            <h2 className="header--lg margin-bottom--none margin-top--none">
+              Practical experience and technical expertise
+            </h2>
+
+            <p className="margin-top--none">
               As patients and clinicians demand more from their software-driven
               healthcare experiences, human-centered design is essential to the
               future of digital health. GoInvo has the practical experience and
@@ -93,9 +112,9 @@ class ServicesPage extends Component {
               patient-facing experiences to life-saving clinical software, to
               government health IT and patient-data policy — has not only been
               rewarding, it has given us the right experiences to help digital
-              health clients realize their vision. More than 94% of GoInvo’s
-              customers are enthusiastic about our work and report positively on
-              our engagement together.
+              health clients realize their vision. More than 80% of GoInvo’s
+              customers are enthusiastic about our work and return for repeat
+              engagements.
             </p>
 
             <h2 className="header--lg margin-bottom--none">

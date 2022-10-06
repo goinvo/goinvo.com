@@ -6,6 +6,7 @@ caption: 'Prototyping and envisioning future applications of a national health d
 categories:
   - 'health-it-and-infrastructure'
   - 'open-source'
+  - 'software-strategy'
 upNext:
   - 'fastercures-health-data-basics'
   - 'determinants-of-health'

@@ -114,7 +114,11 @@
     "title": "Determinants of Health",
     "date": "Apr.2020",
     "client": "Feature",
-    "categories": ["public-health-and-policy", "open-source"],
+    "categories": [
+      "public-health-and-policy",
+      "open-source",
+      "determinants-of-health"
+    ],
     "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.",
     "image": "/images/services/doh-preview.jpg",
     "link": "/vision/determinants-of-health/"
@@ -208,7 +212,11 @@
     "title": "Loneliness in Our Human Code",
     "date": "Nov.2018",
     "client": "Feature",
-    "categories": ["open-source", "public-health-and-policy"],
+    "categories": [
+      "open-source",
+      "public-health-and-policy",
+      "determinants-of-health"
+    ],
     "caption": "Loneliness is more than a feeling, it can effect our overall health and increase our risk for certain conditions.",
     "image": "/images/features/loneliness-in-our-human-code/loneliness-featured.jpg",
     "link": "/vision/loneliness-in-our-human-code/"
@@ -221,7 +229,8 @@
     "categories": [
       "health-it-and-infrastructure",
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "software-strategy"
     ],
     "caption": "The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.",
     "image": "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",

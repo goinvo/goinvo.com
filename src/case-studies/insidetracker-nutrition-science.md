@@ -6,6 +6,7 @@ caption: 'Personalized food based on your DNA, blood, and habits.'
 categories:
   - 'precision-medicine-and-genomics'
   - 'patient-engagement'
+  - 'determinants-of-health'
 upNext:
   - 'bathroom-to-healthroom'
   - 'hgraph'

@@ -4,6 +4,10 @@
     "title": "Care Management"
   },
   {
+    "id": "determinants-of-health",
+    "title": "Determinants of Health"
+  },
+  {
     "id": "health-it-and-infrastructure",
     "title": "Health IT & Infrastructure"
   },
@@ -22,5 +26,9 @@
   {
     "id": "open-source",
     "title": "Open Source Health Design"
+  },
+  {
+    "id": "software-strategy",
+    "title": "Software Strategy"
   }
 ]

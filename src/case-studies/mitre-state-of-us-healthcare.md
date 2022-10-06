@@ -6,6 +6,7 @@ caption: 'An interactive healthcare story engine that help scientists to showcas
 categories:
   - 'public-health-and-policy'
   - 'open-source'
+  - 'determinants-of-health'
 upNext:
   - 'mitre-shr'
   - 'healthcare-dollars'

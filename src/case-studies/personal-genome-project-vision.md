@@ -6,6 +6,7 @@ caption: 'A strategy workshop that leads to a new business focus'
 categories:
   - 'precision-medicine-and-genomics'
   - 'open-source'
+  - 'software-strategy'
 upNext:
   - 'partners-geneinsight'
   - 'carrier-testing'

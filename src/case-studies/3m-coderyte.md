@@ -5,6 +5,7 @@ client: '3M'
 caption: 'A 180° turn for a $150M business. How our skunkworks for an ambitious start-up led to a $150M exit.'
 categories:
   - 'health-it-and-infrastructure'
+  - 'software-strategy'
 upNext:
   - 'partners-insight'
   - 'inspired-ehrs'
@@ -49,7 +50,7 @@ However, Glenn and his executive cohorts saw a bigger opportunity: to take over 
 ![Glenn Tobin](/images/case-studies/coderyte/coderyte-glenn2.jpg)
 _Glenn Tobin, COO, CodeRyte Inc._
 
-#### Software that handles $4B in revenues ain't no joke.
+#### Software that handles \$4B in revenues ain't no joke.
 
 You and I are familiar with the open-backed gowns and terrible food, but what you might not be familiar with is how information moves inside the hospital, and how that pertains to billing. For the hospital to get paid, they must tag each record with unique diagnosis codes. Lots and lots of codes that drive insurance reimbursement. All of this is a manual process done by an army of “coders” at the hospital.
 

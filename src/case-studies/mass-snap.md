@@ -5,6 +5,7 @@ client: 'MA Department of Transitional Assistance'
 caption: 'A 50% increase in digital applications means more people are getting the food they need.'
 categories:
   - 'public-health-and-policy'
+  - 'determinants-of-health'
 upNext:
   - 'care-plans'
   - 'inspired-ehrs'

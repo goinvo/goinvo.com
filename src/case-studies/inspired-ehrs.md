@@ -6,6 +6,7 @@ caption: 'Revealing multifaceted, evidence-based designs for a new generation of
 categories:
   - 'health-it-and-infrastructure'
   - 'open-source'
+  - 'software-strategy'
 results:
   - stat: '600'
     description: 'visits / month'

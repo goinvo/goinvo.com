@@ -6,6 +6,7 @@ caption: 'Open source designs, and assets to educate patients on health data.'
 categories:
   - 'public-health-and-policy'
   - 'open-source'
+  - 'determinants-of-health'
 results:
   - stat: '97%'
     description: 'Recall of 5 key educational concepts'

@@ -5,6 +5,7 @@ client: 'Partners Healthcare'
 caption: 'A full redesign of the Partners Healthcare research administration platform, Insight.'
 categories:
   - 'health-it-and-infrastructure'
+  - 'software-strategy'
 upNext:
   - 'mitre-flux-notes'
   - 'mount-sinai-consent'

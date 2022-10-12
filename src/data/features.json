@@ -1,5 +1,16 @@
 [
   {
+    "id": "public-healthroom",
+    "title": "From Public Restroom to Public Healthroom",
+    "date": "Oct.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Preventative Health Infrastructure for cities and towns.",
+    "image": "/images/features/public-healthroom/pubhrm-hero-1.jpg",
+    "link": "/vision/public-healthroom/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "primary-self-care-algorithms",
     "title": "Primary Self Care Algorithms",
     "date": "Sep.2022",

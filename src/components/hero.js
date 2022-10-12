@@ -6,6 +6,12 @@ import Video from './video'
 import Logo from '../assets/images/logo-goinvo.inline.svg'
 
 class Hero extends Component {
+  handleLoad = event => {
+    if (this.props.onLoad) {
+      this.props.onLoad(event)
+    }
+  }
+
   renderHeroMedia = () => {
     const { image, video, poster, fallback, position } = this.props
 
@@ -16,6 +22,7 @@ class Hero extends Component {
             src={image}
             className="hero__image"
             position={position}
+            onLoad={this.handleLoad}
           />
         </div>
       )

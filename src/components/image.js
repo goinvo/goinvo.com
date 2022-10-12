@@ -36,6 +36,12 @@ class Image extends Component {
     }
   }
 
+  handleLoad = event => {
+    if (this.props.onLoad) {
+      this.props.onLoad(event)
+    }
+  }
+
   getSrc = () => {
     return typeof this.img.current.currentSrc !== 'undefined'
       ? this.img.current.currentSrc
@@ -51,7 +57,13 @@ class Image extends Component {
     })
 
     return externalImage ? (
-      <img ref={this.img} className={className} alt={alt} src={src} />
+      <img
+        ref={this.img}
+        className={className}
+        alt={alt}
+        src={src}
+        onLoad={this.handleLoad}
+      />
     ) : (
       <img
         ref={this.img}
@@ -60,6 +72,7 @@ class Image extends Component {
         srcSet={srcset}
         sizes={sizes}
         src={`${src}?w=800`}
+        onLoad={this.handleLoad}
       />
     )
   }

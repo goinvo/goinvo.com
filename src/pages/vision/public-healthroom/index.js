@@ -376,6 +376,8 @@ class PublicHealthroom extends Component {
     )
   }
 
+  heroLoaded = () => {}
+
   getOverlayClass = () => {
     let className = ''
 
@@ -401,7 +403,11 @@ class PublicHealthroom extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <div className="public-healthroom">
-          <Hero image={frontmatter.heroImage} position="center bottom" />
+          <Hero
+            image={frontmatter.heroImage}
+            position="center bottom"
+            onLoad={this.heroLoaded}
+          />
           <div className="max-width--md pad-horizontal margin-top pad-top margin-auto">
             <h1 className="header--xl">Public Restroom to Public Healthroom</h1>
             <p>
@@ -567,75 +573,77 @@ class PublicHealthroom extends Component {
               sizes={config.sizes.fullInsideMaxWidth}
             />
           </div>
-          <div className="pad-all public-healthroom__prototype-wrapper">
-            <div
-              className={`public-healthroom__prototype-frame-sticky ${this.getOverlayClass()}`}
-            >
-              <SlickCarousel
-                ref={this.carousel}
-                infinite={false}
-                dots={false}
-                arrows={false}
-                fade={true}
+          {this.heroLoaded ? (
+            <div className="pad-all public-healthroom__prototype-wrapper">
+              <div
+                className={`public-healthroom__prototype-frame-sticky ${this.getOverlayClass()}`}
               >
-                {prototypeImages.map((image, i) => {
-                  const bgImage =
-                    image === 'none'
-                      ? ''
-                      : mediaUrl(
-                          `/images/features/public-healthroom/${image}.jpg`
-                        )
-                  return (
-                    <div
-                      className="public-healthroom__prototype-frame-container"
-                      key={image}
-                    >
+                <SlickCarousel
+                  ref={this.carousel}
+                  infinite={false}
+                  dots={false}
+                  arrows={false}
+                  fade={true}
+                >
+                  {prototypeImages.map((image, i) => {
+                    const bgImage =
+                      image === 'none'
+                        ? ''
+                        : mediaUrl(
+                            `/images/features/public-healthroom/${image}.jpg`
+                          )
+                    return (
                       <div
-                        ref={this.imageRefsArray[i].ref}
-                        className={`public-healthroom__prototype-frame ${
-                          this.state.backwards
-                            ? 'public-healthroom__prototype-frame--backwards'
-                            : ''
-                        }`}
+                        className="public-healthroom__prototype-frame-container"
+                        key={image}
                       >
                         <div
-                          className="public-healthroom__prototype-frame__image"
-                          style={{ backgroundImage: `url(${bgImage}` }}
-                        ></div>
+                          ref={this.imageRefsArray[i].ref}
+                          className={`public-healthroom__prototype-frame ${
+                            this.state.backwards
+                              ? 'public-healthroom__prototype-frame--backwards'
+                              : ''
+                          }`}
+                        >
+                          <div
+                            className="public-healthroom__prototype-frame__image"
+                            style={{ backgroundImage: `url(${bgImage}` }}
+                          ></div>
+                        </div>
                       </div>
-                    </div>
-                  )
-                })}
-              </SlickCarousel>
-              {this.renderOverlay()}
+                    )
+                  })}
+                </SlickCarousel>
+                {this.renderOverlay()}
+              </div>
+              <div className="public-healthroom__system-logic">
+                <div className="public-healthroom__indicator"></div>
+                <Scrollspy
+                  items={prototypeFrameIds}
+                  offset={this.state.offset}
+                  onUpdate={this.onScrollSpyUpdate}
+                  className="public-healthroom__section-container"
+                >
+                  {prototypeFrames.map((frame, i) => {
+                    return (
+                      <li
+                        key={frame.id}
+                        id={frame.id}
+                        className="public-healthroom__section"
+                        ref={this.systemRefsArray[i].ref}
+                      >
+                        <Image
+                          src={`/images/features/public-healthroom/logic/${frame.id}.jpg`}
+                          className="image--max-width"
+                          sizes={config.sizes.fullToHalfAtLarge}
+                        />
+                      </li>
+                    )
+                  })}
+                </Scrollspy>
+              </div>
             </div>
-            <div className="public-healthroom__system-logic">
-              <div className="public-healthroom__indicator"></div>
-              <Scrollspy
-                items={prototypeFrameIds}
-                offset={this.state.offset}
-                onUpdate={this.onScrollSpyUpdate}
-                className="public-healthroom__section-container"
-              >
-                {prototypeFrames.map((frame, i) => {
-                  return (
-                    <li
-                      key={frame.id}
-                      id={frame.id}
-                      className="public-healthroom__section"
-                      ref={this.systemRefsArray[i].ref}
-                    >
-                      <Image
-                        src={`/images/features/public-healthroom/logic/${frame.id}.jpg`}
-                        className="image--max-width"
-                        sizes={config.sizes.fullToHalfAtLarge}
-                      />
-                    </li>
-                  )
-                })}
-              </Scrollspy>
-            </div>
-          </div>
+          ) : null}
           <div className="max-width--md pad-horizontal margin-top pad-top margin-auto">
             <Divider />
             <h2 className="max-width--sm header--lg text--center margin-auto">

@@ -2,12 +2,34 @@
   {
     "id": "us-healthcare-system-map",
     "title": "US Healthcare System Map",
-    "date": "Nov.2022",
+    "date": "Jan.2023",
     "client": "Feature",
     "categories": ["open-source"],
     "caption": "A map of the US healthcare system that describes the main actors and relationships between actors.",
     "image": "/images/features/us-healthcare-system-map/us-healthcare-system-map-hero.jpg",
     "link": "https://goinvo.github.io/healthcare-map/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "digital-health-connections-model",
+    "title": "Digital Health Connections Model",
+    "date": "Jan.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "This model is a representation of the system of services that can make up digital health software.",
+    "image": "/images/features/digital-health-connections-model/digital-health-connections-model-hero.jpg",
+    "link": "https://goinvo.github.io/DigitalHealthServiceComponents/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "whats-on-fhir",
+    "title": "What's on FHIR?",
+    "date": "Nov.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "What’s on FHIR? — Are you a UX designer, developer, or product manager in digital healthcare and not quite sure what the heck FHIR is? Yeah, it can be tricky.",
+    "image": "/images/features/whats-on-fhir/whats-on-fhir-hero.jpg",
+    "link": "https://www.whatsonfhir.org/",
     "hiddenWorkPage": true
   },
   {
@@ -41,28 +63,6 @@
     "caption": "GoInvo breaks down significant digital health trends you should watch for.",
     "image": "/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg",
     "link": "/vision/digital-health-trends-2022/",
-    "hiddenWorkPage": true
-  },
-  {
-    "id": "digital-health-components",
-    "title": "Digital Health Components",
-    "date": "Mar.2022",
-    "client": "Feature",
-    "categories": ["open-source"],
-    "caption": "The Digital Health Connections Model is a representation of the system of services that can make up digital health software.",
-    "image": "/images/features/digital-health-components/digital-health-components-hero.jpg",
-    "link": "https://goinvo.github.io/DigitalHealthServiceComponents/",
-    "hiddenWorkPage": true
-  },
-  {
-    "id": "whats-on-fhir",
-    "title": "What's on FHIR?",
-    "date": "Feb.2022",
-    "client": "Feature",
-    "categories": ["open-source"],
-    "caption": "What’s on FHIR? — Are you a UX designer, developer, or product manager in digital healthcare and not quite sure what the heck FHIR is? Yeah, it can be tricky.",
-    "image": "/images/features/whats-on-fhir/whats-on-fhir-hero.jpg",
-    "link": "https://www.whatsonfhir.org/",
     "hiddenWorkPage": true
   },
   {

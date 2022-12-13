@@ -410,6 +410,10 @@ class PublicHealthroom extends Component {
           />
           <div className="max-width--md pad-horizontal margin-top pad-top margin-auto">
             <h1 className="header--xl">Public Restroom to Public Healthroom</h1>
+            <h2 className="header--lg">
+              As part of GoInvo's Design Vision Series on Health Futures, we
+              explore preventative health infrastructure for cities and towns.
+            </h2>
             <p>
               Infrastructure is public health, preventive health, and personal
               health. Historically, we see this relationship in everything from
@@ -443,8 +447,8 @@ class PublicHealthroom extends Component {
                 <li>
                   Residents own their health data. The public healthroom is a
                   means for individuals to access and understand their key
-                  physical health indicators, but it protects your privacy and
-                  does not sell historical data to third-parties.
+                  physical health indicators, but it does not store historical
+                  data with the intent of selling to third-party buyers.
                 </li>
                 <li>
                   All residents should have easy access to preventive care. No
@@ -490,6 +494,7 @@ class PublicHealthroom extends Component {
               healthcare system and receive necessary care.
             </p>
             <h3 className="header--md">Cities/Towns</h3>
+            <h3 className="header--md">State/Federal Government</h3>
             <p>
               Instead of being a strictly clinical effort, preventive primary
               care should be integrated into the community.
@@ -498,7 +503,6 @@ class PublicHealthroom extends Component {
               It is time to “shift delivery into the community, reaching people
               where they live, work, learn, and play.” (Krist et. al, 2015)
             </p>
-            <h3 className="header--md">State/Federal Government</h3>
             <p>
               Responsible for setting data-driven national health objectives for
               the decade, Healthy People 2030 reported little progress when it
@@ -512,29 +516,28 @@ class PublicHealthroom extends Component {
               How does the Public Healthroom help?
             </h2>
             <h3 className="header--md">
-              Health Screening as Daily Encounters by…
+              Health Screening as Daily Encounters:
             </h3>
             <ul>
               <li>
-                Conduct a primary care checkup, following state guidelines.
+                Conducts primary care checkups in adherence to state guidelines
               </li>
-              <li>Knowing and understanding a snapshot of your health.</li>
+              <li>Provides each patient with a snapshot of their health</li>
               <li>
-                Increase access to screening and further assistance if
-                necessary.
+                Increases access to screenings and further assistance when
+                necessary
               </li>
             </ul>
             <h3 className="header--md">
-              Increase Awareness for Preventative Health by…
+              Increase Awareness for Preventative Health:
             </h3>
             <ul>
               <li>
-                To bring awareness on further steps taken after health
-                screening.
+                Informs individuals about next steps after health screening
               </li>
               <li>
-                To promote relevant, micro-lifestyle changes that could prevent
-                illnesses.
+                Promotes relevant, micro-lifestyle changes that could prevent
+                illnesses
               </li>
             </ul>
             <Divider />
@@ -555,15 +558,16 @@ class PublicHealthroom extends Component {
           <div className="max-width--sm pad-horizontal margin-top pad-top margin-auto">
             <Divider />
             <h2 className="max-width--sm header--lg text--center margin-auto">
-              How should the Public Healthroom measure?
+              Exploring Health Futures: Public Healthroom Design Vision
             </h2>
             <p>
-              Amongst the various methods to accomplish measurement goals
-              detailed above, the following is one possible version of the
-              screening episode: it is a fully-guided, automated sequence. The
-              room itself is build modularly, so components can be updated with
-              newer versions of machines or replaced from deterioration
-              overtime.
+              Among the various methods to accomplish measurement goals detailed
+              above, the following is one possible version of the screening
+              episode: a fully-guided, automated sequence. The room itself is
+              built modularly, so components can be replaced after extended use
+              or updated with newer technology. As a thought experiment, this
+              focuses less on limitations and logistics and explores a
+              futuristic, ideal experience.
             </p>
           </div>
           <div className="max-width">
@@ -650,36 +654,35 @@ class PublicHealthroom extends Component {
               Final Thoughts
             </h2>
             <p>
-              In the fiscal year 2021-2022, the operation cost of public toilets
-              by San Francisco Public Works was $12.7 million or $113,000 per
-              year per portable toilet that opens 40 hr/week.
-              <Reference>3</Reference> Using this as a baseline, the public
-              healthroom is indeed susceptible to higher costs to engineer,
-              build and operate. Yet, there is significant value in developing a
-              preventative health infrastructure that transitions US healthcare
-              spendings from its immense quantity to quality. In next steps, a
-              MVP must be developed with analysis on potential funding
-              structures (private vs public vs hybrid).
+              In the fiscal year 2021-2022, the operation cost of San Francisco
+              Public Works was $12.7 million or $113,000 per year per public
+              portable toilet open 40 hours/week.<Reference>3</Reference> With
+              this as a baseline, the costs to engineer, build, and operate the
+              public healthroom would be much higher—however, there is
+              significant potential value in developing a preventive health
+              infrastructure that transitions US healthcare spendings from
+              quantity to quality. The next step would be developing a minimum
+              viable product (MVP) with analysis on potential funding structures
+              (private vs. public vs. hybrid).
             </p>
             <p>
-              One MVP is to develop the lowest-cost version that aggregates
-              current off-the-shelf technologies but maximizes experience in
+              One possible MVP approach is to develop the lowest-cost version
+              that aggregates current off-the-shelf technologies but maximizes
               ease of use. Another is to develop each tool separately:
             </p>
             <ul>
               <li>
-                Refurbishing public restrooms or restrooms in community center
-                (YMCA, Student Centers, retail toilets) with urine/stool
-                analysis toilets
+                Refurbish public or community center (YMCA, Student Centers,
+                retail toilets) restrooms with urine/stool analysis toilets
               </li>
               <li>
-                Developing a software for screening recommendations based on age
-                and sex, used for retail healthcare (CVS MinuteClinic, Walgreens
+                Develop a software for screening recommendations based on age
+                and sex for retail healthcare (CVS MinuteClinic, Walgreens
                 Health, Walmart Health Center), and integrating with their
                 screening/lab test services
               </li>
               <li>
-                Aggregating at-home test/finger-prick test vendors into one
+                Aggregate at-home test/finger-prick test vendors into one
                 physical vending machine at retailers and community health
                 centers
               </li>
@@ -693,7 +696,7 @@ class PublicHealthroom extends Component {
               environment. As emergent technologies develop and preventive care
               needs increase in the next five years, success in implementation
               and public utilization will rely heavily on design, and on how
-              thoroughly we consider how the experience of engaging with one's
+              thoroughly we consider how the experience of engaging with one’s
               health can be seamless and timely without over-complications in
               technology.
             </p>

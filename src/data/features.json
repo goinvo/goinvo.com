@@ -66,17 +66,6 @@
     "hiddenWorkPage": true
   },
   {
-    "id": "own-your-health-data",
-    "title": "Own Your Health Data",
-    "date": "Oct.2021",
-    "client": "Feature",
-    "categories": ["open-source", "public-health-and-policy"],
-    "caption": "As the future of our healthcare system moves towards electronic healthcare records, we need patient data ownership rights to protect patient care.",
-    "image": "/images/features/own-your-health-data/patient-data-ownership.jpg",
-    "link": "/vision/own-your-health-data/",
-    "hiddenWorkPage": true
-  },
-  {
     "id": "faces-in-health-communication",
     "title": "Faces in Health Communication",
     "date": "Mar.2022",
@@ -96,6 +85,17 @@
     "caption": "GoInvo highlighted in Health Design Thinking book",
     "image": "/images/features/health-design-thinking/health-design-thinking-book-thumbnail.jpg",
     "link": "/vision/health-design-thinking/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "own-your-health-data",
+    "title": "Own Your Health Data",
+    "date": "Oct.2021",
+    "client": "Feature",
+    "categories": ["open-source", "public-health-and-policy"],
+    "caption": "As the future of our healthcare system moves towards electronic healthcare records, we need patient data ownership rights to protect patient care.",
+    "image": "/images/features/own-your-health-data/patient-data-ownership.jpg",
+    "link": "/vision/own-your-health-data/",
     "hiddenWorkPage": true
   },
   {

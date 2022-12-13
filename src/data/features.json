@@ -1,5 +1,16 @@
 [
   {
+    "id": "us-healthcare-system-map",
+    "title": "US Healthcare System Map",
+    "date": "Nov.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "A map of the US healthcare system that describes the main actors and relationships between actors.",
+    "image": "/images/features/us-healthcare-system-map/us-healthcare-system-map-hero.jpg",
+    "link": "https://goinvo.github.io/healthcare-map/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "primary-self-care-algorithms",
     "title": "Primary Self Care Algorithms",
     "date": "Sep.2022",
@@ -30,6 +41,28 @@
     "caption": "GoInvo breaks down significant digital health trends you should watch for.",
     "image": "/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg",
     "link": "/vision/digital-health-trends-2022/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "digital-health-components",
+    "title": "Digital Health Components",
+    "date": "Mar.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "The Digital Health Connections Model is a representation of the system of services that can make up digital health software.",
+    "image": "/images/features/digital-health-components/digital-health-components-hero.jpg",
+    "link": "https://goinvo.github.io/DigitalHealthServiceComponents/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "whats-on-fhir",
+    "title": "What's on FHIR?",
+    "date": "Feb.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "What’s on FHIR? — Are you a UX designer, developer, or product manager in digital healthcare and not quite sure what the heck FHIR is? Yeah, it can be tricky.",
+    "image": "/images/features/whats-on-fhir/whats-on-fhir-hero.jpg",
+    "link": "https://www.whatsonfhir.org/",
     "hiddenWorkPage": true
   },
   {

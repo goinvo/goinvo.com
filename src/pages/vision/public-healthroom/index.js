@@ -15,7 +15,7 @@ import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Public Restroom to Public Healthroom  - GoInvo',
+  metaTitle: 'Public Restroom to Public Healthroom - GoInvo',
   metaDescription: 'Preventative Health Infrastructure for cities and towns.',
   heroImage: '/images/features/public-healthroom/pubhrm-hero-1.jpg',
 }

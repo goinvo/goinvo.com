@@ -447,8 +447,8 @@ class PublicHealthroom extends Component {
                 <li>
                   Residents own their health data. The public healthroom is a
                   means for individuals to access and understand their key
-                  physical health indicators, but it does not store historical
-                  data with the intent of selling to third-party buyers.
+                  physical health indicators, but it protects your privacy and
+                  does not sell historical data to third-parties.
                 </li>
                 <li>
                   All residents should have easy access to preventive care. No
@@ -467,8 +467,8 @@ class PublicHealthroom extends Component {
                   individual detect abnormalities in the context of their own
                   history (e.g., sudden weight fluctuation, height loss, vision
                   loss). Uncovering hidden signals can help prevent
-                  deterioration of various diseases (e.g., blindness caused by
-                  diabetes).
+                  deterioration of various diseases (e.g., changes to the skin
+                  indicating risk for skin cancer).
                 </li>
               </ol>
             </div>
@@ -488,7 +488,7 @@ class PublicHealthroom extends Component {
               and little has changed despite increased coverage through the
               Affordable Care Act. A 2018 survey identified lack of trust in
               physicians, long wait times, and work and family obligations as
-              reasons for missing care. (Borsky et. al, 2018) The public
+              reasons for missing care (Borsky et. al, 2018). The public
               healthroom can provide residents with easy access to health
               screening and assistance as they attempt to navigate the complex
               healthcare system and receive necessary care.

@@ -494,7 +494,6 @@ class PublicHealthroom extends Component {
               healthcare system and receive necessary care.
             </p>
             <h3 className="header--md">Cities/Towns</h3>
-            <h3 className="header--md">State/Federal Government</h3>
             <p>
               Instead of being a strictly clinical effort, preventive primary
               care should be integrated into the community.
@@ -503,6 +502,7 @@ class PublicHealthroom extends Component {
               It is time to “shift delivery into the community, reaching people
               where they live, work, learn, and play.” (Krist et. al, 2015)
             </p>
+            <h3 className="header--md">State/Federal Government</h3>
             <p>
               Responsible for setting data-driven national health objectives for
               the decade, Healthy People 2030 reported little progress when it

@@ -306,7 +306,7 @@ class DeterminantsOfHealthFeature extends Component {
                 GoInvo is a healthcare design company that crafts innovative
                 digital and physical solutions. Our deep expertise in Health IT,
                 Genomics, and Open Source health has delivered results for the
-                National Institute of Health, Walgreens, Mount Sinai and
+                National Institutes of Health, Walgreens, Mount Sinai, and
                 Partners Healthcare. Reach out for a custom installation or
                 feedback.
               </p>

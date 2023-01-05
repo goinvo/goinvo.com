@@ -10,16 +10,6 @@
     "references": "1, 2"
   },
   {
-    "id": "covid-19-continues-to-kill",
-    "title": "COVID-19 continues to kill",
-    "description": "471K lives have been lost, 1.7T US government dollars have been spent, $3-4T in US GDP is projected to be lost over the next 2 years, and the US unemployment rate is almost double what it was in 2019, with one-third of the total unemployed now categorized as long-term.",
-    "deaths": "552K",
-    "peopleImpacted": "328M",
-    "spending": "$1.7T",
-    "tags": "cost",
-    "references": "3, 4, 5, 6, 7"
-  },
-  {
     "id": "death-is-premature",
     "title": "Death is premature",
     "description": "900,000 people die each year due to the top 5 leading causes of death: heart disease, cancer, chronic lower respiratory diseases, stroke, and unintentional injuries. Several deaths are driven by health disparities defined by social, economic, and environmental disadvantages. However, 20-40% of these deaths can be avoided by changes in personal behavior, such as eating healthy, exercising, and stopping smoking.",
@@ -98,6 +88,16 @@
     "spending": "",
     "tags": "quality",
     "references": "8"
+  },
+  {
+    "id": "covid-19-continues-to-kill",
+    "title": "COVID's long tail",
+    "description": "1.1M US lives have been lost, $4T US government dollars have been spent, and 100M cases begins the journey of long COVID on personal and societal scale.",
+    "deaths": "1.1M",
+    "peopleImpacted": "100M",
+    "spending": "$4T",
+    "tags": "cost",
+    "references": "3, 4, 5, 6, 7"
   },
   {
     "id": "physicians-are-financial-decision-makers",

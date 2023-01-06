@@ -5,19 +5,9 @@
     "description": "The United States spends more on healthcare in terms of %GDP than any other country  — yet has the lowest life expectancy, highest suicide rates, highest chronic disease burden and highest obesity rate out of all countries in the OECD (Organisation for Economic Co-operation and Development).",
     "deaths": "",
     "peopleImpacted": "328M",
-    "spending": "$3.8T",
+    "spending": "$4.3T",
     "tags": "quality",
     "references": "1, 2"
-  },
-  {
-    "id": "covid-19-continues-to-kill",
-    "title": "COVID-19 continues to kill",
-    "description": "471K lives have been lost, 1.7T US government dollars have been spent, $3-4T in US GDP is projected to be lost over the next 2 years, and the US unemployment rate is almost double what it was in 2019, with one-third of the total unemployed now categorized as long-term.",
-    "deaths": "552K",
-    "peopleImpacted": "328M",
-    "spending": "$1.7T",
-    "tags": "cost",
-    "references": "3, 4, 5, 6, 7"
   },
   {
     "id": "death-is-premature",
@@ -98,6 +88,16 @@
     "spending": "",
     "tags": "quality",
     "references": "8"
+  },
+  {
+    "id": "covid-19-continues-to-kill",
+    "title": "COVID's long tail",
+    "description": "1.1M US lives have been lost, $4T US government dollars have been spent, and 100M cases begins the journey of long COVID on personal and societal scale.",
+    "deaths": "1.1M",
+    "peopleImpacted": "100M",
+    "spending": "$4T",
+    "tags": "cost",
+    "references": "3, 4, 5, 6, 7"
   },
   {
     "id": "physicians-are-financial-decision-makers",

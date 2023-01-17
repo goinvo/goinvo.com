@@ -189,8 +189,8 @@ class CareersPage extends Component {
                 your work is critical because thousands to millions of people
                 will immediately interact with your finished designs. We are
                 looking for a passionate, inspiring, design-obsessed apostle who
-                can increase our IQs (as well as dramatically increase your
-                own).
+                can increase our brain power (as well as dramatically increase
+                your own).
               </p>
               <p>
                 That’s the kind of person we want. If you have those three

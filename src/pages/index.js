@@ -134,7 +134,7 @@ class IndexPage extends Component {
                     <span className="text--bold">1 billion prescriptions</span>
                     <br />
                     <span className="text--gray">
-                      will flow through the software we've designed in 2019.
+                      will flow through the software we've designed.
                     </span>
                     <br />
                   </p>

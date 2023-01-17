@@ -220,27 +220,69 @@ class CareersPage extends Component {
           </div>
         </BackgroundImage>
         <div className="max-width content-padding pad-vertical--quad--only-lg">
-          <Columns columns={3}>
+          <h2 className="header--xl margin-bottom--none">Benefits</h2>
+          <Columns columns={2}>
             <ImageBlock
               key={'1'}
               image="/images/about/careers/group-lunch.jpg"
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Break Bread"
-              caption="We cook for one another and share meals together. Cooking and eating as a tribe makes us a closer, better tribe."
+              title="Health & Dental Insurance"
+              caption="We pay 95% of your healthcare insurance. A single person pays $40/month instead of the state average of $715."
             />
             <ImageBlock
               key={'2'}
               image="/images/about/careers/7-years-beards.jpg"
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Work & Play"
-              caption="Design can be a grind. So is Life. Plan yours as you see fit. We don’t track vacation or sick days. Just be responsible."
+              title="Your decide your vacation"
+              caption="Take-what-you-need, no vacation day counting."
+            />
+          </Columns>
+          <Columns columns={2}>
+            <ImageBlock
+              key={'1'}
+              image="/images/about/careers/group-lunch.jpg"
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+              title="401k Retirement Trust"
+              caption="Participate in a Studio-run Vanguard Mutual Fund."
             />
             <ImageBlock
-              key={'3'}
-              image="/images/about/careers/drone-hands.jpg"
+              key={'2'}
+              image="/images/about/careers/7-years-beards.jpg"
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Makers & Shippers"
-              caption="We explore with our hands, heads, and hearts. Tinkering with, building, and shipping things is part of our DNA."
+              title="People over buildings"
+              caption="Work at the studio, at home, or a combo. Your call."
+            />
+          </Columns>
+          <Columns columns={2}>
+            <ImageBlock
+              key={'1'}
+              image="/images/about/careers/group-lunch.jpg"
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+              title="Co-ownership of the studio on Day 1"
+              caption="We pay 95% of your healthcare insurance. A single person pays $40/month instead of the state average of $715."
+            />
+            <ImageBlock
+              key={'2'}
+              image="/images/about/careers/7-years-beards.jpg"
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+              title="Break bread together"
+              caption="We cook for one another and share meals together. Cooking and eating as a tribe makes us a closer, better tribe."
+            />
+          </Columns>
+          <Columns columns={2}>
+            <ImageBlock
+              key={'1'}
+              image="/images/about/careers/group-lunch.jpg"
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+              title="Everyone has their own credit card"
+              caption="Buy what you need to run projects."
+            />
+            <ImageBlock
+              key={'2'}
+              image="/images/about/careers/7-years-beards.jpg"
+              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+              title="Know your numbers"
+              caption="Try new healthcare services from genome sequencing to gut biome analysis."
             />
           </Columns>
         </div>

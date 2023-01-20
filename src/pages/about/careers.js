@@ -10,6 +10,11 @@ import ImageBlock from '../../components/image-block'
 import HubspotForm from '../../components/hubspot-form'
 import BackgroundImage from '../../components/background-image'
 
+import IconComplexity from '../../assets/images/icon-complexity.inline.svg'
+import IconHealthcare from '../../assets/images/icon-healthcare.inline.svg'
+import IconTeam from '../../assets/images/icon-team.inline.svg'
+import IconVision from '../../assets/images/icon-vision.inline.svg'
+
 import config from '../../../config'
 
 const frontmatter = {
@@ -219,6 +224,70 @@ class CareersPage extends Component {
             </div>
           </div>
         </BackgroundImage>
+
+        <div className="max-width content-padding pad-vertical--double margin-bottom--double">
+          <h3 className="header--md margin-bottom--none margin-top--double">
+            Benefits
+          </h3>
+          <div className="pure-g pad-bottom--double">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
+              <IconHealthcare className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Health & Dental Insurance
+              </h4>
+              <p className="text--gray margin-top--half">
+                We pay 95% of your healthcare insurance. A single person pays
+                $40/month instead of the state average of $715.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
+              <IconVision className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                401k Retirement Trust
+              </h4>
+              <p className="text--gray margin-top--half">
+                Participate in a Studio-run Vanguard Mutual Fund.
+              </p>
+              <a
+                href="https://www.goinvo.com/features/careplans"
+                className="display--inline-block"
+              >
+                Care plans
+              </a>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
+              <IconTeam className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Co-ownership of the studio on Day 1
+              </h4>
+              <p className="text--gray margin-top--half">
+                If the company sold, you'd profit.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Everyone has their own credit card
+              </h4>
+              <p className="text--gray margin-top--half">
+                Buy what you need to run projects.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                We're comfortable with complexity.
+              </h4>
+              <p className="text--gray margin-top--half">
+                From enterprise-grade health IT to data-driven precision
+                healthcare, GoInvo works closely with our clients and partners
+                to transform messy problems into structured strategy and
+                solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="max-width content-padding pad-vertical--quad--only-lg">
           <h2 className="header--xl margin-bottom--none">Benefits</h2>
           <Columns columns={2}>

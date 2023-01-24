@@ -230,32 +230,44 @@ class CareersPage extends Component {
             Benefits
           </h3>
           <div className="pure-g pad-bottom--double">
-            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom pad-top--double--only-lg">
               <IconHealthcare className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
-                Health & Dental Insurance
+                Health & dental insurance
               </h4>
               <p className="text--gray margin-top--half">
                 We pay 95% of your healthcare insurance. A single person pays
                 $40/month instead of the state average of $715.
               </p>
             </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom pad-top--double--only-lg">
               <IconVision className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                You decide your vacation
+              </h4>
+              <p className="text--gray margin-top--half">
+                Take-what-you-need, no vacation day counting.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 401k Retirement Trust
               </h4>
               <p className="text--gray margin-top--half">
                 Participate in a Studio-run Vanguard Mutual Fund.
               </p>
-              <a
-                href="https://www.goinvo.com/features/careplans"
-                className="display--inline-block"
-              >
-                Care plans
-              </a>
             </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                People over buildings
+              </h4>
+              <p className="text--gray margin-top--half">
+                Work at the studio, at home, or a combo. Your call.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom">
               <IconTeam className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Co-ownership of the studio on Day 1
@@ -264,7 +276,17 @@ class CareersPage extends Component {
                 If the company sold, you'd profit.
               </p>
             </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Break bread together
+              </h4>
+              <p className="text--gray margin-top--half">
+                We cook for one another and share meals together. Cooking and
+                eating as a tribe makes us a closer, better tribe.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom">
               <IconComplexity className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Everyone has their own credit card
@@ -273,87 +295,17 @@ class CareersPage extends Component {
                 Buy what you need to run projects.
               </p>
             </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom">
               <IconComplexity className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
-                We're comfortable with complexity.
+                Know your numbers
               </h4>
               <p className="text--gray margin-top--half">
-                From enterprise-grade health IT to data-driven precision
-                healthcare, GoInvo works closely with our clients and partners
-                to transform messy problems into structured strategy and
-                solutions.
+                Try new healthcare services from genome sequencing to gut biome
+                analysis.
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="max-width content-padding pad-vertical--quad--only-lg">
-          <h2 className="header--xl margin-bottom--none">Benefits</h2>
-          <Columns columns={2}>
-            <ImageBlock
-              key={'1'}
-              image="/images/about/careers/group-lunch.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Health & Dental Insurance"
-              caption="We pay 95% of your healthcare insurance. A single person pays $40/month instead of the state average of $715."
-            />
-            <ImageBlock
-              key={'2'}
-              image="/images/about/careers/7-years-beards.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Your decide your vacation"
-              caption="Take-what-you-need, no vacation day counting."
-            />
-          </Columns>
-          <Columns columns={2}>
-            <ImageBlock
-              key={'1'}
-              image="/images/about/careers/group-lunch.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="401k Retirement Trust"
-              caption="Participate in a Studio-run Vanguard Mutual Fund."
-            />
-            <ImageBlock
-              key={'2'}
-              image="/images/about/careers/7-years-beards.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="People over buildings"
-              caption="Work at the studio, at home, or a combo. Your call."
-            />
-          </Columns>
-          <Columns columns={2}>
-            <ImageBlock
-              key={'1'}
-              image="/images/about/careers/group-lunch.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Co-ownership of the studio on Day 1"
-              caption="We pay 95% of your healthcare insurance. A single person pays $40/month instead of the state average of $715."
-            />
-            <ImageBlock
-              key={'2'}
-              image="/images/about/careers/7-years-beards.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Break bread together"
-              caption="We cook for one another and share meals together. Cooking and eating as a tribe makes us a closer, better tribe."
-            />
-          </Columns>
-          <Columns columns={2}>
-            <ImageBlock
-              key={'1'}
-              image="/images/about/careers/group-lunch.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Everyone has their own credit card"
-              caption="Buy what you need to run projects."
-            />
-            <ImageBlock
-              key={'2'}
-              image="/images/about/careers/7-years-beards.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Know your numbers"
-              caption="Try new healthcare services from genome sequencing to gut biome analysis."
-            />
-          </Columns>
         </div>
       </Layout>
     )

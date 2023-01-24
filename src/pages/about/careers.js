@@ -11,9 +11,6 @@ import HubspotForm from '../../components/hubspot-form'
 import BackgroundImage from '../../components/background-image'
 
 import IconComplexity from '../../assets/images/icon-complexity.inline.svg'
-import IconHealthcare from '../../assets/images/icon-healthcare.inline.svg'
-import IconTeam from '../../assets/images/icon-team.inline.svg'
-import IconVision from '../../assets/images/icon-vision.inline.svg'
 
 import config from '../../../config'
 
@@ -231,7 +228,7 @@ class CareersPage extends Component {
           </h3>
           <div className="pure-g pad-bottom--double">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom pad-top--double--only-lg">
-              <IconHealthcare className="icon--wide icon--secondary" />
+              <IconComplexity className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Health & dental insurance
               </h4>
@@ -241,7 +238,7 @@ class CareersPage extends Component {
               </p>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom pad-top--double--only-lg">
-              <IconVision className="icon--wide icon--secondary" />
+              <IconComplexity className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 You decide your vacation
               </h4>
@@ -268,7 +265,7 @@ class CareersPage extends Component {
               </p>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom">
-              <IconTeam className="icon--wide icon--secondary" />
+              <IconComplexity className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Co-ownership of the studio on Day 1
               </h4>

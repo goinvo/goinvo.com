@@ -10,9 +10,9 @@ import config from '../../../../config'
 
 const frontmatter = {
   metaTitle: 'The AI Healthcare Future We Need - GoInvo',
-  metaDescription: 'AI will transform Healthcare.',
-  heroImage:
-    '/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg',
+  metaDescription:
+    'Artificial intelligence (AI) has undergone tremendous advancements since its conception in the 1950s.',
+  heroImage: '/images/features/healthcare-ai/healthcare-ai-hero-2.jpg',
 }
 
 class HealthcareAIFeature extends Component {
@@ -191,9 +191,33 @@ class HealthcareAIFeature extends Component {
                 Patient Tool Concept
               </h2>
 
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/healthcare-ai/storyboard-mental-health-vertical.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
+
               <h2 className="header--lg margin-top margin-bottom--none">
                 Clinician Tool Concept
               </h2>
+
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/healthcare-ai/storyboard-ai-clinician.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
+
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/healthcare-ai/sketch-ai-bedroom.jpg"
+                  className="image--max-width-med image--center"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
 
               <h2 className="header--lg margin-top margin-bottom--none">
                 What purposes could an AI patient tool serve?
@@ -298,6 +322,14 @@ class HealthcareAIFeature extends Component {
                   </li>
                 </ul>
               </ul>
+
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/healthcare-ai/sketch-ai-train.jpg"
+                  className="image--max-width-med image--center"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
 
               <h2 className="header--lg margin-top margin-bottom--none">
                 Ripple Effects and Unintended Outcomes

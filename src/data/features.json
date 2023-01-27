@@ -1,5 +1,16 @@
 [
   {
+    "id": "healthcare-ai",
+    "title": "The AI Healthcare Future We Need",
+    "date": "Feb.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Artificial intelligence (AI) has undergone tremendous advancements since its conception in the 1950s.",
+    "image": "/images/features/healthcare-ai/healthcare-ai-hero-2.jpg",
+    "link": "/vision/healthcare-ai/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "us-healthcare-system-map",
     "title": "US Healthcare System Map",
     "date": "Jan.2023",

@@ -23,7 +23,10 @@ class HealthcareAIFeature extends Component {
         <div className="healthcare-ai-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">The AI Healthcare Future We Need</h1>
+              <p className="margin-bottom--none">Draft v.01, 27.Jan.23</p>
+              <h1 className="header--xl margin-top--none">
+                The AI Healthcare Future We Need
+              </h1>
 
               <p>
                 Artificial intelligence (AI) has undergone tremendous

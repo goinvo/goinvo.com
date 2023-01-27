@@ -12,7 +12,7 @@ const frontmatter = {
   metaTitle: 'The AI Healthcare Future We Need - GoInvo',
   metaDescription:
     'Artificial intelligence (AI) has undergone tremendous advancements since its conception in the 1950s.',
-  heroImage: '/images/features/healthcare-ai/healthcare-ai-hero-2.jpg',
+  heroImage: '/images/features/healthcare-ai/healthcare-ai-hero-3.jpg',
 }
 
 class HealthcareAIFeature extends Component {
@@ -183,12 +183,115 @@ class HealthcareAIFeature extends Component {
                 Patient Tool Concept
               </h2>
 
-              <div className="margin-auto">
-                <Image
-                  src="/images/features/healthcare-ai/storyboard-mental-health-vertical.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-1a.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    Jay gets home from school.AIHealth believes they may be
+                    feeling depressed based on their health data:
+                  </p>
+                  <ul>
+                    <li>their heart rate variability is low</li>
+                    <li>they’ve been on their phone more than often</li>
+                    <li>step count is low</li>
+                  </ul>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-2.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AiHealth sends Jay a photo album from their hike with their
+                    family from 3 months ago - this approach of reminding them
+                    of good memories often cheers them up.
+                  </p>
+                  <p>
+                    However Jay doesn’t respond to the images and ends up
+                    skipping dinner and stays in bed all through the next
+                    morning.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pure-g margin-top--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-3a.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AiHealth sends a text message.
+                    <br />
+                    “Hey are you ok? I’m here for you if you want to chat.”
+                    <br />
+                    Jay is hungry, tired, and stressed. They reply “no... idk.”
+                    <br />
+                    AiHealth - “I can see the stress coming through in your
+                    health data. I’m sorry that you’re going through so much.”
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-4a.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AiHealth - “Why don’t we do something to make your body feel
+                    a little better?”
+                    <br />
+                    Jay - “ok”
+                    <br />
+                    AiHealth knows Jay like images and animations, so it creates
+                    a little sparkling glass of water with written text inside
+                    reminding them to drink some water and get a snack and their
+                    body will feel a little better right away!
+                  </p>
+                </div>
+              </div>
+
+              <div className="pure-g margin-top--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-5a.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AiHealth - “do you feel any better?”
+                    <br />
+                    Jay - “a little.. it’s good to get up”
+                    <br />
+                    AiHealth - “well if that was good, here are some other easy
+                    things we can do together to help your body feel better...”
+                    <br />
+                    AiHealth helps Jay wash their face and brush their teeth,
+                    put on a fresh change of clothes and even go outside to
+                    breathe some fresh air.
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-6c.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    Jay starts texting AiHealth about what’s been bothering
+                    them... stress with friend groups at school and a big
+                    misunderstanding and just feeling really down for a while.
+                    <br />
+                    AiHealth listens, asks good questions, and makes space for
+                    this.
+                  </p>
+                </div>
               </div>
 
               <h2 className="header--lg margin-top--double margin-bottom--none">

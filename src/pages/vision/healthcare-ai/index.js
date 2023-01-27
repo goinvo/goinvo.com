@@ -31,44 +31,52 @@ class HealthcareAIFeature extends Component {
               </p>
 
               <p>
-                AI Image Generation: One of the most notable developments in
-                recent years is the accessibility and widespread engagement of
-                AI trained on images. This includes tools such as pix2pix from
-                2014, as well as more recent advancements like DALL·E,
-                MidJourney and Stable Diffusion, all released between January
-                2021 and August 2022. These tools have led to the mainstream
-                adoption of applications that generate fine-art-like portraits,
-                avatars and more, such as the "Magic Avatar" feature in the app
-                Lensa, which was released in November 2022.
+                <strong>AI Image Generation</strong>: One of the most notable
+                developments in recent years is the accessibility and widespread
+                engagement of AI trained on images. This includes tools such as
+                pix2pix from 2014, as well as more recent advancements like
+                DALL·E, MidJourney and Stable Diffusion, all released between
+                January 2021 and August 2022. These tools have led to the
+                mainstream adoption of applications that generate fine-art-like
+                portraits, avatars and more, such as the "Magic Avatar" feature
+                in the app Lensa, which was released in November 2022.
               </p>
 
               <p>
-                AI Text Generation: In addition to image generation,
-                conversational AI has also gained mainstream attention. RNNs,
-                developed decades ago, have been used for text generation. And
-                now there are various modern applications like ChatGPT, a
-                machine learning model that can generate human-like text, that
-                can answer nearly any imaginable question. ChatGPT was released
-                in November 2022 and gained more than one million users within a
-                week. This free tool has reached a mainstream audience in a way
-                that feels distinct, as people of all ages and backgrounds are
-                finding interesting applications for the tool. Students are
-                using ChatGPT to write school papers, doctors are checking
-                ChatGPT’s answers as they respond to patient questions, and
-                people exploring ChatGPT’s ability to generate workout plans,
-                re-write emails to be more persuasive, and craft poems and more.
-                In fact, we used ChatGPT to write the first draft of this intro
-                from a set of bullet points!
+                <strong>AI Text Generation</strong>: In addition to image
+                generation, conversational AI has also gained mainstream
+                attention. RNNs, developed decades ago, have been used for text
+                generation. And now there are various modern applications like
+                ChatGPT, a machine learning model that can generate human-like
+                text, that can answer nearly any imaginable question. ChatGPT
+                was released in November 2022 and gained more than{' '}
+                <a href="https://www.demandsage.com/chatgpt-statistics/">
+                  one million
+                </a>{' '}
+                users within a week. This free tool has reached a mainstream
+                audience in a way that feels distinct, as people of all ages and
+                backgrounds are finding interesting applications for the tool.
+                Students are using ChatGPT to write school papers, doctors are
+                checking ChatGPT’s answers as they respond to patient questions,
+                and people exploring ChatGPT’s ability to generate workout
+                plans, re-write emails to be more persuasive, and craft poems
+                and more. In fact, we used ChatGPT to write the first draft of
+                this intro from a set of bullet points!
               </p>
 
               <p>
-                With all of these new advancements, ai capabilities straight out
+                With all of these new advancements, AI capabilities straight out
                 of Fantastic Planet (1973), Blade Runner (1982), Moon (2009),
                 HER (2013), Big Hero 6 (2016), I Am Mother (2019) (just to name
-                a few out of hundreds) seem closer than ever. How will this
-                impact health? How should it impact health? Here are our
-                studio’s thoughts on the matter.
+                a few out of hundreds) seem closer than ever.
               </p>
+
+              <p>
+                How will this impact health?
+                <br />
+                How should it impact health?
+              </p>
+              <p>Here are our studio’s thoughts on the matter.</p>
 
               <div className="margin-auto">
                 <Image
@@ -82,93 +90,101 @@ class HealthcareAIFeature extends Component {
                 Expectations for the Future
               </h2>
               <p>
-                The following are gaps we’ve identified in existing tools. These
-                features should exist together in a patient tool.
+                The following are gaps we’ve identified in existing tools.
+                <br />
+                These features should exist together in a patient tool.
               </p>
 
-              <h4 className="header-sm margin-bottom--none margin-top--double">
-                Context aware and ability to personalize how it engages with me
-              </h4>
-              <ul>
+              <ul className="margin-top--none">
                 <li>
-                  It should have MY history and provide insight in the context
-                  of my health and behavior
+                  <strong>
+                    Context aware and ability to personalize how it engages with
+                    me
+                  </strong>
                 </li>
-                <li>Health record, phone, & wearables data</li>
+                <ul>
+                  <li>
+                    It should have MY history and provide insight in the context
+                    of my health and behavior
+                  </li>
+                  <li>Health record, phone, & wearables data</li>
+                  <li>
+                    Plug into other apps like mood tracking, food diary,
+                    condition related, etc
+                  </li>
+                  <li>
+                    Personalization around how it communicates with me - if I
+                    prefer a different language, speech instead of text,
+                    animated videos, etc. If using speech - some prefer faster
+                    answers that aren’t in full sentences vs conversational
+                    phrasing.
+                  </li>
+                </ul>
                 <li>
-                  Plug into other apps like mood tracking, food diary, condition
-                  related, etc
+                  <strong>
+                    Don’t wait for me to come to it - it should come to me
+                  </strong>
                 </li>
+                <ul>
+                  <li>
+                    I won’t always remember to ask health questions or think
+                    about my health. I don’t take care of myself enough. I need
+                    an assistant that checks in on me at the right times.
+                  </li>
+                </ul>
                 <li>
-                  Personalization around how it communicates with me - if I
-                  prefer a different language, speech instead of text, animated
-                  videos, etc. If using speech - some prefer faster answers that
-                  aren’t in full sentences vs conversational phrasing.
+                  <strong>It needs to query me</strong>
                 </li>
-              </ul>
-
-              <h4 className="header-sm margin-bottom--none margin-top--double">
-                Don’t wait for me to come to it - it should come to me
-              </h4>
-              <ul>
+                <ul>
+                  <li>
+                    If it needs more information to give a personalized answer,
+                    it needs to ask me appropriate questions.
+                  </li>
+                </ul>
                 <li>
-                  I won’t always remember to ask health questions or think about
-                  my health. I don’t take care of myself enough. I need an
-                  assistant that checks in on me at the right times.
+                  <strong>Multimodal</strong>
                 </li>
-              </ul>
-
-              <h4 className="header-sm margin-bottom--none margin-top--double">
-                It needs to query me
-              </h4>
-              <ul>
+                <ul>
+                  <li>
+                    It needs to combine with visualization and sonification
+                  </li>
+                  <li>
+                    Ex: Show me a cartoon version of how lactose intolerance
+                    works
+                  </li>
+                </ul>
                 <li>
-                  If it needs more information to give a personalized answer, it
-                  needs to ask me appropriate questions.
+                  <strong>Connected to evidence</strong>
                 </li>
-              </ul>
-
-              <h4 className="header-sm margin-bottom--none margin-top--double">
-                Multimodal
-              </h4>
-              <ul>
-                <li>It needs to combine with visualization and sonification</li>
+                <ul>
+                  <li>Need a way for me to fact-check or dig deeper</li>
+                  <li>
+                    It should have the ability to link sources that support its
+                    answers
+                  </li>
+                </ul>
                 <li>
-                  Ex: Show me a cartoon version of how lactose intolerance works
+                  <strong>I own my data</strong>
                 </li>
-              </ul>
-
-              <h4 className="header-sm margin-bottom--none margin-top--double">
-                Connected to evidence
-              </h4>
-              <ul>
-                <li>Need a way for me to fact-check or dig deeper</li>
+                <ul>
+                  <li>
+                    It needs to combine with visualization and sonification
+                  </li>
+                  <li>Data ownership and privacy policies should be clear</li>
+                </ul>
                 <li>
-                  It should have the ability to link sources that support its
-                  answers
+                  <strong>Designed for accessibility</strong>
                 </li>
-              </ul>
-
-              <h4 className="header-sm margin-bottom--none margin-top--double">
-                I own my data
-              </h4>
-              <ul>
-                <li>It needs to combine with visualization and sonification</li>
-                <li>Data ownership and privacy policies should be clear</li>
-              </ul>
-
-              <h4 className="header-sm margin-bottom--none margin-top--double">
-                Designed for accessibility
-              </h4>
-              <ul>
-                <li>
-                  Communication should by default be short and easy to read at a
-                  5th grade reading level, with deeper answers when asked
-                </li>
-                <li>
-                  We’d love to see how this could be designed specifically for
-                  those who are blind or low vision.
-                </li>
+                <ul>
+                  <li>
+                    Communication should by default be short and easy to read at
+                    a 5th grade reading level, with deeper answers when asked
+                  </li>
+                  <li>
+                    We’d love to see how this could be designed specifically for
+                    those who are blind or low vision.
+                  </li>
+                </ul>
               </ul>
 
               <h2 className="header--lg margin-top margin-bottom--none">
@@ -186,31 +202,41 @@ class HealthcareAIFeature extends Component {
               <p>Here’s how we imagine it:</p>
 
               <ul>
-                <li>Gathering all of my health data together</li>
+                <li>
+                  <strong>Gathering all of my health data together</strong>
+                </li>
                 <ul>
                   <li>
                     Interoperability where AI does the manual labor of merging
                     across all life data
                   </li>
                 </ul>
-                <li>Help me find support I need based on my context</li>
+                <li>
+                  <strong>
+                    Help me find support I need based on my context
+                  </strong>
+                </li>
                 <ul>
                   <li>Based on health conditions, if I’m homeless, etc</li>
                   <li>Core basics of support, local support in your town</li>
                 </ul>
                 <li>
-                  Symptom check / Diagnostic help (more advanced, faster ADA)
+                  <strong>
+                    Symptom check / Diagnostic help (more advanced, faster ADA)
+                  </strong>
                 </li>
                 <ul>
                   <li>
                     Patient takes a photo or provides information about a
                     symptom: what problem is this? Chat asks questions. Provides
-                    top X answers.
+                    top N answers.
                   </li>
                   <li>Should be trained on medical diagnostic databases</li>
                 </ul>
                 <li>
-                  Live support at Dr’s office (this could also happen at home)
+                  <strong>
+                    Live support at Dr’s office (this could also happen at home)
+                  </strong>
                 </li>
                 <ul>
                   <li>
@@ -223,7 +249,9 @@ class HealthcareAIFeature extends Component {
                     to adhere to
                   </li>
                 </ul>
-                <li>Just-in-time support</li>
+                <li>
+                  <strong>Just-in-time support</strong>
+                </li>
                 <ul>
                   <li>Real time feedback on exercising more effectively</li>
                   <li>
@@ -234,8 +262,10 @@ class HealthcareAIFeature extends Component {
                   <li>Help during emergencies - who to call</li>
                 </ul>
                 <li>
-                  Help me reflect on my health and develop a caring relationship
-                  with my body
+                  <strong>
+                    Help me reflect on my health and develop a caring
+                    relationship with my body
+                  </strong>
                 </li>
                 <ul>
                   <li>
@@ -250,7 +280,11 @@ class HealthcareAIFeature extends Component {
                     complex articles).
                   </li>
                 </ul>
-                <li>Scan my health and help me take any necessary action</li>
+                <li>
+                  <strong>
+                    Scan my health and help me take any necessary action
+                  </strong>
+                </li>
                 <ul>
                   <li>
                     (continually vs periodically based on preference) Review my
@@ -273,59 +307,72 @@ class HealthcareAIFeature extends Component {
 
               <ul>
                 <li>
-                  Misinformation at scale - Stack Overflow banned ChatGPT
-                  answers as it got swamped with quality control at scale.
-                  ChatGPT makes it incredibly easy to post an answer, but the
-                  non-zero error rate is a real problem for quality control.
-                  There’s no way to easily check ChatGPT’s answers without doing
-                  the research manually. This could become a serious problem if
-                  everyone uses a similar tool for health answers.
+                  <strong>Misinformation at scale</strong> - Stack Overflow
+                  banned ChatGPT answers as it got swamped with quality control
+                  at scale. ChatGPT makes it incredibly easy to post an answer,
+                  but the non-zero error rate is a real problem for quality
+                  control. There’s no way to easily check ChatGPT’s answers
+                  without doing the research manually. This could become a
+                  serious problem if everyone uses a similar tool for health
+                  answers.
                 </li>
                 <li>
-                  Ability for chatGPT to sound truer than it is? Psychology
-                  might suggest that people are more susceptible to believe
-                  information shared in a more conversational tone? (we need to
-                  research this - but paired with the first problem, this could
-                  be harmful)
+                  <strong>
+                    Ability for ChatGPT to sound truer than it is?
+                  </strong>{' '}
+                  - Psychology might suggest that people are more susceptible to
+                  believe information shared in a more conversational tone? (we
+                  need to research this - but paired with the first problem,
+                  this could be harmful)
                 </li>
                 <li>
-                  Harmful information - Molotov Cocktail question can still be
-                  achieved by phrasing as a print function question, I assume
-                  similar information about how to effectively commit suicide
-                  could be easily obtained.
+                  <strong>Harmful information</strong> - Molotov Cocktail
+                  question can still be achieved by phrasing as a{' '}
+                  <a href="https://twitter.com/zswitten/status/1598197802676682752">
+                    print function question
+                  </a>
+                  , I assume similar information about how to effectively commit
+                  suicide could be easily obtained.
                 </li>
                 <li>
-                  Perpetuating harmful biases, conventions, etc - The AI will
-                  provide answers based on the material it is trained on. If
-                  that material is biased, non-inclusive, etc, the AI’s answers
-                  will be the same. For example, humans depicted in MidJourney
-                  are typically white unless specified otherwise. When asked to
-                  portray a telehealth call, MidJourney created doctors that
-                  were all white and three out of four were male.
+                  <strong>Perpetuating harmful biases, conventions, etc</strong>{' '}
+                  - The AI will provide answers based on the material it is
+                  trained on. If that material is biased, non-inclusive, etc,
+                  the AI’s answers will be the same. For example, humans
+                  depicted in MidJourney are typically white unless specified
+                  otherwise. When asked to portray a telehealth call, MidJourney
+                  created doctors that were all white and three out of four were
+                  male.
                 </li>
                 <li>
-                  Impact on human workers - “The cost of intelligence is going
-                  down” – Rob McCready. AI could replace writers, artists,
-                  musicians, and generally all white collar jobs in the long
-                  run. Ideally, AI could augment these people’s work by helping
-                  generate a starting point that the human can perfect or to
-                  help people brainstorm a diversity of concepts, however this
-                  new technology provides the opportunity for these creatives to
-                  lose their jobs and for their work to be taken without
-                  compensation to train ai to do the work.
+                  <strong>Impact on human workers</strong> - “The cost of
+                  intelligence is going down” – Rob McCready. AI could replace
+                  writers, artists, musicians, and generally all white collar
+                  jobs in the long run. Ideally, AI could augment these people’s
+                  work by helping generate a starting point that the human can
+                  perfect or to help people brainstorm a diversity of concepts,
+                  however this new technology provides the opportunity for these
+                  creatives to lose their jobs and for their work to be taken
+                  without compensation to train AI to do the work.
                 </li>
                 <li>
-                  Property and ownership issues - Many have voiced the problem
-                  that image generation AI is training off of art that it does
-                  not own. Some artists have seen their personal style and even
-                  their signature show up in Stable Diffusion
-                  (https://www.cbc.ca/radio/asithappens/artificial-intelligence-ai-art-ethics-greg-rutkowski-1.6679466)
+                  <strong>Property and ownership issues</strong> - Many have
+                  voiced the problem that image generation AI is training off of
+                  art that it does not own. Some artists have seen their
+                  personal style and even their signature show up in Stable
+                  Diffusion. See{' '}
+                  <a href="https://www.cbc.ca/radio/asithappens/artificial-intelligence-ai-art-ethics-greg-rutkowski-1.6679466">
+                    article
+                  </a>
+                  .
                 </li>
                 <li>
-                  Our relationship with technology and each other - Human
-                  immersion into tech (smartphones and social media) has not
-                  always had a positive impact on health (ex: mental health of
-                  the younger generation in particular). How can we make sure
+                  <strong>
+                    Our relationship with technology and each other
+                  </strong>{' '}
+                  - Human immersion into tech (smartphones and social media) has
+                  not always had a positive impact on health (ex: mental health
+                  of the younger generation in particular). How can we make sure
                   we’re not sprinting into more negative side effects in the
                   name of “progress.” How will an increase of artificial
                   intelligence impact human intelligence? Perhaps it will allow

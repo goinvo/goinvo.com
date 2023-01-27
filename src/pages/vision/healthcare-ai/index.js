@@ -194,7 +194,7 @@ class HealthcareAIFeature extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="margin-top--none">
-                    Jay gets home from school.AIHealth believes they may be
+                    Jay gets home from school. AIHealth believes they may be
                     feeling depressed based on their health data:
                   </p>
                   <ul>

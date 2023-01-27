@@ -78,15 +78,7 @@ class HealthcareAIFeature extends Component {
               </p>
               <p>Here are our studio’s thoughts on the matter.</p>
 
-              <div className="margin-auto">
-                <Image
-                  src="/images/features/digital-health-trends-2022/1-digital-health-at-home-a.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-              </div>
-
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--double margin-bottom--none">
                 Expectations for the Future
               </h2>
               <p>
@@ -187,7 +179,7 @@ class HealthcareAIFeature extends Component {
                 </ul>
               </ul>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--double margin-bottom--none">
                 Patient Tool Concept
               </h2>
 
@@ -199,7 +191,7 @@ class HealthcareAIFeature extends Component {
                 />
               </div>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--double margin-bottom--none">
                 Clinician Tool Concept
               </h2>
 

@@ -309,18 +309,84 @@ class HealthcareAIFeature extends Component {
                 Clinician Tool Concept
               </h2>
 
-              <div className="margin-auto">
-                <Image
-                  src="/images/features/healthcare-ai/storyboard-ai-clinician.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-clinician-1.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    Patient is having a discussion with their doctor.
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-clinician-2.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AI is listening to the conversation.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pure-g margin-top--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-clinician-3.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AI requests the doctor to take an image of the patient to
+                    further evaluate the encounter.
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-clinician-4.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AI provides a list of diagnoses with evidence. Doctor
+                    reviews and decides on final diagnosis.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pure-g margin-top--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-clinician-5.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    AI recommends a care plan tailored to the patient and
+                    diagnosis.
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
+                  <Image
+                    src="/images/features/healthcare-ai/storyboard-clinician-6a.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                  <p className="margin-top--none">
+                    Doctor reviews and approves care plan. AI documents
+                    encounter in EHR, send prescription to pharmacy, and a
+                    receipt to the patient.
+                  </p>
+                </div>
               </div>
 
               <div className="margin-auto">
                 <Image
                   src="/images/features/healthcare-ai/sketch-ai-bedroom.jpg"
-                  className="image--max-width-med image--center"
+                  className="image--max-width-med image--center margin-top--double"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>

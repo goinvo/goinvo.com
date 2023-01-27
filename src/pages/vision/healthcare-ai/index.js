@@ -294,6 +294,17 @@ class HealthcareAIFeature extends Component {
                 </div>
               </div>
 
+              <Image
+                src="/images/features/healthcare-ai/chatgpt-output.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+              />
+
+              <p className="margin-top--none">
+                At the end AiHealth asks if they’d like any help or suggestions
+                to feel better.
+              </p>
+
               <h2 className="header--lg margin-top--double margin-bottom--none">
                 Clinician Tool Concept
               </h2>

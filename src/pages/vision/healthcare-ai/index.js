@@ -12,7 +12,7 @@ const frontmatter = {
   metaTitle: 'The AI Healthcare Future We Need - GoInvo',
   metaDescription:
     'Artificial intelligence (AI) has undergone tremendous advancements since its conception in the 1950s.',
-  heroImage: '/images/features/healthcare-ai/healthcare-ai-hero-3.jpg',
+  heroImage: '/images/features/healthcare-ai/healthcare-ai-hero-4.jpg',
 }
 
 class HealthcareAIFeature extends Component {
@@ -23,7 +23,7 @@ class HealthcareAIFeature extends Component {
         <div className="healthcare-ai-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <p className="margin-bottom--none">Draft v.01, 27.Jan.23</p>
+              <p className="margin-bottom--none">Draft v.01, 2.Feb.23</p>
               <h1 className="header--xl margin-top--none">
                 The AI Healthcare Future We Need
               </h1>
@@ -36,48 +36,51 @@ class HealthcareAIFeature extends Component {
               <p>
                 <strong>AI Image Generation</strong>: One of the most notable
                 developments in recent years is the accessibility and widespread
-                engagement of AI trained on images. This includes tools such as
-                pix2pix from 2014, as well as more recent advancements like
-                DALL·E, MidJourney and Stable Diffusion, all released between
-                January 2021 and August 2022. These tools have led to the
-                mainstream adoption of applications that generate fine-art-like
-                portraits, avatars and more, such as the "Magic Avatar" feature
-                in the app Lensa, which was released in November 2022.
+                engagement of AI trained on images. This includes tools like
+                pix2pix from 2014 and more recent advancements like DALL·E,
+                released in January 2021, as well as MidJourney and Stable
+                Diffusion, both released in the summer of 2022. These tools have
+                since fueled the mainstream adoption of app features like
+                Lensa’s "Magic Avatar" that generate fine-art-like portraits,
+                avatars, and more.
               </p>
 
               <p>
                 <strong>AI Text Generation</strong>: In addition to image
                 generation, conversational AI has also gained mainstream
-                attention. RNNs, developed decades ago, have been used for text
-                generation. And now there are various modern applications like
-                ChatGPT, a machine learning model that can generate human-like
-                text, that can answer nearly any imaginable question. ChatGPT
-                was released in November 2022 and gained more than{' '}
-                <a href="https://www.demandsage.com/chatgpt-statistics/">
-                  one million
+                attention. Originally developed decades ago, recurrent neural
+                networks (RNNs) have been used for text generation. While RNNs
+                can be trained on data sets like{' '}
+                <a href="https://www.tensorflow.org/text/tutorials/text_generation">
+                  Shakespeare’s writing
                 </a>{' '}
-                users within a week. This free tool has reached a mainstream
-                audience in a way that feels distinct, as people of all ages and
-                backgrounds are finding interesting applications for the tool.
-                Students are using ChatGPT to write school papers, doctors are
-                checking ChatGPT’s answers as they respond to patient questions,
-                and people exploring ChatGPT’s ability to generate workout
-                plans, re-write emails to be more persuasive, and craft poems
-                and more. In fact, we used ChatGPT to write the first draft of
-                this intro from a set of bullet points!
+                and generate text to match, ChatGPT can answer nearly any
+                question imaginable in nearly any style. Released for free in
+                November 2022, ChatGPT gained more than{' '}
+                <a href="https://www.demandsage.com/chatgpt-statistics/">
+                  one million users
+                </a>{' '}
+                within its first week. It has reached a mainstream audience in a
+                way that feels distinct, as people of all ages and backgrounds
+                continue to find different applications for the tool. Students
+                are using it to write school papers, and doctors are checking
+                ChatGPT’s answers as they respond to patient questions; others
+                are exploring ChatGPT’s ability to generate workout plans,
+                rewrite emails to be more persuasive, craft poems, and more. In
+                fact, ChatGPT was given a set of bullet points and produced the
+                first draft of this article introduction!
               </p>
 
               <p>
                 With all of these new advancements, AI capabilities straight out
-                of Fantastic Planet (1973), Blade Runner (1982), Moon (2009),
-                HER (2013), Big Hero 6 (2016), I Am Mother (2019) (just to name
-                a few out of hundreds) seem closer than ever.
+                of sci-fi movies like Fantastic Planet, Moon, and Her seem
+                closer than ever.
               </p>
 
               <p>
                 How will this impact health?
                 <br />
-                How should it impact health?
+                How <em>should</em> it impact health?
               </p>
               <p>Here are our studio’s thoughts on the matter.</p>
 
@@ -85,106 +88,138 @@ class HealthcareAIFeature extends Component {
                 Expectations for the Future
               </h2>
               <p>
-                The following are gaps we’ve identified in existing tools.
-                <br />
-                These features should exist together in a patient tool.
+                The following are gaps we’ve identified in existing technology
+                that we would expect from an ideal patient tool:
               </p>
 
               <ul className="margin-top--none">
                 <li>
-                  <strong>
-                    Context aware and ability to personalize how it engages with
-                    me
-                  </strong>
+                  <strong>Context awareness</strong>
                 </li>
                 <ul>
                   <li>
-                    It should have MY history and provide insight in the context
-                    of my health and behavior
-                  </li>
-                  <li>Health record, phone, & wearables data</li>
-                  <li>
-                    Plug into other apps like mood tracking, food diary,
-                    condition related, etc
+                    It should provide insight grounded in the historical context
+                    of my health and behavior.
                   </li>
                   <li>
-                    Personalization around how it communicates with me - if I
-                    prefer a different language, speech instead of text,
-                    animated videos, etc. If using speech - some prefer faster
-                    answers that aren’t in full sentences vs conversational
-                    phrasing.
+                    With my consent, it could gather this data from my health
+                    record, native health apps (Apple Health, Google Fit), and
+                    phone data (GPS, screen time) as well as plug into
+                    wearables, mood tracking, fitness, pain tracking, and other
+                    health apps.
                   </li>
                 </ul>
                 <li>
-                  <strong>
-                    Don’t wait for me to come to it - it should come to me
-                  </strong>
+                  <strong>Personalized engagement</strong>
+                </li>
+                <ul>
+                  <li>
+                    The mode of communication could be personalized by switching
+                    to my preferred language, using speech instead of text,
+                    playing animated videos, etc. If using speech, some prefer
+                    faster answers that aren’t in full sentences vs.
+                    conversational phrasing.
+                  </li>
+                  <li>
+                    Some people will want more nudges and interaction than
+                    others.
+                  </li>
+                </ul>
+                <li>
+                  <strong>Proactive approach</strong>
                 </li>
                 <ul>
                   <li>
                     I won’t always remember to ask health questions or think
-                    about my health. I don’t take care of myself enough. I need
-                    an assistant that checks in on me at the right times.
+                    about my health. Most people don’t take the time to focus on
+                    their health. I need an assistant that checks in at the
+                    right times to help me engage with my health and better
+                    understand my body.
                   </li>
                 </ul>
                 <li>
-                  <strong>It needs to query me</strong>
+                  <strong>Queries for better answers</strong>
                 </li>
                 <ul>
                   <li>
                     If it needs more information to give a personalized answer,
-                    it needs to ask me appropriate questions.
+                    it should prompt me with appropriate follow-up questions.
                   </li>
                 </ul>
                 <li>
-                  <strong>Multimodal</strong>
+                  <strong>Multimodal communication</strong>
                 </li>
                 <ul>
                   <li>
-                    It needs to combine with visualization and sonification
+                    It should enrich communication through visualization and
+                    sonification and accommodate different learning styles.
                   </li>
                   <li>
-                    Ex: Show me a cartoon version of how lactose intolerance
-                    works
-                  </li>
-                </ul>
-                <li>
-                  <strong>Connected to evidence</strong>
-                </li>
-                <ul>
-                  <li>Need a way for me to fact-check or dig deeper</li>
-                  <li>
-                    It should have the ability to link sources that support its
-                    answers
+                    For example: “Show me a cartoon representation of how
+                    lactose intolerance works.”
                   </li>
                 </ul>
                 <li>
-                  <strong>I own my data</strong>
+                  <strong>Emphasis on evidence</strong>
                 </li>
                 <ul>
                   <li>
-                    It needs to combine with visualization and sonification
+                    It should provide ways for me to fact-check or dig deeper.
                   </li>
-                  <li>Data ownership and privacy policies should be clear</li>
+                  <li>
+                    It should link reputable sources that support its answers.
+                  </li>
                 </ul>
                 <li>
-                  <strong>Designed for accessibility</strong>
+                  <strong>Transparency and user data ownership</strong>
+                </li>
+                <ul>
+                  <li>Data ownership and privacy policies should be clear.</li>
+                  <li>
+                    People should own or co-own their data; they should also
+                    have control over how their data is used and who can access
+                    it.
+                  </li>
+                </ul>
+                <li>
+                  <strong>Accessible Design</strong>
                 </li>
                 <ul>
                   <li>
-                    Communication should by default be short and easy to read at
-                    a 5th grade reading level, with deeper answers when asked
+                    Initial communication should be concise and easy to read at
+                    a fifth grade reading level, following up with more thorough
+                    explanations when asked.
                   </li>
                   <li>
                     We’d love to see how this could be designed specifically for
-                    those who are blind or low vision.
+                    individuals with low vision, mobility and dexterity
+                    impairments, and other conditions that might make
+                    interaction with this kind of tool challenging.
                   </li>
                 </ul>
               </ul>
 
               <h2 className="header--lg margin-top--double margin-bottom--none">
-                Patient Tool Concept
+                Patient Tool Concepts
               </h2>
+
+              <p>
+                <strong>AdHoc Health Guide</strong>
+              </p>
+
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/healthcare-ai/storyboard-patient-mole.jpg"
+                  className="image--max-width image--center"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
+
+              <p className="margin-top--double">
+                <strong>Mental Health Support</strong>
+                <br />
+                <em>Storyboard with images generated by MidJourney</em>
+              </p>
 
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
@@ -194,13 +229,13 @@ class HealthcareAIFeature extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="margin-top--none">
-                    Jay gets home from school. AIHealth believes they may be
+                    Jay gets home from school. AiHealth believes they may be
                     feeling depressed based on their health data:
                   </p>
                   <ul>
-                    <li>their heart rate variability is low</li>
-                    <li>they’ve been on their phone more than often</li>
-                    <li>step count is low</li>
+                    <li>Their heart rate variability is low</li>
+                    <li>They’ve been on their phone more than often</li>
+                    <li>Step count is low</li>
                   </ul>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
@@ -210,14 +245,13 @@ class HealthcareAIFeature extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="margin-top--none">
-                    AiHealth sends Jay a photo album from their hike with their
-                    family from 3 months ago - this approach of reminding them
-                    of good memories often cheers them up.
+                    AiHealth sends Jay a photo they took with their family on a
+                    hike 3 months ago. Reminding Jay of happy memories often
+                    cheers them up.
                   </p>
                   <p>
-                    However Jay doesn’t respond to the images and ends up
-                    skipping dinner and stays in bed all through the next
-                    morning.
+                    However, Jay doesn’t respond to the images. They end up
+                    skipping dinner and staying in bed until the next morning.
                   </p>
                 </div>
               </div>
@@ -230,14 +264,15 @@ class HealthcareAIFeature extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="margin-top--none">
-                    AiHealth sends a text message.
-                    <br />
-                    “Hey are you ok? I’m here for you if you want to chat.”
-                    <br />
-                    Jay is hungry, tired, and stressed. They reply “no... idk.”
-                    <br />
-                    AiHealth - “I can see the stress coming through in your
-                    health data. I’m sorry that you’re going through so much.”
+                    AiHealth sends a text message: “Hey are you ok? I’m here for
+                    you if you want to chat.”
+                  </p>
+                  <p>
+                    Jay is hungry, tired, and stressed. They reply, “no... idk.”
+                  </p>
+                  <p>
+                    AiHealth: “I can see the stress coming through in your
+                    health data. That must be difficult.”
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
@@ -247,15 +282,15 @@ class HealthcareAIFeature extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="margin-top--none">
-                    AiHealth - “Why don’t we do something to make your body feel
+                    AiHealth: “Why don’t we do something to make your body feel
                     a little better?”
-                    <br />
-                    Jay - “ok”
-                    <br />
-                    AiHealth knows Jay like images and animations, so it creates
-                    a little sparkling glass of water with written text inside
-                    reminding them to drink some water and get a snack and their
-                    body will feel a little better right away!
+                  </p>
+                  <p>Jay: “ok”</p>
+                  <p>
+                    AiHealth knows Jay likes images and animations, so it
+                    creates a little sparkling glass of water with a written
+                    reminder: “Drink some water and have a snack! Your body will
+                    feel a little better right away.”
                   </p>
                 </div>
               </div>
@@ -268,16 +303,17 @@ class HealthcareAIFeature extends Component {
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                   <p className="margin-top--none">
-                    AiHealth - “do you feel any better?”
-                    <br />
-                    Jay - “a little.. it’s good to get up”
-                    <br />
-                    AiHealth - “well if that was good, here are some other easy
-                    things we can do together to help your body feel better...”
-                    <br />
-                    AiHealth helps Jay wash their face and brush their teeth,
-                    put on a fresh change of clothes and even go outside to
-                    breathe some fresh air.
+                    AiHealth: “How do you feel now?”
+                  </p>
+                  <p>Jay: “A little better maybe... it’s good to get up”</p>
+                  <p>
+                    AiHealth: “Well if that helped, here are some other things
+                    we can do to help your body feel better...”
+                  </p>
+                  <p>
+                    AiHealth walks Jay through washing their face, brushing
+                    their teeth, putting on a fresh change of clothes, and
+                    finally going outside to get some fresh air.
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
@@ -288,9 +324,10 @@ class HealthcareAIFeature extends Component {
                   />
                   <p className="margin-top--none">
                     Jay starts texting AiHealth about what’s been bothering
-                    them... stress with friend groups at school and a big
-                    misunderstanding and just feeling really down for a while.
-                    <br />
+                    them: tension between friends groups at school, a big
+                    misunderstanding, and just feeling really down for a while.
+                  </p>
+                  <p>
                     AiHealth listens, asks good questions, and makes space for
                     this.
                   </p>
@@ -304,97 +341,15 @@ class HealthcareAIFeature extends Component {
               />
 
               <p className="margin-top--none">
+                <em>This image is a screenshot from ChatGPT</em>
+              </p>
+
+              <p>
                 At the end AiHealth asks if they’d like any help or suggestions
                 to feel better.
               </p>
 
               <h2 className="header--lg margin-top--double margin-bottom--none">
-                Clinician Tool Concept
-              </h2>
-
-              <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <Image
-                    src="/images/features/healthcare-ai/storyboard-clinician-1.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                  <p className="margin-top--none">
-                    Patient is having a discussion with their doctor.
-                  </p>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                  <Image
-                    src="/images/features/healthcare-ai/storyboard-clinician-2.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                  <p className="margin-top--none">
-                    AI is listening to the conversation.
-                  </p>
-                </div>
-              </div>
-
-              <div className="pure-g margin-top--double">
-                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <Image
-                    src="/images/features/healthcare-ai/storyboard-clinician-3.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                  <p className="margin-top--none">
-                    AI requests the doctor to take an image of the patient to
-                    further evaluate the encounter.
-                  </p>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                  <Image
-                    src="/images/features/healthcare-ai/storyboard-clinician-4.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                  <p className="margin-top--none">
-                    AI provides a list of diagnoses with evidence. Doctor
-                    reviews and decides on final diagnosis.
-                  </p>
-                </div>
-              </div>
-
-              <div className="pure-g margin-top--double">
-                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <Image
-                    src="/images/features/healthcare-ai/storyboard-clinician-5.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                  <p className="margin-top--none">
-                    AI recommends a care plan tailored to the patient and
-                    diagnosis.
-                  </p>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                  <Image
-                    src="/images/features/healthcare-ai/storyboard-clinician-6a.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                  <p className="margin-top--none">
-                    Doctor reviews and approves care plan. AI documents
-                    encounter in EHR, send prescription to pharmacy, and a
-                    receipt to the patient.
-                  </p>
-                </div>
-              </div>
-
-              <div className="margin-auto">
-                <Image
-                  src="/images/features/healthcare-ai/sketch-ai-bedroom.jpg"
-                  className="image--max-width-med image--center margin-top--double"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-              </div>
-
-              <h2 className="header--lg margin-top margin-bottom--none">
                 What purposes could an AI patient tool serve?
               </h2>
 
@@ -402,106 +357,138 @@ class HealthcareAIFeature extends Component {
 
               <ul>
                 <li>
-                  <strong>Gathering all of my health data together</strong>
+                  <strong>Interoperability</strong>
+                </li>
+                <ul>
+                  <li>Gathers and merges all longitudinal patient data</li>
+                  <li>Helps identify gaps and missing data</li>
+                </ul>
+                <li>
+                  <strong>
+                    Context and location-based support and resources
+                  </strong>
                 </li>
                 <ul>
                   <li>
-                    Interoperability where AI does the manual labor of merging
-                    across all life data
+                    Refers to information regarding health conditions, housing
+                    security, employment status, etc.
                   </li>
+                  <li>Provides basic resources, local support in your town</li>
                 </ul>
                 <li>
-                  <strong>
-                    Help me find support I need based on my context
-                  </strong>
-                </li>
-                <ul>
-                  <li>Based on health conditions, if I’m homeless, etc</li>
-                  <li>Core basics of support, local support in your town</li>
-                </ul>
-                <li>
-                  <strong>
-                    Symptom check / Diagnostic help (more advanced, faster ADA)
-                  </strong>
+                  <strong>Symptom check / diagnostic help</strong>
                 </li>
                 <ul>
                   <li>
-                    Patient takes a photo or provides information about a
-                    symptom: what problem is this? Chat asks questions. Provides
-                    top N answers.
+                    Patient takes a photo and/or provides information about
+                    symptoms and AI provides top-N answers
                   </li>
                   <li>Should be trained on medical diagnostic databases</li>
+                  <li>
+                    Can feature a more conversational tone than current options
+                    like Ada Health and Babylon chat bots
+                  </li>
                 </ul>
                 <li>
                   <strong>
-                    Live support at Dr’s office (this could also happen at home)
+                    Live support at appointments, both in-person and virtual
                   </strong>
                 </li>
                 <ul>
                   <li>
-                    How to summarize how I’ve really been, visualize my health
-                    since my last visit
+                    Guides the patient in reflecting on how they’ve been and
+                    visualizing their health since their last visit
                   </li>
-                  <li>What else should I ask? What data’s missing?</li>
                   <li>
-                    Help me keep track of follow up items and care plans I need
-                    to adhere to
+                    Provides the patient with a list of possible questions to
+                    ask their doctor
+                  </li>
+                  <li>
+                    Helps identify missing information needed for optimal care
+                  </li>
+                  <li>
+                    Helps the patient keep track of to-do lists and care plans
                   </li>
                 </ul>
                 <li>
                   <strong>Just-in-time support</strong>
                 </li>
                 <ul>
-                  <li>Real time feedback on exercising more effectively</li>
                   <li>
-                    Noticing health conditions in real time like sleep apnea,
-                    anxiety, etc
+                    Provides real-time feedback on exercising more effectively
                   </li>
-                  <li>Reaching out if it identifies that I’m in crisis</li>
-                  <li>Help during emergencies - who to call</li>
+                  <li>
+                    Notices health condition risks in real time, like sleep
+                    apnea, anxiety, etc.
+                  </li>
+                  <li>Reaches out if it identifies that I’m in crisis</li>
+                  <li>Helps during emergencies, like suggesting who to call</li>
                 </ul>
                 <li>
                   <strong>
-                    Help me reflect on my health and develop a caring
-                    relationship with my body
+                    Health check-ins that increase patient engagement in their
+                    own health
                   </strong>
                 </li>
                 <ul>
                   <li>
-                    Ask me how I’m doing, prompt me to describe concerns,
-                    provide best practice suggestions for how to address
-                    concerns, help me decide what to try in order to address the
-                    concern
+                    Asks how the person is doing, prompts them to describe
+                    concerns, provides best practice suggestions, helps them
+                    decide what habits or actions to try, follows up for
+                    accountability and reflection
                   </li>
                   <li>
-                    Generates visual patient information for any given condition
-                    and paraphrasing articles as the person digs deeper (even
-                    complex articles).
+                    Generates article summaries and visual patient information
+                    for different conditions, increasing accessibility of
+                    anything from basic human biology to recent neuroscience
+                    research
                   </li>
                 </ul>
                 <li>
-                  <strong>
-                    Scan my health and help me take any necessary action
-                  </strong>
+                  <strong>Personal health scans</strong>
                 </li>
                 <ul>
                   <li>
-                    (continually vs periodically based on preference) Review my
-                    data, rate my health, note good health and improvements,
-                    spotlight areas that need attention, help me identify what
-                    to focus on first
+                    Continually or periodically reviews the patient’s data and
+                    care they’ve received, notes positive health trends and
+                    improvements, spotlights areas that need attention, helps
+                    the patient identify what to prioritize
                   </li>
                   <li>
-                    When do I need to get my next physical, eye exam, dentist
-                    appointment, flu shot, cancer screening, etc?
+                    Examples: When do I need to schedule my next physical, eye
+                    exam, dentist appointment, flu shot, cancer screening, etc?
                   </li>
                 </ul>
               </ul>
 
-              <div className="margin-auto">
+              <div>
+                <Image
+                  src="/images/features/healthcare-ai/sketch-ai-bench.jpg"
+                  className="image--max-width image--center margin-top--double"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
+
+              <div>
+                <Image
+                  src="/images/features/healthcare-ai/sketch-ai-bedroom.jpg"
+                  className="image--max-width image--center margin-top--double"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
+
+              <div>
+                <Image
+                  src="/images/features/healthcare-ai/sketch-ai-encounter.jpg"
+                  className="image--max-width image--center margin-top--double"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
+
+              <div>
                 <Image
                   src="/images/features/healthcare-ai/sketch-ai-train.jpg"
-                  className="image--max-width-med image--center"
+                  className="image--max-width image--center margin-top--double"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
@@ -514,79 +501,63 @@ class HealthcareAIFeature extends Component {
 
               <ul>
                 <li>
-                  <strong>Misinformation at scale</strong> - Stack Overflow
+                  <strong>Misinformation at scale</strong>: Stack Overflow
                   banned ChatGPT answers as it got swamped with quality control
                   at scale. ChatGPT makes it incredibly easy to post an answer,
                   but the non-zero error rate is a real problem for quality
-                  control. There’s no way to easily check ChatGPT’s answers
+                  control. There’s no easy way to check ChatGPT’s answers
                   without doing the research manually. This could become a
                   serious problem if everyone uses a similar tool for health
                   answers.
                 </li>
                 <li>
-                  <strong>
-                    Ability for ChatGPT to sound truer than it is?
-                  </strong>{' '}
-                  - Psychology might suggest that people are more susceptible to
-                  believe information shared in a more conversational tone? (we
-                  need to research this - but paired with the first problem,
-                  this could be harmful)
-                </li>
-                <li>
-                  <strong>Harmful information</strong> - Molotov Cocktail
-                  question can still be achieved by phrasing as a{' '}
+                  <strong>Harmful information</strong>: “Molotov Cocktail
+                  questions” can still be achieved by phrasing as a{' '}
                   <a href="https://twitter.com/zswitten/status/1598197802676682752">
                     print function question
                   </a>
-                  , I assume similar information about how to effectively commit
-                  suicide could be easily obtained.
+                  . Presumably similar information about how to effectively
+                  commit suicide, for example, could be easily obtained.
                 </li>
                 <li>
-                  <strong>Perpetuating harmful biases, conventions, etc</strong>{' '}
-                  - The AI will provide answers based on the material it is
-                  trained on. If that material is biased, non-inclusive, etc,
-                  the AI’s answers will be the same. For example, humans
-                  depicted in MidJourney are typically white unless specified
-                  otherwise. When asked to portray a telehealth call, MidJourney
-                  created doctors that were all white and three out of four were
-                  male.
+                  <strong>Perpetuating harmful biases, conventions, etc</strong>
+                  : The AI will provide answers based on the material it is
+                  trained on. If the material is biased or non-inclusive, the
+                  AI’s answers will reflect that. For example, when asked to
+                  portray a telehealth call, MidJourney generated four all-white
+                  doctors, three of whom were male.
                 </li>
                 <li>
-                  <strong>Impact on human workers</strong> - “The cost of
-                  intelligence is going down” – Rob McCready. AI could replace
-                  writers, artists, musicians, and generally all white collar
-                  jobs in the long run. Ideally, AI could augment these people’s
-                  work by helping generate a starting point that the human can
-                  perfect or to help people brainstorm a diversity of concepts,
-                  however this new technology provides the opportunity for these
-                  creatives to lose their jobs and for their work to be taken
-                  without compensation to train AI to do the work.
+                  <strong>Impact on human workers</strong>: In the long run, AI
+                  could replace writers, artists, musicians, and many
+                  white-collar jobs. Ideally, AI could augment these people’s
+                  work by generating a starting point that humans can perfect or
+                  brainstorming initial concepts. However, this new technology
+                  may ultimately fill jobs and put humans out of work.
                 </li>
                 <li>
-                  <strong>Property and ownership issues</strong> - Many have
-                  voiced the problem that image generation AI is training off of
-                  art that it does not own. Some artists have seen their
-                  personal style and even their signature show up in Stable
-                  Diffusion. See{' '}
+                  <strong>Property and ownership issues</strong>: Many have
+                  raised the issue that image generation AI is trained on art
+                  that it does not own. Some artists have seen their personal
+                  style and even their signature show up in Stable Diffusion (
                   <a href="https://www.cbc.ca/radio/asithappens/artificial-intelligence-ai-art-ethics-greg-rutkowski-1.6679466">
                     article
                   </a>
-                  .
+                  ).
                 </li>
                 <li>
                   <strong>
                     Our relationship with technology and each other
-                  </strong>{' '}
-                  - Human immersion into tech (smartphones and social media) has
-                  not always had a positive impact on health (ex: mental health
-                  of the younger generation in particular). How can we make sure
-                  we’re not sprinting into more negative side effects in the
-                  name of “progress.” How will an increase of artificial
-                  intelligence impact human intelligence? Perhaps it will allow
-                  humans to learn and accomplish new things, but it may also
-                  reduce our skill in some areas such as synthesis of
-                  information. We should be intentional about what we might be
-                  losing.
+                  </strong>
+                  : Human immersion into technology has not always had a
+                  positive impact on health (e.g., social media’s impact on
+                  mental health). How can we make sure we’re not running blindly
+                  into more negative effects in the name of “progress?” How will
+                  an increase of artificial intelligence impact human
+                  intelligence? It may allow humans to learn and accomplish new
+                  things, but it may also reduce our skills in other areas, like
+                  synthesis of information. It’s important to closely examine
+                  what we might be losing.
                 </li>
               </ul>
             </div>
@@ -605,15 +576,12 @@ class HealthcareAIFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>
-                <h2 className="header--xl text--center">Author</h2>
+                <h2 className="header--xl text--center">Authors</h2>
                 <Author name="Sharon Lee" />
+                <Author name="Juhan Sonin" />
                 <div className="pad-vertical--double">
-                  <h3 className="header--md">Contributors</h3>
-                  <p>
-                    Juhan Sonin
-                    <br />
-                    Eric Benoit
-                  </p>
+                  <h3 className="header--md">Contributor</h3>
+                  <p>Eric Benoit</p>
                 </div>
               </div>
             </div>

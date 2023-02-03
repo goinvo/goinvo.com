@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Craig McGinley <craig@goinvo.com>",
   "dependencies": {
+    "@gatsbyjs/reach-router": "^2.0.1",
     "@mdx-js/mdx": "^0.15.6",
     "@mdx-js/tag": "^0.15.6",
     "airtable": "^0.10.1",

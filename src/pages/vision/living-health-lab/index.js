@@ -24,13 +24,29 @@ class LivingHealthLabFeature extends Component {
   constructor(props) {
     super(props)
 
+    // Comic Carousel
     this.state = {
       currentSlide: 0,
     }
 
     this.carousel = React.createRef()
+
+    // Paper Prototype Carousel
+    this.state = {
+      currentPaperSlide: 0,
+    }
+
+    this.carouselPaper = React.createRef()
+
+    // Digital Design Carousel
+    this.state = {
+      currentDigitalSlide: 0,
+    }
+
+    this.carouselDigital = React.createRef()
   }
 
+  // Comic Carousel
   afterComicSlideChange = currentSlide => {
     this.setState({ currentSlide })
   }
@@ -41,8 +57,32 @@ class LivingHealthLabFeature extends Component {
     })
   }
 
+  // Paper Prototype Carousel
+  afterPaperSlideChange = currentPaperSlide => {
+    this.setState({ currentPaperSlide })
+  }
+
+  goToPaperSlide = i => {
+    this.setState({ currentPaperSlide: i }, () => {
+      this.carouselPaper.current.slickGoTo(i, true)
+    })
+  }
+
+  // Digital Design Carousel
+  afterDigitalSlideChange = currentDigitalSlide => {
+    this.setState({ currentDigitalSlide })
+  }
+
+  goToDigitalSlide = i => {
+    this.setState({ currentDigitalSlide: i }, () => {
+      this.carouselDigital.current.slickGoTo(i, true)
+    })
+  }
+
   render() {
     const comicSlides = Array.from(Array(6), (x, i) => i)
+    const paperSlides = Array.from(Array(3), (x, i) => i)
+    const digitalSlides = Array.from(Array(3), (x, i) => i)
 
     return (
       <Layout frontmatter={frontmatter}>
@@ -117,6 +157,13 @@ class LivingHealthLabFeature extends Component {
               their data or offer insights to improve everyday health.
               <Reference>1</Reference>
             </p>
+
+            <Image
+              src="/images/features/living-health-lab/lhl-pain-infoviz.jpg"
+              className="image--max-width"
+              sizes={config.sizes.fullInsideMaxWidth}
+            />
+
             <p>
               Out of all chronic pain patients, one in three individuals faces
               frequent limitations in daily life due to the severity and
@@ -200,18 +247,10 @@ class LivingHealthLabFeature extends Component {
             <h2 className="header--lg margin-top--trip">Design</h2>
 
             <Image
-              src="/images/features/living-health-lab/timeline.png"
+              src="/images/features/living-health-lab/LHL_project_timeline.jpg"
               className="image--max-width"
               sizes={config.sizes.fullInsideMaxWidth}
             />
-            <p>
-              Living Health Lab is an open source project in the early stages of
-              the design process. In Stage 1, we completed an initial round of
-              research into existing health trackers and personal science,
-              defined our design principles based on research, began visualizing
-              the patient experience, and explored key challenges. We will
-              continue to update this feature as we move through each stage.
-            </p>
 
             <h3 className="header--md">1) Design Principles</h3>
 
@@ -366,9 +405,230 @@ class LivingHealthLabFeature extends Component {
               ></button>
             </div>
 
-            <h3 className="header--md">3) Key Challenges</h3>
+            <h3 className="header--md">3) Paper Prototype: The Workbook</h3>
 
-            <h4>Helping the patient set up the right exploration</h4>
+            <p>
+              In Stage 2, we realized we needed to test our approach firsthand.
+              We took our learnings from Stage 1 and created a printable version
+              of Living Health Lab. This workbook guides the user towards the
+              exploration that best suits their needs based on our research
+              (read more about the Health Journey below). It helps the person
+              refine what to track, when, for how long, and who can help keep
+              them accountable. The workbook includes space to record data
+              manually followed by a short guide for reflecting on what they’ve
+              learned after the exploration is over. Four of us on the team used
+              the workbook to conduct our own self-tracking experiments. With
+              our own experiences and feedback from colleagues, we refined the
+              draft into this current iteration.
+            </p>
+
+            <SlickCarousel
+              ref={this.carouselPaper}
+              infinite={false}
+              dots={false}
+              arrows={false}
+              afterChange={this.afterPaperSlideChange}
+            >
+              {paperSlides.map((n, i) => {
+                return (
+                  <div key={n}>
+                    <div className="lhl-image-max-width">
+                      <Image
+                        src={`/images/features/living-health-lab/lhl_paper_test_${i +
+                          1}.jpg`}
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMaxWidth}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
+            </SlickCarousel>
+            <div className="lhl-paper-nav">
+              <button
+                className={`button button--link lhl-paper-prev ${
+                  this.state.currentPaperSlide === 0 ? 'disabled' : ''
+                }`}
+                onClick={() =>
+                  this.goToPaperSlide(this.state.currentPaperSlide - 1)
+                }
+              ></button>
+              {paperSlides.map((n, i) => {
+                return (
+                  <button
+                    key={n}
+                    className={`button button--link lhl-paper-button ${
+                      this.state.currentPaperSlide === i ? 'active' : ''
+                    }`}
+                    onClick={() => this.goToPaperSlide(i)}
+                  >
+                    <Image
+                      src={`/images/features/living-health-lab/lhl_paper_test_${i +
+                        1}.jpg`}
+                      className="image--max-width"
+                      sizes={config.sizes.fullInsideMaxWidth}
+                    />
+                  </button>
+                )
+              })}
+              <button
+                className={`button button--link lhl-paper-next ${
+                  this.state.currentPaperSlide === paperSlides.length - 1
+                    ? 'disabled'
+                    : ''
+                }`}
+                onClick={() =>
+                  this.goToPaperSlide(this.state.currentPaperSlide + 1)
+                }
+              ></button>
+            </div>
+
+            <p>
+              <strong>Early results</strong>
+              <br />
+              Our experiments with the workbook taught all of us more about our
+              health. One member of our team realized their health condition was
+              more serious than they had thought and decided to seek
+              professional help. Another discovered a healthy habit that
+              significantly reduced pain and has been living with less pain
+              since. The time-bound nature of the exploration made it more
+              doable as expected, and the planned group check-in at its
+              conclusion created additional accountability.
+            </p>
+
+            <p>
+              However, the experience was also far from perfect. For many of us,
+              it was hard to keep track of the physical paper and remember to
+              log our data daily. Even with the guide, it can still be
+              challenging to find creative ways to test hypotheses in our
+              fast-paced lives. In general, it is challenging to take the
+              initiative to focus on our health and prioritize this kind of
+              exploration.
+            </p>
+
+            <p>How might we address these problems in the future?</p>
+
+            <ol>
+              <li>
+                Integration of technology: a conveniently-timed text prompt
+                might improve consistency of day-to-day tracking.
+              </li>
+              <li>
+                Professional Support: increasing personal motivation to
+                prioritize health and utilize the workbook can be difficult.
+                Ideally, a professional (e.g., health coach or therapist) could
+                use Living Health Lab to guide the patient through the process.
+              </li>
+              <li>
+                Accessibility: we can also make the workbook easier to use by
+                lowering the reading level, simplifying the workbook further, or
+                translating it into other languages. We will continue to
+                brainstorm new ways to make personal science more accessible.
+              </li>
+            </ol>
+
+            <p>
+              <strong>Try it out</strong>
+              <br />
+              This is still an early version, and we recognize that it is not
+              fully accessible to all as it requires comfort level with science
+              and significant self-motivation and bandwidth to use on one’s own.
+              However, we’re excited to share the workbook with you all. Please
+              take a look and share your feedback with us at{' '}
+              <a href="mailto:LivingHealthLab@goinvo.com">
+                LivingHealthLab@goinvo.com
+              </a>
+            </p>
+
+            <div>
+              <a href="" className="button button--primary">
+                View The Workbook
+              </a>
+            </div>
+
+            <h3 className="header--md">4) Next Steps: Digital Design</h3>
+
+            <p>
+              In Stage 2, we mapped out logic flows and the information
+              architecture of Living Health Lab as a native or web app, and we
+              began mocking up the screens.
+            </p>
+
+            <SlickCarousel
+              ref={this.carouselDigital}
+              infinite={false}
+              dots={false}
+              arrows={false}
+              afterChange={this.afterDigitalSlideChange}
+            >
+              {digitalSlides.map((n, i) => {
+                return (
+                  <div key={n}>
+                    <div className="lhl-image-max-width">
+                      <Image
+                        src={`/images/features/living-health-lab/lhl_design_updates_${i +
+                          1}.jpg`}
+                        className="image--max-width"
+                        sizes={config.sizes.fullInsideMaxWidth}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
+            </SlickCarousel>
+            <div className="lhl-digital-nav">
+              <button
+                className={`button button--link lhl-digital-prev ${
+                  this.state.currentDigitalSlide === 0 ? 'disabled' : ''
+                }`}
+                onClick={() =>
+                  this.goToDigitalSlide(this.state.currentDigitalSlide - 1)
+                }
+              ></button>
+              {digitalSlides.map((n, i) => {
+                return (
+                  <button
+                    key={n}
+                    className={`button button--link lhl-digital-button ${
+                      this.state.currentDigitalSlide === i ? 'active' : ''
+                    }`}
+                    onClick={() => this.goToDigitalSlide(i)}
+                  >
+                    <Image
+                      src={`/images/features/living-health-lab/lhl_design_updates_${i +
+                        1}.jpg`}
+                      className="image--max-width"
+                      sizes={config.sizes.fullInsideMaxWidth}
+                    />
+                  </button>
+                )
+              })}
+              <button
+                className={`button button--link lhl-digital-next ${
+                  this.state.currentDigitalSlide === digitalSlides.length - 1
+                    ? 'disabled'
+                    : ''
+                }`}
+                onClick={() =>
+                  this.goToDigitalSlide(this.state.currentDigitalSlide + 1)
+                }
+              ></button>
+            </div>
+
+            <p>
+              Making personal science accessible is no small task. Here are the
+              top four challenges with this type of digital service based on our
+              research and review of similar tools:
+            </p>
+
+            <ul>
+              <li>a) Helping the patient set up the right exploration</li>
+              <li>b) Reducing the Tracking Burden</li>
+              <li>c) Making Personal Science Accessible and Understandable</li>
+              <li>d) Providing Actionable Insights and Appropriate Analysis</li>
+            </ul>
+
+            <h4>a) Helping the patient set up the right exploration</h4>
             <p>
               Tracking a wide range of factors without clear goals runs the risk
               of overburdening; this is why it is critical to ensure that each
@@ -408,25 +668,7 @@ class LivingHealthLabFeature extends Component {
               <sup>,</sup>
               <Reference>8</Reference>
             </p>
-            <p>
-              The Health Journey consists of three phases: Notice, Investigate,
-              Test. Each phase uses personal science, but the exploration design
-              and analysis method depend on which phase the patient is in.
-              Explorations within each phase serve different purposes. For
-              example, if the patient is in the Investigate phase, Living Health
-              Lab will help them set up an observational study to investigate
-              relationships between factors and visualize the results through
-              correlation analysis. However, if Living Health Lab analyzes a
-              patient’s goals and directs them to the Test phase, they will
-              instead conduct a self-experiment to create space for practicing
-              new habits and assess whether this results in meaningful change.
-              Living Health Lab will set up an exploration that aligns with the
-              patient’s goals and uses the appropriate self-tracking strategy,
-              guiding each individual through their own research study to gain
-              insight into patterns, associations, and discoveries surrounding
-              their health.
-            </p>
-            <h4>Reducing the Tracking Burden</h4>
+            <h4>b) Reducing the Tracking Burden</h4>
             <p>
               Any given individual is more likely to reach their tracking goal
               if it fits easily into their life. A purposeful, well-defined
@@ -451,7 +693,7 @@ class LivingHealthLabFeature extends Component {
               this hypothesis and develop additional measures through user
               testing.
             </p>
-            <h4>Making Personal Science Accessible and Understandable</h4>
+            <h4>c) Making Personal Science Accessible and Understandable</h4>
             <p>
               Living Health Lab will use multiple approaches to make the
               experience accessible to a wide range of patients. Assuming that
@@ -463,7 +705,7 @@ class LivingHealthLabFeature extends Component {
               <Reference>11</Reference> Balancing thorough patient education
               with simplicity is a primary challenge that we acknowledge.
             </p>
-            <h4>Providing Actionable Insights and Appropriate Analysis</h4>
+            <h4>d) Providing Actionable Insights and Appropriate Analysis</h4>
             <p>
               Living Health Lab can become a space for patients to engage in
               activities that strengthen their knowledge, skills, attitudes, and
@@ -491,16 +733,6 @@ class LivingHealthLabFeature extends Component {
               exploration, a person can still learn in the process. Ultimately,
               the goal is for Living Health Lab to help patients see their
               health and take action to improve their day-to-day health.
-            </p>
-            <p>
-              At this stage in our project, we have reviewed existing research
-              to identify potential exploration design, analysis, and
-              visualization approaches for the three phases of the Health
-              Journey. Our next steps will be to continue our research and
-              pursue promising avenues through light testing. Take a look at the{' '}
-              <a href="#appendix">Appendix</a> to learn more about the study
-              designs, analysis approaches, and visualization methods that we
-              hope to build upon.
             </p>
 
             <h2 className="header--lg margin-top--trip">
@@ -554,10 +786,15 @@ class LivingHealthLabFeature extends Component {
               dispensing this advice is rarely sufficient in effecting change.
               So how can we set people up for success in each person’s unique
               context? Providing concrete, actionable steps based on their lived
-              experience is the key. Living Health Lab takes the recommendation
-              to eat better and prompts the individual to determine the
-              specifics of what that looks like for them. These guided
-              self-tracking strategies give structure to the process of
+              experience is the key. In several observational studies and
+              clinical trials, non-medicine approaches like exercise,
+              mindfulness, and mind-body practices have demonstrated improvement
+              in chronic pain experienced by people (see appendix i -
+              Non-medicine Pain Relief Research Summary). Our work builds on
+              these findings to apply it in real world terms. Living Health Lab
+              takes the recommendation to eat better and prompts the individual
+              to determine the specifics of what that looks like for them. These
+              guided self-tracking strategies give structure to the process of
               watching, measuring, and investigating choices. Living Health Lab
               will show people how capable they are of taking control of their
               own health.
@@ -610,6 +847,14 @@ class LivingHealthLabFeature extends Component {
             <div className="max-width pad-all">
               <div id="appendix">
                 <h2 className="header--lg text--center">Appendix</h2>
+
+                <h2 className="header--lg margin-bottom--none">
+                  i - Non-medicine Pain Relief
+                </h2>
+
+                <h2 className="header--lg margin-bottom--none">
+                  ii - Research Table
+                </h2>
                 <iframe
                   width="100%"
                   height="600px"
@@ -640,6 +885,12 @@ class LivingHealthLabFeature extends Component {
             <Author name="Megan Hirsch" />
             <Author name="Chloe Ma" />
             <Author name="Samantha Wuu" />
+            <Author name="Arpna Ghanshani" />
+
+            <div className="pad-vertical--double">
+              <h3 className="header--md">Contributor</h3>
+              <p>Jenny Yi</p>
+            </div>
 
             <div className="margin-top--trip">
               <Divider />

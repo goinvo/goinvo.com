@@ -235,51 +235,62 @@ class LivingHealthLabFeature extends Component {
               seek answers to their own difficult health questions and concerns
               through five key actions of self-research<Reference>5</Reference>:
             </p>
-            <ul className="list--unstyled list-steps">
-              <li>
-                <Image
-                  src="/images/features/living-health-lab/step-1.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
-                />
-                1. <b>Question</b> experiences, emotions, observations about
-                one’s own life
-              </li>
-              <li>
-                <Image
-                  src="/images/features/living-health-lab/step-2.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
-                />
-                2. <b>Design</b> the exploration
-              </li>
-              <li>
-                <Image
-                  src="/images/features/living-health-lab/step-3.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
-                />
-                3. <b>Observe</b> the data collected, manually self-reported or
-                collected by smart devices
-              </li>
-              <li>
-                <Image
-                  src="/images/features/living-health-lab/step-4.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
-                />
-                4. <b>Reason</b> through the findings
-              </li>
-              <li>
-                <Image
-                  src="/images/features/living-health-lab/step-5.png"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
-                />
-                5. <b>Discover</b> practical actions to improve daily life and
-                share with others
-              </li>
-            </ul>
+
+            <div className="pure-g margin-vertical--double">
+              <div className="pure-u-1-2 pure-u-lg-1-5">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
+                  <Image
+                    src="/images/features/living-health-lab/step-1-b.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  1. <b>Question</b> experiences, emotions, observations about
+                  one’s own life
+                </div>
+              </div>
+              <div className="pure-u-1-2 pure-u-lg-1-5">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
+                  <Image
+                    src="/images/features/living-health-lab/step-2-b.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  2. <b>Design</b> the exploration
+                </div>
+              </div>
+              <div className="pure-u-1-2 pure-u-lg-1-5">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
+                  <Image
+                    src="/images/features/living-health-lab/step-3-b.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  3. <b>Observe</b> the data collected, manually self-reported
+                  or collected by smart devices
+                </div>
+              </div>
+              <div className="pure-u-1-2 pure-u-lg-1-5">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
+                  <Image
+                    src="/images/features/living-health-lab/step-4-b.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  4. <b>Reason</b> through the findings
+                </div>
+              </div>
+              <div className="pure-u-1-2 pure-u-lg-1-5">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
+                  <Image
+                    src="/images/features/living-health-lab/step-5-b.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  5. <b>Discover</b> practical actions to improve daily life and
+                  share with others
+                </div>
+              </div>
+            </div>
             <p>
               In our review of published work in the fields of personal science
               and self-tracking, we found that this approach has helped

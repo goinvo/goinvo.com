@@ -11,7 +11,6 @@ import References from '../../../components/references'
 import Reference from '../../../components/reference'
 import Divider from '../../../components/divider'
 
-import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -212,11 +211,66 @@ class LivingHealthLabFeature extends Component {
               <Reference>1</Reference>
             </p>
 
-            <Image
-              src="/images/features/living-health-lab/lhl-pain-infoviz.jpg"
-              className="image--max-width"
-              sizes={config.sizes.fullInsideMaxWidth}
-            />
+            <div className="max-width">
+              <div className="pure-g button-group margin-bottom">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="margin-top--double">
+                    <Image
+                      src="/images/features/living-health-lab/viz_one_in_five.png"
+                      className="image--max-width"
+                      sizes={config.sizes.fullInsideMaxWidth}
+                    />
+                  </div>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="margin-top--double content-padding">
+                    <h2 className="header--lg margin-top--trip">
+                      At least 1 in 5 adults in the U.S. live with chronic pain
+                      <Reference>W</Reference>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="pure-g margin-vertical--double">
+              <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding text--center">
+                  <Image
+                    src="/images/features/living-health-lab/viz_migraines.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  <span className="text--xl">5</span> million experience{' '}
+                  <b>daily migraines</b>
+                  <Reference>X</Reference>
+                </div>
+              </div>
+              <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding text--center">
+                  <Image
+                    src="/images/features/living-health-lab/viz_arthritis.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  <span className="text--xl">15</span> million experience{' '}
+                  <b>arthritis pain</b>
+                  <Reference>Y</Reference>
+                </div>
+              </div>
+              <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
+                <div className="max-width--48 max-width--60--only-lg margin-auto content-padding text--center">
+                  <Image
+                    src="/images/features/living-health-lab/viz_ibs.png"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
+                  />
+                  <span className="text--xl">24-45</span> million experience{' '}
+                  <b>IBS symptoms</b>
+                  <Reference>Z</Reference>
+                </div>
+              </div>
+            </div>
 
             <p>
               Out of all chronic pain patients, one in three individuals faces
@@ -614,6 +668,7 @@ class LivingHealthLabFeature extends Component {
                 href="https://www.dropbox.com/s/rw3u29f73v0wfpk/living-health-lab-workbook.pdf?dl=0"
                 className="button button--primary"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 View The Workbook
               </a>

@@ -26,7 +26,8 @@
 
   .lhl-comic-nav,
   .lhl-paper-nav,
-  .lhl-digital-nav {
+  .lhl-digital-nav,
+  .lhl-appendix-nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +35,8 @@
 
   .lhl-comic-button,
   .lhl-paper-button,
-  .lhl-digital-button {
+  .lhl-digital-button,
+  .lhl-appendix-button {
     max-width: 100px;
     padding: 2px;
     margin-right: 5px;
@@ -53,7 +55,9 @@
   .lhl-paper-prev,
   .lhl-paper-next,
   .lhl-digital-prev,
-  .lhl-digital-next {
+  .lhl-digital-next,
+  .lhl-appendix-prev,
+  .lhl-appendix-next {
     width: 40px;
     height: 40px;
     opacity: 1;
@@ -79,7 +83,8 @@
 
   .lhl-comic-prev,
   .lhl-paper-prev,
-  .lhl-digital-prev {
+  .lhl-digital-prev,
+  .lhl-appendix-prev {
     margin-right: 10px;
 
     &:before {
@@ -89,7 +94,8 @@
 
   .lhl-comic-next,
   .lhl-paper-next,
-  .lhl-digital-next {
+  .lhl-digital-next,
+  .lhl-appendix-next {
     margin-left: 10px;
 
     &:before {

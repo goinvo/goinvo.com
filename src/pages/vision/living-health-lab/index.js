@@ -26,29 +26,14 @@ class LivingHealthLabFeature extends Component {
 
     this.state = {
       currentComicSlide: 0,
-    }
-
-    this.carouselComic = React.createRef()
-
-    // Paper Prototype Carousel
-    this.state = {
       currentPaperSlide: 0,
-    }
-
-    this.carouselPaper = React.createRef()
-
-    // Digital Design Carousel
-    this.state = {
       currentDigitalSlide: 0,
-    }
-
-    this.carouselDigital = React.createRef()
-
-    // Appendix Carousel
-    this.state = {
       currentAppendixSlide: 0,
     }
 
+    this.carouselComic = React.createRef()
+    this.carouselPaper = React.createRef()
+    this.carouselDigital = React.createRef()
     this.carouselAppendix = React.createRef()
   }
 
@@ -113,7 +98,6 @@ class LivingHealthLabFeature extends Component {
         <div className="living-health-lab">
           <Hero image={frontmatter.heroImage} position={'top center'} isLarge />
           <div className="max-width pad-all">
-            <p className="margin-bottom--none">Draft v.02, 10.Feb.23</p>
             <h1 className="header--xl">Living Health Lab</h1>
 
             <h4>
@@ -490,9 +474,9 @@ class LivingHealthLabFeature extends Component {
                 )
               })}
             </SlickCarousel>
-            <div className="lhl-comic-nav">
+            <div className="lhl-carousel-nav">
               <button
-                className={`button button--link lhl-comic-prev ${
+                className={`button button--link lhl-carousel-prev ${
                   this.state.currentComicSlide === 0 ? 'disabled' : ''
                 }`}
                 onClick={() =>
@@ -503,7 +487,7 @@ class LivingHealthLabFeature extends Component {
                 return (
                   <button
                     key={n}
-                    className={`button button--link lhl-comic-button ${
+                    className={`button button--link lhl-carousel-button ${
                       this.state.currentComicSlide === i ? 'active' : ''
                     }`}
                     onClick={() => this.goToComicSlide(i)}
@@ -518,7 +502,7 @@ class LivingHealthLabFeature extends Component {
                 )
               })}
               <button
-                className={`button button--link lhl-comic-next ${
+                className={`button button--link lhl-carousel-next ${
                   this.state.currentComicSlide === comicSlides.length - 1
                     ? 'disabled'
                     : ''
@@ -568,9 +552,9 @@ class LivingHealthLabFeature extends Component {
                 )
               })}
             </SlickCarousel>
-            <div className="lhl-paper-nav">
+            <div className="lhl-carousel-nav">
               <button
-                className={`button button--link lhl-paper-prev ${
+                className={`button button--link lhl-carousel-prev ${
                   this.state.currentPaperSlide === 0 ? 'disabled' : ''
                 }`}
                 onClick={() =>
@@ -581,7 +565,7 @@ class LivingHealthLabFeature extends Component {
                 return (
                   <button
                     key={n}
-                    className={`button button--link lhl-paper-button ${
+                    className={`button button--link lhl-carousel-button ${
                       this.state.currentPaperSlide === i ? 'active' : ''
                     }`}
                     onClick={() => this.goToPaperSlide(i)}
@@ -596,7 +580,7 @@ class LivingHealthLabFeature extends Component {
                 )
               })}
               <button
-                className={`button button--link lhl-paper-next ${
+                className={`button button--link lhl-carousel-next ${
                   this.state.currentPaperSlide === paperSlides.length - 1
                     ? 'disabled'
                     : ''
@@ -705,9 +689,9 @@ class LivingHealthLabFeature extends Component {
                 )
               })}
             </SlickCarousel>
-            <div className="lhl-digital-nav">
+            <div className="lhl-carousel-nav">
               <button
-                className={`button button--link lhl-digital-prev ${
+                className={`button button--link lhl-carousel-prev ${
                   this.state.currentDigitalSlide === 0 ? 'disabled' : ''
                 }`}
                 onClick={() =>
@@ -718,7 +702,7 @@ class LivingHealthLabFeature extends Component {
                 return (
                   <button
                     key={n}
-                    className={`button button--link lhl-digital-button ${
+                    className={`button button--link lhl-carousel-button ${
                       this.state.currentDigitalSlide === i ? 'active' : ''
                     }`}
                     onClick={() => this.goToDigitalSlide(i)}
@@ -733,7 +717,7 @@ class LivingHealthLabFeature extends Component {
                 )
               })}
               <button
-                className={`button button--link lhl-digital-next ${
+                className={`button button--link lhl-carousel-next ${
                   this.state.currentDigitalSlide === digitalSlides.length - 1
                     ? 'disabled'
                     : ''
@@ -1003,9 +987,9 @@ class LivingHealthLabFeature extends Component {
                     )
                   })}
                 </SlickCarousel>
-                <div className="lhl-appendix-nav">
+                <div className="lhl-carousel-nav">
                   <button
-                    className={`button button--link lhl-appendix-prev ${
+                    className={`button button--link lhl-carousel-prev ${
                       this.state.currentAppendixSlide === 0 ? 'disabled' : ''
                     }`}
                     onClick={() =>
@@ -1018,7 +1002,7 @@ class LivingHealthLabFeature extends Component {
                     return (
                       <button
                         key={n}
-                        className={`button button--link lhl-appendix-button ${
+                        className={`button button--link lhl-carousel-button ${
                           this.state.currentAppendixSlide === i ? 'active' : ''
                         }`}
                         onClick={() => this.goToAppendixSlide(i)}
@@ -1033,7 +1017,7 @@ class LivingHealthLabFeature extends Component {
                     )
                   })}
                   <button
-                    className={`button button--link lhl-appendix-next ${
+                    className={`button button--link lhl-carousel-next ${
                       this.state.currentAppendixSlide ===
                       appendixSlides.length - 1
                         ? 'disabled'

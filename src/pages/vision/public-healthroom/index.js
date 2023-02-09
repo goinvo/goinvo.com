@@ -137,11 +137,15 @@ const prototypeFrames = [
   {
     id: 23,
     image: 'blood-vision',
+    backgroundPosition: 'left -40% top -5vw',
+    transform: 'scale(1.8)',
   },
   {
     id: 24,
     image: 'blood-vision',
-    overlay: 'default',
+    backgroundPosition: 'left -66% top -3vw',
+    transform: 'scale(1.8)',
+    overlay: 'enter',
   },
   {
     id: 25,
@@ -292,9 +296,7 @@ class PublicHealthroom extends Component {
     return (
       <div
         className={`public-healthroom__overlay-container ${
-          id === 24 || id === 28
-            ? 'public-healthroom__overlay-container--dimmed'
-            : ''
+          id === 28 ? 'public-healthroom__overlay-container--dimmed' : ''
         }`}
       >
         <div
@@ -336,7 +338,6 @@ class PublicHealthroom extends Component {
             id === 8 ||
             id === 10 ||
             id === 15 ||
-            id === 24 ||
             id === 26 ||
             id === 28
               ? 'public-healthroom__overlay-image--visible'
@@ -351,12 +352,12 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__overlay-image public-healthroom__message-1 ${
+          className={`public-healthroom__overlay-image public-healthroom__vision-results ${
             id === 24 ? 'public-healthroom__overlay-image--visible' : ''
           }`}
         >
           <Image
-            src="/images/features/public-healthroom/message-1.png"
+            src="/images/features/public-healthroom/vision-results.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
           />

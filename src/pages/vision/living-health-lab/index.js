@@ -113,6 +113,7 @@ class LivingHealthLabFeature extends Component {
         <div className="living-health-lab">
           <Hero image={frontmatter.heroImage} position={'top center'} isLarge />
           <div className="max-width pad-all">
+            <p className="margin-bottom--none">Draft v.02, 10.Feb.23</p>
             <h1 className="header--xl">Living Health Lab</h1>
 
             <h4>

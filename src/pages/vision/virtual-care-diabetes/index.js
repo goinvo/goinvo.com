@@ -32,10 +32,10 @@ class VirtualCareDiabetesFeature extends Component {
               <p>
                 While telehealth in various forms has been a part of medical
                 care for well over a decade, it has, until recently, received
-                only limited use. Across the U.S. health system, telehealth
-                visits were minimal, representing less than 1% of encounters
-                across all specialties when looking at Medicare telehealth
-                visits.
+                only limited use. Prior to the pandemic, across the U.S. health
+                system, telehealth visits were minimal, representing less than
+                1% of encounters across all specialties when looking at Medicare
+                telehealth visits.
                 <sup>
                   <a href="#references">1</a>
                 </sup>{' '}

@@ -1,5 +1,16 @@
 [
   {
+    "id": "virtual-care-diabetes",
+    "title": "Virtual Care Diabetes",
+    "date": "Apr.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "",
+    "image": "/images/features/virtual-care-diabetes/virtual-care-diabetes-hero.jpg",
+    "link": "/vision/virtual-care-diabetes/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "public-healthroom",
     "title": "From Public Restroom to Public Healthroom",
     "date": "Mar.2023",

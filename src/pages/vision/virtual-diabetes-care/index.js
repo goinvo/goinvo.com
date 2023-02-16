@@ -10,19 +10,19 @@ import References from '../../../components/references'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Virtual Care Diabetes - GoInvo',
+  metaTitle: 'Virtual Diabetes Care - GoInvo',
   metaDescription:
     'Learn about the benefits of virtual diabetes care, and a hybrid healthcare approach, which combines in-person visits with telehealth.',
   heroImage:
     '/images/features/virtual-care-diabetes/virtual-care-diabetes-hero.jpg',
 }
 
-class VirtualCareDiabetesFeature extends Component {
+class VirtualDiabetesCareFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
-        <div className="virtual-care-diabetes-feature">
+        <div className="virtual-diabetes-care-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">
@@ -615,4 +615,4 @@ class VirtualCareDiabetesFeature extends Component {
   }
 }
 
-export default VirtualCareDiabetesFeature
+export default VirtualDiabetesCareFeature

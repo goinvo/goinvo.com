@@ -1,13 +1,13 @@
 [
   {
-    "id": "virtual-care-diabetes",
-    "title": "Virtual Care Diabetes",
+    "id": "virtual-diabetes-care",
+    "title": "Virtual Diabetes Care",
     "date": "Apr.2023",
     "client": "Feature",
     "categories": ["open-source"],
     "caption": "Learn about the benefits of virtual diabetes care, and a hybrid healthcare approach, which combines in-person visits with telehealth.",
     "image": "/images/features/virtual-care-diabetes/virtual-care-diabetes-hero.jpg",
-    "link": "/vision/virtual-care-diabetes/",
+    "link": "/vision/virtual-diabetes-care/",
     "hiddenWorkPage": true
   },
   {

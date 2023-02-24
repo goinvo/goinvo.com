@@ -211,7 +211,7 @@ class LivingHealthLabFeature extends Component {
                   <div className="margin-top--double content-padding">
                     <h2 className="header--lg margin-top--trip">
                       At least 1 in 5 adults in the U.S. live with chronic pain
-                      <Reference>W</Reference>
+                      <Reference>3</Reference>
                     </h2>
                   </div>
                 </div>
@@ -228,7 +228,7 @@ class LivingHealthLabFeature extends Component {
                   />
                   <span className="text--xl">3</span>% globally experience{' '}
                   <b>chronic daily headaches</b>
-                  <Reference>X</Reference>
+                  <Reference>4</Reference>
                 </div>
               </div>
               <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
@@ -240,7 +240,7 @@ class LivingHealthLabFeature extends Component {
                   />
                   <span className="text--xl">15</span> million experience{' '}
                   <b>arthritis pain</b>
-                  <Reference>Y</Reference>
+                  <Reference>5</Reference>
                 </div>
               </div>
               <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
@@ -252,7 +252,7 @@ class LivingHealthLabFeature extends Component {
                   />
                   <span className="text--xl">24-45</span> million experience{' '}
                   <b>IBS symptoms</b>
-                  <Reference>Z</Reference>
+                  <Reference>6</Reference>
                 </div>
               </div>
             </div>
@@ -266,13 +266,13 @@ class LivingHealthLabFeature extends Component {
               and ER, several trials of different medications, and multiple days
               of missed work due to disability, all of which take a toll on
               their interpersonal relationships, financial stability, and
-              overall quality of life.<Reference>3</Reference> Members of a
+              overall quality of life.<Reference>7</Reference> Members of a
               community called Quantified Self found inspiration in this
               disheartening cycle through a self-tracking approach now known as
               personal science: they became “active investigators” of their own
-              health.<Reference>4</Reference> This method encourages patients to
+              health.<Reference>8</Reference> This method encourages patients to
               seek answers to their own difficult health questions and concerns
-              through five key actions of self-research<Reference>5</Reference>:
+              through five key actions of self-research<Reference>9</Reference>:
             </p>
 
             <div className="pure-g margin-vertical--double">
@@ -336,11 +336,11 @@ class LivingHealthLabFeature extends Component {
               individuals with specific chronic conditions, including patients
               with Parkinson’s disease in identifying personalized sleep and
               medication routines to improve symptoms of rigidity,
-              <Reference>6</Reference> patients with irritable bowel syndrome in
-              determining possible food triggers,<Reference>7</Reference>
+              <Reference>10</Reference> patients with irritable bowel syndrome
+              in determining possible food triggers,<Reference>11</Reference>
               <sup>,</sup>
-              <Reference>8</Reference> and patients trying to understand and
-              better manage their migraines.<Reference>9</Reference> Living
+              <Reference>12</Reference> and patients trying to understand and
+              better manage their migraines.<Reference>13</Reference> Living
               Health Lab’s mission is to build on this research and broadly
               apply the process of personal science to patients with all types
               of health conditions, habits, and concerns. It will help anyone
@@ -750,7 +750,7 @@ class LivingHealthLabFeature extends Component {
               different health concerns and questions, there is no
               one-size-fits-all exploration. Researchers Munson et al. explore
               how crafting the exploration around the patient’s goals leads to
-              the best results.<Reference>10</Reference> These goals can be
+              the best results.<Reference>14</Reference> These goals can be
               distinct from those of their doctor or the intentions of the
               tool’s designers, and they can change over time as the patient
               learns more. Additionally, patients may need support to clarify
@@ -773,13 +773,13 @@ class LivingHealthLabFeature extends Component {
               that’s already been done—we are particularly grateful to those in
               the Quantified Self as well as all the researchers in the patient
               self-tracking space for their foundational work.
-              <Reference>4</Reference>
-              <sup>,</sup>
-              <Reference>10</Reference>
-              <sup>,</sup>
-              <Reference>7</Reference>
-              <sup>,</sup>
               <Reference>8</Reference>
+              <sup>,</sup>
+              <Reference>14</Reference>
+              <sup>,</sup>
+              <Reference>11</Reference>
+              <sup>,</sup>
+              <Reference>12</Reference>
             </p>
             <h4>b) Reducing the Tracking Burden</h4>
             <p>
@@ -815,7 +815,7 @@ class LivingHealthLabFeature extends Component {
               more, provide clarity into the process, and integrate animation
               and other visual aids to support understanding. Additionally,
               content should be written at a fifth-grade reading level.
-              <Reference>11</Reference> Balancing thorough patient education
+              <Reference>15</Reference> Balancing thorough patient education
               with simplicity is a primary challenge that we acknowledge.
             </p>
             <h4>d) Providing Actionable Insights and Appropriate Analysis</h4>
@@ -842,7 +842,7 @@ class LivingHealthLabFeature extends Component {
               generation of new ideas for improving their own care; productive
               engagement with clinicians; and providing a sense of agency while
               dealing with the stress of disease and treatment.”
-              <Reference>5</Reference> Regardless of the results for any given
+              <Reference>9</Reference> Regardless of the results for any given
               exploration, a person can still learn in the process. Ultimately,
               the goal is for Living Health Lab to help patients see their
               health and take action to improve their day-to-day health.
@@ -862,7 +862,7 @@ class LivingHealthLabFeature extends Component {
               difficult, like fibromyalgia, arthritis, and migraines. Research
               has shown those with chronic conditions are often the most
               motivated to start the tracking process as any insight can
-              directly affect their day-to-day health.<Reference>7</Reference>{' '}
+              directly affect their day-to-day health.<Reference>11</Reference>{' '}
               Patients who are <b>highly motivated</b> to answer their health
               questions and have <b>much to gain</b> may be the easiest to
               reach, but many others could also benefit from Living Health Lab:
@@ -877,13 +877,13 @@ class LivingHealthLabFeature extends Component {
               their doctors as they “identify new trends, hypothesize about
               symptom contributors, generate action plans, and identify new
               information needs” for chronic condition management and healthy
-              lifestyle promotion.<Reference>9</Reference> This type of
+              lifestyle promotion.<Reference>13</Reference> This type of
               collaboration is most successful when both parties share their
               clearly defined goals. Access to high-quality, patient-generated
               data might free up the office visit to discuss more targeted
               concerns as patients come in to share their findings and receive
               personalized interpretation and direction.
-              <Reference>12</Reference> We see the opportunity for Living Health
+              <Reference>16</Reference> We see the opportunity for Living Health
               Lab to facilitate higher levels of patient engagement in their
               healthcare and make it easier for providers to obtain data on
               their patients’ day-to-day health.
@@ -893,7 +893,7 @@ class LivingHealthLabFeature extends Component {
               understanding their unique, necessary lifestyle changes and the
               ideal way to implement them. Lifestyle changes could prevent one
               out of every three premature deaths related to heart disease,
-              stroke, and chronic lung disease.<Reference>13</Reference> “Eat
+              stroke, and chronic lung disease.<Reference>17</Reference> “Eat
               better,” “Move more,” and “Smoke less” are just a few of the most
               common generic lifestyle recommendations. Though accurate, simply
               dispensing this advice is rarely sufficient in effecting change.
@@ -1095,6 +1095,28 @@ class LivingHealthLabFeature extends Component {
                     'Zelaya CE, Dahlhamer JM, Lucas JW, Connor EM Chronic Pain and High-impact Chronic Pain Among U.S. Adults, 2019. NCHS Data Brief no 390. National Center for Health Statistics. 2020. Accessed June 7, 2022.',
                   link:
                     'https://www.cdc.gov/nchs/products/databriefs/db390.htm#section_1',
+                },
+                {
+                  title:
+                    'Zelaya CE, Dahlhamer JM, Lucas JW, Connor EM. CDC/National Center for Health Statistics. Chronic Pain and High-impact chronic pain among U.S.. adults, 2019. Updated November 4, 2020. Accessed June 26, 2022',
+                  link:
+                    'https://www.cdc.gov/nchs/products/databriefs/db390.htm',
+                },
+                {
+                  title:
+                    'Lj Stovner 1, K Hagen, R Jensen, Z Katsarava, Rb Lipton, Ai Scher, Tj Steiner, J-A Zwart. The global burden of headache: a documentation of headache prevalence and disability worldwide. 2007 Mar;27(3):193-210. doi: 10.1111/j.1468-2982.2007.01288.x.',
+                  link: 'https://pubmed.ncbi.nlm.nih.gov/17381554/',
+                },
+                {
+                  title:
+                    'Centers for Disease Control and Prevention. Joint Pain and Arthritis. Updated April 22, 2022. Accessed June 26, 2022',
+                  link:
+                    'https://www.cdc.gov/arthritis/pain/index.htm#:~:text=Chronic%20pain%20caused%20by%20arthritis,joint%20pain%20related%20to%20arthritis',
+                },
+                {
+                  title:
+                    'International Foundation for Gastrointestinal Disorders. IBS Facts and Statistics. Accessed June 26, 2022',
+                  link: 'https://aboutibs.org/what-is-ibs/facts-about-ibs/',
                 },
                 {
                   title:

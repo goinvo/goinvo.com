@@ -226,7 +226,7 @@ class LivingHealthLabFeature extends Component {
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
                   />
-                  <span className="text--xl">3</span>% globally experience{' '}
+                  <span className="text--xl">5</span>% globally experience{' '}
                   <b>chronic daily headaches</b>
                   <Reference>4</Reference>
                 </div>

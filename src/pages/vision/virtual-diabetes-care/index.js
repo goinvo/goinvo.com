@@ -178,11 +178,11 @@ class VirtualDiabetesCareFeature extends Component {
                   <a href="#references">8</a>
                 </sup>{' '}
                 This type of support has demonstrated an improvement in blood
-                sugar, blood pressure, and weight control for patients.
-                Importantly, this usually requires a person with diabetes to
-                have frequent touch points within a comprehensive health system
-                beyond just the physician, including nurses, diabetes educators,
-                nutritionists, or pharmacists.
+                sugar, blood pressure, and weight control for patients with
+                diabetes. Importantly, this usually requires a person with
+                diabetes to have frequent touch points within a comprehensive
+                health system beyond just the physician, including nurses,
+                diabetes educators, nutritionists, or pharmacists.
               </p>
 
               <div className="margin-auto">
@@ -195,10 +195,13 @@ class VirtualDiabetesCareFeature extends Component {
 
               <p>
                 A key resource in providing care to these individuals is time.
-                In rural areas, the commute time to the nearest doctor is an
-                hour on average. In underserved urban areas, the time to an
-                appointment can be months because of the low physician to
-                patient ratios.
+                In{' '}
+                <a href="https://www.goinvo.com/work/tabeeb-diagnostics">
+                  rural areas
+                </a>
+                , the commute time to the nearest doctor is an hour on average.
+                In underserved urban areas, the time to an appointment can be
+                months because of the low physician to patient ratios.
                 <sup>
                   <a href="#references">9</a>
                 </sup>

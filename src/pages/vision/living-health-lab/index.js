@@ -226,7 +226,7 @@ class LivingHealthLabFeature extends Component {
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
                   />
-                  <span className="text--xl">5</span>% globally experience{' '}
+                  <span className="text--xl">3-4</span>% globally experience{' '}
                   <b>chronic daily headaches</b>
                   <Reference>4</Reference>
                 </div>
@@ -1104,7 +1104,7 @@ class LivingHealthLabFeature extends Component {
                 },
                 {
                   title:
-                    'Lj Stovner 1, K Hagen, R Jensen, Z Katsarava, Rb Lipton, Ai Scher, Tj Steiner, J-A Zwart. The global burden of headache: a documentation of headache prevalence and disability worldwide. 2007 Mar;27(3):193-210. doi: 10.1111/j.1468-2982.2007.01288.x.',
+                    'Stovner Lj, Hagen K, Jensen R, Katsarava Z, Lipton R, Scher A, Steiner T, Zwart JA. The global burden of headache: a documentation of headache prevalence and disability worldwide. 2007 Mar;27(3):193-210. doi: 10.1111/j.1468-2982.2007.01288.x.',
                   link: 'https://pubmed.ncbi.nlm.nih.gov/17381554/',
                 },
                 {

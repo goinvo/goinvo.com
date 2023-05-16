@@ -20,72 +20,108 @@ const frontmatter = {
   heroImage: '/images/features/living-health-lab/hero.jpg',
 }
 
+let carousels = {
+  comic: 'comicCarousel',
+  paper: 'paperCarousel',
+  digital: 'digitalCarousel',
+  appendix: 'appendixCarousel',
+}
+
 class LivingHealthLabFeature extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      currentComicSlide: 0,
-      currentPaperSlide: 0,
-      currentDigitalSlide: 0,
-      currentAppendixSlide: 0,
-    }
+    this.state = {}
 
-    this.carouselComic = React.createRef()
-    this.carouselPaper = React.createRef()
-    this.carouselDigital = React.createRef()
-    this.carouselAppendix = React.createRef()
-  }
+    Object.keys(carousels).forEach(key => {
+      let carouselId = carousels[key]
 
-  // Comic Carousel
-  afterComicSlideChange = currentComicSlide => {
-    this.setState({ currentComicSlide })
-  }
+      this.state[carouselId] = 0
 
-  goToComicSlide = i => {
-    this.setState({ currentComicSlide: i }, () => {
-      this.carouselComic.current.slickGoTo(i, true)
+      this[carouselId] = React.createRef()
     })
   }
 
-  // Paper Prototype Carousel
-  afterPaperSlideChange = currentPaperSlide => {
-    this.setState({ currentPaperSlide })
+  setCarouselSlide = (id, currentSlide) => {
+    let updatedState = {}
+    updatedState[id] = currentSlide
+
+    this.setState(updatedState)
   }
 
-  goToPaperSlide = i => {
-    this.setState({ currentPaperSlide: i }, () => {
-      this.carouselPaper.current.slickGoTo(i, true)
+  goToCarouselSlide = (id, i) => {
+    let updatedState = {}
+    updatedState[id] = i
+
+    this.setState(updatedState, () => {
+      this[id].current.slickGoTo(i, true)
     })
   }
 
-  // Digital Design Carousel
-  afterDigitalSlideChange = currentDigitalSlide => {
-    this.setState({ currentDigitalSlide })
-  }
-
-  goToDigitalSlide = i => {
-    this.setState({ currentDigitalSlide: i }, () => {
-      this.carouselDigital.current.slickGoTo(i, true)
-    })
-  }
-
-  // Appendix Design Carousel
-  afterAppendixSlideChange = currentAppendixSlide => {
-    this.setState({ currentAppendixSlide })
-  }
-
-  goToAppendixSlide = i => {
-    this.setState({ currentAppendixSlide: i }, () => {
-      this.carouselAppendix.current.slickGoTo(i, true)
-    })
+  renderCarousel = (id, slides, path, imageType) => {
+    return (
+      <div>
+        <SlickCarousel
+          ref={this[id]}
+          infinite={false}
+          dots={false}
+          arrows={false}
+          afterChange={i => this.setCarouselSlide(id, i)}
+        >
+          {slides.map((n, i) => {
+            return (
+              <div key={n}>
+                <div className="lhl-image-max-width">
+                  <Image
+                    src={`/images/features/living-health-lab/${path}${i +
+                      1}.${imageType}`}
+                    className="image--max-width"
+                    sizes={config.sizes.fullInsideMaxWidth}
+                  />
+                </div>
+              </div>
+            )
+          })}
+        </SlickCarousel>
+        <div className="lhl-carousel-nav">
+          <button
+            className={`button button--link lhl-carousel-prev ${
+              this.state[id] === 0 ? 'disabled' : ''
+            }`}
+            onClick={() => this.goToCarouselSlide(id, this.state[id] - 1)}
+          ></button>
+          {slides.map((n, i) => {
+            return (
+              <button
+                key={n}
+                className={`button button--link lhl-carousel-button ${
+                  this.state[id] === i ? 'active' : ''
+                }`}
+                onClick={() => this.goToCarouselSlide(id, i)}
+              >
+                <Image
+                  src={`/images/features/living-health-lab/${path}${i +
+                    1}.${imageType}`}
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </button>
+            )
+          })}
+          <button
+            className={`button button--link lhl-carousel-next ${
+              this.state[id] === slides.length - 1 ? 'disabled' : ''
+            }`}
+            onClick={() => this.goToCarouselSlide(id, this.state[id] + 1)}
+          ></button>
+        </div>
+      </div>
+    )
   }
 
   render() {
-    const comicSlides = Array.from(Array(6), (x, i) => i)
-    const paperSlides = Array.from(Array(3), (x, i) => i)
-    const digitalSlides = Array.from(Array(3), (x, i) => i)
-    const appendixSlides = Array.from(Array(3), (x, i) => i)
+    const sixSlides = Array.from(Array(6), (x, i) => i)
+    const threeSlides = Array.from(Array(3), (x, i) => i)
 
     return (
       <Layout frontmatter={frontmatter}>
@@ -452,66 +488,8 @@ class LivingHealthLabFeature extends Component {
               Living Health Lab and begin taking ownership of their health
               through the service.
             </p>
-            <SlickCarousel
-              ref={this.carouselComic}
-              infinite={false}
-              dots={false}
-              arrows={false}
-              afterChange={this.afterComicSlideChange}
-            >
-              {comicSlides.map((n, i) => {
-                return (
-                  <div key={n}>
-                    <div className="lhl-image-max-width">
-                      <Image
-                        src={`/images/features/living-health-lab/comic-${i +
-                          1}.png`}
-                        className="image--max-width"
-                        sizes={config.sizes.fullInsideMaxWidth}
-                      />
-                    </div>
-                  </div>
-                )
-              })}
-            </SlickCarousel>
-            <div className="lhl-carousel-nav">
-              <button
-                className={`button button--link lhl-carousel-prev ${
-                  this.state.currentComicSlide === 0 ? 'disabled' : ''
-                }`}
-                onClick={() =>
-                  this.goToComicSlide(this.state.currentComicSlide - 1)
-                }
-              ></button>
-              {comicSlides.map((n, i) => {
-                return (
-                  <button
-                    key={n}
-                    className={`button button--link lhl-carousel-button ${
-                      this.state.currentComicSlide === i ? 'active' : ''
-                    }`}
-                    onClick={() => this.goToComicSlide(i)}
-                  >
-                    <Image
-                      src={`/images/features/living-health-lab/comic-${i +
-                        1}.png`}
-                      className="image--max-width"
-                      sizes={config.sizes.fullInsideMaxWidth}
-                    />
-                  </button>
-                )
-              })}
-              <button
-                className={`button button--link lhl-carousel-next ${
-                  this.state.currentComicSlide === comicSlides.length - 1
-                    ? 'disabled'
-                    : ''
-                }`}
-                onClick={() =>
-                  this.goToComicSlide(this.state.currentComicSlide + 1)
-                }
-              ></button>
-            </div>
+
+            {this.renderCarousel(carousels.comic, sixSlides, 'comic-', 'png')}
 
             <h3 className="header--md">3) Paper Prototype: The Workbook</h3>
 
@@ -530,66 +508,12 @@ class LivingHealthLabFeature extends Component {
               draft into this current iteration.
             </p>
 
-            <SlickCarousel
-              ref={this.carouselPaper}
-              infinite={false}
-              dots={false}
-              arrows={false}
-              afterChange={this.afterPaperSlideChange}
-            >
-              {paperSlides.map((n, i) => {
-                return (
-                  <div key={n}>
-                    <div className="lhl-image-max-width">
-                      <Image
-                        src={`/images/features/living-health-lab/lhl_paper_test_${i +
-                          1}.jpg`}
-                        className="image--max-width"
-                        sizes={config.sizes.fullInsideMaxWidth}
-                      />
-                    </div>
-                  </div>
-                )
-              })}
-            </SlickCarousel>
-            <div className="lhl-carousel-nav">
-              <button
-                className={`button button--link lhl-carousel-prev ${
-                  this.state.currentPaperSlide === 0 ? 'disabled' : ''
-                }`}
-                onClick={() =>
-                  this.goToPaperSlide(this.state.currentPaperSlide - 1)
-                }
-              ></button>
-              {paperSlides.map((n, i) => {
-                return (
-                  <button
-                    key={n}
-                    className={`button button--link lhl-carousel-button ${
-                      this.state.currentPaperSlide === i ? 'active' : ''
-                    }`}
-                    onClick={() => this.goToPaperSlide(i)}
-                  >
-                    <Image
-                      src={`/images/features/living-health-lab/lhl_paper_test_${i +
-                        1}.jpg`}
-                      className="image--max-width"
-                      sizes={config.sizes.fullInsideMaxWidth}
-                    />
-                  </button>
-                )
-              })}
-              <button
-                className={`button button--link lhl-carousel-next ${
-                  this.state.currentPaperSlide === paperSlides.length - 1
-                    ? 'disabled'
-                    : ''
-                }`}
-                onClick={() =>
-                  this.goToPaperSlide(this.state.currentPaperSlide + 1)
-                }
-              ></button>
-            </div>
+            {this.renderCarousel(
+              carousels.paper,
+              threeSlides,
+              'lhl_paper_test_',
+              'jpg'
+            )}
 
             <p>
               <strong>Early results</strong>
@@ -667,66 +591,12 @@ class LivingHealthLabFeature extends Component {
               began mocking up the screens.
             </p>
 
-            <SlickCarousel
-              ref={this.carouselDigital}
-              infinite={false}
-              dots={false}
-              arrows={false}
-              afterChange={this.afterDigitalSlideChange}
-            >
-              {digitalSlides.map((n, i) => {
-                return (
-                  <div key={n}>
-                    <div className="lhl-image-max-width">
-                      <Image
-                        src={`/images/features/living-health-lab/lhl_design_updates_${i +
-                          1}.jpg`}
-                        className="image--max-width"
-                        sizes={config.sizes.fullInsideMaxWidth}
-                      />
-                    </div>
-                  </div>
-                )
-              })}
-            </SlickCarousel>
-            <div className="lhl-carousel-nav">
-              <button
-                className={`button button--link lhl-carousel-prev ${
-                  this.state.currentDigitalSlide === 0 ? 'disabled' : ''
-                }`}
-                onClick={() =>
-                  this.goToDigitalSlide(this.state.currentDigitalSlide - 1)
-                }
-              ></button>
-              {digitalSlides.map((n, i) => {
-                return (
-                  <button
-                    key={n}
-                    className={`button button--link lhl-carousel-button ${
-                      this.state.currentDigitalSlide === i ? 'active' : ''
-                    }`}
-                    onClick={() => this.goToDigitalSlide(i)}
-                  >
-                    <Image
-                      src={`/images/features/living-health-lab/lhl_design_updates_${i +
-                        1}.jpg`}
-                      className="image--max-width"
-                      sizes={config.sizes.fullInsideMaxWidth}
-                    />
-                  </button>
-                )
-              })}
-              <button
-                className={`button button--link lhl-carousel-next ${
-                  this.state.currentDigitalSlide === digitalSlides.length - 1
-                    ? 'disabled'
-                    : ''
-                }`}
-                onClick={() =>
-                  this.goToDigitalSlide(this.state.currentDigitalSlide + 1)
-                }
-              ></button>
-            </div>
+            {this.renderCarousel(
+              carousels.digital,
+              threeSlides,
+              'lhl_design_updates_',
+              'jpg'
+            )}
 
             <p>
               Making personal science accessible is no small task. Here are the
@@ -965,71 +835,12 @@ class LivingHealthLabFeature extends Component {
                   i - Non-medicine Pain Relief
                 </h2>
 
-                <SlickCarousel
-                  ref={this.carouselAppendix}
-                  infinite={false}
-                  dots={false}
-                  arrows={false}
-                  afterChange={this.afterAppendixSlideChange}
-                >
-                  {appendixSlides.map((n, i) => {
-                    return (
-                      <div key={n}>
-                        <div className="lhl-image-max-width">
-                          <Image
-                            src={`/images/features/living-health-lab/lhl_research_${i +
-                              1}.jpg`}
-                            className="image--max-width"
-                            sizes={config.sizes.fullInsideMaxWidth}
-                          />
-                        </div>
-                      </div>
-                    )
-                  })}
-                </SlickCarousel>
-                <div className="lhl-carousel-nav">
-                  <button
-                    className={`button button--link lhl-carousel-prev ${
-                      this.state.currentAppendixSlide === 0 ? 'disabled' : ''
-                    }`}
-                    onClick={() =>
-                      this.goToAppendixSlide(
-                        this.state.currentAppendixSlide - 1
-                      )
-                    }
-                  ></button>
-                  {appendixSlides.map((n, i) => {
-                    return (
-                      <button
-                        key={n}
-                        className={`button button--link lhl-carousel-button ${
-                          this.state.currentAppendixSlide === i ? 'active' : ''
-                        }`}
-                        onClick={() => this.goToAppendixSlide(i)}
-                      >
-                        <Image
-                          src={`/images/features/living-health-lab/lhl_research_${i +
-                            1}.jpg`}
-                          className="image--max-width"
-                          sizes={config.sizes.fullInsideMaxWidth}
-                        />
-                      </button>
-                    )
-                  })}
-                  <button
-                    className={`button button--link lhl-carousel-next ${
-                      this.state.currentAppendixSlide ===
-                      appendixSlides.length - 1
-                        ? 'disabled'
-                        : ''
-                    }`}
-                    onClick={() =>
-                      this.goToAppendixSlide(
-                        this.state.currentAppendixSlide + 1
-                      )
-                    }
-                  ></button>
-                </div>
+                {this.renderCarousel(
+                  carousels.appendix,
+                  threeSlides,
+                  'lhl_research_',
+                  'jpg'
+                )}
 
                 <h2 className="header--lg margin-bottom--none">
                   ii - Research Table

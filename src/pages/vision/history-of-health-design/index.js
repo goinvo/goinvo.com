@@ -40,7 +40,7 @@ class HistoryOfHealthDesignFeature extends Component {
               </p>
               <p>
                 Let us know what we're missing at{' '}
-                <a href="mailto:feedback@goinvo.com">feedback@goinvo.com</a>
+                <a href="mailto:feedback@goinvo.com">feedback@goinvo.com</a>.
               </p>
             </div>
             <div className="content-padding">

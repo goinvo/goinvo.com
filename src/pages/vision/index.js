@@ -24,7 +24,7 @@ import features from '../../data/features.json'
 import config from '../../../config'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'us-healthcare-system-map'
+  feature => feature.id === 'living-health-lab'
 )
 
 const frontmatter = {

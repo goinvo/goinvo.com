@@ -7,9 +7,9 @@ import Author from '../../../components/author'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Top Innovations in Health Design History',
+  metaTitle: 'History of Health Design',
   metaDescription:
-    'Our list of the top 100+ innovations from the past 10,000 years of human history.',
+    'Our list of the top healthcare innovations from the past 10,000 years of human history.',
   heroImage: '/images/features/history-of-health-design/splint.jpg',
 }
 
@@ -20,20 +20,23 @@ class HistoryOfHealthDesignFeature extends Component {
         <div className="history-of-health-design">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">
-                Top Innovations in Health Design History
-              </h1>
+              <h1 className="header--xl">History of Health Design</h1>
               <p>
-                Even before our species first emerged, their predecessors were
-                already fashioning tools out of stone. Humans came into
-                existence around the same time as the tradition of design:
-                thinking and planning and making to solve problems of everyday
-                life.
+                Early humans didn't know much about how our bodies worked. We
+                had to come up with clever ways to treat illnesses and injuries,
+                often with rituals and herbal remedies.
               </p>
               <p>
-                Here's our V.01 list of the top 100+ innovations that have made
-                Homo sapiens health history—and altered or revolutionized the
-                landscape of our future.
+                Over the past 10,000 years, we've gone on a tear. As we've
+                learned more about science, the world around us, and our own
+                minds, we've invented tools, machines, and techniques that help
+                us stay healthy and fix things that go wrong inside and out of
+                our bodies. Soon enough, we'll be dictating how long we want to
+                live.
+              </p>
+              <p>
+                Here's our evolving list of top healthcare innovations over
+                time, from the stone surgical knife to genetic “scissors.”
               </p>
               <p>
                 Let us know what we're missing at{' '}

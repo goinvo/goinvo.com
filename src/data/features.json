@@ -10,6 +10,17 @@
     "hiddenWorkPage": true
   },
   {
+    "id": "living-health-lab",
+    "title": "Living Health Lab",
+    "date": "Apr.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.",
+    "image": "/images/features/living-health-lab/hero.jpg",
+    "link": "/vision/living-health-lab/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "virtual-diabetes-care",
     "title": "Virtual Diabetes Care",
     "date": "Apr.2023",
@@ -32,6 +43,17 @@
     "hiddenWorkPage": true
   },
   {
+    "id": "digital-health-connections-model",
+    "title": "Digital Health Connections Model",
+    "date": "Feb.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "This model is a representation of the system of services that can make up digital health software.",
+    "image": "/images/features/digital-health-connections-model/digital-health-connections-model-hero.jpg",
+    "link": "https://goinvo.github.io/DigitalHealthServiceComponents/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "us-healthcare-system-map",
     "title": "US Healthcare System Map",
     "date": "Jan.2023",
@@ -40,17 +62,6 @@
     "caption": "A map of the US healthcare system that describes the main actors and relationships between actors.",
     "image": "/images/features/us-healthcare-system-map/us-healthcare-system-map-hero.jpg",
     "link": "https://goinvo.github.io/healthcare-map/",
-    "hiddenWorkPage": true
-  },
-  {
-    "id": "digital-health-connections-model",
-    "title": "Digital Health Connections Model",
-    "date": "Jan.2023",
-    "client": "Feature",
-    "categories": ["open-source"],
-    "caption": "This model is a representation of the system of services that can make up digital health software.",
-    "image": "/images/features/digital-health-connections-model/digital-health-connections-model-hero.jpg",
-    "link": "https://goinvo.github.io/DigitalHealthServiceComponents/",
     "hiddenWorkPage": true
   },
   {
@@ -73,17 +84,6 @@
     "caption": "Primary self care algorithms are decision support tools for individuals to better understand their health and the steps needed to optimize their health status.",
     "image": "/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero.jpg",
     "link": "/vision/primary-self-care-algorithms/",
-    "hiddenWorkPage": true
-  },
-  {
-    "id": "living-health-lab",
-    "title": "Living Health Lab",
-    "date": "Jul.2022",
-    "client": "Feature",
-    "categories": ["open-source"],
-    "caption": "An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.",
-    "image": "/images/features/living-health-lab/hero.jpg",
-    "link": "/vision/living-health-lab/",
     "hiddenWorkPage": true
   },
   {

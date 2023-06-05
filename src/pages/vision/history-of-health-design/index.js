@@ -11,19 +11,39 @@ import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'The History of Health Design Timeline',
-  metaDescription: 'Bleh.',
-  heroImage: '/images/features/precision-autism/hero-precision-autism-2.jpg',
+  metaTitle: 'Top Innovations in Health Design History',
+  metaDescription:
+    'Our list of the top 100+ innovations from the past 10,000 years of human history.',
 }
 
 class HistoryOfHealthDesignFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <Hero image={frontmatter.heroImage} position="bottom center" />
+        {/* <Hero image={frontmatter.heroImage} position="bottom center" /> */}
         <div className="history-of-health-design">
           <div className="pad-vertical--double">
-            <div className="max-width max-width--md content-padding"></div>
+            <div className="max-width max-width--md content-padding">
+              <h1 className="header--xl">
+                Top Innovations in Health Design History
+              </h1>
+              <p>
+                Even before our species first emerged, their predecessors were
+                already fashioning tools out of stone. Humans came into
+                existence around the same time as the tradition of design:
+                thinking and planning and making to solve problems of everyday
+                life.
+              </p>
+              <p>
+                Here's our V.01 list of the top 100+ innovations that have made
+                Homo sapiens health history—and altered or revolutionized the
+                landscape of our future.
+              </p>
+              <p>
+                Let us know what we're missing at{' '}
+                <a href="mailto:feedback@goinvo.com">feedback@goinvo.com</a>
+              </p>
+            </div>
             <div className="content-padding">
               <iframe
                 src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1qa0ZwX09I8ON2YuHXaigZ8M7p_wnImQALPFyd8fVN98&font=Default&lang=en&initial_zoom=10&height=650"

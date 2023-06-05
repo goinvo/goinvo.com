@@ -1,5 +1,15 @@
 [
   {
+    "id": "health-of-health-design",
+    "title": "Top Innovations in Health Design History",
+    "date": "Jun.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Our list of the top 100+ innovations from the past 10,000 years of human history.",
+    "link": "/vision/history-of-health-design/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "virtual-diabetes-care",
     "title": "Virtual Diabetes Care",
     "date": "Apr.2023",

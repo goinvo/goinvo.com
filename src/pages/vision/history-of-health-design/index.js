@@ -10,6 +10,7 @@ const frontmatter = {
   metaTitle: 'Top Innovations in Health Design History',
   metaDescription:
     'Our list of the top 100+ innovations from the past 10,000 years of human history.',
+  heroImage: '/images/features/history-of-health-design/splint.jpg',
 }
 
 class HistoryOfHealthDesignFeature extends Component {

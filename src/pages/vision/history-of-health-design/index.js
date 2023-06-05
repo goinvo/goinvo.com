@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
-import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
-import Image from '../../../components/image'
 import Author from '../../../components/author'
-
-import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
 
@@ -20,7 +16,6 @@ class HistoryOfHealthDesignFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        {/* <Hero image={frontmatter.heroImage} position="bottom center" /> */}
         <div className="history-of-health-design">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
@@ -73,14 +68,6 @@ class HistoryOfHealthDesignFeature extends Component {
                   <Author name="Samantha Wuu" />
                   <Author name="Juhan Sonin" />
                 </div>
-                {/* <h2 className="header--lg text--center margin-top--quad">
-                  Special thanks to...
-                </h2>
-                <ul className="ul">
-                  <li>Elizabeth Horn</li>
-                  <li>Clare Southern</li>
-                  <li>Michael Snyder</li>
-                </ul> */}
               </div>
             </div>
 

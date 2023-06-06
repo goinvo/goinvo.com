@@ -278,203 +278,114 @@ class NationalCancerNavigationFeature extends Component {
                         '“Cancer and Emergency Medicine | EGRP/DCCPS/NCI/NIH.” Accessed 31 May 2023',
                       link: 'https://epi.grants.cancer.gov/emergency-medicine/',
                     },
-                    // {
-                    //   title:
-                    //     'Bruel, S, et al. Patient Decision Aid in Vaccination: A Systematic Review of the Literature. U.S. National Library of Medicine',
-                    //   link: 'https://pubmed.ncbi.nlm.nih.gov/32163307/',
-                    // },
-                    // {
-                    //   title: '“COVID-19: Vaccine Options.” Dynamed Decisions',
-                    //   link:
-                    //     'https://decisions.dynamed.com/shared-decision-making/covid-19-vaccine-options',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Mental Illness.” National Institute of Mental Health, U.S. Department of Health and Human Services',
-                    //   link:
-                    //     'https://www.nimh.nih.gov/health/statistics/mental-illness',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Suicide Statistics.” American Foundation for Suicide Prevention, 14 June 2022',
-                    //   link: 'https://afsp.org/suicide-statistics/',
-                    // },
-                    // {
-                    //   title:
-                    //     'Chinman, Matthew, et al. “Computer-Assisted Self-Assessment in Persons with Severe Mental Illness.” Psychiatrist.com, Physicians Postgraduate Press, Inc., 4 Feb. 2021',
-                    //   link:
-                    //     'https://www.psychiatrist.com/jcp/bipolar/computer-assisted-self-assessment-persons-severe-mental/',
-                    // },
-                    // {
-                    //   title:
-                    //     'Depp, Colin A, et al. “Technology to Assess and Support Self-Management in Serious Mental Illness.” Dialogues in Clinical Neuroscience, U.S. National Library of Medicine, 18 June 2018',
-                    //   link: 'https://pubmed.ncbi.nlm.nih.gov/27489457/',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Heart Disease Facts.” Centers for Disease Control and Prevention, 15 July 2022',
-                    //   link: 'https://www.cdc.gov/heartdisease/facts.htm',
-                    // },
-                    // {
-                    //   title: 'CDC National Health Report Highlights',
-                    //   link:
-                    //     'https://www.cdc.gov/healthreport/publications/compendium.pdf',
-                    // },
-                    // {
-                    //   title:
-                    //     'Hypertension in Adults: Screening. US Preventive Services Taskforce, 27 Apr. 2021',
-                    //   link:
-                    //     'https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening',
-                    // },
-                    // {
-                    //   title:
-                    //     'Tucker, Katherine L, et al. “Self-Monitoring of Blood Pressure in Hypertension: A Systematic Review and Individual Patient Data Meta-Analysis.” PLoS Medicine, Public Library of Science, 19 Sept. 2017',
-                    //   link:
-                    //     'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5604965/',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Kidney Basics.” National Kidney Foundation, 28 July 2022',
-                    //   link: 'https://www.kidney.org/kidney-basics',
-                    // },
-                    // {
-                    //   title:
-                    //     'Erez, Daniella Levy, et al. “Dipping at Home: Is It Better, Easier, and More Convenient? A Feasibility and Acceptability Study of a Novel Home Urinalysis Using a Smartphone Application - Pediatric Nephrology.” SpringerLink, Springer Berlin Heidelberg, 21 Apr. 2022',
-                    //   link:
-                    //     'https://link.springer.com/article/10.1007/s00467-022-05556-8',
-                    // },
-                    // {
-                    //   title:
-                    //     '“10 Parameter Urinalysis Test at Home.” Diagnox Health: Innovative Wellness and Healthcare Products',
-                    //   link:
-                    //     'https://www.diagnoxhealth.com/blog/10-parameter-urinalysis-test-at-home',
-                    // },
-                    // {
-                    //   title: 'Olive Diagnostics',
-                    //   link: 'https://www.olive.earth/',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Breast Cancer Statistics: How Common Is Breast Cancer?” American Cancer Society, 2022',
-                    //   link:
-                    //     'https://www.cancer.org/cancer/breast-cancer/about/how-common-is-breast-cancer.html',
-                    // },
-                    // {
-                    //   title:
-                    //     'Boraas, Marcia, and Sameer Gupta. “Breast Self-Exam (BSE).” BreastCancer.org, 29 June 2022',
-                    //   link:
-                    //     'https://www.breastcancer.org/screening-testing/breast-self-exam-bse',
-                    // },
-                    // {
-                    //   title:
-                    //     '“The Breast Cancer Risk Assessment Tool.” The National Cancer Institute',
-                    //   link: 'https://bcrisktool.cancer.gov/index.html',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Vision Impairment and Blindness.” World Health Organization',
-                    //   link:
-                    //     'https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Vision Impairment and Chronic Health Conditions.” Centers for Disease Control and Prevention, 17 June 2020',
-                    //   link:
-                    //     'https://www.cdc.gov/visionhealth/living/index.html',
-                    // },
-                    // {
-                    //   title:
-                    //     'Yannuzzi, L A. A Modified Amsler Grid. A Self-Assessment Test for Patients with Macular Disease. U.S. National Library of Medicine',
-                    //   link: 'https://pubmed.ncbi.nlm.nih.gov/6175935/',
-                    // },
-                    // {
-                    //   title: 'https://www.homeacuitytest.org',
-                    //   link: 'https://www.homeacuitytest.org',
-                    // },
-                    // {
-                    //   title:
-                    //     '“National Diabetes Statistics Report.” Centers for Disease Control and Prevention, 18 Jan. 2022',
-                    //   link:
-                    //     'https://www.cdc.gov/diabetes/data/statistics-report/index.html',
-                    // },
-                    // {
-                    //   title:
-                    //     'Sia, Hon-Ke, et al. “Self-Monitoring of Blood Glucose in Association with Glycemic Control in Newly Diagnosed Non-Insulin-Treated Diabetes Patients: A Retrospective Cohort Study.” Nature News, Nature Publishing Group, 13 Jan. 2021',
-                    //   link:
-                    //     'https://www.nature.com/articles/s41598-021-81024-x',
-                    // },
-                    // {
-                    //   title: '“What Is Nightscout?” Nightscout',
-                    //   link: 'https://nightscout.github.io/#:~:text=Nightscout',
-                    // },
-                    // {
-                    //   title:
-                    //     '“The U.S. Government and International Family Planning &amp; Reproductive Health Efforts.” KFF, 24 June 2022',
-                    //   link:
-                    //     'https://www.kff.org/global-health-policy/fact-sheet/the-u-s-government-and-international-family-planning-reproductive-health-efforts/',
-                    // },
-                    // {
-                    //   title:
-                    //     'Stevenson, Amanda J, et al. The Impact of Contraceptive Access on High School Graduation. American Association for the Advancement of Science, 5 May 2021',
-                    //   link:
-                    //     'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8099178/',
-                    // },
-                    // {
-                    //   title: '“Unmet Need for Contraception: Fact Sheet.” PRB',
-                    //   link:
-                    //     'https://www.prb.org/resources/unmet-need-for-contraception-fact-sheet/',
-                    // },
-                    // {
-                    //   title:
-                    //     '“A Decision Aid to Help Women Choose and Use a Method of Birth Control.” PCORI, 4 Mar. 2022',
-                    //   link:
-                    //     'https://www.pcori.org/research-results/2013/decision-aid-help-women-choose-and-use-method-birth-control',
-                    // },
-                    // {
-                    //   title:
-                    //     'Your Birth Control Choices - Reproductive Health Access Project. Reproductive Access Project, Oct. 2021',
-                    //   link:
-                    //     'https://www.reproductiveaccess.org/wp-content/uploads/2014/06/2020-09-contra-choices.pdf',
-                    // },
-                    // {
-                    //   title:
-                    //     'Ambrosino, Nicolino, and Enrica Bertella. Lifestyle Interventions in Prevention and Comprehensive Management of COPD. European Respiratory Society, Sept. 2018',
-                    //   link:
-                    //     'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6118879/',
-                    // },
-                    // {
-                    //   title:
-                    //     'Saini, Jagriti, et al. “A Comprehensive Review on Indoor Air Quality Monitoring Systems for Enhanced Public Health - Sustainable Environment Research.” BioMed Central, BioMed Central, 29 Jan. 2020',
-                    //   link:
-                    //     'https://sustainenvironres.biomedcentral.com/articles/10.1186/s42834-020-0047-y',
-                    // },
-                    // {
-                    //   title: '“Pulse Oximetry.” Yale Medicine, 2 Mar. 2021',
-                    //   link:
-                    //     'https://www.yalemedicine.org/conditions/pulse-oximetry#:~:text=Basically%2C',
-                    // },
-                    // {
-                    //   title:
-                    //     'Hang, Liang-Wen, et al. “Validation of Overnight Oximetry to Diagnose Patients with Moderate to Severe Obstructive Sleep Apnea.” BMC Pulmonary Medicine, U.S. National Library of Medicine, 20 Mar. 2015',
-                    //   link: 'https://pubmed.ncbi.nlm.nih.gov/25880649/',
-                    // },
-                    // {
-                    //   title:
-                    //     'Luks, Andrew M, and Erik R Swenson. “Pulse Oximetry for Monitoring Patients with COVID-19 at Home. Potential Pitfalls and Practical Guidance.” Annals of the American Thoracic Society, U.S. National Library of Medicine, 17 Sept. 2020',
-                    //   link: 'https://pubmed.ncbi.nlm.nih.gov/32521167/',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Evaluating Clinical Decision Support.” Rethinking Clinical Trials, 27 Dec. 2021',
-                    //   link:
-                    //     'https://rethinkingclinicaltrials.org/chapters/conduct/real-world-evidence-clinical-decision-support/evaluating-cds/',
-                    // },
-                    // {
-                    //   title:
-                    //     '“Immunization Calculation Engine (ICE).” CDS Connect',
-                    //   link:
-                    //     'https://cds.ahrq.gov/cdsconnect/artifact/immunization-calculation-engine-ice-0',
-                    // },
+                    {
+                      title:
+                        'Tong, Michelle, and 2022. “Racial Disparities in Cancer Outcomes, Screening, and Treatment.” KFF, 3 Feb. 2022',
+                      link:
+                        'www.kff.org/racial-equity-and-health-policy/issue-brief/racial-disparities-in-cancer-outcomes-screening-and-treatment/',
+                    },
+                    {
+                      title:
+                        'Zhu, J., et al. “First-Onset Mental Disorders after Cancer Diagnosis and Cancer-Specific Mortality: A Nationwide Cohort Study.” Annals of Oncology, vol. 28, no. 8, 19 May 2017, pp. 1964-1969',
+                      link: 'https://doi.org/10.1093/annonc/mdx265',
+                    },
+                    {
+                      title:
+                        'Carrera, Pricivel M., et al. “The Financial Burden and Distress of Patients with Cancer: Understanding and Stepping-up Action on the Financial Toxicity of Cancer Treatment.” CA: A Cancer Journal for Clinicians, vol. 68, no. 2, 16 Jan. 2018, pp. 153-165',
+                      link: 'https://doi.org/10.3322/caac.21443',
+                    },
+                    {
+                      title:
+                        'Fallowfield, Lesley, and Valerie Jenkins. “Communicating Sad, Bad, and Difficult News in Medicine.” Lancet (London, England), vol. 363, no. 9405, 2004, pp. 312-9',
+                      link: 'https://www.ncbi.nlm.nih.gov/pubmed/14751707',
+                    },
+                    {
+                      title:
+                        'Nazemi, Kellie J., and Suman Malempati. “Emergency Department Presentation of Childhood Cancer.” Emergency Medicine Clinics of North America, vol. 27, no. 3, 1 Aug. 2009, pp. 477-495. Accessed 31 May 2023',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/19646649/',
+                    },
+                    {
+                      title:
+                        "Hendren, Samantha, et al. “Patients' Barriers to Receipt of Cancer Care, and Factors Associated with Needing More Assistance from a Patient Navigator.” Journal of the National Medical Association, vol. 103, no. 8, July 2011, pp. 701-710",
+                      link: 'https://doi.org/10.1016/s0027-9684(15)30409-0',
+                    },
+                    {
+                      title:
+                        '“Rural Urban Disparities in Cancer.” Gis.cancer.gov',
+                      link:
+                        'https://gis.cancer.gov/mapstory/rural-urban/index.html',
+                    },
+                    {
+                      title:
+                        'Onega, Tracy, et al. “Geographic Access to Cancer Care in the U.S.” Cancer, vol. 112, no. 4, 2008, pp. 909-918',
+                      link: 'https://doi.org/10.1002/cncr.23229',
+                    },
+                    {
+                      title:
+                        'Ward, E., et al. “Association of Insurance with Cancer Care Utilization and Outcomes.” CA: A Cancer Journal for Clinicians, vol. 58, no. 1, 1 Jan. 2008, pp. 9-31',
+                      link: 'https://doi.org/10.3322/ca.2007.0011',
+                    },
+                    {
+                      title:
+                        'Marlow, Nicole M., et al. The Relationship between Insurance Coverage and Cancer Care: A Literature Synthesis. PubMed, Research Triangle Park (NC), RTI Press, 2009',
+                      link: 'https://www.ncbi.nlm.nih.gov/books/NBK542737/',
+                    },
+                    {
+                      title:
+                        'Meijer, Anna, et al. “Effects of Screening for Psychological Distress on Patient Outcomes in Cancer: A Systematic Review.” Journal of Psychosomatic Research, vol. 75, no. 1, July 2013, pp. 1-17',
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3833882/',
+                    },
+                    {
+                      title:
+                        'Kling, Jim. “Time to Cancer Diagnoses in U.S. Averages 5 Months.” www.mdedge.com, 15 Sept. 2022. Accessed 31 May 2023',
+                      link:
+                        'https://www.mdedge.com/hematology-oncology/article/257891/breast-cancer/time-cancer-diagnoses-us-averages-5-months',
+                    },
+                    {
+                      title:
+                        'Handtke, Oriana, et al. “Culturally Competent Healthcare - a Scoping Review of Strategies Implemented in Healthcare Organizations and a Model of Culturally Competent Healthcare Provision.” PLOS ONE, vol. 14, no. 7, 30 July 2019, pp. 1-24',
+                      link:
+                        'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0219971',
+                    },
+                    {
+                      title:
+                        'Nekhlyudov, Larissa, et al. “Patient-Centered, Evidence-Based, and Cost-Conscious Cancer Care across the Continuum: Translating the Institute of Medicine Report into Clinical Practice.” CA: A Cancer Journal for Clinicians, vol. 64, no. 6, 9 Sept. 2014, pp. 408-421',
+                      link: 'https://doi.org/10.3322/caac.21249',
+                    },
+                    {
+                      title:
+                        "Kessels, Roy P C. “Patients' Memory for Medical Information.” Journal of the Royal Society of Medicine, vol. 96, no. 5, May 2003, pp. 219-22",
+                      link:
+                        'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC539473/',
+                    },
+                    {
+                      title:
+                        'Rosenkrantz, Andrew B., et al. “Perceptions of Radiologists and Emergency Medicine Providers Regarding the Quality, Value, and Challenges of Outside Image Sharing in the Emergency Department Setting.” AJR. American Journal of Roentgenology, vol. 214, no. 4, 1 Apr. 2020, pp. 843-852. Accessed 28 June 2021',
+                      link: 'https://pubmed.ncbi.nlm.nih.gov/32023121/',
+                    },
+                    {
+                      title:
+                        'Virnig, Beth A., et al. “A Matter of Race: Early-versus Late-Stage Cancer Diagnosis.” Health Affairs, vol. 28, no. 1, Jan. 2009, pp. 160-168',
+                      link: 'https://doi.org/10.1377/hlthaff.28.1.160',
+                    },
+                    {
+                      title:
+                        '“Survey: Majority of Cancer Patients Struggle to Afford Cancer Care.” American Cancer Society Cancer Action Network, 15 Dec. 2021',
+                      link:
+                        'www.fightcancer.org/releases/survey-majority-cancer-patients-struggle-afford-cancer-care',
+                    },
+                    {
+                      title:
+                        'Robin Vanderpool, DrPH. “Availability and Accessibility of Cancer Care Delivery Approaches to Reduce Financial Toxicity of Rural and Urban Cancer Patients in Kentucky.” Www.jons-Online.com, vol. 13, no. 5, 1 June 2022. Accessed 31 May 2023',
+                      link:
+                        'www.jons-online.com/issues/2022/may-2022-vol-13-no-5/4518-availability-and-accessibility-of-cancer-care-delivery-approaches-to-reduce-financial-toxicity-of-rural-and-urban-cancer-patients-in-kentucky',
+                    },
+                    {
+                      title:
+                        'Awidi, Muhammad, and Samer Al Hadidi. “Participation of Black Americans in Cancer Clinical Trials: Current Challenges and Proposed Solutions.” JCO Oncology Practice, vol. 17, no. 5, May 2021, pp. 265-271',
+                      link: 'https://doi.org/10.1200/op.21.00001',
+                    },
                   ]}
                 />
               </div>

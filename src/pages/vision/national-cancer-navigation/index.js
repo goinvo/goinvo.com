@@ -12,7 +12,7 @@ const frontmatter = {
   metaTitle: 'National Cancer Navigation - GoInvo',
   metaDescription:
     'Mapping cancer journey pain points and exploring how navigation could support patients and their families.',
-  heroImage: '/images/features/national-cancer-navigation/banner.png',
+  heroImage: '/images/features/national-cancer-navigation/hero.png',
 }
 
 const images = Array.from(Array(7), (x, i) => i + 1)
@@ -87,7 +87,7 @@ class NationalCancerNavigationFeature extends Component {
             <div className="max-width">
               {images.map(i => {
                 return (
-                  <div className="pure-g margin-bottom--double">
+                  <div key={i} className="pure-g margin-bottom--double">
                     <div className="pure-u-1 pure-u-lg-1-2">
                       <Image
                         src={`/images/features/national-cancer-navigation/${i}-prob.png`}
@@ -148,10 +148,8 @@ class NationalCancerNavigationFeature extends Component {
               src="https://goinvo.github.io/cancernavigator/"
               width="100%"
               height="650px"
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowfullscreen
-              frameborder="0"
+              allowFullScreen
+              frameBorder="0"
               title="Cancer Navigator"
             ></iframe>
             <div className="max-width max-width--md content-padding">
@@ -198,23 +196,62 @@ class NationalCancerNavigationFeature extends Component {
               </ul>
               <p>
                 <b>See our progress since November 2022</b>
-                <br />-{' '}
-                <a
-                  href="https://www.dropbox.com/s/92n9k4b5mz5ryov/cancer_nav_process_highlevel_v1.pdf?dl=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Cancer Navigation Process High Level V1 pdf
-                </a>
-                <br />-{' '}
-                <a
-                  href="https://www.dropbox.com/s/r6xwmaknrw5a6ic/cancer_nav_process_breakdown_v1.pdf?dl=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Cancer Navigation Process Breakdown V1 pdf
-                </a>
-                <br />-{' '}
+              </p>
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="margin-right--only-lg margin-bottom">
+                    <div className="poster margin-bottom--half">
+                      <a
+                        href="https://www.dropbox.com/s/92n9k4b5mz5ryov/cancer_nav_process_highlevel_v1.pdf?dl=0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src="/images/features/national-cancer-navigation/highlevel-preview.png"
+                          className="image--max-width display--block"
+                          sizes={
+                            config.sizes.fullToHalfAtLargeInsideMediumMaxWidth
+                          }
+                        />
+                      </a>
+                    </div>
+                    <a
+                      href="https://www.dropbox.com/s/92n9k4b5mz5ryov/cancer_nav_process_highlevel_v1.pdf?dl=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cancer Navigation Process High Level V1 pdf
+                    </a>
+                  </div>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <div className="margin-left--only-lg margin-bottom">
+                    <div className="poster margin-bottom--half">
+                      <a
+                        href="https://www.dropbox.com/s/r6xwmaknrw5a6ic/cancer_nav_process_breakdown_v1.pdf?dl=0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src="/images/features/national-cancer-navigation/breakdown-preview.png"
+                          className="image--max-width display--block"
+                          sizes={
+                            config.sizes.fullToHalfAtLargeInsideMediumMaxWidth
+                          }
+                        />
+                      </a>
+                    </div>
+                    <a
+                      href="https://www.dropbox.com/s/r6xwmaknrw5a6ic/cancer_nav_process_breakdown_v1.pdf?dl=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cancer Navigation Process Breakdown V1 pdf
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <p>
                 <a
                   href="https://github.com/goinvo/cancernavigator"
                   target="_blank"

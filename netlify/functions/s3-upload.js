@@ -8,8 +8,8 @@ const randomstring = require('randomstring')
 let s3 = null
 if (process.env.NETLIFY) {
   s3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_KEY,
+    accessKeyId: process.env.GOINVO_AWS_ACCESS_KEY,
+    secretAccessKey: process.env.GOINVO_AWS_SECRET_KEY,
   })
 } else {
   s3 = new AWS.S3()

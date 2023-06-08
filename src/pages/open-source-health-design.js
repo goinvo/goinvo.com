@@ -15,6 +15,7 @@ const frontmatter = {
   metaTitle: 'Open Source Health Design',
   metaDescription:
     'Healthcare needs to be open. We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.',
+  heroImage: '/images/open_source/open-source.jpg',
 }
 
 const openSourceConversations = [
@@ -107,7 +108,7 @@ class OpenSourcePage extends Component {
             <div className="max-width content-padding pad-vertical LayoutCenter teal">
               <div className="pure-u-lg-1-2">
                 <h2 className="header--xl headerStyle ">
-                  We envision a world where patients can be cared for with a
+                  We envision a world where patients can be cared for with
                   technology that can be trusted
                   <span className="text--serif text--primary">.</span>
                 </h2>

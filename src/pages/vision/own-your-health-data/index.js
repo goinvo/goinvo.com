@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -138,9 +139,19 @@ class OwnYourHealthDataFeature extends Component {
                 GoInvo is a healthcare design company that crafts innovative
                 digital and physical solutions. Our deep expertise in Health IT,
                 Genomics, and Open Source health has delivered results for the
-                National Institute of Health, Walgreens, Mount Sinai and
+                National Institutes of Health, Walgreens, Mount Sinai, and
                 Partners Healthcare.
               </p>
+            </div>
+          </div>
+
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
 

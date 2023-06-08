@@ -1,8 +1,19 @@
 [
   {
+    "id": "health-of-health-design",
+    "title": "History of Health Design",
+    "date": "Jun.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Our list of the top healthcare innovations from the past 10,000 years of human history.",
+    "link": "/vision/history-of-health-design/",
+    "image": "/images/features/history-of-health-design/splint.jpg",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "living-health-lab",
     "title": "Living Health Lab",
-    "date": "Jul.2022",
+    "date": "May.2023",
     "client": "Feature",
     "categories": ["open-source"],
     "caption": "An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.",
@@ -11,25 +22,80 @@
     "hiddenWorkPage": true
   },
   {
-    "id": "digital-health-trends-2022",
-    "title": "Digital Health Trends to Watch in 2022 and Beyond",
-    "date": "May.2022",
+    "id": "virtual-diabetes-care",
+    "title": "Virtual Diabetes Care",
+    "date": "Apr.2023",
     "client": "Feature",
     "categories": ["open-source"],
-    "caption": "GoInvo breaks down significant digital health trends you should watch in 2022 and the decade to come.",
-    "image": "/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg",
-    "link": "/vision/digital-health-trends-2022/",
+    "caption": "Learn about the benefits of virtual diabetes care, and a hybrid healthcare approach, which combines in-person visits with telehealth.",
+    "image": "/images/features/virtual-care-diabetes/virtual-care-diabetes-hero.jpg",
+    "link": "/vision/virtual-diabetes-care/",
     "hiddenWorkPage": true
   },
   {
-    "id": "own-your-health-data",
-    "title": "Own Your Health Data",
-    "date": "Oct.2021",
+    "id": "public-healthroom",
+    "title": "From Public Restroom to Public Healthroom",
+    "date": "Mar.2023",
     "client": "Feature",
-    "categories": ["open-source", "public-health-and-policy"],
-    "caption": "As the future of our healthcare system moves towards electronic healthcare records, we need patient data ownership rights to protect patient care.",
-    "image": "/images/features/own-your-health-data/patient-data-ownership.jpg",
-    "link": "/vision/own-your-health-data/",
+    "categories": ["open-source"],
+    "caption": "As part of GoInvo's Design Vision Series on Health Futures, we explore preventative health infrastructure for cities and towns.",
+    "image": "/images/features/public-healthroom/pubhrm-hero-1.jpg",
+    "link": "/vision/public-healthroom/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "digital-health-connections-model",
+    "title": "Digital Health Connections Model",
+    "date": "Feb.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "This model is a representation of the system of services that can make up digital health software.",
+    "image": "/images/features/digital-health-connections-model/digital-health-connections-model-hero.jpg",
+    "link": "https://goinvo.github.io/DigitalHealthServiceComponents/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "us-healthcare-system-map",
+    "title": "US Healthcare System Map",
+    "date": "Jan.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "A map of the US healthcare system that describes the main actors and relationships between actors.",
+    "image": "/images/features/us-healthcare-system-map/us-healthcare-system-map-hero.jpg",
+    "link": "https://goinvo.github.io/healthcare-map/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "whats-on-fhir",
+    "title": "What's on FHIR?",
+    "date": "Nov.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "What’s on FHIR? — Are you a UX designer, developer, or product manager in digital healthcare and not quite sure what the heck FHIR is? Yeah, it can be tricky.",
+    "image": "/images/features/whats-on-fhir/whats-on-fhir-hero.jpg",
+    "link": "https://www.whatsonfhir.org/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "primary-self-care-algorithms",
+    "title": "Primary Self Care Algorithms",
+    "date": "Sep.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Primary self care algorithms are decision support tools for individuals to better understand their health and the steps needed to optimize their health status.",
+    "image": "/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero.jpg",
+    "link": "/vision/primary-self-care-algorithms/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "digital-health-trends-2022",
+    "title": "Digital Health Trends to Watch",
+    "date": "May.2022",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "GoInvo breaks down significant digital health trends you should watch for.",
+    "image": "/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg",
+    "link": "/vision/digital-health-trends-2022/",
     "hiddenWorkPage": true
   },
   {
@@ -39,7 +105,7 @@
     "client": "Feature",
     "categories": ["open-source"],
     "caption": "The Benefits of Information Graphics and Human Faces for Improved Patient Understanding.",
-    "image": "/images/features/faces-in-health-communication/hero.jpg",
+    "image": "/images/features/faces-in-health-communication/hero-2.jpg",
     "link": "/vision/faces-in-health-communication/",
     "hiddenWorkPage": true
   },
@@ -52,6 +118,17 @@
     "caption": "GoInvo highlighted in Health Design Thinking book",
     "image": "/images/features/health-design-thinking/health-design-thinking-book-thumbnail.jpg",
     "link": "/vision/health-design-thinking/",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "own-your-health-data",
+    "title": "Own Your Health Data",
+    "date": "Oct.2021",
+    "client": "Feature",
+    "categories": ["open-source", "public-health-and-policy"],
+    "caption": "As the future of our healthcare system moves towards electronic healthcare records, we need patient data ownership rights to protect patient care.",
+    "image": "/images/features/own-your-health-data/patient-data-ownership.jpg",
+    "link": "/vision/own-your-health-data/",
     "hiddenWorkPage": true
   },
   {

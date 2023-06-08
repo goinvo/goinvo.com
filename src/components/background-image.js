@@ -31,6 +31,12 @@ class BackgroundImage extends Component {
     this.setState({ src })
   }
 
+  handleLoad = event => {
+    if (this.props.onLoad) {
+      this.props.onLoad(event)
+    }
+  }
+
   render() {
     const backgroundImageUrl = this.props.notResponsive
       ? mediaUrl(this.props.src) + '?w=900'
@@ -74,6 +80,7 @@ class BackgroundImage extends Component {
             sizes={this.props.sizes}
             onUpdate={this.updateSrc}
             ref={this.img}
+            onLoad={this.handleLoad}
           />
         ) : null}
         {this.props.children}

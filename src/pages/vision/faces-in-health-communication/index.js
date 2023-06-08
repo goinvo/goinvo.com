@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
+import HubspotForm from '../../../components/hubspot-form'
 import Divider from '../../../components/divider'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
@@ -15,7 +16,7 @@ const frontmatter = {
   metaTitle: 'Faces in Health Communication - GoInvo',
   metaDescription:
     'The Benefits of Information Graphics and Human Faces for Improved Patient Understanding.',
-  heroImage: '/images/features/faces-in-health-communication/hero.jpg',
+  heroImage: '/images/features/faces-in-health-communication/hero-2.jpg',
 }
 
 class FacesInHealthCommunicationFeature extends Component {
@@ -1069,6 +1070,17 @@ class FacesInHealthCommunicationFeature extends Component {
               />
             </div>
           </div>
+
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
+            </div>
+          </div>
+
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>

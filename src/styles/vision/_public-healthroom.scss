@@ -1,0 +1,202 @@
+.public-healthroom {
+  .hero {
+    &__image-container {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 200 / 51; // Preferred aspect ratio until max-height is reached
+      max-height: 500px;
+    }
+  }
+
+  .header--md {
+    margin-top: $spacing * 2;
+  }
+  &__prototype-frame-sticky {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: $header-height;
+    height: calc(50vh - #{$header-height});
+    width: 100%;
+    min-width: 0;
+    z-index: 1;
+    background-color: #fff;
+
+    @include mq($from: large) {
+      height: calc(100vh - 70px);
+      width: 50%;
+    }
+
+    .slick-slider {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+  &__prototype-frame-container {
+    width: 100%;
+  }
+
+  &__prototype-frame {
+    position: relative;
+    width: 100%;
+    max-width: calc(50vh - #{$header-height});
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin: 0 auto;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      transition: all 0.5s;
+    }
+
+    @include mq($from: large) {
+      width: 90%;
+      max-width: 75vh;
+    }
+  }
+
+  &__overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: calc(50vh - #{$header-height});
+    aspect-ratio: 1 / 1;
+    background-color: rgba(0, 0, 0, 0);
+    transform: translate(-50%, -50%);
+    transition: background-color 0.5s;
+
+    &--dimmed {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @include mq($from: large) {
+      width: 90%;
+      max-width: 75vh;
+    }
+  }
+
+  &__overlay-image {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.25s;
+
+    img {
+      display: block;
+    }
+
+    &--visible {
+      opacity: 1;
+    }
+  }
+
+  &__entry-menu {
+    width: 44.2%;
+    top: 50%;
+    left: 51.5%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__holding-phone {
+    width: 40%;
+    bottom: 0;
+    right: 0;
+
+    &--center {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__vision-results {
+    width: 55%;
+    top: 9%;
+    left: -8%;
+  }
+
+  &__message-1 {
+    width: 32%;
+    top: 23%;
+    right: 4%;
+  }
+
+  &__message-2 {
+    width: 32%;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__system-logic {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    margin-top: 8vh;
+
+    @include mq($from: large) {
+      width: 50%;
+      margin-left: auto;
+    }
+  }
+
+  &__section-container {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__section {
+    img {
+      display: block;
+    }
+  }
+
+  .public-healthroom__prototype-frame--enter {
+    .public-healthroom__prototype-frame__image {
+      transition: all 0.5s;
+    }
+
+    .public-healthroom__overlay-image {
+      transition: opacity 0.25s 0.5s;
+    }
+  }
+
+  .public-healthroom__prototype-frame--exit {
+    .public-healthroom__prototype-frame__image {
+      transition: all 0.5s 0.25s;
+    }
+
+    .public-healthroom__overlay-image {
+      transition: opacity 0.25s;
+    }
+  }
+
+  &__prototype-wrapper {
+    position: relative;
+
+    @include mq($from: large) {
+      display: flex;
+    }
+  }
+
+  &__indicator {
+    position: sticky;
+    top: 75vh;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.25);
+    z-index: 2;
+
+    @include mq($from: large) {
+      top: 50vh;
+      left: 50%;
+      width: 100%;
+    }
+  }
+}

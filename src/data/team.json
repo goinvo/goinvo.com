@@ -101,36 +101,6 @@
     "image": "/images/about/headshot-craig-mcginley.jpg"
   },
   {
-    "name": "Ines Amri",
-    "title": "Designer",
-    "bio": "Ines is a designer and data analyst. She translates complex, often chaotic medical problems into elegant digital experiences. As an advocate for international women's health and human rights, Ines joined GoInvo in 2021 with a BA in Economics from Paris Dauphine University and an MSc in Digital Health and Data Analytics from the University of Reading.",
-    "social": {
-      "email": "ines@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/amri-ines/"
-    },
-    "image": "/images/about/headshot-ines-amri.jpg"
-  },
-  {
-    "name": "Huahua Zhu",
-    "title": "Designer",
-    "bio": "Huahua is a designer who tells stories through illustration, animation and comics. She creates beautiful narratives to show how our healthcare should be treating all of us. She joined Invo in 2022 with a BFA from Rhode Island School of Design.",
-    "social": {
-      "email": "huahua@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/huahua-zhu-3523b21a2/"
-    },
-    "image": "/images/about/headshot-huahua-zhu.jpg"
-  },
-  {
-    "name": "Matthew Reyes",
-    "title": "Designer",
-    "bio": "Matthew is a designer and developer with a background in health diagnostics and patient care. Dedicated to improving public health systems and dismantling health inequities, he joined Invo in 2022 while completing his MPH at the University of California, Berkeley.",
-    "social": {
-      "email": "matthew@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/reyesmatthew/"
-    },
-    "image": "/images/about/headshot-matthew-reyes-2.jpg"
-  },
-  {
     "name": "Samantha Wuu",
     "title": "People person",
     "bio": "Sam is a writer, editor, and resident People Person at GoInvo. She previously worked at NYC Health + Hospitals on the migration of the provider credentialing process to a digital platform. A middle school English teacher in a past life, Sam is also a lifelong detail enthusiast and fan of diversity (of both people and punctuation). She joined Invo in 2022 with a BA in English from Barnard College and an MEd from Harvard University.",
@@ -141,24 +111,14 @@
     "image": "/images/about/headshot-samantha-wuu.jpeg"
   },
   {
-    "name": "Arpna Ghanshani",
+    "name": "Tala Habbab",
     "title": "Designer",
-    "bio": "Arpna is a designer with a background in data science and public health. She strives to create beautiful, data-driven  primary self care services and improve access to healthcare. She joined Invo in 2022 while completing her BA in Data Science and BA in Public Health at the University of California, Berkeley.",
+    "bio": "Tala is a designer with a background in medical devices and product design. She creates services that improve healthcare access and understandability. Tala joined GoInvo in 2022 with a BS in Materials Science and Biomedical Engineering and a MS in Product & Service Design from Carnegie Mellon University.",
     "social": {
-      "email": "arpna@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/arpna-g/"
+      "email": "tala@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/talahabbab/"
     },
-    "image": "/images/about/headshot-arpna-ghanshani.jpg"
-  },
-  {
-    "name": "Jenny Yi",
-    "title": "Designer",
-    "bio": "Jenny is a designer of urban infrastructures that impact public health. She designs spaces that incorporate new healthcare technologies to create seamless experiences for people’s access to healthcare services. She joined Invo in 2022 with a B.Arch from Cornell University and while working on her M.Des from Harvard Graduate School of Design.",
-    "social": {
-      "email": "jenny@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/jenny-yi-202020/"
-    },
-    "image": "/images/about/headshot-jenny-yi.jpg"
+    "image": "/images/about/headshot-tala-habbab.jpg"
   },
   {
     "name": "Jonathan Follett",

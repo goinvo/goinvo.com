@@ -48,7 +48,7 @@
     "gatsby-develop": "gatsby develop",
     "develop": "run-s rework-css gatsby-develop",
     "format": "prettier --write '**/*.{js,json,md,scss}'",
-    "upload": "node netlify/functions/s3-upload.js",
+    "upload": "node netlify/functions/deploy-succeeded.js",
     "redirect": "node netlify/functions/s3-redirects.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

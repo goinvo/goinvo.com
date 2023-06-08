@@ -24,7 +24,7 @@
 
   .hs_attach_resume .hs-input {
     height: auto;
-    margin-top: $spacing / 2;
+    margin-top: calc($spacing / 2);
     border: 0;
     font-size: 0.75rem;
   }

@@ -15,18 +15,18 @@
 
     &--2 {
       @include mq($from: medium) {
-        flex-basis: calc(50% - #{$spacing / 2});
+        flex-basis: calc(50% - #{calc($spacing / 2)});
       }
     }
 
     &--3 {
       @include mq($from: large) {
-        flex-basis: calc(33.33% - #{$spacing * 0.66});
+        flex-basis: calc(33.33% - #{calc($spacing * 0.66)});
       }
     }
     &--4 {
       @include mq($from: large) {
-        flex-basis: calc(25% - #{$spacing / 2});
+        flex-basis: calc(25% - #{calc($spacing / 2)});
       }
     }
   }

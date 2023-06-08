@@ -100,5 +100,12 @@ const invalidateCloudfront = () => {
   })
 }
 
-uploadFromDirectory(path.join(__dirname, '..', '..', '/public/'))
-invalidateCloudfront()
+exports.handler = async function(event, context) {
+  uploadFromDirectory(path.join(__dirname, '..', '..', '/public/'))
+  invalidateCloudfront()
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: 'Executed successfully.' }),
+  }
+}

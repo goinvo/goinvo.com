@@ -6,8 +6,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === 'Mdx') {
     const value = createFilePath({ node, getNode })
     createNodeField({
-      name: 'slug',
       node,
+      name: 'slug',
       // don't need a separating "/" before the value because
       // createFilePath returns a path with the leading "/".
       value: `/work${value}`,

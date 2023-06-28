@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Helmet from 'react-helmet'
 
 import Layout from './layout'
@@ -22,16 +21,18 @@ import {
 
 import config from '../../../config'
 
-const CaseStudyLayout = props => {
-  const { data } = props
+const CaseStudyLayout = ({ data, children }) => {
+  const { mdx } = data
 
-  if (!data) {
+  if (!mdx || !children) {
     return
   }
 
+  console.log('HAS CHILDRED')
+
   const caseStudiesWithFeatures = concatCaseStudiesAndFeatures(data, false)
 
-  const caseStudy = findCaseStudyById(data, data.mdx.id)
+  const caseStudy = findCaseStudyById(data, mdx.id)
 
   const meta = [
     {
@@ -129,7 +130,7 @@ const CaseStudyLayout = props => {
         <div className={`case-study ${caseStudy.parent.name}`}>
           <Hero image={caseStudy.frontmatter.image} />
           <div className="max-width max-width--md content-padding">
-            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+            {children}
           </div>
           {caseStudy.frontmatter.results ? (
             <Results stats={caseStudy.frontmatter.results} />
@@ -184,7 +185,6 @@ export const pageQuery = graphql`
   query CaseStudyLayoutQuery($id: String) {
     mdx(id: { eq: $id }) {
       id
-      body
     }
     allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
       edges {

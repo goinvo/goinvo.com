@@ -26,14 +26,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'case-studies',
-        path: `${__dirname}/src/case-studies/`,
+        name: 'test-pages',
+        path: `${__dirname}/src/test-pages/`,
       },
     },
     {
       resolve: 'gatsby-plugin-page-creator',
       options: {
-        path: `${__dirname}/src/case-studies`,
+        path: `${__dirname}/src/test-pages`,
       },
     },
     {

@@ -59,7 +59,7 @@ class OwnYourHealthDataFeature extends Component {
                     <div className="poster margin-top--double margin-right margin-left">
                       <a
                         href={mediaUrl(
-                          '/pdf/vision/own-your-health-data/OwnYourHealthData.pdf'
+                          '/pdf/vision/own-your-health-data/Own-Your-Health-Data.pdf'
                         )}
                       >
                         <Image
@@ -73,7 +73,7 @@ class OwnYourHealthDataFeature extends Component {
                     </div>
                     <a
                       href={mediaUrl(
-                        '/pdf/vision/own-your-health-data/OwnYourHealthData.pdf'
+                        '/pdf/vision/own-your-health-data/Own-Your-Health-Data.pdf'
                       )}
                       rel="noopener noreferrer"
                       className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"

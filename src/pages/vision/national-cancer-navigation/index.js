@@ -22,7 +22,7 @@ class NationalCancerNavigationFeature extends Component {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} position="top" />
-        <div className="primary-self-care-algorithms">
+        <div className="national-cancer-navigation">
           <div className="pad-vertical--double pad-bottom--none">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">National Cancer Navigation</h1>
@@ -198,8 +198,8 @@ class NationalCancerNavigationFeature extends Component {
                 <b>See our progress since November 2022</b>
               </p>
               <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="margin-right--only-lg margin-bottom">
+                <div className="pure-u-1">
+                  <div className="margin-bottom--double">
                     <div className="poster margin-bottom--half">
                       <a
                         href="https://www.dropbox.com/s/92n9k4b5mz5ryov/cancer_nav_process_highlevel_v1.pdf?dl=0"
@@ -224,8 +224,8 @@ class NationalCancerNavigationFeature extends Component {
                     </a>
                   </div>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <div className="margin-left--only-lg margin-bottom">
+                <div className="pure-u-1">
+                  <div className="margin-bottom--double">
                     <div className="poster margin-bottom--half">
                       <a
                         href="https://www.dropbox.com/s/r6xwmaknrw5a6ic/cancer_nav_process_breakdown_v1.pdf?dl=0"

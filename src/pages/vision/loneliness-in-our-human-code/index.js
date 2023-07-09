@@ -968,12 +968,13 @@ class LonelinessFeature extends Component {
                   image="/images/features/loneliness-in-our-human-code/headshot-vanessa-li.jpg"
                 >
                   Vanessa specializes in health systems and public health
-                  modeling, with an emphasis in substance abuse and disease
-                  prevention research. She graduated from the University of
-                  Southern California with a B.S. in Public Policy and a double
-                  minor in Business Economics and Global Health. Vanessa is
-                  working towards a graduate degree in biostatistics at the
-                  University of Washington.
+                  modeling, with an emphasis in socio-structural factors of
+                  disease. At the time of this paper (2018), she received a
+                  Bachelor of Science in Public Policy with double minors in
+                  Business Economics and Global Health from the University of
+                  Southern California, and later a Master of Public Health from
+                  the University of Washington. As of 2020, Vanessa works as an
+                  epidemiologist at the MITRE Corporation.
                 </Author>
                 <Author name="Jen Patel" />
 

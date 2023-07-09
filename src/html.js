@@ -14,7 +14,7 @@ export default class HTML extends React.Component {
           />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-10273473-2"
+            src="https://www.googletagmanager.com/gtag/js?id=G-P00K4KL2Y9"
           />
           <script
             dangerouslySetInnerHTML={{
@@ -23,7 +23,7 @@ export default class HTML extends React.Component {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-10273473-2');
+            gtag('config', 'G-P00K4KL2Y9');
             gtag('config', 'AW-973476681');
           `,
             }}
@@ -34,11 +34,6 @@ export default class HTML extends React.Component {
             async
             defer
             src="//js.hs-scripts.com/356419.js"
-          />
-          <script
-            type="text/javascript"
-            src="//script.crazyegg.com/pages/scripts/0105/6922.js"
-            async="async"
           />
           <script
             type="text/javascript"

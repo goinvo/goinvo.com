@@ -25,3 +25,12 @@
     display: block;
   }
 }
+
+.poster {
+  border: 15px #ffeee4 solid;
+  transition: box-shadow $transition-duration--card;
+
+  &:hover {
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.08);
+  }
+}

@@ -1,5 +1,16 @@
 [
   {
+    "id": "national-cancer-navigation",
+    "title": "National Cancer Navigation",
+    "date": "Jun.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Mapping cancer journey pain points and exploring how navigation could support patients and their families.",
+    "link": "/vision/national-cancer-navigation/",
+    "image": "/images/features/national-cancer-navigation/hero.png",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "health-of-health-design",
     "title": "History of Health Design",
     "date": "Jun.2023",

@@ -143,6 +143,7 @@ class VisionPage extends Component {
                       date={feature.date}
                       caption={feature.caption}
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                      position={feature.imagePosition}
                       hoverable
                     />
                   </Card>

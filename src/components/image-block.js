@@ -28,6 +28,7 @@ class ImageBlock extends Component {
       categories,
       caption,
       className,
+      position,
       isSmall = false,
       hoverable = false,
     } = this.props
@@ -48,6 +49,7 @@ class ImageBlock extends Component {
             externalImage={externalImage}
             sizes={sizes}
             className="image-block__image"
+            position={position}
             alt={alt || ''}
           />
         </div>

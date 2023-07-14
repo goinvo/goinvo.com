@@ -41,6 +41,7 @@
     "caption": "Learn about the benefits of virtual diabetes care, and a hybrid healthcare approach, which combines in-person visits with telehealth.",
     "image": "/images/features/virtual-care-diabetes/virtual-care-diabetes-hero.jpg",
     "link": "/vision/virtual-diabetes-care/",
+    "imagePosition": "20% center",
     "hiddenWorkPage": true
   },
   {
@@ -204,6 +205,7 @@
     "categories": ["public-health-and-policy"],
     "caption": "A primer on COVID-19 with weekly updates",
     "image": "/images/features/coronavirus/hero.jpg",
+    "imagePosition": "right center",
     "link": "/vision/coronavirus/",
     "hiddenWorkPage": true
   },
@@ -230,6 +232,7 @@
     ],
     "caption": "",
     "image": "/images/features/vapepocolypse/vapepocolypse-hero.jpg",
+    "imagePosition": "right center",
     "link": "/vision/vapepocolypse/",
     "hiddenWorkPage": true
   },

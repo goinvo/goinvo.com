@@ -269,33 +269,6 @@ class NationalCancerNavigationFeature extends Component {
 
               <h2 className="header--lg margin-bottom--half">Authors</h2>
               <p className="margin-top--none">
-                <a
-                  href="https://www.linkedin.com/in/gcordovano/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Grace Cordovano, PhD
-                </a>
-                <br />
-                <span class="text--caption">
-                  Healthcare Navigating Solutionist & De-Frictionizer
-                </span>
-                <br />
-                <br />
-                <a
-                  href="https://www.linkedin.com/in/wendi-cross-98153519/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Wendi Cross, PhD
-                </a>
-                <br />
-                <span class="text--caption">
-                  Professor of Psychiatry (Psychology) and Pediatrics at
-                  University of Rochester Medical Center
-                </span>
-                <br />
-                <br />
                 Claire Lin
                 <br />
                 Tala Habbab
@@ -307,6 +280,32 @@ class NationalCancerNavigationFeature extends Component {
                 Samantha Wuu
                 <br />
                 Juhan Sonin
+              </p>
+              <h2 className="header--lg margin-bottom--half">Contributors</h2>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/gcordovano/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Grace Cordovano, PhD
+                </a>
+                <br />
+                <a
+                  href="https://www.linkedin.com/in/wendi-cross-98153519/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Wendi Cross, PhD
+                </a>
+                <br />
+                <a
+                  href="https://www.linkedin.com/in/daniel-ngo-41953232/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Daniel Ngo
+                </a>
               </p>
             </div>
           </div>

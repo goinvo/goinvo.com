@@ -281,8 +281,10 @@ class NationalCancerNavigationFeature extends Component {
                 <br />
                 Juhan Sonin
               </p>
-              <h2 className="header--lg margin-bottom--half">Contributors</h2>
-              <p>
+              <h2 className="header--lg margin-bottom--half margin-top--double">
+                Contributors
+              </h2>
+              <p className="margin-top--none">
                 <a
                   href="https://www.linkedin.com/in/gcordovano/"
                   target="_blank"

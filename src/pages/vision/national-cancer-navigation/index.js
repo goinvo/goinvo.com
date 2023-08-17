@@ -6,6 +6,7 @@ import HubspotForm from '../../../components/hubspot-form'
 import References from '../../../components/references'
 import Image from '../../../components/image'
 
+import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
 
 const frontmatter = {
@@ -202,7 +203,9 @@ class NationalCancerNavigationFeature extends Component {
                   <div className="margin-bottom--double">
                     <div className="poster margin-bottom--half">
                       <a
-                        href="https://www.dropbox.com/s/92n9k4b5mz5ryov/cancer_nav_process_highlevel_v1.pdf?dl=0"
+                        href={mediaUrl(
+                          '/pdf/vision/national-cancer-navigation/cancer_nav_process_highlevel_v1.pdf'
+                        )}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -216,7 +219,9 @@ class NationalCancerNavigationFeature extends Component {
                       </a>
                     </div>
                     <a
-                      href="https://www.dropbox.com/s/92n9k4b5mz5ryov/cancer_nav_process_highlevel_v1.pdf?dl=0"
+                      href={mediaUrl(
+                        '/pdf/vision/national-cancer-navigation/cancer_nav_process_highlevel_v1.pdf'
+                      )}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -228,7 +233,9 @@ class NationalCancerNavigationFeature extends Component {
                   <div className="margin-bottom--double">
                     <div className="poster margin-bottom--half">
                       <a
-                        href="https://www.dropbox.com/s/r6xwmaknrw5a6ic/cancer_nav_process_breakdown_v1.pdf?dl=0"
+                        href={mediaUrl(
+                          '/pdf/vision/national-cancer-navigation/cancer_nav_process_breakdown_v1.pdf'
+                        )}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -242,7 +249,9 @@ class NationalCancerNavigationFeature extends Component {
                       </a>
                     </div>
                     <a
-                      href="https://www.dropbox.com/s/r6xwmaknrw5a6ic/cancer_nav_process_breakdown_v1.pdf?dl=0"
+                      href={mediaUrl(
+                        '/pdf/vision/national-cancer-navigation/cancer_nav_process_breakdown_v1.pdf'
+                      )}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

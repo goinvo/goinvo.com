@@ -1,5 +1,15 @@
 [
   {
+    "name": "Sharon Lee",
+    "title": "Designer",
+    "bio": "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia.",
+    "social": {
+      "email": "sharon@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/sharon-lee-a1371999/"
+    },
+    "image": "/images/about/headshot-sharon-lee-2.jpg"
+  },
+  {
     "name": "Matthew Reyes",
     "title": "Designer",
     "bio": "Matthew is a designer and developer with a background in health diagnostics and patient care. Dedicated to improving public health systems and dismantling health inequities, he joined Invo in 2022 while completing his MPH at the University of California, Berkeley.",
@@ -19,16 +29,7 @@
     },
     "image": "/images/about/headshot-arpna-ghanshani.jpg"
   },
-  {
-    "name": "Jenny Yi",
-    "title": "Designer",
-    "bio": "Jenny is a designer of urban infrastructures that impact public health. She designs spaces that incorporate new healthcare technologies to create seamless experiences for people’s access to healthcare services. She joined Invo in 2022 with a B.Arch from Cornell University and while working on her M.Des from Harvard Graduate School of Design.",
-    "social": {
-      "email": "jenny@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/jenny-yi-202020/"
-    },
-    "image": "/images/about/headshot-jenny-yi.jpg"
-  },
+
   {
     "name": "Ines Amri",
     "title": "Designer",

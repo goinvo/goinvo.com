@@ -31,16 +31,6 @@
     "image": "/images/about/headshot-jen-patel.jpg"
   },
   {
-    "name": "Sharon Lee",
-    "title": "Designer",
-    "bio": "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia.",
-    "social": {
-      "email": "sharon@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/sharon-lee-a1371999/"
-    },
-    "image": "/images/about/headshot-sharon-lee-2.jpg"
-  },
-  {
     "name": "Parsuree Vatanasirisuk",
     "title": "Designer, Illustrator",
     "bio": "Parsuree is a user experience designer and illustrator with background in industrial design. She makes the complex beautiful and approachable through illustration and information design. Parsuree joined Invo in 2018, and has a BA in Industrial Design from Chulalongkorn University and a MFA from Rochester Institute of Technology (RIT).",
@@ -119,6 +109,16 @@
       "linkedin": "https://www.linkedin.com/in/talahabbab/"
     },
     "image": "/images/about/headshot-tala-habbab.jpg"
+  },
+  {
+    "name": "Jenny Yi",
+    "title": "Designer",
+    "bio": "Jenny is a designer of urban infrastructures that impact public health. She designs spaces that incorporate new healthcare technologies to create seamless experiences for people’s access to healthcare services. She joined Invo in 2022 with a B.Arch from Cornell University and a M.Des from Harvard Graduate School of Design.",
+    "social": {
+      "email": "jenny@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/jenny-yi-202020/"
+    },
+    "image": "/images/about/headshot-jenny-yi.jpg"
   },
   {
     "name": "Jonathan Follett",

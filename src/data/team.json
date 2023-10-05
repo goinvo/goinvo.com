@@ -121,6 +121,16 @@
     "image": "/images/about/headshot-jenny-yi.jpg"
   },
   {
+    "name": "Shirley Xu",
+    "title": "Designer, Engineer",
+    "bio": "Shirley is a designer-engineer with a background in art, engineering, and bioinformatics. She makes complex healthcare concepts and information actionable and beautiful. Shirley holds a BS in Computer Science from University of Massachusetts Amherst and an MS in Bioinformatics from Brandeis University.",
+    "social": {
+      "email": "shirley@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/mystarryspace/"
+    },
+    "image": "/images/about/headshot-shirley-xu.jpg"
+  },
+  {
     "name": "Jonathan Follett",
     "title": "Principal",
     "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",

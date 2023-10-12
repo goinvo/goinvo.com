@@ -600,9 +600,13 @@ class HealthcareAIFeature extends Component {
                 <Author name="Juhan Sonin" />
                 <div className="pad-vertical--double">
                   <h3 className="header--md">Contributors</h3>
-                  <p>Eric Benoit</p>
-                  <p>Xiaokun Qian</p>
-                  <p>Carina Zhang</p>
+                  <p>
+                    Eric Benoit
+                    <br />
+                    Xiaokun Qian
+                    <br />
+                    Carina Zhang
+                  </p>
                 </div>
               </div>
             </div>

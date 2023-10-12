@@ -24,7 +24,6 @@ class HealthcareAIFeature extends Component {
         <div className="healthcare-ai-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <p className="margin-bottom--none">Draft v.01, 2.Feb.23</p>
               <h1 className="header--xl margin-top--none">
                 The AI Healthcare Future We Need
               </h1>

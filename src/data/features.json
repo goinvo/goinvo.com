@@ -1,5 +1,16 @@
 [
   {
+    "id": "healthcare-ai",
+    "title": "The AI Healthcare Future We Need",
+    "date": "Nov.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Exploring the AI Healthcare future – opportunities and unexpected outcomes.",
+    "link": "/vision/healthcare-ai/",
+    "image": "/images/features/healthcare-ai/healthcare-ai-hero-4.png",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "national-cancer-navigation",
     "title": "National Cancer Navigation",
     "date": "Jun.2023",

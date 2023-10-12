@@ -11,7 +11,7 @@ import config from '../../../../config'
 const frontmatter = {
   metaTitle: 'The AI Healthcare Future We Need - GoInvo',
   metaDescription:
-    'Artificial intelligence (AI) has undergone tremendous advancements since its conception in the 1950s.',
+    'Exploring the AI Healthcare future – opportunities and unexpected outcomes.',
   heroImage: '/images/features/healthcare-ai/healthcare-ai-hero-4.jpg',
 }
 
@@ -580,8 +580,10 @@ class HealthcareAIFeature extends Component {
                 <Author name="Sharon Lee" />
                 <Author name="Juhan Sonin" />
                 <div className="pad-vertical--double">
-                  <h3 className="header--md">Contributor</h3>
+                  <h3 className="header--md">Contributors</h3>
                   <p>Eric Benoit</p>
+                  <p>Xiaokun Qian</p>
+                  <p>Carina Zhang</p>
                 </div>
               </div>
             </div>

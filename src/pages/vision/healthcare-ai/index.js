@@ -204,7 +204,11 @@ class HealthcareAIFeature extends Component {
                   className="image--max-width image--center"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
-
+              </div>
+              <div className="margin-auto">
+                <p>
+                  <strong>Melanoma AI Healthcare Assistant</strong>
+                </p>
                 <Video
                   sources={[
                     {
@@ -222,7 +226,11 @@ class HealthcareAIFeature extends Component {
                   fallback="/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg"
                   loop
                 />
-
+              </div>
+              <div className="margin-auto">
+                <p>
+                  <strong>Ankle Pain AI Healthcare Assistant</strong>
+                </p>
                 <Video
                   sources={[
                     {

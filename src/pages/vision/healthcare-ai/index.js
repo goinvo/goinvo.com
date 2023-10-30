@@ -5,9 +5,9 @@ import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
-import Video from '../../../components/video'
 
 import config from '../../../../config'
+import { mediaUrl } from '../../../helpers'
 
 const frontmatter = {
   metaTitle: 'The AI Healthcare Future We Need - GoInvo',
@@ -32,23 +32,25 @@ class HealthcareAIFeature extends Component {
               </p>
             </div>
             <div className="healthcare-ai-feature__video">
-              <Video
-                sources={[
-                  {
-                    src:
-                      '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.mp4',
-                    format: 'mp4',
-                  },
-                  {
-                    src:
-                      '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.webm',
-                    format: 'webm',
-                  },
-                ]}
-                poster="/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg"
-                fallback="/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg"
-                loop
-              />
+              <video
+                poster={mediaUrl(
+                  '/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg'
+                )}
+                controls
+              >
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.mp4'
+                  )}
+                  type="video/mp4"
+                />
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.webm'
+                  )}
+                  type="video/webm"
+                />
+              </video>
             </div>
             <div className="max-width max-width--md content-padding">
               <p>
@@ -56,23 +58,25 @@ class HealthcareAIFeature extends Component {
               </p>
             </div>
             <div className="healthcare-ai-feature__video">
-              <Video
-                sources={[
-                  {
-                    src:
-                      '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.mp4',
-                    format: 'mp4',
-                  },
-                  {
-                    src:
-                      '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.webm',
-                    format: 'webm',
-                  },
-                ]}
-                poster="/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg"
-                fallback="/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg"
-                loop
-              />
+              <video
+                poster={mediaUrl(
+                  '/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg'
+                )}
+                controls
+              >
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.mp4'
+                  )}
+                  type="video/mp4"
+                />
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.webm'
+                  )}
+                  type="video/webm"
+                />
+              </video>
             </div>
             <div className="max-width max-width--md content-padding">
               <p>

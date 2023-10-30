@@ -7,11 +7,12 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 
 import config from '../../../../config'
+import { mediaUrl } from '../../../helpers'
 
 const frontmatter = {
   metaTitle: 'The AI Healthcare Future We Need - GoInvo',
   metaDescription:
-    'Artificial intelligence (AI) has undergone tremendous advancements since its conception in the 1950s.',
+    'Exploring the AI Healthcare future – opportunities and unexpected outcomes.',
   heroImage: '/images/features/healthcare-ai/healthcare-ai-hero-4.jpg',
 }
 
@@ -23,16 +24,65 @@ class HealthcareAIFeature extends Component {
         <div className="healthcare-ai-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <p className="margin-bottom--none">Draft v.01, 2.Feb.23</p>
               <h1 className="header--xl margin-top--none">
                 The AI Healthcare Future We Need
               </h1>
-
+              <p>
+                <strong>Melanoma AI Healthcare Assistant</strong>
+              </p>
+            </div>
+            <div className="healthcare-ai-feature__video">
+              <video
+                poster={mediaUrl(
+                  '/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg'
+                )}
+                controls
+              >
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.mp4'
+                  )}
+                  type="video/mp4"
+                />
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.webm'
+                  )}
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div className="max-width max-width--md content-padding">
+              <p>
+                <strong>Ankle Pain AI Healthcare Assistant</strong>
+              </p>
+            </div>
+            <div className="healthcare-ai-feature__video">
+              <video
+                poster={mediaUrl(
+                  '/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg'
+                )}
+                controls
+              >
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.mp4'
+                  )}
+                  type="video/mp4"
+                />
+                <source
+                  src={mediaUrl(
+                    '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.webm'
+                  )}
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div className="max-width max-width--md content-padding">
               <p>
                 Artificial intelligence (AI) has undergone tremendous
                 advancements since its conception in the 1950s:
               </p>
-
               <p>
                 <strong>AI Image Generation</strong>: One of the most notable
                 developments in recent years is the accessibility and widespread
@@ -44,7 +94,6 @@ class HealthcareAIFeature extends Component {
                 Lensa’s "Magic Avatar" that generate fine-art-like portraits,
                 avatars, and more.
               </p>
-
               <p>
                 <strong>AI Text Generation</strong>: In addition to image
                 generation, conversational AI has also gained mainstream
@@ -70,20 +119,17 @@ class HealthcareAIFeature extends Component {
                 fact, ChatGPT was given a set of bullet points and produced the
                 first draft of this article introduction!
               </p>
-
               <p>
                 With all of these new advancements, AI capabilities straight out
                 of sci-fi movies like Fantastic Planet, Moon, and Her seem
                 closer than ever.
               </p>
-
               <p>
                 How will this impact health?
                 <br />
                 How <em>should</em> it impact health?
               </p>
               <p>Here are our studio’s thoughts on the matter.</p>
-
               <h2 className="header--lg margin-top--double margin-bottom--none">
                 Expectations for the Future
               </h2>
@@ -91,7 +137,6 @@ class HealthcareAIFeature extends Component {
                 The following are gaps we’ve identified in existing technology
                 that we would expect from an ideal patient tool:
               </p>
-
               <ul className="margin-top--none">
                 <li>
                   <strong>Context awareness</strong>
@@ -198,15 +243,12 @@ class HealthcareAIFeature extends Component {
                   </li>
                 </ul>
               </ul>
-
               <h2 className="header--lg margin-top--double margin-bottom--none">
                 Patient Tool Concepts
               </h2>
-
               <p>
                 <strong>AdHoc Health Guide</strong>
               </p>
-
               <div className="margin-auto">
                 <Image
                   src="/images/features/healthcare-ai/storyboard-patient-mole.jpg"
@@ -214,13 +256,11 @@ class HealthcareAIFeature extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
-
               <p className="margin-top--double">
                 <strong>Mental Health Support</strong>
                 <br />
                 <em>Storyboard with images generated by MidJourney</em>
               </p>
-
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
                   <Image
@@ -255,7 +295,6 @@ class HealthcareAIFeature extends Component {
                   </p>
                 </div>
               </div>
-
               <div className="pure-g margin-top--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
                   <Image
@@ -294,7 +333,6 @@ class HealthcareAIFeature extends Component {
                   </p>
                 </div>
               </div>
-
               <div className="pure-g margin-top--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
                   <Image
@@ -333,28 +371,22 @@ class HealthcareAIFeature extends Component {
                   </p>
                 </div>
               </div>
-
               <Image
                 src="/images/features/healthcare-ai/chatgpt-output.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               />
-
               <p className="margin-top--none">
                 <em>This image is a screenshot from ChatGPT</em>
               </p>
-
               <p>
                 At the end AiHealth asks if they’d like any help or suggestions
                 to feel better.
               </p>
-
               <h2 className="header--lg margin-top--double margin-bottom--none">
                 What purposes could an AI patient tool serve?
               </h2>
-
               <p>Here’s how we imagine it:</p>
-
               <ul>
                 <li>
                   <strong>Interoperability</strong>
@@ -460,7 +492,6 @@ class HealthcareAIFeature extends Component {
                   </li>
                 </ul>
               </ul>
-
               <div>
                 <Image
                   src="/images/features/healthcare-ai/sketch-ai-bench.jpg"
@@ -468,7 +499,6 @@ class HealthcareAIFeature extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
-
               <div>
                 <Image
                   src="/images/features/healthcare-ai/sketch-ai-bedroom.jpg"
@@ -476,7 +506,6 @@ class HealthcareAIFeature extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
-
               <div>
                 <Image
                   src="/images/features/healthcare-ai/sketch-ai-encounter.jpg"
@@ -484,7 +513,6 @@ class HealthcareAIFeature extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
-
               <div>
                 <Image
                   src="/images/features/healthcare-ai/sketch-ai-train.jpg"
@@ -492,13 +520,10 @@ class HealthcareAIFeature extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
-
               <h2 className="header--lg margin-top margin-bottom--none">
                 Ripple Effects and Unintended Outcomes
               </h2>
-
               <p>Here are the big conversations we think need to happen:</p>
-
               <ul>
                 <li>
                   <strong>Misinformation at scale</strong>: Stack Overflow
@@ -580,8 +605,14 @@ class HealthcareAIFeature extends Component {
                 <Author name="Sharon Lee" />
                 <Author name="Juhan Sonin" />
                 <div className="pad-vertical--double">
-                  <h3 className="header--md">Contributor</h3>
-                  <p>Eric Benoit</p>
+                  <h3 className="header--md">Contributors</h3>
+                  <p>
+                    Eric Benoit
+                    <br />
+                    Xiaokun Qian
+                    <br />
+                    Carina Zhang
+                  </p>
                 </div>
               </div>
             </div>

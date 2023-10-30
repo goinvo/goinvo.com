@@ -1,0 +1,14 @@
+.healthcare-ai-feature {
+  &__video {
+    width: 100%;
+    margin: 0 auto;
+
+    video {
+      width: 100%;
+    }
+
+    @include mq($from: large) {
+      width: 75%;
+    }
+  }
+}

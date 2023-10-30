@@ -28,6 +28,54 @@ class HealthcareAIFeature extends Component {
                 The AI Healthcare Future We Need
               </h1>
               <p>
+                <strong>Melanoma AI Healthcare Assistant</strong>
+              </p>
+            </div>
+            <div className="healthcare-ai-feature__video">
+              <Video
+                sources={[
+                  {
+                    src:
+                      '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.mp4',
+                    format: 'mp4',
+                  },
+                  {
+                    src:
+                      '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.webm',
+                    format: 'webm',
+                  },
+                ]}
+                poster="/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg"
+                fallback="/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg"
+                loop
+              />
+            </div>
+            <div className="max-width max-width--md content-padding">
+              <p>
+                <strong>Ankle Pain AI Healthcare Assistant</strong>
+              </p>
+            </div>
+            <div className="healthcare-ai-feature__video">
+              <Video
+                sources={[
+                  {
+                    src:
+                      '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.mp4',
+                    format: 'mp4',
+                  },
+                  {
+                    src:
+                      '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.webm',
+                    format: 'webm',
+                  },
+                ]}
+                poster="/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg"
+                fallback="/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg"
+                loop
+              />
+            </div>
+            <div className="max-width max-width--md content-padding">
+              <p>
                 Artificial intelligence (AI) has undergone tremendous
                 advancements since its conception in the 1950s:
               </p>
@@ -204,51 +252,6 @@ class HealthcareAIFeature extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
-              <div className="margin-auto">
-                <p>
-                  <strong>Melanoma AI Healthcare Assistant</strong>
-                </p>
-                <Video
-                  sources={[
-                    {
-                      src:
-                        '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.mp4',
-                      format: 'mp4',
-                    },
-                    {
-                      src:
-                        '/videos/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.webm',
-                      format: 'webm',
-                    },
-                  ]}
-                  poster="/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg"
-                  fallback="/images/features/healthcare-ai/melanoma_mobile_assistant_goinvo_aug2024.jpg"
-                  loop
-                />
-              </div>
-              <div className="margin-auto">
-                <p>
-                  <strong>Ankle Pain AI Healthcare Assistant</strong>
-                </p>
-                <Video
-                  sources={[
-                    {
-                      src:
-                        '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.mp4',
-                      format: 'mp4',
-                    },
-                    {
-                      src:
-                        '/videos/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.webm',
-                      format: 'webm',
-                    },
-                  ]}
-                  poster="/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg"
-                  fallback="/images/features/healthcare-ai/pearl-health-ankle-pain-2023-08-29.jpg"
-                  loop
-                />
-              </div>
-              pearl-health-ankle-pain-2023-08-29
               <p className="margin-top--double">
                 <strong>Mental Health Support</strong>
                 <br />

@@ -5,7 +5,20 @@ const path = require('path')
 const mime = require('mime-types')
 const AWS = require('aws-sdk')
 const randomstring = require('randomstring')
-const s3 = new AWS.S3()
+let s3 = null
+if (process.env.NETLIFY) {
+  s3 = new AWS.S3({
+    accessKeyId: process.env.GOINVO_AWS_ACCESS_KEY,
+    secretAccessKey: process.env.GOINVO_AWS_SECRET_KEY,
+  })
+} else {
+  s3 = new AWS.S3()
+}
+
+if (s3 === null) {
+  throw 'Error: unable to set s3 connection'
+}
+
 const cloudfront = new AWS.CloudFront()
 
 const uploadFile = filePath => {
@@ -87,5 +100,12 @@ const invalidateCloudfront = () => {
   })
 }
 
-uploadFromDirectory(path.join(__dirname + '/public/'))
-invalidateCloudfront()
+exports.handler = async function(event, context) {
+  uploadFromDirectory(path.join(__dirname, '..', '..', '/public/'))
+  invalidateCloudfront()
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: 'Executed successfully.' }),
+  }
+}

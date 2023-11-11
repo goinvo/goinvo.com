@@ -6,6 +6,7 @@ caption: 'Your health in one picture.'
 categories:
   - 'patient-engagement'
   - 'open-source'
+  - 'determinants-of-health'
 upNext:
   - 'care-cards'
   - 'paintrackr'

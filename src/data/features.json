@@ -1,5 +1,16 @@
 [
   {
+    "id": "healthcare-mottos",
+    "title": "US Healthcare Building Blocks",
+    "date": "Dec.2023",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Building blocks to help shape policies, regulations, and practices to ensure that healthcare is accessible, effective, and aligned with ethical standards.",
+    "link": "https://www.healthcaremottos.com/",
+    "image": "/images/features/healthcare-mottos/hc-mottos-hero-03.jpg",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "healthcare-ai",
     "title": "The AI Healthcare Future We Need",
     "date": "Nov.2023",

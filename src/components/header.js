@@ -65,10 +65,12 @@ class Header extends Component {
         <Link to="/contact/" className="header-nav__link hidden--until-lg">
           <div className="button button--primary">Contact</div>
         </Link>
+        {/* eslint-disable */}
         <div
           className="mobile-nav-overlay hidden--lg"
           onClick={this.toggleMobileNav}
         />
+        {/* eslint-enable */}
         <div className="mobile-nav">
           <button
             className="button button--transparent mobile-nav__close"

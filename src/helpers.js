@@ -17,18 +17,18 @@ export function formatDate(date) {
 }
 
 export function extractCaseStudyDataFromQuery(data) {
-  return data.allMdx.edges.map(edge => {
+  return data.allMdx.nodes.map(node => {
     return {
-      slug: edge.node.parent.name,
-      ...edge.node.frontmatter,
+      slug: node.parent.name,
+      ...node.frontmatter,
     }
   })
 }
 
 export function findCaseStudyById(data, id) {
-  return data.allMdx.edges.find(({ node }) => {
+  return data.allMdx.nodes.find(node => {
     return node.id === id
-  }).node
+  })
 }
 
 export function extractWorkItemLinkDetails(item) {
@@ -36,8 +36,8 @@ export function extractWorkItemLinkDetails(item) {
   const externalLink = item.slug
     ? false
     : item.link.includes('/vision/')
-      ? false
-      : true
+    ? false
+    : true
   const suppressNewTab = item.external ? false : true
 
   return {

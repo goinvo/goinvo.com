@@ -34,7 +34,7 @@
   &__link {
     display: block;
     width: 100%;
-    padding: ($spacing / 2) 2rem ($spacing / 2) 0;
+    padding: calc($spacing / 2) 2rem calc($spacing / 2) 0;
     border-bottom: $categories-list-border;
     text-decoration: none;
   }

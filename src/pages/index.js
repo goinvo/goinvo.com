@@ -384,20 +384,22 @@ class IndexPage extends Component {
 export const indexPageQuery = graphql`
   query IndexQuery {
     allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
-      edges {
-        node {
-          parent {
-            ... on File {
-              name
-            }
+      nodes {
+        id
+        parent {
+          ... on File {
+            name
           }
-          frontmatter {
-            title
-            image
-            client
-            categories
-            caption
-          }
+        }
+        frontmatter {
+          title
+          image
+          client
+          categories
+          caption
+        }
+        fields {
+          slug
         }
       }
     }

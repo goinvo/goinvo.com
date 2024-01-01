@@ -4,26 +4,26 @@
   }
 
   .header--sm {
-    margin-bottom: $spacing / 2;
-    margin-top: $spacing * 2;
+    margin-bottom: calc($spacing / 2);
+    margin-top: calc($spacing * 2);
   }
 
   .header--md {
-    margin-top: $spacing * 4;
+    margin-top: calc($spacing * 4);
   }
 
   .ul {
-    margin-top: $spacing / 2;
+    margin-top: calc($spacing / 2);
   }
 
   &__enables {
     .header--sm {
-      margin-top: $spacing / 2;
-      margin-bottom: $spacing / 2;
+      margin-top: calc($spacing / 2);
+      margin-bottom: calc($spacing / 2);
     }
 
     img {
-      margin-top: $spacing * 2;
+      margin-top: calc($spacing * 2);
     }
   }
 }

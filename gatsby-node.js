@@ -1,54 +1,83 @@
 const path = require('path')
-const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
+const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ graphql, actions }) => {
+const caseStudyLayout = path.resolve(
+  `./src/components/layouts/case-study-layout.js`
+)
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  createTypes(`
+    type Reference {
+     title: String
+     link: String
+    }
+    type Result {
+      stat: String
+      description: String
+    }
+    type MdxFrontmatter {
+      title: String
+      image: String
+      client: String
+      caption: String
+      categories: [String]
+      upNext: [String]
+      hidden: Boolean
+      metaDescription: String
+      references: [Reference]
+      results: [Result]
+    }
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter!
+    }
+  `)
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === 'Mdx') {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      node,
+      name: 'slug',
+      // don't need a separating "/" before the value because
+      // createFilePath returns a path with the leading "/".
+      value: `/work${value}`,
+    })
+  }
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  return new Promise((resolve, reject) => {
-    resolve(
-      graphql(
-        `
-          {
-            allMdx {
-              edges {
-                node {
-                  id
-                  parent {
-                    ... on File {
-                      name
-                      sourceInstanceName
-                    }
-                  }
-                  code {
-                    scope
-                  }
-                  frontmatter {
-                    hidden
-                  }
-                }
-              }
-            }
+  const result = await graphql(`
+    query {
+      allMdx {
+        nodes {
+          id
+          fields {
+            slug
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+          internal {
+            contentFilePath
+          }
         }
-
-        result.data.allMdx.edges.forEach(({ node }) => {
-          if (!node.frontmatter.hidden) {
-            createPage({
-              path: `/work/${node.parent.name}`,
-              component: componentWithMDXScope(
-                path.resolve('./src/components/layouts/case-study-layout.js'),
-                node.code.scope
-              ),
-              context: { id: node.id },
-            })
-          }
-        })
-      })
-    )
+      }
+    }
+  `)
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
+  const caseStudies = result.data.allMdx.nodes
+  caseStudies.forEach(node => {
+    createPage({
+      path: node.fields.slug,
+      component: `${caseStudyLayout}?__contentFilePath=${node.internal.contentFilePath}`,
+      // You can use the values in this context in
+      // our page layout component
+      context: { id: node.id },
+    })
   })
 }
 

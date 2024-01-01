@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { MDXProvider } from '@mdx-js/react'
+import { MDXProvider } from "@mdx-js/react"
 import Helmet from 'react-helmet'
 
 import Layout from './layout'

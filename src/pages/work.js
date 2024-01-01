@@ -317,24 +317,22 @@ class WorkPage extends Component {
 export const workPageQuery = graphql`
   query WorkQuery {
     allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
-      edges {
-        node {
-          id
-          parent {
-            ... on File {
-              name
-            }
+      nodes {
+        id
+        parent {
+          ... on File {
+            name
           }
-          frontmatter {
-            title
-            image
-            client
-            categories
-            caption
-          }
-          fields {
-            slug
-          }
+        }
+        frontmatter {
+          title
+          image
+          client
+          categories
+          caption
+        }
+        fields {
+          slug
         }
       }
     }

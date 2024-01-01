@@ -1,6 +1,40 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+const caseStudyLayout = path.resolve(
+  `./src/components/layouts/case-study-layout.js`
+)
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  createTypes(`
+    type Reference {
+     title: String
+     link: String
+    }
+    type Result {
+      stat: String
+      description: String
+    }
+    type MdxFrontmatter {
+      title: String
+      image: String
+      client: String
+      caption: String
+      categories: [String]
+      upNext: [String]
+      hidden: Boolean
+      metaDescription: String
+      references: [Reference]
+      results: [Result]
+    }
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter!
+    }
+  `)
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (node.internal.type === 'Mdx') {
@@ -20,12 +54,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query {
       allMdx {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
+        nodes {
+          id
+          fields {
+            slug
+          }
+          internal {
+            contentFilePath
           }
         }
       }
@@ -34,11 +69,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
-  const caseStudies = result.data.allMdx.edges
-  caseStudies.forEach(({ node }, index) => {
+  const caseStudies = result.data.allMdx.nodes
+  caseStudies.forEach(node => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/components/layouts/case-study-layout.js`),
+      component: `${caseStudyLayout}?__contentFilePath=${node.internal.contentFilePath}`,
       // You can use the values in this context in
       // our page layout component
       context: { id: node.id },

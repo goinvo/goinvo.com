@@ -15,7 +15,6 @@ metaDescription: 'A standard health record for the United States.'
 ---
 
 import Divider from 'components/divider'
-import Quote from 'components/quote'
 
 # Driving a National Health Data Standard
 
@@ -23,9 +22,9 @@ for MITRE Corporation
 
 ### Problem
 
-<!-- prettier-ignore-start -->
-The U.S. lacks a health data standard. Organizations cannot efficiently share or manage health data, costing the US healthcare system $80 billion a year.
-<!-- prettier-ignore-end -->
+{ /_ prettier-ignore-start _/ }
+The U.S. lacks a health data standard. Organizations cannot efficiently share or manage health data, costing the US healthcare system \$80 billion a year.
+{ /_ prettier-ignore-end _/ }
 
 MITRE, a Federally Funded Research and Development Center (FFRDC) specializing in systems engineering, is developing a health data specification called the Standard Health Record (SHR). To drive development and national health IT policy, they needed help envisioning its technical architecture and imagining the services built on top of SHR.
 
@@ -37,12 +36,30 @@ GoInvo identified pain points in the current state of health data interoperabili
 
 The design concepts and SHR use cases played a key role in providing MITRE a long-term vision. It communicated the value of the SHR and continues to educate key players and organizations. In 2018, SHR was accepted into the international FHIR standard as a new oncology FHIR profile.
 
-<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 1 designer for 18 months, ongoing
-<br /><span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & Infrastructure, Open Source
+<span class="text--uppercase text--gray text--bold text--spacing text--md">
+  Time:
+</span> 1 designer for 18 months, ongoing
 <br />
-<a href="http://standardhealthrecord.org/" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg">SHR website</a>
-<a href="https://github.com/standardhealth/shr_design/" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half">Designs on GitHub</a>
-
+<span class="text--uppercase text--gray text--bold text--spacing text--md">
+  Tags:
+</span> Health IT & Infrastructure, Open Source
+<br />
+<a
+  href="http://standardhealthrecord.org/"
+  target="blank"
+  rel="noopener noreferrer"
+  class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg"
+>
+  SHR website
+</a>
+<a
+  href="https://github.com/standardhealth/shr_design/"
+  target="blank"
+  rel="noopener noreferrer"
+  class="button button--secondary button--lg margin-top--double margin-bottom--half"
+>
+  Designs on GitHub
+</a>
 <Divider />
 
 ## Process
@@ -115,7 +132,7 @@ _A patient may initiate a personal health record that values patient data owners
 ![SHR storyboards 2](/images/case-studies/mitre/SHR/shr-storyboard-at-home.jpg)
 _Continuous at-home primary care service via a patient performing a self-assessment using conversational UI._
 
-<br/>
+<br />
 
 ![SHR storyboards 3](/images/case-studies/mitre/SHR/shr-storyboard-emergency.jpg)
 _Remote care can also help in an emergency situation._

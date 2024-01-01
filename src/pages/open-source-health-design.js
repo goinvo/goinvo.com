@@ -479,20 +479,18 @@ class OpenSourcePage extends Component {
 export const openSourcePageQuery = graphql`
   query OpenSourcePageQuery {
     allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
-      edges {
-        node {
-          parent {
-            ... on File {
-              name
-            }
+      nodes {
+        parent {
+          ... on File {
+            name
           }
-          frontmatter {
-            title
-            image
-            client
-            categories
-            caption
-          }
+        }
+        frontmatter {
+          title
+          image
+          client
+          categories
+          caption
         }
       }
     }

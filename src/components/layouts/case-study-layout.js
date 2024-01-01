@@ -28,8 +28,6 @@ const CaseStudyLayout = ({ data, children }) => {
     return
   }
 
-  console.log('HAS CHILDRED')
-
   const caseStudiesWithFeatures = concatCaseStudiesAndFeatures(data, false)
 
   const caseStudy = findCaseStudyById(data, mdx.id)
@@ -187,34 +185,32 @@ export const pageQuery = graphql`
       id
     }
     allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
-      edges {
-        node {
-          id
-          parent {
-            ... on File {
-              name
-            }
+      nodes {
+        id
+        parent {
+          ... on File {
+            name
           }
-          frontmatter {
+        }
+        frontmatter {
+          title
+          image
+          client
+          categories
+          caption
+          results {
+            stat
+            description
+          }
+          references {
             title
-            image
-            client
-            categories
-            caption
-            results {
-              stat
-              description
-            }
-            references {
-              title
-              link
-            }
-            upNext
-            metaDescription
+            link
           }
-          fields {
-            slug
-          }
+          upNext
+          metaDescription
+        }
+        fields {
+          slug
         }
       }
     }

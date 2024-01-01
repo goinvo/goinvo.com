@@ -21,7 +21,6 @@ metaDescription: 'Closing the SNAP gap for 760,000 MA residents. A 50% increase 
 ---
 
 import Divider from 'components/divider'
-import Quote from 'components/quote'
 import Video from 'components/video'
 
 # Closing the SNAP gap
@@ -40,20 +39,31 @@ Our project aimed to make this first step welcoming rather than prohibitive thro
 
 We designed an application that's fully compliant with [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) and [508 accessibility standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/) – and is currently in use in Massachusetts. This work was highlighted in the third edition of [_Measuring the User Experience_](https://www.amazon.com/Measuring-User-Experience-Interactive-Technologies/dp/0128180803) by Bill Albert and Tom Tullis.
 
-<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 12 weeks, 2 engineers for 10 weeks<br/>
-<span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Public health & policy
+<span class="text--uppercase text--gray text--bold text--spacing text--md">
+  Time:
+</span> 2 designers for 12 weeks, 2 engineers for 10 weeks
 <br />
-<a href="https://dtaconnect.eohhs.mass.gov/?_ga=2.253579721.1938704760.1538663360-447556880.1535061795" target="blank" rel="noopener noreferrer" class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg">View live app</a>
-
+<span class="text--uppercase text--gray text--bold text--spacing text--md">
+  Tags:
+</span> Public health & policy
+<br />
+<a
+  href="https://dtaconnect.eohhs.mass.gov/?_ga=2.253579721.1938704760.1538663360-447556880.1535061795"
+  target="blank"
+  rel="noopener noreferrer"
+  class="button button--secondary button--lg margin-top--double margin-bottom--half margin-right--only-lg"
+>
+  View live app
+</a>
 <Divider />
 
 ## Understanding the problem
 
 #### No one should have to worry about affording their next meal.
 
-<!-- prettier-ignore-start -->
-In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP[^2]. Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in $1.80 in total economic activity.”
-<!-- prettier-ignore-end -->
+{ /_ prettier-ignore-start _/ }
+In Massachusetts, the Department of Transitional Assistance (DTA) helps nearly 800K residents afford food every month through SNAP[^2]. Formerly known as Food Stamps, SNAP provides households with anywhere from $15 to $352 per month for a family of two. The DTA reports that “every dollar in new SNAP benefits results in \$1.80 in total economic activity.”
+{ /_ prettier-ignore-end _/ }
 
 ![A simple diagram we made to help communicate the process to SNAP applicants.](/images/case-studies/mass/snap/snap-simple-process.jpg)
 
@@ -83,9 +93,9 @@ We shadowed case workers performing phone interviews and assisting applicants an
 
 #### Why mobile first makes sense
 
-<!-- prettier-ignore-start -->
-The Pew Research Center reported that 77% of U.S. adults owned smartphones as of January 10, 2018[^3]. Americans making less than $30,000 per year came in at a 67% ownership rate. While residents can access desktop computers at local libraries, many of those who would apply to SNAP have more immediate access to smartphones rather than desktop computers. Having a phone connects people to work opportunities and is a necessity in the modern world.
-<!-- prettier-ignore-end -->
+{ /_ prettier-ignore-start _/ }
+The Pew Research Center reported that 77% of U.S. adults owned smartphones as of January 10, 2018[^3]. Americans making less than \$30,000 per year came in at a 67% ownership rate. While residents can access desktop computers at local libraries, many of those who would apply to SNAP have more immediate access to smartphones rather than desktop computers. Having a phone connects people to work opportunities and is a necessity in the modern world.
+{ /_ prettier-ignore-end _/ }
 
 <Divider />
 
@@ -117,15 +127,11 @@ Behavior, interactions, feedback loops, and accessibility standards all ultimate
 
 The design is optimized for screen readers, maintains WCAG 2.0 AAA contrast levels, and allows the user to translate the application. The streamlined format minimizes visual burden and reduces missed information.
 
-<!-- TODO: "Before you start" video or image -->
-
 ![Before you start](/images/case-studies/mass/snap/snap-before-you-start.jpg)
 
 #### Reduced question fatigue.
 
 We grouped questions by topic into bite-sized sections, helping users work through the application more efficiently and with less confusion. We decreased the number of questions from about 90 to 40 (estimate for a household of two). The redesigned application uses logic as the user begins answering questions to filter out irrelevant questions.
-
-<!-- TODO: "How Close am I" video or image -->
 
 ![How Close am I](/images/case-studies/mass/snap/snap-how-close.jpg)
 
@@ -133,20 +139,25 @@ We grouped questions by topic into bite-sized sections, helping users work throu
 
 Diagrams at the beginning and end of the application help the user anticipate what comes next. The user gets a chance to catch mistakes through summaries at the end of sections. Definitions and help text expand inline for easiest reading. The user can track their progress in the menu, as it doubles as a checklist.
 
-<!-- TODO: "Emergency" video needs to be sped up -->
-
 <Video
-sources={[
-{src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.mp4", format: "mp4"},
-{src: "/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.webm", format: "webm"}
-]}
-width="100%"
-height="480"
-poster="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
-fallback="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
-loop
+  sources={[
+    {
+      src:
+        '/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.mp4',
+      format: 'mp4',
+    },
+    {
+      src:
+        '/videos/case-studies/mass/snap/dta-snap-emergency-recording-9Oct.webm',
+      format: 'webm',
+    },
+  ]}
+  width="100%"
+  height="480"
+  poster="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
+  fallback="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
+  loop
 />
-
 <Divider />
 
 ## Results

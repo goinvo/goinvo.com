@@ -24,7 +24,7 @@ import features from '../../data/features.json'
 import config from '../../../config'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'living-health-lab'
+  feature => feature.id === 'healthcare-ai'
 )
 
 const frontmatter = {
@@ -143,6 +143,7 @@ class VisionPage extends Component {
                       date={feature.date}
                       caption={feature.caption}
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                      position={feature.imagePosition}
                       hoverable
                     />
                   </Card>

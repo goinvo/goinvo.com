@@ -13,3 +13,5 @@ src/**/*.css
 
 # Environment variables
 .env
+
+.vscode

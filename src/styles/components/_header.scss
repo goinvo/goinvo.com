@@ -43,7 +43,7 @@
     padding: 0 calc($spacing / 2);
     fill: $color-gray;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       margin-left: $spacing;
     }
   }
@@ -58,7 +58,7 @@
     }
   }
 
-  @include mq($from: large) {
+  @include mq-from($breakpoint--lg) {
     #{$parent}__logo {
       margin-right: auto;
     }

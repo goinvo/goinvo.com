@@ -1,4 +1,4 @@
-import config from '../config.js'
+import config from './config.js'
 import features from './data/features.json'
 import caseStudiesOrder from './data/case-study-order.json'
 
@@ -17,18 +17,18 @@ export function formatDate(date) {
 }
 
 export function extractCaseStudyDataFromQuery(data) {
-  return data.allMdx.nodes.map(node => {
+  return data.allMdx.edges.map(edge => {
     return {
-      slug: node.parent.name,
-      ...node.frontmatter,
+      slug: edge.node.parent.name,
+      ...edge.node.frontmatter,
     }
   })
 }
 
 export function findCaseStudyById(data, id) {
-  return data.allMdx.nodes.find(node => {
+  return data.allMdx.edges.find(({ node }) => {
     return node.id === id
-  })
+  }).node
 }
 
 export function extractWorkItemLinkDetails(item) {
@@ -36,8 +36,8 @@ export function extractWorkItemLinkDetails(item) {
   const externalLink = item.slug
     ? false
     : item.link.includes('/vision/')
-    ? false
-    : true
+      ? false
+      : true
   const suppressNewTab = item.external ? false : true
 
   return {
@@ -69,10 +69,10 @@ export function concatCaseStudiesAndFeatures(
 
 export function debounce(func, wait, immediate) {
   var timeout
-  return function() {
+  return function () {
     var context = this,
       args = arguments
-    var later = function() {
+    var later = function () {
       timeout = null
       if (!immediate) func.apply(context, args)
     }

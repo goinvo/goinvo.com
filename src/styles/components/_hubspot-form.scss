@@ -46,14 +46,15 @@
   }
 
   &--inline {
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
+
       form,
       .hs-form-field {
         display: flex;
         align-items: center;
       }
 
-      form > div,
+      form>div,
       .input {
         flex: 1;
       }
@@ -76,14 +77,14 @@
   &--breakout {
     margin-top: -2rem;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       margin-top: 0;
     }
   }
 }
 
 .vision-form-wrapper {
-  @include mq($from: large) {
+  @include mq-from($breakpoint--lg) {
     position: relative;
 
     .hubspot-form {

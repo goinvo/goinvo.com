@@ -5,7 +5,7 @@
   &__menu-items {
     margin: $spacing 0 ($spacing * 2) 0;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       display: flex;
     }
   }
@@ -25,7 +25,7 @@
       border-bottom: $carousel-menu-item-border;
     }
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       flex: 1;
       border-bottom: $carousel-menu-item-border;
 
@@ -80,7 +80,7 @@
       background-repeat: no-repeat;
       opacity: 1;
 
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         display: block;
       }
     }
@@ -129,6 +129,7 @@
   }
 
   &:hover {
+
     .slick-prev,
     .slick-next {
       opacity: 1;

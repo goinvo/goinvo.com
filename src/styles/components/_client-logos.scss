@@ -6,12 +6,12 @@
     width: 50%;
     height: 70px;
 
-    @include mq($from: medium) {
+    @include mq-from($breakpoint--md) {
       width: 25%;
       height: 80px;
     }
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       width: 20%;
     }
 

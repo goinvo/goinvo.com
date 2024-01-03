@@ -1,15 +1,5 @@
 [
   {
-    "name": "Parsuree Vatanasirisuk",
-    "title": "Designer, Illustrator",
-    "bio": "Parsuree is a user experience designer and illustrator with background in industrial design. She makes the complex beautiful and approachable through illustration and information design. Parsuree joined Invo in 2018, and has a BA in Industrial Design from Chulalongkorn University and a MFA from Rochester Institute of Technology (RIT).",
-    "social": {
-      "email": "parsuree@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/parsuree-vatanasirisuk/"
-    },
-    "image": "/images/about/headshot-parsuree-vatanasirisuk.jpg"
-  },
-  {
     "name": "Sharon Lee",
     "title": "Designer",
     "bio": "Sharon is a designer with an eclectic background in engineering, medicine, and art. Passionate about healthcare, she has focused her efforts on human-centered software design. She joined Invo in 2016 with a BS in Biomedical Engineering from the University of Virginia.",
@@ -39,6 +29,7 @@
     },
     "image": "/images/about/headshot-arpna-ghanshani.jpg"
   },
+
   {
     "name": "Ines Amri",
     "title": "Designer",

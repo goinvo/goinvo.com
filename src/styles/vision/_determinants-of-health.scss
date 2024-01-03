@@ -14,11 +14,13 @@
     h4 {
       margin: 0 0 5px 0;
     }
+
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
+
     .divisionSection {
       margin-bottom: 30px;
       break-inside: avoid-column;
@@ -51,7 +53,7 @@ h3.determinant {
       vertical-align: middle;
     }
 
-    @include mq($from: small) {
+    @include mq-from($breakpoint--sm) {
       flex-wrap: nowrap;
 
       li {
@@ -70,7 +72,7 @@ h3.determinant {
     }
 
     &__label {
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         display: none;
       }
     }

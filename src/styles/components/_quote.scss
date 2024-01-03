@@ -6,6 +6,7 @@
     &:first-of-type {
       margin-bottom: $spacing * 3;
     }
+
     &:last-of-type {
       margin-top: $spacing * 2;
     }
@@ -39,23 +40,24 @@
 
   &--lg {
     #{$parent}__content {
+
       &:before,
       &:after {
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           width: 30px;
           height: 30px;
         }
       }
 
       &:before {
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           top: -35px;
           left: -35px;
         }
       }
 
       &:after {
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           bottom: -35px;
           right: -35px;
         }

@@ -7,7 +7,7 @@
       width: 100%;
     }
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       width: 75%;
     }
   }

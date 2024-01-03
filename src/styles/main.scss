@@ -1,9 +1,18 @@
-@import '~purecss/build/base.css'; // This includes normalize.css
-@import '~purecss/build/grids.css';
 @import './vendor/pure-grids-responsive-reworked.css'; // Using rework to modify responsive grid breakpoints
-@import '~sass-mq/mq';
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
+
+@mixin mq-from($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin mq-until($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
 
 @import 'variables/layout';
 @import 'variables/colors';

@@ -9,23 +9,24 @@
     flex-basis: 100%;
     margin-bottom: 1rem;
 
-    > * {
+    >* {
       flex-grow: 1;
     }
 
     &--2 {
-      @include mq($from: medium) {
+      @include mq-from($breakpoint--md) {
         flex-basis: calc(50% - #{calc($spacing / 2)});
       }
     }
 
     &--3 {
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         flex-basis: calc(33.33% - #{calc($spacing * 0.66)});
       }
     }
+
     &--4 {
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         flex-basis: calc(25% - #{calc($spacing / 2)});
       }
     }

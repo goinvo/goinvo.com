@@ -1,70 +1,42 @@
 {
-  "name": "goinvo.com",
-  "description": "Static site for goinvo.com using GatsbyJS",
+  "name": "goinvov",
+  "description": "Static site for goinvo.com using Next.js",
   "version": "1.0.0",
-  "author": "Craig McGinley <craig@goinvo.com>",
-  "dependencies": {
-    "@mdx-js/mdx": "^3.0.0",
-    "@mdx-js/react": "^3.0.0",
-    "@mdx-js/tag": "^0.20.3",
-    "airtable": "^0.12.2",
-    "aws-sdk": "^2.328.0",
-    "d3-axis": "^3.0.0",
-    "d3-fetch": "^3.0.1",
-    "d3-format": "^3.1.0",
-    "d3-scale": "^4.0.2",
-    "d3-selection": "^3.0.0",
-    "dotenv": "^16.3.1",
-    "gatsby": "^5.0.0",
-    "gatsby-plugin-manifest": "^5.0.0",
-    "gatsby-plugin-mdx": "^5.13.0",
-    "gatsby-plugin-page-creator": "^5.0.0",
-    "gatsby-plugin-react-helmet": "^6.0.0",
-    "gatsby-plugin-react-svg": "^3.0.0",
-    "gatsby-plugin-sass": "^6.0.0",
-    "gatsby-source-filesystem": "^5.0.0",
-    "jquery": "^3.3.1",
-    "mime-types": "^2.1.20",
-    "purecss": "^3.0.0",
-    "randomstring": "^1.1.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-google-charts": "^4.0.1",
-    "react-helmet": "^6.1.0",
-    "react-hubspot-form": "^1.3.6",
-    "react-redux": "^9.0.4",
-    "react-scrollspy": "^3.4.3",
-    "react-slick": "^0.29.0",
-    "rework": "^1.0.1",
-    "rework-pure-grids": "^2.0.1",
-    "sass": "^1.63.2",
-    "sass-mq": "^6.0.0",
-    "slick-carousel": "^1.8.1",
-    "smoothscroll-polyfill": "^0.4.3"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goinvo/goinvo.com"
   },
   "scripts": {
-    "rework-css": "node ./src/rework-pure-grids.js",
-    "gatsby-build": "gatsby build",
-    "build": "run-s rework-css gatsby-build",
-    "gatsby-develop": "gatsby develop",
-    "develop": "run-s rework-css gatsby-develop",
-    "format": "prettier --write '**/*.{js,json,scss}'",
-    "upload": "node upload.js",
-    "redirect": "node redirect.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "next dev",
+    "develop:scss": "sass --watch --update --style=expanded src/styles:public/styles",
+    "build:server": "next build",
+    "build:scss": "npm run build:rework && sass src/styles:public/styles",
+    "build:rework": "node scripts/rework-pure-grids.js",
+    "build": "npm run build && npm run build:scss && npm run start",
+    "start": "next start",
+    "lint": "next lint",
+    "upload": "node scripts/upload.js",
+    "redirect": "node scripts/redirect.js",
+    "release": "commit-and-tag-version"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-helmet": "^6.1.0",
+    "rework": "^1.0.1",
+    "rework-pure-grids": "^2.0.1",
+    "sass": "^1.69.6"
+  },
+  "devDependencies": {
+    "commit-and-tag-version": "^12.0.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "husky": "^8.0.3"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  },
-  "devDependencies": {
-    "husky": "^8.0.3",
-    "npm-run-all": "^4.1.3",
-    "prettier": "^3.1.1",
-    "pretty-quick": "^3.1.3"
-  },
-  "engines": {
-    "node": ">=18.18.*"
   }
 }

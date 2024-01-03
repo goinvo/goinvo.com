@@ -4,12 +4,14 @@
   list-style-image: url('../assets/images/bullet.svg');
   padding-left: 21px;
 
-  @include mq($from: large) {
+  @include mq-from($breakpoint--lg) {
     padding-left: 0;
   }
+
   li {
     line-height: 1.5rem;
     padding: 0.2rem;
+
     ul {
       padding-left: 15px;
     }
@@ -28,7 +30,7 @@
   justify-content: space-between;
 
   &--half {
-    @include mq($from: medium) {
+    @include mq-from($breakpoint--md) {
       li {
         flex-basis: calc(50% - #{$spacing});
       }

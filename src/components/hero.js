@@ -1,7 +1,5 @@
-/* eslint-disable react/jsx-no-target-blank */
-
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'next/link'
 
 import BackgroundImage from './background-image'
 import Video from './video'
@@ -87,9 +85,8 @@ class Hero extends Component {
 
     return (
       <div
-        className={`hero ${isLarge ? 'hero--large' : ''} ${
-          className ? className : ''
-        } ${video ? 'hero--video' : ''}`}
+        className={`hero ${isLarge ? 'hero--large' : ''} ${className ? className : ''
+          } ${video ? 'hero--video' : ''}`}
         style={this.props.style}
       >
         {this.renderHeroBlock()}

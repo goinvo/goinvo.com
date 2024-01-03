@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
+import Image from 'next/image';
 
 import Divider from './divider'
 
-import Logo from '../assets/images/logo-goinvo.inline.svg'
-import Hamburger from '../assets/images/icon-hamburger.inline.svg'
-import Close from '../assets/images/icon-close.inline.svg'
+import Logo from '../../public/images/logo-goinvo.inline.svg'
+// import Hamburger from '../assets/images/icon-hamburger.inline.svg'
+// import Close from '../assets/images/icon-close.inline.svg'
 
 class Header extends Component {
   constructor(props) {
@@ -36,19 +37,18 @@ class Header extends Component {
 
     return (
       <div
-        className={`header-nav ${
-          this.state.mobileNavOpen ? 'header-nav--mobile-nav-open' : ''
-        }`}
+        className={`header-nav ${this.state.mobileNavOpen ? 'header-nav--mobile-nav-open' : ''
+          }`}
         id="header"
       >
-        <Link to="/" className="header-nav__link header-nav__logo">
-          <Logo />
+        <Link href="/" className="header-nav__link header-nav__logo">
+          <Image src={Logo} alt="GoInvo Logo" />
         </Link>
         {navItems.map(navItem => {
           return (
             <Link
               key={navItem.link}
-              to={navItem.link}
+              href={navItem.link}
               className={`header-nav__link ${navItem.class}`}
               activeClassName="header-nav__link--active"
             >
@@ -60,29 +60,27 @@ class Header extends Component {
           className="header-nav__hamburger button button--transparent hidden--lg"
           onClick={this.toggleMobileNav}
         >
-          <Hamburger />
+          <img src="./images/icon-hamburger.inline.svg" />
         </button>
-        <Link to="/contact/" className="header-nav__link hidden--until-lg">
+        <Link href="/contact/" className="header-nav__link hidden--until-lg">
           <div className="button button--primary">Contact</div>
         </Link>
-        {/* eslint-disable */}
         <div
           className="mobile-nav-overlay hidden--lg"
           onClick={this.toggleMobileNav}
         />
-        {/* eslint-enable */}
         <div className="mobile-nav">
           <button
             className="button button--transparent mobile-nav__close"
             onClick={this.toggleMobileNav}
           >
-            <Close />
+            <img src="./images/icon-close.inline.svg" />
           </button>
           <div className="mobile-nav__content">
             <ul className="mobile-nav__list">
               <li>
                 <Link
-                  to="/"
+                  href="/"
                   className="mobile-nav__link"
                   activeClassName="mobile-nav__link--active"
                   onClick={this.toggleMobileNav}
@@ -94,7 +92,7 @@ class Header extends Component {
                 return (
                   <li key={navItem.link}>
                     <Link
-                      to={navItem.link}
+                      href={navItem.link}
                       className={`mobile-nav__link`}
                       activeClassName="mobile-nav__link--active"
                       onClick={this.toggleMobileNav}
@@ -106,7 +104,7 @@ class Header extends Component {
               })}
               <li>
                 <Link
-                  to="/contact/"
+                  href="/contact/"
                   className="mobile-nav__link"
                   activeClassName="mobile-nav__link--active"
                   onClick={this.toggleMobileNav}
@@ -119,7 +117,7 @@ class Header extends Component {
             <ul className="mobile-nav__list">
               <li>
                 <Link
-                  to="/about/careers/"
+                  href="/about/careers/"
                   className="mobile-nav__link-secondary"
                   activeClassName="mobile-nav__link--active"
                   onClick={this.toggleMobileNav}
@@ -129,7 +127,7 @@ class Header extends Component {
               </li>
               <li>
                 <Link
-                  to="/about/open-office-hours/"
+                  href="/about/open-office-hours/"
                   className="mobile-nav__link-secondary"
                   activeClassName="mobile-nav__link--active"
                   onClick={this.toggleMobileNav}

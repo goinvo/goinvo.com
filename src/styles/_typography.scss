@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Open Sans';
-  src: url('../assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
-    url('../assets/fonts/opensans-regular-webfont.woff') format('woff');
+  src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+    url('../fonts/opensans-regular-webfont.woff') format('woff');
   font-weight: $font-weight--normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('../assets/fonts/opensans-semibold-webfont.woff2') format('woff2'),
-    url('../assets/fonts/opensans-semibold-webfont.woff') format('woff');
+  src: url('../fonts/opensans-semibold-webfont.woff2') format('woff2'),
+    url('../fonts/opensans-semibold-webfont.woff') format('woff');
   font-weight: $font-weight--bold;
   font-style: normal;
 }
@@ -61,7 +61,7 @@ body {
     font-size: 1.75rem;
     line-height: 2.0625rem;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       font-size: 2.25rem;
       line-height: 2.625rem;
     }
@@ -115,6 +115,7 @@ body {
 }
 
 .header {
+
   &--lg,
   &--xl {
     font-family: $font-family--serif;
@@ -129,7 +130,7 @@ body {
     @extend .text--sm;
     line-height: 1.1875rem;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       font-size: $font-size--md;
       line-height: 1.375rem;
     }

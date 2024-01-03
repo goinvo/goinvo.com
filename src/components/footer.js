@@ -1,13 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
-
-import Logo from '../assets/images/logo-goinvo.inline.svg'
-import Email from '../assets/images/icon-email.inline.svg'
-import Flickr from '../assets/images/icon-flickr.inline.svg'
-import LinkedIn from '../assets/images/icon-linkedin.inline.svg'
-import Medium from '../assets/images/icon-medium.inline.svg'
-import SoundCloud from '../assets/images/icon-soundcloud.inline.svg'
-import Twitter from '../assets/images/icon-twitter.inline.svg'
+import Link from 'next/link'
 
 class Footer extends Component {
   render() {
@@ -19,26 +11,26 @@ class Footer extends Component {
               <div className="pure-u-1-2 margin-bottom--double">
                 <ul className="list--unstyled">
                   <li>
-                    <Link to="/">Home</Link>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/work/">Work</Link>
+                    <Link href="/work/">Work</Link>
                   </li>
                   <li>
-                    <Link to="/services/">Services</Link>
+                    <Link href="/services/">Services</Link>
                   </li>
                 </ul>
               </div>
               <div className="pure-u-1-2">
                 <ul className="list--unstyled">
                   <li>
-                    <Link to="/about/">About</Link>
+                    <Link href="/about/">About</Link>
                   </li>
                   <li>
-                    <Link to="/about/careers/">Careers</Link>
+                    <Link href="/about/careers/">Careers</Link>
                   </li>
                   <li>
-                    <Link to="/about/open-office-hours/">
+                    <Link href="/about/open-office-hours/">
                       Open Office Hours
                     </Link>
                   </li>
@@ -49,14 +41,14 @@ class Footer extends Component {
               <div className="pure-u-1-2 margin-bottom--double">
                 <ul className="list--unstyled">
                   <li>
-                    <Link to="/vision/">Vision</Link>
+                    <Link href="/vision/">Vision</Link>
                   </li>
                 </ul>
               </div>
               <div className="pure-u-1-2">
                 <ul className="list--unstyled">
                   <li>
-                    <Link to="/contact/">Contact Us</Link>
+                    <Link href="/contact/">Contact Us</Link>
                   </li>
                   <li>
                     <a
@@ -79,35 +71,35 @@ class Footer extends Component {
             <ul className="social-links list--unstyled container container--justify-space-around container--align-center">
               <li>
                 <a href="mailto:hello@goinvo.com">
-                  <Email className="icon" />
+                  <img className="icon" src="./images/icon-email.inline.svg" />
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/company/goinvo/">
-                  <LinkedIn className="icon" />
+                  <img className="icon" src="./images/icon-linkedin.inline.svg" />
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/goinvo">
-                  <Twitter className="icon" />
+                  <img className="icon" src="./images/icon-twitter.inline.svg" />
                 </a>
               </li>
               <li>
-                <Logo className="logo" />
+                <img className="logo" src="./images/logo-goinvo.inline.svg" />
               </li>
               <li>
                 <a href="https://medium.com/@goinvo">
-                  <Medium className="icon" />
+                  <img className="icon" src="./images/icon-medium.inline.svg" />
                 </a>
               </li>
               <li>
                 <a href="https://www.flickr.com/photos/juhansonin/">
-                  <Flickr className="icon" />
+                  <img className="icon" src="./images/icon-flickr.inline.svg" />
                 </a>
               </li>
               <li>
                 <a href="https://soundcloud.com/involution-studios">
-                  <SoundCloud className="icon" />
+                  <img className="icon" src="./images/icon-soundcloud.inline.svg" />
                 </a>
               </li>
             </ul>

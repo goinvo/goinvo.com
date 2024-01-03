@@ -11,6 +11,7 @@
   .header--md {
     margin-top: $spacing * 2;
   }
+
   &__prototype-frame-sticky {
     position: sticky;
     display: flex;
@@ -23,7 +24,7 @@
     z-index: 1;
     background-color: #fff;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       height: calc(100vh - 70px);
       width: 50%;
     }
@@ -54,7 +55,7 @@
       transition: all 0.5s;
     }
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       width: 90%;
       max-width: 75vh;
     }
@@ -75,7 +76,7 @@
       background-color: rgba(0, 0, 0, 0.2);
     }
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       width: 90%;
       max-width: 75vh;
     }
@@ -139,7 +140,7 @@
     z-index: 0;
     margin-top: 8vh;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       width: 50%;
       margin-left: auto;
     }
@@ -180,7 +181,7 @@
   &__prototype-wrapper {
     position: relative;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       display: flex;
     }
   }
@@ -193,7 +194,7 @@
     border-bottom: 1px dashed rgba(0, 0, 0, 0.25);
     z-index: 2;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       top: 50vh;
       left: 50%;
       width: 100%;

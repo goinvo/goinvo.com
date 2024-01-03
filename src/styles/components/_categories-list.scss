@@ -26,7 +26,7 @@
       }
     }
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       width: 90%;
     }
   }
@@ -52,7 +52,7 @@
   }
 
   &--later-column-with-all {
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       li:first-of-type {
         #{$parent}__link {
           border-top: $categories-list-border;

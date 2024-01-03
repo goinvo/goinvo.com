@@ -4,19 +4,22 @@
   }
 
   .stat {
-    @include mq($until: large) {
+    @include mq-until($breakpoint--lg) {
       display: inline-block;
       text-align: left;
       width: auto;
       margin-right: 10px;
     }
   }
+
   .stat-desc {
     width: 260px;
+
     p {
       margin-top: 0;
     }
-    @include mq($until: large) {
+
+    @include mq-until($breakpoint--lg) {
       display: inline-block;
       width: auto;
     }
@@ -25,33 +28,39 @@
   .row {
     margin: 40px 0;
 
-    @include mq($until: medium) {
+    @include mq-until($breakpoint--md) {
       margin: 0;
     }
   }
+
   .risk-duo {
     display: inline-block;
     width: 50%;
     min-width: 320px;
 
-    @include mq($until: medium) {
+    @include mq-until($breakpoint--md) {
       width: 100%;
     }
   }
+
   .risk-factor {
     display: inline-block;
     vertical-align: top;
     width: 50%;
+
     &.risk-solo {
       width: 100%;
     }
+
     .risk-text {
       padding: 0 15px;
     }
-    @include mq($until: medium) {
+
+    @include mq-until($breakpoint--md) {
       margin: 10px 0;
     }
   }
+
   .icon-bubble {
     box-sizing: border-box;
     margin: 0 auto;
@@ -69,23 +78,29 @@
       &.organ-heart-icon {
         margin-top: 15px;
       }
+
       &.dementia-icon,
       &.stroke-icon {
         margin-top: 25px;
       }
+
       &.arthritis-icon {
         margin-top: 18px;
       }
+
       &.diabetes-icon {
         margin-top: 30px;
         width: 70px;
       }
+
       &.depression-icon {
         margin-top: 5px;
       }
+
       &.blood-vessel-icon {
         margin-top: 10px;
       }
+
       &.stress-icon {
         width: 70px;
         margin-top: 22px;
@@ -97,6 +112,7 @@
     border-left: solid 4px $color-orange--light;
     z-index: -1;
   }
+
   .age-title {
     &:before {
       content: '';
@@ -112,21 +128,24 @@
       background-color: #fff;
     }
   }
+
   .lonely-factor {
     border-top: solid 2px $color-orange--light;
     min-height: 200px;
   }
+
   .lonely-factor-text {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 30px;
     width: 50%;
 
-    @include mq($until: large) {
+    @include mq-until($breakpoint--lg) {
       width: 100%;
       padding-left: 20px;
     }
   }
+
   .lonely-factor-icon {
     box-sizing: border-box;
     display: inline-block;
@@ -134,7 +153,7 @@
     position: relative;
     width: 50%;
 
-    @include mq($until: large) {
+    @include mq-until($breakpoint--lg) {
       width: 100%;
     }
   }
@@ -144,58 +163,71 @@
     margin: 20px auto;
     height: 120px;
     width: auto;
+
     &.stroller-icon {
       margin-top: 30px;
       margin-bottom: 30px;
       height: 150px;
     }
+
     &.cuddle-icon {
       margin-top: 40px;
     }
+
     &.money-icon {
       margin-top: 50px;
       height: 110px;
     }
+
     &.single-parent-icon {
       height: 150px;
     }
+
     &.conversation-icon,
     &.sleep-icon,
     &.self-preservation-icon {
       margin-top: 60px;
     }
+
     &.family-icon,
     &.substance-use-icon,
     &.elderly-icon {
       margin-top: 60px;
       height: 150px;
     }
+
     &.peer-icon {
       margin-top: 60px;
       height: 100px;
     }
+
     &.path-icon {
       margin-top: 100px;
       height: 160px;
     }
+
     &.health-behavior-icon {
       margin-top: 30px;
       margin-bottom: 30px;
       height: 160px;
     }
+
     &.organ-heart-icon {
       margin-top: 90px;
     }
+
     &.heart-break-loss-icon {
       margin-top: 120px;
     }
+
     &.long-term-couple-icon {
       margin-top: 90px;
       height: 190px;
     }
 
-    @include mq($until: large) {
+    @include mq-until($breakpoint--lg) {
       margin-top: 20px;
+
       &.stroller-icon,
       &.cuddle-icon,
       &.money-icon,
@@ -220,6 +252,7 @@
   .resources {
     margin: 50px 0;
   }
+
   .care-card {
     width: 50%;
     margin: 20px auto;
@@ -229,16 +262,19 @@
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     }
   }
+
   .button-group {
     display: block;
     width: 100%;
     padding: 20px;
+
     .button {
       display: block;
       width: 50%;
       margin-left: auto;
       margin-right: auto;
-      @include mq($until: large) {
+
+      @include mq-until($breakpoint--lg) {
         width: 100%;
       }
     }

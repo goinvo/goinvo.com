@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'next/link'
 
 import CATEGORIES_LIST from '../data/categories.json'
 
@@ -13,11 +13,10 @@ class CategoriesList extends Component {
     return (
       <li
         key={cat.id}
-        className={`categories-list__category ${
-          cat.id === this.props.selectedCategoryId
+        className={`categories-list__category ${cat.id === this.props.selectedCategoryId
             ? 'categories-list__category--selected'
             : ''
-        }`}
+          }`}
       >
         {this.props.onSelectCategory ? (
           <button
@@ -49,16 +48,14 @@ class CategoriesList extends Component {
           return (
             <div
               key={i}
-              className={`categories-list__column pure-u-1 pure-u-lg-1-${
-                this.props.columns
-              }`}
+              className={`categories-list__column pure-u-1 pure-u-lg-1-${this.props.columns
+                }`}
             >
               <ul
-                className={`categories-list ${
-                  i > 0 && this.props.includeAll
+                className={`categories-list ${i > 0 && this.props.includeAll
                     ? 'categories-list--later-column-with-all'
                     : ''
-                }`}
+                  }`}
               >
                 {i === 0 && this.props.includeAll
                   ? this.renderCategory(allCategory)

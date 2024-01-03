@@ -1,7 +1,5 @@
-/* eslint-disable react/jsx-no-target-blank */
-
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'next/link'
 
 class Card extends Component {
   render() {
@@ -15,9 +13,8 @@ class Card extends Component {
       suppressNewTab = false,
     } = this.props
 
-    const completeClassName = `card ${noShadow ? '' : 'card--shadow'} ${
-      fillHeight ? 'card--fill-height' : ''
-    } ${className ? className : ''}`
+    const completeClassName = `card ${noShadow ? '' : 'card--shadow'} ${fillHeight ? 'card--fill-height' : ''
+      } ${className ? className : ''}`
 
     if (link) {
       return externalLink ? (

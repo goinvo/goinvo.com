@@ -35,7 +35,7 @@
     padding-bottom: ($spacing * 2);
     background-color: transparentize($color-white, 0.3);
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -57,7 +57,7 @@
     @extend .text--gray;
   }
 
-  @include mq($from: large) {
+  @include mq-from($breakpoint--lg) {
     #{$parent}__image-container {
       height: 325px;
     }
@@ -70,7 +70,7 @@
 
     #{$parent}__image-container,
     #{$parent}__video-container {
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         height: $max-height;
       }
     }
@@ -78,7 +78,7 @@
     #{$parent}__title {
       position: static;
 
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         position: absolute;
       }
     }

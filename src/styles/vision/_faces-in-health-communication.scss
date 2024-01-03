@@ -37,13 +37,13 @@
       max-width: 40%;
 
       &--only-lg {
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           max-width: 40%;
         }
       }
 
       &--until-lg {
-        @include mq($until: large) {
+        @include mq-until($breakpoint--lg) {
           max-width: 40%;
         }
       }
@@ -53,13 +53,13 @@
       max-width: 50%;
 
       &--only-lg {
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           max-width: 50%;
         }
       }
 
       &--until-lg {
-        @include mq($until: large) {
+        @include mq-until($breakpoint--lg) {
           max-width: 50%;
         }
       }
@@ -69,13 +69,13 @@
       max-width: 60%;
 
       &--only-lg {
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           max-width: 60%;
         }
       }
 
       &--until-lg {
-        @include mq($until: large) {
+        @include mq-until($breakpoint--lg) {
           max-width: 60%;
         }
       }
@@ -85,13 +85,13 @@
       max-width: 80%;
 
       &--only-lg {
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           max-width: 80%;
         }
       }
 
       &--until-lg {
-        @include mq($until: large) {
+        @include mq-until($breakpoint--lg) {
           max-width: 80%;
         }
       }

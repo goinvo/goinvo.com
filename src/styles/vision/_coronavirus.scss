@@ -30,12 +30,12 @@ $corona-font-weight--extra-bold: 900;
       fill: #747070;
     }
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       font-size: 18px;
     }
   }
 
-  @include mq($from: large) {
+  @include mq-from($breakpoint--lg) {
     font-size: 18px;
   }
 
@@ -60,20 +60,22 @@ $corona-font-weight--extra-bold: 900;
     font-size: 16px;
     margin-bottom: 0;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       font-size: 18px;
     }
   }
 
-  h4 + p {
+  h4+p {
     margin-top: 0;
   }
 
   ul {
     padding-left: 18px;
-    @include mq($from: large) {
+
+    @include mq-from($breakpoint--lg) {
       padding-left: 0;
     }
+
     li {
       padding: 0 0 1rem 0;
     }
@@ -159,7 +161,8 @@ $corona-font-weight--extra-bold: 900;
 
     &__image-container {
       min-height: 300px;
-      @include mq($from: large) {
+
+      @include mq-from($breakpoint--lg) {
         height: 530px;
       }
     }
@@ -184,7 +187,7 @@ $corona-font-weight--extra-bold: 900;
         line-height: 49px;
         text-shadow: 0px 0px 30px rgba(81, 67, 111, 0.2);
 
-        @include mq($from: large) {
+        @include mq-from($breakpoint--lg) {
           font-size: 48px;
           line-height: 78px;
         }
@@ -202,7 +205,7 @@ $corona-font-weight--extra-bold: 900;
     text-align: center;
     border-radius: 50px;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       margin-left: -1em;
       font-size: 18px;
     }
@@ -219,29 +222,33 @@ $corona-font-weight--extra-bold: 900;
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
+
     h1 {
       color: $corona-color--primary;
       font-size: 30px;
       line-height: 49px;
       text-shadow: 0px 0px 30px rgba(81, 67, 111, 0.2);
 
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         font-size: 48px;
         line-height: 78px;
       }
     }
+
     h2 {
       margin-bottom: 0;
       font-size: 25px;
       font-weight: $corona-font-weight--base;
 
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         font-size: 35px;
       }
     }
+
     p {
       margin-top: 0.5em;
     }
+
     h2,
     p {
       color: $corona-color--gray-dark;
@@ -252,14 +259,17 @@ $corona-font-weight--extra-bold: 900;
     .corona {
       display: block;
       width: 100%;
-      @include mq($from: 420px) {
+
+      @include mq-from(420px) {
         display: inline-block;
         width: 50%;
       }
-      @include mq($from: 590px) {
+
+      @include mq-from(590px) {
         display: inline-block;
         width: 30%;
       }
+
       .title {
         background: $corona-color--gray-dark;
         font-weight: $font-weight--bold;
@@ -267,6 +277,7 @@ $corona-font-weight--extra-bold: 900;
         padding: 5px;
         margin: -5px 0 5px -5px;
         line-height: 2.5rem;
+
         &.covid19 {
           background: $corona-color--primary;
         }
@@ -276,17 +287,20 @@ $corona-font-weight--extra-bold: 900;
 
   .corona-timeline {
     border-left: $corona-color--primary-med solid 3px;
+
     &.timeline-dotted {
       display: block;
       height: 90px;
       border-left: $corona-color--primary-med dotted 3px;
     }
+
     .timepoint {
       &.time-highlight {
         p {
           background: $corona-color--primary-med;
           border-radius: 5px;
         }
+
         .dot {
           height: 24px;
           width: 24px;
@@ -304,6 +318,7 @@ $corona-font-weight--extra-bold: 900;
         padding: 10px;
         width: 90%;
       }
+
       .dot {
         display: inline-block;
         vertical-align: top;
@@ -312,13 +327,16 @@ $corona-font-weight--extra-bold: 900;
         height: 20px;
         width: 20px;
         border-radius: 10px;
+
         &.dotted {
           background: #fff;
           border: $corona-color--primary dashed 1px;
         }
       }
+
       ul {
         margin: 0 0 0 15px;
+
         li {
           margin: 0;
           padding: 0;
@@ -328,11 +346,12 @@ $corona-font-weight--extra-bold: 900;
   }
 
   .close-contact {
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       margin-top: -250px;
       margin-left: 20vw;
     }
-    @include mq($from: 1035px) {
+
+    @include mq-from(1035px) {
       margin-top: -300px;
       margin-left: calc(20vw - ((100vw - 1020px) / 2));
       margin-bottom: 50px;
@@ -343,7 +362,7 @@ $corona-font-weight--extra-bold: 900;
     background-color: $corona-color--primary-light;
     transform: translate3d(0, 0, 0);
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       max-width: 400px;
       margin-top: -400px;
     }
@@ -353,7 +372,7 @@ $corona-font-weight--extra-bold: 900;
   &-masks {
     margin-bottom: 1em;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       background-color: $corona-color--primary-light;
     }
   }
@@ -362,11 +381,13 @@ $corona-font-weight--extra-bold: 900;
     display: inline-block;
     width: 50%;
     vertical-align: top;
+
     .pro-con {
       p {
         display: inline-block;
         width: 75%;
       }
+
       .pro-con-icon {
         display: inline-block;
         height: 44px;
@@ -381,17 +402,17 @@ $corona-font-weight--extra-bold: 900;
     background-size: cover;
     background-repeat: no-repeat;
 
-    @include mq($until: 1024px) {
+    @include mq-until(1024px) {
       background-position: 100vw 0;
     }
 
-    @include mq($from: 1024px) {
+    @include mq-from(1024px) {
       min-height: 130vw;
     }
   }
 
   &-around-the-world {
-    @include mq($from: 1024px) {
+    @include mq-from(1024px) {
       position: absolute;
       left: 0;
       right: 0;
@@ -412,18 +433,22 @@ $corona-font-weight--extra-bold: 900;
           left: calc(23vw - ((100vw - 1020px) / 2));
           max-width: 600px;
         }
+
         &:nth-of-type(2) {
           bottom: 55%;
           left: calc(60vw - ((100vw - 1020px) / 2));
         }
+
         &:nth-of-type(3) {
           bottom: 35%;
           left: calc(65vw - ((100vw - 1020px) / 2));
         }
+
         &:nth-of-type(4) {
           bottom: 20%;
           left: calc(58vw - ((100vw - 1020px) / 2));
         }
+
         &:nth-of-type(5) {
           bottom: 0;
           left: calc(23vw - ((100vw - 1020px) / 2));
@@ -433,7 +458,7 @@ $corona-font-weight--extra-bold: 900;
     }
 
     &-mobile {
-      @include mq($from: 1024px) {
+      @include mq-from(1024px) {
         display: none;
       }
     }
@@ -462,32 +487,36 @@ $corona-font-weight--extra-bold: 900;
       content: '';
       width: 100vw;
       height: 80px;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      @include mq($until: large) {
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 0) 100%);
+
+      @include mq-until($breakpoint--lg) {
         display: block;
       }
     }
 
-    @include mq($until: 400px) {
+    @include mq-until(400px) {
       height: 300vw;
     }
-    @include mq($from: 401px) {
+
+    @include mq-from(401px) {
       height: 250vw;
     }
-    @include mq($from: 450px) {
+
+    @include mq-from(450px) {
       height: 200vw;
     }
-    @include mq($from: 620px) {
+
+    @include mq-from(620) {
       height: 165vw;
     }
-    @include mq($from: 780px) {
+
+    @include mq-from(780px) {
       height: 160vw;
     }
-    @include mq($from: large) {
+
+    @include mq-from($breakpoint--lg) {
       height: 83.3vw;
     }
   }
@@ -497,7 +526,7 @@ $corona-font-weight--extra-bold: 900;
     margin-bottom: 2em;
 
     &--left {
-      @include mq($from: large) {
+      @include mq-from($breakpoint--lg) {
         flex: 0 0 40%;
       }
     }

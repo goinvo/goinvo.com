@@ -33,7 +33,7 @@ body {
   }
 
   &--half-left {
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       max-width: 510px;
       margin: 0 0 0 auto;
     }
@@ -44,7 +44,7 @@ body {
   }
 
   &--half-right {
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       max-width: 510px;
       margin: 0 auto 0 0;
     }
@@ -79,7 +79,7 @@ body {
   padding-left: $spacing;
   padding-right: $spacing;
 
-  @include mq($from: large) {
+  @include mq-from($breakpoint--lg) {
     padding-left: $spacing * 2;
     padding-right: $spacing * 2;
   }
@@ -88,7 +88,7 @@ body {
     padding-left: $spacing;
     padding-right: $spacing;
 
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       padding-left: $spacing * 4;
       padding-right: $spacing * 4;
     }
@@ -97,27 +97,31 @@ body {
 
 .hidden {
   &--sm {
-    @include mq($until: medium) {
+    @include mq-until($breakpoint--md) {
       display: none !important;
     }
   }
+
   &--md {
-    @include mq($until: large) {
+    @include mq-until($breakpoint--lg) {
       display: none !important;
     }
   }
+
   &--lg {
-    @include mq($from: large) {
+    @include mq-from($breakpoint--lg) {
       display: none !important;
     }
   }
+
   &--until-lg {
-    @include mq($until: large) {
+    @include mq-until($breakpoint--lg) {
       display: none !important;
     }
   }
+
   &--after-sm {
-    @include mq($from: medium) {
+    @include mq-from($breakpoint--md) {
       display: none !important;
     }
   }
@@ -140,6 +144,7 @@ body {
       &-center {
         align-items: center;
       }
+
       &-baseline {
         align-items: baseline;
       }
@@ -149,6 +154,7 @@ body {
       &-center {
         justify-content: center;
       }
+
       &-space-between {
         justify-content: space-between;
       }
@@ -168,6 +174,7 @@ body {
   &--left {
     float: left;
   }
+
   &--right {
     float: right;
   }

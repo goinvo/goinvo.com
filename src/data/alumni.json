@@ -1,5 +1,15 @@
 [
   {
+    "name": "Jenny Yi",
+    "title": "Designer",
+    "bio": "Jenny is a designer of urban infrastructures that impact public health. She designs spaces that incorporate new healthcare technologies to create seamless experiences for people’s access to healthcare services. She joined Invo in 2022 with a B.Arch from Cornell University and a M.Des from Harvard Graduate School of Design.",
+    "social": {
+      "email": "jenny@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/jenny-yi-202020/"
+    },
+    "image": "/images/about/headshot-jenny-yi.jpg"
+  },
+  {
     "name": "Parsuree Vatanasirisuk",
     "title": "Designer, Illustrator",
     "bio": "Parsuree is a user experience designer and illustrator with background in industrial design. She makes the complex beautiful and approachable through illustration and information design. Parsuree joined Invo in 2018, and has a BA in Industrial Design from Chulalongkorn University and a MFA from Rochester Institute of Technology (RIT).",

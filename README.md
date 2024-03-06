@@ -15,7 +15,12 @@ _MANY NOTE:_ You may be required to install additional dependencies like XCode c
 [Homebrew](https://brew.sh/) is an easy way to install the system packages you'll need for this project on Mac.
 
 ```bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Before you can use the brew command, you may have to add it to your path. If you are using a MacBook with an M1 or M2 chipset, try
+
+```bash
+$ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile"
 ```
 
 ### Install Node

@@ -5,7 +5,7 @@ class References extends Component {
     return (
       <div>
         {!this.props.hideTitle ? (
-          <h2 className="header--lg text--center margin-top--double">
+          <h2 id="references" className="header--lg text--center margin-top--double">
             References
           </h2>
         ) : null}

@@ -11,6 +11,17 @@
     "hiddenWorkPage": true
   },
   {
+    "id": "healthcare-mottos",
+    "title": "Healthcare Mottos",
+    "date": "Apr.2024",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "Healthcare principles and rights are essential in any healthcare system, as they provide a framework for guiding the delivery, quality, and ethical considerations of healthcare services.",
+    "link": "https://www.healthcaremottos.com/",
+    "image": "/images/features/healthcare-mottos/hc-mottos-hero-02.jpg",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "national-cancer-navigation",
     "title": "National Cancer Navigation",
     "date": "Jun.2023",

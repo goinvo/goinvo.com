@@ -41,16 +41,6 @@
     "image": "/images/about/headshot-daniel-reeves.jpg"
   },
   {
-    "name": "Shayla Nettey",
-    "title": "Chief Clinical Strategist",
-    "bio": "Shayla Nettey is a physician with a taste for design. Her focus on community medicine and patient education pushes her public health goals where all patients better control their health with help from happier, skilled clinicians. Shayla joined Invo in 2021, is a graduate of Morehouse School of Medicine, and practices as a hospitalist in North Carolina.",
-    "social": {
-      "email": "shayla@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/shaylanetteymd/"
-    },
-    "image": "/images/about/headshot-shayla-nettey.jpg"
-  },
-  {
     "name": "Claire Lin",
     "title": "Designer, Engineer",
     "bio": "Claire is a designer-engineer combining architecture and product design in making healthcare digital services. She works on local, public projects on clothing recycling and neighborhood health through Design for America. Claire joined Invo in 2021 with a BA in Mechanical Engineering from Brown University.",
@@ -109,6 +99,26 @@
       "linkedin": "https://www.linkedin.com/in/mystarryspace/"
     },
     "image": "/images/about/headshot-shirley-xu.jpg"
+  },
+  {
+    "name": "Katerina Labrou",
+    "title": "Engineer",
+    "bio": "Katerina is an engineer and designer with a background in computational architecture and augmented reality design. She merges technical expertise and creative vision to change the way we experience and interact with our surroundings and health. Kat joined GoInvo in 2024 with a BS in Architecture and a combined MS in Electrical Engineering and Computer Science from MIT.",
+    "social": {
+      "email": "kat@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/katelabrou/"
+    },
+    "image": "/images/about/headshot-katerina-labrou.jpg"
+  },
+  {
+    "name": "Shayla Nettey",
+    "title": "Clinical Strategist (on-call)",
+    "bio": "Shayla Nettey is a physician with a taste for design. Her focus on community medicine and patient education pushes her public health goals where all patients better control their health with help from happier, skilled clinicians. Shayla joined Invo in 2021, is a graduate of Morehouse School of Medicine, and practices as a hospitalist in North Carolina.",
+    "social": {
+      "email": "shayla@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/shaylanetteymd/"
+    },
+    "image": "/images/about/headshot-shayla-nettey.jpg"
   },
   {
     "name": "Jonathan Follett",

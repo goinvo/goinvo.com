@@ -1,0 +1,99 @@
+.augmented-clinical-decision-support-feature {
+  .list-steps {
+    li {
+      max-width: 300px;
+      text-align: center;
+      margin: 2rem auto 0;
+      margin-top: 2rem;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .acds-image-max-width {
+    display: block;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .acds-user-chart {
+    max-width: 100%;
+  }
+
+  .acds-carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .acds-carousel-button {
+    max-width: 100px;
+    padding: 2px;
+    margin-right: 5px;
+
+    img {
+      display: block;
+    }
+
+    &.active {
+      background-color: $color-orange;
+    }
+  }
+
+  .acds-carousel-prev,
+  .acds-carousel-next {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+    z-index: 1;
+    flex-shrink: 0;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url('../assets/images/icon-caret.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  .acds-carousel-prev {
+    margin-right: 10px;
+
+    &:before {
+      transform: rotate(90deg);
+    }
+  }
+
+  .acds-carousel-next {
+    margin-left: 10px;
+
+    &:before {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .header--md {
+    margin-top: 2rem;
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+
+    + p {
+      margin-top: 0.5rem;
+    }
+  }
+}

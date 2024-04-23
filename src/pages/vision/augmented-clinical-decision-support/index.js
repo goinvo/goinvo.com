@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
@@ -17,8 +18,105 @@ const frontmatter = {
     '/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero.jpg',
 }
 
-class VirtualDiabetesCareFeature extends Component {
+let carousels = {
+  pregnancy: 'pregnancyCarousel',
+  // paper: 'paperCarousel',
+}
+
+class AugmentedClinicalDecisionSupportFeature extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {}
+
+    Object.keys(carousels).forEach(key => {
+      let carouselId = carousels[key]
+
+      this.state[carouselId] = 0
+
+      this[carouselId] = React.createRef()
+    })
+  }
+
+  setCarouselSlide = (id, currentSlide) => {
+    let updatedState = {}
+    updatedState[id] = currentSlide
+
+    this.setState(updatedState)
+  }
+
+  goToCarouselSlide = (id, i) => {
+    let updatedState = {}
+    updatedState[id] = i
+
+    this.setState(updatedState, () => {
+      this[id].current.slickGoTo(i, true)
+    })
+  }
+
+  renderCarousel = (id, slides, path, imageType) => {
+    return (
+      <div>
+        <SlickCarousel
+          ref={this[id]}
+          infinite={false}
+          dots={false}
+          arrows={false}
+          afterChange={i => this.setCarouselSlide(id, i)}
+        >
+          {slides.map((n, i) => {
+            return (
+              <div key={n}>
+                <div className="acds-image-max-width">
+                  <Image
+                    src={`/images/features/augmented-clinical-decision-support/${path}${i +
+                      1}.${imageType}`}
+                    className="image--max-width"
+                    sizes={config.sizes.fullInsideMaxWidth}
+                  />
+                </div>
+              </div>
+            )
+          })}
+        </SlickCarousel>
+        <div className="acds-carousel-nav">
+          <button
+            className={`button button--link acds-carousel-prev ${
+              this.state[id] === 0 ? 'disabled' : ''
+            }`}
+            onClick={() => this.goToCarouselSlide(id, this.state[id] - 1)}
+          ></button>
+          {slides.map((n, i) => {
+            return (
+              <button
+                key={n}
+                className={`button button--link acds-carousel-button ${
+                  this.state[id] === i ? 'active' : ''
+                }`}
+                onClick={() => this.goToCarouselSlide(id, i)}
+              >
+                <Image
+                  src={`/images/features/augmented-clinical-decision-support/${path}${i +
+                    1}.${imageType}`}
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </button>
+            )
+          })}
+          <button
+            className={`button button--link acds-carousel-next ${
+              this.state[id] === slides.length - 1 ? 'disabled' : ''
+            }`}
+            onClick={() => this.goToCarouselSlide(id, this.state[id] + 1)}
+          ></button>
+        </div>
+      </div>
+    )
+  }
+
   render() {
+    const sixSlides = Array.from(Array(21), (x, i) => i)
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
@@ -29,7 +127,7 @@ class VirtualDiabetesCareFeature extends Component {
                 Real-time clinical guidance for mobile health workers
               </h1>
 
-              <p>Intro paragraph...</p>
+              <p>...</p>
 
               <h2 class="header--lg margin-top--trip">
                 The future of rural healthcare is...
@@ -39,7 +137,7 @@ class VirtualDiabetesCareFeature extends Component {
                 <li>Care at home, in your neighborhood</li>
                 <li>The clinician comes to you</li>
                 <li>Worry-free, urgent care</li>
-                <li>Clinic on wheels w/CT, imaging</li>
+                <li>Clinic on wheels w/CT, imaging </li>
                 <li>Realtime augmented CDS support tools (for mobile clinic clinicians and community healthcare workers)</li>
                 <li>With a phone, 24-365 access to primary care, broadband everywhere</li>
               </ul>
@@ -48,13 +146,7 @@ class VirtualDiabetesCareFeature extends Component {
                 Pregnancy Scenario
               </h2>
 
-              <div className="margin-auto">
-                <Image
-                  src="/images/features/virtual-care-diabetes/point_3.jpg"
-                  className="image--max-width"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-              </div>
+              {this.renderCarousel(carousels.pregnancy, sixSlides, 'pregnancy-', 'jpg')}
 
               <div className="margin-bottom--double">
                 <div className="pure-g button-group margin-bottom--double">
@@ -64,7 +156,7 @@ class VirtualDiabetesCareFeature extends Component {
                     rel="noopener noreferrer"
                     className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
                   >
-                    Download Walkthrough
+                    Download Pregnancy Scenario
                   </a>
                 </div>
               </div>
@@ -143,4 +235,4 @@ class VirtualDiabetesCareFeature extends Component {
   }
 }
 
-export default VirtualDiabetesCareFeature
+export default AugmentedClinicalDecisionSupportFeature

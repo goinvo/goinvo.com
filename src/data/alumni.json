@@ -1,5 +1,15 @@
 [
   {
+    "name": "Mandy Liu",
+    "title": "Designer",
+    "bio": "",
+    "social": {
+      "email": "mandy@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/mandyliu0924/"
+    },
+    "image": "/images/about/headshot-mandy-liu.jpg"
+  },
+  {
     "name": "Jenny Yi",
     "title": "Designer",
     "bio": "Jenny is a designer of urban infrastructures that impact public health. She designs spaces that incorporate new healthcare technologies to create seamless experiences for people’s access to healthcare services. She joined Invo in 2022 with a B.Arch from Cornell University and a M.Des from Harvard Graduate School of Design.",

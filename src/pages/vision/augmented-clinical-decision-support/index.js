@@ -6,6 +6,7 @@ import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
+import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
 
@@ -185,7 +186,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.pdf"
+                  href={mediaUrl(
+                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.pdf'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -206,7 +209,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="/pdf/vision/augmented-clinical-decision-support/clinical-task-guidance-system-diagram.pdf"
+                  href={mediaUrl(
+                    '/pdf/vision/augmented-clinical-decision-support/clinical-task-guidance-system-diagram.pdf'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -246,7 +251,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.pdf"
+                  href={mediaUrl(
+                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.pdf'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -265,7 +272,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.pdf"
+                  href={mediaUrl(
+                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.pdf'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -284,7 +293,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-cancer.pdf"
+                  href={mediaUrl(
+                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-cancer.pdf'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"

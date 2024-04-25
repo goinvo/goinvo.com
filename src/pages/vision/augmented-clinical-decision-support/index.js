@@ -153,7 +153,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               <div>
                 <a
                   href={mediaUrl(
-                    '#'
+                    '/pdf/vision/augmented-clinical-decision-support/arpa-h-proposal.pdf'
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -231,7 +231,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               <div>
                 <a
                   href={mediaUrl(
-                    '#'
+                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-pregnancy-storyboard.pdf'
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -283,7 +283,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
                 >
-                  Download Head Trauma Process Map
+                  Download Head Injury Process Map
                 </a>
               </div>
 

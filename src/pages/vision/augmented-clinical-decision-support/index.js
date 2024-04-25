@@ -266,7 +266,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 </a>
               </div>
 
-              <h3 className="header--md">Head Trauma Process Map</h3>
+              <h3 className="header--md">Head Injury Process Map</h3>
 
               <Image
                 src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.jpg"

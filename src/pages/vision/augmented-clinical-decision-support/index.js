@@ -152,7 +152,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="#"
+                  href={mediaUrl(
+                    '#'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -228,7 +230,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="#"
+                  href={mediaUrl(
+                    '#'
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"

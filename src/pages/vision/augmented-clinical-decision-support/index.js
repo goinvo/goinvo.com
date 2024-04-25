@@ -6,7 +6,6 @@ import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
-import References from '../../../components/references'
 
 import config from '../../../../config'
 
@@ -15,7 +14,7 @@ const frontmatter = {
   metaDescription:
     'Real-time, augmented decision support and guidance for mobile health workers, to better training and repeatable health outcomes.',
   heroImage:
-    '/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero.jpg',
+    '/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero-1.jpg',
 }
 
 let carousels = {
@@ -127,7 +126,39 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 Real-time clinical guidance for mobile health workers
               </h1>
 
-              <p>...</p>
+              <p>
+              Our aim is to enhance healthcare accessibility for people in rural or remote regions by minimizing the skill gap among health workers, thereby empowering them to deliver high-quality care effectively. We design a virtual medical agent that assists real-time communication and decision making for both patients and the medical staff.
+              </p>
+
+              <p>
+                Specifically, the system offers:
+              </p>
+              
+              <ul>
+                <li>Seamless communication between patients and the Care Delivery Platform (CDP) for scheduling and confirming with mobile health units.</li>
+                <li>Patient check-in automation to alleviate the administrative workload on staff, onsite or virtual (extending to scheduling and pre-appointment interactions).</li>
+                <li>Guidance for healthcare professionals during patient consultations to ensure more effective, safer examinations, diagnoses, and treatments.</li>
+                <li>Secure health data collection for continuous service improvement and scaling of healthcare services.</li>
+              </ul>
+
+              <p>
+                Our proposed system facilitates the entire healthcare journey, from a patient's initial engagement with our digital platform to their ongoing treatment and health management. It includes documenting medical histories and symptoms, establishing differential diagnoses, performing clinical assessments, and determining suitable treatment pathways.
+              </p>
+
+              <p>
+              A virtual medical agent with advanced capabilities in language processing and generation that enable intuitive dialogues between patients is accessible to initiate a consultation anytime via smartphone. The agent offers features like registering patient incidents, initiating clinical dialogues for assessing condition severity and scheduling appointments with a mobile health unit or a local clinic. It can also provide initial medical guidance to patients pending their in-person consultations. The gathered information is recorded and made accessible to healthcare workers, streamlining the intake process.
+              </p>
+
+              <div>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                >
+                  Download ARPHA-H Proposal
+                </a>
+              </div>
 
               <h2 class="header--lg margin-top--trip">
                 The future of rural healthcare is...
@@ -143,22 +174,123 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </ul>
 
               <h2 class="header--lg margin-top--trip">
-                Pregnancy Scenario
+                Primary Care Process
+              </h2>
+
+              <Image
+                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMaxWidth}
+              />
+
+              <div>
+                <a
+                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                >
+                  Download Primary Care Process
+                </a>
+              </div>
+
+              <h2 class="header--lg margin-top--trip">
+                Clinical Task Guidance System Diagram
+              </h2>
+
+              <Image
+                src="/images/features/augmented-clinical-decision-support/clinical-task-guidance-system-diagram.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMaxWidth}
+              />
+
+              <div>
+                <a
+                  href="/pdf/vision/augmented-clinical-decision-support/clinical-task-guidance-system-diagram.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                >
+                  Download Clinical Task Guidance System Diagram
+                </a>
+              </div>
+
+              <h2 class="header--lg margin-top--trip">
+                Pregnancy Storyboard
               </h2>
 
               {this.renderCarousel(carousels.pregnancy, sixSlides, 'pregnancy-', 'jpg')}
 
-              <div className="margin-bottom--double">
-                <div className="pure-g button-group margin-bottom--double">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
-                  >
-                    Download Pregnancy Scenario
-                  </a>
-                </div>
+              <div>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                >
+                  Download Pregnancy Storyboard
+                </a>
+              </div>
+
+              <h2 class="header--lg margin-top--trip">
+                Process Maps
+              </h2>
+
+              <h3 className="header--md">Pregnancy Process Map</h3>
+
+              <Image
+                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMaxWidth}
+              />
+
+              <div>
+                <a
+                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                >
+                  Download Pregnancy Process Map
+                </a>
+              </div>
+
+              <h3 className="header--md">Head Trauma Process Map</h3>
+
+              <Image
+                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMaxWidth}
+              />
+
+              <div>
+                <a
+                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                >
+                  Download Head Trauma Process Map
+                </a>
+              </div>
+
+              <h3 className="header--md">Cancer Process Map</h3>
+
+              <Image
+                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-cancer.jpg"
+                className="image--max-width"
+                sizes={config.sizes.fullInsideMaxWidth}
+              />
+
+              <div>
+                <a
+                  href="/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-cancer.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                >
+                  Download Cancer Process Map
+                </a>
               </div>
 
               <h2 className="header--lg margin-bottom--half margin-top--double">
@@ -167,7 +299,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               <p className="text--gray">
                 We can help you design and ship your own version of augmented clinical decision support.<br />
                 Contact us to discuss your project.<br />
-                <a href="mailto:hello@goinvo.com"> hello@goinvo.com</a>
+                <a href="mailto:hello@goinvo.com">hello@goinvo.com</a>
               </p>
 
               <h4 className="header--sm margin-bottom--half margin-top--double">
@@ -201,32 +333,19 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 <Author name="Mandy Liu" />
                 <Author name="Jonathan Follett" />
                 <Author name="Juhan Sonin" />
-                Cagri Zaman<br />
-                Mollie Williams
+                Cagri Zaman, Mediate<br />
+                Mollie Williams, Harvard Medical School
               </div>
 
               <div className="pad-vertical--double">
                 <h3 className="header--md">Contributors</h3>
                 <p>
-                  Mediate<br />
                   Massachusetts General Hospital Family Van<br />
                   John Brownstein and Sarah Scalia, Boston Children's Hospital<br />
                   Eric Benoit, GoInvo
                 </p>
               </div>
 
-              <div id="references">
-                <References
-                  references={[
-                    {
-                      title:
-                        '...',
-                      link:
-                        '',
-                    },
-                  ]}
-                />
-              </div>
             </div>
           </div>
         </div>

@@ -151,15 +151,31 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </p>
 
               <div>
-                <a
-                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/arpa-h-paradigm-field-guider-proposal.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button button--secondary margin-top--double margin-bottom--half margin-right"
-                >
-                  Download ARPHA-H Proposal
-                </a>
+                
               </div>
+
+              <div className="pure-g button-group margin-bottom">
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <a
+                      href="https://github.com/goinvo/arpa-h/blob/main/TA5/arpa-h-paradigm-field-guider-proposal.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                      >
+                        Download ARPHA-H Proposal
+                    </a>
+                  </div>
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <a
+                      href="https://github.com/goinvo/arpa-h"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
+                    >
+                      Github
+                    </a>
+                  </div>
+                </div>
 
               <h2 class="header--lg margin-top--trip">
                 The future of rural healthcare is...

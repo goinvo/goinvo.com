@@ -152,9 +152,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href={mediaUrl(
-                    '/pdf/vision/augmented-clinical-decision-support/arpa-h-proposal.pdf'
-                  )}
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/arpa-h-field-guider-proposal.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -180,17 +178,21 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 Primary Care Process
               </h2>
 
-              <Image
-                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.jpg"
-                className="image--max-width"
-                sizes={config.sizes.fullInsideMaxWidth}
-              />
+              <a
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-primary-care.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <Image
+                  src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </a>
 
               <div>
                 <a
-                  href={mediaUrl(
-                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.pdf'
-                  )}
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-primary-care.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -203,17 +205,21 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 Clinical Task Guidance System Diagram
               </h2>
 
-              <Image
-                src="/images/features/augmented-clinical-decision-support/clinical-task-guidance-system-diagram.jpg"
-                className="image--max-width"
-                sizes={config.sizes.fullInsideMaxWidth}
-              />
+              <a
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-clinical-task-guidance-system-diagram.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <Image
+                  src="/images/features/augmented-clinical-decision-support/clinical-task-guidance-system-diagram-2.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </a>
 
               <div>
                 <a
-                  href={mediaUrl(
-                    '/pdf/vision/augmented-clinical-decision-support/clinical-task-guidance-system-diagram.pdf'
-                  )}
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-clinical-task-guidance-system-diagram.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -230,9 +236,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href={mediaUrl(
-                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-pregnancy-storyboard.pdf'
-                  )}
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-pregnancy-storyboard.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -247,17 +251,21 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <h3 className="header--md">Pregnancy Process Map</h3>
 
-              <Image
-                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.jpg"
-                className="image--max-width"
-                sizes={config.sizes.fullInsideMaxWidth}
-              />
+              <a
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-pregnancy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <Image
+                  src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </a>
 
               <div>
                 <a
-                  href={mediaUrl(
-                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.pdf'
-                  )}
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-pregnancy.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -268,17 +276,21 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <h3 className="header--md">Head Injury Process Map</h3>
 
-              <Image
-                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.jpg"
-                className="image--max-width"
-                sizes={config.sizes.fullInsideMaxWidth}
-              />
+              <a
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-head-injury.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <Image
+                  src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </a>
 
               <div>
                 <a
-                  href={mediaUrl(
-                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.pdf'
-                  )}
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-head-injury.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"
@@ -289,17 +301,21 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <h3 className="header--md">Cancer Process Map</h3>
 
-              <Image
-                src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-cancer.jpg"
-                className="image--max-width"
-                sizes={config.sizes.fullInsideMaxWidth}
-              />
+              <a
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-cancer.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <Image
+                  src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-cancer.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullInsideMaxWidth}
+                />
+              </a>
 
               <div>
                 <a
-                  href={mediaUrl(
-                    '/pdf/vision/augmented-clinical-decision-support/augmented-cds-process-map-cancer.pdf'
-                  )}
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-cancer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"

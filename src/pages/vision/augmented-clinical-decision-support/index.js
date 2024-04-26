@@ -152,7 +152,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
               <div>
                 <a
-                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/arpa-h-field-guider-proposal.pdf"
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/arpa-h-paradigm-field-guider-proposal.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button--secondary margin-top--double margin-bottom--half margin-right"

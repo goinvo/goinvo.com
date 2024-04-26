@@ -127,7 +127,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </h1>
 
               <p>
-              Our aim is to enhance healthcare accessibility for people in rural or remote regions by minimizing the skill gap among health workers, thereby empowering them to deliver high-quality care effectively. We design a virtual medical agent that assists real-time communication and decision making for both patients and the medical staff.
+              Our aim is to enhance healthcare accessibility for people in rural or remote regions by minimizing the skill gap among health workers, thereby empowering them to deliver high-quality care effectively. We're designing a virtual medical agent that assists real-time communication and decision making for both patients and the medical staff.
               </p>
 
               <p>

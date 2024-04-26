@@ -6,7 +6,6 @@ import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
-import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
 

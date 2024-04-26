@@ -379,7 +379,6 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 <Author name="Katerina Labrou" />
                 <Author name="Mandy Liu" />
                 <Author name="Jonathan Follett" />
-                <Author name="Juhan Sonin" />
                 <Author
                   name="Cagri Zaman"
                   company="Mediate"
@@ -387,7 +386,6 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 >
                   Dr. Cagri Hakan Zaman is the Director of Virtual Collaboration Research (Mediate Labs) as well as the founder and former director of the MIT Virtual Experience Design Lab at the Massachusetts Institute of Technology. His research is highly interdisciplinary, focusing on developing immersive media tools for engineering and design by studying human spatial experiences in both virtual and physical environments. Dr. Zaman's innovative approach to spatial experience from a story-understanding perspective is showcased in his dissertation titled "Spatial Experience in Humans and Machines." With extensive research experience in embodied intelligence, computational design, and immersive media, Dr. Zaman has conducted research at both the MIT Computer Science and Artificial Intelligence Laboratory (CSAIL) and the MIT Design Lab (formerly MIT Mobile Experience Lab).
                 </Author>
-
                 <Author
                   name="Mollie Williams"
                   company="Harvard Medical School"
@@ -395,6 +393,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 >
                   Mollie is a visionary and purposeful leader dedicated to advancing health equity and justice. Strategic thinker who gracefully transitions between big picture impact and day-to-day operations. Trusted collaborator and champion of high- performing, inclusive teams. Thought-leader, ambassador, and influencer in local, national, and international conversations about equitable access to compassionate, high-quality care for all.
                 </Author>
+                <Author name="Juhan Sonin" />
               </div>
 
               <div className="pad-vertical--double">

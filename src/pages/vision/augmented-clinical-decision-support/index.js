@@ -147,9 +147,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </p>
               
               <ul>
-                <li>lives on the mobile health truck, phone, AR goggles,</li>
+                <li>lives on the mobile health truck, phone, and AR goggles,</li>
                 <li>works with healthcare workers in real-time to co-diagnose, co-treat patients for better health outcomes,</li>
-                <li>and provides in-encounter training, visual and aural clinical decision support nudges to up-skill staff.</li>
+                <li>and provides in-encounter training, through visual and aural clinical decision support nudges to up-skill staff.</li>
               </ul>
 
               <div className="pure-g button-group margin-bottom">

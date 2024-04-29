@@ -6,7 +6,6 @@ import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
-import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
 
@@ -128,31 +127,30 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </h1>
 
               <p>
-              Our aim is to enhance healthcare accessibility for people in rural or remote regions by minimizing the skill gap among health workers, thereby empowering them to deliver high-quality care effectively. We design a virtual medical agent that assists real-time communication and decision making for both patients and the medical staff.
+                Across the rural US, healthcare is<br />
+                sometimes overlooked,<br />
+                often understaffed,<br />
+                always vital,<br />
+                and mostly stretched thin.
               </p>
 
               <p>
-                Specifically, the system offers:
+                Rural healthcare needs an adrenaline shot.
+              </p>
+
+              <p>
+                <a href="https://arpa-h.gov/research-and-funding/programs/paradigm" target="_blank">ARPA-H's Paradigm</a> program takes one bite of the problem by funding a high-tech mobile health truck, armed with skilled staff, advanced technology, and new healthcare funding models to get better care to the people that need it.
+              </p>
+
+              <p>
+                Our concept for an onboard truck assistant is <strong>Field Guider</strong>, an open source software service that:
               </p>
               
               <ul>
-                <li>Seamless communication between patients and the Care Delivery Platform (CDP) for scheduling and confirming with mobile health units.</li>
-                <li>Patient check-in automation to alleviate the administrative workload on staff, onsite or virtual (extending to scheduling and pre-appointment interactions).</li>
-                <li>Guidance for healthcare professionals during patient consultations to ensure more effective, safer examinations, diagnoses, and treatments.</li>
-                <li>Secure health data collection for continuous service improvement and scaling of healthcare services.</li>
+                <li>lives on the mobile health truck, phone, and AR goggles,</li>
+                <li>works with healthcare workers in real-time to co-diagnose, co-treat patients for better health outcomes,</li>
+                <li>and provides in-encounter training, through visual and aural clinical decision support nudges to up-skill staff.</li>
               </ul>
-
-              <p>
-                Our proposed system facilitates the entire healthcare journey, from a patient's initial engagement with our digital platform to their ongoing treatment and health management. It includes documenting medical histories and symptoms, establishing differential diagnoses, performing clinical assessments, and determining suitable treatment pathways.
-              </p>
-
-              <p>
-              A virtual medical agent with advanced capabilities in language processing and generation that enable intuitive dialogues between patients is accessible to initiate a consultation anytime via smartphone. The agent offers features like registering patient incidents, initiating clinical dialogues for assessing condition severity and scheduling appointments with a mobile health unit or a local clinic. It can also provide initial medical guidance to patients pending their in-person consultations. The gathered information is recorded and made accessible to healthcare workers, streamlining the intake process.
-              </p>
-
-              <div>
-                
-              </div>
 
               <div className="pure-g button-group margin-bottom">
                   <div className="pure-u-1 pure-u-lg-1-2">
@@ -379,7 +377,6 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 <Author name="Katerina Labrou" />
                 <Author name="Mandy Liu" />
                 <Author name="Jonathan Follett" />
-                <Author name="Juhan Sonin" />
                 <Author
                   name="Cagri Zaman"
                   company="Mediate"
@@ -387,7 +384,6 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 >
                   Dr. Cagri Hakan Zaman is the Director of Virtual Collaboration Research (Mediate Labs) as well as the founder and former director of the MIT Virtual Experience Design Lab at the Massachusetts Institute of Technology. His research is highly interdisciplinary, focusing on developing immersive media tools for engineering and design by studying human spatial experiences in both virtual and physical environments. Dr. Zaman's innovative approach to spatial experience from a story-understanding perspective is showcased in his dissertation titled "Spatial Experience in Humans and Machines." With extensive research experience in embodied intelligence, computational design, and immersive media, Dr. Zaman has conducted research at both the MIT Computer Science and Artificial Intelligence Laboratory (CSAIL) and the MIT Design Lab (formerly MIT Mobile Experience Lab).
                 </Author>
-
                 <Author
                   name="Mollie Williams"
                   company="Harvard Medical School"
@@ -395,6 +391,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 >
                   Mollie is a visionary and purposeful leader dedicated to advancing health equity and justice. Strategic thinker who gracefully transitions between big picture impact and day-to-day operations. Trusted collaborator and champion of high- performing, inclusive teams. Thought-leader, ambassador, and influencer in local, national, and international conversations about equitable access to compassionate, high-quality care for all.
                 </Author>
+                <Author name="Juhan Sonin" />
               </div>
 
               <div className="pad-vertical--double">

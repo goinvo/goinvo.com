@@ -348,7 +348,8 @@
     "caption": "Open source design guidelines for delivering digitized carrier testing results.",
     "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
     "link": "http://www.genomicsdesign.com/",
-    "hiddenWorkPage": true
+    "hiddenWorkPage": true,
+    "external": true
   },
   {
     "id": "print-big",

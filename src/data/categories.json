@@ -4,6 +4,10 @@
     "title": "Care Management"
   },
   {
+    "id": "enterprise",
+    "title": "Enterprise"
+  },
+  {
     "id": "health-it-and-infrastructure",
     "title": "Health IT & Infrastructure"
   },

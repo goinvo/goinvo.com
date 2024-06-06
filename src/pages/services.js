@@ -74,7 +74,7 @@ const services = [
     description:
       'We test and iterate designs with users throughout a project to validate product features, functions, and designs.',
     methods:
-      'expert reviews, A/B testing, usability testing, accessability testing',
+      'expert reviews, A/B testing, usability testing, accessibility testing',
     image: '/images/services/glytec-brown.jpg',
     color: '#E2DACE',
     example: {

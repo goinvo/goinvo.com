@@ -226,7 +226,6 @@ class WorkPage extends Component {
                   columns={3}
                   selectedCategoryId={this.state.selectedCategory.id}
                   onSelectCategory={this.setSelectedCategory}
-                  includeAll
                 />
               </div>
             </div>

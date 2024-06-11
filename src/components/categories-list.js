@@ -8,6 +8,8 @@ export const allCategory = {
   title: 'All',
 }
 
+CATEGORIES_LIST.unshift(allCategory);
+
 class CategoriesList extends Component {
   renderCategory = cat => {
     return (

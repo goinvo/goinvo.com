@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
@@ -8,14 +7,16 @@ import Author from '../../../components/author'
 import References from '../../../components/references'
 
 import config from '../../../../config'
+import columns from '../../../components/columns'
 
 const frontmatter = {
   metaTitle: 'Fraud Waste Abuse Healthcare - GoInvo',
   metaDescription:
-    'Learn about the benefits of virtual diabetes care, and a hybrid healthcare approach, which combines in-person visits with telehealth.',
+    'Learn about the problem of fraud, waste, and abuse in the US Healthcare system',
   heroImage:
     '/images/features/virtual-care-diabetes/virtual-care-diabetes-hero.jpg',
 }
+
 
 class FraudWasteAbuseHealthcare extends Component {
   render() {
@@ -28,7 +29,7 @@ class FraudWasteAbuseHealthcare extends Component {
               <h1 className="header--xl">
                 Fraud, Waste, and Abuse in Healthcare
               </h1>
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 3-30% of US Healthcare spending is lost to Fraud, Waste, and Abuse
               </h2>
               <p>
@@ -44,30 +45,39 @@ class FraudWasteAbuseHealthcare extends Component {
                 FWA, and potential solutions.
               </p>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 What is Fraud, Waste, and Abuse
               </h2>
               <p>
-                <em>Crafting a common definition</em>
-                <br />
+                <em>Crafting a common definition</em><br />
               </p>
               <p>
                 Healthcare organizations have varying definitions of FWA.
                 We've taken the FWA definition from several organizations 
                 and have distilled each into a single sentence.
               </p>
-              <p>
-                Fraud: intentional misuse of healthcare system resources.<br />
-                Waste: unintentional misuse of healthcare system resources.<br />
-                Abuse: misuse of healthcare system resources independent of intention.<br />
-              </p>
+              <div className="columns">
+                <div className="columns__item columns__item--2">
+                  <p>
+                    Fraud: intentional misuse of healthcare system resources.<br />
+                    Waste: unintentional misuse of healthcare system resources.<br />
+                    Abuse: misuse of healthcare system resources independent of intention.<br />
+                  </p>
+                </div>
+                <div className="columns__item columns__item--2">
+                  <p>
+                    Adding diagram image of FWA
+                  </p>
+                </div>
+              </div>
               <p>
                 Based on these definitions, Abuse is the umbrella for all misuse of healthcare 
                 resources regardless of intent. If intent is identified then it would fall into 
                 either Fraud or Waste.
               </p>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 The Cost of FWA
               </h2>
               <p>
@@ -78,19 +88,29 @@ class FraudWasteAbuseHealthcare extends Component {
                 Finding the total amount of Fraud, Waste, and Abuse is a challenge. 
                 In our research, we found a range of estimates for FWA, from 3-30%.
               </p>
-              <p>
-                <em>"30 percent of U.S. health spending (public and private) in 2009 — 
+              <p className="quote">
+                "30 percent of U.S. health spending (public and private) in 2009 — 
                   roughly $750 billion — was wasted on unnecessary services, excessive 
-                  administrative costs, fraud, and other problems.” </em>
+                  administrative costs, fraud, and other problems.” 
                 <sup>
                   <a href="#references">11</a>
                 </sup>{' '}
                 <br />
               </p>
-              <p>
-                <em>"Estimates of fraudulent billings to health care programs, both public 
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/virtual-care-diabetes/rural_urban.jpg"
+                  className="image--max-width"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+              </div>
+              <p className="quote">
+                 "Estimates of fraudulent billings to health care programs, both public 
                   and private, are estimated between 3 and 10 percent of total health care 
-                  expenditures.”</em>
+                  expenditures.”
+                <sup>
+                    <a href="#references">11</a>
+                </sup>{' '}
                 <br />
               </p>
               <div className="margin-auto">
@@ -101,7 +121,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 />
               </div>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 FWA Across Industries
               </h2>
               <p>
@@ -121,11 +141,13 @@ class FraudWasteAbuseHealthcare extends Component {
                 less. Despite a lower FWA, food waste and retail theft are more commonly discussed in the media. 
               </p>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 Common Fraud, Waste, Abuse Enumeration (CFWAE)
               </h2>
               <p>
-              We created a common language with canonical examples to describe fraud, waste, and abuse in healthcare.<br />
+              We created a common language with canonical examples to describe fraud, waste, and abuse in healthcare.
+              </p>
+              <p>
               The concept would be to establish these as a healthcare standard, much like ICD-10, but for FWA. 
               Having a standard set of FWA categories would help to drive national FWA awareness and an open source 
               FWA reporting tool. 
@@ -134,42 +156,70 @@ class FraudWasteAbuseHealthcare extends Component {
                 <em>Common Fraud, Waste, Abuse Enumeration (CFWAE)</em>
                 <br />
               </p>
-              <li> 1.000 No service was provided but a charge was submitted </li>
-              <li> 2.000 A service was provided but it was not necessary </li>
-              <li> 3.000 A service was provided but a kickback was involved </li>
-              <li> 4.000 A service was provided but the actor was not eligible </li>
-              <li> 5.000 A service was provided but an overcharge was submitted </li>
-              <li> 6.000 A service was provided but the payment was denied </li>
-              <li> 7.000 A service was provided but it was not covered </li>
-              <p>
-                <em>1.000 - No service was provided but a charge was submitted</em><br />
-              </p>
-              <p>
-                <em>2.000 - A service was provided but it was not necessary</em><br />
-              </p>
-              <p>
-                <em>3.000 - A service was provided but a kickback was involved</em><br />
-              </p>
-              <p>
-                <em>4.000 - A service was provided but the actor was not eligible</em><br />
-              </p> 
-              <p>
-                <em>5.000 - A service was provided but an overcharge was submitted</em><br />
-              </p>
-              <p>
-                <em>6.000 - A service was provided but the payment was denied</em><br />
-              </p>
-              <p>
-                <em>7.000 - A service was provided but it was not covered</em><br />
+              <p> 
+                1.000 No service was provided but a charge was submitted      <br />
+                2.000 A service was provided but it was not necessary         <br />
+                3.000 A service was provided but a kickback was involved      <br />
+                4.000 A service was provided but the actor was not eligible   <br />
+                5.000 A service was provided but an overcharge was submitted  <br />
+                6.000 A service was provided but the payment was denied       <br />
+                7.000 A service was provided but it was not covered           <br />
               </p>
 
-              <p>
-                <em>Total FWA across the categories</em>
-                <br />
-              </p>
+              <em>1.000 - No service was provided but a charge was submitted </em>  <br />
+              <div className="background--gray pad-all text--left">
+                <p>
+                  <em>Info</em><br />
+                </p>
+              </div>
+              <br />
+              <em>2.000 A service was provided but it was not necessary </em>  <br />
+              <div className="background--gray pad-all text--left">
+                <p>
+                  <em>Info</em><br />
+                </p>
+              </div>
+              <br />
+              <em>3.000 A service was provided but a kickback was involved </em>  <br />
+              <div className="background--gray pad-all text--left">
+                <p>
+                  <em>Info</em><br />
+                </p>
+              </div>
+              <br />
+              <em>4.000 A service was provided but the actor was not eligible </em>  <br />
+              <div className="background--gray pad-all text--left">
+                <p>
+                  <em>Info</em><br />
+                </p>
+              </div>
+              <br />
+              <em>5.000 A service was provided but an overcharge was submitted </em>  <br />
+              <div className="background--gray pad-all text--left">
+                <p>
+                  <em>Info</em><br />
+                </p>
+              </div>
+              <br />
+              <em>6.000 A service was provided but the payment was denied </em>  <br />
+              <div className="background--gray pad-all text--left">
+                <p>
+                  <em>Info</em><br />
+                </p>
+              </div>
+              <br />
+              <em>7.000 A service was provided but it was not covered </em>  <br />
+              <div className="background--gray pad-all text--left">
+                <p>
+                  <em>Info</em><br />
+                </p>
+              </div>
+              <br />
 
+              <em>Total FWA across the categories</em>
+              
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 Recovering FWA
               </h2>
               <p>
@@ -182,7 +232,28 @@ class FraudWasteAbuseHealthcare extends Component {
                 and Abuse Control Program Protects Consumers and Taxpayers by Combating Health Care Fraud. 
                 Over the last three years, they returned $4 for every $1 invested in recovery efforts. 
                 Below, we can look deeper into FY2021 spending and recovery. 
-              </p>
+              </p > 
+              <br />
+              
+              <div className="columns">
+                <div className="columns__item--4 container--align-center">
+                  <div className="background--gray pad-all text--center text--serif text--lg"> $1.1B </div>
+                  <p className="text--center">Dollars Invested In FWA Recovery</p>
+                </div>       
+                <div className="columns__item--4 container--align-center">
+                  <div className="background--gray pad-all text--center text--serif text--lg"> $1.9B </div>
+                  <p className="text--center">Dollars <br /> Recovered</p>
+                </div>
+                <div className="columns__item--4 container--align-center">
+                  <div className="background--gray pad-all text--center text--serif text--lg"> 0.15% </div>
+                  <p className="text--center">Percent of loss Recovered</p>
+                </div> 
+                <div className="columns__item--4 container--align-center">
+                  <div className="background--gray pad-all text--center text--serif text--lg">0.026%</div>
+                  <p className="text--center">Percent of Spending Put Towards Recovery</p>
+                </div>
+              </div>
+
               <p>
               While FY2021 was on the lower end of success during the three year rolling average, the HCFAC
               made $0.9B from their efforts. Only 0.15% of loss to fraud, waste, and abuse was recovered, 
@@ -192,16 +263,13 @@ class FraudWasteAbuseHealthcare extends Component {
               HCFAC for recovery efforts, makes us question why not invest more? 
               </p>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 Recovery Challenges
               </h2>
 
-              <h2 className="header--lg margin-top margin-bottom--none">
+              <h2 className="header--lg margin-top--lg margin-bottom--none">
                 Proposed Solutions
               </h2>
-
-
-
 
             </div>
           </div>

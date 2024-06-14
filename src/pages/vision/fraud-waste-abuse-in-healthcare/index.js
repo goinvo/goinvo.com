@@ -5,9 +5,11 @@ import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
+import columns from '../../../components/columns'
+import Divider from '../../../components/divider'
 
 import config from '../../../../config'
-import columns from '../../../components/columns'
+
 
 const frontmatter = {
   metaTitle: 'Fraud Waste Abuse Healthcare - GoInvo',
@@ -45,12 +47,13 @@ class FraudWasteAbuseHealthcare extends Component {
                 FWA, and potential solutions.
               </p>
 
-              <h2 className="header--lg margin-top--lg margin-bottom--none">
-                What is Fraud, Waste, and Abuse
-              </h2>
-              <p>
-                <em>Crafting a common definition</em><br />
-              </p>
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  What is Fraud, Waste, and Abuse
+                </h1>
+              </div>
+              <h2 className="header--lg text--left">Crafting a common definition</h2>
               <p>
                 Healthcare organizations have varying definitions of FWA.
                 We've taken the FWA definition from several organizations 
@@ -66,7 +69,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 </div>
                 <div className="columns__item columns__item--2">
                   <p>
-                    Adding diagram image of FWA
+                        Add later
                   </p>
                 </div>
               </div>
@@ -76,14 +79,13 @@ class FraudWasteAbuseHealthcare extends Component {
                 either Fraud or Waste.
               </p>
 
-
-              <h2 className="header--lg margin-top--lg margin-bottom--none">
-                The Cost of FWA
-              </h2>
-              <p>
-                <em>Estimating FWA</em>
-                <br />
-              </p>
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  The Cost of FWA
+                </h1>
+              </div>
+              <h2 className="header--lg text--left">Estimating FWA</h2>
               <p>
                 Finding the total amount of Fraud, Waste, and Abuse is a challenge. 
                 In our research, we found a range of estimates for FWA, from 3-30%.
@@ -121,9 +123,12 @@ class FraudWasteAbuseHealthcare extends Component {
                 />
               </div>
 
-              <h2 className="header--lg margin-top--lg margin-bottom--none">
-                FWA Across Industries
-              </h2>
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  FWA Across Industries
+                </h1>
+              </div>
               <p>
                 FWA occurs in every industry.
                 How does the US Healthcare system compare to other US industries in the amount of FWA?
@@ -141,9 +146,12 @@ class FraudWasteAbuseHealthcare extends Component {
                 less. Despite a lower FWA, food waste and retail theft are more commonly discussed in the media. 
               </p>
 
-              <h2 className="header--lg margin-top--lg margin-bottom--none">
-                Common Fraud, Waste, Abuse Enumeration (CFWAE)
-              </h2>
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  Common Fraud, Waste, Abuse Enumeration (CFWAE)
+                </h1>
+              </div>
               <p>
               We created a common language with canonical examples to describe fraud, waste, and abuse in healthcare.
               </p>
@@ -152,11 +160,8 @@ class FraudWasteAbuseHealthcare extends Component {
               Having a standard set of FWA categories would help to drive national FWA awareness and an open source 
               FWA reporting tool. 
               </p>
-              <p>
-                <em>Common Fraud, Waste, Abuse Enumeration (CFWAE)</em>
-                <br />
-              </p>
-              <p> 
+              <h2 className="header--lg text--left">Common Fraud, Waste, Abuse Enumeration (CFWAE)</h2>
+              <p className="text--center"> 
                 1.000 No service was provided but a charge was submitted      <br />
                 2.000 A service was provided but it was not necessary         <br />
                 3.000 A service was provided but a kickback was involved      <br />
@@ -165,67 +170,60 @@ class FraudWasteAbuseHealthcare extends Component {
                 6.000 A service was provided but the payment was denied       <br />
                 7.000 A service was provided but it was not covered           <br />
               </p>
-
-              <em>1.000 - No service was provided but a charge was submitted </em>  <br />
+              <h2 className="header--lg text--left">1.000 No service was provided but a charge was submitted</h2>
               <div className="background--gray pad-all text--left">
                 <p>
-                  <em>Info</em><br />
+                  Info
                 </p>
               </div>
-              <br />
-              <em>2.000 A service was provided but it was not necessary </em>  <br />
+              <h2 className="header--lg text--left">2.000 A service was provided but it was not necessary </h2>
               <div className="background--gray pad-all text--left">
                 <p>
-                  <em>Info</em><br />
+                  Info
                 </p>
               </div>
-              <br />
-              <em>3.000 A service was provided but a kickback was involved </em>  <br />
+              <h2 className="header--lg text--left">3.000 A service was provided but a kickback was involved</h2>
               <div className="background--gray pad-all text--left">
                 <p>
-                  <em>Info</em><br />
+                  Info
                 </p>
               </div>
-              <br />
-              <em>4.000 A service was provided but the actor was not eligible </em>  <br />
+              <h2 className="header--lg text--left">4.000 A service was provided but the actor was not eligible</h2>
               <div className="background--gray pad-all text--left">
                 <p>
-                  <em>Info</em><br />
+                  Info
                 </p>
               </div>
-              <br />
-              <em>5.000 A service was provided but an overcharge was submitted </em>  <br />
+              <h2 className="header--lg text--left">5.000 A service was provided but an overcharge was submitted</h2>
               <div className="background--gray pad-all text--left">
                 <p>
-                  <em>Info</em><br />
+                  Info
                 </p>
               </div>
-              <br />
-              <em>6.000 A service was provided but the payment was denied </em>  <br />
+              <h2 className="header--lg text--left">6.000 A service was provided but the payment was denied</h2>
               <div className="background--gray pad-all text--left">
                 <p>
-                  <em>Info</em><br />
+                  Info
                 </p>
               </div>
-              <br />
-              <em>7.000 A service was provided but it was not covered </em>  <br />
+              <h2 className="header--lg text--left">7.000 A service was provided but it was not covered</h2>
               <div className="background--gray pad-all text--left">
                 <p>
-                  <em>Info</em><br />
+                  Info
                 </p>
               </div>
               <br />
 
-              <em>Total FWA across the categories</em>
+              <h2 className="header--lg text--left">Total FWA across the categories</h2>
               
-
-              <h2 className="header--lg margin-top--lg margin-bottom--none">
-                Recovering FWA
-              </h2>
-              <p>
-                <em>For every $1 Invested, $4 Recovered </em>
-                <br />
-              </p>
+              
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  Recovering FWA
+                </h1>
+              </div>
+              <h2 className="header--lg text--left">For every $1 Invested, $4 Recovered</h2>
               <p>
                 The Department of Health and Human Services (HHS) and the Department of Justice (DOJ) 
                 have a joint Health Care Fraud and Abuse Control Program (HCFAC). The Health Care Fraud 
@@ -263,13 +261,27 @@ class FraudWasteAbuseHealthcare extends Component {
               HCFAC for recovery efforts, makes us question why not invest more? 
               </p>
 
-              <h2 className="header--lg margin-top--lg margin-bottom--none">
-                Recovery Challenges
-              </h2>
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  Recovery Challenges
+                </h1>
+              </div>
 
-              <h2 className="header--lg margin-top--lg margin-bottom--none">
-                Proposed Solutions
-              </h2>
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  Proposed Solutions
+                </h1>
+              </div>
+
+
+              <Divider />
+              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h1 className="header--xl text--center max-width--sm margin-auto">
+                  Methodology
+                </h1>
+              </div>
 
             </div>
           </div>

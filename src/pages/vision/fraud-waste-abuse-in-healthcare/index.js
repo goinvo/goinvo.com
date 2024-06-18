@@ -377,7 +377,6 @@ class FraudWasteAbuseHealthcare extends Component {
                   <p className="text--center">Percent of Spending Put Towards Recovery</p>
                 </div>
               </div>
-
               <p>
                 While FY2021 was on the lower end of success during the three year rolling average, the HCFAC
                 made $0.9B from their efforts. Only 0.15% of loss to fraud, waste, and abuse was recovered, 
@@ -393,6 +392,15 @@ class FraudWasteAbuseHealthcare extends Component {
                   Recovery Challenges
                 </h1>
               </div>
+              <p>
+                Those responsible for recovering fraud, waste, and abuse face decisions of which cases to persue. 
+                Some cases of fraud are not worth recovery efforts, if the amount lost is not meaningful. 
+                Fraud cases often involve criminal prosecution, which is expensive and time consuming.
+              </p>
+              <p>
+                Knowing this, it is important to note that many cases of fraud go undetected and unrecovered.
+                Numbers in this report are only based on detected fraud, and expert estimates.
+              </p>
 
               <Divider />
               <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
@@ -400,6 +408,25 @@ class FraudWasteAbuseHealthcare extends Component {
                   Proposed Solutions
                 </h1>
               </div>
+              <h2 className="header--lg text--left">Concept 1: Health Accuracy Receipt</h2>
+              <div className="columns">
+                <div className="columns__item--2 container--align-center">
+                  <p>Txt</p>
+                </div>
+                <div className="columns__item--2 container--align-center">
+                  <p>Img</p>
+                </div>
+              </div>
+              <h2 className="header--lg text--left">Concept 2: FWA Tracker</h2>
+              <div className="columns">
+                <div className="columns__item--2 container--align-center">
+                  <p>Txt</p>
+                </div>
+                <div className="columns__item--2 container--align-center">
+                  <p>Img</p>
+                </div>
+              </div>
+              
 
 
               <Divider />
@@ -407,44 +434,40 @@ class FraudWasteAbuseHealthcare extends Component {
                 <h1 className="header--xl text--center max-width--sm margin-auto">
                   Methodology
                 </h1>
-                <p className="text--gray">
-                  Below is a description of the methodology used in creating the Fraud, Waste, and Abuse in US Healthcare 
-                  report. Calculations are based on expert estimates, therefore final percentages are an estimate
-                  and should not be viewed as absolute numbers.
-                </p>
-                <h2 className="header--lg text--left text--gray pad-top">Calculations</h2>
-                <p className="text--gray">
-                  $1.32T of US healthcare spending lost to FWA - high estimate <br />
-                  Total value:{' '}
-                  <strong className="text--teal">
-                    $4.4T x 30% = $1.32T
-                  </strong> 
-                  <br /><br />
-                  $1.01T of US healthcare spending lost to FWA - low estimate <br />
-                  Total value:{' '}
-                  <strong className="text--teal">
-                    $4.4T x 23% = $1.01T
-                  </strong> 
-                  <br /><br />
-                  0.14% of loss to FWA is recovered<br />
-                  Total value:{' '}
-                  <strong className="text--teal">
-                    $1.9B / $1.32T = 0.1439%
-                  </strong> 
-                  <br /><br />
-                  0.0257% of total heathcare spending is put twords recovery <br />
-                  Total value:{' '}
-                  <strong className="text--teal">
-                    $1.129B / $4.4T = 0.0257%
-                  </strong> 
-                  <br />
-
-
-
-
-                </p>
               </div>
-
+              <p className="text--gray">
+                Below is a description of the methodology used in creating the Fraud, Waste, and Abuse in US Healthcare 
+                report. Calculations are based on expert estimates, therefore final percentages are an estimate
+                and should not be viewed as absolute numbers.
+              </p>
+              <h2 className="header--lg text--left text--gray pad-top">Calculations</h2>
+              <p className="text--gray">
+                $1.32T of US healthcare spending lost to FWA - high estimate <br />
+                Total value:{' '}
+                <strong className="text--teal">
+                  $4.4T x 30% = $1.32T
+                </strong> 
+                <br /><br />
+                $1.01T of US healthcare spending lost to FWA - low estimate <br />
+                Total value:{' '}
+                <strong className="text--teal">
+                  $4.4T x 23% = $1.01T
+                </strong> 
+                <br /><br />
+                0.14% of loss to FWA is recovered<br />
+                Total value:{' '}
+                <strong className="text--teal">
+                  $1.9B / $1.32T = 0.1439%
+                </strong> 
+                <br /><br />
+                0.0257% of total heathcare spending is put twords recovery <br />
+                Total value:{' '}
+                <strong className="text--teal">
+                  $1.129B / $4.4T = 0.0257%
+                </strong> 
+                <br />
+              </p>
+              
             </div>
           </div>
 

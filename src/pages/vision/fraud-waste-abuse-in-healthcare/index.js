@@ -330,7 +330,7 @@ class FraudWasteAbuseHealthcare extends Component {
               <div className="margin-auto ">
                 <Image
                   src="/images/features/fraud-waste-abuse-in-healthcare/cfwe1.png"
-                  className="image--max-width-80"
+                  className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>

@@ -89,8 +89,11 @@ class FraudWasteAbuseHealthcare extends Component {
               <h2 className="header--lg text--left">Estimating FWA</h2>
               <p>
                 Finding the total amount of Fraud, Waste, and Abuse is a challenge.<br />
-                In our research, we found an estimate of 10% fraud and 20% waste, totaling 30%.
-                While the quote below is from 2009, today in 2024, it is still the most recent estimate of total FWA of US Healthcare.
+                In our research, we found an estimate of 10% fraud and 20% waste, totaling 30%. 
+                <sup>
+                  <a href="#methodology">A1</a>
+                </sup>{' '}
+                While the data below is from 2009, today in 2024, it is still the most recent estimate of total FWA of US Healthcare.
               </p>
               <Quote
                 quotee="United States Department of Health and Human Services (HHS)"
@@ -98,6 +101,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 30 percent of U.S. health spending (public and private) in 2009 — 
                 roughly $750 billion — was wasted on unnecessary services, excessive 
                 administrative costs, fraud, and other problems.
+                <sup><a href="#references">5</a></sup>{' '}
               </Quote>      
               <h2 className="header--lg text--center">30% FWA</h2>
               <div className="margin-auto">
@@ -107,7 +111,11 @@ class FraudWasteAbuseHealthcare extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
-              <h2 className="header--md text--center">Fraud 10% + Waste 20%</h2>
+              <h2 className="header--md text--center">
+                Fraud 10% + Waste 20%
+                <sup><a href="#methodology"> A2</a></sup>{' '}
+              </h2>
+              
 
               <Quote
                 quotee="Federal Bureau of Investigation (FBI)"
@@ -115,6 +123,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 Estimates of fraudulent billings to health care programs, both public 
                 and private, are estimated between 3 and 10 percent of total health care 
                 expenditures.
+                <sup><a href="#references">3</a></sup>{' '}
               </Quote>
 
               <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
@@ -395,26 +404,38 @@ class FraudWasteAbuseHealthcare extends Component {
                 and Abuse Control Program Protects Consumers and Taxpayers by Combating Health Care Fraud. 
               </p>
               <p>
-                Over the last three years, they returned $4 for every $1 invested in recovery efforts. 
+                Over the last three years, they returned $4 for every $1 invested in recovery efforts.<sup><a href="#references">4</a></sup>{' '}
                 Below, we can look deeper into FY2021 spending and recovery. 
               </p>
               
               <div className="columns">
                 <div className="columns__item--4 container--align-center">
                   <div className="background--gray pad-all text--center text--serif text--xl"> $1.1B </div>
-                  <p className="text--center">Dollars Invested In FWA Recovery</p>
+                  <p className="text--center">
+                    Dollars Invested In FWA Recovery 
+                    <sup><a href="#references"> 4</a></sup>{' '}
+                  </p>
                 </div>       
                 <div className="columns__item--4 container--align-center">
                   <div className="background--gray pad-all text--center text--serif text--xl"> $1.9B </div>
-                  <p className="text--center">Dollars <br /> Recovered</p>
+                  <p className="text--center">
+                    Dollars <br /> Recovered
+                    <sup><a href="#references"> 4</a></sup>{' '}
+                  </p>
                 </div>
                 <div className="columns__item--4 container--align-center">
                   <div className="background--gray pad-all text--center text--serif text--xl"> 0.14% </div>
-                  <p className="text--center">Percent of loss Recovered</p>
+                  <p className="text--center">
+                    Percent of loss Recovered
+                    <sup><a href="#methodology"> A3</a></sup>{' '}
+                  </p>
                 </div> 
                 <div className="columns__item--4 container--align-center">
                   <div className="background--gray pad-all text--center text--serif text--xl">0.026%</div>
-                  <p className="text--center">Percent of Spending Put Towards Recovery</p>
+                  <p className="text--center">
+                    Percent of Spending Put Towards Recovery
+                    <sup><a href="#methodology"> A4</a></sup>{' '}
+                  </p>
                 </div>
               </div>
               <p>
@@ -470,28 +491,36 @@ class FraudWasteAbuseHealthcare extends Component {
                 <h2 className="header--md">Calculations</h2>
 
                 <p className="text--gray">
-                  $1.32T of US healthcare spending lost to FWA - high estimate <br />
+                  A1 - 30% of US healthcare spending lost to FWA <br />
                   Total value:{' '}
                   <strong className="text--teal">
-                    $4.4T x 30% = $1.32T
+                    10% <sup><a href="#references">3</a></sup>{' '}
+                    + 20% <sup><a href="#references">2</a></sup>{' '}
+                    = 30%
                   </strong> 
                   <br /><br />
-                  $1.01T of US healthcare spending lost to FWA - low estimate <br />
+                  A2 - $1.32T of US healthcare spending lost to FWA <br />
                   Total value:{' '}
                   <strong className="text--teal">
-                    $4.4T x 23% = $1.01T
+                    $4.4T <sup><a href="#references">1</a></sup>{' '}
+                     x 30% <sup><a href="#methodology">A1</a></sup>{' '}
+                     = $1.32T
                   </strong> 
                   <br /><br />
-                  0.14% of loss to FWA is recovered<br />
+                  A3 - 0.14% of loss to FWA is recovered<br />
                   Total value:{' '}
                   <strong className="text--teal">
-                    $1.9B / $1.32T = 0.1439%
+                    $1.9B <sup><a href="#references">4</a></sup>{' '}
+                    / $1.32T <sup><a href="#methodology">A2</a></sup>{' '}
+                    = 0.1439%
                   </strong> 
                   <br /><br />
-                  0.0257% of total heathcare spending is put twords recovery <br />
+                  A4 - 0.0257% of total heathcare spending is put twords recovery <br />
                   Total value:{' '}
                   <strong className="text--teal">
-                    $1.129B / $4.4T = 0.0257%
+                    $1.129B <sup><a href="#references">4</a></sup>{' '}
+                    / $4.4T <sup><a href="#references">1</a></sup>{' '}
+                    = 0.0257%
                   </strong>
                 </p>
                 
@@ -545,7 +574,13 @@ class FraudWasteAbuseHealthcare extends Component {
                         'US Department of Justice, US Department of Health and Human Services. Annual Report of the Departments of Health and Human Services and Justice. Published July, 2022. Accessed June 18, 2024',
                       link:
                         'https://oig.hhs.gov/documents/hcfac/1177/OIG-HCFAC-2021-Complete%20Report.pdf',
-                    },      
+                    },
+                    {
+                      title:
+                        'US Department of Health and Human Services. Management Challenge 2: Fighting Fraud, Waste, and Abuse in Medicaire Parts A and B. Published March, 2015. Accessed June 18, 2024',
+                      link:
+                        'https://github.com/goinvo/fraud-waste-abuse/blob/main/estimate-of-fwa-in-medicaid.pdf',
+                    },         
                   ]}
                 />
               </div>

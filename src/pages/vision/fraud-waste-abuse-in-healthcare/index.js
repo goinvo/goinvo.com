@@ -32,7 +32,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 Fraud, Waste, and Abuse in Healthcare
               </h1>
               <h2 className="header--lg margin-top--lg margin-bottom--none">
-                23-30% of US Healthcare spending is lost to Fraud, Waste, and Abuse.
+                30% of US Healthcare spending is lost to Fraud, Waste, and Abuse.
               </h2>
               <p>
                 Fraud, Waste, and Abuse (FWA) is a challenge in every industry.<br /> 
@@ -89,7 +89,8 @@ class FraudWasteAbuseHealthcare extends Component {
               <h2 className="header--lg text--left">Estimating FWA</h2>
               <p>
                 Finding the total amount of Fraud, Waste, and Abuse is a challenge.<br />
-                In our research, we found a range of estimates from 23-30%.
+                In our research, we found an estimate of 10% fraud and 20% waste, totaling 30%.
+                While the quote below is from 2009, today in 2024, it is still the most recent estimate of total FWA of US Healthcare.
               </p>
               <Quote
                 quotee="United States Department of Health and Human Services (HHS)"
@@ -97,32 +98,16 @@ class FraudWasteAbuseHealthcare extends Component {
                 30 percent of U.S. health spending (public and private) in 2009 — 
                 roughly $750 billion — was wasted on unnecessary services, excessive 
                 administrative costs, fraud, and other problems.
-              </Quote>
-              <div className="columns">
-                <div className="columns__item--2">
-                    <h2 className="header--lg text--center">23% FWA</h2>
-                    <div className="margin-auto">
-                      <Image
-                        src="/images/features/fraud-waste-abuse-in-healthcare/fwa-low-pie1.jpg"
-                        className="image--max-width"
-                        sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                      />
-                    </div>
-                    <h2 className="header--md text--center">Fraud 3% + Waste 20%</h2>
-                </div>
-                <div className="columns__item--2">
-                  <h2 className="header--lg text--center">30% FWA</h2>
-                  <div className="margin-auto">
-                    <Image
-                      src="/images/features/fraud-waste-abuse-in-healthcare/fwa-high-pie1.jpg"
-                      className="image--max-width"
-                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    />
-                  </div>
-                  <h2 className="header--md text--center">Fraud 10% + Waste 20%</h2>
-                </div>
+              </Quote>      
+              <h2 className="header--lg text--center">30% FWA</h2>
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/fraud-waste-abuse-in-healthcare/fwa-high-pie1.jpg"
+                  className="image--max-width-half image--center"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
               </div>
-
+              <h2 className="header--md text--center">Fraud 10% + Waste 20%</h2>
 
               <Quote
                 quotee="Federal Bureau of Investigation (FBI)"
@@ -213,10 +198,12 @@ class FraudWasteAbuseHealthcare extends Component {
                   </div>  
                 </div>
                 <p className="text--sm">
-                  Examples <br />
-                  A provider bills Medicaid for an x-ray that was never taken for the patient.<br />
-                  A patient failed to keep his appointment but a charge was submitted as if the appointment took place.<br />
-                  Patient was billed for 30 tablets of Oxycontin but half of this amount was delivered to the patient.<br />
+                  Examples
+                  <ul> 
+                    <li> A provider bills Medicaid for an x-ray that was never taken for the patient.</li>
+                    <li> A patient failed to keep his appointment but a charge was submitted as if the appointment took place.</li>
+                    <li> Patient was billed for 30 tablets of Oxycontin but half of this amount was delivered to the patient.</li>
+                  </ul> 
                 </p>
               </div>
 
@@ -236,10 +223,12 @@ class FraudWasteAbuseHealthcare extends Component {
                   </div>  
                 </div>
                 <p className="text--sm">
-                  Examples <br />
-                  A provider orders an MRI for a sprained ankle.<br />
-                  A patient visits multiple providers in order to gain additional prescriptions for a certain drug.<br />
-                  A provider falsifies symptoms on a patient record to order additional laboratory tests.<br />
+                  Examples 
+                  <ul> 
+                    <li>A provider orders an MRI for a sprained ankle.</li>
+                    <li>A patient visits multiple providers in order to gain additional prescriptions for a certain drug.</li>
+                    <li>A provider falsifies symptoms on a patient record to order additional laboratory tests.</li>
+                  </ul>
                 </p>
               </div>
 
@@ -259,10 +248,12 @@ class FraudWasteAbuseHealthcare extends Component {
                   </div>  
                 </div>
                 <p className="text--sm">
-                  Examples <br />
-                  A nursing home owner requires another provider, such as an ambulance company, to pay the nursing home owner a portion of the money received for rendering services to patients.<br />
-                  A patient accepts money from a provider and is directed to go to a specific clinic.<br />
-                  Providers are paid additional money to refer Medicaid patients to certain hospitals.<br />
+                  Examples
+                  <ul> 
+                    <li>A nursing home owner requires another provider, such as an ambulance company, to pay the nursing home owner a portion of the money received for rendering services to patients.</li>
+                    <li>A patient accepts money from a provider and is directed to go to a specific clinic.</li>
+                    <li>Providers are paid additional money to refer Medicaid patients to certain hospitals.</li>
+                  </ul>
                 </p>
               </div>
               
@@ -282,11 +273,12 @@ class FraudWasteAbuseHealthcare extends Component {
                   </div>  
                 </div>
                 <p className="text--sm">
-                  Examples <br />
-                  A physician allows a non-physician to impersonate a licensed doctor, who medically treats patients and prescribes drugs, and then bills the Medicaid program.<br />
-                  A patient uses a neighbor’s Medicaid card in order to receive Medicaid services.<br />
-                  False information is used to enroll in Medicaid and then receive Medicaid services.<br />
-
+                  Examples 
+                  <ul> 
+                    <li>A physician allows a non-physician to impersonate a licensed doctor, who medically treats patients and prescribes drugs, and then bills the Medicaid program.</li>
+                    <li>A patient uses a neighbor’s Medicaid card in order to receive Medicaid services.</li>
+                    <li>False information is used to enroll in Medicaid and then receive Medicaid services.</li>
+                  </ul>
                 </p>
               </div>
 
@@ -306,10 +298,12 @@ class FraudWasteAbuseHealthcare extends Component {
                   </div>  
                 </div>
                 <p className="text--sm">
-                  Examples <br />
-                  A common panel of tests, normally billed using a single code, is split up into individual tests and billed as if they were performed separately. <br />
-                  A provider bills for more than 24 hours of treatment services in a day. <br />
-                  A lower cost drug is provided to a patient after Medicaid was billed for a brand name prescription. <br />
+                  Examples
+                  <ul> 
+                    <li>A common panel of tests, normally billed using a single code, is split up into individual tests and billed as if they were performed separately. </li>
+                    <li>A provider bills for more than 24 hours of treatment services in a day. </li>
+                    <li>A lower cost drug is provided to a patient after Medicaid was billed for a brand name prescription. </li>
+                  </ul>
                 </p>
               </div>
 
@@ -329,10 +323,12 @@ class FraudWasteAbuseHealthcare extends Component {
                   </div>  
                 </div>
                 <p className="text--sm">
-                  Examples <br />
-                  A provider submits a valid claim but it is denied by the payer.<br />
-                  The amount owed by the insurer to the healthcare provider under the terms of their contract is undervalued.<br />
-                  The insurer overvalued the cost in paying claims.<br />
+                  Examples
+                  <ul> 
+                    <li>A provider submits a valid claim but it is denied by the payer.</li>
+                    <li>The amount owed by the insurer to the healthcare provider under the terms of their contract is undervalued.</li>
+                    <li>The insurer overvalued the cost in paying claims.</li>
+                  </ul>
                 </p>
               </div>
 
@@ -352,11 +348,12 @@ class FraudWasteAbuseHealthcare extends Component {
                   </div>  
                 </div>
                 <p className="text--sm">
-                  Examples <br />
-                  An over the counter drug that is not covered by Medicaid is nevertheless prescribed and billed to Medicaid.<br />
-                  A patient uses an ambulance provided by Medicaid for personal use (versus medical use).<br />
-                  A patient receives an uncovered cosmetic dental procedure yet the provider bills it as a similar but covered Medicaid procedure.<br />
-
+                  Examples 
+                  <ul>
+                  <li>An over the counter drug that is not covered by Medicaid is nevertheless prescribed and billed to Medicaid.</li>
+                  <li>A patient uses an ambulance provided by Medicaid for personal use (versus medical use).</li>
+                  <li>A patient receives an uncovered cosmetic dental procedure yet the provider bills it as a similar but covered Medicaid procedure.</li>
+                  </ul>
                 </p>
               </div>
 

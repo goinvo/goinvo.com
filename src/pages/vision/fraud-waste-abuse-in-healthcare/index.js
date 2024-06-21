@@ -68,7 +68,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 <div className="columns__item--2">
                 <div className="margin-auto">
                   <Image
-                    src="/images/features/fraud-waste-abuse-in-healthcare/fwa-definition.jpg"
+                    src="/images/features/fraud-waste-abuse-in-healthcare/fwa-definition1.jpg"
                     className="image--max-width-small"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
@@ -102,7 +102,7 @@ class FraudWasteAbuseHealthcare extends Component {
               <h2 className="header--lg text--center">30% FWA</h2>
               <div className="margin-auto">
                 <Image
-                  src="/images/features/fraud-waste-abuse-in-healthcare/fwa-high-pie1.jpg"
+                  src="/images/features/fraud-waste-abuse-in-healthcare/fwa-high-pie2.jpg"
                   className="image--max-width-half image--center"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
@@ -426,21 +426,6 @@ class FraudWasteAbuseHealthcare extends Component {
                 HCFAC for recovery efforts, makes us question why not invest more? 
               </p>
 
-              <Divider />
-              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
-                <h1 className="header--xl text--center max-width--sm margin-auto">
-                  Recovery Challenges
-                </h1>
-              </div>
-              <p>
-                Those responsible for recovering fraud, waste, and abuse face decisions of which cases to persue. 
-                Some cases of fraud are not worth recovery efforts, if the amount lost is not meaningful. 
-                Fraud cases often involve criminal prosecution, which is expensive and time consuming.
-              </p>
-              <p>
-                Knowing this, it is important to note that many cases of fraud go undetected and unrecovered.
-                Numbers in this report are only based on detected fraud, and expert estimates.
-              </p>
 
               <Divider />
               <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">

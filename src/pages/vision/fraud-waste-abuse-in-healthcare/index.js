@@ -366,6 +366,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 </p>
               </div>
 
+              {/*
               <a
                   href="https://github.com/goinvo/fraud-waste-abuse/blob/main/common-fraud-waste-abuse-enumeration.pdf"
                   target="_blank"
@@ -374,7 +375,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 >
                   Download CFWAE Research
                 </a>
-
+              */}
               {/* <h2 className="header--lg text--left">Total FWA across the categories</h2>
               <div className="margin-auto ">
                 <Image

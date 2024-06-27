@@ -16,7 +16,7 @@ const frontmatter = {
   metaDescription:
     'The $1 Trillion yearly burden on the US Healthcare system.',
   heroImage:
-    '/images/features/fraud-waste-abuse-in-healthcare/hero-chat-fwa.jpg',
+    '/images/features/fraud-waste-abuse-in-healthcare/fwa-hero1.png',
 }
 
 
@@ -461,27 +461,45 @@ class FraudWasteAbuseHealthcare extends Component {
               <div className="columns">
                 <div className="columns__item--2 container--align-center">
                   <p>
-                    The Health Accuracy Receipt uses the patient as the fraud detection system.
+                    The Health Accuracy Receipt uses the patient as the fraud detection system.<br /><br />
                     It makes reporting fraud, waste, and abuse easy and understandable to everyone.
                   </p>
                 </div>
                 <div className="columns__item--2 container--align-center">
-                  <p>Img</p>
+                  <div className="margin-auto">
+                    <Image
+                      src="/images/features/fraud-waste-abuse-in-healthcare/phone.png"
+                      className="image--max-width"
+                    />
+                  </div>
                 </div>
               </div>
               <h2 className="header--lg text--left">Concept 2: FWA Tracker</h2>
-              <div className="columns">
-                <div className="columns__item--2 container--align-center">
-                  <p>
-                    The FWA Tracker is a real-time fraud, waste, and abuse detection dashboard. 
-                    It is built from a database which collects its data from numerous sources, such as the Health Accuracy Receipt. 
-                    <br />
-                    Users can choose between two different views, four different sorting types, and search for specific keywords. 
-                  </p>
-                </div>
-                <div className="columns__item--2 container--align-center">
-                  <p>Img</p>
-                </div>
+              <p>
+                The FWA Tracker is a real-time fraud, waste, and abuse detection dashboard. 
+                It is built from a database which collects its data from numerous sources, such as the Health Accuracy Receipt. 
+                <br />
+                Users can choose between two different views, four different sorting types, and search for specific keywords. 
+              </p>
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/fraud-waste-abuse-in-healthcare/map-view.jpg"
+                  className="image--max-width"
+                />
+              </div>
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/fraud-waste-abuse-in-healthcare/tree-view.jpg"
+                  className="image--max-width"
+                />
+              </div>
+
+              <h2 className="header--lg text--left">System Diagram</h2>
+              <div className="margin-auto">
+                <Image
+                  src="/images/features/fraud-waste-abuse-in-healthcare/system.jpg"
+                  className="image--max-width image--center"
+                />
               </div>
             </div>
           </div>

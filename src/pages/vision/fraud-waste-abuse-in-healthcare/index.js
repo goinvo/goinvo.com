@@ -126,6 +126,8 @@ class FraudWasteAbuseHealthcare extends Component {
                 <sup><a href="#references">3</a></sup>{' '}
               </Quote>
 
+
+            {/*
               <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
                 <h1 className="header--xl text--center max-width--sm margin-auto">
                   Common Fraud, Waste, Abuse Enumeration
@@ -458,7 +460,10 @@ class FraudWasteAbuseHealthcare extends Component {
               <h2 className="header--lg text--left">Concept 1: Health Accuracy Receipt</h2>
               <div className="columns">
                 <div className="columns__item--2 container--align-center">
-                  <p>Txt</p>
+                  <p>
+                    The Health Accuracy Receipt uses the patient as the fraud detection system.
+                    It makes reporting fraud, waste, and abuse easy and understandable to everyone.
+                  </p>
                 </div>
                 <div className="columns__item--2 container--align-center">
                   <p>Img</p>
@@ -467,7 +472,12 @@ class FraudWasteAbuseHealthcare extends Component {
               <h2 className="header--lg text--left">Concept 2: FWA Tracker</h2>
               <div className="columns">
                 <div className="columns__item--2 container--align-center">
-                  <p>Txt</p>
+                  <p>
+                    The FWA Tracker is a real-time fraud, waste, and abuse detection dashboard. 
+                    It is built from a database which collects its data from numerous sources, such as the Health Accuracy Receipt. 
+                    <br />
+                    Users can choose between two different views, four different sorting types, and search for specific keywords. 
+                  </p>
                 </div>
                 <div className="columns__item--2 container--align-center">
                   <p>Img</p>
@@ -548,7 +558,21 @@ class FraudWasteAbuseHealthcare extends Component {
                 <Author name="Juhan Sonin" />
                 <Author name="Edwin Choi" />
               </div>
+            </div>
+          </div>  
+            
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+                <h3 className="header--md">Contributors</h3>
+                <p>
+                  Anesu Machoko, MetaDigital <br />
+                  Philip Mattera, Violation Tracker <br />
+                </p>
+            </div>    
+          </div>   
 
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
               <div id="references">
                 <References
                   references={[

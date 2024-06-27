@@ -457,12 +457,14 @@ class FraudWasteAbuseHealthcare extends Component {
                   Proposed Solutions
                 </h1>
               </div>
-              <h2 className="header--lg text--left">Concept 1: Health Accuracy Receipt</h2>
+              
               <div className="columns">
                 <div className="columns__item--2 container--align-center">
+                <h2 className="header--lg text--left">Concept 1: Health Accuracy Receipt</h2>
                   <p>
                     The Health Accuracy Receipt uses the patient as the fraud detection system.<br /><br />
-                    It makes reporting fraud, waste, and abuse easy and understandable to everyone.
+                    The receipt is sent to patients after discharge to confirm what happend during their visit. <br /><br />
+                    It makes reporting fraud, waste, and abuse easy and understandable to everyone.<br /><br />
                   </p>
                 </div>
                 <div className="columns__item--2 container--align-center">

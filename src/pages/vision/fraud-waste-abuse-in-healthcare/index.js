@@ -33,6 +33,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </h1>
               <h2 className="header--lg margin-top--lg margin-bottom--none">
                 30% of US Healthcare spending is lost to Fraud, Waste, and Abuse.
+                <sup><a href="#methodology">A1</a></sup>{' '}
               </h2>
               <p>
                 Fraud, Waste, and Abuse (FWA) is a challenge in every industry.<br /> 
@@ -479,24 +480,26 @@ class FraudWasteAbuseHealthcare extends Component {
               <h2 className="header--lg text--left">Concept 2: FWA Tracker</h2>
               <p>
                 The FWA Tracker is a real-time fraud, waste, and abuse detection dashboard. 
-                It is built from a database which collects its data from numerous sources, such as the Health Accuracy Receipt. 
-                <br />
-                Users can choose between two different views, four different sorting types, and search for specific keywords. 
+                It is built from a database which collects its data from numerous sources, such as the Health Accuracy Receipt. <br /><br />
+                Users can choose between two different views, four different sorting types, and search for specific keywords: <br /><br />
+                Tree view shows quantities of FWA sperated into boxes of CFWE type. Map view shows statistics specific to a location. 
+                Filters are by date (year or YTD), state (location), stakeholder (patient, provider, insurer), and type (fraud,waste).
+                Searching allows the user to further customize filtering. 
               </p>
-              <div className="margin-auto">
+              <div className="margin-auto pad-top">
                 <Image
                   src="/images/features/fraud-waste-abuse-in-healthcare/map-view.jpg"
                   className="image--max-width"
                 />
               </div>
-              <div className="margin-auto">
+              <div className="margin-auto pad-top--crazy">
                 <Image
                   src="/images/features/fraud-waste-abuse-in-healthcare/tree-view.jpg"
                   className="image--max-width"
                 />
               </div>
 
-              <h2 className="header--lg text--left">System Diagram</h2>
+              <h2 className="header--lg text--left pad-top--crazy">System Diagram</h2>
               <div className="margin-auto">
                 <Image
                   src="/images/features/fraud-waste-abuse-in-healthcare/system.jpg"
@@ -586,7 +589,8 @@ class FraudWasteAbuseHealthcare extends Component {
                 <h3 className="header--md">Contributors</h3>
                 <p>
                   Anesu Machoko, MetaDigital <br />
-                  Philip Mattera, Violation Tracker <br />
+                  Philip Mattera, Good Jobs First <br />
+                  Siobhan Standaert, Good Jobs First <br />
                 </p>
             </div>    
           </div>   

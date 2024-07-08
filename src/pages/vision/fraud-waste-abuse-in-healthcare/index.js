@@ -128,7 +128,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </Quote>
 
 
-            {/*
+            
               <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
                 <h1 className="header--xl text--center max-width--sm margin-auto">
                   Common Fraud, Waste, Abuse Enumeration
@@ -141,6 +141,16 @@ class FraudWasteAbuseHealthcare extends Component {
               The concept would be to establish these as a healthcare standard, similar to documenting <a href="https://www.cve.org/">software vulnerabilities</a>, or <a href="https://en.wikipedia.org/wiki/ICD-10">ICD-10 codes</a> for diagnoses, symptoms, and procedures. 
               </p>
 
+              <ul>
+                <li>1.000 Charge submitted for service not provided. </li>
+                <li>2.000 Unnecessary service provided. </li>
+                <li>3.000 Kickback involved for provided service. </li>
+                <li>4.000 Actor not eligible for provided service. </li>
+                <li>5.000 Overcharge submitted for provided service. </li>
+                <li>6.000 Payment denied for provided service. </li>
+                <li>7.000 Provided service not covered. </li>
+              </ul>
+            {/*
               <p>Having a standard set of FWA categories would help drive national FWA awareness all well as an open source 
               FWA reporting tool. 
               </p>

@@ -140,13 +140,13 @@ class FraudWasteAbuseHealthcare extends Component {
               </p>
 
               <ul>
-                <li>1.000 Charge submitted for service not provided. </li>
-                <li>2.000 Unnecessary service provided. </li>
-                <li>3.000 Kickback involved for provided service. </li>
-                <li>4.000 Actor not eligible for provided service. </li>
-                <li>5.000 Overcharge submitted for provided service. </li>
-                <li>6.000 Payment denied for provided service. </li>
-                <li>7.000 Provided service not covered. </li>
+                <li>Series A - Charge submitted for service not provided. </li>
+                <li>Series B - Unnecessary service provided. </li>
+                <li>Series C - Kickback involved for provided service. </li>
+                <li>Series D - Actor not eligible for provided service. </li>
+                <li>Series E - Overcharge submitted for provided service. </li>
+                <li>Series F - Payment denied for provided service. </li>
+                <li>Series G - Provided service not covered. </li>
               </ul>
                
               <Divider />
@@ -260,13 +260,6 @@ class FraudWasteAbuseHealthcare extends Component {
                 />
               </div>
 
-              <h2 className="header--lg text--left pad-top--crazy">System Diagram</h2>
-              <div className="margin-auto">
-                <Image
-                  src="/images/features/fraud-waste-abuse-in-healthcare/system.jpg"
-                  className="image--max-width image--center"
-                />
-              </div>
             </div>
           </div>
 

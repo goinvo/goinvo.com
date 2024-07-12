@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
@@ -6,7 +7,6 @@ import Image from '../../../components/image'
 import Quote from '../../../components/quote'
 import Author from '../../../components/author'
 import References from '../../../components/references'
-import columns from '../../../components/columns'
 import Divider from '../../../components/divider'
 
 import config from '../../../../config'
@@ -44,8 +44,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </p>
               <p>
                 Our research explores identifying the size of FWA in Healthcare, setting 
-                a common vocabulary of definitions and categories, the challenges combatting 
-                FWA, and potential solutions.
+                a common vocabulary of definitions and categories, and potential solutions.
               </p>
 
               <Divider />
@@ -94,7 +93,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 <sup>
                   <a href="#methodology">A1</a>
                 </sup>{' '}
-                While the data below is from 2009, today in 2024, it is still the most recent estimate of total FWA of US Healthcare.
+                While the data below is from 2009, today in 2024, it is still the most recent estimate of total FWA in US Healthcare.
               </p>
               <Quote
                 quotee="United States Department of Health and Human Services (HHS)"
@@ -165,8 +164,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </div>
               <p>
                 The Department of Health and Human Services (HHS) and the Department of Justice (DOJ) 
-                have a joint Health Care Fraud and Abuse Control Program (HCFAC). The Health Care Fraud 
-                and Abuse Control Program Protects Consumers and Taxpayers by Combating Health Care Fraud. 
+                have a joint Health Care Fraud and Abuse Control (HCFAC) Program. The HCFAC protects consumers and taxpayers by combating healthcare fraud. 
               </p>
               <p>
                 Over the last three years, they returned $4 for every $1 invested in recovery efforts.<sup><a href="#references">4</a></sup>{' '}
@@ -205,7 +203,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </div>
               <p>
                 While FY2021 was on the lower end of success during the three year rolling average, the HCFAC
-                made $0.9B from their efforts. Only 0.15% of loss to fraud, waste, and abuse was recovered, 
+                made $0.9B from their efforts. Only 0.14% of loss to fraud, waste, and abuse was recovered, 
                 leaving tons of money intended for healthcare use unrecovered. 
 
                 The $0.9B success, paired with the low 0.026% of US Healthcare spending allocated to the 
@@ -224,9 +222,13 @@ class FraudWasteAbuseHealthcare extends Component {
                 <div className="columns__item--2 container--align-center">
                 <h2 className="header--lg text--left">Concept 1: Health Accuracy Receipt</h2>
                   <p>
-                    The Health Accuracy Receipt uses the patient as the fraud detection system.<br /><br />
-                    The receipt is sent to patients after discharge to confirm what happend during their visit. <br /><br />
-                    It makes reporting fraud, waste, and abuse easy and understandable to everyone.<br /><br />
+                    The Health Accuracy Receipt uses the patient as the fraud detection system.
+                  </p>
+                  <p>
+                    The receipt is sent to patients after an encounter to confirm what happened during their visit.
+                  </p>
+                  <p>
+                    It makes reporting fraud, waste, and abuse available to anyone.
                   </p>
                 </div>
                 <div className="columns__item--2 container--align-center">
@@ -241,11 +243,7 @@ class FraudWasteAbuseHealthcare extends Component {
               <h2 className="header--lg text--left">Concept 2: FWA Tracker</h2>
               <p>
                 The FWA Tracker is a real-time fraud, waste, and abuse detection dashboard. 
-                It is built from a database which collects its data from numerous sources, such as the Health Accuracy Receipt. <br /><br />
-                Users can choose between two different views, four different sorting types, and search for specific keywords: <br /><br />
-                Tree view shows quantities of FWA sperated into boxes of CFWE type. Map view shows statistics specific to a location. 
-                Filters are by date (year or YTD), state (location), stakeholder (patient, provider, insurer), and type (fraud,waste).
-                Searching allows the user to further customize filtering. 
+                It is built from a database which collects data from numerous sources, such as the Health Accuracy Receipt.
               </p>
               <div className="margin-auto pad-top">
                 <Image
@@ -255,7 +253,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </div>
               <div className="margin-auto pad-top--crazy">
                 <Image
-                  src="/images/features/fraud-waste-abuse-in-healthcare/tree-view.jpg"
+                  src="/images/features/fraud-waste-abuse-in-healthcare/tree-view-v02.jpg"
                   className="image--max-width"
                 />
               </div>
@@ -303,7 +301,7 @@ class FraudWasteAbuseHealthcare extends Component {
                     = 0.1439%
                   </strong> 
                   <br /><br />
-                  A4 - 0.0257% of total heathcare spending is put twords recovery <br />
+                  A4 - 0.0257% of total heathcare spending is put towords recovery<br />
                   Total value:{' '}
                   <strong className="text--teal">
                     $1.129B <sup><a href="#references">4</a></sup>{' '}

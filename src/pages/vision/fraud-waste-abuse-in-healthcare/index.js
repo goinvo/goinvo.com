@@ -168,6 +168,8 @@ class FraudWasteAbuseHealthcare extends Component {
               </p>
               <p>
                 Over the last three years, they returned $4 for every $1 invested in recovery efforts.<sup><a href="#references">4</a></sup>{' '}
+              </p>
+              <p>
                 Below, we can look deeper into FY2021 spending and recovery. 
               </p>
               

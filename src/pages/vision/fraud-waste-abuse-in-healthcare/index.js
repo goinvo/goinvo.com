@@ -43,8 +43,14 @@ class FraudWasteAbuseHealthcare extends Component {
                 quality of care that patients receive. 
               </p>
               <p>
-                Our research explores identifying the size of FWA in Healthcare, setting 
-                a common vocabulary of definitions and categories, and potential solutions.
+                Our research in 2024 explores identifying the size of FWA in Healthcare, setting 
+                a common vocabulary of definitions and categories, the challenges combatting 
+                FWA, and potential solutions.
+              </p>
+              <p>
+                We looked into FWA a decade ago.
+                Sadly, the fidelity of the data is still low, there is no nationally focused effort on 
+                public reporting, and we are still not tracking it with rigor. 
               </p>
 
               <Divider />
@@ -333,7 +339,6 @@ class FraudWasteAbuseHealthcare extends Component {
                 <Author name="Michelle Bourdon" />
                 <Author name="Eric Benoit" />
                 <Author name="Juhan Sonin" />
-                <Author name="Edwin Choi" />
               </div>
             </div>
           </div>  
@@ -342,9 +347,11 @@ class FraudWasteAbuseHealthcare extends Component {
             <div className="max-width max-width--md content-padding">
                 <h3 className="header--md">Contributors</h3>
                 <p>
+                  Edwin Choi, GoInvo <br />
                   Anesu Machoko, MetaDigital <br />
                   Philip Mattera, Good Jobs First <br />
                   Siobhan Standaert, Good Jobs First <br />
+                  Jung Hoon Son, Clinicians.fyi
                 </p>
             </div>    
           </div>   

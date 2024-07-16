@@ -48,8 +48,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </p>
               <p>
                 We looked into FWA a decade ago.
-                Sadly, the fidelity of the data is still low, there is no nationally focused effort on 
-                public reporting, and we are still not tracking it with rigor. 
+                Sadly, there is still no national effort on tracking with rigor, and little publically reported data.  
               </p>
 
               <Divider />

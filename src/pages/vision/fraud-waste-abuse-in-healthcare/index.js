@@ -44,8 +44,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </p>
               <p>
                 Our research in 2024 explores identifying the size of FWA in Healthcare, setting 
-                a common vocabulary of definitions and categories, the challenges combatting 
-                FWA, and potential solutions.
+                a common vocabulary of definitions and categories, and potential solutions.
               </p>
               <p>
                 We looked into FWA a decade ago.

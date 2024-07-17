@@ -1,5 +1,16 @@
 [
   {
+    "id": "fraud-waste-abuse-in-healthcare",
+    "title": "Fraud, Waste, Abuse in US Healthcare",
+    "date": "Jul.2024",
+    "client": "Feature",
+    "categories": ["open-source"],
+    "caption": "The $1 Trillion yearly burden on the US Healthcare system.",
+    "link": "/vision/fraud-waste-abuse-in-healthcare/",
+    "image": "/images/features/fraud-waste-abuse-in-healthcare/fwa-hero1.png",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "augmented-clinical-decision-support",
     "title": "Augmented Clinical Decision Support",
     "date": "May.2024",

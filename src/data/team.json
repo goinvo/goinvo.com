@@ -101,34 +101,14 @@
     "image": "/images/about/headshot-shirley-xu.jpg"
   },
   {
-    "name": "Katerina Labrou",
-    "title": "Engineer",
-    "bio": "Katerina is an engineer and designer with a background in computational architecture and augmented reality design. She merges technical expertise and creative vision to change the way we experience and interact with our surroundings and health. Kat joined GoInvo in 2024 with a BS in Architecture and a combined MS in Electrical Engineering and Computer Science from MIT.",
-    "social": {
-      "email": "kat@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/katelabrou/"
-    },
-    "image": "/images/about/headshot-katerina-labrou.jpg"
-  },
-  {
-    "name": "Malia Hong",
+    "name": "Sue Park",
     "title": "Designer",
-    "bio": "Malia is a designer with a background in industrial design and human-centered technology design. Her primary focus is healthcare and socially responsible design, effectively advocating for individuals confronting adversity. Additionally, she concentrates on incorporating gamification to enhance interaction engagement. She has a bachelor's degree in ID from the Rhode Island School of Design and is pursuing a master's degree in Design for Interactions at Carnegie Mellon University.",
+    "bio": "Sue Park joined GoInvo in 2024 with a background in industrial design and human-computer interaction. Her previous work includes designing intuitive interfaces for the healthcare and fintech industries. She holds a BS in Industrial Design from Korea Advanced Institute of Science & Technology and an MS in Information from the University of Michigan.",
     "social": {
-      "email": "malia@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/chengqihong/"
+      "email": "sue@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/sooyeonp/"
     },
-    "image": "/images/about/headshot-malia-hong.jpg"
-  },
-  {
-    "name": "Michelle Bourdon",
-    "title": "Designer, Engineer",
-    "bio": "Michelle is a designer and developer with a background in computer science, business, and healthcare. She is currently working towards a BS in Computer Science at the University of Western Ontario (UWO). Michelle joined GoInvo as an intern in 2024.",
-    "social": {
-      "email": "kat@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/mebourdon/"
-    },
-    "image": "/images/about/headshot-michelle-bourdon.jpg"
+    "image": "/images/about/headshot-sue-park.jpg"
   },
   {
     "name": "Shayla Nettey",

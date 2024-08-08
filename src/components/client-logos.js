@@ -39,6 +39,25 @@ class ClientLogos extends Component {
               <Crossover />
             </li>
           </ul>
+        ) :
+        this.props.enterprise ? (
+          <ul className="list--unstyled client-logos">
+            <li>
+              <Walgreens />
+            </li>
+            <li>
+              <Nih />
+            </li>
+            <li className="">
+              <ThreeM />
+            </li>
+            <li className="">
+              <Mitre />
+            </li>
+            <li className="hidden--sm">
+              <Crossover />
+            </li>
+          </ul>
         ) : (
           <ul className="list--unstyled client-logos">
             <li>

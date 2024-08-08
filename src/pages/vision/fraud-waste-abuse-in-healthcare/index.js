@@ -129,8 +129,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 expenditures.
                 <sup><a href="#references">3</a></sup>{' '}
               </Quote>
-               
-              <Divider />
+
               <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
                 <h1 className="header--xl text--center max-width--sm margin-auto">
                   Recovering FWA

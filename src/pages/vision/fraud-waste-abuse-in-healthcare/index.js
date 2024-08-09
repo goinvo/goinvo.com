@@ -132,29 +132,6 @@ class FraudWasteAbuseHealthcare extends Component {
 
               <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
                 <h1 className="header--xl text--center max-width--sm margin-auto">
-                  Common Fraud, Waste, Abuse Enumeration
-                </h1>
-              </div>
-              <p>
-              We created a common language of canonical examples to describe fraud, waste, and abuse in healthcare.
-              </p>
-              <p>
-              The concept would be to establish these as a healthcare standard, similar to documenting <a href="https://www.cve.org/">software vulnerabilities</a>, or <a href="https://en.wikipedia.org/wiki/ICD-10">ICD-10 codes</a> for diagnoses, symptoms, and procedures. 
-              </p>
-
-              <ul>
-                <li>Series A - Charge submitted for service not provided. </li>
-                <li>Series B - Unnecessary service provided. </li>
-                <li>Series C - Kickback involved for provided service. </li>
-                <li>Series D - Actor not eligible for provided service. </li>
-                <li>Series E - Overcharge submitted for provided service. </li>
-                <li>Series F - Payment denied for provided service. </li>
-                <li>Series G - Provided service not covered. </li>
-              </ul>
-               
-              <Divider />
-              <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
-                <h1 className="header--xl text--center max-width--sm margin-auto">
                   Recovering FWA
                 </h1>
               </div>

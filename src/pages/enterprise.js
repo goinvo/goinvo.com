@@ -250,9 +250,9 @@ class EnterprisePage extends Component {
             <div className="max-width content-padding pad-vertical--double">
               <div className="pure-u-md-1-2">
                 <p className="header--xl">
-                  <em>Enterprise is complicated.<br />
-                  Your stuff looks like shit.<br />
-                  Nobody wants to use it.<br />
+                  <em>Enterprise software is broken.<br />
+                  Nobody is efficient.<br />
+                  You're leaving millions on the table.<br />
                   We ship software that works.</em>
                 </p>
               </div>

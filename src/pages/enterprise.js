@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layouts/layout'
+import Hero from '../components/hero'
 import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
@@ -11,44 +12,29 @@ const frontmatter = {
   metaTitle: 'Design for Enterprise Software',
   metaDescription:
     'Beautiful software design for the Enterprise to catapult your business forward.',
-  heroImage: '/images/open_source/open-source.jpg',
 }
 
 class EnterprisePage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="open-source-health-design">
-          <div className="pad-horizontal teal background-image ">
-            <div className="max-width content-padding pad-vertical LayoutCenter">
-              <div className="flip-parent container-spacing">
-                <div className="flip-child container-spacing">
-                  <h1 className="header--xl margin-bottom--none">
-                    Enterprise is complicated<span className="text--serif text--primary">.</span><br />
-                    We know how to do it
-                    <span className="text--serif text--primary">.</span>
-                  </h1>
-                  <p className="margin-top--none">
-                    Beautiful software design for the Enterprise to catapult your business forward.
-                  </p>
-                  <Link
-                    to="/contact"
-                    className="button button--primary button--lg ctaLayout marginTop"
-                  >
-                    Let's discuss your project
-                  </Link>
-                </div>
-
-                <div className="flip-child mainImg">
-                  <Image
-                    src="/images/open_source/open-source-bgd.png"
-                    className="image--max-width"
-                    sizes={config.sizes.full}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="enterprise-design">
+          <Hero
+            className="hero--higher-text-contrast"
+            link="/contact/"
+            image="/images/open_source/open-source.jpg"
+            caption="Beautiful software design for the Enterprise to catapult your business forward."
+            button="Let's discuss your project"
+            isLarge
+            position="top center"
+          >
+            <h1 className="header--xl">
+              Enterprise is complicated
+              <span className="text--serif text--primary">.</span><br />
+              We know how to do it
+              <span className="text--serif text--primary">.</span>
+            </h1>
+          </Hero>
           <div className="bg-light pad-horizontal">
             <div className="max-width content-padding pad-vertical LayoutCenter teal">
               <h2 className="header--xl">

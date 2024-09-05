@@ -18,7 +18,7 @@ const frontmatter = {
   metaDescription:
     'A centralized MA resident database for better service accessibility.',
   heroImage:
-    '/images/features/eligibility/hero-image.png',
+    '/images/features/eligibility/hero-image.jpg',
 }
 
 
@@ -155,12 +155,13 @@ class EligibilityEngine extends Component {
                 </div>
             </div>
 
+
             <p><strong>Proactive Service Recommendations</strong></p>
             <p>
                 The system would actively analyze the information about residents in the database. By doing so, it could identify and suggest benefits they might be eligible for but haven't yet applied to. This saves residents the time and effort of having to search for programs themselves.        
             </p>
 
-            <div className="image--max-width">
+            <div className="healthcare-ai-feature__video">
               <video
                 poster={mediaUrl(
                   '/images/features/eligibility/feature-1.jpg'
@@ -187,7 +188,7 @@ class EligibilityEngine extends Component {
             When a resident wants to apply for a benefit, the system would pre-populate the application form with their data already stored in the database. Residents would then only need to provide additional information specific to that particular program. This significantly simplifies the application process.
             </p>
 
-            <div className="image--max-width">
+            <div className="healthcare-ai-feature__video">
               <video
                 poster={mediaUrl(
                   '/images/features/eligibility/feature-2.jpg'
@@ -214,7 +215,7 @@ class EligibilityEngine extends Component {
             The platform could automate the process of renewing benefits, sending timely reminders to residents and handling re-enrollment paperwork, thus reducing administrative work and preventing lapses in coverage.
             </p>
 
-            <div className="image--max-width">
+            <div className="healthcare-ai-feature__video">
               <video
                 poster={mediaUrl(
                   '/images/features/eligibility/feature-3.jpg'

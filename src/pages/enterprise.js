@@ -247,23 +247,21 @@ class EnterprisePage extends Component {
           </div>
 
           <div className="bg-light teal">
-            <div className="max-width content-padding pad-vertical--double">
+          <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="pure-u-md-1-2">
                 <p className="header--xl">
-                  <em>Enterprise software is broken.<br />
+                  Enterprise software is broken.<br />
                   Nobody is efficient.<br />
                   You're leaving millions on the table.<br />
-                  We ship software that works.</em>
+                  We ship software that works.
                 </p>
-              </div>
 
-              <div className="pure-u-md-1-2">
               <h2 className="header--xl margin-bottom--none">
                   Let's build together!
                 </h2>
                 <p className="margin-top--none">
                   Interested in having GoInvo help your organization?<br />
-                  Reach out to learn more about our services and how we can help!
+                  Reach out to learn how we can help.
                 </p>
 
                 <HubspotForm

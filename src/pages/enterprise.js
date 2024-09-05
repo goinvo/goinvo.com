@@ -22,7 +22,7 @@ class EnterprisePage extends Component {
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/open_source/open-source.jpg"
+            image="/images/enterprise/enterprise-hero-1.jpg"
             caption="Beautiful software design for the Enterprise to catapult your business forward."
             button="Let's discuss your project"
             isLarge

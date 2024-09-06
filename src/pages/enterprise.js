@@ -38,11 +38,8 @@ class EnterprisePage extends Component {
           <div className="bg-light pad-horizontal">
             <div className="max-width content-padding pad-vertical LayoutCenter teal">
               <h2 className="header--xl">
-                GoInvo enables high-growth companies to realize market-changing advances via envisioning, planning, and implementing best-in-class enterprise software, services, and experiences.
-              </h2>
-              <p className="margin-bottom--none">
                 What results are you looking for?
-              </p>
+              </h2>
               <div className="pure-u-lg-1-2">
                 <h4 className="margin-top--none">
                   Cost savings through a more productive workforce or customers.
@@ -235,19 +232,12 @@ class EnterprisePage extends Component {
           <div className="bg-light teal">
           <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="pure-u-md-1-2">
-                <p className="header--xl">
-                  Enterprise software is broken.<br />
-                  Nobody is efficient.<br />
-                  You're leaving millions on the table.<br />
-                  We ship software that works.
-                </p>
-
-              <h2 className="header--xl margin-bottom--none">
+                <p className="header--xl margin-bottom--none">
+                  We ship software that works.<br />
                   Let's build together!
-                </h2>
+                </p>
                 <p className="margin-top--none">
-                  Interested in having GoInvo help your organization?<br />
-                  Reach out to learn how we can help.
+                  Reach out to learn how GoInvo can help.
                 </p>
 
                 <HubspotForm

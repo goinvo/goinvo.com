@@ -30,7 +30,7 @@ class EnterprisePage extends Component {
             position="top center"
           >
             <h1 className="header--xl">
-              Enterprise is complicated
+              Enterprise software is complicated
               <span className="text--serif text--primary">.</span><br />
               We know how to do it
               <span className="text--serif text--primary">.</span>

@@ -12,6 +12,7 @@ const frontmatter = {
   metaTitle: 'Design for Enterprise Software',
   metaDescription:
     'Beautiful software design for the Enterprise to catapult your business forward.',
+  heroImage: '/images/enterprise/enterprise-hero-1.jpg',
 }
 
 class EnterprisePage extends Component {

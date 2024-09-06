@@ -25,6 +25,7 @@ class EnterprisePage extends Component {
             image="/images/enterprise/enterprise-hero-1.jpg"
             caption="Beautiful software design for the Enterprise to catapult your business forward."
             button="Let's discuss your project"
+            buttonLink="/contact/"
             isLarge
             position="top center"
           >

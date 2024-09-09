@@ -120,7 +120,7 @@ class EligibilityEngine extends Component {
             
             <div className="margin-auto">
                   <Image
-                    src="/images/features/eligibility/application-data.jpg"
+                    src="/images/features/eligibility/application-data-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
@@ -130,6 +130,18 @@ class EligibilityEngine extends Component {
                 </p>    
                 </div>
             </div>
+
+            <div class="text--center">
+                <a
+                href="https://docs.google.com/spreadsheets/d/1SRI5Tz5pJLIEr_ibwOj32J4cwN0Ry1cgbXNAXfiBWfk/edit?usp=sharing"
+                target="blank"
+                rel="noopener noreferrer"
+                class="button button--secondary button--lg margin-top--double margin-bottom--half"
+                >
+                {"View Common data for MA services"}
+                </a>
+              </div>
+              <p></p>
 
             <Divider />
             <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">

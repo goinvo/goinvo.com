@@ -82,6 +82,7 @@ class Hero extends Component {
       withLogo,
       children,
       button,
+      buttonLink,
       className,
     } = this.props
 
@@ -104,7 +105,7 @@ class Hero extends Component {
               {children}
               {caption ? <p className="hero__caption">{caption}</p> : null}
               {button ? (
-                <Link to="/work/" className="button button--primary">
+                <Link to={buttonLink} className="button button--primary">
                   {button}
                 </Link>
               ) : null}

@@ -35,11 +35,11 @@ const lgBreakPointPx =
 
 const upNextList = [
   {
-    link: '/services/',
-    image: '/images/services/shr-completeness.jpg',
-    title: 'Learn more about our services',
+    link: '/enterprise/',
+    image: '/images/enterprise/enterprise-hero-1.jpg',
+    title: 'Design for the Enterprise',
     caption:
-      'No matter the size or structure of your team, we integrate to magnify your efforts.',
+      'Beautiful software design for the Enterprise to catapult your business forward.',
   },
   {
     link: '/vision/',

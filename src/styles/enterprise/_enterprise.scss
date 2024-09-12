@@ -15,14 +15,30 @@
     @media screen and (max-width: 690px) {
       text-align: center;
 
-      ul {
+      .ul {
         text-align: left;
       }
     }
   }
 
-  ul li {
-    padding-right: 20px;
+  .resultsRow {
+    display: flex;
+
+    li {
+      width: 50%;
+      padding: 6px 20px 6px 6px;
+      line-height: 1.6rem;
+
+    }
+
+    @media screen and (max-width: 690px) {
+      text-align: left;
+      display: block;
+
+      li {
+        width: 100%;
+      }
+    }
   }
 
   .bg-light {

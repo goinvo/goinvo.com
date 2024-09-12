@@ -42,43 +42,17 @@ class EnterprisePage extends Component {
               <h2 className="header--xl">
                 What results are you looking for?
               </h2>
-              <div className="resultsRow">
-                <div className="pure-u-lg-1-2">
-                  <ul className="ul margin-top--none">
-                    <li><strong>Cost savings through a more productive workforce or customers.</strong></li>
-                  </ul>
-                </div>
-                <div className="pure-u-lg-1-2">
-                  <ul className="ul margin-top--none">
-                    <li><strong>Transforming software acquisitions into a seamless suite-like experience.</strong></li>
-                  </ul>
-                </div>
+              <div className="resultsRow ul">
+                <li><strong>Cost savings through a more productive workforce or customers.</strong></li>
+                <li><strong>Transforming software acquisitions into a seamless suite-like experience.</strong></li>
               </div>
-
-              <div className="resultsRow">
-                <div className="pure-u-lg-1-2">
-                  <ul className=" ul margin-top--none">
-                    <li><strong>Re-imagining the software to meet evolving customer needs.</strong></li>
-                  </ul>
-                </div>
-                <div className="pure-u-lg-1-2">
-                  <ul className="ul margin-top--none">
-                    <li><strong>Validating an idea before investing in a full development cycle.</strong></li>
-                  </ul>
-                </div>
+              <div className="resultsRow ul">
+                <li><strong>Re-imagining the software to meet evolving customer needs.</strong></li>
+                <li><strong>Validating an idea before investing in a full development cycle.</strong></li>
               </div>
-
-              <div className="resultsRow">
-                <div className="pure-u-lg-1-2">
-                  <ul className="ul margin-top--none">
-                    <li><strong>Convincing investors.</strong></li>
-                  </ul>
-                </div>
-                <div className="pure-u-lg-1-2">
-                  <ul className="ul margin-top--none">
-                    <li><strong>A vision to rally the company.</strong></li>
-                  </ul>
-                </div>
+              <div className="resultsRow ul">
+                <li><strong>Convincing investors.</strong></li>
+                <li><strong>A vision to rally the company.</strong></li>
               </div>
             </div>
           </div>

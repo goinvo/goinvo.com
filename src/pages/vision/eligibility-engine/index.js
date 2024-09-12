@@ -101,7 +101,6 @@ class EligibilityEngine extends Component {
                 <sup><a href="#references">3</a></sup>{' '}
             </Quote>
             
-            <Divider />
             <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
                 <h2 className="header--lg text--center max-width--sm margin-auto">
                 Common Data Elements for MA Residents

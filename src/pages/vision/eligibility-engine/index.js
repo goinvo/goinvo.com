@@ -69,7 +69,7 @@ class EligibilityEngine extends Component {
 
               <div className="margin-auto">
                   <Image
-                    src="/images/features/eligibility/current-process.jpg"
+                    src="/images/features/eligibility/current-process-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
@@ -156,7 +156,7 @@ class EligibilityEngine extends Component {
 
             <div className="margin-auto">
                   <Image
-                    src="/images/features/eligibility/streamlined-process.jpg"
+                    src="/images/features/eligibility/streamlined-process-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
@@ -222,7 +222,7 @@ class EligibilityEngine extends Component {
               </video>
             </div>
 
-            <p><strong>Automated Benefit Renewals</strong></p>
+            <p><strong>Renew your benefits in a snap</strong></p>
             <p>
             The platform could automate the process of renewing benefits, sending timely reminders to residents and handling re-enrollment paperwork, thus reducing administrative work and preventing lapses in coverage.
             </p>
@@ -279,7 +279,13 @@ class EligibilityEngine extends Component {
                   </li>
             </ul>
 
-
+            <Divider />
+            <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
+                <h2 className="header--lg text--center max-width--sm margin-auto">
+                Footprint
+                </h2>
+            </div>
+            <p>Here is a record of the efforts made by the Commonwealth of Massachusetts<sup><a href="#references">4</a></sup>{' '}, the Department of Transitional Assistance (DTA)<sup><a href="#references">5</a></sup>{' '}, and the Executive Office of Technology Services and Security (EOTSS)<sup><a href="#references">6</a></sup>{' '} to address the service gap in Massachusetts.</p>
            
 
 
@@ -334,7 +340,25 @@ class EligibilityEngine extends Component {
                         'Civilla and Code for America. (2019). Streamlining Access to Public Benefits in Michigan',
                       link:
                         'https://s3-us-west-1.amazonaws.com/codeforamerica-cms1/documents/Streamlining-Access-Report_Integrated-Benefits-Initiative-Civilla_Code-for-America_March-2019.pdf'
-                    },                
+                    },
+                    {
+                      title:
+                        'The Commonwealth of Massachusetts Executive Office of Health and Human Services Office of Medicaid. (2015). Integrated Eligibility Implementation Plan',
+                      link:
+                        'https://www.mass.gov/doc/integrated-eligibility-implementation-plan-october-2015'
+                    },
+                    {
+                      title:
+                        'Goinvo (2018). Closing the SNAP gap',
+                      link:
+                        'https://www.goinvo.com/work/mass-snap/'
+                    },
+                    {
+                      title:
+                        'Goinvo (2018). Closing the SNAP gap',
+                      link:
+                        'https://www.goinvo.com/work/mass-snap/'
+                    },                   
                   ]}
                 />
               </div>

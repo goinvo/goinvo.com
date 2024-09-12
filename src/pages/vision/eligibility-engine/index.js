@@ -71,7 +71,6 @@ class EligibilityEngine extends Component {
                   <Image
                     src="/images/features/eligibility/current-process-2.jpg"
                     className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                 <div class="text--center">
                 <p>
@@ -121,7 +120,6 @@ class EligibilityEngine extends Component {
                   <Image
                     src="/images/features/eligibility/application-data-2.jpg"
                     className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                 <div class="text--center">
                 <p>
@@ -157,7 +155,6 @@ class EligibilityEngine extends Component {
                   <Image
                     src="/images/features/eligibility/streamlined-process-2.jpg"
                     className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                 <div class="text--center">
                 <p>
@@ -172,7 +169,7 @@ class EligibilityEngine extends Component {
                 The system would actively analyze the information about residents in the database. By doing so, it could identify and suggest benefits they might be eligible for but haven't yet applied to. This saves residents the time and effort of having to search for programs themselves.        
             </p>
 
-            <div className="healthcare-ai-feature__video">
+            <div className="eligibility-engine__video">
               <video
                 poster={mediaUrl(
                   '/images/features/eligibility/feature-1.jpg'
@@ -199,7 +196,7 @@ class EligibilityEngine extends Component {
             When a resident wants to apply for a benefit, the system would pre-populate the application form with their data already stored in the database. Residents would then only need to provide additional information specific to that particular program. This significantly simplifies the application process.
             </p>
 
-            <div className="healthcare-ai-feature__video">
+            <div className="eligibility-engine__video">
               <video
                 poster={mediaUrl(
                   '/images/features/eligibility/feature-2.jpg'
@@ -226,7 +223,7 @@ class EligibilityEngine extends Component {
             The platform could automate the process of renewing benefits, sending timely reminders to residents and handling re-enrollment paperwork, thus reducing administrative work and preventing lapses in coverage.
             </p>
 
-            <div className="healthcare-ai-feature__video">
+            <div className="eligibility-engine__video">
               <video
                 poster={mediaUrl(
                   '/images/features/eligibility/feature-3.jpg'
@@ -290,7 +287,6 @@ class EligibilityEngine extends Component {
                   <Image
                     src="/images/features/eligibility/footprint.jpg"
                     className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />
                 <div class="text--center">   
                 </div>

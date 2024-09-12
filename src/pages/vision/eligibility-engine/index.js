@@ -285,7 +285,7 @@ class EligibilityEngine extends Component {
                 Footnotes
                 </h2>
             </div>
-            <p>Here is a record of the efforts we made so far to address the service gap in Massachusetts in response to the Integrated Eligibility System (IES) initiative for the Commonwealth of Massachusetts.<sup><a href="#references">4</a></sup>{' '}</p>
+            <p>Here is a record of the efforts made so far to address the service gap in Massachusetts in response to the Integrated Eligibility System (IES) initiative for the Commonwealth of Massachusetts.<sup><a href="#references">4</a></sup>{' '}</p>
            
             <div className="margin-auto">
                   <Image

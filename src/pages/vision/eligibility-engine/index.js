@@ -282,12 +282,20 @@ class EligibilityEngine extends Component {
             <Divider />
             <div className="pad-top--half pad-bottom--half pad-horizontal margin-bottom--double">
                 <h2 className="header--lg text--center max-width--sm margin-auto">
-                Footprint
+                Footnotes
                 </h2>
             </div>
-            <p>Here is a record of the efforts made by the Commonwealth of Massachusetts<sup><a href="#references">4</a></sup>{' '}, the Department of Transitional Assistance (DTA)<sup><a href="#references">5</a></sup>{' '}, and the Executive Office of Technology Services and Security (EOTSS)<sup><a href="#references">6</a></sup>{' '} to address the service gap in Massachusetts.</p>
+            <p>Here is a record of the efforts we made so far to address the service gap in Massachusetts in response to the Integrated Eligibility System (IES) initiative for the Commonwealth of Massachusetts.<sup><a href="#references">4</a></sup>{' '}</p>
            
-
+            <div className="margin-auto">
+                  <Image
+                    src="/images/features/eligibility/footprint.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                <div class="text--center">   
+                </div>
+            </div>
 
 
             </div>
@@ -346,19 +354,7 @@ class EligibilityEngine extends Component {
                         'The Commonwealth of Massachusetts Executive Office of Health and Human Services Office of Medicaid. (2015). Integrated Eligibility Implementation Plan',
                       link:
                         'https://www.mass.gov/doc/integrated-eligibility-implementation-plan-october-2015'
-                    },
-                    {
-                      title:
-                        'Goinvo (2018). Closing the SNAP gap',
-                      link:
-                        'https://www.goinvo.com/work/mass-snap/'
-                    },
-                    {
-                      title:
-                        'Goinvo (2018). Closing the SNAP gap',
-                      link:
-                        'https://www.goinvo.com/work/mass-snap/'
-                    },                   
+                    },                  
                   ]}
                 />
               </div>

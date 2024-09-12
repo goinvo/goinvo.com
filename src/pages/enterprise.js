@@ -42,27 +42,17 @@ class EnterprisePage extends Component {
               <h2 className="header--xl">
                 What results are you looking for?
               </h2>
-              <div className="pure-u-lg-1-2">
-                <h4 className="margin-top--none">
-                  Cost savings through a more productive workforce or customers.
-                </h4>
-                <h4>
-                  Validating an idea before investing in a full development cycle.
-                </h4>
-                <h4>
-                  Convincing investors.
-                </h4>
+              <div className="resultsRow ul">
+                <li><strong>Cost savings through a more productive workforce or customers.</strong></li>
+                <li><strong>Transforming software acquisitions into a seamless suite-like experience.</strong></li>
               </div>
-              <div className="pure-u-lg-1-2">
-                <h4 className="margin-top--none">
-                  A vision to rally the company.
-                </h4>
-                <h4>
-                  Re-imagining the software to meet evolving customer needs. 
-                </h4>
-                <h4>
-                  Transforming software acquisitions into a seamless suite-like experience.
-                </h4>
+              <div className="resultsRow ul">
+                <li><strong>Re-imagining the software to meet evolving customer needs.</strong></li>
+                <li><strong>Validating an idea before investing in a full development cycle.</strong></li>
+              </div>
+              <div className="resultsRow ul">
+                <li><strong>Convincing investors.</strong></li>
+                <li><strong>A vision to rally the company.</strong></li>
               </div>
             </div>
           </div>
@@ -74,8 +64,8 @@ class EnterprisePage extends Component {
               </h2>
             </div>
 
-          <div className="container--justify-center">
-              <div className="pad-horizontal pure-u-sm-1-3">
+            <div className="container--justify-center tileRow">
+              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <Image
                   src="/images/open_source/innovation.png"
                   className="image--max-width-80"
@@ -85,14 +75,14 @@ class EnterprisePage extends Component {
                   <strong>Software Design Velocity</strong><br />
                   Start fast with a team experienced working together compared to hiring.
                 </p>
-                <p>
+                <p className="stat">
                   <span className="nbrStyle">100+</span>
                   <span>
                     software design projects since 2010
                   </span>
                 </p>
               </div>
-              <div className="pad-horizontal pure-u-sm-1-3">
+              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <Image
                   src="/images/open_source/public-good.png"
                   className="image--max-width-80"
@@ -102,7 +92,7 @@ class EnterprisePage extends Component {
                   <strong>Large-Scale Enterprise Design</strong><br />
                   Make design and innovation a key influence in your organization.
                 </p>
-                <p>
+                <p className="stat">
                   <span className="nbrStyle">160M+</span>
                   <span>
                     people impacted by GoInvo designs
@@ -110,7 +100,7 @@ class EnterprisePage extends Component {
                 </p>
               </div>
 
-              <div className="pad-horizontal pure-u-sm-1-3">
+              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <Image
                   src="/images/open_source/trust.png"
                   className="image--max-width-80"
@@ -120,7 +110,7 @@ class EnterprisePage extends Component {
                   <strong>Feature Finding for Profits</strong><br />
                   We discover opportunities that keep clients coming back for more.
                 </p>
-                <p>
+                <p className="stat">
                   <span className="nbrStyle">90%</span>
                   <span>
                     of clients repeat business with GoInvo
@@ -135,7 +125,7 @@ class EnterprisePage extends Component {
               <div className="max-width content-padding pad-vertical">
                 <div className="pad-vertical">
                   <div className="max-width content-padding">
-                    <p className="center">Trusted by ambitious startups and Fortune 500's</p>
+                    <p className="center"><strong>Trusted by ambitious startups and Fortune 500's</strong></p>
                     <ClientLogos enterprise="true" />
                   </div>
                 </div>
@@ -147,7 +137,7 @@ class EnterprisePage extends Component {
             <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="paddingBottom">
                 <div>
-                  <h2 className="header--xl margin-bottom--none">
+                  <h2 className="header--xl margin-bottom--half">
                     Driving results for Enterprise software
                     <span className="text--serif text--primary">.</span>
                   </h2>
@@ -159,7 +149,7 @@ class EnterprisePage extends Component {
                   </Link>
                 </div>
 
-                <div className="pure-u-1 card marginTop">
+                <div className="pure-u-1 marginTop">
                   <Card link="/work/3m-coderyte/">
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 teal textCard flip-child">
@@ -183,7 +173,7 @@ class EnterprisePage extends Component {
                         </p>
                       </div>
 
-                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth">
+                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
                           src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
                           className="image--max-width"
@@ -217,7 +207,7 @@ class EnterprisePage extends Component {
                         </p>
                       </div>
 
-                      <div className="pure-u-md-1-2 flip-child imgMaxWidth">
+                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
                           src="/images/case-studies/infobionic/infobionic-dashboard.jpg"
                           className="image--max-width"
@@ -232,7 +222,7 @@ class EnterprisePage extends Component {
           </div>
 
           <div className="bg-light teal">
-          <div className="max-width content-padding pad-vertical container--justify-center center ">
+            <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="pure-u-md-1-2">
                 <p className="header--xl margin-bottom--none">
                   We ship software that works.<br />

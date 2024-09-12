@@ -11,8 +11,33 @@
     @media screen and (min-width: 690px) {
       text-align: left;
     }
+
     @media screen and (max-width: 690px) {
       text-align: center;
+
+      .ul {
+        text-align: left;
+      }
+    }
+  }
+
+  .resultsRow {
+    display: flex;
+
+    li {
+      width: 50%;
+      padding: 6px 20px 6px 6px;
+      line-height: 1.6rem;
+
+    }
+
+    @media screen and (max-width: 690px) {
+      text-align: left;
+      display: block;
+
+      li {
+        width: 100%;
+      }
     }
   }
 
@@ -26,7 +51,24 @@
       padding-bottom: 2rem;
       padding-left: 2rem;
     }
-    @media screen and (max-width: 863px) {
+
+    @media screen and (max-width: 863px) {}
+  }
+
+  .reason-tile {
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .stat {
+      width: 75%;
+      margin: 0 auto;
     }
   }
 
@@ -34,6 +76,7 @@
     @media screen and (min-width: 600px) {
       min-width: 500;
     }
+
     @media screen and (max-width: 600px) {
       min-width: 300;
     }
@@ -98,11 +141,12 @@
   }
 
   .nbrStyle {
+    margin-top: 25px;
     font-size: 32px;
     color: #c9461d;
     font-family: Adobe Jensen Pro;
     letter-spacing: 1;
-    line-height: 1.8;
+    line-height: 1.1;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -117,6 +161,19 @@
   .card {
     text-align: left;
     margin-bottom: 5%;
+
+    .caseStudyImg {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    img {
+      align-self: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 10px;
+    }
   }
 
   .textCard {

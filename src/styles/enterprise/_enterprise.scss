@@ -1,0 +1,206 @@
+.enterprise-design {
+  .textAlign {
+    text-align: center;
+  }
+
+  .hero__title {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .LayoutCenter {
+    @media screen and (min-width: 690px) {
+      text-align: left;
+    }
+
+    @media screen and (max-width: 690px) {
+      text-align: center;
+
+      .ul {
+        text-align: left;
+      }
+    }
+  }
+
+  .resultsRow {
+    display: flex;
+
+    li {
+      width: 50%;
+      padding: 6px 20px 6px 6px;
+      line-height: 1.6rem;
+
+    }
+
+    @media screen and (max-width: 690px) {
+      text-align: left;
+      display: block;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  .bg-light {
+    background-color: #faf6f4;
+  }
+
+  .textLayout {
+    @media screen and (min-width: 863px) {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    @media screen and (max-width: 863px) {}
+  }
+
+  .reason-tile {
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .stat {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+  .mainImg {
+    @media screen and (min-width: 600px) {
+      min-width: 500;
+    }
+
+    @media screen and (max-width: 600px) {
+      min-width: 300;
+    }
+  }
+
+  .headerStyle {
+    @media screen and (min-width: 863px) {
+      padding-right: 2rem;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 863px) {
+      padding-right: 0;
+    }
+  }
+
+  .teal {
+    color: $color-tertiary;
+  }
+
+  .noTopMargin {
+    @media screen and (max-width: 760px) {
+      margin-top: 0;
+    }
+  }
+
+  .ctaLayout {
+    width: auto;
+    min-width: 0;
+    margin-top: 20;
+    margin-bottom: 30;
+  }
+
+  .container-spacing {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .marginTop {
+    margin-top: 20px;
+  }
+
+  .paddingBottom {
+    padding-bottom: 2%;
+  }
+
+  .chartLayout {
+    display: block;
+    margin: auto;
+
+    a {
+      transition: 0.25s;
+
+      &:hover {
+        filter: drop-shadow(0px 7px 7px rgba(57, 75, 94, 0.17));
+      }
+    }
+  }
+
+  .imgMaxWidth {
+    max-width: 400px;
+  }
+
+  .nbrStyle {
+    margin-top: 25px;
+    font-size: 32px;
+    color: #c9461d;
+    font-family: Adobe Jensen Pro;
+    letter-spacing: 1;
+    line-height: 1.1;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+  }
+
+  .center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .card {
+    text-align: left;
+    margin-bottom: 5%;
+
+    .caseStudyImg {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    img {
+      align-self: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 10px;
+    }
+  }
+
+  .textCard {
+    padding: 5%;
+  }
+
+  .headerCard {
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .flip-parent {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .flip-child {
+    flex: 1 1 300px;
+  }
+
+  .wrap-parent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrap {
+    flex: 1 1 300px;
+  }
+}

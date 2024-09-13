@@ -64,6 +64,7 @@ class IndexPage extends Component {
           image={this.state.image}
           caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
           button={frontmatter.heroButtonText}
+          buttonLink="/work/"
           isLarge
           position="top center"
         >

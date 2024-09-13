@@ -5,6 +5,10 @@
 
   .hero__title {
     width: 550px;
+
+    @media screen and (max-width: 690px) {
+      width: 100%;
+    }
   }
 
   .LayoutCenter {

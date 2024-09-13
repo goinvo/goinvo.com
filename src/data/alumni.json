@@ -1,5 +1,15 @@
 [
   {
+    "name": "Sue Park",
+    "title": "Designer",
+    "bio": "Sue Park joined GoInvo in 2024 with a background in industrial design and human-computer interaction. Her previous work includes designing intuitive interfaces for the healthcare and fintech industries. She holds a BS in Industrial Design from Korea Advanced Institute of Science & Technology and an MS in Information from the University of Michigan.",
+    "social": {
+      "email": "sue@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/sooyeonp/"
+    },
+    "image": "/images/about/headshot-sue-park.jpg"
+  },
+  {
     "name": "Katerina Labrou",
     "title": "Engineer",
     "bio": "Katerina is an engineer and designer with a background in computational architecture and augmented reality design. She merges technical expertise and creative vision to change the way we experience and interact with our surroundings and health. Kat joined GoInvo in 2024 with a BS in Architecture and a combined MS in Electrical Engineering and Computer Science from MIT.",

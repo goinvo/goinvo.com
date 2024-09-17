@@ -1,15 +1,25 @@
 .eligibility-engine {
-    &__video {
+  &__video {
+    width: 100%;
+    margin: 0 auto;
+
+    video {
       width: 100%;
-      margin: 0 auto;
-  
-      video {
-        width: 100%;
-      }
-  
-      @include mq($from: large) {
-        width: 100%;
-      }
+    }
+
+    @include mq($from: large) {
+      width: 100%;
     }
   }
-  
+
+  iframe {
+    width: 100%;
+    height: 550px;
+    border: solid 1px $color-gray--medium;
+    border-radius: 4px;
+  }
+
+  .preview-download {
+    border: solid 15px #FCEEE5;
+  }
+}

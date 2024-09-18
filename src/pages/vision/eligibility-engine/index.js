@@ -71,10 +71,18 @@ class EligibilityEngine extends Component {
               </p>
 
               <div className="margin-auto">
-                <Image
-                  src="/images/features/eligibility/current-process-2.jpg"
-                  className="image--max-width"
-                />
+                <a
+                  href={mediaUrl(
+                    '/images/features/eligibility/current-process-2.jpg'
+                  )}
+                  target="blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/features/eligibility/current-process-2.jpg"
+                    className="image--max-width"
+                  />
+                </a>
                 <div class="text--center">
                   <p>
                     Current Application Process
@@ -134,10 +142,18 @@ class EligibilityEngine extends Component {
               </p>
 
               <div className="margin-auto">
-                <Image
-                  src="/images/features/eligibility/application-data-2.jpg"
-                  className="image--max-width"
-                />
+                <a
+                  href={mediaUrl(
+                    '/images/features/eligibility/application-data-2.jpg'
+                  )}
+                  target="blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/features/eligibility/application-data-2.jpg"
+                    className="image--max-width"
+                  />
+                </a>
                 <div class="text--center">
                   <p>
                     Data required for major MA benefit application
@@ -172,10 +188,18 @@ class EligibilityEngine extends Component {
               </p>
 
               <div className="margin-auto">
-                <Image
-                  src="/images/features/eligibility/streamlined-process-2.jpg"
-                  className="image--max-width"
-                />
+                <a
+                  href={mediaUrl(
+                    '/images/features/eligibility/streamlined-process-2.jpg'
+                  )}
+                  target="blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/features/eligibility/streamlined-process-2.jpg"
+                    className="image--max-width"
+                  />
+                </a>
                 <div class="text--center">
                   <p>
                     Streamlined Application Process with Resident Database
@@ -304,10 +328,18 @@ class EligibilityEngine extends Component {
               <p>Here is a record of the efforts made so far to address the service gap in Massachusetts in response to the Integrated Eligibility System (IES) initiative for the Commonwealth of Massachusetts.<sup><a href="#references">4</a></sup>{' '}</p>
 
               <div className="margin-auto">
-                <Image
-                  src="/images/features/eligibility/footprint.jpg"
-                  className="image--max-width"
-                />
+                <a
+                  href={mediaUrl(
+                    '/images/features/eligibility/footprint.jpg'
+                  )}
+                  target="blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/features/eligibility/footprint.jpg"
+                    className="image--max-width"
+                  />
+                </a>
                 <div class="text--center">
                 </div>
               </div>

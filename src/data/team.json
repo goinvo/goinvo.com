@@ -130,17 +130,17 @@
     },
     "image": "/images/about/headshot-shayla-nettey.jpg"
   },
-  {    
+  {
     "name": "Maverick Chan",
-  "title": "Designer",
-  "bio": "Maverick is a designer with a background in architecture and healthcare research. He strives to improve human well-being through the intersection of healthcare and design. Maverick joined GoInvo in 2024 with a Bachelor of Arts & Science from McMaster University and a Master of Architecture from the University of British Columbia.",
-  "social": {
-    "email": "maverick@goinvo.com",
-    "linkedin": "https://www.linkedin.com/in/maverickchan/"
+    "title": "Designer",
+    "bio": "Maverick is a designer with a background in architecture and healthcare research. He strives to improve human well-being through the intersection of healthcare and design. Maverick joined GoInvo in 2024 with a Bachelor of Arts & Science from McMaster University and a Master of Architecture from the University of British Columbia.",
+    "social": {
+      "email": "maverick@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/maverickchan/"
+    },
+    "image": "/images/about/headshot-maverick-chan2.jpg"
   },
-  "image": "/images/about/headshot-maverick-chan.jpg"
-},
-{
+  {
     "name": "Jonathan Follett",
     "title": "Principal",
     "bio": "As Principal of GoInvo, Jonathan is responsible for project management and design for select engagements. Jon has fifteen years of experience and has garnered several American Graphic Design Awards. Jon is an internationally published author on user experience and information design with over 25 articles published in UXmatters, Digital Web and A List Apart. His most recent book, Designing for Emerging Technologies, was published by O’Reilly Media.",

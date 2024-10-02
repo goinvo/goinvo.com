@@ -12,7 +12,7 @@ _MANY NOTE:_ You may be required to install additional dependencies like XCode c
 
 ### Install Brew
 
-[Homebrew](https://brew.sh/) is an easy way to install the system packages you'll need for this project on Mac.
+[Homebrew](https://brew.sh/) is an easy way to install the system packages you'll need for this project on Mac. (Don't copy the $ :))
 
 ```bash
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -44,7 +44,7 @@ Then you can check your Node versions with:
 $ nvm ls
 ```
 
-Install the Node version the project wants by running:
+Open a new terminal, and install the Node version the project wants by running:
 
 ```
 $ nvm use

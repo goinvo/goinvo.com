@@ -610,6 +610,28 @@ Open up `src/data/features.json` and add your feature to the top as the followin
 },
 ```
 
+### Adding team members
+
+When a new teammate starts, we ask them for a bio and photo. Once we have an approved bio and photo, we’re ready to get them on the website.
+
+Original photos should be uploaded resources > photos-people > Headshots > [name]
+Photos for the team page should be resized to 2000px width, saved as optimized jpg, and uploaded to Dropbox: Graphics > goinvo.com > images > about
+Someone with AWS credentials (Craig, Eric, or Jen) should run yarn upload and the image should be ready to use.
+
+In the data/team.json file, add a team member using the following:
+{
+	"name": " ",
+	"title": " ",
+	"bio": " ",
+	"social": {
+  	"email": "name@goinvo.com",
+  	"twitter": " ",
+  	"linkedin": " "
+	},
+	"image": "/images/about/headshot-first-lastname.jpg"
+  }
+
+
 ### Going live
 
 When your feature is ready to go live, make sure to push up any final changes to the branch. Then, on Github, you may locate your branch in the list of branches, and create a new pull request and let a reviewer know that you're ready for their review. Once approved, the final reviewer will merge it into master.

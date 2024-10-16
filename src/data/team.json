@@ -72,7 +72,7 @@
   },
   {
     "name": "Samantha Wuu",
-    "title": "People person",
+    "title": "People Person",
     "bio": "Sam is a writer, editor, and resident People Person at GoInvo. She previously worked at NYC Health + Hospitals on the migration of the provider credentialing process to a digital platform. A middle school English teacher in a past life, Sam is also a lifelong detail enthusiast and fan of diversity (of both people and punctuation). She joined Invo in 2022 with a BA in English from Barnard College and an MEd from Harvard University.",
     "social": {
       "email": "sam@goinvo.com",
@@ -111,6 +111,16 @@
     "image": "/images/about/headshot-amelia.jpg"
   },
   {
+    "name": "Oliver Bello",
+    "title": "Designer",
+    "bio": "Oliver is a designer and engineer learning digital storytelling and product design. They joined GoInvo in 2024 and are finishing a BS in Engineering Psychology at Tufts University.",
+    "social": {
+      "email": "oliver@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/obbello/"
+    },
+    "image": "/images/about/headshot-oliver-bello.jpg"
+  },
+  {
     "name": "Shayla Nettey",
     "title": "Clinical Strategist (on-call)",
     "bio": "Shayla Nettey is a physician with a taste for design. Her focus on community medicine and patient education pushes her public health goals where all patients better control their health with help from happier, skilled clinicians. Shayla joined Invo in 2021, is a graduate of Morehouse School of Medicine, and practices as a hospitalist in North Carolina.",
@@ -119,6 +129,16 @@
       "linkedin": "https://www.linkedin.com/in/shaylanetteymd/"
     },
     "image": "/images/about/headshot-shayla-nettey.jpg"
+  },
+  {
+    "name": "Maverick Chan",
+    "title": "Designer",
+    "bio": "Maverick is a designer with a background in architecture and public health. He works to make people's lives better by creating digital spaces and systems that support healthier living. Maverick joined GoInvo in 2024 with a BASc from McMaster University and an M.Arch from the University of British Columbia.",
+    "social": {
+      "email": "maverick@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/maverickchan/"
+    },
+    "image": "/images/about/headshot-maverick-chan2.jpg"
   },
   {
     "name": "Jonathan Follett",

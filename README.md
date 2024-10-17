@@ -12,7 +12,7 @@ _MANY NOTE:_ You may be required to install additional dependencies like XCode c
 
 ### Install Brew
 
-[Homebrew](https://brew.sh/) is an easy way to install the system packages you'll need for this project on Mac.
+[Homebrew](https://brew.sh/) is an easy way to install the system packages you'll need for this project on Mac. (Don't copy the $ :))
 
 ```bash
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -44,7 +44,7 @@ Then you can check your Node versions with:
 $ nvm ls
 ```
 
-Install the Node version the project wants by running:
+Open a new terminal, and install the Node version the project wants by running:
 
 ```
 $ nvm use
@@ -609,6 +609,28 @@ Open up `src/data/features.json` and add your feature to the top as the followin
   "link": "/vision/your-feature-url/"
 },
 ```
+
+### Adding team members
+
+When a new teammate starts, we ask them for a bio and photo. Once we have an approved bio and photo, we’re ready to get them on the website.
+
+Original photos should be uploaded resources > photos-people > Headshots > [name]
+Photos for the team page should be resized to 2000px width, saved as optimized jpg, and uploaded to Dropbox: Graphics > goinvo.com > images > about
+Someone with AWS credentials (Craig, Eric, or Jen) should run yarn upload and the image should be ready to use.
+
+In the data/team.json file, add a team member using the following:
+{
+	"name": " ",
+	"title": " ",
+	"bio": " ",
+	"social": {
+  	"email": "name@goinvo.com",
+  	"twitter": " ",
+  	"linkedin": " "
+	},
+	"image": "/images/about/headshot-first-lastname.jpg"
+  }
+
 
 ### Going live
 

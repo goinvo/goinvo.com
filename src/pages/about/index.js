@@ -5,10 +5,12 @@ import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
 import ImageBlock from '../../components/image-block'
 import TeamMember from '../../components/team-member'
+import TeamAdvisor from '../../components/team-advisors'
 import Image from '../../components/image'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
 import team from '../../data/team.json'
+import advisors from '../../data/advisors.json'
 import HubspotForm from '../../components/hubspot-form'
 
 import config from '../../../config'
@@ -219,6 +221,14 @@ const AboutPage = () => (
         <TeamMember key={member.name} member={member} />
       ))}
     </div>
+
+    <div className="max-width content-padding">
+      <h2 className="header--xl text--center pad-vertical--double">Our advisors</h2>
+      {advisors.slice(0, advisors.length).map(advisor => (
+        <TeamAdvisor key={advisor.name} member={advisor} />
+      ))}
+    </div>
+
     <div className="background--gray pad-vertical--double--only-lg pad-top--double">
       <div className="max-width content-padding">
         <h3 className="header--md text--center text--md">Code of Ethics</h3>
@@ -259,8 +269,8 @@ const AboutPage = () => (
             <h3 className="header--md text--center text--md">Our Story</h3>
             <p className="text--gray margin-bottom pad-right--only-lg">
               With early roots designing for Apple, Microsoft, Oracle, and
-              Obama’s 2008 campaign, GoInvo is now focused exclusively on
-              healthcare. We’ve delivered over 110 products with partners
+              Obama's 2008 campaign, GoInvo is now focused exclusively on
+              healthcare. We've delivered over 110 products with partners
               ranging from 3M, U.S. Department of Health and Human Services,
               Partners Healthcare, and a variety of startups.
             </p>

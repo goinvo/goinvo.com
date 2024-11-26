@@ -2,6 +2,8 @@ import { createStore as reduxCreateStore } from 'redux'
 import { allCategory } from '../components/categories-list'
 
 const reducer = (state, action) => {
+  console.log('SETTING CATEGORY IN STORE')
+  console.log(action.value)
   if (action.type === `SET_CATEGORY`) {
     return Object.assign({}, state, {
       selectedCategory: action.value,
@@ -10,7 +12,7 @@ const reducer = (state, action) => {
   return state
 }
 
-const initialState = { selectedCategory: allCategory }
+// const initialState = { selectedCategory: allCategory }
 
-const createStore = () => reduxCreateStore(reducer, initialState)
+const createStore = () => reduxCreateStore(reducer, { selectedCategory: null })
 export default createStore

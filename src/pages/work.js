@@ -83,6 +83,8 @@ const frontmatter = {
 class WorkPage extends Component {
   constructor(props) {
     super(props)
+    console.log('PROPS')
+    console.log(props)
 
     const workItems = concatCaseStudiesAndFeatures(props.data)
     const query =
@@ -95,6 +97,8 @@ class WorkPage extends Component {
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       allCategory
+    console.log('SELECTED CATEGORY IN CONSTRUCTOR')
+    console.log(selectedCategory)
     const activeWorkItems = getWorkItemsOfCategory(
       workItems,
       selectedCategory.id
@@ -112,6 +116,26 @@ class WorkPage extends Component {
     }
 
     this.categoryDropdownButton = React.createRef()
+  }
+
+  componentDidUpdate = (prevProps, prevState, snapshot) => {
+    console.log('DID UPDATE:')
+    console.log(prevProps)
+    console.log(prevState)
+    console.log(snapshot)
+  }
+
+  // static getDerivedStateFromProps = (props, state) => {
+  //   console.log("DERIVED STATE BEFORE RENDER:")
+  //   console.log(props);
+  //   console.log(state);
+  // }
+
+  componentDidMount = () => {
+    console.log('DID MOUNT:')
+    console.log(this.props)
+    console.log(this.state)
+    this.forceUpdate()
   }
 
   handleCategoriesStickyStateChange = (isStuck, stickyBasedOnWidth) => {
@@ -339,6 +363,8 @@ export const workPageQuery = graphql`
 `
 
 const mapStateToProps = ({ selectedCategory }) => {
+  console.log('MAPPING STATE TO PROPS')
+  console.log(selectedCategory)
   return { selectedCategory }
 }
 

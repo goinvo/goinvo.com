@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactHubspotForm from 'react-hubspot-form'
 
 import Card from './card'
 
@@ -17,18 +16,6 @@ class HubspotForm extends Component {
       >
         <div className="pad-all">
           <h2 className="header--lg">{this.props.title}</h2>
-          <ReactHubspotForm
-            portalId="356419"
-            formId={this.props.formId}
-            css=""
-            submitButtonClass="button button--secondary button--block"
-            translations={{
-              en: {
-                required: 'Please fill out this field',
-                submitText: this.props.submitButtonText,
-              },
-            }}
-          />
           {this.props.children}
         </div>
       </Card>

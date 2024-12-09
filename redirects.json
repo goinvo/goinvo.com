@@ -1,4 +1,6 @@
 {
+  "%20/": "/",
+  "/%20/": "/",
   "healthcare/index.html": "/work/",
   "enterprise/index.html": "/work/",
   "products/index.html": "/work/",

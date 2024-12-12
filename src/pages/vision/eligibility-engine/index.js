@@ -53,7 +53,7 @@ class EligibilityEngine extends Component {
                 The Commonwealth of Massachusetts demonstrates a strong commitment to its residents by investing substantial resources in providing a wide array of services, ranging from healthcare and food assistance to housing and educational programs. The full spectrum of these services can be explored on the official Mass.gov website. However, despite these efforts, a significant portion of eligible residents, over 50%, are not receiving the benefits they qualify for, such as MassHealth and SNAP.<sup><a href="#references">1</a></sup>{' '}<sup><a href="#references">2</a></sup>{' '}
               </p>
 
-              <div classNAme="max-width max-width--md content-padding">
+              {/* <div classNAme="max-width max-width--md content-padding">
                 <iframe src="https://goinvo.github.io/ma-services/" className="max-width"></iframe>
               </div>
               <div class="text--center">
@@ -65,7 +65,7 @@ class EligibilityEngine extends Component {
                 >
                   {"View MA Service List"}
                 </a>
-              </div>
+              </div> */}
               <p>
                 One of the primary reasons for this gap is the difficulty in navigating the complex network of available services. Residents often face challenges in identifying programs that are relevant to their needs, understanding the eligibility criteria, and gathering the necessary information and documents to apply. The current service application process, which often involves manual data entry and document uploads on multiple agency-specific portals, can be time-consuming and overwhelming.
               </p>

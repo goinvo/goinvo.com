@@ -635,3 +635,7 @@ In the data/team.json file, add a team member using the following:
 ### Going live
 
 When your feature is ready to go live, make sure to push up any final changes to the branch. Then, on Github, you may locate your branch in the list of branches, and create a new pull request and let a reviewer know that you're ready for their review. Once approved, the final reviewer will merge it into master.
+
+Once approved changes are merged into master, then do the following in terminal to go live.
+`yarn build`  
+`yarn upload`

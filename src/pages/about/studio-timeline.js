@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
+import ImageBlock from '../../components/image-block'
+import config from '../../../config'
 
 const frontmatter = {
   metaTitle: 'Our Studio Timeline - GoInvo',
@@ -32,6 +34,45 @@ class StudioTimelinePage extends Component {
               frameBorder="0"
               start_at_slide="194"
             />
+          </div>
+          <div className="max-width content-padding pad-vertical--quad">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <ImageBlock
+                  key={'2'}
+                  image="/images/about/studio-timeline/goInvo_projects_timeline.jpg"
+                  title="GoInvo Project Timeline"
+                  caption="View the landsscape of projects we have worked on."
+                  sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                >
+                  <a
+                    href="https://ChurchOfDesign.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download
+                  </a>
+                </ImageBlock>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <ImageBlock
+                  key={'2'}
+                  image="/images/about/studio-timeline/invoSV_dirk_andrei.jpg"
+                  title="Oral History"
+                  caption="Former leadersof GoInvo reminisce together the ups and downs of our studio beginnings."
+                  sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
+                >
+                  <a
+                    href="https://www.goinvo.com/features/an-oral-history/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Oral History
+                  </a>
+                </ImageBlock>
+              </div>
+
+            </div>
           </div>
         </Layout>
       </div>

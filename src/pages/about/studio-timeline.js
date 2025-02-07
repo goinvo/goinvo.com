@@ -43,7 +43,7 @@ class StudioTimelinePage extends Component {
                   key={'2'}
                   image="/images/about/studio-timeline/goInvo_projects_timeline.jpg"
                   title="GoInvo Project Timeline"
-                  caption="View the landsscape of projects we have worked on."
+                  caption="View the landscape of projects we have worked on."
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                 >
                   <a
@@ -60,7 +60,7 @@ class StudioTimelinePage extends Component {
                   key={'2'}
                   image="/images/about/studio-timeline/invoSV_dirk_andrei.jpg"
                   title="Oral History"
-                  caption="Former leadersof GoInvo reminisce together the ups and downs of our studio beginnings."
+                  caption="Former leaders of GoInvo reminisce together the ups and downs of our studio beginnings."
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                 >
                   <a

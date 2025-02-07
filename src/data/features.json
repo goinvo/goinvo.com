@@ -1,5 +1,31 @@
 [
   {
+    "id": "goinvo-timeline",
+    "title": "GoInvo Timeline",
+    "date": "Feb.2025",
+    "client": "Feature",
+    "categories": [
+      ""
+    ],
+    "caption": "A history of GoInvo from 2004 to current day.",
+    "link": "/about/studio-timeline/",
+    "image": "/images/about/studio-timeline/bookshelf.jpg",
+    "hiddenWorkPage": true
+  },
+  {
+    "id": "eligibility-engine",
+    "title": "Eligibility Engine for Massachusetts",
+    "date": "Oct.2024",
+    "client": "Feature",
+    "categories": [
+      "open-source"
+    ],
+    "caption": "A centralized MA resident database for better service accessibility.",
+    "link": "/vision/eligibility-engine/",
+    "image": "/images/features/eligibility/hero-image.jpg",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "eligibility-engine",
     "title": "Eligibility Engine for Massachusetts",
     "date": "Oct.2024",

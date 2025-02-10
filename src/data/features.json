@@ -1,15 +1,15 @@
 [
   {
     "id": "goinvo-timeline",
-    "title": "GoInvo Timeline",
+    "title": "Our Time Machine",
     "date": "Feb.2025",
     "client": "Feature",
     "categories": [
       ""
     ],
-    "caption": "A history of GoInvo from 2004 to current day.",
+    "caption": "The GoInvo history visualized, no co-pay required.",
     "link": "/about/studio-timeline/",
-    "image": "/images/about/studio-timeline/bookshelf.jpg",
+    "image": "/images/about/studio-timeline/morninglight.jpg",
     "hiddenWorkPage": true
   },
   {

@@ -8,7 +8,7 @@ import config from '../../../config'
 const frontmatter = {
   metaTitle: 'Our Studio Timeline - GoInvo',
   metaDescrition: "An interactive timeline of GoInvo's history.",
-  heroImage: '/images/about/studio-timeline/bookshelf.jpg',
+  heroImage: '/images/about/studio-timeline/morninglight.jpg',
 }
 
 class StudioTimelinePage extends Component {

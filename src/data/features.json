@@ -1,5 +1,18 @@
 [
   {
+    "id": "goinvo-timeline",
+    "title": "Our Time Machine",
+    "date": "Mar.2025",
+    "client": "Feature",
+    "categories": [
+      ""
+    ],
+    "caption": "The GoInvo history visualized, no co-pay required.",
+    "link": "/about/studio-timeline/",
+    "image": "/images/about/studio-timeline/morninglight.jpg",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "eligibility-engine",
     "title": "Eligibility Engine for Massachusetts",
     "date": "Oct.2024",

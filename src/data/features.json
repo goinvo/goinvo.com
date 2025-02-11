@@ -26,19 +26,6 @@
     "hiddenWorkPage": true
   },
   {
-    "id": "eligibility-engine",
-    "title": "Eligibility Engine for Massachusetts",
-    "date": "Oct.2024",
-    "client": "Feature",
-    "categories": [
-      "open-source"
-    ],
-    "caption": "A centralized MA resident database for better service accessibility.",
-    "link": "/vision/eligibility-engine/",
-    "image": "/images/features/eligibility/hero-image.jpg",
-    "hiddenWorkPage": true
-  },
-  {
     "id": "fraud-waste-abuse-in-healthcare",
     "title": "Fraud, Waste, Abuse in US Healthcare",
     "date": "Jul.2024",

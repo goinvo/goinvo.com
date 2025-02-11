@@ -25,7 +25,7 @@ class StudioTimelinePage extends Component {
           <div className="max-width content-padding pad-vertical--double">
             <iframe
               title="Invo Studio Timeline"
-              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=2&height=650&start_at_slide=186"
+              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=2&height=650&start_at_slide=279"
               width="100%"
               height="650"
               //start_at_slide="186"
@@ -43,7 +43,7 @@ class StudioTimelinePage extends Component {
                   key={'2'}
                   image="/images/about/studio-timeline/goInvo_projects_timeline.jpg"
                   title="GoInvo Project Timeline"
-                  caption="View the landscape of projects we have worked on."
+                  caption="The landscape of open and closed source projects since 2009."
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                 >
                   <a
@@ -58,9 +58,9 @@ class StudioTimelinePage extends Component {
               <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
                 <ImageBlock
                   key={'2'}
-                  image="/images/about/studio-timeline/invoSV_dirk_andrei.jpg"
+                  image="/images/features/oral-history-goinvo/oral-history-goinvo-featured.jpg"
                   title="Oral History"
-                  caption="Former leaders of GoInvo reminisce together the ups and downs of our studio beginnings."
+                  caption="Inside the early days of GoInvo, from the people who lived it."
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                 >
                   <a

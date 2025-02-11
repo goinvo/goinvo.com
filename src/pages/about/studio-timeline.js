@@ -25,7 +25,7 @@ class StudioTimelinePage extends Component {
           <div className="max-width content-padding pad-vertical--double">
             <iframe
               title="Invo Studio Timeline"
-              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=2&height=650&start_at_slide=305"
+              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=2&height=650&start_at_slide=310"
               width="100%"
               height="650"
               //start_at_slide="186"
@@ -65,8 +65,6 @@ class StudioTimelinePage extends Component {
                 >
                   <a
                     href="https://www.goinvo.com/features/an-oral-history/"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     Oral History
                   </a>

@@ -1,0 +1,17 @@
+.timeline-page {
+  .timeline-card {
+    a {
+      text-decoration: none;
+
+      .header--lg {
+        color: $color-black;
+      }
+
+      &:hover {
+        .header--lg {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

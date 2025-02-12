@@ -38,7 +38,7 @@ class HistoryOfHealthDesignFeature extends Component {
               </p>
               <p>
                 Here's our evolving list of top healthcare innovations over
-                time, from the stone surgical knife to genetic “scissors.”
+                the last 10,000 years, from the stone surgical knife to genetic “scissors.”
               </p>
               <p>
                 Let us know what we're missing at{' '}
@@ -47,7 +47,7 @@ class HistoryOfHealthDesignFeature extends Component {
             </div>
             <div className="content-padding">
               <iframe
-                src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1qa0ZwX09I8ON2YuHXaigZ8M7p_wnImQALPFyd8fVN98&font=Default&lang=en&initial_zoom=10&height=650"
+                src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1qa0ZwX09I8ON2YuHXaigZ8M7p_wnImQALPFyd8fVN98&font=Default&lang=en&initial_zoom=10&height=650&start_at_slide=1"
                 width="100%"
                 height="650"
                 webkitallowfullscreen

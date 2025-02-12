@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
+import Hero from '../../../components/hero'
 import HubspotForm from '../../../components/hubspot-form'
 import Author from '../../../components/author'
 
@@ -10,13 +11,14 @@ const frontmatter = {
   metaTitle: 'History of Health Design',
   metaDescription:
     'Our list of the top healthcare innovations from the past 10,000 years of human history.',
-  heroImage: '/images/features/history-of-health-design/splint.jpg',
+  heroImage: '/images/features/history-of-health-design/hero.jpg',
 }
 
 class HistoryOfHealthDesignFeature extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
+        <Hero image={frontmatter.heroImage} />
         <div className="history-of-health-design">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">

@@ -46,7 +46,7 @@ class StudioTimelinePage extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <BackgroundImage
+                  <Image
                     src="/images/about/studio-timeline/goInvo_projects_timeline.jpg"
                     className="image-block__image"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -67,7 +67,7 @@ class StudioTimelinePage extends Component {
                 <a
                   href="https://www.goinvo.com/features/an-oral-history/"
                 >
-                  <BackgroundImage
+                  <Image
                     src="/images/features/oral-history-goinvo/oral-history-goinvo-featured.jpg"
                     className="image-block__image"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -75,11 +75,6 @@ class StudioTimelinePage extends Component {
                   />
                   <p className="text--bold header--lg">Oral History</p>
                   <p className="text--gray">Inside the early days of GoInvo, from the people who lived it.</p>
-                </a>
-                <a
-                  href="https://www.goinvo.com/features/an-oral-history/"
-                >
-                  Oral History
                 </a>
               </div>
 

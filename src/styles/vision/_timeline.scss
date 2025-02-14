@@ -1,5 +1,14 @@
 .timeline-page {
+  .timeline-row {
+    min-height:500px;
+    margin-bottom: 50px;
+    display: block;
+    border: solid red 1px;
+  }
   .timeline-card {
+    border: solid blue 1px;
+    padding-right: 25px;
+    min-height:350px;
     a {
       text-decoration: none;
       cursor: pointer;

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
-import ImageBlock from '../../components/image-block'
+import Image from '../../components/image'
+import BackgroundImage from '../../components/background-image'
 import config from '../../../config'
 
 const frontmatter = {
@@ -37,7 +38,7 @@ class StudioTimelinePage extends Component {
               frameBorder="0"
             />
           </div>
-          <div className="max-width content-padding pad-vertical--quad">
+          <div className="max-width content-padding pad-vertical--quad timeline-row">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg timeline-card">
                 <a
@@ -45,40 +46,40 @@ class StudioTimelinePage extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ImageBlock
-                    key={'2'}
-                    image="/images/about/studio-timeline/goInvo_projects_timeline.jpg"
-                    title="GoInvo Project Timeline"
-                    caption="The landscape of open and closed source projects since 2009."
-                    sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                  >
-                    <a
-                      href="https://ChurchOfDesign.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Download
-                    </a>
-                  </ImageBlock>
+                  <BackgroundImage
+                    src="/images/about/studio-timeline/goInvo_projects_timeline.jpg"
+                    className="image-block__image"
+                    sizes={config.sizes.fullInsideMediumMaxWidth}
+                    alt={'GoInvo project timeline'}
+                  />
+                  <p className="text--bold header--lg">GoInvo Project Timeline</p>
+                  <p className="text--gray">The landscape of open and closed source projects since 2009.</p>
+                </a>
+                <a
+                  href="https://ChurchOfDesign.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download
                 </a>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg timeline-card">
                 <a
                   href="https://www.goinvo.com/features/an-oral-history/"
                 >
-                  <ImageBlock
-                    key={'2'}
-                    image="/images/features/oral-history-goinvo/oral-history-goinvo-featured.jpg"
-                    title="Oral History"
-                    caption="Inside the early days of GoInvo, from the people who lived it."
-                    sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-                  >
-                    <a
-                      href="https://www.goinvo.com/features/an-oral-history/"
-                    >
-                      Oral History
-                    </a>
-                  </ImageBlock>
+                  <BackgroundImage
+                    src="/images/features/oral-history-goinvo/oral-history-goinvo-featured.jpg"
+                    className="image-block__image"
+                    sizes={config.sizes.fullInsideMediumMaxWidth}
+                    alt={'Involution from the past'}
+                  />
+                  <p className="text--bold header--lg">Oral History</p>
+                  <p className="text--gray">Inside the early days of GoInvo, from the people who lived it.</p>
+                </a>
+                <a
+                  href="https://www.goinvo.com/features/an-oral-history/"
+                >
+                  Oral History
                 </a>
               </div>
 

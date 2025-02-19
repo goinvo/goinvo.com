@@ -16,6 +16,7 @@ import PersonalGenomeProject from '../assets/images/client-logos/logo-pgp.inline
 import Walgreens from '../assets/images/client-logos/logo-walgreens.inline.svg'
 import Wuxi from '../assets/images/client-logos/logo-wuxinextcode.inline.svg'
 import Crossover from '../assets/images/client-logos/logo-crossover.inline.svg'
+import DTA from '../assets/images/client-logos/logo-dtaconnect.inline.svg'
 
 class ClientLogos extends Component {
   render() {
@@ -63,6 +64,15 @@ class ClientLogos extends Component {
           <ul className="list--unstyled client-logos">
             <li>
               <Nih />
+            </li>
+            <li className="">
+              <Mass />
+            </li>
+            <li className="">
+              <DTA />
+            </li>
+            <li className="">
+              <Mass />
             </li>
             <li className="">
               <Mitre />

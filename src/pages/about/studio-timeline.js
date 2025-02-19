@@ -23,10 +23,10 @@ class StudioTimelinePage extends Component {
             </h1>
             <p>The events, people, and clients who shaped GoInvo over the past 20 years and today.</p>
           </Hero>
-          <div className="max-width content-padding pad-vertical--double">
+          <div className="max-width content-padding">
             <iframe
               title="Invo Studio Timeline"
-              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=2&height=650&start_at_slide=308"
+              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=5&height=650&start_at_slide=285"
               width="100%"
               height="650"
               //start_at_slide="186"

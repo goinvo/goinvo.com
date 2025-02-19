@@ -9,29 +9,29 @@ import Card from '../components/card'
 import HubspotForm from '../components/hubspot-form'
 
 const frontmatter = {
-  metaTitle: 'Design for Enterprise Software',
+  metaTitle: 'Software Design for Government Services',
   metaDescription:
-    'Beautiful software design for the Enterprise to catapult your business forward.',
-  heroImage: '/images/enterprise/enterprise-hero-1.jpg',
+    'Beautiful software design for government and state services for smoother processes and happy residents.',
+  heroImage: '/images/case-studies/mass/snap/snap-cover.jpg',
 }
 
 class EnterprisePage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="gov-design">
+        <div className="enterprise-design">
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/enterprise/enterprise-hero-1.jpg"
-            caption="Beautiful software design for residents and state agencies to catapult your business forward."
+            image="/images/case-studies/mass/snap/snap-cover.jpg"
+            caption="Beautiful software design for government and state services for smoother processes and happy residents."
             button="Let's discuss your project"
             buttonLink="/contact/"
             isLarge
             position="top center"
           >
             <h1 className="header--xl">
-              Enterprise software is complicated
+              Software for goverment services is complicated
               <span className="text--serif text--primary">.</span><br />
               We know how to do it
               <span className="text--serif text--primary">.</span>
@@ -43,16 +43,17 @@ class EnterprisePage extends Component {
                 What results are you looking for?
               </h2>
               <div className="resultsRow ul">
-                <li><strong>Cost savings through a more productive workforce or customers.</strong></li>
-                <li><strong>Transforming software acquisitions into a seamless suite-like experience.</strong></li>
+                <li><strong>Transforming outdated systems into cutting-edge solutions.</strong></li>
+                <li><strong>Smoother processes for happier government employees and residents.</strong></li>
               </div>
               <div className="resultsRow ul">
-                <li><strong>Re-imagining the software to meet evolving customer needs.</strong></li>
+                <li><strong>Re-imagining software and services to meet evolving needs at scale.</strong></li>
                 <li><strong>Validating an idea before investing in a full development cycle.</strong></li>
               </div>
               <div className="resultsRow ul">
-                <li><strong>Convincing investors.</strong></li>
-                <li><strong>A vision to rally the company.</strong></li>
+                <li><strong>Convincing sponsors.</strong></li>
+                <li><strong>A vision to rally support.</strong></li>
+                <li><strong>Improved accessibility for wider resident needs.</strong></li>
               </div>
             </div>
           </div>
@@ -89,7 +90,7 @@ class EnterprisePage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text margin-top--none">
-                  <strong>Large-Scale Enterprise Design</strong><br />
+                  <strong>Large-Scale Design for Government Services</strong><br />
                   Make design and innovation a key influence in your organization.
                 </p>
                 <p className="stat">
@@ -125,8 +126,8 @@ class EnterprisePage extends Component {
               <div className="max-width content-padding pad-vertical">
                 <div className="pad-vertical">
                   <div className="max-width content-padding">
-                    <p className="center"><strong>Trusted by ambitious startups and Fortune 500's</strong></p>
-                    <ClientLogos enterprise="true" />
+                    <p className="center"><strong>Trusted by ambitious state agencies and for-public partners</strong></p>
+                    <ClientLogos government="true" />
                   </div>
                 </div>
               </div>
@@ -138,7 +139,7 @@ class EnterprisePage extends Component {
               <div className="paddingBottom">
                 <div>
                   <h2 className="header--xl margin-bottom--half">
-                    Driving results for Enterprise software
+                    Driving results for government services
                     <span className="text--serif text--primary">.</span>
                   </h2>
                   <Link
@@ -154,20 +155,13 @@ class EnterprisePage extends Component {
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
-                          A 200% productivity gain <br />
-                          = $146M exit.
+                          1,107,790 Massachusetts residents were recipients of SNAP food benefits in 2024.
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
-                        </p>
-                        <p className="margin-top--none">
-                          George Moon<br />
-                          VP of Product, CodeRyte Inc.
+                          Up from 750,000 residents in 2017. The redesigned application was deployed in July 2018, and for the first time ever at the MA DTA, the volume of online applications exceeded that of applications completed in person.
                         </p>
                         <p>
-                          <Link
-                            to="/work/3m-coderyte/"
-                          >
+                          <Link to="/work/mass-snap/">
                             Read Case Study
                           </Link>
                         </p>
@@ -175,7 +169,7 @@ class EnterprisePage extends Component {
 
                       <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
+                          src="/images/case-studies/public-sector/pubDesign_SNAP.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />

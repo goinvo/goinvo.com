@@ -58,6 +58,16 @@ class ClientLogos extends Component {
               <Crossover />
             </li>
           </ul>
+        ) :
+        this.props.government ? (
+          <ul className="list--unstyled client-logos">
+            <li>
+              <Nih />
+            </li>
+            <li className="">
+              <Mitre />
+            </li>
+          </ul>
         ) : (
           <ul className="list--unstyled client-logos">
             <li>

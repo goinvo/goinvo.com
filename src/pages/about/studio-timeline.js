@@ -70,7 +70,7 @@ class StudioTimelinePage extends Component {
                     key={'2'}
                     image="/images/features/oral-history-goinvo/oral-history-goinvo-featured.jpg"
                     title="Oral History"
-                    caption="Inside the early days of GoInvo, from the people who lived it."
+                    caption="Inside the early days of GoInvo from 2004-2014, from the people who lived it."
                     sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                   >
                     <a

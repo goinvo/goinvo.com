@@ -51,9 +51,8 @@ class EnterprisePage extends Component {
                 <li><strong>Validating an idea before investing in a full development cycle.</strong></li>
               </div>
               <div className="resultsRow ul">
-                <li><strong>Convincing sponsors.</strong></li>
-                <li><strong>A vision to rally support.</strong></li>
                 <li><strong>Improved accessibility for wider resident needs.</strong></li>
+                <li><strong>A vision to rally support.</strong></li>
               </div>
             </div>
           </div>
@@ -151,7 +150,7 @@ class EnterprisePage extends Component {
                 </div>
 
                 <div className="pure-u-1 marginTop">
-                  <Card link="/work/3m-coderyte/">
+                  <Card link="/work/mass-snap/">
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
@@ -179,22 +178,18 @@ class EnterprisePage extends Component {
                 </div>
 
                 <div className="pure-u-1">
-                  <Card link="/work/infobionic-heart-monitoring/">
+                  <Card link="/work/all-of-us/">
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 teal flip-child textCard">
                         <h4 className="header--xl headerCard">
-                          A vision to secure $17M Series B.
+                          NIH's All of Us Research Program
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          “We absolutely love everything GoInvo has created for us, it has by far exceeded our expectations.”
-                        </p>
-                        <p className="margin-top--none">
-                          Serban Georgescu MD<br />
-                          Director of Business and Clinical Development, InfoBionic
+                          Through participant-focused design leadership and research, we delivered experiences and strategies that impacted an NIH research program, aiming to build the largest medical data repository for research.
                         </p>
                         <p>
                           <Link
-                            to="/work/infobionic-heart-monitoring/"
+                            to="/work/all-of-us/"
                           >
                             Read Case Study
                           </Link>
@@ -203,7 +198,7 @@ class EnterprisePage extends Component {
 
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/infobionic/infobionic-dashboard.jpg"
+                          src="/images/case-studies/aou/01-hero-image.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />
@@ -211,6 +206,37 @@ class EnterprisePage extends Component {
                     </div>
                   </Card>
                 </div>
+
+                <div className="pure-u-1">
+                  <Card link="/work/ahrq-cds/">
+                    <div className="flip-parent">
+                      <div className="pure-u-md-1-2 teal flip-child textCard">
+                        <h4 className="header--xl headerCard">
+                          National Clinical Decision Support Tool
+                        </h4>
+                        <p className="header--lg margin-bottom--none">
+                          GoInvo designed CDS Connect, an AHRQ-funded (Agency for Healthcare Research and Quality) national repository for providers, health IT vendors, and researchers to create and share CDS tools (clinical decision support tools) to improve clinical decision making and quality of care.
+                        </p>
+                        <p>
+                          <Link
+                            to="/work/ahrq-cds/"
+                          >
+                            Read Case Study
+                          </Link>
+                        </p>
+                      </div>
+
+                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                        <Image
+                          src="/images/case-studies/ahrq/CDS_connect_header_photo.jpg"
+                          className="image--max-width"
+                          sizes={config.sizes.full}
+                        />
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+
               </div>
             </div>
           </div>

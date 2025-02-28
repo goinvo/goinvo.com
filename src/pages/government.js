@@ -198,7 +198,7 @@ class EnterprisePage extends Component {
 
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/aou/01-hero-image.jpg"
+                          src="/images/case-studies/aou/01-hero-image-2.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />
@@ -228,7 +228,7 @@ class EnterprisePage extends Component {
 
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/ahrq/CDS_connect_header_photo.jpg"
+                          src="/images/case-studies/ahrq/CDS_connect_hero-2.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />

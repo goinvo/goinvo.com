@@ -43,16 +43,16 @@ class EnterprisePage extends Component {
                 What results are you looking for?
               </h2>
               <div className="resultsRow ul">
-                <li><strong>Transforming outdated systems into cutting-edge solutions.</strong></li>
+                <li><strong>Transformed outdated systems into cutting-edge solutions.</strong></li>
                 <li><strong>Smoother processes for happier government employees and residents.</strong></li>
               </div>
               <div className="resultsRow ul">
-                <li><strong>Re-imagining software and services to meet evolving needs at scale.</strong></li>
-                <li><strong>Validating an idea before investing in a full development cycle.</strong></li>
+                <li><strong>Re-imagined software and services to meet evolving needs at scale.</strong></li>
+                <li><strong>Validated ideas before investing in a full development cycle.</strong></li>
               </div>
               <div className="resultsRow ul">
                 <li><strong>Improved accessibility for wider resident needs.</strong></li>
-                <li><strong>A vision to rally support.</strong></li>
+                <li><strong>Strategy and vision to rally support.</strong></li>
               </div>
             </div>
           </div>
@@ -72,13 +72,13 @@ class EnterprisePage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text margin-top--none">
-                  <strong>Software Design Velocity</strong><br />
-                  Start fast with a team experienced working together compared to hiring.
+                  <strong>Long Term Mission Support</strong><br />
+                  We support your long term mission and objectives with digital tools that are scalable and increase accessibility.
                 </p>
                 <p className="stat">
-                  <span className="nbrStyle">100+</span>
+                  <span className="nbrStyle">27</span>
                   <span>
-                    software design projects since 2010
+                    government-sponsored design projects since 2009
                   </span>
                 </p>
               </div>
@@ -89,8 +89,8 @@ class EnterprisePage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text margin-top--none">
-                  <strong>Large-Scale Design for Government Services</strong><br />
-                  Make design and innovation a key influence in your organization.
+                  <strong>Transformation for the Common Good</strong><br />
+                  We design seamless, human-centered experiences that transform complex needs into seamless and equitable services, reducing burden and building trust.
                 </p>
                 <p className="stat">
                   <span className="nbrStyle">160M+</span>
@@ -107,13 +107,13 @@ class EnterprisePage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text margin-top--none">
-                  <strong>Feature Finding for Profits</strong><br />
-                  We discover opportunities that keep clients coming back for more.
+                  <strong>Rapid Iteration and Testing</strong><br />
+                  Validated design, research, and rapid prototyping to showcase your agency's vision, build support, and prove value before investing time and budget.
                 </p>
                 <p className="stat">
-                  <span className="nbrStyle">90%</span>
+                  <span className="nbrStyle">13</span>
                   <span>
-                    of clients repeat business with GoInvo
+                    agencies we've worked with
                   </span>
                 </p>
               </div>
@@ -137,7 +137,7 @@ class EnterprisePage extends Component {
             <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="paddingBottom">
                 <div>
-                  <h2 className="header--xl margin-bottom--half">
+                  <h2 className="header--xl">
                     Driving results for government services
                     <span className="text--serif text--primary">.</span>
                   </h2>

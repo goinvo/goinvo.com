@@ -89,7 +89,7 @@ class EnterprisePage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text margin-top--none">
-                  <strong>Transformation for the Common Good</strong><br />
+                  <strong>Transformative Change for the Public Good</strong><br />
                   We design seamless, human-centered experiences that transform complex needs into seamless and equitable services, reducing burden and building trust.
                 </p>
                 <p className="stat">

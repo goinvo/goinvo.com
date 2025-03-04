@@ -42,27 +42,27 @@ class EnterprisePage extends Component {
               <h2 className="header--xl">
                 What results are you looking for?
               </h2>
-              <div className="resultsRow ul">
-                <li><strong>Transformed outdated systems into cutting-edge solutions.</strong></li>
-                <li><strong>Smoother processes for happier government employees and residents.</strong></li>
-              </div>
-              <div className="resultsRow ul">
-                <li><strong>Re-imagined software and services to meet evolving needs at scale.</strong></li>
-                <li><strong>Validated ideas before investing in a full development cycle.</strong></li>
-              </div>
-              <div className="resultsRow ul">
-                <li><strong>Improved accessibility for wider resident needs.</strong></li>
-                <li><strong>Strategy and vision to rally support.</strong></li>
+              <div className="margin-bottom--double">
+                <div className="resultsRow ul">
+                  <li><strong>Transformed outdated systems into cutting-edge solutions.</strong></li>
+                  <li><strong>Smoother processes for happier government employees and residents.</strong></li>
+                </div>
+                <div className="resultsRow ul">
+                  <li><strong>Re-imagined software and services to meet evolving needs at scale.</strong></li>
+                  <li><strong>Validated ideas before investing in a full development cycle.</strong></li>
+                </div>
+                <div className="resultsRow ul">
+                  <li><strong>Improved accessibility for wider resident needs.</strong></li>
+                  <li><strong>Strategy and vision to rally support.</strong></li>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="max-width content-padding pad-vertical LayoutCenter teal">
-            <div className="max-width content-padding pad-vertical LayoutCenter">
-              <h2 className="header--xl center ">
-                Why choose GoInvo?
-              </h2>
-            </div>
+          <div className="max-width content-padding pad-vertical LayoutCenter">
+            <h2 className="header--xl center margin-bottom--half">
+              Why choose GoInvo?
+            </h2>
 
             <div className="container--justify-center tileRow">
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
@@ -75,13 +75,8 @@ class EnterprisePage extends Component {
                   <strong>Long Term Mission Support</strong><br />
                   We support your long term mission and objectives with digital tools that are scalable and increase accessibility.
                 </p>
-                <p className="stat">
-                  <span className="nbrStyle">27</span>
-                  <span>
-                    government-sponsored design projects since 2009
-                  </span>
-                </p>
               </div>
+
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <Image
                   src="/images/open_source/public-good.png"
@@ -91,12 +86,6 @@ class EnterprisePage extends Component {
                 <p className="text margin-top--none">
                   <strong>Transformative Change for the Public Good</strong><br />
                   We design seamless, human-centered experiences that transform complex needs into seamless and equitable services, reducing burden and building trust.
-                </p>
-                <p className="stat">
-                  <span className="nbrStyle">160M+</span>
-                  <span>
-                    people impacted by GoInvo designs
-                  </span>
                 </p>
               </div>
 
@@ -110,40 +99,63 @@ class EnterprisePage extends Component {
                   <strong>Rapid Iteration and Testing</strong><br />
                   Validated design, research, and rapid prototyping to showcase your agency's vision, build support, and prove value before investing time and budget.
                 </p>
+              </div>
+            </div>
+
+            <div className="container--justify-center tileRow">
+              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <p className="stat">
-                  <span className="nbrStyle">13</span>
+                  <span className="nbrStyle">33</span>
+                  <span>
+                    government-sponsored design projects since 2009
+                  </span>
+                </p>
+              </div>
+
+              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
+                <p className="stat">
+                  <span className="nbrStyle">160M+</span>
+                  <span>
+                    people impacted by GoInvo designs
+                  </span>
+                </p>
+              </div>
+
+              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
+                <p className="stat">
+                  <span className="nbrStyle">15</span>
                   <span>
                     agencies we've worked with
                   </span>
                 </p>
               </div>
             </div>
+
           </div>
 
           <div className="LayoutCenter teal">
-            <div>
-              <div className="max-width content-padding pad-vertical">
-                <div className="pad-vertical">
-                  <div className="max-width content-padding">
-                    <p className="center"><strong>Trusted by ambitious state agencies and for-public partners</strong></p>
-                    <ClientLogos government="true" />
-                  </div>
-                </div>
+            <div className="max-width content-padding pad-vertical">
+              <div className="pad-vertical">
+                <div className="hr margin-bottom--double"></div>
+                <p className="center"><strong>Trusted by ambitious state agencies and for-public partners</strong></p>
+                <ClientLogos government="true" />
+                <p>Our <strong>ITS81 contract</strong> with the Commonwealth of Massachusetts prequalifies us for IT professional services—streamlining government procurement and validating our expertise as a trusted vendor.</p>
               </div>
             </div>
+
           </div>
 
           <div className="bg-light teal">
-            <div className="max-width content-padding pad-vertical container--justify-center center ">
-              <div className="paddingBottom">
+            <div className="max-width content-padding pad-vertical container--justify-center center">
+              <div>
                 <div>
-                  <h2 className="header--xl">
-                    Driving results for government services
+                  <h2 className="header--xl margin-bottom--double">
+                    Our work drives results for government services
                     <span className="text--serif text--primary">.</span>
                   </h2>
                   <Link
                     to="/contact"
-                    className="button button--primary button--lg ctaLayout margin-bottom"
+                    className="button button--primary button--lg ctaLayout margin-bottom--double"
                   >
                     Let's discuss your project
                   </Link>
@@ -195,7 +207,6 @@ class EnterprisePage extends Component {
                           </Link>
                         </p>
                       </div>
-
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
                           src="/images/case-studies/aou/01-hero-image-2.jpg"
@@ -225,7 +236,6 @@ class EnterprisePage extends Component {
                           </Link>
                         </p>
                       </div>
-
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
                           src="/images/case-studies/ahrq/CDS_connect_hero-2.jpg"
@@ -233,6 +243,7 @@ class EnterprisePage extends Component {
                           sizes={config.sizes.full}
                         />
                       </div>
+
                     </div>
                   </Card>
                 </div>
@@ -241,9 +252,9 @@ class EnterprisePage extends Component {
             </div>
           </div>
 
-          <div className="bg-light teal">
+          <div className="background--blue">
             <div className="max-width content-padding pad-vertical container--justify-center center ">
-              <div className="pure-u-md-1-2">
+              <div className="pure-u-md-1-2 margin-bottom--double">
                 <p className="header--xl margin-bottom--none">
                   We ship software that works.<br />
                   Let's build together!
@@ -251,7 +262,6 @@ class EnterprisePage extends Component {
                 <p className="margin-top--none">
                   Reach out to learn how GoInvo can help.
                 </p>
-
                 <HubspotForm
                   formId={config.hubspotContactFormId}
                   title=""
@@ -259,8 +269,24 @@ class EnterprisePage extends Component {
               </div>
             </div>
           </div>
+
+          {/* This will look better with more contracts */}
+          {/*<div className="background--white ">
+            <div className="max-width content-padding pad-vertical ">
+              <div className="pure-u-md-1-2 margin-bottom--double">
+                <h2 className="header--xl">
+                  Contracts and Certifications
+                </h2>
+
+                <ul className="ul margin-top--none">
+                  <li><strong>ITS81</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>*/}
+
         </div>
-      </Layout>
+      </Layout >
     )
   }
 }

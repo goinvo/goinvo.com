@@ -16,6 +16,9 @@ import PersonalGenomeProject from '../assets/images/client-logos/logo-pgp.inline
 import Walgreens from '../assets/images/client-logos/logo-walgreens.inline.svg'
 import Wuxi from '../assets/images/client-logos/logo-wuxinextcode.inline.svg'
 import Crossover from '../assets/images/client-logos/logo-crossover.inline.svg'
+import DTA from '../assets/images/client-logos/logo-dtaconnect.inline.svg'
+import CMS from '../assets/images/client-logos/logo-cms.inline.svg'
+import NIH2 from '../assets/images/client-logos/logo-nih-2.inline.svg'
 
 class ClientLogos extends Component {
   render() {
@@ -40,73 +43,92 @@ class ClientLogos extends Component {
             </li>
           </ul>
         ) :
-        this.props.enterprise ? (
-          <ul className="list--unstyled client-logos">
-            <li>
-              <Walgreens />
-            </li>
-            <li>
-              <Nih />
-            </li>
-            <li className="">
-              <ThreeM />
-            </li>
-            <li className="">
-              <Mitre />
-            </li>
-            <li className="hidden--sm">
-              <Crossover />
-            </li>
-          </ul>
-        ) : (
-          <ul className="list--unstyled client-logos">
-            <li>
-              <ThreeM />
-            </li>
-            <li>
-              <Partners />
-            </li>
-            <li>
-              <Bd />
-            </li>
-            <li className="hidden--sm">
-              <InfoBionic />
-            </li>
-            <li className="hidden--sm">
-              <Mgh />
-            </li>
-            <li>
-              <JohnsonAndJohnson />
-            </li>
-            <li>
-              <MountSinai />
-            </li>
-            <li>
-              <Wuxi />
-            </li>
-            <li>
-              <Walgreens />
-            </li>
-            <li className="hidden--sm">
-              <JournalOfParticipatoryMedicine />
-            </li>
-            <li className="hidden--sm">
-              <NationalScienceFoundation />
-            </li>
-            <li>
-              <Nih />
-            </li>
-            <li className="hidden--sm">
-              <PersonalGenomeProject />
-            </li>
-            <li className="hidden--sm">
-              <Mitre />
-            </li>
-            <li className="hidden--sm">
-              <Mass />
-            </li>
-          </ul>
-        )}
+          this.props.enterprise ? (
+            <ul className="list--unstyled client-logos">
+              <li>
+                <Walgreens />
+              </li>
+              <li>
+                <Nih />
+              </li>
+              <li className="">
+                <ThreeM />
+              </li>
+              <li className="">
+                <Mitre />
+              </li>
+              <li className="hidden--sm">
+                <Crossover />
+              </li>
+            </ul>
+          ) :
+            this.props.government ? (
+              <ul className="list--unstyled client-logos">
+                <li>
+                  <NIH2 />
+                </li>
+                <li className="">
+                  <Mass />
+                </li>
+                <li className="">
+                  <DTA />
+                </li>
+                <li className="">
+                  <CMS />
+                </li>
+                <li className="">
+                  <Mitre />
+                </li>
+              </ul>
+            ) : (
+              <ul className="list--unstyled client-logos">
+                <li>
+                  <ThreeM />
+                </li>
+                <li>
+                  <Partners />
+                </li>
+                <li>
+                  <Bd />
+                </li>
+                <li className="hidden--sm">
+                  <InfoBionic />
+                </li>
+                <li className="hidden--sm">
+                  <Mgh />
+                </li>
+                <li>
+                  <JohnsonAndJohnson />
+                </li>
+                <li>
+                  <MountSinai />
+                </li>
+                <li>
+                  <Wuxi />
+                </li>
+                <li>
+                  <Walgreens />
+                </li>
+                <li className="hidden--sm">
+                  <JournalOfParticipatoryMedicine />
+                </li>
+                <li className="hidden--sm">
+                  <NationalScienceFoundation />
+                </li>
+                <li>
+                  <Nih />
+                </li>
+                <li className="hidden--sm">
+                  <PersonalGenomeProject />
+                </li>
+                <li className="hidden--sm">
+                  <Mitre />
+                </li>
+                <li className="hidden--sm">
+                  <Mass />
+                </li>
+              </ul>
+            )}
       </div>
     )
   }

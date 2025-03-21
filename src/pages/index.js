@@ -81,12 +81,28 @@ class IndexPage extends Component {
           <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
+              <h2 className="header--xl margin--none">
+                Welcome Jacobin Readers!
+              </h2>
+              <div style={{ borderRadius: '20px', overflow: 'hidden', marginTop: '10px', marginBottom: '20px', marginRight: '30px', height: '270px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <a
+                  href="https://www.goinvo.com/work/care-cards/"
+                  style={{ display: 'block', lineHeight: 0 }}
+                >
+                  <Image
+                    src="/images/features/posters/care-card-sugar-kills.jpg"
+                    alt="Sugar Kills poster"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="pure-u-1 pure-u-lg-2-3">
               <h2 className="header--xl margin--none pad-right--double">
                 Our designs in healthcare are used every day
                 <span className="text--serif text--primary">.</span>
               </h2>
-            </div>
-            <div className="pure-u-1 pure-u-lg-2-3">
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <p className="pad-right--only-lg">

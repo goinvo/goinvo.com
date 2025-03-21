@@ -84,7 +84,7 @@ class IndexPage extends Component {
               <h2 className="header--xl margin--none">Welcome Jacobin Readers!</h2>
               <div style={{ borderRadius: '20px', overflow: 'hidden', marginTop: '10px', marginBottom: '20px', marginRight: '30px', height: '270px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <a
-                  href="https://www.goinvo.com/work/care-cards/"
+                  href="/vision/"
                   style={{ display: 'block', lineHeight: 0 }}
                 >
                   <Image

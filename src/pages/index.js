@@ -37,9 +37,9 @@ const heroImage = categoryData.heroImages[Math.floor(Math.random() * categoryDat
 console.log("heroImage: ", heroImage);
 
 const frontmatter = {
-  metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
+  metaTitle: 'Product & UX Design Agency | GoInvo Boston',
   metaDescription:
-    'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
+    'GoInvo is a software UX design agency with deep expertise in designing for Enterprise, Government, AI, Health IT, Genomics, and Open Source, located in the greater Boston area.',
   category: selectedCategory,
   title: categoryData.title, // Add title from the selected category
   tagline: categoryData.tagline, // Add tagline from the selected category
@@ -112,7 +112,7 @@ class IndexPage extends Component {
             </div>
             <div className="pure-u-1 pure-u-lg-2-3">
               <h2 className="header--xl margin--none pad-right--double">
-                Our designs in healthcare are used every day
+                Our designs are used every day
                 <span className="text--serif text--primary">.</span>
               </h2>
               <div className="pure-g">

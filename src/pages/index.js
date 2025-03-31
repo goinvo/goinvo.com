@@ -37,9 +37,9 @@ const heroImage = categoryData.heroImages[Math.floor(Math.random() * categoryDat
 console.log("heroImage: ", heroImage);
 
 const frontmatter = {
-  metaTitle: 'Product & UX Design Agency | GoInvo Boston',
+  metaTitle: 'Boston Product & UX Design Agency | GoInvo',
   metaDescription:
-    'GoInvo is a software UX design agency with deep expertise in designing for Enterprise, Government, AI, Health IT, Genomics, and Open Source, located in the greater Boston area.',
+    'GoInvo is a Boston area product and user experience design agency with deep expertise in creating software for enterprise, government, health, and AI clients.',
   category: selectedCategory,
   title: categoryData.title, // Add title from the selected category
   tagline: categoryData.tagline, // Add tagline from the selected category

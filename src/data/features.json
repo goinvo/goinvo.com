@@ -1,5 +1,19 @@
 [
   {
+    "id": "healthcare-dollars-redux",
+    "title": "Where Your Health Dollars Go (Redux)",
+    "date": "Mar.2025",
+    "client": "Feature",
+    "categories": [
+      "open-source",
+      "public-health-and-policy"
+    ],
+    "caption": "An interactive map that tracks the origin, flow, and destination of money through the US healthcare system.",
+    "image": "/images/features/health-dollars-redux/health-dollars-redux-hero.jpg",
+    "link": "/vision/healthcare-dollars-redux/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "goinvo-timeline",
     "title": "Our Time Machine",
     "date": "Mar.2025",

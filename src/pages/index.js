@@ -50,12 +50,13 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
 
+    const workItems = concatCaseStudiesAndFeatures(props.data).slice(0, 4);
+
     this.state = {
       workItems,
       frontmatter,
     }
 
-    const workItems = concatCaseStudiesAndFeatures(props.data).slice(0, 4);
   }
 
   render() {

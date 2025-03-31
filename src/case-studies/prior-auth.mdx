@@ -1,0 +1,119 @@
+---
+title: 'Faster Approvals, Better Outcomes: Rethinking Prior Authorization for Cancer Care'
+image: '/images/case-studies/priorauth/pa-hero.jpg'
+client: 'Prior Authorization'
+caption: 'Software design for efficient, more intelligent protocol review, saving time and burden for insurers, providers, and hospitals.'
+categories:
+  - 'health-it-and-infrastructure'
+upNext:
+  - 'mitre-flux-notes'
+  - 'maya-ehr'
+  - '3m-coderyte'
+hidden: false
+references:
+  - title: 'Impact of Prior Authorization on Patient Access to Cancer Care'
+    link: 'https://ascopubs.org/doi/10.1200/EDBK_100036'
+  - title: 'The Patient Experience of Prior Authorization for Cancer Care'
+    link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10585404/'
+metaDescription: 'Faster, more efficient software design for prior authorization for cancer care using NLP and structured patient data'
+---
+
+import Divider from 'components/divider'
+
+# Faster Approvals, Better Outcomes: Rethinking Prior Authorization for Cancer Care
+
+### Problem
+
+Prior authorization is a lengthy and complex administrative process that has become a burden on providers and insurers alike despite the intention to ensure patient safety. Getting a decision on a prior authorization can delay treatments up to weeks for patients at various stages of cancer treatment.
+
+### Solution
+
+GoInvo created tools to assist providers and insurers in making faster and more efficient decisions on prior authorizations. Faster, more intelligent and efficient processing ensures that patients receive the care they need promptly, saving time and money for providers, hospitals, and insurers, while providing timely critical treatment for patients.
+
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Time:</span> 2 designers for 3 months
+
+<span class="text--uppercase text--gray text--bold text--spacing text--md">Tags:</span> Health IT & Infrastructure
+
+<Divider />
+
+<iframe width="100%" height="575" src="https://embed.figma.com/proto/D8T2IedHh250Dahc415XtP/Prior-Auth-mini-prototype?page-id=4632%3A425433&node-id=4632-425899&p=f&viewport=292%2C234%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4632%3A425899&embed-host=share%26hide-ui=1" allowfullscreen></iframe>
+
+
+## Background
+
+#### Prior authorization is a frequent reality for cancer patients and their families.
+Health insurers use prior authorizations to review and control the delivery, payments, and reimbursements to ensure high-quality standards in treatment and therapy delivery standards.<sup><a href="#references">1</a></sup> When a provider determines a line of treatment for their patient, they or their administrative staff submit a request through the patient’s insurer. The treatment case is then reviewed for eligibility and coverage before a decision is made, whether approval, adjustment, or denial.
+
+#### Burdensome for experts who specialize in prior authorization.
+Some insurers often use services that specialize in processing prior authorization requests. These organizations employ clinical and prescribing experts to review cases. This process involves reviewing patient and clinical documents in great detail, combing through piles of unstructured data (some records may be missing or incomplete), communicating back and forth with admin staff, and sometimes requiring a secondary review for more complex cases.
+
+#### Increased burden and delays mean anxiety, stress, and distrust for patients.
+This process places a significant burden on providers, administrative staff, and the reviewers themselves. The requirements, administration, and review process can cause treatment delays of up to two weeks, increasing stress, anxiety, and distrust in the healthcare system for patients and their families.<sup><a href="#references">2</a></sup> Delays and denials in care are particularly problematic for patients with cancer, who often need urgent treatment or symptom management and are left waiting while their condition worsens.<sup><a href="#references">2</a></sup>
+
+#### Reduce friction and increase analytical efficiency.
+Our goal was to streamline the case review process for reviewers. This improvement will not only make their work more manageable but will also benefit patients by reducing wait times. Additionally, it will lessen the follow-up administrative tasks required from both providers and staff. With natural language processing to derive structured data from the unstructured records sent by providers and a clear information hierarchy to provide the right information at the right time, reviewers could spend less time hunting and manually recording a reference. Different panels allow the interface to be flexible and present the relevant information the context for the reviewer is in.
+
+<Divider />
+
+## The Process
+
+#### Background knowledge of oncological treatments is essential
+We needed to build our knowledge of cancer treatments to better understand what case reviewers look for in their reviews. We worked with clinical reviewers to learn about their process and pain points that helped us focus on where we could make the most impact. To better understand and design for real-life cases and scenarios, we conducted research into treatments for different cancers, therapy lines, and the patient journey. We work with real data so that solutions meet the real needs of the people impacted by this process.
+
+#### Detailed review and interviews with case reviewers
+We reviewed the software in detail, giving us a starting point for the fundamental problem areas. Interviews with reviewers at various steps of the prior authorization process and different types of cases gave our team a deeper understanding of how they work and identify pain points. We continued interviews throughout the design process to validate the concepts, ensuring that the solutions met the needs of reviewers and staff at each stage.
+
+## Insights and recommendations
+
+#### A complex process further complicated by a dense UI
+
+Tabular and gridlike data weighed down the reviewer system with little information hierarchy, and it could be challenging to find a small detail amongst a sea of patient data points.Performing most actions takes a lot of navigating back and forth, clicking, opening windows and pop-ups, which makes reviewing information side by side difficult without having multiple browser windows open. What should be simple processes take a lot of steps and clicks. An organized information structure using a clear hierarchy to highlight key information, along with the ability to review information in flexible panels designed to present the right information for the context of the stage of review.
+
+#### Disparate documentation and detective work
+To fully understand and make an informed decision on the protocol requested by the provider, reviewers needed to understand the complete picture of the patient over time, the progression of their cancer, previous treatments, side effects they’ve experienced, etc. Reviewers hunt for this information through many different sources, verifying information (provider notes can sometimes be outdated in records), manually recording the information to build a patient history for reference during their review, and redoing all of this for each round and request. If documents could be automatically identified and classified, structured data may be derived from the documentation so that reviewers don’t need to wait for admin staff to process or have to hunt and search for information.
+
+#### Note capture
+Notes and contact queries are located at multiple points throughout the review, which may also contain important information needed to conduct the review. As reviewers conduct their analysis, while keeping track of patient information, they manually capture notes on their review, which they enter at the end of the process when they’re ready to make their determination. However, they are unable to view or record notes without losing the context of the protocol or patient record or fearing they might lose the notes they have already captured during their review. Giving reviewers a convenient way to take notes at any point during their review was essential without disrupting their focus on the content. Reliable note saving was also essential, enabling reviewers to quickly return to their previous point if interrupted.
+
+![Displaying the case action tab with notes open and filled](/images/case-studies/priorauth/pa-caseActionNote.jpg)
+
+#### Smarter, organized queues
+The reviewer’s queue is straightforward, but there was still room for improvement and better efficiency. We reorganized information in the queue to help with readability and scanability. In their system, reviewers were limited to their own queue which did not refresh, leading staff to creative workarounds to be able to share work, offer assistance, and prompt a page refresh to reduce friction. We focused on these pain points with recommendations to make the queue more live with periodic refreshes when work arrives in a queue and allowing reviewers to access any case when they need to offer assistance to another colleague, with robust filters to set default views and focus on their own queue when working.
+
+![Case queue](/images/case-studies/priorauth/pa_Queue.jpg)
+
+## Solution
+
+![Treatment protocol example, listing protocols for review along the left and the details of the protocol, dosing information, risks, and resources for the reviewer](/images/case-studies/priorauth/pa-caseProtocol.jpg)
+
+#### Patient Information Upfront
+From flat, tabular information representation, we used type size and sectioning to organize patient information. The most critical information is front and center to ensure the reviewer is referring to the correct patient and condition. Because of the sheer amount of information needed for a complete case, we paid attention to what information was truly needed in what contexts. For example, *Provider contact information* is included if the reviewer needs to ask questions or reach out to confirm or locate any missing information. Additionally, *Admin information*, which previously took up a lot of space, creating distance between the patient information and contextual information needed for a review is also accessible here.
+
+![Displaying the document tab besides the patient record tab](/images/case-studies/priorauth/pa-caseDocumentRecord.jpg)
+
+#### Reviewing the Protocol / Treatment Request
+Protocol information is similarly up front, with more detail in an expandable drawer for a detailed review of timing and dosing, which can collapse when no longer needed. We wanted to include multi-modality to access different features. In this context, if the reviewer notices a change is necessary, they may select to *Change* or *Withdraw* the protocol, *Add protocol*, or *Modify dosing*, and the drawer will collapse and allow them to make any changes necessary in the *Actions* panel, where they would submit their recommendations of adjustments, approval, or denial.
+
+#### Reviewing the Patient Record
+To address the time-consuming task of sifting through patient documentation, a Natural Language Processing (NLP) model would automatically classify patient documents and extract structured data from unstructured clinical reports. The data is discretely organized into categories as a functioning patient record to make it easier to locate the right information, and users have the option to explore the record as a timeline to get a chronological view of the patient history. This greatly reduces the time and effort spent on searching for information in many separate documents.
+
+Understanding that patient records aren’t always complete and NLPs aren’t perfect, missing information can be entered and saved as structured data. Users can also correct information that may be incorrect. Based on the patient’s type of cancer, progression, and protocol request, we can also identify what information is required to make a safe determination on the prior authorization. Knowing that there could be cases when information may need to be updated for each round of a request for clinical safety, or information may drift or have conflicting entries, we identify which data points are in need of verification. Once verified, a reviewer can be sure that the information is correct for the following cases on this patient. 
+
+#### Reviewing the Patient Timeline
+To get a clear picture of the patient and the progression of their condition, the patient record is meant to organize information as a timeline reviewers can refer to during their review and following reviews. Reviewers would no longer need to build a patient history manually. One challenge was to capture the concept of treatments over time, including active prescriptions and changes in therapy, which we indicate with the vertical strips on the side.
+
+![Displaying the actions tab besides the patient timeline view](/images/case-studies/priorauth/pa-caseTimelineActionNotes.jpg)
+
+#### Determining an Action on a Case
+Once a review is complete and the reviewer is ready to make their determination, the reviewer can record the decision in the actions panel. During their review, if they had made notes in the note widget/panel/capture, those notes would be recorded along with their review. This reduces the need to copy notes the reviewer had recorded on the side in the previous system.
+
+![Displaying the case action tab with notes open and filled](/images/case-studies/priorauth/pa-caseActionNote.jpg)
+
+#### Automating Approvals to Save on Time and Resources
+Clinical reviewers would continue to review more complex cases, while the system would take advantage of the structured data to automate determinations on cases that fell under a set of rules and guidelines set out by the organization in partnership with payers. The automation would be able to save hundreds of hours of time, effort, and resources that otherwise would be spent by the prior authorization review team, payers, providers, and hospital systems –and patients would be able to start treatment much sooner than they would have in the past.
+
+## Key challenges and takeaways
+
+- With the design recommendations and supporting system, an ultimate goal of this project was for more straightforward prior authorizations to be approved automatically without the need for a detailed review, improving time to treatment and reducing overall resource burden.
+- Technology requirements can change over time, and in the end the technology approach chosen by the team didn’t support our initial designs.
+- Working with the team on subsequent projects, we were able to help their organization streamline other parts of their process, including dosing recommendations, the provider experience of patient intake, management of providers and practices, management of clinical rules and guidelines that feed into protocol recommendations, maintenance of drug rules and guidelines for various insurers, and tools that help the organization’s staff to stay up to date on how different conditions are impacting different payers.

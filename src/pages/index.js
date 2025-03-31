@@ -12,6 +12,7 @@ import HubspotForm from '../components/hubspot-form'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
+import headerData from '../data/homepage-headers.json'
 
 import config from '../../config'
 import {
@@ -19,18 +20,30 @@ import {
   concatCaseStudiesAndFeatures,
 } from '../helpers'
 
+//Load the header data from the JSON file
+const categories = headerData ? Object.keys(headerData) : [];
+if (categories.length === 0) {
+  throw new Error("No categories found in headerData.");
+}
+//check the categories
+console.log("categories: ", categories);
+// Select a random category
+const selectedCategory = categories[Math.floor(Math.random() * categories.length)];
+console.log("Selected category: ", selectedCategory);
+const categoryData = headerData[selectedCategory];
+console.log("categoryData: ", JSON.stringify(categoryData, null, 2));
+// Select a random hero image from the category
+const heroImage = categoryData.heroImages[Math.floor(Math.random() * categoryData.heroImages.length)];
+console.log("heroImage: ", heroImage);
+
 const frontmatter = {
   metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
   metaDescription:
     'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
-  heroImage: [
-    '/images/homepage/hero-critical-mass-5.jpg',
-    '/images/homepage/precision-autism-hero.jpg',
-    '/images/homepage/common_health_hero.jpg',
-    '/images/features/living-health-lab/hero.jpg',
-    '/images/homepage/open-source-bgd-9.jpg',
-    '/images/homepage/doh-hero-fallback.jpg',
-  ],
+  category: selectedCategory,
+  title: categoryData.title, // Add title from the selected category
+  tagline: categoryData.tagline, // Add tagline from the selected category
+  heroImage: heroImage,
   heroButtonText: 'See Our Work',
 }
 
@@ -43,26 +56,27 @@ class IndexPage extends Component {
     this.state = {
       image: null,
       workItems,
+      frontmatter,
     }
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     this.setState({
       image:
         frontmatter.heroImage[
-          Math.floor(Math.random() * frontmatter.heroImage.length)
+        Math.floor(Math.random() * frontmatter.heroImage.length)
         ],
     })
-  }
+  }*/
 
   render() {
     return (
-      <Layout frontmatter={frontmatter}>
+      <Layout frontmatter={this.state.frontmatter}>
         <Hero
           className="hero--higher-text-contrast"
           link="/work/"
-          image={this.state.image}
-          caption="We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, and governments."
+          image={this.state.frontmatter.heroImage}
+          caption={this.state.frontmatter.tagline}
           button={frontmatter.heroButtonText}
           buttonLink="/work/"
           isLarge
@@ -73,7 +87,7 @@ class IndexPage extends Component {
             <br />
             the future of
             <br />
-            healthcare
+            {this.state.frontmatter.category}
             <span className="text--serif text--primary">.</span>
           </h1>
         </Hero>

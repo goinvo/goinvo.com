@@ -39,7 +39,7 @@ class HealthcareDollarsRedux extends Component {
             
               <div className="card--shadow margin-top--double" style={{ borderRadius: '5px', overflow: 'hidden' }}>
                 <a  
-                    href={"https://dreeves4321.github.io/healthcare-flow/"}
+                    href={"https://goinvo.github.io/healthcare-flow/"}
                     target="_blank"
                     rel="noopener noreferrer"
                 ><Image
@@ -52,7 +52,7 @@ class HealthcareDollarsRedux extends Component {
 
               <div>
                   <a
-                    href={"https://dreeves4321.github.io/healthcare-flow/"}
+                    href={"https://goinvo.github.io/healthcare-flow/"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
@@ -159,7 +159,7 @@ class HealthcareDollarsRedux extends Component {
               <div className="button-group">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
-                    href="https://github.com/dreeves4321/healthcare-flow"
+                    href="https://github.com/goinvo/healthcare-flow"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"

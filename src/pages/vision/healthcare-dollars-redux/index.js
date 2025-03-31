@@ -14,7 +14,7 @@ import config from '../../../../config'
 const frontmatter = {
   metaTitle: 'Where Your Health Dollars Go (Redux)',
   metaDescription:
-    'An interactive app to explore the flow and destimation of money within the US healthcare system.',
+    'An interactive app to explore the flow and destination of money within the US healthcare system.',
   heroImage: '/images/features/health-dollars-redux/health-dollars-redux-hero.jpg',
 }
 

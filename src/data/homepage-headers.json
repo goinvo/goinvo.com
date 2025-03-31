@@ -1,0 +1,31 @@
+{
+  "healthcare": {
+    "tagline": "We deliver beautiful and useful experiences for patients, clinicians, clinics, companies, & governments.",
+    "heroImages": [
+      "/images/homepage/precision-autism-hero.jpg",
+      "/images/homepage/common_health_hero.jpg",
+      "/images/features/living-health-lab/hero.jpg",
+      "/images/homepage/open-source-bgd-9.jpg",
+      "/images/homepage/doh-hero-fallback.jpg"
+    ]
+  },
+  "government": {
+    "tagline": "We deliver beautiful and useful services and tools for local and national agencies for smoother processes and happier residents.",
+    "heroImages": [
+      "/images/homepage/hero-critical-mass-5.jpg",
+      "/images/homepage/mitre_open_health_dashboard_demo_3.jpg"
+    ]
+  },
+  "enterprise": {
+    "tagline": "We create designs that make complex enterprise products into seamless, innovative solutions that meet evolving customer needs.",
+    "heroImages": [
+      "/images/enterprise/enterprise-hero-1.jpg"
+    ]
+  },
+  "AI": {
+    "tagline": "We create innovative experiences with the power of AI to deliver accessible and equitable services for humans.",
+    "heroImages": [
+      "/images/homepage/ai-hero-augmented-clinical-decision-support.jpg"
+    ]
+  }
+}

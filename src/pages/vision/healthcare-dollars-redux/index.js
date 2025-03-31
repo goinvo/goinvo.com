@@ -15,7 +15,7 @@ const frontmatter = {
   metaTitle: 'Where Your Health Dollars Go (redux)',
   metaDescription:
     'An interactive app to explore the flow and destimation of money within the US healthcare system.',
-  heroImage: '/images/features/healthcare-dollars-redux/healthcare-dollars-redux-hero.jpg',
+  heroImage: '/images/features/health-dollars-redux/health-dollars-redux-hero.jpg',
 }
 
 class HealthcareDollars extends Component {
@@ -34,53 +34,149 @@ class HealthcareDollars extends Component {
               "Where your Health Dollars Go" is a map of the US healthcare system and its components. By following  the allocation and flow of money in healthcare, the thread of how the  organizations, departments, and major players are connected becomes  apparent.
               </p>
               <p className="margin-bottom--none text--gray">
-              We expand on previous work to present an interactive map of the flow. Check it out to see how your dollars work their way through the system from your paycheck to the paychecks of nurses and the pockets of shareholders and CEOs. Select stories to focus on specific parts of the system. 
+              We expand on <a href="../healthcare-dollars/">prior work</a> and present an interactive map of the flow. Check it out and see how your dollars work their way through the system from your paycheck to the paychecks of nurses and the pockets of shareholders and CEOs. Select stories to focus on specific parts of the system. 
               </p>
             
-              <div className="card--shadow margin-top--double">
+              <div className="card--shadow margin-top--double" style={{ borderRadius: '5px', overflow: 'hidden' }}>
                 <a  
                     href={"https://dreeves4321.github.io/healthcare-flow/"}
                     target="_blank"
                     rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/images/features/healthcare-dollars-redux/healthcare-dollars-redux-shot.jpg"
-                    className="image--max-width"
+                ><Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-shot.jpg"
+                    className="image--max-width image--center"                    
                     sizes={config.sizes.fullInsideMediumMaxWidth}
-                  />
-                </a>
+                    alt="Screenshot of Where Your Healthcare Dollars Go interactive map."
+                  /></a>
               </div>
 
-              <div className="button-primary">
+              <div>
                   <a
                     href={"https://dreeves4321.github.io/healthcare-flow/"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
+                    className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
                   >
-                    Open the App
+                    Open the Interactive Map
                   </a>
               </div>
 
               <Divider />
               <h2 className="header--xl text--center">The Process</h2>
-              <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+              <div className="pure-g pad-bottom--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
                   <Image
-                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame 1.jpg"
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--1.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 1: The original Where Your Health Dollars Go map, with a comic style caption, 'The Original'."
                   />
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
                   <Image
-                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame 2.jpg"
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 2: Two people are looking at the original map. The first says 'But where does it go from here? Who's making all that money?!' The second is thinking 'You doc? Or CEOs?'"
+                  />
+                </div>
+              </div>
+              <div className="pure-g pad-bottom--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--3.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 3: Back in the studio, time for desk research! A designer pours over stacks of papers and charts. Citations float about the room."
+                  />
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--4.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 4: The designer thinks out loud, 'I got the big totals, but... what about the breakdowns?!' Behind the designer hangs a backdrop of an Airtable database."
+                  />
+                </div>
+              </div>
+              <div className="pure-g pad-bottom--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--5.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 5 — From off page, the designer's voice calls, 'Oh Gemini! Give me a hand! Please provide an estimate table of the breakdowns of expense for the home health industry. Include categories similar to prior tables.' Below that text buble are two screenshots of Gemini output."
+                  />
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--6.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 6 — Sketches on paper of the interactive map. In a caption box it reads, 'Time to sketch up some ideas...'"
+                  />
+                </div>
+              </div>
+              <div className="pure-g pad-bottom--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--7.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 7 — Caption box reads, 'Then give prompt-to-build a try!' with screenshots of Cursor and a early version of the map."
+                  />
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--8.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 8 — The designer thinks out loud, 'Well that's... ugly. Let's Design!.' Behind the designer is a backdrop of a Figma file."
+                  />
+                </div>
+              </div>
+              <div className="pure-g pad-bottom--double">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--9.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 9 — Text bubbles forming a process loop: Text-to-code, debug, evaluate, what's next, desgn, iterate!"
+                  />
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
+                  <Image
+                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--10.jpg"
+                    className="image--max-width"
+                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    alt="Comic frame 10 — The designer and person from Frame 2 are  looking at the new interctive map. The designer says, 'Well that's closer'. The other person thinks, 'It's something!'"
                   />
                 </div>
               </div>
               
+              <div className="button-group">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <a
+                    href="https://github.com/dreeves4321/healthcare-flow"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--secondary button--lg margin-top--double margin-bottom--double button--block"
+                  >
+                    Contribute on GitHub
+                  </a>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <a
+                    href="https://airtable.com/appWDZVTJCKQpQudH/shrNjVJ8t7e0EC078"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
+                  >
+                    View the Data
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
 

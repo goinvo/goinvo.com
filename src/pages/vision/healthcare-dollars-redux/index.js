@@ -18,12 +18,12 @@ const frontmatter = {
   heroImage: '/images/features/health-dollars-redux/health-dollars-redux-hero.jpg',
 }
 
-class HealthcareDollars extends Component {
+class HealthcareDollarsRedux extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
         <Hero image={frontmatter.heroImage} />
-        <div className="healthcare-dollars">
+        <div className="healthcare-dollars-redux-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Where Your Health Dollars Go (redux)</h1>
@@ -65,15 +65,17 @@ class HealthcareDollars extends Component {
               <h2 className="header--xl text--center">The Process</h2>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <Image
-                    src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--1.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    alt="Comic frame 1: The original Where Your Health Dollars Go map, with a comic style caption, 'The Original'."
-                  />
+                  <a href="../healthcare-dollars/">
+                    <Image
+                      src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--1.jpg"
+                      className="image--max-width hoverable-comic"
+                      sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                      alt="Comic frame 1: The original Where Your Health Dollars Go map, with a comic style caption, 'The Original'."                     
+                    />
+                  </a>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <Image
+                    <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -206,4 +208,4 @@ class HealthcareDollars extends Component {
   }
 }
 
-export default HealthcareDollars
+export default HealthcareDollarsRedux

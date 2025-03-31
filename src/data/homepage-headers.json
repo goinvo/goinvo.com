@@ -10,20 +10,20 @@
     ]
   },
   "government": {
-    "tagline": "We deliver beautiful and useful services and tools for local and national agencies for smoother processes and happier residents.",
+    "tagline": "We deliver Beautiful software design for government and state services for smoother processes and happy residents.",
     "heroImages": [
       "/images/homepage/hero-critical-mass-5.jpg",
       "/images/homepage/mitre_open_health_dashboard_demo_3.jpg"
     ]
   },
   "enterprise": {
-    "tagline": "We create designs that make complex enterprise products into seamless, innovative solutions that meet evolving customer needs.",
+    "tagline": "We design beautiful software design for the Enterprise to catapult your business forward.",
     "heroImages": [
       "/images/enterprise/enterprise-hero-1.jpg"
     ]
   },
   "AI": {
-    "tagline": "We create innovative experiences with the power of AI to deliver accessible and equitable services for humans.",
+    "tagline": "We design tools and experiences with AI so people and machines can skillfully work together.",
     "heroImages": [
       "/images/homepage/ai-hero-augmented-clinical-decision-support.jpg"
     ]

@@ -26,38 +26,48 @@ if (categories.length === 0) {
   throw new Error("No categories found in headerData.");
 }
 //check the categories
-//console.log("categories: ", categories);
+console.log("categories: ", categories);
 // Select a random category
 const selectedCategory = categories[Math.floor(Math.random() * categories.length)];
-//console.log("Selected category: ", selectedCategory);
+console.log("Selected category: ", selectedCategory);
 const categoryData = headerData[selectedCategory];
-//console.log("categoryData: ", JSON.stringify(categoryData, null, 2));
+console.log("categoryData: ", JSON.stringify(categoryData, null, 2));
 // Select a random hero image from the category
 const heroImage = categoryData.heroImages[Math.floor(Math.random() * categoryData.heroImages.length)];
-//console.log("heroImage: ", heroImage);
+console.log("heroImage: ", heroImage);
 
 const frontmatter = {
-  category: selectedCategory,
   metaTitle: 'Healthcare UX Design Agency | GoInvo Boston',
   metaDescription:
     'GoInvo is a healthcare UX design agency with deep expertise in Health IT, Genomics, and Open Source Health, located in the greater Boston area.',
+  category: selectedCategory,
   title: categoryData.title, // Add title from the selected category
   tagline: categoryData.tagline, // Add tagline from the selected category
   heroImage: heroImage,
   heroButtonText: 'See Our Work',
 }
+
 class IndexPage extends Component {
   constructor(props) {
     super(props)
 
-    const workItems = concatCaseStudiesAndFeatures(props.data).slice(0, 4);
+    const workItems = concatCaseStudiesAndFeatures(props.data).slice(0, 4)
 
     this.state = {
+      image: null,
       workItems,
       frontmatter,
     }
-
   }
+
+  /*componentDidMount() {
+    this.setState({
+      image:
+        frontmatter.heroImage[
+        Math.floor(Math.random() * frontmatter.heroImage.length)
+        ],
+    })
+  }*/
 
   render() {
     return (
@@ -67,7 +77,7 @@ class IndexPage extends Component {
           link="/work/"
           image={this.state.frontmatter.heroImage}
           caption={this.state.frontmatter.tagline}
-          button={headerData.heroButtonText}
+          button={frontmatter.heroButtonText}
           buttonLink="/work/"
           isLarge
           position="top center"
@@ -400,5 +410,29 @@ class IndexPage extends Component {
   }
 }
 
+export const indexPageQuery = graphql`
+  query IndexQuery {
+    allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
+      nodes {
+        id
+        parent {
+          ... on File {
+            name
+          }
+        }
+        frontmatter {
+          title
+          image
+          client
+          categories
+          caption
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

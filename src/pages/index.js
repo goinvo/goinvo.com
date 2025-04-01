@@ -39,7 +39,7 @@ console.log("heroImage: ", heroImage);
 const frontmatter = {
   metaTitle: 'Boston Product & UX Design Agency | GoInvo',
   metaDescription:
-    'GoInvo is a Boston area product and user experience design agency with deep expertise in creating software for enterprise, government, health, and AI clients.',
+    'GoInvo is a Boston area product and user experience design agency with deep expertise in creating software for enterprise, government, health, and AI services.',
   category: selectedCategory,
   title: categoryData.title, // Add title from the selected category
   tagline: categoryData.tagline, // Add tagline from the selected category

@@ -1,5 +1,35 @@
 [
   {
+    "name": "Daniel Reeves",
+    "title": "Designer, Engineer",
+    "bio": "Daniel is a designer and developer with a diverse background in building interactive and science-based exhibits to academic research in interdisciplinary physics. He has a PhD in physics and quantitative biology from Brandeis University and held subsequent positions at Harvard and MIT. Daniel joined the GoInvo team in 2018 to build engaging biologic and healthcare services.",
+    "social": {
+      "email": "daniel@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/danielfreeves/"
+    },
+    "image": "/images/about/headshot-daniel-reeves.jpg"
+  },
+  {
+    "name": "Samantha Wuu",
+    "title": "People Person",
+    "bio": "Sam is a writer, editor, and resident People Person at GoInvo. She previously worked at NYC Health + Hospitals on the migration of the provider credentialing process to a digital platform. A middle school English teacher in a past life, Sam is also a lifelong detail enthusiast and fan of diversity (of both people and punctuation). She joined Invo in 2022 with a BA in English from Barnard College and an MEd from Harvard University.",
+    "social": {
+      "email": "sam@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/samantha-wuu-44559113/"
+    },
+    "image": "/images/about/headshot-samantha-wuu.jpeg"
+  },
+  {
+    "name": "Shayla Nettey",
+    "title": "Clinical Strategist (on-call)",
+    "bio": "Shayla Nettey is a physician with a taste for design. Her focus on community medicine and patient education pushes her public health goals where all patients better control their health with help from happier, skilled clinicians. Shayla joined Invo in 2021, is a graduate of Morehouse School of Medicine, and practices as a hospitalist in North Carolina.",
+    "social": {
+      "email": "shayla@goinvo.com",
+      "linkedin": "https://www.linkedin.com/in/shaylanetteymd/"
+    },
+    "image": "/images/about/headshot-shayla-nettey.jpg"
+  },
+  {
     "name": "Amelia Luo",
     "title": "Designer",
     "bio": "Amelia joined GoInvo as a user experience design intern in 2024. Passionate about health, education, and entertainment,  Amelia is currently completing a Master’s at Carnegie Mellon University’s Entertainment Technology Center and holds a BFA in Illustration from School of Visual Arts.",

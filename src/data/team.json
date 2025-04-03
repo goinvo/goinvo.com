@@ -31,16 +31,6 @@
     "image": "/images/about/headshot-jen-patel.jpg"
   },
   {
-    "name": "Daniel Reeves",
-    "title": "Designer, Engineer",
-    "bio": "Daniel is a designer and developer with a diverse background in building interactive and science-based exhibits to academic research in interdisciplinary physics. He has a PhD in physics and quantitative biology from Brandeis University and held subsequent positions at Harvard and MIT. Daniel joined the GoInvo team in 2018 to build engaging biologic and healthcare services.",
-    "social": {
-      "email": "daniel@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/danielfreeves/"
-    },
-    "image": "/images/about/headshot-daniel-reeves.jpg"
-  },
-  {
     "name": "Claire Lin",
     "title": "Designer, Engineer",
     "bio": "Claire is a designer-engineer combining architecture and product design in making healthcare digital services. She works on local, public projects on clothing recycling and neighborhood health through Design for America. Claire joined Invo in 2021 with a BA in Mechanical Engineering from Brown University.",
@@ -71,16 +61,6 @@
     "image": "/images/about/headshot-craig-mcginley.jpg"
   },
   {
-    "name": "Samantha Wuu",
-    "title": "People Person",
-    "bio": "Sam is a writer, editor, and resident People Person at GoInvo. She previously worked at NYC Health + Hospitals on the migration of the provider credentialing process to a digital platform. A middle school English teacher in a past life, Sam is also a lifelong detail enthusiast and fan of diversity (of both people and punctuation). She joined Invo in 2022 with a BA in English from Barnard College and an MEd from Harvard University.",
-    "social": {
-      "email": "sam@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/samantha-wuu-44559113/"
-    },
-    "image": "/images/about/headshot-samantha-wuu.jpeg"
-  },
-  {
     "name": "Tala Habbab",
     "title": "Designer",
     "bio": "Tala is a designer with a background in medical devices and product design. She creates services that improve healthcare access and understandability. Tala joined GoInvo in 2022 with a BS in Materials Science and Biomedical Engineering and a MS in Product & Service Design from Carnegie Mellon University.",
@@ -99,16 +79,6 @@
       "linkedin": "https://www.linkedin.com/in/mystarryspace/"
     },
     "image": "/images/about/headshot-shirley-xu.jpg"
-  },
-  {
-    "name": "Shayla Nettey",
-    "title": "Clinical Strategist (on-call)",
-    "bio": "Shayla Nettey is a physician with a taste for design. Her focus on community medicine and patient education pushes her public health goals where all patients better control their health with help from happier, skilled clinicians. Shayla joined Invo in 2021, is a graduate of Morehouse School of Medicine, and practices as a hospitalist in North Carolina.",
-    "social": {
-      "email": "shayla@goinvo.com",
-      "linkedin": "https://www.linkedin.com/in/shaylanetteymd/"
-    },
-    "image": "/images/about/headshot-shayla-nettey.jpg"
   },
   {
     "name": "Maverick Chan",

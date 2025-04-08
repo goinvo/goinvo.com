@@ -1,10 +1,12 @@
 [
   "prior-auth",
+  "healthcare-dollars-redux",
   "public-sector",
   "all-of-us",
   "mitre-shr",
   "maya-ehr",
   "mass-snap",
+  "eligibility-engine",
   "wuxi-nextcode-familycode",
   "augmented-clinical-decision-support",
   "mitre-state-of-us-healthcare",
@@ -20,8 +22,6 @@
   "inspired-ehrs",
   "ahrq-cds",
   "infobionic-heart-monitoring",
-  "bathroom-to-healthroom",
-  "open-source-healthcare",
   "personal-genome-project-vision",
   "healthcare-dollars",
   "staffplan",
@@ -29,12 +29,7 @@
   "virtual-care",
   "partners-geneinsight",
   "insidetracker-nutrition-science",
-  "understanding-ebola",
   "ebola-care-guideline",
-  "loneliness-in-our-human-code",
   "paintrackr",
-  "tabeeb-diagnostics",
-  "killer-truths",
-  "understanding-zika",
-  "healing-us-healthcare"
+  "tabeeb-diagnostics"
 ]

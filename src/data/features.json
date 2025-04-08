@@ -6,7 +6,9 @@
     "client": "Feature",
     "categories": [
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "health",
+      "government"
     ],
     "caption": "An interactive map that tracks the origin, flow, and destination of money through the US healthcare system.",
     "image": "/images/features/health-dollars-redux/health-dollars-redux-hero.jpg",
@@ -32,7 +34,9 @@
     "date": "Oct.2024",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "government",
+      "health"
     ],
     "caption": "A centralized MA resident database for better service accessibility.",
     "link": "/vision/eligibility-engine/",
@@ -45,7 +49,9 @@
     "date": "Jul.2024",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "government",
+      "health"
     ],
     "caption": "The $1 Trillion yearly burden on the US Healthcare system.",
     "link": "/vision/fraud-waste-abuse-in-healthcare/",
@@ -58,7 +64,9 @@
     "date": "May.2024",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "ai",
+      "health"
     ],
     "caption": "Real-time, augmented decision support and guidance for mobile health workers, to better training and repeatable health outcomes.",
     "link": "/vision/augmented-clinical-decision-support/",
@@ -70,7 +78,9 @@
     "date": "Nov.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "ai",
+      "health"
     ],
     "caption": "Exploring the AI Healthcare future – opportunities and unexpected outcomes.",
     "link": "/vision/healthcare-ai/",
@@ -83,7 +93,8 @@
     "date": "Apr.2024",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "Healthcare principles and rights are essential in any healthcare system, as they provide a framework for guiding the delivery, quality, and ethical considerations of healthcare services.",
     "link": "https://www.healthcaremottos.com/",
@@ -96,7 +107,9 @@
     "date": "Jun.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health",
+      "government"
     ],
     "caption": "Mapping cancer journey pain points and exploring how navigation could support patients and their families.",
     "link": "/vision/national-cancer-navigation/",
@@ -109,7 +122,8 @@
     "date": "Jun.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "Our list of the top healthcare innovations from the past 10,000 years of human history.",
     "link": "/vision/history-of-health-design/",
@@ -122,7 +136,8 @@
     "date": "May.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.",
     "image": "/images/features/living-health-lab/hero.jpg",
@@ -135,7 +150,8 @@
     "date": "Apr.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "Learn about the benefits of virtual diabetes care, and a hybrid healthcare approach, which combines in-person visits with telehealth.",
     "image": "/images/features/virtual-care-diabetes/virtual-care-diabetes-hero.jpg",
@@ -149,7 +165,8 @@
     "date": "Mar.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "As part of GoInvo's Design Vision Series on Health Futures, we explore preventative health infrastructure for cities and towns.",
     "image": "/images/features/public-healthroom/pubhrm-hero-1.jpg",
@@ -162,7 +179,8 @@
     "date": "Feb.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "This model is a representation of the system of services that can make up digital health software.",
     "image": "/images/features/digital-health-connections-model/digital-health-connections-model-hero.jpg",
@@ -175,7 +193,9 @@
     "date": "Jan.2023",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health",
+      "government"
     ],
     "caption": "A map of the US healthcare system that describes the main actors and relationships between actors.",
     "image": "/images/features/us-healthcare-system-map/us-healthcare-system-map-hero.jpg",
@@ -188,9 +208,11 @@
     "date": "Nov.2022",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health-it-and-infrastructure",
+      "health"
     ],
-    "caption": "What’s on FHIR? — Are you a UX designer, developer, or product manager in digital healthcare and not quite sure what the heck FHIR is? Yeah, it can be tricky.",
+    "caption": "What's on FHIR? — Are you a UX designer, developer, or product manager in digital healthcare and not quite sure what the heck FHIR is? Yeah, it can be tricky.",
     "image": "/images/features/whats-on-fhir/whats-on-fhir-hero.jpg",
     "link": "https://www.whatsonfhir.org/",
     "hiddenWorkPage": true
@@ -201,7 +223,8 @@
     "date": "Sep.2022",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "Primary self care algorithms are decision support tools for individuals to better understand their health and the steps needed to optimize their health status.",
     "image": "/images/features/primary-self-care-algorithms/primary-self-care-algorithms-hero.jpg",
@@ -214,7 +237,8 @@
     "date": "May.2022",
     "client": "Feature",
     "categories": [
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "GoInvo breaks down significant digital health trends you should watch for.",
     "image": "/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg",
@@ -252,7 +276,9 @@
     "client": "Feature",
     "categories": [
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "government",
+      "health"
     ],
     "caption": "As the future of our healthcare system moves towards electronic healthcare records, we need patient data ownership rights to protect patient care.",
     "image": "/images/features/own-your-health-data/patient-data-ownership.jpg",
@@ -266,7 +292,9 @@
     "client": "Feature",
     "categories": [
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "government",
+      "health"
     ],
     "caption": "The United States is home to some of the best and worst care. The list serves as a call to action for everyone to close the gap.",
     "image": "/images/features/us-healthcare-problems/us_healthcare_problems_hero_v01.jpg",
@@ -280,7 +308,8 @@
     "client": "Feature",
     "categories": [
       "precision-medicine-and-genomics",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "Our open source visual depiction of the history of autism, and how precision medicine will help to define, manage, and treat the condition.",
     "image": "/images/features/precision-autism/precision-autism.jpg",
@@ -293,7 +322,9 @@
     "date": "Jun.2020",
     "client": "Feature",
     "categories": [
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "government",
+      "health"
     ],
     "caption": "The strategy to defeat pandemic viruses.",
     "image": "/images/features/test-treat-trace/test-treat-trace-header-2.jpg",
@@ -318,7 +349,8 @@
     "client": "Feature",
     "categories": [
       "public-health-and-policy",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "89% of health occurs outside of the clinical space through our genetics, behavior, environment, and social circumstances. These factors are known as the social determinants of health.",
     "image": "/images/services/doh-preview.jpg",
@@ -330,7 +362,8 @@
     "date": "Mar.2020",
     "client": "Feature",
     "categories": [
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "health"
     ],
     "caption": "A primer on COVID-19 with weekly updates",
     "image": "/images/features/coronavirus/hero.jpg",
@@ -345,7 +378,8 @@
     "client": "Feature",
     "categories": [
       "public-health-and-policy",
-      "health-it-and-infrastructure"
+      "health-it-and-infrastructure",
+      "health"
     ],
     "caption": "A meaningful, informed consent process designed for patients",
     "image": "/images/features/patient-centered-consent/consent-hero2.jpg",
@@ -360,7 +394,8 @@
     "categories": [
       "public-health-and-policy",
       "patient-engagement",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "",
     "image": "/images/features/vapepocolypse/vapepocolypse-hero.jpg",
@@ -375,7 +410,8 @@
     "client": "Feature",
     "categories": [
       "public-health-and-policy",
-      "health-it-and-infrastructure"
+      "health-it-and-infrastructure",
+      "health"
     ],
     "caption": "The health data trade has quietly grown with little patient or doctor knowledge.",
     "image": "/images/features/health-data-use/health-data-use-hero-2.jpg",
@@ -391,7 +427,8 @@
       "care-management",
       "health-it-and-infrastructure",
       "patient-engagement",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "An open source framework for patient-reported outcomes.",
     "image": "/images/features/open-pro/open-pro-hero-v2.jpg",
@@ -405,7 +442,8 @@
     "client": "Feature",
     "categories": [
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "health"
     ],
     "caption": "Tracking the allocation and flow of money in the US healthcare system to reveal connections within.",
     "image": "/images/features/healthcare-dollars/healthcare-dollars-hero.jpg",
@@ -418,7 +456,8 @@
     "client": "Feature",
     "categories": [
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "health"
     ],
     "caption": "Half of face-to-face clinical office visits can be conducted virtually.",
     "image": "/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg",
@@ -431,7 +470,8 @@
     "client": "Feature",
     "categories": [
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "health"
     ],
     "caption": "Loneliness is more than a feeling, it can effect our overall health and increase our risk for certain conditions.",
     "image": "/images/features/loneliness-in-our-human-code/loneliness-featured.jpg",
@@ -445,7 +485,8 @@
     "categories": [
       "health-it-and-infrastructure",
       "open-source",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "health"
     ],
     "caption": "The debut issue of our Open Source Healthcare Journal, advocating innovative open source ideas to change healthcare for the better.",
     "image": "/images/features/open-source-healthcare/open-source-healthcare-featured.jpg",
@@ -458,7 +499,8 @@
     "client": "Feature",
     "categories": [
       "precision-medicine-and-genomics",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "Open source design guidelines for delivering digitized carrier testing results.",
     "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
@@ -483,7 +525,8 @@
     "client": "Feature",
     "categories": [
       "public-health-and-policy",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "How citizens of the USA really die (from 2007-2014).",
     "image": "/images/features/killer-truths/killer-truths-featured2.jpg",
@@ -497,7 +540,8 @@
     "categories": [
       "patient-engagement",
       "care-management",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "A patient guide to manage day-to-day health based on health concerns, goals, and interventions.",
     "image": "/images/features/care-plans/care-plans-featured2.jpg",
@@ -510,7 +554,8 @@
     "client": "Feature",
     "categories": [
       "public-health-and-policy",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "There are an estimated 1.6 million cases of Zika cirus in 33 countries.",
     "image": "/images/features/understanding-zika/understanding-zika-featured.jpg",
@@ -533,7 +578,9 @@
     "client": "Feature",
     "categories": [
       "health-it-and-infrastructure",
-      "public-health-and-policy"
+      "public-health-and-policy",
+      "health",
+      "government"
     ],
     "date": "Sep.2015",
     "caption": "How do we heal an ailing system?",
@@ -557,7 +604,8 @@
     "date": "Mar.2015",
     "client": "Feature",
     "categories": [
-      "patient-engagement"
+      "patient-engagement",
+      "health"
     ],
     "caption": "How magical technology will revolutionize human health.",
     "image": "/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg",
@@ -578,7 +626,9 @@
     "title": "Redesign Democracy",
     "date": "Oct.2014",
     "client": "Feature",
-    "categories": [],
+    "categories": [
+      "government"
+    ],
     "caption": "A better solution for the digital era.",
     "image": "/images/features/redesign-democracy/redesign-democracy-featured.jpg",
     "link": "https://www.goinvo.com/features/redesign-democracy/",
@@ -591,7 +641,8 @@
     "client": "Feature",
     "categories": [
       "public-health-and-policy",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "A visual guide.",
     "image": "/images/features/understanding-ebola/understanding-ebola-featured.jpg",
@@ -604,7 +655,8 @@
     "client": "Feature",
     "categories": [
       "public-health-and-policy",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "caption": "An illustrated process on personal protective equipment.",
     "image": "/images/features/ebola-care-guideline/ebola-care-guideline-featured.jpg",

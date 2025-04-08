@@ -36,7 +36,8 @@
     "categories": [
       "open-source",
       "government",
-      "health"
+      "health",
+      "ai"
     ],
     "caption": "A centralized MA resident database for better service accessibility.",
     "link": "/vision/eligibility-engine/",
@@ -108,7 +109,8 @@
     "categories": [
       "open-source",
       "health",
-      "government"
+      "government",
+      "ai"
     ],
     "caption": "Mapping cancer journey pain points and exploring how navigation could support patients and their families.",
     "link": "/vision/national-cancer-navigation/",

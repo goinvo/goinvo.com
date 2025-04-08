@@ -4,7 +4,7 @@ import BackgroundImage from './background-image'
 import CATEGORIES_LIST from '../data/categories.json'
 
 class ImageBlock extends Component {
-  formatCategories = categories => {
+  /*formatCategories = categories => {
     let str = ''
 
     categories.map((cat, i) => {
@@ -14,7 +14,7 @@ class ImageBlock extends Component {
     })
 
     return str
-  }
+  }*/
 
   render() {
     const {
@@ -35,14 +35,12 @@ class ImageBlock extends Component {
 
     return (
       <div
-        className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${
-          className ? className : ''
-        }`}
+        className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className ? className : ''
+          }`}
       >
         <div
-          className={`image-block__image-container ${
-            isSmall ? 'image-block__image-container--small' : ''
-          }`}
+          className={`image-block__image-container ${isSmall ? 'image-block__image-container--small' : ''
+            }`}
         >
           <BackgroundImage
             src={image}
@@ -59,13 +57,24 @@ class ImageBlock extends Component {
             <p className="text--gray">
               {client ? <span>{client}</span> : null}
               {client && (date || (categories && categories.length)) ? (
+                <span></span>
+              ) : null}
+              {categories && categories.length ? (
+                <span></span>
+              ) : null}
+              {date ? <span> | {date}</span> : null}
+            </p>
+
+            /*<p className="text--gray">
+              {client ? <span>{client}</span> : null}
+              {client && (date || (categories && categories.length)) ? (
                 <span> | </span>
               ) : null}
               {categories && categories.length ? (
                 <span>{this.formatCategories(categories)}</span>
               ) : null}
               {date ? <span>{date}</span> : null}
-            </p>
+            </p> */
           ) : null}
           <p className="text--gray">{caption}</p>
           {this.props.children ? (

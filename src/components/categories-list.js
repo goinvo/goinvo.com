@@ -43,7 +43,7 @@ class CategoriesList extends Component {
 
   render() {
     const numPerColumn = Math.ceil(CATEGORIES_LIST.length / this.props.columns)
-    console.log(numPerColumn);
+
     const columns = Array.apply(null, { length: this.props.columns })
 
     return (

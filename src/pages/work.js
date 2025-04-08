@@ -201,14 +201,13 @@ class WorkPage extends Component {
               ref={this.categoryDropdownButton}
             >
               {this.state.categoriesCollapsed &&
-              !this.state.hasUsedFilter &&
-              this.state.selectedCategory.id === allCategory.id
+                !this.state.hasUsedFilter &&
+                this.state.selectedCategory.id === allCategory.id
                 ? 'Add a filter'
                 : this.state.selectedCategory.title}
               <Caret
-                className={`icon icon--md margin-left flip ${
-                  !this.state.categoriesCollapsed ? 'flip--is-flipped' : ''
-                }`}
+                className={`icon icon--md margin-left flip ${!this.state.categoriesCollapsed ? 'flip--is-flipped' : ''
+                  }`}
                 style={{ marginTop: '-1px' }}
               />
             </button>
@@ -223,7 +222,7 @@ class WorkPage extends Component {
             >
               <div className="max-width content-padding">
                 <CategoriesList
-                  columns={3}
+                  columns={4}
                   selectedCategoryId={this.state.selectedCategory.id}
                   onSelectCategory={this.setSelectedCategory}
                 />

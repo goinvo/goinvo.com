@@ -1,0 +1,18 @@
+[
+  {
+    "id": "health",
+    "title": "Health"
+  },
+  {
+    "id": "enterprise",
+    "title": "Enterprise"
+  },
+  {
+    "id": "government",
+    "title": "Government"
+  },
+  {
+    "id": "ai",
+    "title": "AI"
+  }
+]

@@ -9,7 +9,7 @@ export const allCategory = {
   title: 'All',
 }
 
-CATEGORIES_LIST.push(allCategory);
+//CATEGORIES_LIST.push(allCategory);
 
 class CategoriesList extends Component {
   renderCategory = cat => {
@@ -42,6 +42,10 @@ class CategoriesList extends Component {
   }
 
   render() {
+    const categories = this.props.includeAll
+      ? [allCategory, ...CATEGORIES_LIST]
+      : CATEGORIES_LIST
+
     const numPerColumn = Math.ceil(CATEGORIES_LIST.length / this.props.columns)
 
     const columns = Array.apply(null, { length: this.props.columns })
@@ -61,10 +65,8 @@ class CategoriesList extends Component {
                   : ''
                   }`}
               >
-                {i === 0 && this.props.includeAll
-                  ? this.renderCategory(allCategory)
-                  : null}
-                {CATEGORIES_LIST.slice(
+
+                {categories.slice(
                   i * numPerColumn,
                   i * numPerColumn + numPerColumn
                 ).map(cat => this.renderCategory(cat))}

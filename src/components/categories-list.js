@@ -9,7 +9,7 @@ export const allCategory = {
   title: 'All',
 }
 
-CATEGORIES_LIST.unshift(allCategory);
+CATEGORIES_LIST.push(allCategory);
 
 class CategoriesList extends Component {
   renderCategory = cat => {

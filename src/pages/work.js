@@ -222,7 +222,7 @@ class WorkPage extends Component {
             >
               <div className="max-width content-padding">
                 <CategoriesList
-                  columns={4}
+                  columns={5}
                   selectedCategoryId={this.state.selectedCategory.id}
                   onSelectCategory={this.setSelectedCategory}
                 />

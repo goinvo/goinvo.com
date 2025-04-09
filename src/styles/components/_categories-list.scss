@@ -20,7 +20,7 @@
     &--selected {
       #{$parent}__link {
         color: $color-primary;
-        font-weight: $font-weight--bold;
+        font-weight: $font-weight--normal;
       }
 
       #{$parent}__selected-indicator {

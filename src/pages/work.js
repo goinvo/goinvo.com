@@ -24,7 +24,7 @@ import {
 
 import Caret from '../assets/images/icon-caret.inline.svg'
 
-import CATEGORIES_LIST from '../data/categories.json'
+import CATEGORIES_LIST from '../data/categories-buckets.json'
 
 if (typeof window !== 'undefined') {
   smoothscroll.polyfill()

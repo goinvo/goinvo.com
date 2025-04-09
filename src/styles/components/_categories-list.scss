@@ -1,6 +1,7 @@
 .categories-list {
   $parent: &;
-  $categories-list-border: 1px solid $color-gray--medium;
+  //$categories-list-border: 1px solid $color-gray--medium;
+  $categories-list-border: 1px solid $color-orange--light;
 
   @extend .list--unstyled;
   display: flex;
@@ -19,6 +20,7 @@
     &--selected {
       #{$parent}__link {
         color: $color-primary;
+        font-weight: $font-weight--normal;
       }
 
       #{$parent}__selected-indicator {
@@ -35,8 +37,13 @@
     display: block;
     width: 100%;
     padding: calc($spacing / 2) 2rem calc($spacing / 2) 0;
+    padding: 1rem 2rem 1rem 0;
     border-bottom: $categories-list-border;
     text-decoration: none;
+    color: $color-black;
+    font-family: $font-family--serif;
+    font-size: $font-size--lg;
+    font-weight: $font-weight--light;
   }
 
   &__selected-indicator {

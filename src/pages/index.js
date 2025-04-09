@@ -181,15 +181,17 @@ class IndexPage extends Component {
           </div>
         </div>
         <div className="max-width content-padding pad-bottom--double">
-          <div className="pure-g margin-vertical--double pad-vertical--double">
-            <div className="pure-u-1 pure-u-lg-1-3">
-              <h2 className="header--xl margin--none pad-right--double">
-                Our expertise in software design covers
-                <span className="text--serif text--primary">...</span>
-              </h2>
+          <div className="margin-vertical--double pad-vertical--double">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--xl margin--none pad-right--double">
+                  Our practices
+                </h2>
+              </div>
             </div>
-            <div className="pure-u-1 pure-u-lg-2-3">
-              <CategoriesList columns={2} />
+
+            <div className="pure-u-1 pure-u-lg-4-4">
+              <CategoriesList includeAll={false} columns={4} />
             </div>
           </div>
           <Columns columns={2}>

@@ -57,11 +57,13 @@ export function concatCaseStudiesAndFeatures(
     featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage)
   }
 
+  const allCaseStudiesOrder = caseStudiesOrder["all"] || [];
+
   return extractCaseStudyDataFromQuery(caseStudies)
     .concat(featuresToDisplay)
     .sort((a, b) => {
-      return caseStudiesOrder.indexOf(a.slug || a.id) >
-        caseStudiesOrder.indexOf(b.slug || b.id)
+      return allCaseStudiesOrder.indexOf(a.slug || a.id) >
+        allCaseStudiesOrder.indexOf(b.slug || b.id)
         ? 1
         : -1
     })

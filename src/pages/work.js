@@ -59,7 +59,7 @@ const upNextList = [
 
 const getWorkItemsOfCategory = (workItems, catId) => {
   let newWorkItems = []
-
+/*
   if (catId === allCategory.id) {
     newWorkItems = workItems
   } else {
@@ -69,6 +69,17 @@ const getWorkItemsOfCategory = (workItems, catId) => {
       }).length
     })
   }
+*/
+  if (catId === allCategory.id) {
+    // Return all work items if "all" category is selected
+    return workItems;
+    console.log('selectedCategory')
+  }
+
+  // Filter work items based on the selected category
+  return workItems.filter(item =>
+    item.categories.some(cat => cat === catId)
+  );
 
   return newWorkItems
 }

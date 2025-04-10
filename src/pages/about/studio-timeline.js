@@ -26,7 +26,8 @@ class StudioTimelinePage extends Component {
           <div className="max-width content-padding">
             <iframe
               title="Invo Studio Timeline"
-              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=5&height=650&start_at_slide=285"
+              src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2:2PACX-1vTIvl6eov0t7l37plBphnF26oCswjKp0pGFWNEK0b8uvTvm0sJKwNADa8s-BgogGLEnJ_gsb7uvST_u&font=Default&lang=en&initial_zoom=2&height=650&start_at_slide=285"
+              //src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1N0aoZHt8082QBIge4a3bgn8kfOG3njTgHktR3-78Ooc&font=Default&lang=en&initial_zoom=5&height=650&start_at_slide=285"
               width="100%"
               height="650"
               //start_at_slide="186"

@@ -36,8 +36,8 @@ export function extractWorkItemLinkDetails(item) {
   const externalLink = item.slug
     ? false
     : item.link.includes('/vision/')
-    ? false
-    : true
+      ? false
+      : true
   const suppressNewTab = item.external ? false : true
 
   return {
@@ -49,6 +49,7 @@ export function extractWorkItemLinkDetails(item) {
 
 export function concatCaseStudiesAndFeatures(
   caseStudies,
+  selectedCategoryId = "all",
   filterFeatures = true
 ) {
   let featuresToDisplay = features
@@ -57,13 +58,13 @@ export function concatCaseStudiesAndFeatures(
     featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage)
   }
 
-  const allCaseStudiesOrder = caseStudiesOrder["all"] || [];
+  const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
 
   return extractCaseStudyDataFromQuery(caseStudies)
     .concat(featuresToDisplay)
     .sort((a, b) => {
-      return allCaseStudiesOrder.indexOf(a.slug || a.id) >
-        allCaseStudiesOrder.indexOf(b.slug || b.id)
+      return categoryOrder.indexOf(a.slug || a.id) >
+        categoryOrder.indexOf(b.slug || b.id)
         ? 1
         : -1
     })
@@ -71,10 +72,10 @@ export function concatCaseStudiesAndFeatures(
 
 export function debounce(func, wait, immediate) {
   var timeout
-  return function() {
+  return function () {
     var context = this,
       args = arguments
-    var later = function() {
+    var later = function () {
       timeout = null
       if (!immediate) func.apply(context, args)
     }

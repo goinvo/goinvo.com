@@ -59,7 +59,6 @@ const upNextList = [
 
 const getWorkItemsOfCategory = (workItems, catId) => {
   let newWorkItems = []
-/*
   if (catId === allCategory.id) {
     newWorkItems = workItems
   } else {
@@ -69,11 +68,10 @@ const getWorkItemsOfCategory = (workItems, catId) => {
       }).length
     })
   }
-*/
+
   if (catId === allCategory.id) {
     // Return all work items if "all" category is selected
     return workItems;
-    console.log('selectedCategory')
   }
 
   // Filter work items based on the selected category
@@ -81,7 +79,6 @@ const getWorkItemsOfCategory = (workItems, catId) => {
     item.categories.some(cat => cat === catId)
   );
 
-  return newWorkItems
 }
 
 const frontmatter = {
@@ -95,7 +92,7 @@ class WorkPage extends Component {
   constructor(props) {
     super(props)
 
-    const workItems = concatCaseStudiesAndFeatures(props.data)
+    const workItems = concatCaseStudiesAndFeatures(props.data, "all")
     const query =
       props.location && props.location.search ? props.location.search : null
     const categoryId =
@@ -106,10 +103,16 @@ class WorkPage extends Component {
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       allCategory
-    const activeWorkItems = getWorkItemsOfCategory(
+    console.log('selectedCategory', selectedCategory.id);
+    /*const activeWorkItems = getWorkItemsOfCategory(
       workItems,
       selectedCategory.id
-    )
+    )*/
+
+    const activeWorkItems = concatCaseStudiesAndFeatures(
+      props.data,
+      selectedCategory.id
+    );
 
     this.state = {
       workItems,

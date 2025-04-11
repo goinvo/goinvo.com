@@ -25,6 +25,7 @@ import {
 import Caret from '../assets/images/icon-caret.inline.svg'
 
 import CATEGORIES_LIST from '../data/categories-buckets.json'
+import CASE_STUDY_ORDER from '../data/case-study-order.json';
 
 if (typeof window !== 'undefined') {
   smoothscroll.polyfill()
@@ -58,6 +59,9 @@ const upNextList = [
 ]
 
 const getWorkItemsOfCategory = (workItems, catId) => {
+  const categoryOrder = CASE_STUDY_ORDER[catId] || [];
+  console.log('Category Order:', categoryOrder);
+
   let newWorkItems = []
   if (catId === allCategory.id) {
     newWorkItems = workItems
@@ -67,17 +71,28 @@ const getWorkItemsOfCategory = (workItems, catId) => {
         return cat === catId
       }).length
     })
-  }
+  }*/
+  // Get the order for the selected category from the case-study-order.json file
 
-  if (catId === allCategory.id) {
-    // Return all work items if "all" category is selected
-    return workItems;
-  }
 
   // Filter work items based on the selected category
-  return workItems.filter(item =>
-    item.categories.some(cat => cat === catId)
-  );
+  const filteredWorkItems = catId === allCategory.id
+    ? workItems // Include all work items for the "all" category
+    : workItems.filter(item => item.categories.includes(catId));
+
+  // Sort the filtered work items based on the order in case-study-order.json
+  const orderedWorkItems = filteredWorkItems.sort((a, b) => {
+    const indexA = categoryOrder.indexOf(a.id);
+    const indexB = categoryOrder.indexOf(b.id);
+
+    // Items not in the order list will appear at the end
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+
+    return indexA - indexB;
+  });
+
+  return orderedWorkItems;
 
 }
 
@@ -109,7 +124,7 @@ class WorkPage extends Component {
       selectedCategory.id
     )*/
 
-    const activeWorkItems = concatCaseStudiesAndFeatures(
+    const activeWorkItems = getWorkItemsOfCategory(
       props.data,
       selectedCategory.id
     );

@@ -52,21 +52,30 @@ export function concatCaseStudiesAndFeatures(
   selectedCategoryId = "all",
   filterFeatures = true
 ) {
+  const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
+  console.log('Category Order:', categoryOrder);
+
   let featuresToDisplay = features
 
   if (filterFeatures) {
     featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage)
   }
 
-  const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
-
   return extractCaseStudyDataFromQuery(caseStudies)
     .concat(featuresToDisplay)
     .sort((a, b) => {
-      return categoryOrder.indexOf(a.slug || a.id) >
+      /*return categoryOrder.indexOf(a.slug || a.id) >
         categoryOrder.indexOf(b.slug || b.id)
         ? 1
         : -1
+      */
+      const indexA = categoryOrder.indexOf(a.slug || a.id);
+      const indexB = categoryOrder.indexOf(b.slug || b.id);
+
+      if (indexA === -1) return 1;
+      if (indexB === -1) return -1;
+
+      return indexA - indexB;
     })
 }
 

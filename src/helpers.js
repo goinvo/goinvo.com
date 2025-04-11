@@ -52,6 +52,7 @@ export function concatCaseStudiesAndFeatures(
   selectedCategoryId = "all",
   filterFeatures = true
 ) {
+  const validCategories = Object.keys(caseStudiesOrder); // Get valid categories from case-study-order.json
   const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
   console.log('Category Order:', categoryOrder);
 
@@ -72,7 +73,8 @@ export function concatCaseStudiesAndFeatures(
     selectedCategoryId === "all"
       ? combinedItems // Include all items for the "all" category
       : combinedItems.filter(item =>
-        item.categories?.includes(selectedCategoryId)
+        item.categories?.some(cat => validCategories.includes(cat)) && // Ignore invalid categories
+        item.categories?.includes(selectedCategoryId) // Ensure the item belongs to the selected category
       );
 
   // Sort items based on the order in case-study-order.json

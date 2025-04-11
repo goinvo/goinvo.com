@@ -71,7 +71,7 @@ const getWorkItemsOfCategory = (workItems, catId) => {
         return cat === catId
       }).length
     })
-  }
+  }*/
   // Get the order for the selected category from the case-study-order.json file
 
 
@@ -105,26 +105,29 @@ const frontmatter = {
 
 class WorkPage extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    // Get sorted work items by default (using "all" category)
-    const workItems = getWorkItemsOfCategory(props.data, "all");
-
-    // Determine the selected category from the query or default to "all"
+    const workItems = concatCaseStudiesAndFeatures(props.data, "all")
     const query =
-      props.location && props.location.search ? props.location.search : null;
+      props.location && props.location.search ? props.location.search : null
     const categoryId =
       query && query.includes('category')
         ? query.substr(query.indexOf('=') + 1)
-        : allCategory.id;
-
+        : allCategory.id
     const selectedCategory =
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
-      allCategory;
+      allCategory
+    console.log('selectedCategory', selectedCategory.id);
+    /*const activeWorkItems = getWorkItemsOfCategory(
+      workItems,
+      selectedCategory.id
+    )*/
 
-    // Get work items sorted by the selected category
-    const activeWorkItems = getWorkItemsOfCategory(props.data, selectedCategory.id);
+    const activeWorkItems = getWorkItemsOfCategory(
+      props.data,
+      selectedCategory.id
+    );
 
     this.state = {
       workItems,
@@ -135,9 +138,9 @@ class WorkPage extends Component {
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
       hasUsedFilter: false,
-    };
+    }
 
-    this.categoryDropdownButton = React.createRef();
+    this.categoryDropdownButton = React.createRef()
   }
 
   handleCategoriesStickyStateChange = (isStuck, stickyBasedOnWidth) => {

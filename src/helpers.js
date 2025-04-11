@@ -47,44 +47,36 @@ export function extractWorkItemLinkDetails(item) {
   }
 }
 
-export function getSortedWorkItems(caseStudies, selectedCategoryId = "all", filterFeatures = true) {
+export function concatCaseStudiesAndFeatures(
+  caseStudies,
+  selectedCategoryId = "all",
+  filterFeatures = true
+) {
   const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
   console.log('Category Order:', categoryOrder);
 
-  // Extract case studies
-  const caseStudyItems = caseStudies.allMdx.nodes.map(node => ({
-    slug: node.parent.name,
-    ...node.frontmatter,
-  }));
+  let featuresToDisplay = features
 
-  // Filter features if needed
-  let featuresToDisplay = features;
   if (filterFeatures) {
-    featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage);
+    featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage)
   }
 
-  // Combine case studies and features
-  const combinedItems = caseStudyItems.concat(featuresToDisplay);
+  return extractCaseStudyDataFromQuery(caseStudies)
+    .concat(featuresToDisplay)
+    .sort((a, b) => {
+      /*return categoryOrder.indexOf(a.slug || a.id) >
+        categoryOrder.indexOf(b.slug || b.id)
+        ? 1
+        : -1
+      */
+      const indexA = categoryOrder.indexOf(a.slug || a.id);
+      const indexB = categoryOrder.indexOf(b.slug || b.id);
 
-  // Filter items based on the selected category (if not "all")
-  const filteredItems =
-    selectedCategoryId === "all"
-      ? combinedItems
-      : combinedItems.filter(item =>
-          item.categories && item.categories.includes(selectedCategoryId)
-        );
+      if (indexA === -1) return 1;
+      if (indexB === -1) return -1;
 
-  // Sort items based on the category order
-  return filteredItems.sort((a, b) => {
-    const indexA = categoryOrder.indexOf(a.slug || a.id);
-    const indexB = categoryOrder.indexOf(b.slug || b.id);
-
-    // Items not in the order list will appear at the end
-    if (indexA === -1) return 1;
-    if (indexB === -1) return -1;
-
-    return indexA - indexB;
-  });
+      return indexA - indexB;
+    })
 }
 
 export function debounce(func, wait, immediate) {

@@ -32,6 +32,9 @@ export function findCaseStudyById(data, id) {
 }
 
 export function extractWorkItemLinkDetails(item) {
+  if (!item) {
+    return {};
+  }
   const link = item.slug ? `/work/${item.slug}` : item.link
   const externalLink = item.slug
     ? false
@@ -54,7 +57,6 @@ export function concatCaseStudiesAndFeatures(
 ) {
   const validCategories = Object.keys(caseStudiesOrder); // Get valid categories from case-study-order.json
   const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
-  console.log('Category Order:', categoryOrder);
 
   // Extract case studies from the query
   const caseStudyItems = extractCaseStudyDataFromQuery(caseStudies);

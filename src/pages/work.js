@@ -60,7 +60,6 @@ const upNextList = [
 
 const getWorkItemsOfCategory = (workItems, catId) => {
   const categoryOrder = CASE_STUDY_ORDER[catId] || [];
-  console.log('Category Order:', categoryOrder);
 
   let newWorkItems = []
   if (catId === allCategory.id) {

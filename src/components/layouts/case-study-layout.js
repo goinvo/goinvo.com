@@ -137,10 +137,11 @@ const CaseStudyLayout = ({ data, children }) => {
             <div className="max-width content-padding">
               <h3 className="header--md">Up next</h3>
               <Columns columns={3}>
-                {caseStudy.frontmatter.upNext.map(id => {
+                {!!caseStudiesWithFeatures.length && caseStudy.frontmatter.upNext.map(id => {
                   const nextItem = caseStudiesWithFeatures.find(
                     item => item.slug === id || item.id === id
                   )
+
                   const {
                     link,
                     externalLink,

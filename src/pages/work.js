@@ -25,6 +25,7 @@ import {
 import Caret from '../assets/images/icon-caret.inline.svg'
 
 import CATEGORIES_LIST from '../data/categories-buckets.json'
+import CASE_STUDY_ORDER from '../data/case-study-order.json';
 
 if (typeof window !== 'undefined') {
   smoothscroll.polyfill()
@@ -58,8 +59,9 @@ const upNextList = [
 ]
 
 const getWorkItemsOfCategory = (workItems, catId) => {
-  let newWorkItems = []
+  const categoryOrder = CASE_STUDY_ORDER[catId] || [];
 
+  let newWorkItems = []
   if (catId === allCategory.id) {
     newWorkItems = workItems
   } else {
@@ -69,8 +71,28 @@ const getWorkItemsOfCategory = (workItems, catId) => {
       }).length
     })
   }
+  // Get the order for the selected category from the case-study-order.json file
 
-  return newWorkItems
+
+  // Filter work items based on the selected category
+  const filteredWorkItems = catId === allCategory.id
+    ? workItems // Include all work items for the "all" category
+    : workItems.filter(item => item.categories.includes(catId));
+
+  // Sort the filtered work items based on the order in case-study-order.json
+  const orderedWorkItems = filteredWorkItems.sort((a, b) => {
+    const indexA = categoryOrder.indexOf(a.id);
+    const indexB = categoryOrder.indexOf(b.id);
+
+    // Items not in the order list will appear at the end
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+
+    return indexA - indexB;
+  });
+
+  return orderedWorkItems;
+
 }
 
 const frontmatter = {
@@ -82,36 +104,35 @@ const frontmatter = {
 
 class WorkPage extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    const workItems = concatCaseStudiesAndFeatures(props.data)
+    // Default category is "all"
     const query =
-      props.location && props.location.search ? props.location.search : null
+      props.location && props.location.search ? props.location.search : null;
     const categoryId =
       query && query.includes('category')
         ? query.substr(query.indexOf('=') + 1)
-        : allCategory.id
+        : allCategory.id;
+
     const selectedCategory =
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
-      allCategory
-    const activeWorkItems = getWorkItemsOfCategory(
-      workItems,
-      selectedCategory.id
-    )
+      allCategory;
+
+    // Get work items for the selected category
+    const workItems = concatCaseStudiesAndFeatures(props.data, selectedCategory.id);
 
     this.state = {
       workItems,
       selectedCategory,
-      activeWorkItems,
       heroPadding: 0,
       categoriesStuck: false,
       categoriesCollapsed: false,
       suppressCollapseTransition: false,
       hasUsedFilter: false,
-    }
+    };
 
-    this.categoryDropdownButton = React.createRef()
+    this.categoryDropdownButton = React.createRef();
   }
 
   handleCategoriesStickyStateChange = (isStuck, stickyBasedOnWidth) => {
@@ -140,25 +161,27 @@ class WorkPage extends Component {
 
   setSelectedCategory = cat => {
     if (!this.state.hasUsedFilter) {
-      this.setState({ hasUsedFilter: true })
+      this.setState({ hasUsedFilter: true });
     }
+
+    // Update the selected category and work items
     this.setState(
       {
         selectedCategory: cat,
-        activeWorkItems: getWorkItemsOfCategory(this.state.workItems, cat.id),
+        workItems: concatCaseStudiesAndFeatures(this.props.data, cat.id),
         categoriesCollapsed: this.state.categoriesStuck ? true : false,
       },
       () => {
         if (typeof window !== 'undefined') {
-          window.history.replaceState(null, null, `/work/?category=${cat.id}`)
+          window.history.replaceState(null, null, `/work/?category=${cat.id}`);
         }
         if (this.state.categoriesCollapsed) {
-          this.scrollWorkItemsIntoView()
+          this.scrollWorkItemsIntoView();
         }
-        this.props.setCategory(cat)
+        this.props.setCategory(cat);
       }
-    )
-  }
+    );
+  };
 
   scrollWorkItemsIntoView = () => {
     if (typeof window !== 'undefined') {
@@ -236,7 +259,7 @@ class WorkPage extends Component {
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <div className="margin-top--only-lg">
             <Columns columns={2}>
-              {this.state.activeWorkItems.map((item, i) => {
+              {this.state.workItems.map((item, i) => {
                 const {
                   link,
                   externalLink,

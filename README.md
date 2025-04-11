@@ -343,7 +343,7 @@ Wow I was right. A quote.
 
 ### Wrapping up
 
-Make commits to your branch adding content to your case study as you go, and make sure to push your branch to the GitHub repo. When finished, seek assistance getting your case study code reviewed and merged into the production website.
+Make commits to your branch adding content to your case study as you go, and make sure to push your branch to the GitHub repo. Add your new case study to the `case-study-order` file, adding it to the appropriate order for each category. When finished, seek assistance getting your case study code reviewed and merged into the production website. 
 
 ## Adding a simple feature
 
@@ -609,6 +609,8 @@ Open up `src/data/features.json` and add your feature to the top as the followin
   "link": "/vision/your-feature-url/"
 },
 ```
+
+If your feature will be shown on the work page, also add your new case study to the `case-study-order` file, adding it to the appropriate order for each category
 
 ### Adding team members
 

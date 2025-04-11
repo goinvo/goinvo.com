@@ -64,18 +64,19 @@ export function concatCaseStudiesAndFeatures(
   return extractCaseStudyDataFromQuery(caseStudies)
     .concat(featuresToDisplay)
     .sort((a, b) => {
-      /*return categoryOrder.indexOf(a.slug || a.id) >
+      return categoryOrder.indexOf(a.slug || a.id) >
         categoryOrder.indexOf(b.slug || b.id)
         ? 1
         : -1
-      */
-      const indexA = categoryOrder.indexOf(a.slug || a.id);
+
+      /*const indexA = categoryOrder.indexOf(a.slug || a.id);
       const indexB = categoryOrder.indexOf(b.slug || b.id);
 
       if (indexA === -1) return 1;
       if (indexB === -1) return -1;
 
       return indexA - indexB;
+      */
     })
 }
 

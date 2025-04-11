@@ -55,30 +55,42 @@ export function concatCaseStudiesAndFeatures(
   const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
   console.log('Category Order:', categoryOrder);
 
-  let featuresToDisplay = features
+  // Extract case studies from the query
+  const caseStudyItems = extractCaseStudyDataFromQuery(caseStudies);
 
+  // Filter features if needed
+  let featuresToDisplay = features;
   if (filterFeatures) {
-    featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage)
+    featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage);
   }
 
-  return extractCaseStudyDataFromQuery(caseStudies)
-    .concat(featuresToDisplay)
-    .filter(item => item && (item.slug || item.id)) // Ensure items have slug or id
-    .sort((a, b) => {
-      return categoryOrder.indexOf(a.slug || a.id) >
-        categoryOrder.indexOf(b.slug || b.id)
-        ? 1
-        : -1
+  // Combine case studies and features
+  const combinedItems = caseStudyItems.concat(featuresToDisplay);
 
-      /*const indexA = categoryOrder.indexOf(a.slug || a.id);
-      const indexB = categoryOrder.indexOf(b.slug || b.id);
+  // Filter items based on the selected category
+  const filteredItems =
+    selectedCategoryId === "all"
+      ? combinedItems // Include all items for the "all" category
+      : combinedItems.filter(item =>
+        item.categories?.includes(selectedCategoryId)
+      );
 
-      if (indexA === -1) return 1;
-      if (indexB === -1) return -1;
+  // Sort items based on the order in case-study-order.json
+  const sortedItems = filteredItems.sort((a, b) => {
+    const idA = a?.slug || a?.id || "";
+    const idB = b?.slug || b?.id || "";
 
-      return indexA - indexB;
-      */
-    })
+    const indexA = categoryOrder.indexOf(idA);
+    const indexB = categoryOrder.indexOf(idB);
+
+    // Items not in the order list will appear at the end
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+
+    return indexA - indexB;
+  });
+
+  return sortedItems;
 }
 
 export function debounce(func, wait, immediate) {

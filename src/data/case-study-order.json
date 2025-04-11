@@ -38,7 +38,6 @@
   "health": [
     "prior-auth",
     "healthcare-dollars-redux",
-    "public-sector",
     "all-of-us",
     "mitre-shr",
     "maya-ehr",
@@ -69,7 +68,8 @@
     "insidetracker-nutrition-science",
     "ebola-care-guideline",
     "paintrackr",
-    "tabeeb-diagnostics"
+    "tabeeb-diagnostics",
+    "public-sector"
   ],
   "enterprise": [
     "staffplan",

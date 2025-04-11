@@ -63,6 +63,7 @@ export function concatCaseStudiesAndFeatures(
 
   return extractCaseStudyDataFromQuery(caseStudies)
     .concat(featuresToDisplay)
+    .filter(item => item && (item.slug || item.id)) // Ensure items have slug or id
     .sort((a, b) => {
       return categoryOrder.indexOf(a.slug || a.id) >
         categoryOrder.indexOf(b.slug || b.id)

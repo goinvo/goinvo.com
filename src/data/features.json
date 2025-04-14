@@ -13,7 +13,8 @@
     ],
     "caption": "An interactive map that tracks the origin, flow, and destination of money through the US healthcare system.",
     "image": "/images/features/health-dollars-redux/health-dollars-redux-hero.jpg",
-    "link": "/vision/healthcare-dollars-redux/"
+    "link": "/vision/healthcare-dollars-redux/",
+    "hiddenWorkPage": true
   },
   {
     "id": "goinvo-timeline",

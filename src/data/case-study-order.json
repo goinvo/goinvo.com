@@ -1,7 +1,6 @@
 {
   "all": [
     "prior-auth",
-    "healthcare-dollars-redux",
     "public-sector",
     "all-of-us",
     "mitre-shr",
@@ -37,7 +36,6 @@
   ],
   "healthcare": [
     "all-of-us",
-    "healthcare-dollars-redux",
     "prior-auth",
     "mitre-shr",
     "maya-ehr",
@@ -88,7 +86,6 @@
     "mitre-flux-notes",
     "ahrq-cds",
     "mitre-state-of-us-healthcare",
-    "healthcare-dollars-redux",
     "public-sector"
   ],
   "AI": [
@@ -96,7 +93,6 @@
     "3m-coderyte",
     "prior-auth",
     "national-cancer-navigation",
-    "eligibility-engine",
-    "healthcare-dollars-redux"
+    "eligibility-engine"
   ]
 }

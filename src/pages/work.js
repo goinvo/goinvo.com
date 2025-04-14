@@ -106,8 +106,7 @@ class WorkPage extends Component {
       heroImages.length > 0
         ? heroImages[Math.floor(Math.random() * heroImages.length)]
         : '/images/work/dr-emily.jpg'; // Replace with a valid default image path
-    console.log("heroImage: ", heroImage);
-  
+    
     // Create the frontmatter dynamically
     const frontmatter = {
       metaTitle: 'Case Studies by UX Design Agency GoInvo',
@@ -136,7 +135,6 @@ class WorkPage extends Component {
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       allCategory;
-    console.log("Selected category: ", selectedCategory);
     
     // Get work items for the selected category
     const workItems = concatCaseStudiesAndFeatures(props.data, selectedCategory.id);
@@ -191,8 +189,7 @@ class WorkPage extends Component {
     }
 
     // Get category data, hero images, and frontmatter
-    const { categoryData, frontmatter, heroImage } =
-    this.getCategoryData(cat.id);
+    const { categoryData, frontmatter, heroImage } = this.getCategoryData(cat.id);
 
     // Update the selected category and work items
     this.setState(

@@ -114,7 +114,8 @@ class WorkPage extends Component {
       metaDescription:
         'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
       heroImage: heroImage,
-      title: categoryData.title  || 'Explore Our Work' // Fallback title
+      title: 'Design that Delivers', // Fallback title
+      subtitle: 'Real projects, real users, real business outcomes.'
     }
   
     return { categoryData, heroImages, frontmatter, heroImage };
@@ -238,6 +239,8 @@ class WorkPage extends Component {
           <h1 className="header--xl">
             {frontmatter.title}
             <span className="text--serif text--primary">.</span>
+            <br />
+            <span className="text--serif text--lg">{frontmatter.subtitle}</span>
           </h1>
         </Hero>
         <Sticky

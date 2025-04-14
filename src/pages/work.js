@@ -14,6 +14,7 @@ import Quote from '../components/quote'
 import Collapsible from '../components/collapsible'
 import HubspotForm from '../components/hubspot-form'
 import GradientImageColumns from '../components/gradient-image-columns'
+import headerData from '../data/homepage-headers.json'
 
 import config from '../../config'
 
@@ -92,14 +93,6 @@ const getWorkItemsOfCategory = (workItems, catId) => {
   });
 
   return orderedWorkItems;
-
-}
-
-const frontmatter = {
-  metaTitle: 'Case Studies by Healthcare UX Design Agency GoInvo',
-  metaDescription:
-    'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
-  heroImage: '/images/work/dr-emily.jpg',
 }
 
 class WorkPage extends Component {
@@ -118,13 +111,36 @@ class WorkPage extends Component {
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       allCategory;
-
+    console.log("Selected category: ", selectedCategory);
+    
     // Get work items for the selected category
     const workItems = concatCaseStudiesAndFeatures(props.data, selectedCategory.id);
 
+    // Get category data for the selected category
+    const categoryData = headerData[selectedCategory?.id] || headerData['all'] || {};
+    const heroImages = categoryData.heroImages || [];
+
+    // Select a random hero image from the category (fallback to a default image if none exist)
+    const heroImage =
+      heroImages.length > 0
+        ? heroImages[Math.floor(Math.random() * heroImages.length)]
+        : '/images/work/dr-emily.jpg'; // Replace with a valid default image path
+    console.log("heroImage: ", heroImage);
+
+    const frontmatter = {
+      metaTitle: 'Case Studies by UX Design Agency GoInvo',
+      metaDescription:
+        'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
+      heroImage: heroImage,
+      title: categoryData.title  || 'Explore Our Work' // Fallback title
+    }
+
     this.state = {
       workItems,
+      categoryData,
+      heroImage,
       selectedCategory,
+      frontmatter,
       heroPadding: 0,
       categoriesStuck: false,
       categoriesCollapsed: false,
@@ -194,6 +210,8 @@ class WorkPage extends Component {
   }
 
   render() {
+    const { frontmatter, workItems, selectedCategory, categoryData } = this.state;
+
     return (
       <Layout frontmatter={frontmatter}>
         <Hero
@@ -202,10 +220,7 @@ class WorkPage extends Component {
           style={{ marginTop: this.state.heroPadding }}
         >
           <h1 className="header--xl">
-            Patient tested
-            <span className="text--serif text--primary">.</span>
-            <br />
-            Clinician approved
+            {frontmatter.title}
             <span className="text--serif text--primary">.</span>
           </h1>
         </Hero>

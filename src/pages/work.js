@@ -96,6 +96,30 @@ const getWorkItemsOfCategory = (workItems, catId) => {
 }
 
 class WorkPage extends Component {
+  getCategoryData(categoryId) {
+    // Get category data for the selected category
+    const categoryData = headerData[categoryId] || headerData['all'] || {};
+    const heroImages = categoryData.heroImages || [];
+  
+    // Select a random hero image from the category (fallback to a default image if none exist)
+    const heroImage =
+      heroImages.length > 0
+        ? heroImages[Math.floor(Math.random() * heroImages.length)]
+        : '/images/work/dr-emily.jpg'; // Replace with a valid default image path
+    console.log("heroImage: ", heroImage);
+  
+    // Create the frontmatter dynamically
+    const frontmatter = {
+      metaTitle: 'Case Studies by UX Design Agency GoInvo',
+      metaDescription:
+        'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
+      heroImage: heroImage,
+      title: categoryData.title  || 'Explore Our Work' // Fallback title
+    }
+  
+    return { categoryData, heroImages, frontmatter, heroImage };
+  }
+
   constructor(props) {
     super(props);
 
@@ -116,24 +140,9 @@ class WorkPage extends Component {
     // Get work items for the selected category
     const workItems = concatCaseStudiesAndFeatures(props.data, selectedCategory.id);
 
-    // Get category data for the selected category
-    const categoryData = headerData[selectedCategory?.id] || headerData['all'] || {};
-    const heroImages = categoryData.heroImages || [];
-
-    // Select a random hero image from the category (fallback to a default image if none exist)
-    const heroImage =
-      heroImages.length > 0
-        ? heroImages[Math.floor(Math.random() * heroImages.length)]
-        : '/images/work/dr-emily.jpg'; // Replace with a valid default image path
-    console.log("heroImage: ", heroImage);
-
-    const frontmatter = {
-      metaTitle: 'Case Studies by UX Design Agency GoInvo',
-      metaDescription:
-        'We design and ship beautiful software for healthcare organizations as far-reaching as 3M, Johnson & Johnson, and Walgreens, to leading startups.',
-      heroImage: heroImage,
-      title: categoryData.title  || 'Explore Our Work' // Fallback title
-    }
+    // Get category data, hero images, and frontmatter
+    const { categoryData, heroImages, frontmatter, heroImage } =
+      this.getCategoryData(selectedCategory.id);
 
     this.state = {
       workItems,
@@ -180,12 +189,19 @@ class WorkPage extends Component {
       this.setState({ hasUsedFilter: true });
     }
 
+    // Get category data, hero images, and frontmatter
+    const { categoryData, frontmatter, heroImage } =
+    this.getCategoryData(cat.id);
+
     // Update the selected category and work items
     this.setState(
       {
         selectedCategory: cat,
         workItems: concatCaseStudiesAndFeatures(this.props.data, cat.id),
         categoriesCollapsed: this.state.categoriesStuck ? true : false,
+        categoryData,
+        frontmatter,
+        heroImage,
       },
       () => {
         if (typeof window !== 'undefined') {

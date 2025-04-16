@@ -32,12 +32,15 @@ export function findCaseStudyById(data, id) {
 }
 
 export function extractWorkItemLinkDetails(item) {
+  if (!item) {
+    return {};
+  }
   const link = item.slug ? `/work/${item.slug}` : item.link
   const externalLink = item.slug
     ? false
     : item.link.includes('/vision/')
-    ? false
-    : true
+      ? false
+      : true
   const suppressNewTab = item.external ? false : true
 
   return {
@@ -49,30 +52,57 @@ export function extractWorkItemLinkDetails(item) {
 
 export function concatCaseStudiesAndFeatures(
   caseStudies,
+  selectedCategoryId = "all",
   filterFeatures = true
 ) {
-  let featuresToDisplay = features
+  const validCategories = Object.keys(caseStudiesOrder); // Get valid categories from case-study-order.json
+  const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
 
+  // Extract case studies from the query
+  const caseStudyItems = extractCaseStudyDataFromQuery(caseStudies);
+
+  // Filter features if needed
+  let featuresToDisplay = features;
   if (filterFeatures) {
-    featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage)
+    featuresToDisplay = features.filter(feature => !feature.hiddenWorkPage);
   }
 
-  return extractCaseStudyDataFromQuery(caseStudies)
-    .concat(featuresToDisplay)
-    .sort((a, b) => {
-      return caseStudiesOrder.indexOf(a.slug || a.id) >
-        caseStudiesOrder.indexOf(b.slug || b.id)
-        ? 1
-        : -1
-    })
+  // Combine case studies and features
+  const combinedItems = caseStudyItems.concat(featuresToDisplay);
+
+  // Filter items based on the selected category
+  const filteredItems =
+    selectedCategoryId === "all"
+      ? combinedItems // Include all items for the "all" category
+      : combinedItems.filter(item =>
+        item.categories?.some(cat => validCategories.includes(cat)) && // Ignore invalid categories
+        item.categories?.includes(selectedCategoryId) // Ensure the item belongs to the selected category
+      );
+
+  // Sort items based on the order in case-study-order.json
+  const sortedItems = filteredItems.sort((a, b) => {
+    const idA = a?.slug || a?.id || "";
+    const idB = b?.slug || b?.id || "";
+
+    const indexA = categoryOrder.indexOf(idA);
+    const indexB = categoryOrder.indexOf(idB);
+
+    // Items not in the order list will appear at the end
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+
+    return indexA - indexB;
+  });
+
+  return sortedItems;
 }
 
 export function debounce(func, wait, immediate) {
   var timeout
-  return function() {
+  return function () {
     var context = this,
       args = arguments
-    var later = function() {
+    var later = function () {
       timeout = null
       if (!immediate) func.apply(context, args)
     }

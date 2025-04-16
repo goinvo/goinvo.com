@@ -25,16 +25,12 @@ const categories = headerData ? Object.keys(headerData) : [];
 if (categories.length === 0) {
   throw new Error("No categories found in headerData.");
 }
-//check the categories
-console.log("categories: ", categories);
 // Select a random category
 const selectedCategory = categories[Math.floor(Math.random() * categories.length)];
-console.log("Selected category: ", selectedCategory);
+// console.log("Selected category: ", selectedCategory);
 const categoryData = headerData[selectedCategory];
-console.log("categoryData: ", JSON.stringify(categoryData, null, 2));
 // Select a random hero image from the category
 const heroImage = categoryData.heroImages[Math.floor(Math.random() * categoryData.heroImages.length)];
-console.log("heroImage: ", heroImage);
 
 const frontmatter = {
   metaTitle: 'Boston UX Design Agency | GoInvo Boston',
@@ -59,15 +55,6 @@ class IndexPage extends Component {
       frontmatter,
     }
   }
-
-  /*componentDidMount() {
-    this.setState({
-      image:
-        frontmatter.heroImage[
-        Math.floor(Math.random() * frontmatter.heroImage.length)
-        ],
-    })
-  }*/
 
   render() {
     return (

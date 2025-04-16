@@ -1,7 +1,7 @@
 [
   {
-    "id": "health",
-    "title": "Health"
+    "id": "healthcare",
+    "title": "Healthcare"
   },
   {
     "id": "enterprise",
@@ -12,7 +12,7 @@
     "title": "Government"
   },
   {
-    "id": "ai",
+    "id": "AI",
     "title": "AI"
   }
 ]

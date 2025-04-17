@@ -198,8 +198,8 @@ class ServicesPage extends Component {
 
         <div className="max-width content-padding pad-vertical--double margin-bottom--double">
           <Divider />
-          <h3 className="header--md margin-bottom--none margin-top--double">
-            Approach
+          <h3 className="header--lg margin-bottom--none margin-top--double">
+            What We Do
           </h3>
           <div className="pure-g pad-bottom--double">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
@@ -263,16 +263,18 @@ class ServicesPage extends Component {
               <Link to="/about/">Team biographies</Link>
             </div>
           </div>
+        </div>
 
-          <Quote
-            background="gray"
-            quotee="Serban Georgescu, MD"
-            quoteeSub="InfoBionic Director of Clinical Development"
-          >
-            With Invo, design wasn't just design. It impacted our IP portfolio. It
-            changed our business.
-          </Quote>
+        <Quote
+          background="gray"
+          quotee="Serban Georgescu, MD"
+          quoteeSub="InfoBionic Director of Clinical Development"
+        >
+          With Invo, design wasn't just design. It impacted our IP portfolio. It
+          changed our business.
+        </Quote>
 
+        <div className="max-width content-padding pad-vertical--double margin-bottom--double">
           <div className="max-width content-padding pad-vertical--double">
             <h2
               className="header--lg text--center"

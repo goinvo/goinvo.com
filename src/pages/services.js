@@ -209,7 +209,7 @@ class ServicesPage extends Component {
               <p className="text--gray margin-top--half">
                 We align user needs, business goals, and technical realities to define what matters, what to build first, and why. We help our clients leverage emerging technologies, envision future products and services, and realize long-term goals.
               </p>
-              <Link to="/work/">View all sectors</Link>
+              <Link to="/work/">View all domains</Link>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
               <h4 className="header--sm margin-top--none margin-bottom--half">
@@ -219,17 +219,11 @@ class ServicesPage extends Component {
                 We lead user research, system mapping, and insight synthesis to uncover pain points and deliver grounded solutions that work. We design for accessibility and inclusivity from the start — not as an afterthought.
               </p>
               <Link
-                to="/work/hgraph/"
+                to="/work/mass-snap/"
                 className="display--inline-block margin-right--double"
               >
-                Your health in one picture
+                Massachusetts SNAP
               </Link>
-              <a
-                href="https://www.goinvo.com/features/careplans"
-                className="display--inline-block"
-              >
-                Care plans
-              </a>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
               <h4 className="header--sm margin-top--none margin-bottom--half">

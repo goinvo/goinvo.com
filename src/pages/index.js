@@ -47,7 +47,7 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
 
-    const workItems = concatCaseStudiesAndFeatures(props.data).slice(0, 4)
+    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 4)
 
     this.state = {
       image: null,

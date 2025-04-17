@@ -21,16 +21,19 @@ import {
 
 import config from '../../../config'
 
-const CaseStudyLayout = ({ data, children }) => {
-  const { mdx } = data
+const CaseStudyLayout = ({ data: caseStudies, children }) => {
+  const { mdx } = caseStudies
 
   if (!mdx || !children) {
     return
   }
 
-  const caseStudiesWithFeatures = concatCaseStudiesAndFeatures(data, false)
+  const caseStudiesWithFeatures = concatCaseStudiesAndFeatures({
+    caseStudies,
+    filterFeatures: false,
+  })
 
-  const caseStudy = findCaseStudyById(data, mdx.id)
+  const caseStudy = findCaseStudyById(caseStudies, mdx.id)
 
   const meta = [
     {

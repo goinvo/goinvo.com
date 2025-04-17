@@ -203,7 +203,6 @@ class ServicesPage extends Component {
           </h3>
           <div className="pure-g pad-bottom--double">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
-              <IconVision className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Clarify Product Strategy & Vision
               </h4>
@@ -213,7 +212,6 @@ class ServicesPage extends Component {
               <Link to="/work/">View all sectors</Link>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
-              <IconVision className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Design for Real People with Deep Research
               </h4>
@@ -234,7 +232,6 @@ class ServicesPage extends Component {
               </a>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
-              <IconTeam className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Craft Usable, Scalable Experiences
               </h4>
@@ -249,7 +246,6 @@ class ServicesPage extends Component {
               </Link>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
-              <IconComplexity className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Prototype and Test Quickly
               </h4>
@@ -264,7 +260,6 @@ class ServicesPage extends Component {
               </Link>
             </div>
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
-              <IconTeam className="icon--wide icon--secondary" />
               <h4 className="header--sm margin-top--none margin-bottom--half">
                 Deliver with impact
               </h4>
@@ -274,6 +269,16 @@ class ServicesPage extends Component {
               <Link to="/about/">Team biographies</Link>
             </div>
           </div>
+
+          <Quote
+            background="gray"
+            quotee="Serban Georgescu, MD"
+            quoteeSub="InfoBionic Director of Clinical Development"
+          >
+            With Invo, design wasn't just design. It impacted our IP portfolio. It
+            changed our business.
+          </Quote>
+
           <div className="max-width content-padding pad-vertical--double">
             <h2
               className="header--lg text--center"
@@ -290,15 +295,6 @@ class ServicesPage extends Component {
           </div>
 
         </div>
-
-        <Quote
-          background="gray"
-          quotee="Serban Georgescu, MD"
-          quoteeSub="InfoBionic Director of Clinical Development"
-        >
-          With Invo, design wasn't just design. It impacted our IP portfolio. It
-          changed our business.
-        </Quote>
 
         <div className="max-width content-padding pad-vertical--double">
           <Columns columns={3}>

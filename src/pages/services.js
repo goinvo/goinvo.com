@@ -44,7 +44,7 @@ const services = [
       'Prototyping for civic tech and policy',
       'Legacy system UX modernization'
     ],
-    image: '/images/services/wuxi-blue.jpg',
+    image: '/images/services/gov_snap.jpg',
     color: '#CBE7F4',
     example: {
       link: 'work/mass-snap',
@@ -61,7 +61,7 @@ const services = [
       'Workflow optimization & team alignment',
       'Strategic design for regulated environments'
     ],
-    image: '/images/services/shr-red.jpg',
+    image: '/images/services/enterprise_cotiviti.jpg',
     color: '#C0EEEC',
     example: {
       link: '/work/mitre-shr',
@@ -78,8 +78,8 @@ const services = [
       'Explainability & trust-building interfaces',
       'Ethical frameworks & transparency in design'
     ],
-    image: '/images/services/hgraph-gold.jpg',
-    color: '#D4DBEE',
+    image: '/images/services/ai_augment.jpg',
+    color: '#CFD6FF',
     example: {
       link: '/vision/augmented-clinical-decision-support',
       title: 'Explore our AI work →',
@@ -129,18 +129,21 @@ class ServicesPage extends Component {
           </h1>
         </Hero>
         <div className="max-width content-padding pad-vertical--double--only-lg">
-          <div className="pure-u-1 pure-u-lg-2-2">
-            <p className="header--lg margin-bottom--none">
-              Let's talk about your project and how GoInvo can help.
-            </p>
-          </div>
-          <div className="pure-u-1 pure-u-lg-1-2">
-            <Link
-              to="#calendly-open-office-hours"
-              className="button button--secondary button--block margin-bottom--double"
-            >
-              Schedule a chat
-            </Link>
+          <div className="container container--column container--align-center">
+            <div className="pure-u-1 pure-u-lg-1-2 text--center">
+              <p className="header--lg margin-bottom--half">
+                Design for complexity. Build for impact.
+              </p>
+              <p className="text--gray">
+                We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
+              </p>
+              <Link
+                to="#calendly-open-office-hours"
+                className="button button--secondary button--block margin-bottom--double"
+              >
+                Schedule a chat
+              </Link>
+            </div>
           </div>
           <div className="equal-height-rows">
             {services.map((service, i) => {
@@ -148,7 +151,7 @@ class ServicesPage extends Component {
                 <div key={service.title} className="pure-g">
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="pad-right--only-lg margin-bottom">
-                      <div className="pad-vertical--double--only-lg">
+                      <div className="pad-bottom--double--only-lg">
                         <h4 className="header--sm margin-bottom--none">
                           {service.title}
                         </h4>
@@ -178,7 +181,7 @@ class ServicesPage extends Component {
                   </div>
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="pad-left--only-lg">
-                      <div className="pad-bottom--double pad-top--double--only-lg">
+                      <div className="pad-vertical--double">
                         <Image
                           src={service.image}
                           sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

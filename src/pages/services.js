@@ -155,6 +155,76 @@ class ServicesPage extends Component {
               </Link>
             </div>
           </div>
+
+          <div className="container">
+            <h3 className="header--lg margin-bottom--none margin-top--double">
+              What We Do
+            </h3>
+            <div className="pure-g pad-bottom--double">
+              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
+                <h4 className="header--sm margin-top--none margin-bottom--half">
+                  Clarify Product Strategy & Vision
+                </h4>
+                <p className="text--gray margin-top--half">
+                We help teams align around a clear product direction, providing experienced, unbiased input — whether you're evolving what exists, envisioning a new concept, or clarifying long-term goals.
+                </p>
+                <Link to="/work/">View all domains</Link>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
+                <h4 className="header--sm margin-top--none margin-bottom--half">
+                  De-risking projects
+                </h4>
+                <p className="text--gray margin-top--half">
+                  We keep projects moving through the mess — navigating org changes, tight timelines, and shifting priorities so good ideas don't die on the whiteboard.
+                </p>
+                <Link
+                  to="/work/mass-snap/"
+                  className="display--inline-block margin-right--double"
+                >
+                  Massachusetts SNAP
+                </Link>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
+                <h4 className="header--sm margin-top--none margin-bottom--half">
+                  Find the right problems to solve
+                </h4>
+                <p className="text--gray margin-top--half">
+                  Through user research, system mapping, and insight synthesis, we uncover real-world needs — guiding smarter investment and more focused solutions.
+                </p>
+                <Link
+                  to="/work/mitre-shr"
+                  className="display--inline-block margin-right--double"
+                >
+                  Standard health record
+                </Link>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+                <h4 className="header--sm margin-top--none margin-bottom--half">
+                  Move fast and test often
+                </h4>
+                <p className="text--gray margin-top--half">
+                  We rapidly prototype and frequently test with real users and data — reducing risk, and informing decision-making for real-world use.
+                </p>
+                <Link
+                  to="/work/partners-insight"
+                  className="display--inline-block"
+                >
+                  Partners Insight IRB
+                </Link>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
+                <h4 className="header--sm margin-top--none margin-bottom--half">
+                  Deliver & ship
+                </h4>
+                <p className="text--gray margin-top--half">
+                  Our dedicated team will integrate seamlessly with yours to ship better tools, improve performance, and keep strategy evolving — from concept to launch to impact.
+                </p>
+                <Link to="/about/">Team biographies</Link>
+              </div>
+            </div>
+            <Divider />
+          </div>
+
           <div className="equal-height-rows">
             {services.map((service, i) => {
               return (
@@ -204,74 +274,7 @@ class ServicesPage extends Component {
           </div>
         </div>
 
-        <div className="max-width content-padding pad-vertical--double margin-bottom--double">
-          <Divider />
-          <h3 className="header--lg margin-bottom--none margin-top--double">
-            What We Do
-          </h3>
-          <div className="pure-g pad-bottom--double">
-            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                Clarify Product Strategy & Vision
-              </h4>
-              <p className="text--gray margin-top--half">
-                We align user needs, business goals, and technical realities to define what matters, what to build first, and why. We help our clients leverage emerging technologies, envision future products and services, and realize long-term goals.
-              </p>
-              <Link to="/work/">View all domains</Link>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                Design for Real People with Deep Research
-              </h4>
-              <p className="text--gray margin-top--half">
-                We lead user research, system mapping, and insight synthesis to uncover pain points and deliver grounded solutions that work. We design for accessibility and inclusivity from the start — not as an afterthought.
-              </p>
-              <Link
-                to="/work/mass-snap/"
-                className="display--inline-block margin-right--double"
-              >
-                Massachusetts SNAP
-              </Link>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                Craft Usable, Scalable Experiences
-              </h4>
-              <p className="text--gray margin-top--half">
-                We design intuitive, accessible, and trustworthy software — especially for high-stakes systems with complex tasks and real-world users. Working side by side with our clients, we turn messy problems into structured strategies and scalable solutions.
-              </p>
-              <Link
-                to="/work/mitre-shr"
-                className="display--inline-block margin-right--double"
-              >
-                Standard health record
-              </Link>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                Prototype and Test Quickly
-              </h4>
-              <p className="text--gray margin-top--half">
-                We move fast, rapidly prototyping and frequently testing with real users to reduce risk and optimize for real-world use. Rapid iteration brings us closer to a solution that's both usable and impactful.
-              </p>
-              <Link
-                to="/work/partners-insight"
-                className="display--inline-block"
-              >
-                Partners Insight IRB
-              </Link>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                Deliver with impact
-              </h4>
-              <p className="text--gray margin-top--half">
-                We collaborate closely with in-house teams, adapt fast, and integrate seamlessly into product and engineering workflows. You’ll get a dedicated design team that helps you delivery and ship smarter tools and see real results.
-              </p>
-              <Link to="/about/">Team biographies</Link>
-            </div>
-          </div>
-        </div>
+        
 
         <Quote
           background="gray"

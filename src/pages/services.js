@@ -18,76 +18,79 @@ import config from '../../config'
 
 const services = [
   {
-    title: 'Healthcare product strategy',
+    title: 'Design for Healthcare',
     description:
-      'We envision products and services through collaborative design exercises that will help frame your digital future.',
-    methods:
-      'vision workshops, design facilitation, ideation, concept work, product roadmapping',
-    image: '/images/services/pgp-green.jpg',
-    color: '#D6E8E2',
-    example: {
-      link: '/work/personal-genome-project-vision',
-      title: 'Personal Genome Project',
-    },
-  },
-  {
-    title: 'Research',
-    description:
-      'We uncover deep user insights with patients, clinicians, and industry experts that inform priorities, drive features, and inspire strategy.',
-    methods:
-      'user interviews, analytic reviews, journey mapping, market research, competitive analysis, survey creation',
-    image: '/images/services/wuxi-blue.jpg',
-    color: '#D3DCEE',
-    example: {
-      link: '/work/wuxi-nextcode-familycode',
-      title: 'WuXi NextCODE',
-    },
-  },
-  {
-    title: 'Product definition',
-    description:
-      'We define complex products and bring ideas to life by mapping systems, touchpoints, and features.',
-    methods:
-      'system mapping, use cases, persona development, storyboarding, user requirements',
-    image: '/images/services/shr-red.jpg',
-    color: '#EAC5BA',
-    example: {
-      link: '/work/mitre-shr',
-      title: 'Standard Health Record',
-    },
-  },
-  {
-    title: 'User experience design',
-    description:
-      'We create product user experiences that are both functional and beautiful, crafting every detail from initial sketch to interactive prototype to front-end code.',
-    methods:
-      'UI and UX design, information architecture, wireframes, mockups, interactive prototypes, design systems',
+      'We design software that improves care, reduces friction, and drives better outcomes — from clinical decision support to policy-driven health data systems. With 20+ years of experience, we navigate clinical complexity, policy constraints, and stakeholder needs to make health systems work better for everyone.',
+    methods: [
+      'Clinical decision support design',
+      'EHR integrations & patient workflows',
+      'Public health dashboards',
+      'Data visualization for policy and advocacy'
+    ],
     image: '/images/services/hgraph-gold.jpg',
     color: '#EEE0CA',
     example: {
-      link: '/work/hgraph',
-      title: 'hGraph',
+      link: '/work/?category=healthcare',
+      title: 'Explore our healthcare work →',
     },
   },
   {
-    title: 'Usability and validation',
+    title: 'Design for Government',
     description:
-      'We test and iterate designs with users throughout a project to validate product features, functions, and designs.',
-    methods:
-      'expert reviews, A/B testing, usability testing, accessibility testing',
-    image: '/images/services/glytec-brown.jpg',
-    color: '#E2DACE',
+      'We design public services that are more modern, usable, equitable, and human. We partner with federal, state, and local agencies to transform services that matter — from applications that help residents get the benefits they need to digital tools for policy makers.',
+    methods: [
+      'Public benefits service design',
+      'Inclusive research & accessibility audits',
+      'Prototyping for civic tech and policy',
+      'Legacy system UX modernization'
+    ],
+    image: '/images/services/gov_snap.jpg',
+    color: '#CBE7F4',
     example: {
-      link: '/work/mass-snap',
-      title: 'Mass SNAP',
+      link: '/work/?category=government',
+      title: 'Explore our government work →',
     },
   },
+  {
+    title: 'Design for Enterprise',
+    description:
+      'We streamline internal tools and systems that power big organizations for better alignment, efficiency, and insight. We work with large teams to improve internal platforms, streamline complex workflows, and align business and user goals — delivering better tools quickly and collaboratively to reduce friction and boost efficiency.',
+    methods: [
+      'Internal platforms & dashboards',
+      'Enterprise UX audits & redesigns',
+      'Workflow optimization & team alignment',
+      'Strategic design for regulated environments'
+    ],
+    image: '/images/services/enterprise_cotiviti.jpg',
+    color: '#C0EEEC',
+    example: {
+      link: '/work/?category=enterprise',
+      title: 'Explore our enterprise work →',
+    },
+  },
+  {
+    title: 'Design for AI',
+    description:
+      'We design AI-powered tools that connect humans and machines, ensuring they work together seamlessly. We create human-centered interactions that make intelligent tools clear, explainable, and usable, aligned with human needs from day one.',
+    methods: [
+      'UX for ML-powered products',
+      'Human-AI interaction design',
+      'Explainability & trust-building interfaces',
+      'Ethical frameworks & transparency in design'
+    ],
+    image: '/images/services/ai_augment.jpg',
+    color: '#CFD6FF',
+    example: {
+      link: '/work/?category=ai',
+      title: 'Explore our AI work →',
+    },
+  }
 ]
 
 const frontmatter = {
-  metaTitle: 'Healthcare UX Design Services in Boston - GoInvo',
+  metaTitle: 'UX Design Services in Boston - GoInvo',
   metaDescription:
-    'Our UX design process is tailored to your project. Contact GoInvo today to get started in designing a beautiful UX for your healthcare product!',
+    'Our UX design process is tailored to your project. Contact GoInvo today to get started in designing a beautiful UX for your product!',
   heroImage: '/images/services/hand-drawing.jpg',
 }
 
@@ -126,18 +129,31 @@ class ServicesPage extends Component {
           </h1>
         </Hero>
         <div className="max-width content-padding pad-vertical--double--only-lg">
-          <div className="pure-u-1 pure-u-lg-2-2">
-            <p className="header--lg margin-bottom--none">
-              Let's talk about your project and how GoInvo can help.
-            </p>
-          </div>
-          <div className="pure-u-1 pure-u-lg-1-2">
-            <Link
-              to="#calendly-open-office-hours"
-              className="button button--secondary button--block margin-bottom--double"
-            >
-              Schedule a chat
-            </Link>
+          <div className="container">
+            <div className="pure-u-1 pure-u-lg-1-2">
+              <p className="header--lg margin-bottom--half">
+                Why hire GoInvo
+              </p>
+              <p className="text--gray margin-bottom--half">
+                Our small, nimble team brings 20 + years of experience designing complex digital systems. We can help you:
+              </p>
+              <ul className="ul text--gray margin-top--half">
+                <li>De-risk complex projects</li>
+                <li>Clarify vision and align stakeholders</li>
+                <li>Modernize legacy systems for efficiency</li>
+                <li>Validate ideas and spark innovation</li>
+                <li>Fill senior design expertise gaps</li>
+                <li>Inspire teams and secure executive buy-in</li>
+                <li>Ship high-impact, revenue-driving products</li>
+              </ul>
+              
+              <Link
+                to="#calendly-open-office-hours"
+                className="button button--secondary button--block margin-bottom--double"
+              >
+                Schedule a chat
+              </Link>
+            </div>
           </div>
           <div className="equal-height-rows">
             {services.map((service, i) => {
@@ -145,7 +161,7 @@ class ServicesPage extends Component {
                 <div key={service.title} className="pure-g">
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="pad-right--only-lg margin-bottom">
-                      <div className="pad-vertical--double--only-lg">
+                      <div className="pad-bottom--double--only-lg">
                         <h4 className="header--sm margin-bottom--none">
                           {service.title}
                         </h4>
@@ -153,17 +169,17 @@ class ServicesPage extends Component {
                           className="hr hr--thick"
                           style={{ backgroundColor: service.color }}
                         />
-                        <p className="text--gray">{service.description}</p>
+                        <p className="text--gray margin-bottom--half">{service.description}</p>
+                        <ul className="ul text--gray margin-top--half">
+                          {service.methods.map((method, i) => {
+                            return (
+                              <li key={i}>
+                                {method}
+                              </li>
+                            )
+                          })}
+                        </ul>
                         <p className="text--gray">
-                          <span className="text--bold text--uppercase text--spacing text--md">
-                            Methods:{' '}
-                          </span>
-                          {service.methods}
-                        </p>
-                        <p className="text--gray">
-                          <span className="text--bold text--uppercase text--spacing text--md">
-                            Example:{' '}
-                          </span>
                           <Link to={service.example.link}>
                             {service.example.title}
                           </Link>
@@ -173,7 +189,7 @@ class ServicesPage extends Component {
                   </div>
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="pad-left--only-lg">
-                      <div className="pad-bottom--double pad-top--double--only-lg">
+                      <div className="pad-vertical--double">
                         <Image
                           src={service.image}
                           sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -187,6 +203,76 @@ class ServicesPage extends Component {
             })}
           </div>
         </div>
+
+        <div className="max-width content-padding pad-vertical--double margin-bottom--double">
+          <Divider />
+          <h3 className="header--lg margin-bottom--none margin-top--double">
+            What We Do
+          </h3>
+          <div className="pure-g pad-bottom--double">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Clarify Product Strategy & Vision
+              </h4>
+              <p className="text--gray margin-top--half">
+                We align user needs, business goals, and technical realities to define what matters, what to build first, and why. We help our clients leverage emerging technologies, envision future products and services, and realize long-term goals.
+              </p>
+              <Link to="/work/">View all domains</Link>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Design for Real People with Deep Research
+              </h4>
+              <p className="text--gray margin-top--half">
+                We lead user research, system mapping, and insight synthesis to uncover pain points and deliver grounded solutions that work. We design for accessibility and inclusivity from the start — not as an afterthought.
+              </p>
+              <Link
+                to="/work/mass-snap/"
+                className="display--inline-block margin-right--double"
+              >
+                Massachusetts SNAP
+              </Link>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Craft Usable, Scalable Experiences
+              </h4>
+              <p className="text--gray margin-top--half">
+                We design intuitive, accessible, and trustworthy software — especially for high-stakes systems with complex tasks and real-world users. Working side by side with our clients, we turn messy problems into structured strategies and scalable solutions.
+              </p>
+              <Link
+                to="/work/mitre-shr"
+                className="display--inline-block margin-right--double"
+              >
+                Standard health record
+              </Link>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Prototype and Test Quickly
+              </h4>
+              <p className="text--gray margin-top--half">
+                We move fast, rapidly prototyping and frequently testing with real users to reduce risk and optimize for real-world use. Rapid iteration brings us closer to a solution that's both usable and impactful.
+              </p>
+              <Link
+                to="/work/partners-insight"
+                className="display--inline-block"
+              >
+                Partners Insight IRB
+              </Link>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Deliver with impact
+              </h4>
+              <p className="text--gray margin-top--half">
+                We collaborate closely with in-house teams, adapt fast, and integrate seamlessly into product and engineering workflows. You’ll get a dedicated design team that helps you delivery and ship smarter tools and see real results.
+              </p>
+              <Link to="/about/">Team biographies</Link>
+            </div>
+          </div>
+        </div>
+
         <Quote
           background="gray"
           quotee="Serban Georgescu, MD"
@@ -195,87 +281,8 @@ class ServicesPage extends Component {
           With Invo, design wasn't just design. It impacted our IP portfolio. It
           changed our business.
         </Quote>
+
         <div className="max-width content-padding pad-vertical--double margin-bottom--double">
-          <h3 className="header--md margin-bottom--none margin-top--double">
-            Approach
-          </h3>
-          <div className="pure-g pad-bottom--double">
-            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
-              <IconHealthcare className="icon--wide icon--secondary" />
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                We're focused on healthcare.
-              </h4>
-              <p className="text--gray margin-top--half">
-                Healthcare is an exceedingly complex field that holds unique
-                challenges both seen and unseen. At GoInvo, we’ve focused solely
-                on this space for over a decade, designing more than 110
-                products and services during that time.
-              </p>
-              <Link to="/work/">View all sectors</Link>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
-              <IconVision className="icon--wide icon--secondary" />
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                We'll help you envision the future.
-              </h4>
-              <p className="text--gray margin-top--half">
-                We bring fresh ideas and a history of healthcare design and
-                research to help our clients leverage emerging technologies,
-                envision future products and services, and realize long-term
-                goals.
-              </p>
-              <Link
-                to="/work/hgraph/"
-                className="display--inline-block margin-right--double"
-              >
-                Your health in one picture
-              </Link>
-              <a
-                href="https://www.goinvo.com/features/careplans"
-                className="display--inline-block"
-              >
-                Care plans
-              </a>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
-              <IconTeam className="icon--wide icon--secondary" />
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                We deploy dedicated teams.
-              </h4>
-              <p className="text--gray margin-top--half">
-                At GoInvo, you’ll get a dedicated design team that collaborates
-                with you throughout the course of your project, communicating
-                openly and adapting quickly to new challenges. We’re adept at
-                integrating our design efforts with your engineering and product
-                teams to form a seamless whole.
-              </p>
-              <Link to="/about/">Team biographies</Link>
-            </div>
-            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
-              <IconComplexity className="icon--wide icon--secondary" />
-              <h4 className="header--sm margin-top--none margin-bottom--half">
-                We're comfortable with complexity.
-              </h4>
-              <p className="text--gray margin-top--half">
-                From enterprise-grade health IT to data-driven precision
-                healthcare, GoInvo works closely with our clients and partners
-                to transform messy problems into structured strategy and
-                solutions.
-              </p>
-              <Link
-                to="/work/mitre-shr"
-                className="display--inline-block margin-right--double"
-              >
-                Standard health record
-              </Link>
-              <Link
-                to="/work/partners-insight"
-                className="display--inline-block"
-              >
-                Partners Insight IRB
-              </Link>
-            </div>
-          </div>
           <div className="max-width content-padding pad-vertical--double">
             <h2
               className="header--lg text--center"
@@ -290,8 +297,9 @@ class ServicesPage extends Component {
               style={{ minWidth: '320px', height: '950px' }}
             />
           </div>
-          <Divider />
+
         </div>
+
         <div className="max-width content-padding pad-vertical--double">
           <Columns columns={3}>
             <ImageBlock

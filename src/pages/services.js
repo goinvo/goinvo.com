@@ -30,7 +30,7 @@ const services = [
     image: '/images/services/hgraph-gold.jpg',
     color: '#EEE0CA',
     example: {
-      link: '/work/hgraph',
+      link: '/work/?category=healthcare',
       title: 'Explore our healthcare work →',
     },
   },
@@ -47,7 +47,7 @@ const services = [
     image: '/images/services/gov_snap.jpg',
     color: '#CBE7F4',
     example: {
-      link: 'work/mass-snap',
+      link: '/work/?category=government',
       title: 'Explore our government work →',
     },
   },
@@ -64,7 +64,7 @@ const services = [
     image: '/images/services/enterprise_cotiviti.jpg',
     color: '#C0EEEC',
     example: {
-      link: '/work/mitre-shr',
+      link: '/work/?category=enterprise',
       title: 'Explore our enterprise work →',
     },
   },
@@ -81,7 +81,7 @@ const services = [
     image: '/images/services/ai_augment.jpg',
     color: '#CFD6FF',
     example: {
-      link: '/vision/augmented-clinical-decision-support',
+      link: '/work/?category=ai',
       title: 'Explore our AI work →',
     },
   }
@@ -129,14 +129,24 @@ class ServicesPage extends Component {
           </h1>
         </Hero>
         <div className="max-width content-padding pad-vertical--double--only-lg">
-          <div className="container container--column container--align-center">
-            <div className="pure-u-1 pure-u-lg-1-2 text--center">
+          <div className="container">
+            <div className="pure-u-1 pure-u-lg-1-2">
               <p className="header--lg margin-bottom--half">
-                Design for complexity. Build for impact.
+                Why hire GoInvo
               </p>
-              <p className="text--gray">
-                We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
+              <p className="text--gray margin-bottom--half">
+                Our small, nimble team brings 20 + years of experience designing complex digital systems. We can help you:
               </p>
+              <ul className="ul text--gray margin-top--half">
+                <li>De-risk complex projects</li>
+                <li>Clarify vision and align stakeholders</li>
+                <li>Modernize legacy systems for efficiency</li>
+                <li>Validate ideas and spark innovation</li>
+                <li>Fill senior design expertise gaps</li>
+                <li>Inspire teams and secure executive buy-in</li>
+                <li>Ship high-impact, revenue-driving products</li>
+              </ul>
+              
               <Link
                 to="#calendly-open-office-hours"
                 className="button button--secondary button--block margin-bottom--double"
@@ -159,18 +169,16 @@ class ServicesPage extends Component {
                           className="hr hr--thick"
                           style={{ backgroundColor: service.color }}
                         />
-                        <p className="text--gray">{service.description}</p>
-                        <p className="text--gray">
-                          <ul>
-                            {service.methods.map((method, i) => {
-                              return (
-                                <li key={i} className="margin-bottom--half">
-                                  {method}
-                                </li>
-                              )
-                            })}
-                          </ul>
-                        </p>
+                        <p className="text--gray margin-bottom--half">{service.description}</p>
+                        <ul className="ul text--gray margin-top--half">
+                          {service.methods.map((method, i) => {
+                            return (
+                              <li key={i}>
+                                {method}
+                              </li>
+                            )
+                          })}
+                        </ul>
                         <p className="text--gray">
                           <Link to={service.example.link}>
                             {service.example.title}

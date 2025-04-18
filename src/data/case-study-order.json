@@ -35,6 +35,7 @@
     "tabeeb-diagnostics"
   ],
   "healthcare": [
+    "hgraph",
     "all-of-us",
     "prior-auth",
     "mitre-shr",
@@ -47,7 +48,6 @@
     "mitre-state-of-us-healthcare",
     "3m-coderyte",
     "determinants-of-health",
-    "hgraph",
     "partners-insight",
     "mitre-flux-notes",
     "commonhealth-smart-health-cards",

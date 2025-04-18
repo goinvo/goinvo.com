@@ -100,13 +100,13 @@ class WorkPage extends Component {
     // Get category data for the selected category
     const categoryData = headerData[categoryId] || headerData['all'] || {};
     const heroImages = categoryData.heroImages || [];
-  
+
     // Select a random hero image from the category (fallback to a default image if none exist)
     const heroImage =
       heroImages.length > 0
         ? heroImages[Math.floor(Math.random() * heroImages.length)]
         : '/images/work/dr-emily.jpg'; // Replace with a valid default image path
-    
+
     // Create the frontmatter dynamically
     const frontmatter = {
       metaTitle: 'Case Studies by UX Design Agency GoInvo',
@@ -116,7 +116,7 @@ class WorkPage extends Component {
       title: 'Design that Delivers', // Fallback title
       subtitle: 'Real projects, real users, real business outcomes.'
     }
-  
+
     return { categoryData, heroImages, frontmatter, heroImage };
   }
 
@@ -135,9 +135,12 @@ class WorkPage extends Component {
       CATEGORIES_LIST.find(cat => cat.id === categoryId) ||
       props.selectedCategory ||
       allCategory;
-    
+
     // Get work items for the selected category
-    const workItems = concatCaseStudiesAndFeatures(props.data, selectedCategory.id);
+    const workItems = concatCaseStudiesAndFeatures({
+      caseStudies: props.data,
+      selectedCategoryId: selectedCategory.id
+    });
 
     // Get category data, hero images, and frontmatter
     const { categoryData, heroImages, frontmatter, heroImage } =
@@ -195,7 +198,10 @@ class WorkPage extends Component {
     this.setState(
       {
         selectedCategory: cat,
-        workItems: concatCaseStudiesAndFeatures(this.props.data, cat.id),
+        workItems: concatCaseStudiesAndFeatures({
+          caseStudies: this.props.data,
+          selectedCategoryId: cat.id,
+        }),
         categoriesCollapsed: this.state.categoriesStuck ? true : false,
         categoryData,
         frontmatter,

@@ -50,11 +50,11 @@ export function extractWorkItemLinkDetails(item) {
   }
 }
 
-export function concatCaseStudiesAndFeatures(
+export function concatCaseStudiesAndFeatures({
   caseStudies,
   selectedCategoryId = "all",
   filterFeatures = true
-) {
+}) {
   const validCategories = Object.keys(caseStudiesOrder); // Get valid categories from case-study-order.json
   const categoryOrder = caseStudiesOrder[selectedCategoryId] || [];
 

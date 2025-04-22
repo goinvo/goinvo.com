@@ -129,24 +129,15 @@ class ServicesPage extends Component {
           </h1>
         </Hero>
         <div className="max-width content-padding pad-vertical--double--only-lg">
-          <div className="container">
+          <div className="container container--column container--align-center">
             <div className="pure-u-1 pure-u-lg-1-2">
-              <p className="header--lg margin-bottom--half">
+              <p className="header--lg margin-bottom--half text--center">
                 Why hire GoInvo
               </p>
               <p className="text--gray margin-bottom--half">
-                Our small, nimble team brings 20 + years of experience designing complex digital systems. We can help you:
+                We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
               </p>
-              <ul className="ul text--gray margin-top--half">
-                <li>De-risk complex projects</li>
-                <li>Clarify vision and align stakeholders</li>
-                <li>Modernize legacy systems for efficiency</li>
-                <li>Validate ideas and spark innovation</li>
-                <li>Fill senior design expertise gaps</li>
-                <li>Inspire teams and secure executive buy-in</li>
-                <li>Ship high-impact, revenue-driving products</li>
-              </ul>
-              
+
               <Link
                 to="#calendly-open-office-hours"
                 className="button button--secondary button--block margin-bottom--double"
@@ -156,17 +147,18 @@ class ServicesPage extends Component {
             </div>
           </div>
 
-          <div className="container">
+          <div>
             <h3 className="header--lg margin-bottom--none margin-top--double">
               What We Do
             </h3>
+            <p className="text--gray">We design and deliver digital systems — from idea to execution. Our team joins where we're needed most, offering end-to-end product design or focused support to move things forward.</p>
             <div className="pure-g pad-bottom--double">
               <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
                 <h4 className="header--sm margin-top--none margin-bottom--half">
                   Clarify Product Strategy & Vision
                 </h4>
                 <p className="text--gray margin-top--half">
-                We help teams align around a clear product direction, providing experienced, unbiased input — whether you're evolving what exists, envisioning a new concept, or clarifying long-term goals.
+                  We help teams <strong>align around a clear product direction, providing experienced, unbiased input</strong> — whether you're evolving what exists, envisioning a new concept, or clarifying long-term goals.
                 </p>
                 <Link to="/work/">View all domains</Link>
               </div>
@@ -175,7 +167,7 @@ class ServicesPage extends Component {
                   De-risking projects
                 </h4>
                 <p className="text--gray margin-top--half">
-                  We keep projects moving through the mess — navigating org changes, tight timelines, and shifting priorities so good ideas don't die on the whiteboard.
+                  We keep projects moving through the mess — <strong>navigating org changes, tight timelines, and shifting priorities</strong> so good ideas don't die on the whiteboard.
                 </p>
                 <Link
                   to="/work/mass-snap/"
@@ -189,7 +181,7 @@ class ServicesPage extends Component {
                   Find the right problems to solve
                 </h4>
                 <p className="text--gray margin-top--half">
-                  Through user research, system mapping, and insight synthesis, we uncover real-world needs — guiding smarter investment and more focused solutions.
+                  Through <strong>user research, system mapping, and insight synthesis,</strong> we uncover real-world needs — guiding smarter investment and more focused solutions.
                 </p>
                 <Link
                   to="/work/mitre-shr"
@@ -203,7 +195,7 @@ class ServicesPage extends Component {
                   Move fast and test often
                 </h4>
                 <p className="text--gray margin-top--half">
-                  We rapidly prototype and frequently test with real users and data — reducing risk, and informing decision-making for real-world use.
+                  We <strong>rapidly prototype and frequently test with real users and data</strong> — reducing risk, and informing decision-making for real-world use.
                 </p>
                 <Link
                   to="/work/partners-insight"
@@ -217,7 +209,7 @@ class ServicesPage extends Component {
                   Deliver & ship
                 </h4>
                 <p className="text--gray margin-top--half">
-                  Our dedicated team will integrate seamlessly with yours to ship better tools, improve performance, and keep strategy evolving — from concept to launch to impact.
+                  Our dedicated team will <strong>integrate seamlessly with yours to ship better tools, improve performance, and keep strategy evolving</strong> — from concept to launch to impact.
                 </p>
                 <Link to="/about/">Team biographies</Link>
               </div>
@@ -273,8 +265,6 @@ class ServicesPage extends Component {
             })}
           </div>
         </div>
-
-        
 
         <Quote
           background="gray"

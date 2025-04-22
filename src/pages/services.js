@@ -160,7 +160,18 @@ class ServicesPage extends Component {
                 <p className="text--gray margin-top--half">
                   We help teams <strong>align around a clear product direction, providing experienced, unbiased input</strong> — whether you're evolving what exists, envisioning a new concept, or clarifying long-term goals.
                 </p>
-                <Link to="/work/">View all domains</Link>
+                <Link
+                  to="/work/mitre-shr"
+                  className="display--inline-block margin-right--double"
+                >
+                  Standard health record
+                </Link>
+                <Link
+                  to="/vision/national-cancer-navigation"
+                  className="display--inline-block margin-right--double"
+                >
+                  National Cancer Navigation
+                </Link>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
                 <h4 className="header--sm margin-top--none margin-bottom--half">
@@ -170,10 +181,16 @@ class ServicesPage extends Component {
                   We keep projects moving through the mess — <strong>navigating org changes, tight timelines, and shifting priorities</strong> so good ideas don't die on the whiteboard.
                 </p>
                 <Link
-                  to="/work/mass-snap/"
+                  to="/work/mitre-flux-notes"
                   className="display--inline-block margin-right--double"
                 >
-                  Massachusetts SNAP
+                  MITRE Flux Notes
+                </Link>
+                <Link
+                  to="/work/insidetracker-nutrition-science"
+                  className="display--inline-block margin-right--double"
+                >
+                  InsideTracker
                 </Link>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
@@ -184,10 +201,16 @@ class ServicesPage extends Component {
                   Through <strong>user research, system mapping, and insight synthesis,</strong> we uncover real-world needs — guiding smarter investment and more focused solutions.
                 </p>
                 <Link
-                  to="/work/mitre-shr"
+                  to="/work/3m-coderyte"
                   className="display--inline-block margin-right--double"
                 >
-                  Standard health record
+                  3M Coderyte
+                </Link>
+                <Link
+                  to="/work/mass-snap"
+                  className="display--inline-block margin-right--double"
+                >
+                  Massachusetts SNAP
                 </Link>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
@@ -199,9 +222,15 @@ class ServicesPage extends Component {
                 </p>
                 <Link
                   to="/work/partners-insight"
-                  className="display--inline-block"
+                  className="display--inline-block margin-right--double"
                 >
-                  Partners Insight IRB
+                  Mass General Brigham IRB Insight
+                </Link>
+                <Link
+                  to="/work/wuxi-nextcode-familycode"
+                  className="display--inline-block margin-right--double"
+                >
+                  WuXi NextCODE FamilyCode
                 </Link>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
@@ -211,7 +240,18 @@ class ServicesPage extends Component {
                 <p className="text--gray margin-top--half">
                   Our dedicated team will <strong>integrate seamlessly with yours to ship better tools, improve performance, and keep strategy evolving</strong> — from concept to launch to impact.
                 </p>
-                <Link to="/about/">Team biographies</Link>
+                <Link
+                  to="/work/all-of-us"
+                  className="display--inline-block margin-right--double"
+                >
+                  All of Us Research Program
+                </Link>
+                <Link
+                  to="/work/3m-coderyte"
+                  className="display--inline-block margin-right--double"
+                >
+                  3M Coderyte
+                </Link>
               </div>
             </div>
             <Divider />

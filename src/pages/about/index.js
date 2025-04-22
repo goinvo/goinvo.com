@@ -83,8 +83,8 @@ const AboutPage = () => (
       <h1 className="header--xl">
         Our shared purpose:
         <br />
-        better health access +<br />
-        outcomes thru design
+        better systems +<br />
+        better lives thru design
         <span className="text--serif text--primary">.</span>
       </h1>
     </Hero>
@@ -93,14 +93,12 @@ const AboutPage = () => (
         <div className="pure-u-1 pure-u-lg-1-2">
           <h2 className="header--lg pad-right--only-lg">
             GoInvo is a digital design studio in Boston, crafting the future of
-            healthcare through strategy, creativity, and vision.
+            software through strategy, creativity, and vision.
           </h2>
         </div>
         <div className="pure-u-1 pure-u-lg-1-2">
           <p className="text--gray pad-left--only-lg">
-            With backgrounds spanning from medical illustration to physics, we
-            share a foundational knowledge of development, design, and
-            healthcare in the shared pursuit of impact for good.
+            With backgrounds in engineering, illustration, design, and software development, we share a foundational technical and creative expertise in the shared pursuit of impact for good.
           </p>
         </div>
       </div>

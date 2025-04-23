@@ -81,7 +81,7 @@ const services = [
     image: '/images/services/ai_augment.jpg',
     color: '#CFD6FF',
     example: {
-      link: '/work/?category=ai',
+      link: '/work/?category=AI',
       title: 'Explore our AI work →',
     },
   }

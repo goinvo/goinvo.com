@@ -2,12 +2,15 @@
   &--gray {
     background-color: $color-gray--light;
   }
+
   &--blue {
     background-color: $color-blue--light;
   }
+
   &--black {
     background-color: $color-black;
   }
+
   &--white {
     background-color: $color-white;
   }
@@ -65,12 +68,15 @@
   &--gray {
     color: $color-gray--medium;
   }
+
   &--light-gray {
     border-color: $color-gray--light;
   }
+
   &--blue {
     border-color: $color-blue--light;
   }
+
   &--heavy {
     border-width: 2px;
   }
@@ -80,4 +86,8 @@
       border: none;
     }
   }
+}
+
+.display-none {
+  display: none;
 }

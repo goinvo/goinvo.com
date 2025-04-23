@@ -51,7 +51,7 @@ class FacesInHealthCommunicationFeature extends Component {
       return
     }
 
-    let height = elements.reduce(function(el, el2) {
+    let height = elements.reduce(function (el, el2) {
       return el.offsetHeight > el2.offsetHeight ? el : el2
     }).offsetHeight
 
@@ -1075,7 +1075,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
+                title="Subscribe to our newsletter."
                 submitButtonText="Subscribe"
               />
             </div>

@@ -141,10 +141,10 @@ class CareersPage extends Component {
               </p>
               <p>
                 If you’re familiar with our work, you know we design, build, and
-                ship beautiful health software for companies of all sizes, like
+                ship beautiful software for companies of all sizes, from
                 Apple, Johnson & Johnson, NIH (National Institutes of Health),
                 and Walgreens, to micro startups. We are hyper-concerned about
-                guiding people through tough decisions, and produce
+                guiding people through tough decisions and producing
                 eyebrow-raising results.
               </p>
               <p>Our idealized candidate can be described in this way:</p>
@@ -153,18 +153,18 @@ class CareersPage extends Component {
                   First and foremost, you need to be exceptional:
                 </span>
                 <br />
-                loving to design and build software, making is in your DNA,
-                solving crazy problems with 50 different crazy solutions. You
-                need to have a proven track record of designing healthcare
-                software that has shipped.
+                love designing and building software, making is in your DNA,
+                and solving crazy problems with 50 different crazy solutions. You
+                need to have a proven track record of designing and shipping healthcare
+                software.
               </p>
               <p>
                 <span className="text--bold">
                   Second, you need to be a system thinker and serial do’er:
                 </span>
                 <br />
-                to see more than just the design and production tasks but the
-                entire product ecosystem, to having a firm grasp of engineering
+                to see beyond the design and production tasks to the
+                entire product ecosystem and to have a firm grasp of engineering
                 principles and business practices. You will need to lead not
                 just yourself but other studio’ites and clients. Your
                 responsibilities include leading projects and, over time,
@@ -181,10 +181,10 @@ class CareersPage extends Component {
                   staff, and Spaceship Earth:
                 </span>
                 <br />
-                being adrenalized about healthcare, business, writing, open
-                source, innovation, craftsmanship, fun. You are given great
-                freedom and responsibility for managing your own work program to
-                mentoring staff to driving company goals. Taking pride in and
+                being adrenalized about doing good, healthcare, business, writing, open
+                source, innovation, craftsmanship, and fun. You are given great
+                freedom and responsibility for managing your own work program while
+                mentoring staff and driving company goals. Taking pride in and
                 feeling responsible for a high degree of personal ownership in
                 your work is critical because thousands to millions of people
                 will immediately interact with your finished designs. We are

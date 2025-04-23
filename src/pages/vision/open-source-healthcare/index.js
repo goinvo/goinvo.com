@@ -98,7 +98,7 @@ class OpenSourceHealthcareFeature extends Component {
                 <p className="text--gray">
                   Read our open source ethos,
                   <br />
-                   with contributing articles by{' '}
+ with contributing articles by{' '}
                   <a
                     href="https://www.healthpopuli.com/2018/10/11/open-source-health-care-will-liberate-patients/"
                     target="_blank"
@@ -198,7 +198,7 @@ class OpenSourceHealthcareFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
+                title="Subscribe to our newsletter."
                 submitButtonText="Subscribe"
               />
             </div>

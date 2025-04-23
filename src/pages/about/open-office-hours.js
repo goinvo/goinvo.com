@@ -48,7 +48,7 @@ class OpenOfficeHoursPage extends Component {
               <p className="text--gray">
                 Our studio is open to anyone seeking advice on design, from
                 students to startups, or chat with our passionate team on
-                improving healthcare for all.
+                design for good on spaceship earth.
               </p>
               <a
                 href="#calendly-open-office-hours"
@@ -90,7 +90,7 @@ class OpenOfficeHoursPage extends Component {
             <ul className="list--unstyled text--gray">
               <li className="margin-bottom">Company and/or product strategy</li>
               <li className="margin-bottom">Startup guidance</li>
-              <li className="margin-bottom">Digital health design methods</li>
+              <li className="margin-bottom">Digital software design methods</li>
               <li className="margin-bottom">Product critiques</li>
               <li className="margin-bottom">
                 Direction for building in-house design teams

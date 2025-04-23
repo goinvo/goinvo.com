@@ -219,7 +219,7 @@ class USHealthcareProblemsFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
+                title="Subscribe to our newsletter."
                 submitButtonText="Subscribe"
               />
             </div>

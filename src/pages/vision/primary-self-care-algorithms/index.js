@@ -249,11 +249,10 @@ class DigitalHealthTrendsFeature extends Component {
                   return (
                     <li key={algorithm.id}>
                       <button
-                        className={`algorithm-icons__algorithm ${
-                          this.state.activeAlgorithm === algorithm.id
+                        className={`algorithm-icons__algorithm ${this.state.activeAlgorithm === algorithm.id
                             ? 'algorithm-icons__algorithm--active'
                             : ''
-                        }`}
+                          }`}
                         onClick={() => this.handleAlgorithmSelect(algorithm.id)}
                         onKeyDown={() =>
                           this.handleAlgorithmSelect(algorithm.id)
@@ -268,12 +267,11 @@ class DigitalHealthTrendsFeature extends Component {
               </ul>
 
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm ===
+                className={`algorithm ${this.state.activeAlgorithm ===
                     ALGORITHMS.VACCINE_DECISION_AIDS || this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   1. Vaccine Decision Aids
@@ -336,13 +334,12 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm ===
+                className={`algorithm ${this.state.activeAlgorithm ===
                     ALGORITHMS.BLOOD_PRESSURE_MONITORING ||
-                  this.state.allExpanded
+                    this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   2. Blood Pressure Monitoring
@@ -401,12 +398,11 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm ===
+                className={`algorithm ${this.state.activeAlgorithm ===
                     ALGORITHMS.AT_HOME_URINALYSIS || this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   3. At-Home Urinalysis
@@ -472,13 +468,12 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm ===
+                className={`algorithm ${this.state.activeAlgorithm ===
                     ALGORITHMS.MENTAL_HEALTH_ASSESSMENTS ||
-                  this.state.allExpanded
+                    this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   4. Mental Health Assessments
@@ -531,12 +526,11 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm === ALGORITHMS.VISION_TESTS ||
-                  this.state.allExpanded
+                className={`algorithm ${this.state.activeAlgorithm === ALGORITHMS.VISION_TESTS ||
+                    this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   5. Vision Tests
@@ -586,13 +580,12 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm ===
+                className={`algorithm ${this.state.activeAlgorithm ===
                     ALGORITHMS.BLOOD_GLUCOSE_MONITORING ||
-                  this.state.allExpanded
+                    this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   6. Blood Glucose Monitoring
@@ -639,12 +632,11 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm === ALGORITHMS.BREAST_SELF_EXAM ||
-                  this.state.allExpanded
+                className={`algorithm ${this.state.activeAlgorithm === ALGORITHMS.BREAST_SELF_EXAM ||
+                    this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   7. Breast Self-Exam
@@ -696,13 +688,12 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm ===
+                className={`algorithm ${this.state.activeAlgorithm ===
                     ALGORITHMS.BIRTH_CONTROL_DECISION_AID ||
-                  this.state.allExpanded
+                    this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   8. Birth Control Decision Aid
@@ -767,12 +758,11 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm ===
+                className={`algorithm ${this.state.activeAlgorithm ===
                     ALGORITHMS.AIR_QUALITY_MONITOR || this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   9. Air Quality Monitor
@@ -813,12 +803,11 @@ class DigitalHealthTrendsFeature extends Component {
                 </ul>
               </div>
               <div
-                className={`algorithm ${
-                  this.state.activeAlgorithm === ALGORITHMS.PULSE_OXIMETRY ||
-                  this.state.allExpanded
+                className={`algorithm ${this.state.activeAlgorithm === ALGORITHMS.PULSE_OXIMETRY ||
+                    this.state.allExpanded
                     ? 'algorithm--visible'
                     : ''
-                }`}
+                  }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
                   10. Pulse Oximetry
@@ -1572,7 +1561,7 @@ class DigitalHealthTrendsFeature extends Component {
             <div className="max-width max-width--md content-padding">
               <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
+                title="Subscribe to our newsletter."
                 submitButtonText="Subscribe"
               />
             </div>

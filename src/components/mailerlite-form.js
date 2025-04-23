@@ -1,10 +1,43 @@
 import React, { Component } from 'react'
-
 import Card from './card'
 
-import config from '../../config'
-
 class MailerLiteForm extends Component {
+
+  onSubmit = async (e) => {
+    e.preventDefault();
+
+    await fetch('https://assets.mailerlite.com/jsonp/1457992/forms/152494406199412364/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        "fields": {
+          "email": e.target.elements.email.value,
+          "name": e.target.elements.name.value,
+        },
+        "ml-submit": 1,
+        "anticsrf": true
+      })
+    }).then(async (response) => {
+      if (response.ok) {
+        var formContent = document.querySelector('.ml-subscribe-form-25168203 .row-form');
+        formContent.style.display = 'none';
+        var formSuccess = document.querySelector('.ml-subscribe-form-25168203 .row-success');
+        formSuccess.style.display = 'block';
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    }).catch((error) => {
+      console.error('Error:', error);
+      var formContent = document.querySelector('.ml-subscribe-form-25168203 .row-form');
+      formContent.style.display = 'none';
+      var formSuccess = document.querySelector('.ml-subscribe-form-25168203 .row-error');
+      formSuccess.style.display = 'block';
+    });
+  }
+
   render() {
     return (
       <Card>
@@ -17,24 +50,24 @@ class MailerLiteForm extends Component {
                   <p>You'll receive our latest ideas, visualizations, and studio news delivered to your inbox twice a month.</p>
                 </div>
 
-                <form className="ml-block-form" action="https://assets.mailerlite.com/jsonp/1457992/forms/152494406199412364/subscribe" data-code="" method="post" target="_blank">
+                <form className="ml-block-form" onSubmit={this.onSubmit}>
                   <div className="ml-form-formContent">
                     <div className="ml-form-fieldRow ">
                       <div className="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                        <input aria-label="email" aria-required="true" type="email" className="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email" />
+                        <input aria-label="email" aria-required="true" type="email" className="form-control" data-inputmask="" name="email" placeholder="Email" autocomplete="email" required />
                       </div>
                     </div>
 
                     <div className="ml-form-fieldRow ml-last-item">
                       <div className="ml-field-group ml-field-name">
-                        <input aria-label="name" type="text" className="form-control" data-inputmask="" name="fields[name]" placeholder="Name" autocomplete="given-name" />
+                        <input aria-label="name" type="text" className="form-control" data-inputmask="" name="name" placeholder="Name" autocomplete="given-name" required />
                       </div>
                     </div>
                   </div>
 
                   <input type="hidden" name="ml-submit" value="1" />
                   <div className="ml-form-embedSubmit">
-                    <button type="submit" className="primary">Subscribe</button>
+                    <button className="primary" type="submit" >Subscribe</button>
                     <button disabled="disabled" type="button" className="loading">
                       <div className="ml-form-embedSubmitLoad"></div>
                       <span className="sr-only">Loading...</span>
@@ -42,7 +75,6 @@ class MailerLiteForm extends Component {
                   </div>
                   <input type="hidden" name="anticsrf" value="true" />
                 </form>
-
               </div>
 
               <div className="ml-form-successBody row-success display-none">
@@ -51,11 +83,16 @@ class MailerLiteForm extends Component {
                   <p>You have successfully joined our subscriber list.</p>
                 </div>
               </div>
-
+              <div className="ml-form-successBody row-error display-none">
+                <div className="ml-form-successContent">
+                  <h4>Too bad!</h4>
+                  <p>Try again later</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </Card >
+      </Card>
     )
   }
 }

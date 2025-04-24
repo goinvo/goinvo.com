@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Divider from '../../../components/divider'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
@@ -51,7 +51,7 @@ class FacesInHealthCommunicationFeature extends Component {
       return
     }
 
-    let height = elements.reduce(function(el, el2) {
+    let height = elements.reduce(function (el, el2) {
       return el.offsetHeight > el2.offsetHeight ? el : el2
     }).offsetHeight
 
@@ -1073,11 +1073,7 @@ class FacesInHealthCommunicationFeature extends Component {
 
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
-                submitButtonText="Subscribe"
-              />
+              <MailerLiteForm />
             </div>
           </div>
 

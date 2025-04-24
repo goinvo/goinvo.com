@@ -6,7 +6,7 @@ import ImageBlock from '../../components/image-block'
 import Columns from '../../components/columns'
 import Image from '../../components/image'
 import Quote from '../../components/quote'
-import HubspotForm from '../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Carousel from '../../components/carousel'
 import GradientImageColumns from '../../components/gradient-image-columns'
 import { Link } from 'gatsby'
@@ -417,11 +417,7 @@ class VisionPage extends Component {
 
         <div className="pad-vertical--double">
           <div className="max-width max-width--md content-padding">
-            <HubspotForm
-              formId={config.hubspotNewsletterFullFormId}
-              title="Subscribe to our open source healthcare newsletter."
-              submitButtonText="Subscribe"
-            />
+            <MailerLiteForm />
           </div>
         </div>
       </Layout>

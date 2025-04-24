@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -950,11 +950,7 @@ class LonelinessFeature extends Component {
 
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
-                submitButtonText="Subscribe"
-              />
+              <MailerLiteForm />
             </div>
           </div>
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 
@@ -588,33 +588,27 @@ class HealthcareAIFeature extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
+          <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our open source healthcare newsletter."
-                submitButtonText="Subscribe"
-              />
+              <h2 className="header--xl text--center">Authors</h2>
+              <Author name="Sharon Lee" />
+              <Author name="Juhan Sonin" />
+              <div className="pad-vertical--double">
+                <h3 className="header--md">Contributors</h3>
+                <p>
+                  Eric Benoit
+                  <br />
+                  Xiaokun Qian
+                  <br />
+                  Carina Zhang
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="pad-vertical--double">
+          <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Authors</h2>
-                <Author name="Sharon Lee" />
-                <Author name="Juhan Sonin" />
-                <div className="pad-vertical--double">
-                  <h3 className="header--md">Contributors</h3>
-                  <p>
-                    Eric Benoit
-                    <br />
-                    Xiaokun Qian
-                    <br />
-                    Carina Zhang
-                  </p>
-                </div>
-              </div>
+              <MailerLiteForm />
             </div>
           </div>
         </div>

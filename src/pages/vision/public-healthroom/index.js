@@ -10,6 +10,7 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Reference from '../../../components/reference'
+import MailerLiteForm from '../../../components/mailerlite-form'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -295,14 +296,12 @@ class PublicHealthroom extends Component {
     const { id } = this.state.currentFrame
     return (
       <div
-        className={`public-healthroom__overlay-container ${
-          id === 28 ? 'public-healthroom__overlay-container--dimmed' : ''
-        }`}
+        className={`public-healthroom__overlay-container ${id === 28 ? 'public-healthroom__overlay-container--dimmed' : ''
+          }`}
       >
         <div
-          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${
-            id === 2 ? 'public-healthroom__overlay-image--visible' : ''
-          }`}
+          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${id === 2 ? 'public-healthroom__overlay-image--visible' : ''
+            }`}
         >
           <Image
             src="/images/features/public-healthroom/menu-1.png"
@@ -311,9 +310,8 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${
-            id === 3 ? 'public-healthroom__overlay-image--visible' : ''
-          }`}
+          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${id === 3 ? 'public-healthroom__overlay-image--visible' : ''
+            }`}
         >
           <Image
             src="/images/features/public-healthroom/menu-2.png"
@@ -322,9 +320,8 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${
-            id === 4 ? 'public-healthroom__overlay-image--visible' : ''
-          }`}
+          className={`public-healthroom__overlay-image public-healthroom__entry-menu ${id === 4 ? 'public-healthroom__overlay-image--visible' : ''
+            }`}
         >
           <Image
             src="/images/features/public-healthroom/menu-3.png"
@@ -333,16 +330,15 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__overlay-image public-healthroom__holding-phone ${
-            id === 4 ||
-            id === 8 ||
-            id === 10 ||
-            id === 15 ||
-            id === 26 ||
-            id === 28
+          className={`public-healthroom__overlay-image public-healthroom__holding-phone ${id === 4 ||
+              id === 8 ||
+              id === 10 ||
+              id === 15 ||
+              id === 26 ||
+              id === 28
               ? 'public-healthroom__overlay-image--visible'
               : ''
-          }
+            }
           ${id === 28 ? 'public-healthroom__holding-phone--center' : ''}`}
         >
           <Image
@@ -352,9 +348,8 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__overlay-image public-healthroom__vision-results ${
-            id === 24 ? 'public-healthroom__overlay-image--visible' : ''
-          }`}
+          className={`public-healthroom__overlay-image public-healthroom__vision-results ${id === 24 ? 'public-healthroom__overlay-image--visible' : ''
+            }`}
         >
           <Image
             src="/images/features/public-healthroom/vision-results.png"
@@ -363,9 +358,8 @@ class PublicHealthroom extends Component {
           />
         </div>
         <div
-          className={`public-healthroom__overlay-image public-healthroom__message-2 ${
-            id === 28 ? 'public-healthroom__overlay-image--visible' : ''
-          }`}
+          className={`public-healthroom__overlay-image public-healthroom__message-2 ${id === 28 ? 'public-healthroom__overlay-image--visible' : ''
+            }`}
         >
           <Image
             src="/images/features/public-healthroom/message-2.png"
@@ -377,7 +371,7 @@ class PublicHealthroom extends Component {
     )
   }
 
-  heroLoaded = () => {}
+  heroLoaded = () => { }
 
   getOverlayClass = () => {
     let className = ''
@@ -595,8 +589,8 @@ class PublicHealthroom extends Component {
                       image === 'none'
                         ? ''
                         : mediaUrl(
-                            `/images/features/public-healthroom/${image}.jpg`
-                          )
+                          `/images/features/public-healthroom/${image}.jpg`
+                        )
                     return (
                       <div
                         className="public-healthroom__prototype-frame-container"
@@ -604,11 +598,10 @@ class PublicHealthroom extends Component {
                       >
                         <div
                           ref={this.imageRefsArray[i].ref}
-                          className={`public-healthroom__prototype-frame ${
-                            this.state.backwards
+                          className={`public-healthroom__prototype-frame ${this.state.backwards
                               ? 'public-healthroom__prototype-frame--backwards'
                               : ''
-                          }`}
+                            }`}
                         >
                           <div
                             className="public-healthroom__prototype-frame__image"
@@ -705,19 +698,24 @@ class PublicHealthroom extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <Divider />
-              <div>
-                <h2 className="header--lg text--center">Authors</h2>
-                <Author name="Jenny Yi" company="GoInvo" />
-                <Author name="Juhan Sonin" company="GoInvo" />
+              <h2 className="header--lg text--center">Authors</h2>
+              <Author name="Jenny Yi" company="GoInvo" />
+              <Author name="Juhan Sonin" company="GoInvo" />
 
-                <h3 className="header--md margin-top--double">Contributors</h3>
+              <h3 className="header--md margin-top--double">Contributors</h3>
+              <p>Samantha Wuu</p>
+              <p>Craig McGinley</p>
+            </div>
+          </div>
 
-                <p>Samantha Wu</p>
-                <p>Craig McGinley</p>
-              </div>
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <MailerLiteForm />
+            </div>
+          </div>
 
-              <Divider />
-
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
               <div id="references">
                 <References
                   references={[

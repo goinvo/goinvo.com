@@ -21,6 +21,7 @@ import MentalHealthAssessments from '../../../assets/images/vision/primary-self-
 import PulseOximetry from '../../../assets/images/vision/primary-self-care-algorithms/pulse-oximetry.inline.svg'
 import VaccineDecisionAids from '../../../assets/images/vision/primary-self-care-algorithms/vaccine-decision-aids.inline.svg'
 import VisionTests from '../../../assets/images/vision/primary-self-care-algorithms/vision-tests.inline.svg'
+import Divider from '../../../components/divider'
 
 const frontmatter = {
   metaTitle: 'Primary Self Care Algorithms - GoInvo',
@@ -250,8 +251,8 @@ class DigitalHealthTrendsFeature extends Component {
                     <li key={algorithm.id}>
                       <button
                         className={`algorithm-icons__algorithm ${this.state.activeAlgorithm === algorithm.id
-                            ? 'algorithm-icons__algorithm--active'
-                            : ''
+                          ? 'algorithm-icons__algorithm--active'
+                          : ''
                           }`}
                         onClick={() => this.handleAlgorithmSelect(algorithm.id)}
                         onKeyDown={() =>
@@ -268,9 +269,9 @@ class DigitalHealthTrendsFeature extends Component {
 
               <div
                 className={`algorithm ${this.state.activeAlgorithm ===
-                    ALGORITHMS.VACCINE_DECISION_AIDS || this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  ALGORITHMS.VACCINE_DECISION_AIDS || this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -335,10 +336,10 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm ===
-                    ALGORITHMS.BLOOD_PRESSURE_MONITORING ||
-                    this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  ALGORITHMS.BLOOD_PRESSURE_MONITORING ||
+                  this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -399,9 +400,9 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm ===
-                    ALGORITHMS.AT_HOME_URINALYSIS || this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  ALGORITHMS.AT_HOME_URINALYSIS || this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -469,10 +470,10 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm ===
-                    ALGORITHMS.MENTAL_HEALTH_ASSESSMENTS ||
-                    this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  ALGORITHMS.MENTAL_HEALTH_ASSESSMENTS ||
+                  this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -527,9 +528,9 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm === ALGORITHMS.VISION_TESTS ||
-                    this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -581,10 +582,10 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm ===
-                    ALGORITHMS.BLOOD_GLUCOSE_MONITORING ||
-                    this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  ALGORITHMS.BLOOD_GLUCOSE_MONITORING ||
+                  this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -633,9 +634,9 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm === ALGORITHMS.BREAST_SELF_EXAM ||
-                    this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -689,10 +690,10 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm ===
-                    ALGORITHMS.BIRTH_CONTROL_DECISION_AID ||
-                    this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  ALGORITHMS.BIRTH_CONTROL_DECISION_AID ||
+                  this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -759,9 +760,9 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm ===
-                    ALGORITHMS.AIR_QUALITY_MONITOR || this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  ALGORITHMS.AIR_QUALITY_MONITOR || this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -804,9 +805,9 @@ class DigitalHealthTrendsFeature extends Component {
               </div>
               <div
                 className={`algorithm ${this.state.activeAlgorithm === ALGORITHMS.PULSE_OXIMETRY ||
-                    this.state.allExpanded
-                    ? 'algorithm--visible'
-                    : ''
+                  this.state.allExpanded
+                  ? 'algorithm--visible'
+                  : ''
                   }`}
               >
                 <h2 className="header--lg margin-top--none margin-bottom--none">
@@ -1536,7 +1537,8 @@ class DigitalHealthTrendsFeature extends Component {
                 </li>
               </ol>
 
-              <div>
+              <div className="pad-vertical--double">
+                <Divider />
                 <h2 className="header--xl text--center">Authors</h2>
                 <Author name="Arpna Ghanshani" />
                 <Author name="Chloe Ma" />

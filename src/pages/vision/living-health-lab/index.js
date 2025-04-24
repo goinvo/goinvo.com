@@ -854,6 +854,7 @@ class LivingHealthLabFeature extends Component {
           </div>
 
           <div className="max-width pad-all">
+            <Divider />
             <h2 className="header--lg text--center margin-top--trip">
               Authors
             </h2>
@@ -868,7 +869,7 @@ class LivingHealthLabFeature extends Component {
 
             <div className="pad-vertical--double">
               <h3 className="header--md">Contributors</h3>
-              Jenny Yi
+              <Author name="Jenny Yi" />
             </div>
           </div>
 

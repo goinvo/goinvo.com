@@ -4,6 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
 import Author from '../../../components/author'
+import Divider from '../../../components/divider'
 
 import config from '../../../../config'
 
@@ -68,20 +69,21 @@ class HistoryOfHealthDesignFeature extends Component {
                   Timeline Events and References
                 </a>
               </div>
-              <div>
-                <div className="pad-vertical--double">
-                  <h2 className="header--xl text--center">Authors</h2>
-                  <Author name="Samantha Wuu" />
-                  <Author name="Juhan Sonin" />
-                </div>
+
+              <div className="pad-vertical--double">
+                <Divider />
+                <h2 className="header--xl text--center">Authors</h2>
+                <Author name="Samantha Wuu" />
+                <Author name="Juhan Sonin" />
               </div>
             </div>
 
-            <div className="pad-vertical--double">
+            <div className=" background--gray pad-vertical--double">
               <div className="max-width max-width--md content-padding">
                 <MailerLiteForm />
               </div>
             </div>
+
           </div>
         </div>
       </Layout>

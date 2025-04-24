@@ -5,6 +5,8 @@ import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
 import References from '../../../components/references'
 import Image from '../../../components/image'
+import Author from '../../../components/author'
+import Divider from '../../../components/divider'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -275,6 +277,8 @@ class NationalCancerNavigationFeature extends Component {
                   CancerNavigator@goinvo.com
                 </a>
               </p>
+
+              <Divider />
 
               <h2 className="header--lg margin-bottom--half">Authors</h2>
               <p className="margin-top--none">

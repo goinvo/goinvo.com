@@ -5,6 +5,7 @@ import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
+import Divider from '../../../components/divider'
 
 import config from '../../../../config'
 import { mediaUrl } from '../../../helpers'
@@ -590,6 +591,7 @@ class HealthcareAIFeature extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
+              <Divider />
               <h2 className="header--xl text--center">Authors</h2>
               <Author name="Sharon Lee" />
               <Author name="Juhan Sonin" />

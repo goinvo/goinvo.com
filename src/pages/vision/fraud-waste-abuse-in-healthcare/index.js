@@ -299,6 +299,7 @@ class FraudWasteAbuseHealthcare extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
+              <Divider />
               <h2 className="header--xl text--center">Authors</h2>
               <Author name="Michelle Bourdon" />
               <Author name="Eric Benoit" />
@@ -325,7 +326,7 @@ class FraudWasteAbuseHealthcare extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
+          <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div id="references">
                 <References

@@ -3,7 +3,7 @@ import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 
@@ -80,16 +80,18 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
         </SlickCarousel>
         <div className="acds-carousel-nav">
           <button
-            className={`button button--link acds-carousel-prev ${this.state[id] === 0 ? 'disabled' : ''
-              }`}
+            className={`button button--link acds-carousel-prev ${
+              this.state[id] === 0 ? 'disabled' : ''
+            }`}
             onClick={() => this.goToCarouselSlide(id, this.state[id] - 1)}
           ></button>
           {slides.map((n, i) => {
             return (
               <button
                 key={n}
-                className={`button button--link acds-carousel-button ${this.state[id] === i ? 'active' : ''
-                  }`}
+                className={`button button--link acds-carousel-button ${
+                  this.state[id] === i ? 'active' : ''
+                }`}
                 onClick={() => this.goToCarouselSlide(id, i)}
               >
                 <Image
@@ -102,8 +104,9 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
             )
           })}
           <button
-            className={`button button--link acds-carousel-next ${this.state[id] === slides.length - 1 ? 'disabled' : ''
-              }`}
+            className={`button button--link acds-carousel-next ${
+              this.state[id] === slides.length - 1 ? 'disabled' : ''
+            }`}
             onClick={() => this.goToCarouselSlide(id, this.state[id] + 1)}
           ></button>
         </div>
@@ -142,7 +145,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               <p>
                 Our concept for an onboard truck assistant is <strong>Field Guider</strong>, an open source software service that:
               </p>
-
+              
               <ul>
                 <li>lives on the mobile health truck, phone, and AR goggles,</li>
                 <li>works with healthcare workers in real-time to co-diagnose, co-treat patients for better health outcomes,</li>
@@ -150,27 +153,27 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </ul>
 
               <div className="pure-g button-group margin-bottom">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <a
-                    href="https://github.com/goinvo/arpa-h/blob/main/TA5/arpa-h-paradigm-field-guider-proposal.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="button button--secondary margin-top--double margin-bottom--half margin-right"
-                  >
-                    Download ARPHA-H Proposal
-                  </a>
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <a
+                      href="https://github.com/goinvo/arpa-h/blob/main/TA5/arpa-h-paradigm-field-guider-proposal.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button button--secondary margin-top--double margin-bottom--half margin-right"
+                      >
+                        Download ARPHA-H Proposal
+                    </a>
+                  </div>
+                  <div className="pure-u-1 pure-u-lg-1-2">
+                    <a
+                      href="https://github.com/goinvo/arpa-h"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
+                    >
+                      Github
+                    </a>
+                  </div>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <a
-                    href="https://github.com/goinvo/arpa-h"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="button button--secondary margin-top--double margin-bottom--half  button--block margin-right"
-                  >
-                    Github
-                  </a>
-                </div>
-              </div>
 
               <h2 class="header--lg margin-top--trip">
                 The future of rural healthcare is...
@@ -190,10 +193,10 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </h2>
 
               <a
-                href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-primary-care.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-primary-care.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <Image
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.jpg"
                   className="image--max-width"
@@ -217,10 +220,10 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               </h2>
 
               <a
-                href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-clinical-task-guidance-system-diagram.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-clinical-task-guidance-system-diagram.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <Image
                   src="/images/features/augmented-clinical-decision-support/clinical-task-guidance-system-diagram-2.jpg"
                   className="image--max-width"
@@ -263,10 +266,10 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               <h3 className="header--md">Pregnancy Process Map</h3>
 
               <a
-                href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-pregnancy.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-pregnancy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <Image
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.jpg"
                   className="image--max-width"
@@ -288,10 +291,10 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               <h3 className="header--md">Head Injury Process Map</h3>
 
               <a
-                href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-head-injury.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-head-injury.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <Image
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.jpg"
                   className="image--max-width"
@@ -313,10 +316,10 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
               <h3 className="header--md">Cancer Process Map</h3>
 
               <a
-                href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-cancer.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+                  href="https://github.com/goinvo/arpa-h/blob/main/TA5/augmented-cds-process-map-cancer.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <Image
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-cancer.jpg"
                   className="image--max-width"
@@ -359,7 +362,11 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
 
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
 

@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import HubspotForm from '../../../components/hubspot-form'
 import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
+
+import config from '../../../../config'
 
 const frontmatter = {
   metaTitle:
@@ -23,7 +25,6 @@ class OpenSourceHealthcareFeature extends Component {
         <div className="oshc-feature">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-
               <div className="oshc-title-area">
                 <h1 className="header--xl">Open Source Healthcare</h1>
                 <h4 className="header--sm">We must set healthcare free</h4>
@@ -97,7 +98,7 @@ class OpenSourceHealthcareFeature extends Component {
                 <p className="text--gray">
                   Read our open source ethos,
                   <br />
-                  with contributing articles by{' '}
+                   with contributing articles by{' '}
                   <a
                     href="https://www.healthpopuli.com/2018/10/11/open-source-health-care-will-liberate-patients/"
                     target="_blank"
@@ -114,6 +115,7 @@ class OpenSourceHealthcareFeature extends Component {
                     Eric Topol
                   </a>
                 </p>
+
                 <div className="button-group margin-bottom--double">
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <a
@@ -139,7 +141,7 @@ class OpenSourceHealthcareFeature extends Component {
                 <Divider />
               </div>
 
-              <div className="oshc-missionette">
+              <div cassName="oshc-missionette">
                 <h2 className="header--lg margin-top--double">
                   Open Source Healthcare Missionette
                 </h2>
@@ -190,16 +192,17 @@ class OpenSourceHealthcareFeature extends Component {
                   governments engage in healthcare for all.
                 </p>
               </div>
-
             </div>
           </div>
-
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
-
         </div>
       </Layout>
     )

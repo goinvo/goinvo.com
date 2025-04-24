@@ -4,7 +4,7 @@ import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
@@ -85,16 +85,18 @@ class LivingHealthLabFeature extends Component {
         </SlickCarousel>
         <div className="lhl-carousel-nav">
           <button
-            className={`button button--link lhl-carousel-prev ${this.state[id] === 0 ? 'disabled' : ''
-              }`}
+            className={`button button--link lhl-carousel-prev ${
+              this.state[id] === 0 ? 'disabled' : ''
+            }`}
             onClick={() => this.goToCarouselSlide(id, this.state[id] - 1)}
           ></button>
           {slides.map((n, i) => {
             return (
               <button
                 key={n}
-                className={`button button--link lhl-carousel-button ${this.state[id] === i ? 'active' : ''
-                  }`}
+                className={`button button--link lhl-carousel-button ${
+                  this.state[id] === i ? 'active' : ''
+                }`}
                 onClick={() => this.goToCarouselSlide(id, i)}
               >
                 <Image
@@ -107,8 +109,9 @@ class LivingHealthLabFeature extends Component {
             )
           })}
           <button
-            className={`button button--link lhl-carousel-next ${this.state[id] === slides.length - 1 ? 'disabled' : ''
-              }`}
+            className={`button button--link lhl-carousel-next ${
+              this.state[id] === slides.length - 1 ? 'disabled' : ''
+            }`}
             onClick={() => this.goToCarouselSlide(id, this.state[id] + 1)}
           ></button>
         </div>
@@ -854,7 +857,11 @@ class LivingHealthLabFeature extends Component {
           </div>
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
           <div className="max-width pad-all">

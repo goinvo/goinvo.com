@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import HubspotForm from '../../../components/hubspot-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -31,34 +31,34 @@ class HealthcareDollarsRedux extends Component {
                 To Understand the Healthcare system, follow the money
               </h4>
               <p className="margin-bottom--none text--gray">
-                "Where your Health Dollars Go" is a map of the US healthcare system and its components. By following  the allocation and flow of money in healthcare, the thread of how the  organizations, departments, and major players are connected becomes  apparent.
+              "Where your Health Dollars Go" is a map of the US healthcare system and its components. By following  the allocation and flow of money in healthcare, the thread of how the  organizations, departments, and major players are connected becomes  apparent.
               </p>
               <p className="margin-bottom--none text--gray">
-                We expand on <a href="../healthcare-dollars/">prior work</a> and present an interactive map of the flow. Check it out and see how your dollars work their way through the system from your paycheck to the paychecks of nurses and the pockets of shareholders and CEOs. Select stories to focus on specific parts of the system.
+              We expand on <a href="../healthcare-dollars/">prior work</a> and present an interactive map of the flow. Check it out and see how your dollars work their way through the system from your paycheck to the paychecks of nurses and the pockets of shareholders and CEOs. Select stories to focus on specific parts of the system. 
               </p>
-
+            
               <div className="card--shadow margin-top--double" style={{ borderRadius: '5px', overflow: 'hidden' }}>
-                <a
-                  href={"https://goinvo.github.io/healthcare-flow/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a  
+                    href={"https://goinvo.github.io/healthcare-flow/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
                 ><Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-shot.jpg"
-                    className="image--max-width image--center"
+                    className="image--max-width image--center"                    
                     sizes={config.sizes.fullInsideMediumMaxWidth}
                     alt="Screenshot of Where Your Healthcare Dollars Go interactive map."
                   /></a>
               </div>
 
               <div>
-                <a
-                  href={"https://goinvo.github.io/healthcare-flow/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
-                >
-                  Open the Interactive Map
-                </a>
+                  <a
+                    href={"https://goinvo.github.io/healthcare-flow/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--primary button--lg margin-top--double margin-bottom--double button--block"
+                  >
+                    Open the Interactive Map
+                  </a>
               </div>
 
               <Divider />
@@ -70,12 +70,12 @@ class HealthcareDollarsRedux extends Component {
                       src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--1.jpg"
                       className="image--max-width hoverable-comic"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                      alt="Comic frame 1: The original Where Your Health Dollars Go map, with a comic style caption, 'The Original'."
+                      alt="Comic frame 1: The original Where Your Health Dollars Go map, with a comic style caption, 'The Original'."                     
                     />
                   </a>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <Image
+                    <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -155,7 +155,7 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
               </div>
-
+              
               <div className="button-group">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
@@ -184,12 +184,16 @@ class HealthcareDollarsRedux extends Component {
 
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
 
-
-
+          
+          
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>

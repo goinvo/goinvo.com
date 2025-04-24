@@ -4,7 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import ImageBlock from '../../../components/image-block'
 import Quote from '../../../components/quote'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import HubspotForm from '../../../components/hubspot-form'
 import Divider from '../../../components/divider'
 import Columns from '../../../components/columns'
 import Card from '../../../components/card'
@@ -145,7 +145,11 @@ class HealthDesignThinkingBook extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <HubspotForm
+                formId={config.hubspotNewsletterFullFormId}
+                title="Subscribe to our open source healthcare newsletter."
+                submitButtonText="Subscribe"
+              />
             </div>
           </div>
 

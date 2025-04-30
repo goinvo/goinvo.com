@@ -12,7 +12,7 @@ import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import Collapsible from '../components/collapsible'
-import HubspotForm from '../components/hubspot-form'
+import MailerLiteContactForm from '../components/mailerlite-contact-form'
 import GradientImageColumns from '../components/gradient-image-columns'
 import headerData from '../data/homepage-headers.json'
 
@@ -343,10 +343,7 @@ class WorkPage extends Component {
           <h2 className="header--xl text--white">
             Want to take your healthcare product to the next level?
           </h2>
-          <HubspotForm
-            formId={config.hubspotContactFormId}
-            title="Get in touch"
-          />
+          <MailerLiteContactForm />
         </GradientImageColumns>
         <div className="background--blue">
           <div className="max-width content-padding pad-vertical pad-vertical--quad--only-lg">

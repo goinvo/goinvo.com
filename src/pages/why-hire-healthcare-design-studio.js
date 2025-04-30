@@ -6,7 +6,7 @@ import Hero from '../components/hero'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import Columns from '../components/columns'
-import HubspotForm from '../components/hubspot-form'
+import MailerLiteContactForm from '../components/mailerlite-contact-form'
 
 import config from '../../config'
 
@@ -157,10 +157,7 @@ class ServicesPage extends Component {
 
         <div className="pad-vertical--double">
           <div className="max-width max-width--md content-padding">
-            <HubspotForm
-              formId={config.hubspotContactFormId}
-              title="Get in touch"
-            />
+            <MailerLiteContactForm />
           </div>
         </div>
 

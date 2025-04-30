@@ -8,6 +8,7 @@ import Quote from '../components/quote'
 import Columns from '../components/columns'
 import Image from '../components/image'
 import Divider from '../components/divider'
+import MailerLiteContactForm from '../components/mailerlite-contact-form'
 
 import IconComplexity from '../assets/images/icon-complexity.inline.svg'
 import IconHealthcare from '../assets/images/icon-healthcare.inline.svg'
@@ -131,20 +132,24 @@ class ServicesPage extends Component {
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <div className="container container--column container--align-center">
             <div className="pure-u-1 pure-u-lg-1-2">
-              <p className="header--lg margin-bottom--half text--center">
-                Why hire GoInvo
-              </p>
-              <p className="text--gray margin-bottom--half">
-                We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
-              </p>
-
-              <Link
-                to="#calendly-open-office-hours"
-                className="button button--secondary button--block margin-bottom--double"
-              >
-                Schedule a chat
-              </Link>
-            </div>
+                <p className="header--lg margin-bottom--half">
+                  Why hire GoInvo
+                </p>
+                <p className="text--gray">
+                  We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
+                </p>
+                
+                
+              
+                <MailerLiteContactForm />
+                <div className="text--center"><p>Or, talk to us live on Zoom.</p></div>
+                <Link
+                  to="#calendly-open-office-hours"
+                  className="button button--secondary button--block margin-bottom--double  margin-top--double"
+                >
+                  Schedule a chat
+                </Link>
+              </div>
           </div>
 
           <div>
@@ -314,7 +319,7 @@ class ServicesPage extends Component {
           With Invo, design wasn't just design. It impacted our IP portfolio. It
           changed our business.
         </Quote>
-
+        
         <div className="max-width content-padding pad-vertical--double margin-bottom--double">
           <div className="max-width content-padding pad-vertical--double">
             <h2
@@ -330,7 +335,14 @@ class ServicesPage extends Component {
               style={{ minWidth: '320px', height: '950px' }}
             />
           </div>
+        </div>
 
+        <div className="background--gray">
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <MailerLiteContactForm />
+            </div>
+          </div>
         </div>
 
         <div className="max-width content-padding pad-vertical--double">

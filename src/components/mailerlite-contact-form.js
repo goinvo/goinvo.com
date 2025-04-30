@@ -49,6 +49,7 @@ class MailerLiteContactForm extends Component {
               <div className="ml-form-embedBody ml-form-embedBodyDefault row-form">
                 <div className="ml-form-embedContent">
                   <h4>Get in touch</h4>
+                  <p>Or email us at <a href="mailto:info@goinvo.com">info@goinvo.com</a></p>
                 </div>
 
                 <form className="ml-block-form" onSubmit={this.onSubmit}>

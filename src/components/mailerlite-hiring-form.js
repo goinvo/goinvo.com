@@ -17,7 +17,7 @@ class MailerLiteHiringForm extends Component {
           "email": e.target.elements.email.value,
           "name": e.target.elements.name.value,
           "body": e.target.elements.body.value,
-          "link": e.target.elements.fields.link.value,
+          "link": e.target.elements.link.value,
         },
         "ml-submit": 1,
         "anticsrf": true
@@ -94,7 +94,7 @@ class MailerLiteHiringForm extends Component {
 
               <div className="ml-form-successBody row-success display-none">
                 <div className="ml-form-successContent">
-                  <h4>Thank you !</h4>
+                  <h4>Thank you for your interest!</h4>
                   <p>We will try to get back to you in 2 business hours.</p>
                 </div>
               </div>

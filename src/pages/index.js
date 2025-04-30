@@ -8,7 +8,7 @@ import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
-import HubspotForm from '../components/hubspot-form'
+import MailerLiteContactForm from '../components/mailerlite-contact-form'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
@@ -337,10 +337,7 @@ class IndexPage extends Component {
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2 margin-vertical">
-                <HubspotForm
-                  formId={config.hubspotContactFormId}
-                  title="Get in touch"
-                />
+                <MailerLiteContactForm />
               </div>
             </div>
           </div>

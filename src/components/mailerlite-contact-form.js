@@ -88,7 +88,7 @@ class MailerLiteContactForm extends Component {
               <div className="ml-form-successBody row-success display-none">
                 <div className="ml-form-successContent">
                   <h4>Thank you for contacting us.</h4>
-                  <p>We will get back to you in 2 business hours.</p>
+                  <p>We will try to get back to you in 2 business hours.</p>
                 </div>
               </div>
               <div className="ml-form-successBody row-error display-none">

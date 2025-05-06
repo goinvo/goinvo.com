@@ -1,4 +1,4 @@
-.enterprise-design {
+.landing-page {
   .textAlign {
     text-align: center;
   }
@@ -40,10 +40,6 @@
         width: 100%;
       }
     }
-  }
-
-  .bg-light {
-    background-color: #faf6f4;
   }
 
   .textLayout {
@@ -94,10 +90,6 @@
     }
   }
 
-  .teal {
-    color: $color-tertiary;
-  }
-
   .noTopMargin {
     @media screen and (max-width: 760px) {
       margin-top: 0;
@@ -144,8 +136,8 @@
   .nbrStyle {
     margin-top: 25px;
     font-size: 32px;
-    color: #c9461d;
-    font-family: Adobe Jensen Pro;
+    color: $color-orange;
+    font-family: $font-family--serif;
     letter-spacing: 1;
     line-height: 1.1;
     font-weight: 600;

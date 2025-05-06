@@ -73,8 +73,8 @@ class OpenSourcePage extends Component {
 
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="open-source-health-design">
-          <div className="pad-horizontal teal background-image ">
+        <div className="open-source-health-design landing-page">
+          <div className="pad-horizontal text--teal background-image ">
             <div className="max-width content-padding pad-vertical LayoutCenter">
               <div className="pad-horizontal flip-parent container-spacing">
                 <div className="flip-child container-spacing">
@@ -104,8 +104,8 @@ class OpenSourcePage extends Component {
               </div>
             </div>
           </div>
-          <div className="bg-light">
-            <div className="max-width content-padding pad-vertical LayoutCenter teal">
+          <div className="background--light-orange">
+            <div className="max-width content-padding pad-vertical LayoutCenter text--teal">
               <div className="pure-u-lg-1-2">
                 <h2 className="header--xl headerStyle ">
                   We envision a world where patients can be cared for with
@@ -114,7 +114,7 @@ class OpenSourcePage extends Component {
                 </h2>
               </div>
               <div className="pure-u-lg-1-2">
-                <p className="text--teal textLayout">
+                <p className="text--text--teal textLayout">
                   Our open source health design mission is to make our patterns,
                   code, scripts, graphics, ideas, documents available to any
                   designer, to any engineer, to any world citizen, to use and
@@ -134,24 +134,24 @@ class OpenSourcePage extends Component {
               <div className="container--justify-center">
                 <div className="pure-u-sm-1-3">
                   <p>
-                    <span className="nbrStyle">$1.8M</span>
-                    <span className="center teal">
+                    <span className="number-large">$1.8M</span>
+                    <span className="center text--teal">
                       GoInvo investment <br /> in open source projects
                     </span>
                   </p>
                 </div>
                 <div className="pure-u-sm-1-3">
                   <p>
-                    <span className="nbrStyle">$2.5M</span>
-                    <span className="center teal">
+                    <span className="number-large">$2.5M</span>
+                    <span className="center text--teal">
                       Clients' investment <br /> in open source projects
                     </span>
                   </p>
                 </div>
                 <div className="pure-u-sm-1-3">
                   <p>
-                    <span className="nbrStyle">65+</span>
-                    <span className="center teal">
+                    <span className="number-large">65+</span>
+                    <span className="center text--teal">
                       Sponsored open source
                       <br />
                       projects since 2010
@@ -162,7 +162,7 @@ class OpenSourcePage extends Component {
             </div>
           </div>
 
-          <div className="max-width content-padding pad-vertical LayoutCenter teal">
+          <div className="max-width content-padding pad-vertical LayoutCenter text--teal">
             <h2 className="header--xl center ">
               Open Source Health Design Projects
             </h2>
@@ -176,7 +176,7 @@ class OpenSourcePage extends Component {
             </div>
           </div>
 
-          <div className="LayoutCenter bg-light teal">
+          <div className="LayoutCenter background--light-orange text--teal">
             <div>
               <div className="max-width content-padding pad-vertical">
                 <div className="pure-u-lg-1-2">
@@ -215,7 +215,7 @@ class OpenSourcePage extends Component {
             </div>
           </div>
 
-          <div className="pad-vertical--double teal">
+          <div className="pad-vertical--double text--teal">
             <Quote
               quotee="Eric Topol"
               quoteeSub="MD, Director, Scripps Translational Science Institute"
@@ -227,7 +227,7 @@ class OpenSourcePage extends Component {
             </Quote>
           </div>
 
-          <div className="bg-light teal">
+          <div className="background--light-orange text--teal">
             <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="paddingBottom">
                 <div>
@@ -275,7 +275,7 @@ class OpenSourcePage extends Component {
                 <div className="pure-u-1 card marginTop">
                   <Card link="/vision/living-health-lab">
                     <div className="flip-parent">
-                      <div className="pure-u-lg-1-2 teal textCard flip-child">
+                      <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard">
                           Living Health Lab
                         </h4>
@@ -309,7 +309,7 @@ class OpenSourcePage extends Component {
                         />
                       </div>
 
-                      <div className="pure-u-md-1-2 teal textCard wrap">
+                      <div className="pure-u-md-1-2 text--teal textCard wrap">
                         <h4 className="header--xl headerCard">
                           Health Manager
                         </h4>
@@ -328,7 +328,7 @@ class OpenSourcePage extends Component {
                 <div className="pure-u-1">
                   <Card link="/work/hgraph">
                     <div className="flip-parent">
-                      <div className="pure-u-md-1-2 teal flip-child textCard">
+                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
                           Health Picture
                         </h4>
@@ -361,7 +361,7 @@ class OpenSourcePage extends Component {
                         />
                       </div>
 
-                      <div className="pure-u-md-1-2 teal textCard wrap">
+                      <div className="pure-u-md-1-2 text--teal textCard wrap">
                         <h4 className="header--xl headerCard">
                           Health Data Ownership
                         </h4>
@@ -389,7 +389,7 @@ class OpenSourcePage extends Component {
           </div>
 
           <div>
-            <div className=" max-width content-padding pad-vertical teal">
+            <div className=" max-width content-padding pad-vertical text--teal">
               <div className="pure-u-lg-1-2 ">
                 <h2 className="header--xl headerStyle">
                   Our design work, health research, and code are open source
@@ -409,7 +409,7 @@ class OpenSourcePage extends Component {
               </div>
             </div>
           </div>
-          <div className="max-width content-padding pad-vertical teal">
+          <div className="max-width content-padding pad-vertical text--teal">
             <div className="paddingBottom">
               <h3 className="header--lg">
                 Open Source Health Design conversations
@@ -437,7 +437,7 @@ class OpenSourcePage extends Component {
               </Columns>
             </div>
           </div>
-          <div className="bg-light teal">
+          <div className="background--light-orange text--teal">
             <div className="max-width content-padding pad-vertical--double">
               <div className="pure-u-md-1-2">
                 <h2 className="header--xl noTopMargin">

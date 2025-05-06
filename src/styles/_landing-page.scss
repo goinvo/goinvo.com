@@ -116,24 +116,13 @@
     padding-bottom: 2%;
   }
 
-  .chartLayout {
-    display: block;
-    margin: auto;
 
-    a {
-      transition: 0.25s;
-
-      &:hover {
-        filter: drop-shadow(0px 7px 7px rgba(57, 75, 94, 0.17));
-      }
-    }
-  }
 
   .imgMaxWidth {
     max-width: 400px;
   }
 
-  .nbrStyle {
+  .number-large {
     margin-top: 25px;
     font-size: 32px;
     color: $color-orange;

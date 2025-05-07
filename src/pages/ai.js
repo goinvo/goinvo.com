@@ -9,31 +9,29 @@ import Card from '../components/card'
 import HubspotForm from '../components/hubspot-form'
 
 const frontmatter = {
-  metaTitle: 'Software Design for Government Services',
+  metaTitle: 'Software Design for AI Services',
   metaDescription:
-    'Beautiful software design for government and state services for smoother processes and happy residents.',
-  heroImage: '/images/case-studies/mass/snap/snap-cover.jpg',
+    'Beautiful software design for AI experiences, bridging human-centered design with AI capabilities.',
+  heroImage: '/images/homepage/ai-hero-augmented-clinical-decision-support.jpg',
 }
 
-class GovernmentPage extends Component {
+class AIPage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="government-design landing-page">
+        <div className="ai-design landing-page">
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/case-studies/mass/snap/snap-cover.jpg"
-            caption="Beautiful software design for government and state services for smoother processes and happy residents."
+            image="/images/homepage/ai-hero-augmented-clinical-decision-support.jpg"
+            caption="We design tools and experiences with AI so people and machines can skillfully work together."
             button="Let's discuss your project"
             buttonLink="/contact/"
             isLarge
             position="top center"
           >
             <h1 className="header--xl">
-              Software for goverment services is complicated
-              <span className="text--serif text--primary">.</span><br />
-              We know how to do it
+              Designing AI-Powered Experiences for People and Organizations
               <span className="text--serif text--primary">.</span>
             </h1>
           </Hero>
@@ -312,4 +310,4 @@ export const openSourcePageQuery = graphql`
   }
 `
 
-export default GovernmentPage
+export default AIPage

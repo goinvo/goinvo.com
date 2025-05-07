@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import Divider from '../../../components/divider'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -57,7 +58,11 @@ class TestTreatTraceFeature extends Component {
                   Download Poster
                 </a>
               </div>
-              <div>
+            </div>
+
+            <div className="pad-vertical--double">
+              <div className="max-width max-width--md content-padding">
+                <Divider />
                 <div className="pad-vertical--double">
                   <h2 className="header--xl text--center">Authors</h2>
                   <Author name="Parsuree Vatanasirisuk" />
@@ -72,6 +77,15 @@ class TestTreatTraceFeature extends Component {
                   <li>Dafna Gold Melchior</li>
                 </ul>
               </div>
+            </div>
+
+            <div className="pad-vertical--double background--gray">
+              <div className="max-width max-width--md content-padding">
+                <MailerLiteForm />
+              </div>
+            </div>
+
+            <div className="max-width max-width--md content-padding">
               <References
                 references={[
                   {
@@ -124,18 +138,9 @@ class TestTreatTraceFeature extends Component {
                 ]}
               />
             </div>
-            <div className="pad-vertical--double">
-              <div className="max-width max-width--md content-padding">
-                <HubspotForm
-                  formId={config.hubspotNewsletterFullFormId}
-                  title="Subscribe to our newsletter."
-                  submitButtonText="Subscribe"
-                />
-              </div>
-            </div>
           </div>
         </div>
-      </Layout>
+      </Layout >
     )
   }
 }

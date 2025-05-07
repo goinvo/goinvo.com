@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -556,16 +556,6 @@ class VirtualCareFeature extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
-            <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
-            </div>
-          </div>
-
           <div className="background--blue pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div id="methodology">
@@ -660,37 +650,44 @@ class VirtualCareFeature extends Component {
           </div>
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Authors</h2>
-                <Author
-                  name="Cameron Gettel"
-                  company="Resident Physician, Brown University"
-                  image="/images/about/headshot-cameron-gettel.jpg"
-                >
-                  Cameron Gettel is an Emergency Medicine physician with
-                  interests in improving healthcare through evidence-based
-                  practices, quality improvement, and clinical research.
-                </Author>
-                <Author name="Eric Benoit" />
-                <h2 className="header--lg text--center">Contributors</h2>
-                <Author name="Juhan Sonin" company="GoInvo, MIT" />
-                <div>
-                  <h4 className="header--sm margin-bottom--half">
-                    About GoInvo
-                  </h4>
-                  <p className="text--gray">
-                    GoInvo is a healthcare design company that crafts innovative
-                    digital and physical solutions. Our deep expertise in Health
-                    IT, Genomics, and Open Source health has delivered results
-                    for the National Institutes of Health, Walgreens, Mount
-                    Sinai, and Partners Healthcare.{' '}
-                  </p>
-                  <p className="text--gray">
-                    <a href="/contact">Reach out with feedback.</a>
-                  </p>
-                </div>
+              <h2 className="header--xl text--center">Authors</h2>
+              <Author
+                name="Cameron Gettel"
+                company="Resident Physician, Brown University"
+                image="/images/about/headshot-cameron-gettel.jpg"
+              >
+                Cameron Gettel is an Emergency Medicine physician with
+                interests in improving healthcare through evidence-based
+                practices, quality improvement, and clinical research.
+              </Author>
+              <Author name="Eric Benoit" />
+              <h2 className="header--lg text--center">Contributors</h2>
+              <Author name="Juhan Sonin" company="GoInvo, MIT" />
+
+              <div className=" pad-vertical--double">
+                <h4 className="header--sm margin-bottom--half">
+                  About GoInvo
+                </h4>
+                <p className="text--gray">
+                  GoInvo is a healthcare design company that crafts innovative
+                  digital and physical solutions. Our deep expertise in Health
+                  IT, Genomics, and Open Source health has delivered results
+                  for the National Institutes of Health, Walgreens, Mount
+                  Sinai, and Partners Healthcare.{' '}
+                </p>
+                <p className="text--gray">
+                  <a href="/contact">Reach out with feedback.</a>
+                </p>
               </div>
-              <Divider />
+            </div>
+
+            <div className="background--gray pad-vertical--double">
+              <div className="max-width max-width--md content-padding">
+                <MailerLiteForm />
+              </div>
+            </div>
+
+            <div className="max-width max-width--md content-padding">
               <div id="references">
                 <References
                   references={[

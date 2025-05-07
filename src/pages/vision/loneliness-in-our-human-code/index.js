@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -100,7 +100,7 @@ class LonelinessFeature extends Component {
                   <span className="header--xl">$6.7</span>
                   <span className="header--lg">B</span>
                 </div>
-                <div class="stat-desc">
+                <div className="stat-desc">
                   <p className="text--gray">
                     dollars in additional federal spending, every year
                     <sup>
@@ -124,53 +124,53 @@ class LonelinessFeature extends Component {
               </h4>
               <div className="row">
                 <div className="risk-duo">
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon organ-heart-icon"
                         src={organHeartIcon}
                         alt="heart"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       heart disease
                     </div>
                   </div>
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon dementia-icon"
                         src={dementiaIcon}
                         alt="dementia"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       dementia
                     </div>
                   </div>
                 </div>
                 <div className="risk-duo">
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon arthritis-icon"
                         src={arthritisIcon}
                         alt="arthritis"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       arthritis
                     </div>
                   </div>
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon diabetes-icon"
                         src={diabetesIcon}
                         alt="diabetes"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       type-2 diabetes
                     </div>
                   </div>
@@ -178,66 +178,66 @@ class LonelinessFeature extends Component {
               </div>
               <div className="row">
                 <div className="risk-duo">
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon depression-icon"
                         src={depressionIcon}
                         alt="depression"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       depression
                     </div>
                   </div>
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon blood-pressure-icon"
                         src={bloodPressureIcon}
                         alt="blood pressure"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       high blood pressure
                     </div>
                   </div>
                 </div>
                 <div className="risk-duo">
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon cancer-icon"
                         src={cancerIcon}
                         alt="cancer"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       metastatic cancer
                     </div>
                   </div>
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon stroke-icon"
                         src={strokeIcon}
                         alt="stroke"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">stroke</div>
+                    <div className="risk-text text--gray text--center">stroke</div>
                   </div>
                 </div>
               </div>
               <div className="row">
-                <div class="risk-factor risk-solo">
-                  <div class="icon-bubble">
+                <div className="risk-factor risk-solo">
+                  <div className="icon-bubble">
                     <img
                       className="risk-icon suicide-icon"
                       src={suicideIcon}
                       alt="suicide"
                     />
                   </div>
-                  <div class="risk-text text--gray text--center">suicide</div>
+                  <div className="risk-text text--gray text--center">suicide</div>
                 </div>
               </div>
 
@@ -249,53 +249,53 @@ class LonelinessFeature extends Component {
               </h4>
               <div className="row">
                 <div className="risk-duo">
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon blood-vessel-icon"
                         src={bloodVesselIcon}
                         alt="blood vessel"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       narrowing blood vessels to preserve body heat
                     </div>
                   </div>
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon stress-icon"
                         src={stressIcon}
                         alt="stress"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       elevating levels of the stress hormone cortisol
                     </div>
                   </div>
                 </div>
                 <div className="risk-duo">
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon antibody-icon"
                         src={antibodyIcon}
                         alt="antibody"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       reducing antibody protection
                     </div>
                   </div>
-                  <div class="risk-factor">
-                    <div class="icon-bubble">
+                  <div className="risk-factor">
+                    <div className="icon-bubble">
                       <img
                         className="risk-icon cognition-icon"
                         src={cognitionIcon}
                         alt="decreased cognition"
                       />
                     </div>
-                    <div class="risk-text text--gray text--center">
+                    <div className="risk-text text--gray text--center">
                       decreasing cognitive function
                     </div>
                   </div>
@@ -356,7 +356,7 @@ class LonelinessFeature extends Component {
                   that found 209 abnormally expressed genes in their lonely
                   group. In the lonely people, genes in charge of activating
                   inflammation were over-expressed while those regulating
-                  antiviral and antibody mechanisms w ere under-expressed.
+                  antiviral and antibody mechanisms were under-expressed.
                   <sup>
                     <a href="#references">6,9,10</a>
                   </sup>
@@ -948,43 +948,39 @@ class LonelinessFeature extends Component {
             </div>
           </div>
 
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <h2 className="header--xl text--center">Authors</h2>
+              <Author
+                name="Vanessa Li"
+                company="University of Washington"
+                image="/images/features/loneliness-in-our-human-code/headshot-vanessa-li.jpg"
+              >
+                Vanessa specializes in health systems and public health
+                modeling, with an emphasis in socio-structural factors of
+                disease. At the time of this paper (2018), she received a
+                Bachelor of Science in Public Policy with double minors in
+                Business Economics and Global Health from the University of
+                Southern California, and later a Master of Public Health from
+                the University of Washington. As of 2020, Vanessa works as an
+                epidemiologist at the MITRE Corporation.
+              </Author>
+              <Author name="Jen Patel" />
+
+              <h3 className="header--md">Contributors</h3>
+              <Author name="Juhan Sonin" company="GoInvo, MIT" />
+              <Author name="Parsuree Vatanasirisuk" />
+            </div>
+          </div>
+
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
+              <MailerLiteForm />
             </div>
           </div>
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Authors</h2>
-                <Author
-                  name="Vanessa Li"
-                  company="University of Washington"
-                  image="/images/features/loneliness-in-our-human-code/headshot-vanessa-li.jpg"
-                >
-                  Vanessa specializes in health systems and public health
-                  modeling, with an emphasis in socio-structural factors of
-                  disease. At the time of this paper (2018), she received a
-                  Bachelor of Science in Public Policy with double minors in
-                  Business Economics and Global Health from the University of
-                  Southern California, and later a Master of Public Health from
-                  the University of Washington. As of 2020, Vanessa works as an
-                  epidemiologist at the MITRE Corporation.
-                </Author>
-                <Author name="Jen Patel" />
-
-                <h3 className="header--md">Contributors</h3>
-                <Author name="Juhan Sonin" company="GoInvo, MIT" />
-                <Author name="Parsuree Vatanasirisuk" />
-              </div>
-
-              <Divider />
-
               <div id="references">
                 <References
                   references={[
@@ -1168,7 +1164,7 @@ class LonelinessFeature extends Component {
                         "Healthline. How to Deal with Loneliness in Today's World: Your Options for Support. Retrieved Nov 8, 2018",
                       link:
                         'https://www.healthline.com/health/how-to-deal-with-loneliness#resources',
-                    },
+                    }
                   ]}
                 />
               </div>

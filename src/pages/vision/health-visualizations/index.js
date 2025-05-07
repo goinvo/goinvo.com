@@ -76,15 +76,7 @@ class Posters extends Component {
           </div>
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-<<<<<<< HEAD
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
-=======
               <MailerLiteForm />
->>>>>>> origin/mailer-form-replacement
             </div>
           </div>
         </div>

@@ -678,19 +678,6 @@ class BurnoutFeature extends Component {
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="background--gray pad-vertical--double">
-            <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
-            </div>
-          </div>
-
-=======
->>>>>>> origin/mailer-form-replacement
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>

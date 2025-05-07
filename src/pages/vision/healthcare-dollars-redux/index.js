@@ -184,19 +184,6 @@ class HealthcareDollarsRedux extends Component {
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-<<<<<<< HEAD
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
-            </div>
-          </div>
-
-
-
-          <div className="pad-vertical--double">
-=======
               <Divider />
               <h2 className="header--xl text--center">Author</h2>
               <Author name="Daniel Reeves" />
@@ -204,7 +191,6 @@ class HealthcareDollarsRedux extends Component {
           </div>
 
           <div className="background--gray pad-vertical--double">
->>>>>>> origin/mailer-form-replacement
             <div className="max-width max-width--md content-padding">
               <MailerLiteForm />
             </div>

@@ -2,11 +2,9 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
-
-import config from '../../../../config'
 
 const frontmatter = {
   metaTitle:
@@ -98,7 +96,11 @@ class OpenSourceHealthcareFeature extends Component {
                 <p className="text--gray">
                   Read our open source ethos,
                   <br />
+<<<<<<< HEAD
  with contributing articles by{' '}
+=======
+                  with contributing articles by{' '}
+>>>>>>> origin/mailer-form-replacement
                   <a
                     href="https://www.healthpopuli.com/2018/10/11/open-source-health-care-will-liberate-patients/"
                     target="_blank"
@@ -141,7 +143,7 @@ class OpenSourceHealthcareFeature extends Component {
                 <Divider />
               </div>
 
-              <div cassName="oshc-missionette">
+              <div className="oshc-missionette">
                 <h2 className="header--lg margin-top--double">
                   Open Source Healthcare Missionette
                 </h2>
@@ -192,15 +194,21 @@ class OpenSourceHealthcareFeature extends Component {
                   governments engage in healthcare for all.
                 </p>
               </div>
+
             </div>
           </div>
+
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
+<<<<<<< HEAD
               <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}
                 title="Subscribe to our newsletter."
                 submitButtonText="Subscribe"
               />
+=======
+              <MailerLiteForm />
+>>>>>>> origin/mailer-form-replacement
             </div>
           </div>
         </div>

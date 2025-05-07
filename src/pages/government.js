@@ -6,7 +6,7 @@ import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
-import HubspotForm from '../components/hubspot-form'
+import MailerLiteContactForm from '../components/mailerlite-contact-form'
 
 const frontmatter = {
   metaTitle: 'Software Design for Government Services',
@@ -262,10 +262,7 @@ class EnterprisePage extends Component {
                 <p className="margin-top--none">
                   Reach out to learn how GoInvo can help.
                 </p>
-                <HubspotForm
-                  formId={config.hubspotContactFormId}
-                  title=""
-                />
+                <MailerLiteContactForm />
               </div>
             </div>
           </div>

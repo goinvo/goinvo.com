@@ -9,7 +9,7 @@ import Image from '../../components/image'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
 import team from '../../data/team.json'
-import HubspotForm from '../../components/hubspot-form'
+import MailerLiteForm from '../../components/mailerlite-form'
 
 import config from '../../../config'
 
@@ -71,7 +71,7 @@ const upNextList = [
 ]
 
 const frontmatter = {
-  metaTitle: 'About GoInvo, a Healthcare UX design company in Boston',
+  metaTitle: 'About GoInvo, a UX design company in Boston',
   metaDescription:
     'Over the past decade, we’ve created beautiful software for patients, clinicians, researchers, and administrators.',
   heroImage: '/images/about/care-cards-hand.jpg',
@@ -106,7 +106,6 @@ const AboutPage = () => (
     <div className="max-width content-padding pad-vertical--double--only-lg">
       <div className="pure-g margin-bottom--double">
         <iframe
-          title="slides"
           src="https://docs.google.com/presentation/d/e/2PACX-1vQbOnDhq-ObLQhYTayN-sWzlR5MVk_Y9O12_HYPlgPBVs0xop6wF3Bs2Q6smWkSHpCCJ8Xv1SHNBmmb/embed?start=false&loop=true&delayms=3000"
           frameborder="0"
           width="960"
@@ -290,11 +289,15 @@ const AboutPage = () => (
 
     <div className="pad-vertical--double">
       <div className="max-width max-width--md content-padding">
+<<<<<<< HEAD
         <HubspotForm
           formId={config.hubspotNewsletterFullFormId}
           title="Subscribe to our newsletter."
           submitButtonText="Subscribe"
         />
+=======
+        <MailerLiteForm />
+>>>>>>> origin/mailer-form-replacement
       </div>
     </div>
 

@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 
 import config from '../../../../config'
+import Divider from '../../../components/divider'
 
 const frontmatter = {
   metaTitle: 'Digital Health Trends to Watch - GoInvo',
@@ -483,36 +484,31 @@ class DigitalHealthTrendsFeature extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
+          <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
+              <Divider />
+              <h2 className="header--xl text--center">Author</h2>
+              <Author name="Jonathan Follett" />
+              <div className="pad-vertical--double">
+                <h3 className="header--md">Contributors</h3>
+                <p>
+                  Huahua Zhu
+                  <br />
+                  Jen Patel
+                  <br />
+                  Sharon Lee
+                  <br />
+                  Juhan Sonin
+                  <br />
+                  Eric Benoit
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="pad-vertical--double">
+          <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Author</h2>
-                <Author name="Jonathan Follett" />
-                <div className="pad-vertical--double">
-                  <h3 className="header--md">Contributors</h3>
-                  <p>
-                    Huahua Zhu
-                    <br />
-                    Jen Patel
-                    <br />
-                    Sharon Lee
-                    <br />
-                    Juhan Sonin
-                    <br />
-                    Eric Benoit
-                  </p>
-                </div>
-              </div>
+              <MailerLiteForm />
             </div>
           </div>
         </div>

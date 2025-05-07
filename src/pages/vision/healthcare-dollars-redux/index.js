@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -182,8 +182,9 @@ class HealthcareDollarsRedux extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
+          <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
+<<<<<<< HEAD
               <HubspotForm
                 formId={config.hubspotNewsletterFullFormId}
                 title="Subscribe to our newsletter."
@@ -195,13 +196,20 @@ class HealthcareDollarsRedux extends Component {
 
 
           <div className="pad-vertical--double">
-            <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Author</h2>
-                <Author name="Daniel Reeves" />
-              </div>
+=======
+              <Divider />
+              <h2 className="header--xl text--center">Author</h2>
+              <Author name="Daniel Reeves" />
             </div>
           </div>
+
+          <div className="background--gray pad-vertical--double">
+>>>>>>> origin/mailer-form-replacement
+            <div className="max-width max-width--md content-padding">
+              <MailerLiteForm />
+            </div>
+          </div>
+
         </div>
       </Layout>
     )

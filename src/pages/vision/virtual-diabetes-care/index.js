@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
+import Divider from '../../../components/divider'
 
 import config from '../../../../config'
 
@@ -471,25 +472,24 @@ class VirtualDiabetesCareFeature extends Component {
             </div>
           </div>
 
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <Divider />
+              <h2 className="header--xl text--center">Authors</h2>
+              <Author name="Shayla Nettey" />
+              <Author name="Jonathan Follett" />
+              <Author name="Sharon Lee" />
+            </div>
+          </div>
+
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
+              <MailerLiteForm />
             </div>
           </div>
 
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Authors</h2>
-                <Author name="Shayla Nettey" />
-                <Author name="Jonathan Follett" />
-                <Author name="Sharon Lee" />
-              </div>
-
               <div id="references">
                 <References
                   references={[

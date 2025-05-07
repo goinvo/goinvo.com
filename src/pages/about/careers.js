@@ -7,13 +7,13 @@ import GradientImageColumns from '../../components/gradient-image-columns'
 import Quote from '../../components/quote'
 import Columns from '../../components/columns'
 import ImageBlock from '../../components/image-block'
-import HubspotForm from '../../components/hubspot-form'
+import MailerLiteHiringForm from '../../components/mailerlite-hiring-form'
 import BackgroundImage from '../../components/background-image'
 
 import config from '../../../config'
 
 const frontmatter = {
-  metaTitle: 'Join our team of Healthcare UX designers & engineers',
+  metaTitle: 'Join our team of UX designers & engineers',
   metaDescription:
     "If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler.",
   heroImage: '/images/about/careers/jen-journeymap-2.jpg',
@@ -211,10 +211,7 @@ class CareersPage extends Component {
                 <a href="mailto:juhan@goinvo.com">juhan@goinvo.com</a>
               </p>
               <div className="pad-top">
-                <HubspotForm
-                  formId={config.hubspotApplicationFormId}
-                  title="Application"
-                />
+                <MailerLiteHiringForm />
               </div>
             </div>
           </div>

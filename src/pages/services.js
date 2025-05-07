@@ -132,24 +132,21 @@ class ServicesPage extends Component {
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <div className="container container--column container--align-center">
             <div className="pure-u-1 pure-u-lg-1-2">
-                <p className="header--lg margin-bottom--half">
-                  Why hire GoInvo
-                </p>
-                <p className="text--gray">
-                  We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
-                </p>
-                
-                
-              
-                <MailerLiteContactForm />
-                <div className="text--center"><p>Or, talk to us live on Zoom.</p></div>
-                <Link
-                  to="#calendly-open-office-hours"
-                  className="button button--secondary button--block margin-bottom--double  margin-top--double"
-                >
-                  Schedule a chat
-                </Link>
-              </div>
+              <p className="header--lg margin-bottom--half">
+                Why hire GoInvo
+              </p>
+              <p className="text--gray">
+                We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
+              </p>
+              <p className="text--gray">Drop us an email at <a href="mailto:info@goinvo.com">info@goinvo.com</a></p>
+              <p className="text--gray">Or, talk to us live on Zoom.</p>
+              <Link
+                to="#calendly-open-office-hours"
+                className="button button--secondary button--block margin-bottom--double  margin-top--double"
+              >
+                Schedule a chat
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -319,7 +316,7 @@ class ServicesPage extends Component {
           With Invo, design wasn't just design. It impacted our IP portfolio. It
           changed our business.
         </Quote>
-        
+
         <div className="max-width content-padding pad-vertical--double margin-bottom--double">
           <div className="max-width content-padding pad-vertical--double">
             <h2

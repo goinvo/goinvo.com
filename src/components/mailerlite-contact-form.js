@@ -51,7 +51,7 @@ class MailerLiteContactForm extends Component {
         <Card>
         <iframe
           id="JotFormIFrame-251276832519159"
-          className="jotform-form"
+          className="jotform-form contact-form"
           title="Contact"
           onload="window.parent.scrollTo(0,0)"
           allowtransparency="true"

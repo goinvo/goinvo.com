@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import SubscribeForm from '../../../components/form-subscribe'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 
@@ -508,7 +508,7 @@ class DigitalHealthTrendsFeature extends Component {
 
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <SubscribeForm />
             </div>
           </div>
         </div>

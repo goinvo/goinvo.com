@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import Card from './card'
 import Helmet from 'react-helmet'
 
-class MailerLiteHiringForm extends Component {
+class HiringForm extends Component {
 
-  render() {    
+  render() {
     return (
       <div className="hiring-form">
         <Helmet>
@@ -13,7 +13,7 @@ class MailerLiteHiringForm extends Component {
         </Helmet>
 
         <Card>
-        <iframe
+          <iframe
             id="JotFormIFrame-251193306087052"
             className="jotform-form hiring-form"
             title="Application"
@@ -30,4 +30,4 @@ class MailerLiteHiringForm extends Component {
   }
 }
 
-export default MailerLiteHiringForm
+export default HiringForm

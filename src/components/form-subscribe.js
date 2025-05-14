@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Card from './card'
 
-class MailerLiteForm extends Component {
+class SubscribeForm extends Component {
 
   onSubmit = async (e) => {
     e.preventDefault();
@@ -97,4 +97,4 @@ class MailerLiteForm extends Component {
   }
 }
 
-export default MailerLiteForm
+export default SubscribeForm

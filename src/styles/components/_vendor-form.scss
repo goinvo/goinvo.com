@@ -1,3 +1,25 @@
+.jotform-form {
+  min-width: 100%;
+  max-width: 100%;
+  border: none;
+
+  h1 {
+    font-family: $font-family--serif;
+    font-size: $font-size--lg;
+    font-weight: 400;
+  }
+
+  &.contact-form {
+    height: 790px;
+    margin-bottom: -10px;
+  }
+
+  &.hiring-form {
+    height: 1100px;
+    margin-bottom: -10px;
+  }
+}
+
 .ml-form-embedSubmitLoad {
   display: inline-block;
   width: 20px;
@@ -75,6 +97,7 @@
     &.embedDefault {
       width: 600px;
     }
+
     &.embedForm {
       max-width: 600px;
       width: 100%;
@@ -94,10 +117,13 @@
       padding: 20px 20px 0 20px;
     }
 
-    .ml-form-embedBody { //.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody
+    .ml-form-embedBody {
+
+      //.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody
       &.ml-form-embedBodyHorizontal {
         padding-bottom: 0;
       }
+
       .ml-form-fieldRow {
         margin: 0 0 10px 0;
         width: 100%;
@@ -123,9 +149,11 @@
           max-width: 100% !important;
         }
       }
+
       .ml-form-fieldRow.ml-last-item {
         margin: 0;
       }
+
       // Hey, look, I'm not the one who wrote this code. I just copied it from the original file. 
       // I know horizintal and horozintal are misspelled, but we might need this someday?
       // .ml-form-fieldRow.ml-formfieldHorizintal {
@@ -143,17 +171,20 @@
         margin: 0 0 20px 0;
         width: 100%;
       }
+
       .ml-form-checkboxRow {
         float: left;
       }
 
-      .ml-form-fieldRow ,
+      .ml-form-fieldRow,
       .ml-form-horizontalRow {
+
         input::-webkit-input-placeholder,
         input::-moz-placeholder,
         input::-ms-input-placeholder {
           color: #333333;
         }
+
         textarea {
           background-color: #ffffff !important;
           color: #333333 !important;
@@ -172,12 +203,14 @@
           box-sizing: border-box !important;
           max-width: 100% !important;
         }
+
         .custom-control {
           position: relative;
           display: block;
           min-height: 1.5rem;
           padding-left: 1.5rem;
         }
+
         .custom-radio .custom-control-label {
           color: #000000;
           font-size: 12px !important;
@@ -189,6 +222,7 @@
           font-style: normal;
           font-weight: 700;
         }
+
         .custom-select {
           background-color: #ffffff !important;
           color: #333333 !important;
@@ -219,6 +253,7 @@
         height: auto;
         width: 100%;
         float: left;
+
         input {
           background-color: #ffffff;
           color: #333333;
@@ -236,6 +271,7 @@
           box-sizing: border-box;
           overflow-y: initial;
         }
+
         button {
           background-color: $color-primary !important;
           border-color: $color-primary;
@@ -253,6 +289,7 @@
           padding: 10px !important;
           width: 100%;
           height: auto;
+
           &:hover {
             background-color: $color-primary--dark !important;
             border-color: $color-primary--dark !important;
@@ -313,6 +350,7 @@
         border-color: #000000 !important;
         background-color: #000000 !important;
       }
+
       .ml-form-fieldRow .custom-radio .custom-control-label::before,
       .ml-form-horizontalRow .custom-radio .custom-control-label::before,
       .ml-form-fieldRow .custom-radio .custom-control-label::after,
@@ -324,6 +362,7 @@
         top: 2px;
         box-sizing: border-box;
       }
+
       .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,
       .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after,
       .ml-form-checkboxRow .label-description::before,
@@ -331,11 +370,13 @@
         top: 0px !important;
         box-sizing: border-box !important;
       }
+
       .ml-form-checkboxRow .label-description::before,
       .ml-form-checkboxRow .label-description::after {
         top: 0px !important;
         box-sizing: border-box !important;
       }
+
       .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
         top: 0px !important;
         box-sizing: border-box !important;
@@ -346,10 +387,12 @@
         height: 1rem;
         content: "";
       }
+
       .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
         top: 0px !important;
         box-sizing: border-box !important;
       }
+
       .custom-control-label::before {
         position: absolute;
         top: 4px;
@@ -363,6 +406,7 @@
         border: #adb5bd solid 1px;
         border-radius: 50%;
       }
+
       .custom-control-label::after {
         position: absolute;
         top: 2px !important;
@@ -372,6 +416,7 @@
         height: 1rem;
         content: "";
       }
+
       .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,
       .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before,
       .ml-form-checkboxRow .label-description::before {
@@ -397,6 +442,7 @@
         height: 1rem;
         content: "";
       }
+
       .ml-form-checkboxRow .label-description::after {
         position: absolute;
         top: 0px !important;
@@ -406,15 +452,18 @@
         height: 1rem;
         content: "";
       }
+
       .custom-radio .custom-control-label::after {
         background: no-repeat 50%/50% 50%;
       }
+
       .custom-checkbox .custom-control-label::after,
       .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after,
       .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after,
       .ml-form-checkboxRow .label-description::after {
         background: no-repeat 50%/50% 50%;
       }
+
       .ml-form-fieldRow .custom-radio .custom-control-input,
       .ml-form-horizontalRow .custom-radio .custom-control-input,
       .ml-form-fieldRow .custom-checkbox .custom-control-input,
@@ -425,6 +474,7 @@
         box-sizing: border-box;
         padding: 0;
       }
+
       .ml-form-checkboxRow {
         input[type="checkbox"] {
           box-sizing: border-box;
@@ -436,6 +486,7 @@
           margin-left: -1.5rem;
           overflow: visible;
         }
+
         .label-description {
           color: $color-black;
           display: block;
@@ -445,6 +496,7 @@
           margin-bottom: 0;
           position: relative;
         }
+
         label {
           font-weight: normal;
           margin: 0;
@@ -453,10 +505,12 @@
           display: block;
           min-height: 24px;
           padding-left: 24px;
+
           a {
             color: $color-black;
             text-decoration: underline;
           }
+
           p {
             color: $color-black !important;
             font-family: $font-family--sans-serif !important;
@@ -465,16 +519,19 @@
             line-height: 18px !important;
             padding: 0 !important;
             margin: 0 5px 0 0 !important;
+
             &:last-child {
               margin: 0;
             }
           }
         }
-      } 
+      }
+
       .ml-form-embedSubmit {
         margin: 0 0 20px 0;
         float: left;
         width: 100%;
+
         button {
           background-color: $color-primary !important;
           border: none !important;
@@ -490,21 +547,25 @@
           padding: 10px !important;
           width: 100% !important;
           box-sizing: border-box !important;
+
           &.loading {
             display: none;
           }
+
           &:hover {
             background-color: $color-primary--dark !important;
           }
         }
       }
-    } //.ml-form-embedBody
+    }
+
+    //.ml-form-embedBody
 
     .ml-form-embedBody .ml-form-embedContent,
     .ml-form-successBody .ml-form-successContent {
       text-align: left;
       margin: 0 0 20px 0;
-      
+
       h4 {
         color: $color-black;
         font-family: $font-family--serif;
@@ -514,6 +575,7 @@
         text-align: left;
         word-break: break-word;
       }
+
       p {
         color: $color-black;
         font-family: $font-family--sans-serif;
@@ -523,11 +585,14 @@
         margin: 0 0 10px 0;
         text-align: left;
       }
+
       p a {
         color: $color-black;
         text-decoration: underline;
       }
-      ul, ol {
+
+      ul,
+      ol {
         color: $color-black;
         font-family: $font-family--sans-serif;
         font-size: 14px;
@@ -567,36 +632,46 @@
       margin: 0;
       width: 100%;
     }
-  } //.ml-form-embedWrapper
+  }
+
+  //.ml-form-embedWrapper
 
   .ml-form-align-left {
     text-align: left;
   }
+
   .ml-form-align-center {
     text-align: center;
   }
+
   .ml-form-align-default {
     display: table-cell !important;
     vertical-align: middle !important;
     text-align: center !important;
   }
+
   .ml-form-align-right {
     text-align: right;
   }
-} //.ml-form-embedContainer
+}
+
+//.ml-form-embedContainer
 
 .ml-form-formContent.horozintalForm .ml-form-horizontalRow {
   .ml-input-horizontal {
     width: 70%;
     float: left;
   }
+
   .ml-button-horizontal {
     width: 30%;
     float: left;
   }
+
   .ml-button-horizontal.labelsOn {
     padding-top: 25px;
   }
+
   .horizontal-fields {
     box-sizing: border-box;
     float: left;
@@ -677,7 +752,18 @@
 
 }
 
-.form-section{display:inline!important}
-.form-pagebreak{display:none!important}
-.form-section-closed{height:auto!important}
-.page-section{position:initial!important}
+.form-section {
+  display: inline !important
+}
+
+.form-pagebreak {
+  display: none !important
+}
+
+.form-section-closed {
+  height: auto !important
+}
+
+.page-section {
+  position: initial !important
+}

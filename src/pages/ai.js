@@ -8,6 +8,8 @@ import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
 import HubspotForm from '../components/hubspot-form'
 
+import bracketDown from '../assets/images/bracket-down.svg'
+
 const frontmatter = {
   metaTitle: 'Software Design for AI Services',
   metaDescription:
@@ -42,20 +44,108 @@ class AIPage extends Component {
               </h2>
               <div className="margin-bottom--double">
                 <div className="resultsRow ul">
-                  <li><strong>Transformed outdated systems into cutting-edge solutions.</strong></li>
-                  <li><strong>Smoother processes for happier government employees and residents.</strong></li>
+                  <li><strong>Efficiency & savings:</strong> Streamline workflows, reduce manual effort, and drive measurable cost reductions.</li>
+                  <li><strong>Innovation:</strong> Quickly generate more out-of-the-box ideas that work and elevate product vision.</li>
                 </div>
                 <div className="resultsRow ul">
-                  <li><strong>Re-imagined software and services to meet evolving needs at scale.</strong></li>
-                  <li><strong>Validated ideas before investing in a full development cycle.</strong></li>
+                  <li><strong>Rapid experimentation:</strong> Validate ideas quickly before committing major resources.</li>
+                  <li><strong>Risk Reduction:</strong> Early-stage design and testing uncover challenges before they escalate.</li>
                 </div>
                 <div className="resultsRow ul">
-                  <li><strong>Improved accessibility for wider resident needs.</strong></li>
-                  <li><strong>Strategy and vision to rally support.</strong></li>
+                  <li><strong>Seamless integration: </strong>AI experiences for real-world use.</li>
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="goinvo-ai-fit max-width content-padding">
+            <div className="row">
+              <div className="col width-80">
+                <p className="margin-bottom--none text--lg">In the land of AI products, designers will split time between problem solving, facilitation, and bending AI services</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col width-80">
+                <p className="margin-top--none text--lg">versus</p>
+              </div>
+              <div className="col width-20">
+                <p  className="margin-top--none text--lg">tooling the individual GenAI and agentic services.</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col width-80">
+                <p className="text--lg text--serif">
+                  Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
+                  <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
+                </p>
+              </div>
+              <div className="col width-20">
+                <p  className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
+              </div>
+            </div>
+            
+            <div className="row">
+              <div className="col width-80">
+                <div className="arrow arrow-80">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-vtop-left"></div>
+                  <div className="arrow-vtop-right"></div>
+                </div>
+              </div>
+              <div className="col width-20">
+                <div className="arrow arrow-20">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-vtop-left"></div>
+                  <div className="arrow-vtop-right"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="goinvo-lives-container">
+              <div className="goinvo-lives">
+                <div className="row">
+                  <div className="bracket">
+                    <img
+                      className="bracket-icon"
+                      src={bracketDown}
+                      alt="bracket pointed down"
+                    />  
+                  </div> 
+                </div>
+                
+                <div className="row">
+                  <p className="text--lg text--serif text--center">GoInvo lives hereas toolmakers and service shapers.</p>
+                </div>
+                
+                <div className="row list">
+                  <div className="col width-80">
+                    <ul className="list--unstyled">
+                      <li>Problem exploration & definition using genAI and humans in the loop.</li>
+                      <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
+                    </ul>
+                  </div>
+                  <div className="col width-20">
+                    <ul className="list--unstyled">
+                      <li>Tuning/feedback loops</li>
+                      <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
+                      <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                      <li>Agent behavior</li>
+                      <li>Confidence loops, ethical rails, debuggability/inspections</li>
+                      <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>
+                      <li>Validate concepts to refine the AI interaction model</li>
+                      <li>Rapid prototyping plugins and specific services for enterprise</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          
+          
+
+            
 
           <div className="max-width content-padding pad-vertical LayoutCenter">
             <h2 className="header--xl center margin-bottom--half">
@@ -65,25 +155,13 @@ class AIPage extends Component {
             <div className="container--justify-center tileRow">
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <Image
-                  src="/images/open_source/innovation.png"
-                  className="image--max-width-80"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text margin-top--none">
-                  <strong>Long Term Mission Support</strong><br />
-                  We support your long term mission and objectives with digital tools that are scalable and increase accessibility.
-                </p>
-              </div>
-
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
                   src="/images/open_source/public-good.png"
                   className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text margin-top--none">
-                  <strong>Transformative Change for the Public Good</strong><br />
-                  We design seamless, human-centered experiences that transform complex needs into seamless and equitable services, reducing burden and building trust.
+                  <strong>Bridging Human Needs with Machine Capabilities</strong><br />
+                  We ensure AI enhances human capabilities rather than becoming a barrier, delivering meaningful and relevant insights to users and deliver intuitive workflows that align with user goals.
                 </p>
               </div>
 
@@ -94,8 +172,20 @@ class AIPage extends Component {
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
                 <p className="text margin-top--none">
-                  <strong>Rapid Iteration and Testing</strong><br />
-                  Validated design, research, and rapid prototyping to showcase your agency's vision, build support, and prove value before investing time and budget.
+                  <strong>Simplifying Complexity</strong><br />
+                  We design seamless AI services that transform complex needs into intuitive human-centered experiences that are reliable, useful, and trustworthy.
+                </p>
+              </div>
+
+              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
+                <Image
+                  src="/images/open_source/innovation.png"
+                  className="image--max-width-80"
+                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                />
+                <p className="text margin-top--none">
+                  <strong>Rapid Ideation and Prototyping</strong><br />
+                  Using AI, we experiment to develop more workable ideas outside of the box. Rapid prototypes and proofs of concept for early validation before more investment.
                 </p>
               </div>
             </div>
@@ -267,21 +357,6 @@ class AIPage extends Component {
               </div>
             </div>
           </div>
-
-          {/* This will look better with more contracts */}
-          {/*<div className="background--white ">
-            <div className="max-width content-padding pad-vertical ">
-              <div className="pure-u-md-1-2 margin-bottom--double">
-                <h2 className="header--xl">
-                  Contracts and Certifications
-                </h2>
-
-                <ul className="ul margin-top--none">
-                  <li><strong>ITS81</strong></li>
-                </ul>
-              </div>
-            </div>
-          </div>*/}
 
         </div>
       </Layout >

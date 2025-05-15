@@ -1,0 +1,145 @@
+.ai-design {
+    .goinvo-ai-fit {
+        .goinvo-lives-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .goinvo-lives {
+            
+            align-self: flex-end;
+            justify-content: flex-end;
+            width: 50%;
+            margin-right: 0;
+
+            .list {
+                .width-80, .width-20 {
+                    width: 50%;
+                }
+            }
+            .bracket {
+                margin:0 auto;
+            }
+        }
+
+        .row {
+            display:flex;
+            flex-direction: row;
+
+            .col {
+            }
+            .width-80 {
+                width: 74%;
+                margin-right: 10px;
+
+                p {
+                    text-align: right;
+                }
+            }
+            .width-20 {
+                width: 25%;
+            }
+        }
+        .inline-number {
+            font-size: 2.75rem;
+            font-weight: 600;
+            .inline-percentage {
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+        }
+        
+        .arrow {
+            position: relative;
+            width: 100%;
+            height: 24px;
+            margin: 20px 0;
+
+            .arrow-line {
+                position: absolute;
+                top: 50%;
+                left: 4px;
+                right: 4px;
+                height: 4px;
+                transform: translateY(-50%);
+                border-radius: 2px;
+                z-index: 1;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 70%;
+                width: 16px;
+                height: 4px;
+                background: #333;
+                border-radius: 2px;
+            }
+
+            // Left end stroke (bottom of V)
+            &::before {
+                left: 0;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            // Right end stroke (bottom of V)
+            &::after {
+                right: 0;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+
+            // Top of the V (left)
+            .arrow-vtop-left {
+                position: absolute;
+                left: 0;
+                top: 35%;
+                width: 16px;
+                height: 4px;
+                background: #333;
+                border-radius: 2px;
+                transform: translateY(-50%) rotate(-45deg);
+                z-index: 2;
+            }
+
+            // Top of the V (right)
+            .arrow-vtop-right {
+                position: absolute;
+                right: 0;
+                top: 35%;
+                width: 16px;
+                height: 4px;
+                background: #333;
+                border-radius: 2px;
+                transform: translateY(-50%) rotate(45deg);
+                z-index: 2;
+            }
+
+            &.arrow-80 {
+                .arrow-line,
+                .arrow-vtop-left,
+                .arrow-vtop-right {
+                    background: #3F7CCB;
+                }
+                &::before,
+                &::after {
+                    background: #3F7CCB;
+                }
+            }
+            &.arrow-20 {
+                .arrow-line,
+                .arrow-vtop-left,
+                .arrow-vtop-right {
+                    background: #D27A64;
+                }
+                &::before,
+                &::after {
+                    background: #D27A64;
+                }
+            }
+            
+        }
+
+       
+    }
+
+}

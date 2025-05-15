@@ -59,20 +59,20 @@ class AIPage extends Component {
           </div>
 
           <div className="goinvo-ai-fit max-width content-padding">
-            <div className="row">
+            <div className="row text-row">
               <div className="col width-80">
                 <p className="margin-bottom--none text--lg">In the land of AI products, designers will split time between problem solving, facilitation, and bending AI services</p>
               </div>
             </div>
-            <div className="row">
+            <div className="row text-row">
               <div className="col width-80">
-                <p className="margin-top--none text--lg">versus</p>
+                <p className="margin-top--none margin-bottom--none text--lg">versus</p>
               </div>
               <div className="col width-20">
                 <p  className="margin-top--none text--lg">tooling the individual GenAI and agentic services.</p>
               </div>
             </div>
-            <div className="row">
+            <div className="row text-row stat-text">
               <div className="col width-80">
                 <p className="text--lg text--serif">
                   Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
@@ -83,8 +83,35 @@ class AIPage extends Component {
                 <p  className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
               </div>
             </div>
+
+            <div className="mobile-stat-text stat-text-80">
+              <div className="col col-left">
+                <span className="text--serif  inline-number">80<span className="inline-percentage">%</span></span>
+              </div>
+              <div className="col col-right">
+                <p className="text--lg text--serif">
+                  Most design will live here in the using AI services to facilitate, problem solve, drive better decisions, and productionize products
+                </p>
+              </div>
+            </div>
+
+            <div className="mobile-stat-text stat-text-20">
+              <div className="col col-left">
+                <span className="text--serif inline-number">20<span className="inline-percentage">%</span></span>
+              </div>
+              <div className="col col-middle">
+                <div className="arrow arrow-80">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-vtop-left"></div>
+                  <div className="arrow-vtop-right"></div>
+                </div>
+              </div>
+              <div className="col col-right">
+                <p className="text--lg text--serif">Tooling</p>
+              </div>
+            </div>
             
-            <div className="row">
+            <div className="row  arrow-row">
               <div className="col width-80">
                 <div className="arrow arrow-80">
                   <div className="arrow-line"></div>
@@ -114,7 +141,7 @@ class AIPage extends Component {
                 </div>
                 
                 <div className="row">
-                  <p className="text--lg text--serif text--center">GoInvo lives hereas toolmakers and service shapers.</p>
+                  <p className="text--lg text--serif text--center">GoInvo lives here as toolmakers and service shapers.</p>
                 </div>
                 
                 <div className="row list">

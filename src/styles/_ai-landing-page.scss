@@ -5,7 +5,6 @@
             flex-direction: column;
         }
         .goinvo-lives {
-            
             align-self: flex-end;
             justify-content: flex-end;
             width: 50%;
@@ -25,8 +24,6 @@
             display:flex;
             flex-direction: row;
 
-            .col {
-            }
             .width-80 {
                 width: 74%;
                 margin-right: 10px;
@@ -138,8 +135,50 @@
             }
             
         }
+        .mobile-stat-text {
+            display: none;
+        }
 
-       
+        @media screen and (max-width: 600px) {
+            .text-row {
+                flex-direction: column;
+                .width-80, .width-20 {
+                    width: 100%;
+                    border: solid red 1px;
+                    p {
+                        text-align: left;
+                    }
+                }
+            }
+            .stat-text {
+                display: none;
+            }
+            .mobile-stat-text {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .col {
+                    border: solid red 1px;
+                }
+                .col-left {
+                    width: 20%;
+                    margin-right: 30px;
+                }
+                .col-right {
+                    width: 70%;
+                }
+            }
+            .arrow-row {
+                transform: rotate(90deg);
+                margin-left: -220px;
+                //width: 24px;    // Make width and height square for vertical arrow
+               // height: 100px;  // Adjust as needed for your layout
+                //margin: 20px auto;
+            }
+            .bracket {
+                transform: rotate(90deg);
+            }
+            
+        }
     }
-
 }

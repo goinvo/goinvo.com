@@ -80,6 +80,16 @@ class ClientLogos extends Component {
                   <Mitre />
                 </li>
               </ul>
+            ) :
+            this.props.ai ? (
+              <ul className="list--unstyled client-logos">
+                <li>
+                  <ThreeM />
+                </li>
+                <li className="">
+                  <Mitre />
+                </li>
+              </ul>
             ) : (
               <ul className="list--unstyled client-logos">
                 <li>

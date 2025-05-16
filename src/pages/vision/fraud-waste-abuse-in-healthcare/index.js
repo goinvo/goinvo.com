@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Quote from '../../../components/quote'
 import Author from '../../../components/author'
@@ -297,24 +297,13 @@ class FraudWasteAbuseHealthcare extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
-            <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
-            </div>
-          </div>
-
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <div>
-                <h2 className="header--xl text--center">Authors</h2>
-                <Author name="Michelle Bourdon" />
-                <Author name="Eric Benoit" />
-                <Author name="Juhan Sonin" />
-              </div>
+              <Divider />
+              <h2 className="header--xl text--center">Authors</h2>
+              <Author name="Michelle Bourdon" />
+              <Author name="Eric Benoit" />
+              <Author name="Juhan Sonin" />
             </div>
           </div>
 
@@ -332,6 +321,12 @@ class FraudWasteAbuseHealthcare extends Component {
           </div>
 
           <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <MailerLiteForm />
+            </div>
+          </div>
+
+          <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div id="references">
                 <References

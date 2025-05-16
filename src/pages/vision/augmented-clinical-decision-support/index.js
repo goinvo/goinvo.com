@@ -3,7 +3,7 @@ import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 
@@ -357,16 +357,6 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
             </div>
           </div>
 
-          <div className="background--gray pad-vertical--double">
-            <div className="max-width max-width--md content-padding">
-              <HubspotForm
-                formId={config.hubspotNewsletterFullFormId}
-                title="Subscribe to our newsletter."
-                submitButtonText="Subscribe"
-              />
-            </div>
-          </div>
-
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <div>
@@ -400,6 +390,12 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 </p>
               </div>
 
+            </div>
+          </div>
+
+          <div className="background--gray pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <MailerLiteForm />
             </div>
           </div>
         </div>

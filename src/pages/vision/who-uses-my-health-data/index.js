@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import HubspotForm from '../../../components/hubspot-form'
+import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -146,22 +146,18 @@ class HealthDataUseFeature extends Component {
               </p>
             </div>
 
-            <div className="background--gray pad-vertical--double margin-top--double">
-              <div className="max-width max-width--md content-padding">
-                <HubspotForm
-                  formId={config.hubspotNewsletterFullFormId}
-                  title="Subscribe to our newsletter."
-                  submitButtonText="Subscribe"
-                />
-              </div>
-            </div>
-
             <div className="max-width max-width--md content-padding">
               <h2 className="header--xl text--center">Authors</h2>
               <Author name="Sharon Lee" />
               <h3 className="header--md margin-top--double">Contributors</h3>
               <Author name="Juhan Sonin" />
               <Divider />
+            </div>
+
+            <div className="background--gray pad-vertical--double margin-top--double">
+              <div className="max-width max-width--md content-padding">
+                <MailerLiteForm />
+              </div>
             </div>
 
             <div id="references">

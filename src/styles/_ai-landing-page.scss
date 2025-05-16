@@ -10,13 +10,20 @@
             width: 50%;
             margin-right: 0;
 
+            p {
+                text-align: center;
+            }
+
             .list {
                 .width-80, .width-20 {
                     width: 50%;
                 }
+                li {
+                    margin-bottom: 20px;
+                }
             }
             .bracket {
-                margin:0 auto;
+                margin: 0 auto;
             }
         }
 
@@ -30,6 +37,7 @@
 
                 p {
                     text-align: right;
+                    padding-right: 20px;
                 }
             }
             .width-20 {
@@ -133,52 +141,97 @@
                     background: #D27A64;
                 }
             }
-            
         }
-        .mobile-stat-text {
+
+        .mobile-stat-stack {
             display: none;
         }
 
         @media screen and (max-width: 600px) {
+            .desktop-stat-stack {
+                display: none;
+            }
+            .mobile-stat-stack {
+                display: flex;
+                flex-direction: column;
+                .row {
+                    display: flex;
+                    flex-direction: row;
+                }
+                .col {
+                    align-self: center;
+                }
+                .stat-text-80 {
+                    height: 500px;
+                    .col-left {
+                        width: 20%;
+                        margin-right: 30px;
+                    }
+                    .col-right {
+                        width: 70%;
+                    }
+                }
+                
+                .stat-text-20 {
+                    .col {
+                        width: 20%;
+                    }
+                }
+            }
             .text-row {
                 flex-direction: column;
                 .width-80, .width-20 {
                     width: 100%;
-                    border: solid red 1px;
                     p {
                         text-align: left;
                     }
                 }
             }
-            .stat-text {
-                display: none;
+            .goinvo-lives {
+                p {
+                    text-align: left;
+                }
+                .row {
+                    flex-direction: column;
+                }
+                .list {
+                    .width-80, .width-20 {
+                        width: 100%;
+                    }
+                }
+                .bracket {
+                    margin-left: -150px;
+                    margin-top: -120px;
+                }
+                .goinvo-lives-text {
+                    margin-top: -150px;
+                    margin-left: -15px;
+                }
             }
-            .mobile-stat-text {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                .col {
-                    border: solid red 1px;
-                }
-                .col-left {
-                    width: 20%;
-                    margin-right: 30px;
-                }
-                .col-right {
-                    width: 70%;
-                }
-            }
+            
             .arrow-row {
                 transform: rotate(90deg);
-                margin-left: -220px;
+                margin-left: -300px;
+                margin-top: 450px;
+                margin-bottom: -400px;
                 //width: 24px;    // Make width and height square for vertical arrow
                // height: 100px;  // Adjust as needed for your layout
                 //margin: 20px auto;
             }
+            .arrow {
+                //transform: rotate(90deg);
+            }
             .bracket {
-                transform: rotate(90deg);
+                transform: rotate(-90deg);
             }
             
+        }
+        @media screen and (max-width: 480px) {
+            .arrow-row {
+                margin-left: -215px;
+                margin-top: 350px;
+                margin-bottom: -350px;
+            }
         }
     }
 }

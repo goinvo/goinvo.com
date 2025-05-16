@@ -253,7 +253,7 @@ class AIPage extends Component {
               <div className="pad-vertical">
                 <div className="hr margin-bottom--double"></div>
                 <p className="text--center"><strong>Trusted by ambitious startups and Fortune 500's</strong></p>
-                <ClientLogos government="true" />
+                <ClientLogos ai="true" />
               </div>
             </div>
 

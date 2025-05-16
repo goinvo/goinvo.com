@@ -167,16 +167,11 @@ class AIPage extends Component {
                   </div>
 
                 </div>
-                
+
               </div>
-            </div>
-
-            
+              
+            </div>            
           </div>
-          
-          
-
-            
 
           <div className="max-width content-padding pad-vertical LayoutCenter">
             <Divider />
@@ -222,7 +217,7 @@ class AIPage extends Component {
               </div>
             </div>
 
-            <div className="container--justify-center tileRow">
+            {/* <div className="container--justify-center tileRow">
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <p className="stat">
                   <span className="number-large">33</span>
@@ -249,7 +244,7 @@ class AIPage extends Component {
                   </span>
                 </p>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
@@ -257,9 +252,8 @@ class AIPage extends Component {
             <div className="max-width content-padding pad-vertical">
               <div className="pad-vertical">
                 <div className="hr margin-bottom--double"></div>
-                <p className="center"><strong>Trusted by ambitious state agencies and for-public partners</strong></p>
+                <p className="text--center"><strong>Trusted by ambitious startups and Fortune 500's</strong></p>
                 <ClientLogos government="true" />
-                <p>Our <strong>ITS81 contract</strong> with the Commonwealth of Massachusetts prequalifies us for IT professional services—streamlining government procurement and validating our expertise as a trusted vendor.</p>
               </div>
             </div>
 
@@ -270,7 +264,7 @@ class AIPage extends Component {
               <div>
                 <div>
                   <h2 className="header--xl margin-bottom--double">
-                    Our work drives results for government services
+                    Driving results services with AI
                     <span className="text--serif text--primary">.</span>
                   </h2>
                   <Link
@@ -286,13 +280,13 @@ class AIPage extends Component {
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
-                          1,107,790 Massachusetts residents were recipients of SNAP food benefits in 2024.
+                          Natural language processing (NLP) software for hospital coding
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          Up from 750,000 residents in 2017. The redesigned application was deployed in July 2018, and for the first time ever at the MA DTA, the volume of online applications exceeded that of applications completed in person.
+                          A 180° turn for a $150M business. How our skunkworks for an ambitious start-up led to a $150M exit.
                         </p>
                         <p>
-                          <Link to="/work/mass-snap/">
+                          <Link to="/work/3m-coderyte/">
                             Read Case Study
                           </Link>
                         </p>
@@ -300,7 +294,7 @@ class AIPage extends Component {
 
                       <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/public-sector/pubDesign_SNAP.jpg"
+                          src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />
@@ -314,14 +308,14 @@ class AIPage extends Component {
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
-                          NIH's All of Us Research Program
+                          Real-time clinical guidance for mobile health workers
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          Through participant-focused design leadership and research, we delivered experiences and strategies that impacted an NIH research program, aiming to build the largest medical data repository for research.
+                          Augmented decision support and guidance for mobile health workers, to better training and repeatable health outcomes.
                         </p>
                         <p>
                           <Link
-                            to="/work/all-of-us/"
+                            to="/vision/augmented-clinical-decision-support/"
                           >
                             Read Case Study
                           </Link>
@@ -329,7 +323,7 @@ class AIPage extends Component {
                       </div>
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/aou/01-hero-image-2.jpg"
+                          src="/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero-1.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />
@@ -343,14 +337,14 @@ class AIPage extends Component {
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
-                          National Clinical Decision Support Tool
+                          Transforming Service Access in Massachusetts
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          GoInvo designed CDS Connect, an AHRQ-funded (Agency for Healthcare Research and Quality) national repository for providers, health IT vendors, and researchers to create and share CDS tools (clinical decision support tools) to improve clinical decision making and quality of care.
+                          A centralized MA resident database for better service accessibility.
                         </p>
                         <p>
                           <Link
-                            to="/work/ahrq-cds/"
+                            to="/vision/eligibility-engine/"
                           >
                             Read Case Study
                           </Link>
@@ -358,7 +352,7 @@ class AIPage extends Component {
                       </div>
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/ahrq/CDS_connect_hero-2.jpg"
+                          src="/images/features/eligibility/hero-image.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />

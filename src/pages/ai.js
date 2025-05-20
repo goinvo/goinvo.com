@@ -60,36 +60,39 @@ class AIPage extends Component {
           </div>
 
           <div className="goinvo-ai-fit max-width content-padding">
-            
-            <div className="row text-row">
-              <div className="col width-80">
-                <p className="margin-bottom--none text--lg">In the land of AI products, designers will split time between problem solving, facilitation, and bending AI services</p>
-              </div>
-            </div>
-            <div className="row text-row">
-              <div className="col width-80">
-                <p className="margin-top--none margin-bottom--none text--lg">versus</p>
-              </div>
-              <div className="col width-20">
-                <p  className="margin-top--none text--lg">tooling the individual GenAI and agentic services.</p>
-              </div>
-            </div>
 
-            <div className="desktop-stat-stack">
-              <div className="row text-row stat-text">
+            <div className="fit-text-top">
+              <div className="row text-row">
                 <div className="col width-80">
-                  <p className="text--lg text--serif">
-                    Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
-                    <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
-                  </p>
+                  <p className="margin-bottom--none text--lg">In the land of AI products, designers will split time between problem solving, facilitation, and bending AI services</p>
+                </div>
+              </div>
+              <div className="row text-row">
+                <div className="col width-80">
+                  <p className="margin-top--none margin-bottom--none text--lg">versus</p>
                 </div>
                 <div className="col width-20">
-                  <p  className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
+                  <p className="margin-top--none text--lg">tooling the individual GenAI and agentic services.</p>
                 </div>
               </div>
             </div>
 
-            <div className="row arrow-row">
+            <div className="diagram-desktop">
+              <div className="stat-stack">
+                <div className="row text-row stat-text">
+                  <div className="col width-80">
+                    <p className="text--lg text--serif">
+                      Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
+                      <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
+                    </p>
+                  </div>
+                  <div className="col width-20">
+                    <p className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row arrow-row">
                 <div className="col width-80">
                   <div className="arrow arrow-80">
                     <div className="arrow-line"></div>
@@ -106,71 +109,140 @@ class AIPage extends Component {
                 </div>
               </div>
 
-            <div className="mobile-stat-stack">
-              <div className="row stat-text-80">
-                <div className="col col-left">
-                  <span className="text--serif  inline-number">80<span className="inline-percentage">%</span></span>
+              <div className="goinvo-lives-container">
+                <div className="goinvo-lives">
+                  <div className="row bracket-row">
+                    <div className="bracket">
+                      <img
+                        className="bracket-icon"
+                        src={bracketDown}
+                        alt="bracket pointed down"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="goinvo-lives-text">
+                    <div className="row lg-only">
+                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                    </div>
+
+                    <div className="row list">
+                      <div className="col width-80">
+                        <ul className="list--unstyled">
+                          <li>Problem exploration & definition using genAI and humans in the loop.</li>
+                          <li>Interview and identify pain points. How do people interact with AI?</li>
+                          <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
+                          <li>Problem definition</li>
+                          <li>User testing and gathering feedback</li>
+                          <li>Design and concept development</li>
+                        </ul>
+                      </div>
+                      <div className="col sm-only">
+                        <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                      </div>
+                      <div className="col width-20">
+                        <ul className="list--unstyled">
+                          <li>Tuning/feedback loops</li>
+                          <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
+                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                          <li>Agent behavior</li>
+                          <li>Confidence loops, ethical rails, debuggability/inspections</li>
+                          <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>
+                          <li>Validate concepts to refine the AI interaction model</li>
+                          <li>Rapid prototyping plugins and specific services for enterprise</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+
                 </div>
-                <div className="col col-right">
-                  <p className="text--lg text--serif">
-                    Most design will live here in the using AI services to facilitate, problem solve, drive better decisions, and productionize products
-                  </p>
+
+              </div>
+
+            </div>
+
+            <div className="diagram-mobile">
+              <div className="stat-stack">
+                <div className="row text-row stat-text">
+                  <div className="col width-80">
+                    <p className="text--lg text--serif">
+                      Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
+                      <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
+                    </p>
+                  </div>
+                  <div className="col width-20">
+                    <p className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="stat-text-20">
-                <div className="col col-left">
-                  <span className="text--serif inline-number">20<span className="inline-percentage">%</span></span>
+              <div className="arrow-stack">
+                <div className="arrow-column-80">
+                  <div className="arrow-vert arrow-80">
+                    <div className="arrow-line"></div>
+                    <div className="arrow-vtop-left"></div>
+                    <div className="arrow-vtop-right"></div>
+                  </div>
                 </div>
-                <div className="col col-right">
-                  <p className="text--lg text--serif margin-top--none margin-bottom--none">Tooling</p>
+                <div className="arrow-column-20">
+                  <div className="arrow-vert arrow-20">
+                    <div className="arrow-line"></div>
+                    <div className="arrow-vtop-left"></div>
+                    <div className="arrow-vtop-right"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="goinvo-lives-container">
+                <div className="goinvo-lives">
+                  <div className="row bracket-row">
+                    <div className="bracket">
+                      <img
+                        className="bracket-icon"
+                        src={bracketDown}
+                        alt="bracket pointed down"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="goinvo-lives-text">
+                    <div className="row lg-only">
+                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                    </div>
+
+                    <div className="row list">
+                      <div className="col width-80">
+                        <ul className="list--unstyled">
+                          <li>Problem exploration & definition using genAI and humans in the loop.</li>
+                          <li>Interview and identify pain points. How do people interact with AI?</li>
+                          <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
+                          <li>Problem definition</li>
+                          <li>User testing and gathering feedback</li>
+                          <li>Design and concept development</li>
+                        </ul>
+                      </div>
+                      <div className="col sm-only">
+                        <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                      </div>
+                      <div className="col width-20">
+                        <ul className="list--unstyled">
+                          <li>Tuning/feedback loops</li>
+                          <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
+                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                          <li>Agent behavior</li>
+                          <li>Confidence loops, ethical rails, debuggability/inspections</li>
+                          <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>
+                          <li>Validate concepts to refine the AI interaction model</li>
+                          <li>Rapid prototyping plugins and specific services for enterprise</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="goinvo-lives-container">
-              <div className="goinvo-lives">
-                <div className="row">
-                  <div className="bracket">
-                    <img
-                      className="bracket-icon"
-                      src={bracketDown}
-                      alt="bracket pointed down"
-                    />  
-                  </div> 
-                </div>
-                
-                <div className="goinvo-lives-text">
-                  <div className="row">
-                    <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
-                  </div>
-                  
-                  <div className="row list">
-                    <div className="col width-80">
-                      <ul className="list--unstyled">
-                        <li>Problem exploration & definition using genAI and humans in the loop.</li>
-                        <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
-                      </ul>
-                    </div>
-                    <div className="col width-20">
-                      <ul className="list--unstyled">
-                        <li>Tuning/feedback loops</li>
-                        <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
-                        <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
-                        <li>Agent behavior</li>
-                        <li>Confidence loops, ethical rails, debuggability/inspections</li>
-                        <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>
-                        <li>Validate concepts to refine the AI interaction model</li>
-                        <li>Rapid prototyping plugins and specific services for enterprise</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-              
-            </div>            
           </div>
 
           <div className="max-width content-padding pad-vertical LayoutCenter">

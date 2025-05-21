@@ -288,7 +288,7 @@ class AIPage extends Component {
                       <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
                     </div>
 
-                    <div className="row list">
+                    {/* <div className="row list">
                       <div className="col width-80">
                         <ul className="list--unstyled">
                           <li>Problem exploration & definition using genAI and humans in the loop.</li>
@@ -315,7 +315,7 @@ class AIPage extends Component {
                           <li>Rapid prototyping plugins and specific services for enterprise</li>
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
 
                   </div>
 

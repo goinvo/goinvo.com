@@ -61,7 +61,7 @@ class AIPage extends Component {
 
           <div className="goinvo-ai-fit max-width content-padding">
 
-            <div className="fit-text-top">
+            <div className="fit-text-top text--serif">
               <div className="row text-row">
                 <div className="col width-80">
                   <p className="margin-bottom--none text--lg">In the land of AI products, designers will split time between problem solving, facilitation, and bending AI services</p>

@@ -108,10 +108,10 @@ class AIPage extends Component {
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
-                          National Cancer Navigation
+                          Rewriting the Cancer Journey
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          Mapping cancer journey pain points and exploring how navigation could support patients and their families.
+                          How AI and human navigators are reshaping patient and family support for the nation
                         </p>
                         <p>
                           <Link to="/vision/national-cancer-navigation/">
@@ -180,7 +180,7 @@ class AIPage extends Component {
                       </div>
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/features/healthcare-ai/healthcare-ai-hero-4.jpg"
+                          src="/images/features/healthcare-ai/healthcare-ai-hero-5.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />

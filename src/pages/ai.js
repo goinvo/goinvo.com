@@ -75,18 +75,19 @@ class AIPage extends Component {
                   </Link>
                 </div>
 
+                {/* Start with Facto */}
                 <div className="pure-u-1 marginTop">
-                  <Card link="/work/mass-snap/">
+                  <Card link="/vision/national-cancer-navigation/">
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
-                          Natural language processing (NLP) software for hospital coding
+                          National Cancer Navigation
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          A 180° turn for a $150M business. How our skunkworks for an ambitious start-up led to a $150M exit.
+                          Mapping cancer journey pain points and exploring how navigation could support patients and their families.
                         </p>
                         <p>
-                          <Link to="/work/3m-coderyte/">
+                          <Link to="/vision/national-cancer-navigation/">
                             Read Case Study
                           </Link>
                         </p>
@@ -94,7 +95,35 @@ class AIPage extends Component {
 
                       <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
+                          src="/images/ai/ai_hero.jpg"
+                          className="image--max-width"
+                          sizes={config.sizes.full}
+                        />
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+
+                <div className="pure-u-1 marginTop">
+                  <Card link="/work/ipsos-facto/">
+                    <div className="flip-parent">
+                      <div className="pure-u-lg-1-2 text--teal textCard flip-child">
+                        <h4 className="header--xl headerCard margin-bottom--none">
+                          The Future of Research Intelligence
+                        </h4>
+                        <p className="header--lg margin-bottom--none">
+                          Designing AI-powered platfo rm that transforms siloed data into actionable insights using deep research and advanced models.
+                        </p>
+                        <p>
+                          <Link to="/work/ipsos-facto/">
+                            Read Case Study
+                          </Link>
+                        </p>
+                      </div>
+
+                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
+                        <Image
+                          src="/images/features/national-cancer-navigation/hero.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />
@@ -133,7 +162,36 @@ class AIPage extends Component {
                 </div>
 
                 <div className="pure-u-1">
-                  <Card link="/work/ahrq-cds/">
+                  <Card link="/vision/healthcare-ai/">
+                    <div className="flip-parent">
+                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
+                        <h4 className="header--xl headerCard">
+                          The AI Healthcare Future We Need
+                        </h4>
+                        <p className="header--lg margin-bottom--none">
+                          Exploring the AI healthcare opportunities and unexpected outcomes.
+                        </p>
+                        <p>
+                          <Link
+                            to="/vision/healthcare-ai/"
+                          >
+                            Read Case Study
+                          </Link>
+                        </p>
+                      </div>
+                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                        <Image
+                          src="/images/features/healthcare-ai/healthcare-ai-hero-4.jpg"
+                          className="image--max-width"
+                          sizes={config.sizes.full}
+                        />
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+
+                <div className="pure-u-1">
+                  <Card link="/vision/eligibility-engine/">
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">

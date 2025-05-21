@@ -75,19 +75,18 @@ class AIPage extends Component {
                   </Link>
                 </div>
 
-                {/* Start with Facto */}
                 <div className="pure-u-1 marginTop">
-                  <Card link="/vision/national-cancer-navigation/">
+                  <Card link="/work/ipsos-facto/">
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
-                          National Cancer Navigation
+                          The Future of Research Intelligence
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          Mapping cancer journey pain points and exploring how navigation could support patients and their families.
+                          Designing AI-powered platfo rm that transforms siloed data into actionable insights using deep research and advanced models.
                         </p>
                         <p>
-                          <Link to="/vision/national-cancer-navigation/">
+                          <Link to="/work/ipsos-facto/">
                             Read Case Study
                           </Link>
                         </p>
@@ -105,17 +104,17 @@ class AIPage extends Component {
                 </div>
 
                 <div className="pure-u-1 marginTop">
-                  <Card link="/work/ipsos-facto/">
+                  <Card link="/vision/national-cancer-navigation/">
                     <div className="flip-parent">
                       <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
-                          The Future of Research Intelligence
+                          National Cancer Navigation
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          Designing AI-powered platfo rm that transforms siloed data into actionable insights using deep research and advanced models.
+                          Mapping cancer journey pain points and exploring how navigation could support patients and their families.
                         </p>
                         <p>
-                          <Link to="/work/ipsos-facto/">
+                          <Link to="/vision/national-cancer-navigation/">
                             Read Case Study
                           </Link>
                         </p>

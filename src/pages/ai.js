@@ -59,405 +59,327 @@ class AIPage extends Component {
             </div>
           </div>
 
-          <div className="goinvo-ai-fit max-width content-padding">
-
-            <div className="fit-text-top text--serif">
-              <div className="row text-row">
-                <div className="col width-80">
-                  <p className="margin-bottom--none text--lg">In the land of AI products, designers will split time between problem solving, facilitation, and bending AI services</p>
-                </div>
-              </div>
-              <div className="row text-row">
-                <div className="col width-80">
-                  <p className="margin-top--none margin-bottom--none text--lg">versus</p>
-                </div>
-                <div className="col width-20">
-                  <p className="margin-top--none text--lg">tooling the individual GenAI and agentic services.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="diagram-desktop">
-              <div className="stat-stack">
-                <div className="row text-row stat-text">
-                  <div className="col width-80">
-                    <p className="text--lg text--serif">
-                      Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
-                      <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
-                    </p>
-                  </div>
-                  <div className="col width-20">
-                    <p className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="row arrow-row">
-                <div className="col width-80">
-                  <div className="arrow arrow-80">
-                    <div className="arrow-line"></div>
-                    <div className="arrow-vtop-left"></div>
-                    <div className="arrow-vtop-right"></div>
-                  </div>
-                </div>
-                <div className="col width-20">
-                  <div className="arrow arrow-20">
-                    <div className="arrow-line"></div>
-                    <div className="arrow-vtop-left"></div>
-                    <div className="arrow-vtop-right"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="goinvo-lives-container">
-                <div className="goinvo-lives">
-                  <div className="row bracket-row">
-                    <div className="bracket">
-                      <img
-                        className="bracket-icon"
-                        src={bracketDown}
-                        alt="bracket pointed down"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="goinvo-lives-text">
-                    <div className="row lg-only">
-                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
-                    </div>
-
-                    <div className="row list">
-                      <div className="col width-80">
-                        <ul className="list--unstyled">
-                          <li>Problem exploration & definition using genAI and humans in the loop.</li>
-                          <li>Interview and identify pain points. How do people interact with AI?</li>
-                          <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
-                          <li>Problem definition</li>
-                          <li>User testing and gathering feedback</li>
-                          <li>Design and concept development</li>
-                        </ul>
-                      </div>
-                      <div className="col sm-only">
-                        <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
-                      </div>
-                      <div className="col width-20">
-                        <ul className="list--unstyled">
-                          <li>Tuning/feedback loops</li>
-                          <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
-                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
-                          <li>Agent behavior</li>
-                          <li>Confidence loops, ethical rails, debuggability/inspections</li>
-                          <li>Call chaining, routing, flow-builders and task decomposition</li>
-                          <li>Multimodal interfaces</li>
-                          <li>Validate concepts to refine the AI interaction model</li>
-                          <li>Rapid prototyping plugins and specific services for enterprise</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="diagram-mobile">
-              <div className="stat-stack">
-                <div className="row text-row stat-text">
-                  <div className="col width-80">
-                    <p className="text--lg text--serif">
-                      Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
-                      <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
-                    </p>
-                  </div>
-                  <div className="col width-20">
-                    <p className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="arrow-stack">
-                <div className="arrow-column-80">
-                  <div className="arrow-vert arrow-80">
-                    <div className="arrow-line"></div>
-                    <div className="arrow-vtop-left"></div>
-                    <div className="arrow-vtop-right"></div>
-                  </div>
-                </div>
-                <div className="arrow-column-20">
-                  <div className="arrow-vert arrow-20">
-                    <div className="arrow-line"></div>
-                    <div className="arrow-vtop-left"></div>
-                    <div className="arrow-vtop-right"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="goinvo-lives-container">
-                <div className="goinvo-lives">
-                  <div className="row bracket-row">
-                    <div className="bracket">
-                      <img
-                        className="bracket-icon"
-                        src={bracketDown}
-                        alt="bracket pointed down"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="goinvo-lives-text">
-                    <div className="row lg-only">
-                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
-                    </div>
-
-                    <div className="row list">
-                      <div className="col width-80">
-                        <ul className="list--unstyled">
-                          <li>Problem exploration & definition using genAI and humans in the loop.</li>
-                          <li>Interview and identify pain points. How do people interact with AI?</li>
-                          <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
-                          <li>Problem definition</li>
-                          <li>User testing and gathering feedback</li>
-                          <li>Design and concept development</li>
-                        </ul>
-                      </div>
-                      <div className="col sm-only">
-                        <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
-                      </div>
-                      <div className="col width-20">
-                        <ul className="list--unstyled">
-                          <li>Tuning/feedback loops</li>
-                          <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
-                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
-                          <li>Agent behavior</li>
-                          <li>Confidence loops, ethical rails, debuggability/inspections</li>
-                          <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>
-                          <li>Validate concepts to refine the AI interaction model</li>
-                          <li>Rapid prototyping plugins and specific services for enterprise</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="max-width content-padding pad-vertical LayoutCenter">
-            <Divider />
-            <h2 className="header--xl center margin-bottom--half">
-              Why choose GoInvo?
-            </h2>
-
-            <div className="container--justify-center tileRow">
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
-                  src="/images/open_source/public-good.png"
-                  className="image--max-width-80"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text margin-top--none">
-                  <strong>Bridging Human Needs with Machine Capabilities</strong><br />
-                  We ensure AI enhances human capabilities rather than becoming a barrier, delivering meaningful and relevant insights to users and deliver intuitive workflows that align with user goals.
-                </p>
-              </div>
-
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
-                  src="/images/open_source/trust.png"
-                  className="image--max-width-80"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text margin-top--none">
-                  <strong>Simplifying Complexity</strong><br />
-                  We design seamless AI services that transform complex needs into intuitive human-centered experiences that are reliable, useful, and trustworthy.
-                </p>
-              </div>
-
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
-                  src="/images/open_source/innovation.png"
-                  className="image--max-width-80"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text margin-top--none">
-                  <strong>Rapid Ideation and Prototyping</strong><br />
-                  Using AI, we experiment to develop more workable ideas outside of the box. Rapid prototypes and proofs of concept for early validation before more investment.
-                </p>
-              </div>
-            </div>
-
-            {/* <div className="container--justify-center tileRow">
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <p className="stat">
-                  <span className="number-large">33</span>
-                  <span>
-                    government-sponsored design projects since 2009
-                  </span>
-                </p>
-              </div>
-
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <p className="stat">
-                  <span className="number-large">160M+</span>
-                  <span>
-                    people impacted by GoInvo designs
-                  </span>
-                </p>
-              </div>
-
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <p className="stat">
-                  <span className="number-large">15</span>
-                  <span>
-                    agencies we've worked with
-                  </span>
-                </p>
-              </div>
-            </div> */}
-
-          </div>
-
-          <div className="LayoutCenter text--teal">
-            <div className="max-width content-padding pad-vertical">
-              <div className="pad-vertical">
-                <div className="hr margin-bottom--double"></div>
-                <p className="text--center"><strong>Trusted by ambitious startups and Fortune 500's</strong></p>
-                <ClientLogos ai="true" />
-              </div>
-            </div>
-
-          </div>
-
-          <div className="background--light-orange text--teal">
-            <div className="max-width content-padding pad-vertical container--justify-center center">
+          div className="background--light-orange text--teal">
+          <div className="max-width content-padding pad-vertical container--justify-center center">
+            <div>
               <div>
-                <div>
-                  <h2 className="header--xl margin-bottom--double">
-                    Driving results services with AI
-                    <span className="text--serif text--primary">.</span>
-                  </h2>
-                  <Link
-                    to="/contact"
-                    className="button button--primary button--lg ctaLayout margin-bottom--double"
-                  >
-                    Let's discuss your project
-                  </Link>
-                </div>
+                <h2 className="header--xl margin-bottom--double">
+                  Driving results services with AI
+                  <span className="text--serif text--primary">.</span>
+                </h2>
+                <Link
+                  to="/contact"
+                  className="button button--primary button--lg ctaLayout margin-bottom--double"
+                >
+                  Let's discuss your project
+                </Link>
+              </div>
 
-                <div className="pure-u-1 marginTop">
-                  <Card link="/work/mass-snap/">
-                    <div className="flip-parent">
-                      <div className="pure-u-lg-1-2 text--teal textCard flip-child">
-                        <h4 className="header--xl headerCard margin-bottom--none">
-                          Natural language processing (NLP) software for hospital coding
-                        </h4>
-                        <p className="header--lg margin-bottom--none">
-                          A 180° turn for a $150M business. How our skunkworks for an ambitious start-up led to a $150M exit.
-                        </p>
-                        <p>
-                          <Link to="/work/3m-coderyte/">
-                            Read Case Study
-                          </Link>
-                        </p>
-                      </div>
-
-                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <Image
-                          src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.full}
-                        />
-                      </div>
+              <div className="pure-u-1 marginTop">
+                <Card link="/work/mass-snap/">
+                  <div className="flip-parent">
+                    <div className="pure-u-lg-1-2 text--teal textCard flip-child">
+                      <h4 className="header--xl headerCard margin-bottom--none">
+                        Natural language processing (NLP) software for hospital coding
+                      </h4>
+                      <p className="header--lg margin-bottom--none">
+                        A 180° turn for a $150M business. How our skunkworks for an ambitious start-up led to a $150M exit.
+                      </p>
+                      <p>
+                        <Link to="/work/3m-coderyte/">
+                          Read Case Study
+                        </Link>
+                      </p>
                     </div>
-                  </Card>
-                </div>
 
-                <div className="pure-u-1">
-                  <Card link="/work/all-of-us/">
-                    <div className="flip-parent">
-                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
-                        <h4 className="header--xl headerCard">
-                          Real-time clinical guidance for mobile health workers
-                        </h4>
-                        <p className="header--lg margin-bottom--none">
-                          Augmented decision support and guidance for mobile health workers, to better training and repeatable health outcomes.
-                        </p>
-                        <p>
-                          <Link
-                            to="/vision/augmented-clinical-decision-support/"
-                          >
-                            Read Case Study
-                          </Link>
-                        </p>
-                      </div>
-                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <Image
-                          src="/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero-1.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.full}
-                        />
-                      </div>
+                    <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <Image
+                        src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.full}
+                      />
                     </div>
-                  </Card>
-                </div>
+                  </div>
+                </Card>
+              </div>
 
-                <div className="pure-u-1">
-                  <Card link="/work/ahrq-cds/">
-                    <div className="flip-parent">
-                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
-                        <h4 className="header--xl headerCard">
-                          Transforming Service Access in Massachusetts
-                        </h4>
-                        <p className="header--lg margin-bottom--none">
-                          A centralized MA resident database for better service accessibility.
-                        </p>
-                        <p>
-                          <Link
-                            to="/vision/eligibility-engine/"
-                          >
-                            Read Case Study
-                          </Link>
-                        </p>
-                      </div>
-                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <Image
-                          src="/images/features/eligibility/hero-image.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.full}
-                        />
-                      </div>
-
+              <div className="pure-u-1">
+                <Card link="/work/all-of-us/">
+                  <div className="flip-parent">
+                    <div className="pure-u-md-1-2 text--teal flip-child textCard">
+                      <h4 className="header--xl headerCard">
+                        Real-time clinical guidance for mobile health workers
+                      </h4>
+                      <p className="header--lg margin-bottom--none">
+                        Augmented decision support and guidance for mobile health workers, to better training and repeatable health outcomes.
+                      </p>
+                      <p>
+                        <Link
+                          to="/vision/augmented-clinical-decision-support/"
+                        >
+                          Read Case Study
+                        </Link>
+                      </p>
                     </div>
-                  </Card>
-                </div>
+                    <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <Image
+                        src="/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero-1.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.full}
+                      />
+                    </div>
+                  </div>
+                </Card>
+              </div>
 
+              <div className="pure-u-1">
+                <Card link="/work/ahrq-cds/">
+                  <div className="flip-parent">
+                    <div className="pure-u-md-1-2 text--teal flip-child textCard">
+                      <h4 className="header--xl headerCard">
+                        Transforming Service Access in Massachusetts
+                      </h4>
+                      <p className="header--lg margin-bottom--none">
+                        A centralized MA resident database for better service accessibility.
+                      </p>
+                      <p>
+                        <Link
+                          to="/vision/eligibility-engine/"
+                        >
+                          Read Case Study
+                        </Link>
+                      </p>
+                    </div>
+                    <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <Image
+                        src="/images/features/eligibility/hero-image.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.full}
+                      />
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="goinvo-ai-fit max-width content-padding">
+
+          <div className="fit-text-top text--serif">
+            <div className="row text-row">
+              <div className="col width-80">
+                <p className="margin-bottom--none text--lg">In the land of AI products, designers will split time between problem solving, facilitation, and bending AI services</p>
+              </div>
+            </div>
+            <div className="row text-row">
+              <div className="col width-80">
+                <p className="margin-top--none margin-bottom--none text--lg">versus</p>
+              </div>
+              <div className="col width-20">
+                <p className="margin-top--none text--lg">tooling the individual GenAI and agentic services.</p>
               </div>
             </div>
           </div>
 
-          <div className="background--blue">
-            <div className="max-width content-padding pad-vertical container--justify-center center ">
-              <div className="pure-u-md-1-2 margin-bottom--double">
-                <p className="header--xl margin-bottom--none">
-                  We ship software that works.<br />
-                  Let's build together!
-                </p>
-                <p className="margin-top--none">
-                  Reach out to learn how GoInvo can help.
-                </p>
-                <HubspotForm
-                  formId={config.hubspotContactFormId}
-                  title=""
-                />
+          <div className="diagram-desktop">
+            <div className="stat-stack">
+              <div className="row text-row stat-text">
+                <div className="col width-80">
+                  <p className="text--lg text--serif">
+                    Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
+                    <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
+                  </p>
+                </div>
+                <div className="col width-20">
+                  <p className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="row arrow-row">
+              <div className="col width-80">
+                <div className="arrow arrow-80">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-vtop-left"></div>
+                  <div className="arrow-vtop-right"></div>
+                </div>
+              </div>
+              <div className="col width-20">
+                <div className="arrow arrow-20">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-vtop-left"></div>
+                  <div className="arrow-vtop-right"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="goinvo-lives-container">
+              <div className="goinvo-lives">
+                <div className="row bracket-row">
+                  <div className="bracket">
+                    <img
+                      className="bracket-icon"
+                      src={bracketDown}
+                      alt="bracket pointed down"
+                    />
+                  </div>
+                </div>
+
+                <div className="goinvo-lives-text">
+                  <div className="row lg-only">
+                    <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                  </div>
+
+                  <div className="row list">
+                    <div className="col width-80">
+                      <ul className="list--unstyled">
+                        <li>Problem exploration & definition using genAI and humans in the loop.</li>
+                        <li>Interview and identify pain points. How do people interact with AI?</li>
+                        <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
+                        <li>Problem definition</li>
+                        <li>User testing and gathering feedback</li>
+                        <li>Design and concept development</li>
+                      </ul>
+                    </div>
+                    <div className="col sm-only">
+                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                    </div>
+                    <div className="col width-20">
+                      <ul className="list--unstyled">
+                        <li>Tuning/feedback loops</li>
+                        <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
+                        <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                        <li>Agent behavior</li>
+                        <li>Confidence loops, ethical rails, debuggability/inspections</li>
+                        <li>Call chaining, routing, flow-builders and task decomposition</li>
+                        <li>Multimodal interfaces</li>
+                        <li>Validate concepts to refine the AI interaction model</li>
+                        <li>Rapid prototyping plugins and specific services for enterprise</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="diagram-mobile">
+            <div className="stat-stack">
+              <div className="row text-row stat-text">
+                <div className="col width-80">
+                  <p className="text--lg text--serif">
+                    Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
+                    <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
+                  </p>
+                </div>
+                <div className="col width-20">
+                  <p className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="arrow-stack">
+              <div className="arrow-column-80">
+                <div className="arrow-vert arrow-80">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-vtop-left"></div>
+                  <div className="arrow-vtop-right"></div>
+                </div>
+              </div>
+              <div className="arrow-column-20">
+                <div className="arrow-vert arrow-20">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-vtop-left"></div>
+                  <div className="arrow-vtop-right"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="goinvo-lives-container">
+              <div className="goinvo-lives">
+                <div className="row bracket-row">
+                  <div className="bracket">
+                    <img
+                      className="bracket-icon"
+                      src={bracketDown}
+                      alt="bracket pointed down"
+                    />
+                  </div>
+                </div>
+
+                <div className="goinvo-lives-text">
+                  <div className="row lg-only">
+                    <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                  </div>
+
+                  <div className="row list">
+                    <div className="col width-80">
+                      <ul className="list--unstyled">
+                        <li>Problem exploration & definition using genAI and humans in the loop.</li>
+                        <li>Interview and identify pain points. How do people interact with AI?</li>
+                        <li>Gather insights, analyze & synthesize. What is the right problem to solve?</li>
+                        <li>Problem definition</li>
+                        <li>User testing and gathering feedback</li>
+                        <li>Design and concept development</li>
+                      </ul>
+                    </div>
+                    <div className="col sm-only">
+                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                    </div>
+                    <div className="col width-20">
+                      <ul className="list--unstyled">
+                        <li>Tuning/feedback loops</li>
+                        <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
+                        <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                        <li>Agent behavior</li>
+                        <li>Confidence loops, ethical rails, debuggability/inspections</li>
+                        <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>
+                        <li>Validate concepts to refine the AI interaction model</li>
+                        <li>Rapid prototyping plugins and specific services for enterprise</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
         </div>
+
+        <div className="LayoutCenter text--teal">
+          <div className="max-width content-padding pad-vertical">
+            <div className="pad-vertical">
+              <div className="hr margin-bottom--double"></div>
+              <p className="text--center"><strong>Trusted by ambitious startups and Fortune 500's</strong></p>
+              <ClientLogos ai="true" />
+            </div>
+          </div>
+        </div>
+
+        <div className="background--blue">
+          <div className="max-width content-padding pad-vertical container--justify-center center ">
+            <div className="pure-u-md-1-2 margin-bottom--double">
+              <p className="header--xl margin-bottom--none">
+                We ship software that works.<br />
+                Let's build together!
+              </p>
+              <p className="margin-top--none">
+                Reach out to learn how GoInvo can help.
+              </p>
+              <HubspotForm
+                formId={config.hubspotContactFormId}
+                title=""
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
       </Layout >
     )
   }

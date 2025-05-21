@@ -15,7 +15,7 @@ const frontmatter = {
   metaTitle: 'Software Design for AI Services',
   metaDescription:
     'Beautiful software design for AI experiences, bridging human-centered design with AI capabilities.',
-  heroImage: '/images/homepage/ai-hero-augmented-clinical-decision-support.jpg',
+  heroImage: '/images/ai/ai_hero.jpg',
 }
 
 class AIPage extends Component {
@@ -26,7 +26,7 @@ class AIPage extends Component {
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/homepage/ai-hero-augmented-clinical-decision-support.jpg"
+            image="/images/ai/ai_hero.jpg"
             caption="We design tools and experiences with AI so people and machines can skillfully work together."
             button="Let's discuss your project"
             buttonLink="/contact/"
@@ -147,7 +147,8 @@ class AIPage extends Component {
                           <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
                           <li>Agent behavior</li>
                           <li>Confidence loops, ethical rails, debuggability/inspections</li>
-                          <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>
+                          <li>Call chaining, routing, flow-builders and task decomposition</li>
+                          <li>Multimodal interfaces</li>
                           <li>Validate concepts to refine the AI interaction model</li>
                           <li>Rapid prototyping plugins and specific services for enterprise</li>
                         </ul>

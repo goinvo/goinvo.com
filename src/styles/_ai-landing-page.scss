@@ -16,8 +16,8 @@
     .goinvo-lives {
       align-self: flex-end;
       justify-content: flex-end;
-      width: 50%;
-      margin-right: 0;
+      width: 60%;
+      margin-right: -40px;
 
       p {
         text-align: center;
@@ -27,7 +27,8 @@
 
         .width-80,
         .width-20 {
-          width: 50%;
+          width: 45%;
+          margin-left: 20px;
         }
 
         .width-80 li {

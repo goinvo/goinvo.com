@@ -1,5 +1,6 @@
 {
   "all": [
+    "ipsos-facto",
     "prior-auth",
     "public-sector",
     "all-of-us",
@@ -69,6 +70,7 @@
   ],
   "enterprise": [
     "staffplan",
+    "ipsos-facto",
     "3m-coderyte",
     "maya-ehr",
     "wuxi-nextcode-familycode",
@@ -89,6 +91,7 @@
     "public-sector"
   ],
   "AI": [
+    "ipsos-facto",
     "augmented-clinical-decision-support",
     "3m-coderyte",
     "prior-auth",

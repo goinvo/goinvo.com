@@ -83,7 +83,7 @@ class AIPage extends Component {
                           The Future of Research Intelligence
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          Designing AI-powered platfo rm that transforms siloed data into actionable insights using deep research and advanced models.
+                          Designing AI-powered platform that transforms siloed data into actionable insights using deep research and advanced models.
                         </p>
                         <p>
                           <Link to="/work/ipsos-facto/">

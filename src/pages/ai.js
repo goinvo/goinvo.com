@@ -15,7 +15,7 @@ const frontmatter = {
   metaTitle: 'Software Design for AI Services',
   metaDescription:
     'Beautiful software design for AI experiences, bridging human-centered design with AI capabilities.',
-  heroImage: '/images/ai/ai_hero.jpg',
+  heroImage: '/images/ai/ai_hero_2.jpg',
 }
 
 class AIPage extends Component {
@@ -26,7 +26,7 @@ class AIPage extends Component {
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/ai/ai_hero.jpg"
+            image="/images/ai/ai_hero_2.jpg"
             caption="We design tools and experiences with AI so people and machines can skillfully work together."
             button="Let's discuss your project"
             buttonLink="/contact/"
@@ -136,7 +136,7 @@ class AIPage extends Component {
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
-                          Real-time clinical guidance for mobile health workers
+                          Real-time Clinical Guidance for Mobile Health Workers
                         </h4>
                         <p className="header--lg margin-bottom--none">
                           Augmented decision support and guidance for mobile health workers, to better training and repeatable health outcomes.
@@ -412,7 +412,7 @@ class AIPage extends Component {
             <div className="max-width content-padding pad-vertical">
               <div className="pad-vertical">
                 <div className="hr margin-bottom--double"></div>
-                <p className="text--center"><strong>Trusted by ambitious startups and Fortune 500's</strong></p>
+                <p className="text--center"><strong>Trusted by ambitious startups, Fortune 500's, and government agencies</strong></p>
                 <ClientLogos ai="true" />
               </div>
             </div>

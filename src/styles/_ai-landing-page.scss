@@ -177,7 +177,7 @@
       .diagram-mobile {
         display: flex;
         flex-direction: row;
-        height: 1400px;
+        height: 650px;
       }
 
       .lg-only {
@@ -208,10 +208,9 @@
 
       .stat-stack {
         box-sizing: border-box;
-        width: 25%;
 
         .stat-text {
-          height: 1000px;
+          height: 600px;
         }
 
         .row {
@@ -229,7 +228,7 @@
         }
 
         .width-80 {
-          height: 80%;
+          height: 85%;
           margin-right: 0;
           align-content: center;
 
@@ -240,7 +239,7 @@
         }
 
         .width-20 {
-          height: 20%;
+          height: 12%;
           align-content: center;
         }
       }
@@ -248,7 +247,7 @@
       .arrow-stack {
         box-sizing: border-box;
         width: 10%;
-        height: 1000px;
+        height: 600px;
 
         .arrow-vert {
           position: relative;
@@ -358,13 +357,17 @@
       }
 
       .goinvo-lives-container {
-        width: 75%;
+        width: 90%;
       }
 
       .goinvo-lives {
-        width: 80%;
+        width: 85%;
         flex-direction: row;
         margin-right: 0;
+
+        p {
+          text-align: left;
+        }
 
         .bracket-row {
           position: relative;
@@ -373,8 +376,8 @@
         .bracket {
           position: absolute;
           transform: rotate(-90deg);
-          margin-left: -54%;
-          margin-top: 750px;
+          margin-left: -130px;
+          margin-top: 430px;
 
           img {
             width: 65%;
@@ -383,7 +386,6 @@
         }
 
         .goinvo-lives-text {
-          margin-top: 470px;
 
           .row {
             flex-direction: column;
@@ -409,10 +411,6 @@
             }
           }
 
-          p {
-            text-align: left;
-          }
-
           .sm-only {
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
@@ -422,8 +420,14 @@
     }
 
     @media screen and (max-width: 480px) {
-      .bracket {
-        margin-left: -64%;
+      .goinvo-lives .bracket {
+        margin-left: -110px;
+        margin-top: 415px;
+
+        img {
+          width: 50%;
+          height: auto;
+        }
       }
 
       .arrow-row {

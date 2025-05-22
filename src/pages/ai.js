@@ -326,19 +326,6 @@ class AIPage extends Component {
             </div>
 
             <div className="diagram-mobile">
-              <div className="stat-stack">
-                <div className="row text-row stat-text">
-                  <div className="col width-80">
-                    <p className="text--lg text--serif">
-                      Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
-                      <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
-                    </p>
-                  </div>
-                  <div className="col width-20">
-                    <p className=" text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
-                  </div>
-                </div>
-              </div>
 
               <div className="arrow-stack">
                 <div className="arrow-column-80">
@@ -357,6 +344,8 @@ class AIPage extends Component {
                 </div>
               </div>
 
+
+
               <div className="goinvo-lives-container">
                 <div className="goinvo-lives">
                   <div className="row bracket-row">
@@ -369,11 +358,29 @@ class AIPage extends Component {
                     </div>
                   </div>
 
-                  <div className="goinvo-lives-text">
-                    <div className="row lg-only">
-                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                  <div className="stat-stack">
+                    <div className="row text-row stat-text">
+                      <div className="col width-80">
+                        <p className="text--lg text--serif">
+                          Most design will live here in the <span className="inline-number">80<span className="inline-percentage">%</span></span>
+                          <br />using AI services to facilitate, problem solve, drive better decisions, and productionize products
+                        </p>
+                      </div>
+                      <div className="goinvo-lives-text">
+                        <div className="row">
+                          <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                        </div>
+                      </div>
+                      <div className="col width-20">
+                        <p className="text--lg text--serif"><span className="inline-number">20<span className="inline-percentage">%</span></span> Tooling</p>
+                      </div>
                     </div>
+                  </div>
 
+                  {/* <div className="goinvo-lives-text">
+                    <div className="row">
+                      <p className="text--lg text--serif">GoInvo lives here as toolmakers and service shapers.</p>
+                    </div> 
                     <div className="row list">
                       <div className="col width-80">
                         <ul className="list--unstyled">
@@ -400,8 +407,8 @@ class AIPage extends Component {
                           <li>Rapid prototyping plugins and specific services for enterprise</li>
                         </ul>
                       </div>
-                    </div>
-                  </div>
+                    </div> 
+                  </div>*/}
                 </div>
               </div>
             </div>

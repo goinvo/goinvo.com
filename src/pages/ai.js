@@ -6,7 +6,7 @@ import config from '../../config'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
-import HubspotForm from '../components/hubspot-form'
+import MailerLiteContactForm from '../components/mailerlite-contact-form'
 import Divider from '../components/divider'
 
 import bracketDown from '../assets/images/bracket-down.svg'
@@ -435,10 +435,7 @@ class AIPage extends Component {
                 <p className="margin-top--none">
                   Reach out to learn how GoInvo can help.
                 </p>
-                <HubspotForm
-                  formId={config.hubspotContactFormId}
-                  title=""
-                />
+                <MailerLiteContactForm />
               </div>
             </div>
           </div>

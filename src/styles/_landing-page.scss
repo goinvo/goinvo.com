@@ -158,6 +158,18 @@
     @media screen and (max-width: 600px) {
       margin: 10px;
     }
+
+    .fill-image-container {
+      object-fit: cover;
+
+      &.caseStudyImg {
+
+        img, .image--max-width {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 
   .textCard {

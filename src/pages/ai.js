@@ -92,7 +92,7 @@ class AIPage extends Component {
                         </p>
                       </div>
 
-                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <div className=" pure-u-lg-1-2 flip-child caseStudyImg fill-image-container">
                         <Image
                           src="/images/ai/ai_hero.jpg"
                           className="image--max-width"
@@ -120,7 +120,7 @@ class AIPage extends Component {
                         </p>
                       </div>
 
-                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <div className=" pure-u-lg-1-2 flip-child fill-image-container caseStudyImg">
                         <Image
                           src="/images/features/national-cancer-navigation/hero.png"
                           className="image--max-width"
@@ -149,7 +149,7 @@ class AIPage extends Component {
                           </Link>
                         </p>
                       </div>
-                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
                         <Image
                           src="/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero-1.jpg"
                           className="image--max-width"
@@ -178,7 +178,7 @@ class AIPage extends Component {
                           </Link>
                         </p>
                       </div>
-                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
                         <Image
                           src="/images/features/healthcare-ai/healthcare-ai-hero-5.jpg"
                           className="image--max-width"
@@ -207,7 +207,7 @@ class AIPage extends Component {
                           </Link>
                         </p>
                       </div>
-                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                      <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
                         <Image
                           src="/images/features/eligibility/hero-image.jpg"
                           className="image--max-width"

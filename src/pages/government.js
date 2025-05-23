@@ -15,11 +15,11 @@ const frontmatter = {
   heroImage: '/images/case-studies/mass/snap/snap-cover.jpg',
 }
 
-class EnterprisePage extends Component {
+class GovernmentPage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="enterprise-design">
+        <div className="government-design landing-page">
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
@@ -37,8 +37,8 @@ class EnterprisePage extends Component {
               <span className="text--serif text--primary">.</span>
             </h1>
           </Hero>
-          <div className="bg-light pad-horizontal">
-            <div className="max-width content-padding pad-vertical LayoutCenter teal">
+          <div className="background--light-orange pad-horizontal">
+            <div className="max-width content-padding pad-vertical LayoutCenter text--teal">
               <h2 className="header--xl">
                 What results are you looking for?
               </h2>
@@ -105,7 +105,7 @@ class EnterprisePage extends Component {
             <div className="container--justify-center tileRow">
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <p className="stat">
-                  <span className="nbrStyle">33</span>
+                  <span className="number-large">33</span>
                   <span>
                     government-sponsored design projects since 2009
                   </span>
@@ -114,7 +114,7 @@ class EnterprisePage extends Component {
 
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <p className="stat">
-                  <span className="nbrStyle">160M+</span>
+                  <span className="number-large">160M+</span>
                   <span>
                     people impacted by GoInvo designs
                   </span>
@@ -123,7 +123,7 @@ class EnterprisePage extends Component {
 
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
                 <p className="stat">
-                  <span className="nbrStyle">15</span>
+                  <span className="number-large">15</span>
                   <span>
                     agencies we've worked with
                   </span>
@@ -133,7 +133,7 @@ class EnterprisePage extends Component {
 
           </div>
 
-          <div className="LayoutCenter teal">
+          <div className="LayoutCenter text--teal">
             <div className="max-width content-padding pad-vertical">
               <div className="pad-vertical">
                 <div className="hr margin-bottom--double"></div>
@@ -145,7 +145,7 @@ class EnterprisePage extends Component {
 
           </div>
 
-          <div className="bg-light teal">
+          <div className="background--light-orange text--teal">
             <div className="max-width content-padding pad-vertical container--justify-center center">
               <div>
                 <div>
@@ -164,7 +164,7 @@ class EnterprisePage extends Component {
                 <div className="pure-u-1 marginTop">
                   <Card link="/work/mass-snap/">
                     <div className="flip-parent">
-                      <div className="pure-u-lg-1-2 teal textCard flip-child">
+                      <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
                           1,107,790 Massachusetts residents were recipients of SNAP food benefits in 2024.
                         </h4>
@@ -192,7 +192,7 @@ class EnterprisePage extends Component {
                 <div className="pure-u-1">
                   <Card link="/work/all-of-us/">
                     <div className="flip-parent">
-                      <div className="pure-u-md-1-2 teal flip-child textCard">
+                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
                           NIH's All of Us Research Program
                         </h4>
@@ -221,7 +221,7 @@ class EnterprisePage extends Component {
                 <div className="pure-u-1">
                   <Card link="/work/ahrq-cds/">
                     <div className="flip-parent">
-                      <div className="pure-u-md-1-2 teal flip-child textCard">
+                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
                           National Clinical Decision Support Tool
                         </h4>
@@ -309,4 +309,4 @@ export const openSourcePageQuery = graphql`
   }
 `
 
-export default EnterprisePage
+export default GovernmentPage

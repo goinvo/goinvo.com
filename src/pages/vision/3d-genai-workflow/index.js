@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 import SlickCarousel from 'react-slick'
 
 import Layout from '../../../components/layouts/layout'
@@ -7,16 +6,14 @@ import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
-import References from '../../../components/references'
-import Reference from '../../../components/reference'
 import Divider from '../../../components/divider'
 
 import config from '../../../../config'
 
 const frontmatter = {
-  metaTitle: 'Living Health Lab - GoInvo',
+  metaTitle: 'Reimagining Visual Storytelling with GenAI',
   metaDescription:
-    'An open source project to help people examine, understand, and improve their day-to-day health through guided exploration, self-tracking, and behavior change.',
+    '',
   heroImage: '/images/features/living-health-lab/hero.jpg',
 }
 
@@ -126,6 +123,7 @@ class LivingHealthLabFeature extends Component {
           <Hero image={frontmatter.heroImage} position={'top center'} isLarge />
           <div className="max-width pad-all">
             <h1 className="header--xl">Reimagining Visual Storytelling with GenAI</h1>
+
             {/* text */}
 
             <Divider />
@@ -133,8 +131,10 @@ class LivingHealthLabFeature extends Component {
             {/* text */}
 
             {/* carousel */}
+            {/* {this.renderCarousel(carousels.rhino, fiveSlides, 'comic-', 'png')} */}
+
             {this.renderCarousel(carousels.comic, sixSlides, 'comic-', 'png')}
-            
+
             {/* image */}
 
             {/* text */}
@@ -148,14 +148,18 @@ class LivingHealthLabFeature extends Component {
             {/* text */}
           </div>
 
+          <div className="max-width pad-all">
             {/* equation thingy -- will need a special mobile layout likely , or maybe a carousel -- outside of content container */}
+            {/* {this.renderCarousel(carousels.prompt, fiveSlides, 'paper-', 'png')} */}
+            {/* how to add text or multiple images to a slider */}
             {this.renderCarousel(
               carousels.paper,
               threeSlides,
               'lhl_paper_test_',
               'jpg'
             )}
-          
+          </div>
+
           <div className="max-width pad-all">
             {/* text */}
           </div>
@@ -175,8 +179,9 @@ class LivingHealthLabFeature extends Component {
               <MailerLiteForm />
             </div>
           </div>
+
         </div>
-      </Layout>
+      </Layout >
     )
   }
 }

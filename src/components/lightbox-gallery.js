@@ -60,8 +60,6 @@ const LightboxGallery = ({ images = [], image = null, className = '', alt = '' }
         </div>
       )}
 
-      console.log('isSingleImage:', isSingleImage);
-
       {/* Lightbox for zooming */}
       <Lightbox
         open={isOpen}

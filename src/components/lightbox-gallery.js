@@ -5,6 +5,9 @@ import config from '../../config'
 import { mediaUrl } from '../helpers'
 import 'yet-another-react-lightbox/styles.css';
 
+//documentation: https://github.com/igordanchenko/yet-another-react-lightbox
+// https://yet-another-react-lightbox.com/documentation
+
 const LightboxGallery = ({ images = [], image = null, className = '', alt = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,11 +32,10 @@ const LightboxGallery = ({ images = [], image = null, className = '', alt = '' }
           ref={(el) => (imageRefs.current[0] = el)}
           src={image}
           alt={alt}
-          className="lightbox-image image--max-width"
+          className="lightbox-image image--max-width single-image"
           sizes={config.sizes.fullInsideMaxWidth}
           style={{ cursor: 'pointer' }}
           onClick={() => {
-            console.log('Opening lightbox for single image');
             setCurrentIndex(0);
             setIsOpen(true);
           }}
@@ -50,7 +52,6 @@ const LightboxGallery = ({ images = [], image = null, className = '', alt = '' }
               sizes={config.sizes.fullInsideMaxWidth}
               style={{ cursor: 'pointer' }}
               onClick={() => {
-                console.log(`Opening lightbox for image at index ${index}`);
                 setCurrentIndex(index);
                 setIsOpen(true);
               }}
@@ -59,19 +60,20 @@ const LightboxGallery = ({ images = [], image = null, className = '', alt = '' }
         </div>
       )}
 
+      console.log('isSingleImage:', isSingleImage);
+
       {/* Lightbox for zooming */}
-      <div className="dumbbox">
-        <Lightbox
-          open={isOpen}
-          close={() => setIsOpen(false)}
-          slides={lightboxImages}
-          currentIndex={currentIndex}
-        // on={{
-        //   clickNext: () => setCurrentIndex((currentIndex + 1) % imageArray.length),
-        //   clickPrev: () => setCurrentIndex((currentIndex - 1 + imageArray.length) % imageArray.length),
-        // }}
-        />
-      </div>
+      <Lightbox
+        open={isOpen}
+        close={() => setIsOpen(false)}
+        slides={lightboxImages}
+        currentIndex={currentIndex}
+        carousel={{ finite: lightboxImages.length <= 1 }}
+        render={{
+          buttonPrev: lightboxImages.length <= 1 ? () => null : undefined,
+          buttonNext: lightboxImages.length <= 1 ? () => null : undefined,
+        }}
+      />
     </div>
   );
 };

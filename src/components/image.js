@@ -63,6 +63,7 @@ class Image extends Component {
         alt={alt}
         src={src}
         onLoad={this.handleLoad}
+        {...this.props}
       />
     ) : (
       <img
@@ -73,6 +74,7 @@ class Image extends Component {
         sizes={sizes}
         src={`${src}?w=800`}
         onLoad={this.handleLoad}
+        {...this.props}
       />
     )
   }

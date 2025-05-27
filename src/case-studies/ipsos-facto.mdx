@@ -16,6 +16,7 @@ metaDescription: 'Designing an AI-powered platform that transforms siloed data i
 
 import Divider from 'components/divider'
 import { mediaUrl } from 'helpers'
+import LightboxGallery from 'components/lightbox-gallery';
 
 # The Future of Research Intelligence
 
@@ -42,15 +43,11 @@ With Facto, researchers can now turn 40+ years of market data into cited insight
 
 <Divider />
 
-<a
-  href={mediaUrl(
-    '/images/case-studies/ipsos/facto/report-wizard.jpg'
-  )}
-  target="blank"
-  rel="noopener noreferrer"
->
-  ![Report wizard to convert insights into a client-ready deliverable](/images/case-studies/ipsos/facto/report-wizard.jpg)
-</a>
+<LightboxGallery
+   image="/images/case-studies/ipsos/facto/report-wizard.jpg"
+   alt="Report wizard to convert insights into a client-ready deliverable"
+   className="image--max-width"
+/>
 <p class="text--caption text--center">_Report wizard to convert insights into a client-ready deliverable_</p>
 
 GoInvo led the design of Ipsos Facto, an AI-native platform that wraps generative intelligence around market researchers’ workflows. We aimed to mature the product’s design thinking, uncomplicate AI for users, and develop features that fit industry-specific needs by layering in guided workflows, embedded prompts, and transparent AI logic.
@@ -74,76 +71,67 @@ These misalignments led to low adoption and high user burden. Researchers were e
 
 GoInvo collaborated with the Ipsos team to rethink Facto’s user experience and make the AI useful. Under the guidance and leadership of David Zotter and JC Escalante, whose clear product vision and strategic direction were instrumental, we collectively rebuilt the foundation of the research agentic experience. Their expertise helped us align the design development with the needs of researchers and the broader enterprise. Together, we introduced guided workflows and research-specific tools for core tasks like content curation, meta-analysis, and transcript coding.
 
-![Template for guidance and automation around meta-analysis](/images/case-studies/ipsos/facto/template.jpg)
+<LightboxGallery
+   image="/images/case-studies/ipsos/facto/template.jpg"
+   alt="Template for guidance and automation around meta-analysis"
+   className="image--max-width"
+/>
 <p class="text--caption text--center">_Template for guidance and automation around meta-analysis_</p>
 
 <div class="pure-u-lg-1-2">
-  <a
-    href={mediaUrl(
-      '/images/case-studies/ipsos/facto/coding.jpg'
-    )}
-    target="blank"
-    rel="noopener noreferrer"
-  >
-    ![Coding tools screen design](/images/case-studies/ipsos/facto/coding-2.jpg)
-  </a>
+  <LightboxGallery
+    image="/images/case-studies/ipsos/facto/coding.jpg"
+    alt="Coding tools screen design"
+    className="image--max-width"
+  />
 </div>
 <div class="pure-u-lg-1-2">
-  <a
-    href={mediaUrl(
-      '/images/case-studies/ipsos/facto/translation.jpg'
-    )}
-    target="blank"
-    rel="noopener noreferrer"
-  >
-    ![Translation screen design](/images/case-studies/ipsos/facto/translation.jpg)
-  </a>
+   <LightboxGallery
+    image="/images/case-studies/ipsos/facto/translation.jpg"
+    alt="Translation screen design"
+    className="image--max-width"
+  />
 </div>
 <p class="text--caption text--center">_Coding and translation tools._</p>
 
 We **reduced cognitive load** by adding suggestions, limitations, and disclaimers into the UI. We added *transparency* to how AI decisions are made (and where they fail). 
 
 <div class="pure-u-lg-1-3">
-  <a
-    href={mediaUrl(
-      '/images/case-studies/ipsos/facto/charts.jpg'
-    )}
-    target="blank"
-    rel="noopener noreferrer"
-  >
-    ![Charts design](/images/case-studies/ipsos/facto/charts.jpg)
-  </a>
+  <LightboxGallery
+    image="/images/case-studies/ipsos/facto/charts.jpg"
+    alt="Charts design"
+    className="image--max-width"
+  />
 </div>
 <div class="pure-u-lg-1-3">
-  <a
-    href={mediaUrl(
-      '/images/case-studies/ipsos/facto/hallucination-warnings.jpg'
-    )}
-    target="blank"
-    rel="noopener noreferrer"
-  >
-    ![Hallucination warnings](/images/case-studies/ipsos/facto/hallucination-warnings.jpg)
-  </a>
+  <LightboxGallery
+    image="/images/case-studies/ipsos/facto/hallucination-warnings.jpg"
+    alt="Hallucination warnings"
+    className="image--max-width"
+  />
 </div>
 <div class="pure-u-lg-1-3">
-  <a
-    href={mediaUrl(
-      '/images/case-studies/ipsos/facto/prompt-suggestions.jpg'
-    )}
-    target="blank"
-    rel="noopener noreferrer"
-  >
-    ![Prompt suggestions](/images/case-studies/ipsos/facto/prompt-suggestions.jpg)
-  </a>
+  <LightboxGallery
+    image="/images/case-studies/ipsos/facto/prompt-suggestions.jpg"
+    alt="Prompt suggestions"
+    className="image--max-width"
+  />
 </div>
 <p class="text--caption text--center">_Design details that reduce user burden._</p>
 
 Additionally, we made the chat feel like part of a **system**, not a disconnected sidekick.
 
-
-![Templates screen design](/images/case-studies/ipsos/facto/templates.gif)
+<LightboxGallery
+  image="/images/case-studies/ipsos/facto/templates.gif"
+  alt="Templates screen design"
+  className="image--max-width"
+/>
 <p class="text--caption text--center">_Quickly pull in a template or tool into an existing chat._</p>
-![Tools design](/images/case-studies/ipsos/facto/tools.gif)
+<LightboxGallery
+  image="/images/case-studies/ipsos/facto/tools.gif"
+  alt="Tools design"
+  className="image--max-width"
+/>
 <p class="text--caption text--center">_Insights that, on click, uncover details and citation metadata from diverse source types._</p>
 
 All of this was underpinned by five principles:

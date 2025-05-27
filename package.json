@@ -40,7 +40,8 @@
     "sass": "^1.63.2",
     "sass-mq": "^6.0.0",
     "slick-carousel": "^1.8.1",
-    "smoothscroll-polyfill": "^0.4.3"
+    "smoothscroll-polyfill": "^0.4.3",
+    "yet-another-react-lightbox": "^3.23.2"
   },
   "scripts": {
     "rework-css": "node ./src/rework-pure-grids.js",

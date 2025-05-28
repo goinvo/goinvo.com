@@ -52,44 +52,44 @@ class ContactForm extends Component {
     document.head.appendChild(jotFormScript);
   }
 
-  onSubmit = async (e) => {
-    e.preventDefault();
+  // onSubmit = async (e) => {
+  //   e.preventDefault();
 
-    await fetch('https://submit.jotform.com/submit/251276832519159', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({
-        "fields": {
-          "email": e.target.elements.email.value,
-          "name": e.target.elements.name.value,
-          "body": e.target.elements.body.value,
-          "link": e.target.elements.link.value,
-          "filename": e.target.elements.fileUpload.value,
-        },
-        "ml-submit": 1,
-        "anticsrf": true
-      })
-    }).then(async (response) => {
-      if (response.ok) {
-        var formContent = document.querySelector('.ml-subscribe-form-25396323 .row-form');
-        formContent.style.display = 'none';
-        var formSuccess = document.querySelector('.ml-subscribe-form-25396323 .row-success');
-        formSuccess.style.display = 'block';
-      } else {
-        console.error('Network response:', response);
-        throw new Error('Network response was not ok');
-      }
-    }).catch((error) => {
-      console.error('Error:', error);
-      var formContent = document.querySelector('.ml-subscribe-form-25396323 .row-form');
-      formContent.style.display = 'none';
-      var formSuccess = document.querySelector('.ml-subscribe-form-25396323 .row-error');
-      formSuccess.style.display = 'block';
-    });
-  }
+  //   await fetch('https://submit.jotform.com/submit/251276832519159', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       "fields": {
+  //         "email": e.target.elements.email.value,
+  //         "name": e.target.elements.name.value,
+  //         "body": e.target.elements.body.value,
+  //       },
+  //       "ml-submit": 1,
+  //       "anticsrf": true
+  //     })
+  //   }).then(async (response) => {
+  //     if (response.ok) {
+  //       var formContent = document.querySelector('.contact-form .row-form');
+  //       formContent.style.display = 'none';
+  //       var formSuccess = document.querySelector('.contact-form .row-success');
+  //       formSuccess.style.display = 'block';
+  //     } else {
+  //       console.error('Network response:', response);
+  //       throw new Error('Network response was not ok');
+  //     }
+  //   }).catch((error) => {
+  //     console.error('Error:', error);
+  //     var formContent = document.querySelector('.contact-form .row-form');
+  //     formContent.style.display = 'none';
+  //     var formSuccess = document.querySelector('.contact-form .row-error');
+  //     formSuccess.style.display = 'block';
+  //   });
+  // }
+
+  //when using the above code, it just hangs on the please wait...
 
   render() {
     return (
@@ -107,10 +107,10 @@ class ContactForm extends Component {
         <Card>
           <form
             className="jotform-form contact-form"
-            onSubmit={this.onSubmit}
-            //onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();"
-            //action="https://submit.jotform.com/submit/251276832519159"
-            //method="post"
+            //onSubmit={this.onSubmit}
+            onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();"
+            action="https://submit.jotform.com/submit/251276832519159"
+            method="post"
             name="form_251276832519159"
             id="251276832519159"
             accept-charset="utf-8"
@@ -128,36 +128,36 @@ class ContactForm extends Component {
             <div role="main" className="form-all">
               <ul className="form-section page-section" role="presentation">
                 <li id="cid_1" className="form-input-wide" data-type="control_head">
-                  <div className="form-header-group  header-large">
+                  <div className="form-header-group">
                     <div className="header-text httal htvam">
                       <h1 id="header_1" className="form-header" data-component="header">Get in Touch</h1>
                       <div id="subHeader_1" className="form-subHeader">or email us at info@goinvo.com</div>
                     </div>
                   </div>
                 </li>
-                <li className="form-line jf-required" data-type="control_textbox" id="id_7">
+                <li className="form-line jf-required margin-top--none" data-type="control_textbox" id="id_7">
                   <label className="form-label form-label-top form-label-auto" id="label_7" for="input_7" aria-hidden="false"> Your name<span className="form-required">*</span> </label>
-                  <div id="cid_7" className="form-input-wide jf-required" data-layout="half">
+                  <div id="cid_7" className="form-input-wide jf-required">
                     <input type="text" id="input_7" name="q7_yourName" data-type="input-textbox" className="form-textbox validate[required]" data-defaultvalue="" data-component="textbox" aria-labelledby="label_7" required="" />
                   </div>
                 </li>
-                <li className="form-line jf-required" data-type="control_email" id="id_4">
+                <li className="form-line jf-required margin-top--none" data-type="control_email" id="id_4">
                   <label className="form-label form-label-top form-label-auto" id="label_4" for="input_4" aria-hidden="false"> Your email<span className="form-required">*</span> </label>
-                  <div id="cid_4" className="form-input-wide jf-required" data-layout="half">
+                  <div id="cid_4" className="form-input-wide jf-required">
                     <span className="form-sub-label-container">
                       <input type="email" id="input_4" name="q4_yourEmail" className="form-textbox validate[required, Email]" data-defaultvalue="" autoComplete="section-input_4 email" data-component="email" aria-labelledby="label_4 sublabel_input_4" required="" />
                       <label className="form-sub-label" for="input_4" id="sublabel_input_4">example@example.com</label>
                     </span>
                   </div>
                 </li>
-                <li className="form-line jf-required" data-type="control_textarea" id="id_5">
+                <li className="form-line jf-required margin-top--none" data-type="control_textarea" id="id_5">
                   <label className="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> How can we help?<span className="form-required">*</span> </label>
-                  <div id="cid_5" className="form-input-wide jf-required" data-layout="full">
+                  <div id="cid_5" className="form-input-wide jf-required">
                     <textarea id="input_5" className="form-textarea validate[required]" name="q5_howCan" data-component="textarea" required="" aria-labelledby="label_5"></textarea>
                   </div>
                 </li>
                 <li className="form-line" data-type="control_button" id="id_2">
-                  <div id="cid_2" className="form-input-wide" data-layout="full">
+                  <div id="cid_2" className="form-input-wide">
                     <div data-align="auto" className="form-buttons-wrapper form-buttons-auto jsTest-button-wrapperField">
                       <button id="input_2" type="submit" className="form-submit-button form-submit-button-orange-500 submit-button jf-form-buttons jsTest-submitField legacy-submit" data-component="button" data-content="">Send</button>
                     </div>
@@ -169,6 +169,7 @@ class ContactForm extends Component {
           </form>
         </Card>
       </div>
+      // the thank you page is on a different page
     )
   }
 }

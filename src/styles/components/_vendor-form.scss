@@ -1,3 +1,8 @@
+.contact-form-frame {
+  height: 860px;
+  overflow: hidden;
+}
+
 .jotform-form {
   min-width: 100%;
   max-width: 100%;
@@ -10,8 +15,8 @@
   }
 
   &.contact-form {
-    height: 790px;
-    margin-bottom: -10px;
+    height: 855px;
+    //just a tiny change that means nothing
   }
 
   &.hiring-form {

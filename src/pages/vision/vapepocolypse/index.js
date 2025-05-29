@@ -6,7 +6,7 @@ import Divider from '../../../components/divider'
 import Image from '../../../components/image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import SubscribeForm from '../../../components/form-subscribe'
 
 import { mediaUrl } from '../../../helpers'
 
@@ -61,7 +61,7 @@ class VapepocolypseFeature extends Component {
 
               <div className="background--gray pad-vertical--double">
                 <div className="max-width max-width--md content-padding">
-                  <MailerLiteForm />
+                  <SubscribeForm />
                 </div>
               </div>
 

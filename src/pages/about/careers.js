@@ -7,7 +7,7 @@ import GradientImageColumns from '../../components/gradient-image-columns'
 import Quote from '../../components/quote'
 import Columns from '../../components/columns'
 import ImageBlock from '../../components/image-block'
-import MailerLiteHiringForm from '../../components/mailerlite-hiring-form'
+import HiringForm from '../../components/form-hiring'
 import BackgroundImage from '../../components/background-image'
 
 import config from '../../../config'
@@ -211,7 +211,7 @@ class CareersPage extends Component {
                 <a href="mailto:juhan@goinvo.com">juhan@goinvo.com</a>
               </p>
               <div className="pad-top">
-                <MailerLiteHiringForm />
+                <HiringForm />
               </div>
             </div>
           </div>

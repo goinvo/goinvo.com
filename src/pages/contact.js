@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
-import MailerLiteContactForm from '../components/mailerlite-contact-form'
+import ContactForm from '../components/form-contact'
 
 import config from '../../config'
 
@@ -21,7 +21,7 @@ const ContactPage = () => (
         className="max-width max-width--sm content-padding"
         style={{ marginTop: '-7rem' }}
       >
-        <MailerLiteContactForm />
+        <ContactForm />
         <div className="margin-top">
           <a href="mailto:info@goinvo.com">info@goinvo.com</a>
           <a

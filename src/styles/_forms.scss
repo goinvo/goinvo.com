@@ -24,6 +24,18 @@
   }
 }
 
+.card.form-card {
+  background: #F3F3FE;
+}
+.form-header {
+    margin-left: 38px;
+    padding-top: 1px;
+    z-index: 3;
+  &.hiring-form-header {
+    
+  }
+}
+
 .form-submit-button-orange-500.submit-button {
   background-color: $color-orange;
   &:hover {

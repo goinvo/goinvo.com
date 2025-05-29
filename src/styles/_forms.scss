@@ -28,21 +28,12 @@
   background: #F3F3FE;
 }
 .form-header {
-    margin-left: 38px;
     padding-top: 1px;
     z-index: 3;
   &.hiring-form-header {
-    
+    margin-left: 38px;
   }
-}
-
-.form-submit-button-orange-500.submit-button {
-  background-color: $color-orange;
-  &:hover {
-    background-color: $color-primary--dark;
+  &.contact-form-header {
+    margin-left: 23px;
   }
-}
-
-.form-buttons-wrapper, .form-submit-clear-wrapper {
-  padding: 20px 52px;
 }

@@ -495,9 +495,9 @@ class VirtualDiabetesCareFeature extends Component {
                   references={[
                     {
                       title:
-                        "Samson LW, Tarazi W, Turrini G, Sheingold S. Office of the Assistant Secretary for Planning and Evaluation.   Medicare Beneficiaries' Use of Telehealth in 2020: Trends by Beneficiary Characteristics and Location. Published December 3, 2021. Accessed December 8, 2022",
+                        "Assistant Secretary for Planning and Evaluation. Medicare Beneficiaries' Use of Telehealth in 2020: Trends by Beneficiary Characteristics and Location. Published December 3, 2021. Accessed December 8, 2022",
                       link:
-                        'https://aspe.hhs.gov/reports/medicare-beneficiaries-use-telehealth-2020',
+                        'https://aspe.hhs.gov/sites/default/files/documents/4e1853c0b4885112b2994680a58af9ed/telehealth-hps-ib.pdf',
                     },
                     {
                       title:

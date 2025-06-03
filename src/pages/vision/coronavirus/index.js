@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import * as d3Fetch from 'd3-fetch'
 import { format, precisionRound } from 'd3-format'
 
 import Layout from '../../../components/layouts/layout'
-import BackgroundImage from '../../../components/background-image'
+import Hero from '../../../components/hero'
+import { LazyImage } from '../../../components/optimized-image'
 import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
@@ -84,7 +85,7 @@ class CoronavirusFeature extends Component {
         <div className="coronavirus">
           <div className="hero">
             <div className="hero__image-container">
-              <BackgroundImage
+              <LazyImage
                 src={frontmatter.heroImage}
                 className="hero__image"
               />
@@ -221,7 +222,7 @@ class CoronavirusFeature extends Component {
                 COVID-19 to the people around you.
               </p>
               <h4>
-                China’s COVID-19 death rate by age as of 11 Feb 2020
+                China's COVID-19 death rate by age as of 11 Feb 2020
                 <sup>19,20</sup>
               </h4>
               <Image
@@ -262,7 +263,7 @@ class CoronavirusFeature extends Component {
                     <span className="text--bold">7 Jan 2020</span>
                     <ul>
                       <li>New virus identified as a coronavirus</li>
-                      <li>Europe’s first case confirmed in France</li>
+                      <li>Europe's first case confirmed in France</li>
                     </ul>
                   </p>
                 </div>
@@ -327,7 +328,7 @@ class CoronavirusFeature extends Component {
                     <span className="text--bold">11 Feb 2020</span>
                     <br />
                     WHO announces a new official name for the disease as
-                    “COVID-19”
+                    "COVID-19"
                   </p>
                 </div>
                 <div className="timepoint">
@@ -393,9 +394,9 @@ class CoronavirusFeature extends Component {
                 </span>
               </h3>
               <p>
-                At this time, we don’t know how fast or easily this virus is
+                At this time, we don't know how fast or easily this virus is
                 spreading between people. More information is discovered
-                everyday, but here’s what we know so far.
+                everyday, but here's what we know so far.
               </p>
               <h4>Human-to-human transmission is possible</h4>
               <p>
@@ -409,7 +410,7 @@ class CoronavirusFeature extends Component {
                   src="/images/features/coronavirus/mobile-spread-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
-                  alt="llustration of a hand holding a child’s hand."
+                  alt="llustration of a hand holding a child's hand."
                 />
                 <NumberListItem number="1">
                   ...close contact of 6 feet or less, including touching and
@@ -458,7 +459,7 @@ class CoronavirusFeature extends Component {
           <section className="margin-top--quad">
             <div className="hero hero--small">
               <div className="hero__image-container">
-                <BackgroundImage
+                <LazyImage
                   src="/images/features/coronavirus/section-header-2.jpg"
                   className="hero__image"
                 />
@@ -481,7 +482,7 @@ class CoronavirusFeature extends Component {
                 </span>
               </h3>
               <p>
-                Here’s what you can do{' '}
+                Here's what you can do{' '}
                 <strong>to prevent COVID-19 from spreading to others:</strong>
               </p>
             </div>
@@ -533,7 +534,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/prevention-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
-                alt="illustration of a subway scene depicting what the public can do to prevent the spread of disease: 1. Stay home when you are sick, 2. Wash your hands often with soap and water. If unable to wash your hands, use alcohol-based hand sanitizer, 3. Avoid close contact with people who are sick, 4. Clean and disinfect frequently touched objects and surfaces, 5. Cover coughs and sneezes with your elbow or a tissue. Throw tissues in the trash, 6. Get your annual flu vaccine, 7. Take flu antivirals if prescribed, 8. Avoid touching your eyes, nose, and mouth with unwashed hands, and 9. Check CDC’s COVID-19 travel health notices often and avoid nonessential travel to China."
+                alt="illustration of a subway scene depicting what the public can do to prevent the spread of disease: 1. Stay home when you are sick, 2. Wash your hands often with soap and water. If unable to wash your hands, use alcohol-based hand sanitizer, 3. Avoid close contact with people who are sick, 4. Clean and disinfect frequently touched objects and surfaces, 5. Cover coughs and sneezes with your elbow or a tissue. Throw tissues in the trash, 6. Get your annual flu vaccine, 7. Take flu antivirals if prescribed, 8. Avoid touching your eyes, nose, and mouth with unwashed hands, and 9. Check CDC's COVID-19 travel health notices often and avoid nonessential travel to China."
               />
             </div>
             <div className="max-width content-padding">
@@ -547,7 +548,7 @@ class CoronavirusFeature extends Component {
                   If you come into close contact with someone who is confirmed
                   to have COVID-19,
                   <br />
-                  <strong>here’s what you can do to stay well:</strong>
+                  <strong>here's what you can do to stay well:</strong>
                   <ul>
                     <li>
                       <strong>Monitor your health</strong> for at least{' '}
@@ -599,7 +600,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/close-contact-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
-                alt="illustration of a sick person with symptoms of fever, coughing, and shortness of breath. Beside them, a person calling their doctor on the phone. Call your doctor ahead of time to tell them you’ve have close contact with someone confirmed to have COVID-19, and to call the local or state health departments. This helps your provider prevent other people from being infected."
+                alt="illustration of a sick person with symptoms of fever, coughing, and shortness of breath. Beside them, a person calling their doctor on the phone. Call your doctor ahead of time to tell them you've have close contact with someone confirmed to have COVID-19, and to call the local or state health departments. This helps your provider prevent other people from being infected."
               />
             </div>
             <div className="max-width content-padding">
@@ -632,7 +633,7 @@ class CoronavirusFeature extends Component {
                 not require hospitalization or is told they are medically stable
                 to go home,{' '}
                 <strong>
-                  here’s what you can do to take care and prevent further spread
+                  here's what you can do to take care and prevent further spread
                   of the disease
                 </strong>{' '}
                 for{' '}
@@ -732,7 +733,7 @@ class CoronavirusFeature extends Component {
                 <NumberListItem number="1">
                   <strong>Wash your hands often</strong> with soap and water for
                   20 seconds. If unable to and your hands are not visibly dirty,
-                  use an alcohol-based hand sanitizer (>60% alcohol). Avoid
+                  use an alcohol-based hand sanitizer (&gt;60% alcohol). Avoid
                   touching your face with unwashed hands.
                 </NumberListItem>
                 <NumberListItem number="2">
@@ -749,7 +750,7 @@ class CoronavirusFeature extends Component {
                     be consulted
                   </strong>{' '}
                   to get permission to end home isolation. They will give their
-                  permission when the patient’s risk of spreading COVID-19 to
+                  permission when the patient's risk of spreading COVID-19 to
                   others is low; the timing differs from patient to patient.
                 </p>
                 <p>
@@ -764,7 +765,7 @@ class CoronavirusFeature extends Component {
                 src="/images/features/coronavirus/care.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
-                alt="illustration of a patient in home care and their caregiver. The CDC recommends patients to 1. stay home except to get medical care, 2. stay in a different room from other people in your home and use a separate bathroom, if available, 3. call ahead before visiting your doctor, 4. wear a facemask, and 5. cover coughs and sneezes with your elbow or a tissue. Throw tissues in the trash and then wash your hands. For caregivers, 1. ensure shared spaces have good air flow, 2. only have people essential for providing care for the person in the home. Keep the elderly and those likely to get sick away from the patient, 3. clean all “high-touch” surfaces, 4. understand and help the person follow the healthcare provider’s instructions for medication and care, 5. dispose of contaminated items in a lined container before disposing them with other household waste, 6. wear at least a disposable facemask and gloves when you touch or have contact with the person’s blood, body fluids and/or secretions, and 7. wash laundry thoroughly. Immediately remove and wash clothes or bedding that have any body fluids and/or secretions or excretions on them. Both patients and caregivers should 1. Wash your hands often with soap and water for 20 seconds. If unable and your hands are not visibly dirty, use an alcohol-based hand sanitizer with more than 60% alcohol, and avoid touching your face with unwashed hands, 2. avoid sharing household items, and 3. monitor your symptoms, and seek medical attention as soon as possible if you notice any symptoms and/or if your illness worsens."
+                alt="Illustration of a patient in home care and their caregiver. The CDC recommends patients to stay home except to get medical care, stay in a different room from other people in your home and use a separate bathroom if available, call ahead before visiting your doctor, wear a facemask, and cover coughs and sneezes with your elbow or a tissue. Throw tissues in the trash and then wash your hands. For caregivers, ensure shared spaces have good air flow, only have people essential for providing care for the person in the home, keep the elderly and those likely to get sick away from the patient, clean all high-touch surfaces, understand and help the person follow healthcare provider instructions for medication and care, dispose of contaminated items in a lined container before disposing them with other household waste, wear at least a disposable facemask and gloves when you touch or have contact with the person's blood or body fluids, and wash laundry thoroughly. Both patients and caregivers should wash hands often with soap and water for 20 seconds, avoid sharing household items, and monitor symptoms."
               />
               <div className="max-width content-padding">
                 <p>
@@ -781,7 +782,7 @@ class CoronavirusFeature extends Component {
                     be consulted
                   </strong>
                   to get permission to end home isolation. They will give their
-                  permission when the patient’s risk of spreading COVID-19 to
+                  permission when the patient's risk of spreading COVID-19 to
                   others is low; the timing differs from patient-to-patient.
                 </p>
                 <p>
@@ -1026,9 +1027,16 @@ class CoronavirusFeature extends Component {
           <section>
             <div className="hero hero--small">
               <div className="hero__image-container">
-                <BackgroundImage
+                <LazyImage
                   src="/images/features/coronavirus/section-header-2.jpg"
                   className="hero__image"
+                  alt="Section header image"
+                  placeholderType="skeleton"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
               </div>
               <div className="coronavirus-header-container">
@@ -1186,7 +1194,7 @@ class CoronavirusFeature extends Component {
               src="/images/features/coronavirus/response-airport.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
-              alt="A comic about how we protect our airports and borders. Since the virus outbreak started outside of the U.S., the first line of defense is to manage places where the virus could enter. Step 1: determine who is at risk. A Custom and Border Protection agent asks a traveler about if they have traveled to China in the last 14 days upon entering the U.S. Step 2: check the symptoms; if any risk is determined, a secondary screening is conducted to evaluate the traveler’s symptoms. Step 3: take action; travelers at risk are then evaluated and monitored by the Centers for Disease and Control which may involve a 14-day quarantine."
+              alt="A comic about how we protect our airports and borders. Since the virus outbreak started outside of the U.S., the first line of defense is to manage places where the virus could enter. Step 1: determine who is at risk. A Custom and Border Protection agent asks a traveler about if they have traveled to China in the last 14 days upon entering the U.S. Step 2: check the symptoms; if any risk is determined, a secondary screening is conducted to evaluate the traveler's symptoms. Step 3: take action; travelers at risk are then evaluated and monitored by the Centers for Disease and Control which may involve a 14-day quarantine."
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
@@ -1225,7 +1233,7 @@ class CoronavirusFeature extends Component {
               src="/images/features/coronavirus/response-hospital-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
-              alt="A comic about how hospitals respond to quarantine. A doctor says “We’ve received training and have protocols on how to handle patients suspected of having COVID-19. The hospital has lots of sick people that may be at a greater risk from having severe symptoms of the virus. Respirators, disposable gloves, and other personal protection equipment are shown; they are crucial to health worker safety. For mild cases, a patient is shown in self-quarantine at home. For severe vases, a patient is shown isolated in a hospital. A nurse says “it’s important that everyone in the hospital environment is educated about the risks and how to deal with COVID-19. This includes not only doctors and nurses, but patients, administrators, and custodians too. We all play a part in keeping this disease controlled and people healthy."
+              alt="A comic about how hospitals respond to quarantine. A doctor explains they have received training and protocols for handling COVID-19 patients. Hospitals have sick people at greater risk from severe symptoms. Respirators, disposable gloves, and personal protection equipment are crucial for health worker safety. Mild cases stay in self-quarantine at home. Severe cases are isolated in hospitals. A nurse explains that everyone in the hospital environment must be educated about risks and how to deal with COVID-19, including doctors, nurses, patients, administrators, and custodians."
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
@@ -1247,8 +1255,8 @@ class CoronavirusFeature extends Component {
                 If there is a suspected case of COVID-19 in the region,
                 hospitals and local clinics should be trained in how to deal
                 with the virus. Massachusetts General Hospital (MGH) is 1 of 10
-                CDC designated “regional ebola and special pathogen treatment
-                centers” in the US —meaning that they have expert knowledge in
+                CDC designated "regional ebola and special pathogen treatment
+                centers" in the US —meaning that they have expert knowledge in
                 how to deal with something like an outbreak. Many other
                 hospitals have turned to MGH as they update their emergency
                 plans.
@@ -1271,7 +1279,7 @@ class CoronavirusFeature extends Component {
               src="/images/features/coronavirus/response-city-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
-              alt="A comic about how a city would respond to quarantine. Based on their surveillance reports, the Centers for Disease and Control has identified a city to be quarantined. The incident manger on the phone says “Alright team, we’ve got our orders, we have to lock down the city. We have 5 days to do it.” 1. Shut down public places like malls, schools, and churches, 2. restrict mass transit, 3. encourage businesses to close and employees to stay home, 4. create checkpoints, curfews, travel permits, and issue health certificates, 5. enforce a quarantine, and 6. keep the public updated via text, cable television, radio, and door-to-door messages."
+              alt="A comic about how a city would respond to quarantine. Based on their surveillance reports, the Centers for Disease and Control has identified a city to be quarantined. The incident manager on the phone explains that they have received orders to lock down the city within 5 days. The plan includes shutting down public places like malls, schools, and churches, restricting mass transit, encouraging businesses to close and employees to stay home, creating checkpoints, curfews, travel permits, and issuing health certificates, enforcing a quarantine, and keeping the public updated via text, cable television, radio, and door-to-door messages."
             />
             <div className="max-width content-padding">
               <div className="text--center margin-bottom--quad">
@@ -1284,13 +1292,27 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="coronavirus-action-end">
-              <BackgroundImage
+              <LazyImage
                 src="/images/features/coronavirus/mobile-conclusion.jpg"
                 className="hidden--lg"
+                alt="Conclusion illustration for mobile"
+                placeholderType="skeleton"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
               />
-              <BackgroundImage
+              <LazyImage
                 src="/images/features/coronavirus/conclusion.jpg"
                 className="hidden--until-lg"
+                alt="Conclusion illustration for desktop"
+                placeholderType="skeleton"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
               />
               <div className="content">
                 <div className="max-width content-padding margin-top--none">
@@ -1315,9 +1337,16 @@ class CoronavirusFeature extends Component {
           <section>
             <div className="hero hero--small">
               <div className="hero__image-container">
-                <BackgroundImage
+                <LazyImage
                   src="/images/features/coronavirus/section-header-2.jpg"
                   className="hero__image"
+                  alt="Section header image"
+                  placeholderType="skeleton"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
               </div>
               <div className="coronavirus-header-container">
@@ -1484,9 +1513,16 @@ class CoronavirusFeature extends Component {
           <section className="margin-top--quad">
             <div className="hero hero--small">
               <div className="hero__image-container">
-                <BackgroundImage
+                <LazyImage
                   src="/images/features/coronavirus/section-header-2.jpg"
                   className="hero__image"
+                  alt="Section header image"
+                  placeholderType="skeleton"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
               </div>
               <div className="coronavirus-header-container">
@@ -1625,9 +1661,16 @@ class CoronavirusFeature extends Component {
           <section>
             <div className="hero hero--small">
               <div className="hero__image-container">
-                <BackgroundImage
+                <LazyImage
                   src="/images/features/coronavirus/section-header-2.jpg"
                   className="hero__image"
+                  alt="Section header image"
+                  placeholderType="skeleton"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
               </div>
               <div className="coronavirus-header-container">
@@ -1654,9 +1697,16 @@ class CoronavirusFeature extends Component {
           <section>
             <div className="hero hero--small">
               <div className="hero__image-container">
-                <BackgroundImage
+                <LazyImage
                   src="/images/features/coronavirus/section-header-2.jpg"
                   className="hero__image"
+                  alt="Section header image"
+                  placeholderType="skeleton"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
               </div>
               <div className="coronavirus-header-container">

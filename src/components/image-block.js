@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BackgroundImage from './background-image'
+import { LazyImage } from './optimized-image'
 
 import CATEGORIES_LIST from '../data/categories.json'
 
@@ -42,13 +42,20 @@ class ImageBlock extends Component {
           className={`image-block__image-container ${isSmall ? 'image-block__image-container--small' : ''
             }`}
         >
-          <BackgroundImage
+          <LazyImage
             src={image}
             externalImage={externalImage}
             sizes={sizes}
             className="image-block__image"
-            position={position}
-            alt={alt || ''}
+            alt={alt || title || ''}
+            placeholderType="skeleton"
+            placeholderColor="#f5f5f5"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: position || 'center center'
+            }}
           />
         </div>
         <div className="image-block__text">

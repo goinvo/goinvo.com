@@ -733,7 +733,7 @@ class BurnoutFeature extends Component {
                       title:
                         "Hawkins M. 2018 Survey of America's Physicians: Practice Patterns & Perspectives. 2018.",
                       link:
-                        'https://physiciansfoundation.org/wp-content/uploads/2018/09/physicians-survey-results-final-2018.pdf',
+                        'https://www.merritthawkins.com/uploadedFiles/MerrittHawkins/Content/Pdf/MerrittHawkins_2018_Physician_Survey.pdf',
                     },
                     {
                       title:

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
-import Image from '../../../components/image'
+import { LazyImage } from '../../../components/optimized-image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -42,7 +42,7 @@ class HealthcareDollarsRedux extends Component {
                   href={"https://goinvo.github.io/healthcare-flow/"}
                   target="_blank"
                   rel="noopener noreferrer"
-                ><Image
+                ><LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-shot.jpg"
                     className="image--max-width image--center"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -66,7 +66,7 @@ class HealthcareDollarsRedux extends Component {
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
                   <a href="../healthcare-dollars/">
-                    <Image
+                    <LazyImage
                       src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--1.jpg"
                       className="image--max-width hoverable-comic"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -75,17 +75,17 @@ class HealthcareDollarsRedux extends Component {
                   </a>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    alt="Comic frame 2: Two people are looking at the original map. The first says 'But where does it go from here? Who's making all that money?!' The second is thinking 'You doc? Or CEOs?'"
+                    alt="Comic frame 2: Two people are looking at the original map. The first says 'But where does it go from here? Who\'s making all that money?!' The second is thinking 'You doc? Or CEOs?'"
                   />
                 </div>
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--3.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -93,7 +93,7 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--4.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -103,7 +103,7 @@ class HealthcareDollarsRedux extends Component {
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--5.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -111,7 +111,7 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--6.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -121,7 +121,7 @@ class HealthcareDollarsRedux extends Component {
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--7.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -129,17 +129,17 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--8.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    alt="Comic frame 8 — The designer thinks out loud, 'Well that's... ugly. Let's Design!.' Behind the designer is a backdrop of a Figma file."
+                    alt="Comic frame 8 — The designer thinks out loud, 'Well that\'s... ugly. Let\'s Design!.' Behind the designer is a backdrop of a Figma file."
                   />
                 </div>
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--9.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -147,11 +147,11 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <Image
+                  <LazyImage
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--10.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    alt="Comic frame 10 — The designer and person from Frame 2 are  looking at the new interctive map. The designer says, 'Well that's closer'. The other person thinks, 'It's something!'"
+                    alt="Comic frame 10 — The designer and person from Frame 2 are  looking at the new interctive map. The designer says, 'Well that\'s closer'. The other person thinks, 'It\'s something!'"
                   />
                 </div>
               </div>

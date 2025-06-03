@@ -90,13 +90,13 @@ class VapepocolypseFeature extends Component {
                       title:
                         "MASSLIVE. (June 2019). 'Mom! It's a USB drive!' Maura Healey lawsuit scrutinizes Eonsmoke's social media advertising",
                       link:
-                        'https://www.masslive.com/politics/2019/06/mom-its-a-usb-drive-maura-healey-lawsuit-scrutinizes-eonsmokes-social-media-advertising.html',
+                        'https://www.masslive.com/news/2019/06/mom-its-a-usb-drive-maura-healey-lawsuit-scrutinizes-eonsmokes-social-media-advertising.html',
                     },
                     {
                       title:
                         "Mammoser. (November 2018). Chemicals Used in E-Cig Flavors Are Toxic and We've Known for Decades. Healthline",
                       link:
-                        'https://www.healthline.com/health-news/vaping-may-be-worse-for-your-lungs-than-you-think',
+                        'https://www.healthline.com/health-news/chemicals-used-in-e-cig-flavors-are-toxic',
                     },
                     {
                       title:

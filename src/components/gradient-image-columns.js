@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import BackgroundImage from './background-image'
+import { LazyImage } from './optimized-image'
 
 import config from '../../config'
 
@@ -12,10 +12,6 @@ import config from '../../config'
 
 class GradientImageColumns extends Component {
   render() {
-    const backgroundProps = {
-      notResponsive: this.props.backgroundNotResponsive ? true : false,
-    }
-
     return (
       <div
         className={`gradient-image-columns ${
@@ -34,14 +30,22 @@ class GradientImageColumns extends Component {
                   this.props.arrow ? 'gradient-image-columns__image--arrow' : ''
                 }`}
               >
-                <BackgroundImage
+                <LazyImage
                   src={this.props.image}
                   sizes={
                     this.props.backgroundNotResponsive
                       ? null
                       : config.sizes.fullToHalfAtLarge
                   }
-                  {...backgroundProps}
+                  alt=""
+                  placeholderType="skeleton"
+                  placeholderColor="#e8e8e8"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center center'
+                  }}
                 />
               </div>
             </div>

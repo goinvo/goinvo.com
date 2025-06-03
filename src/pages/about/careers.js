@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
@@ -8,9 +9,12 @@ import Quote from '../../components/quote'
 import Columns from '../../components/columns'
 import ImageBlock from '../../components/image-block'
 import MailerLiteHiringForm from '../../components/mailerlite-hiring-form'
-import BackgroundImage from '../../components/background-image'
+import { LazyImage } from '../../components/optimized-image'
+import Card from '../../components/card'
 
 import config from '../../../config'
+
+import jobsData from '../../data/jobs.json'
 
 const frontmatter = {
   metaTitle: 'Join our team of UX designers & engineers',
@@ -21,8 +25,19 @@ const frontmatter = {
 
 class CareersPage extends Component {
   render() {
+    const currentJobs = jobsData.filter(job => !job.closed)
+
     return (
       <Layout frontmatter={frontmatter}>
+        <Helmet
+          title={frontmatter.metaTitle}
+          meta={[
+            {
+              name: 'description',
+              content: frontmatter.metaDescription,
+            },
+          ]}
+        />
         <Hero image={frontmatter.heroImage}>
           <h1 className="header--xl">
             This is our job
@@ -129,93 +144,115 @@ class CareersPage extends Component {
             </Quote>
           </GradientImageColumns>
         </Carousel>
-        <BackgroundImage src="/images/contact/studio.jpg" gradient>
-          <div className="pad-vertical--quad pad--only-lg">
-            <div className="background--gray max-width max-width--md content-padding--double pad-vertical--quad">
-              <h2 className="header--xl margin-top--none">
-                Working together towards a healthy groove
-              </h2>
-              <p>
-                We’re looking for a designer and an engineer to join our
-                intimate studio.
-              </p>
-              <p>
-                If you’re familiar with our work, you know we design, build, and
-                ship beautiful software for companies of all sizes, from
-                Apple, Johnson & Johnson, NIH (National Institutes of Health),
-                and Walgreens, to micro startups. We are hyper-concerned about
-                guiding people through tough decisions and producing
-                eyebrow-raising results.
-              </p>
-              <p>Our idealized candidate can be described in this way:</p>
-              <p>
-                <span className="text--bold">
-                  First and foremost, you need to be exceptional:
-                </span>
-                <br />
-                love designing and building software, making is in your DNA,
-                and solving crazy problems with 50 different crazy solutions. You
-                need to have a proven track record of designing and shipping healthcare
-                software.
-              </p>
-              <p>
-                <span className="text--bold">
-                  Second, you need to be a system thinker and serial do’er:
-                </span>
-                <br />
-                to see beyond the design and production tasks to the
-                entire product ecosystem and to have a firm grasp of engineering
-                principles and business practices. You will need to lead not
-                just yourself but other studio’ites and clients. Your
-                responsibilities include leading projects and, over time,
-                learning how to manage the entire service to designing software
-                that is destined to ship. You will not be a cog in a machine.
-                Your ideas will directly shape the experiences you create.
-                Ultimately, you will be your own business unit within the studio
-                and grappling with the holy trinity: design, technology, and
-                business.
-              </p>
-              <p>
-                <span className="text--bold">
-                  Third, you have to really care about Design, your fellow
-                  staff, and Spaceship Earth:
-                </span>
-                <br />
-                being adrenalized about doing good, healthcare, business, writing, open
-                source, innovation, craftsmanship, and fun. You are given great
-                freedom and responsibility for managing your own work program while
-                mentoring staff and driving company goals. Taking pride in and
-                feeling responsible for a high degree of personal ownership in
-                your work is critical because thousands to millions of people
-                will immediately interact with your finished designs. We are
-                looking for a passionate, inspiring, design-obsessed apostle who
-                can increase our IQs (as well as dramatically increase your
-                own).
-              </p>
-              <p>
-                That’s the kind of person we want. If you have those three
-                qualities, just about anything else is negotiable.
-              </p>
-              <p>
-                If you have any questions about the position, please email me.
-              </p>
-              <p>
-                You can apply below, or send me your resume, portfolio, and
-                phone number so we can chat.
-              </p>
-              <p>
-                Looking forward,
-                <br />
-                Juhan Sonin, Director
-                <br />
-                <a href="mailto:juhan@goinvo.com">juhan@goinvo.com</a>
-              </p>
-              <div className="pad-top">
-                <MailerLiteHiringForm />
+        <div className="max-width content-padding">
+          <h2 className="header--lg margin-bottom--half margin-top--double">
+            Open Roles
+          </h2>
+          {currentJobs.length ? (
+            <div className="pure-g">
+              {currentJobs.map((job, i) => {
+                return (
+                  <div
+                    className="pure-u-1 pure-u-lg-1-2 margin-bottom"
+                    key={i}
+                  >
+                    <Card link={job.url} externalLink>
+                      <h3 className="header--sm margin-bottom--quarter">
+                        {job.title}
+                      </h3>
+                      <p className="text--gray margin-bottom--quarter">
+                        {job.location}
+                      </p>
+                      <p className="margin-top--half">{job.description}</p>
+                    </Card>
+                  </div>
+                )
+              })}
+            </div>
+          ) : (
+            <p className="text--gray">
+              No current openings! But we&apos;re always looking for
+              exceptional people.{' '}
+              <a href="mailto:careers@goinvo.com">Email us</a> if you&apos;d
+              like to learn more.
+            </p>
+          )}
+        </div>
+        <Quote
+          background="gray"
+          quotee="Sabrina Tse"
+          quoteeSub="UX Designer"
+        >
+          At GoInvo, I've learned to approach design as a way to make
+          people's lives better, to help them solve real world problems.
+          Every project is an exercise in empathy and understanding humans.
+        </Quote>
+        <div className="pad-vertical--double background--blue">
+          <div className="max-width content-padding text--center">
+            <h2 className="header--lg margin-bottom--half">Work-Life Balance</h2>
+            <p className="text--gray margin-bottom--double">
+              We believe in putting yourself, your family, and your life
+              first. Our benefits package reflects that.
+            </p>
+            <div className="benefits pure-g">
+              <div className="pure-u-1 pure-u-lg-1-4 benefit">
+                <h3 className="header--sm text--bold">Healthcare</h3>
+                <p className="text--gray">
+                  GoInvo pays for 100% of health, dental, and vision insurance
+                  for you and your family.
+                </p>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-4 benefit">
+                <h3 className="header--sm text--bold">
+                  Paid Time Off
+                </h3>
+                <p className="text--gray">
+                  We provide 33 days of PTO annually, including holidays, sick
+                  time, and vacation.
+                </p>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-4 benefit">
+                <h3 className="header--sm text--bold">Remote</h3>
+                <p className="text--gray">
+                  Our team is distributed. Work from our studio space, your
+                  home, or anywhere you&apos;re most productive.
+                </p>
+              </div>
+              <div className="pure-u-1 pure-u-lg-1-4 benefit">
+                <h3 className="header--sm text--bold">Equipment</h3>
+                <p className="text--gray">
+                  We&apos;ll get you set up with a laptop, external monitor,
+                  and anything else you need to do your best work.
+                </p>
               </div>
             </div>
           </div>
-        </BackgroundImage>
+        </div>
+        <div className="background--gray pad-vertical">
+          <LazyImage 
+            src="/images/contact/studio.jpg" 
+            gradient
+            alt="GoInvo studio space"
+            placeholderType="skeleton"
+            placeholderColor="#e8e8e8"
+            className="background-image"
+            style={{
+              width: '100%',
+              height: '400px',
+              objectFit: 'cover',
+              background: `linear-gradient(
+                to top,
+                #F3F1F0 0%,
+                rgba(237, 233, 230, 0.9932) 20%,
+                rgba(234, 228, 225, 0.9893) 25%,
+                rgba(234, 228, 225, 0.8979) 40%,
+                rgba(234, 228, 225, 0.82) 55%,
+                rgba(234, 228, 225, 0.538) 70%,
+                rgba(234, 228, 225, 0) 100%
+              ), url('${config.cloudfrontUrl}/images/contact/studio.jpg') top center / cover no-repeat`
+            }}
+          />
+        </div>
         <div className="max-width content-padding pad-vertical--quad--only-lg">
           <Columns columns={3}>
             <ImageBlock
@@ -230,7 +267,7 @@ class CareersPage extends Component {
               image="/images/about/careers/7-years-beards.jpg"
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
               title="Work & Play"
-              caption="Design can be a grind. So is Life. Plan yours as you see fit. We don’t track vacation or sick days. Just be responsible."
+              caption="Design can be a grind. So is Life. Plan yours as you see fit. We don't track vacation or sick days. Just be responsible."
             />
             <ImageBlock
               key={'3'}

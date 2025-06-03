@@ -15,7 +15,7 @@ const frontmatter = {
   metaTitle: 'Software Design for AI Services',
   metaDescription:
     'Beautiful software design for AI experiences, bridging human-centered design with AI capabilities.',
-  heroImage: '/images/ai/ai_hero_sm.jpg',
+  heroImage: '/images/ai/ai_hero_2.jpg',
 }
 
 class AIPage extends Component {
@@ -26,7 +26,7 @@ class AIPage extends Component {
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/ai/ai_hero_sm.jpg"
+            image="/images/ai/ai_hero_2.jpg"
             caption="We design tools and experiences with AI so people and machines can skillfully work together."
             button="Let's discuss your project"
             buttonLink="/contact/"

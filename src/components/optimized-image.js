@@ -3,34 +3,54 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import { mediaUrl } from '../helpers'
 
+// Helper function to ensure proper URL formatting
+const normalizeImageUrl = (src) => {
+  if (!src) return ''
+  
+  // If it's already a full URL, return as-is
+  if (src.startsWith('http://') || src.startsWith('https://')) {
+    return src
+  }
+  
+  // If it starts with //, add https:
+  if (src.startsWith('//')) {
+    return `https:${src}`
+  }
+  
+  // For relative paths, use mediaUrl
+  return mediaUrl(src)
+}
+
+// Helper to determine if we should use CORS
+const shouldUseCors = () => {
+  // Only use CORS in production or when not on localhost
+  if (typeof window === 'undefined') return false // SSR
+  return !window.location.hostname.includes('localhost') && 
+         !window.location.hostname.includes('127.0.0.1') &&
+         window.location.protocol === 'https:'
+}
+
 // For external images (from your CDN), use this component
 export const ExternalImage = ({ src, alt, className, priority = false, ...props }) => {
-  // If it's an external image, use regular img tag
-  if (src && (src.startsWith('http') || src.startsWith('//'))) {
-    return (
-      <img
-        src={src}
-        alt={alt}
-        className={className}
-        loading={priority ? "eager" : "lazy"}
-        fetchpriority={priority ? "high" : "auto"}
-        {...props}
-      />
-    )
+  const normalizedSrc = normalizeImageUrl(src)
+  const useCors = shouldUseCors()
+  
+  const imageProps = {
+    src: normalizedSrc,
+    alt,
+    className,
+    loading: priority ? "eager" : "lazy",
+    fetchpriority: priority ? "high" : "auto",
+    ...props
   }
 
-  // For CDN images, add loading optimization
-  const cdnSrc = mediaUrl(src)
-  return (
-    <img
-      src={cdnSrc}
-      alt={alt}
-      className={className}
-      loading={priority ? "eager" : "lazy"}
-      fetchpriority={priority ? "high" : "auto"}
-      {...props}
-    />
-  )
+  // Only add CORS attributes in production
+  if (useCors) {
+    imageProps.crossOrigin = "anonymous"
+    imageProps.referrerPolicy = "no-referrer-when-downgrade"
+  }
+  
+  return <img {...imageProps} />
 }
 
 // For local images (in src/assets/images), use this optimized component

@@ -4,6 +4,24 @@ import { mediaUrl } from '../helpers'
 
 import { ExternalImage } from './optimized-image'
 
+// Helper function to ensure proper URL formatting
+const normalizeImageUrl = (src) => {
+  if (!src) return ''
+  
+  // If it's already a full URL, return as-is
+  if (src.startsWith('http://') || src.startsWith('https://')) {
+    return src
+  }
+  
+  // If it starts with //, add https:
+  if (src.startsWith('//')) {
+    return `https:${src}`
+  }
+  
+  // For relative paths, use mediaUrl
+  return mediaUrl(src)
+}
+
 // NOTE: notResponsive prop helps fix a bug when using BackgroundImage
 // within a Carousel component. The transition on the carousel gets fucked if
 // the BackgroundImage is attempting to calculate the responsive image to use.
@@ -23,8 +41,8 @@ class BackgroundImage extends Component {
 
   componentDidMount() {
     if (!this.props.notResponsive) {
-      // For the optimized image component, we'll use the mediaUrl directly
-      const src = this.props.externalImage ? this.props.src : mediaUrl(this.props.src)
+      // For the optimized image component, we'll use the normalized URL
+      const src = normalizeImageUrl(this.props.src)
       this.setState({ src })
     }
   }
@@ -42,8 +60,9 @@ class BackgroundImage extends Component {
   render() {
     const { priority = false } = this.props
     const backgroundImageUrl = this.props.notResponsive
-      ? mediaUrl(this.props.src) + '?w=900'
-      : this.state.src || (this.props.externalImage ? this.props.src : mediaUrl(this.props.src))
+      ? normalizeImageUrl(this.props.src)
+      : this.state.src || normalizeImageUrl(this.props.src)
+    
     const backgroundProperty = `
       ${
         this.props.gradient
@@ -77,7 +96,7 @@ class BackgroundImage extends Component {
       <div className={`background-image ${this.props.className}`} style={style}>
         {!this.props.notResponsive ? (
           <ExternalImage
-            src={this.props.externalImage ? this.props.src : mediaUrl(this.props.src)}
+            src={this.props.src}
             className="background-image__image"
             onLoad={this.handleLoad}
             alt=""

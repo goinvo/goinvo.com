@@ -92,7 +92,7 @@ class IndexPage extends Component {
                     src="/images/features/posters/design-axiom-make-things.jpg"
                     alt="Sugar Kills poster"
                     className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    placeholderColor="#f8f9fa"
                   />
                 </a>
               </div>
@@ -355,7 +355,7 @@ class IndexPage extends Component {
                     src="/images/homepage/group-aug-2018-4.jpg"
                     alt="GoInvo team photo"
                     className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+                    placeholderColor="#e8f5e8"
                   />
                 </a>
               </div>

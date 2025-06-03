@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
-import Image from '../../../components/image'
+import { LazyImage } from '../../../components/optimized-image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -45,7 +45,7 @@ class HealthDataUseFeature extends Component {
               <p className="text--gray">
                 We consumers may grow to expect some data tracking. However, we
                 may not realize that our healthcare data, collected behind the
-                safely closed doors of our doctor’s office, travels through many
+                safely closed doors of our doctor's office, travels through many
                 hands for the profit of others.
               </p>
             </div>
@@ -58,7 +58,7 @@ class HealthDataUseFeature extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <LazyImage
                   src="/images/features/health-data-use/health-data-use-poster-thin.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -102,7 +102,7 @@ class HealthDataUseFeature extends Component {
                   <a href="#references">13 </a>
                 </sup>
                 Even de-identified, data miners and brokers use systems that
-                replace your name, SSN, and a few other “identifying” data with
+                replace your name, SSN, and a few other "identifying" data with
                 a unique code in order to create a longitudinal record of your
                 health.
               </p>
@@ -111,9 +111,9 @@ class HealthDataUseFeature extends Component {
                 since the HIPAA laws were first established. It is easy to
                 imagine how combining information such as GPS data with past
                 appointment times and dates would pinpoint an individual. Past
-                studies have found that “63% of the population can be uniquely
+                studies have found that "63% of the population can be uniquely
                 identified by the combination of their gender, date of birth,
-                and zip code alone.”
+                and zip code alone."
                 <sup>
                   <a href="#references">3</a>
                 </sup>
@@ -123,7 +123,7 @@ class HealthDataUseFeature extends Component {
                 Patients need Insight, Control, and Ownership
               </h2>
               <p className="text--gray margin-top--none">
-                Many companies value health-related data whether it’s
+                Many companies value health-related data whether it's
                 de-identified or directly linked to patient names and addresses.
                 For some of these purposes, we patients may have zero
                 objections. Some patients are eager to share data with

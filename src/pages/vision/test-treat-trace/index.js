@@ -4,7 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
 import MailerLiteForm from '../../../components/mailerlite-form'
-import Image from '../../../components/image'
+import { LazyImage } from '../../../components/optimized-image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
 
@@ -40,7 +40,7 @@ class TestTreatTraceFeature extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/test-treat-trace/test-treat-trace-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -114,7 +114,7 @@ class TestTreatTraceFeature extends Component {
                   },
                   {
                     title:
-                      'Stein, R., Wroth, C., & Hurt, A. (2020, May 7). U.S. Coronavirus Testing Still Falls Short. How’s Your State Doing? Retrieved from',
+                      "Stein, R., Wroth, C., & Hurt, A. (2020, May 7). U.S. Coronavirus Testing Still Falls Short. How's Your State Doing? Retrieved from",
                     link:
                       'https://www.npr.org/sections/health-shots/2020/05/07/851610771/u-s-coronavirus-testing-still-falls-short-hows-your-state-doing#res851618829',
                   },
@@ -126,7 +126,7 @@ class TestTreatTraceFeature extends Component {
                   },
                   {
                     title:
-                      'The National Association of County and City Health Officials’ Position Statement on Public Health Capacity for COVID-19 Contact Tracing Surge. Retrieved from',
+                      "The National Association of County and City Health Officials' Position Statement on Public Health Capacity for COVID-19 Contact Tracing Surge. Retrieved from",
                     link:
                       'https://www.naccho.org/uploads/downloadable-resources/Contact-Tracing-Position-Media-Release_4.16.20.pdf',
                   },

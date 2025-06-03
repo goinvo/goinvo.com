@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
-import Image from '../../../components/image'
+import { LazyImage } from '../../../components/optimized-image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Divider from '../../../components/divider'
@@ -72,7 +72,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <p>
-                In the American Medical Association’s 2021 telehealth report,
+                In the American Medical Association's 2021 telehealth report,
                 over 60% of the clinicians surveyed felt most of their
                 telehealth visits replaced in-person care (63% believed these
                 visits supplemented in person care), with 80% of those providers
@@ -114,12 +114,12 @@ class VirtualDiabetesCareFeature extends Component {
                 <em>Hybrid Care Delivery</em>
                 <br />
                 Virtual care has some surprising benefits that build upon what
-                in-person care does well. Telehealth’s ability to increase
+                in-person care does well. Telehealth's ability to increase
                 access to medical care by overcoming geographic, time, and
                 mobility barriers makes it a great method to transform how
                 primary care is provided. Combining the traditional face-to-face
                 care in the outpatient clinic with care via a smartphone,
-                tablet, or computer, can ease communication with the patient’s
+                tablet, or computer, can ease communication with the patient's
                 health team. More frequent conversations about what patients are
                 eating, how they are moving, and what their life looks like
                 outside of the office visit, can help the health team prevent
@@ -187,7 +187,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <Image
+                <LazyImage
                   src="/images/features/virtual-care-diabetes/rural_urban.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -256,7 +256,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <Image
+                <LazyImage
                   src="/images/features/virtual-care-diabetes/point_1.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -278,7 +278,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <Image
+                <LazyImage
                   src="/images/features/virtual-care-diabetes/point_2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -301,15 +301,15 @@ class VirtualDiabetesCareFeature extends Component {
                 </sup>{' '}
                 Recognizing this, the American Diabetes Association recommends
                 digital coaching and digital self management interventions as
-                effective methods to deliver “diabetes self management education
-                and support”.
+                effective methods to deliver "diabetes self management education
+                and support".
                 <sup>
                   <a href="#references">13</a>
                 </sup>
               </p>
 
               <div className="margin-auto">
-                <Image
+                <LazyImage
                   src="/images/features/virtual-care-diabetes/point_3.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -342,7 +342,7 @@ class VirtualDiabetesCareFeature extends Component {
                 <sup>
                   <a href="#references">15</a>
                 </sup>{' '}
-                “Eat Smart, Move More, Prevent Diabetes” is recognized as a CDC
+                "Eat Smart, Move More, Prevent Diabetes" is recognized as a CDC
                 certified online diabetes prevention program which provides real
                 time instruction with live instructors and evidence based
                 lifestyle strategies to participants.
@@ -363,14 +363,14 @@ class VirtualDiabetesCareFeature extends Component {
                 <sup>
                   <a href="#references">4</a>
                 </sup>{' '}
-                So, it’s reasonable to consider that virtual care could have
+                So, it's reasonable to consider that virtual care could have
                 similar positive outcomes for other chronic conditions besides
                 diabetes. Patients with chronic conditions require an integrated
-                system of care that includes the components of “evidence-based,
+                system of care that includes the components of "evidence-based,
                 planned care; reorganization of practice systems and provider
                 roles; improved patient self-management support; increased
                 access to expertise; and greater availability of clinical
-                information”.
+                information".
                 <sup>
                   <a href="#references">17</a>
                 </sup>{' '}
@@ -410,8 +410,8 @@ class VirtualDiabetesCareFeature extends Component {
 
               <p>
                 The technology itself is not always accessible or usable by
-                providers and patients. “Poor competence with technology, poor
-                literacy, and language barriers” are common barriers to virtual
+                providers and patients. "Poor competence with technology, poor
+                literacy, and language barriers" are common barriers to virtual
                 care.
                 <sup>
                   <a href="#references">20</a>
@@ -495,7 +495,7 @@ class VirtualDiabetesCareFeature extends Component {
                   references={[
                     {
                       title:
-                        'Samson LW, Tarazi W, Turrini G, Sheingold S. Office of the Assistant Secretary for Planning and Evaluation.   Medicare Beneficiaries’ Use of Telehealth in 2020: Trends by Beneficiary Characteristics and Location. Published December 3, 2021. Accessed December 8, 2022',
+                        "Samson LW, Tarazi W, Turrini G, Sheingold S. Office of the Assistant Secretary for Planning and Evaluation.   Medicare Beneficiaries' Use of Telehealth in 2020: Trends by Beneficiary Characteristics and Location. Published December 3, 2021. Accessed December 8, 2022",
                       link:
                         'https://aspe.hhs.gov/reports/medicare-beneficiaries-use-telehealth-2020',
                     },
@@ -556,7 +556,7 @@ class VirtualDiabetesCareFeature extends Component {
                     },
                     {
                       title:
-                        "Jain SR, Sui Y, Ng CH, Chen ZX, Goh LH, Shorey S. Patients' and healthcare professionals' perspectives towards technology-assisted diabetes self-management education. A qualitative systematic review. PLoS One. 2020 Aug 17;15(8):e0237647. doi: 10.1371/journal.pone.0237647",
+                        "Jain SR, Sui Y, Cheng HN. Patients and healthcare professionals' perspectives towards technology-assisted diabetes self-management education. A qualitative systematic review. PLoS One. 2020 Aug 17:15(8):e0237647. doi: 10.1371/journal.pone.0237647",
                       link: '',
                     },
                     {
@@ -596,11 +596,6 @@ class VirtualDiabetesCareFeature extends Component {
                         'Telehealth.HHS.gov. Telehealth policy changes after the covid-19 public health emergency. Updated January 23,2023. Accessed Dec 13 2022',
                       link:
                         'https://telehealth.hhs.gov/providers/policy-changes-during-the-covid-19-public-health-emergency/policy-changes-after-the-covid-19-public-health-emergency/#what-is-being-phased-out',
-                    },
-                    {
-                      title:
-                        'Jain SR, Sui Y, Cheng HN. Patients and healthcare professionals’ perspectives towards technology-assisted diabetes self-management education. A qualitative systematic review. PLoS One. 2020 Aug 17:15(8):e0237647. doi: 10.1371/journal.pone.0237647',
-                      link: '',
                     },
                     {
                       title:

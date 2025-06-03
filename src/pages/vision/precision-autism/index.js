@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import MailerLiteForm from '../../../components/mailerlite-form'
-import Image from '../../../components/image'
+import { LazyImage } from '../../../components/optimized-image'
 import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
@@ -33,7 +33,7 @@ class PrecisionAutismFeature extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/precision-autism/precision-autism.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullInsideMediumMaxWidth}

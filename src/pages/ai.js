@@ -26,7 +26,7 @@ class AIPage extends Component {
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/ai/ai_hero_2.jpg"
+            image="/images/ai/ai_hero_2_sm.jpg"
             caption="We design tools and experiences with AI so people and machines can skillfully work together."
             button="Let's discuss your project"
             buttonLink="/contact/"

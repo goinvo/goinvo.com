@@ -9,7 +9,7 @@ import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import MailerLiteContactForm from '../components/mailerlite-contact-form'
-import Image from '../components/image'
+import SmartImage, { HeroCriticalImage, LazyImage } from '../components/optimized-image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
 import headerData from '../data/homepage-headers.json'
@@ -88,7 +88,7 @@ class IndexPage extends Component {
                   href="/vision/"
                   style={{ display: 'block', lineHeight: 0 }}
                 >
-                  <Image
+                  <HeroCriticalImage
                     src="/images/features/posters/design-axiom-make-things.jpg"
                     alt="Sugar Kills poster"
                     className="image--max-width"
@@ -226,7 +226,7 @@ class IndexPage extends Component {
         >
           The GoInvo studio is one of the most talented groups of designers I
           have ever met in the healthcare space. Not only are their ideas,
-          designs, and graphics remarkable, but I haven’t yet figured out how
+          designs, and graphics remarkable, but I haven't yet figured out how
           they know so much about medicine and its future.
         </Quote>
         <div className="max-width content-padding pad-bottom--double">
@@ -351,8 +351,9 @@ class IndexPage extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/homepage/group-aug-2018-4.jpg"
+                    alt="GoInvo team photo"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                   />

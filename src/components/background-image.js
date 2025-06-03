@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { mediaUrl } from '../helpers'
 
-import Image from './image'
+import { ExternalImage } from './optimized-image'
 
 // NOTE: notResponsive prop helps fix a bug when using BackgroundImage
 // within a Carousel component. The transition on the carousel gets fucked if
@@ -23,7 +23,9 @@ class BackgroundImage extends Component {
 
   componentDidMount() {
     if (!this.props.notResponsive) {
-      this.setState({ src: this.img.current.getSrc() })
+      // For the optimized image component, we'll use the mediaUrl directly
+      const src = this.props.externalImage ? this.props.src : mediaUrl(this.props.src)
+      this.setState({ src })
     }
   }
 
@@ -38,9 +40,10 @@ class BackgroundImage extends Component {
   }
 
   render() {
+    const { priority = false } = this.props
     const backgroundImageUrl = this.props.notResponsive
       ? mediaUrl(this.props.src) + '?w=900'
-      : this.state.src
+      : this.state.src || (this.props.externalImage ? this.props.src : mediaUrl(this.props.src))
     const backgroundProperty = `
       ${
         this.props.gradient
@@ -73,14 +76,13 @@ class BackgroundImage extends Component {
     return (
       <div className={`background-image ${this.props.className}`} style={style}>
         {!this.props.notResponsive ? (
-          <Image
-            src={this.props.src}
-            externalImage={this.props.externalImage}
+          <ExternalImage
+            src={this.props.externalImage ? this.props.src : mediaUrl(this.props.src)}
             className="background-image__image"
-            sizes={this.props.sizes}
-            onUpdate={this.updateSrc}
-            ref={this.img}
             onLoad={this.handleLoad}
+            alt=""
+            priority={priority}
+            style={{ opacity: 0, position: 'absolute', pointerEvents: 'none' }}
           />
         ) : null}
         {this.props.children}

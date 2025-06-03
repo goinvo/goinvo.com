@@ -15,7 +15,7 @@ class Hero extends Component {
   }
 
   renderHeroMedia = () => {
-    const { image, video, poster, fallback, position } = this.props
+    const { image, video, poster, fallback, position, priority = true } = this.props
 
     if (image) {
       return (
@@ -24,6 +24,7 @@ class Hero extends Component {
             src={image}
             className="hero__image"
             position={position}
+            priority={priority}
             onLoad={this.handleLoad}
           />
         </div>

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
-import Image from '../../../components/image'
+import SmartImage, { LazyImage } from '../../../components/optimized-image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
 import MailerLiteForm from '../../../components/mailerlite-form'
@@ -34,8 +34,9 @@ class VapepocolypseFeature extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/vapepocolypse/vapepocolypse-full.jpg"
+                    alt="Vapepocolypse poster"
                     className="image--max-width"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
                   />
@@ -87,13 +88,13 @@ class VapepocolypseFeature extends Component {
                     },
                     {
                       title:
-                        'MASSLIVE. (June 2019). ‘Mom! It’s a USB drive!’ Maura Healey lawsuit scrutinizes Eonsmoke’s social media advertising',
+                        "MASSLIVE. (June 2019). 'Mom! It's a USB drive!' Maura Healey lawsuit scrutinizes Eonsmoke's social media advertising",
                       link:
                         'https://www.masslive.com/politics/2019/06/mom-its-a-usb-drive-maura-healey-lawsuit-scrutinizes-eonsmokes-social-media-advertising.html',
                     },
                     {
                       title:
-                        'Mammoser. (November 2018). Chemicals Used in E-Cig Flavors Are Toxic and We’ve Known for Decades. Healthline',
+                        "Mammoser. (November 2018). Chemicals Used in E-Cig Flavors Are Toxic and We've Known for Decades. Healthline",
                       link:
                         'https://www.healthline.com/health-news/vaping-may-be-worse-for-your-lungs-than-you-think',
                     },

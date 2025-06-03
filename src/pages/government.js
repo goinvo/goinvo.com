@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import config from '../../config'
-import Image from '../components/image'
+import SmartImage, { LazyImage } from '../components/optimized-image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
 import MailerLiteContactForm from '../components/mailerlite-contact-form'
@@ -66,7 +66,7 @@ class GovernmentPage extends Component {
 
             <div className="container--justify-center tileRow">
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
+                <SmartImage
                   src="/images/open_source/innovation.png"
                   className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -78,7 +78,7 @@ class GovernmentPage extends Component {
               </div>
 
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
+                <SmartImage
                   src="/images/open_source/public-good.png"
                   className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -90,7 +90,7 @@ class GovernmentPage extends Component {
               </div>
 
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
+                <SmartImage
                   src="/images/open_source/trust.png"
                   className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -179,7 +179,7 @@ class GovernmentPage extends Component {
                       </div>
 
                       <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <Image
+                        <LazyImage
                           src="/images/case-studies/public-sector/pubDesign_SNAP.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -208,7 +208,7 @@ class GovernmentPage extends Component {
                         </p>
                       </div>
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <Image
+                        <LazyImage
                           src="/images/case-studies/aou/01-hero-image-2.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -237,7 +237,7 @@ class GovernmentPage extends Component {
                         </p>
                       </div>
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <Image
+                        <LazyImage
                           src="/images/case-studies/ahrq/CDS_connect_hero-2.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}

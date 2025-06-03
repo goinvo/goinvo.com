@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import config from '../../config'
-import Image from '../components/image'
+import SmartImage, { LazyImage } from '../components/optimized-image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
 import MailerLiteContactForm from '../components/mailerlite-contact-form'
@@ -93,7 +93,7 @@ class AIPage extends Component {
                       </div>
 
                       <div className=" pure-u-lg-1-2 flip-child caseStudyImg fill-image-container">
-                        <Image
+                        <LazyImage
                           src="/images/ai/ai_hero.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -121,7 +121,7 @@ class AIPage extends Component {
                       </div>
 
                       <div className=" pure-u-lg-1-2 flip-child fill-image-container caseStudyImg">
-                        <Image
+                        <LazyImage
                           src="/images/features/national-cancer-navigation/hero.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -150,7 +150,7 @@ class AIPage extends Component {
                         </p>
                       </div>
                       <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
-                        <Image
+                        <LazyImage
                           src="/images/features/augmented-clinical-decision-support/augmented-clinical-decision-support-hero-1.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -179,7 +179,7 @@ class AIPage extends Component {
                         </p>
                       </div>
                       <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
-                        <Image
+                        <LazyImage
                           src="/images/features/healthcare-ai/healthcare-ai-hero-5.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -208,7 +208,7 @@ class AIPage extends Component {
                         </p>
                       </div>
                       <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
-                        <Image
+                        <LazyImage
                           src="/images/features/eligibility/hero-image.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -306,7 +306,7 @@ class AIPage extends Component {
                         <ul className="list--unstyled">
                           <li>Tuning/feedback loops</li>
                           <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
-                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                          <li>Visual thinking (showing the why/how of the person and machine's thinking)</li>
                           <li>Agent behavior</li>
                           <li>Confidence loops, ethical rails, debuggability/inspections</li>
                           <li>Call chaining, routing, flow-builders and task decomposition</li>
@@ -399,7 +399,7 @@ class AIPage extends Component {
                         <ul className="list--unstyled">
                           <li>Tuning/feedback loops</li>
                           <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
-                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                          <li>Visual thinking (showing the why/how of the person and machine's thinking)</li>
                           <li>Agent behavior</li>
                           <li>Confidence loops, ethical rails, debuggability/inspections</li>
                           <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>

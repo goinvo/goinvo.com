@@ -138,6 +138,10 @@
           .col {
             align-self: center;
 
+            .label {
+              display: none;
+            }
+
             &.col-3 {
               width: 30%;
             }

@@ -4,8 +4,10 @@
   }
 
   .hotspot-image-container {
-    border: solid red 1px;
     position: relative;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
 
     .hotspot-overlay {
       position: absolute;
@@ -18,15 +20,39 @@
         transform: translate(-50%, -50%);
         width: 40px;
         height: 40px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 2px solid #007acc;
+        background-color: rgba(197, 62, 32, 0);
+        border: none;
         border-radius: 4px;
         cursor: pointer;
         z-index: 10;
 
+        &:hover {
+          background: rgba(197, 62, 32, .25);
+        }
+
         &.button-one {
           left: 25%;
           top: 52%;
+        }
+
+        &.button-two {
+          left: 41%;
+          top: 47%;
+        }
+
+        &.button-three {
+          left: 50.5%;
+          top: 23%;
+        }
+
+        &.button-four {
+          left: 75.5%;
+          top: 56%;
+        }
+
+        &.button-five {
+          left: 37.25%;
+          top: 72.5%;
         }
       }
     }

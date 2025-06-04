@@ -30,8 +30,9 @@ class GenAIFeature extends Component {
     super(props)
 
     this.state = {
-      cameraPosition: [5, 3, 5],
-      cameraRotation: [0, 0, 0], // Add rotation state
+      // Isometric view: elevated but angled position
+      cameraPosition: [25, 12, 4],           // Positioned at an angle, elevated
+      cameraRotation: [-Math.PI / 4, Math.PI / 4, 0], // 45° down, 45° turn for isometric angle
     }
 
     Object.keys(carousels).forEach(key => {
@@ -161,27 +162,46 @@ class GenAIFeature extends Component {
                   className="hotspot-button button-one"
                   onClick={() => this.handleHotspotClick(
                     [3, 1, -3],
-                    [0, Math.PI / 8, 0]
-                  )} // Close-up waiting room view
-
-                  //Coordinate System Breakdown: [1,2,3]
-                  // 1 (X-axis): How far left/right the camera is positioned
-                  // Positive values = camera moves to the right
-                  // Negative values = camera moves to the left
-                  // 2 (Y-axis): How high/low the camera is positioned
-                  // Positive values = camera moves up (higher elevation)
-                  // Negative values = camera moves down (lower elevation)
-                  // 3 (Z-axis): How far/close the camera is from the center
-                  // Positive values = camera moves away from the model (further back)
-                  // Negative values = camera moves closer to the model (in front)
-                  //Camera rotation uses radians, not degrees, rotation around the y-axis:
-                  // [0, Math.PI / 4, 0] - Look to the right (45°)
-                  // [0, -Math.PI / 4, 0] - Look to the left (45°) 
-                  // [0, Math.PI / 2, 0] - Look completely to the right (90°)
-                  // [0, Math.PI, 0] - Look behind (180°)
-                  title="Waiting Room View"
+                    [0, -Math.PI / 24, 0]
+                  )}
+                  title="Waiting Room"
                 >
-                  1
+                </button>
+                <button
+                  className="hotspot-button button-two"
+                  onClick={() => this.handleHotspotClick(
+                    [5, 1, -9],
+                    [0, -Math.PI / 6, 0]
+                  )}
+                  title="Exam Room"
+                >
+                </button>
+                <button
+                  className="hotspot-button button-three"
+                  onClick={() => this.handleHotspotClick(
+                    [5, 1, -18],
+                    [0, -Math.PI / 2, 0]
+                  )}
+                  title="Emergency Room"
+                >
+                </button>
+                <button
+                  className="hotspot-button button-four"
+                  onClick={() => this.handleHotspotClick(
+                    [12, 1, -18],
+                    [0, Math.PI / 6 + Math.PI + Math.PI / 18, 0]
+                  )}
+                  title="Emergency Room"
+                >
+                </button>
+                <button
+                  className="hotspot-button button-five"
+                  onClick={() => this.handleHotspotClick(
+                    [12, 1, -1],
+                    [0, Math.PI / 4, 0]
+                  )}
+                  title="Emergency Room"
+                >
                 </button>
               </div>
 

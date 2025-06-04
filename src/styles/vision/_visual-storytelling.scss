@@ -1,4 +1,37 @@
 .visual-storytelling {
+  .model-viewport {
+    border: solid $color-gray 1px;
+  }
+
+  .hotspot-image-container {
+    border: solid red 1px;
+    position: relative;
+
+    .hotspot-overlay {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+
+      .hotspot-button {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 2px solid #007acc;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 10;
+
+        &.button-one {
+          left: 25%;
+          top: 52%;
+        }
+      }
+    }
+  }
+
   .genai-image-max-width {
     display: block;
     max-width: 750px;

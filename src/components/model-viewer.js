@@ -1,24 +1,81 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useEffect, useRef } from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls, useGLTF } from '@react-three/drei'
+import * as THREE from 'three'
 
 function Model({ url }) {
   const { scene } = useGLTF(url)
   return <primitive object={scene} />
 }
 
-function CameraController({ cameraPosition }) {
+function CameraController({ cameraPosition, cameraRotation }) {
   const { camera } = useThree()
+  const controlsRef = useRef()
+
   useEffect(() => {
-    if (cameraPosition) {
-      camera.position.set(...cameraPosition)
-      camera.lookAt(0, 0, 0)
+    console.log('CameraController - Received rotation:', cameraRotation)
+
+    if (controlsRef.current) {
+      // Temporarily disable controls
+      controlsRef.current.enabled = false
+
+      if (cameraPosition) {
+        console.log('Setting camera position:', cameraPosition)
+        camera.position.set(...cameraPosition)
+      }
+
+      const hasNonZeroRotation = Array.isArray(cameraRotation) &&
+        cameraRotation.length === 3 &&
+        (cameraRotation[0] !== 0 || cameraRotation[1] !== 0 || cameraRotation[2] !== 0)
+
+      console.log('Has non-zero rotation?', hasNonZeroRotation, cameraRotation)
+
+      if (hasNonZeroRotation) {
+        console.log('Applying rotation:', cameraRotation)
+
+        // Apply rotation
+        camera.rotation.set(...cameraRotation)
+        camera.updateMatrixWorld()
+
+        // Calculate where the camera is looking based on the rotation
+        // This prevents OrbitControls from overriding our rotation
+        const direction = new THREE.Vector3(0, 0, -1)
+        direction.applyQuaternion(camera.quaternion)
+        const target = camera.position.clone().add(direction.multiplyScalar(5))
+
+        // Update controls target to match the rotation
+        controlsRef.current.target.copy(target)
+
+      } else {
+        console.log('Using lookAt instead')
+        camera.lookAt(0, 0, 0)
+        controlsRef.current.target.set(0, 0, 0)
+      }
+
+      // Re-enable controls after a delay
+      setTimeout(() => {
+        if (controlsRef.current) {
+          controlsRef.current.enabled = true
+          controlsRef.current.update()
+        }
+      }, 100)
     }
-  }, [camera, cameraPosition])
-  return null
+  }, [camera, cameraPosition, cameraRotation])
+
+  return (
+    <OrbitControls
+      ref={controlsRef}
+      enablePan
+      enableZoom
+      enableRotate
+      target={[0, 0, 0]}
+    />
+  )
 }
 
-export default function ModelViewer({ url, cameraPosition }) {
+export default function ModelViewer({ url, cameraPosition, cameraRotation }) {
+  console.log('ModelViewer props - rotation:', cameraRotation)
+
   return (
     <div style={{ width: '100%', height: 500 }}>
       <Canvas camera={{ position: cameraPosition || [0, 0, 5], fov: 50 }}>
@@ -27,9 +84,48 @@ export default function ModelViewer({ url, cameraPosition }) {
         <Suspense fallback={null}>
           <Model url={url} />
         </Suspense>
-        <CameraController cameraPosition={cameraPosition} />
-        <OrbitControls enablePan enableZoom enableRotate />
+        <CameraController
+          cameraPosition={cameraPosition}
+          cameraRotation={cameraRotation}
+        />
       </Canvas>
     </div>
   )
 }
+
+
+// Usage example
+// {typeof window !== "undefined" && (
+//   <ModelViewer
+//     url='/visual-storytelling-with-genai/hospital-3d-model.glb'
+//     cameraPosition={this.state.cameraPosition}
+//     cameraRotation={this.state.cameraRotation}
+//   />
+// )}
+
+
+//Hotspot button for different camera views
+{/* <button
+  className="hotspot-button button-one"
+  onClick={() => this.handleHotspotClick(
+    [3, 1, -3],
+    [0, Math.PI / 8, 0]
+  )} // Close-up waiting room view
+
+  //Coordinate System Breakdown: [1,2,3]
+  // 1 (X-axis): How far left/right the camera is positioned
+  // Positive values = camera moves to the right
+  // Negative values = camera moves to the left
+  // 2 (Y-axis): How high/low the camera is positioned
+  // Positive values = camera moves up (higher elevation)
+  // Negative values = camera moves down (lower elevation)
+  // 3 (Z-axis): How far/close the camera is from the center
+  // Positive values = camera moves away from the model (further back)
+  // Negative values = camera moves closer to the model (in front)
+  //Camera rotation uses radians, not degrees, rotation around the y-axis:
+  // [0, Math.PI / 4, 0] - Look to the right (45°)
+  // [0, -Math.PI / 4, 0] - Look to the left (45°) 
+  // [0, Math.PI / 2, 0] - Look completely to the right (90°)
+  // [0, Math.PI, 0] - Look behind (180°)
+  title="Waiting Room View"
+></button> */}

@@ -29,7 +29,10 @@ class GenAIFeature extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {}
+    this.state = {
+      cameraPosition: [5, 3, 5],
+      cameraRotation: [0, 0, 0], // Add rotation state
+    }
 
     Object.keys(carousels).forEach(key => {
       let carouselId = carousels[key]
@@ -53,6 +56,14 @@ class GenAIFeature extends Component {
 
     this.setState(updatedState, () => {
       this[id].current.slickGoTo(i, true)
+    })
+  }
+
+  // Update handleHotspotClick to accept both position and rotation
+  handleHotspotClick = (cameraPosition, cameraRotation = [0, 0, 0]) => {
+    console.log('Hotspot clicked - Input rotation:', cameraRotation)
+    this.setState({ cameraPosition, cameraRotation }, () => {
+      console.log('State updated - New rotation:', this.state.cameraRotation)
     })
   }
 
@@ -134,21 +145,52 @@ class GenAIFeature extends Component {
             <h2 className="header--lg text--center margin-top--trip">A Faster, Smarter Workflow.</h2>
             <p>We’re developing a digital library of 3D environments including hospitals, clinics, and care homes to use as virtual sandboxes. Using <strong>Rhinoceros 3D</strong>, a modeling software, we can freely explore different compositions in these virtual environments and endlessly capture varying perspectives to apply in our work. </p>
 
-            {typeof window !== "undefined" && (
-              <ModelViewer
-                url='/visual-storytelling-with-genai/hospital-3d-model.glb'
-                hotspots={[
-                  { position: [1, 0, 0], label: 'Hotspot 1' },
-                  { position: [-1, 0, 0], label: 'Hotspot 2' },
-                ]}
-                onHotspotClick={hotspot => alert(`Clicked: ${hotspot.label}`)}
-              />
-            )}
+            <div className="model-viewport">
+              {typeof window !== "undefined" && (
+                <ModelViewer
+                  url='/visual-storytelling-with-genai/hospital-3d-model.glb'
+                  cameraPosition={this.state.cameraPosition}
+                  cameraRotation={this.state.cameraRotation}
+                />
+              )}
+            </div>
 
-            <Image
-              src="/images/features/visual-storytelling-with-genai/genai-3d-model-2.jpg"
-              className="image--max-width"
-              alt="Hospital 3D Model" />
+            <div className="hotspot-image-container">
+              <div className="hotspot-overlay">
+                <button
+                  className="hotspot-button button-one"
+                  onClick={() => this.handleHotspotClick(
+                    [3, 1, -3],
+                    [0, Math.PI / 8, 0]
+                  )} // Close-up waiting room view
+
+                  //Coordinate System Breakdown: [1,2,3]
+                  // 1 (X-axis): How far left/right the camera is positioned
+                  // Positive values = camera moves to the right
+                  // Negative values = camera moves to the left
+                  // 2 (Y-axis): How high/low the camera is positioned
+                  // Positive values = camera moves up (higher elevation)
+                  // Negative values = camera moves down (lower elevation)
+                  // 3 (Z-axis): How far/close the camera is from the center
+                  // Positive values = camera moves away from the model (further back)
+                  // Negative values = camera moves closer to the model (in front)
+                  //Camera rotation uses radians, not degrees, rotation around the y-axis:
+                  // [0, Math.PI / 4, 0] - Look to the right (45°)
+                  // [0, -Math.PI / 4, 0] - Look to the left (45°) 
+                  // [0, Math.PI / 2, 0] - Look completely to the right (90°)
+                  // [0, Math.PI, 0] - Look behind (180°)
+                  title="Waiting Room View"
+                >
+                  1
+                </button>
+              </div>
+
+              <Image
+                src="/images/features/visual-storytelling-with-genai/genai-3d-model-2.jpg"
+                className="image--max-width"
+                alt="Hospital 3D Model"
+              />
+            </div>
 
             <p>Model images are then styled using GenAI tools like <strong>Midjourney</strong> and are guided by prompts tailored to each project’s visual direction. What once took days to illustrate can now be completed in a matter of hours. Scene changes and revisions take a quick camera pivot in the model and an entirely new scene is generated.</p>
             <p>The time investment thus shifts from redrawing each scene by hand to a one-time effort of constructing a detailed 3D model. Once built, these virtual environments become reusable and flexible assets that can support new stories and future projects.</p>

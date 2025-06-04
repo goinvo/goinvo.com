@@ -89,7 +89,7 @@ class IndexPage extends Component {
                   style={{ display: 'block', lineHeight: 0 }}
                 >
                   <Image
-                    src="/images/features/posters/care-card-sugar-kills.jpg"
+                    src="/images/features/posters/design-axiom-make-things.jpg"
                     alt="Sugar Kills poster"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

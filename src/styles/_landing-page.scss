@@ -1,4 +1,4 @@
-.enterprise-design {
+.landing-page {
   .textAlign {
     text-align: center;
   }
@@ -40,10 +40,6 @@
         width: 100%;
       }
     }
-  }
-
-  .bg-light {
-    background-color: #faf6f4;
   }
 
   .textLayout {
@@ -94,10 +90,6 @@
     }
   }
 
-  .teal {
-    color: $color-tertiary;
-  }
-
   .noTopMargin {
     @media screen and (max-width: 760px) {
       margin-top: 0;
@@ -124,28 +116,19 @@
     padding-bottom: 2%;
   }
 
-  .chartLayout {
-    display: block;
-    margin: auto;
-
-    a {
-      transition: 0.25s;
-
-      &:hover {
-        filter: drop-shadow(0px 7px 7px rgba(57, 75, 94, 0.17));
-      }
-    }
+  .client-logos {
+    justify-content: center;
   }
 
   .imgMaxWidth {
     max-width: 400px;
   }
 
-  .nbrStyle {
+  .number-large {
     margin-top: 25px;
     font-size: 32px;
-    color: #c9461d;
-    font-family: Adobe Jensen Pro;
+    color: $color-orange;
+    font-family: $font-family--serif;
     letter-spacing: 1;
     line-height: 1.1;
     font-weight: 600;
@@ -174,6 +157,18 @@
 
     @media screen and (max-width: 600px) {
       margin: 10px;
+    }
+
+    .fill-image-container {
+      object-fit: cover;
+
+      &.caseStudyImg {
+
+        img, .image--max-width {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 

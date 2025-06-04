@@ -33,6 +33,7 @@ class GenAIFeature extends Component {
       // Isometric view: elevated but angled position
       cameraPosition: [25, 12, 4],           // Positioned at an angle, elevated
       cameraRotation: [-Math.PI / 4, Math.PI / 4, 0], // 45° down, 45° turn for isometric angle
+      activeHotspotTitle: '', // Add this to track the active hotspot title
     }
 
     Object.keys(carousels).forEach(key => {
@@ -60,10 +61,14 @@ class GenAIFeature extends Component {
     })
   }
 
-  // Update handleHotspotClick to accept both position and rotation
-  handleHotspotClick = (cameraPosition, cameraRotation = [0, 0, 0]) => {
+  // Update handleHotspotClick to accept title parameter
+  handleHotspotClick = (cameraPosition, cameraRotation = [0, 0, 0], title = '') => {
     console.log('Hotspot clicked - Input rotation:', cameraRotation)
-    this.setState({ cameraPosition, cameraRotation }, () => {
+    this.setState({
+      cameraPosition,
+      cameraRotation,
+      activeHotspotTitle: title
+    }, () => {
       console.log('State updated - New rotation:', this.state.cameraRotation)
     })
   }
@@ -155,6 +160,9 @@ class GenAIFeature extends Component {
                 />
               )}
             </div>
+            <div className="hotspot-caption">
+              <p>{this.state.activeHotspotTitle}</p>
+            </div>
 
             <div className="hotspot-image-container">
               <div className="hotspot-overlay">
@@ -162,7 +170,8 @@ class GenAIFeature extends Component {
                   className="hotspot-button button-one"
                   onClick={() => this.handleHotspotClick(
                     [3, 1, -3],
-                    [0, -Math.PI / 24, 0]
+                    [0, -Math.PI / 24, 0],
+                    '1. Waiting Room'
                   )}
                   title="Waiting Room"
                 >
@@ -171,7 +180,8 @@ class GenAIFeature extends Component {
                   className="hotspot-button button-two"
                   onClick={() => this.handleHotspotClick(
                     [5, 1, -9],
-                    [0, -Math.PI / 6, 0]
+                    [0, -Math.PI / 6, 0],
+                    '2. Exam Room'
                   )}
                   title="Exam Room"
                 >
@@ -180,7 +190,8 @@ class GenAIFeature extends Component {
                   className="hotspot-button button-three"
                   onClick={() => this.handleHotspotClick(
                     [5, 1, -18],
-                    [0, -Math.PI / 2, 0]
+                    [0, -Math.PI / 2, 0],
+                    '3. Emergency Room'
                   )}
                   title="Emergency Room"
                 >
@@ -189,7 +200,8 @@ class GenAIFeature extends Component {
                   className="hotspot-button button-four"
                   onClick={() => this.handleHotspotClick(
                     [12, 1, -18],
-                    [0, Math.PI / 6 + Math.PI + Math.PI / 18, 0]
+                    [0, Math.PI / 6 + Math.PI + Math.PI / 18, 0],
+                    '4. Emergency Room'
                   )}
                   title="Emergency Room"
                 >
@@ -198,7 +210,8 @@ class GenAIFeature extends Component {
                   className="hotspot-button button-five"
                   onClick={() => this.handleHotspotClick(
                     [12, 1, -1],
-                    [0, Math.PI / 4, 0]
+                    [0, Math.PI / 4, 0],
+                    '5. Emergency Room'
                   )}
                   title="Emergency Room"
                 >

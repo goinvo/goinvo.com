@@ -1,6 +1,8 @@
 .visual-storytelling {
   .model-viewport {
-    border: solid $color-gray 1px;
+    border: solid $color-gray--medium 1px;
+    border-radius: 8px;
+    margin-bottom: 15px;
   }
 
   .hotspot-image-container {
@@ -22,7 +24,7 @@
         height: 40px;
         background-color: rgba(197, 62, 32, 0);
         border: none;
-        border-radius: 4px;
+        border-radius: 8px;
         cursor: pointer;
         z-index: 10;
 

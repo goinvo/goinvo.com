@@ -13,6 +13,16 @@
     }
   }
 
+  .pure-u-lg-1-2,
+  .pure-u-lg-1-3 {
+    margin-right: -5px;
+
+    img,
+    p {
+      padding-right: 10px;
+    }
+  }
+
   ol,
   ul {
     color: $color-gray;

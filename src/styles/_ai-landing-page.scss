@@ -1,0 +1,441 @@
+.ai-design {
+
+  .sm-only {
+    display: none;
+  }
+
+  .diagram-mobile {
+    display: none;
+  }
+
+  .goinvo-ai-fit {
+    .goinvo-lives-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .goinvo-lives {
+      align-self: flex-end;
+      justify-content: flex-end;
+      width: 60%;
+      margin-right: -40px;
+
+      p {
+        text-align: center;
+      }
+
+      .list {
+
+        .width-80,
+        .width-20 {
+          width: 45%;
+          margin-left: 20px;
+        }
+
+        .width-80 li {
+          text-align: right;
+        }
+
+        li {
+          margin-bottom: 20px;
+        }
+      }
+
+      .bracket {
+        margin: 0 auto;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+
+      .width-80 {
+        width: 74%;
+        margin-right: 10px;
+
+        p {
+          text-align: right;
+          padding-right: 20px;
+        }
+      }
+
+      .width-20 {
+        width: 25%;
+      }
+    }
+
+    .inline-number {
+      font-size: 2.75rem;
+      font-weight: 600;
+
+      .inline-percentage {
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+    }
+
+    .arrow {
+      position: relative;
+      width: 100%;
+      height: 24px;
+      margin: 20px 0;
+
+      .arrow-line {
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        right: 4px;
+        height: 4px;
+        transform: translateY(-50%);
+        border-radius: 2px;
+        z-index: 1;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 70%;
+        width: 16px;
+        height: 4px;
+        background: #333;
+        border-radius: 2px;
+      }
+
+      // Left end stroke (bottom of V)
+      &::before {
+        left: 0;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      // Right end stroke (bottom of V)
+      &::after {
+        right: 0;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      // Top of the V (left)
+      .arrow-vtop-left {
+        position: absolute;
+        left: 0;
+        top: 35%;
+        width: 16px;
+        height: 4px;
+        background: #333;
+        border-radius: 2px;
+        transform: translateY(-50%) rotate(-45deg);
+        z-index: 2;
+      }
+
+      // Top of the V (right)
+      .arrow-vtop-right {
+        position: absolute;
+        right: 0;
+        top: 35%;
+        width: 16px;
+        height: 4px;
+        background: #333;
+        border-radius: 2px;
+        transform: translateY(-50%) rotate(45deg);
+        z-index: 2;
+      }
+
+      &.arrow-80 {
+
+        .arrow-line,
+        .arrow-vtop-left,
+        .arrow-vtop-right {
+          background: #3F7CCB;
+        }
+
+        &::before,
+        &::after {
+          background: #3F7CCB;
+        }
+      }
+
+      &.arrow-20 {
+
+        .arrow-line,
+        .arrow-vtop-left,
+        .arrow-vtop-right {
+          background: #D27A64;
+        }
+
+        &::before,
+        &::after {
+          background: #D27A64;
+        }
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .diagram-desktop {
+        display: none;
+      }
+
+      .diagram-mobile {
+        display: flex;
+        flex-direction: row;
+        height: 650px;
+      }
+
+      .lg-only {
+        display: none;
+      }
+
+      .sm-only {
+        display: inline-block;
+      }
+
+      .text--lg {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+
+      .fit-text-top .row {
+        flex-direction: column;
+
+        .width-80,
+        .width-20 {
+          width: 100%;
+
+          p {
+            text-align: left;
+          }
+        }
+      }
+
+      .stat-stack {
+        box-sizing: border-box;
+
+        .stat-text {
+          height: 600px;
+        }
+
+        .row {
+          flex-direction: column;
+          justify-self: center;
+        }
+
+        .inline-number {
+          font-size: 2rem;
+        }
+
+        .width-80,
+        .width-20 {
+          width: 100%;
+        }
+
+        .width-80 {
+          height: 85%;
+          margin-right: 0;
+          align-content: center;
+
+          p {
+            text-align: left;
+            padding-right: 0;
+          }
+        }
+
+        .width-20 {
+          height: 12%;
+          align-content: center;
+        }
+      }
+
+      .arrow-stack {
+        box-sizing: border-box;
+        width: 10%;
+        height: 600px;
+
+        .arrow-vert {
+          position: relative;
+          width: 24px;
+          height: 100%;
+          margin: 0 auto;
+
+          .arrow-line {
+            position: absolute;
+            left: 50%;
+            top: 4px;
+            bottom: 4px;
+            width: 4px;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            z-index: 1;
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 16px;
+            /* Length of the arrowhead */
+            background: #333;
+            border-radius: 2px;
+          }
+
+          /* Top end stroke (left of V) */
+          &::before {
+            bottom: 0;
+            left: 7px;
+            transform: translateX(-50%) rotate(-45deg);
+          }
+
+          /* Bottom end stroke (right of V) */
+          &::after {
+            bottom: 0;
+            left: 16px;
+            transform: translateX(-50%) rotate(45deg);
+          }
+
+          /* Top of the V (left) */
+          .arrow-vtop-left {
+            position: absolute;
+            left: 7px;
+            top: 0;
+            width: 4px;
+            height: 16px;
+            background: #333;
+            border-radius: 2px;
+            transform: translateX(-50%) rotate(45deg);
+            z-index: 2;
+          }
+
+          /* Top of the V (right) */
+          .arrow-vtop-right {
+            position: absolute;
+            left: 12px;
+            top: 0;
+            width: 4px;
+            height: 16px;
+            background: #333;
+            border-radius: 2px;
+            transform: translateX(50%) rotate(-45deg);
+            z-index: 2;
+          }
+
+          &.arrow-80 {
+
+            .arrow-line,
+            .arrow-vtop-left,
+            .arrow-vtop-right {
+              background: #3F7CCB;
+            }
+
+            &::before,
+            &::after {
+              background: #3F7CCB;
+            }
+          }
+
+          &.arrow-20 {
+
+            .arrow-line,
+            .arrow-vtop-left,
+            .arrow-vtop-right {
+              background: #D27A64;
+            }
+
+            &::before,
+            &::after {
+              background: #D27A64;
+            }
+          }
+        }
+
+        .arrow-column-80 {
+          height: 80%;
+        }
+
+        .arrow-column-20 {
+          height: 20%;
+        }
+      }
+
+      .goinvo-lives-container {
+        width: 90%;
+      }
+
+      .goinvo-lives {
+        width: 85%;
+        flex-direction: row;
+        margin-right: 0;
+
+        p {
+          text-align: left;
+        }
+
+        .bracket-row {
+          position: relative;
+        }
+
+        .bracket {
+          position: absolute;
+          transform: rotate(-90deg);
+          margin-left: -130px;
+          margin-top: 430px;
+
+          img {
+            width: 65%;
+            height: auto;
+          }
+        }
+
+        .goinvo-lives-text {
+
+          .row {
+            flex-direction: column;
+            justify-self: center;
+          }
+
+          .list {
+
+            .width-80,
+            .width-20 {
+              width: 100%;
+              margin-left: 0;
+              margin-top: 20px;
+            }
+
+            .width-80 li {
+              text-align: left;
+              padding-right: 20px;
+            }
+
+            li {
+              margin-bottom: 10px;
+            }
+          }
+
+          .sm-only {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .goinvo-lives .bracket {
+        margin-left: -110px;
+        margin-top: 415px;
+
+        img {
+          width: 50%;
+          height: auto;
+        }
+      }
+
+      .arrow-row {
+        margin-left: -215px;
+        margin-top: 350px;
+        margin-bottom: -350px;
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ class EnterprisePage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <div className="enterprise-design">
+        <div className="enterprise-design landing-page">
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
@@ -37,8 +37,8 @@ class EnterprisePage extends Component {
               <span className="text--serif text--primary">.</span>
             </h1>
           </Hero>
-          <div className="bg-light pad-horizontal">
-            <div className="max-width content-padding pad-vertical LayoutCenter teal">
+          <div className="background--light-orange pad-horizontal">
+            <div className="max-width content-padding pad-vertical LayoutCenter text--teal">
               <h2 className="header--xl">
                 What results are you looking for?
               </h2>
@@ -57,7 +57,7 @@ class EnterprisePage extends Component {
             </div>
           </div>
 
-          <div className="max-width content-padding pad-vertical LayoutCenter teal">
+          <div className="max-width content-padding pad-vertical LayoutCenter text--teal">
             <div className="max-width content-padding pad-vertical LayoutCenter">
               <h2 className="header--xl center ">
                 Why choose GoInvo?
@@ -76,7 +76,7 @@ class EnterprisePage extends Component {
                   Start fast with a team experienced working together compared to hiring.
                 </p>
                 <p className="stat">
-                  <span className="nbrStyle">100+</span>
+                  <span className="number-large">100+</span>
                   <span>
                     software design projects since 2010
                   </span>
@@ -93,7 +93,7 @@ class EnterprisePage extends Component {
                   Make design and innovation a key influence in your organization.
                 </p>
                 <p className="stat">
-                  <span className="nbrStyle">160M+</span>
+                  <span className="number-large">160M+</span>
                   <span>
                     people impacted by GoInvo designs
                   </span>
@@ -111,7 +111,7 @@ class EnterprisePage extends Component {
                   We discover opportunities that keep clients coming back for more.
                 </p>
                 <p className="stat">
-                  <span className="nbrStyle">90%</span>
+                  <span className="number-large">90%</span>
                   <span>
                     of clients repeat business with GoInvo
                   </span>
@@ -120,7 +120,7 @@ class EnterprisePage extends Component {
             </div>
           </div>
 
-          <div className="LayoutCenter teal">
+          <div className="LayoutCenter text--teal">
             <div>
               <div className="max-width content-padding pad-vertical">
                 <div className="pad-vertical">
@@ -133,7 +133,7 @@ class EnterprisePage extends Component {
             </div>
           </div>
 
-          <div className="bg-light teal">
+          <div className="background--light-orange text--teal">
             <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="paddingBottom">
                 <div>
@@ -152,7 +152,7 @@ class EnterprisePage extends Component {
                 <div className="pure-u-1 marginTop">
                   <Card link="/work/3m-coderyte/">
                     <div className="flip-parent">
-                      <div className="pure-u-lg-1-2 teal textCard flip-child">
+                      <div className="pure-u-lg-1-2 text--teal textCard flip-child">
                         <h4 className="header--xl headerCard margin-bottom--none">
                           A 200% productivity gain <br />
                           = $146M exit.
@@ -187,7 +187,7 @@ class EnterprisePage extends Component {
                 <div className="pure-u-1">
                   <Card link="/work/infobionic-heart-monitoring/">
                     <div className="flip-parent">
-                      <div className="pure-u-md-1-2 teal flip-child textCard">
+                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
                           A vision to secure $17M Series B.
                         </h4>
@@ -221,7 +221,7 @@ class EnterprisePage extends Component {
             </div>
           </div>
 
-          <div className="bg-light teal">
+          <div className="background--light-orange text--teal">
             <div className="max-width content-padding pad-vertical container--justify-center center ">
               <div className="pure-u-md-1-2">
                 <p className="header--xl margin-bottom--none">

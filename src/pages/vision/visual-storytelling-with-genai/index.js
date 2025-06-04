@@ -8,9 +8,9 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 import Divider from '../../../components/divider'
 import ModelViewer from '../../../components/model-viewer'
-//import FloorPlanWithHotspots from '../../../components/floor-plan-hotspots'
-
 import config from '../../../../config'
+
+import arrowDown from '../../../assets/images/icon-arrowDown.svg'
 
 const frontmatter = {
   metaTitle: 'Reimagining Visual Storytelling with GenAI',
@@ -36,30 +36,30 @@ class GenAIFeature extends Component {
       activeHotspotTitle: '', // Add this to track the active hotspot title
     }
 
-    Object.keys(carousels).forEach(key => {
-      let carouselId = carousels[key]
+    // Object.keys(carousels).forEach(key => {
+    //   let carouselId = carousels[key]
 
-      this.state[carouselId] = 0
+    //   this.state[carouselId] = 0
 
-      this[carouselId] = React.createRef()
-    })
+    //   this[carouselId] = React.createRef()
+    // })
   }
 
-  setCarouselSlide = (id, currentSlide) => {
-    let updatedState = {}
-    updatedState[id] = currentSlide
+  // setCarouselSlide = (id, currentSlide) => {
+  //   let updatedState = {}
+  //   updatedState[id] = currentSlide
 
-    this.setState(updatedState)
-  }
+  //   this.setState(updatedState)
+  // }
 
-  goToCarouselSlide = (id, i) => {
-    let updatedState = {}
-    updatedState[id] = i
+  // goToCarouselSlide = (id, i) => {
+  //   let updatedState = {}
+  //   updatedState[id] = i
 
-    this.setState(updatedState, () => {
-      this[id].current.slickGoTo(i, true)
-    })
-  }
+  //   this.setState(updatedState, () => {
+  //     this[id].current.slickGoTo(i, true)
+  //   })
+  // }
 
   // Update handleHotspotClick to accept title parameter
   handleHotspotClick = (cameraPosition, cameraRotation = [0, 0, 0], title = '') => {
@@ -73,67 +73,67 @@ class GenAIFeature extends Component {
     })
   }
 
-  renderCarousel = (id, slides, path, imageType) => {
-    return (
-      <div>
-        <SlickCarousel
-          ref={this[id]}
-          infinite={false}
-          dots={false}
-          arrows={false}
-          afterChange={i => this.setCarouselSlide(id, i)}
-        >
-          {slides.map((n, i) => {
-            return (
-              <div key={n}>
-                <div className="lhl-image-max-width">
-                  <Image
-                    src={`/images/features/living-health-lab/${path}${i +
-                      1}.${imageType}`}
-                    className="image--max-width"
-                    sizes={config.sizes.fullInsideMaxWidth}
-                  />
-                </div>
-              </div>
-            )
-          })}
-        </SlickCarousel>
-        <div className="lhl-carousel-nav">
-          <button
-            className={`button button--link lhl-carousel-prev ${this.state[id] === 0 ? 'disabled' : ''
-              }`}
-            onClick={() => this.goToCarouselSlide(id, this.state[id] - 1)}
-          ></button>
-          {slides.map((n, i) => {
-            return (
-              <button
-                key={n}
-                className={`button button--link lhl-carousel-button ${this.state[id] === i ? 'active' : ''
-                  }`}
-                onClick={() => this.goToCarouselSlide(id, i)}
-              >
-                <Image
-                  src={`/images/features/living-health-lab/${path}${i +
-                    1}.${imageType}`}
-                  className="image--max-width"
-                  sizes={config.sizes.fullInsideMaxWidth}
-                />
-              </button>
-            )
-          })}
-          <button
-            className={`button button--link lhl-carousel-next ${this.state[id] === slides.length - 1 ? 'disabled' : ''
-              }`}
-            onClick={() => this.goToCarouselSlide(id, this.state[id] + 1)}
-          ></button>
-        </div>
-      </div>
-    )
-  }
+  // renderCarousel = (id, slides, path, imageType) => {
+  //   return (
+  //     <div>
+  //       <SlickCarousel
+  //         ref={this[id]}
+  //         infinite={false}
+  //         dots={false}
+  //         arrows={false}
+  //         afterChange={i => this.setCarouselSlide(id, i)}
+  //       >
+  //         {slides.map((n, i) => {
+  //           return (
+  //             <div key={n}>
+  //               <div className="lhl-image-max-width">
+  //                 <Image
+  //                   src={`/images/features/living-health-lab/${path}${i +
+  //                     1}.${imageType}`}
+  //                   className="image--max-width"
+  //                   sizes={config.sizes.fullInsideMaxWidth}
+  //                 />
+  //               </div>
+  //             </div>
+  //           )
+  //         })}
+  //       </SlickCarousel>
+  //       <div className="lhl-carousel-nav">
+  //         <button
+  //           className={`button button--link lhl-carousel-prev ${this.state[id] === 0 ? 'disabled' : ''
+  //             }`}
+  //           onClick={() => this.goToCarouselSlide(id, this.state[id] - 1)}
+  //         ></button>
+  //         {slides.map((n, i) => {
+  //           return (
+  //             <button
+  //               key={n}
+  //               className={`button button--link lhl-carousel-button ${this.state[id] === i ? 'active' : ''
+  //                 }`}
+  //               onClick={() => this.goToCarouselSlide(id, i)}
+  //             >
+  //               <Image
+  //                 src={`/images/features/living-health-lab/${path}${i +
+  //                   1}.${imageType}`}
+  //                 className="image--max-width"
+  //                 sizes={config.sizes.fullInsideMaxWidth}
+  //               />
+  //             </button>
+  //           )
+  //         })}
+  //         <button
+  //           className={`button button--link lhl-carousel-next ${this.state[id] === slides.length - 1 ? 'disabled' : ''
+  //             }`}
+  //           onClick={() => this.goToCarouselSlide(id, this.state[id] + 1)}
+  //         ></button>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   render() {
-    const sixSlides = Array.from(Array(6), (x, i) => i)
-    const threeSlides = Array.from(Array(3), (x, i) => i)
+    // const sixSlides = Array.from(Array(6), (x, i) => i)
+    // const threeSlides = Array.from(Array(3), (x, i) => i)
 
     return (
       <Layout frontmatter={frontmatter}>
@@ -228,45 +228,191 @@ class GenAIFeature extends Component {
             <p>Model images are then styled using GenAI tools like <strong>Midjourney</strong> and are guided by prompts tailored to each project’s visual direction. What once took days to illustrate can now be completed in a matter of hours. Scene changes and revisions take a quick camera pivot in the model and an entirely new scene is generated.</p>
             <p>The time investment thus shifts from redrawing each scene by hand to a one-time effort of constructing a detailed 3D model. Once built, these virtual environments become reusable and flexible assets that can support new stories and future projects.</p>
 
-            {/* image / 3js panning / video with caption */}
+            <Image
+              src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-2-2.jpg"
+              className="image--max-width"
+              alt="Hospital 3D scene"
+            />
+            <p className="caption">1. Hospital trauma room render captured in Rhinoceros 3D model.</p>
 
-            {/* image / 3js panning / video with caption */}
+            <img
+              className="arrow-down"
+              src={arrowDown}
+              alt="arrow pointing down"
+            />
 
-            {/* image / 3js panning / video with caption */}
+            <Image
+              src="/images/features/visual-storytelling-with-genai/genai-trauma-room-midjourney-2.jpg"
+              className="image--max-width"
+              alt="Hospital 3D scene"
+            />
+            <p className="caption">2. Hospital trauma room render stylized in Midjourney with accompanying prompt.</p>
 
-            {/* text */}
-            <h2 className="header--lg text--center margin-top--trip">GenAI motivates creative experimentation.</h2>
+            <img
+              className="arrow-down"
+              src={arrowDown}
+              alt="arrow pointing down"
+            />
+
+            <Image
+              src="/images/features/visual-storytelling-with-genai/genai-trauma-room-characters-2.jpg"
+              className="image--max-width"
+              alt="Hospital 3D scene"
+            />
+            <p className="caption">3. Final image post-processing completed in Photoshop with additional characters added in Procreate.</p>
+
+            <h4 className="margin-top--trip">GenAI motivates creative experimentation.</h4>
             <p>This workflow doesn’t just save us time, it also unlocks new creative possibilities that might have been previously out of reach. GenAI tools like Midjourney allow us to explore a wide range of visual styles such as surrealist, graphic novel-inspired, or painterly, and rapidly iterate our ideas in real-time. Where ideas were once narrowed by a project’s timeline or the limits of what we could achieve by hand, GenAI allows our ideas to expand in scale and ambition, no longer limited by traditional methods.</p>
             <p>The examples below offer a small taste of the vastly different outputs GenAI can generate with various prompts.</p>
           </div>
 
-          <div className="max-width pad-all">
-            <div className="diagram-large">
-              <div className="diagram-row">
-                <div className="col-3">Rhino 3d Model Render</div>
-                <div className="col-spacer"></div>
-                <div className="col-3">Midjourney Re-texturizing Prompt</div>
-                <div className="col-spacer"></div>
-                <div className="col-3">Midjourney Output</div>
-              </div>
+          <div className="process-diagram">
+            <div className="max-width pad-all">
+              <div className="diagram-large">
+                <div className="diagram-row title-row">
+                  <div className="col col-3">Rhino 3d Model Render</div>
+                  <div className="col col-spacer"></div>
+                  <div className="col col-3">Midjourney Re-texturizing Prompt</div>
+                  <div className="col col-spacer"></div>
+                  <div className="col col-3">Midjourney Output</div>
+                </div>
 
-              <div className="diagram-row">
-                <div className="col-3">Rhino 3d Model Render</div>
-                <div className="col-spacer"></div>
-                <div className="col-3">Midjourney Re-texturizing Prompt</div>
-                <div className="col-spacer"></div>
-                <div className="col-3">Midjourney Output</div>
+                <div className="diagram-row">
+                  <div className="col col-3">
+                    <div className="label sm-only">Rhino 3d Model Render</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-1-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                  <div className="col col-spacer text--center plus-sign">+</div>
+                  <div className="col col-3">
+                    <div className="label sm-only">Midjourney Re-texturizing Prompt</div>
+                    <p className="prompt"><em>“Emergency waiting room, flat minimalistic, geometric shapes, pastel colors, brush pen, inspired by the visual style of Atey Ghailan.”</em></p>
+                  </div>
+                  <div className="col col-spacer text--center equal-sign">=</div>
+                  <div className="col col-3 col-full">
+                    <div className="label sm-only">Midjourney Output</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-1-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                </div>
+
+                <div className="diagram-row">
+                  <div className="col col-3">
+                    <div className="label sm-only">Rhino 3d Model Render</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-2-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                  <div className="col col-spacer text--center plus-sign">+</div>
+                  <div className="col col-3">
+                    <div className="label sm-only">Midjourney Re-texturizing Prompt</div>
+                    <p className="prompt"><em>“Hospital trauma room, cinematic lighting, hard-edged blocky brush strokes, rich color gradients with purples, oranges, and greens, high contrast, simplified forms with painterly texture, a moody yet vibrant atmosphere, inspired by the visual style of Joseph Iovescu.”</em></p>
+                  </div>
+                  <div className="col col-spacer text--center equal-sign">=</div>
+                  <div className="col col-3 col-full">
+                    <div className="label sm-only">Midjourney Output</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-2-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                </div>
+
+                <div className="diagram-row">
+                  <div className="col col-3">
+                    <div className="label sm-only">Rhino 3d Model Render</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-4-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                  <div className="col col-spacer text--center plus-sign">+</div>
+                  <div className="col col-3">
+                    <div className="label sm-only">Midjourney Re-texturizing Prompt</div>
+                    <p className="prompt"><em>“A minimalistic, surreal illustration of a hospital emergency room, clean thin linework, soft pastel color palette, flat texture, fine detail, elegant negative space, inspired by the visual style of Harriet Lee-Merrion.”</em></p>
+                  </div>
+                  <div className="col col-spacer text--center equal-sign">=</div>
+                  <div className="col col-3 col-full">
+                    <div className="label sm-only">Midjourney Output</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-4-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                </div>
+
+                <div className="diagram-row">
+                  <div className="col col-3">
+                    <div className="label sm-only">Rhino 3d Model Render</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-3-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                  <div className="col col-spacer text--center plus-sign">+</div>
+                  <div className="col col-3">
+                    <div className="label sm-only">Midjourney Re-texturizing Prompt</div>
+                    <p className="prompt"><em>“A high-contrast ink illustration of a hospital emergency room with multiple characters - healthcare providers and patients, expressive black ink lines, minimalist background, bold negative space, inspired by the visual style of Manuel Bortoletti.”</em></p>
+                  </div>
+                  <div className="col col-spacer text--center equal-sign">=</div>
+                  <div className="col col-3 col-full">
+                    <div className="label sm-only">Midjourney Output</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-3-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                </div>
+
+                <div className="diagram-row">
+                  <div className="col col-3">
+                    <div className="label sm-only">Rhino 3d Model Render</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-5-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                  <div className="col col-spacer text--center">+</div>
+                  <div className="col col-3">
+                    <div className="label sm-only">Midjourney Re-texturizing Prompt</div>
+                    <p className="prompt"><em>“A friendly and colour hospital waiting room, watercolor textures, playful and minimal detail, inspired by the visual style of Oliver Jeffers.” </em></p>
+                  </div>
+                  <div className="col col-spacer text--center">=</div>
+                  <div className="col col-3 col-full">
+                    <div className="label sm-only">Midjourney Output</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-5-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                </div>
+
               </div>
+              {/* equation thingy -- will need a special mobile layout likely , or maybe a carousel -- outside of content container */}
+              {/* {this.renderCarousel(carousels.prompt, fiveSlides, 'paper-', 'png')} */}
+              {/* how to add text or multiple images to a slider */}
+              {/* {this.renderCarousel(
+                carousels.paper,
+                threeSlides,
+                'lhl_paper_test_',
+                'jpg'
+              )} */}
             </div>
-            {/* equation thingy -- will need a special mobile layout likely , or maybe a carousel -- outside of content container */}
-            {/* {this.renderCarousel(carousels.prompt, fiveSlides, 'paper-', 'png')} */}
-            {/* how to add text or multiple images to a slider */}
-            {this.renderCarousel(
-              carousels.paper,
-              threeSlides,
-              'lhl_paper_test_',
-              'jpg'
-            )}
           </div>
 
           <div className="max-width pad-all">

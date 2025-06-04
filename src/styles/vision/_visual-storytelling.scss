@@ -7,9 +7,13 @@
 
   .hotspot-image-container {
     position: relative;
-    width: 50%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
+
+    @include mq($from: medium) {
+      width: 50%;
+    }
 
     .hotspot-overlay {
       position: absolute;
@@ -58,6 +62,117 @@
         }
       }
     }
+  }
+
+  .process-diagram {
+    font-family: $font-family--serif;
+    background-color: $color-gray--light;
+    padding: 20px 0;
+
+    .col-spacer {
+      font-family: $font-family--sans-serif;
+    }
+
+    .diagram-large {
+      .diagram-row {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+        border-bottom: solid $color-gray--medium 2px;
+
+        &.title-row {
+          font-size: 1rem;
+          padding: 15px 0;
+          display: none;
+        }
+
+        @include mq($from: medium) {
+          flex-wrap: nowrap; // Prevent wrapping on larger screens
+
+          &.title-row {
+            font-size: 1.2rem;
+            display: flex;
+          }
+        }
+
+        .prompt {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 10px;
+          margin: 0;
+        }
+
+        .col {
+          flex-direction: row;
+
+          img {
+            align-self: center;
+          }
+
+          &.col-3 {
+            width: 46%;
+          }
+
+          &.col-spacer {
+            width: 5%;
+            font-size: 1.5rem;
+            align-self: center;
+
+            &.equal-sign {
+              display: none;
+            }
+          }
+
+          &.col-full {
+            width: 100%;
+            margin-top: 15px; // Add some spacing above
+          }
+
+          &.sm-only {
+            display: block;
+          }
+        }
+
+        @include mq($from: medium) {
+          .col {
+            align-self: center;
+
+            &.col-3 {
+              width: 30%;
+            }
+
+            &.col-full {
+              margin-top: 0;
+              width: 30%;
+            }
+
+            &.col-spacer {
+              width: 5%;
+              font-size: 1.5rem;
+
+              &.equal-sign {
+                display: inline-block;
+              }
+            }
+
+            &.lg-only {
+              display: inline-block;
+            }
+
+            &.sm-only {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .arrow-down {
+    margin: 15px auto;
+    display: block;
+
   }
 
   .genai-image-max-width {

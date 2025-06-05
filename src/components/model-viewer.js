@@ -5,6 +5,17 @@ import * as THREE from 'three'
 
 function Model({ url }) {
   const { scene } = useGLTF(url)
+
+  // Enable shadow casting and receiving on all meshes in the model
+  useEffect(() => {
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true
+        child.receiveShadow = true
+      }
+    })
+  }, [scene])
+
   return <primitive object={scene} />
 }
 

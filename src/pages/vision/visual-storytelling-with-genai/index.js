@@ -137,7 +137,7 @@ class GenAIFeature extends Component {
                   url='/visual-storytelling-with-genai/hospital-3d-model.glb'
                   cameraPosition={this.state.cameraPosition}
                   cameraRotation={this.state.cameraRotation}
-                  enableInteraction={false} //set to true if we want users to be able to interact with the model
+                  enableInteraction={true} //true = users can interact with the model, false = users can't interact with the model
                 />
               )}
             </div>
@@ -248,31 +248,6 @@ class GenAIFeature extends Component {
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
                     <Image
-                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-4-2.jpg"
-                      className="image--max-width"
-                      alt="Hospital 3D scene"
-                    />
-                  </div>
-                  <div className="col col-spacer text--center plus-sign">+</div>
-                  <div className="col col-3">
-                    <div className="label sm-only">Midjourney Re-texturizing Prompt</div>
-                    <p className="prompt"><em>“A minimalistic, surreal illustration of a hospital emergency room, clean thin linework, soft pastel color palette, flat texture, fine detail, elegant negative space, inspired by the visual style of Harriet Lee-Merrion.”</em></p>
-                  </div>
-                  <div className="col col-spacer text--center equal-sign">=</div>
-                  <div className="col col-3 col-full">
-                    <div className="label sm-only">Midjourney Output</div>
-                    <Image
-                      src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-4-2.jpg"
-                      className="image--max-width"
-                      alt="Hospital 3D scene"
-                    />
-                  </div>
-                </div>
-
-                <div className="diagram-row">
-                  <div className="col col-3">
-                    <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
                       src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-3-2.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -288,6 +263,31 @@ class GenAIFeature extends Component {
                     <div className="label sm-only">Midjourney Output</div>
                     <Image
                       src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-3-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                </div>
+
+                <div className="diagram-row">
+                  <div className="col col-3">
+                    <div className="label sm-only">Rhino 3d Model Render</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-4-2.jpg"
+                      className="image--max-width"
+                      alt="Hospital 3D scene"
+                    />
+                  </div>
+                  <div className="col col-spacer text--center plus-sign">+</div>
+                  <div className="col col-3">
+                    <div className="label sm-only">Midjourney Re-texturizing Prompt</div>
+                    <p className="prompt"><em>“A minimalistic, surreal illustration of a hospital emergency room, clean thin linework, soft pastel color palette, flat texture, fine detail, elegant negative space, inspired by the visual style of Harriet Lee-Merrion.”</em></p>
+                  </div>
+                  <div className="col col-spacer text--center equal-sign">=</div>
+                  <div className="col col-3 col-full">
+                    <div className="label sm-only">Midjourney Output</div>
+                    <Image
+                      src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-4-2.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
                     />

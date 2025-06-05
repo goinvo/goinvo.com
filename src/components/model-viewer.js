@@ -94,7 +94,7 @@ function EnhancedLighting() {
       <directionalLight
         position={[10, 10, 5]}
         intensity={1.2}
-        color="#FFEDC6" // Warm golden light
+        color="#fff" // white light
         castShadow
         shadow-mapSize-width={4096}
         shadow-mapSize-height={4096}
@@ -129,14 +129,14 @@ function EnhancedLighting() {
       <directionalLight
         position={[2, 15, -2]}
         intensity={0.2}
-        color="#fff5e6" // Soft warm white
+        color="#fff" // Soft warm white
       />
 
       {/* Point lights for interior spaces - varied temperatures */}
       <pointLight
         position={[0, 8, 0]}
         intensity={0.8}
-        color="#fff2d9" // Warm white
+        color="#fff" // Warm white
         distance={25}
         decay={2}
         castShadow
@@ -146,7 +146,7 @@ function EnhancedLighting() {
       <pointLight
         position={[8, 4, -8]}
         intensity={0.4}
-        color="#fff5e6" // light yellow
+        color="#fff" // light yellow
         distance={20}
         decay={2}
       />

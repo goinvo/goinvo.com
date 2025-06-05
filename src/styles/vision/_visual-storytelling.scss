@@ -78,7 +78,7 @@
         display: flex;
         flex-wrap: wrap;
         padding-bottom: 15px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         border-bottom: solid $color-gray--medium 2px;
 
         &.title-row {
@@ -89,6 +89,8 @@
 
         @include mq($from: medium) {
           flex-wrap: nowrap; // Prevent wrapping on larger screens
+          border-bottom: none;
+          margin-bottom: 10px;
 
           &.title-row {
             font-size: 1.2rem;

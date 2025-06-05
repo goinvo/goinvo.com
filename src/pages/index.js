@@ -336,7 +336,7 @@ class IndexPage extends Component {
                   <a href="/services/">Learn more about our services</a>
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-1-2 margin-vertical">
+              <div className="pure-u-1 pure-u-lg-1-2">
                 <ContactForm />
               </div>
             </div>

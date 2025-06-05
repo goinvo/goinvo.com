@@ -151,19 +151,6 @@ class GenAIFeature extends Component {
             <h2 className="header--lg text--center margin-top--trip">A Faster, Smarter Workflow.</h2>
             <p>We’re developing a digital library of 3D environments including hospitals, clinics, and care homes to use as virtual sandboxes. Using <strong>Rhinoceros 3D</strong>, a modeling software, we can freely explore different compositions in these virtual environments and endlessly capture varying perspectives to apply in our work. </p>
 
-            <div className="model-viewport">
-              {typeof window !== "undefined" && (
-                <ModelViewer
-                  url='/visual-storytelling-with-genai/hospital-3d-model.glb'
-                  cameraPosition={this.state.cameraPosition}
-                  cameraRotation={this.state.cameraRotation}
-                />
-              )}
-            </div>
-            <div className="hotspot-caption">
-              <p>{this.state.activeHotspotTitle}</p>
-            </div>
-
             <div className="hotspot-image-container">
               <div className="hotspot-overlay">
                 <button
@@ -223,6 +210,19 @@ class GenAIFeature extends Component {
                 className="image--max-width"
                 alt="Hospital 3D Model"
               />
+            </div>
+
+            <div className="model-viewport">
+              {typeof window !== "undefined" && (
+                <ModelViewer
+                  url='/visual-storytelling-with-genai/hospital-3d-model.glb'
+                  cameraPosition={this.state.cameraPosition}
+                  cameraRotation={this.state.cameraRotation}
+                />
+              )}
+            </div>
+            <div className="hotspot-caption">
+              <p>{this.state.activeHotspotTitle}</p>
             </div>
 
             <p>Model images are then styled using GenAI tools like <strong>Midjourney</strong> and are guided by prompts tailored to each project’s visual direction. What once took days to illustrate can now be completed in a matter of hours. Scene changes and revisions take a quick camera pivot in the model and an entirely new scene is generated.</p>

@@ -31,7 +31,7 @@ class GenAIFeature extends Component {
 
     this.state = {
       // Isometric view: elevated but angled position
-      cameraPosition: [25, 12, 4],           // Positioned at an angle, elevated
+      cameraPosition: [25, 12, 4], // left/right, up/down, forward/backward
       cameraRotation: [-Math.PI / 4, Math.PI / 4, 0], // 45° down, 45° turn for isometric angle
       activeHotspotTitle: '', // Add this to track the active hotspot title
     }

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import SubscribeForm from '../../../components/form-subscribe'
 import Image from '../../../components/image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -81,7 +81,7 @@ class TestTreatTraceFeature extends Component {
 
             <div className="pad-vertical--double background--gray">
               <div className="max-width max-width--md content-padding">
-                <MailerLiteForm />
+                <SubscribeForm />
               </div>
             </div>
 

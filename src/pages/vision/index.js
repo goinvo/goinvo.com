@@ -24,7 +24,7 @@ import features from '../../data/features.json'
 import config from '../../../config'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'augmented-clinical-decision-support'
+  feature => feature.id === 'visual-storytelling-with-genai'
 )
 
 const frontmatter = {

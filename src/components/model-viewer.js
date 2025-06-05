@@ -79,6 +79,19 @@ function CameraController({ cameraPosition, cameraRotation, enableInteraction = 
       enableZoom={enableInteraction}
       enableRotate={enableInteraction}
       target={[0, 0, 0]}
+      // Add these properties to reduce sensitivity
+      rotateSpeed={0.6}        // Default is 1.0, lower = less sensitive rotation
+      zoomSpeed={0.2}          // Default is 1.0, lower = less sensitive zoom
+      panSpeed={0.6}           // Default is 1.0, lower = less sensitive panning
+      // Optional: Add damping for smoother interactions
+      enableDamping={true}     // Enables smooth camera movements
+      dampingFactor={0.05}     // Lower = more damping (smoother but slower)
+      // Optional: Limit zoom range
+      minDistance={2}          // Minimum zoom distance
+      maxDistance={50}         // Maximum zoom distance
+      // Optional: Limit vertical rotation
+      minPolarAngle={0}        // Minimum vertical angle (0 = straight down)
+      maxPolarAngle={Math.PI}  // Maximum vertical angle (Math.PI = straight up)
     />
   )
 }

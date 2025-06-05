@@ -73,9 +73,9 @@ class GenAIFeature extends Component {
                   onClick={() => this.handleHotspotClick(
                     [3, 1, -3],
                     [0, -Math.PI / 24, 0],
-                    '1. Waiting Room'
+                    'Scene 1: Entering emergency room'
                   )}
-                  title="Waiting Room"
+                  title="Scene 1: Entering emergency room"
                 >
                 </button>
                 <button
@@ -83,9 +83,9 @@ class GenAIFeature extends Component {
                   onClick={() => this.handleHotspotClick(
                     [5, 1, -9],
                     [0, -Math.PI / 6, 0],
-                    '2. Exam Room'
+                    'Scene 2: Emergency trauma room'
                   )}
-                  title="Exam Room"
+                  title="Scene 2: Emergency trauma room"
                 >
                 </button>
                 <button
@@ -93,9 +93,9 @@ class GenAIFeature extends Component {
                   onClick={() => this.handleHotspotClick(
                     [5, 1, -18],
                     [0, -Math.PI / 2, 0],
-                    '3. Emergency Room'
+                    'Scene 3: Emergency room'
                   )}
-                  title="Emergency Room"
+                  title="Scene 3: Emergency room"
                 >
                 </button>
                 <button
@@ -103,9 +103,9 @@ class GenAIFeature extends Component {
                   onClick={() => this.handleHotspotClick(
                     [12, 1, -19],
                     [0, Math.PI, -1],
-                    '4. Emergency Room'
+                    'Scene 4: Emergency room treatment area'
                   )}
-                  title="Emergency Room"
+                  title="Scene 4: Emergency room treatment area"
                 >
                 </button>
                 <button
@@ -113,9 +113,9 @@ class GenAIFeature extends Component {
                   onClick={() => this.handleHotspotClick(
                     [12, 1, -1],
                     [0, Math.PI / 4, 0],
-                    '5. Emergency Room'
+                    'Scene 5: Hospital waiting room'
                   )}
-                  title="Emergency Room"
+                  title="Scene 5: Hospital waiting room"
                 >
                 </button>
               </div>

@@ -127,6 +127,10 @@ class GenAIFeature extends Component {
               />
             </div>
 
+            <div className="hotspot-caption">
+              <p><strong>{this.state.activeHotspotTitle}</strong></p>
+            </div>
+
             <div className="model-viewport">
               {typeof window !== "undefined" && (
                 <ModelViewer
@@ -136,9 +140,6 @@ class GenAIFeature extends Component {
                   enableInteraction={false} //set to true if we want users to be able to interact with the model
                 />
               )}
-            </div>
-            <div className="hotspot-caption">
-              <p>{this.state.activeHotspotTitle}</p>
             </div>
 
             <p>Model images are then styled using GenAI tools like <strong>Midjourney</strong> and are guided by prompts tailored to each project’s visual direction. What once took days to illustrate can now be completed in a matter of hours. Scene changes and revisions take a quick camera pivot in the model and an entirely new scene is generated.</p>

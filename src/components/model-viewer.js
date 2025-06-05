@@ -72,14 +72,101 @@ function CameraController({ cameraPosition, cameraRotation, enableInteraction = 
   )
 }
 
+// Enhanced lighting setup component
+function EnhancedLighting() {
+  return (
+    <>
+      {/* Ambient light for overall base illumination - slightly warmer */}
+      <ambientLight intensity={0.1} color="#fff" />
+
+      {/* Main directional light (warm sunlight) - increased intensity */}
+      <directionalLight
+        position={[10, 10, 5]}
+        intensity={1.2}
+        color="#FFEDC6" // Warm golden light
+        castShadow
+        shadow-mapSize-width={4096}
+        shadow-mapSize-height={4096}
+        shadow-camera-near={0.1}
+        shadow-camera-far={50}
+        shadow-camera-left={-20}
+        shadow-camera-right={20}
+        shadow-camera-top={20}
+        shadow-camera-bottom={-20}
+        shadow-bias={-0.0001}
+      />
+
+      {/* Fill light from the opposite side - cool blue tone */}
+      <directionalLight
+        position={[-8, 6, -8]}
+        intensity={0.5}
+        color="#a6d8ff" // Cool blue light
+        castShadow
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+        shadow-bias={-0.0001}
+      />
+
+      {/* Rim light from behind - cool purple tone for depth */}
+      <directionalLight
+        position={[-2, 8, -12]}
+        intensity={0.6}
+        color="#d4c5ff" // Cool purple light
+      />
+
+      {/* Top-down light for interior illumination - neutral warm */}
+      <directionalLight
+        position={[2, 15, -2]}
+        intensity={0.2}
+        color="#fff5e6" // Soft warm white
+      />
+
+      {/* Point lights for interior spaces - varied temperatures */}
+      <pointLight
+        position={[0, 8, 0]}
+        intensity={0.8}
+        color="#fff2d9" // Warm white
+        distance={25}
+        decay={2}
+        castShadow
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
+      />
+      <pointLight
+        position={[8, 4, -8]}
+        intensity={0.4}
+        color="#fff5e6" // light yellow
+        distance={20}
+        decay={2}
+      />
+      <pointLight
+        position={[-8, 4, -8]}
+        intensity={0.5}
+        color="#b3d9ff" // Cool blue
+        distance={18}
+        decay={2}
+      />
+      <pointLight
+        position={[0, 3, -15]}
+        intensity={0.4}
+        color="#e6ccff" // Cool lavender
+        distance={15}
+        decay={2}
+      />
+    </>
+  )
+}
+
 export default function ModelViewer({ url, cameraPosition, cameraRotation, enableInteraction = true }) {
   console.log('ModelViewer props - rotation:', cameraRotation)
 
   return (
     <div style={{ width: '100%', height: 500 }}>
-      <Canvas camera={{ position: cameraPosition || [0, 0, 5], fov: 50 }}>
-        <ambientLight intensity={0.8} />
-        <directionalLight position={[10, 10, 10]} />
+      <Canvas
+        camera={{ position: cameraPosition || [0, 0, 5], fov: 50 }}
+        shadows // Enable shadows for better depth perception
+      >
+        <EnhancedLighting />
         <Suspense fallback={null}>
           <Model url={url} />
         </Suspense>

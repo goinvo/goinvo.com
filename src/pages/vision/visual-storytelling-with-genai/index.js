@@ -319,15 +319,6 @@ class GenAIFeature extends Component {
                 </div>
 
               </div>
-              {/* equation thingy -- will need a special mobile layout likely , or maybe a carousel -- outside of content container */}
-              {/* {this.renderCarousel(carousels.prompt, fiveSlides, 'paper-', 'png')} */}
-              {/* how to add text or multiple images to a slider */}
-              {/* {this.renderCarousel(
-                carousels.paper,
-                threeSlides,
-                'lhl_paper_test_',
-                'jpg'
-              )} */}
             </div>
           </div>
 

@@ -8,7 +8,7 @@ function Model({ url }) {
   return <primitive object={scene} />
 }
 
-function CameraController({ cameraPosition, cameraRotation }) {
+function CameraController({ cameraPosition, cameraRotation, enableInteraction = true }) {
   const { camera } = useThree()
   const controlsRef = useRef()
 
@@ -38,7 +38,6 @@ function CameraController({ cameraPosition, cameraRotation }) {
         camera.updateMatrixWorld()
 
         // Calculate where the camera is looking based on the rotation
-        // This prevents OrbitControls from overriding our rotation
         const direction = new THREE.Vector3(0, 0, -1)
         direction.applyQuaternion(camera.quaternion)
         const target = camera.position.clone().add(direction.multiplyScalar(5))
@@ -52,28 +51,28 @@ function CameraController({ cameraPosition, cameraRotation }) {
         controlsRef.current.target.set(0, 0, 0)
       }
 
-      // Re-enable controls after a delay
+      // Re-enable controls after a delay, but only if interaction is enabled
       setTimeout(() => {
         if (controlsRef.current) {
-          controlsRef.current.enabled = true
+          controlsRef.current.enabled = enableInteraction
           controlsRef.current.update()
         }
       }, 100)
     }
-  }, [camera, cameraPosition, cameraRotation])
+  }, [camera, cameraPosition, cameraRotation, enableInteraction])
 
   return (
     <OrbitControls
       ref={controlsRef}
-      enablePan
-      enableZoom
-      enableRotate
+      enablePan={enableInteraction}
+      enableZoom={enableInteraction}
+      enableRotate={enableInteraction}
       target={[0, 0, 0]}
     />
   )
 }
 
-export default function ModelViewer({ url, cameraPosition, cameraRotation }) {
+export default function ModelViewer({ url, cameraPosition, cameraRotation, enableInteraction = true }) {
   console.log('ModelViewer props - rotation:', cameraRotation)
 
   return (
@@ -87,6 +86,7 @@ export default function ModelViewer({ url, cameraPosition, cameraRotation }) {
         <CameraController
           cameraPosition={cameraPosition}
           cameraRotation={cameraRotation}
+          enableInteraction={enableInteraction}
         />
       </Canvas>
     </div>

@@ -35,31 +35,7 @@ class GenAIFeature extends Component {
       cameraRotation: [-Math.PI / 4, Math.PI / 4, 0], // 45° down, 45° turn for isometric angle
       activeHotspotTitle: '', // Add this to track the active hotspot title
     }
-
-    // Object.keys(carousels).forEach(key => {
-    //   let carouselId = carousels[key]
-
-    //   this.state[carouselId] = 0
-
-    //   this[carouselId] = React.createRef()
-    // })
   }
-
-  // setCarouselSlide = (id, currentSlide) => {
-  //   let updatedState = {}
-  //   updatedState[id] = currentSlide
-
-  //   this.setState(updatedState)
-  // }
-
-  // goToCarouselSlide = (id, i) => {
-  //   let updatedState = {}
-  //   updatedState[id] = i
-
-  //   this.setState(updatedState, () => {
-  //     this[id].current.slickGoTo(i, true)
-  //   })
-  // }
 
   // Update handleHotspotClick to accept title parameter
   handleHotspotClick = (cameraPosition, cameraRotation = [0, 0, 0], title = '') => {
@@ -73,68 +49,7 @@ class GenAIFeature extends Component {
     })
   }
 
-  // renderCarousel = (id, slides, path, imageType) => {
-  //   return (
-  //     <div>
-  //       <SlickCarousel
-  //         ref={this[id]}
-  //         infinite={false}
-  //         dots={false}
-  //         arrows={false}
-  //         afterChange={i => this.setCarouselSlide(id, i)}
-  //       >
-  //         {slides.map((n, i) => {
-  //           return (
-  //             <div key={n}>
-  //               <div className="lhl-image-max-width">
-  //                 <Image
-  //                   src={`/images/features/living-health-lab/${path}${i +
-  //                     1}.${imageType}`}
-  //                   className="image--max-width"
-  //                   sizes={config.sizes.fullInsideMaxWidth}
-  //                 />
-  //               </div>
-  //             </div>
-  //           )
-  //         })}
-  //       </SlickCarousel>
-  //       <div className="lhl-carousel-nav">
-  //         <button
-  //           className={`button button--link lhl-carousel-prev ${this.state[id] === 0 ? 'disabled' : ''
-  //             }`}
-  //           onClick={() => this.goToCarouselSlide(id, this.state[id] - 1)}
-  //         ></button>
-  //         {slides.map((n, i) => {
-  //           return (
-  //             <button
-  //               key={n}
-  //               className={`button button--link lhl-carousel-button ${this.state[id] === i ? 'active' : ''
-  //                 }`}
-  //               onClick={() => this.goToCarouselSlide(id, i)}
-  //             >
-  //               <Image
-  //                 src={`/images/features/living-health-lab/${path}${i +
-  //                   1}.${imageType}`}
-  //                 className="image--max-width"
-  //                 sizes={config.sizes.fullInsideMaxWidth}
-  //               />
-  //             </button>
-  //           )
-  //         })}
-  //         <button
-  //           className={`button button--link lhl-carousel-next ${this.state[id] === slides.length - 1 ? 'disabled' : ''
-  //             }`}
-  //           onClick={() => this.goToCarouselSlide(id, this.state[id] + 1)}
-  //         ></button>
-  //       </div>
-  //     </div>
-  //   )
-  // }
-
   render() {
-    // const sixSlides = Array.from(Array(6), (x, i) => i)
-    // const threeSlides = Array.from(Array(3), (x, i) => i)
-
     return (
       <Layout frontmatter={frontmatter}>
         <div className="living-health-lab visual-storytelling">
@@ -186,8 +101,8 @@ class GenAIFeature extends Component {
                 <button
                   className="hotspot-button button-four"
                   onClick={() => this.handleHotspotClick(
-                    [12, 1, -18],
-                    [0, Math.PI / 6 + Math.PI + Math.PI / 18, 0],
+                    [12, 1, -19],
+                    [0, Math.PI, -1],
                     '4. Emergency Room'
                   )}
                   title="Emergency Room"
@@ -218,6 +133,7 @@ class GenAIFeature extends Component {
                   url='/visual-storytelling-with-genai/hospital-3d-model.glb'
                   cameraPosition={this.state.cameraPosition}
                   cameraRotation={this.state.cameraRotation}
+                  enableInteraction={false} //set to true if we want users to be able to interact with the model
                 />
               )}
             </div>

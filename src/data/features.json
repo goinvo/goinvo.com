@@ -1,5 +1,22 @@
 [
   {
+    "id": "visual-storytelling-with-genai",
+    "title": "Reimagining Visual Storytelling with GenAI",
+    "date": "Jun.2025",
+    "client": "Feature",
+    "categories": [
+      "open-source",
+      "public-health-and-policy",
+      "government",
+      "healthcare",
+      "AI"
+    ],
+    "caption": "With GenAI, we can create visual stories that are more engaging, accessible, and allows us to explore more than ever before.",
+    "image": "/images/features/visual-storytelling-with-genai/genai-hero-2.jpg",
+    "link": "/vision/visual-storytelling-with-genai/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "healthcare-dollars-redux",
     "title": "Where Your Health Dollars Go (Redux)",
     "date": "Apr.2025",

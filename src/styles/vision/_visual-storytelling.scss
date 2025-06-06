@@ -1,0 +1,250 @@
+.visual-storytelling {
+  .model-viewport {
+    border: solid $color-gray--medium 1px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .hotspot-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    @include mq($from: medium) {
+      width: 50%;
+    }
+
+    .hotspot-overlay {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+
+      .hotspot-button {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(197, 62, 32, 0);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover {
+          background: rgba(197, 62, 32, .25);
+        }
+
+        &.button-one {
+          left: 25%;
+          top: 52%;
+        }
+
+        &.button-two {
+          left: 41%;
+          top: 47%;
+        }
+
+        &.button-three {
+          left: 50.5%;
+          top: 23%;
+        }
+
+        &.button-four {
+          left: 75.5%;
+          top: 56%;
+        }
+
+        &.button-five {
+          left: 37.25%;
+          top: 72.5%;
+        }
+      }
+    }
+  }
+
+  .process-diagram {
+    font-family: $font-family--serif;
+    background-color: $color-gray--light;
+    padding: 20px 0;
+
+    .col-spacer {
+      font-family: $font-family--sans-serif;
+    }
+
+    .diagram-large {
+      .diagram-row {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        border-bottom: solid $color-gray--medium 2px;
+
+        &.title-row {
+          font-size: 1rem;
+          padding: 15px 0;
+          display: none;
+        }
+
+        @include mq($from: medium) {
+          flex-wrap: nowrap; // Prevent wrapping on larger screens
+          border-bottom: none;
+          margin-bottom: 10px;
+
+          &.title-row {
+            font-size: 1.2rem;
+            display: flex;
+          }
+        }
+
+        .prompt {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 10px;
+          margin: 0;
+        }
+
+        .col {
+          flex-direction: row;
+
+          img {
+            align-self: center;
+          }
+
+          &.col-3 {
+            width: 46%;
+          }
+
+          &.col-spacer {
+            width: 5%;
+            font-size: 1.5rem;
+            align-self: center;
+
+            &.equal-sign {
+              display: none;
+            }
+          }
+
+          &.col-full {
+            width: 100%;
+            margin-top: 15px; // Add some spacing above
+          }
+
+          &.sm-only {
+            display: block;
+          }
+        }
+
+        @include mq($from: medium) {
+          .col {
+            align-self: center;
+
+            .label {
+              display: none;
+            }
+
+            &.col-3 {
+              width: 30%;
+            }
+
+            &.col-full {
+              margin-top: 0;
+              width: 30%;
+            }
+
+            &.col-spacer {
+              width: 5%;
+              font-size: 1.5rem;
+
+              &.equal-sign {
+                display: inline-block;
+              }
+            }
+
+            &.lg-only {
+              display: inline-block;
+            }
+
+            &.sm-only {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .arrow-down {
+    margin: 15px auto;
+    display: block;
+
+  }
+
+  .genai-image-max-width {
+    display: block;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .genai-carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .genai-carousel-button {
+    max-width: 100px;
+    padding: 2px;
+    margin-right: 5px;
+
+    img {
+      display: block;
+    }
+
+    &.active {
+      background-color: $color-orange;
+    }
+  }
+
+  .genai-carousel-prev,
+  .genai-carousel-next {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+    z-index: 1;
+    flex-shrink: 0;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url('../assets/images/icon-caret.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  .genai-carousel-prev {
+    margin-right: 10px;
+
+    &:before {
+      transform: rotate(90deg);
+    }
+  }
+
+  .genai-carousel-next {
+    margin-left: 10px;
+
+    &:before {
+      transform: rotate(-90deg);
+    }
+  }
+}

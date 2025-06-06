@@ -8,7 +8,7 @@ import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
-import MailerLiteContactForm from '../components/mailerlite-contact-form'
+import ContactForm from '../components/form-contact'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
@@ -336,8 +336,8 @@ class IndexPage extends Component {
                   <a href="/services/">Learn more about our services</a>
                 </div>
               </div>
-              <div className="pure-u-1 pure-u-lg-1-2 margin-vertical">
-                <MailerLiteContactForm />
+              <div className="pure-u-1 pure-u-lg-1-2">
+                <ContactForm />
               </div>
             </div>
           </div>

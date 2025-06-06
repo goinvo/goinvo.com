@@ -2,18 +2,16 @@ import React, { Component } from 'react'
 import Card from './card'
 import Helmet from 'react-helmet'
 
-class MailerLiteHiringForm extends Component {
+class HiringForm extends Component {
 
-  render() {    
+  render() {
     return (
-      <div className="hiring-form">
-        <Helmet>
-          {/* <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-          <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-251193306087052']", "https://form.jotform.com/")</script> */}
-        </Helmet>
-
-        <Card>
-        <iframe
+      <div className="form-wrapper">
+        <Card className="form-card">
+          <div className="form-header hiring-form-header">
+            <h2 className="header--xl">Apply</h2>
+          </div>
+          <iframe
             id="JotFormIFrame-251193306087052"
             className="jotform-form hiring-form"
             title="Application"
@@ -30,4 +28,4 @@ class MailerLiteHiringForm extends Component {
   }
 }
 
-export default MailerLiteHiringForm
+export default HiringForm

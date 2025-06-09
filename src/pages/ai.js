@@ -414,6 +414,40 @@ class AIPage extends Component {
             </div>
 
           </div>
+          <div className="background--light-orange text--teal">
+            <div className="max-width content-padding pad-vertical container--justify-center center">
+
+              <div className="pure-u-1">
+                <Card link="/vision/eligibility-engine/">
+                  <div className="flip-parent">
+                    <div className="pure-u-md-1-2 text--teal flip-child textCard">
+                      <h4 className="header--xl headerCard">
+                        Reimagining Visual Storytelling with GenAI
+                      </h4>
+                      <p className="header--lg margin-bottom--none">
+                        GenAI accelerates our design process and enhances our ability to tell compelling stories through visuals.
+                      </p>
+                      <p>
+                        <Link
+                          to="/vision/visual-storytelling-with-genai/"
+                        >
+                          Read Case Study
+                        </Link>
+                      </p>
+                    </div>
+                    <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
+                      <Image
+                        src="/images/features/visual-storytelling-with-genai/genai-hero-3.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.full}
+                      />
+                    </div>
+                  </div>
+                </Card>
+              </div>
+
+            </div>
+          </div>
 
           <div className="LayoutCenter text--teal">
             <div className="max-width content-padding pad-vertical">

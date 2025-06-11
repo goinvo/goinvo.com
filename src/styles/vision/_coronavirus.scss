@@ -159,6 +159,7 @@ $corona-font-weight--extra-bold: 900;
 
     &__image-container {
       min-height: 300px;
+      overflow: hidden;
       @include mq($from: large) {
         height: 530px;
       }

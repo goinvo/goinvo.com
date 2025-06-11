@@ -31,29 +31,29 @@ class ImageBlock extends Component {
       position,
       isSmall = false,
       hoverable = false,
+      workCard = false,
+      objectFit = 'cover',
     } = this.props
 
     return (
       <div
-        className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className ? className : ''
+        className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className || ''
           }`}
       >
         <div
           className={`image-block__image-container ${isSmall ? 'image-block__image-container--small' : ''
-            }`}
+            } ${workCard ? 'image-block__image-container--work-card' : ''}`}
         >
           <LazyImage
             src={image}
-            externalImage={externalImage}
-            sizes={sizes}
+            alt={alt}
             className="image-block__image"
-            alt={alt || title || ''}
-            placeholderType="skeleton"
-            placeholderColor="#f5f5f5"
+            sizes={sizes}
+            externalImage={externalImage}
             style={{
               width: '100%',
               height: '100%',
-              objectFit: 'cover',
+              objectFit: objectFit,
               objectPosition: position || 'center center'
             }}
           />

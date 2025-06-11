@@ -142,7 +142,7 @@ const CaseStudyLayout = ({ data: caseStudies, children }) => {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'center center'
+                  objectPosition: 'center bottom'
                 }}
               />
             </div>

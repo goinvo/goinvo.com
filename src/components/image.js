@@ -53,6 +53,7 @@ class Image extends Component {
         hasError: false
       })
     } else {
+      console.error(`Image failed to load: ${this.props.src}`)
       this.setState({ hasError: true })
     }
   }
@@ -69,7 +70,7 @@ class Image extends Component {
     // Determine which source to use
     let imageSrc
     let srcset = null
-    src = externalImage ? src : mediaUrl(src)
+    //src = externalImage ? src : mediaUrl(src)
 
     if (externalImage) {
       // External images remain unchanged
@@ -80,9 +81,30 @@ class Image extends Component {
     } else {
       // Use image service
       imageSrc = mediaUrl(src)
-      srcset = dimensions.map(dimension => {
-        return `${imageSrc}?w=${dimension} ${dimension}w`
-      })
+      if (dimensions && dimensions.length > 0) {
+        srcset = dimensions.map(dimension => {
+          return `${imageSrc}?w=${dimension} ${dimension}w`
+        }).join(', ')
+      }
+    }
+
+    // Show error state if image completely failed to load
+    if (this.state.hasError) {
+      return (
+        <div
+          className={`${className || ''} image-error`}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '100px',
+            backgroundColor: '#f5f5f5',
+            color: '#999'
+          }}
+        >
+          Image failed to load
+        </div>
+      )
     }
 
     return externalImage ? (

@@ -10,6 +10,8 @@ class Image extends Component {
 
     this.state = {
       src: '',
+      useLocalFallback: false,
+      hasError: false,
     }
 
     this.img = React.createRef()
@@ -42,6 +44,19 @@ class Image extends Component {
     }
   }
 
+  // Handle image load errors and fallback to local
+  handleError = () => {
+    if (!this.state.useLocalFallback && !this.props.externalImage) {
+      console.warn(`Image service failed for ${this.props.src}, falling back to local`)
+      this.setState({
+        useLocalFallback: true,
+        hasError: false
+      })
+    } else {
+      this.setState({ hasError: true })
+    }
+  }
+
   getSrc = () => {
     return typeof this.img.current.currentSrc !== 'undefined'
       ? this.img.current.currentSrc
@@ -50,11 +65,25 @@ class Image extends Component {
 
   render() {
     let { src, externalImage, alt, className, dimensions, sizes } = this.props
+
+    // Determine which source to use
+    let imageSrc
+    let srcset = null
     src = externalImage ? src : mediaUrl(src)
 
-    let srcset = dimensions.map(dimension => {
-      return `${src}?w=${dimension} ${dimension}w`
-    })
+    if (externalImage) {
+      // External images remain unchanged
+      imageSrc = src
+    } else if (this.state.useLocalFallback) {
+      // Use local fallback - serve directly from public folder
+      imageSrc = src.startsWith('/') ? src : `/${src}`
+    } else {
+      // Use image service
+      imageSrc = mediaUrl(src)
+      srcset = dimensions.map(dimension => {
+        return `${imageSrc}?w=${dimension} ${dimension}w`
+      })
+    }
 
     return externalImage ? (
       <img
@@ -63,6 +92,7 @@ class Image extends Component {
         alt={alt}
         src={src}
         onLoad={this.handleLoad}
+        onError={this.handleError}
         {...this.props}
       />
     ) : (
@@ -72,8 +102,9 @@ class Image extends Component {
         alt={alt}
         srcSet={srcset}
         sizes={sizes}
-        src={`${src}?w=800`}
+        src={this.state.useLocalFallback ? imageSrc : `${imageSrc}?w=800`}
         onLoad={this.handleLoad}
+        onError={this.handleError}
         {...this.props}
       />
     )

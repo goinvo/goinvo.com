@@ -6,7 +6,7 @@ import config from '../../config'
 import SmartImage, { LazyImage } from '../components/optimized-image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
-import MailerLiteContactForm from '../components/mailerlite-contact-form'
+import ContactForm from '../components/form-contact'
 
 const frontmatter = {
   metaTitle: 'Software Design for Government Services',
@@ -262,7 +262,7 @@ class GovernmentPage extends Component {
                 <p className="margin-top--none">
                   Reach out to learn how GoInvo can help.
                 </p>
-                <MailerLiteContactForm />
+                <ContactForm />
               </div>
             </div>
           </div>

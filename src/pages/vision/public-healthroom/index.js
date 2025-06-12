@@ -10,7 +10,7 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Reference from '../../../components/reference'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import SubscribeForm from '../../../components/form-subscribe'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
@@ -331,13 +331,13 @@ class PublicHealthroom extends Component {
         </div>
         <div
           className={`public-healthroom__overlay-image public-healthroom__holding-phone ${id === 4 ||
-              id === 8 ||
-              id === 10 ||
-              id === 15 ||
-              id === 26 ||
-              id === 28
-              ? 'public-healthroom__overlay-image--visible'
-              : ''
+            id === 8 ||
+            id === 10 ||
+            id === 15 ||
+            id === 26 ||
+            id === 28
+            ? 'public-healthroom__overlay-image--visible'
+            : ''
             }
           ${id === 28 ? 'public-healthroom__holding-phone--center' : ''}`}
         >
@@ -599,8 +599,8 @@ class PublicHealthroom extends Component {
                         <div
                           ref={this.imageRefsArray[i].ref}
                           className={`public-healthroom__prototype-frame ${this.state.backwards
-                              ? 'public-healthroom__prototype-frame--backwards'
-                              : ''
+                            ? 'public-healthroom__prototype-frame--backwards'
+                            : ''
                             }`}
                         >
                           <div
@@ -710,7 +710,7 @@ class PublicHealthroom extends Component {
 
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <SubscribeForm />
             </div>
           </div>
 

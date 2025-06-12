@@ -8,7 +8,7 @@ import Quote from '../components/quote'
 import Columns from '../components/columns'
 import SmartImage, { LazyImage } from '../components/optimized-image'
 import Divider from '../components/divider'
-import MailerLiteContactForm from '../components/mailerlite-contact-form'
+import ContactForm from '../components/form-contact'
 
 import IconComplexity from '../assets/images/icon-complexity.inline.svg'
 import IconHealthcare from '../assets/images/icon-healthcare.inline.svg'
@@ -337,7 +337,7 @@ class ServicesPage extends Component {
         <div className="background--gray">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteContactForm />
+              <ContactForm />
             </div>
           </div>
         </div>

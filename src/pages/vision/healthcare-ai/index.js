@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SmartImage, { LazyImage } from '../../../components/optimized-image'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import SubscribeForm from '../../../components/form-subscribe'
 import Author from '../../../components/author'
 import Divider from '../../../components/divider'
 
@@ -610,7 +610,7 @@ class HealthcareAIFeature extends Component {
 
           <div className="background--gray pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <MailerLiteForm />
+              <SubscribeForm />
             </div>
           </div>
         </div>

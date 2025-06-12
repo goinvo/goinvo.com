@@ -8,9 +8,7 @@ import TeamMember from '../../components/team-member'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
 import team from '../../data/team.json'
-import MailerLiteForm from '../../components/mailerlite-form'
-import Quote from '../../components/quote'
-import Divider from '../../components/divider'
+import SubscribeForm from '../../components/form-subscribe'
 
 import config from '../../../config'
 
@@ -304,7 +302,7 @@ const AboutPage = () => (
 
     <div className="pad-vertical--double">
       <div className="max-width max-width--md content-padding">
-        <MailerLiteForm />
+        <SubscribeForm />
       </div>
     </div>
 

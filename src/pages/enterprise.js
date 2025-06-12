@@ -6,7 +6,7 @@ import config from '../../config'
 import SmartImage, { LazyImage } from '../components/optimized-image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
-import MailerLiteContactForm from '../components/mailerlite-contact-form'
+import ContactForm from '../components/form-contact'
 
 const frontmatter = {
   metaTitle: 'Design for Enterprise Software',
@@ -232,7 +232,7 @@ class EnterprisePage extends Component {
                   Reach out to learn how GoInvo can help.
                 </p>
 
-                <MailerLiteContactForm />
+                <ContactForm />
               </div>
             </div>
           </div>

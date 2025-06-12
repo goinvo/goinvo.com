@@ -23,3 +23,17 @@
     border-color: $color-red;
   }
 }
+
+.card.form-card {
+  background: #F3F3FE;
+}
+.form-header {
+    padding-top: 1px;
+    z-index: 3;
+  &.hiring-form-header {
+    margin-left: 38px;
+  }
+  &.contact-form-header {
+    margin-left: 23px;
+  }
+}

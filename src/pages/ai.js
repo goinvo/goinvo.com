@@ -6,7 +6,7 @@ import config from '../../config'
 import SmartImage, { LazyImage } from '../components/optimized-image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
-import MailerLiteContactForm from '../components/mailerlite-contact-form'
+import ContactForm from '../components/form-contact'
 import Divider from '../components/divider'
 
 import bracketDown from '../assets/images/bracket-down.svg'
@@ -414,6 +414,40 @@ class AIPage extends Component {
             </div>
 
           </div>
+          <div className="background--light-orange text--teal">
+            <div className="max-width content-padding pad-vertical container--justify-center center">
+
+              <div className="pure-u-1">
+                <Card link="/vision/eligibility-engine/">
+                  <div className="flip-parent">
+                    <div className="pure-u-md-1-2 text--teal flip-child textCard">
+                      <h4 className="header--xl headerCard">
+                        Reimagining Visual Storytelling with GenAI
+                      </h4>
+                      <p className="header--lg margin-bottom--none">
+                        GenAI accelerates our design process and enhances our ability to tell compelling stories through visuals.
+                      </p>
+                      <p>
+                        <Link
+                          to="/vision/visual-storytelling-with-genai/"
+                        >
+                          Read Case Study
+                        </Link>
+                      </p>
+                    </div>
+                    <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
+                      <Image
+                        src="/images/features/visual-storytelling-with-genai/genai-hero-3.jpg"
+                        className="image--max-width"
+                        sizes={config.sizes.full}
+                      />
+                    </div>
+                  </div>
+                </Card>
+              </div>
+
+            </div>
+          </div>
 
           <div className="LayoutCenter text--teal">
             <div className="max-width content-padding pad-vertical">
@@ -435,7 +469,7 @@ class AIPage extends Component {
                 <p className="margin-top--none">
                   Reach out to learn how GoInvo can help.
                 </p>
-                <MailerLiteContactForm />
+                <ContactForm />
               </div>
             </div>
           </div>

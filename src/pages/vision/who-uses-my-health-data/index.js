@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import MailerLiteForm from '../../../components/mailerlite-form'
+import SubscribeForm from '../../../components/form-subscribe'
 import { LazyImage } from '../../../components/optimized-image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
@@ -156,7 +156,7 @@ class HealthDataUseFeature extends Component {
 
             <div className="background--gray pad-vertical--double margin-top--double">
               <div className="max-width max-width--md content-padding">
-                <MailerLiteForm />
+                <SubscribeForm />
               </div>
             </div>
 

@@ -436,7 +436,7 @@ class AIPage extends Component {
                       </p>
                     </div>
                     <div className="pure-u-md-1-2 flip-child fill-image-container caseStudyImg">
-                      <Image
+                      <LazyImage
                         src="/images/features/visual-storytelling-with-genai/genai-hero-3.jpg"
                         className="image--max-width"
                         sizes={config.sizes.full}

@@ -231,7 +231,7 @@ class CareersPage extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </BackgroundImage>
         <div className="background--gray pad-vertical">
           <LazyImage 
             src="/images/contact/studio.jpg" 

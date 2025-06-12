@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import { mediaUrl } from '../helpers'
@@ -21,22 +21,6 @@ const normalizeImageUrl = (src) => {
   return mediaUrl(src)
 }
 
-// Skeleton loader component
-const SkeletonLoader = ({ className }) => (
-  <div 
-    className={`skeleton-loader ${className || ''}`}
-    style={{
-      backgroundColor: '#f0f0f0',
-      background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
-      backgroundSize: '200% 100%',
-      animation: 'loading 1.5s infinite',
-      width: '100%',
-      height: '100%',
-      minHeight: '200px'
-    }}
-  />
-)
-
 // Enhanced external image component that renders exactly like the old Image component
 export const ExternalImage = ({ 
   src, 
@@ -52,18 +36,7 @@ export const ExternalImage = ({
   objectFit,
   ...props 
 }) => {
-  const [showSkeleton, setShowSkeleton] = useState(true)
-  const [isError, setIsError] = useState(false)
   const normalizedSrc = normalizeImageUrl(src)
-  
-  // Hide skeleton after a short delay to allow natural image loading
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSkeleton(false)
-    }, 100) // Very short delay, just enough to show skeleton briefly
-    
-    return () => clearTimeout(timer)
-  }, [])
   
   // Build srcset exactly like the old component
   let srcset = null
@@ -80,38 +53,18 @@ export const ExternalImage = ({
     borderRadius,
     ...htmlProps 
   } = props
-
-  const handleLoad = () => {
-    // Image is fully loaded, make sure skeleton is hidden
-    setShowSkeleton(false)
-    if (props.onLoad) {
-      props.onLoad()
-    }
-  }
-
-  const handleError = () => {
-    setIsError(true)
-    setShowSkeleton(false)
-  }
   
   const imageProps = {
     src: externalImage ? normalizedSrc : `${normalizedSrc}?w=800`,
     alt,
     className,
     loading: priority ? "eager" : "lazy",
-    onLoad: handleLoad,
-    onError: handleError,
     ...(srcset && { srcSet: srcset }),
     ...(sizes && { sizes }),
     ...htmlProps
   }
   
-  return (
-    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-      {showSkeleton && !isError && <SkeletonLoader className={className} />}
-      <img {...imageProps} style={props.style} />
-    </div>
-  )
+  return <img {...imageProps} style={props.style} />
 }
 
 // For local images (in src/assets/images), use Gatsby's optimized component
@@ -136,7 +89,7 @@ export const OptimizedImage = ({
           relativePath
           childImageSharp {
             gatsbyImageData(
-              placeholder: BLURRED
+              placeholder: DOMINANT_COLOR
               formats: [AUTO, WEBP, AVIF]
               quality: 90
             )

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 
 import Layout from './layout'
 import Image from '../image'
-import { HeroCriticalImage } from '../optimized-image'
+import { HeroCriticalImage, LazyImage } from '../optimized-image'
 import Results from '../results'
 import Columns from '../columns'
 import Card from '../card'
@@ -20,7 +20,6 @@ import {
 } from '../../helpers'
 
 import config from '../../../config'
-import { LazyImage } from '../../../components/optimized-image'
 
 const CaseStudyLayout = ({ data: caseStudies, children }) => {
   const { mdx } = caseStudies

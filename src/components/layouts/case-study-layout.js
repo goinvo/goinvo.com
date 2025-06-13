@@ -20,6 +20,7 @@ import {
 } from '../../helpers'
 
 import config from '../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const CaseStudyLayout = ({ data: caseStudies, children }) => {
   const { mdx } = caseStudies
@@ -120,7 +121,7 @@ const CaseStudyLayout = ({ data: caseStudies, children }) => {
             </ul>
           ),
           img: props => (
-            <Image
+            <LazyImage
               className="image--max-width"
               sizes={config.sizes.fullInsideMediumMaxWidth}
               {...props}

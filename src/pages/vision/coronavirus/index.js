@@ -225,7 +225,7 @@ class CoronavirusFeature extends Component {
                 China's COVID-19 death rate by age as of 11 Feb 2020
                 <sup>19,20</sup>
               </h4>
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/mortality-by-age.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -406,7 +406,7 @@ class CoronavirusFeature extends Component {
               <h4>It travels through droplets in the air</h4>
               <p>It can infect humans through...</p>
               <div className="hidden--lg">
-                <Image
+                <LazyImage
                   src="/images/features/coronavirus/mobile-spread-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
@@ -416,7 +416,7 @@ class CoronavirusFeature extends Component {
                   ...close contact of 6 feet or less, including touching and
                   shaking hands.
                 </NumberListItem>
-                <Image
+                <LazyImage
                   src="/images/features/coronavirus/mobile-spread-1.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
@@ -426,7 +426,7 @@ class CoronavirusFeature extends Component {
                   ...the air by coughing and sneezing. People nearby may inhale
                   droplets from coughs and sneezes into their lungs.
                 </NumberListItem>
-                <Image
+                <LazyImage
                   src="/images/features/coronavirus/mobile-spread-3.jpg"
                   className="image--max-width"
                   sizes={config.sizes.full}
@@ -439,7 +439,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="hidden--until-lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/spread-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -487,7 +487,7 @@ class CoronavirusFeature extends Component {
               </p>
             </div>
             <div className="hidden--lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/mobile-prevention.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -530,7 +530,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="hidden--until-lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/prevention-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -566,7 +566,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="hidden--lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/mobile-close-contact.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -596,7 +596,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="hidden--until-lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/close-contact-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -653,7 +653,7 @@ class CoronavirusFeature extends Component {
                   For <strong>Patients</strong>
                 </p>
               </div>
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/mobile-care-1.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -688,7 +688,7 @@ class CoronavirusFeature extends Component {
                   For <strong>Caregivers</strong>
                 </p>
               </div>
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/mobile-care-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -761,7 +761,7 @@ class CoronavirusFeature extends Component {
             </div>
 
             <div className="hidden--until-lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/care.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -829,7 +829,7 @@ class CoronavirusFeature extends Component {
                   flying off American shelves:
                 </p>
                 <div className="hidden--lg">
-                  <Image
+                  <LazyImage
                     src="/images/features/coronavirus/mobile-masks-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.full}
@@ -860,7 +860,7 @@ class CoronavirusFeature extends Component {
                   <div className="mask-half">
                     <h4 className="margin-bottom--none">Surgical Masks</h4>
                     <div className="text--center">
-                      <Image
+                      <LazyImage
                         src="/images/features/coronavirus/surgical-mask-3.png"
                         className="image--max-width"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -890,7 +890,7 @@ class CoronavirusFeature extends Component {
                   <div className="mask-half">
                     <h4 className="margin-bottom--none">N95 Respirators</h4>
                     <div className="text--center">
-                      <Image
+                      <LazyImage
                         src="/images/features/coronavirus/n95-respirator-4.png"
                         className="image--max-width n95"
                         sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -956,7 +956,7 @@ class CoronavirusFeature extends Component {
                   bandanas, rubber bands, and coffee filters.
                 </p>
                 <div className="hidden--lg">
-                  <Image
+                  <LazyImage
                     src="/images/features/coronavirus/mobile-cloth-masks-1.png"
                     className="image--max-width"
                     sizes={config.sizes.full}
@@ -964,7 +964,7 @@ class CoronavirusFeature extends Component {
                   />
                 </div>
                 <div className="hidden--until-lg">
-                  <Image
+                  <LazyImage
                     src="/images/features/coronavirus/cloth-masks.png"
                     className="image--max-width"
                     sizes={config.sizes.full}
@@ -997,7 +997,7 @@ class CoronavirusFeature extends Component {
                   damage or change to shape
                 </p>
                 <div className="hidden--lg">
-                  <Image
+                  <LazyImage
                     src="/images/features/coronavirus/mobile-cloth-masks-2.png"
                     className="image--max-width"
                     sizes={config.sizes.full}
@@ -1071,7 +1071,7 @@ class CoronavirusFeature extends Component {
                   that we have a plan on how to deal with situations like these.
                 </p>
                 <div className="coronavirus-around-the-world-mobile">
-                  <Image
+                  <LazyImage
                     src="/images/features/coronavirus/mobile-line-of-command.jpg"
                     className="image--max-width"
                     sizes={config.sizes.full}
@@ -1131,7 +1131,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="hidden--lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/mobile-local-ground-team.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -1169,7 +1169,7 @@ class CoronavirusFeature extends Component {
               </div>
             </div>
             <div className="hidden--until-lg">
-              <Image
+              <LazyImage
                 src="/images/features/coronavirus/local-ground-team-2.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -1190,7 +1190,7 @@ class CoronavirusFeature extends Component {
                 </h3>
               </div>
             </div>
-            <Image
+            <LazyImage
               src="/images/features/coronavirus/response-airport.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
@@ -1229,7 +1229,7 @@ class CoronavirusFeature extends Component {
                 and monitor their symptoms.
               </p>
             </div>
-            <Image
+            <LazyImage
               src="/images/features/coronavirus/response-hospital-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
@@ -1275,7 +1275,7 @@ class CoronavirusFeature extends Component {
                 plan to manage the situation.
               </p>
             </div>
-            <Image
+            <LazyImage
               src="/images/features/coronavirus/response-city-2.jpg"
               className="image--max-width"
               sizes={config.sizes.full}
@@ -1366,7 +1366,7 @@ class CoronavirusFeature extends Component {
                     rel="noopener noreferrer"
                     href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
                   >
-                    <Image
+                    <LazyImage
                       src="/images/features/coronavirus/logo-who.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
@@ -1401,7 +1401,7 @@ class CoronavirusFeature extends Component {
                     rel="noopener noreferrer"
                     href="https://www.cdc.gov/coronavirus/2019-nCoV/"
                   >
-                    <Image
+                    <LazyImage
                       src="/images/features/coronavirus/logo-cdc.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
@@ -1437,7 +1437,7 @@ class CoronavirusFeature extends Component {
                     rel="noopener noreferrer"
                     href="https://www.niaid.nih.gov/diseases-conditions/coronaviruses"
                   >
-                    <Image
+                    <LazyImage
                       src="/images/features/coronavirus/logo-nih.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}
@@ -1468,7 +1468,7 @@ class CoronavirusFeature extends Component {
                     rel="noopener noreferrer"
                     href="https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov"
                   >
-                    <Image
+                    <LazyImage
                       src="/images/features/coronavirus/logo-fda.jpg"
                       className="image--max-width"
                       sizes={config.sizes.full}

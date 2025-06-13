@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layouts/layout'
 import config from '../../config'
-import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Columns from '../components/columns'
 import ImageBlock from '../components/image-block'
@@ -10,11 +9,12 @@ import Card from '../components/card'
 import Quote from '../components/quote'
 import OpenSourceDesktop from '../assets/images/os-desktop.inline.svg'
 import OpenSourceMobile from '../assets/images/os-mobile.inline.svg'
+import SmartImage, { LazyImage, HeroCriticalImage } from '../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
   metaDescription:
-    'Healthcare needs to be open. We’ve built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.',
+    "Healthcare needs to be open. We've built 10 of our own open source products and integrated open source code with a range of clients. Our services range from guidance to design and development.",
   heroImage: '/images/open_source/open-source.jpg',
 }
 
@@ -22,7 +22,7 @@ const openSourceConversations = [
   {
     link: 'https://designmuseumfoundation.org/open-source-healthcare/',
     image: '/images/open_source/Artboard-1_4-techtalks.jpg',
-    title: 'It’s Time for Open Source Healthcare',
+    title: "It's Time for Open Source Healthcare",
     caption:
       'Designers can and should shape the future of healthcare, from how products and systems work to the underlying infrastructure and standards these products and services are built upon.',
   },
@@ -95,7 +95,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="flip-child mainImg">
-                  <Image
+                  <HeroCriticalImage
                     src="/images/open_source/open-source-bgd.png"
                     className="image--max-width"
                     sizes={config.sizes.full}
@@ -222,7 +222,7 @@ class OpenSourcePage extends Component {
             >
               The GoInvo studio is one of the most talented groups of designers
               I have ever met in the healthcare space. Not only are their ideas,
-              designs, and graphics remarkable, but I haven’t yet figured out
+              designs, and graphics remarkable, but I haven't yet figured out
               how they know so much about medicine and its future.
             </Quote>
           </div>
@@ -238,7 +238,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="pad-horizontal pure-u-sm-1-3">
-                  <Image
+                  <LazyImage
                     src="/images/open_source/trust.png"
                     className="image--max-width-80"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -249,7 +249,7 @@ class OpenSourcePage extends Component {
                   </p>
                 </div>
                 <div className="pad-horizontal pure-u-sm-1-3">
-                  <Image
+                  <LazyImage
                     src="/images/open_source/innovation.png"
                     className="image--max-width-80"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -261,7 +261,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="pad-horizontal pure-u-sm-1-3">
-                  <Image
+                  <LazyImage
                     src="/images/open_source/public-good.png"
                     className="image--max-width-80"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -288,7 +288,7 @@ class OpenSourcePage extends Component {
                       </div>
 
                       <div className=" pure-u-lg-1-2 flip-child imgMaxWidth">
-                        <Image
+                        <LazyImage
                           src="/images/open_source/health-lab.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -302,7 +302,7 @@ class OpenSourcePage extends Component {
                   <Card link="https://open-health-manager.github.io/Design/">
                     <div className="wrap-parent">
                       <div className="pure-u-md-1-2 wrap imgMaxWidth">
-                        <Image
+                        <LazyImage
                           src="/images/open_source/health-manager.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -340,7 +340,7 @@ class OpenSourcePage extends Component {
                       </div>
 
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth">
-                        <Image
+                        <LazyImage
                           src="/images/open_source/health-picture.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -354,7 +354,7 @@ class OpenSourcePage extends Component {
                   <Card link="/vision/own-your-health-data/">
                     <div className="wrap-parent">
                       <div className="pure-u-md-1-2 wrap imgMaxWidth">
-                        <Image
+                        <LazyImage
                           src="/images/open_source/health-data-ownership.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -367,7 +367,7 @@ class OpenSourcePage extends Component {
                         </h4>
                         <p className="text">
                           Establishing data ownership rights is critical to
-                          protecting patient care. We’ve mapped out the changes
+                          protecting patient care. We've mapped out the changes
                           that need to happen and illustrated them to be
                           accessible for both policy makers and the general
                           public.
@@ -441,7 +441,7 @@ class OpenSourcePage extends Component {
             <div className="max-width content-padding pad-vertical--double">
               <div className="pure-u-md-1-2">
                 <h2 className="header--xl noTopMargin">
-                  Let’s build better care together!
+                  Let's build better care together!
                 </h2>
                 <p className="text">
                   Interested in using, contributing to, or funding these
@@ -462,7 +462,7 @@ class OpenSourcePage extends Component {
               </div>
 
               <div className="pure-u-md-1-2 hidden--sm">
-                <Image
+                <LazyImage
                   src="/images/open_source/cta-community.png"
                   className="image--max-width"
                   sizes={config.sizes.full}

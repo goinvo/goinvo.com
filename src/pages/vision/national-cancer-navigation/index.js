@@ -10,6 +10,7 @@ import Divider from '../../../components/divider'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'National Cancer Navigation - GoInvo',
@@ -92,14 +93,14 @@ class NationalCancerNavigationFeature extends Component {
                 return (
                   <div key={i} className="pure-g margin-bottom--double">
                     <div className="pure-u-1 pure-u-lg-1-2">
-                      <Image
+                      <LazyImage
                         src={`/images/features/national-cancer-navigation/${i}-prob.png`}
                         className="image--max-width"
                         sizes={config.sizes.full}
                       />
                     </div>
                     <div className="pure-u-1 pure-u-lg-1-2">
-                      <Image
+                      <LazyImage
                         src={`/images/features/national-cancer-navigation/${i}-solve.png`}
                         className="image--max-width"
                         sizes={config.sizes.full}
@@ -211,7 +212,7 @@ class NationalCancerNavigationFeature extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Image
+                        <LazyImage
                           src="/images/features/national-cancer-navigation/highlevel-preview.png"
                           className="image--max-width display--block"
                           sizes={
@@ -241,7 +242,7 @@ class NationalCancerNavigationFeature extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Image
+                        <LazyImage
                           src="/images/features/national-cancer-navigation/breakdown-preview.png"
                           className="image--max-width display--block"
                           sizes={

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Image from './image'
+import { LazyImage } from './optimized-image'
 
 import team from '../data/team.json'
 import alumni from '../data/alumni.json'
@@ -31,7 +31,7 @@ class Author extends Component {
     return (
       <div className="author">
         <div className="author__image pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-          <Image
+          <LazyImage
             src={
               this.props.image || (this.state.author && this.state.author.image)
             }

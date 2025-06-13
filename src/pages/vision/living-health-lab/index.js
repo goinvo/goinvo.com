@@ -12,6 +12,7 @@ import Reference from '../../../components/reference'
 import Divider from '../../../components/divider'
 
 import config from '../../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'Living Health Lab - GoInvo',
@@ -72,7 +73,7 @@ class LivingHealthLabFeature extends Component {
             return (
               <div key={n}>
                 <div className="lhl-image-max-width">
-                  <Image
+                  <LazyImage
                     src={`/images/features/living-health-lab/${path}${i +
                       1}.${imageType}`}
                     className="image--max-width"
@@ -97,7 +98,7 @@ class LivingHealthLabFeature extends Component {
                   }`}
                 onClick={() => this.goToCarouselSlide(id, i)}
               >
-                <Image
+                <LazyImage
                   src={`/images/features/living-health-lab/${path}${i +
                     1}.${imageType}`}
                   className="image--max-width"
@@ -183,7 +184,7 @@ class LivingHealthLabFeature extends Component {
               <div className="pure-g button-group margin-bottom">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="margin-top--double margin-right">
-                    <Image
+                    <LazyImage
                       src="/images/features/living-health-lab/living-health-lab-workbook.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullInsideMaxWidth}
@@ -233,7 +234,7 @@ class LivingHealthLabFeature extends Component {
               <div className="pure-g button-group margin-bottom">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <div className="margin-top--double">
-                    <Image
+                    <LazyImage
                       src="/images/features/living-health-lab/viz_one_in_five.png"
                       className="image--max-width"
                       sizes={config.sizes.fullInsideMaxWidth}
@@ -254,7 +255,7 @@ class LivingHealthLabFeature extends Component {
             <div className="pure-g margin-vertical--double">
               <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding text--center">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/viz_migraines.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -266,7 +267,7 @@ class LivingHealthLabFeature extends Component {
               </div>
               <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding text--center">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/viz_arthritis.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -278,7 +279,7 @@ class LivingHealthLabFeature extends Component {
               </div>
               <div className="pure-u-1-1 pure-u-lg-1-3 margin-bottom--double">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding text--center">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/viz_ibs.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -311,7 +312,7 @@ class LivingHealthLabFeature extends Component {
             <div className="pure-g margin-vertical--double">
               <div className="pure-u-1-2 pure-u-lg-1-5">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/step-1-b.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -322,7 +323,7 @@ class LivingHealthLabFeature extends Component {
               </div>
               <div className="pure-u-1-2 pure-u-lg-1-5">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/step-2-b.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -332,7 +333,7 @@ class LivingHealthLabFeature extends Component {
               </div>
               <div className="pure-u-1-2 pure-u-lg-1-5">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/step-3-b.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -343,7 +344,7 @@ class LivingHealthLabFeature extends Component {
               </div>
               <div className="pure-u-1-2 pure-u-lg-1-5">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/step-4-b.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -353,7 +354,7 @@ class LivingHealthLabFeature extends Component {
               </div>
               <div className="pure-u-1-2 pure-u-lg-1-5">
                 <div className="max-width--48 max-width--60--only-lg margin-auto content-padding">
-                  <Image
+                  <LazyImage
                     src="/images/features/living-health-lab/step-5-b.png"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -383,7 +384,7 @@ class LivingHealthLabFeature extends Component {
 
             <h2 className="header--lg margin-top--trip">Design</h2>
 
-            <Image
+            <LazyImage
               src="/images/features/living-health-lab/LHL_project_timeline.jpg"
               className="image--max-width"
               sizes={config.sizes.fullInsideMaxWidth}
@@ -626,7 +627,7 @@ class LivingHealthLabFeature extends Component {
               direct individuals toward the self-tracking strategy that best
               aligns with where they are in their own “Health Journey.”
             </p>
-            <Image
+            <LazyImage
               src="/images/features/living-health-lab/health-journey.png"
               className="image--max-width lhl-image-max-width"
               sizes={config.sizes.fullInsideMaxWidth}
@@ -734,7 +735,7 @@ class LivingHealthLabFeature extends Component {
               questions and have <b>much to gain</b> may be the easiest to
               reach, but many others could also benefit from Living Health Lab:
             </p>
-            <Image
+            <LazyImage
               src="/images/features/living-health-lab/user-chart.png"
               className="image--max-width lhl-image-max-width lhl-user-chart"
               sizes={config.sizes.fullInsideMaxWidth}

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
 //import Image from '../../image'
-import BackgroundImage from '../../background-image'
+import { LazyImage } from '../../optimized-image'
+import React, { Component } from 'react'
 import { mediaUrl } from '../../../helpers'
 
 class PosterCard extends Component {
@@ -17,11 +17,19 @@ class PosterCard extends Component {
           <a href={downloadLink}>
             <div className="image-block image-block--hoverable margin-top--none">
               <div className="image-block__image-container">
-                <BackgroundImage
+                <LazyImage
                   src={image}
                   sizes={sizes}
                   className="image-block__image"
                   alt={id}
+                  placeholderType="skeleton"
+                  placeholderColor="#f0f0f0"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center center'
+                  }}
                 />
               </div>
             </div>

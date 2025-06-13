@@ -4,6 +4,9 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -28,6 +31,13 @@ module.exports = {
       options: {
         name: 'case-studies',
         path: `${__dirname}/src/case-studies/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images/`,
       },
     },
     {

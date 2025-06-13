@@ -4,7 +4,7 @@ import SlickCarousel from 'react-slick'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
+import { LazyImage } from '../../../components/optimized-image'
 import Author from '../../../components/author'
 import Divider from '../../../components/divider'
 import ModelViewer from '../../../components/model-viewer'
@@ -120,7 +120,7 @@ class GenAIFeature extends Component {
                 </button>
               </div>
 
-              <Image
+              <LazyImage
                 src="/images/features/visual-storytelling-with-genai/genai-3d-model-3.jpg"
                 className="image--max-width"
                 alt="Hospital 3D Model"
@@ -145,7 +145,7 @@ class GenAIFeature extends Component {
             <p>Model images are then styled using GenAI tools like <strong>Midjourney</strong> and are guided by prompts tailored to each project’s visual direction. What once took days to illustrate can now be completed in a matter of hours. Scene changes and revisions take a quick camera pivot in the model and an entirely new scene is generated.</p>
             <p>The time investment thus shifts from redrawing each scene by hand to a one-time effort of constructing a detailed 3D model. Once built, these virtual environments become reusable and flexible assets that can support new stories and future projects.</p>
 
-            <Image
+            <LazyImage
               src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-2-3.jpg"
               className="image--max-width"
               alt="Hospital 3D scene"
@@ -158,7 +158,7 @@ class GenAIFeature extends Component {
               alt="arrow pointing down"
             />
 
-            <Image
+            <LazyImage
               src="/images/features/visual-storytelling-with-genai/genai-trauma-room-midjourney-3.jpg"
               className="image--max-width"
               alt="Hospital 3D scene"
@@ -171,7 +171,7 @@ class GenAIFeature extends Component {
               alt="arrow pointing down"
             />
 
-            <Image
+            <LazyImage
               src="/images/features/visual-storytelling-with-genai/genai-trauma-room-characters-3.jpg"
               className="image--max-width"
               alt="Hospital 3D scene"
@@ -197,7 +197,7 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-1-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -211,7 +211,7 @@ class GenAIFeature extends Component {
                   <div className="col col-spacer text--center equal-sign">=</div>
                   <div className="col col-3 col-full">
                     <div className="label sm-only">Midjourney Output</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-1-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -222,7 +222,7 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-2-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -236,7 +236,7 @@ class GenAIFeature extends Component {
                   <div className="col col-spacer text--center equal-sign">=</div>
                   <div className="col col-3 col-full">
                     <div className="label sm-only">Midjourney Output</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-2-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -247,7 +247,7 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-3-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -261,7 +261,7 @@ class GenAIFeature extends Component {
                   <div className="col col-spacer text--center equal-sign">=</div>
                   <div className="col col-3 col-full">
                     <div className="label sm-only">Midjourney Output</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-3-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -272,7 +272,7 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-4-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -286,7 +286,7 @@ class GenAIFeature extends Component {
                   <div className="col col-spacer text--center equal-sign">=</div>
                   <div className="col col-3 col-full">
                     <div className="label sm-only">Midjourney Output</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-4-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -297,7 +297,7 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-5-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"
@@ -311,7 +311,7 @@ class GenAIFeature extends Component {
                   <div className="col col-spacer text--center">=</div>
                   <div className="col col-3 col-full">
                     <div className="label sm-only">Midjourney Output</div>
-                    <Image
+                    <LazyImage
                       src="/images/features/visual-storytelling-with-genai/genai-midjourney-scene-5-3.jpg"
                       className="image--max-width"
                       alt="Hospital 3D scene"

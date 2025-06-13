@@ -4,7 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
+import { LazyImage } from '../../../components/optimized-image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
 
@@ -40,7 +40,7 @@ class TestTreatTraceFeature extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/test-treat-trace/test-treat-trace-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -114,21 +114,26 @@ class TestTreatTraceFeature extends Component {
                   },
                   {
                     title:
-                      'Stein, R., Wroth, C., & Hurt, A. (2020, May 7). U.S. Coronavirus Testing Still Falls Short. How’s Your State Doing? Retrieved from',
+                      "Stein, R., Wroth, C., & Hurt, A. (2020, May 7). U.S. Coronavirus Testing Still Falls Short. How's Your State Doing? Retrieved from",
                     link:
-                      'https://www.npr.org/sections/health-shots/2020/05/07/851610771/u-s-coronavirus-testing-still-falls-short-hows-your-state-doing#res851618829',
+                      'https://www.npr.org/sections/health-shots/2020/05/07/851610771/u-s-coronavirus-testing-still-falls-short-hows-your-state-doing',
                   },
                   {
                     title:
-                      'Watson, C., Cicero, A., Blumenstock, J., & Fraser, M.  A National Plan to Enable Comprehensive COVID-19 Case Finding and Contact Tracing in the US [PDF File]. Johns Hopkins Center for Health Security. Retrieved from',
+                      'Swanson, I., & Leonhardt, M. (2020, May 5). WarnerRobins.com',
                     link:
-                      'https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200410-national-plan-to-contact-tracing.pdf',
+                      'https://www.warnerrobins.com/2020/05/05/free-covid-19-testing-available-at-museum-of-aviation/',
                   },
                   {
                     title:
-                      'The National Association of County and City Health Officials’ Position Statement on Public Health Capacity for COVID-19 Contact Tracing Surge. Retrieved from',
+                      'TeamSafe. About TeamSafe. Retrieved from',
+                    link: 'https://www.teamsa.fe/',
+                  },
+                  {
+                    title:
+                      "The National Association of County and City Health Officials' Position Statement on Public Health Capacity for COVID-19 Contact Tracing Surge. Retrieved from",
                     link:
-                      'https://www.naccho.org/uploads/downloadable-resources/Contact-Tracing-Position-Media-Release_4.16.20.pdf',
+                      'https://www.naccho.org/uploads/downloadable-resources/NACCHO-Contact-Tracing-Statement.pdf',
                   },
                   {
                     title: 'Contact tracing. (n.d.). Retrieved from',

@@ -10,6 +10,7 @@ import References from '../../../components/references'
 import Divider from '../../../components/divider'
 
 import config from '../../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'Fraud, Waste, and Abuse in Healthcare - GoInvo',
@@ -71,7 +72,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 </div>
                 <div className="columns__item--2">
                   <div className="margin-auto">
-                    <Image
+                    <LazyImage
                       src="/images/features/fraud-waste-abuse-in-healthcare/fwa-definition1.jpg"
                       className="image--max-width-small"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -109,7 +110,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </Quote>
               <h2 className="header--lg text--center">30% FWA</h2>
               <div className="margin-auto">
-                <Image
+                <LazyImage
                   src="/images/features/fraud-waste-abuse-in-healthcare/fwa-high-pie2.jpg"
                   className="image--max-width-half image--center"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -137,7 +138,7 @@ class FraudWasteAbuseHealthcare extends Component {
               </div>
               <h2 className="header--lg text--left">For every $1 Invested, $4 Recovered</h2>
               <div className="margin-auto">
-                <Image
+                <LazyImage
                   src="/images/features/fraud-waste-abuse-in-healthcare/roi.jpg"
                   className="image--max-width-med image--center"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -216,7 +217,7 @@ class FraudWasteAbuseHealthcare extends Component {
                 </div>
                 <div className="columns__item--2 container--align-center">
                   <div className="margin-auto">
-                    <Image
+                    <LazyImage
                       src="/images/features/fraud-waste-abuse-in-healthcare/phone.png"
                       className="image--max-width"
                     />
@@ -229,13 +230,13 @@ class FraudWasteAbuseHealthcare extends Component {
                 It is built from a database which collects data from numerous sources, such as the Health Accuracy Receipt.
               </p>
               <div className="margin-auto pad-top">
-                <Image
+                <LazyImage
                   src="/images/features/fraud-waste-abuse-in-healthcare/map-view.jpg"
                   className="image--max-width"
                 />
               </div>
               <div className="margin-auto pad-top--crazy">
-                <Image
+                <LazyImage
                   src="/images/features/fraud-waste-abuse-in-healthcare/tree-view-v02.jpg"
                   className="image--max-width"
                 />

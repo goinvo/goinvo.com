@@ -8,6 +8,7 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 
 import config from '../../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'Augmented Clinical Decision Support - GoInvo',
@@ -67,7 +68,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
             return (
               <div key={n}>
                 <div className="acds-image-max-width">
-                  <Image
+                  <LazyImage
                     src={`/images/features/augmented-clinical-decision-support/${path}${i +
                       1}.${imageType}`}
                     className="image--max-width"
@@ -92,7 +93,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                   }`}
                 onClick={() => this.goToCarouselSlide(id, i)}
               >
-                <Image
+                <LazyImage
                   src={`/images/features/augmented-clinical-decision-support/${path}${i +
                     1}.${imageType}`}
                   className="image--max-width"
@@ -194,7 +195,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <LazyImage
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-primary-care.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMaxWidth}
@@ -221,7 +222,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <LazyImage
                   src="/images/features/augmented-clinical-decision-support/clinical-task-guidance-system-diagram-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMaxWidth}
@@ -267,7 +268,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <LazyImage
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-pregnancy.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMaxWidth}
@@ -292,7 +293,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <LazyImage
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-head-injury.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMaxWidth}
@@ -317,7 +318,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <LazyImage
                   src="/images/features/augmented-clinical-decision-support/augmented-cds-process-map-cancer.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMaxWidth}

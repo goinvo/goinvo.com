@@ -4,7 +4,7 @@ import Layout from '../../components/layouts/layout'
 import Card from '../../components/card'
 import ImageBlock from '../../components/image-block'
 import Columns from '../../components/columns'
-import Image from '../../components/image'
+import { HeroCriticalImage, LazyImage } from '../../components/optimized-image'
 import Quote from '../../components/quote'
 import SubscribeForm from '../../components/form-subscribe'
 import Carousel from '../../components/carousel'
@@ -50,35 +50,35 @@ class VisionPage extends Component {
       <Layout frontmatter={frontmatter}>
         <div className="pure-g">
           <div className="pure-u-1-2 hidden--sm">
-            <Image
+            <HeroCriticalImage
               className="image--max-width"
               src="/images/vision/vision-illustration-desktop-left.jpg"
               alt=""
             />
           </div>
           <div className="pure-u-1-2 hidden--sm">
-            <Image
+            <HeroCriticalImage
               className="image--max-width"
               src="/images/vision/vision-illustration-desktop-right.jpg"
               alt=""
             />
           </div>
           <div className="pure-u-1 hidden--after-sm">
-            <Image
+            <HeroCriticalImage
               className="image--max-width"
               src="/images/vision/vision-illustration-mobile-home.jpg"
               alt=""
             />
           </div>
           <div className="pure-u-1 hidden--after-sm">
-            <Image
+            <HeroCriticalImage
               className="image--max-width"
               src="/images/vision/vision-illustration-mobile-practice.jpg"
               alt=""
             />
           </div>
           <div className="pure-u-1 hidden--after-sm">
-            <Image
+            <HeroCriticalImage
               className="image--max-width"
               src="/images/vision/vision-illustration-mobile-country.jpg"
               alt=""
@@ -155,7 +155,7 @@ class VisionPage extends Component {
         <div className="max-width content-padding pad-vertical--quad">
           <div className="pure-g">
             <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-              <Image
+              <LazyImage
                 src="/images/vision/emerging-tech-books.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

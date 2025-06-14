@@ -4,7 +4,6 @@ import { MDXProvider } from "@mdx-js/react"
 import Helmet from 'react-helmet'
 
 import Layout from './layout'
-import Image from '../image'
 import { HeroCriticalImage, LazyImage } from '../optimized-image'
 import Results from '../results'
 import Columns from '../columns'

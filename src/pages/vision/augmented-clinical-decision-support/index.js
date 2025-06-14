@@ -4,7 +4,6 @@ import SlickCarousel from 'react-slick'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
 import Author from '../../../components/author'
 
 import config from '../../../../config'

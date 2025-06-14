@@ -6,7 +6,6 @@ import { format, precisionRound } from 'd3-format'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import { LazyImage } from '../../../components/optimized-image'
-import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 

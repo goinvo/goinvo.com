@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
 import Quote from '../../../components/quote'
 import Author from '../../../components/author'
 import References from '../../../components/references'
@@ -21,7 +20,6 @@ const frontmatter = {
   heroImage:
     '/images/features/eligibility/hero-image.jpg',
 }
-
 
 class EligibilityEngine extends Component {
   render() {
@@ -207,7 +205,6 @@ class EligibilityEngine extends Component {
                   </p>
                 </div>
               </div>
-
 
               <p><strong>Proactive Service Recommendations</strong></p>
               <p>

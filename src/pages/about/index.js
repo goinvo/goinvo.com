@@ -7,6 +7,7 @@ import SmartImage, { LazyImage } from '../../components/optimized-image'
 import TeamMember from '../../components/team-member'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
+import ImageBlock from '../../components/image-block'
 import team from '../../data/team.json'
 import SubscribeForm from '../../components/form-subscribe'
 
@@ -318,9 +319,10 @@ const AboutPage = () => (
                 externalLink={item.externalLink}
                 suppressNewTab={item.suppressNewTab}
               >
-                <LazyImage
-                  src={item.image}
-                  alt={item.title}
+                <ImageBlock
+                  image={item.image}
+                  title={item.title}
+                  caption={item.caption}
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                   hoverable
                 />

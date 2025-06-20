@@ -8,6 +8,7 @@ import Image from '../../../components/image'
 import Author from '../../../components/author'
 import Divider from '../../../components/divider'
 import ModelViewer from '../../../components/model-viewer'
+import Video from '../../../components/video'
 import config from '../../../../config'
 
 import arrowDown from '../../../assets/images/icon-arrowDown.svg'
@@ -182,6 +183,28 @@ class GenAIFeature extends Component {
               alt="Hospital 3D scene"
             />
             <p className="caption">3. Final image post-processing completed in Photoshop with additional characters added in Procreate.</p>
+
+            <img
+              className="arrow-down"
+              src={arrowDown}
+              alt="arrow pointing down"
+            />
+
+            <Video
+              sources={[
+                {
+                  src:
+                    '/videos/features/visual-storytelling-with-genai/genai-trauma-room-characters-animation.mp4',
+                  format: 'mp4',
+                }
+              ]}
+              width="100%"
+              height="480"
+              poster="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
+              fallback="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
+              loop
+            />
+            <p className="caption">4. Animation created with <strong>Midjourney Video</strong> using the final post-processed image as the starting frame.</p>
 
             <h4 className="margin-top--trip">GenAI motivates creative experimentation.</h4>
             <p>This workflow doesn’t just save us time, it also unlocks new creative possibilities that might have been previously out of reach. GenAI tools like Midjourney allow us to explore a wide range of visual styles such as surrealist, graphic novel-inspired, or painterly, and rapidly iterate our ideas in real-time. Where ideas were once narrowed by a project’s timeline or the limits of what we could achieve by hand, GenAI allows our ideas to expand in scale and ambition, no longer limited by traditional methods.</p>

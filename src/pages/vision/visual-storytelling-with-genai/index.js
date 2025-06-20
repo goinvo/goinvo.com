@@ -199,7 +199,7 @@ class GenAIFeature extends Component {
                 }
               ]}
               width="100%"
-              height="480"
+              height="560"
               poster="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
               fallback="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
               loop

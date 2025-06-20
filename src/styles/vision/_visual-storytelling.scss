@@ -108,12 +108,19 @@
         .col {
           flex-direction: row;
 
-          img {
-            align-self: center;
-          }
-
           &.col-3 {
             width: 46%;
+          }
+
+          &.col-3:first-child {
+            display: flex;
+            flex-direction: column;
+
+            .image-container {
+              flex: 1;
+              display: flex;
+              align-items: center; // Centers image vertically
+            }
           }
 
           &.col-spacer {

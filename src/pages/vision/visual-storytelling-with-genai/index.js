@@ -197,11 +197,13 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
-                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-1-3.jpg"
-                      className="image--max-width"
-                      alt="Hospital 3D scene"
-                    />
+                    <div className="image-container">
+                      <Image
+                        src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-1-3.jpg"
+                        className="image--max-width"
+                        alt="Hospital 3D scene"
+                      />
+                    </div>
                   </div>
                   <div className="col col-spacer text--center plus-sign">+</div>
                   <div className="col col-3">
@@ -222,11 +224,13 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
-                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-2-3.jpg"
-                      className="image--max-width"
-                      alt="Hospital 3D scene"
-                    />
+                    <div className="image-container">
+                      <Image
+                        src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-2-3.jpg"
+                        className="image--max-width"
+                        alt="Hospital 3D scene"
+                      />
+                    </div>
                   </div>
                   <div className="col col-spacer text--center plus-sign">+</div>
                   <div className="col col-3">
@@ -247,11 +251,13 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
-                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-3-3.jpg"
-                      className="image--max-width"
-                      alt="Hospital 3D scene"
-                    />
+                    <div className="image-container">
+                      <Image
+                        src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-3-3.jpg"
+                        className="image--max-width"
+                        alt="Hospital 3D scene"
+                      />
+                    </div>
                   </div>
                   <div className="col col-spacer text--center plus-sign">+</div>
                   <div className="col col-3">
@@ -272,11 +278,13 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
-                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-4-3.jpg"
-                      className="image--max-width"
-                      alt="Hospital 3D scene"
-                    />
+                    <div className="image-container">
+                      <Image
+                        src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-4-3.jpg"
+                        className="image--max-width"
+                        alt="Hospital 3D scene"
+                      />
+                    </div>
                   </div>
                   <div className="col col-spacer text--center plus-sign">+</div>
                   <div className="col col-3">
@@ -297,11 +305,13 @@ class GenAIFeature extends Component {
                 <div className="diagram-row">
                   <div className="col col-3">
                     <div className="label sm-only">Rhino 3d Model Render</div>
-                    <Image
-                      src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-5-3.jpg"
-                      className="image--max-width"
-                      alt="Hospital 3D scene"
-                    />
+                    <div className="image-container">
+                      <Image
+                        src="/images/features/visual-storytelling-with-genai/genai-3d-render-scene-5-3.jpg"
+                        className="image--max-width"
+                        alt="Hospital 3D scene"
+                      />
+                    </div>
                   </div>
                   <div className="col col-spacer text--center">+</div>
                   <div className="col col-3">
@@ -326,7 +336,7 @@ class GenAIFeature extends Component {
           <div className="max-width pad-all">
             <h2 className="header--lg text--center margin-top--trip">Why does this matter?</h2>
             <p>This workflow is designed for storytelling at scale. For complex systems and stories, we need hundreds of custom visuals. GenAI allows us to move faster and empowers us to lead with ideas rather than limit them. It helps us sketch crazy ideas, try wild graphics, and show real stories without getting stuck in every pixel and every tool.</p>
-            <p>The concept takes the lead, not the toolset &emdash; bringing bold ideas to life and more prototypes to the table. The more we can make and the less time it takes to do so, the better the ideas we can bring to the work.</p>
+            <p>The concept takes the lead, not the toolset —bringing bold ideas to life and more prototypes to the table. The more we can make and the less time it takes to do so, the better the ideas we can bring to the work.</p>
           </div>
 
           <div className="max-width pad-all">

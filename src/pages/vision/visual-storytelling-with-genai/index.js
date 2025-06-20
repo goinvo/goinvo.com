@@ -151,7 +151,7 @@ class GenAIFeature extends Component {
               className="image--max-width"
               alt="Hospital 3D scene"
             />
-            <p className="caption">1. Hospital trauma room render captured in Rhinoceros 3D model.</p>
+            <p className="caption">1. Hospital trauma room render captured in <strong>Rhinoceros 3D</strong> model.</p>
 
             <img
               className="arrow-down"
@@ -169,7 +169,7 @@ class GenAIFeature extends Component {
                 alt="Hospital 3D scene"
               />
             </div>
-            <p className="caption">2. Hospital trauma room render stylized in Midjourney with accompanying prompt.</p>
+            <p className="caption">2. Hospital trauma room render stylized in <strong>Midjourney</strong> with accompanying prompt.</p>
 
             <img
               className="arrow-down"
@@ -182,7 +182,7 @@ class GenAIFeature extends Component {
               className="image--max-width"
               alt="Hospital 3D scene"
             />
-            <p className="caption">3. Final image post-processing completed in Photoshop with additional characters added in Procreate.</p>
+            <p className="caption">3. Final image post-processing completed in <strong>Photoshop</strong> with additional characters added in <strong>Procreate.</strong></p>
 
             <img
               className="arrow-down"

@@ -211,35 +211,22 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
                     {results.filter(r => r.featured).map((result) => (
                       <div key={result.id} className="project-search__result project-search__result--featured">
                         <div className="project-search__result-image">
-                          {result.type === 'capability' ? (
-                            <div className="project-search__capability-icon">
-                              💡
-                            </div>
-                          ) : (
-                            <Link to={result.link || `/work/${result.slug}`}>
-                              {result.image && (
-                                <ImageBlock
-                                  image={result.image}
-                                  alt={result.title}
-                                  className="project-search__image"
-                                />
-                              )}
-                            </Link>
-                          )}
+                          <Link to={result.link || `/work/${result.slug}`}>
+                            {result.image && (
+                              <ImageBlock
+                                image={result.image}
+                                alt={result.title}
+                                className="project-search__image"
+                              />
+                            )}
+                          </Link>
                         </div>
                         <div className="project-search__result-content">
                           <div className="project-search__result-header">
                             <h4 className="project-search__result-title">
-                              {result.type === 'capability' ? (
-                                <span className="project-search__capability-title">
-                                  {result.title}
-                                  <span className="project-search__capability-badge">Capability</span>
-                                </span>
-                              ) : (
-                                <Link to={result.link || `/work/${result.slug}`}>
-                                  {result.title}
-                                </Link>
-                              )}
+                              <Link to={result.link || `/work/${result.slug}`}>
+                                {result.title}
+                              </Link>
                             </h4>
                             <div className="project-search__result-badges">
                               <span className="project-search__similarity-badge project-search__similarity-badge--high">
@@ -254,24 +241,8 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
                             </p>
                           )}
                           <p className="project-search__result-caption">
-                            {result.caption || result.description}
+                            {result.caption}
                           </p>
-                          {result.type === 'capability' && result.relatedCaseStudies && result.relatedCaseStudies.length > 0 && (
-                            <div className="project-search__related-work">
-                              <p><strong>Related work:</strong></p>
-                              <div className="project-search__related-links">
-                                {result.relatedCaseStudies.slice(0, 3).map(slug => (
-                                  <Link 
-                                    key={slug} 
-                                    to={`/work/${slug}`} 
-                                    className="project-search__related-link"
-                                  >
-                                    {slug.replace(/-/g, ' ')}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          )}
                           {result.aiDescription && (
                             <div className="project-search__ai-description">
                               <p><strong>Why this project fits your needs:</strong> {result.aiDescription}</p>
@@ -308,35 +279,22 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
                     {results.filter(r => !r.featured).map((result) => (
                       <div key={result.id} className="project-search__result">
                         <div className="project-search__result-image">
-                          {result.type === 'capability' ? (
-                            <div className="project-search__capability-icon">
-                              💡
-                            </div>
-                          ) : (
-                            <Link to={result.link || `/work/${result.slug}`}>
-                              {result.image && (
-                                <ImageBlock
-                                  image={result.image}
-                                  alt={result.title}
-                                  className="project-search__image"
-                                />
-                              )}
-                            </Link>
-                          )}
+                          <Link to={result.link || `/work/${result.slug}`}>
+                            {result.image && (
+                              <ImageBlock
+                                image={result.image}
+                                alt={result.title}
+                                className="project-search__image"
+                              />
+                            )}
+                          </Link>
                         </div>
                         <div className="project-search__result-content">
                           <div className="project-search__result-header">
                             <h5 className="project-search__result-title">
-                              {result.type === 'capability' ? (
-                                <span className="project-search__capability-title">
-                                  {result.title}
-                                  <span className="project-search__capability-badge">Capability</span>
-                                </span>
-                              ) : (
-                                <Link to={result.link || `/work/${result.slug}`}>
-                                  {result.title}
-                                </Link>
-                              )}
+                              <Link to={result.link || `/work/${result.slug}`}>
+                                {result.title}
+                              </Link>
                             </h5>
                             <span className="project-search__similarity-badge">
                               {result.similarityPercent}% match
@@ -348,24 +306,8 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
                             </p>
                           )}
                           <p className="project-search__result-caption">
-                            {result.caption || result.description}
+                            {result.caption}
                           </p>
-                          {result.type === 'capability' && result.relatedCaseStudies && result.relatedCaseStudies.length > 0 && (
-                            <div className="project-search__related-work">
-                              <p><strong>Related work:</strong></p>
-                              <div className="project-search__related-links">
-                                {result.relatedCaseStudies.slice(0, 2).map(slug => (
-                                  <Link 
-                                    key={slug} 
-                                    to={`/work/${slug}`} 
-                                    className="project-search__related-link"
-                                  >
-                                    {slug.replace(/-/g, ' ')}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          )}
                           {result.aiDescription && (
                             <div className="project-search__ai-description">
                               <p><strong>Relevant for your project:</strong> {result.aiDescription}</p>

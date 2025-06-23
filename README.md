@@ -740,25 +740,24 @@ Once approved changes are merged into master, then do the following in terminal 
 
 ## 🔍 Semantic Search System
 
-This website features an intelligent semantic search system that helps potential clients find relevant projects using natural language queries. The system combines **completed case studies** with **capability definitions** to provide comprehensive coverage of GoInvo's expertise areas.
+This website features an intelligent semantic search system that helps potential clients find relevant projects using natural language queries. The system uses enhanced keyword matching and semantic understanding to surface the most relevant existing projects for any buyer query.
 
 ### How It Works
 
-1. **Multi-Source Content**: Combines case studies, features, and capability definitions into a unified search index
-2. **AI-Powered Analysis**: Each item is analyzed by GPT-3.5-turbo to extract metadata and generate buyer-focused descriptions
-3. **Semantic Embeddings**: OpenAI's text-embedding-3-small model creates vector representations of all content
-4. **Enhanced Matching**: 100+ semantic keyword mappings and domain-specific boosting algorithms
-5. **Client-Side Search**: Search runs entirely in the browser using intelligent keyword matching and concept mapping
-6. **Smart Caching**: Only changed content gets reprocessed, saving time and API costs
+1. **AI-Powered Analysis**: Each project is analyzed by GPT-3.5-turbo to extract metadata and generate buyer-focused descriptions
+2. **Semantic Embeddings**: OpenAI's text-embedding-3-small model creates vector representations of project content
+3. **Enhanced Keyword Matching**: 100+ semantic keyword mappings and domain-specific boosting algorithms
+4. **Client-Side Search**: Search runs entirely in the browser using intelligent keyword matching and concept mapping
+5. **Smart Caching**: Only changed content gets reprocessed, saving time and API costs
 
 ### Search Features
 
 - **Natural Language Queries**: "I need a UI for an AI platform for therapists"
-- **Capability-Based Matching**: 20+ expertise areas beyond just completed projects
+- **Intelligent Keyword Expansion**: Automatically maps related terms (e.g., "telemetry" → "monitoring", "vital signs")
 - **Buyer-Focused Descriptions**: AI explains why each project is relevant to your specific needs
 - **Smart Filtering**: Filter by project type, industry, and complexity
 - **Real-Time Results**: Instant search with similarity scoring
-- **Compliance Awareness**: Recognizes HIPAA, SOC-2, FedRAMP, and other compliance requirements
+- **Domain-Specific Boosting**: Healthcare, enterprise, and government queries get specialized matching
 
 ### Content Sources
 
@@ -768,13 +767,14 @@ Detailed completed projects with full descriptions, client information, and port
 #### Features (`src/data/features.json`)
 Portfolio highlights and quick project overviews used throughout the site.
 
-#### Capabilities (`src/data/capabilities.json`)
-Expertise areas and potential project types that extend beyond completed work. Includes:
+### Enhanced Keyword Understanding
 
-- **Healthcare**: Telemetry dashboards, oncology platforms, therapy systems, lab interfaces, radiology solutions
-- **Enterprise**: Business intelligence, IoT platforms, team collaboration, fintech analytics, e-commerce systems
-- **Government**: Civic technology, permit systems, emergency response, transparency tools, election systems
-- **Compliance**: SOC-2, FedRAMP, HIPAA-compliant systems
+The search system recognizes and expands hundreds of related terms:
+
+- **Healthcare**: telemetry, oncology, therapy, hematology, radiology, FHIR, HIPAA
+- **Enterprise**: analytics, dashboards, IoT, fintech, logistics, SOC-2
+- **Government**: civic, municipal, permits, emergency, elections, FedRAMP
+- **Technology**: AI, platforms, systems, compliance, real-time
 
 ## 🚀 Setup Instructions
 

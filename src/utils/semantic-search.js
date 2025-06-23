@@ -177,20 +177,17 @@ const extractKeywords = (text) => {
  * @returns {number} Similarity score between 0 and 1
  */
 const calculateKeywordSimilarity = (queryKeywords, project) => {
-  // Extract project text for matching (include more fields for capabilities)
+  // Extract project text for matching
   const projectText = [
     project.title,
     project.caption,
-    project.description, // For capabilities
     project.client,
     ...(project.categories || []),
-    ...(project.keywords || []), // For capabilities
     project.metadata?.projectType,
     project.metadata?.industry,
     ...(project.metadata?.problemsSolved || []),
     ...(project.metadata?.techniques || []),
-    project.metadata?.targetAudience,
-    ...(project.compliance || []) // For capabilities
+    project.metadata?.targetAudience
   ].filter(Boolean).join(' ')
   
   const projectKeywords = extractKeywords(projectText)
@@ -233,29 +230,25 @@ const calculateKeywordSimilarity = (queryKeywords, project) => {
   }
   
   if (therapyTerms.some(term => queryText.includes(term))) {
-    if (therapyTerms.some(term => projectTextLower.includes(term)) ||
-        project.id === 'therapy-platforms') {
+    if (therapyTerms.some(term => projectTextLower.includes(term))) {
       weightedScore += 4
     }
   }
   
   if (oncologyTerms.some(term => queryText.includes(term))) {
-    if (oncologyTerms.some(term => projectTextLower.includes(term)) ||
-        project.id === 'oncology-platforms') {
+    if (oncologyTerms.some(term => projectTextLower.includes(term))) {
       weightedScore += 4
     }
   }
   
   if (labTerms.some(term => queryText.includes(term))) {
-    if (labTerms.some(term => projectTextLower.includes(term)) ||
-        project.id === 'laboratory-systems') {
+    if (labTerms.some(term => projectTextLower.includes(term))) {
       weightedScore += 4
     }
   }
   
   if (radiologyTerms.some(term => queryText.includes(term))) {
-    if (radiologyTerms.some(term => projectTextLower.includes(term)) ||
-        project.id === 'radiology-systems') {
+    if (radiologyTerms.some(term => projectTextLower.includes(term))) {
       weightedScore += 4
     }
   }
@@ -303,18 +296,12 @@ const calculateKeywordSimilarity = (queryKeywords, project) => {
     }
   }
   
-  // Compliance boosting
+  // Compliance boosting (check project content for compliance terms)
   const complianceTerms = ['hipaa', 'fhir', 'soc-2', 'fedramp', 'gdpr', 'compliance'];
   if (complianceTerms.some(term => queryText.includes(term))) {
-    if (project.compliance?.some(comp => complianceTerms.some(term => 
-        comp.toLowerCase().includes(term) || term.includes(comp.toLowerCase())))) {
+    if (complianceTerms.some(term => projectTextLower.includes(term))) {
       weightedScore += 3
     }
-  }
-  
-  // Capability type bonus (capabilities should score higher for broad queries)
-  if (project.type === 'capability') {
-    weightedScore += 1
   }
   
   // Normalize score

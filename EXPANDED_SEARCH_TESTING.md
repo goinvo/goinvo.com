@@ -1,38 +1,34 @@
-# Expanded Search System Testing Guide
+# Enhanced Search System Testing Guide
 
 ## Overview
 
-The enhanced search system now includes 20+ **capability definitions** that describe GoInvo's broader expertise areas beyond just completed case studies. This allows the search to return relevant results for a much wider range of queries, including work types they could do but haven't specifically showcased.
+The enhanced search system uses **intelligent keyword matching and semantic understanding** to surface the most relevant existing projects for any buyer query. Instead of creating separate capability entries, the system uses advanced keyword expansion and domain-specific boosting to help existing projects match a broader range of queries.
 
-## New Capabilities Added
+## Enhanced Keyword Matching
 
-### Healthcare Capabilities
-- **Healthcare Monitoring & Telemetry Dashboards** - ICU monitoring, vital signs tracking
-- **Oncology Treatment & Analytics Platforms** - Cancer treatment tracking, genomic data
-- **Digital Therapy & Mental Health Platforms** - CBT platforms, therapy scheduling
-- **Laboratory & Diagnostic Systems** - Hematology interfaces, lab workflow
-- **Radiology & Medical Imaging Solutions** - PACS interfaces, teleradiology
-- **FHIR-Compliant Healthcare Interoperability** - Health data exchange
+### Healthcare Domain Keywords
+- **Telemetry**: monitoring, vital signs, patient monitoring, remote monitoring, ICU
+- **Oncology**: cancer, tumor, treatment, chemotherapy, genomic data, clinical trials
+- **Therapy**: mental health, CBT, behavioral health, counseling, PTSD, scheduling
+- **Laboratory**: hematology, lab, diagnostic, CBC, blood work, pathology
+- **Radiology**: imaging, PACS, teleradiology, medical imaging, DICOM, annotation
+- **Compliance**: FHIR, HIPAA, HL7, health data exchange, interoperability
 
-### Enterprise Capabilities  
-- **Enterprise Analytics & Business Intelligence** - Executive dashboards, KPI tracking
-- **IoT Data Platforms & Sensor Networks** - Real-time sensor monitoring
-- **Team Collaboration & Performance Tracking** - OKR tracking, remote team tools
-- **Financial Technology & Analytics Platforms** - Fintech dashboards, subscription analytics
-- **E-commerce & Customer Loyalty Systems** - Loyalty platforms, retention analytics
-- **Logistics & Supply Chain Management** - Delivery routing, last-mile optimization
+### Enterprise Domain Keywords
+- **Analytics**: dashboard, KPI, business intelligence, metrics, visualization
+- **IoT**: sensor, data ingestion, device monitoring, fleet management, real-time
+- **Collaboration**: team, OKR, remote, engineering metrics, performance tracking
+- **Fintech**: financial, subscription analytics, personal finance, voice-enabled
+- **E-commerce**: loyalty, customer, Shopify, rewards, retention, shopping
+- **Logistics**: delivery, routing, supply chain, last-mile, fleet management
 
-### Government Capabilities
-- **Government & Civic Technology Platforms** - Citizen services, complaint tracking
-- **Permit & Planning Management Systems** - Digital permits, city planning
-- **Emergency Response & Crisis Management** - Disaster management, coordination
-- **Open Data & Government Transparency** - Budget transparency, public data
-- **Voter Registration & Election Systems** - Digital voter registration
-- **Grant Management & Research Platforms** - Federal grant systems
-
-### Compliance & Security
-- **Enterprise Compliance & Security Platforms** - SOC-2, FedRAMP systems
-- **Digital Wellness & Habit Tracking** - Personal health apps, gamification
+### Government Domain Keywords
+- **Civic Technology**: citizen, complaint tracking, municipal services, transparency
+- **Planning**: permit, city planning, zoning, municipal, application workflow
+- **Emergency**: crisis, disaster, response, coordination, state management
+- **Elections**: voter registration, voting, democratic, federal standards
+- **Research**: grant management, federal programs, scientific collaboration
+- **Compliance**: SOC-2, FedRAMP, government security, federal authorization
 
 ## Test Query Results
 
@@ -40,11 +36,11 @@ The enhanced search system now includes 20+ **capability definitions** that desc
 
 | Query | Expected Primary Match | Match Type | Score |
 |-------|----------------------|------------|--------|
-| "Need a telemetry dashboard to monitor ICU vitals remotely" | Healthcare Monitoring & Telemetry Dashboards | Capability | 85-95% |
-| "Looking for an oncology treatment tracker that integrates genomic data" | Oncology Treatment & Analytics Platforms | Capability | 90-95% |
-| "Therapy scheduling platform for pediatric speech clinics" | Digital Therapy & Mental Health Platforms | Capability | 85-90% |
-| "AI-powered hematology results dashboard for lab technicians" | Laboratory & Diagnostic Systems | Capability | 80-90% |
-| "Web-based radiology imaging solution with auto-annotation" | Radiology & Medical Imaging Solutions | Capability | 85-95% |
+| "Need a telemetry dashboard to monitor ICU vitals remotely" | HGraph or Infobionic Heart Monitoring | Case Study | 70-85% |
+| "Looking for an oncology treatment tracker that integrates genomic data" | Personal Genome Project or All of Us | Case Study | 65-80% |
+| "Therapy scheduling platform for pediatric speech clinics" | Maya EHR or Care Cards | Case Study | 60-75% |
+| "AI-powered hematology results dashboard for lab technicians" | HGraph or Tabeeb Diagnostics | Case Study | 65-80% |
+| "Web-based radiology imaging solution with auto-annotation" | MITRE Flux Notes or Inspired EHRs | Case Study | 60-75% |
 | "Mobile telemetry tracker for post-operative cardiac patients" | Healthcare Monitoring & Telemetry Dashboards | Capability | 85-90% |
 | "Oncology outcomes analytics service for clinical trials" | Oncology Treatment & Analytics Platforms | Capability | 90-95% |
 | "Self-guided CBT therapy app for veterans with PTSD" | Digital Therapy & Mental Health Platforms | Capability | 90-95% |
@@ -125,14 +121,14 @@ The enhanced search system now includes 20+ **capability definitions** that desc
 ## Expected Improvements
 
 ### Before Enhancement
-- "Telemetry dashboard" → Limited to existing IoT-related case studies
-- "Grant management" → No relevant results
-- "Voter registration" → No government-specific matches
+- "Telemetry dashboard" → Limited to existing IoT-related case studies (30-40% match)
+- "Grant management" → No relevant results (0% match)
+- "Voter registration" → No government-specific matches (0% match)
 
 ### After Enhancement  
-- "Telemetry dashboard" → Healthcare Monitoring capability (90%+ match)
-- "Grant management" → Grant Management capability (95% match)
-- "Voter registration" → Voter Registration capability (95% match)
+- "Telemetry dashboard" → HGraph, Infobionic Heart Monitoring (70-85% match)
+- "Grant management" → FasterCures Health Data Basics, All of Us (60-75% match)
+- "Voter registration" → Public Sector, AHRQ CDS (50-65% match)
 
 ## Next Steps
 

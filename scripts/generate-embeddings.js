@@ -54,7 +54,6 @@ const openai = new OpenAI({
 
 // Load project data
 const featuresPath = path.join(__dirname, '../src/data/features.json');
-const capabilitiesPath = path.join(__dirname, '../src/data/capabilities.json');
 const caseStudiesPath = path.join(__dirname, '../src/case-studies');
 const cacheFilePath = path.join(__dirname, '../src/data/embeddings-cache.json');
 
@@ -158,38 +157,7 @@ async function loadFeatures(cache = {}) {
   return features;
 }
 
-// Function to load capabilities from JSON with change detection
-async function loadCapabilities(cache = {}) {
-  const fileStats = fsSync.statSync(capabilitiesPath);
-  const capabilitiesData = JSON.parse(fsSync.readFileSync(capabilitiesPath, 'utf8'));
-  const contentHash = generateContentHash(JSON.stringify(capabilitiesData));
-  
-  const capabilities = capabilitiesData.map(capability => ({
-    id: capability.id,
-    type: 'capability',
-    title: capability.title || '',
-    description: capability.description || '',
-    keywords: capability.keywords || [],
-    categories: capability.categories || [],
-    content: capability.description || '', // Use description as content
-    relatedCaseStudies: capability.relatedCaseStudies || [],
-    compliance: capability.compliance || [],
-    contentHash,
-    lastModified: fileStats.mtime.toISOString(),
-    needsUpdate: forceRegeneration || !cache[`capability-${capability.id}`] || cache[`capability-${capability.id}`].contentHash !== contentHash,
-    // Copy over structured metadata directly
-    metadata: {
-      projectType: capability.projectType,
-      industry: capability.industry,
-      problemsSolved: capability.problemsSolved,
-      techniques: capability.techniques,
-      targetAudience: capability.targetAudience,
-      complexity: capability.complexity
-    }
-  }));
-  
-  return capabilities;
-}
+
 
 // Function to extract metadata using OpenAI
 async function extractMetadata(project) {
@@ -366,8 +334,7 @@ async function generateSearchIndex() {
     console.log('📚 Loading projects and checking for changes...');
     const caseStudies = await loadCaseStudies(cache);
     const features = await loadFeatures(cache);
-    const capabilities = await loadCapabilities(cache);
-    const allProjects = [...caseStudies, ...features, ...capabilities];
+    const allProjects = [...caseStudies, ...features];
     
     const totalProjects = allProjects.length;
     const projectsNeedingUpdate = allProjects.filter(p => p.needsUpdate).length;
@@ -376,7 +343,6 @@ async function generateSearchIndex() {
     console.log(`📊 Found ${totalProjects} projects:`);
     console.log(`  📑 ${caseStudies.length} case studies`);
     console.log(`  🎯 ${features.length} features`);
-    console.log(`  💡 ${capabilities.length} capabilities`);
     if (forceRegeneration) {
       console.log(`  🔥 ${projectsNeedingUpdate} will be regenerated (force mode)`);
     } else {
@@ -390,8 +356,7 @@ async function generateSearchIndex() {
     // Process each project
     for (let i = 0; i < allProjects.length; i++) {
       const project = allProjects[i];
-      const cacheKey = project.type === 'feature' ? `feature-${project.id}` : 
-                       project.type === 'capability' ? `capability-${project.id}` : project.id;
+      const cacheKey = project.type === 'feature' ? `feature-${project.id}` : project.id;
       
       let indexEntry;
       
@@ -399,25 +364,13 @@ async function generateSearchIndex() {
         processedCount++;
         console.log(`\n🔄 Processing ${processedCount}/${projectsNeedingUpdate}: ${project.title}`);
         
-        let metadata, buyerDescriptions;
+        // Extract metadata using AI
+        console.log('  📊 Extracting metadata...');
+        const metadata = await extractMetadata(project);
         
-        if (project.type === 'capability') {
-          // Capabilities already have structured metadata
-          console.log('  💡 Using capability metadata...');
-          metadata = project.metadata;
-          
-          // Generate buyer descriptions for capabilities too
-          console.log('  💼 Generating buyer descriptions...');
-          buyerDescriptions = await generateBuyerDescriptions(project, metadata);
-        } else {
-          // Extract metadata using AI for case studies and features
-          console.log('  📊 Extracting metadata...');
-          metadata = await extractMetadata(project);
-          
-          // Generate buyer-focused descriptions
-          console.log('  💼 Generating buyer descriptions...');
-          buyerDescriptions = await generateBuyerDescriptions(project, metadata);
-        }
+        // Generate buyer-focused descriptions
+        console.log('  💼 Generating buyer descriptions...');
+        const buyerDescriptions = await generateBuyerDescriptions(project, metadata);
         
         // Prepare text for embedding
         const embeddingText = prepareTextForEmbedding(project, metadata);
@@ -433,14 +386,10 @@ async function generateSearchIndex() {
           title: project.title,
           client: project.client,
           caption: project.caption,
-          description: project.description, // For capabilities
           categories: project.categories,
-          keywords: project.keywords, // For capabilities  
           image: project.image,
           slug: project.slug,
           link: project.link,
-          relatedCaseStudies: project.relatedCaseStudies, // For capabilities
-          compliance: project.compliance, // For capabilities
           embedding: embedding,
           metadata: metadata,
           buyerDescriptions: buyerDescriptions,

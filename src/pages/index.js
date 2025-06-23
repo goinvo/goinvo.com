@@ -12,6 +12,7 @@ import ContactForm from '../components/form-contact'
 import { HeroCriticalImage, LazyImage } from '../components/optimized-image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
+import ProjectSearch from '../components/project-search'
 import headerData from '../data/homepage-headers.json'
 
 import config from '../../config'
@@ -48,10 +49,12 @@ class IndexPage extends Component {
     super(props)
 
     const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 4)
+    const allProjects = concatCaseStudiesAndFeatures({ caseStudies: props.data })
 
     this.state = {
       image: null,
       workItems,
+      allProjects,
       frontmatter,
     }
   }
@@ -78,6 +81,20 @@ class IndexPage extends Component {
             <span className="text--serif text--primary">.</span>
           </h1>
         </Hero>
+        <div className="background--gray pad-vertical--double">
+          <div className="max-width content-padding">
+            <div className="container container--justify-center margin-bottom--double">
+              <h2 className="header--xl text--center">
+                Find the perfect project for your needs
+                <span className="text--serif text--primary">.</span>
+              </h2>
+              <p className="text--gray text--center text--lg margin-top">
+                Search our portfolio using natural language to find projects that match your specific requirements
+              </p>
+            </div>
+            <ProjectSearch projects={this.state.allProjects} />
+          </div>
+        </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double">

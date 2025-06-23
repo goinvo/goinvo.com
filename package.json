@@ -28,8 +28,10 @@
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
+    "gray-matter": "^4.0.3",
     "jquery": "^3.3.1",
     "mime-types": "^2.1.20",
+    "openai": "^5.6.0",
     "purecss": "^3.0.0",
     "randomstring": "^1.1.5",
     "react": "^18.2.0",
@@ -53,13 +55,18 @@
   "scripts": {
     "rework-css": "node ./src/rework-pure-grids.js",
     "gatsby-build": "gatsby build",
-    "build": "run-s rework-css gatsby-build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "gatsby-develop": "gatsby develop",
-    "develop": "run-s rework-css gatsby-develop",
-    "format": "prettier --write '**/*.{js,json,scss}'",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "upload": "node upload.js",
     "redirect": "node redirect.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "generate-embeddings": "node scripts/generate-embeddings.js",
+    "generate-embeddings:force": "node scripts/generate-embeddings.js --force",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
   "husky": {
     "hooks": {

@@ -9665,6 +9665,11 @@ open@^8.4.0:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
+openai@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.npmjs.org/openai/-/openai-5.6.0.tgz"
+  integrity sha512-jNH5z+hYAdOMZXyEt0yZ7246s+UZjg2AwFQqkAhZIPPjxNtHHO5mykOefau6FkOqj16aC94MOdJl/rZBcKj/cQ==
+
 opentracing@^0.14.7:
   version "0.14.7"
   resolved "https://registry.npmjs.org/opentracing/-/opentracing-0.14.7.tgz"

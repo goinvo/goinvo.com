@@ -103,7 +103,8 @@ async function loadCaseStudies(cache = {}) {
         .replace(/<[^>]*>/g, '') // Remove HTML/JSX tags
         .replace(/```[\s\S]*?```/g, '') // Remove code blocks
         .replace(/#{1,6}\s/g, '') // Remove markdown headers
-        .replace(/\*{1,2}([^*]+)\*{1,2}/g, '$1') // Remove bold/italic
+        .replace(/\*{1,2}([^*]+)\*{1,2}/g, '$1') // Remove bold/italic (asterisk)
+        .replace(/_{1,2}([^_]+)_{1,2}/g, '$1') // Remove bold/italic (underscore)
         .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Remove links, keep text
         .replace(/\n{3,}/g, '\n\n') // Normalize whitespace
         .trim();

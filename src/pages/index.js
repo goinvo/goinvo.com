@@ -88,9 +88,6 @@ class IndexPage extends Component {
                 Find the perfect project for your needs
                 <span className="text--serif text--primary">.</span>
               </h2>
-              <p className="text--gray text--center text--lg margin-top">
-                Search our portfolio using natural language to find projects that match your specific requirements
-              </p>
             </div>
             <ProjectSearch projects={this.state.allProjects} />
           </div>

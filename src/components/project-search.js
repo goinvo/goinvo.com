@@ -3,12 +3,11 @@ import { Link } from 'gatsby'
 import ImageBlock from './image-block'
 import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
 
-const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an AI platform for therapists" }) => {
+const ProjectSearch = ({ projects = [], placeholder = "Find the perfect project for your needs" }) => {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState([])
   const [error, setError] = useState(null)
-  const [selectedFilters, setSelectedFilters] = useState({})
   const [searchIndex, setSearchIndex] = useState([])
   const [indexLoaded, setIndexLoaded] = useState(false)
   
@@ -50,12 +49,12 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
       try {
         // Use search index if available, otherwise fall back to projects prop
         const dataSource = searchIndex.length > 0 ? searchIndex : projects
-        const searchResults = performClientSideSemanticSearch(query, dataSource, selectedFilters)
+        const searchResults = performClientSideSemanticSearch(query, dataSource)
         
         setResults(searchResults)
         
         if (searchResults.length === 0) {
-          setError('No projects match your search. Try different keywords or remove filters.')
+          setError('No projects match your search. Try different keywords.')
         }
       } catch (err) {
         console.error('Search error:', err)
@@ -64,10 +63,10 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
       } finally {
         setIsSearching(false)
       }
-    }, 300) // Faster response for client-side search
+    }, 300)
     
     return () => clearTimeout(timeoutId)
-  }, [query, selectedFilters, searchIndex, projects, indexLoaded])
+  }, [query, searchIndex, projects, indexLoaded])
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)
@@ -76,19 +75,6 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
   const handleClearSearch = () => {
     setQuery('')
     setResults([])
-  }
-  
-  // Filter options based on metadata
-  const filterOptions = {
-    projectType: [
-      'UI Design', 'UX Design', 'Data Visualization', 'Illustration', 
-      'Research', 'Strategy', 'Healthcare Design'
-    ],
-    industry: [
-      'Healthcare', 'Enterprise', 'Government', 'Finance', 
-      'Education', 'Consumer', 'Non-profit'
-    ],
-    complexity: ['Simple', 'Moderate', 'Complex']
   }
 
   // Quick filter buttons for common searches
@@ -100,13 +86,6 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
     { label: 'Government', query: 'government public policy' },
     { label: 'Mobile Apps', query: 'mobile app smartphone application' }
   ]
-  
-  const handleFilterChange = (filterType, value) => {
-    setSelectedFilters(prev => ({
-      ...prev,
-      [filterType]: value === prev[filterType] ? null : value
-    }))
-  }
   
   return (
     <div className="project-search">
@@ -152,37 +131,11 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
             ))}
           </div>
         )}
-        
-        {/* Advanced Filters */}
-        {(query || Object.keys(selectedFilters).length > 0) && indexLoaded && (
-          <div className="project-search__filters">
-            <span className="project-search__filters-label">Filter by:</span>
-            
-            {Object.entries(filterOptions).map(([filterType, options]) => (
-              <div key={filterType} className="project-search__filter-group">
-                <label className="project-search__filter-label">
-                  {filterType === 'projectType' ? 'Project Type' : 
-                   filterType === 'industry' ? 'Industry' : 'Complexity'}
-                </label>
-                <select
-                  value={selectedFilters[filterType] || ''}
-                  onChange={(e) => handleFilterChange(filterType, e.target.value)}
-                  className="project-search__filter-select"
-                >
-                  <option value="">All</option>
-                  {options.map(option => (
-                    <option key={option} value={option}>{option}</option>
-                  ))}
-                </select>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
       
       {isSearching && (
         <div className="project-search__loading">
-          <p>🧠 Analyzing semantic similarity...</p>
+          <p>🧠 Searching projects...</p>
         </div>
       )}
       
@@ -192,154 +145,56 @@ const ProjectSearch = ({ projects = [], placeholder = "e.g. I need a UI for an A
         </div>
       )}
       
-      {query && !isSearching && indexLoaded && (
+      {query && !isSearching && indexLoaded && results.length > 0 && (
         <div className="project-search__results">
-          {results.length > 0 ? (
-            <>
-              <div className="project-search__results-header">
-                <h3>Found {results.length} relevant project{results.length !== 1 ? 's' : ''}</h3>
-                <p className="text--gray">Projects ranked by semantic similarity:</p>
-              </div>
-              
-              {/* Featured Results Section */}
-              {results.filter(r => r.featured).length > 0 && (
-                <div className="project-search__featured-section">
-                  <h4 className="project-search__featured-title">
-                    ⭐ High Matches
-                  </h4>
-                  <div className="project-search__featured-results">
-                    {results.filter(r => r.featured).map((result) => (
-                      <div key={result.id} className="project-search__result project-search__result--featured">
-                        <div className="project-search__result-image">
-                          <Link to={result.link || `/work/${result.slug}`}>
-                            {result.image && (
-                              <ImageBlock
-                                image={result.image}
-                                alt={result.title}
-                                className="project-search__image"
-                              />
-                            )}
-                          </Link>
-                        </div>
-                        <div className="project-search__result-content">
-                          <div className="project-search__result-header">
-                            <h4 className="project-search__result-title">
-                              <Link to={result.link || `/work/${result.slug}`}>
-                                {result.title}
-                              </Link>
-                            </h4>
-                            <div className="project-search__result-badges">
-                              <span className="project-search__similarity-badge project-search__similarity-badge--high">
-                                {result.similarityPercent}% match
+          <div className="project-search__results-grid">
+            {results.map((result) => (
+              <div key={result.id} className="project-search__result">
+                <Link to={result.link || `/work/${result.slug}`} className="project-search__result-link">
+                  {result.image && (
+                    <ImageBlock
+                      image={result.image}
+                      alt={result.title}
+                      title={result.title}
+                      client={result.client && result.client.toLowerCase() !== 'goinvo' ? result.client : null}
+                      caption={result.caption}
+                      className="project-search__image-block"
+                      hoverable={true}
+                    >
+                      <div className="project-search__result-extras">
+                        {result.aiDescription && (
+                          <div className="project-search__ai-description">
+                            <p>{result.aiDescription}</p>
+                          </div>
+                        )}
+                        {result.metadata && (
+                          <div className="project-search__result-metadata">
+                            {result.metadata.projectType && (
+                              <span className="project-search__metadata-tag">
+                                {result.metadata.projectType}
                               </span>
-                              <span className="project-search__featured-badge">High Match</span>
-                            </div>
-                          </div>
-                          {result.client && (
-                            <p className="project-search__result-client">
-                              <strong>Client:</strong> {result.client}
-                            </p>
-                          )}
-                          <p className="project-search__result-caption">
-                            {result.caption}
-                          </p>
-                          {result.aiDescription && (
-                            <div className="project-search__ai-description">
-                              <p><strong>Why this project fits your needs:</strong> {result.aiDescription}</p>
-                            </div>
-                          )}
-                          {result.metadata && (
-                            <div className="project-search__result-metadata">
-                              {result.metadata.projectType && (
-                                <span className="project-search__metadata-tag">
-                                  {result.metadata.projectType}
-                                </span>
-                              )}
-                              {result.metadata.industry && (
-                                <span className="project-search__metadata-tag">
-                                  {result.metadata.industry}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-              
-              {/* All Results Section */}
-              {results.filter(r => !r.featured).length > 0 && (
-                <div className="project-search__all-results">
-                  <h4 className="project-search__section-title">
-                    📋 Additional Matches
-                  </h4>
-                  <div className="project-search__results-grid">
-                    {results.filter(r => !r.featured).map((result) => (
-                      <div key={result.id} className="project-search__result">
-                        <div className="project-search__result-image">
-                          <Link to={result.link || `/work/${result.slug}`}>
-                            {result.image && (
-                              <ImageBlock
-                                image={result.image}
-                                alt={result.title}
-                                className="project-search__image"
-                              />
                             )}
-                          </Link>
-                        </div>
-                        <div className="project-search__result-content">
-                          <div className="project-search__result-header">
-                            <h5 className="project-search__result-title">
-                              <Link to={result.link || `/work/${result.slug}`}>
-                                {result.title}
-                              </Link>
-                            </h5>
-                            <span className="project-search__similarity-badge">
-                              {result.similarityPercent}% match
-                            </span>
+                            {result.metadata.industry && (
+                              <span className="project-search__metadata-tag">
+                                {result.metadata.industry}
+                              </span>
+                            )}
                           </div>
-                          {result.client && (
-                            <p className="project-search__result-client">
-                              <strong>Client:</strong> {result.client}
-                            </p>
-                          )}
-                          <p className="project-search__result-caption">
-                            {result.caption}
-                          </p>
-                          {result.aiDescription && (
-                            <div className="project-search__ai-description">
-                              <p><strong>Relevant for your project:</strong> {result.aiDescription}</p>
-                            </div>
-                          )}
-                          {result.metadata && (
-                            <div className="project-search__result-metadata">
-                              {result.metadata.projectType && (
-                                <span className="project-search__metadata-tag">
-                                  {result.metadata.projectType}
-                                </span>
-                              )}
-                              {result.metadata.industry && (
-                                <span className="project-search__metadata-tag">
-                                  {result.metadata.industry}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </div>
+                        )}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="project-search__no-results">
-              <h3>No matches found</h3>
-              <p>Try adjusting your search terms or removing filters.</p>
-            </div>
-          )}
+                    </ImageBlock>
+                  )}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {query && !isSearching && indexLoaded && results.length === 0 && !error && (
+        <div className="project-search__no-results">
+          <h3>No matches found</h3>
+          <p>Try adjusting your search terms.</p>
         </div>
       )}
     </div>

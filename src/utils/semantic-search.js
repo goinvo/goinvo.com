@@ -322,25 +322,63 @@ const getRelevantBuyerDescription = (query, buyerDescriptions) => {
   
   const queryLower = query.toLowerCase();
   
-  // Priority order for matching descriptions
+  // Priority order for matching descriptions with more specific triggers
   const descriptionPriority = [
-    { key: 'aiPlatform', triggers: ['ai', 'artificial intelligence', 'machine learning', 'ml', 'algorithm', 'platform'] },
-    { key: 'healthcareSolution', triggers: ['healthcare', 'medical', 'clinical', 'patient', 'health', 'therapy', 'therapist'] },
-    { key: 'enterpriseSoftware', triggers: ['enterprise', 'business', 'corporate', 'software', 'system', 'workflow'] },
-    { key: 'dataVisualization', triggers: ['data', 'visualization', 'analytics', 'chart', 'dashboard', 'metrics'] },
-    { key: 'userExperience', triggers: ['ui', 'ux', 'user', 'interface', 'experience', 'design', 'usability'] }
+    { 
+      key: 'aiPlatform', 
+      triggers: ['ai', 'artificial intelligence', 'machine learning', 'ml', 'algorithm', 'automated', 'smart', 'intelligent'],
+      weight: 3
+    },
+    { 
+      key: 'healthcareSolution', 
+      triggers: ['healthcare', 'medical', 'clinical', 'patient', 'health', 'therapy', 'therapist', 'hospital', 'care', 'treatment', 'diagnosis'],
+      weight: 3
+    },
+    { 
+      key: 'enterpriseSoftware', 
+      triggers: ['enterprise', 'business', 'corporate', 'software', 'system', 'workflow', 'team', 'organization', 'company'],
+      weight: 2
+    },
+    { 
+      key: 'dataVisualization', 
+      triggers: ['data', 'visualization', 'analytics', 'chart', 'dashboard', 'metrics', 'graph', 'visual', 'report'],
+      weight: 2
+    },
+    { 
+      key: 'userExperience', 
+      triggers: ['ui', 'ux', 'user', 'interface', 'experience', 'design', 'usability', 'interaction'],
+      weight: 1
+    }
   ];
   
-  // Find the most relevant description
-  for (const desc of descriptionPriority) {
-    if (buyerDescriptions[desc.key] && desc.triggers.some(trigger => queryLower.includes(trigger))) {
-      return buyerDescriptions[desc.key];
-    }
+  // Score each description based on trigger matches
+  const scores = descriptionPriority.map(desc => {
+    if (!buyerDescriptions[desc.key]) return { key: desc.key, score: 0, description: null };
+    
+    const matchCount = desc.triggers.filter(trigger => queryLower.includes(trigger)).length;
+    const score = matchCount * desc.weight;
+    
+    return {
+      key: desc.key,
+      score,
+      description: buyerDescriptions[desc.key]
+    };
+  }).filter(item => item.description && item.score > 0);
+  
+  // Return the highest scoring description
+  if (scores.length > 0) {
+    scores.sort((a, b) => b.score - a.score);
+    return scores[0].description;
   }
   
-  // If no specific match, return the first available description
-  const availableDescriptions = Object.values(buyerDescriptions);
-  return availableDescriptions.length > 0 ? availableDescriptions[0] : null;
+  // If no specific match, return a random available description to add variety
+  const availableDescriptions = Object.values(buyerDescriptions).filter(Boolean);
+  if (availableDescriptions.length > 0) {
+    const randomIndex = Math.floor(Math.random() * availableDescriptions.length);
+    return availableDescriptions[randomIndex];
+  }
+  
+  return null;
 }
 
 /**
@@ -404,11 +442,6 @@ export const performClientSideSemanticSearch = (query, projects, filters = {}) =
   
   // Only include results with some relevance
   filteredResults = filteredResults.filter(result => result.similarity > 0.1)
-  
-  // Add featured flag for high-similarity results
-  filteredResults.forEach(result => {
-    result.featured = result.similarity > 0.4 // High similarity threshold
-  })
   
   console.log('✅ Found', filteredResults.length, 'relevant results')
   if (filteredResults.length > 0) {

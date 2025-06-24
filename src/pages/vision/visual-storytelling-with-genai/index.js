@@ -8,6 +8,7 @@ import { LazyImage } from '../../../components/optimized-image'
 import Author from '../../../components/author'
 import Divider from '../../../components/divider'
 import ModelViewer from '../../../components/model-viewer'
+import Video from '../../../components/video'
 import config from '../../../../config'
 
 import arrowDown from '../../../assets/images/icon-arrowDown.svg'
@@ -150,7 +151,7 @@ class GenAIFeature extends Component {
               className="image--max-width"
               alt="Hospital 3D scene"
             />
-            <p className="caption">1. Hospital trauma room render captured in Rhinoceros 3D model.</p>
+            <p className="caption">1. Hospital trauma room render captured in <strong>Rhinoceros 3D</strong> model.</p>
 
             <img
               className="arrow-down"
@@ -158,12 +159,17 @@ class GenAIFeature extends Component {
               alt="arrow pointing down"
             />
 
-            <LazyImage
-              src="/images/features/visual-storytelling-with-genai/genai-trauma-room-midjourney-3.jpg"
-              className="image--max-width"
-              alt="Hospital 3D scene"
-            />
-            <p className="caption">2. Hospital trauma room render stylized in Midjourney with accompanying prompt.</p>
+            <div className="overlay-text-container">
+              <div className="overlay-text">
+                <p className="text--serif"><strong>Midjourney Prompt:</strong> <em>“A hospital trauma room, outlined in soft blue linework, overlaid with abstract health data visualizations, flat design with orange and cool blue color palette, minimalistic and light-filled background with circular gradient overlays, inspired by healthcare dashboards.”</em></p>
+              </div>
+              <Image
+                src="/images/features/visual-storytelling-with-genai/genai-trauma-room-midjourney-3.jpg"
+                className="image--max-width"
+                alt="Hospital 3D scene"
+              />
+            </div>
+            <p className="caption">2. Hospital trauma room render stylized in <strong>Midjourney</strong> with accompanying prompt.</p>
 
             <img
               className="arrow-down"
@@ -176,7 +182,29 @@ class GenAIFeature extends Component {
               className="image--max-width"
               alt="Hospital 3D scene"
             />
-            <p className="caption">3. Final image post-processing completed in Photoshop with additional characters added in Procreate.</p>
+            <p className="caption">3. Final image post-processing completed in <strong>Photoshop</strong> with additional characters added in <strong>Procreate.</strong></p>
+
+            <img
+              className="arrow-down"
+              src={arrowDown}
+              alt="arrow pointing down"
+            />
+
+            <Video
+              sources={[
+                {
+                  src:
+                    '/videos/features/visual-storytelling-with-genai/genai-trauma-room-characters-animation.mp4',
+                  format: 'mp4',
+                }
+              ]}
+              width="100%"
+              height="560"
+              poster="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
+              fallback="/images/case-studies/mass/snap/snap-emergency-benefits.jpg"
+              loop
+            />
+            <p className="caption">4. Animation created with <strong>Midjourney Video</strong> using the final post-processed image as the starting frame.</p>
 
             <h4 className="margin-top--trip">GenAI motivates creative experimentation.</h4>
             <p>This workflow doesn’t just save us time, it also unlocks new creative possibilities that might have been previously out of reach. GenAI tools like Midjourney allow us to explore a wide range of visual styles such as surrealist, graphic novel-inspired, or painterly, and rapidly iterate our ideas in real-time. Where ideas were once narrowed by a project’s timeline or the limits of what we could achieve by hand, GenAI allows our ideas to expand in scale and ambition, no longer limited by traditional methods.</p>
@@ -326,7 +354,7 @@ class GenAIFeature extends Component {
           <div className="max-width pad-all">
             <h2 className="header--lg text--center margin-top--trip">Why does this matter?</h2>
             <p>This workflow is designed for storytelling at scale. For complex systems and stories, we need hundreds of custom visuals. GenAI allows us to move faster and empowers us to lead with ideas rather than limit them. It helps us sketch crazy ideas, try wild graphics, and show real stories without getting stuck in every pixel and every tool.</p>
-            <p>The concept takes the lead, not the toolset &emdash; bringing bold ideas to life and more prototypes to the table. The more we can make and the less time it takes to do so, the better the ideas we can bring to the work.</p>
+            <p>The concept takes the lead, not the toolset —bringing bold ideas to life and more prototypes to the table. The more we can make and the less time it takes to do so, the better the ideas we can bring to the work.</p>
           </div>
 
           <div className="max-width pad-all">

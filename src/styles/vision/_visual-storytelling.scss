@@ -1,8 +1,35 @@
 .visual-storytelling {
+  .arrow-down {
+    margin: 15px auto;
+    display: block;
+  }
+
+  .overlay-text-container {
+    position: relative;
+  }
+
+  .overlay-text {
+    max-width: 500px;
+    margin: 0 0 20px 0;
+    background: rgb(246, 246, 246, 0.8);
+    border-radius: 10px;
+    padding: 16px;
+
+    @include mq($from: medium) {
+      position: absolute;
+      bottom: 0;
+      margin: 0 20px 20px 20px;
+      background: rgba(255,255,255,.8);
+    }
+  }
+
   .model-viewport {
     border: solid $color-gray--medium 1px;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin: 0 20px 15px 20px;
+    @include mq($from: medium) {
+      margin: 0 0 15px 0;
+    }
   }
 
   .hotspot-image-container {
@@ -108,12 +135,19 @@
         .col {
           flex-direction: row;
 
-          img {
-            align-self: center;
-          }
-
           &.col-3 {
             width: 46%;
+          }
+
+          &.col-3:first-child {
+            display: flex;
+            flex-direction: column;
+
+            .image-container {
+              flex: 1;
+              display: flex;
+              align-items: center; // Centers image vertically
+            }
           }
 
           &.col-spacer {
@@ -172,79 +206,6 @@
           }
         }
       }
-    }
-  }
-
-  .arrow-down {
-    margin: 15px auto;
-    display: block;
-
-  }
-
-  .genai-image-max-width {
-    display: block;
-    max-width: 750px;
-    margin: 0 auto;
-  }
-
-  .genai-carousel-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .genai-carousel-button {
-    max-width: 100px;
-    padding: 2px;
-    margin-right: 5px;
-
-    img {
-      display: block;
-    }
-
-    &.active {
-      background-color: $color-orange;
-    }
-  }
-
-  .genai-carousel-prev,
-  .genai-carousel-next {
-    width: 40px;
-    height: 40px;
-    opacity: 1;
-    transition: opacity 200ms ease-in-out;
-    z-index: 1;
-    flex-shrink: 0;
-
-    &:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: url('../assets/images/icon-caret.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    &.disabled {
-      pointer-events: none;
-      opacity: 0;
-    }
-  }
-
-  .genai-carousel-prev {
-    margin-right: 10px;
-
-    &:before {
-      transform: rotate(90deg);
-    }
-  }
-
-  .genai-carousel-next {
-    margin-left: 10px;
-
-    &:before {
-      transform: rotate(-90deg);
     }
   }
 }

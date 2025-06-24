@@ -222,6 +222,102 @@ import Hamburger from '../assets/images/icon-hamburger.inline.svg'
 
 Now we can use CSS to style `icon` and `icon-hamburger`, like controlling the size or `fill` color of the icon, etc.
 
+## Image Optimization
+
+This project uses an optimized image system to improve performance and user experience. All contributors should use the optimized image components instead of the legacy `<Image />` component.
+
+### Optimized Image Components
+
+The project provides several optimized image components in `src/components/optimized-image.js`:
+
+#### `HeroCriticalImage`
+Use for above-the-fold images that should load immediately (high priority):
+```js
+import { HeroCriticalImage } from '../components/optimized-image'
+
+<HeroCriticalImage
+  src="/images/homepage/hero-image.jpg"
+  alt="Descriptive alt text"
+  className="image--max-width"
+/>
+```
+
+#### `LazyImage` 
+Use for below-the-fold images that can load lazily (low priority):
+```js
+import { LazyImage } from '../components/optimized-image'
+
+<LazyImage
+  src="/images/about/team-photo.jpg"
+  alt="Team photo"
+  className="image--max-width"
+  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+/>
+```
+
+#### `SpinnerImage`
+Use for interactive elements where users expect immediate feedback:
+```js
+import { SpinnerImage } from '../components/optimized-image'
+
+<SpinnerImage
+  src="/images/gallery/interactive-image.jpg"
+  alt="Interactive image"
+  className="image--max-width"
+/>
+```
+
+#### `SmartImage` (Default Export)
+Auto-detects the best optimization strategy based on context:
+```js
+import SmartImage from '../components/optimized-image'
+
+<SmartImage
+  src="/images/content/example.jpg"
+  alt="Example image"
+  priority={false} // or true for critical images
+/>
+```
+
+### Performance Benefits
+
+The optimized image system provides:
+
+- **Dominant color placeholders** for instant visual feedback
+- **Lazy loading** for better initial page load performance
+- **Proper priority handling** (critical vs lazy loading)
+- **Responsive image sizing** with automatic srcset generation
+- **Better LCP (Largest Contentful Paint)** scores
+
+### Migration Guidelines
+
+When working with existing pages, replace old `<Image />` components:
+
+**Before:**
+```js
+import Image from '../components/image'
+
+<Image src="/images/example.jpg" alt="Example" />
+```
+
+**After:**
+```js
+import { LazyImage } from '../components/optimized-image'
+
+<LazyImage src="/images/example.jpg" alt="Example" />
+```
+
+### Component Selection Guide
+
+- **Hero images, above-the-fold content**: Use `HeroCriticalImage`
+- **Content images, galleries, below-the-fold**: Use `LazyImage`
+- **Interactive elements, buttons, clickable images**: Use `SpinnerImage`
+- **Unsure or mixed usage**: Use `SmartImage` with appropriate `priority` prop
+
+### Legacy Support
+
+The old `<Image />` component is deprecated but still functional. However, all new development should use the optimized components for better performance.
+
 ### Using videos
 
 Videos are also managed through Dropbox and work similarly to images. The project makes use of a `<Video />` component. However, videos have a few extra requirements that images do not. First, videos need _two_ sources, one as `.mp4` filetype and one as `.webm` filetype. This is to make sure there is a video format that supports every browser's needs. Check the syntax below for how to include these formats in JavaScript. Also, videos should have a poster image (displayed before video plays, while the video is loading), and a fallback image (used if the video element is not supported by the browser). Use the component with the sources of your video (which corresponds to the Dropbox path), the poster image, and the fallback image, like so:

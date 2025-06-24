@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
-import Image from './image';
+import { LazyImage } from './optimized-image';
 import config from '../../config'
 import { mediaUrl } from '../helpers'
 import 'yet-another-react-lightbox/styles.css';
@@ -28,7 +28,7 @@ const LightboxGallery = ({ images = [], image = null, className = '', alt = '' }
     <div className={`lightbox-gallery ${className}`}>
       {/* Render single image or gallery */}
       {isSingleImage ? (
-        <Image
+        <LazyImage
           ref={(el) => (imageRefs.current[0] = el)}
           src={image}
           alt={alt}
@@ -43,7 +43,7 @@ const LightboxGallery = ({ images = [], image = null, className = '', alt = '' }
       ) : (
         <div className="gallery-grid">
           {images.map((image, index) => (
-            <Image
+            <LazyImage
               key={index}
               ref={(el) => (imageRefs.current[index] = el)}
               src={image.src}

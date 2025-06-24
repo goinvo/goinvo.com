@@ -3,13 +3,27 @@ import { Link } from 'gatsby'
 import ImageBlock from './image-block'
 import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
 
-const ProjectSearch = ({ projects = [], placeholder = "Find the perfect project for your needs" }) => {
+const ProjectSearch = ({ projects = [] }) => {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState([])
   const [error, setError] = useState(null)
   const [searchIndex, setSearchIndex] = useState([])
   const [indexLoaded, setIndexLoaded] = useState(false)
+  const [placeholderIndex, setPlaceholderIndex] = useState(0)
+  const [isPlaceholderFading, setIsPlaceholderFading] = useState(false)
+  
+  // Example search queries to rotate through
+  const placeholderExamples = [
+    "an AI transcription platform for therapists",
+    "a patient portal for chronic disease management", 
+    "data visualization for clinical research",
+    "mobile app for medication adherence",
+    "dashboard for healthcare administrators",
+    "telemedicine platform for rural patients",
+    "EHR system for specialty clinics",
+    "health tracking app for seniors"
+  ]
   
   // Load search index on component mount
   useEffect(() => {
@@ -28,6 +42,24 @@ const ProjectSearch = ({ projects = [], placeholder = "Find the perfect project 
     
     initializeSearch()
   }, [])
+
+  // Rotate placeholder examples with fade animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Start fade out
+      setIsPlaceholderFading(true)
+      
+      // After fade out completes, change text and fade back in
+      setTimeout(() => {
+        setPlaceholderIndex((prevIndex) => 
+          (prevIndex + 1) % placeholderExamples.length
+        )
+        setIsPlaceholderFading(false)
+      }, 300) // Match CSS transition duration
+    }, 3000)
+    
+    return () => clearInterval(interval)
+  }, [placeholderExamples.length])
 
   // Client-side search with debouncing
   useEffect(() => {
@@ -95,8 +127,8 @@ const ProjectSearch = ({ projects = [], placeholder = "Find the perfect project 
             type="text"
             value={query}
             onChange={handleInputChange}
-            placeholder={placeholder}
-            className="project-search__input"
+            placeholder={placeholderExamples[placeholderIndex]}
+            className={`project-search__input ${isPlaceholderFading ? 'placeholder-fade-out' : ''}`}
             aria-label="Search projects"
             disabled={!indexLoaded}
           />

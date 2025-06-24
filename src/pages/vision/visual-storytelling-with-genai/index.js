@@ -163,7 +163,7 @@ class GenAIFeature extends Component {
               <div className="overlay-text">
                 <p className="text--serif"><strong>Midjourney Prompt:</strong> <em>“A hospital trauma room, outlined in soft blue linework, overlaid with abstract health data visualizations, flat design with orange and cool blue color palette, minimalistic and light-filled background with circular gradient overlays, inspired by healthcare dashboards.”</em></p>
               </div>
-              <Image
+              <LazyImage
                 src="/images/features/visual-storytelling-with-genai/genai-trauma-room-midjourney-3.jpg"
                 className="image--max-width"
                 alt="Hospital 3D scene"

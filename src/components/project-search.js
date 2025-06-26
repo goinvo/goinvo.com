@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from 'gatsby'
 import ImageBlock from './image-block'
-import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
+import Results from './results'
+import { performEnhancedSearch } from '../utils/enhanced-search'
 
 const ProjectSearch = ({ projects = [] }) => {
   const [query, setQuery] = useState('')
@@ -12,6 +13,8 @@ const ProjectSearch = ({ projects = [] }) => {
   const [indexLoaded, setIndexLoaded] = useState(false)
   const [placeholderIndex, setPlaceholderIndex] = useState(0)
   const [isPlaceholderFading, setIsPlaceholderFading] = useState(false)
+  const [suggestions, setSuggestions] = useState([])
+  const [searchAnalysis, setSearchAnalysis] = useState(null)
   
   // Example search queries to rotate through
   const placeholderExamples = [
@@ -29,19 +32,25 @@ const ProjectSearch = ({ projects = [] }) => {
   useEffect(() => {
     const initializeSearch = async () => {
       try {
-        const index = await loadSearchIndex()
-        setSearchIndex(index)
-        setIndexLoaded(true)
-        console.log('🔍 Search system initialized')
+        const response = await fetch('/search-index.json')
+        if (response.ok) {
+          const index = await response.json()
+          setSearchIndex(index)
+          setIndexLoaded(true)
+          console.log('🔍 Search index loaded successfully')
+        } else {
+          throw new Error('Search index not found')
+        }
       } catch (error) {
-        console.warn('⚠️ Search index failed to load, using fallback')
-        setSearchIndex([])
+        console.warn('⚠️ Search index failed to load, using fallback data')
+        // Use projects prop as fallback
+        setSearchIndex(projects)
         setIndexLoaded(true)
       }
     }
     
     initializeSearch()
-  }, [])
+  }, [projects])
 
   // Rotate placeholder examples with fade animation
   useEffect(() => {
@@ -67,6 +76,8 @@ const ProjectSearch = ({ projects = [] }) => {
       setResults([])
       setIsSearching(false)
       setError(null)
+      setSuggestions([])
+      setSearchAnalysis(null)
       return
     }
     
@@ -77,15 +88,21 @@ const ProjectSearch = ({ projects = [] }) => {
     setIsSearching(true)
     setError(null)
     
-    const timeoutId = setTimeout(() => {
+    const timeoutId = setTimeout(async () => {
       try {
-        // Use search index if available, otherwise fall back to projects prop
-        const dataSource = searchIndex.length > 0 ? searchIndex : projects
-        const searchResults = performClientSideSemanticSearch(query, dataSource)
+        // Prepare search data
+        const searchData = {
+          projects: searchIndex
+        }
         
-        setResults(searchResults)
+        // Perform enhanced search
+        const searchResults = await performEnhancedSearch(query, searchData)
         
-        if (searchResults.length === 0) {
+        setResults(searchResults.results || [])
+        setSuggestions(searchResults.suggestions || [])
+        setSearchAnalysis(searchResults.searchAnalysis || null)
+        
+        if (searchResults.results.length === 0) {
           setError('No projects match your search. Try different keywords.')
         }
       } catch (err) {
@@ -98,7 +115,7 @@ const ProjectSearch = ({ projects = [] }) => {
     }, 300)
     
     return () => clearTimeout(timeoutId)
-  }, [query, searchIndex, projects, indexLoaded])
+  }, [query, searchIndex, indexLoaded])
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)
@@ -194,9 +211,25 @@ const ProjectSearch = ({ projects = [] }) => {
                       hoverable={true}
                     >
                       <div className="project-search__result-extras">
-                        {result.aiDescription && (
+                        {result.snippet && (
                           <div className="project-search__ai-description">
-                            <p>{result.aiDescription}</p>
+                            <p>{result.snippet}</p>
+                            {result.debug?.snippetSource && (
+                              <div className="project-search__snippet-metadata">
+                                <small>
+                                  Source: {result.debug.snippetSource}
+                                  {result.debug.snippetConfidence && ` (${Math.round(result.debug.snippetConfidence * 100)}% confidence)`}
+                                </small>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                        {result.matchedSkills && result.matchedSkills.length > 0 && (
+                          <div className="project-search__matched-skills">
+                            <small>
+                              Matched skills: {result.matchedSkills.slice(0, 3).join(', ')}
+                              {result.matchedSkills.length > 3 && ` +${result.matchedSkills.length - 3} more`}
+                            </small>
                           </div>
                         )}
                         {result.metadata && (
@@ -209,6 +242,11 @@ const ProjectSearch = ({ projects = [] }) => {
                             {result.metadata.industry && (
                               <span className="project-search__metadata-tag">
                                 {result.metadata.industry}
+                              </span>
+                            )}
+                            {result.score && (
+                              <span className="project-search__metadata-tag project-search__metadata-tag--score">
+                                Match: {Math.round(result.score)}%
                               </span>
                             )}
                           </div>
@@ -227,6 +265,63 @@ const ProjectSearch = ({ projects = [] }) => {
         <div className="project-search__no-results">
           <h3>No matches found</h3>
           <p>Try adjusting your search terms.</p>
+          
+          {suggestions.length > 0 && (
+            <div className="project-search__suggestions">
+              <h4>Try these suggestions:</h4>
+              <div className="project-search__suggestion-buttons">
+                {suggestions.map((suggestion, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setQuery(suggestion)}
+                    className="project-search__suggestion-button"
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {searchAnalysis && (
+            <div className="project-search__analysis">
+              <details>
+                <summary>Search Analysis</summary>
+                <div className="project-search__analysis-content">
+                  <p><strong>Detected Domain:</strong> {searchAnalysis.domain || 'None'}</p>
+                  <p><strong>Detected Product:</strong> {searchAnalysis.product || 'None'}</p>
+                  <p><strong>Detected Goal:</strong> {searchAnalysis.goal || 'None'}</p>
+                  {searchAnalysis.detectedSkills && (
+                    <>
+                      {searchAnalysis.detectedSkills.technical.length > 0 && (
+                        <p><strong>Technical Skills:</strong> {searchAnalysis.detectedSkills.technical.join(', ')}</p>
+                      )}
+                      {searchAnalysis.detectedSkills.design.length > 0 && (
+                        <p><strong>Design Skills:</strong> {searchAnalysis.detectedSkills.design.join(', ')}</p>
+                      )}
+                      {searchAnalysis.detectedSkills.domain.length > 0 && (
+                        <p><strong>Domain Knowledge:</strong> {searchAnalysis.detectedSkills.domain.join(', ')}</p>
+                      )}
+                    </>
+                  )}
+                </div>
+              </details>
+            </div>
+          )}
+        </div>
+      )}
+      
+      {searchAnalysis && results.length > 0 && (
+        <div className="project-search__results-analysis">
+          <div className="project-search__analysis-summary">
+            <span>Found {results.length} results</span>
+            {searchAnalysis.domain && (
+              <span> • Domain: {searchAnalysis.domain}</span>
+            )}
+            {searchAnalysis.product && (
+              <span> • Product: {searchAnalysis.product}</span>
+            )}
+          </div>
         </div>
       )}
     </div>

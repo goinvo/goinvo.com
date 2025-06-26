@@ -37,7 +37,7 @@ export const cosineSimilarity = (vecA, vecB) => {
  * @param {string} text - Text to analyze
  * @returns {Set<string>} Set of normalized keywords
  */
-const extractKeywords = (text) => {
+export const extractKeywords = (text) => {
   // Common stop words to filter out
   const stopWords = new Set([
     'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from',
@@ -176,7 +176,7 @@ const extractKeywords = (text) => {
  * @param {Object} project - Project object with metadata
  * @returns {number} Similarity score between 0 and 1
  */
-const calculateKeywordSimilarity = (queryKeywords, project) => {
+export const calculateKeywordSimilarity = (queryKeywords, project) => {
   // Extract project text for matching
   const projectText = [
     project.title,
@@ -193,13 +193,11 @@ const calculateKeywordSimilarity = (queryKeywords, project) => {
   const projectKeywords = extractKeywords(projectText)
   
   // Calculate intersection
-  let matches = 0
   let weightedScore = 0
   
   queryKeywords.forEach(keyword => {
     // Direct match
     if (projectKeywords.has(keyword)) {
-      matches++
       weightedScore += 1
     }
     
@@ -394,7 +392,7 @@ export const performClientSideSemanticSearch = (query, projects, filters = {}) =
     return []
   }
   
-  console.log('🔍 Performing keyword-based semantic search for:', query)
+  console.log('🔍 Performing enhanced semantic search for:', query)
   console.log('📊 Searching through', projects.length, 'projects')
   
   // Extract keywords from query
@@ -403,16 +401,33 @@ export const performClientSideSemanticSearch = (query, projects, filters = {}) =
   
   // Calculate similarity scores for each project
   const results = projects.map(project => {
-    const similarity = calculateKeywordSimilarity(queryKeywords, project)
+    const keywordSimilarity = calculateKeywordSimilarity(queryKeywords, project)
     
-    // Get relevant buyer description
+    // Get relevant buyer description (legacy fallback)
     const relevantDescription = getRelevantBuyerDescription(query, project.buyerDescriptions)
+    
+    // Generate dynamic snippet using new system
+    let dynamicSnippet = null
+    try {
+      // Import the generator dynamically to avoid circular dependencies
+      import('./snippet-generator').then(module => {
+        dynamicSnippet = module.generateDynamicSnippet(project, query, {
+          fallbackToAI: true,
+          useRandomization: false
+        })
+      }).catch(err => {
+        console.warn('Could not load snippet generator:', err)
+      })
+    } catch (err) {
+      console.warn('Error generating dynamic snippet:', err)
+    }
     
     return {
       ...project,
-      similarity: Math.max(0, Math.min(1, similarity)),
-      similarityPercent: Math.round(similarity * 100),
-      aiDescription: relevantDescription // Add AI-generated description
+      similarity: Math.max(0, Math.min(1, keywordSimilarity)),
+      similarityPercent: Math.round(keywordSimilarity * 100),
+      aiDescription: relevantDescription, // Legacy AI description
+      dynamicSnippet: dynamicSnippet?.snippet || relevantDescription || null // New dynamic snippet
     }
   })
   

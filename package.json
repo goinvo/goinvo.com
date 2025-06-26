@@ -58,15 +58,17 @@
     "build": "npm run rework-css && npm run generate-embeddings && GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "gatsby-develop": "gatsby develop",
     "develop": "npm run rework-css && gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,scss,md,mdx}\"",
     "upload": "node upload.js",
     "redirect": "node redirect.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "generate-embeddings": "node scripts/generate-embeddings.js",
-    "generate-embeddings:force": "node scripts/generate-embeddings.js --force",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "watch": "npm run clean && npm run develop",
+    "serve": "npm run build && gatsby serve -p 9000",
+    "clean": "gatsby clean",
+    "generate-embeddings": "node scripts/generate-embeddings-v3.js",
+    "generate-embeddings:force": "node scripts/generate-embeddings-v3.js --force",
+    "generate-embeddings:id": "node scripts/generate-embeddings-v3.js --id=",
+    "lint": "prettier --check \"**/*.{js,jsx,json,css,scss,md,mdx}\""
   },
   "husky": {
     "hooks": {

@@ -65,9 +65,9 @@
     "watch": "npm run clean && npm run develop",
     "serve": "npm run build && gatsby serve -p 9000",
     "clean": "gatsby clean",
-    "generate-embeddings": "node scripts/generate-embeddings-v3.js",
-    "generate-embeddings:force": "node scripts/generate-embeddings-v3.js --force",
-    "generate-embeddings:id": "node scripts/generate-embeddings-v3.js --id=",
+    "generate-embeddings": "node scripts/generate-embeddings.js",
+    "generate-embeddings:force": "node scripts/generate-embeddings.js --force",
+    "generate-embeddings:id": "node scripts/generate-embeddings.js",
     "lint": "prettier --check \"**/*.{js,jsx,json,css,scss,md,mdx}\""
   },
   "husky": {

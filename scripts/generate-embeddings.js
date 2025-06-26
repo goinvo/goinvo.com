@@ -8,6 +8,28 @@ const forceRegeneration = process.argv.includes('--force')
 const CACHE_FILE = path.join(__dirname, '..', '.embeddings-cache', 'cache.json')
 const hasOpenAIKey = !!process.env.OPENAI_API_KEY
 
+// Parse command line arguments
+function parseArgs() {
+  const args = {
+    id: null,
+    type: null,
+    fileInput: null,
+    force: forceRegeneration
+  }
+  
+  process.argv.forEach(arg => {
+    if (arg.startsWith('--id=')) {
+      args.id = arg.split('=')[1]
+    } else if (arg.startsWith('--type=')) {
+      args.type = arg.split('=')[1]
+    } else if (arg.startsWith('--file-input=')) {
+      args.fileInput = arg.split('=')[1]
+    }
+  })
+  
+  return args
+}
+
 // Initialize OpenAI client conditionally
 const openai = hasOpenAIKey ? new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
@@ -111,46 +133,163 @@ async function loadFeatures(cache = {}) {
     })
 }
 
-// Function to generate buyer descriptions (from v1)
-async function generateBuyerDescriptions(project) {
+// Function to automatically detect content type
+function detectContentType(project) {
+  const { id, title, content, categories = [] } = project
+  const lowerTitle = title.toLowerCase()
+  const lowerId = id.toLowerCase()
+  
+  // Check if it's a history or timeline page (but not a case study)
+  if (project.type !== 'case-study') {
+    if (lowerId.includes('timeline') || lowerId.includes('history') ||
+        lowerTitle.includes('timeline') || lowerTitle.includes('history') ||
+        lowerTitle.includes('oral history')) {
+      return 'history-timeline'
+    }
+  }
+  
+  // Check for other specific types
+  if (lowerId.includes('about') || lowerId.includes('team')) {
+    return 'company-info'
+  }
+  
+  if (lowerId.includes('vision') || categories.includes('Vision')) {
+    return 'thought-leadership'
+  }
+  
+  if (lowerId.includes('blog') || categories.includes('Blog')) {
+    return 'blog-post'
+  }
+  
+  // Default to case-study for actual case studies, feature for others
+  return project.type === 'case-study' ? 'case-study' : 'feature'
+}
+
+// Function to generate buyer descriptions based on content type
+async function generateBuyerDescriptions(project, contentType, customContent = null) {
+  // Use custom content if provided via file input
+  const effectiveContent = customContent || project.content
+  
   if (!hasOpenAIKey) {
-    return generateBuyerDescriptionsFallback(project)
+    return generateBuyerDescriptionsFallback(project, contentType)
   }
 
-  const scenarios = [
-    {
-      role: 'CEO',
-      context: 'making a strategic decision about hiring a design consultancy',
-      focus: 'business value, ROI, strategic advantage, and company reputation'
-    },
-    {
-      role: 'Product Manager',
-      context: 'evaluating design partners for product development',
-      focus: 'user experience, design process, timeline, and deliverables'
-    },
-    {
-      role: 'Healthcare Organization',
-      context: 'looking for design expertise in healthcare',
-      focus: 'healthcare domain knowledge, regulatory compliance, and patient outcomes'
-    },
-    {
-      role: 'Government Agency',
-      context: 'seeking design services for public sector projects',
-      focus: 'public service, accessibility, security, and civic engagement'
-    }
-  ]
+  // Define scenarios based on content type
+  let scenarios = []
+  
+  switch (contentType) {
+    case 'history-timeline':
+      scenarios = [
+        {
+          role: 'CEO',
+          context: 'evaluating a design consultancy\'s experience and stability',
+          focus: 'years of experience, company evolution, longevity, and proven track record'
+        },
+        {
+          role: 'Product Manager',
+          context: 'assessing design partner cultural fit and innovation capability',
+          focus: 'company culture, innovation history, adaptation to new technologies, and team values'
+        },
+        {
+          role: 'Healthcare Organization',
+          context: 'looking for experienced healthcare design partners',
+          focus: 'healthcare experience timeline, long-term client relationships, and industry expertise evolution'
+        },
+        {
+          role: 'Government Agency',
+          context: 'seeking established design partners with proven track record',
+          focus: 'company stability, years in business, public sector experience, and reliable partnership history'
+        }
+      ]
+      break
+      
+    case 'company-info':
+      scenarios = [
+        {
+          role: 'CEO',
+          context: 'learning about a potential design partner',
+          focus: 'company values, team expertise, leadership, and strategic capabilities'
+        },
+        {
+          role: 'Product Manager',
+          context: 'evaluating team composition and capabilities',
+          focus: 'team skills, collaboration approach, design process, and technical expertise'
+        },
+        {
+          role: 'Healthcare Organization',
+          context: 'assessing healthcare design expertise',
+          focus: 'healthcare team experience, domain knowledge, and specialized capabilities'
+        },
+        {
+          role: 'Government Agency',
+          context: 'evaluating vendor capabilities and compliance',
+          focus: 'team certifications, security clearances, government experience, and compliance standards'
+        }
+      ]
+      break
+      
+    case 'thought-leadership':
+      scenarios = [
+        {
+          role: 'CEO',
+          context: 'exploring innovative design thinking and future trends',
+          focus: 'strategic insights, industry vision, innovation leadership, and transformative ideas'
+        },
+        {
+          role: 'Product Manager',
+          context: 'seeking cutting-edge design approaches',
+          focus: 'innovative methodologies, emerging technologies, design trends, and practical applications'
+        },
+        {
+          role: 'Healthcare Organization',
+          context: 'looking for healthcare transformation insights',
+          focus: 'healthcare innovation, patient-centered design vision, future of care delivery'
+        },
+        {
+          role: 'Government Agency',
+          context: 'exploring public sector innovation',
+          focus: 'civic innovation, citizen engagement strategies, digital transformation insights'
+        }
+      ]
+      break
+      
+    default: // case-study or feature
+      scenarios = [
+        {
+          role: 'CEO',
+          context: 'making a strategic decision about hiring a design consultancy',
+          focus: 'business value, ROI, strategic advantage, and company reputation'
+        },
+        {
+          role: 'Product Manager',
+          context: 'evaluating design partners for product development',
+          focus: 'user experience, design process, timeline, and deliverables'
+        },
+        {
+          role: 'Healthcare Organization',
+          context: 'looking for design expertise in healthcare',
+          focus: 'healthcare domain knowledge, regulatory compliance, and patient outcomes'
+        },
+        {
+          role: 'Government Agency',
+          context: 'seeking design services for public sector projects',
+          focus: 'public service, accessibility, security, and civic engagement'
+        }
+      ]
+  }
 
   const descriptions = {}
 
   for (const scenario of scenarios) {
-    const prompt = `Generate a compelling 1-2 sentence description of this project tailored for a ${scenario.role} ${scenario.context}.
+    const prompt = `Generate a compelling 1-2 sentence description of this ${contentType === 'history-timeline' ? 'company history/timeline' : contentType === 'company-info' ? 'company information' : contentType === 'thought-leadership' ? 'thought leadership piece' : 'project'} tailored for a ${scenario.role} ${scenario.context}.
 
-Project: ${project.title}
-Client: ${project.client}
-Caption: ${project.caption}
-Categories: ${project.categories.join(', ')}
+${contentType === 'history-timeline' ? 'Company History' : contentType === 'company-info' ? 'Company Info' : contentType === 'thought-leadership' ? 'Vision/Insight' : 'Project'}: ${project.title}
+${project.client ? `Client: ${project.client}` : ''}
+${project.caption ? `Description: ${project.caption}` : ''}
+${project.categories.length > 0 ? `Categories: ${project.categories.join(', ')}` : ''}
+${effectiveContent ? `\nContent excerpt: ${effectiveContent.substring(0, 1000)}...` : ''}
 
-Focus on ${scenario.focus}. Make it specific and persuasive, highlighting relevant outcomes and expertise.
+Focus on ${scenario.focus}. Make it specific and persuasive, highlighting relevant ${contentType === 'history-timeline' ? 'historical milestones and company evolution' : contentType === 'company-info' ? 'team capabilities and values' : contentType === 'thought-leadership' ? 'insights and vision' : 'outcomes and expertise'}.
 Return ONLY the description text, no additional formatting.`
 
     try {
@@ -164,32 +303,80 @@ Return ONLY the description text, no additional formatting.`
       descriptions[scenario.role] = response.choices[0].message.content.trim()
     } catch (error) {
       console.error(`Error generating description for ${scenario.role}:`, error)
-      descriptions[scenario.role] = generateFallbackDescription(project, scenario)
+      descriptions[scenario.role] = generateFallbackDescription(project, scenario, contentType)
     }
   }
 
   return descriptions
 }
 
-// Fallback buyer descriptions
-function generateBuyerDescriptionsFallback(project) {
-  return {
-    'CEO': `${project.title} demonstrates our ability to deliver strategic value through innovative design solutions that drive business outcomes.`,
-    'Product Manager': `${project.title} showcases our user-centered design process and expertise in creating exceptional product experiences.`,
-    'Healthcare Organization': `${project.title} highlights our deep healthcare domain knowledge and commitment to improving patient outcomes through thoughtful design.`,
-    'Government Agency': `${project.title} exemplifies our experience in public sector design, focusing on accessibility and civic engagement.`
+// Fallback buyer descriptions based on content type
+function generateBuyerDescriptionsFallback(project, contentType) {
+  switch (contentType) {
+    case 'history-timeline':
+      return {
+        'CEO': `${project.title} showcases our ${new Date().getFullYear() - 2009} years of design excellence and continuous innovation in healthcare and emerging technologies.`,
+        'Product Manager': `${project.title} demonstrates our evolution as a human-centered design studio, adapting to new technologies while maintaining our core values and culture.`,
+        'Healthcare Organization': `${project.title} highlights our deep healthcare expertise developed over ${new Date().getFullYear() - 2009} years of dedicated healthcare design and innovation.`,
+        'Government Agency': `${project.title} illustrates our established track record and reliability as a design partner with over a decade of successful project delivery.`
+      }
+      
+    case 'company-info':
+      return {
+        'CEO': `${project.title} reveals our team's strategic capabilities and commitment to delivering transformative design solutions.`,
+        'Product Manager': `${project.title} showcases our collaborative approach and multidisciplinary expertise in creating exceptional user experiences.`,
+        'Healthcare Organization': `${project.title} demonstrates our specialized healthcare design team and deep domain expertise.`,
+        'Government Agency': `${project.title} highlights our experienced team and commitment to secure, compliant design solutions.`
+      }
+      
+    case 'thought-leadership':
+      return {
+        'CEO': `${project.title} presents our strategic vision and innovative thinking on the future of design and technology.`,
+        'Product Manager': `${project.title} explores cutting-edge design methodologies and practical insights for modern product development.`,
+        'Healthcare Organization': `${project.title} offers transformative insights on the future of healthcare design and patient-centered innovation.`,
+        'Government Agency': `${project.title} provides thought leadership on civic innovation and the future of public service design.`
+      }
+      
+    default:
+      return {
+        'CEO': `${project.title} demonstrates our ability to deliver strategic value through innovative design solutions that drive business outcomes.`,
+        'Product Manager': `${project.title} showcases our user-centered design process and expertise in creating exceptional product experiences.`,
+        'Healthcare Organization': `${project.title} highlights our deep healthcare domain knowledge and commitment to improving patient outcomes through thoughtful design.`,
+        'Government Agency': `${project.title} exemplifies our experience in public sector design, focusing on accessibility and civic engagement.`
+      }
   }
 }
 
-function generateFallbackDescription(project, scenario) {
+function generateFallbackDescription(project, scenario, contentType) {
   const templates = {
-    'CEO': `${project.title} delivers strategic business value through innovative design that drives measurable outcomes and competitive advantage.`,
-    'Product Manager': `${project.title} demonstrates our expertise in user-centered design and efficient product development processes.`,
-    'Healthcare Organization': `${project.title} showcases our healthcare domain expertise and commitment to improving patient care through design.`,
-    'Government Agency': `${project.title} exemplifies our public sector experience, delivering accessible and secure solutions for citizens.`
+    'history-timeline': {
+      'CEO': `${project.title} demonstrates our ${new Date().getFullYear() - 2009}+ years of proven design excellence and strategic value delivery.`,
+      'Product Manager': `${project.title} showcases our evolution and adaptability in design innovation over ${new Date().getFullYear() - 2009} years.`,
+      'Healthcare Organization': `${project.title} illustrates our long-standing commitment to healthcare design excellence since 2009.`,
+      'Government Agency': `${project.title} establishes our credibility as a reliable design partner with over a decade of experience.`
+    },
+    'company-info': {
+      'CEO': `${project.title} highlights our strategic design capabilities and experienced team.`,
+      'Product Manager': `${project.title} demonstrates our collaborative design process and technical expertise.`,
+      'Healthcare Organization': `${project.title} showcases our healthcare-focused team and specialized capabilities.`,
+      'Government Agency': `${project.title} presents our qualified team and commitment to public sector excellence.`
+    },
+    'thought-leadership': {
+      'CEO': `${project.title} shares our strategic insights on design innovation and industry transformation.`,
+      'Product Manager': `${project.title} explores innovative design approaches and emerging methodologies.`,
+      'Healthcare Organization': `${project.title} presents our vision for the future of healthcare design and patient experience.`,
+      'Government Agency': `${project.title} offers insights on civic innovation and public service transformation.`
+    },
+    'default': {
+      'CEO': `${project.title} delivers strategic business value through innovative design that drives measurable outcomes and competitive advantage.`,
+      'Product Manager': `${project.title} demonstrates our expertise in user-centered design and efficient product development processes.`,
+      'Healthcare Organization': `${project.title} showcases our healthcare domain expertise and commitment to improving patient care through design.`,
+      'Government Agency': `${project.title} exemplifies our public sector experience, delivering accessible and secure solutions for citizens.`
+    }
   }
   
-  return templates[scenario.role] || `${project.title} demonstrates our design expertise and commitment to delivering exceptional results.`
+  const typeTemplates = templates[contentType] || templates['default']
+  return typeTemplates[scenario.role] || `${project.title} demonstrates our design expertise and commitment to delivering exceptional results.`
 }
 
 // Function to extract skills from search query (from v2)
@@ -602,330 +789,157 @@ function categorizePageType(project) {
   return 'other';
 }
 
-// Main function to generate search index
-async function generateSearchIndex() {
-  console.log('🚀 Starting search index generation with comprehensive embeddings...')
+// Main function
+async function main() {
+  console.log('🚀 Starting embeddings generation...')
   
-  // Check for specific ID regeneration
-  const specificId = process.argv.find(arg => arg.startsWith('--id='))?.split('=')[1];
-  const forceRegeneration = process.argv.includes('--force');
+  const args = parseArgs()
   
-  if (specificId) {
-    console.log(`🎯 Targeting specific project: ${specificId}`);
+  // Load cache
+  const cache = await loadCache()
+  
+  // Load all projects
+  const caseStudies = await loadCaseStudies(cache)
+  const features = await loadFeatures(cache)
+  
+  let allProjects = [...caseStudies, ...features]
+  let updatedProjects = []
+  
+  // Filter to specific project if --id is provided
+  if (args.id) {
+    allProjects = allProjects.filter(p => p.id === args.id)
+    if (allProjects.length === 0) {
+      console.error(`❌ No project found with id: ${args.id}`)
+      process.exit(1)
+    }
+    console.log(`📌 Processing only project: ${args.id}`)
   }
   
-  if (forceRegeneration) {
-    console.log('🔥 Force mode: Regenerating ALL data (ignoring cache)')
+  // Load custom content if --file-input is provided
+  let customContent = null
+  if (args.fileInput) {
+    try {
+      const filePath = path.resolve(args.fileInput)
+      customContent = await fs.readFile(filePath, 'utf-8')
+      console.log(`📄 Loaded custom content from: ${args.fileInput}`)
+    } catch (error) {
+      console.error(`❌ Failed to load file: ${args.fileInput}`, error.message)
+      process.exit(1)
+    }
   }
   
-  if (!hasOpenAIKey) {
-    console.log('⚠️  Running in fallback mode - OpenAI API key not available')
-  }
-  
-  // Track pages without body text
-  const pagesWithoutBodyText = [];
-  const pageTypes = {
-    caseStudies: 0,
-    blogPosts: 0,
-    companyPages: 0,
-    features: 0,
-    other: 0
-  };
-  
-  try {
-    // Load existing cache
-    console.log('🗂️  Loading cache...')
-    const cache = await loadCache()
+  // Process projects that need updates
+  for (const project of allProjects) {
+    const cacheKey = project.type === 'case-study' ? project.id : `feature-${project.id}`
     
-    // Load all projects
-    console.log('📚 Loading projects and checking for changes...')
-    const caseStudies = await loadCaseStudies(cache)
-    const features = await loadFeatures(cache)
-    let allProjects = [...caseStudies, ...features]
-    
-    // If specific ID is provided, filter to only that project
-    let existingProjects = [];
-    if (specificId) {
-      const targetProject = allProjects.find(p => p.id === specificId);
-      if (!targetProject) {
-        console.error(`❌ Project with ID "${specificId}" not found`);
-        console.log('Available project IDs:');
-        allProjects.forEach(p => console.log(`  - ${p.id}`));
-        process.exit(1);
-      }
-      console.log(`✅ Found project: ${targetProject.title}`);
+    if (project.needsUpdate || args.id) {
+      console.log(`\n📝 Processing: ${project.title} (${project.id})`)
       
-      // Save all other projects
-      existingProjects = allProjects.filter(p => p.id !== specificId);
-      
-      // Process only the target project
-      allProjects = [targetProject];
-      
-      // Force update for the specific project
-      allProjects[0].needsUpdate = true;
-    }
-    
-    const totalProjects = allProjects.length
-    const projectsNeedingUpdate = allProjects.filter(p => p.needsUpdate).length
-    const cachedProjects = totalProjects - projectsNeedingUpdate
-    
-    console.log(`📊 Found ${totalProjects} projects:`)
-    if (!specificId) {
-      console.log(`  📑 ${caseStudies.length} case studies`)
-      console.log(`  🎯 ${features.length} features`)
-    }
-    if (!hasOpenAIKey) {
-      console.log(`  ⚠️  Using fallback mode (no OpenAI API key)`)
-    }
-    if (forceRegeneration) {
-      console.log(`  🔥 ${projectsNeedingUpdate} will be regenerated (force mode)`)
-    } else if (!specificId) {
-      console.log(`  ✅ ${cachedProjects} cached (unchanged)`)
-      console.log(`  🔄 ${projectsNeedingUpdate} need processing`)
-    }
-    
-    const searchIndex = []
-    let processedCount = 0
-    
-    // Process each project
-    for (let i = 0; i < allProjects.length; i++) {
-      const project = allProjects[i]
-      const cacheKey = project.type === 'feature' ? `feature-${project.id}` : project.id
-      
-      // Categorize page type
-      const pageType = categorizePageType(project);
-      pageTypes[pageType]++;
-      
-      // Check if project has sufficient body text
-      const hasBodyText = project.content && project.content.trim().length > 100;
-      if (!hasBodyText) {
-        pagesWithoutBodyText.push({
-          id: project.id,
-          title: project.title,
-          type: pageType,
-          reason: !project.content ? 'No body text' : `Body text too short (${project.content.trim().length} chars)`,
-          contentLength: project.content ? project.content.trim().length : 0
-        });
-      }
-      
-      let indexEntry
-      
-      if (project.needsUpdate) {
-        processedCount++
-        console.log(`\n🔄 Processing ${processedCount}/${projectsNeedingUpdate}: ${project.title}`)
-        
-        if (!hasBodyText) {
-          console.log('  ⚠️  Warning: Insufficient body text - descriptions may be generic');
-        }
-        
-        // Extract structured metadata (domain, product, goal)
-        console.log('  📋 Extracting structured metadata...')
-        const structuredMetadata = extractStructuredMetadata(project)
+      try {
+        // Determine content type
+        const contentType = args.type || detectContentType(project)
+        console.log(`  📊 Content type: ${contentType}`)
         
         // Generate buyer descriptions (v1 approach)
         console.log('  👥 Generating buyer persona descriptions...')
-        const buyerDescriptions = await generateBuyerDescriptions(project)
+        const buyerDescriptions = await generateBuyerDescriptions(project, contentType, customContent)
         
         // Extract project capabilities (v2 approach)
         console.log('  🔍 Extracting project capabilities...')
         const capabilities = await extractProjectCapabilities(project)
         
         // Generate modular descriptions (v2 approach)
-        console.log('  ✍️  Generating modular descriptions...')
+        console.log('  📝 Generating modular descriptions...')
         const modularDescriptions = await generateModularDescriptions(project, capabilities)
         
-        // Prepare comprehensive text for embedding
-        const embeddingText = prepareTextForEmbedding(
-          project, 
-          buyerDescriptions, 
-          capabilities, 
+        const updatedProject = {
+          ...project,
+          buyerDescriptions,
+          capabilities,
           modularDescriptions,
-          structuredMetadata
-        )
-        
-        // Generate embedding
-        console.log('  🧠 Generating embedding...')
-        const embedding = await generateEmbedding(embeddingText)
-        
-        // Create comprehensive search index entry
-        indexEntry = {
-          id: project.id,
-          type: project.type,
-          title: project.title,
-          client: project.client,
-          caption: project.caption,
-          categories: project.categories,
-          image: project.image,
-          slug: project.slug,
-          link: project.link,
-          
-          // Structured metadata (v1 approach)
-          structuredMetadata: structuredMetadata,
-          
-          // Buyer descriptions (v1 approach)
-          buyerDescriptions: buyerDescriptions,
-          
-          // Capabilities (v2 approach)
-          capabilities: capabilities,
-          
-          // Modular descriptions (v2 approach)
-          modularDescriptions: modularDescriptions,
-          
-          // Embedding and metadata
-          embedding: embedding,
-          embeddingText: embeddingText,
-          lastUpdated: new Date().toISOString(),
-          contentHash: project.contentHash
+          lastGenerated: new Date().toISOString()
         }
         
         // Update cache
         cache[cacheKey] = {
           contentHash: project.contentHash,
-          lastModified: project.lastModified,
-          indexEntry: indexEntry
+          buyerDescriptions,
+          capabilities,
+          modularDescriptions,
+          lastGenerated: updatedProject.lastGenerated
         }
         
-        // Add small delay to respect API rate limits
-        if (processedCount < projectsNeedingUpdate && hasOpenAIKey) {
-          await new Promise(resolve => setTimeout(resolve, 200))
-        }
-        
-      } else {
-        // Use cached version
-        console.log(`✅ Using cached: ${project.title}`)
-        indexEntry = cache[cacheKey].indexEntry
+        updatedProjects.push(updatedProject)
+        console.log('  ✅ Descriptions generated successfully')
+      } catch (error) {
+        console.error(`  ❌ Error processing ${project.title}:`, error)
       }
-      
-      searchIndex.push(indexEntry)
-    }
-    
-    // If we were regenerating a specific ID, merge back with existing projects
-    if (specificId && existingProjects.length > 0) {
-      console.log('\n🔀 Merging with existing projects...');
-      
-      // Load the existing search index
-      const existingIndexPath = path.join(__dirname, '../src/data/search-index.json');
-      let existingIndex = [];
-      try {
-        const existingData = await fs.readFile(existingIndexPath, 'utf-8');
-        existingIndex = JSON.parse(existingData);
-      } catch (e) {
-        console.log('  ⚠️  No existing index found, creating new one');
-      }
-      
-      // Replace the specific entry in the existing index
-      const updatedIndex = existingIndex.filter(item => item.id !== specificId);
-      updatedIndex.push(...searchIndex);
-      searchIndex.length = 0;
-      searchIndex.push(...updatedIndex);
-    }
-    
-    // Save updated cache
-    console.log('\n💾 Saving cache...')
-    await saveCache(cache)
-    
-    // Save search index
-    const outputPath = path.join(__dirname, '../src/data/search-index.json')
-    await fs.writeFile(outputPath, JSON.stringify(searchIndex, null, 2))
-    console.log(`✅ Search index saved to ${outputPath}`)
-    
-    // Also copy to static folder
-    const publicPath = path.join(__dirname, '..', 'static', 'search-index.json')
-    await fs.writeFile(publicPath, JSON.stringify(searchIndex, null, 2))
-    console.log(`✅ Search index also saved to ${publicPath} for client access`)
-    
-    // Generate summary statistics
-    console.log('\n📈 Generation Summary:')
-    console.log(`  🔄 Processed: ${processedCount} projects`)
-    if (!forceRegeneration && !specificId) {
-      console.log(`  ⚡ Cached: ${cachedProjects} projects`)
-    }
-    if (hasOpenAIKey) {
-      console.log(`  💰 Estimated cost: $${(processedCount * 0.01).toFixed(2)}`)
     } else {
-      console.log(`  ⚠️  Used fallback mode (no cost - no OpenAI API)`)
-    }
-    
-    // Report page types (only if not specific ID mode)
-    if (!specificId) {
-      console.log('\n📄 Page Type Breakdown:');
-      Object.entries(pageTypes).forEach(([type, count]) => {
-        if (count > 0) {
-          console.log(`  ${type}: ${count}`);
-        }
-      });
-    }
-    
-    // Report pages without body text
-    if (pagesWithoutBodyText.length > 0) {
-      console.log(`\n⚠️  Pages without sufficient body text: ${pagesWithoutBodyText.length}`);
-      console.log('These pages may have hallucinated or generic descriptions:');
-      pagesWithoutBodyText.forEach(page => {
-        console.log(`  - ${page.title} (${page.id})`);
-        console.log(`    Type: ${page.type}, Reason: ${page.reason}`);
-      });
-      
-      console.log('\n💡 Recommendation: Consider adding more content to these pages or excluding them from search.');
-    }
-    
-    // Show data richness (only if not specific ID mode)
-    if (!specificId) {
-      console.log('\n💎 Data Richness:')
-      
-      // Capability distribution
-      const capabilityStats = {
-        techniques: 0,
-        skills: 0,
-        frameworks: 0,
-        technicalImplementation: 0,
-        domainExpertise: 0,
-        businessOutcomes: 0
-      }
-      
-      // Domain distribution
-      const domainStats = {}
-      
-      searchIndex.forEach(item => {
-        // Count capabilities
-        if (item.capabilities) {
-          Object.keys(capabilityStats).forEach(key => {
-            capabilityStats[key] += (item.capabilities[key] || []).length
-          })
-        }
-        
-        // Count domains
-        if (item.structuredMetadata && item.structuredMetadata.domain) {
-          domainStats[item.structuredMetadata.domain] = (domainStats[item.structuredMetadata.domain] || 0) + 1
-        }
-      })
-      
-      console.log('\n🎯 Capability Distribution:')
-      Object.entries(capabilityStats).forEach(([key, count]) => {
-        console.log(`  ${key}: ${count} total`)
-      })
-      
-      console.log('\n🏢 Domain Distribution:')
-      Object.entries(domainStats).forEach(([domain, count]) => {
-        console.log(`  ${domain}: ${count} projects`)
+      console.log(`⏭️  Skipping ${project.title} (cached)`)
+      // Use cached data
+      const cachedData = cache[cacheKey]
+      updatedProjects.push({
+        ...project,
+        buyerDescriptions: cachedData.buyerDescriptions || {},
+        capabilities: cachedData.capabilities || {},
+        modularDescriptions: cachedData.modularDescriptions || {},
+        lastGenerated: cachedData.lastGenerated
       })
     }
-    
-    console.log('\n✨ Each project now has:')
-    console.log('  - 4 buyer persona descriptions (CEO, PM, Healthcare, Government)')
-    console.log('  - Structured metadata (domain, product, goal)')
-    console.log('  - Detailed capability extraction')
-    console.log('  - Modular capability descriptions')
-    console.log('  - Rich embeddings combining all data')
-    
-  } catch (error) {
-    console.error('❌ Error generating search index:', error)
-    process.exit(1)
   }
+  
+  // If we processed a specific ID, we're done
+  if (args.id) {
+    await saveCache(cache)
+    console.log('\n✅ Individual project processed successfully!')
+    return
+  }
+  
+  // Continue with full search index generation...
+  console.log(`\n📊 Processed ${updatedProjects.length} projects`)
+  
+  // Generate the search index
+  console.log('\n🔍 Generating search index...')
+  const searchIndex = allProjects.map(project => {
+    const projectData = updatedProjects.find(p => p.id === project.id) || project
+    const buyerDescriptions = projectData.buyerDescriptions || cache[project.id]?.buyerDescriptions || {}
+    const capabilities = projectData.capabilities || cache[project.id]?.capabilities || {}
+    const modularDescriptions = projectData.modularDescriptions || cache[project.id]?.modularDescriptions || {}
+    
+    return {
+      id: project.id,
+      type: project.type,
+      title: project.title,
+      client: project.client,
+      categories: project.categories,
+      caption: project.caption,
+      slug: project.slug || project.link || '',
+      image: project.image || '',
+      buyerDescriptions,
+      capabilities,
+      modularDescriptions
+    }
+  })
+  
+  // Write the search index
+  const publicDir = path.join(__dirname, '..', 'public')
+  await fs.mkdir(publicDir, { recursive: true })
+  await fs.writeFile(
+    path.join(publicDir, 'search-index.json'),
+    JSON.stringify(searchIndex, null, 2)
+  )
+  
+  // Save cache
+  await saveCache(cache)
+  
+  console.log('✅ Search index generated successfully!')
+  console.log(`📁 Output: public/search-index.json`)
+  console.log(`📊 Total projects: ${searchIndex.length}`)
+  console.log(`🔄 Updated: ${updatedProjects.length}`)
+  console.log(`💾 Cached: ${searchIndex.length - updatedProjects.length}`)
 }
 
 // Run the script
-if (require.main === module) {
-  generateSearchIndex()
-}
+main().catch(console.error)
 
-module.exports = { generateSearchIndex } 
+module.exports = { main } 

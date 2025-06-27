@@ -113,6 +113,35 @@ This project uses [prettier](https://github.com/prettier/prettier) to format cod
 
 You may also wish to make things easier by installing and using [EditorConfig](https://editorconfig.org/), which will apply many of the same rules from prettier directly in your code editor. This helps keep things like indentation in check as you code. If you use [Atom](https://atom.io/), there is an [Atom EditorConfig package](https://atom.io/packages/editorconfig) available.
 
+## Troubleshooting
+
+### Webpack chunk loading errors
+
+If you encounter an error like "Loading chunk component---src-pages-index-js failed" or similar webpack chunk loading errors, this is usually caused by corrupted build cache. This is a common issue that can occur after making changes to dependencies or file structures.
+
+To fix this issue:
+
+1. Stop the development server (Ctrl+C or Cmd+C)
+2. Clear the Gatsby cache:
+   ```bash
+   $ yarn clean
+   ```
+   or
+   ```bash
+   $ npm run clean
+   ```
+3. Restart the development server:
+   ```bash
+   $ yarn develop
+   ```
+
+This will delete the `.cache` and `public` directories and rebuild everything from scratch. The page should then load without chunk loading errors.
+
+If the issue persists after clearing the cache, you can also try:
+- Clearing your browser cache and doing a hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
+- Deleting `node_modules` and running `yarn install` again
+- Checking for any syntax errors in recently modified files
+
 ## Working with images
 
 **Do not add or commit images directly to this project!**

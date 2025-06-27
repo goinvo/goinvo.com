@@ -1,11 +1,10 @@
 // Enhanced Search - Combines template-based and skill-based approaches
+import { extractKeywords, calculateKeywordSimilarity } from './semantic-search'
 
 // Function to extract query skills and structured fields
 export function parseQuery(query) {
   const queryLower = query.toLowerCase()
   const result = {
-    // Store original query for persona selection
-    originalQuery: query,
     // Structured fields
     domain: null,
     product: null,
@@ -172,48 +171,7 @@ export function calculateSkillMatch(querySkills, project) {
 export function selectBuyerDescription(project, parsedQuery) {
   if (!project.buyerDescriptions) return null
   
-  // Check for specific visitor intent based on query keywords
-  const queryLower = parsedQuery.originalQuery ? parsedQuery.originalQuery.toLowerCase() : ''
-  
-  // Job seeker queries
-  if (queryLower.includes('job') || queryLower.includes('career') || 
-      queryLower.includes('work at') || queryLower.includes('working at') ||
-      queryLower.includes('hire') || queryLower.includes('hiring') ||
-      queryLower.includes('employment')) {
-    return project.buyerDescriptions['Job Seeker'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Culture enthusiast queries
-  if (queryLower.includes('culture') || queryLower.includes('values') ||
-      queryLower.includes('team') || queryLower.includes('what is goinvo like') ||
-      queryLower.includes('open source') || queryLower.includes('philosophy')) {
-    return project.buyerDescriptions['Culture Enthusiast'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Merchandise seeker queries
-  if (queryLower.includes('print') || queryLower.includes('poster') ||
-      queryLower.includes('merch') || queryLower.includes('merchandise') ||
-      queryLower.includes('buy') || queryLower.includes('purchase') ||
-      queryLower.includes('product') || queryLower.includes('shop')) {
-    return project.buyerDescriptions['Merchandise Seeker'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Design professional/student queries
-  if (queryLower.includes('design process') || queryLower.includes('methodology') ||
-      queryLower.includes('case study') || queryLower.includes('design inspiration') ||
-      queryLower.includes('learn') || queryLower.includes('student')) {
-    return project.buyerDescriptions['Design Professional'] || 
-           project.buyerDescriptions['Design Student/Professional'] || 
-           project.buyerDescriptions['Product Manager']
-  }
-  
-  // General public queries
-  if (queryLower.includes('what is') || queryLower.includes('how does') ||
-      queryLower.includes('explain') || queryLower.includes('understand')) {
-    return project.buyerDescriptions['General Public'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Domain-based selection (existing logic)
+  // Determine most relevant persona based on query
   if (parsedQuery.domain === 'Healthcare') {
     return project.buyerDescriptions['Healthcare Organization'] || project.buyerDescriptions['CEO']
   } else if (parsedQuery.domain === 'Government') {
@@ -221,7 +179,6 @@ export function selectBuyerDescription(project, parsedQuery) {
   } else if (parsedQuery.product && ['Mobile App', 'Dashboard', 'Platform'].includes(parsedQuery.product)) {
     return project.buyerDescriptions['Product Manager'] || project.buyerDescriptions['CEO']
   } else {
-    // Default to CEO for general business queries
     return project.buyerDescriptions['CEO']
   }
 }

@@ -403,31 +403,14 @@ export const performClientSideSemanticSearch = (query, projects, filters = {}) =
   const results = projects.map(project => {
     const keywordSimilarity = calculateKeywordSimilarity(queryKeywords, project)
     
-    // Get relevant buyer description (legacy fallback)
+    // Get relevant buyer description
     const relevantDescription = getRelevantBuyerDescription(query, project.buyerDescriptions)
-    
-    // Generate dynamic snippet using new system
-    let dynamicSnippet = null
-    try {
-      // Import the generator dynamically to avoid circular dependencies
-      import('./snippet-generator').then(module => {
-        dynamicSnippet = module.generateDynamicSnippet(project, query, {
-          fallbackToAI: true,
-          useRandomization: false
-        })
-      }).catch(err => {
-        console.warn('Could not load snippet generator:', err)
-      })
-    } catch (err) {
-      console.warn('Error generating dynamic snippet:', err)
-    }
     
     return {
       ...project,
       similarity: Math.max(0, Math.min(1, keywordSimilarity)),
       similarityPercent: Math.round(keywordSimilarity * 100),
-      aiDescription: relevantDescription, // Legacy AI description
-      dynamicSnippet: dynamicSnippet?.snippet || relevantDescription || null // New dynamic snippet
+      aiDescription: relevantDescription
     }
   })
   

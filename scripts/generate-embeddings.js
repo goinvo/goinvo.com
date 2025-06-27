@@ -88,15 +88,15 @@ async function loadCaseStudies(cache = {}) {
     
     return {
       id,
-      type: 'case-study',
+        type: 'case-study',
       title: frontmatter.title || id,
-      client: frontmatter.client || '',
+        client: frontmatter.client || '',
       categories: frontmatter.categories ? frontmatter.categories.split(',').map(c => c.trim()) : [],
-      caption: frontmatter.caption || '',
+        caption: frontmatter.caption || '',
       slug: `/case-study/${id}/`,
       content: content.replace(/^---[\s\S]*?---\n/, ''),
-      contentHash,
-      lastModified: fileStats.mtime.toISOString(),
+        contentHash,
+        lastModified: fileStats.mtime.toISOString(),
       needsUpdate: forceRegeneration || !cache[id] || cache[id].contentHash !== contentHash
     }
   }))
@@ -117,18 +117,18 @@ async function loadFeatures(cache = {}) {
       const contentHash = generateContentHash(JSON.stringify(feature))
       
       return {
-        id: feature.id,
-        type: 'feature',
-        title: feature.title || '',
-        client: feature.client || '',
-        caption: feature.caption || '',
-        categories: feature.categories || [],
+      id: feature.id,
+      type: 'feature',
+      title: feature.title || '',
+      client: feature.client || '',
+      caption: feature.caption || '',
+      categories: feature.categories || [],
         content: feature.caption || '',
-        image: feature.image || '',
-        link: feature.link || '',
-        contentHash,
-        lastModified: fileStats.mtime.toISOString(),
-        needsUpdate: forceRegeneration || !cache[`feature-${feature.id}`] || cache[`feature-${feature.id}`].contentHash !== contentHash
+      image: feature.image || '',
+      link: feature.link || '',
+      contentHash,
+      lastModified: fileStats.mtime.toISOString(),
+      needsUpdate: forceRegeneration || !cache[`feature-${feature.id}`] || cache[`feature-${feature.id}`].contentHash !== contentHash
       }
     })
 }
@@ -199,6 +199,16 @@ async function generateBuyerDescriptions(project, contentType, customContent = n
           role: 'Government Agency',
           context: 'seeking established design partners with proven track record',
           focus: 'company stability, years in business, public sector experience, and reliable partnership history'
+        },
+        {
+          role: 'Job Seeker',
+          context: 'researching company history and culture before applying',
+          focus: 'company growth, culture evolution, work environment changes, and long-term stability as an employer'
+        },
+        {
+          role: 'Culture Enthusiast',
+          context: 'exploring what makes GoInvo unique',
+          focus: 'company values, human-centered approach, team dynamics, and creative culture over the years'
         }
       ]
       break
@@ -224,6 +234,16 @@ async function generateBuyerDescriptions(project, contentType, customContent = n
           role: 'Government Agency',
           context: 'evaluating vendor capabilities and compliance',
           focus: 'team certifications, security clearances, government experience, and compliance standards'
+        },
+        {
+          role: 'Job Seeker',
+          context: 'learning about work culture and opportunities',
+          focus: 'team culture, work environment, growth opportunities, benefits, and what it\'s like to work at GoInvo'
+        },
+        {
+          role: 'Culture Enthusiast',
+          context: 'discovering GoInvo\'s unique approach',
+          focus: 'company mission, values, team dynamics, open source contributions, and community involvement'
         }
       ]
       break
@@ -249,6 +269,16 @@ async function generateBuyerDescriptions(project, contentType, customContent = n
           role: 'Government Agency',
           context: 'exploring public sector innovation',
           focus: 'civic innovation, citizen engagement strategies, digital transformation insights'
+        },
+        {
+          role: 'Design Student/Professional',
+          context: 'seeking inspiration and learning resources',
+          focus: 'design philosophy, methodology insights, industry best practices, and educational value'
+        },
+        {
+          role: 'General Public',
+          context: 'interested in healthcare and design innovation',
+          focus: 'accessible insights, real-world impact, future possibilities, and how design affects daily life'
         }
       ]
       break
@@ -274,6 +304,16 @@ async function generateBuyerDescriptions(project, contentType, customContent = n
           role: 'Government Agency',
           context: 'seeking design services for public sector projects',
           focus: 'public service, accessibility, security, and civic engagement'
+        },
+        {
+          role: 'Design Professional',
+          context: 'studying successful design implementations',
+          focus: 'design methodology, problem-solving approach, technical execution, and creative solutions'
+        },
+        {
+          role: 'Merchandise Seeker',
+          context: 'looking for prints or products related to this work',
+          focus: 'visual impact, artistic merit, availability of prints or merchandise, and unique design elements'
         }
       ]
   }
@@ -318,7 +358,9 @@ function generateBuyerDescriptionsFallback(project, contentType) {
         'CEO': `${project.title} showcases our ${new Date().getFullYear() - 2009} years of design excellence and continuous innovation in healthcare and emerging technologies.`,
         'Product Manager': `${project.title} demonstrates our evolution as a human-centered design studio, adapting to new technologies while maintaining our core values and culture.`,
         'Healthcare Organization': `${project.title} highlights our deep healthcare expertise developed over ${new Date().getFullYear() - 2009} years of dedicated healthcare design and innovation.`,
-        'Government Agency': `${project.title} illustrates our established track record and reliability as a design partner with over a decade of successful project delivery.`
+        'Government Agency': `${project.title} illustrates our established track record and reliability as a design partner with over a decade of successful project delivery.`,
+        'Job Seeker': `${project.title} reveals our journey from startup to established studio, showcasing a stable, creative work environment where designers thrive and grow.`,
+        'Culture Enthusiast': `${project.title} tells the story of our human-centered approach, open culture, and commitment to making healthcare more accessible through design.`
       }
       
     case 'company-info':
@@ -326,7 +368,9 @@ function generateBuyerDescriptionsFallback(project, contentType) {
         'CEO': `${project.title} reveals our team's strategic capabilities and commitment to delivering transformative design solutions.`,
         'Product Manager': `${project.title} showcases our collaborative approach and multidisciplinary expertise in creating exceptional user experiences.`,
         'Healthcare Organization': `${project.title} demonstrates our specialized healthcare design team and deep domain expertise.`,
-        'Government Agency': `${project.title} highlights our experienced team and commitment to secure, compliant design solutions.`
+        'Government Agency': `${project.title} highlights our experienced team and commitment to secure, compliant design solutions.`,
+        'Job Seeker': `${project.title} provides insight into our open, collaborative culture where creativity flourishes and every team member's voice matters.`,
+        'Culture Enthusiast': `${project.title} captures our mission to humanize healthcare through open source design and transparent collaboration.`
       }
       
     case 'thought-leadership':
@@ -334,7 +378,9 @@ function generateBuyerDescriptionsFallback(project, contentType) {
         'CEO': `${project.title} presents our strategic vision and innovative thinking on the future of design and technology.`,
         'Product Manager': `${project.title} explores cutting-edge design methodologies and practical insights for modern product development.`,
         'Healthcare Organization': `${project.title} offers transformative insights on the future of healthcare design and patient-centered innovation.`,
-        'Government Agency': `${project.title} provides thought leadership on civic innovation and the future of public service design.`
+        'Government Agency': `${project.title} provides thought leadership on civic innovation and the future of public service design.`,
+        'Design Student/Professional': `${project.title} shares valuable design insights and methodologies that inspire and educate the design community.`,
+        'General Public': `${project.title} makes complex design and healthcare concepts accessible, showing how good design improves lives.`
       }
       
     default:
@@ -342,7 +388,9 @@ function generateBuyerDescriptionsFallback(project, contentType) {
         'CEO': `${project.title} demonstrates our ability to deliver strategic value through innovative design solutions that drive business outcomes.`,
         'Product Manager': `${project.title} showcases our user-centered design process and expertise in creating exceptional product experiences.`,
         'Healthcare Organization': `${project.title} highlights our deep healthcare domain knowledge and commitment to improving patient outcomes through thoughtful design.`,
-        'Government Agency': `${project.title} exemplifies our experience in public sector design, focusing on accessibility and civic engagement.`
+        'Government Agency': `${project.title} exemplifies our experience in public sector design, focusing on accessibility and civic engagement.`,
+        'Design Professional': `${project.title} reveals our design methodology and problem-solving approach, offering insights for fellow designers.`,
+        'Merchandise Seeker': `${project.title} features striking visual design elements that capture the essence of innovative healthcare solutions.`
       }
   }
 }
@@ -353,25 +401,33 @@ function generateFallbackDescription(project, scenario, contentType) {
       'CEO': `${project.title} demonstrates our ${new Date().getFullYear() - 2009}+ years of proven design excellence and strategic value delivery.`,
       'Product Manager': `${project.title} showcases our evolution and adaptability in design innovation over ${new Date().getFullYear() - 2009} years.`,
       'Healthcare Organization': `${project.title} illustrates our long-standing commitment to healthcare design excellence since 2009.`,
-      'Government Agency': `${project.title} establishes our credibility as a reliable design partner with over a decade of experience.`
+      'Government Agency': `${project.title} establishes our credibility as a reliable design partner with over a decade of experience.`,
+      'Job Seeker': `${project.title} shows our growth story and the exciting opportunities to join a mature yet innovative design studio.`,
+      'Culture Enthusiast': `${project.title} reveals the values and human-centered philosophy that have guided us for over ${new Date().getFullYear() - 2009} years.`
     },
     'company-info': {
       'CEO': `${project.title} highlights our strategic design capabilities and experienced team.`,
       'Product Manager': `${project.title} demonstrates our collaborative design process and technical expertise.`,
       'Healthcare Organization': `${project.title} showcases our healthcare-focused team and specialized capabilities.`,
-      'Government Agency': `${project.title} presents our qualified team and commitment to public sector excellence.`
+      'Government Agency': `${project.title} presents our qualified team and commitment to public sector excellence.`,
+      'Job Seeker': `${project.title} offers a glimpse into our creative workspace and the talented people who make GoInvo special.`,
+      'Culture Enthusiast': `${project.title} embodies our open source ethos and dedication to improving lives through design.`
     },
     'thought-leadership': {
       'CEO': `${project.title} shares our strategic insights on design innovation and industry transformation.`,
       'Product Manager': `${project.title} explores innovative design approaches and emerging methodologies.`,
       'Healthcare Organization': `${project.title} presents our vision for the future of healthcare design and patient experience.`,
-      'Government Agency': `${project.title} offers insights on civic innovation and public service transformation.`
+      'Government Agency': `${project.title} offers insights on civic innovation and public service transformation.`,
+      'Design Student/Professional': `${project.title} provides educational insights and inspiration for the design community.`,
+      'General Public': `${project.title} translates complex design concepts into accessible ideas that impact everyday life.`
     },
     'default': {
       'CEO': `${project.title} delivers strategic business value through innovative design that drives measurable outcomes and competitive advantage.`,
       'Product Manager': `${project.title} demonstrates our expertise in user-centered design and efficient product development processes.`,
       'Healthcare Organization': `${project.title} showcases our healthcare domain expertise and commitment to improving patient care through design.`,
-      'Government Agency': `${project.title} exemplifies our public sector experience, delivering accessible and secure solutions for citizens.`
+      'Government Agency': `${project.title} exemplifies our public sector experience, delivering accessible and secure solutions for citizens.`,
+      'Design Professional': `${project.title} offers valuable insights into our design process and creative problem-solving approach.`,
+      'Merchandise Seeker': `${project.title} presents visually compelling design work that would make beautiful prints or products.`
     }
   }
   
@@ -420,6 +476,11 @@ Return ONLY valid JSON, no additional text.`
     } else if (result.includes('```')) {
       result = result.replace(/```\s*/g, '')
     }
+    
+    // Fix common JSON escape issues
+    result = result.replace(/\\\\/g, '\\')  // Fix double-escaped backslashes
+    result = result.replace(/\\'/g, "'")    // Replace \' with '
+    result = result.replace(/[\x00-\x1F\x7F]/g, '')  // Remove control characters
     
     return JSON.parse(result)
   } catch (error) {
@@ -536,6 +597,11 @@ Return ONLY valid JSON, no additional text.`
       result = result.replace(/```\s*/g, '')
     }
     
+    // Fix common JSON escape issues
+    result = result.replace(/\\\\/g, '\\')  // Fix double-escaped backslashes
+    result = result.replace(/\\'/g, "'")    // Replace \' with '
+    result = result.replace(/[\x00-\x1F\x7F]/g, '')  // Remove control characters
+    
     const parsed = JSON.parse(result)
     // Ensure all properties are arrays
     return {
@@ -629,6 +695,11 @@ Return ONLY valid JSON, no additional text.`
     } else if (result.includes('```')) {
       result = result.replace(/```\s*/g, '')
     }
+    
+    // Fix common JSON escape issues
+    result = result.replace(/\\\\/g, '\\')  // Fix double-escaped backslashes
+    result = result.replace(/\\'/g, "'")    // Replace \' with '
+    result = result.replace(/[\x00-\x1F\x7F]/g, '')  // Remove control characters
     
     return JSON.parse(result)
   } catch (error) {

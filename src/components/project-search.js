@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import ImageBlock from './image-block'
-import Results from './results'
 import { performEnhancedSearch } from '../utils/enhanced-search'
 
 const ProjectSearch = ({ projects = [] }) => {

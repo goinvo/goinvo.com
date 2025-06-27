@@ -832,7 +832,7 @@ cp .env.example .env
 Add your OpenAI API key to `.env`:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=your-api-key-here
 ```
 
 > **💡 API Key Setup**: Get your OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
@@ -1055,3 +1055,25 @@ For questions about the search system or setup:
 - ✅ **Advanced Filtering** by type, industry, complexity
 - ✅ **Mobile Responsive** design
 - ✅ **Cost Efficient** client-side architecture
+
+## Environment Setup
+
+### OpenAI API Key for Enhanced Search
+
+The site uses AI-generated search descriptions to enhance the search functionality. To enable this:
+
+1. Create a `.env` file in the project root:
+   ```bash
+   touch .env
+   ```
+
+2. Add your OpenAI API key to the `.env` file:
+   ```
+   OPENAI_API_KEY=your-api-key-here
+   ```
+
+3. Get your API key from: https://platform.openai.com/api-keys
+
+The `.env` file is gitignored and will not be committed to the repository.
+
+**Note:** Without an OpenAI API key, the search will still work but will use generic template descriptions instead of AI-generated ones.

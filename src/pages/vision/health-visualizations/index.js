@@ -5,8 +5,7 @@ import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
 import Columns from '../../../components/columns'
 import PosterCard from '../../../components/vision/health-visualizations/poster-card'
-//import Image from '../../../components/image'
-//import { mediaUrl } from '../../../helpers'
+////import { mediaUrl } from '../../../helpers'
 
 import posters from '../../../data/vision/health-visualizations/posters.json'
 

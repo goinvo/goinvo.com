@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
 import Quote from '../../../components/quote'
 import Author from '../../../components/author'
 import References from '../../../components/references'
@@ -12,6 +11,7 @@ import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'Transforming Service Access in Massachusetts',
@@ -20,7 +20,6 @@ const frontmatter = {
   heroImage:
     '/images/features/eligibility/hero-image.jpg',
 }
-
 
 class EligibilityEngine extends Component {
   render() {
@@ -78,7 +77,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/eligibility/current-process-2.jpg"
                     className="image--max-width"
                   />
@@ -97,7 +96,7 @@ class EligibilityEngine extends Component {
                 rel="noopener noreferrer"
                 className="preview-download"
               >
-                <Image
+                <LazyImage
                   src="/images/features/eligibility/journey-map-preview.jpg"
                   className="image--max-width"
                 />
@@ -149,7 +148,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/eligibility/application-data-2.jpg"
                     className="image--max-width"
                   />
@@ -195,7 +194,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/eligibility/streamlined-process-2.jpg"
                     className="image--max-width"
                   />
@@ -206,7 +205,6 @@ class EligibilityEngine extends Component {
                   </p>
                 </div>
               </div>
-
 
               <p><strong>Proactive Service Recommendations</strong></p>
               <p>
@@ -335,7 +333,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <LazyImage
                     src="/images/features/eligibility/footprint.jpg"
                     className="image--max-width"
                   />

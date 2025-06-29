@@ -318,6 +318,7 @@ class WorkPage extends Component {
                       caption={item.caption}
                       sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
                       hoverable
+                      workCard
                     />
                   </Card>
                 )

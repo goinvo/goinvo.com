@@ -363,8 +363,8 @@ class GenAIFeature extends Component {
 
           <div className="max-width pad-all">
             <h2 className="header--lg text--center margin-top--trip">Why does this matter?</h2>
-            <p>This workflow is designed for storytelling at scale. For complex systems and stories, we need hundreds of custom visuals. GenAI allows us to move faster and empowers us to lead with ideas rather than limit them. It helps us sketch crazy ideas, try wild graphics, and show real stories without getting stuck in every pixel and every tool.</p>
-            <p>The concept takes the lead, not the toolset —bringing bold ideas to life and more prototypes to the table. The more we can make and the less time it takes to do so, the better the ideas we can bring to the work.</p>
+            <p>This workflow is designed for storytelling at scale. For complex systems and stories, we need hundreds of custom visuals. GenAI allows us to move faster and empowers us to lead with ideas rather than limit them. It helps us sketch crazy ideas, try wild graphics, and show real stories without getting stuck in every pixel and every tool. <a href="https://www.researchgate.net/publication/254303366_Assessing_the_Quality_of_Ideas_From_Prolific_Early-Stage_Product_Ideation" target="_blank" rel="noopener noreferrer">As research has shown</a>, the more ideas we generate, the more statistically likely we are to come up with a promising lead.</p>
+            <p>By adding GenAi to our creative workflow, the concept takes the lead, not the toolset — allowing us to bring bold ideas to life and more prototypes to the table. The more we can make and the less time it takes to do so, the better the ideas we can bring to the work.</p>
           </div>
 
           <div className="max-width pad-all">

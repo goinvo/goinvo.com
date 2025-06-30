@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -15,6 +14,7 @@ import personalizedCareIcon from '../../../assets/images/vision/open-pro/persona
 import treatmentIcon from '../../../assets/images/vision/open-pro/treatment.svg'
 
 import config from '../../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'openPRO: Your health. Your voice.',
@@ -319,7 +319,7 @@ class openPro extends Component {
                 beautifully and simply.{' '}
               </h4>
 
-              <Image
+              <LazyImage
                 src="/images/features/open-pro/main-graphic.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -388,7 +388,7 @@ class openPro extends Component {
                 are no publically available voice interfaces for collecting
                 PROMs or questionnaires.
               </p>
-              <Image
+              <LazyImage
                 src="/images/features/open-pro/voice-pro.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -472,7 +472,7 @@ class openPro extends Component {
                 tool such as openPRO - Symptom Reporter would help encourage
                 such integration.
               </p>
-              <Image
+              <LazyImage
                 src="/images/features/open-pro/symptom.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -569,7 +569,7 @@ class openPro extends Component {
                   questions such as frequency, severity, and timing.
                 </li>
               </ul>
-              <Image
+              <LazyImage
                 src="/images/features/open-pro/ros.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -660,7 +660,7 @@ class openPro extends Component {
                   ROS reporter, and Voice PROMs.
                 </li>
               </ul>
-              <Image
+              <LazyImage
                 src="/images/features/open-pro/platform.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}

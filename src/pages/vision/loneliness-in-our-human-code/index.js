@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -42,6 +41,7 @@ import homeIcon from '../../../assets/images/vision/loneliness-in-our-human-code
 import longTermCoupleIcon from '../../../assets/images/vision/loneliness-in-our-human-code/long-term-couple.svg'
 
 import config from '../../../../config'
+import { LazyImage } from '../../../components/optimized-image'
 
 const frontmatter = {
   metaTitle: 'Loneliness in our Human Code - GoInvo',
@@ -940,7 +940,7 @@ class LonelinessFeature extends Component {
               </div>
 
               <div className="care-card">
-                <Image
+                <LazyImage
                   src="/images/features/loneliness-in-our-human-code/care-card-tell-someone.jpg"
                   className="image--max-width"
                 />

@@ -4,8 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 import Helmet from 'react-helmet'
 
 import Layout from './layout'
-import Image from '../image'
-import Hero from '../hero'
+import { HeroCriticalImage, LazyImage } from '../optimized-image'
 import Results from '../results'
 import Columns from '../columns'
 import Card from '../card'
@@ -120,7 +119,7 @@ const CaseStudyLayout = ({ data: caseStudies, children }) => {
             </ul>
           ),
           img: props => (
-            <Image
+            <LazyImage
               className="image--max-width"
               sizes={config.sizes.fullInsideMediumMaxWidth}
               {...props}
@@ -129,7 +128,23 @@ const CaseStudyLayout = ({ data: caseStudies, children }) => {
         }}
       >
         <div className={`case-study ${caseStudy.parent.name}`}>
-          <Hero image={caseStudy.frontmatter.image} />
+          <div className="hero">
+            <div className="hero__image-container">
+              <HeroCriticalImage
+                src={caseStudy.frontmatter.image}
+                alt={caseStudy.frontmatter.title}
+                className="hero__image"
+                priority={true}
+                placeholderType="blur"
+                placeholderColor="#2c3e50"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+            </div>
+          </div>
           <div className="max-width max-width--md content-padding">
             {children}
           </div>

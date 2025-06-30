@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Image from './image'
+import { LazyImage } from './optimized-image'
 
 import Email from '../assets/images/icon-email.inline.svg'
 import LinkedIn from '../assets/images/icon-linkedin.inline.svg'
@@ -19,7 +19,7 @@ class TeamMember extends Component {
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
             <div className="pad-right--only-lg margin-bottom">
-              <Image
+              <LazyImage
                 src={image}
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 className="image--max-width"

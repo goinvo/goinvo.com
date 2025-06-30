@@ -72,7 +72,7 @@ const ProjectSearch = ({ projects = [] }) => {
 
   // Client-side search with debouncing
   useEffect(() => {
-    if (query.trim().length < 3) {
+    if (query.trim().length < 2) {
       setResults([])
       setIsSearching(false)
       setError(null)
@@ -128,8 +128,8 @@ const ProjectSearch = ({ projects = [] }) => {
 
   // Quick filter buttons for common searches
   const quickFilters = [
-    { label: 'AI Projects', query: 'AI artificial intelligence machine learning' },
-    { label: 'UI Design', query: 'user interface design dashboard' },
+    { label: 'AI Projects', query: 'AI' },
+    { label: 'UI Design', query: 'UI' },
     { label: 'Healthcare', query: 'healthcare medical clinical' },
     { label: 'Enterprise', query: 'enterprise business corporate' },
     { label: 'Government', query: 'government public policy' },
@@ -246,7 +246,7 @@ const ProjectSearch = ({ projects = [] }) => {
                             )}
                             {result.score && (
                               <span className="project-search__metadata-tag project-search__metadata-tag--score">
-                                Match: {Math.round(result.score)}%
+                                Match: {Math.round(result.score * 100)}%
                               </span>
                             )}
                           </div>

@@ -3,7 +3,7 @@ const path = require('path')
 const crypto = require('crypto')
 const OpenAI = require('openai')
 
-console.log('🔄 Script version: Updated with brand voice guidelines and webpage element hallucination prevention')
+console.log('🔄 Script version: Updated with brand voice, hallucination prevention, and improved search scoring')
 console.log('📁 Output will be saved to: public/search-index.json')
 
 // Load environment variables from .env file

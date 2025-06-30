@@ -106,25 +106,47 @@ export function calculateStructuredMatch(parsed, project) {
   let score = 0
   let matches = []
   
+  // If no structuredMetadata, try to infer from other fields
+  const metadata = project.structuredMetadata || {}
+  
+  // Infer domain from categories or title if not in metadata
+  let projectDomain = metadata.domain
+  if (!projectDomain && project.categories) {
+    if (project.categories.some(cat => cat.toLowerCase().includes('health'))) {
+      projectDomain = 'Healthcare'
+    } else if (project.categories.some(cat => cat.toLowerCase().includes('government'))) {
+      projectDomain = 'Government'
+    } else if (project.categories.some(cat => cat.toLowerCase().includes('enterprise'))) {
+      projectDomain = 'Enterprise'
+    }
+  }
+  
   // Domain matching (40%)
-  if (parsed.domain && project.structuredMetadata && project.structuredMetadata.domain) {
-    if (parsed.domain === project.structuredMetadata.domain) {
+  if (parsed.domain && projectDomain) {
+    if (parsed.domain === projectDomain) {
       score += 0.4
       matches.push(`Domain: ${parsed.domain}`)
     }
   }
   
   // Product matching (30%)
-  if (parsed.product && project.structuredMetadata && project.structuredMetadata.product) {
-    if (parsed.product === project.structuredMetadata.product) {
+  if (parsed.product && metadata.product) {
+    if (parsed.product === metadata.product) {
       score += 0.3
       matches.push(`Product: ${parsed.product}`)
+    }
+  } else if (parsed.product) {
+    // Check if product type is mentioned in title or caption
+    const searchText = `${project.title} ${project.caption}`.toLowerCase()
+    if (searchText.includes(parsed.product.toLowerCase())) {
+      score += 0.15 // Half score for inferred match
+      matches.push(`Product (inferred): ${parsed.product}`)
     }
   }
   
   // Goal matching (30%)
-  if (parsed.goal && project.structuredMetadata && project.structuredMetadata.goal) {
-    if (parsed.goal === project.structuredMetadata.goal) {
+  if (parsed.goal && metadata.goal) {
+    if (parsed.goal === metadata.goal) {
       score += 0.3
       matches.push(`Goal: ${parsed.goal}`)
     }
@@ -171,6 +193,29 @@ export function calculateSkillMatch(querySkills, project) {
 // Select best buyer description based on query
 export function selectBuyerDescription(project, parsedQuery) {
   if (!project.buyerDescriptions) return null
+  
+  // Check if we have proper buyer descriptions (with CEO, Product Manager, etc. keys)
+  const hasProperBuyerDescriptions = project.buyerDescriptions.CEO || 
+                                     project.buyerDescriptions['Product Manager'] ||
+                                     project.buyerDescriptions['Healthcare Organization'];
+  
+  if (!hasProperBuyerDescriptions) {
+    // The search index might have malformed buyer descriptions
+    // Try to find any reasonable description
+    const descriptions = Object.values(project.buyerDescriptions);
+    const validDescriptions = descriptions.filter(desc => 
+      typeof desc === 'string' && 
+      desc.length > 50 && 
+      !desc.includes('buyerDescriptions') && // Avoid nested/corrupted data
+      !desc.startsWith('@{') // Avoid PowerShell artifacts
+    );
+    
+    if (validDescriptions.length > 0) {
+      // Return the best available description
+      return validDescriptions[0];
+    }
+    return null;
+  }
   
   // Check for specific visitor intent based on query keywords
   const queryLower = parsedQuery.originalQuery ? parsedQuery.originalQuery.toLowerCase() : ''
@@ -222,7 +267,9 @@ export function selectBuyerDescription(project, parsedQuery) {
     return project.buyerDescriptions['Product Manager'] || project.buyerDescriptions['CEO']
   } else {
     // Default to CEO for general business queries
-    return project.buyerDescriptions['CEO']
+    return project.buyerDescriptions['CEO'] || 
+           project.buyerDescriptions['Product Manager'] ||
+           Object.values(project.buyerDescriptions).find(desc => typeof desc === 'string' && desc.length > 50)
   }
 }
 
@@ -230,7 +277,7 @@ export function selectBuyerDescription(project, parsedQuery) {
 export function generateDynamicSnippet(project, parsedQuery, querySkills, matchInfo) {
   // Try buyer description first
   const buyerDescription = selectBuyerDescription(project, parsedQuery)
-  if (buyerDescription && matchInfo.confidence > 0.6) {
+  if (buyerDescription && matchInfo.confidence > 0.3) { // Lowered threshold to use descriptions more often
     return {
       snippet: buyerDescription,
       source: 'buyer-description',
@@ -239,7 +286,7 @@ export function generateDynamicSnippet(project, parsedQuery, querySkills, matchI
   }
   
   // Try assembling from modular descriptions based on matched skills
-  if (project.modularDescriptions && matchInfo.matchedSkills.length > 0) {
+  if (project.modularDescriptions && matchInfo.matchedSkills && matchInfo.matchedSkills.length > 0) {
     const relevantDescriptions = []
     
     // Find modular descriptions that match our skills
@@ -267,38 +314,70 @@ export function generateDynamicSnippet(project, parsedQuery, querySkills, matchI
     }
   }
   
-  // Fallback to template-based approach
-  if (parsedQuery.domain || parsedQuery.product || parsedQuery.goal) {
-    const parts = []
-    
-    parts.push(project.title)
-    
-    if (parsedQuery.product) {
-      parts.push(`is a ${parsedQuery.product.toLowerCase()}`)
-    } else {
-      parts.push('is a solution')
-    }
-    
-    if (parsedQuery.domain) {
-      parts.push(`for the ${parsedQuery.domain.toLowerCase()} sector`)
-    }
-    
-    if (parsedQuery.goal) {
-      parts.push(`focused on ${parsedQuery.goal}`)
-    }
-    
+  // Create enhanced fallback descriptions based on project metadata
+  let enhancedCaption = project.caption || '';
+  
+  // Project-specific descriptions for key projects
+  const projectDescriptions = {
+    'healthcare-ai': 'Exploring the future of AI in healthcare - from clinical decision support to automated diagnostics, examining opportunities and challenges in medical AI adoption.',
+    'augmented-clinical-decision-support': 'Real-time AI-powered guidance for mobile health workers, providing context-aware clinical recommendations to improve patient care in resource-limited settings.',
+    'visual-storytelling-with-genai': 'Leveraging generative AI to accelerate healthcare design storytelling, creating compelling visuals and narratives that communicate complex medical concepts.',
+    'ipsos-facto': 'An AI-powered research intelligence platform that transforms fragmented data into actionable insights using advanced natural language processing and machine learning.',
+    'eligibility-engine': 'A centralized eligibility database for Massachusetts residents, using intelligent matching algorithms to improve access to government services and benefits.',
+    '3m-coderyte': 'Natural language processing software that revolutionized medical coding, turning a manual process into an AI-assisted workflow that led to a $150M acquisition.',
+    'paintrackr': 'A straightforward pain tracking tool that helps patients log and visualize their pain patterns over time, supporting better clinical conversations.',
+    'vaccination-cards': 'Digital vaccination record system integrated with CommonHealth, enabling secure, portable access to immunization history for patients nationwide.',
+    'health-data-basics': 'Educational resources and tools that demystify health data for patients, making complex medical information accessible and actionable.',
+    'hgraph': 'An innovative circular visualization of health metrics that presents complex medical data in an intuitive, at-a-glance format.',
+    'care-cards': 'Beautifully illustrated cards that encourage healthy behaviors through visual storytelling and evidence-based behavioral design principles.',
+    // Additional important projects
+    'ahrq-cds': 'Clinical decision support repository that makes evidence-based guidelines accessible to healthcare providers at the point of care.',
+    'all-of-us': 'Participant-focused design for NIH\'s precision medicine initiative, creating inclusive experiences for diverse research participants.',
+    'commonhealth-smart-health-cards': 'Digital health credentials using SMART Health Cards framework, enabling verifiable, privacy-preserving health records.',
+    'infobionic-heart-monitoring': 'Cloud-based cardiac monitoring platform that uses machine learning to detect arrhythmias in real-time telemetry data.',
+    'insidetracker-nutrition-science': 'Personalized nutrition recommendations based on biomarker analysis, translating complex lab data into actionable lifestyle changes.',
+    'inspired-ehrs': 'Open-source design guidelines for electronic health records, establishing best practices for clinical software usability.',
+    'mass-snap': 'Modernizing food assistance enrollment for Massachusetts, streamlining the SNAP application process for vulnerable populations.',
+    'maya-ehr': 'Refocusing nursing documentation on patient care rather than compliance, reducing administrative burden while improving care quality.',
+    'mitre-flux-notes': 'Collaborative clinical documentation system that captures the dynamic nature of medical decision-making and team communication.',
+    'mitre-shr': 'Standard Health Record initiative creating a universal health data model for seamless information exchange across healthcare systems.',
+    'mount-sinai-consent': 'Patient-centered consent management platform that makes complex research participation decisions clear and accessible.',
+    'partners-geneinsight': 'Genomic variant interpretation platform helping clinicians understand and act on complex genetic testing results.',
+    'partners-insight': 'Clinical analytics dashboard providing real-time operational intelligence for hospital administrators and care teams.',
+    'wuxi-nextcode-familycode': 'Family genomics platform that visualizes hereditary patterns and supports clinical decision-making for genetic conditions.'
+  };
+  
+  // Use project-specific description if available
+  if (projectDescriptions[project.id]) {
     return {
-      snippet: parts.join(' ') + '.',
-      source: 'template',
-      confidence: matchInfo.confidence * 0.7 // Lower confidence for templates
+      snippet: projectDescriptions[project.id],
+      source: 'curated-description',
+      confidence: 0.9
     }
   }
   
-  // Final fallback
+  // Add category-based enhancements for AI projects
+  if (project.categories && project.categories.includes('AI')) {
+    if (project.title.toLowerCase().includes('ai') || project.title.toLowerCase().includes('artificial intelligence')) {
+      enhancedCaption = `An AI-powered ${project.categories.includes('Healthcare') ? 'healthcare' : ''} solution that ${enhancedCaption.toLowerCase()}`;
+    } else {
+      enhancedCaption = `${enhancedCaption} This project leverages AI and machine learning technologies.`;
+    }
+  }
+  
+  // Add client context if available
+  if (project.client && project.client !== 'GoInvo' && !enhancedCaption.includes(project.client)) {
+    enhancedCaption = `For ${project.client}: ${enhancedCaption}`;
+  }
+  
+  // Use enhanced caption or create a basic one
+  const finalSnippet = enhancedCaption || 
+    `${project.title} - ${project.categories ? project.categories.join(', ') : 'Design'} project delivering innovative solutions.`;
+  
   return {
-    snippet: project.caption || `${project.title} delivers innovative design solutions.`,
-    source: 'fallback',
-    confidence: 0.3
+    snippet: finalSnippet,
+    source: 'enhanced-caption',
+    confidence: 0.5
   }
 }
 
@@ -309,7 +388,7 @@ function extractKeywordsWithWeights(text, wordWeights = {}) {
   const words = text.toLowerCase()
     .replace(/[^\w\s]/g, ' ')
     .split(/\s+/)
-    .filter(word => word.length > 2 && word.length < 20);
+    .filter(word => word.length >= 2 && word.length < 20);
   
   // Apply weights to words
   const weightedWords = words.map(word => ({
@@ -338,13 +417,43 @@ function calculateWeightedKeywordSimilarity(query, text, wordWeights = {}) {
   return totalWeight > 0 ? matchScore / totalWeight : 0;
 }
 
+// Helper function for whole word matching
+function containsWholeWord(text, word) {
+  const regex = new RegExp(`\\b${word}\\b`, 'i');
+  return regex.test(text);
+}
+
 // Enhanced keyword similarity calculation with better matching
 function calculateEnhancedKeywordSimilarity(query, project) {
+  console.log('📊 calculateEnhancedKeywordSimilarity called for:', project.title);
+  
   const queryLower = query.toLowerCase();
-  const queryWords = queryLower.split(/\s+/).filter(w => w.length > 2);
+  const queryWords = queryLower.split(/\s+/).filter(w => w.length >= 2);
+  
+  console.log('Query words:', queryWords); // Debug logging
+  
+  // Skip empty queries
+  if (queryWords.length === 0) return 0;
   
   // Define semantic mappings for common search terms
   const semanticMappings = {
+    // Technology/Abbreviations
+    'ai': ['artificial intelligence', 'machine learning', 'ml', 'deep learning', 'neural networks', 'nlp', 'automation'],
+    'ml': ['machine learning', 'ai', 'artificial intelligence', 'predictive modeling', 'algorithms'],
+    'nlp': ['natural language processing', 'ai', 'text analysis', 'language model'],
+    'ux': ['user experience', 'usability', 'design', 'interface design', 'interaction design'],
+    'ui': ['user interface', 'interface', 'design', 'visual design', 'front-end'],
+    'api': ['application programming interface', 'integration', 'web service', 'endpoint'],
+    'ehr': ['electronic health record', 'emr', 'electronic medical record', 'health record'],
+    'emr': ['electronic medical record', 'ehr', 'electronic health record', 'medical record'],
+    'it': ['information technology', 'technology', 'tech', 'systems'],
+    // Full terms mapping back to abbreviations
+    'artificial intelligence': ['ai', 'ml', 'machine learning', 'deep learning', 'automation'],
+    'machine learning': ['ml', 'ai', 'artificial intelligence', 'algorithms'],
+    'user experience': ['ux', 'usability', 'design', 'interaction'],
+    'user interface': ['ui', 'interface', 'design', 'front-end'],
+    'natural language processing': ['nlp', 'ai', 'text analysis'],
+    
     // Visual/Design terms
     'illustrations': ['visual', 'graphic', 'design', 'artwork', 'cards', 'visuals', 'images', 'pictures'],
     'illustration': ['visual', 'graphic', 'design', 'artwork', 'card', 'visual', 'image', 'picture'],
@@ -352,6 +461,10 @@ function calculateEnhancedKeywordSimilarity(query, project) {
     'cards': ['card', 'deck', 'visual', 'mantras'],
     'visual': ['visualization', 'graphic', 'design', 'illustration'],
     'design': ['designer', 'designed', 'designing', 'ux', 'ui'],
+    'dashboard': ['dashboards', 'analytics', 'metrics', 'reporting', 'visualization'],
+    'dashboards': ['dashboard', 'analytics', 'metrics', 'reporting', 'visualization'],
+    'portal': ['platform', 'system', 'application', 'interface', 'gateway'],
+    'portals': ['platforms', 'systems', 'applications', 'interfaces', 'gateways'],
     
     // Healthcare terms
     'doctors': ['clinicians', 'physicians', 'healthcare providers', 'medical professionals', 'providers', 'clinical'],
@@ -367,7 +480,12 @@ function calculateEnhancedKeywordSimilarity(query, project) {
     'capture': ['collect', 'gather', 'record', 'track', 'input', 'enter', 'capture', 'capturing'],
     'data': ['information', 'records', 'health data', 'medical data', 'content'],
     'system': ['platform', 'application', 'tool', 'software', 'solution'],
-    'platform': ['system', 'application', 'tool', 'software', 'solution'],
+    'platform': ['system', 'application', 'tool', 'software', 'solution', 'portal'],
+    
+    // Research terms
+    'research': ['study', 'investigation', 'analysis', 'examination', 'inquiry'],
+    'researcher': ['investigator', 'scientist', 'analyst', 'scholar'],
+    'researchers': ['investigators', 'scientists', 'analysts', 'scholars'],
     
     // Action terms
     'encourage': ['promote', 'support', 'foster', 'empower', 'inspire', 'motivate', 'drive'],
@@ -380,7 +498,11 @@ function calculateEnhancedKeywordSimilarity(query, project) {
     'burden': ['workload', 'effort', 'time', 'complexity']
   };
   
-  let score = 0;
+  // Track matches per word to calculate percentage
+  let wordMatches = {};
+  queryWords.forEach(word => {
+    wordMatches[word] = 0;
+  });
   
   // Get all searchable text fields
   const titleLower = (project.title || '').toLowerCase();
@@ -388,16 +510,31 @@ function calculateEnhancedKeywordSimilarity(query, project) {
   const clientLower = (project.client || '').toLowerCase();
   const categoriesText = (project.categories || []).join(' ').toLowerCase();
   
+  // Special handling for abbreviations - check categories array directly
+  const isAbbreviationQuery = queryWords.length === 1 && queryWords[0].length <= 3 && queryWords[0].toUpperCase() === queryWords[0].toUpperCase();
+  if (isAbbreviationQuery) {
+    const abbreviation = queryWords[0];
+    // Check if abbreviation exists as a category (case-insensitive)
+    const categoriesArray = project.categories || [];
+    const hasAbbreviationCategory = categoriesArray.some(cat => cat.toLowerCase() === abbreviation);
+    
+    if (hasAbbreviationCategory) {
+      // Reduced boost for exact category match with abbreviation
+      wordMatches[abbreviation] += 8; // Reduced from 15
+      console.log(`Found exact abbreviation category match for "${abbreviation}" in ${project.title}`);
+    }
+  }
+  
   // 1. Title matching (highest weight)
   queryWords.forEach(word => {
-    if (titleLower.includes(word)) {
-      score += 5; // High weight for title matches
+    if (containsWholeWord(titleLower, word)) {
+      wordMatches[word] += 8; // Increased from 5 for better title prioritization
     }
     // Check semantic mappings
     if (semanticMappings[word]) {
       semanticMappings[word].forEach(synonym => {
-        if (titleLower.includes(synonym)) {
-          score += 3;
+        if (containsWholeWord(titleLower, synonym)) {
+          wordMatches[word] += 5; // Increased from 3
         }
       });
     }
@@ -405,7 +542,10 @@ function calculateEnhancedKeywordSimilarity(query, project) {
   
   // Exact phrase matching in title
   if (titleLower.includes(queryLower)) {
-    score += 10; // Huge boost for exact phrase match
+    // Boost all words equally for phrase match
+    queryWords.forEach(word => {
+      wordMatches[word] += 10 / queryWords.length;
+    });
   }
   
   // Check for important multi-word phrases
@@ -416,27 +556,39 @@ function calculateEnhancedKeywordSimilarity(query, project) {
     'health data',
     'clinical decision',
     'patient data',
-    'vaccination cards'
+    'vaccination cards',
+    'artificial intelligence',
+    'machine learning',
+    'natural language processing',
+    'user experience',
+    'user interface',
+    'electronic health record',
+    'electronic medical record'
   ];
   
   importantPhrases.forEach(phrase => {
     if (queryLower.includes(phrase) && titleLower.includes(phrase)) {
-      score += 8;
+      // Distribute points across all words in the query
+      queryWords.forEach(word => {
+        wordMatches[word] += 8 / queryWords.length;
+      });
     } else if (queryLower.includes(phrase) && captionLower.includes(phrase)) {
-      score += 4;
+      queryWords.forEach(word => {
+        wordMatches[word] += 4 / queryWords.length;
+      });
     }
   });
   
   // 2. Caption matching (medium weight)
   queryWords.forEach(word => {
-    if (captionLower.includes(word)) {
-      score += 2;
+    if (containsWholeWord(captionLower, word)) {
+      wordMatches[word] += 2;
     }
     // Check semantic mappings
     if (semanticMappings[word]) {
       semanticMappings[word].forEach(synonym => {
-        if (captionLower.includes(synonym)) {
-          score += 1.5;
+        if (containsWholeWord(captionLower, synonym)) {
+          wordMatches[word] += 1.5;
         }
       });
     }
@@ -444,30 +596,47 @@ function calculateEnhancedKeywordSimilarity(query, project) {
   
   // 3. Client and categories (lower weight)
   queryWords.forEach(word => {
-    if (clientLower.includes(word) || categoriesText.includes(word)) {
-      score += 1;
+    if (containsWholeWord(clientLower, word) || containsWholeWord(categoriesText, word)) {
+      wordMatches[word] += 1;
     }
   });
   
-  // 4. Special case boosts
+  // 4. Check buyer descriptions (very low weight and only if not found elsewhere)
+  if (project.buyerDescriptions) {
+    const buyerDescText = Object.values(project.buyerDescriptions).join(' ').toLowerCase();
+    queryWords.forEach(word => {
+      // Only add buyer description score if word hasn't been found elsewhere
+      if (wordMatches[word] === 0 && containsWholeWord(buyerDescText, word)) {
+        wordMatches[word] += 0.1; // Very low weight for AI-generated content
+      }
+    });
+  }
+  
+  // 5. Special case boosts
   // Care Cards specific boost
   if (queryLower.includes('card') && (queryLower.includes('care') || queryLower.includes('illustration') || queryLower.includes('encourage'))) {
     if (project.id === 'care-cards' || titleLower.includes('care cards')) {
-      score += 20; // Very high boost for Care Cards
+      queryWords.forEach(word => {
+        wordMatches[word] += 20 / queryWords.length;
+      });
     }
   }
   
   // Health data capture boost
   if ((queryLower.includes('capture') || queryLower.includes('collect')) && queryLower.includes('data')) {
     if (titleLower.includes('capture') || titleLower.includes('data capture')) {
-      score += 15;
+      queryWords.forEach(word => {
+        wordMatches[word] += 15 / queryWords.length;
+      });
     }
   }
   
   // Point of care boost
   if (queryLower.includes('point of care') || (queryLower.includes('care') && queryLower.includes('point'))) {
     if (titleLower.includes('point of care') || captionLower.includes('point of care')) {
-      score += 12;
+      queryWords.forEach(word => {
+        wordMatches[word] += 12 / queryWords.length;
+      });
     }
   }
   
@@ -475,19 +644,127 @@ function calculateEnhancedKeywordSimilarity(query, project) {
   if ((queryLower.includes('system') || queryLower.includes('platform')) && 
       (queryLower.includes('doctor') || queryLower.includes('clinician'))) {
     if (captionLower.includes('clinician') || captionLower.includes('clinical')) {
-      score += 8;
+      queryWords.forEach(word => {
+        wordMatches[word] += 8 / queryWords.length;
+      });
     }
   }
   
-  // Normalize score to 0-1 range (assuming max score of ~60)
-  return Math.min(score / 60, 1);
+  // Research portal/platform boost
+  if ((queryLower.includes('research') && queryLower.includes('portal')) ||
+      (queryLower.includes('research') && queryLower.includes('platform'))) {
+    if (containsWholeWord(titleLower, 'research') || containsWholeWord(captionLower, 'research')) {
+      if (containsWholeWord(titleLower, 'platform') || containsWholeWord(captionLower, 'platform') ||
+          containsWholeWord(titleLower, 'portal') || containsWholeWord(captionLower, 'portal')) {
+        queryWords.forEach(word => {
+          wordMatches[word] += 10 / queryWords.length;
+        });
+      }
+    }
+  }
+  
+  // AI/ML boost - handle abbreviations specially
+  if (queryLower === 'ai' || queryLower === 'ml' || queryLower === 'nlp' ||
+      queryLower === 'ux' || queryLower === 'ui' || queryLower === 'it') {
+    // Check categories for exact match (case-insensitive)
+    const categoriesArray = project.categories || [];
+    if (categoriesArray.some(cat => cat.toLowerCase() === queryLower)) {
+      queryWords.forEach(word => {
+        wordMatches[word] += 5; // Reduced from 10
+      });
+    }
+    // Also check title/caption for AI-related terms
+    if (queryLower === 'ai' && (
+        containsWholeWord(titleLower, 'ai') || 
+        titleLower.includes('artificial intelligence') ||
+        captionLower.includes('artificial intelligence') ||
+        captionLower.includes('ai-powered') ||
+        titleLower.includes('ai ') ||
+        captionLower.includes('ai '))) {
+      queryWords.forEach(word => {
+        wordMatches[word] += 3; // Reduced from 8
+      });
+    }
+    // UX/UI boost
+    if ((queryLower === 'ux' || queryLower === 'ui') && (
+        containsWholeWord(titleLower, queryLower) || 
+        titleLower.includes('user experience') ||
+        titleLower.includes('user interface') ||
+        captionLower.includes('user experience') ||
+        captionLower.includes('user interface'))) {
+      queryWords.forEach(word => {
+        wordMatches[word] += 3; // Reduced from 8
+      });
+    }
+  }
+  
+  // Calculate average score per word
+  let totalScore = 0;
+  let matchedWords = 0;
+  
+  for (const word in wordMatches) {
+    if (wordMatches[word] > 0) {
+      matchedWords++;
+      totalScore += wordMatches[word];
+    }
+  }
+  
+  // Calculate match percentage (how many query words found matches)
+  const matchPercentage = matchedWords / queryWords.length;
+  
+  // Calculate average score per word (normalized by query length)
+  const avgScorePerWord = totalScore / queryWords.length;
+  
+  // Combine match percentage with average score
+  // This ensures both coverage and strength of matches matter
+  // Adjusted normalization to provide better differentiation
+  let finalScore = (matchPercentage * 0.3) + (Math.min(avgScorePerWord / 15, 1) * 0.7);
+  
+  // Apply query length multiplier - shorter queries get moderate boost
+  // This ensures single-word queries aren't penalized but not over-inflated
+  let queryLengthMultiplier;
+  switch (queryWords.length) {
+    case 1:
+      queryLengthMultiplier = 1.4;  // Moderate boost for single-word queries
+      break;
+    case 2:
+      queryLengthMultiplier = 1.2;  // Small boost for two-word queries
+      break;
+    case 3:
+      queryLengthMultiplier = 1.1;  // Minimal boost for three-word queries
+      break;
+    default:
+      queryLengthMultiplier = 1.0;  // No boost for longer queries
+  }
+  
+  // Apply the multiplier
+  finalScore *= queryLengthMultiplier;
+  
+  // Apply a softer cap to allow differentiation at high scores
+  // This uses a sigmoid-like function to compress scores near 1.0
+  if (finalScore > 0.8) {
+    finalScore = 0.8 + (0.2 * Math.tanh((finalScore - 0.8) * 5));
+  }
+  
+  // Ensure score doesn't exceed 1.0
+  finalScore = Math.min(finalScore, 1.0);
+  
+  // Debug log for top matches
+  if (finalScore > 0.3) {
+    console.log(`Project "${project.title}" - Matched ${matchedWords}/${queryWords.length} words, avg score: ${avgScorePerWord.toFixed(2)}, multiplier: ${queryLengthMultiplier}, final: ${finalScore.toFixed(3)}`);
+  }
+  
+  return finalScore;
 }
 
 // Main search function combining all approaches
 export async function performEnhancedSearch(query, searchData, options = {}) {
+  console.log('🔍 performEnhancedSearch called with:', { query, projectCount: searchData?.projects?.length || 0 });
+  
   const { wordWeights = {} } = options;
   
   if (!query || query.trim().length < 2) {
+    console.log('⚠️ Query too short or empty:', query);
     return {
       results: [],
       searchAnalysis: null,
@@ -496,6 +773,7 @@ export async function performEnhancedSearch(query, searchData, options = {}) {
   }
 
   console.log('🔍 Performing enhanced search for:', query);
+  console.log('📊 Searching through', searchData.projects ? searchData.projects.length : 0, 'projects');
 
   // Parse query for both structured fields and skills
   const parsedQuery = parseQuery(query);
@@ -506,7 +784,7 @@ export async function performEnhancedSearch(query, searchData, options = {}) {
     
     // Track which keywords were found
     const keywordsFound = new Set();
-    const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+    const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length >= 2);
     const searchableText = [
       project.title || '',
       project.caption || '',
@@ -528,22 +806,31 @@ export async function performEnhancedSearch(query, searchData, options = {}) {
     const skillMatch = calculateSkillMatch(parsedQuery, project)
     
     // Combined score with keyword matching having higher weight (60%)
-    const totalScore = (keywordScore * 0.6) + (structuredMatch.score * 0.2) + (skillMatch.score * 0.2)
+    let totalScore = (keywordScore * 0.6) + (structuredMatch.score * 0.2) + (skillMatch.score * 0.2)
+    
+    // Apply query length multiplier to the combined score as well
+    // This ensures consistency across all scoring methods
+    const queryLengthMultiplier = Math.max(1.0, 1.5 - (queryWords.length * 0.15));
+    totalScore *= queryLengthMultiplier;
+    
+    // Ensure score is a valid number and doesn't exceed 1.0
+    const validScore = isNaN(totalScore) ? 0 : Math.min(totalScore, 1.0);
     
     return {
       ...project,
-      score: totalScore,
+      score: validScore,
       keywordScore,
       structuredScore: structuredMatch.score,
       skillScore: skillMatch.score,
       matchedFields: structuredMatch.matches,
       matchedSkills: skillMatch.matchedSkills,
-      confidence: totalScore,
+      confidence: validScore,
       debug: {
         keywordsFound: Array.from(keywordsFound),
         keywordScore,
         structuredScore: structuredMatch.score,
-        skillScore: skillMatch.score
+        skillScore: skillMatch.score,
+        queryLengthMultiplier
       }
     }
   })
@@ -551,8 +838,22 @@ export async function performEnhancedSearch(query, searchData, options = {}) {
   // Sort by score
   results.sort((a, b) => b.score - a.score)
   
-  // Take top results
-  const topResults = results.slice(0, 20).filter(p => p.score > 0.1)
+  // Debug: Log top 5 results after sorting
+  console.log('🏆 Top 5 results after sorting:');
+  results.slice(0, 5).forEach((r, idx) => {
+    console.log(`  ${idx + 1}. ${r.title} - Score: ${(r.score * 100).toFixed(1)}%`);
+  });
+  
+  // Take top results without filtering by score threshold
+  const topResults = results.slice(0, 20).filter(p => p.score > 0) // Only filter out zero scores
+  
+  // Debug logging for no results
+  if (topResults.length === 0) {
+    console.log('⚠️ No results found. Top 5 scores were:');
+    results.slice(0, 5).forEach(r => {
+      console.log(`  - ${r.title}: ${r.score.toFixed(4)}`);
+    });
+  }
   
   // Generate dynamic snippets for results
   const resultsWithSnippets = topResults.map(project => {
@@ -576,6 +877,12 @@ export async function performEnhancedSearch(query, searchData, options = {}) {
       }
     }
   })
+  
+  // Debug: Verify order is maintained after snippet generation
+  console.log('📋 Final results order:');
+  resultsWithSnippets.slice(0, 5).forEach((r, idx) => {
+    console.log(`  ${idx + 1}. ${r.title} - Score: ${(r.score * 100).toFixed(1)}%`);
+  });
   
   // Generate search suggestions if no good results
   const suggestions = []

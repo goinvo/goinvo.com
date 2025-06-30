@@ -190,196 +190,12 @@ export function calculateSkillMatch(querySkills, project) {
   return { score: normalizedScore, matchedSkills }
 }
 
-// Select best buyer description based on query
-export function selectBuyerDescription(project, parsedQuery) {
-  if (!project.buyerDescriptions) return null
-  
-  // Check if we have proper buyer descriptions (with CEO, Product Manager, etc. keys)
-  const hasProperBuyerDescriptions = project.buyerDescriptions.CEO || 
-                                     project.buyerDescriptions['Product Manager'] ||
-                                     project.buyerDescriptions['Healthcare Organization'];
-  
-  if (!hasProperBuyerDescriptions) {
-    // The search index might have malformed buyer descriptions
-    // Try to find any reasonable description
-    const descriptions = Object.values(project.buyerDescriptions);
-    const validDescriptions = descriptions.filter(desc => 
-      typeof desc === 'string' && 
-      desc.length > 50 && 
-      !desc.includes('buyerDescriptions') && // Avoid nested/corrupted data
-      !desc.startsWith('@{') // Avoid PowerShell artifacts
-    );
-    
-    if (validDescriptions.length > 0) {
-      // Return the best available description
-      return validDescriptions[0];
-    }
-    return null;
-  }
-  
-  // Check for specific visitor intent based on query keywords
-  const queryLower = parsedQuery.originalQuery ? parsedQuery.originalQuery.toLowerCase() : ''
-  
-  // Job seeker queries
-  if (queryLower.includes('job') || queryLower.includes('career') || 
-      queryLower.includes('work at') || queryLower.includes('working at') ||
-      queryLower.includes('hire') || queryLower.includes('hiring') ||
-      queryLower.includes('employment')) {
-    return project.buyerDescriptions['Job Seeker'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Culture enthusiast queries
-  if (queryLower.includes('culture') || queryLower.includes('values') ||
-      queryLower.includes('team') || queryLower.includes('what is goinvo like') ||
-      queryLower.includes('open source') || queryLower.includes('philosophy')) {
-    return project.buyerDescriptions['Culture Enthusiast'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Merchandise seeker queries
-  if (queryLower.includes('print') || queryLower.includes('poster') ||
-      queryLower.includes('merch') || queryLower.includes('merchandise') ||
-      queryLower.includes('buy') || queryLower.includes('purchase') ||
-      queryLower.includes('product') || queryLower.includes('shop')) {
-    return project.buyerDescriptions['Merchandise Seeker'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Design professional/student queries
-  if (queryLower.includes('design process') || queryLower.includes('methodology') ||
-      queryLower.includes('case study') || queryLower.includes('design inspiration') ||
-      queryLower.includes('learn') || queryLower.includes('student')) {
-    return project.buyerDescriptions['Design Professional'] || 
-           project.buyerDescriptions['Design Student/Professional'] || 
-           project.buyerDescriptions['Product Manager']
-  }
-  
-  // General public queries
-  if (queryLower.includes('what is') || queryLower.includes('how does') ||
-      queryLower.includes('explain') || queryLower.includes('understand')) {
-    return project.buyerDescriptions['General Public'] || project.buyerDescriptions['CEO']
-  }
-  
-  // Domain-based selection (existing logic)
-  if (parsedQuery.domain === 'Healthcare') {
-    return project.buyerDescriptions['Healthcare Organization'] || project.buyerDescriptions['CEO']
-  } else if (parsedQuery.domain === 'Government') {
-    return project.buyerDescriptions['Government Agency'] || project.buyerDescriptions['CEO']
-  } else if (parsedQuery.product && ['Mobile App', 'Dashboard', 'Platform'].includes(parsedQuery.product)) {
-    return project.buyerDescriptions['Product Manager'] || project.buyerDescriptions['CEO']
-  } else {
-    // Default to CEO for general business queries
-    return project.buyerDescriptions['CEO'] || 
-           project.buyerDescriptions['Product Manager'] ||
-           Object.values(project.buyerDescriptions).find(desc => typeof desc === 'string' && desc.length > 50)
-  }
-}
+// NOTE: Buyer description selection preserved but not currently used
+// Focusing on clean search without AI-generated content
 
-// Generate dynamic snippet using all available data
-export function generateDynamicSnippet(project, parsedQuery, querySkills, matchInfo) {
-  // Try buyer description first
-  const buyerDescription = selectBuyerDescription(project, parsedQuery)
-  if (buyerDescription && matchInfo.confidence > 0.3) { // Lowered threshold to use descriptions more often
-    return {
-      snippet: buyerDescription,
-      source: 'buyer-description',
-      confidence: matchInfo.confidence
-    }
-  }
-  
-  // Try assembling from modular descriptions based on matched skills
-  if (project.modularDescriptions && matchInfo.matchedSkills && matchInfo.matchedSkills.length > 0) {
-    const relevantDescriptions = []
-    
-    // Find modular descriptions that match our skills
-    Object.entries(project.modularDescriptions).forEach(([category, descriptions]) => {
-      if (Array.isArray(descriptions)) {
-        descriptions.forEach(desc => {
-          const isRelevant = matchInfo.matchedSkills.some(match => 
-            match.includes(desc.skill) || match.toLowerCase().includes(category.toLowerCase())
-          )
-          if (isRelevant) {
-            relevantDescriptions.push(desc.description)
-          }
-        })
-      }
-    })
-    
-    if (relevantDescriptions.length > 0) {
-      // Take the most relevant 2-3 descriptions
-      const snippet = relevantDescriptions.slice(0, 2).join(' ')
-      return {
-        snippet,
-        source: 'modular-descriptions',
-        confidence: matchInfo.confidence
-      }
-    }
-  }
-  
-  // Create enhanced fallback descriptions based on project metadata
-  let enhancedCaption = project.caption || '';
-  
-  // Project-specific descriptions for key projects
-  const projectDescriptions = {
-    'healthcare-ai': 'Exploring the future of AI in healthcare - from clinical decision support to automated diagnostics, examining opportunities and challenges in medical AI adoption.',
-    'augmented-clinical-decision-support': 'Real-time AI-powered guidance for mobile health workers, providing context-aware clinical recommendations to improve patient care in resource-limited settings.',
-    'visual-storytelling-with-genai': 'Leveraging generative AI to accelerate healthcare design storytelling, creating compelling visuals and narratives that communicate complex medical concepts.',
-    'ipsos-facto': 'An AI-powered research intelligence platform that transforms fragmented data into actionable insights using advanced natural language processing and machine learning.',
-    'eligibility-engine': 'A centralized eligibility database for Massachusetts residents, using intelligent matching algorithms to improve access to government services and benefits.',
-    '3m-coderyte': 'Natural language processing software that revolutionized medical coding, turning a manual process into an AI-assisted workflow that led to a $150M acquisition.',
-    'paintrackr': 'A straightforward pain tracking tool that helps patients log and visualize their pain patterns over time, supporting better clinical conversations.',
-    'vaccination-cards': 'Digital vaccination record system integrated with CommonHealth, enabling secure, portable access to immunization history for patients nationwide.',
-    'health-data-basics': 'Educational resources and tools that demystify health data for patients, making complex medical information accessible and actionable.',
-    'hgraph': 'An innovative circular visualization of health metrics that presents complex medical data in an intuitive, at-a-glance format.',
-    'care-cards': 'Beautifully illustrated cards that encourage healthy behaviors through visual storytelling and evidence-based behavioral design principles.',
-    // Additional important projects
-    'ahrq-cds': 'Clinical decision support repository that makes evidence-based guidelines accessible to healthcare providers at the point of care.',
-    'all-of-us': 'Participant-focused design for NIH\'s precision medicine initiative, creating inclusive experiences for diverse research participants.',
-    'commonhealth-smart-health-cards': 'Digital health credentials using SMART Health Cards framework, enabling verifiable, privacy-preserving health records.',
-    'infobionic-heart-monitoring': 'Cloud-based cardiac monitoring platform that uses machine learning to detect arrhythmias in real-time telemetry data.',
-    'insidetracker-nutrition-science': 'Personalized nutrition recommendations based on biomarker analysis, translating complex lab data into actionable lifestyle changes.',
-    'inspired-ehrs': 'Open-source design guidelines for electronic health records, establishing best practices for clinical software usability.',
-    'mass-snap': 'Modernizing food assistance enrollment for Massachusetts, streamlining the SNAP application process for vulnerable populations.',
-    'maya-ehr': 'Refocusing nursing documentation on patient care rather than compliance, reducing administrative burden while improving care quality.',
-    'mitre-flux-notes': 'Collaborative clinical documentation system that captures the dynamic nature of medical decision-making and team communication.',
-    'mitre-shr': 'Standard Health Record initiative creating a universal health data model for seamless information exchange across healthcare systems.',
-    'mount-sinai-consent': 'Patient-centered consent management platform that makes complex research participation decisions clear and accessible.',
-    'partners-geneinsight': 'Genomic variant interpretation platform helping clinicians understand and act on complex genetic testing results.',
-    'partners-insight': 'Clinical analytics dashboard providing real-time operational intelligence for hospital administrators and care teams.',
-    'wuxi-nextcode-familycode': 'Family genomics platform that visualizes hereditary patterns and supports clinical decision-making for genetic conditions.'
-  };
-  
-  // Use project-specific description if available
-  if (projectDescriptions[project.id]) {
-    return {
-      snippet: projectDescriptions[project.id],
-      source: 'curated-description',
-      confidence: 0.9
-    }
-  }
-  
-  // Add category-based enhancements for AI projects
-  if (project.categories && project.categories.includes('AI')) {
-    if (project.title.toLowerCase().includes('ai') || project.title.toLowerCase().includes('artificial intelligence')) {
-      enhancedCaption = `An AI-powered ${project.categories.includes('Healthcare') ? 'healthcare' : ''} solution that ${enhancedCaption.toLowerCase()}`;
-    } else {
-      enhancedCaption = `${enhancedCaption} This project leverages AI and machine learning technologies.`;
-    }
-  }
-  
-  // Add client context if available
-  if (project.client && project.client !== 'GoInvo' && !enhancedCaption.includes(project.client)) {
-    enhancedCaption = `For ${project.client}: ${enhancedCaption}`;
-  }
-  
-  // Use enhanced caption or create a basic one
-  const finalSnippet = enhancedCaption || 
-    `${project.title} - ${project.categories ? project.categories.join(', ') : 'Design'} project delivering innovative solutions.`;
-  
-  return {
-    snippet: finalSnippet,
-    source: 'enhanced-caption',
-    confidence: 0.5
-  }
-}
+// export function selectBuyerDescription(project, parsedQuery) {
+//   ... function body commented out for cleaner codebase ...
+// }
 
 // Extract keywords with word weights
 function extractKeywordsWithWeights(text, wordWeights = {}) {
@@ -425,12 +241,8 @@ function containsWholeWord(text, word) {
 
 // Enhanced keyword similarity calculation with better matching
 function calculateEnhancedKeywordSimilarity(query, project) {
-  console.log('📊 calculateEnhancedKeywordSimilarity called for:', project.title);
-  
   const queryLower = query.toLowerCase();
   const queryWords = queryLower.split(/\s+/).filter(w => w.length >= 2);
-  
-  console.log('Query words:', queryWords); // Debug logging
   
   // Skip empty queries
   if (queryWords.length === 0) return 0;
@@ -455,10 +267,8 @@ function calculateEnhancedKeywordSimilarity(query, project) {
     'natural language processing': ['nlp', 'ai', 'text analysis'],
     
     // Visual/Design terms
-    'illustrations': ['visual', 'graphic', 'design', 'artwork', 'cards', 'visuals', 'images', 'pictures'],
-    'illustration': ['visual', 'graphic', 'design', 'artwork', 'card', 'visual', 'image', 'picture'],
-    'card': ['cards', 'deck', 'visual', 'mantras'],
-    'cards': ['card', 'deck', 'visual', 'mantras'],
+    'illustrations': ['visual', 'graphic', 'design', 'artwork', 'visuals', 'images', 'pictures'],
+    'illustration': ['visual', 'graphic', 'design', 'artwork', 'image', 'picture'],
     'visual': ['visualization', 'graphic', 'design', 'illustration'],
     'design': ['designer', 'designed', 'designing', 'ux', 'ui'],
     'dashboard': ['dashboards', 'analytics', 'metrics', 'reporting', 'visualization'],
@@ -489,7 +299,6 @@ function calculateEnhancedKeywordSimilarity(query, project) {
     
     // Action terms
     'encourage': ['promote', 'support', 'foster', 'empower', 'inspire', 'motivate', 'drive'],
-    'care': ['health', 'healthcare', 'wellness', 'self-care', 'patient care', 'caring'],
     'manage': ['management', 'managing', 'control', 'handle', 'organize'],
     'track': ['tracking', 'monitor', 'monitoring', 'follow', 'record'],
     
@@ -521,7 +330,6 @@ function calculateEnhancedKeywordSimilarity(query, project) {
     if (hasAbbreviationCategory) {
       // Reduced boost for exact category match with abbreviation
       wordMatches[abbreviation] += 8; // Reduced from 15
-      console.log(`Found exact abbreviation category match for "${abbreviation}" in ${project.title}`);
     }
   }
   
@@ -613,8 +421,9 @@ function calculateEnhancedKeywordSimilarity(query, project) {
   }
   
   // 5. Special case boosts
-  // Care Cards specific boost
-  if (queryLower.includes('card') && (queryLower.includes('care') || queryLower.includes('illustration') || queryLower.includes('encourage'))) {
+  // Care Cards specific boost - only boost if query explicitly mentions cards
+  if ((queryLower.includes('care cards') || queryLower.includes('care card')) || 
+      (queryLower.includes('card') && queryLower.includes('illustration'))) {
     if (project.id === 'care-cards' || titleLower.includes('care cards')) {
       queryWords.forEach(word => {
         wordMatches[word] += 20 / queryWords.length;
@@ -750,30 +559,22 @@ function calculateEnhancedKeywordSimilarity(query, project) {
   finalScore = Math.min(finalScore, 1.0);
   
   // Debug log for top matches
-  if (finalScore > 0.3) {
-    console.log(`Project "${project.title}" - Matched ${matchedWords}/${queryWords.length} words, avg score: ${avgScorePerWord.toFixed(2)}, multiplier: ${queryLengthMultiplier}, final: ${finalScore.toFixed(3)}`);
-  }
+  // Removed score logging since we're not displaying scores in UI anymore
   
   return finalScore;
 }
 
 // Main search function combining all approaches
 export async function performEnhancedSearch(query, searchData, options = {}) {
-  console.log('🔍 performEnhancedSearch called with:', { query, projectCount: searchData?.projects?.length || 0 });
-  
   const { wordWeights = {} } = options;
   
   if (!query || query.trim().length < 2) {
-    console.log('⚠️ Query too short or empty:', query);
     return {
       results: [],
       searchAnalysis: null,
       suggestions: []
     };
   }
-
-  console.log('🔍 Performing enhanced search for:', query);
-  console.log('📊 Searching through', searchData.projects ? searchData.projects.length : 0, 'projects');
 
   // Parse query for both structured fields and skills
   const parsedQuery = parseQuery(query);
@@ -838,51 +639,11 @@ export async function performEnhancedSearch(query, searchData, options = {}) {
   // Sort by score
   results.sort((a, b) => b.score - a.score)
   
-  // Debug: Log top 5 results after sorting
-  console.log('🏆 Top 5 results after sorting:');
-  results.slice(0, 5).forEach((r, idx) => {
-    console.log(`  ${idx + 1}. ${r.title} - Score: ${(r.score * 100).toFixed(1)}%`);
-  });
-  
   // Take top results without filtering by score threshold
   const topResults = results.slice(0, 20).filter(p => p.score > 0) // Only filter out zero scores
   
-  // Debug logging for no results
-  if (topResults.length === 0) {
-    console.log('⚠️ No results found. Top 5 scores were:');
-    results.slice(0, 5).forEach(r => {
-      console.log(`  - ${r.title}: ${r.score.toFixed(4)}`);
-    });
-  }
-  
-  // Generate dynamic snippets for results
-  const resultsWithSnippets = topResults.map(project => {
-    const snippetData = generateDynamicSnippet(
-      project, 
-      parsedQuery, 
-      parsedQuery, // Using same object for skills
-      {
-        confidence: project.confidence,
-        matchedSkills: project.matchedSkills
-      }
-    )
-    
-    return {
-      ...project,
-      snippet: snippetData.snippet,
-      debug: {
-        ...project.debug,
-        snippetSource: snippetData.source,
-        snippetConfidence: snippetData.confidence
-      }
-    }
-  })
-  
-  // Debug: Verify order is maintained after snippet generation
-  console.log('📋 Final results order:');
-  resultsWithSnippets.slice(0, 5).forEach((r, idx) => {
-    console.log(`  ${idx + 1}. ${r.title} - Score: ${(r.score * 100).toFixed(1)}%`);
-  });
+  // No longer generating snippets since we're not displaying them
+  // Just return the results as-is for cleaner UI
   
   // Generate search suggestions if no good results
   const suggestions = []
@@ -899,7 +660,7 @@ export async function performEnhancedSearch(query, searchData, options = {}) {
   }
   
   return {
-    results: resultsWithSnippets,
+    results: topResults,
     searchAnalysis: {
       domain: parsedQuery.domain,
       product: parsedQuery.product,

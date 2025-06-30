@@ -18,14 +18,14 @@ const ProjectSearch = ({ projects = [] }) => {
   
   // Example search queries to rotate through
   const placeholderExamples = [
-    "an AI transcription platform for therapists",
-    "a patient portal for chronic disease management", 
-    "data visualization for clinical research",
-    "mobile app for medication adherence",
-    "dashboard for healthcare administrators",
-    "telemedicine platform for rural patients",
-    "EHR system for specialty clinics",
-    "health tracking app for seniors"
+    "NLP software for medical coding",
+    "real-time cardiac monitoring system", 
+    "vaccination record management",
+    "clinical decision support tools",
+    "research participant portal",
+    "nutrition analysis platform",
+    "consent management system",
+    "health data visualization"
   ]
   
   // Load search index on component mount
@@ -128,12 +128,12 @@ const ProjectSearch = ({ projects = [] }) => {
 
   // Quick filter buttons for common searches
   const quickFilters = [
-    { label: 'AI Projects', query: 'AI' },
-    { label: 'UI Design', query: 'UI' },
-    { label: 'Healthcare', query: 'healthcare medical clinical' },
-    { label: 'Enterprise', query: 'enterprise business corporate' },
-    { label: 'Government', query: 'government public policy' },
-    { label: 'Mobile Apps', query: 'mobile app smartphone application' }
+    { label: 'AI/NLP tools', query: 'NLP artificial intelligence' },
+    { label: 'Clinical tools', query: 'clinical decision support' },
+    { label: 'Data visualization', query: 'hGraph visualization' },
+    { label: 'Research platforms', query: 'research intelligence' },
+    { label: 'Patient data', query: 'health data capture' },
+    { label: 'EHR systems', query: 'inspired EHRs' }
   ]
   
   return (
@@ -210,48 +210,7 @@ const ProjectSearch = ({ projects = [] }) => {
                       className="project-search__image-block"
                       hoverable={true}
                     >
-                      <div className="project-search__result-extras">
-                        {result.snippet && (
-                          <div className="project-search__ai-description">
-                            <p>{result.snippet}</p>
-                            {result.debug?.snippetSource && (
-                              <div className="project-search__snippet-metadata">
-                                <small>
-                                  Source: {result.debug.snippetSource}
-                                  {result.debug.snippetConfidence && ` (${Math.round(result.debug.snippetConfidence * 100)}% confidence)`}
-                                </small>
-                              </div>
-                            )}
-                          </div>
-                        )}
-                        {result.matchedSkills && result.matchedSkills.length > 0 && (
-                          <div className="project-search__matched-skills">
-                            <small>
-                              Matched skills: {result.matchedSkills.slice(0, 3).join(', ')}
-                              {result.matchedSkills.length > 3 && ` +${result.matchedSkills.length - 3} more`}
-                            </small>
-                          </div>
-                        )}
-                        {result.metadata && (
-                          <div className="project-search__result-metadata">
-                            {result.metadata.projectType && (
-                              <span className="project-search__metadata-tag">
-                                {result.metadata.projectType}
-                              </span>
-                            )}
-                            {result.metadata.industry && (
-                              <span className="project-search__metadata-tag">
-                                {result.metadata.industry}
-                              </span>
-                            )}
-                            {result.score && (
-                              <span className="project-search__metadata-tag project-search__metadata-tag--score">
-                                Match: {Math.round(result.score * 100)}%
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
+                      {/* Removed AI descriptions and match scores - keeping UI clean and focused */}
                     </ImageBlock>
                   )}
                 </Link>
@@ -308,20 +267,6 @@ const ProjectSearch = ({ projects = [] }) => {
               </details>
             </div>
           )}
-        </div>
-      )}
-      
-      {searchAnalysis && results.length > 0 && (
-        <div className="project-search__results-analysis">
-          <div className="project-search__analysis-summary">
-            <span>Found {results.length} results</span>
-            {searchAnalysis.domain && (
-              <span> • Domain: {searchAnalysis.domain}</span>
-            )}
-            {searchAnalysis.product && (
-              <span> • Product: {searchAnalysis.product}</span>
-            )}
-          </div>
         </div>
       )}
     </div>

@@ -27,28 +27,31 @@ class PrecisionAutismFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Precision Autism</h1>
-              <h3 className="header--md">A Dynamic Tracking App for Families</h3>
+              <h3 className="header--md">A Dynamic Tracking Concept for Families</h3>
               <p>Living with autism looks different for every family. By capturing real-world data and tailoring insights to the individual, a thoughtfully designed tool can support more personalized care, better communication with caregivers, educators, and providers. And ultimately, provide families with a more empowered and proactive approach for living with autism.</p>
+            </div>
 
-              <Video
-                sources={[
-                  {
-                    src:
-                      '/videos/features/precision-autism/autism_atmosphere_10_720.mp4',
-                    format: 'mp4',
-                  },
-                  {
-                    src:
-                      '/videos/features/precision-autism/autism_atmosphere_10_720.webm',
-                    format: 'webm',
-                  },
-                ]}
-                width="100%"
-                height="480"
-                poster="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
-                fallback="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
-                loop
-              />
+            <Video
+              sources={[
+                {
+                  src:
+                    '/videos/features/precision-autism/autism_atmosphere_10_720.mp4',
+                  format: 'mp4',
+                },
+                {
+                  src:
+                    '/videos/features/precision-autism/autism_atmosphere_10_720.webm',
+                  format: 'webm',
+                },
+              ]}
+              width="100%"
+              height="480"
+              poster="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
+              fallback="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
+              loop
+            />
+
+            <div className="max-width max-width--md content-padding">
               <div className="pure-g button-group margin-bottom">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
@@ -63,7 +66,7 @@ class PrecisionAutismFeature extends Component {
                     href='https://openautism.github.io/'
                     className="button button--secondary margin-top--double margin-bottom--double"
                   >
-                    Process
+                    Concepts and Sketches
                   </a>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 //import Image from '../../image'
-import { LazyImage } from '../../optimized-image'
+import Image from '../../image'
 import React, { Component } from 'react'
 import { mediaUrl } from '../../../helpers'
 
@@ -17,7 +17,7 @@ class PosterCard extends Component {
           <a href={downloadLink}>
             <div className="image-block image-block--hoverable margin-top--none">
               <div className="image-block__image-container">
-                <LazyImage
+                <Image
                   src={image}
                   sizes={sizes}
                   className="image-block__image"

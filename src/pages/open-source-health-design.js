@@ -9,7 +9,7 @@ import Card from '../components/card'
 import Quote from '../components/quote'
 import OpenSourceDesktop from '../assets/images/os-desktop.inline.svg'
 import OpenSourceMobile from '../assets/images/os-mobile.inline.svg'
-import SmartImage, { LazyImage, HeroCriticalImage } from '../components/optimized-image'
+import Image from '../components/image'
 
 const frontmatter = {
   metaTitle: 'Open Source Health Design',
@@ -95,7 +95,8 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="flip-child mainImg">
-                  <HeroCriticalImage
+                  <Image
+          aboveTheFold={true}
                     src="/images/open_source/open-source-bgd.png"
                     className="image--max-width"
                     sizes={config.sizes.full}
@@ -238,7 +239,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="pad-horizontal pure-u-sm-1-3">
-                  <LazyImage
+                  <Image
                     src="/images/open_source/trust.png"
                     className="image--max-width-80"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -249,7 +250,7 @@ class OpenSourcePage extends Component {
                   </p>
                 </div>
                 <div className="pad-horizontal pure-u-sm-1-3">
-                  <LazyImage
+                  <Image
                     src="/images/open_source/innovation.png"
                     className="image--max-width-80"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -261,7 +262,7 @@ class OpenSourcePage extends Component {
                 </div>
 
                 <div className="pad-horizontal pure-u-sm-1-3">
-                  <LazyImage
+                  <Image
                     src="/images/open_source/public-good.png"
                     className="image--max-width-80"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -288,7 +289,7 @@ class OpenSourcePage extends Component {
                       </div>
 
                       <div className=" pure-u-lg-1-2 flip-child imgMaxWidth">
-                        <LazyImage
+                        <Image
                           src="/images/open_source/health-lab.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -302,7 +303,7 @@ class OpenSourcePage extends Component {
                   <Card link="https://open-health-manager.github.io/Design/">
                     <div className="wrap-parent">
                       <div className="pure-u-md-1-2 wrap imgMaxWidth">
-                        <LazyImage
+                        <Image
                           src="/images/open_source/health-manager.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -340,7 +341,7 @@ class OpenSourcePage extends Component {
                       </div>
 
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth">
-                        <LazyImage
+                        <Image
                           src="/images/open_source/health-picture.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -354,7 +355,7 @@ class OpenSourcePage extends Component {
                   <Card link="/vision/own-your-health-data/">
                     <div className="wrap-parent">
                       <div className="pure-u-md-1-2 wrap imgMaxWidth">
-                        <LazyImage
+                        <Image
                           src="/images/open_source/health-data-ownership.png"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -462,7 +463,7 @@ class OpenSourcePage extends Component {
               </div>
 
               <div className="pure-u-md-1-2 hidden--sm">
-                <LazyImage
+                <Image
                   src="/images/open_source/cta-community.png"
                   className="image--max-width"
                   sizes={config.sizes.full}

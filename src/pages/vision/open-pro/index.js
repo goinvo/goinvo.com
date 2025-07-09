@@ -14,7 +14,7 @@ import personalizedCareIcon from '../../../assets/images/vision/open-pro/persona
 import treatmentIcon from '../../../assets/images/vision/open-pro/treatment.svg'
 
 import config from '../../../../config'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 
 const frontmatter = {
   metaTitle: 'openPRO: Your health. Your voice.',
@@ -319,7 +319,7 @@ class openPro extends Component {
                 beautifully and simply.{' '}
               </h4>
 
-              <LazyImage
+              <Image
                 src="/images/features/open-pro/main-graphic.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -388,7 +388,7 @@ class openPro extends Component {
                 are no publically available voice interfaces for collecting
                 PROMs or questionnaires.
               </p>
-              <LazyImage
+              <Image
                 src="/images/features/open-pro/voice-pro.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -472,7 +472,7 @@ class openPro extends Component {
                 tool such as openPRO - Symptom Reporter would help encourage
                 such integration.
               </p>
-              <LazyImage
+              <Image
                 src="/images/features/open-pro/symptom.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -569,7 +569,7 @@ class openPro extends Component {
                   questions such as frequency, severity, and timing.
                 </li>
               </ul>
-              <LazyImage
+              <Image
                 src="/images/features/open-pro/ros.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -660,7 +660,7 @@ class openPro extends Component {
                   ROS reporter, and Voice PROMs.
                 </li>
               </ul>
-              <LazyImage
+              <Image
                 src="/images/features/open-pro/platform.jpg"
                 className="image--max-width-med image--center"
                 sizes={config.sizes.fullInsideMediumMaxWidth}

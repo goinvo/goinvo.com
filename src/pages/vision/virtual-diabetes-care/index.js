@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Divider from '../../../components/divider'
@@ -187,7 +187,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/virtual-care-diabetes/rural_urban.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -256,7 +256,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/virtual-care-diabetes/point_1.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -278,7 +278,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/virtual-care-diabetes/point_2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -309,7 +309,7 @@ class VirtualDiabetesCareFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/virtual-care-diabetes/point_3.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

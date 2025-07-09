@@ -9,7 +9,7 @@ import Card from '../components/card'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import ContactForm from '../components/form-contact'
-import { HeroCriticalImage, LazyImage } from '../components/optimized-image'
+import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
 import headerData from '../data/homepage-headers.json'
@@ -88,11 +88,12 @@ class IndexPage extends Component {
                   href="/vision/"
                   style={{ display: 'block', lineHeight: 0 }}
                 >
-                  <HeroCriticalImage
+                  <Image
                     src="/images/features/posters/design-axiom-make-things.jpg"
                     alt="Sugar Kills poster"
                     className="image--max-width"
                     placeholderColor="#f8f9fa"
+                    aboveTheFold={true}
                   />
                 </a>
               </div>
@@ -351,7 +352,7 @@ class IndexPage extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LazyImage
+                  <Image
                     src="/images/homepage/group-aug-2018-4.jpg"
                     alt="GoInvo team photo"
                     className="image--max-width"

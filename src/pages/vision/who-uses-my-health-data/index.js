@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -58,7 +58,7 @@ class HealthDataUseFeature extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LazyImage
+                <Image
                   src="/images/features/health-data-use/health-data-use-poster-thin.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMediumMaxWidth}

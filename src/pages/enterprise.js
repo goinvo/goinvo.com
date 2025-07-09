@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
 import config from '../../config'
-import SmartImage, { LazyImage } from '../components/optimized-image'
+import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Card from '../components/card'
 import ContactForm from '../components/form-contact'
@@ -66,7 +66,7 @@ class EnterprisePage extends Component {
 
             <div className="container--justify-center tileRow">
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <SmartImage
+                <Image
                   src="/images/open_source/innovation.png"
                   className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -83,7 +83,7 @@ class EnterprisePage extends Component {
                 </p>
               </div>
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <SmartImage
+                <Image
                   src="/images/open_source/public-good.png"
                   className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -101,7 +101,7 @@ class EnterprisePage extends Component {
               </div>
 
               <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <SmartImage
+                <Image
                   src="/images/open_source/trust.png"
                   className="image--max-width-80"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -174,7 +174,7 @@ class EnterprisePage extends Component {
                       </div>
 
                       <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <LazyImage
+                        <Image
                           src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
@@ -208,7 +208,7 @@ class EnterprisePage extends Component {
                       </div>
 
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <LazyImage
+                        <Image
                           src="/images/case-studies/infobionic/infobionic-dashboard.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}

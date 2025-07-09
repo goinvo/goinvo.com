@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { LazyImage } from './optimized-image'
+import Image from './image'
 
 import CATEGORIES_LIST from '../data/categories.json'
 
@@ -44,7 +44,7 @@ class ImageBlock extends Component {
           className={`image-block__image-container ${isSmall ? 'image-block__image-container--small' : ''
             } ${workCard ? 'image-block__image-container--work-card' : ''}`}
         >
-          <LazyImage
+          <Image
             src={image}
             alt={alt}
             className="image-block__image"

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
-import SmartImage, { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import References from '../../../components/references'
 import Author from '../../../components/author'
 import SubscribeForm from '../../../components/form-subscribe'
@@ -34,7 +34,7 @@ class VapepocolypseFeature extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LazyImage
+                  <Image
                     src="/images/features/vapepocolypse/vapepocolypse-full.jpg"
                     alt="Vapepocolypse poster"
                     className="image--max-width"

@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
-import SmartImage, { LazyImage } from '../../components/optimized-image'
+import Image from '../../components/image'
 import TeamMember from '../../components/team-member'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
@@ -121,7 +121,7 @@ const AboutPage = () => (
       <div className="max-width content-padding">
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-            <LazyImage
+            <Image
               src="/images/about/design-markup.jpg"
               alt="Open office hours"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -141,7 +141,7 @@ const AboutPage = () => (
             </Link>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-            <LazyImage
+            <Image
               src="/images/about/megan-and-claire-ultrasound.jpg"
               alt="Join the team"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -192,7 +192,7 @@ const AboutPage = () => (
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2">
             <div className="pad-right--only-lg">
-              <LazyImage
+              <Image
                 src="/images/about/silhouette.jpg"
                 alt="Career opportunities at GoInvo"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -290,7 +290,7 @@ const AboutPage = () => (
         </div>
         <div className="pure-u-1 pure-u-lg-1-2">
           <div className="pad-left--only-lg">
-            <LazyImage
+            <Image
               src="/images/about/bowling.jpg"
               alt="GoInvo team bowling"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

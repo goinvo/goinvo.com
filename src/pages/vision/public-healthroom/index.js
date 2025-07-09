@@ -13,7 +13,7 @@ import SubscribeForm from '../../../components/form-subscribe'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 
 const frontmatter = {
   metaTitle: 'Public Restroom to Public Healthroom - GoInvo',
@@ -303,7 +303,7 @@ class PublicHealthroom extends Component {
           className={`public-healthroom__overlay-image public-healthroom__entry-menu ${id === 2 ? 'public-healthroom__overlay-image--visible' : ''
             }`}
         >
-          <LazyImage
+          <Image
             src="/images/features/public-healthroom/menu-1.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
@@ -313,7 +313,7 @@ class PublicHealthroom extends Component {
           className={`public-healthroom__overlay-image public-healthroom__entry-menu ${id === 3 ? 'public-healthroom__overlay-image--visible' : ''
             }`}
         >
-          <LazyImage
+          <Image
             src="/images/features/public-healthroom/menu-2.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
@@ -323,7 +323,7 @@ class PublicHealthroom extends Component {
           className={`public-healthroom__overlay-image public-healthroom__entry-menu ${id === 4 ? 'public-healthroom__overlay-image--visible' : ''
             }`}
         >
-          <LazyImage
+          <Image
             src="/images/features/public-healthroom/menu-3.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
@@ -341,7 +341,7 @@ class PublicHealthroom extends Component {
             }
           ${id === 28 ? 'public-healthroom__holding-phone--center' : ''}`}
         >
-          <LazyImage
+          <Image
             src="/images/features/public-healthroom/holding-phone.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
@@ -351,7 +351,7 @@ class PublicHealthroom extends Component {
           className={`public-healthroom__overlay-image public-healthroom__vision-results ${id === 24 ? 'public-healthroom__overlay-image--visible' : ''
             }`}
         >
-          <LazyImage
+          <Image
             src="/images/features/public-healthroom/vision-results.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
@@ -361,7 +361,7 @@ class PublicHealthroom extends Component {
           className={`public-healthroom__overlay-image public-healthroom__message-2 ${id === 28 ? 'public-healthroom__overlay-image--visible' : ''
             }`}
         >
-          <LazyImage
+          <Image
             src="/images/features/public-healthroom/message-2.png"
             className="image--max-width"
             sizes={config.sizes.fullToHalfAtLarge}
@@ -566,7 +566,7 @@ class PublicHealthroom extends Component {
             </p>
           </div>
           <div className="max-width">
-            <LazyImage
+            <Image
               src={`/images/features/public-healthroom/pubhrm-plan.png`}
               className="image--max-width"
               sizes={config.sizes.fullInsideMaxWidth}
@@ -630,7 +630,7 @@ class PublicHealthroom extends Component {
                         className="public-healthroom__section"
                         ref={this.systemRefsArray[i].ref}
                       >
-                        <LazyImage
+                        <Image
                           src={`/images/features/public-healthroom/logic/${frame.id}.jpg`}
                           className="image--max-width"
                           sizes={config.sizes.fullToHalfAtLarge}

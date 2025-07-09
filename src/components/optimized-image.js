@@ -143,11 +143,14 @@ const SmartImage = ({
   dimensions,
   ...props 
 }) => {
+  // Ensure src is a string
+  const srcString = typeof src === 'string' ? src : String(src || '')
+  
   // If explicitly marked as external or is a full URL, use external
-  if (externalImage || (src && (src.startsWith('http') || src.startsWith('//')))) {
+  if (externalImage || (srcString && (srcString.startsWith('http') || srcString.startsWith('//')))) {
     return (
       <ExternalImage 
-        src={src} 
+        src={srcString} 
         alt={alt} 
         className={className} 
         sizes={sizes}
@@ -160,10 +163,10 @@ const SmartImage = ({
   }
 
   // For SVGs, treat as external but don't add query params
-  if (src && (src.endsWith('.svg') || src.includes('.svg'))) {
+  if (srcString && (srcString.endsWith('.svg') || srcString.includes('.svg'))) {
     return (
       <ExternalImage 
-        src={src} 
+        src={srcString} 
         alt={alt} 
         className={className} 
         priority={priority}
@@ -174,14 +177,14 @@ const SmartImage = ({
   }
 
   // For local images, try optimized first
-  if (src && !src.startsWith('http') && !src.startsWith('//')) {
-    return <OptimizedImage src={src} alt={alt} className={className} priority={priority} {...props} />
+  if (srcString && !srcString.startsWith('http') && !srcString.startsWith('//')) {
+    return <OptimizedImage src={srcString} alt={alt} className={className} priority={priority} {...props} />
   }
 
   // Default to external with srcset
   return (
     <ExternalImage 
-      src={src} 
+      src={srcString} 
       alt={alt} 
       className={className} 
       sizes={sizes}

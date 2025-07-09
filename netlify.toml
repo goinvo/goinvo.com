@@ -1,0 +1,26 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18.17.0"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+
+# Function configuration
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["public/ai-preset-cache.json"]
+  
+# Handle OPTIONS requests for CORS
+[[redirects]]
+  from = "/.netlify/functions/ai-search"
+  to = "/.netlify/functions/ai-search"
+  status = 200
+  conditions = {Method = ["OPTIONS"]} 

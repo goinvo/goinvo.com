@@ -4,6 +4,29 @@ import ImageBlock from './image-block'
 import Results from './results'
 import { performEnhancedSearch } from '../utils/enhanced-search'
 
+// AI Persona options
+const AI_PERSONAS = [
+  { key: 'healthcare_executive', label: '🏥 Healthcare Executive', description: 'ROI & compliance focused' },
+  { key: 'product_manager', label: '📱 Product Manager', description: 'UX/UI best practices' },
+  { key: 'researcher', label: '🔬 Clinical Researcher', description: 'Research tools & data' },
+  { key: 'government_official', label: '🏛️ Government Official', description: 'Civic tech solutions' },
+  { key: 'startup_founder', label: '🚀 Startup Founder', description: 'Scalable innovations' }
+]
+
+// Storage keys for state persistence
+const STORAGE_KEYS = {
+  searchQuery: 'ai_search_query',
+  searchResults: 'ai_search_results',
+  aiEnabled: 'ai_search_enabled',
+  selectedPersona: 'ai_search_persona',
+  detectedPersona: 'ai_search_detected_persona',
+  aiSearchInsight: 'ai_search_insight',
+  timestamp: 'ai_search_timestamp'
+}
+
+// State expires after 1 hour
+const STATE_EXPIRY = 60 * 60 * 1000
+
 const ProjectSearch = ({ projects = [] }) => {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
@@ -16,6 +39,18 @@ const ProjectSearch = ({ projects = [] }) => {
   const [suggestions, setSuggestions] = useState([])
   const [searchAnalysis, setSearchAnalysis] = useState(null)
   
+  // AI-specific states
+  const [aiEnabled, setAiEnabled] = useState(true) // Default to enabled
+  const [selectedPersona, setSelectedPersona] = useState(null)
+  const [detectedPersona, setDetectedPersona] = useState(null)
+  const [isLoadingAI, setIsLoadingAI] = useState(false)
+  const [aiError, setAiError] = useState(null)
+  const [aiSearchInsight, setAiSearchInsight] = useState(null)
+  const [showPersonaSelector, setShowPersonaSelector] = useState(false)
+  const [stateRestored, setStateRestored] = useState(false)
+  const [searchTriggered, setSearchTriggered] = useState(false)
+  const [expandedDescriptions, setExpandedDescriptions] = useState(new Set())
+  
   // Example search queries to rotate through
   const placeholderExamples = [
     "NLP software for medical coding",
@@ -27,6 +62,135 @@ const ProjectSearch = ({ projects = [] }) => {
     "consent management system",
     "health data visualization"
   ]
+
+  // Save search state to localStorage - memoized
+  const saveSearchState = useCallback((searchState) => {
+    try {
+      const stateToSave = {
+        ...searchState,
+        timestamp: Date.now()
+      }
+      
+      Object.keys(STORAGE_KEYS).forEach(key => {
+        if (stateToSave[key] !== undefined) {
+          localStorage.setItem(STORAGE_KEYS[key], JSON.stringify(stateToSave[key]))
+        }
+      })
+    } catch (error) {
+      console.warn('Failed to save search state:', error)
+    }
+  }, [])
+
+  // Load search state from localStorage - memoized
+  const loadSearchState = useCallback(() => {
+    try {
+      const timestamp = JSON.parse(localStorage.getItem(STORAGE_KEYS.timestamp) || 'null')
+      
+      // Check if state has expired
+      if (!timestamp || Date.now() - timestamp > STATE_EXPIRY) {
+        clearSearchState()
+        return null
+      }
+
+      const savedState = {}
+      Object.keys(STORAGE_KEYS).forEach(key => {
+        const stored = localStorage.getItem(STORAGE_KEYS[key])
+        if (stored) {
+          try {
+            savedState[key] = JSON.parse(stored)
+          } catch (e) {
+            console.warn(`Failed to parse stored ${key}:`, e)
+          }
+        }
+      })
+
+      return savedState
+    } catch (error) {
+      console.warn('Failed to load search state:', error)
+      return null
+    }
+  }, [])
+
+  // Clear search state from localStorage - memoized
+  const clearSearchState = useCallback(() => {
+    Object.values(STORAGE_KEYS).forEach(key => {
+      localStorage.removeItem(key)
+    })
+  }, [])
+
+  // AI-enhanced search function - memoized to prevent re-renders
+  const performAISearch = useCallback(async (searchResults) => {
+    if (!aiEnabled || searchResults.length === 0) {
+      return searchResults
+    }
+    
+    setIsLoadingAI(true)
+    setAiError(null)
+    setAiSearchInsight(null)
+    
+    try {
+      // Reduce payload by only sending essential fields
+      const minimalProjects = searchResults.slice(0, 10).map(project => ({
+        slug: project.slug,
+        title: project.title,
+        caption: project.caption || '',
+        categories: project.categories || [],
+        score: project.score || 0
+      }))
+      
+      const response = await fetch('/.netlify/functions/ai-search', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          query,
+          projects: minimalProjects,
+          preset: selectedPersona,
+          useAI: true,
+          autoDetectPersona: !selectedPersona // Auto-detect if no persona selected
+        })
+      })
+      
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'AI search failed')
+      }
+      
+      const aiData = await response.json()
+      
+      if (aiData.aiGenerated) {
+        setAiSearchInsight(aiData.searchInsight)
+        setDetectedPersona(aiData.detectedPersona)
+        
+        // If persona was auto-detected and we don't have one selected, use it
+        if (!selectedPersona && aiData.detectedPersona) {
+          setSelectedPersona(aiData.detectedPersona)
+        }
+        
+        // Merge AI data back with full project data
+        return searchResults.map(project => {
+          const aiEnhancement = aiData.results.find(r => r.slug === project.slug)
+          if (aiEnhancement) {
+            return {
+              ...project,
+              aiDescription: aiEnhancement.aiDescription,
+              aiEnhanced: aiEnhancement.aiEnhanced
+            }
+          }
+          return project
+        })
+      }
+      
+      return searchResults
+    } catch (err) {
+      console.error('AI search error:', err)
+      setAiError(err.message)
+      return searchResults // Fallback to non-AI results
+    } finally {
+      setIsLoadingAI(false)
+    }
+  }, [aiEnabled, query, selectedPersona]) // Only re-create when these specific values change
   
   // Load search index on component mount
   useEffect(() => {
@@ -52,6 +216,32 @@ const ProjectSearch = ({ projects = [] }) => {
     initializeSearch()
   }, [projects])
 
+  // Restore search state on component mount
+  useEffect(() => {
+    if (indexLoaded && !stateRestored) {
+      const savedState = loadSearchState()
+      
+      if (savedState && savedState.searchQuery) {
+        setQuery(savedState.searchQuery)
+        setResults(savedState.searchResults || [])
+        setAiEnabled(savedState.aiEnabled !== undefined ? savedState.aiEnabled : true)
+        setSelectedPersona(savedState.selectedPersona || null)
+        setDetectedPersona(savedState.detectedPersona || null)
+        setAiSearchInsight(savedState.aiSearchInsight || null)
+        
+        // Scroll to search area after a brief delay
+        setTimeout(() => {
+          const searchElement = document.querySelector('.project-search')
+          if (searchElement) {
+            searchElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }
+        }, 100)
+      }
+      
+      setStateRestored(true)
+    }
+  }, [indexLoaded, loadSearchState])
+
   // Rotate placeholder examples with fade animation
   useEffect(() => {
     const interval = setInterval(() => {
@@ -70,23 +260,33 @@ const ProjectSearch = ({ projects = [] }) => {
     return () => clearInterval(interval)
   }, [placeholderExamples.length])
 
-  // Client-side search with debouncing
+  // Client-side search with debouncing - FIXED dependencies
   useEffect(() => {
+    // Don't search if query is too short
     if (query.trim().length < 2) {
       setResults([])
       setIsSearching(false)
       setError(null)
       setSuggestions([])
       setSearchAnalysis(null)
+      setAiSearchInsight(null)
+      setSearchTriggered(false)
       return
     }
     
-    if (!indexLoaded) {
-      return // Wait for index to load
+    // Wait for index to load and state to be restored
+    if (!indexLoaded || !stateRestored) {
+      return
+    }
+    
+    // Skip search if we just restored state and have results already AND no search was manually triggered
+    if (results.length > 0 && stateRestored && !searchTriggered) {
+      return
     }
     
     setIsSearching(true)
     setError(null)
+    setSearchTriggered(false) // Reset flag
     
     const timeoutId = setTimeout(async () => {
       try {
@@ -98,11 +298,24 @@ const ProjectSearch = ({ projects = [] }) => {
         // Perform enhanced search
         const searchResults = await performEnhancedSearch(query, searchData)
         
-        setResults(searchResults.results || [])
+        // Apply AI enhancement if enabled
+        const finalResults = await performAISearch(searchResults.results || [])
+        
+        setResults(finalResults)
         setSuggestions(searchResults.suggestions || [])
         setSearchAnalysis(searchResults.searchAnalysis || null)
         
-        if (searchResults.results.length === 0) {
+        // Save search state
+        saveSearchState({
+          searchQuery: query,
+          searchResults: finalResults,
+          aiEnabled,
+          selectedPersona,
+          detectedPersona,
+          aiSearchInsight
+        })
+        
+        if (finalResults.length === 0) {
           setError('No projects match your search. Try different keywords.')
         }
       } catch (err) {
@@ -115,15 +328,83 @@ const ProjectSearch = ({ projects = [] }) => {
     }, 300)
     
     return () => clearTimeout(timeoutId)
-  }, [query, searchIndex, indexLoaded])
+  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered]) // Added searchTriggered
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)
+    // Clear results when typing to trigger new search
+    if (results.length > 0) {
+      setResults([])
+      setSearchTriggered(true)
+    }
   }
   
   const handleClearSearch = () => {
     setQuery('')
     setResults([])
+    setAiSearchInsight(null)
+    setDetectedPersona(null)
+    setSearchTriggered(false)
+    setExpandedDescriptions(new Set())
+    clearSearchState()
+  }
+
+  const toggleDescriptionExpansion = (projectSlug) => {
+    setExpandedDescriptions(prev => {
+      const newExpanded = new Set(prev)
+      if (newExpanded.has(projectSlug)) {
+        newExpanded.delete(projectSlug)
+      } else {
+        newExpanded.add(projectSlug)
+      }
+      return newExpanded
+    })
+  }
+
+  const handleToggleAI = () => {
+    const newAiEnabled = !aiEnabled
+    setAiEnabled(newAiEnabled)
+    if (!newAiEnabled) {
+      // When enabling AI, reset persona to trigger auto-detection
+      setSelectedPersona(null)
+    }
+    
+    // Clear results to trigger new search with updated AI settings
+    if (results.length > 0) {
+      setResults([])
+      setSearchTriggered(true)
+    }
+    
+    // Save updated AI preference
+    saveSearchState({
+      searchQuery: query,
+      searchResults: results,
+      aiEnabled: newAiEnabled,
+      selectedPersona,
+      detectedPersona,
+      aiSearchInsight
+    })
+  }
+
+  const handlePersonaSelect = (personaKey) => {
+    setSelectedPersona(personaKey)
+    setShowPersonaSelector(false)
+    
+    // Clear results to trigger new search with updated persona
+    if (results.length > 0) {
+      setResults([])
+      setSearchTriggered(true)
+    }
+    
+    // Save updated persona
+    saveSearchState({
+      searchQuery: query,
+      searchResults: results,
+      aiEnabled,
+      selectedPersona: personaKey,
+      detectedPersona,
+      aiSearchInsight
+    })
   }
 
   // Quick filter buttons for common searches
@@ -149,6 +430,17 @@ const ProjectSearch = ({ projects = [] }) => {
             aria-label="Search projects"
             disabled={!indexLoaded}
           />
+          
+          {/* AI Enhancement Toggle inside input */}
+          <button
+            onClick={handleToggleAI}
+            className={`project-search__ai-toggle-inline ${aiEnabled ? 'active' : ''} ${query ? 'with-clear' : ''}`}
+            disabled={!indexLoaded}
+            title={aiEnabled ? "AI is enhancing your search results" : "Enable AI-powered search"}
+          >
+            <span className="ai-text">AI</span>
+          </button>
+          
           {query && (
             <button
               onClick={handleClearSearch}
@@ -159,6 +451,42 @@ const ProjectSearch = ({ projects = [] }) => {
             </button>
           )}
         </div>
+        
+        {/* Persona Selector Modal (now optional) */}
+        {showPersonaSelector && (
+          <div className="project-search__persona-selector">
+            <h3>Select Your Role</h3>
+            <p>Choose a persona for more tailored recommendations</p>
+            <div className="persona-options">
+              <button
+                onClick={() => {
+                  setSelectedPersona(null);
+                  setShowPersonaSelector(false);
+                }}
+                className={`persona-option ${!selectedPersona ? 'selected' : ''}`}
+              >
+                <div className="persona-label">🎯 Auto-detect</div>
+                <div className="persona-description">Let AI choose based on your search</div>
+              </button>
+              {AI_PERSONAS.map(persona => (
+                <button
+                  key={persona.key}
+                  onClick={() => handlePersonaSelect(persona.key)}
+                  className={`persona-option ${selectedPersona === persona.key ? 'selected' : ''}`}
+                >
+                  <div className="persona-label">{persona.label}</div>
+                  <div className="persona-description">{persona.description}</div>
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setShowPersonaSelector(false)}
+              className="persona-close"
+            >
+              Close
+            </button>
+          </div>
+        )}
         
         {!indexLoaded && (
           <div className="project-search__loading">
@@ -182,89 +510,172 @@ const ProjectSearch = ({ projects = [] }) => {
         )}
       </div>
       
-      {isSearching && (
-        <div className="project-search__loading">
-          <p>🧠 Searching projects...</p>
+      {/* AI Loading State */}
+      {isLoadingAI && (
+        <div className="project-search__ai-loading">
+          <div className="ai-loading-spinner">🤖</div>
+          <p>AI is analyzing your search...</p>
         </div>
       )}
       
-      {error && (
-        <div className="project-search__error">
-          <p>{error}</p>
+      {/* AI Error State */}
+      {aiError && (
+        <div className="project-search__ai-error">
+          <p>⚠️ AI enhancement unavailable: {aiError}</p>
         </div>
       )}
       
-      {query && !isSearching && indexLoaded && results.length > 0 && (
+      {/* Search Results */}
+      {query && !isSearching && results.length > 0 && (
         <div className="project-search__results">
-          <div className="project-search__results-grid">
-            {results.map((result) => (
-              <div key={result.id} className="project-search__result">
-                <Link to={result.link || `/work/${result.slug}`} className="project-search__result-link">
-                  {result.image && (
-                    <ImageBlock
-                      image={result.image}
-                      alt={result.title}
-                      title={result.title}
-                      client={result.client && result.client.toLowerCase() !== 'goinvo' ? result.client : null}
-                      caption={result.caption}
-                      className="project-search__image-block"
-                      hoverable={true}
+          
+          {/* AI-Enhanced Results Section */}
+          {aiEnabled && results.some(project => project.aiDescription) && (() => {
+            // Get AI-enhanced projects for featured section
+            const aiEnhancedProjects = results
+              .filter(project => project.aiDescription)
+              .slice(0, 4);
+            
+            return (
+              <div className="ai-enhanced-section">
+                {/* Decorative background */}
+                <div className="ai-enhanced-background"></div>
+                
+                <div className="ai-section-header">
+                  <h4>Recommended for You</h4>
+                  <p>These projects are most relevant to your search, with AI-generated insights:</p>
+                </div>
+                
+                <div className="ai-enhanced-grid">
+                  {aiEnhancedProjects.map((project, index) => (
+                    <div 
+                      key={`ai-${project.slug}`} 
+                      className="ai-enhanced-item"
                     >
-                      {/* Removed AI descriptions and match scores - keeping UI clean and focused */}
-                    </ImageBlock>
-                  )}
-                </Link>
+                      <Link to={`/work/${project.slug}/`} className="ai-enhanced-link">
+                        {project.image && (
+                          <div className="ai-enhanced-image">
+                            <ImageBlock
+                              image={project.image}
+                              alt={project.title}
+                              sizes="(max-width: 768px) 100vw, 400px"
+                            />
+                          </div>
+                        )}
+                        
+                        <div className="ai-enhanced-content">
+                          <h5>{project.title}</h5>
+                          
+                          {/* AI Description or Caption */}
+                          <div className="ai-description-section">
+                            <p className={`ai-description-text}`}>
+                              {project.aiDescription ? project.aiDescription : project.caption}
+                            </p>
+                          </div>
+                        </div>
+                        
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+            );
+          })()}
+          
+          {/* All Results Section */}
+          <div className="all-results-section">
+            {(() => {
+              // Get AI-enhanced project slugs to filter out duplicates
+              const aiEnhancedSlugs = aiEnabled ? 
+                results
+                  .filter(project => project.aiDescription)
+                  .slice(0, 4)
+                  .map(project => project.slug) : [];
+              
+              // Filter out AI-enhanced projects from remaining results
+              const remainingResults = results.filter(project => 
+                !aiEnhancedSlugs.includes(project.slug)
+              );
+              
+              return (
+                <>
+                  {aiEnabled && results.some(project => project.aiDescription) && (
+                    <div className="all-results-header">
+                      <h4>All Results</h4>
+                      <p>Browse all {results.length} projects that match your search:</p>
+                    </div>
+                  )}
+                  
+                  <div className="results-grid">
+                    {remainingResults.map((project, index) => (
+                      <div 
+                        key={project.slug} 
+                        className="result-item"
+                      >
+                        <Link to={`/work/${project.slug}/`} className="result-link">
+                          {project.image && (
+                            <div className="result-image">
+                              <ImageBlock
+                                image={project.image}
+                                alt={project.title}
+                                sizes="(max-width: 768px) 100vw, 350px"
+                              />
+                            </div>
+                          )}
+                          
+                          <div className="result-content">
+                            <h4>{project.title}</h4>
+                            
+                            {/* Always show original caption in this section */}
+                            <p className="result-caption">
+                              {project.caption}
+                            </p>
+                            
+                            {project.categories && project.categories.length > 0 && (
+                              <div className="result-categories">
+                                {project.categories.slice(0, 3).map((cat, i) => (
+                                  <span key={i} className="category-tag">{cat}</span>
+                                ))}
+                              </div>
+                            )}
+                            
+                            {/* Show match score only when AI is disabled */}
+                            {!aiEnabled && project.score && (
+                              <div className="result-score">
+                                Match: {Math.round(project.score * 100)}%
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </div>
       )}
       
-      {query && !isSearching && indexLoaded && results.length === 0 && !error && (
-        <div className="project-search__no-results">
-          <h3>No matches found</h3>
-          <p>Try adjusting your search terms.</p>
-          
+      {/* Loading State */}
+      {isSearching && !isLoadingAI && (
+        <div className="project-search__loading">
+          <p>🔍 Searching projects...</p>
+        </div>
+      )}
+      
+      {/* Error State */}
+      {error && !isSearching && (
+        <div className="project-search__error">
+          <p>{error}</p>
           {suggestions.length > 0 && (
-            <div className="project-search__suggestions">
-              <h4>Try these suggestions:</h4>
-              <div className="project-search__suggestion-buttons">
+            <div className="search-suggestions">
+              <p>Suggestions:</p>
+              <ul>
                 {suggestions.map((suggestion, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setQuery(suggestion)}
-                    className="project-search__suggestion-button"
-                  >
-                    {suggestion}
-                  </button>
+                  <li key={index}>{suggestion}</li>
                 ))}
-              </div>
-            </div>
-          )}
-          
-          {searchAnalysis && (
-            <div className="project-search__analysis">
-              <details>
-                <summary>Search Analysis</summary>
-                <div className="project-search__analysis-content">
-                  <p><strong>Detected Domain:</strong> {searchAnalysis.domain || 'None'}</p>
-                  <p><strong>Detected Product:</strong> {searchAnalysis.product || 'None'}</p>
-                  <p><strong>Detected Goal:</strong> {searchAnalysis.goal || 'None'}</p>
-                  {searchAnalysis.detectedSkills && (
-                    <>
-                      {searchAnalysis.detectedSkills.technical.length > 0 && (
-                        <p><strong>Technical Skills:</strong> {searchAnalysis.detectedSkills.technical.join(', ')}</p>
-                      )}
-                      {searchAnalysis.detectedSkills.design.length > 0 && (
-                        <p><strong>Design Skills:</strong> {searchAnalysis.detectedSkills.design.join(', ')}</p>
-                      )}
-                      {searchAnalysis.detectedSkills.domain.length > 0 && (
-                        <p><strong>Domain Knowledge:</strong> {searchAnalysis.detectedSkills.domain.join(', ')}</p>
-                      )}
-                    </>
-                  )}
-                </div>
-              </details>
+              </ul>
             </div>
           )}
         </div>

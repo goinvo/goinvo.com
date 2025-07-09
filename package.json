@@ -68,7 +68,11 @@
     "generate-embeddings": "node scripts/generate-embeddings.js",
     "generate-embeddings:force": "node scripts/generate-embeddings.js --force",
     "generate-embeddings:id": "node scripts/generate-embeddings.js",
-    "lint": "prettier --check \"**/*.{js,jsx,json,css,scss,md,mdx}\""
+    "lint": "prettier --check \"**/*.{js,jsx,json,css,scss,md,mdx}\"",
+    "generate-ai-cache": "node scripts/pre-generate-ai-presets.js",
+    "dev:ai": "netlify dev",
+    "test:ai": "sh test-ai-local.sh",
+    "test:ai:windows": "test-ai-local.bat"
   },
   "husky": {
     "hooks": {

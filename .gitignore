@@ -110,3 +110,6 @@ jspm_packages/
 .vscode-test
 
 .vscode
+
+# Local Netlify folder
+.netlify

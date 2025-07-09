@@ -14,7 +14,7 @@
     "caption": "With GenAI, we can create visual stories that are more engaging, accessible, and allows us to explore more than ever before.",
     "image": "/images/features/visual-storytelling-with-genai/genai-hero-2.jpg",
     "link": "/vision/visual-storytelling-with-genai/",
-    "hiddenWorkPage": true
+    "hiddenWorkPage": false
   },
   {
     "id": "healthcare-dollars-redux",
@@ -332,7 +332,7 @@
     "caption": "Our open source visual depiction of the history of autism, and how precision medicine will help to define, manage, and treat the condition.",
     "image": "/images/features/precision-autism/precision-autism.jpg",
     "link": "/vision/precision-autism/",
-    "hiddenWorkPage": true
+    "hiddenWorkPage": false
   },
   {
     "id": "test-treat-trace",

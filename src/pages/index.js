@@ -85,15 +85,19 @@ class IndexPage extends Component {
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-3">
                 <h2 className="header--xl margin--none pad-right--double">
-                  Our practices
+                  Our expertise in design covers...
                 </h2>
+              </div>
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <CategoriesList includeAll={false} columns={2} />
               </div>
             </div>
 
-            <div className="pure-u-1 pure-u-lg-4-4">
-              <CategoriesList includeAll={false} columns={4} />
-            </div>
+
           </div>
+          <h2 className="header--xl pad-right--double">
+            Spotlight
+          </h2>
           <Columns columns={2}>
             {this.state.workItems.map((item, i) => {
               const {
@@ -126,7 +130,7 @@ class IndexPage extends Component {
           <div className="container container--justify-center margin-top margin-bottom--double">
             <Link
               to="/work/?expanded=true"
-              className="button button--primary button--lg"
+              className="button button--secondary button--lg"
             >
               View all work
             </Link>

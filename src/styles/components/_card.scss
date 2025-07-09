@@ -22,4 +22,10 @@
   &--fill-height {
     height: 100%;
   }
+
+  &--spotlight {
+    p {
+      font-family: $font-family--serif;
+    }
+  }
 }

@@ -15,7 +15,7 @@ class CardSpotlight extends Component {
       suppressNewTab = false,
     } = this.props
 
-    const completeClassName = `card ${noShadow ? '' : 'card--shadow'} ${fillHeight ? 'card--fill-height' : ''
+    const completeClassName = `card ${fillHeight ? 'card--fill-height' : ''
       } ${className ? className : ''}`
 
     if (link) {

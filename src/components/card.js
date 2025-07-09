@@ -9,15 +9,17 @@ class Card extends Component {
       children,
       className,
       noShadow,
+      spotlight,
       fillHeight,
       link = null,
       externalLink = null,
       suppressNewTab = false,
     } = this.props
 
-    const completeClassName = `card ${noShadow ? '' : 'card--shadow'} ${
-      fillHeight ? 'card--fill-height' : ''
-    } ${className ? className : ''}`
+    const completeClassName = `card ${noShadow ? '' : 'card--shadow'} 
+      ${fillHeight ? 'card--fill-height' : ''}
+      ${spotlight ? 'card--spotlight' : ''}
+      ${className ? className : ''}`
 
     if (link) {
       return externalLink ? (

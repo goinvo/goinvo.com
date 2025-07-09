@@ -6,7 +6,7 @@ import Hero from '../components/hero'
 import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
-import WorkItemsGrid from '../components/work-items-grid'
+import WorkSpotlightGrid from '../components/work-spotlight-grid'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import ContactForm from '../components/form-contact'
@@ -48,7 +48,11 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
 
+    console.log('IndexPage props.data:', props.data)
+
     const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 9)
+
+    console.log('IndexPage workItems after concatCaseStudiesAndFeatures:', workItems)
 
     this.state = {
       image: null,
@@ -99,7 +103,7 @@ class IndexPage extends Component {
           <h2 className="header--xl pad-right--double">
             Spotlight
           </h2>
-          <WorkItemsGrid
+          <WorkSpotlightGrid
             workItems={this.state.workItems}
             extractWorkItemLinkDetails={extractWorkItemLinkDetails}
           />

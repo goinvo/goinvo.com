@@ -80,6 +80,69 @@ class IndexPage extends Component {
         </Hero>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
+
+          <div className="margin-vertical--double pad-vertical--double">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--xl margin--none pad-right--double">
+                  Our practices
+                </h2>
+              </div>
+            </div>
+
+            <div className="pure-u-1 pure-u-lg-4-4">
+              <CategoriesList includeAll={false} columns={4} />
+            </div>
+          </div>
+          <Columns columns={2}>
+            {this.state.workItems.map((item, i) => {
+              const {
+                link,
+                externalLink,
+                suppressNewTab,
+              } = extractWorkItemLinkDetails(item)
+
+              return (
+                <Card
+                  link={link}
+                  key={link}
+                  externalLink={externalLink}
+                  suppressNewTab={suppressNewTab}
+                  hidden={{ condition: i > 1, class: 'hidden--sm' }}
+                >
+                  <ImageBlock
+                    title={item.title}
+                    image={item.image}
+                    client={item.client}
+                    categories={item.categories}
+                    caption={item.caption}
+                    sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                    hoverable
+                  />
+                </Card>
+              )
+            })}
+          </Columns>
+          <div className="container container--justify-center margin-top margin-bottom--double">
+            <Link
+              to="/work/?expanded=true"
+              className="button button--primary button--lg"
+            >
+              View all work
+            </Link>
+          </div>
+        </div>
+
+        <div className="background--gray  pad-vertical--double">
+          <div className="max-width content-padding">
+            <h3 className="header--md" style={{ marginTop: 0 }}>
+              We've worked with...
+            </h3>
+            <ClientLogos />
+          </div>
+        </div>
+
+        <div className="max-width content-padding">
           <div className="pure-g margin-vertical--double">
             <div className="pure-u-1 pure-u-lg-1-3">
               <h2 className="header--xl margin--none">Welcome Jacobin Readers!</h2>
@@ -97,6 +160,7 @@ class IndexPage extends Component {
                 </a>
               </div>
             </div>
+
             <div className="pure-u-1 pure-u-lg-2-3">
               <h2 className="header--xl margin--none pad-right--double">
                 Our designs are used every day
@@ -159,66 +223,9 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--gray  pad-vertical--double">
-          <div className="max-width content-padding">
-            <h3 className="header--md" style={{ marginTop: 0 }}>
-              We've worked with...
-            </h3>
-            <ClientLogos />
-          </div>
-        </div>
-        <div className="max-width content-padding pad-bottom--double">
-          <div className="margin-vertical--double pad-vertical--double">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--xl margin--none pad-right--double">
-                  Our practices
-                </h2>
-              </div>
-            </div>
 
-            <div className="pure-u-1 pure-u-lg-4-4">
-              <CategoriesList includeAll={false} columns={4} />
-            </div>
-          </div>
-          <Columns columns={2}>
-            {this.state.workItems.map((item, i) => {
-              const {
-                link,
-                externalLink,
-                suppressNewTab,
-              } = extractWorkItemLinkDetails(item)
 
-              return (
-                <Card
-                  link={link}
-                  key={link}
-                  externalLink={externalLink}
-                  suppressNewTab={suppressNewTab}
-                  hidden={{ condition: i > 1, class: 'hidden--sm' }}
-                >
-                  <ImageBlock
-                    title={item.title}
-                    image={item.image}
-                    client={item.client}
-                    categories={item.categories}
-                    caption={item.caption}
-                    sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                    hoverable
-                  />
-                </Card>
-              )
-            })}
-          </Columns>
-          <div className="container container--justify-center margin-top margin-bottom--double">
-            <Link
-              to="/work/?expanded=true"
-              className="button button--primary button--lg"
-            >
-              View all work
-            </Link>
-          </div>
-        </div>
+
         <Quote
           background="gray"
           quotee="Eric Topol"

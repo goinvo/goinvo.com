@@ -33,12 +33,6 @@
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-
-    &:hover {
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    }
   }
 
   &__image-container {
@@ -100,39 +94,7 @@
     }
   }
 
-  &__caption {
-    font-size: 0.875rem;
-    line-height: 1.4;
-    color: #666;
-    margin-bottom: 1rem;
-    flex: 1;
 
-    @media (min-width: 48em) {
-      font-size: 0.9375rem;
-    }
-
-    @media (min-width: 64em) {
-      font-size: 1rem;
-    }
-  }
-
-  &__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 0.8125rem;
-    color: #888;
-
-    @media (min-width: 48em) {
-      font-size: 0.875rem;
-    }
-  }
-
-  &__client {
-    font-weight: 500;
-    color: #555;
-  }
 
   &__categories {
     display: flex;

@@ -6,6 +6,7 @@ import Hero from '../components/hero'
 import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
+import WorkItemsGrid from '../components/work-items-grid'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import ContactForm from '../components/form-contact'
@@ -47,7 +48,7 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
 
-    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 4)
+    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 9)
 
     this.state = {
       image: null,
@@ -98,35 +99,10 @@ class IndexPage extends Component {
           <h2 className="header--xl pad-right--double">
             Spotlight
           </h2>
-          <Columns columns={2}>
-            {this.state.workItems.map((item, i) => {
-              const {
-                link,
-                externalLink,
-                suppressNewTab,
-              } = extractWorkItemLinkDetails(item)
-
-              return (
-                <Card
-                  link={link}
-                  key={link}
-                  externalLink={externalLink}
-                  suppressNewTab={suppressNewTab}
-                  hidden={{ condition: i > 1, class: 'hidden--sm' }}
-                >
-                  <ImageBlock
-                    title={item.title}
-                    image={item.image}
-                    client={item.client}
-                    categories={item.categories}
-                    caption={item.caption}
-                    sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                    hoverable
-                  />
-                </Card>
-              )
-            })}
-          </Columns>
+          <WorkItemsGrid
+            workItems={this.state.workItems}
+            extractWorkItemLinkDetails={extractWorkItemLinkDetails}
+          />
           <div className="container container--justify-center margin-top margin-bottom--double">
             <Link
               to="/work/?expanded=true"

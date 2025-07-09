@@ -4,8 +4,10 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
 import Image from '../../../components/image'
+//import BackgroundImage from '../../../components/background-image'
 import Author from '../../../components/author'
 import Video from '../../../components/video'
+import Divider from '../../../components/divider'
 
 import { mediaUrl } from '../../../helpers'
 
@@ -27,7 +29,7 @@ class PrecisionAutismFeature extends Component {
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
               <h1 className="header--xl">Precision Autism</h1>
-              <h3 className="header--md">A Dynamic Tracking Concept for Families</h3>
+              <h3 className="header--md">Dynamic Tracking Concept for Families</h3>
               <p>Living with autism looks different for every family. By capturing real-world data and tailoring insights to the individual, a thoughtfully designed tool can support more personalized care, better communication with caregivers, educators, and providers. And ultimately, provide families with a more empowered and proactive approach for living with autism.</p>
             </div>
 
@@ -52,7 +54,7 @@ class PrecisionAutismFeature extends Component {
             />
 
             <div className="max-width max-width--md content-padding">
-              <div className="pure-g button-group margin-bottom">
+              <div className="pure-g button-group margin-bottom--double margin-top--none">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
                     href='https://github.com/openAutism/openautism.github.io'
@@ -71,7 +73,10 @@ class PrecisionAutismFeature extends Component {
                 </div>
               </div>
 
-              <div className="poster margin-top--double">
+              <Divider />
+
+              <div className="margin-top--double">
+                <h3 className="header--md margin-top--double">A Brief History of Precision Medicine and Autism</h3>
                 <a
                   href={mediaUrl(
                     '/pdf/vision/precision-autism/Precision-Autism-25.Aug.2020.pdf'
@@ -81,7 +86,7 @@ class PrecisionAutismFeature extends Component {
                 >
                   <Image
                     src="/images/features/precision-autism/precision-autism.jpg"
-                    className="image--max-width"
+                    className="image--max-width image--interactive"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
                   />
                 </a>
@@ -97,7 +102,7 @@ class PrecisionAutismFeature extends Component {
                   Download Poster
                 </a>
               </div>
-              <p className="text--center text--gray">
+              <p className="text--center text--gray text--caption margin-top--none margin-bottom--none">
                 Licensed under Creative Commons Attribution v4
               </p>
             </div>

@@ -75,6 +75,7 @@ class WorkSpotlightGrid extends Component {
           <ImageBlock
             title={item.title}
             image={item.image}
+            client={item.client}
             categories={item.categories}
             sizes={config.sizes.fullInsideMediumMaxWidth}
             hoverable

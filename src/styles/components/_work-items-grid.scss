@@ -31,6 +31,10 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
+    &:hover {
+      background: #f6f6f6;
+    }
   }
 
   &__image-container {

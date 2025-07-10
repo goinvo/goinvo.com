@@ -11,7 +11,7 @@ import Divider from '../../../components/divider'
 import { mediaUrl } from '../../../helpers'
 
 import config from '../../../../config'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 
 const frontmatter = {
   metaTitle: 'Transforming Service Access in Massachusetts',
@@ -77,7 +77,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <LazyImage
+                  <Image
                     src="/images/features/eligibility/current-process-2.jpg"
                     className="image--max-width"
                   />
@@ -96,7 +96,7 @@ class EligibilityEngine extends Component {
                 rel="noopener noreferrer"
                 className="preview-download"
               >
-                <LazyImage
+                <Image
                   src="/images/features/eligibility/journey-map-preview.jpg"
                   className="image--max-width"
                 />
@@ -148,7 +148,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <LazyImage
+                  <Image
                     src="/images/features/eligibility/application-data-2.jpg"
                     className="image--max-width"
                   />
@@ -194,7 +194,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <LazyImage
+                  <Image
                     src="/images/features/eligibility/streamlined-process-2.jpg"
                     className="image--max-width"
                   />
@@ -333,7 +333,7 @@ class EligibilityEngine extends Component {
                   target="blank"
                   rel="noopener noreferrer"
                 >
-                  <LazyImage
+                  <Image
                     src="/images/features/eligibility/footprint.jpg"
                     className="image--max-width"
                   />

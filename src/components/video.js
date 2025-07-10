@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { LazyImage } from './optimized-image'
+import Image from './image'
 
 import { mediaUrl } from '../helpers'
 
@@ -24,7 +24,7 @@ class Video extends Component {
             type={`video/${src.format}`}
           />
         ))}
-        <LazyImage src={this.props.fallback} alt="" />
+        <Image src={this.props.fallback} alt="" />
       </video>
     )
   }

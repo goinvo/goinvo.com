@@ -6,7 +6,7 @@ import Hero from '../components/hero'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import Columns from '../components/columns'
-import SmartImage, { LazyImage } from '../components/optimized-image'
+import Image from '../components/image'
 import Divider from '../components/divider'
 import ContactForm from '../components/form-contact'
 
@@ -294,7 +294,7 @@ class ServicesPage extends Component {
                   <div className="pure-u-1 pure-u-lg-1-2">
                     <div className="pad-left--only-lg">
                       <div className="pad-vertical--double">
-                        <SmartImage
+                        <Image
                           src={service.image}
                           sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                           className="image--max-width"

@@ -6,6 +6,24 @@ export function mediaUrl(path) {
   return `${config.cloudfrontUrl}${path}`
 }
 
+// Helper function to ensure proper URL formatting for images
+export function normalizeImageUrl(src) {
+  if (!src) return ''
+  
+  // If it's already a full URL, return as-is
+  if (src.startsWith('http://') || src.startsWith('https://')) {
+    return src
+  }
+  
+  // If it starts with //, add https:
+  if (src.startsWith('//')) {
+    return `https:${src}`
+  }
+  
+  // For relative paths, use mediaUrl
+  return mediaUrl(src)
+}
+
 export function formatDate(date) {
   date = new Date(date)
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import Author from '../../../components/author'
 
 import config from '../../../../config'
@@ -102,7 +102,7 @@ class DigitalHealthTrendsFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/digital-health-trends-2022/1-digital-health-at-home-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -178,7 +178,7 @@ class DigitalHealthTrendsFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/digital-health-trends-2022/3-virtualizing-primary-care-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -257,7 +257,7 @@ class DigitalHealthTrendsFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/digital-health-trends-2022/5-managing-our-health-data-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -337,7 +337,7 @@ class DigitalHealthTrendsFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/digital-health-trends-2022/4-shift-to-local-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -394,7 +394,7 @@ class DigitalHealthTrendsFeature extends Component {
               </p>
 
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/digital-health-trends-2022/2-advances-in-remote-a.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

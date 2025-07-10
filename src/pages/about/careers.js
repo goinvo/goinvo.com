@@ -9,7 +9,7 @@ import Quote from '../../components/quote'
 import Columns from '../../components/columns'
 import ImageBlock from '../../components/image-block'
 import HiringForm from '../../components/form-hiring'
-import { LazyImage } from '../../components/optimized-image'
+import Image from '../../components/image'
 import Card from '../../components/card'
 import BackgroundImage from '../../components/background-image'
 
@@ -233,7 +233,7 @@ class CareersPage extends Component {
           </div>
         </BackgroundImage>
         <div className="background--gray pad-vertical">
-          <LazyImage 
+          <Image 
             src="/images/contact/studio.jpg" 
             gradient
             alt="GoInvo studio space"

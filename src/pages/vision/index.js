@@ -4,7 +4,7 @@ import Layout from '../../components/layouts/layout'
 import Card from '../../components/card'
 import ImageBlock from '../../components/image-block'
 import Columns from '../../components/columns'
-import { HeroCriticalImage, LazyImage } from '../../components/optimized-image'
+import Image from '../../components/image'
 import Quote from '../../components/quote'
 import SubscribeForm from '../../components/form-subscribe'
 import Carousel from '../../components/carousel'
@@ -173,38 +173,43 @@ const VisionPage = () => {
     <Layout frontmatter={frontmatter}>
       <div className="pure-g">
         <div className="pure-u-1-2 hidden--sm">
-          <HeroCriticalImage
+          <Image
             className="image--max-width"
             src="/images/vision/vision-illustration-desktop-left.jpg"
             alt=""
+            aboveTheFold={true}
           />
         </div>
         <div className="pure-u-1-2 hidden--sm">
-          <HeroCriticalImage
+          <Image
             className="image--max-width"
             src="/images/vision/vision-illustration-desktop-right.jpg"
             alt=""
+            aboveTheFold={true}
           />
         </div>
         <div className="pure-u-1 hidden--after-sm">
-          <HeroCriticalImage
+          <Image
             className="image--max-width"
             src="/images/vision/vision-illustration-mobile-home.jpg"
             alt=""
+            aboveTheFold={true}
           />
         </div>
         <div className="pure-u-1 hidden--after-sm">
-          <HeroCriticalImage
+          <Image
             className="image--max-width"
             src="/images/vision/vision-illustration-mobile-practice.jpg"
             alt=""
+            aboveTheFold={true}
           />
         </div>
         <div className="pure-u-1 hidden--after-sm">
-          <HeroCriticalImage
+          <Image
             className="image--max-width"
             src="/images/vision/vision-illustration-mobile-country.jpg"
             alt=""
+            aboveTheFold={true}
           />
         </div>
       </div>
@@ -322,7 +327,7 @@ const VisionPage = () => {
       <div className="max-width content-padding pad-vertical--quad">
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-            <LazyImage
+            <Image
               src="/images/vision/emerging-tech-books.jpg"
               className="image--max-width"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

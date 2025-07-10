@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { LazyImage } from './optimized-image'
+import Image from './image'
 
 import config from '../../config'
 
@@ -30,7 +30,7 @@ class GradientImageColumns extends Component {
                   this.props.arrow ? 'gradient-image-columns__image--arrow' : ''
                 }`}
               >
-                <LazyImage
+                <Image
                   src={this.props.image}
                   sizes={
                     this.props.backgroundNotResponsive
@@ -38,7 +38,6 @@ class GradientImageColumns extends Component {
                       : config.sizes.fullToHalfAtLarge
                   }
                   alt=""
-                  placeholderType="skeleton"
                   placeholderColor="#e8e8e8"
                   style={{
                     width: '100%',

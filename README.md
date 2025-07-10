@@ -253,60 +253,53 @@ Now we can use CSS to style `icon` and `icon-hamburger`, like controlling the si
 
 ## Image Optimization
 
-This project uses an optimized image system to improve performance and user experience. All contributors should use the optimized image components instead of the legacy `<Image />` component.
+This project uses a unified, optimized image system to improve performance and user experience. All image rendering is handled through a single `<Image />` component that automatically provides the best optimization strategy.
 
-### Optimized Image Components
+### The Unified Image Component
 
-The project provides several optimized image components in `src/components/optimized-image.js`:
+The project provides a single, intuitive image component in `src/components/image.js`:
 
-#### `HeroCriticalImage`
-Use for above-the-fold images that should load immediately (high priority):
+#### Basic Usage
 ```js
-import { HeroCriticalImage } from '../components/optimized-image'
+import Image from '../components/image'
 
-<HeroCriticalImage
-  src="/images/homepage/hero-image.jpg"
-  alt="Descriptive alt text"
-  className="image--max-width"
-/>
-```
-
-#### `LazyImage` 
-Use for below-the-fold images that can load lazily (low priority):
-```js
-import { LazyImage } from '../components/optimized-image'
-
-<LazyImage
+// Standard lazy-loaded image (default)
+<Image
   src="/images/about/team-photo.jpg"
   alt="Team photo"
   className="image--max-width"
   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
 />
-```
 
-#### `SpinnerImage`
-Use for interactive elements where users expect immediate feedback:
-```js
-import { SpinnerImage } from '../components/optimized-image'
-
-<SpinnerImage
-  src="/images/gallery/interactive-image.jpg"
-  alt="Interactive image"
+// Above-the-fold image with high priority loading
+<Image
+  src="/images/homepage/hero-image.jpg"
+  alt="Hero image"
   className="image--max-width"
+  aboveTheFold={true}
 />
 ```
 
-#### `SmartImage` (Default Export)
-Auto-detects the best optimization strategy based on context:
-```js
-import SmartImage from '../components/optimized-image'
+#### Image Component Props
 
-<SmartImage
-  src="/images/content/example.jpg"
-  alt="Example image"
-  priority={false} // or true for critical images
-/>
-```
+- **`src`** (required): Path to the image
+- **`alt`** (required): Descriptive alt text for accessibility
+- **`aboveTheFold`** (optional): Set to `true` for images that should load immediately (default: `false`)
+- **`className`** (optional): CSS classes to apply
+- **`sizes`** (optional): Responsive image sizes configuration
+- **`externalImage`** (optional): Set to `true` for external URLs
+- **`placeholder`** (optional): Enable loading placeholder (default: `true`)
+- **`placeholderColor`** (optional): Placeholder color (default: `#f0f0f0`)
+
+### Automatic Smart Behavior
+
+The unified component automatically:
+
+- **Detects image type**: Local vs external, SVG vs raster images
+- **Chooses optimal loading**: Eager loading for critical images, lazy loading otherwise
+- **Generates responsive images**: Creates multiple sizes with appropriate srcsets
+- **Provides loading placeholders**: Shows dominant color or custom placeholder while loading
+- **Uses configuration**: Pulls responsive breakpoints and dimensions from `config.js`
 
 ### Performance Benefits
 
@@ -317,35 +310,49 @@ The optimized image system provides:
 - **Proper priority handling** (critical vs lazy loading)
 - **Responsive image sizing** with automatic srcset generation
 - **Better LCP (Largest Contentful Paint)** scores
+- **Automatic format optimization** (WebP, AVIF when supported)
 
-### Migration Guidelines
+### Usage Guidelines
 
-When working with existing pages, replace old `<Image />` components:
-
-**Before:**
+**For above-the-fold images** (hero images, critical content):
 ```js
-import Image from '../components/image'
-
-<Image src="/images/example.jpg" alt="Example" />
+<Image 
+  src="/images/homepage/hero.jpg" 
+  alt="Hero image" 
+  aboveTheFold={true} 
+/>
 ```
 
-**After:**
+**For below-the-fold images** (content images, galleries):
 ```js
-import { LazyImage } from '../components/optimized-image'
-
-<LazyImage src="/images/example.jpg" alt="Example" />
+<Image 
+  src="/images/content/gallery.jpg" 
+  alt="Gallery image" 
+/>
 ```
 
-### Component Selection Guide
+**For external images**:
+```js
+<Image 
+  src="https://example.com/image.jpg" 
+  alt="External image"
+  externalImage={true}
+/>
+```
 
-- **Hero images, above-the-fold content**: Use `HeroCriticalImage`
-- **Content images, galleries, below-the-fold**: Use `LazyImage`
-- **Interactive elements, buttons, clickable images**: Use `SpinnerImage`
-- **Unsure or mixed usage**: Use `SmartImage` with appropriate `priority` prop
+### Configuration
 
-### Legacy Support
+Image dimensions and responsive breakpoints are configured in `config.js`:
 
-The old `<Image />` component is deprecated but still functional. However, all new development should use the optimized components for better performance.
+```js
+// config.js
+imageDimensions: [600, 900, 1200, 1500, 2000], // Responsive image sizes
+sizes: {
+  full: ['100vw'],
+  fullToHalfAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+  // ... other responsive configurations
+}
+```
 
 ### Using videos
 

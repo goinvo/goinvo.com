@@ -1,26 +1,7 @@
 import React, { Component } from 'react'
 
-import { mediaUrl } from '../helpers'
-
-import { ExternalImage } from './optimized-image'
-
-// Helper function to ensure proper URL formatting
-const normalizeImageUrl = (src) => {
-  if (!src) return ''
-  
-  // If it's already a full URL, return as-is
-  if (src.startsWith('http://') || src.startsWith('https://')) {
-    return src
-  }
-  
-  // If it starts with //, add https:
-  if (src.startsWith('//')) {
-    return `https:${src}`
-  }
-  
-  // For relative paths, use mediaUrl
-  return mediaUrl(src)
-}
+import { normalizeImageUrl } from '../helpers'
+import Image from './image'
 
 // NOTE: notResponsive prop helps fix a bug when using BackgroundImage
 // within a Carousel component. The transition on the carousel gets fucked if
@@ -95,12 +76,12 @@ class BackgroundImage extends Component {
     return (
       <div className={`background-image ${this.props.className}`} style={style}>
         {!this.props.notResponsive ? (
-          <ExternalImage
+          <Image
             src={this.props.src}
             className="background-image__image"
             onLoad={this.handleLoad}
             alt=""
-            priority={priority}
+            aboveTheFold={priority}
             style={{ opacity: 0, position: 'absolute', pointerEvents: 'none' }}
           />
         ) : null}

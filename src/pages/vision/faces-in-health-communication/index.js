@@ -4,7 +4,7 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
 import Divider from '../../../components/divider'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Columns from '../../../components/columns'
@@ -101,7 +101,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </h1>
             </div>
             <div className="margin-auto pad-bottom max-width--80">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/02-HHS-defines-health-literacy.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -114,7 +114,7 @@ class FacesInHealthCommunicationFeature extends Component {
               information needed to make appropriate health decisions.”
             </p>
             <div className="margin-auto pad-bottom pad-top--quad max-width--80">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/03-36.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -134,7 +134,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </sup>
             </p>
             <div className="margin-auto pad-bottom pad-top--quad max-width--80">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/04-numerical-skill.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -159,7 +159,7 @@ class FacesInHealthCommunicationFeature extends Component {
             </p>
             <Columns columns={3}>
               <div className="max-width--60--until-lg margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/faces-in-health-communication/05-236B-1.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -169,7 +169,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
               </div>
               <div className="max-width--60--until-lg margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/faces-in-health-communication/05-236B-2.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -179,7 +179,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
               </div>
               <div className="max-width--60--until-lg margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/faces-in-health-communication/05-236B-3.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -203,7 +203,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </p>
             </div>
             <div className="margin-auto pad-bottom--double">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/05-236B-4.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -222,7 +222,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-3">
                 <div className="pad-right margin-top max-width--60 max-width--80--only-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/06-icon1.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -243,7 +243,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
               <div className="pure-u-1 pure-u-lg-1-3">
                 <div className="pad-right margin-top max-width--60 max-width--80--only-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/06-icon2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -263,7 +263,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
               <div className="pure-u-1 pure-u-lg-1-3">
                 <div className="pad-right margin-top max-width--60 max-width--80--only-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/06-icon3.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -287,7 +287,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="pure-g margin-top--double">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg pad-bottom--double pad-top--double--only-lg max-width--60--until-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/07-more-likely.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -324,7 +324,7 @@ class FacesInHealthCommunicationFeature extends Component {
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg">
                   <div className="pad-bottom--double pad-top--double--only-lg max-width--40--until-lg max-width--60--only-lg margin-auto">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/08-wound-care-b.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -362,7 +362,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="pure-g">
               <div className="pure-u-1-2 pure-u-lg-1-4">
                 <div className="max-width--60 max-width--80--only-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/09-born-to-look-at-faces1.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -371,7 +371,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
               <div className="pure-u-1-2 pure-u-lg-1-4">
                 <div className="max-width--60 max-width--80--only-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/09-born-to-look-at-faces2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -380,7 +380,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
               <div className="pure-u-1-2 pure-u-lg-1-4">
                 <div className="max-width--60 max-width--80--only-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/09-born-to-look-at-faces3.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -389,7 +389,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
               <div className="pure-u-1-2 pure-u-lg-1-4">
                 <div className="max-width--60 max-width--80--only-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/09-born-to-look-at-faces4.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -435,7 +435,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     <div className="text--center text--uppercase text--bold">
                       Frontal Lobe
                     </div>
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-brain1.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -444,7 +444,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-baby1.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -479,7 +479,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     <div className="text--center text--uppercase text--bold">
                       Motor Cortex
                     </div>
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-brain2.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -488,7 +488,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-baby2.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -511,7 +511,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     <div className="text--center text--uppercase text--bold">
                       Occipital Lobe
                     </div>
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-brain3.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -520,7 +520,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-baby3.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -546,7 +546,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     <div className="text--center text--uppercase text--bold">
                       Temporal Lobe
                     </div>
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-brain4.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -555,7 +555,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1-2 pure-u-lg-14-24 display--flex display--flex--column display--flex--justify-center">
                   <div className="pad-horizontal pad-top--until-lg pad-bottom--until-lg">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/10-baby4.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
@@ -585,7 +585,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="text--center margin-auto">
               <Columns columns={2}>
                 <div className="pad-right max-width--60--until-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/11-how-we-look-at-face-triangle.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -599,7 +599,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   </p>
                 </div>
                 <div className="pad-left max-width--60--until-lg margin-auto">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/11-how-we-look-at-face-circle.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -624,7 +624,7 @@ class FacesInHealthCommunicationFeature extends Component {
               race.
             </p>
             <div className="max-width--60 margin-auto">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/12-ORB.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -661,7 +661,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </sup>
             </p>
             <div className="max-width--50 margin-auto">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/13-consistent-ORB.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -678,7 +678,7 @@ class FacesInHealthCommunicationFeature extends Component {
               .
             </p>
             <div className="margin-auto">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/14-PC-engaged-emotions.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -693,7 +693,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="pure-g margin-bottom--double">
               <div className="pure-u-1 pure-u-lg-2-5">
                 <div className="pad-right--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/15-plot-message-self-referent1.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -721,7 +721,7 @@ class FacesInHealthCommunicationFeature extends Component {
               <Columns columns={3}>
                 <div className="text--center">
                   <div className="max-width--60--until-lg margin-auto">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/15-plot-message-self-referent3.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -737,7 +737,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="text--center">
                   <div className="max-width--60--until-lg margin-auto">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/15-plot-message-self-referent4.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -752,7 +752,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="text--center">
                   <div className="max-width--60--until-lg margin-auto">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/15-plot-message-self-referent5.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -768,7 +768,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </Columns>
             </div>
             <div className="fihc-impact hidden--until-lg">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/16-PC-impact-what-we-believe.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -788,7 +788,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </div>
             </div>
             <div className="fihc-impact hidden--lg">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/16-mobile-impact-what-we-believe.jpg"
                 className="image--max-width"
                 sizes={config.sizes.full}
@@ -804,7 +804,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/17-quit-smoking.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -851,14 +851,14 @@ class FacesInHealthCommunicationFeature extends Component {
               </span>
             </p>
             <div className="hidden--until-lg">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/18-diversity.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMaxWidth}
               />
             </div>
             <div className="hidden--lg">
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/18-mobile-diversity.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMaxWidth}
@@ -872,7 +872,7 @@ class FacesInHealthCommunicationFeature extends Component {
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-3 margin-top">
                   <div className="max-width--60--until-lg max-width--80--only-lg pad-right--only-lg margin-auto">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/19-conclusion1.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -892,7 +892,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-3 margin-top">
                   <div className="max-width--60--until-lg max-width--80--only-lg pad-right--only-lg margin-auto">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/19-conclusion2.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -913,7 +913,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-3 margin-top">
                   <div className="max-width--60--until-lg max-width--80--only-lg pad-right--only-lg margin-auto">
-                    <LazyImage
+                    <Image
                       src="/images/features/faces-in-health-communication/19-conclusion3.jpg"
                       className="image--max-width"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -949,7 +949,7 @@ class FacesInHealthCommunicationFeature extends Component {
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-2">
                 <div className="pad-right--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/faces-in-health-communication/20-appendix.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -988,7 +988,7 @@ class FacesInHealthCommunicationFeature extends Component {
               graphics below.
             </p>
             <div>
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/21-research.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -1001,7 +1001,7 @@ class FacesInHealthCommunicationFeature extends Component {
               Option 2 (face) thought that the boy ranked at a 5 in happiness.
             </p>
             <div>
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/22-scale.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -1014,7 +1014,7 @@ class FacesInHealthCommunicationFeature extends Component {
               saw the option showing a face.
             </p>
             <div>
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/23-happy.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -1029,7 +1029,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </b>
             </p>
             <div>
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/24-pie-chart.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -1046,7 +1046,7 @@ class FacesInHealthCommunicationFeature extends Component {
               (unhappy).
             </p>
             <div>
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/25-sad-b.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -1063,7 +1063,7 @@ class FacesInHealthCommunicationFeature extends Component {
               </b>
             </p>
             <div>
-              <LazyImage
+              <Image
                 src="/images/features/faces-in-health-communication/26-bar.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

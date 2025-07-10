@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -42,7 +42,7 @@ class HealthcareDollarsRedux extends Component {
                   href={"https://goinvo.github.io/healthcare-flow/"}
                   target="_blank"
                   rel="noopener noreferrer"
-                ><LazyImage
+                ><Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-shot.jpg"
                     className="image--max-width image--center"
                     sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -66,7 +66,7 @@ class HealthcareDollarsRedux extends Component {
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
                   <a href="../healthcare-dollars/">
-                    <LazyImage
+                    <Image
                       src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--1.jpg"
                       className="image--max-width hoverable-comic"
                       sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -75,7 +75,7 @@ class HealthcareDollarsRedux extends Component {
                   </a>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -85,7 +85,7 @@ class HealthcareDollarsRedux extends Component {
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--3.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -93,7 +93,7 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--4.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -103,7 +103,7 @@ class HealthcareDollarsRedux extends Component {
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--5.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -111,7 +111,7 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--6.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -121,7 +121,7 @@ class HealthcareDollarsRedux extends Component {
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--7.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -129,7 +129,7 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--8.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -139,7 +139,7 @@ class HealthcareDollarsRedux extends Component {
               </div>
               <div className="pure-g pad-bottom--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--half pad-left--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--9.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -147,7 +147,7 @@ class HealthcareDollarsRedux extends Component {
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--half pad-right--half">
-                  <LazyImage
+                  <Image
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--10.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

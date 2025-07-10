@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -145,7 +145,7 @@ class DeterminantsOfHealthFeature extends Component {
               </div>
 
               <div className="poster margin-top--double">
-                <LazyImage
+                <Image
                   src="/images/features/determinants-of-health/determinants-of-health-poster.jpg"
                   className="image--max-width"
                   sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -176,21 +176,21 @@ class DeterminantsOfHealthFeature extends Component {
 
               <div>
                 <div className="pure-u-1 pure-u-lg-1-3 pad-right--only-lg pad-top">
-                  <LazyImage
+                  <Image
                     src="/images/features/determinants-of-health/determinants-of-health-mitre-poster.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-3 pad-right--only-lg pad-top">
-                  <LazyImage
+                  <Image
                     src="/images/features/determinants-of-health/determinants-of-health-sxsw-poster3.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
                   />
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-3 pad-right--only-lg pad-top">
-                  <LazyImage
+                  <Image
                     src="/images/features/determinants-of-health/determinants-of-health-studio-poster.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToThirdAtLargeInsideMediumMaxWidth}
@@ -246,7 +246,7 @@ class DeterminantsOfHealthFeature extends Component {
               <h2 className="header--xl text--center margin-top--double">
                 Determinants Compared to Spending
               </h2>
-              <LazyImage
+              <Image
                 src="/images/features/determinants-of-health/sdoh-spend-mockup.jpg"
                 className="image--max-width margin-top--half"
                 sizes={config.sizes.fullInsideMediumMaxWidth}

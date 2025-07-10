@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -106,7 +106,7 @@ class BurnoutFeature extends Component {
                 <div className="research-chunk">
                   <div className="research-graph-block">
                     <div className="research-graph">
-                      <LazyImage
+                      <Image
                         src="/images/features/burnout/chart-national-burnout-3.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -138,7 +138,7 @@ class BurnoutFeature extends Component {
                 <div className="research-chunk">
                   <div className="research-graph-block">
                     <div className="research-graph">
-                      <LazyImage
+                      <Image
                         src="/images/features/burnout/chart-depression-suicide.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -164,7 +164,7 @@ class BurnoutFeature extends Component {
                 <div className="research-chunk">
                   <div className="research-graph-block">
                     <div className="research-graph">
-                      <LazyImage
+                      <Image
                         src="/images/features/burnout/chart-academic-burnout-3.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -191,7 +191,7 @@ class BurnoutFeature extends Component {
                 <div className="research-chunk">
                   <div className="research-graph-block">
                     <div className="research-graph">
-                      <LazyImage
+                      <Image
                         src="/images/features/burnout/chart-physicians-symptoms.jpg"
                         className="image--max-width"
                         sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -384,7 +384,7 @@ class BurnoutFeature extends Component {
                 </li>
               </ol>
             </div>
-            <LazyImage
+            <Image
               src="/images/features/burnout/contributors-mobile.jpg"
               className="image--max-width"
               sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -392,7 +392,7 @@ class BurnoutFeature extends Component {
             />
           </div>
 
-          <LazyImage
+          <Image
             src="/images/features/burnout/contributors-desktop-2.jpg"
             className="image--max-width hidden--until-lg"
             sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -637,7 +637,7 @@ class BurnoutFeature extends Component {
             </div>
           </div>
 
-          <LazyImage
+          <Image
             src="/images/features/burnout/vision.jpg"
             className="image--max-width"
             sizes={config.sizes.fullInsideMediumMaxWidth}

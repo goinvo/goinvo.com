@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
-import SmartImage, { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 import SubscribeForm from '../../../components/form-subscribe'
 import Author from '../../../components/author'
 import Divider from '../../../components/divider'
@@ -251,7 +251,7 @@ class HealthcareAIFeature extends Component {
                 <strong>AdHoc Health Guide</strong>
               </p>
               <div className="margin-auto">
-                <LazyImage
+                <Image
                   src="/images/features/healthcare-ai/storyboard-patient-mole.jpg"
                   className="image--max-width image--center"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -264,7 +264,7 @@ class HealthcareAIFeature extends Component {
               </p>
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/healthcare-ai/storyboard-1a.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -280,7 +280,7 @@ class HealthcareAIFeature extends Component {
                   </ul>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/healthcare-ai/storyboard-2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -298,7 +298,7 @@ class HealthcareAIFeature extends Component {
               </div>
               <div className="pure-g margin-top--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/healthcare-ai/storyboard-3a.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -316,7 +316,7 @@ class HealthcareAIFeature extends Component {
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/healthcare-ai/storyboard-4a.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -336,7 +336,7 @@ class HealthcareAIFeature extends Component {
               </div>
               <div className="pure-g margin-top--double">
                 <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/healthcare-ai/storyboard-5a.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -356,7 +356,7 @@ class HealthcareAIFeature extends Component {
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-                  <LazyImage
+                  <Image
                     src="/images/features/healthcare-ai/storyboard-6c.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -372,7 +372,7 @@ class HealthcareAIFeature extends Component {
                   </p>
                 </div>
               </div>
-              <LazyImage
+              <Image
                 src="/images/features/healthcare-ai/chatgpt-output.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
@@ -494,28 +494,28 @@ class HealthcareAIFeature extends Component {
                 </ul>
               </ul>
               <div>
-                <LazyImage
+                <Image
                   src="/images/features/healthcare-ai/sketch-ai-bench.jpg"
                   className="image--max-width image--center margin-top--double"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
               <div>
-                <LazyImage
+                <Image
                   src="/images/features/healthcare-ai/sketch-ai-bedroom.jpg"
                   className="image--max-width image--center margin-top--double"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
               <div>
-                <LazyImage
+                <Image
                   src="/images/features/healthcare-ai/sketch-ai-encounter.jpg"
                   className="image--max-width image--center margin-top--double"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 />
               </div>
               <div>
-                <LazyImage
+                <Image
                   src="/images/features/healthcare-ai/sketch-ai-train.jpg"
                   className="image--max-width image--center margin-top--double"
                   sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}

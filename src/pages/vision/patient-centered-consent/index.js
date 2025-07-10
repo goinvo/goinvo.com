@@ -8,7 +8,7 @@ import References from '../../../components/references'
 import Author from '../../../components/author'
 
 import config from '../../../../config'
-import { LazyImage } from '../../../components/optimized-image'
+import Image from '../../../components/image'
 
 const frontmatter = {
   metaTitle: 'A Guide to Patient-Centered Consent - GoInvo',
@@ -216,7 +216,7 @@ class ConsentFeature extends Component {
               <h4 className="header--sm margin-top--quad margin-bottom--half">
                 2. Make Consent Front and Center
               </h4>
-              <LazyImage
+              <Image
                 src="/images/features/patient-centered-consent/consent-resilient-proj.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -242,7 +242,7 @@ class ConsentFeature extends Component {
               <h4 className="header--sm margin-top--quad margin-bottom--half">
                 3. Use Plain, Concise Language
               </h4>
-              <LazyImage
+              <Image
                 src="/images/features/patient-centered-consent/consent-pdua.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -288,7 +288,7 @@ class ConsentFeature extends Component {
               <h4 className="header--sm margin-top--quad margin-bottom--half">
                 5. Organize Content into Bite-sized Sections
               </h4>
-              <LazyImage
+              <Image
                 src="/images/features/patient-centered-consent/consent-wilbanks-informed-consent.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -327,7 +327,7 @@ class ConsentFeature extends Component {
               <h4 className="header--sm margin-top--quad margin-bottom--half">
                 6. Use Visual Storytelling
               </h4>
-              <LazyImage
+              <Image
                 src="/images/features/patient-centered-consent/consent-allofus-consent.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -363,7 +363,7 @@ class ConsentFeature extends Component {
               <h4 className="header--sm margin-top--quad margin-bottom--half">
                 7. Provide Real-Time Help
               </h4>
-              <LazyImage
+              <Image
                 src="/images/features/patient-centered-consent/consent-mpower.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -397,7 +397,7 @@ class ConsentFeature extends Component {
               <h4 className="header--sm margin-top--quad margin-bottom--half">
                 8. Use "Repeat Back" to Engage the Brain
               </h4>
-              <LazyImage
+              <Image
                 src="/images/features/patient-centered-consent/consent-mpower-quiz.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}
@@ -426,7 +426,7 @@ class ConsentFeature extends Component {
               <h4 className="header--sm margin-top--quad margin-bottom--half">
                 Bonus: 9. Keep Measuring + Iterating!
               </h4>
-              <LazyImage
+              <Image
                 src="/images/features/patient-centered-consent/consent-resilient-expression.jpg"
                 className="image--max-width"
                 sizes={config.sizes.fullInsideMediumMaxWidth}

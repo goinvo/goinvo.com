@@ -31,6 +31,17 @@ class PrecisionAutismFeature extends Component {
               <h1 className="header--xl">Precision Autism</h1>
               <h3 className="header--md">Dynamic Tracking Concept for Families</h3>
               <p>Living with autism looks different for every family. By capturing real-world data and tailoring insights to the individual, a thoughtfully designed tool can support more personalized care, better communication with caregivers, educators, and providers. And ultimately, provide families with a more empowered and proactive approach for living with autism.</p>
+              <div className="button-group">
+                <a
+                  href='https://www.handsfilm.org/'
+                  className="button button--secondary margin-top margin-bottom--double button--block"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Check out the Documentary
+                </a>
+              </div>
+
             </div>
 
             <div className="max-width max-width--md content-padding">
@@ -61,6 +72,8 @@ class PrecisionAutismFeature extends Component {
                   <a
                     href='https://github.com/openAutism/openautism.github.io'
                     className="button button--secondary margin-top--half margin-bottom--half margin-right button--block"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Github
                   </a>
@@ -69,6 +82,8 @@ class PrecisionAutismFeature extends Component {
                   <a
                     href='https://openautism.github.io/'
                     className="button button--secondary margin-top--half margin-bottom--half margin-right button--block"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Concepts and Sketches
                   </a>

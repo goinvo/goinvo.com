@@ -33,32 +33,34 @@ class PrecisionAutismFeature extends Component {
               <p>Living with autism looks different for every family. By capturing real-world data and tailoring insights to the individual, a thoughtfully designed tool can support more personalized care, better communication with caregivers, educators, and providers. And ultimately, provide families with a more empowered and proactive approach for living with autism.</p>
             </div>
 
-            <Video
-              sources={[
-                {
-                  src:
-                    '/videos/features/precision-autism/autism_atmosphere_10_720.mp4',
-                  format: 'mp4',
-                },
-                {
-                  src:
-                    '/videos/features/precision-autism/autism_atmosphere_10_720.webm',
-                  format: 'webm',
-                },
-              ]}
-              width="100%"
-              height="480"
-              poster="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
-              fallback="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
-              loop
-            />
+            <div className="max-width max-width--md content-padding">
+              <Video
+                sources={[
+                  {
+                    src:
+                      '/videos/features/precision-autism/autism_atmosphere_10_720.mp4',
+                    format: 'mp4',
+                  },
+                  {
+                    src:
+                      '/videos/features/precision-autism/autism_atmosphere_10_720.webm',
+                    format: 'webm',
+                  },
+                ]}
+                width="100%"
+                max-height="480"
+                poster="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
+                fallback="/images/features/precision-autism/autism_data_display_spacey_v2.jpg"
+                loop
+              />
+            </div>
 
             <div className="max-width max-width--md content-padding">
-              <div className="pure-g button-group margin-bottom--double margin-top--none">
+              <div className="pure-g button-group margin-bottom--double margin-top--half">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
                     href='https://github.com/openAutism/openautism.github.io'
-                    className="button button--secondary margin-top--double margin-bottom--double"
+                    className="button button--secondary margin-top--half margin-bottom--half margin-right button--block"
                   >
                     Github
                   </a>
@@ -66,7 +68,7 @@ class PrecisionAutismFeature extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
                     href='https://openautism.github.io/'
-                    className="button button--secondary margin-top--double margin-bottom--double"
+                    className="button button--secondary margin-top--half margin-bottom--half margin-right button--block"
                   >
                     Concepts and Sketches
                   </a>
@@ -97,7 +99,7 @@ class PrecisionAutismFeature extends Component {
                   href={mediaUrl(
                     '/pdf/vision/precision-autism/Precision-Autism-25.Aug.2020.pdf'
                   )}
-                  className="button button--secondary margin-top--double margin-bottom--double"
+                  className="button button--secondary margin-top margin-bottom--half button--block"
                 >
                   Download Poster
                 </a>

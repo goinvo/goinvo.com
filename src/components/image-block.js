@@ -4,17 +4,21 @@ import BackgroundImage from './background-image'
 import CATEGORIES_LIST from '../data/categories.json'
 
 class ImageBlock extends Component {
-  /*formatCategories = categories => {
-    let str = ''
+  formatCategories = categories => {
+    if (!categories || !Array.isArray(categories)) {
+      return ''
+    }
 
+    let str = ''
     categories.map((cat, i) => {
-      const catTitle = CATEGORIES_LIST.find(CAT => CAT.id === cat).title
+      const categoryObj = CATEGORIES_LIST.find(CAT => CAT.id === cat)
+      const catTitle = categoryObj ? categoryObj.title : cat
       str += `${catTitle}${i < categories.length - 1 ? ', ' : ''}`
       return null
     })
 
     return str
-  }*/
+  }
 
   render() {
     const {
@@ -52,31 +56,20 @@ class ImageBlock extends Component {
           />
         </div>
         <div className="image-block__text">
-          <p className={hoverable ? 'text--bold' : 'header--lg'}>{title}</p>
+          <p className={`card-title ${hoverable ? 'text--bold' : 'header--lg'}`}>{title}</p>
           {client || date || (categories && categories.length) ? (
-            <p className="text--gray">
+            <p className="card-data text--gray">
               {client ? <span>{client}</span> : null}
               {client && (date || (categories && categories.length)) ? (
-                <span></span>
-              ) : null}
-              {categories && categories.length ? (
-                <span></span>
-              ) : null}
-              {date ? <span> | {date}</span> : null}
-            </p>
-
-            /*<p className="text--gray">
-              {client ? <span>{client}</span> : null}
-              {client && (date || (categories && categories.length)) ? (
-                <span> | </span>
+                <span> |</span>
               ) : null}
               {categories && categories.length ? (
                 <span>{this.formatCategories(categories)}</span>
               ) : null}
-              {date ? <span>{date}</span> : null}
-            </p> */
+              {date ? <span> | {date}</span> : null}
+            </p>
           ) : null}
-          <p className="text--gray">{caption}</p>
+          {caption && <p className="text--gray">{caption}</p>}
           {this.props.children ? (
             <div className="margin-top">{this.props.children}</div>
           ) : null}

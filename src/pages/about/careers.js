@@ -10,6 +10,8 @@ import ImageBlock from '../../components/image-block'
 import HiringForm from '../../components/form-hiring'
 import BackgroundImage from '../../components/background-image'
 
+import IconComplexity from '../../assets/images/icon-complexity.inline.svg'
+
 import config from '../../../config'
 
 const frontmatter = {
@@ -189,8 +191,8 @@ class CareersPage extends Component {
                 your work is critical because thousands to millions of people
                 will immediately interact with your finished designs. We are
                 looking for a passionate, inspiring, design-obsessed apostle who
-                can increase our IQs (as well as dramatically increase your
-                own).
+                can increase our brain power (as well as dramatically increase
+                your own).
               </p>
               <p>
                 That’s the kind of person we want. If you have those three
@@ -216,30 +218,88 @@ class CareersPage extends Component {
             </div>
           </div>
         </BackgroundImage>
-        <div className="max-width content-padding pad-vertical--quad--only-lg">
-          <Columns columns={3}>
-            <ImageBlock
-              key={'1'}
-              image="/images/about/careers/group-lunch.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Break Bread"
-              caption="We cook for one another and share meals together. Cooking and eating as a tribe makes us a closer, better tribe."
-            />
-            <ImageBlock
-              key={'2'}
-              image="/images/about/careers/7-years-beards.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Work & Play"
-              caption="Design can be a grind. So is Life. Plan yours as you see fit. We don’t track vacation or sick days. Just be responsible."
-            />
-            <ImageBlock
-              key={'3'}
-              image="/images/about/careers/drone-hands.jpg"
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-              title="Makers & Shippers"
-              caption="We explore with our hands, heads, and hearts. Tinkering with, building, and shipping things is part of our DNA."
-            />
-          </Columns>
+
+        <div className="max-width content-padding pad-vertical--double margin-bottom--double">
+          <h3 className="header--md margin-bottom--none margin-top--double">
+            Benefits
+          </h3>
+          <div className="pure-g pad-bottom--double">
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom pad-top--double--only-lg">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Health & dental insurance
+              </h4>
+              <p className="text--gray margin-top--half">
+                We pay 95% of your healthcare insurance. A single person pays
+                $40/month instead of the state average of $715.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom pad-top--double--only-lg">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                You decide your vacation
+              </h4>
+              <p className="text--gray margin-top--half">
+                Take-what-you-need, no vacation day counting.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                401k Retirement Trust
+              </h4>
+              <p className="text--gray margin-top--half">
+                Participate in a Studio-run Vanguard Mutual Fund.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                People over buildings
+              </h4>
+              <p className="text--gray margin-top--half">
+                Work at the studio, at home, or a combo. Your call.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Co-ownership of the studio on Day 1
+              </h4>
+              <p className="text--gray margin-top--half">
+                If the company sold, you'd profit.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Break bread together
+              </h4>
+              <p className="text--gray margin-top--half">
+                We cook for one another and share meals together. Cooking and
+                eating as a tribe makes us a closer, better tribe.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Everyone has their own credit card
+              </h4>
+              <p className="text--gray margin-top--half">
+                Buy what you need to run projects.
+              </p>
+            </div>
+            <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom">
+              <IconComplexity className="icon--wide icon--secondary" />
+              <h4 className="header--sm margin-top--none margin-bottom--half">
+                Know your numbers
+              </h4>
+              <p className="text--gray margin-top--half">
+                Try new healthcare services from genome sequencing to gut biome
+                analysis.
+              </p>
+            </div>
+          </div>
         </div>
       </Layout>
     )

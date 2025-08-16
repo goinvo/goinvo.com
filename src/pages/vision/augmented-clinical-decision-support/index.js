@@ -243,7 +243,7 @@ class AugmentedClinicalDecisionSupportFeature extends Component {
                 Pregnancy Storyboard
               </h2>
 
-              {this.renderCarousel(carousels.pregnancy, sixSlides, 'pregnancy-', 'jpg')}
+              {this.renderCarousel(carousels.pregnancy, sixSlides, 'pregnancy-a-', 'jpg')}
 
               <div>
                 <a

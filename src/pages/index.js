@@ -6,6 +6,7 @@ import Hero from '../components/hero'
 import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
+import WorkSpotlightGrid from '../components/work-spotlight-grid'
 import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import ContactForm from '../components/form-contact'
@@ -47,7 +48,11 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
 
-    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 4)
+    console.log('IndexPage props.data:', props.data)
+
+    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 9)
+
+    console.log('IndexPage workItems after concatCaseStudiesAndFeatures:', workItems)
 
     this.state = {
       image: null,
@@ -80,28 +85,57 @@ class IndexPage extends Component {
         </Hero>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
-          <div className="pure-g margin-vertical--double">
-            <div className="pure-u-1 pure-u-lg-1-3">
-              <h2 className="header--xl margin--none">Welcome Jacobin Readers!</h2>
-              <div style={{ borderRadius: '20px', overflow: 'hidden', marginTop: '10px', marginBottom: '20px', marginRight: '30px', height: '270px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <a
-                  href="/vision/"
-                  style={{ display: 'block', lineHeight: 0 }}
-                >
-                  <Image
-                    src="/images/features/posters/design-axiom-make-things.jpg"
-                    alt="Sugar Kills poster"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                </a>
+
+          <div className="margin-vertical--double pad-vertical--double">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--xl margin--none pad-right--double">
+                  Our expertise in design covers...
+                </h2>
+              </div>
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <CategoriesList includeAll={false} columns={2} />
               </div>
             </div>
-            <div className="pure-u-1 pure-u-lg-2-3">
+
+
+          </div>
+          <h2 className="header--xl pad-right--double">
+            Spotlight
+          </h2>
+          <WorkSpotlightGrid
+            workItems={this.state.workItems}
+            extractWorkItemLinkDetails={extractWorkItemLinkDetails}
+          />
+          <div className="container container--justify-center margin-top margin-bottom--double">
+            <Link
+              to="/work/?expanded=true"
+              className="button button--secondary button--lg"
+            >
+              View all work
+            </Link>
+          </div>
+        </div>
+
+        <div className="background--gray  pad-vertical--double">
+          <div className="max-width content-padding">
+            <h3 className="header--md" style={{ marginTop: 0 }}>
+              We've worked with...
+            </h3>
+            <ClientLogos />
+          </div>
+        </div>
+
+        <div className="max-width content-padding">
+          <div className="pure-g margin-vertical--double">
+            <div className="pure-u-1 pure-u-lg-1-3">
               <h2 className="header--xl margin--none pad-right--double">
                 Our designs are used every day
                 <span className="text--serif text--primary">.</span>
               </h2>
+            </div>
+
+            <div className="pure-u-1 pure-u-lg-2-3">
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <p className="pad-right--only-lg">
@@ -159,66 +193,9 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--gray  pad-vertical--double">
-          <div className="max-width content-padding">
-            <h3 className="header--md" style={{ marginTop: 0 }}>
-              We've worked with...
-            </h3>
-            <ClientLogos />
-          </div>
-        </div>
-        <div className="max-width content-padding pad-bottom--double">
-          <div className="margin-vertical--double pad-vertical--double">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--xl margin--none pad-right--double">
-                  Our practices
-                </h2>
-              </div>
-            </div>
 
-            <div className="pure-u-1 pure-u-lg-4-4">
-              <CategoriesList includeAll={false} columns={4} />
-            </div>
-          </div>
-          <Columns columns={2}>
-            {this.state.workItems.map((item, i) => {
-              const {
-                link,
-                externalLink,
-                suppressNewTab,
-              } = extractWorkItemLinkDetails(item)
 
-              return (
-                <Card
-                  link={link}
-                  key={link}
-                  externalLink={externalLink}
-                  suppressNewTab={suppressNewTab}
-                  hidden={{ condition: i > 1, class: 'hidden--sm' }}
-                >
-                  <ImageBlock
-                    title={item.title}
-                    image={item.image}
-                    client={item.client}
-                    categories={item.categories}
-                    caption={item.caption}
-                    sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                    hoverable
-                  />
-                </Card>
-              )
-            })}
-          </Columns>
-          <div className="container container--justify-center margin-top margin-bottom--double">
-            <Link
-              to="/work/?expanded=true"
-              className="button button--primary button--lg"
-            >
-              View all work
-            </Link>
-          </div>
-        </div>
+
         <Quote
           background="gray"
           quotee="Eric Topol"

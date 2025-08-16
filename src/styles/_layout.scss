@@ -17,7 +17,7 @@ body {
 // Max width sizes should be in sync with variables
 // in config.js
 .max-width {
-  max-width: 1020px;
+  max-width: 1050px;
   margin: 0 auto;
 
   &--xs {
@@ -101,21 +101,25 @@ body {
       display: none !important;
     }
   }
+
   &--md {
     @include mq($until: large) {
       display: none !important;
     }
   }
+
   &--lg {
     @include mq($from: large) {
       display: none !important;
     }
   }
+
   &--until-lg {
     @include mq($until: large) {
       display: none !important;
     }
   }
+
   &--after-sm {
     @include mq($from: medium) {
       display: none !important;
@@ -140,6 +144,7 @@ body {
       &-center {
         align-items: center;
       }
+
       &-baseline {
         align-items: baseline;
       }
@@ -149,6 +154,7 @@ body {
       &-center {
         justify-content: center;
       }
+
       &-space-between {
         justify-content: space-between;
       }
@@ -168,6 +174,7 @@ body {
   &--left {
     float: left;
   }
+
   &--right {
     float: right;
   }

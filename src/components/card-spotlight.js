@@ -3,23 +3,20 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
-class Card extends Component {
+class CardSpotlight extends Component {
   render() {
     const {
       children,
       className,
       noShadow,
-      spotlight,
       fillHeight,
       link = null,
       externalLink = null,
       suppressNewTab = false,
     } = this.props
 
-    const completeClassName = `card ${noShadow ? '' : 'card--shadow'} 
-      ${fillHeight ? 'card--fill-height' : ''}
-      ${spotlight ? 'card--spotlight' : ''}
-      ${className ? className : ''}`
+    const completeClassName = `card ${fillHeight ? 'card--fill-height' : ''
+      } ${className ? className : ''}`
 
     if (link) {
       return externalLink ? (
@@ -42,4 +39,4 @@ class Card extends Component {
   }
 }
 
-export default Card
+export default CardSpotlight

@@ -117,7 +117,7 @@ class IndexPage extends Component {
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <p className="pad-left--only-lg">
                     <span className="text--bold">
-                      700,000 Massachusetts residents
+                      1MM+ Massachusetts residents
                     </span>
                     <br />
                     <span className="text--gray">

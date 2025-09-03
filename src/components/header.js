@@ -37,8 +37,8 @@ class Header extends Component {
     return (
       <div
         className={`header-nav ${
-          this.state.mobileNavOpen ? 'header-nav--mobile-nav-open' : ''
-        }`}
+          this.props.transparent ? 'header-nav--transparent' : ''
+        } ${this.state.mobileNavOpen ? 'header-nav--mobile-nav-open' : ''}`}
         id="header"
       >
         <Link to="/" className="header-nav__link header-nav__logo">

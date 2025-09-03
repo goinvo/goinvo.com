@@ -4,13 +4,16 @@ import Card from './card'
 class ContactForm extends Component {
 
   render() {
+    const showHeader = this.props.showHeader !== false
     return (
       <div className="form-wrapper">
         <Card className="form-card">
-          <div className="form-header contact-form-header">
-            <h2 className="header--xl margin-bottom--none">Get in touch</h2>
-            <p className="margin-top--half text--gray">or email us at <a href="info@goinvo.com">info@goinvo.com</a></p>
-          </div>
+          {showHeader ? (
+            <div className="form-header contact-form-header">
+              <h2 className="header--xl margin-bottom--none">Get in touch</h2>
+              <p className="margin-top--half text--gray">or email us at <a href="info@goinvo.com">info@goinvo.com</a></p>
+            </div>
+          ) : null}
           <div className="contact-form-frame">
             <iframe
               id="JotFormIFrame-251276832519159"

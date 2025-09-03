@@ -7,13 +7,15 @@ import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
-import Quote from '../components/quote'
+// import Quote from '../components/quote'
 import ContactForm from '../components/form-contact'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
+import TEAM from '../data/team.json'
 import ProjectSearch from '../components/project-search'
 import headerData from '../data/homepage-headers.json'
+import Marquee from 'react-fast-marquee'
 
 import config from '../../config'
 import {
@@ -30,8 +32,8 @@ if (categories.length === 0) {
 const selectedCategory = categories[Math.floor(Math.random() * categories.length)];
 // console.log("Selected category: ", selectedCategory);
 const categoryData = headerData[selectedCategory];
-// Select a random hero image from the category
-const heroImage = categoryData.heroImages[Math.floor(Math.random() * categoryData.heroImages.length)];
+// Use a single consistent hero image
+const heroImage = '/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg'
 
 const frontmatter = {
   metaTitle: 'Boston UX Design Agency | GoInvo Boston',
@@ -61,62 +63,53 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Layout frontmatter={this.state.frontmatter}>
+      <Layout frontmatter={this.state.frontmatter} isHomepage>
         <Hero
           className="hero--higher-text-contrast"
           link="/work/"
           image={this.state.frontmatter.heroImage}
-          caption={this.state.frontmatter.tagline}
-          button={frontmatter.heroButtonText}
-          buttonLink="/work/"
           isLarge
           position="top center"
         >
-          <h1 className="header--xl">
-            Designing
-            <br />
-            the future of
-            <br />
-            {this.state.frontmatter.category}
+          <h1 className="header--xl hero-title--lg">
+            Designing the Future
             <span className="text--serif text--primary">.</span>
           </h1>
+          <p className="hero-subtitle text--black">
+            We deliver beautiful and useful design for digital, including software, posters, and data visualizations.
+          </p>
         </Hero>
-        <div className="background--gray pad-vertical--double">
+        <div className="expertise-section pad-vertical--double">
           <div className="max-width content-padding">
-            <div className="container container--justify-center margin-bottom--double">
-              <h2 className="header--xl text--center">
-                Find the perfect project for your needs
-                <span className="text--serif text--primary">.</span>
-              </h2>
+            <div className="pure-g expertise-row">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--xl margin--none text--white">Our expertise in design covers...</h2>
+              </div>
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <div className="expertise-grid">
+                  <div className="expertise-item">Enterprise</div>
+                  <div className="expertise-item">Healthcare</div>
+                  <div className="expertise-item">Government</div>
+                  <div className="expertise-item">AI</div>
+                </div>
+              </div>
             </div>
-            <ProjectSearch projects={this.state.allProjects} />
+            <div className="expertise-search">
+              <input className="expertise-search__input" type="text" placeholder="How can we help your next project?" aria-label="Search" />
+              <button className="expertise-search__button" aria-label="Search">→</button>
+            </div>
           </div>
         </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
-          <div className="pure-g margin-vertical--double">
+          <div className="pure-g margin-vertical--double" style={{ alignItems: 'flex-start' }}>
             <div className="pure-u-1 pure-u-lg-1-3">
-              <h2 className="header--xl margin--none">Welcome Jacobin Readers!</h2>
-              <div style={{ borderRadius: '20px', overflow: 'hidden', marginTop: '10px', marginBottom: '20px', marginRight: '30px', height: '270px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <a
-                  href="/vision/"
-                  style={{ display: 'block', lineHeight: 0 }}
-                >
-                  <Image
-                    src="/images/features/posters/design-axiom-make-things.jpg"
-                    alt="Sugar Kills poster"
-                    className="image--max-width"
-                    placeholderColor="#f8f9fa"
-                    aboveTheFold={true}
-                  />
-                </a>
-              </div>
-            </div>
-            <div className="pure-u-1 pure-u-lg-2-3">
               <h2 className="header--xl margin--none pad-right--double">
                 Our designs are used every day
                 <span className="text--serif text--primary">.</span>
               </h2>
+            </div>
+            <div className="pure-u-1 pure-u-lg-2-3">
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <p className="pad-right--only-lg">
@@ -174,76 +167,82 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
-        <div className="background--gray  pad-vertical--double">
+        <div className="partners-section pad-vertical--double">
           <div className="max-width content-padding">
-            <h3 className="header--md" style={{ marginTop: 0 }}>
-              We've worked with...
+            <h3 className="header--md partners-section__title" style={{ marginTop: 0 }}>
+              PAST PARTNERS
             </h3>
-            <ClientLogos />
+            <div className="partners-section__logos">
+              <ClientLogos />
+            </div>
           </div>
         </div>
         <div className="max-width content-padding pad-bottom--double">
           <div className="margin-vertical--double pad-vertical--double">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--xl margin--none pad-right--double">
-                  Our practices
+                <h2 className="header--xl margin--none pad-right--double spotlights-title">
+                  Spotlights
                 </h2>
               </div>
             </div>
-
-            <div className="pure-u-1 pure-u-lg-4-4">
-              <CategoriesList includeAll={false} columns={4} />
+            <div className="spotlights-grid">
+              {this.state.workItems.concat(this.state.allProjects).slice(0, 6).map((item, i) => {
+                const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
+                return (
+                  <Card
+                    link={link}
+                    key={`spot-${link}-${i}`}
+                    externalLink={externalLink}
+                    suppressNewTab={suppressNewTab}
+                  >
+                    <ImageBlock
+                      title={item.title}
+                      image={item.image}
+                      client={null}
+                      categories={null}
+                      caption={item.caption}
+                      sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                    />
+                  </Card>
+                )
+              })}
+            </div>
+            <div className="spotlights-grid spotlights-grid--single">
+              {(() => {
+                const item = this.state.allProjects[6]
+                if (!item) return null
+                const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
+                return (
+                  <Card
+                    link={link}
+                    key={`spot-last-${link}`}
+                    externalLink={externalLink}
+                    suppressNewTab={suppressNewTab}
+                  >
+                    <ImageBlock
+                      title={item.title}
+                      image={item.image}
+                      client={null}
+                      categories={null}
+                      caption={item.caption}
+                      sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                    />
+                  </Card>
+                )
+              })()}
+            </div>
+            <div className="container container--justify-center margin-top margin-bottom--double">
+              <Link
+                to="/work/?expanded=true"
+                className="button button--outline-primary button--padded"
+              >
+                VIEW ALL WORK
+              </Link>
             </div>
           </div>
-          <Columns columns={2}>
-            {this.state.workItems.map((item, i) => {
-              const {
-                link,
-                externalLink,
-                suppressNewTab,
-              } = extractWorkItemLinkDetails(item)
-
-              return (
-                <Card
-                  link={link}
-                  key={link}
-                  externalLink={externalLink}
-                  suppressNewTab={suppressNewTab}
-                  hidden={{ condition: i > 1, class: 'hidden--sm' }}
-                >
-                  <ImageBlock
-                    title={item.title}
-                    image={item.image}
-                    client={item.client}
-                    categories={item.categories}
-                    caption={item.caption}
-                    sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                    hoverable
-                  />
-                </Card>
-              )
-            })}
-          </Columns>
-          <div className="container container--justify-center margin-top margin-bottom--double">
-            <Link
-              to="/work/?expanded=true"
-              className="button button--primary button--lg"
-            >
-              View all work
-            </Link>
-          </div>
         </div>
-        <Quote
-          background="gray"
-          quotee="Eric Topol"
-          quoteeSub="MD, Director, Scripps Translational Science Institute"
-        >
-          The GoInvo studio is one of the most talented groups of designers I
-          have ever met in the healthcare space. Not only are their ideas,
-          designs, and graphics remarkable, but I haven't yet figured out how
-          they know so much about medicine and its future.
-        </Quote>
+        {/* Testimonial removed per request */}
         <div className="max-width content-padding pad-bottom--double">
           <div className="container container--justify-center margin-vertical">
             <h2 className="header--xl">
@@ -314,96 +313,62 @@ class IndexPage extends Component {
                     design method to reimagine your software, system, or
                     service.
                   </p>
-                  <div className="pure-g">
-                    <div className="pure-u-1-2">
-                      <p>
-                        Research
-                        <br />
-                        User interviews
-                        <br />
-                        Analysis
-                        <br />
-                        User mapping
-                        <br />
-                        Ideation
-                        <br />
-                        UI & UX Design
-                        <br />
-                      </p>
-                    </div>
-                    <div className="pure-u-1-2">
-                      <p>
-                        Prototyping
-                        <br />
-                        User testing
-                        <br />
-                        Front-end development
-                        <br />
-                        Strategy consulting
-                        <br />
-                        Workshop
-                        <br />
-                        Graphic facilitation
-                        <br />
-                      </p>
-                    </div>
-                  </div>
-                  <a href="/services/">Learn more about our services</a>
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2">
-                <ContactForm />
+                <ContactForm showHeader={false} />
               </div>
             </div>
           </div>
         </div>
-        <div className="max-width content-padding pad-vertical--quad">
-          <div className="pure-g">
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="pad-right--only-lg">
-                <a
-                  href="https://my.matterport.com/show/?m=KDRR1E7jZwf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/images/homepage/group-aug-2018-4.jpg"
-                    alt="GoInvo team photo"
-                    className="image--max-width"
-                    placeholderColor="#e8f5e8"
-                  />
-                </a>
-              </div>
+        {/* New We are GoInvo section */}
+        <div className="we-are-goinvo">
+          <div className="content-padding">
+            <div className="team-marquee" aria-hidden="true">
+              <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                {TEAM.slice(0, 5).map(member => (
+                  <div key={`top-${member.name}`} className="team-marquee__tile">
+                    <Image
+                      src={member.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="team-marquee__img"
+                    />
+                  </div>
+                ))}
+              </Marquee>
             </div>
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="pad-left--only-lg">
-                <h2 className="header--xl">
-                  We are GoInvo
+          </div>
+          <div className="max-width content-padding pad-vertical--double">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <h2 className="we-are-title header--xl">
+                  We are <span className="text--primary text--serif">GoInvo</span>
                   <span className="text--primary text--serif">.</span>
                 </h2>
-                <p className="text--gray margin-bottom--double">
-                  Small by design.
-                  <br />
-                  Big thinkers.
-                  <br />
-                  Sweat the details.
-                  <br />
-                  Ethics not optional.
-                  <br />
-                  Hyperfocused on software.
-                  <br />
+                <p className="we-are-body text--gray">
+                  Small by design. Big thinkers. Sweat the details. Ethics not optional.
                 </p>
-                <Link
-                  to="/about/"
-                  className="button button--secondary button--lg margin-bottom"
-                >
-                  Meet our team
-                </Link>
-                <br />
-                <Link to="/about/open-office-hours/">
-                  Visit our open office hours
-                </Link>
               </div>
+              <div className="pure-u-1 pure-u-lg-1-3 display--flex display--flex--align-center display--flex--justify-center">
+                <Link to="/about/" className="button button--outline-primary button--padded">MEET OUR TEAM</Link>
+              </div>
+            </div>
+          </div>
+          <div className="content-padding">
+            <div className="team-marquee" aria-hidden="true">
+              <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                {TEAM.slice(5, 10).map(member => (
+                  <div key={`bottom-${member.name}`} className="team-marquee__tile">
+                    <Image
+                      src={member.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="team-marquee__img"
+                    />
+                  </div>
+                ))}
+              </Marquee>
             </div>
           </div>
         </div>

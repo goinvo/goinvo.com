@@ -1,5 +1,4 @@
 .header-nav {
-  @extend .shadow--header;
   $parent: &;
   position: fixed;
   width: 100%;
@@ -20,6 +19,7 @@
     font-size: $font-size--md;
     padding: 0 $spacing;
     text-decoration: none;
+    color: $color-black;
 
     &--active {
       &:after {
@@ -73,6 +73,23 @@
       opacity: 1;
       pointer-events: auto;
     }
+  }
+}
+
+// Transparent variant for homepage
+.header-nav--transparent {
+  background-color: transparent;
+
+  .header-nav__link {
+    color: $color-white;
+  }
+
+  .header-nav__logo {
+    fill: $color-white;
+  }
+
+  .header-nav__hamburger svg {
+    fill: $color-white;
   }
 }
 

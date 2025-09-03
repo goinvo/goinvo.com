@@ -199,3 +199,147 @@
     flex: 1 1 300px;
   }
 }
+
+// New homepage sections
+.expertise-section {
+  background-color: $color-primary;
+  color: $color-white;
+  padding-top: calc($spacing * 3);
+  padding-bottom: calc($spacing * 3);
+
+  .header--xl {
+    color: $color-white;
+  }
+
+  .expertise-row {
+    align-items: flex-start;
+  }
+
+  // add horizontal space between heading and grid at large
+  .pure-u-lg-2-3 {
+    @include mq($from: large) {
+      padding-left: 24px;
+    }
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+
+    .expertise-item {
+      padding-bottom: 8px;
+      border-bottom: 1px solid $color-white;
+      color: $color-white;
+      font-family: $font-family--sans-serif;
+      font-size: 1.125rem;
+      font-weight: $font-weight--normal;
+    }
+  }
+
+  .expertise-search {
+    margin-top: 24px;
+    position: relative;
+
+    &__input {
+      width: 100%;
+      padding: 20px 64px 20px 20px;
+      border-radius: 9999px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    &__button {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      height: calc(100% - 12px);
+      padding: 0 18px;
+      border-radius: 9999px;
+      background-color: $color-primary;
+      color: $color-white;
+      border: 1px solid $color-white;
+      cursor: pointer;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.spotlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  margin-top: 24px;
+
+  @include mq($from: large) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &--single {
+    grid-template-columns: 1fr;
+  }
+
+  .image-block__text {
+    p.header--lg {
+      font-family: $font-family--serif;
+      font-size: 24px;
+      color: $color-black;
+    }
+    p.text--gray {
+      font-family: $font-family--sans-serif;
+      font-size: 14px;
+      color: $color-gray;
+    }
+  }
+}
+
+.partners-section {
+  background-color: #F7FAFE;
+
+  &__title {
+    color: #B2AFAF;
+  }
+
+  &__logos {
+    .client-logos li svg {
+      fill: #B2AFAF;
+      color: #B2AFAF;
+    }
+  }
+}
+
+// Team strips
+.team-marquee {
+  height: 512px;
+  overflow: hidden;
+}
+
+.team-marquee__img {
+  width: 512px;
+  height: 512px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  margin-right: 0;
+}
+
+.team-marquee__tile {
+  display: inline-block;
+  width: 512px;
+  height: 512px;
+  margin-right: 8px;
+}
+
+.we-are-goinvo {
+  .we-are-title {
+    font-family: $font-family--serif;
+    margin-top: calc($spacing * 2);
+    margin-bottom: 0;
+  }
+
+  .we-are-body {
+    font-family: $font-family--sans-serif;
+    margin-top: 0;
+  }
+}

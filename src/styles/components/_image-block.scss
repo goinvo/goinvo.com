@@ -48,3 +48,14 @@
     }
   }
 }
+
+.image--interactive {
+  transform: scale(1);
+  transition: transform $transition-duration--card;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform $transition-duration--card;
+  }
+}

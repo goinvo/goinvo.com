@@ -1,43 +1,27 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from 'gatsby'
 import ImageBlock from './image-block'
-// Results UI remains; backend and AI calls are disabled for now
+import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
 
-// Placeholder results used while backend/AI are rebuilt
-const PLACEHOLDER_RESULTS = [
-  {
-    slug: 'care-cards',
-    title: 'Care Cards',
-    caption: 'Mantras for patients to change themselves, clinicians, and the healthcare system.',
-    image: 'https://placehold.co/800x500?text=Care+Cards',
-    categories: ['health', 'patient'],
-    aiDescription: 'Guidance cards and tools to empower patients and improve outcomes.'
-  },
-  {
-    slug: 'hgraph',
-    title: 'hGraph',
-    caption: 'Your health in one picture.',
-    image: 'https://placehold.co/800x500?text=hGraph',
-    categories: ['visualization'],
-    aiDescription: 'A unified health visualization to understand wellness at a glance.'
-  },
-  {
-    slug: 'ipsos-facto',
-    title: 'The Future of Research Intelligence',
-    caption: 'AI-powered insights platform for research teams.',
-    image: 'https://placehold.co/800x500?text=Research+Intelligence',
-    categories: ['AI', 'research'],
-    aiDescription: 'Surface insights from complex, siloed research data using modern AI.'
-  },
-  {
-    slug: 'infobionic-heart-monitoring',
-    title: 'Real-Time Cardiac Arrhythmias',
-    caption: 'A data-rich view for remote diagnosis.',
-    image: 'https://placehold.co/800x500?text=Cardiac+Monitoring',
-    categories: ['cardiology'],
-    aiDescription: 'Clinician-centric monitoring experience for timely, accurate analysis.'
+// Helper to call Netlify Functions with graceful local fallback
+async function callFunction(name, payload) {
+  const opts = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload || {})
   }
-]
+  // Try relative path (works in Netlify dev proxy or production)
+  try {
+    const res = await fetch(`/.netlify/functions/${name}`, opts)
+    if (res.ok) return await res.json()
+  } catch {}
+  // Fallback to local functions port if running Gatsby alone
+  try {
+    const res = await fetch(`http://localhost:8888/.netlify/functions/${name}`, opts)
+    if (res.ok) return await res.json()
+  } catch {}
+  throw new Error(`Function ${name} unavailable`)
+}
 
 // AI Persona options
 const AI_PERSONAS = [
@@ -157,13 +141,85 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const effectiveAiEnabled = typeof aiEnabledOverride === 'boolean' ? aiEnabledOverride : aiEnabled
   const effectiveSelectedPersona = selectedPersonaOverride || selectedPersona
 
-  // AI backend disabled: no-op enhancement, UI only
-  const performAISearch = useCallback(async (searchResults) => searchResults, [])
+  // AI pipeline: server selection (ai-select) -> optional persona enhancement (ai-search)
+  const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag, personaKey }) => {
+    // 1) Server-side selection (or keyword fallback)
+    let baseResults = []
+    try {
+      const selection = await callFunction('ai-select', {
+        query: queryText,
+        topK: 20,
+        projects: Array.isArray(allProjects) && allProjects.length > 0 ? allProjects : undefined
+      })
+      baseResults = (selection.results || [])
+    } catch (e) {
+      // Fallback to client-side semantic search
+      baseResults = performClientSideSemanticSearch(queryText, allProjects || [])
+        .map(r => ({
+          slug: r.slug,
+          title: r.title,
+          caption: r.caption,
+          categories: r.categories || [],
+          image: r.image || '',
+          score: r.similarity || r.score || 0,
+          aiDescription: r.aiDescription || null
+        }))
+    }
+
+    // If AI enhancement disabled, return base results
+    if (!aiEnabledFlag) {
+      return { finalResults: baseResults, aiInsight: null, detectedPersonaOut: null }
+    }
+
+    // 2) Persona enhancement via ai-search
+    try {
+      const payloadProjects = baseResults.slice(0, 10).map(p => ({
+        slug: p.slug,
+        title: p.title,
+        caption: p.caption,
+        categories: p.categories || [],
+        score: p.score || 0
+      }))
+      const ai = await callFunction('ai-search', {
+        query: queryText,
+        projects: payloadProjects,
+        preset: personaKey || null,
+        useAI: true,
+        autoDetectPersona: !personaKey
+      })
+
+      const enhanced = (ai.results || []).map(er => {
+        const base = baseResults.find(b => b.slug === er.slug) || er
+        return {
+          ...base,
+          aiDescription: er.aiDescription || base.aiDescription || null
+        }
+      })
+      return { finalResults: enhanced, aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null }
+    } catch (e) {
+      // If enhancement fails, just return base results
+      return { finalResults: baseResults, aiInsight: null, detectedPersonaOut: null }
+    }
+  }, [])
   
-  // Mark index as loaded immediately; backend disabled
+  // Load search index if available
   useEffect(() => {
-    setSearchIndex([])
-    setIndexLoaded(true)
+    let mounted = true
+    ;(async () => {
+      try {
+        const data = await loadSearchIndex()
+        if (mounted) {
+          setSearchIndex(Array.isArray(data) ? data : [])
+          setIndexLoaded(true)
+        }
+      } catch (e) {
+        if (mounted) {
+          setSearchIndex([])
+          setIndexLoaded(true)
+        }
+      }
+    })()
+    return () => { mounted = false }
   }, [])
 
   // Restore search state on component mount
@@ -226,7 +282,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     }
   }, [externalQuery])
 
-  // Selection replaced with placeholder results (backend disabled)
+  // Execute search pipeline when query changes
   useEffect(() => {
     // Don't search if query is too short
     if (query.trim().length < 2) {
@@ -256,18 +312,26 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     
     const timeoutId = setTimeout(async () => {
       try {
-        // Always use predefined placeholder items
-        const finalResults = await performAISearch(PLACEHOLDER_RESULTS)
+        const allProjects = (searchIndex && searchIndex.length > 0) ? searchIndex : projects
+        const { finalResults, aiInsight, detectedPersonaOut } = await performAISearch({
+          queryText: query,
+          allProjects,
+          aiEnabledFlag: effectiveAiEnabled,
+          personaKey: effectiveSelectedPersona
+        })
+
         setResults(finalResults)
         setSuggestions([])
         setSearchAnalysis(null)
+        setAiSearchInsight(aiInsight)
+        if (detectedPersonaOut) setDetectedPersona(detectedPersonaOut)
         saveSearchState({
           searchQuery: query,
           searchResults: finalResults,
           aiEnabled: effectiveAiEnabled,
           selectedPersona: effectiveSelectedPersona,
-          detectedPersona,
-          aiSearchInsight
+          detectedPersona: detectedPersonaOut || detectedPersona,
+          aiSearchInsight: aiInsight
         })
         setError(null)
       } catch (err) {
@@ -279,7 +343,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     }, 200)
     
     return () => clearTimeout(timeoutId)
-  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered]) // Added searchTriggered
+  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled, effectiveSelectedPersona])
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)

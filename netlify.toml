@@ -17,10 +17,9 @@
 [functions]
   node_bundler = "esbuild"
   included_files = ["public/ai-preset-cache.json"]
-  
-# Handle OPTIONS requests for CORS
-[[redirects]]
-  from = "/.netlify/functions/ai-search"
-  to = "/.netlify/functions/ai-search"
-  status = 200
-  conditions = {Method = ["OPTIONS"]} 
+
+[dev]
+  command = "npm run develop"
+  framework = "gatsby"
+  targetPort = 8000
+  port = 8888

@@ -13,6 +13,7 @@ echo "OPENAI_API_KEY=sk-your-key-here" > .env
 npm install
 
 # 4. Run local dev server with functions
+# The Netlify function auto-loads the root .env for OPENAI_API_KEY
 netlify dev
 ```
 

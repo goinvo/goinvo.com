@@ -1,0 +1,37 @@
+{
+  "canonicalPhrases": [
+    "care cards",
+    "artificial intelligence",
+    "machine learning",
+    "natural language processing",
+    "electronic health record",
+    "electronic medical record",
+    "data visualization",
+    "research portal",
+    "research platform"
+  ],
+  "canonicalWords": [
+    "cards",
+    "care",
+    "health",
+    "data",
+    "visualization",
+    "dashboard",
+    "research",
+    "platform",
+    "portal",
+    "clinical",
+    "patient",
+    "government",
+    "enterprise"
+  ],
+  "abbreviationMap": {
+    "ml": "machine learning",
+    "ai": "artificial intelligence",
+    "nlp": "natural language processing",
+    "ehr": "electronic health record",
+    "emr": "electronic medical record"
+  }
+}
+
+

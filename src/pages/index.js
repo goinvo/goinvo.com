@@ -58,6 +58,22 @@ class IndexPage extends Component {
       workItems,
       allProjects,
       frontmatter,
+      // AI search controls driven by the orange section UI
+      aiEnabled: true,
+      selectedPersona: null,
+      homeSearchQuery: '',
+      homeInputDefault: ''
+    }
+  }
+
+  componentDidMount() {
+    try {
+      const savedQuery = JSON.parse(localStorage.getItem('ai_search_query') || 'null')
+      if (savedQuery && typeof savedQuery === 'string') {
+        this.setState({ homeInputDefault: savedQuery })
+      }
+    } catch (e) {
+      // ignore
     }
   }
 
@@ -94,11 +110,47 @@ class IndexPage extends Component {
                 </div>
               </div>
             </div>
-            <div className="expertise-search">
-              <input className="expertise-search__input" type="text" placeholder="How can we help your next project?" aria-label="Search" />
-              <button className="expertise-search__button" aria-label="Search">→</button>
+            {/* AI-driven search: full-width search input */}
+            <div className="pure-g expertise-controls" style={{ marginTop: '1rem', alignItems: 'stretch' }}>
+              <div className="pure-u-1">
+                <div className="expertise-search">
+                  <form onSubmit={(e) => {
+                    e.preventDefault()
+                    const value = e.target.elements.homeSearch.value
+                    if (value && this.setState) {
+                      this.setState({ homeSearchQuery: value })
+                      // Smooth scroll to results
+                      setTimeout(() => {
+                        const el = document.querySelector('.project-search')
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }, 50)
+                    }
+                  }}>
+                    <input
+                      name="homeSearch"
+                      className="expertise-search__input"
+                      type="text"
+                      placeholder="How can we help your next project?"
+                      defaultValue={this.state.homeInputDefault}
+                      aria-label="Search"
+                    />
+                    <button type="submit" className="expertise-search__button" aria-label="Search">→</button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        {/* Inject AI/Enhanced search component directly under the orange expertise section */}
+        <div className="max-width content-padding pad-vertical">
+          <ProjectSearch
+            projects={this.state.allProjects}
+            externalQuery={this.state.homeSearchQuery || ''}
+            aiEnabledOverride={this.state.aiEnabled}
+            selectedPersonaOverride={this.state.selectedPersona}
+            hideInput={true}
+            selectionMode="client"
+          />
         </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
@@ -112,7 +164,7 @@ class IndexPage extends Component {
             <div className="pure-u-1 pure-u-lg-2-3">
               <div className="pure-g">
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-right--only-lg">
+                  <p className="margin--none pad-right--only-lg">
                     <span className="text--bold">160 million US residents</span>
                     <br />
                     <span className="text--gray">
@@ -123,7 +175,7 @@ class IndexPage extends Component {
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-left--only-lg">
+                  <p className="margin--none pad-left--only-lg">
                     <span className="text--bold">
                       1M+ Massachusetts residents
                     </span>
@@ -136,7 +188,7 @@ class IndexPage extends Component {
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-right--only-lg">
+                  <p className="margin--none pad-right--only-lg">
                     <span className="text--bold">Wikipedia</span>
                     <br />
                     <span className="text--gray">
@@ -154,7 +206,7 @@ class IndexPage extends Component {
                   </p>
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-left--only-lg">
+                  <p className="margin--none pad-left--only-lg">
                     <span className="text--bold">1 billion prescriptions</span>
                     <br />
                     <span className="text--gray">

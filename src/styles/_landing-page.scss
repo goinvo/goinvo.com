@@ -282,6 +282,9 @@
   }
 
   .image-block__text {
+    padding-left: $spacing;
+    padding-right: $spacing;
+    
     p.header--lg {
       font-family: $font-family--serif;
       font-size: 24px;

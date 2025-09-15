@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AI-enhanced search feature leverages OpenAI's GPT-4 to provide intelligent project recommendations based on user personas and search queries. This feature generates contextual descriptions for projects on-the-fly, making search results more relevant and personalized.
+The AI-enhanced search feature leverages OpenAI's GPT-5 to provide intelligent project recommendations based on user personas and search queries. This feature generates contextual descriptions for projects on-the-fly, making search results more relevant and personalized.
 
 ## Key Features
 
@@ -104,7 +104,7 @@ This will start:
        ▼
 ┌─────────────┐     ┌───────────────────┐     ┌─────────────┐
 │   Persona   │────▶│ Netlify Function  │────▶│   OpenAI    │
-│  Selection  │     │ (/.netlify/...)   │     │   GPT-4     │
+│  Selection  │     │ (/.netlify/...)   │     │   GPT-5     │
 └─────────────┘     └───────────────────┘     └─────────────┘
                             │
                             ▼
@@ -189,7 +189,7 @@ The implementation now sends minimal project data to avoid this error. If it per
 
 1. Pre-generate cache: `npm run generate-ai-cache`
 2. Reduce number of projects sent to AI (currently 10 in the function)
-3. Consider using a faster OpenAI model (e.g., gpt-3.5-turbo)
+3. Consider using a faster OpenAI model (e.g., gpt-5-mini)
 
 ### Rate limit errors
 

@@ -162,7 +162,7 @@ async function getCachedPresetResponse(presetKey, query, projects) {
   return response;
 }
 
-// Generate AI response using OpenAI - now uses GPT-3.5-turbo (much cheaper!)
+// Generate AI response using OpenAI — returns JSON with per-project relevance flag
 async function generateAIResponse(query, projects, personaContext) {
   // Take top 4 projects to generate descriptions for
   const topProjects = projects.slice(0, 4);
@@ -171,7 +171,7 @@ async function generateAIResponse(query, projects, personaContext) {
 
 CRITICAL: Only describe what is explicitly mentioned in the project data. Do NOT infer, assume, or add technologies, methods, or capabilities that are not specifically stated in the title, caption, or categories.
 
-Your task is to write a compelling 2-3 sentence description for each project explaining why it's relevant to the user's search query and needs. Focus on the value proposition for the specific persona.
+Your task is to write a compelling 2-3 sentence description for each project explaining why it's relevant to the user's search query and needs. Focus on the value proposition for the specific persona. If a project is not relevant to the query, set its relevant flag to false and provide an empty description string.
 
 Guidelines:
 - ONLY highlight positive connections and relevance - never mention what projects lack or don't have
@@ -214,13 +214,15 @@ For each project, provide a description that:
 2. Highlights relevance to the persona's specific needs
 3. Emphasizes the value or insights they could gain
 4. Does NOT mention technologies or methods not explicitly listed in the project data
+5. If no clear, explicit connection exists, mark the project as not relevant (relevant=false) and set description to an empty string
 
 Format your response as JSON:
 {
   "projectDescriptions": [
     {
       "slug": "project-slug",
-      "description": "Why this project is relevant to the search query and persona needs (using only explicit information provided)"
+      "description": "Why this project is relevant to the search query and persona needs (using only explicit information provided)",
+      "relevant": true
     }
   ],
   "searchInsight": "Brief insight about what the user is looking for"
@@ -323,18 +325,23 @@ exports.handler = async (event, context) => {
     // Enhance top 4 projects with AI descriptions
     const enhancedResults = projects.map((project, index) => {
       const aiData = aiResponse.projectDescriptions?.find(p => p.slug === project.slug);
+      const isRelevant = aiData && (typeof aiData.relevant === 'boolean' ? aiData.relevant : true)
       return {
         ...project,
-        aiDescription: aiData ? aiData.description : null,
+        aiDescription: isRelevant && aiData ? aiData.description : null,
+        aiRelevant: isRelevant,
         // First 4 get AI descriptions and priority
-        aiEnhanced: index < 4 && !!aiData
+        aiEnhanced: index < 4 && !!aiData && isRelevant
       };
     });
     
+    // Filter out projects marked not relevant when AI is enabled
+    const filteredResults = enhancedResults.filter(r => r.aiRelevant !== false)
+
     return {
       statusCode: 200,
       body: JSON.stringify({
-        results: enhancedResults,
+        results: filteredResults,
         aiGenerated: true,
         searchInsight: aiResponse.searchInsight,
         detectedPersona: selectedPersona,

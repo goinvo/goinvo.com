@@ -274,7 +274,8 @@
   margin-top: 24px;
 
   @include mq($from: large) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
   }
 
   &--single {
@@ -296,6 +297,42 @@
       color: $color-gray;
     }
   }
+}
+
+// 4-column control with spans
+
+
+.spotlight--span-2 {
+  @include mq($from: large) {
+    grid-column: span 2;
+  }
+}
+
+.spotlight--span-4 {
+  @include mq($from: large) {
+    grid-column: 1 / -1;
+  }
+}
+
+// Remove card shadow/border for Spotlights
+.spotlights-grid .card {
+  box-shadow: none;
+  border: none;
+}
+
+.spotlight-card {
+  display: flex;
+  flex-direction: column;
+}
+.spotlight-media {
+  width: 100%;
+  overflow: hidden;
+}
+.spotlight-media video {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
 }
 
 .partners-section {

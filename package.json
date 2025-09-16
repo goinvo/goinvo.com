@@ -55,9 +55,9 @@
   "scripts": {
     "rework-css": "node ./src/rework-pure-grids.js",
     "gatsby-build": "gatsby build",
-    "build": "npm run rework-css && gatsby build --log-pages",
+    "build": "(npm run rework-css && node scripts/precompute-embeddings.js || exit 0) && gatsby build --log-pages",
     "gatsby-develop": "gatsby develop",
-    "develop": "npm run rework-css && gatsby develop",
+    "develop": "(npm run rework-css && node scripts/precompute-embeddings.js || exit 0) && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,css,scss,md,mdx}\"",
     "upload": "node upload.js",
     "redirect": "node redirect.js",

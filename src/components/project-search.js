@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from 'gatsby'
 import ImageBlock from './image-block'
+import Image from './image'
 import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
 
 // Helper to call Netlify Functions with graceful local fallback
@@ -21,6 +22,20 @@ async function callFunction(name, payload) {
     if (res.ok) return await res.json()
   } catch {}
   throw new Error(`Function ${name} unavailable`)
+}
+
+// Ensure we never show duplicate projects by slug
+function dedupeBySlug(items) {
+  const seen = new Set()
+  const out = []
+  for (const item of items || []) {
+    const key = item && item.slug
+    if (!key) continue
+    if (seen.has(key)) continue
+    seen.add(key)
+    out.push(item)
+  }
+  return out
 }
 
 // AI Persona options
@@ -151,10 +166,11 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         topK: 20,
         projects: Array.isArray(allProjects) && allProjects.length > 0 ? allProjects : undefined
       })
-      baseResults = (selection.results || [])
+      baseResults = dedupeBySlug(selection.results || [])
     } catch (e) {
       // Fallback to client-side semantic search
-      baseResults = performClientSideSemanticSearch(queryText, allProjects || [])
+      baseResults = dedupeBySlug(
+        performClientSideSemanticSearch(queryText, allProjects || [])
         .map(r => ({
           slug: r.slug,
           title: r.title,
@@ -164,11 +180,12 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           score: r.similarity || r.score || 0,
           aiDescription: r.aiDescription || null
         }))
+      )
     }
 
     // If AI enhancement disabled, return base results
     if (!aiEnabledFlag) {
-      return { finalResults: baseResults, aiInsight: null, detectedPersonaOut: null }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null }
     }
 
     // 2) Persona enhancement via ai-search
@@ -195,10 +212,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           aiDescription: er.aiDescription || base.aiDescription || null
         }
       })
-      return { finalResults: enhanced, aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null }
+      return { finalResults: dedupeBySlug(enhanced), aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null }
     } catch (e) {
       // If enhancement fails, just return base results
-      return { finalResults: baseResults, aiInsight: null, detectedPersonaOut: null }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null }
     }
   }, [])
   
@@ -503,6 +520,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
             const aiEnhancedProjects = results
               .filter(project => project.aiDescription)
               .slice(0, 4);
+            const isSingleEnhanced = aiEnhancedProjects.length === 1;
             
             return (
               <div className="ai-enhanced-section">
@@ -514,20 +532,28 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                   <p>These projects are most relevant to your search, with AI-generated insights:</p>
                 </div>
                 
-                <div className="ai-enhanced-grid">
+                <div className={`ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
                   {aiEnhancedProjects.map((project, index) => (
                     <div 
                       key={`ai-${project.slug}`} 
-                      className="ai-enhanced-item"
+                      className={`ai-enhanced-item ${isSingleEnhanced ? 'ai-enhanced-item--single' : ''}`}
                     >
                       <Link to={`/work/${project.slug}/`} className="ai-enhanced-link">
                         {project.image && (
                           <div className="ai-enhanced-image">
-                            <ImageBlock
-                              image={project.image}
-                              alt={project.title}
-                              sizes="(max-width: 768px) 100vw, 400px"
-                            />
+                            {isSingleEnhanced ? (
+                              <Image
+                                src={project.image}
+                                alt={project.title}
+                                sizes="(min-width: 1200px) 420px, (min-width: 768px) 50vw, 100vw"
+                              />
+                            ) : (
+                              <ImageBlock
+                                image={project.image}
+                                alt={project.title}
+                                sizes="(max-width: 768px) 100vw, 400px"
+                              />
+                            )}
                           </div>
                         )}
                         
@@ -618,10 +644,33 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                       </div>
                     ))}
                   </div>
+
+                  {/* See all work CTA (match Spotlights section styles) */}
+                  <div className="container container--justify-center margin-top margin-bottom--double">
+                    <Link
+                      to="/work/?expanded=true"
+                      className="button button--outline-primary button--padded"
+                      aria-label="See all work page"
+                    >
+                      VIEW ALL WORK
+                    </Link>
+                  </div>
                 </>
               );
             })()}
           </div>
+        </div>
+      )}
+
+      {/* No Results State */}
+      {query && !isSearching && results.length === 0 && (
+        <div className="project-search__no-results">
+          <h4>No results found</h4>
+          <p>
+            We couldnt find projects matching "{query}". Try different or broader keywords
+            (for example: "NLP", "machine learning", "health data", or "dashboard"). You can
+            also browse the Spotlights section below for featured projects.
+          </p>
         </div>
       )}
       

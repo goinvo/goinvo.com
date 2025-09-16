@@ -81,10 +81,11 @@ const OptimizedImage = ({
   `)
 
   // Find the matching image
+  const safeSrc = typeof src === 'string' ? src : ''
   const imageNode = data.allFile.nodes.find(node => 
-    node.relativePath === src || 
-    node.relativePath === src.replace(/^\//, '') ||
-    node.relativePath.endsWith(src.split('/').pop())
+    node.relativePath === safeSrc || 
+    node.relativePath === safeSrc.replace(/^\//, '') ||
+    node.relativePath.endsWith((safeSrc.split('/').pop()) || '')
   )
 
   if (imageNode && imageNode.childImageSharp) {

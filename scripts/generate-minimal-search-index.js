@@ -52,6 +52,11 @@ const projects = caseStudyFiles.map(file => {
 
 // Save to public directory
 const outputPath = path.join(__dirname, '..', 'public', 'search-index.json')
+// Ensure output directory exists (first run after cleaning `public`)
+const outputDir = path.dirname(outputPath)
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true })
+}
 fs.writeFileSync(outputPath, JSON.stringify(projects, null, 2))
 
 console.log(`✅ Generated minimal search index with ${projects.length} projects`)

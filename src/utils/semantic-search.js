@@ -190,11 +190,37 @@ export const calculateKeywordSimilarity = (queryKeywords, project) => {
     project.metadata?.targetAudience
   ].filter(Boolean).join(' ')
   
+  // Combine extracted keywords with pre-generated index keywords (if present)
   const projectKeywords = extractKeywords(projectText)
+  ;(project.keywords || []).forEach(k => {
+    const token = String(k || '').toLowerCase()
+    if (token && token.length > 2) projectKeywords.add(token)
+  })
   
   // Calculate intersection
   let weightedScore = 0
   
+  // Simple Levenshtein distance for typo tolerance
+  const levenshtein = (a, b) => {
+    if (a === b) return 0
+    const m = a.length, n = b.length
+    if (m === 0) return n
+    if (n === 0) return m
+    const dp = new Array(n + 1)
+    for (let j = 0; j <= n; j++) dp[j] = j
+    for (let i = 1; i <= m; i++) {
+      let prev = dp[0]
+      dp[0] = i
+      for (let j = 1; j <= n; j++) {
+        const temp = dp[j]
+        if (a[i - 1] === b[j - 1]) dp[j] = prev
+        else dp[j] = Math.min(prev + 1, dp[j] + 1, dp[j - 1] + 1)
+        prev = temp
+      }
+    }
+    return dp[n]
+  }
+
   queryKeywords.forEach(keyword => {
     // Direct match
     if (projectKeywords.has(keyword)) {
@@ -205,6 +231,12 @@ export const calculateKeywordSimilarity = (queryKeywords, project) => {
     projectKeywords.forEach(projectKeyword => {
       if (projectKeyword.includes(keyword) || keyword.includes(projectKeyword)) {
         weightedScore += 0.3
+      }
+      // Typo tolerance: allow edit distance of 1 for reasonably long words
+      if (keyword.length >= 6 && projectKeyword.length >= 6) {
+        if (levenshtein(keyword, projectKeyword) === 1) {
+          weightedScore += 0.8
+        }
       }
     })
   })

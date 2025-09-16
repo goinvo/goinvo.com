@@ -43,6 +43,7 @@ class ImageBlock extends Component {
         <div
           className={`image-block__image-container ${isSmall ? 'image-block__image-container--small' : ''
             } ${workCard ? 'image-block__image-container--work-card' : ''}`}
+          style={{ height: '260px' }}
         >
           <Image
             src={image}

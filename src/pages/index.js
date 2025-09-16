@@ -3,10 +3,11 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
-import CategoriesList from '../components/categories-list'
+// import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
+import Video from '../components/video'
 // import Quote from '../components/quote'
 import ContactForm from '../components/form-contact'
 import Image from '../components/image'
@@ -50,8 +51,8 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
 
-    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 4)
-    const allProjects = concatCaseStudiesAndFeatures({ caseStudies: props.data })
+    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data, filterFeatures: false }).slice(0, 4)
+    const allProjects = concatCaseStudiesAndFeatures({ caseStudies: props.data, filterFeatures: false })
 
     this.state = {
       image: null,
@@ -152,6 +153,107 @@ class IndexPage extends Component {
             selectionMode="client"
           />
         </div>
+        <div className="max-width content-padding pad-bottom--double">
+          <div className="margin-vertical--double pad-vertical--double">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--xl margin--none pad-right--double spotlights-title">
+                  Spotlights
+                </h2>
+              </div>
+            </div>
+            {/* Spotlights (custom layout in a single grid) */}
+            {(() => {
+              const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
+              const TEXT_OVERRIDES = {
+                'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
+                'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
+                'visual-storytelling-with-genai': { title: 'Storytelling with GenAI', subtitle: 'Illustration' },
+                'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Poster' },
+                'hgraph': { title: 'hGraph', subtitle: 'Data Visualization' },
+                'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
+                'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
+                'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
+                'inspired-ehrs': { title: 'Transforming Healthcare Analytics', subtitle: 'Enterprise Software' }
+              }
+              const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
+                if (!item) return null
+                const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
+                const key = (item.slug || item.id)
+                const override = TEXT_OVERRIDES[key] || {}
+                const displayTitle = override.title || item.title
+                const displaySubtitle = override.subtitle || item.caption
+                return (
+                  <Card
+                    noShadow
+                    link={link}
+                    key={`spot-${(item.slug||item.id)}`}
+                    externalLink={externalLink}
+                    suppressNewTab={suppressNewTab}
+                    className={className}
+                  >
+                    {useVideo && videoSrc ? (
+                      <div className="spotlight-card">
+                        <div className="spotlight-media">
+                          <Video poster={item.image} loop sources={[{ format: 'mp4', src: videoSrc }]} />
+                        </div>
+                        <div className="image-block__text">
+                          <p className={'header--lg'}>{displayTitle}</p>
+                          <p className="text--gray">{displaySubtitle}</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <ImageBlock
+                        title={displayTitle}
+                        image={item.image}
+                        client={null}
+                        categories={null}
+                        caption={displaySubtitle}
+                        sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                      />
+                    )}
+                  </Card>
+                )
+              }
+
+              return (
+                <div className="spotlights-grid spotlights-grid--four">
+                  {/* Row A */}
+                  {renderCard(findItem('ipsos-facto'), { className: 'spotlight--span-2' })}
+                  {renderCard(findItem('eligibility-engine'))}
+                  {renderCard(findItem('visual-storytelling-with-genai'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' })}
+                  {/* Row B */}
+                  {renderCard(findItem('determinants-of-health'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' })}
+                  {renderCard(findItem('hgraph'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' })}
+                  {renderCard(findItem('inspired-ehrs'), { className: 'spotlight--span-2' })}
+                  {/* Row C */}
+                  {renderCard(findItem('prior-auth'), { className: 'spotlight--span-2' })}
+                  {renderCard(findItem('precision-autism'), { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' })}
+                  {/* Row D */}
+                  {renderCard(findItem('mass-snap'), { className: 'spotlight--span-4' })}
+                </div>
+              )
+            })()}
+            <div className="container container--justify-center margin-top margin-bottom--double">
+              <Link
+                to="/work/?expanded=true"
+                className="button button--outline-primary button--padded"
+              >
+                VIEW ALL WORK
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="partners-section pad-vertical--double">
+          <div className="max-width content-padding">
+            <h3 className="header--md partners-section__title" style={{ marginTop: 0 }}>
+              PAST PARTNERS
+            </h3>
+            <div className="partners-section__logos">
+              <ClientLogos />
+            </div>
+          </div>
+        </div>
         <div className="max-width content-padding pad-vertical--double--only-lg">
           <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double" style={{ alignItems: 'flex-start' }}>
@@ -216,81 +318,6 @@ class IndexPage extends Component {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="partners-section pad-vertical--double">
-          <div className="max-width content-padding">
-            <h3 className="header--md partners-section__title" style={{ marginTop: 0 }}>
-              PAST PARTNERS
-            </h3>
-            <div className="partners-section__logos">
-              <ClientLogos />
-            </div>
-          </div>
-        </div>
-        <div className="max-width content-padding pad-bottom--double">
-          <div className="margin-vertical--double pad-vertical--double">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--xl margin--none pad-right--double spotlights-title">
-                  Spotlights
-                </h2>
-              </div>
-            </div>
-            <div className="spotlights-grid">
-              {this.state.workItems.concat(this.state.allProjects).slice(0, 6).map((item, i) => {
-                const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
-                return (
-                  <Card
-                    link={link}
-                    key={`spot-${link}-${i}`}
-                    externalLink={externalLink}
-                    suppressNewTab={suppressNewTab}
-                  >
-                    <ImageBlock
-                      title={item.title}
-                      image={item.image}
-                      client={null}
-                      categories={null}
-                      caption={item.caption}
-                      sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                    />
-                  </Card>
-                )
-              })}
-            </div>
-            <div className="spotlights-grid spotlights-grid--single">
-              {(() => {
-                const item = this.state.allProjects[6]
-                if (!item) return null
-                const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
-                return (
-                  <Card
-                    link={link}
-                    key={`spot-last-${link}`}
-                    externalLink={externalLink}
-                    suppressNewTab={suppressNewTab}
-                  >
-                    <ImageBlock
-                      title={item.title}
-                      image={item.image}
-                      client={null}
-                      categories={null}
-                      caption={item.caption}
-                      sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                    />
-                  </Card>
-                )
-              })()}
-            </div>
-            <div className="container container--justify-center margin-top margin-bottom--double">
-              <Link
-                to="/work/?expanded=true"
-                className="button button--outline-primary button--padded"
-              >
-                VIEW ALL WORK
-              </Link>
             </div>
           </div>
         </div>

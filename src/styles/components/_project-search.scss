@@ -659,6 +659,55 @@
         gap: 1.5rem;
       }
 
+      // Single-card layout: side-by-side image and content on larger screens
+      .ai-enhanced-grid.ai-enhanced-grid--single {
+        grid-template-columns: 1fr; // one card
+      }
+
+      .ai-enhanced-item.ai-enhanced-item--single {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        align-items: stretch;
+      }
+
+      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-link {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 1.25rem;
+        align-items: stretch;
+      }
+
+      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image {
+        aspect-ratio: auto;
+        height: 100%;
+        min-height: 260px;
+        overflow: hidden;
+      }
+
+      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image img,
+      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 1024px) {
+        .ai-enhanced-item.ai-enhanced-item--single,
+        .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-link {
+          grid-template-columns: 1fr;
+        }
+
+        .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image {
+          height: auto;
+          aspect-ratio: 16 / 9;
+        }
+      }
+
+      // Constrain text width for readability in single mode
+      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-content {
+        max-width: 70ch;
+      }
+
       .ai-enhanced-item {
         background: var(--white);
         border: 2px solid #e0e0e0;

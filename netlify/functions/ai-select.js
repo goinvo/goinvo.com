@@ -285,7 +285,15 @@ exports.handler = async (event) => {
     }
 
     scored.sort((a, b) => b.score - a.score)
-    const results = scored.slice(0, topK).map(({ p, score }) => ({
+
+    // Apply a relevance threshold to avoid returning unrelated results
+    const hasEmbeddings = !!queryEmbedding
+    const MIN_SCORE = hasEmbeddings ? 0.12 : 0.5 // require at least one keyword match in fallback
+
+    const filtered = scored.filter(({ score }) => score >= MIN_SCORE)
+    const limited = (filtered.length > 0 ? filtered : scored).slice(0, topK)
+
+    const results = limited.map(({ p, score }) => ({
       slug: p.slug,
       title: p.title,
       caption: p.caption,

@@ -1,5 +1,6 @@
 # Project dependencies
 .cache
+.cache.old*
 node_modules
 yarn-error.log
 yarn.lock

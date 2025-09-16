@@ -57,7 +57,7 @@ export default class HTML extends React.Component {
             as="style"
             crossOrigin="anonymous"
           />
-          <link rel="stylesheet" href="https://use.typekit.net/lcb6luw.css" />
+          <link rel="stylesheet" href="https://use.typekit.net/lcb6luw.css" crossOrigin="anonymous" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

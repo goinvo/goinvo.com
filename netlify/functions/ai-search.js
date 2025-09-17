@@ -1,4 +1,11 @@
 const OpenAI = require('openai');
+// CORS helper
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+}
+const jsonResponse = (statusCode, obj) => ({ statusCode, headers: CORS_HEADERS, body: JSON.stringify(obj || {}) })
 
 // In-memory cache for preset queries
 const presetCache = new Map();
@@ -257,20 +264,19 @@ Format your response as JSON:
 
 // Netlify Function handler
 exports.handler = async (event, context) => {
+  // Preflight
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 200, headers: CORS_HEADERS, body: '' }
+  }
+
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ error: 'Method not allowed' })
-    };
+    return jsonResponse(405, { error: 'Method not allowed' })
   }
   
   // Check for API key
   if (!process.env.OPENAI_API_KEY) {
-    return {
-      statusCode: 503,
-      body: JSON.stringify({ error: 'AI service not configured' })
-    };
+    return jsonResponse(503, { error: 'AI service not configured' })
   }
   
   // Get client IP for rate limiting
@@ -279,12 +285,9 @@ exports.handler = async (event, context) => {
   // Check enhanced rate limit
   const rateLimitResult = checkRateLimit(ip);
   if (!rateLimitResult.allowed) {
-    return {
-      statusCode: 429,
-      body: JSON.stringify({ 
-        error: `${rateLimitResult.reason}. Current limits: ${MAX_REQUESTS_PER_WINDOW} per minute, ${DAILY_LIMIT_PER_IP} per day.`
-      })
-    };
+    return jsonResponse(429, { 
+      error: `${rateLimitResult.reason}. Current limits: ${MAX_REQUESTS_PER_WINDOW} per minute, ${DAILY_LIMIT_PER_IP} per day.`
+    })
   }
   
   try {
@@ -292,21 +295,12 @@ exports.handler = async (event, context) => {
     
     // Validate input
     if (!query || !projects || !Array.isArray(projects)) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: 'Invalid request data' })
-      };
+      return jsonResponse(400, { error: 'Invalid request data' })
     }
     
     // If not using AI, just return the projects as-is
     if (!useAI) {
-      return {
-        statusCode: 200,
-        body: JSON.stringify({
-          results: projects,
-          aiGenerated: false
-        })
-      };
+      return jsonResponse(200, { results: projects, aiGenerated: false })
     }
     
     let selectedPersona = preset;
@@ -346,25 +340,16 @@ exports.handler = async (event, context) => {
     // Filter out projects marked not relevant when AI is enabled
     const filteredResults = enhancedResults.filter(r => r.aiRelevant !== false)
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        results: filteredResults,
-        aiGenerated: true,
-        searchInsight: aiResponse.searchInsight,
-        detectedPersona: selectedPersona,
-        preset: selectedPersona
-      })
-    };
+    return jsonResponse(200, {
+      results: filteredResults,
+      aiGenerated: true,
+      searchInsight: aiResponse.searchInsight,
+      detectedPersona: selectedPersona,
+      preset: selectedPersona
+    })
     
   } catch (error) {
     console.error('AI search error:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ 
-        error: 'Failed to process AI search',
-        aiGenerated: false 
-      })
-    };
+    return jsonResponse(500, { error: 'Failed to process AI search', aiGenerated: false })
   }
 }; 

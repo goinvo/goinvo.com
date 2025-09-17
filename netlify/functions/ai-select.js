@@ -170,24 +170,34 @@ function fuzzyVariants(q) {
   return Array.from(variants)
 }
 
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+}
+const json = (status, obj) => ({ statusCode: status, headers: CORS_HEADERS, body: JSON.stringify(obj || {}) })
+
 exports.handler = async (event) => {
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 200, headers: CORS_HEADERS, body: '' }
+  }
   if (event.httpMethod !== 'POST') {
     if (event.httpMethod === 'GET') {
       // Simple health check
-      return { statusCode: 200, body: JSON.stringify({ ok: true, model: EMBEDDING_MODEL }) }
+      return json(200, { ok: true, model: EMBEDDING_MODEL })
     }
-    return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) }
+    return json(405, { error: 'Method not allowed' })
   }
 
   const ip = event.headers['x-forwarded-for'] || event.headers['client-ip'] || 'unknown'
   if (!checkRateLimit(ip)) {
-    return { statusCode: 429, body: JSON.stringify({ error: 'Rate limit exceeded' }) }
+    return json(429, { error: 'Rate limit exceeded' })
   }
 
   try {
     const { query, topK = 20, projects: providedProjects } = JSON.parse(event.body || '{}')
     if (!query || typeof query !== 'string' || query.trim().length < 2) {
-      return { statusCode: 400, body: JSON.stringify({ error: 'Invalid query' }) }
+      return json(400, { error: 'Invalid query' })
     }
 
     // Load projects from provided payload (dev) or disk (prod)
@@ -197,7 +207,7 @@ exports.handler = async (event) => {
     } else {
       const indexPath = path.join(__dirname, '..', '..', 'public', 'search-index.json')
       if (!fs.existsSync(indexPath)) {
-        return { statusCode: 503, body: JSON.stringify({ error: 'Search index unavailable' }) }
+      return json(503, { error: 'Search index unavailable' })
       }
       projects = JSON.parse(fs.readFileSync(indexPath, 'utf-8'))
     }
@@ -220,7 +230,7 @@ exports.handler = async (event) => {
         image: p.image || '',
         score
       }))
-      return { statusCode: 200, body: JSON.stringify({ results, selectionMode: 'server-fallback' }) }
+      return json(200, { results, selectionMode: 'server-fallback' })
     }
 
     // Embed query (may fail; we will fallback to keyword scoring)
@@ -307,7 +317,7 @@ exports.handler = async (event) => {
     savePersistentCacheSafe()
 
     const mode = queryEmbedding ? 'server-embeddings' : 'server-fallback'
-    return { statusCode: 200, body: JSON.stringify({ results, selectionMode: mode, warning: mode !== 'server-embeddings' ? 'Embeddings unavailable, used keyword fallback' : undefined }) }
+    return json(200, { results, selectionMode: mode, warning: mode !== 'server-embeddings' ? 'Embeddings unavailable, used keyword fallback' : undefined })
   } catch (error) {
     console.error('ai-select error:', error)
     // Graceful fallback: try simple keyword scoring over provided/disk projects
@@ -333,10 +343,10 @@ exports.handler = async (event) => {
         image: p.image || '',
         score
       }))
-      return { statusCode: 200, body: JSON.stringify({ results, selectionMode: 'server-fallback', warning: 'Embedding exception; used keyword fallback' }) }
+      return json(200, { results, selectionMode: 'server-fallback', warning: 'Embedding exception; used keyword fallback' })
     } catch (e2) {
       console.error('ai-select fallback error:', e2)
-      return { statusCode: 500, body: JSON.stringify({ error: 'Selection failed' }) }
+      return json(500, { error: 'Selection failed' })
     }
   }
 }

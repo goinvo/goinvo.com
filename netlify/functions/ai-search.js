@@ -202,17 +202,25 @@ Writing Style Instructions:
 - Stay away from fluff: Avoid unnecessary adjectives and adverbs.
   Example: "We finished the task."
 - Focus on clarity: Make your message easy to understand.
-  Example: "Please send the file by Monday."`;
+  Example: "Please send the file by Monday."
+
+STRONG WRITING REQUIREMENTS (for convincing buyers):
+- Lead with a concrete outcome or metric if present (e.g., adoption, speed, accuracy, user reach).
+- Name the buyer-relevant artifact we delivered (e.g., clinician dashboard, consent workflow, research repository, ROI model).
+- Mention the buyer context using the provided 'client' field when available to add credibility.
+- Use 1 buyer-specific benefit relevant to the persona (e.g., "cuts review time for payers", "reduces clinician clicks", "improves data quality for researchers").
+- Keep 2-3 sentences total; avoid generic words like "innovative", "powerful", "solution".
+`;
 
   const userPrompt = `Search query: "${query}"
 
-Projects to describe (ONLY use information provided below - do not add details not explicitly mentioned):
+Projects to describe (ONLY use information provided below - do not add details not explicitly mentioned). Each project object may include: slug, title, caption, client, categories, keywords, score.
 ${JSON.stringify(topProjects, null, 2)}
 
 For each project, provide a description that:
 1. Connects the project to the search query based on ONLY what's explicitly described
 2. Highlights relevance to the persona's specific needs
-3. Emphasizes the value or insights they could gain
+3. Emphasizes the value or insights they could gain, ideally with a concrete artifact or measurable impact if present in the data
 4. Does NOT mention technologies or methods not explicitly listed in the project data
 5. If no clear, explicit connection exists, mark the project as not relevant (relevant=false) and set description to an empty string
 
@@ -221,7 +229,7 @@ Format your response as JSON:
   "projectDescriptions": [
     {
       "slug": "project-slug",
-      "description": "Why this project is relevant to the search query and persona needs (using only explicit information provided)",
+      "description": "Why this project is relevant to the search query and persona needs (using only explicit information provided). Start with outcome or artifact when available; keep it specific and concrete.",
       "relevant": true
     }
   ],

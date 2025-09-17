@@ -345,6 +345,14 @@
   }
 }
 
+// Force AI search result grids to 2 columns on desktop
+.ai-enhanced-grid,
+.ai-results-grid {
+  @include mq($from: large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 // 4-column control with spans
 
 

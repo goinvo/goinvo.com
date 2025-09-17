@@ -293,14 +293,16 @@ exports.handler = async (event) => {
     const filtered = scored.filter(({ score }) => score >= MIN_SCORE)
     const limited = (filtered.length > 0 ? filtered : scored).slice(0, topK)
 
-    const results = limited.map(({ p, score }) => ({
-      slug: p.slug,
-      title: p.title,
-      caption: p.caption,
-      categories: p.categories || [],
-      image: p.image || '',
-      score
-    }))
+      const results = limited.map(({ p, score }) => ({
+        slug: p.slug,
+        title: p.title,
+        caption: p.caption,
+        client: p.client || '',
+        categories: p.categories || [],
+        keywords: Array.isArray(p.keywords) ? p.keywords.slice(0, 12) : [],
+        image: p.image || '',
+        score
+      }))
     // Best-effort save cache
     savePersistentCacheSafe()
 
@@ -325,7 +327,9 @@ exports.handler = async (event) => {
         slug: p.slug,
         title: p.title,
         caption: p.caption,
+        client: p.client || '',
         categories: p.categories || [],
+        keywords: Array.isArray(p.keywords) ? p.keywords.slice(0, 12) : [],
         image: p.image || '',
         score
       }))

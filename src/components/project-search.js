@@ -536,7 +536,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                   <p>These projects are most relevant to your search, with AI-generated insights:</p>
                 </div>
                 
-                <div className={`spotlights-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
+                <div className={`spotlights-grid ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
                   {aiEnhancedProjects.map((project) => (
                     <Card
                       key={`ai-${project.slug}`}
@@ -580,7 +580,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                     </div>
                   )}
                   
-                  <div className="spotlights-grid">
+                  <div className="spotlights-grid ai-results-grid">
                     {remainingResults.map((project) => (
                       <Card key={project.slug} link={`/work/${project.slug}/`} noShadow>
                         <ImageBlock

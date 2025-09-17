@@ -109,7 +109,7 @@ class IndexPage extends Component {
             <span className="text--serif text--primary">.</span>
           </h1>
           <p className="hero-subtitle text--black">
-            We deliver beautiful and useful design for digital, including software, posters, and data visualizations.
+            We craft digital design through software, strategic thinking, data visualization, and illustration.
           </p>
         </Hero>
         <div className="expertise-section pad-vertical--double">

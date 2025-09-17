@@ -120,10 +120,62 @@ class IndexPage extends Component {
               </div>
               <div className="pure-u-1 pure-u-lg-2-3">
                 <div className="expertise-grid">
-                  <div className="expertise-item">Enterprise</div>
-                  <div className="expertise-item">Healthcare</div>
-                  <div className="expertise-item">Government</div>
-                  <div className="expertise-item">AI</div>
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      this.setState({ homeSearchQuery: 'enterprise analytics platform', aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Enterprise
+                  </button>
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      this.setState({ homeSearchQuery: 'healthcare software', aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Healthcare
+                  </button>
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      this.setState({ homeSearchQuery: 'public sector service design', aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Government
+                  </button>
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      this.setState({ homeSearchQuery: 'AI LLM NLP healthcare', aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    AI
+                  </button>
                 </div>
               </div>
             </div>

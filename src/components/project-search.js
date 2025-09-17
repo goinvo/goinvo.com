@@ -301,6 +301,27 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     }
   }, [externalQuery])
 
+  // Session cache helpers (robust across HMR; TTL-limited)
+  const CACHE_TTL_MS = 10 * 60 * 1000
+  const cacheKeyPrefix = 'ai_search_cache:'
+  const readCache = (key) => {
+    try {
+      const raw = sessionStorage.getItem(cacheKeyPrefix + key)
+      if (!raw) return null
+      const { ts, data } = JSON.parse(raw)
+      if (!ts || (Date.now() - ts) > CACHE_TTL_MS) {
+        sessionStorage.removeItem(cacheKeyPrefix + key)
+        return null
+      }
+      return data
+    } catch (_) { return null }
+  }
+  const writeCache = (key, data) => {
+    try {
+      sessionStorage.setItem(cacheKeyPrefix + key, JSON.stringify({ ts: Date.now(), data }))
+    } catch (_) {}
+  }
+
   // Execute search pipeline when query changes
   useEffect(() => {
     // Don't search if query is too short
@@ -332,6 +353,20 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     const timeoutId = setTimeout(async () => {
       try {
         const allProjects = (searchIndex && searchIndex.length > 0) ? searchIndex : projects
+        const indexVersion = allProjects && allProjects.length
+          ? `${allProjects.length}:${allProjects[0]?.slug || allProjects[0]?.id || 'x'}:${allProjects[allProjects.length - 1]?.slug || allProjects[allProjects.length - 1]?.id || 'y'}`
+          : 'none'
+        const cacheKey = `${query}|${effectiveAiEnabled ? 'ai' : 'plain'}|${effectiveSelectedPersona || 'auto'}|v=${indexVersion}`
+        const cached = readCache(cacheKey)
+        if (cached && Array.isArray(cached.results)) {
+          setResults(cached.results)
+          setAiSearchInsight(cached.insight || null)
+          if (cached.detectedPersona) setDetectedPersona(cached.detectedPersona)
+          setError(null)
+          setIsSearching(false)
+          return
+        }
+
         const { finalResults, aiInsight, detectedPersonaOut } = await performAISearch({
           queryText: query,
           allProjects,
@@ -340,6 +375,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         })
 
         setResults(finalResults)
+        // Cache successful results to reduce API usage for repeated queries
+        if (Array.isArray(finalResults) && finalResults.length > 0) {
+          writeCache(cacheKey, { results: finalResults, insight: aiInsight, detectedPersona: detectedPersonaOut })
+        }
         try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(finalResults) && finalResults.length > 0 } })) } catch(_) {}
         setSuggestions([])
         setSearchAnalysis(null)

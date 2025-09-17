@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from 'gatsby'
 import ImageBlock from './image-block'
+import Card from './card'
 import Image from './image'
+import config from '../../config'
 import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
 
 // Helper to call Netlify Functions with graceful local fallback
@@ -338,6 +340,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         })
 
         setResults(finalResults)
+        try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(finalResults) && finalResults.length > 0 } })) } catch(_) {}
         setSuggestions([])
         setSearchAnalysis(null)
         setAiSearchInsight(aiInsight)
@@ -379,6 +382,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     setSearchTriggered(false)
     setExpandedDescriptions(new Set())
     clearSearchState()
+    try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch(_) {}
   }
 
   const toggleDescriptionExpansion = (projectSlug) => {
@@ -532,44 +536,20 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                   <p>These projects are most relevant to your search, with AI-generated insights:</p>
                 </div>
                 
-                <div className={`ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
-                  {aiEnhancedProjects.map((project, index) => (
-                    <div 
-                      key={`ai-${project.slug}`} 
-                      className={`ai-enhanced-item ${isSingleEnhanced ? 'ai-enhanced-item--single' : ''}`}
+                <div className={`spotlights-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
+                  {aiEnhancedProjects.map((project) => (
+                    <Card
+                      key={`ai-${project.slug}`}
+                      link={`/work/${project.slug}/`}
+                      noShadow
                     >
-                      <Link to={`/work/${project.slug}/`} className="ai-enhanced-link">
-                        {project.image && (
-                          <div className="ai-enhanced-image">
-                            {isSingleEnhanced ? (
-                              <Image
-                                src={project.image}
-                                alt={project.title}
-                                sizes="(min-width: 1200px) 420px, (min-width: 768px) 50vw, 100vw"
-                              />
-                            ) : (
-                              <ImageBlock
-                                image={project.image}
-                                alt={project.title}
-                                sizes="(max-width: 768px) 100vw, 400px"
-                              />
-                            )}
-                          </div>
-                        )}
-                        
-                        <div className="ai-enhanced-content">
-                          <h5>{project.title}</h5>
-                          
-                          {/* AI Description or Caption */}
-                          <div className="ai-description-section">
-                            <p className={`ai-description-text`}>
-                              {project.aiDescription ? project.aiDescription : project.caption}
-                            </p>
-                          </div>
-                        </div>
-                        
-                      </Link>
-                    </div>
+                      <ImageBlock
+                        title={project.title}
+                        image={project.image}
+                        caption={project.aiDescription ? project.aiDescription : project.caption}
+                        sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                      />
+                    </Card>
                   ))}
                 </div>
               </div>
@@ -600,48 +580,16 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                     </div>
                   )}
                   
-                  <div className="results-grid">
-                    {remainingResults.map((project, index) => (
-                      <div 
-                        key={project.slug} 
-                        className="result-item"
-                      >
-                        <Link to={`/work/${project.slug}/`} className="result-link">
-                          {project.image && (
-                            <div className="result-image">
-                              <ImageBlock
-                                image={project.image}
-                                alt={project.title}
-                                sizes="(max-width: 768px) 100vw, 350px"
-                              />
-                            </div>
-                          )}
-                          
-                          <div className="result-content">
-                            <h4>{project.title}</h4>
-                            
-                            {/* Always show original caption in this section */}
-                            <p className="result-caption">
-                              {project.caption}
-                            </p>
-                            
-                            {project.categories && project.categories.length > 0 && (
-                              <div className="result-categories">
-                                {project.categories.slice(0, 3).map((cat, i) => (
-                                  <span key={i} className="category-tag">{cat}</span>
-                                ))}
-                              </div>
-                            )}
-                            
-                            {/* Show match score only when AI is disabled */}
-                            {!aiEnabled && project.score && (
-                              <div className="result-score">
-                                Match: {Math.round(project.score * 100)}%
-                              </div>
-                            )}
-                          </div>
-                        </Link>
-                      </div>
+                  <div className="spotlights-grid">
+                    {remainingResults.map((project) => (
+                      <Card key={project.slug} link={`/work/${project.slug}/`} noShadow>
+                        <ImageBlock
+                          title={project.title}
+                          image={project.image}
+                          caption={project.caption}
+                          sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                        />
+                      </Card>
                     ))}
                   </div>
 
@@ -659,17 +607,21 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
               );
             })()}
           </div>
+          <div className="container container--justify-center margin-top">
+            <button className="button button--outline-primary button--padded" onClick={handleClearSearch} aria-label="Clear search and show spotlights">
+              CLEAR SEARCH
+            </button>
+          </div>
         </div>
       )}
 
       {/* No Results State */}
       {query && !isSearching && results.length === 0 && (
         <div className="project-search__no-results">
-          <h4>No results found</h4>
+          <h4>No results</h4>
+          <p className="text--gray">Try different or broader keywords.</p>
           <p>
-            We couldnt find projects matching "{query}". Try different or broader keywords
-            (for example: "NLP", "machine learning", "health data", or "dashboard"). You can
-            also browse the Spotlights section below for featured projects.
+            Or explore featured work in <a href="#spotlights">Spotlights</a> below.
           </p>
         </div>
       )}

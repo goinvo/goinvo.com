@@ -59,6 +59,7 @@ class IndexPage extends Component {
       workItems,
       allProjects,
       frontmatter,
+      hideSpotlights: false,
       // AI search controls driven by the orange section UI
       aiEnabled: true,
       selectedPersona: null,
@@ -68,6 +69,16 @@ class IndexPage extends Component {
   }
 
   componentDidMount() {
+    // Listen for AI search results to toggle Spotlights visibility
+    this._aiSearchHandler = (evt) => {
+      try {
+        const hasResults = !!(evt && evt.detail && evt.detail.hasResults)
+        this.setState({ hideSpotlights: hasResults })
+      } catch (_) {}
+    }
+    if (typeof window !== 'undefined') {
+      window.addEventListener('ai-search-results', this._aiSearchHandler)
+    }
     try {
       const savedQuery = JSON.parse(localStorage.getItem('ai_search_query') || 'null')
       if (savedQuery && typeof savedQuery === 'string') {
@@ -75,6 +86,11 @@ class IndexPage extends Component {
       }
     } catch (e) {
       // ignore
+    }
+  }
+  componentWillUnmount() {
+    if (typeof window !== 'undefined' && this._aiSearchHandler) {
+      window.removeEventListener('ai-search-results', this._aiSearchHandler)
     }
   }
 
@@ -153,7 +169,8 @@ class IndexPage extends Component {
             selectionMode="client"
           />
         </div>
-        <div className="max-width content-padding pad-bottom--double">
+        {!this.state.hideSpotlights && (
+        <div className="max-width content-padding pad-bottom--double" id="spotlights">
           <div className="margin-vertical--double pad-vertical--double">
             <div className="pure-g">
               <div className="pure-u-1 pure-u-lg-1-3">
@@ -244,6 +261,7 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
+        )}
         <div className="partners-section pad-vertical--double">
           <div className="max-width content-padding">
             <h3 className="header--md partners-section__title" style={{ marginTop: 0 }}>
@@ -254,7 +272,7 @@ class IndexPage extends Component {
             </div>
           </div>
         </div>
-        <div className="max-width content-padding pad-vertical--double--only-lg">
+        <div className="max-width content-padding pad-vertical--double--only-lg used-everyday">
           <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double" style={{ alignItems: 'flex-start' }}>
             <div className="pure-u-1 pure-u-lg-1-3">

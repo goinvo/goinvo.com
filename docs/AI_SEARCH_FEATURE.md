@@ -2,16 +2,19 @@
 
 ## Overview
 
-The AI-enhanced search feature leverages OpenAI's GPT-5 to provide intelligent project recommendations based on user personas and search queries. This feature generates contextual descriptions for projects on-the-fly, making search results more relevant and personalized.
+The AI-enhanced search uses a two-stage pipeline:
+
+- Stage 1 (`ai-select`): server-side ranking using embeddings with a keyword fallback when no API key is available.
+- Stage 2 (`ai-search`): persona-aware AI descriptions and per-project relevance flags used by the UI.
 
 ## Key Features
 
-1. **Persona-Based Search**: Users can select from predefined buyer personas to get tailored recommendations
-2. **Dynamic Descriptions**: AI generates project descriptions specific to the user's needs and context
-3. **Smart Throttling**: Rate limiting prevents API abuse (5 requests per minute per IP)
-4. **Intelligent Caching**: Preset queries are cached for 24 hours, with pre-generated responses lasting 7 days
-5. **Fallback Support**: Gracefully falls back to standard search if AI is unavailable
-6. **Optimized Payload**: Sends only essential project data to avoid payload size limits
+1. **Persona-Based Search**: Users can select buyer personas or enable auto-detect.
+2. **Dynamic Descriptions**: AI generates short, persona-specific blurbs for selected projects.
+3. **Smart Throttling**: Rate limiting prevents abuse (see limits below).
+4. **Intelligent Caching**: Preset persona responses cached in-memory for 24 hours; embeddings cached on disk.
+5. **Fallback Support**: `ai-select` falls back to keyword scoring if embeddings unavailable.
+6. **Optimized Payload**: Only essential fields are sent to the AI function.
 
 ## Available Personas
 
@@ -33,16 +36,13 @@ OPENAI_API_KEY=your-api-key-here
 
 ### 2. Pre-generate AI Cache (Optional but Recommended)
 
-Run the pre-generation script to cache common persona queries:
+Run the pre-generation script to prewarm persona presets used by `ai-search`:
 
 ```bash
 npm run generate-ai-cache
 ```
 
-This will:
-- Generate AI responses for common queries for each persona
-- Cache responses in `public/ai-preset-cache.json`
-- Reduce API calls and improve response times
+Embeddings are also cached via `scripts/precompute-embeddings.js` (auto-runs in `develop`/`build` when an API key is present).
 
 ### 3. Deploy with Netlify
 
@@ -86,32 +86,16 @@ This will start:
 ### Technical Architecture
 
 ```
-┌─────────────┐     ┌──────────────┐     ┌─────────────┐
-│   Browser   │────▶│ Search Index │────▶│  Enhanced   │
-│             │     │   (Static)   │     │   Search    │
-└─────────────┘     └──────────────┘     └─────────────┘
-       │                                         │
-       │                                         ▼
-       │                                  ┌─────────────┐
-       │                                  │   Results   │
-       │                                  └─────────────┘
-       │                                         │
-       ▼                                         │
-┌─────────────┐                                  │
-│  AI Toggle  │──────────────────────────────────┘
-└─────────────┘
-       │
-       ▼
-┌─────────────┐     ┌───────────────────┐     ┌─────────────┐
-│   Persona   │────▶│ Netlify Function  │────▶│   OpenAI    │
-│  Selection  │     │ (/.netlify/...)   │     │   GPT-5     │
-└─────────────┘     └───────────────────┘     └─────────────┘
-                            │
-                            ▼
-                    ┌──────────────┐
-                    │ Rate Limiter │
-                    │   & Cache    │
-                    └──────────────┘
+┌─────────────┐     ┌──────────────┐     ┌──────────────┐     ┌─────────────┐
+│   Browser   │────▶│ Search Index │────▶│   ai-select   │────▶│  ai-search  │
+│             │     │   (Static)   │     │ (Rank/Filter)│     │ (Describe)  │
+└─────────────┘     └──────────────┘     └──────────────┘     └─────────────┘
+                                               │                         │
+                                               ▼                         ▼
+                                       ┌─────────────┐          ┌─────────────┐
+                                       │ Embeddings  │          │   OpenAI    │
+                                       │  + Cache    │          │  Chat API   │
+                                       └─────────────┘          └─────────────┘
 ```
 
 ### API Endpoint
@@ -136,16 +120,16 @@ Request body (optimized payload):
 }
 ```
 
-Response:
+Response (includes `aiRelevant` flag used by the UI to filter):
 ```json
 {
   "results": [
     {
       "slug": "infobionic-heart-monitoring",
       "title": "Infobionic Heart Monitoring",
-      "aiDescription": "This remote cardiac monitoring platform directly addresses...",
-      "aiSelected": true,
-      ...
+      "aiDescription": "Short persona-specific blurb",
+      "aiRelevant": true,
+      "aiEnhanced": true
     }
   ],
   "aiGenerated": true,
@@ -158,9 +142,9 @@ Response:
 
 1. **Initial Load**: AI feature loads asynchronously, doesn't block search
 2. **API Latency**: Typically 1-3 seconds for AI enhancement
-3. **Caching**: Reduces repeated API calls by 80%+
-4. **Rate Limiting**: Prevents abuse while allowing reasonable usage
-5. **Payload Optimization**: Only sends essential fields (slug, title, caption, categories, score)
+3. **Caching**: Embeddings persisted in `.embeddings-cache/server-embeddings.json`; preset persona responses cached in-memory for 24h
+4. **Rate Limiting**: `ai-select` 5/min per IP; `ai-search` 3/min per IP and 50/day
+5. **Payload Optimization**: Only essential fields (slug, title, caption, categories, score)
 
 ## Cost Management
 
@@ -193,8 +177,9 @@ The implementation now sends minimal project data to avoid this error. If it per
 
 ### Rate limit errors
 
-- Default: 5 requests per minute per IP
-- Adjust `MAX_REQUESTS_PER_WINDOW` in `netlify/functions/ai-search.js`
+- ai-select: 5 requests per minute per IP
+- ai-search: 3 requests per minute per IP, 50 per day per IP
+- Adjust values in the respective function files if needed
 
 ### CORS errors
 

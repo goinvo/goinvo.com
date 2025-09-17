@@ -93,6 +93,15 @@
   }
 }
 
+// Switch to solid styling after hero/search
+.header-nav--solid {
+  background-color: $color-white;
+
+  .header-nav__link { color: $color-black; }
+  .header-nav__logo { fill: $color-gray; }
+  .header-nav__hamburger svg { fill: $color-primary; }
+}
+
 .mobile-nav-overlay {
   position: fixed;
   top: 0;

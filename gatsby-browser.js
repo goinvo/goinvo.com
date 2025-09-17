@@ -8,6 +8,14 @@ export const onRouteUpdate = () => {
   const header = document.getElementById('header')
   if (!header) return
   const update = () => {
+    // Only use transparent header on the homepage. All other routes should stay solid for contrast.
+    const isHomepage = !!document.querySelector('.app.homepage') || (typeof window !== 'undefined' && window.location && window.location.pathname === '/')
+    if (!isHomepage) {
+      header.classList.remove('header-nav--transparent')
+      header.classList.add('header-nav--solid')
+      return
+    }
+
     const thresholdEl = document.querySelector('.expertise-section') || document.querySelector('.project-search')
     const threshold = thresholdEl ? (thresholdEl.getBoundingClientRect().bottom + window.scrollY) : window.innerHeight * 0.8
     const solid = window.scrollY > threshold

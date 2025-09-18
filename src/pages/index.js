@@ -74,7 +74,7 @@ class IndexPage extends Component {
       try {
         const hasResults = !!(evt && evt.detail && evt.detail.hasResults)
         this.setState({ hideSpotlights: hasResults })
-      } catch (_) {}
+      } catch (_) { }
     }
     if (typeof window !== 'undefined') {
       window.addEventListener('ai-search-results', this._aiSearchHandler)
@@ -221,7 +221,7 @@ class IndexPage extends Component {
                             aria-label="Clear search"
                             onClick={() => {
                               this.setState({ homeInputValue: '', homeSearchQuery: '' })
-                              try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) {}
+                              try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) { }
                             }}
                           >
                             ×
@@ -233,10 +233,10 @@ class IndexPage extends Component {
                       )
                     })()}
                   </form>
-                  <div className="expertise-disclaimer">
-                    <div className="expertise-disclaimer__experimental">AI search is experimental.</div>
-                    <div className="expertise-disclaimer__tip">Tip: Click a sector above to try example queries.</div>
-                  </div>
+                </div>
+                <div className="expertise-disclaimer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px' }}>
+                  <div className="expertise-disclaimer__tip" style={{ color: '#fff', opacity: 0.95, fontSize: '1rem' }}>Tip: Click a sector above to try example queries.</div>
+                  <div className="expertise-disclaimer__experimental" style={{ color: '#fff', opacity: 0.6, fontSize: '0.875rem', fontWeight: 400 }}>AI search is experimental.</div>
                 </div>
               </div>
             </div>
@@ -254,97 +254,97 @@ class IndexPage extends Component {
           />
         </div>
         {!this.state.hideSpotlights && (
-        <div className="max-width content-padding pad-bottom--double" id="spotlights">
-          <div className="margin-vertical--double pad-vertical--double">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--xl margin--none pad-right--double spotlights-title">
-                  Spotlights
-                </h2>
+          <div className="max-width content-padding pad-bottom--double" id="spotlights">
+            <div className="margin-vertical--double pad-vertical--double">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-1-3">
+                  <h2 className="header--xl margin--none pad-right--double spotlights-title">
+                    Spotlights
+                  </h2>
+                </div>
+              </div>
+              {/* Spotlights (custom layout in a single grid) */}
+              {(() => {
+                const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
+                const TEXT_OVERRIDES = {
+                  'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
+                  'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
+                  'visual-storytelling-with-genai': { title: 'Storytelling with GenAI', subtitle: 'Illustration' },
+                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Poster' },
+                  'hgraph': { title: 'hGraph', subtitle: 'Data Visualization' },
+                  'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
+                  'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
+                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
+                  'inspired-ehrs': { title: 'Transforming Healthcare Analytics', subtitle: 'Enterprise Software' }
+                }
+                const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
+                  if (!item) return null
+                  const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
+                  const key = (item.slug || item.id)
+                  const override = TEXT_OVERRIDES[key] || {}
+                  const displayTitle = override.title || item.title
+                  const displaySubtitle = override.subtitle || item.caption
+                  return (
+                    <Card
+                      noShadow
+                      link={link}
+                      key={`spot-${(item.slug || item.id)}`}
+                      externalLink={externalLink}
+                      suppressNewTab={suppressNewTab}
+                      className={className}
+                    >
+                      {useVideo && videoSrc ? (
+                        <div className="spotlight-card">
+                          <div className="spotlight-media">
+                            <Video poster={item.image} loop sources={[{ format: 'mp4', src: videoSrc }]} />
+                          </div>
+                          <div className="image-block__text">
+                            <p className={'header--lg'}>{displayTitle}</p>
+                            <p className="text--gray">{displaySubtitle}</p>
+                          </div>
+                        </div>
+                      ) : (
+                        <ImageBlock
+                          title={displayTitle}
+                          image={item.image}
+                          client={null}
+                          categories={null}
+                          caption={displaySubtitle}
+                          sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                        />
+                      )}
+                    </Card>
+                  )
+                }
+
+                return (
+                  <div className="spotlights-grid spotlights-grid--four">
+                    {/* Row A */}
+                    {renderCard(findItem('ipsos-facto'), { className: 'spotlight--span-2' })}
+                    {renderCard(findItem('eligibility-engine'))}
+                    {renderCard(findItem('visual-storytelling-with-genai'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' })}
+                    {/* Row B */}
+                    {renderCard(findItem('determinants-of-health'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' })}
+                    {renderCard(findItem('hgraph'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' })}
+                    {renderCard(findItem('inspired-ehrs'), { className: 'spotlight--span-2' })}
+                    {/* Row C */}
+                    {renderCard(findItem('prior-auth'), { className: 'spotlight--span-2' })}
+                    {renderCard(findItem('precision-autism'), { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' })}
+                    {/* Row D */}
+                    {renderCard(findItem('mass-snap'), { className: 'spotlight--span-4' })}
+                  </div>
+                )
+              })()}
+              <div className="container container--justify-center margin-top margin-bottom--double">
+                <Link
+                  to="/work/?expanded=true"
+                  className="button button--outline-primary button--padded"
+                >
+                  VIEW ALL WORK
+                </Link>
               </div>
             </div>
-            {/* Spotlights (custom layout in a single grid) */}
-            {(() => {
-              const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
-              const TEXT_OVERRIDES = {
-                'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
-                'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
-                'visual-storytelling-with-genai': { title: 'Storytelling with GenAI', subtitle: 'Illustration' },
-                'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Poster' },
-                'hgraph': { title: 'hGraph', subtitle: 'Data Visualization' },
-                'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
-                'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
-                'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
-                'inspired-ehrs': { title: 'Transforming Healthcare Analytics', subtitle: 'Enterprise Software' }
-              }
-              const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
-                if (!item) return null
-                const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
-                const key = (item.slug || item.id)
-                const override = TEXT_OVERRIDES[key] || {}
-                const displayTitle = override.title || item.title
-                const displaySubtitle = override.subtitle || item.caption
-                return (
-                  <Card
-                    noShadow
-                    link={link}
-                    key={`spot-${(item.slug||item.id)}`}
-                    externalLink={externalLink}
-                    suppressNewTab={suppressNewTab}
-                    className={className}
-                  >
-                    {useVideo && videoSrc ? (
-                      <div className="spotlight-card">
-                        <div className="spotlight-media">
-                          <Video poster={item.image} loop sources={[{ format: 'mp4', src: videoSrc }]} />
-                        </div>
-                        <div className="image-block__text">
-                          <p className={'header--lg'}>{displayTitle}</p>
-                          <p className="text--gray">{displaySubtitle}</p>
-                        </div>
-                      </div>
-                    ) : (
-                      <ImageBlock
-                        title={displayTitle}
-                        image={item.image}
-                        client={null}
-                        categories={null}
-                        caption={displaySubtitle}
-                        sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                      />
-                    )}
-                  </Card>
-                )
-              }
-
-              return (
-                <div className="spotlights-grid spotlights-grid--four">
-                  {/* Row A */}
-                  {renderCard(findItem('ipsos-facto'), { className: 'spotlight--span-2' })}
-                  {renderCard(findItem('eligibility-engine'))}
-                  {renderCard(findItem('visual-storytelling-with-genai'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' })}
-                  {/* Row B */}
-                  {renderCard(findItem('determinants-of-health'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' })}
-                  {renderCard(findItem('hgraph'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' })}
-                  {renderCard(findItem('inspired-ehrs'), { className: 'spotlight--span-2' })}
-                  {/* Row C */}
-                  {renderCard(findItem('prior-auth'), { className: 'spotlight--span-2' })}
-                  {renderCard(findItem('precision-autism'), { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' })}
-                  {/* Row D */}
-                  {renderCard(findItem('mass-snap'), { className: 'spotlight--span-4' })}
-                </div>
-              )
-            })()}
-            <div className="container container--justify-center margin-top margin-bottom--double">
-              <Link
-                to="/work/?expanded=true"
-                className="button button--outline-primary button--padded"
-              >
-                VIEW ALL WORK
-              </Link>
-            </div>
           </div>
-        </div>
         )}
         <div className="partners-section pad-vertical--double">
           <div className="max-width content-padding">

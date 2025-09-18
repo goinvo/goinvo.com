@@ -681,11 +681,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
               );
             })()}
           </div>
-          <div className="container container--justify-center margin-top">
-            <button className="button button--outline-primary button--padded" onClick={handleClearSearch} aria-label="Clear search and show spotlights">
-              CLEAR SEARCH
-            </button>
-          </div>
+          
         </div>
       )}
 

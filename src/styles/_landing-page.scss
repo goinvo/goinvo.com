@@ -280,6 +280,7 @@
       font-family: 'Open Sans', $font-family--sans-serif, sans-serif;
       font-size: 1.125rem;
       font-weight: $font-weight--normal;
+        letter-spacing: 0; // reduce tracking
       text-transform: none; // override button uppercase
       text-align: left; // ensure left alignment
     }

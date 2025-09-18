@@ -633,27 +633,30 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           {/* All Results Section */}
           <div className="all-results-section">
             {(() => {
-              // Get AI-enhanced project slugs to filter out duplicates
-              const aiEnhancedSlugs = aiEnabled ? 
+              // Get AI-enhanced project slugs (up to 4) to filter out duplicates
+              const aiEnhancedSlugs = aiEnabled ?
                 results
                   .filter(project => project.aiDescription)
                   .slice(0, 4)
                   .map(project => project.slug) : [];
-              
+
               // Filter out AI-enhanced projects from remaining results
-              const remainingResults = results.filter(project => 
-                !aiEnhancedSlugs.includes(project.slug)
-              );
-              
+              const remainingResults = results.filter(project => !aiEnhancedSlugs.includes(project.slug));
+
+              // If there are no remaining results, don't render this section
+              if (!remainingResults || remainingResults.length === 0) return null;
+
+              const remainingCount = remainingResults.length;
+
               return (
                 <>
-                  {aiEnabled && results.some(project => project.aiDescription) && (
+                  {aiEnabled && aiEnhancedSlugs.length > 0 && (
                     <div className="all-results-header">
                       <h4>All Results</h4>
-                      <p>Browse all {results.length} projects that match your search:</p>
+                      <p>Browse all {remainingCount} projects that match your search:</p>
                     </div>
                   )}
-                  
+
                   <div className="spotlights-grid ai-results-grid">
                     {remainingResults.map((project) => (
                       <Card key={project.slug} link={`/work/${project.slug}/`} onClick={handleResultNavigate} noShadow>

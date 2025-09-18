@@ -80,9 +80,10 @@ class IndexPage extends Component {
       window.addEventListener('ai-search-results', this._aiSearchHandler)
     }
     try {
+      // Prefer session restore flag path; otherwise, show last submitted query as placeholder
       const savedQuery = JSON.parse(localStorage.getItem('ai_search_query') || 'null')
       if (savedQuery && typeof savedQuery === 'string') {
-        this.setState({ homeInputDefault: savedQuery })
+        this.setState({ homeInputDefault: savedQuery, homeInputValue: savedQuery, lastSubmittedQuery: savedQuery })
       }
     } catch (e) {
       // ignore

@@ -261,6 +261,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           setSelectedPersona(savedState.selectedPersona || null)
           setDetectedPersona(savedState.detectedPersona || null)
           setAiSearchInsight(savedState.aiSearchInsight || null)
+          // Inform homepage to hide spotlights
+          try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(savedState.searchResults) && savedState.searchResults.length > 0 } })) } catch (_) {}
           // Clear flag so we do not auto-restore on fresh visits
           try { sessionStorage.removeItem('ai_search_expect_restore') } catch (_) {}
           // Scroll to search area after a brief delay
@@ -297,6 +299,12 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
   // Accept external query (e.g., from homepage hero search) and trigger a search
   useEffect(() => {
+    // If we're about to restore state (back navigation), skip external query to avoid clearing restored results
+    try {
+      const shouldRestore = sessionStorage.getItem('ai_search_expect_restore') === '1'
+      if (shouldRestore) return
+    } catch (_) {}
+
     if (externalQuery && externalQuery.trim().length >= 2) {
       setQuery(externalQuery)
       setResults([])

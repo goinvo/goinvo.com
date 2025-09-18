@@ -125,7 +125,8 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      this.setState({ homeSearchQuery: 'enterprise analytics platform', aiEnabled: true }, () => {
+                      const value = 'enterprise analytics platform'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -140,7 +141,7 @@ class IndexPage extends Component {
                     className="expertise-item button button--transparent"
                     onClick={() => {
                       const value = 'healthcare software'
-                      this.setState({ homeSearchQuery: value, homeInputValue: value, aiEnabled: true }, () => {
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -155,7 +156,7 @@ class IndexPage extends Component {
                     className="expertise-item button button--transparent"
                     onClick={() => {
                       const value = 'public sector service design'
-                      this.setState({ homeSearchQuery: value, homeInputValue: value, aiEnabled: true }, () => {
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -170,7 +171,7 @@ class IndexPage extends Component {
                     className="expertise-item button button--transparent"
                     onClick={() => {
                       const value = 'AI LLM NLP healthcare'
-                      this.setState({ homeSearchQuery: value, homeInputValue: value, aiEnabled: true }, () => {
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -232,6 +233,10 @@ class IndexPage extends Component {
                       )
                     })()}
                   </form>
+                  <div className="expertise-disclaimer">
+                    <div className="expertise-disclaimer__experimental">AI search is experimental.</div>
+                    <div className="expertise-disclaimer__tip">Tip: Click a sector above to try example queries.</div>
+                  </div>
                 </div>
               </div>
             </div>

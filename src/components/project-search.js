@@ -657,7 +657,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       {/* No Results State */}
       {query && !isSearching && results.length === 0 && (
         <div className="project-search__no-results" style={{ textAlign: 'center' }}>
-          <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>NOT FOUND</h4>
+          <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>No Results...</h4>
           <p className="text--gray" style={{ fontSize: '1.125rem', marginBottom: '12px' }}>We couldn't find projects for your search.</p>
           <div className="margin-bottom">
             <img

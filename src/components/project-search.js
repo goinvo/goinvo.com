@@ -396,6 +396,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           if (cached.detectedPersona) setDetectedPersona(cached.detectedPersona)
           setError(null)
           setIsSearching(false)
+          // Ensure spotlights visibility is synced even on cache hits
+          try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(cached.results) && cached.results.length > 0 } })) } catch(_) {}
           return
         }
 
@@ -429,6 +431,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       } catch (err) {
         setError('Search is temporarily unavailable. Please try again later.')
         setResults([])
+        // Show spotlights on failure
+        try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch(_) {}
       } finally {
         setIsSearching(false)
       }
@@ -620,7 +624,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                 
                 <div className="ai-section-header">
                   <h4>Recommended for You</h4>
-                  <p>Here are projects that may interest you based on your search:</p>
+                  <p>{isSingleEnhanced ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
                 </div>
                 
                 <div className={`spotlights-grid ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
@@ -697,6 +701,20 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                 </>
               );
             })()}
+          </div>
+
+          {/* View Spotlights CTA */}
+          <div className="container container--justify-center margin-top margin-bottom--double">
+            <a
+              href="#spotlights"
+              className="button button--outline-primary button--padded"
+              onClick={(e) => {
+                try { handleClearSearch() } catch(_) {}
+              }}
+              aria-label="View spotlights and clear search"
+            >
+              VIEW SPOTLIGHTS
+            </a>
           </div>
           
         </div>

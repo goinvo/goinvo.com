@@ -407,6 +407,11 @@
   }
 }
 
+// Ensure anchored scroll to Spotlights accounts for fixed header
+#spotlights {
+  scroll-margin-top: calc(#{$header-height} + 24px);
+}
+
 // Team strips
 .team-marquee {
   height: 512px;

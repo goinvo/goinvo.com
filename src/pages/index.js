@@ -73,6 +73,7 @@ class IndexPage extends Component {
     this._aiSearchHandler = (evt) => {
       try {
         const hasResults = !!(evt && evt.detail && evt.detail.hasResults)
+        // Keep spotlights visible when there are zero results (show no-results + spotlights)
         this.setState({ hideSpotlights: hasResults })
       } catch (_) { }
     }
@@ -80,10 +81,10 @@ class IndexPage extends Component {
       window.addEventListener('ai-search-results', this._aiSearchHandler)
     }
     try {
-      // Prefer session restore flag path; otherwise, show last submitted query as placeholder
+      // Prefer session restore flag path; otherwise, show last saved as input seed (but don't mark as submitted)
       const savedQuery = JSON.parse(localStorage.getItem('ai_search_query') || 'null')
       if (savedQuery && typeof savedQuery === 'string') {
-        this.setState({ homeInputDefault: savedQuery, homeInputValue: savedQuery, lastSubmittedQuery: savedQuery })
+        this.setState({ homeInputDefault: savedQuery, homeInputValue: savedQuery })
       }
     } catch (e) {
       // ignore
@@ -207,13 +208,14 @@ class IndexPage extends Component {
                       placeholder="How can we help your next project?"
                       value={(this.state.homeInputValue || '')}
                       onChange={(e) => this.setState({ homeInputValue: e.target.value })}
+                      onInput={(e) => this.setState({ homeInputValue: e.target.value })}
                       aria-label="Search"
                     />
                     {(() => {
                       const current = (this.state.homeInputValue || '').trim().toLowerCase()
                       const last = (this.state.lastSubmittedQuery || '').trim().toLowerCase()
-                      const isSame = current.length > 0 && current === last
-                      if (isSame) {
+                      const showClear = current.length > 0 && last.length > 0 && current === last
+                      if (showClear) {
                         return (
                           <button
                             type="button"

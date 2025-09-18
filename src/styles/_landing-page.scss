@@ -412,6 +412,21 @@
   scroll-margin-top: calc(#{$header-height} + 24px);
 }
 
+// Simple teal spinner for AI loading state
+.ai-spinner {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(0,0,0,0.12);
+  border-top-color: $color-teal;
+  border-radius: 50%;
+  animation: ai-spin 0.8s linear infinite;
+}
+
+@keyframes ai-spin {
+  to { transform: rotate(360deg); }
+}
+
 // Team strips
 .team-marquee {
   height: 512px;

@@ -740,8 +740,9 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       
       {/* Loading State */}
       {isSearching && !isLoadingAI && (
-        <div className="project-search__loading">
-          <p>🔍 Searching projects...</p>
+        <div className="project-search__loading" style={{ textAlign: 'center', padding: '0 16px' }}>
+          <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>Searching projects...</h4>
+          <div className="ai-spinner" style={{ margin: '8px auto 24px' }} />
         </div>
       )}
       

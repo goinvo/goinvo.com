@@ -305,6 +305,20 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       if (shouldRestore) return
     } catch (_) {}
 
+    // If parent cleared the query, clear local state and restore spotlights
+    if (externalQuery === '') {
+      setQuery('')
+      setResults([])
+      setAiSearchInsight(null)
+      setDetectedPersona(null)
+      setSearchTriggered(false)
+      setExpandedDescriptions(new Set())
+      clearSearchState()
+      try { sessionStorage.removeItem('ai_search_expect_restore') } catch (_) {}
+      try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) {}
+      return
+    }
+
     if (externalQuery && externalQuery.trim().length >= 2) {
       setQuery(externalQuery)
       setResults([])

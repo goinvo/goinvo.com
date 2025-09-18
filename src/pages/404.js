@@ -13,7 +13,15 @@ const NotFoundPage = () => (
         alt="Page not found"
         loading="lazy"
         decoding="async"
-        style={{ width: '100%', height: 'auto', display: 'block', margin: '12px auto 0', clipPath: 'inset(24px 3px 0 0)' }}
+        style={{
+          width: '100%',
+          height: 'auto',
+          display: 'block',
+          margin: '12px auto 0',
+          clipPath: 'inset(24px 3px 0 0)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 93%, transparent)',
+          maskImage: 'linear-gradient(to bottom, black 93%, transparent)'
+        }}
       />
     </div>
   </Layout>

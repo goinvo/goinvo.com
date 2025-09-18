@@ -656,19 +656,19 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
       {/* No Results State */}
       {query && !isSearching && results.length === 0 && (
-        <div className="project-search__no-results">
+        <div className="project-search__no-results" style={{ textAlign: 'center' }}>
+          <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>NOT FOUND</h4>
+          <p className="text--gray" style={{ fontSize: '1.125rem', marginBottom: '12px' }}>We couldn't find projects for your search.</p>
           <div className="margin-bottom">
             <img
               src={`${config.cloudfrontUrl}/images/404/404-ai.png`}
               alt="No results illustration"
-              style={{ maxWidth: '520px', width: '100%', height: 'auto' }}
+              loading="lazy"
+              decoding="async"
+              style={{ width: '100%', height: 'auto', display: 'block', margin: '0 auto', WebkitMaskImage: 'linear-gradient(to bottom, black 93%, transparent)', maskImage: 'linear-gradient(to bottom, black 93%, transparent)', clipPath: 'inset(24px 3px 0 0)' }}
             />
           </div>
-          <h4>No results</h4>
-          <p className="text--gray">Try different or broader keywords.</p>
-          <p>
-            Or explore featured work in <a href="#spotlights">Spotlights</a> below.
-          </p>
+          <p className="text--gray">Try different or broader keywords, or explore featured work in <a href="#spotlights">Spotlights</a> below.</p>
         </div>
       )}
       

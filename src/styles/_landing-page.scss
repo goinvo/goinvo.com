@@ -280,6 +280,8 @@
       font-family: $font-family--sans-serif;
       font-size: 1.125rem;
       font-weight: $font-weight--normal;
+      text-transform: none; // override button uppercase
+      text-align: left; // ensure left alignment
     }
   }
 

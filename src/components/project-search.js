@@ -657,6 +657,13 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       {/* No Results State */}
       {query && !isSearching && results.length === 0 && (
         <div className="project-search__no-results">
+          <div className="margin-bottom">
+            <img
+              src={`${config.cloudfrontUrl}/images/404/404-ai.png`}
+              alt="No results illustration"
+              style={{ maxWidth: '520px', width: '100%', height: 'auto' }}
+            />
+          </div>
           <h4>No results</h4>
           <p className="text--gray">Try different or broader keywords.</p>
           <p>

@@ -187,7 +187,7 @@ class IndexPage extends Component {
                     e.preventDefault()
                     const value = e.target.elements.homeSearch.value
                     if (value && this.setState) {
-                      this.setState({ homeSearchQuery: value })
+                      this.setState({ homeSearchQuery: value, lastSubmittedQuery: value, homeInputValue: value })
                       // Smooth scroll to results
                       setTimeout(() => {
                         const el = document.querySelector('.project-search')
@@ -200,10 +200,33 @@ class IndexPage extends Component {
                       className="expertise-search__input"
                       type="text"
                       placeholder="How can we help your next project?"
-                      defaultValue={this.state.homeInputDefault}
+                      value={(this.state.homeInputValue || '')}
+                      onChange={(e) => this.setState({ homeInputValue: e.target.value })}
                       aria-label="Search"
                     />
-                    <button type="submit" className="expertise-search__button" aria-label="Search">→</button>
+                    {(() => {
+                      const current = (this.state.homeInputValue || '').trim().toLowerCase()
+                      const last = (this.state.lastSubmittedQuery || '').trim().toLowerCase()
+                      const isSame = current.length > 0 && current === last
+                      if (isSame) {
+                        return (
+                          <button
+                            type="button"
+                            className="expertise-search__button"
+                            aria-label="Clear search"
+                            onClick={() => {
+                              this.setState({ homeInputValue: '', homeSearchQuery: '' })
+                              try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) {}
+                            }}
+                          >
+                            ×
+                          </button>
+                        )
+                      }
+                      return (
+                        <button type="submit" className="expertise-search__button" aria-label="Search">→</button>
+                      )
+                    })()}
                   </form>
                 </div>
               </div>

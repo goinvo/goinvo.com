@@ -211,10 +211,13 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         const base = baseResults.find(b => b.slug === er.slug) || er
         return {
           ...base,
-          aiDescription: er.aiDescription || base.aiDescription || null
+          aiDescription: er.aiDescription || base.aiDescription || null,
+          aiRelevant: er.aiRelevant === true
         }
       })
-      return { finalResults: dedupeBySlug(enhanced), aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null }
+      // Only keep items the AI marked as relevant
+      const enhancedRelevant = enhanced.filter(item => item.aiRelevant)
+      return { finalResults: dedupeBySlug(enhancedRelevant), aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null }
     } catch (e) {
       // If enhancement fails, just return base results
       return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null }
@@ -241,28 +244,35 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     return () => { mounted = false }
   }, [])
 
-  // Restore search state on component mount
+  // Restore search state on component mount ONLY if user returned via back navigation from a result
   useEffect(() => {
     if (indexLoaded && !stateRestored) {
-      const savedState = loadSearchState()
-      
-      if (savedState && savedState.searchQuery) {
-        setQuery(savedState.searchQuery)
-        setResults(savedState.searchResults || [])
-        setAiEnabled(savedState.aiEnabled !== undefined ? savedState.aiEnabled : true)
-        setSelectedPersona(savedState.selectedPersona || null)
-        setDetectedPersona(savedState.detectedPersona || null)
-        setAiSearchInsight(savedState.aiSearchInsight || null)
-        
-        // Scroll to search area after a brief delay
-        setTimeout(() => {
-          const searchElement = document.querySelector('.project-search')
-          if (searchElement) {
-            searchElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          }
-        }, 100)
+      let shouldRestore = false
+      try {
+        shouldRestore = sessionStorage.getItem('ai_search_expect_restore') === '1'
+      } catch (_) {}
+
+      if (shouldRestore) {
+        const savedState = loadSearchState()
+        if (savedState && savedState.searchQuery) {
+          setQuery(savedState.searchQuery)
+          setResults(savedState.searchResults || [])
+          setAiEnabled(savedState.aiEnabled !== undefined ? savedState.aiEnabled : true)
+          setSelectedPersona(savedState.selectedPersona || null)
+          setDetectedPersona(savedState.detectedPersona || null)
+          setAiSearchInsight(savedState.aiSearchInsight || null)
+          // Clear flag so we do not auto-restore on fresh visits
+          try { sessionStorage.removeItem('ai_search_expect_restore') } catch (_) {}
+          // Scroll to search area after a brief delay
+          setTimeout(() => {
+            const searchElement = document.querySelector('.project-search')
+            if (searchElement) {
+              searchElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          }, 100)
+        }
       }
-      
+
       setStateRestored(true)
     }
   }, [indexLoaded, loadSearchState])
@@ -379,6 +389,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         if (Array.isArray(finalResults) && finalResults.length > 0) {
           writeCache(cacheKey, { results: finalResults, insight: aiInsight, detectedPersona: detectedPersonaOut })
         }
+        // Notify homepage to hide spotlights only when we truly have results
         try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(finalResults) && finalResults.length > 0 } })) } catch(_) {}
         setSuggestions([])
         setSearchAnalysis(null)
@@ -482,6 +493,21 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     })
   }
 
+  // When navigating to a result, mark that we should restore on back and persist current state
+  const handleResultNavigate = useCallback(() => {
+    try {
+      sessionStorage.setItem('ai_search_expect_restore', '1')
+      saveSearchState({
+        searchQuery: query,
+        searchResults: results,
+        aiEnabled,
+        selectedPersona,
+        detectedPersona,
+        aiSearchInsight
+      })
+    } catch (_) {}
+  }, [query, results, aiEnabled, selectedPersona, detectedPersona, aiSearchInsight, saveSearchState])
+
   // Quick filter buttons for common searches
   const quickFilters = [
     { label: 'AI/NLP tools', query: 'NLP artificial intelligence' },
@@ -572,7 +598,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                 
                 <div className="ai-section-header">
                   <h4>Recommended for You</h4>
-                  <p>These projects are most relevant to your search, with AI-generated insights:</p>
+                  <p>Here are projects that may interest you based on your search:</p>
                 </div>
                 
                 <div className={`spotlights-grid ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
@@ -580,6 +606,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                     <Card
                       key={`ai-${project.slug}`}
                       link={`/work/${project.slug}/`}
+                      onClick={handleResultNavigate}
                       noShadow
                     >
                       <ImageBlock
@@ -621,7 +648,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                   
                   <div className="spotlights-grid ai-results-grid">
                     {remainingResults.map((project) => (
-                      <Card key={project.slug} link={`/work/${project.slug}/`} noShadow>
+                      <Card key={project.slug} link={`/work/${project.slug}/`} onClick={handleResultNavigate} noShadow>
                         <ImageBlock
                           title={project.title}
                           image={project.image}

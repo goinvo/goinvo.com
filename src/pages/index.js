@@ -139,7 +139,8 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      this.setState({ homeSearchQuery: 'healthcare software', aiEnabled: true }, () => {
+                      const value = 'healthcare software'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -153,7 +154,8 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      this.setState({ homeSearchQuery: 'public sector service design', aiEnabled: true }, () => {
+                      const value = 'public sector service design'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -167,7 +169,8 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      this.setState({ homeSearchQuery: 'AI LLM NLP healthcare', aiEnabled: true }, () => {
+                      const value = 'AI LLM NLP healthcare'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })

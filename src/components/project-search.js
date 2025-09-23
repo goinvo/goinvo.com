@@ -86,6 +86,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const [stateRestored, setStateRestored] = useState(false)
   const [searchTriggered, setSearchTriggered] = useState(false)
   const [expandedDescriptions, setExpandedDescriptions] = useState(new Set())
+  const [usedFallback, setUsedFallback] = useState(false)
   
   // Example search queries to rotate through
   const placeholderExamples = [
@@ -162,6 +163,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag, personaKey }) => {
     // 1) Server-side selection (or keyword fallback)
     let baseResults = []
+    let selectionFallback = false
     try {
       const selection = await callFunction('ai-select', {
         query: queryText,
@@ -171,6 +173,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       baseResults = dedupeBySlug(selection.results || [])
     } catch (e) {
       // Fallback to client-side semantic search
+      selectionFallback = true
       baseResults = dedupeBySlug(
         performClientSideSemanticSearch(queryText, allProjects || [])
         .map(r => ({
@@ -187,7 +190,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
     // If AI enhancement disabled, return base results
     if (!aiEnabledFlag) {
-      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback }
     }
 
     // 2) Persona enhancement via ai-search
@@ -217,10 +220,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       })
       // Only keep items the AI marked as relevant
       const enhancedRelevant = enhanced.filter(item => item.aiRelevant)
-      return { finalResults: dedupeBySlug(enhancedRelevant), aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null }
+      return { finalResults: dedupeBySlug(enhancedRelevant), aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null, fallbackUsed: selectionFallback }
     } catch (e) {
       // If enhancement fails, just return base results
-      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback }
     }
   }, [])
   
@@ -401,7 +404,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           return
         }
 
-        const { finalResults, aiInsight, detectedPersonaOut } = await performAISearch({
+        const { finalResults, aiInsight, detectedPersonaOut, fallbackUsed } = await performAISearch({
           queryText: query,
           allProjects,
           aiEnabledFlag: effectiveAiEnabled,
@@ -409,6 +412,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         })
 
         setResults(finalResults)
+        setUsedFallback(!!fallbackUsed)
         // Cache successful results to reduce API usage for repeated queries
         if (Array.isArray(finalResults) && finalResults.length > 0) {
           writeCache(cacheKey, { results: finalResults, insight: aiInsight, detectedPersona: detectedPersonaOut })
@@ -608,6 +612,12 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       {/* Search Results */}
       {query && !isSearching && results.length > 0 && (
         <div className="project-search__results">
+          {/* Fallback banner */}
+          {usedFallback && (
+            <div className="project-search__fallback" style={{ background: '#f6f9fa', border: '1px solid #e3eef3', color: '#24434d', padding: '8px 12px', borderRadius: '6px', marginBottom: '16px' }}>
+              Showing results from local fallback search while AI services are unavailable.
+            </div>
+          )}
           
           {/* AI-Enhanced Results Section */}
           {aiEnabled && results.some(project => project.aiDescription) && (() => {
@@ -623,7 +633,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                 <div className="ai-enhanced-background"></div>
                 
                 <div className="ai-section-header">
-                  <h4>Recommended for You</h4>
+                  <h2 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>Recommended for You</h2>
                   <p>{isSingleEnhanced ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
                 </div>
                 
@@ -666,9 +676,12 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
               const remainingCount = remainingResults.length;
 
+              // If we used fallback search, still show the header even without AI descriptions
+              const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback
+
               return (
                 <>
-                  {aiEnabled && aiEnhancedSlugs.length > 0 && (
+                  {showHeader && (
                     <div className="all-results-header">
                       <h4>All Results</h4>
                       <p>Browse all {remainingCount} projects that match your search:</p>
@@ -741,7 +754,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       {/* Loading State */}
       {isSearching && !isLoadingAI && (
         <div className="project-search__loading" style={{ textAlign: 'center', padding: '0 16px' }}>
-          <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>Searching projects...</h4>
+          <h4 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>Searching projects...</h4>
           <div className="ai-spinner" style={{ margin: '8px auto 24px' }} />
         </div>
       )}

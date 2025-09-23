@@ -359,17 +359,16 @@ class IndexPage extends Component {
           </div>
         </div>
         <div className="max-width content-padding pad-vertical--double--only-lg used-everyday">
-          <Divider animated className="hidden--lg" />
           <div className="pure-g margin-vertical--double" style={{ alignItems: 'flex-start' }}>
             <div className="pure-u-1 pure-u-lg-1-3">
-              <h2 className="header--xl margin--none pad-right--double">
+              <h2 className="header--xl margin--bottom pad-right--double">
                 Our designs are used every day
                 <span className="text--serif text--primary">.</span>
               </h2>
             </div>
             <div className="pure-u-1 pure-u-lg-2-3">
               <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
                   <p className="margin--none pad-right--only-lg">
                     <span className="text--bold">160 million US residents</span>
                     <br />
@@ -380,7 +379,7 @@ class IndexPage extends Component {
                     <br />
                   </p>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
                   <p className="margin--none pad-left--only-lg">
                     <span className="text--bold">
                       1M+ Massachusetts residents
@@ -393,7 +392,7 @@ class IndexPage extends Component {
                     <Link to="/work/mass-snap">Read the case study</Link>
                   </p>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
                   <p className="margin--none pad-right--only-lg">
                     <span className="text--bold">Wikipedia</span>
                     <br />
@@ -411,7 +410,7 @@ class IndexPage extends Component {
                     </a>
                   </p>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
                   <p className="margin--none pad-left--only-lg">
                     <span className="text--bold">1 billion prescriptions</span>
                     <br />
@@ -424,8 +423,8 @@ class IndexPage extends Component {
               </div>
             </div>
           </div>
-        </div>
-        {/* Testimonial removed per request */}
+        </div> 
+        <Divider animated className="" />
         <div className="max-width content-padding pad-bottom--double">
           <div className="container container--justify-center margin-vertical">
             <h2 className="header--xl">

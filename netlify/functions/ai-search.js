@@ -18,10 +18,12 @@ const MAX_REQUESTS_PER_WINDOW = 3; // Max 3 requests per minute per IP
 const DAILY_LIMIT_PER_IP = 50; // Max 50 requests per day per IP
 const dailyUsage = new Map();
 
-// Initialize OpenAI client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
+// Environment flags
+const HAS_OPENAI_KEY = !!process.env.OPENAI_API_KEY
+const IS_NETLIFY_PREVIEW = (process.env.CONTEXT === 'deploy-preview') || (!!process.env.DEPLOY_PRIME_URL && String(process.env.DEPLOY_PRIME_URL).includes('deploy-preview'))
+
+// Initialize OpenAI client lazily/safely
+const openai = HAS_OPENAI_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null
 
 // Preset buyer personas with optimized prompts
 const BUYER_PERSONAS = {
@@ -78,8 +80,13 @@ async function detectPersona(query) {
     return bestMatch;
   }
   
+  // Skip OpenAI call in previews or when missing key
+  if (IS_NETLIFY_PREVIEW || !HAS_OPENAI_KEY || !openai) {
+    return bestMatch;
+  }
+
   try {
-    const response = await openai.chat.completions.create({
+    const response = await withTimeout(openai.chat.completions.create({
       model: 'gpt-4.1-nano',
       messages: [
         {
@@ -100,7 +107,7 @@ Respond with ONLY the persona key (e.g., "healthcare_executive").`
       ],
       temperature: 0.1, // Lower temperature for more deterministic results
       max_tokens: 15 // Reduced from 20
-    });
+    }), 8000, 'persona-detect-timeout')
     
     const detectedPersona = response.choices[0].message.content.trim().toLowerCase();
     if (BUYER_PERSONAS[detectedPersona]) {
@@ -167,6 +174,15 @@ async function getCachedPresetResponse(presetKey, query, projects) {
   });
   
   return response;
+}
+
+// Promise timeout helper
+function withTimeout(promise, ms, label) {
+  let timer
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error(`${label || 'timeout'} after ${ms}ms`)), ms)
+  })
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer))
 }
 
 // Generate AI response using OpenAI — returns JSON with per-project relevance flag
@@ -243,8 +259,13 @@ Format your response as JSON:
   "searchInsight": "Brief insight about what the user is looking for"
 }`;
 
+  // Skip OpenAI call in previews or when missing key
+  if (IS_NETLIFY_PREVIEW || !HAS_OPENAI_KEY || !openai) {
+    return { projectDescriptions: [], searchInsight: null }
+  }
+
   try {
-    const response = await openai.chat.completions.create({
+    const response = await withTimeout(openai.chat.completions.create({
       model: 'gpt-4.1',
       messages: [
         { role: 'system', content: systemPrompt },
@@ -253,7 +274,7 @@ Format your response as JSON:
       temperature: 0.2, // Reduced from 0.3 for more consistent responses
       max_tokens: 600, // Reduced from 800
       response_format: { type: "json_object" }
-    });
+    }), 9000, 'ai-search-timeout')
     
     return JSON.parse(response.choices[0].message.content);
   } catch (error) {
@@ -274,11 +295,22 @@ exports.handler = async (event, context) => {
     return jsonResponse(405, { error: 'Method not allowed' })
   }
   
-  // Check for API key
-  if (!process.env.OPENAI_API_KEY) {
-    return jsonResponse(503, { error: 'AI service not configured' })
+  // Parse request body early
+  let parsed = {}
+  try { parsed = JSON.parse(event.body || '{}') } catch (_) {}
+
+  const { query, projects, preset, useAI, autoDetectPersona } = parsed;
+
+  // If previews or missing API key, short-circuit with non-AI response to avoid 502s
+  if (IS_NETLIFY_PREVIEW || !HAS_OPENAI_KEY || !openai) {
+    // Validate input shape minimally
+    if (!query || !projects || !Array.isArray(projects)) {
+      return jsonResponse(200, { results: [], aiGenerated: false })
+    }
+    // Return projects as-is; client will display without AI descriptions
+    return jsonResponse(200, { results: projects, aiGenerated: false, disabled: IS_NETLIFY_PREVIEW ? 'preview' : 'no-api-key' })
   }
-  
+
   // Get client IP for rate limiting
   const ip = event.headers['x-forwarded-for'] || event.headers['client-ip'] || 'unknown';
   
@@ -291,7 +323,6 @@ exports.handler = async (event, context) => {
   }
   
   try {
-    const { query, projects, preset, useAI, autoDetectPersona } = JSON.parse(event.body);
     
     // Validate input
     if (!query || !projects || !Array.isArray(projects)) {

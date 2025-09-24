@@ -87,6 +87,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const [searchTriggered, setSearchTriggered] = useState(false)
   const [expandedDescriptions, setExpandedDescriptions] = useState(new Set())
   const [usedFallback, setUsedFallback] = useState(false)
+  const [fallbackReason, setFallbackReason] = useState(null)
   
   // Example search queries to rotate through
   const placeholderExamples = [
@@ -218,13 +219,46 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           aiRelevant: er.aiRelevant === true
         }
       })
-      // Only keep items the AI marked as relevant
-      const enhancedRelevant = enhanced.filter(item => item.aiRelevant)
-      return { finalResults: dedupeBySlug(enhancedRelevant), aiInsight: ai.searchInsight || null, detectedPersonaOut: ai.detectedPersona || null, fallbackUsed: selectionFallback }
+      const aiGenerated = ai && ai.aiGenerated === true
+      // If AI actually generated relevance flags, keep only those marked relevant.
+      // In previews or when AI is disabled, keep the base results as-is.
+      const enhancedRelevant = aiGenerated ? enhanced.filter(item => item.aiRelevant) : baseResults
+      return {
+        finalResults: dedupeBySlug(enhancedRelevant),
+        aiInsight: ai.searchInsight || null,
+        detectedPersonaOut: ai.detectedPersona || null,
+        // Treat missing AI generation as a fallback condition when AI is enabled
+        fallbackUsed: selectionFallback || (aiEnabledFlag && !aiGenerated),
+        fallbackReason: aiGenerated ? null : (ai && ai.disabled ? ai.disabled : 'ai-unavailable')
+      }
     } catch (e) {
       // If enhancement fails, just return base results
-      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback, fallbackReason: 'ai-error' }
     }
+  }, [])
+
+  // Very simple backup matching to avoid empty result sets in previews
+  const quickKeywordFallback = useCallback((q, allProjects) => {
+    const text = String(q || '').toLowerCase().trim()
+    if (!text) return []
+    const words = text.split(/\s+/).filter(Boolean)
+    const scored = (allProjects || []).map(p => {
+      const hay = [p.title, p.caption, ...(p.categories || []), ...(p.keywords || [])].filter(Boolean).join(' ').toLowerCase()
+      let score = 0
+      words.forEach(w => { if (hay.includes(w)) score += 1 })
+      return { p, score }
+    })
+    scored.sort((a, b) => b.score - a.score)
+    const top = scored.filter(s => s.score > 0).slice(0, 12)
+    const list = (top.length > 0 ? top : scored.slice(0, 8)).map(({ p, score }) => ({
+      slug: p.slug,
+      title: p.title,
+      caption: p.caption,
+      categories: p.categories || [],
+      image: p.image || '',
+      score
+    }))
+    return dedupeBySlug(list)
   }, [])
   
   // Load search index if available
@@ -404,15 +438,29 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           return
         }
 
-        const { finalResults, aiInsight, detectedPersonaOut, fallbackUsed } = await performAISearch({
+        const { finalResults, aiInsight, detectedPersonaOut, fallbackUsed, fallbackReason } = await performAISearch({
           queryText: query,
           allProjects,
           aiEnabledFlag: effectiveAiEnabled,
           personaKey: effectiveSelectedPersona
         })
 
-        setResults(finalResults)
-        setUsedFallback(!!fallbackUsed)
+        let outResults = finalResults
+        let usedFb = !!fallbackUsed
+        let fbReason = fallbackReason || null
+
+        // If we somehow have no results, try a simple local keyword fallback
+        if ((!outResults || outResults.length === 0) && Array.isArray(allProjects) && allProjects.length > 0) {
+          outResults = quickKeywordFallback(query, allProjects)
+          if (outResults && outResults.length > 0) {
+            usedFb = true
+            fbReason = fbReason || 'no-results'
+          }
+        }
+
+        setResults(outResults)
+        setUsedFallback(usedFb)
+        setFallbackReason(fbReason)
         // Cache successful results to reduce API usage for repeated queries
         if (Array.isArray(finalResults) && finalResults.length > 0) {
           writeCache(cacheKey, { results: finalResults, insight: aiInsight, detectedPersona: detectedPersonaOut })

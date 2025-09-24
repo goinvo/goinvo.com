@@ -662,8 +662,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         <div className="project-search__results">
           {/* Fallback banner */}
           {usedFallback && (
-            <div className="project-search__fallback" style={{ background: '#f6f9fa', border: '1px solid #e3eef3', color: '#24434d', padding: '8px 12px', borderRadius: '6px', marginBottom: '16px' }}>
-              Showing results from local fallback search while AI services are unavailable.
+            <div className="project-search__fallback" style={{ background: '#fff7e6', border: '1px solid #ffd591', color: '#8a4b00', padding: '10px 12px', borderRadius: '6px', marginBottom: '16px' }}>
+              <strong>AI search unavailable.</strong> Showing results without AI enhancements{fallbackReason ? ` (${fallbackReason})` : ''}.
             </div>
           )}
           
@@ -726,12 +726,13 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
               // If we used fallback search, still show the header even without AI descriptions
               const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback
+              const headerTitle = usedFallback ? 'Here are your results' : 'All Results'
 
               return (
                 <>
                   {showHeader && (
                     <div className="all-results-header">
-                      <h4>All Results</h4>
+                      <h4>{headerTitle}</h4>
                       <p>Browse all {remainingCount} projects that match your search:</p>
                     </div>
                   )}

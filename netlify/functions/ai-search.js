@@ -21,6 +21,7 @@ const dailyUsage = new Map();
 // Environment flags
 const HAS_OPENAI_KEY = !!process.env.OPENAI_API_KEY
 const IS_NETLIFY_PREVIEW = (process.env.CONTEXT === 'deploy-preview') || (!!process.env.DEPLOY_PRIME_URL && String(process.env.DEPLOY_PRIME_URL).includes('deploy-preview'))
+const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toLowerCase() === 'true') || (process.env.ALLOW_AI_IN_PREVIEWS === '1')
 
 // Initialize OpenAI client lazily/safely
 const openai = HAS_OPENAI_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null
@@ -80,8 +81,8 @@ async function detectPersona(query) {
     return bestMatch;
   }
   
-  // Skip OpenAI call in previews or when missing key
-  if (IS_NETLIFY_PREVIEW || !HAS_OPENAI_KEY || !openai) {
+  // Skip OpenAI call when missing key or previews without explicit allow
+  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
     return bestMatch;
   }
 
@@ -259,8 +260,8 @@ Format your response as JSON:
   "searchInsight": "Brief insight about what the user is looking for"
 }`;
 
-  // Skip OpenAI call in previews or when missing key
-  if (IS_NETLIFY_PREVIEW || !HAS_OPENAI_KEY || !openai) {
+  // Skip OpenAI call when missing key or previews without explicit allow
+  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
     return { projectDescriptions: [], searchInsight: null }
   }
 
@@ -301,14 +302,14 @@ exports.handler = async (event, context) => {
 
   const { query, projects, preset, useAI, autoDetectPersona } = parsed;
 
-  // If previews or missing API key, short-circuit with non-AI response to avoid 502s
-  if (IS_NETLIFY_PREVIEW || !HAS_OPENAI_KEY || !openai) {
+  // If missing API key, or previews without allow flag, short-circuit with non-AI response
+  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
     // Validate input shape minimally
     if (!query || !projects || !Array.isArray(projects)) {
       return jsonResponse(200, { results: [], aiGenerated: false })
     }
     // Return projects as-is; client will display without AI descriptions
-    return jsonResponse(200, { results: projects, aiGenerated: false, disabled: IS_NETLIFY_PREVIEW ? 'preview' : 'no-api-key' })
+    return jsonResponse(200, { results: projects, aiGenerated: false, disabled: (!HAS_OPENAI_KEY || !openai) ? 'no-api-key' : (IS_NETLIFY_PREVIEW ? 'preview' : 'disabled') })
   }
 
   // Get client IP for rate limiting

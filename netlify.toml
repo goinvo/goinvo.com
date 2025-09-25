@@ -23,3 +23,7 @@
   framework = "gatsby"
   targetPort = 8000
   port = 8888
+
+# Enable AI in deploy previews
+[context.deploy-preview.environment]
+  ALLOW_AI_IN_PREVIEWS = "true"

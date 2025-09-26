@@ -373,12 +373,14 @@ class IndexPage extends Component {
               <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
                 {TEAM.slice(0, 5).map(member => (
                   <div key={`top-${member.name}`} className="team-marquee__tile">
-                    <Image
-                      src={member.image}
-                      alt=""
-                      aria-hidden="true"
-                      className="team-marquee__img"
-                    />
+                    <Link to="/about">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </Link>
                   </div>
                 ))}
               </Marquee>
@@ -405,12 +407,14 @@ class IndexPage extends Component {
               <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
                 {TEAM.slice(5, 10).map(member => (
                   <div key={`bottom-${member.name}`} className="team-marquee__tile">
-                    <Image
-                      src={member.image}
-                      alt=""
-                      aria-hidden="true"
-                      className="team-marquee__img"
-                    />
+                    <Link to="/about">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </Link>
                   </div>
                 ))}
               </Marquee>

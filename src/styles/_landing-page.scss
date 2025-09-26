@@ -366,6 +366,12 @@
   }
 }
 
+.spotlight--span-3 {
+  @include mq($from: large) {
+    grid-column: span 3;
+  }
+}
+
 .spotlight--span-4 {
   @include mq($from: large) {
     grid-column: 1 / -1;

@@ -224,7 +224,13 @@ class IndexPage extends Component {
                   'inspired-ehrs': 2,
                   'prior-auth': 2,
                   'precision-autism': 2,
-                  'mass-snap': 4
+                  'mass-snap': 4,
+                  // Additional items requested
+                  'maya-ehr': 2,
+                  'national-cancer-navigation': 2,
+                  'national-healthcare-stories': 2,
+                  '3m-coderyte': 2,
+                  'augmented-clinical-decision-support': 2
                 }
 
                 const getWidthForItem = (item) => {
@@ -235,27 +241,51 @@ class IndexPage extends Component {
 
                 const spanClassForWidth = (w) => {
                   if (w >= 4) return 'spotlight--span-4'
+                  if (w >= 3) return 'spotlight--span-3'
                   if (w >= 2) return 'spotlight--span-2'
                   return ''
+                }
+
+                // Known animated banners per project slug
+                const VIDEO_BANNERS = {
+                  'visual-storytelling-with-genai': '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4',
+                  'determinants-of-health': '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4',
+                  'hgraph': '/images/homepage/animated%20covers/hgraph_trimmed.mp4',
+                  'precision-autism': '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4'
+                }
+
+                const getVideoOptsForItem = (item) => {
+                  if (!item) return {}
+                  const key = item.slug || item.id
+                  const src = VIDEO_BANNERS[key]
+                  return src ? { useVideo: true, videoSrc: src } : {}
                 }
 
                 // Greedy packing to fill 4-unit rows
                 const layoutWithGreedy = (items) => {
                   const remaining = [...items]
-                  const output = []
+                  const output = [] // { item, width }
                   let rowRemaining = 4
+                  let rowStartIdx = 0 // index in output where current row starts
+
                   while (remaining.length > 0) {
-                    // Try next item
                     const candidate = remaining[0]
                     const w = getWidthForItem(candidate)
+
+                    // If fits, place it
                     if (w <= rowRemaining) {
-                      output.push({ item: candidate, className: spanClassForWidth(w) })
+                      output.push({ item: candidate, width: w })
                       remaining.shift()
                       rowRemaining -= w
-                      if (rowRemaining === 0) rowRemaining = 4
+                      if (rowRemaining === 0) {
+                        // row complete
+                        rowRemaining = 4
+                        rowStartIdx = output.length
+                      }
                       continue
                     }
-                    // Find later item that fits current row
+
+                    // Look ahead for any that fits
                     let foundIdx = -1
                     for (let i = 1; i < remaining.length; i++) {
                       const wi = getWidthForItem(remaining[i])
@@ -264,15 +294,38 @@ class IndexPage extends Component {
                     if (foundIdx !== -1) {
                       const fit = remaining.splice(foundIdx, 1)[0]
                       const wf = getWidthForItem(fit)
-                      output.push({ item: fit, className: spanClassForWidth(wf) })
+                      output.push({ item: fit, width: wf })
                       rowRemaining -= wf
-                      if (rowRemaining === 0) rowRemaining = 4
+                      if (rowRemaining === 0) {
+                        rowRemaining = 4
+                        rowStartIdx = output.length
+                      }
                       continue
                     }
-                    // Start a new row if nothing fits
+
+                    // Nothing fits: expand the last item in the current row to fill remainder
+                    if (output.length > rowStartIdx) {
+                      const lastIdx = output.length - 1
+                      output[lastIdx] = {
+                        item: output[lastIdx].item,
+                        width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+                      }
+                    }
+                    // Start a new row
                     rowRemaining = 4
+                    rowStartIdx = output.length
                   }
-                  return output
+
+                  // If last row isn't full, expand the last item of the row to fill remainder
+                  if (rowRemaining !== 4 && output.length > rowStartIdx) {
+                    const lastIdx = output.length - 1
+                    output[lastIdx] = {
+                      item: output[lastIdx].item,
+                      width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+                    }
+                  }
+
+                  return output.map(({ item, width }) => ({ item, className: spanClassForWidth(width || 1) }))
                 }
                 const normalizedCategory = (this.state.selectedCategoryFilter || '').toString().trim().toLowerCase()
                 const matchesCategory = (project) => {
@@ -361,10 +414,14 @@ class IndexPage extends Component {
                 // If a category filter is selected, show items from the entire work pool
                 if (normalizedCategory) {
                   const filteredProjects = (this.state.allProjects || []).filter(matchesCategory)
-                  const arranged = layoutWithGreedy(filteredProjects).slice(0, 12)
+                  const firstPage = filteredProjects.slice(0, 12)
+                  const arranged = layoutWithGreedy(firstPage)
                   return (
                     <div className="spotlights-grid spotlights-grid--four">
-                      {arranged.map(({ item, className }, idx) => renderCard(item, { className }))}
+                      {arranged.map(({ item, className }, idx) => {
+                        const vid = getVideoOptsForItem(item)
+                        return renderCard(item, { className, ...vid })
+                      })}
                     </div>
                   )
                 }

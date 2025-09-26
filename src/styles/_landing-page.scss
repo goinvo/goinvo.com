@@ -430,13 +430,13 @@
 
 // Team strips
 .team-marquee {
-  height: 512px;
+  height: 300px;
   overflow: hidden;
 }
 
 .team-marquee__img {
-  width: 512px;
-  height: 512px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   filter: grayscale(100%);
   margin-right: 0;
@@ -444,8 +444,8 @@
 
 .team-marquee__tile {
   display: inline-block;
-  width: 512px;
-  height: 512px;
+  width: 300px;
+  height: 300px;
   margin-right: 8px;
 }
 

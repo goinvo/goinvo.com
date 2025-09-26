@@ -103,6 +103,8 @@ class IndexPage extends Component {
           className="hero--higher-text-contrast"
           link="/work/"
           image={this.state.frontmatter.heroImage}
+          button={frontmatter.heroButtonText}
+          buttonLink="/work/"
           isLarge
           position="top center"
         >

@@ -3,7 +3,36 @@ import features from './data/features.json'
 import caseStudiesOrder from './data/case-study-order.json'
 
 export function mediaUrl(path) {
-  return `${config.cloudfrontUrl}${path}`
+  if (!path) return ''
+  // If absolute URL, return as-is
+  if (typeof path === 'string' && (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('//'))) {
+    return path
+  }
+  // Join with CloudFront if configured; otherwise return relative
+  if (config.cloudfrontUrl) {
+    const base = config.cloudfrontUrl.replace(/\/$/, '')
+    const p = String(path).startsWith('/') ? path : `/${path}`
+    return `${base}${p}`
+  }
+  return path
+}
+
+// Helper function to ensure proper URL formatting for images
+export function normalizeImageUrl(src) {
+  if (!src) return ''
+  
+  // If it's already a full URL, return as-is
+  if (src.startsWith('http://') || src.startsWith('https://')) {
+    return src
+  }
+  
+  // If it starts with //, add https:
+  if (src.startsWith('//')) {
+    return `https:${src}`
+  }
+  
+  // For relative paths, use mediaUrl
+  return mediaUrl(src)
 }
 
 export function formatDate(date) {

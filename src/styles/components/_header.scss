@@ -1,5 +1,4 @@
 .header-nav {
-  @extend .shadow--header;
   $parent: &;
   position: fixed;
   width: 100%;
@@ -20,6 +19,7 @@
     font-size: $font-size--md;
     padding: 0 $spacing;
     text-decoration: none;
+    color: $color-black;
 
     &--active {
       &:after {
@@ -74,6 +74,44 @@
       pointer-events: auto;
     }
   }
+}
+
+// Transparent variant for homepage
+.header-nav--transparent {
+  background-color: transparent;
+
+  // Subtle top-to-bottom gradient to improve white text legibility on imagery
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparentize($color-black, 0.65), transparent);
+  }
+
+  .header-nav__link {
+    color: $color-white;
+  }
+
+  .header-nav__logo {
+    fill: $color-white;
+  }
+
+  .header-nav__hamburger svg {
+    fill: $color-white;
+  }
+}
+
+// Switch to solid styling after hero/search
+.header-nav--solid {
+  background-color: $color-white;
+
+  .header-nav__link { color: $color-black; }
+  .header-nav__logo { fill: $color-gray; }
+  .header-nav__hamburger svg { fill: $color-primary; }
 }
 
 .mobile-nav-overlay {

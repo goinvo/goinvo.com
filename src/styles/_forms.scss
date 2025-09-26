@@ -25,7 +25,7 @@
 }
 
 .card.form-card {
-  background: #F3F3FE;
+  background: transparent;
 }
 .form-header {
     padding-top: 1px;
@@ -35,5 +35,24 @@
   }
   &.contact-form-header {
     margin-left: 23px;
+  }
+}
+
+// Contact form enhancements
+.form.contact-form {
+  .label {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .form-control {
+    border-radius: 6px;
+    border: 1px solid $color-gray--light;
+    background: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BackgroundImage from './background-image'
+import Image from './image'
 
 import CATEGORIES_LIST from '../data/categories.json'
 
@@ -31,24 +31,32 @@ class ImageBlock extends Component {
       position,
       isSmall = false,
       hoverable = false,
+      workCard = false,
+      objectFit = 'cover',
     } = this.props
 
     return (
       <div
-        className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className ? className : ''
+        className={`image-block ${hoverable ? 'image-block--hoverable' : ''} ${className || ''
           }`}
       >
         <div
           className={`image-block__image-container ${isSmall ? 'image-block__image-container--small' : ''
-            }`}
+            } ${workCard ? 'image-block__image-container--work-card' : ''}`}
+          style={{ height: '260px' }}
         >
-          <BackgroundImage
+          <Image
             src={image}
-            externalImage={externalImage}
-            sizes={sizes}
+            alt={alt}
             className="image-block__image"
-            position={position}
-            alt={alt || ''}
+            sizes={sizes}
+            externalImage={externalImage}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: objectFit,
+              objectPosition: position || 'center center'
+            }}
           />
         </div>
         <div className="image-block__text">

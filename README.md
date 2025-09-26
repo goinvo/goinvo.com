@@ -113,6 +113,35 @@ This project uses [prettier](https://github.com/prettier/prettier) to format cod
 
 You may also wish to make things easier by installing and using [EditorConfig](https://editorconfig.org/), which will apply many of the same rules from prettier directly in your code editor. This helps keep things like indentation in check as you code. If you use [Atom](https://atom.io/), there is an [Atom EditorConfig package](https://atom.io/packages/editorconfig) available.
 
+## Troubleshooting
+
+### Webpack chunk loading errors
+
+If you encounter an error like "Loading chunk component---src-pages-index-js failed" or similar webpack chunk loading errors, this is usually caused by corrupted build cache. This is a common issue that can occur after making changes to dependencies or file structures.
+
+To fix this issue:
+
+1. Stop the development server (Ctrl+C or Cmd+C)
+2. Clear the Gatsby cache:
+   ```bash
+   $ yarn clean
+   ```
+   or
+   ```bash
+   $ npm run clean
+   ```
+3. Restart the development server:
+   ```bash
+   $ yarn develop
+   ```
+
+This will delete the `.cache` and `public` directories and rebuild everything from scratch. The page should then load without chunk loading errors.
+
+If the issue persists after clearing the cache, you can also try:
+- Clearing your browser cache and doing a hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
+- Deleting `node_modules` and running `yarn install` again
+- Checking for any syntax errors in recently modified files
+
 ## Working with images
 
 **Do not add or commit images directly to this project!**
@@ -221,6 +250,109 @@ import Hamburger from '../assets/images/icon-hamburger.inline.svg'
 ```
 
 Now we can use CSS to style `icon` and `icon-hamburger`, like controlling the size or `fill` color of the icon, etc.
+
+## Image Optimization
+
+This project uses a unified, optimized image system to improve performance and user experience. All image rendering is handled through a single `<Image />` component that automatically provides the best optimization strategy.
+
+### The Unified Image Component
+
+The project provides a single, intuitive image component in `src/components/image.js`:
+
+#### Basic Usage
+```js
+import Image from '../components/image'
+
+// Standard lazy-loaded image (default)
+<Image
+  src="/images/about/team-photo.jpg"
+  alt="Team photo"
+  className="image--max-width"
+  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
+/>
+
+// Above-the-fold image with high priority loading
+<Image
+  src="/images/homepage/hero-image.jpg"
+  alt="Hero image"
+  className="image--max-width"
+  aboveTheFold={true}
+/>
+```
+
+#### Image Component Props
+
+- **`src`** (required): Path to the image
+- **`alt`** (required): Descriptive alt text for accessibility
+- **`aboveTheFold`** (optional): Set to `true` for images that should load immediately (default: `false`)
+- **`className`** (optional): CSS classes to apply
+- **`sizes`** (optional): Responsive image sizes configuration
+- **`externalImage`** (optional): Set to `true` for external URLs
+- **`placeholder`** (optional): Enable loading placeholder (default: `true`)
+- **`placeholderColor`** (optional): Placeholder color (default: `#f0f0f0`)
+
+### Automatic Smart Behavior
+
+The unified component automatically:
+
+- **Detects image type**: Local vs external, SVG vs raster images
+- **Chooses optimal loading**: Eager loading for critical images, lazy loading otherwise
+- **Generates responsive images**: Creates multiple sizes with appropriate srcsets
+- **Provides loading placeholders**: Shows dominant color or custom placeholder while loading
+- **Uses configuration**: Pulls responsive breakpoints and dimensions from `config.js`
+
+### Performance Benefits
+
+The optimized image system provides:
+
+- **Dominant color placeholders** for instant visual feedback
+- **Lazy loading** for better initial page load performance
+- **Proper priority handling** (critical vs lazy loading)
+- **Responsive image sizing** with automatic srcset generation
+- **Better LCP (Largest Contentful Paint)** scores
+- **Automatic format optimization** (WebP, AVIF when supported)
+
+### Usage Guidelines
+
+**For above-the-fold images** (hero images, critical content):
+```js
+<Image 
+  src="/images/homepage/hero.jpg" 
+  alt="Hero image" 
+  aboveTheFold={true} 
+/>
+```
+
+**For below-the-fold images** (content images, galleries):
+```js
+<Image 
+  src="/images/content/gallery.jpg" 
+  alt="Gallery image" 
+/>
+```
+
+**For external images**:
+```js
+<Image 
+  src="https://example.com/image.jpg" 
+  alt="External image"
+  externalImage={true}
+/>
+```
+
+### Configuration
+
+Image dimensions and responsive breakpoints are configured in `config.js`:
+
+```js
+// config.js
+imageDimensions: [600, 900, 1200, 1500, 2000], // Responsive image sizes
+sizes: {
+  full: ['100vw'],
+  fullToHalfAtLarge: [`(min-width: ${mediaQueries.lg}) 50vw`, '100vw'],
+  // ... other responsive configurations
+}
+```
 
 ### Using videos
 
@@ -335,7 +467,7 @@ Here is some markdown paragraph content.
 With some more content. And I sense a quote coming...
 
 <Quote quotee="Merkin Muffley" quoteeSub="President of the United States">
-Gentlemen, you can’t fight in here. This is the war room.
+Gentlemen, you can't fight in here. This is the war room.
 </Quote>
 
 Wow I was right. A quote.
@@ -614,7 +746,7 @@ If your feature will be shown on the work page, also add your new case study to 
 
 ### Adding team members
 
-When a new teammate starts, we ask them for a bio and photo. Once we have an approved bio and photo, we’re ready to get them on the website.
+When a new teammate starts, we ask them for a bio and photo. Once we have an approved bio and photo, we're ready to get them on the website.
 
 Original photos should be uploaded resources > photos-people > Headshots > [name]
 Photos for the team page should be resized to 2000px width, saved as optimized jpg, and uploaded to Dropbox: Graphics > goinvo.com > images > about
@@ -641,3 +773,314 @@ When your feature is ready to go live, make sure to push up any final changes to
 Once approved changes are merged into master, then do the following in terminal to go live.
 `yarn build`  
 `yarn upload`
+
+## 🔍 Semantic Search System
+
+This website features an intelligent semantic search system that helps potential clients find relevant projects using natural language queries. The system uses enhanced keyword matching and semantic understanding to surface the most relevant existing projects for any buyer query.
+
+### How It Works
+
+1. **AI-Powered Analysis**: Each project is analyzed by GPT-3.5-turbo to extract metadata and generate buyer-focused descriptions
+2. **Semantic Embeddings**: OpenAI's text-embedding-3-small model creates vector representations of project content
+3. **Enhanced Keyword Matching**: 100+ semantic keyword mappings and domain-specific boosting algorithms
+4. **Client-Side Search**: Search runs entirely in the browser using intelligent keyword matching and concept mapping
+5. **Smart Caching**: Only changed content gets reprocessed, saving time and API costs
+
+### Search Features
+
+- **Natural Language Queries**: "I need a UI for an AI platform for therapists"
+- **Intelligent Keyword Expansion**: Automatically maps related terms (e.g., "telemetry" → "monitoring", "vital signs")
+- **Buyer-Focused Descriptions**: AI explains why each project is relevant to your specific needs
+- **Smart Filtering**: Filter by project type, industry, and complexity
+- **Real-Time Results**: Instant search with similarity scoring
+- **Domain-Specific Boosting**: Healthcare, enterprise, and government queries get specialized matching
+
+### Content Sources
+
+#### Case Studies (`src/case-studies/*.mdx`)
+Detailed completed projects with full descriptions, client information, and portfolio images.
+
+#### Features (`src/data/features.json`)
+Portfolio highlights and quick project overviews used throughout the site.
+
+### Enhanced Keyword Understanding
+
+The search system recognizes and expands hundreds of related terms:
+
+- **Healthcare**: telemetry, oncology, therapy, hematology, radiology, FHIR, HIPAA
+- **Enterprise**: analytics, dashboards, IoT, fintech, logistics, SOC-2
+- **Government**: civic, municipal, permits, emergency, elections, FedRAMP
+- **Technology**: AI, platforms, systems, compliance, real-time
+
+## 🚀 Setup Instructions
+
+### Prerequisites
+
+1. **Node.js 16+** and npm
+2. **OpenAI API Key** for embedding generation
+3. **Gatsby CLI** (optional, for development commands)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/goinvo/goinvo.com.git
+cd goinvo.com
+
+# Install dependencies
+npm install
+
+# Create environment file
+cp .env.example .env
+```
+
+### Environment Variables
+
+Add your OpenAI API key to `.env`:
+
+```env
+OPENAI_API_KEY=your-api-key-here
+```
+
+> **💡 API Key Setup**: Get your OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+
+### Generate Search Index
+
+**Required for search functionality**. Run this whenever you add or modify case studies:
+
+```bash
+# Generate embeddings and search index (uses cache for unchanged files)
+npm run generate-embeddings
+
+# Force regeneration of ALL embeddings (ignores cache)
+npm run generate-embeddings:force
+```
+
+**When to use force mode:**
+- 🔄 After upgrading the embedding system (like adding AI buyer descriptions)
+- 🧹 When you suspect cache corruption
+- ✨ To ensure all projects have the latest AI features
+
+This command will:
+- ✅ Analyze all case studies and features with AI
+- 🧠 Generate OpenAI embeddings for semantic search  
+- 💼 Create buyer-focused descriptions for each project
+- 🗂️ Cache results to avoid reprocessing unchanged content (unless `--force` used)
+- 💰 Show estimated API costs (typically $2-5 for full regeneration)
+
+### Development
+
+```bash
+# Start development server
+npm start
+
+# Build for production
+npm run build
+
+# Serve production build locally
+npm run serve
+```
+
+## 📝 Content Management
+
+### Adding New Case Studies
+
+1. **Create MDX file** in `src/case-studies/your-project.mdx`
+2. **Add frontmatter** with required fields:
+   ```yaml
+   ---
+   title: "Your Project Title"
+   client: "Client Name"
+   caption: "Brief description"
+   categories: ["healthcare", "ui-design"]
+   image: "/path/to/image.jpg"
+   ---
+   ```
+3. **Write content** in MDX format
+4. **Regenerate embeddings**:
+   ```bash
+   npm run generate-embeddings
+   ```
+
+### Adding Features
+
+1. **Edit** `src/data/features.json`
+2. **Add entry** with required fields
+3. **Regenerate embeddings**:
+   ```bash
+   npm run generate-embeddings
+   ```
+
+### Smart Caching
+
+The embedding system automatically detects changes:
+
+- ✅ **Unchanged files**: Uses cached embeddings (instant)
+- 🔄 **Modified files**: Regenerates embeddings (uses API)
+- 📊 **Cost tracking**: Shows exactly what gets processed
+
+Example output:
+```
+📊 Found 33 projects:
+  ✅ 28 cached (unchanged)
+  🔄 5 need processing
+💰 Estimated cost: $0.02
+```
+
+## 🔧 Search System Architecture
+
+### Files Structure
+
+```
+src/
+├── components/
+│   └── project-search.js         # Main search component
+├── utils/
+│   └── semantic-search.js        # Search logic and utilities
+├── data/
+│   ├── search-index.json         # Generated search index
+│   └── embeddings-cache.json     # Cached embeddings
+└── styles/components/
+    └── _project-search.scss      # Search component styles
+
+scripts/
+└── generate-embeddings.js        # Embedding generation script
+
+static/
+└── search-index.json             # Public search index for browser
+```
+
+### Search Process
+
+1. **Load Index**: Browser fetches pre-generated search index
+2. **Extract Keywords**: Query is analyzed for relevant terms and concepts
+3. **Calculate Similarity**: Projects are scored using keyword matching and metadata
+4. **Add AI Descriptions**: Relevant buyer descriptions are attached to results
+5. **Rank Results**: Projects sorted by relevance with similarity scores
+
+### Cost Optimization
+
+- **One-time Generation**: Embeddings created once per content change
+- **Smart Caching**: Only reprocess modified files
+- **Client-Side Search**: No runtime API costs
+- **Efficient Model**: Uses cost-effective text-embedding-3-small
+
+**Typical Costs**:
+- Initial setup: $2-5 (all projects)
+- Adding one project: $0.003
+- Search queries: $0 (client-side)
+
+## 🎯 Search Query Examples
+
+The enhanced system now handles a much broader range of buyer queries:
+
+### Healthcare Queries
+- *"Need a telemetry dashboard to monitor ICU vitals remotely"*
+- *"Looking for an oncology treatment tracker that integrates genomic data"*
+- *"Self-guided CBT therapy app for veterans with PTSD"*
+- *"HIPAA-compliant radiology collaboration dashboard"*
+- *"AI-powered hematology results dashboard for lab technicians"*
+
+### Enterprise Queries
+- *"Enterprise expense-analysis dashboard for SaaS CFOs"*
+- *"Scalable data-ingest platform for IoT sensor fleets"*
+- *"Cross-team dashboard visualizing OKRs and KPIs"*
+- *"SOC-2 compliant customer analytics platform"*
+- *"Customer loyalty service that plugs into Shopify"*
+
+### Government Queries
+- *"Citizen complaint tracking dashboard for municipal services"*
+- *"Digital voter-registration tracker compliant with federal standards"*
+- *"Grant-management platform for federal research programs"*
+- *"FedRAMP authorized emergency response coordination system"*
+
+### Original Examples (Still Work)
+- *"I need a UI for an AI platform for therapists"*
+- *"Healthcare dashboard design for clinical workflows"*
+- *"Data visualization for government policy"*
+- *"Enterprise software user experience"*
+- *"Mobile health app interface design"*
+
+## 🛠️ Development Workflow
+
+### For Developers
+
+```bash
+# Standard development
+npm start                    # Start dev server
+npm run build               # Build for production
+
+# Search system
+npm run generate-embeddings  # Update search index (smart caching)
+npm run generate-embeddings:force  # Force regenerate all (ignore cache)
+```
+
+### For Content Creators
+
+1. **Add/edit content** in `src/case-studies/` or `src/data/features.json`
+2. **Run embedding generation**:
+   ```bash
+   # Normal update (uses cache)
+   npm run generate-embeddings
+   
+   # Or force full regeneration
+   npm run generate-embeddings:force
+   ```
+3. **Test search** functionality on homepage
+
+### Performance Notes
+
+- **Search index size**: ~1.5MB (33 projects with embeddings)
+- **Load time**: Index loads asynchronously, search available in ~1-2 seconds
+- **Browser compatibility**: Works in all modern browsers
+- **Mobile friendly**: Responsive design with touch-friendly controls
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Add/modify content as needed
+4. Run `npm run generate-embeddings` if content changed
+5. Test search functionality
+6. Submit a pull request
+
+## 📞 Support
+
+For questions about the search system or setup:
+
+- Check the console for detailed logging
+- Verify `.env` file has valid OpenAI API key
+- Ensure `search-index.json` exists in `static/` folder
+- Run embedding generation if search returns no results
+
+## 🎉 Features
+
+- ✅ **Semantic Search** with natural language queries
+- ✅ **AI-Generated Descriptions** for buyer relevance
+- ✅ **Smart Caching** to minimize API costs
+- ✅ **Real-Time Search** with instant results
+- ✅ **Advanced Filtering** by type, industry, complexity
+- ✅ **Mobile Responsive** design
+- ✅ **Cost Efficient** client-side architecture
+
+## Environment Setup
+
+### OpenAI API Key for Enhanced Search
+
+The site uses AI-generated search descriptions to enhance the search functionality. To enable this:
+
+1. Create a `.env` file in the project root:
+   ```bash
+   touch .env
+   ```
+
+2. Add your OpenAI API key to the `.env` file:
+   ```
+   OPENAI_API_KEY=your-api-key-here
+   ```
+
+3. Get your API key from: https://platform.openai.com/api-keys
+
+The `.env` file is gitignored and will not be committed to the repository.
+
+**Note:** Without an OpenAI API key, the search will still work but will use generic template descriptions instead of AI-generated ones.

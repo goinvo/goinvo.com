@@ -95,3 +95,21 @@
 .display-none {
   display: none;
 }
+
+// CSS Custom Properties for AI features
+:root {
+  --primary: #{$color-primary};
+  --primary-light: #{$color-primary--light};
+  --primary-dark: #{$color-primary--dark};
+  --secondary: #{$color-secondary};
+  --secondary-light: #{lighten($color-secondary, 45%)};
+  --white: #{$color-white};
+  --gray: #{$color-gray};
+  --gray-light: #{$color-gray--light};
+  --gray-lightest: #{lighten($color-gray--light, 5%)};
+  --gray-dark: #{darken($color-gray, 10%)};
+  --gray-darkest: #{$color-black};
+  --error: #{$color-red};
+  --error-light: #{lighten($color-red, 45%)};
+  --error-dark: #{darken($color-red, 10%)};
+}

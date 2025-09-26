@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { Component } from 'react'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
-import ImageBlock from '../../components/image-block'
-import TeamMember from '../../components/team-member'
 import Image from '../../components/image'
+import TeamMember from '../../components/team-member'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
+import ImageBlock from '../../components/image-block'
 import team from '../../data/team.json'
 import SubscribeForm from '../../components/form-subscribe'
 
@@ -56,7 +56,7 @@ const upNextList = [
     image: '/images/services/hgraph-ipad.jpg',
     title: 'Open Source Health Design',
     caption:
-      'Learn about our opensource projects and why we’re passionate about making healthcare open.',
+      "Learn about our opensource projects and why we're passionate about making healthcare open.",
   },
   {
     link: 'https://www.goinvo.com/features/print-big/',
@@ -73,7 +73,7 @@ const upNextList = [
 const frontmatter = {
   metaTitle: 'About GoInvo, a UX design company in Boston',
   metaDescription:
-    'Over the past decade, we’ve created beautiful software for patients, clinicians, researchers, and administrators.',
+    "Over the past decade, we've created beautiful software for patients, clinicians, researchers, and administrators.",
   heroImage: '/images/about/care-cards-hand.jpg',
 }
 
@@ -121,12 +121,18 @@ const AboutPage = () => (
       <div className="max-width content-padding">
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-            <ImageBlock
-              image="/images/about/design-markup.jpg"
+            <Image
+              src="/images/about/design-markup.jpg"
+              alt="Open office hours"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-              title="Open office hours"
-              caption="Receive design advice on your product’s strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction."
+              className="image--max-width"
             />
+            <div className="margin-bottom">
+              <h3 className="header--md margin-bottom--half">Open office hours</h3>
+              <p className="text--gray margin--none">
+                Receive design advice on your product's strategy, layout, and data visualization. Alternatively, meet the tribe, or plot your career direction.
+              </p>
+            </div>
             <Link
               to="/about/open-office-hours/"
               className="button button--secondary button--block margin-bottom--double hidden--lg"
@@ -135,12 +141,18 @@ const AboutPage = () => (
             </Link>
           </div>
           <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-            <ImageBlock
-              image="/images/about/megan-and-claire-ultrasound.jpg"
+            <Image
+              src="/images/about/megan-and-claire-ultrasound.jpg"
+              alt="Join the team"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-              title="Join the team"
-              caption="If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler."
+              className="image--max-width"
             />
+            <div className="margin-bottom">
+              <h3 className="header--md margin-bottom--half">Join the team</h3>
+              <p className="text--gray margin--none">
+                If you're an independent thinker and passionate maker hunting for meaningful work, give us a holler.
+              </p>
+            </div>
             <Link
               to="/about/careers/"
               className="button button--secondary button--block margin-bottom--double hidden--lg"
@@ -182,6 +194,7 @@ const AboutPage = () => (
             <div className="pad-right--only-lg">
               <Image
                 src="/images/about/silhouette.jpg"
+                alt="Career opportunities at GoInvo"
                 sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
                 className="image--max-width"
               />
@@ -196,8 +209,8 @@ const AboutPage = () => (
                 Designer and/or Engineer
               </p>
               <p className="text--gray">
-                If you’re looking to engage in meaningful work, learn from a
-                diverse team and thrive with autonomy on complex projects, we’d
+                If you're looking to engage in meaningful work, learn from a
+                diverse team and thrive with autonomy on complex projects, we'd
                 be a good fit.
               </p>
               <Link
@@ -256,8 +269,8 @@ const AboutPage = () => (
             <h3 className="header--md text--center text--md">Our Story</h3>
             <p className="text--gray margin-bottom pad-right--only-lg">
               With early roots designing for Apple, Microsoft, Oracle, and
-              Obama’s 2008 campaign, GoInvo is now focused exclusively on
-              healthcare. We’ve delivered over 110 products with partners
+              Obama's 2008 campaign, GoInvo is now focused exclusively on
+              healthcare. We've delivered over 110 products with partners
               ranging from 3M, U.S. Department of Health and Human Services,
               Partners Healthcare, and a variety of startups.
             </p>
@@ -279,6 +292,7 @@ const AboutPage = () => (
           <div className="pad-left--only-lg">
             <Image
               src="/images/about/bowling.jpg"
+              alt="GoInvo team bowling"
               sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
               className="image--max-width"
             />
@@ -306,8 +320,8 @@ const AboutPage = () => (
                 suppressNewTab={item.suppressNewTab}
               >
                 <ImageBlock
-                  title={item.title}
                   image={item.image}
+                  title={item.title}
                   caption={item.caption}
                   sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
                   hoverable

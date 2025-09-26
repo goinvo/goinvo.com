@@ -6,7 +6,6 @@ import Scrollspy from 'react-scrollspy'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
-import Image from '../../../components/image'
 import Author from '../../../components/author'
 import References from '../../../components/references'
 import Reference from '../../../components/reference'
@@ -14,6 +13,7 @@ import SubscribeForm from '../../../components/form-subscribe'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
+import Image from '../../../components/image'
 
 const frontmatter = {
   metaTitle: 'Public Restroom to Public Healthroom - GoInvo',

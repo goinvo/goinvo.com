@@ -88,3 +88,25 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   })
 }
+
+// Ensure minimal search index exists in public/ after build (for previews and prod)
+exports.onPostBuild = async ({ reporter }) => {
+  const fs = require('fs')
+  const path = require('path')
+  const publicIndex = path.join(__dirname, 'public', 'search-index.json')
+  try {
+    if (!fs.existsSync(publicIndex)) {
+      reporter.info('Generating minimal search index (missing in public/)')
+      const gen = path.join(__dirname, 'scripts', 'generate-minimal-search-index.js')
+      if (fs.existsSync(gen)) {
+        require('child_process').execFileSync(process.execPath, [gen], { stdio: 'inherit' })
+      } else {
+        reporter.warn('generate-minimal-search-index.js not found; skipping index generation')
+      }
+    } else {
+      reporter.info('search-index.json already present; skipping generation')
+    }
+  } catch (err) {
+    reporter.warn(`Failed to ensure search-index.json: ${err && err.message ? err.message : err}`)
+  }
+}

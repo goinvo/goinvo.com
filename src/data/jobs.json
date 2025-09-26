@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Senior UX Designer",
+    "location": "Boston, MA / Remote",
+    "description": "Join our team to design healthcare software that makes a difference. You'll work on projects that improve patient outcomes and healthcare delivery.",
+    "url": "mailto:careers@goinvo.com?subject=Senior UX Designer Application",
+    "closed": true
+  },
+  {
+    "title": "Software Engineer",
+    "location": "Boston, MA / Remote", 
+    "description": "Build innovative healthcare technology solutions. Work with React, Node.js, and modern web technologies to create impactful products.",
+    "url": "mailto:careers@goinvo.com?subject=Software Engineer Application",
+    "closed": true
+  }
+] 

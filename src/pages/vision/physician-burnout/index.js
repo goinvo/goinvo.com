@@ -34,7 +34,7 @@ class BurnoutFeature extends Component {
                 <sup>
                   <a href="#references">1</a>
                 </sup>{' '}
-                We’re losing physicians to burnout, drop out, and suicide. The
+                We're losing physicians to burnout, drop out, and suicide. The
                 suicide rate alone in 2018 was at a rate of{' '}
                 <strong>28 to 40 per 100,000,</strong> triple the national
                 average
@@ -82,7 +82,7 @@ class BurnoutFeature extends Component {
                 Pre-covid, we began 2020 with unprecedented rates of clinical
                 depression and suicide in the physician and, in fact, the entire
                 US healtcare workforce. With the Covid-19 global pandemic making
-                waves through the world’s healthcare systems, more healthcare
+                waves through the world's healthcare systems, more healthcare
                 workers than ever are on the front-lines, putting themselves at
                 risk to save lives and beat this virus. They are working long
                 hours, with limited resources, and the added burden of sourcing
@@ -203,7 +203,7 @@ class BurnoutFeature extends Component {
                       Physicians with Symptoms
                     </h4>
                     <p className="margin-top--none">
-                      A 2018 Survey of America’s Practice Patterns and
+                      A 2018 Survey of America's Practice Patterns and
                       Perspective conducted by Merritt Hawkins found that 78% of
                       over 8,000 physicians experience symptoms of burnout at
                       least once in their career.
@@ -226,11 +226,11 @@ class BurnoutFeature extends Component {
                   <a href="#references">7</a>
                 </sup>{' '}
                 reported a decline in physician burnout at a rate below 50%, its
-                optimistic conclusions are premature. It concluded “burnout and
+                optimistic conclusions are premature. It concluded "burnout and
                 satisfaction with Work Life Index (WLI) among US physicians has
                 improved between 2014 and 2017. This trend is reason for
                 optimism and suggests that progress is both possible and under
-                way.” As of 2016 there were over <strong>950,000</strong>{' '}
+                way." As of 2016 there were over <strong>950,000</strong>{' '}
                 actively licensed physicians in US.
                 <sup>
                   <a href="#references">8</a>
@@ -271,7 +271,7 @@ class BurnoutFeature extends Component {
                   <a href="#references">14</a>
                 </sup>{' '}
                 <strong>
-                  Burnout isn’t limited to starting out as a physician. Once
+                  Burnout isn't limited to starting out as a physician. Once
                   symptoms are experienced, they will surface again and again
                   and stay with a physician throughout their career.
                 </strong>{' '}
@@ -422,7 +422,7 @@ class BurnoutFeature extends Component {
                 Organization-oriented approaches for better interventions
               </h4>
               <p className="margin-top--none">
-                The term “burnout” itself and its medicalization is problematic
+                The term "burnout" itself and its medicalization is problematic
                 and minimizes the role of systemic factors. Burnout is an
                 outcome rather than root cause of issues in our healthcare
                 system, as a result of complex interactions between
@@ -497,7 +497,7 @@ class BurnoutFeature extends Component {
                 The most commonly used measure of burnout is the Maslach Burnout
                 Inventory (MBI) which was designed as a research tool, rather
                 than a diagnostic and clinical tool. Create a reportable quality
-                of life measure for physicians that can’t be used to determine
+                of life measure for physicians that can't be used to determine
                 clinical quality. With destigmatization, more accurate reporting
                 can lead to real change in healthcare culture that will reduce
                 healthcare worker burden.
@@ -517,10 +517,10 @@ class BurnoutFeature extends Component {
                 delivery efficiency, software is still prone to glitches and
                 performance issues. A note that may have taken upwards of 15
                 minutes to compose can be wiped out in microseconds due to poor
-                UI design or malfunction. Frustrations with EHRs aren’t limited
+                UI design or malfunction. Frustrations with EHRs aren't limited
                 to software issues. From the beginning, EHRs were designed to
                 optimize billing and maximize reimbursement —not for patient
-                care. Yet healthcare technology continues to “innovate” at
+                care. Yet healthcare technology continues to "innovate" at
                 lightning speed and with minimal consideration of their end
                 users, physicians and patients.
               </p>
@@ -665,7 +665,7 @@ class BurnoutFeature extends Component {
 
               <p>
                 The tide for the physician burnout crisis is not turning.
-                Physician burnout is only the tip of the healthcare industry’s
+                Physician burnout is only the tip of the healthcare industry's
                 sickness. Physicians will become scarce in ten years should we
                 fail to end this epidemic with well-designed approaches
                 addressing both individual and organizational needs. Patients
@@ -731,9 +731,9 @@ class BurnoutFeature extends Component {
                     },
                     {
                       title:
-                        'Hawkins M. 2018 Survey of America’s Physicians: Practice Patterns & Perspectives. 2018.',
+                        "Hawkins M. 2018 Survey of America's Physicians: Practice Patterns & Perspectives. 2018.",
                       link:
-                        'https://physiciansfoundation.org/wp-content/uploads/2018/09/physicians-survey-results-final-2018.pdf',
+                        'https://www.merritthawkins.com/uploadedFiles/MerrittHawkins/Content/Pdf/MerrittHawkins_2018_Physician_Survey.pdf',
                     },
                     {
                       title:
@@ -765,7 +765,7 @@ class BurnoutFeature extends Component {
                     },
                     {
                       title:
-                        'Karolina Doulougeri, Katerina Georganta & Anthony Montgomery | Albert Lee (Reviewing Editor) (2016) “Diagnosing” burnout among healthcare professionals: Can we find consensus?, Cogent Medicine, 3:1, DOI: 10.1080/2331205X.2016.1237605',
+                        'Karolina Doulougeri, Katerina Georganta & Anthony Montgomery | Albert Lee (Reviewing Editor) (2016) "Diagnosing" burnout among healthcare professionals: Can we find consensus?, Cogent Medicine, 3:1, DOI: 10.1080/2331205X.2016.1237605',
                       link:
                         'https://www.tandfonline.com/doi/full/10.1080/2331205X.2016.1237605',
                     },

@@ -306,7 +306,7 @@ class AIPage extends Component {
                         <ul className="list--unstyled">
                           <li>Tuning/feedback loops</li>
                           <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
-                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                          <li>Visual thinking (showing the why/how of the person and machine's thinking)</li>
                           <li>Agent behavior</li>
                           <li>Confidence loops, ethical rails, debuggability/inspections</li>
                           <li>Call chaining, routing, flow-builders and task decomposition</li>
@@ -399,7 +399,7 @@ class AIPage extends Component {
                         <ul className="list--unstyled">
                           <li>Tuning/feedback loops</li>
                           <li>Contextual memory, memory UI (what the agent knows, remembers, forgets, history panels)</li>
-                          <li>Visual thinking (showing the why/how of the person and machine’s thinking)</li>
+                          <li>Visual thinking (showing the why/how of the person and machine's thinking)</li>
                           <li>Agent behavior</li>
                           <li>Confidence loops, ethical rails, debuggability/inspections</li>
                           <li>Call chaining, routing, flow-builders and task decompositionMultimodal interfaces</li>

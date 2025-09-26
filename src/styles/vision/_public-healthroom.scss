@@ -5,6 +5,7 @@
       height: auto;
       aspect-ratio: 200 / 51; // Preferred aspect ratio until max-height is reached
       max-height: 500px;
+      overflow: hidden;
     }
   }
 

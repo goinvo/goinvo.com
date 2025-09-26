@@ -1,6 +1,16 @@
 .footer {
-  background-color: #eff1f6;
-  border-bottom: 3rem solid #263238;
+  background-color: #007385;
+  border-bottom: 3rem solid #007385;
+  color: $color-white;
+
+  a {
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+    }
+  }
 
   &__social-links {
     display: flex;
@@ -15,6 +25,8 @@
     .icon {
       width: 1rem;
       height: 1rem;
+      fill: $color-white;
+      color: $color-white;
 
       @include mq($from: small) {
         width: 1.25rem;
@@ -30,6 +42,8 @@
     .logo {
       margin: 0 1rem;
       width: 50px;
+      fill: $color-white;
+      color: $color-white;
 
       @include mq($from: small) {
         width: 60px;
@@ -40,5 +54,10 @@
         width: 70px;
       }
     }
+  }
+
+  // Keep icons white on hover within footer
+  .social-links a:hover .icon {
+    fill: $color-white;
   }
 }

@@ -1,4 +1,26 @@
 .landing-page {
+  // Make the hero occupy full viewport height and pin the orange bar to bottom
+  .hero.hero--large {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto; // media takes available space, content bar at bottom
+  }
+
+  .hero__image-container,
+  .hero__video-container {
+    grid-row: 1;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero__content {
+    grid-row: 2;
+    padding-bottom: 0; // rely on section padding
+  }
   .textAlign {
     text-align: center;
   }
@@ -142,6 +164,23 @@
     justify-content: center;
   }
 
+  // Spacing for "Our designs are used every day" section
+  .used-everyday {
+    // Title spacing
+    .header--xl { margin-bottom: $spacing * 1.5; }
+
+    // Block spacing for each item (both mobile and desktop)
+    .pure-g > .pure-u-1 { margin-bottom: $spacing * 2; }
+    .pure-g > .pure-u-1 p { margin: 0 0 $spacing 0; }
+    .pure-g > .pure-u-1 a { display: inline-block; margin-top: calc($spacing / 2); }
+
+    @include mq($from: large) {
+      .pure-u-lg-1-3 { margin-right: $spacing * 2; }
+      .pure-g > .pure-u-lg-1-2 { margin-bottom: $spacing * 1.5; }
+      .pure-u-lg-1-2:first-of-type { padding-right: $spacing * 2; }
+    }
+  }
+
   .card {
     text-align: left;
     margin-bottom: 5%;
@@ -197,5 +236,228 @@
 
   .wrap {
     flex: 1 1 300px;
+  }
+}
+
+// New homepage sections
+.expertise-section {
+  background-color: $color-primary;
+  color: $color-white;
+  padding-top: calc($spacing * 3);
+  padding-bottom: calc($spacing * 3);
+
+  .header--xl {
+    color: $color-white;
+  }
+
+  .expertise-row {
+    align-items: flex-start;
+  }
+
+  // Add vertical spacing between heading and options on mobile
+  .pure-u-lg-1-3 {
+    margin-bottom: $spacing;
+    @include mq($from: large) {
+      margin-bottom: 0;
+    }
+  }
+
+  // add horizontal space between heading and grid at large
+  .pure-u-lg-2-3 {
+    @include mq($from: large) {
+      padding-left: 24px;
+    }
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+
+    .expertise-item {
+      padding-bottom: 8px;
+      border-bottom: 1px solid $color-white;
+      color: $color-white;
+      font-family: 'Open Sans', $font-family--sans-serif, sans-serif;
+      font-size: 1.125rem;
+      font-weight: $font-weight--normal;
+        letter-spacing: 0; // reduce tracking
+      text-transform: none; // override button uppercase
+      text-align: left; // ensure left alignment
+    }
+  }
+
+  .expertise-search {
+    margin-top: 24px;
+    position: relative;
+
+    &__input {
+      width: 100%;
+      padding: 20px 64px 20px 20px;
+      border-radius: 9999px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    &__button {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      height: calc(100% - 12px);
+      padding: 0 18px;
+      border-radius: 9999px;
+      background-color: $color-primary;
+      color: $color-white;
+      border: 1px solid $color-white;
+      cursor: pointer;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.spotlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  margin-top: 24px;
+
+  @include mq($from: large) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+  }
+
+  &--single {
+    grid-template-columns: 1fr;
+  }
+
+  .image-block__text {
+    padding-left: $spacing;
+    padding-right: $spacing;
+    
+    p.header--lg {
+      font-family: $font-family--serif;
+      font-size: 24px;
+      color: $color-black;
+    }
+    p.text--gray {
+      font-family: $font-family--sans-serif;
+      font-size: 14px;
+      color: $color-gray;
+    }
+  }
+}
+
+// Force AI search result grids to 2 columns on desktop
+.ai-enhanced-grid,
+.ai-results-grid {
+  @include mq($from: large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// 4-column control with spans
+
+
+.spotlight--span-2 {
+  @include mq($from: large) {
+    grid-column: span 2;
+  }
+}
+
+.spotlight--span-4 {
+  @include mq($from: large) {
+    grid-column: 1 / -1;
+  }
+}
+
+// Remove card shadow/border for Spotlights
+.spotlights-grid .card {
+  box-shadow: none;
+  border: none;
+}
+
+.spotlight-card {
+  display: flex;
+  flex-direction: column;
+}
+.spotlight-media {
+  width: 100%;
+  overflow: hidden;
+}
+.spotlight-media video {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+}
+
+.partners-section {
+  background-color: #F7FAFE;
+
+  &__title {
+    color: #B2AFAF;
+  }
+
+  &__logos {
+    .client-logos li svg {
+      fill: #B2AFAF;
+      color: #B2AFAF;
+    }
+  }
+}
+
+// Ensure anchored scroll to Spotlights accounts for fixed header
+#spotlights {
+  scroll-margin-top: calc(#{$header-height} + 24px);
+}
+
+// Simple teal spinner for AI loading state
+.ai-spinner {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(0,0,0,0.12);
+  border-top-color: $color-teal;
+  border-radius: 50%;
+  animation: ai-spin 0.8s linear infinite;
+}
+
+@keyframes ai-spin {
+  to { transform: rotate(360deg); }
+}
+
+// Team photo strips
+.team-marquee {
+  height: 300px;
+  overflow: hidden;
+}
+
+.team-marquee__img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  margin-right: 0;
+}
+
+.team-marquee__tile {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-right: 8px;
+}
+
+.we-are-goinvo {
+  .we-are-title {
+    font-family: $font-family--serif;
+    margin-top: calc($spacing * 2);
+    margin-bottom: 0;
+  }
+
+  .we-are-body {
+    font-family: $font-family--sans-serif;
+    margin-top: 0;
   }
 }

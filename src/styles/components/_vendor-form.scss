@@ -1,5 +1,5 @@
 .contact-form-frame {
-  height: 800px;
+  height: 700px;
   overflow: hidden;
 }
 
@@ -15,11 +15,12 @@
   }
 
   &.contact-form {
-    height: 800px;
+    height: 700px;
+    margin-bottom: 0;
   }
 
   &.hiring-form {
-    height: 1200px; //extra space for file uploads
+    height: 1050px; //extra space for file uploads
     margin-bottom: -10px;
   }
 }

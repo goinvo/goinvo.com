@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
-import Image from '../../../components/image'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
@@ -15,6 +14,7 @@ import personalizedCareIcon from '../../../assets/images/vision/open-pro/persona
 import treatmentIcon from '../../../assets/images/vision/open-pro/treatment.svg'
 
 import config from '../../../../config'
+import Image from '../../../components/image'
 
 const frontmatter = {
   metaTitle: 'openPRO: Your health. Your voice.',

@@ -1,12 +1,13 @@
 .hero {
   $parent: &;
-  $max-height: 530px;
+  $max-height: 932px;
   display: block;
   color: $color-black;
   text-decoration: none;
 
   &__image-container {
-    height: 150px;
+    height: 220px;
+    overflow: hidden;
   }
 
   &__video-container {
@@ -33,7 +34,7 @@
     width: 100%;
     padding-top: ($spacing * 2);
     padding-bottom: ($spacing * 2);
-    background-color: transparentize($color-white, 0.3);
+    background-color: transparentize($color-white, 0.2);
 
     @include mq($from: large) {
       position: absolute;
@@ -53,13 +54,28 @@
     margin: 0;
   }
 
+  .hero-title--lg {
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    @include mq($from: large) {
+      font-size: 3rem;
+      line-height: 3.25rem;
+    }
+  }
+
+  .hero-subtitle {
+    margin-top: 0.75rem;
+    color: $color-black;
+  }
+
   &__caption {
     @extend .text--gray;
   }
 
   @include mq($from: large) {
     #{$parent}__image-container {
-      height: 325px;
+      height: 450px;
     }
   }
 

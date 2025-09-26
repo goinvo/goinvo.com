@@ -7,12 +7,16 @@ import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
-import Quote from '../components/quote'
+import Video from '../components/video'
+// import Quote from '../components/quote'
 import ContactForm from '../components/form-contact'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import Divider from '../components/divider'
+import TEAM from '../data/team.json'
+import ProjectSearch from '../components/project-search'
 import headerData from '../data/homepage-headers.json'
+import Marquee from 'react-fast-marquee'
 
 import config from '../../config'
 import {
@@ -29,8 +33,8 @@ if (categories.length === 0) {
 const selectedCategory = categories[Math.floor(Math.random() * categories.length)];
 // console.log("Selected category: ", selectedCategory);
 const categoryData = headerData[selectedCategory];
-// Select a random hero image from the category
-const heroImage = categoryData.heroImages[Math.floor(Math.random() * categoryData.heroImages.length)];
+// Use a single consistent hero image
+const heroImage = '/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg'
 
 const frontmatter = {
   metaTitle: 'Boston UX Design Agency | GoInvo Boston',
@@ -47,64 +51,188 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
 
-    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data }).slice(0, 4)
+    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data, filterFeatures: false }).slice(0, 4)
+    const allProjects = concatCaseStudiesAndFeatures({ caseStudies: props.data, filterFeatures: false })
 
     this.state = {
       image: null,
       workItems,
+      allProjects,
       frontmatter,
+      hideSpotlights: false,
+      selectedPersona: null,
+      homeSearchQuery: '',
+      homeInputDefault: ''
+    }
+  }
+
+  componentDidMount() {
+    // Listen for AI search results to toggle Spotlights visibility
+    this._aiSearchHandler = (evt) => {
+      try {
+        const hasResults = !!(evt && evt.detail && evt.detail.hasResults)
+        // Keep spotlights visible when there are zero results (show no-results + spotlights)
+        this.setState({ hideSpotlights: hasResults })
+      } catch (_) { }
+    }
+    if (typeof window !== 'undefined') {
+      window.addEventListener('ai-search-results', this._aiSearchHandler)
+    }
+    try {
+      // Prefer session restore flag path; otherwise, show last saved as input seed (but don't mark as submitted)
+      const savedQuery = JSON.parse(localStorage.getItem('ai_search_query') || 'null')
+      if (savedQuery && typeof savedQuery === 'string') {
+        this.setState({ homeInputDefault: savedQuery, homeInputValue: savedQuery })
+      }
+    } catch (e) {
+      // ignore
+    }
+  }
+  componentWillUnmount() {
+    if (typeof window !== 'undefined' && this._aiSearchHandler) {
+      window.removeEventListener('ai-search-results', this._aiSearchHandler)
     }
   }
 
   render() {
     return (
-      <Layout frontmatter={this.state.frontmatter}>
+      <Layout frontmatter={this.state.frontmatter} isHomepage>
         <Hero
           className="hero--higher-text-contrast"
           link="/work/"
           image={this.state.frontmatter.heroImage}
-          caption={this.state.frontmatter.tagline}
           button={frontmatter.heroButtonText}
           buttonLink="/work/"
           isLarge
           position="top center"
         >
-          <h1 className="header--xl">
-            Designing
-            <br />
-            the future of
-            <br />
-            {this.state.frontmatter.category}
+          <h1 className="header--xl hero-title--lg">
+            Designing the Future
             <span className="text--serif text--primary">.</span>
           </h1>
+          <p className="hero-subtitle text--black">
+            We craft digital design through software, strategic thinking, and data visualization.
+          </p>
         </Hero>
-        <div className="max-width content-padding pad-vertical--double--only-lg">
-          <Divider animated className="hidden--lg" />
-          <div className="pure-g margin-vertical--double">
-            <div className="pure-u-1 pure-u-lg-1-3">
-              <h2 className="header--xl margin--none">Welcome Jacobin Readers!</h2>
-              <div style={{ borderRadius: '20px', overflow: 'hidden', marginTop: '10px', marginBottom: '20px', marginRight: '30px', height: '270px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <a
-                  href="/vision/"
-                  style={{ display: 'block', lineHeight: 0 }}
+        
+        {!this.state.hideSpotlights && (
+          <div className="max-width content-padding pad-bottom--double" id="spotlights">
+            <div className="margin-vertical--double pad-vertical--double">
+              <div className="pure-g">
+                <div className="pure-u-1">
+                  <h2 className="header--xl margin--none pad-right--double spotlights-title">
+                    Our expertise in design covers...
+                  </h2>
+                </div>
+                <div className="pure-u-1 pure-u-lg-4-4">
+                  <CategoriesList includeAll={false} columns={4} />
+                </div>
+              </div>
+              {/* Spotlights (custom layout in a single grid) */}
+              {(() => {
+                const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
+                const TEXT_OVERRIDES = {
+                  'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
+                  'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
+                  'visual-storytelling-with-genai': { title: 'Decision Grade Viz', subtitle: 'Workflow Research' },
+                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Industry Analysis' },
+                  'hgraph': { title: 'hGraph', subtitle: 'Clinical Decision Making' },
+                  'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
+                  'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
+                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Digital Transformation for All' },
+                  'inspired-ehrs': { title: 'Healthcare Best Practices', subtitle: 'Enterprise Software' }
+                }
+                const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
+                  if (!item) return null
+                  const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
+                  const key = (item.slug || item.id)
+                  const override = TEXT_OVERRIDES[key] || {}
+                  const displayTitle = override.title || item.title
+                  const displaySubtitle = override.subtitle || item.caption
+                  return (
+                    <Card
+                      noShadow
+                      link={link}
+                      key={`spot-${(item.slug || item.id)}`}
+                      externalLink={externalLink}
+                      suppressNewTab={suppressNewTab}
+                      className={className}
+                    >
+                      {useVideo && videoSrc ? (
+                        <div className="spotlight-card">
+                          <div className="spotlight-media">
+                            <Video poster={item.image} loop sources={[{ format: 'mp4', src: videoSrc }]} />
+                          </div>
+                          <div className="image-block__text">
+                            <p className={'header--lg'}>{displayTitle}</p>
+                            <p className="text--gray">{displaySubtitle}</p>
+                          </div>
+                        </div>
+                      ) : (
+                        <ImageBlock
+                          title={displayTitle}
+                          image={item.image}
+                          client={null}
+                          categories={null}
+                          caption={displaySubtitle}
+                          sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                        />
+                      )}
+                    </Card>
+                  )
+                }
+
+                return (
+                  <div className="spotlights-grid spotlights-grid--four">
+                    {/* Row A */}
+                    {renderCard(findItem('ipsos-facto'), { className: 'spotlight--span-2' })}
+                    {renderCard(findItem('eligibility-engine'))}
+                    {renderCard(findItem('visual-storytelling-with-genai'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' })}
+                    {/* Row B */}
+                    {renderCard(findItem('determinants-of-health'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' })}
+                    {renderCard(findItem('hgraph'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' })}
+                    {renderCard(findItem('inspired-ehrs'), { className: 'spotlight--span-2' })}
+                    {/* Row C */}
+                    {renderCard(findItem('prior-auth'), { className: 'spotlight--span-2' })}
+                    {renderCard(findItem('precision-autism'), { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' })}
+                    {/* Row D */}
+                    {renderCard(findItem('mass-snap'), { className: 'spotlight--span-4' })}
+                  </div>
+                )
+              })()}
+              <div className="container container--justify-center margin-top margin-bottom--double">
+                <Link
+                  to="/work/?expanded=true"
+                  className="button button--outline-primary button--padded"
                 >
-                  <Image
-                    src="/images/features/posters/design-axiom-make-things.jpg"
-                    alt="Sugar Kills poster"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                </a>
+                  VIEW ALL WORK
+                </Link>
               </div>
             </div>
-            <div className="pure-u-1 pure-u-lg-2-3">
-              <h2 className="header--xl margin--none pad-right--double">
+          </div>
+        )}
+        <div className="partners-section pad-vertical--double">
+          <div className="max-width content-padding">
+            <h3 className="header--md partners-section__title" style={{ marginTop: 0 }}>
+              PAST PARTNERS
+            </h3>
+            <div className="partners-section__logos">
+              <ClientLogos />
+            </div>
+          </div>
+        </div>
+        <div className="max-width content-padding pad-vertical--double--only-lg used-everyday">
+          <div className="pure-g margin-vertical--double" style={{ alignItems: 'flex-start' }}>
+            <div className="pure-u-1 pure-u-lg-1-3">
+              <h2 className="header--xl margin--bottom pad-right--double">
                 Our designs are used every day
                 <span className="text--serif text--primary">.</span>
               </h2>
+            </div>
+            <div className="pure-u-1 pure-u-lg-2-3">
               <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-right--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
+                  <p className="margin--none pad-right--only-lg">
                     <span className="text--bold">160 million US residents</span>
                     <br />
                     <span className="text--gray">
@@ -114,8 +242,8 @@ class IndexPage extends Component {
                     <br />
                   </p>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-left--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
+                  <p className="margin--none pad-left--only-lg">
                     <span className="text--bold">
                       1M+ Massachusetts residents
                     </span>
@@ -127,8 +255,8 @@ class IndexPage extends Component {
                     <Link to="/work/mass-snap">Read the case study</Link>
                   </p>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-right--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
+                  <p className="margin--none pad-right--only-lg">
                     <span className="text--bold">Wikipedia</span>
                     <br />
                     <span className="text--gray">
@@ -145,8 +273,8 @@ class IndexPage extends Component {
                     </a>
                   </p>
                 </div>
-                <div className="pure-u-1 pure-u-lg-1-2">
-                  <p className="pad-left--only-lg">
+                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
+                  <p className="margin--none pad-left--only-lg">
                     <span className="text--bold">1 billion prescriptions</span>
                     <br />
                     <span className="text--gray">
@@ -158,77 +286,8 @@ class IndexPage extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="background--gray  pad-vertical--double">
-          <div className="max-width content-padding">
-            <h3 className="header--md" style={{ marginTop: 0 }}>
-              We've worked with...
-            </h3>
-            <ClientLogos />
-          </div>
-        </div>
-        <div className="max-width content-padding pad-bottom--double">
-          <div className="margin-vertical--double pad-vertical--double">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--xl margin--none pad-right--double">
-                  Our practices
-                </h2>
-              </div>
-            </div>
-
-            <div className="pure-u-1 pure-u-lg-4-4">
-              <CategoriesList includeAll={false} columns={4} />
-            </div>
-          </div>
-          <Columns columns={2}>
-            {this.state.workItems.map((item, i) => {
-              const {
-                link,
-                externalLink,
-                suppressNewTab,
-              } = extractWorkItemLinkDetails(item)
-
-              return (
-                <Card
-                  link={link}
-                  key={link}
-                  externalLink={externalLink}
-                  suppressNewTab={suppressNewTab}
-                  hidden={{ condition: i > 1, class: 'hidden--sm' }}
-                >
-                  <ImageBlock
-                    title={item.title}
-                    image={item.image}
-                    client={item.client}
-                    categories={item.categories}
-                    caption={item.caption}
-                    sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                    hoverable
-                  />
-                </Card>
-              )
-            })}
-          </Columns>
-          <div className="container container--justify-center margin-top margin-bottom--double">
-            <Link
-              to="/work/?expanded=true"
-              className="button button--primary button--lg"
-            >
-              View all work
-            </Link>
-          </div>
-        </div>
-        <Quote
-          background="gray"
-          quotee="Eric Topol"
-          quoteeSub="MD, Director, Scripps Translational Science Institute"
-        >
-          The GoInvo studio is one of the most talented groups of designers I
-          have ever met in the healthcare space. Not only are their ideas,
-          designs, and graphics remarkable, but I haven’t yet figured out how
-          they know so much about medicine and its future.
-        </Quote>
+        </div> 
+        <Divider animated className="" />
         <div className="max-width content-padding pad-bottom--double">
           <div className="container container--justify-center margin-vertical">
             <h2 className="header--xl">
@@ -299,95 +358,66 @@ class IndexPage extends Component {
                     design method to reimagine your software, system, or
                     service.
                   </p>
-                  <div className="pure-g">
-                    <div className="pure-u-1-2">
-                      <p>
-                        Research
-                        <br />
-                        User interviews
-                        <br />
-                        Analysis
-                        <br />
-                        User mapping
-                        <br />
-                        Ideation
-                        <br />
-                        UI & UX Design
-                        <br />
-                      </p>
-                    </div>
-                    <div className="pure-u-1-2">
-                      <p>
-                        Prototyping
-                        <br />
-                        User testing
-                        <br />
-                        Front-end development
-                        <br />
-                        Strategy consulting
-                        <br />
-                        Workshop
-                        <br />
-                        Graphic facilitation
-                        <br />
-                      </p>
-                    </div>
-                  </div>
-                  <a href="/services/">Learn more about our services</a>
                 </div>
               </div>
               <div className="pure-u-1 pure-u-lg-1-2">
-                <ContactForm />
+                <ContactForm showHeader={false} />
               </div>
             </div>
           </div>
         </div>
-        <div className="max-width content-padding pad-vertical--quad">
-          <div className="pure-g">
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="pad-right--only-lg">
-                <a
-                  href="https://my.matterport.com/show/?m=KDRR1E7jZwf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/images/homepage/group-aug-2018-4.jpg"
-                    className="image--max-width"
-                    sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                  />
-                </a>
-              </div>
+        {/* New We are GoInvo section */}
+        <div className="we-are-goinvo">
+          <div className="content-padding">
+            <div className="team-marquee" aria-hidden="true">
+              <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                {TEAM.slice(0, 5).map(member => (
+                  <div key={`top-${member.name}`} className="team-marquee__tile">
+                    <Link to="/about">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </Link>
+                  </div>
+                ))}
+              </Marquee>
             </div>
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <div className="pad-left--only-lg">
-                <h2 className="header--xl">
-                  We are GoInvo
+          </div>
+          <div className="max-width content-padding pad-vertical--double">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <h2 className="we-are-title header--xl">
+                  We are <span className="text--primary text--serif">GoInvo</span>
                   <span className="text--primary text--serif">.</span>
                 </h2>
-                <p className="text--gray margin-bottom--double">
-                  Small by design.
-                  <br />
-                  Big thinkers.
-                  <br />
-                  Sweat the details.
-                  <br />
-                  Ethics not optional.
-                  <br />
-                  Hyperfocused on software.
-                  <br />
+                <p className="we-are-body text--gray">
+                  Small by design. Big thinkers. Sweat the details. Ethics not optional.
                 </p>
-                <Link
-                  to="/about/"
-                  className="button button--secondary button--lg margin-bottom"
-                >
-                  Meet our team
-                </Link>
-                <br />
-                <Link to="/about/open-office-hours/">
-                  Visit our open office hours
-                </Link>
               </div>
+              <div className="pure-u-1 pure-u-lg-1-3 display--flex display--flex--align-center display--flex--justify-center">
+                <Link to="/about/" className="button button--outline-primary button--padded">MEET OUR TEAM</Link>
+              </div>
+            </div>
+          </div>
+          <div className="content-padding">
+            <div className="team-marquee" aria-hidden="true">
+              <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                {TEAM.slice(5, 10).map(member => (
+                  <div key={`bottom-${member.name}`} className="team-marquee__tile">
+                    <Link to="/about">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </Link>
+                  </div>
+                ))}
+              </Marquee>
             </div>
           </div>
         </div>

@@ -1,0 +1,29 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18.17.0"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+
+# Function configuration
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["public/ai-preset-cache.json"]
+
+[dev]
+  command = "npm run develop"
+  framework = "gatsby"
+  targetPort = 8000
+  port = 8888
+
+# Enable AI in deploy previews
+[context.deploy-preview.environment]
+  ALLOW_AI_IN_PREVIEWS = "true"

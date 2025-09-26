@@ -13,6 +13,7 @@ class Card extends Component {
       link = null,
       externalLink = null,
       suppressNewTab = false,
+    ...restProps
     } = this.props
 
     const completeClassName = `card ${noShadow ? '' : 'card--shadow'} ${
@@ -26,16 +27,17 @@ class Card extends Component {
           className={completeClassName}
           target={suppressNewTab ? null : '_blank'}
           rel={suppressNewTab ? null : 'noopener noreferrer'}
+          {...restProps}
         >
           {children}
         </a>
       ) : (
-        <Link to={link} className={completeClassName}>
+        <Link to={link} className={completeClassName} {...restProps}>
           {children}
         </Link>
       )
     } else {
-      return <div className={completeClassName}>{children}</div>
+      return <div className={completeClassName} {...restProps}>{children}</div>
     }
   }
 }

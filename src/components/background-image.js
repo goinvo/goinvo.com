@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-import { mediaUrl } from '../helpers'
-
+import { normalizeImageUrl } from '../helpers'
 import Image from './image'
 
 // NOTE: notResponsive prop helps fix a bug when using BackgroundImage
@@ -23,7 +22,9 @@ class BackgroundImage extends Component {
 
   componentDidMount() {
     if (!this.props.notResponsive) {
-      this.setState({ src: this.img.current.getSrc() })
+      // For the optimized image component, we'll use the normalized URL
+      const src = normalizeImageUrl(this.props.src)
+      this.setState({ src })
     }
   }
 
@@ -38,9 +39,11 @@ class BackgroundImage extends Component {
   }
 
   render() {
+    const { priority = false } = this.props
     const backgroundImageUrl = this.props.notResponsive
-      ? mediaUrl(this.props.src) + '?w=900'
-      : this.state.src
+      ? normalizeImageUrl(this.props.src)
+      : this.state.src || normalizeImageUrl(this.props.src)
+    
     const backgroundProperty = `
       ${
         this.props.gradient
@@ -75,12 +78,11 @@ class BackgroundImage extends Component {
         {!this.props.notResponsive ? (
           <Image
             src={this.props.src}
-            externalImage={this.props.externalImage}
             className="background-image__image"
-            sizes={this.props.sizes}
-            onUpdate={this.updateSrc}
-            ref={this.img}
             onLoad={this.handleLoad}
+            alt=""
+            aboveTheFold={priority}
+            style={{ opacity: 0, position: 'absolute', pointerEvents: 'none' }}
           />
         ) : null}
         {this.props.children}

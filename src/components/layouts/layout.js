@@ -21,7 +21,7 @@ class Layout extends Component {
     )
 
     return (
-      <div className="app">
+      <div className={`app ${this.props.isHomepage ? 'homepage' : ''}`}>
         <Helmet
           title={frontmatter.metaTitle}
           meta={[
@@ -65,7 +65,7 @@ class Layout extends Component {
         >
           <html lang="en" />
         </Helmet>
-        <Header />
+        <Header transparent={this.props.isHomepage} />
         <div className="app__body">{this.props.children}</div>
         <Footer />
       </div>

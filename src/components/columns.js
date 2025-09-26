@@ -5,8 +5,13 @@ class Columns extends Component {
     return (
       <div className="columns">
         {!!this.props.children && React.Children.map(this.props.children, (item => {
+          // Skip null, undefined, or non-React elements
+          if (!item || !React.isValidElement(item)) {
+            return null
+          }
+          
           const hiddenClass =
-            item.props.hidden && item.props.hidden.condition
+            item.props && item.props.hidden && item.props.hidden.condition
               ? item.props.hidden.class
               : ''
           return (

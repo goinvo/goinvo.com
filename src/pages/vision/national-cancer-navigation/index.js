@@ -4,12 +4,12 @@ import Layout from '../../../components/layouts/layout'
 import Hero from '../../../components/hero'
 import SubscribeForm from '../../../components/form-subscribe'
 import References from '../../../components/references'
-import Image from '../../../components/image'
 import Author from '../../../components/author'
 import Divider from '../../../components/divider'
 
 import { mediaUrl } from '../../../helpers'
 import config from '../../../../config'
+import Image from '../../../components/image'
 
 const frontmatter = {
   metaTitle: 'National Cancer Navigation - GoInvo',

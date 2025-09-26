@@ -79,7 +79,7 @@ class HealthcareDollarsRedux extends Component {
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--2.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    alt="Comic frame 2: Two people are looking at the original map. The first says 'But where does it go from here? Who's making all that money?!' The second is thinking 'You doc? Or CEOs?'"
+                    alt="Comic frame 2: Two people are looking at the original map. The first says 'But where does it go from here? Who\'s making all that money?!' The second is thinking 'You doc? Or CEOs?'"
                   />
                 </div>
               </div>
@@ -133,7 +133,7 @@ class HealthcareDollarsRedux extends Component {
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--8.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    alt="Comic frame 8 — The designer thinks out loud, 'Well that's... ugly. Let's Design!.' Behind the designer is a backdrop of a Figma file."
+                    alt="Comic frame 8 — The designer thinks out loud, 'Well that\'s... ugly. Let\'s Design!.' Behind the designer is a backdrop of a Figma file."
                   />
                 </div>
               </div>
@@ -151,7 +151,7 @@ class HealthcareDollarsRedux extends Component {
                     src="/images/features/health-dollars-redux/health-dollars-redux-comic-frame--10.jpg"
                     className="image--max-width"
                     sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                    alt="Comic frame 10 — The designer and person from Frame 2 are  looking at the new interctive map. The designer says, 'Well that's closer'. The other person thinks, 'It's something!'"
+                    alt="Comic frame 10 — The designer and person from Frame 2 are  looking at the new interctive map. The designer says, 'Well that\'s closer'. The other person thinks, 'It\'s something!'"
                   />
                 </div>
               </div>

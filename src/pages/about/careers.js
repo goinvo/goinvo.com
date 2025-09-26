@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../../components/layouts/layout'
 import Hero from '../../components/hero'
@@ -8,9 +9,13 @@ import Quote from '../../components/quote'
 import Columns from '../../components/columns'
 import ImageBlock from '../../components/image-block'
 import HiringForm from '../../components/form-hiring'
+import Image from '../../components/image'
+import Card from '../../components/card'
 import BackgroundImage from '../../components/background-image'
 
 import config from '../../../config'
+
+import jobsData from '../../data/jobs.json'
 
 const frontmatter = {
   metaTitle: 'Join our team of UX designers & engineers',
@@ -21,8 +26,19 @@ const frontmatter = {
 
 class CareersPage extends Component {
   render() {
+    const currentJobs = jobsData.filter(job => !job.closed)
+
     return (
       <Layout frontmatter={frontmatter}>
+        <Helmet
+          title={frontmatter.metaTitle}
+          meta={[
+            {
+              name: 'description',
+              content: frontmatter.metaDescription,
+            },
+          ]}
+        />
         <Hero image={frontmatter.heroImage}>
           <h1 className="header--xl">
             This is our job
@@ -216,6 +232,31 @@ class CareersPage extends Component {
             </div>
           </div>
         </BackgroundImage>
+        <div className="background--gray pad-vertical">
+          <Image 
+            src="/images/contact/studio.jpg" 
+            gradient
+            alt="GoInvo studio space"
+            placeholderType="skeleton"
+            placeholderColor="#e8e8e8"
+            className="background-image"
+            style={{
+              width: '100%',
+              height: '400px',
+              objectFit: 'cover',
+              background: `linear-gradient(
+                to top,
+                #F3F1F0 0%,
+                rgba(237, 233, 230, 0.9932) 20%,
+                rgba(234, 228, 225, 0.9893) 25%,
+                rgba(234, 228, 225, 0.8979) 40%,
+                rgba(234, 228, 225, 0.82) 55%,
+                rgba(234, 228, 225, 0.538) 70%,
+                rgba(234, 228, 225, 0) 100%
+              ), url('${config.cloudfrontUrl}/images/contact/studio.jpg') top center / cover no-repeat`
+            }}
+          />
+        </div>
         <div className="max-width content-padding pad-vertical--quad--only-lg">
           <Columns columns={3}>
             <ImageBlock
@@ -230,7 +271,7 @@ class CareersPage extends Component {
               image="/images/about/careers/7-years-beards.jpg"
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
               title="Work & Play"
-              caption="Design can be a grind. So is Life. Plan yours as you see fit. We don’t track vacation or sick days. Just be responsible."
+              caption="Design can be a grind. So is Life. Plan yours as you see fit. We don't track vacation or sick days. Just be responsible."
             />
             <ImageBlock
               key={'3'}

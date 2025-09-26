@@ -158,7 +158,7 @@ class EnterprisePage extends Component {
                           = $146M exit.
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          “We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too.”
+                          "We needed to make sure we could do this. Invo proved we could. We needed to make sure we could sell this. Invo gave us the tools to do that, too."
                         </p>
                         <p className="margin-top--none">
                           George Moon<br />
@@ -192,7 +192,7 @@ class EnterprisePage extends Component {
                           A vision to secure $17M Series B.
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          “We absolutely love everything GoInvo has created for us, it has by far exceeded our expectations.”
+                          "We absolutely love everything GoInvo has created for us, it has by far exceeded our expectations."
                         </p>
                         <p className="margin-top--none">
                           Serban Georgescu MD<br />

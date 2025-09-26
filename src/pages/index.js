@@ -134,13 +134,13 @@ class IndexPage extends Component {
                 const TEXT_OVERRIDES = {
                   'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
                   'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
-                  'visual-storytelling-with-genai': { title: 'Storytelling with GenAI', subtitle: 'Illustration' },
-                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Poster' },
-                  'hgraph': { title: 'hGraph', subtitle: 'Data Visualization' },
+                  'visual-storytelling-with-genai': { title: 'Decision grade viz', subtitle: 'Workflow Research' },
+                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Industry Analysis' },
+                  'hgraph': { title: 'hGraph', subtitle: 'Clinical Decision Making' },
                   'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
                   'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
                   'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
-                  'inspired-ehrs': { title: 'Transforming Healthcare Analytics', subtitle: 'Enterprise Software' }
+                  'inspired-ehrs': { title: 'Healthcare Best Practices', subtitle: 'Enterprise Software' }
                 }
                 const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
                   if (!item) return null

@@ -114,20 +114,23 @@ class IndexPage extends Component {
             We craft digital design through software, strategic thinking, data visualization, and illustration.
           </p>
         </Hero>
-        <div className="expertise-section pad-vertical--double">
-          <div className="max-width content-padding">
-            <div className="pure-g expertise-row">
-              <div className="pure-u-1 pure-u-lg-1-3">
-                <h2 className="header--xl margin--none text--white">Our expertise in design covers...</h2>
-              </div>
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <div className="expertise-grid">
+        {/* Expertise section (no orange background); labels below heading with orange underlines */}
+        <div className="max-width content-padding pad-top--double pad-bottom--none homepage-expertise">
+          <div className="margin-vertical--double pure-g expertise-row">
+            <div className="pure-u-1">
+              <h2 className="header--xl margin--none">Our expertise in design covers...</h2>
+            </div>
+          </div>
+          <div className="pure-g" style={{ marginTop: '18px' }}>
+            <div className="pure-u-1">
+              <div className="expertise-grid">
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}>
                   <button
                     type="button"
-                    className="expertise-item button button--transparent"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}
                     onClick={() => {
-                      const value = 'enterprise analytics platform'
-                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                      const selected = this.state.selectedCategoryFilter === 'Enterprise' ? null : 'Enterprise'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -137,12 +140,14 @@ class IndexPage extends Component {
                   >
                     Enterprise
                   </button>
+                </div>
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}>
                   <button
                     type="button"
-                    className="expertise-item button button--transparent"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}
                     onClick={() => {
-                      const value = 'healthcare software'
-                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                      const selected = this.state.selectedCategoryFilter === 'Healthcare' ? null : 'Healthcare'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -152,12 +157,14 @@ class IndexPage extends Component {
                   >
                     Healthcare
                   </button>
+                </div>
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}>
                   <button
                     type="button"
-                    className="expertise-item button button--transparent"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}
                     onClick={() => {
-                      const value = 'public sector service design'
-                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                      const selected = this.state.selectedCategoryFilter === 'Government' ? null : 'Government'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -167,12 +174,14 @@ class IndexPage extends Component {
                   >
                     Government
                   </button>
+                </div>
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}>
                   <button
                     type="button"
-                    className="expertise-item button button--transparent"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}
                     onClick={() => {
-                      const value = 'AI LLM NLP healthcare'
-                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                      const selected = this.state.selectedCategoryFilter === 'AI' ? null : 'AI'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -185,86 +194,11 @@ class IndexPage extends Component {
                 </div>
               </div>
             </div>
-            {/* AI-driven search: full-width search input */}
-            <div className="pure-g expertise-controls" style={{ marginTop: '1rem', alignItems: 'stretch' }}>
-              <div className="pure-u-1">
-                <div className="expertise-search">
-                  <form onSubmit={(e) => {
-                    e.preventDefault()
-                    const value = e.target.elements.homeSearch.value
-                    if (value && this.setState) {
-                      this.setState({ homeSearchQuery: value, lastSubmittedQuery: value, homeInputValue: value })
-                      // Smooth scroll to results
-                      setTimeout(() => {
-                        const el = document.querySelector('.project-search')
-                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                      }, 50)
-                    }
-                  }}>
-                    <input
-                      name="homeSearch"
-                      className="expertise-search__input"
-                      type="text"
-                      placeholder="How can we help your next project?"
-                      value={(this.state.homeInputValue || '')}
-                      onChange={(e) => this.setState({ homeInputValue: e.target.value })}
-                      onInput={(e) => this.setState({ homeInputValue: e.target.value })}
-                      aria-label="Search"
-                    />
-                    {(() => {
-                      const current = (this.state.homeInputValue || '').trim().toLowerCase()
-                      const last = (this.state.lastSubmittedQuery || '').trim().toLowerCase()
-                      const showClear = current.length > 0 && last.length > 0 && current === last
-                      if (showClear) {
-                        return (
-                          <button
-                            type="button"
-                            className="expertise-search__button"
-                            aria-label="Clear search"
-                            onClick={() => {
-                              this.setState({ homeInputValue: '', homeSearchQuery: '' })
-                              try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) { }
-                            }}
-                          >
-                            ×
-                          </button>
-                        )
-                      }
-                      return (
-                        <button type="submit" className="expertise-search__button" aria-label="Search">→</button>
-                      )
-                    })()}
-                  </form>
-                </div>
-                <div className="expertise-disclaimer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px' }}>
-                  <div className="expertise-disclaimer__tip" style={{ color: '#fff', opacity: 0.95, fontSize: '1rem' }}>Tip: Click a sector above to try example queries.</div>
-                  <div className="expertise-disclaimer__experimental" style={{ color: '#fff', opacity: 0.6, fontSize: '0.875rem', fontWeight: 400 }}>AI search is experimental.</div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-        {/* Inject AI/Enhanced search component directly under the orange expertise section */}
-        <div className="max-width content-padding pad-vertical">
-          <ProjectSearch
-            projects={this.state.allProjects}
-            externalQuery={this.state.homeSearchQuery || ''}
-            aiEnabledOverride={this.state.aiEnabled}
-            selectedPersonaOverride={this.state.selectedPersona}
-            hideInput={true}
-            selectionMode="client"
-          />
         </div>
         {!this.state.hideSpotlights && (
           <div className="max-width content-padding pad-bottom--double" id="spotlights">
-            <div className="margin-vertical--double pad-vertical--double">
-              <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-3">
-                  <h2 className="header--xl margin--none pad-right--double spotlights-title">
-                    Spotlights
-                  </h2>
-                </div>
-              </div>
+            <div className="pad-vertical--double">
               {/* Spotlights (custom layout in a single grid) */}
               {(() => {
                 const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
@@ -279,6 +213,98 @@ class IndexPage extends Component {
                   'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
                   'inspired-ehrs': { title: 'Transforming Healthcare Analytics', subtitle: 'Enterprise Software' }
                 }
+                // Width map for aesthetically pleasing layouts (in 4-column grid)
+                // 1 = quarter width, 2 = half width, 4 = full width
+                const SPOTLIGHT_WIDTHS = {
+                  'ipsos-facto': 2,
+                  'eligibility-engine': 1,
+                  'visual-storytelling-with-genai': 2,
+                  'determinants-of-health': 2,
+                  'hgraph': 2,
+                  'inspired-ehrs': 2,
+                  'prior-auth': 2,
+                  'precision-autism': 2,
+                  'mass-snap': 4
+                }
+
+                const getWidthForItem = (item) => {
+                  if (!item) return 1
+                  const key = item.slug || item.id || ''
+                  return SPOTLIGHT_WIDTHS[key] || 1
+                }
+
+                const spanClassForWidth = (w) => {
+                  if (w >= 4) return 'spotlight--span-4'
+                  if (w >= 2) return 'spotlight--span-2'
+                  return ''
+                }
+
+                // Greedy packing to fill 4-unit rows
+                const layoutWithGreedy = (items) => {
+                  const remaining = [...items]
+                  const output = []
+                  let rowRemaining = 4
+                  while (remaining.length > 0) {
+                    // Try next item
+                    const candidate = remaining[0]
+                    const w = getWidthForItem(candidate)
+                    if (w <= rowRemaining) {
+                      output.push({ item: candidate, className: spanClassForWidth(w) })
+                      remaining.shift()
+                      rowRemaining -= w
+                      if (rowRemaining === 0) rowRemaining = 4
+                      continue
+                    }
+                    // Find later item that fits current row
+                    let foundIdx = -1
+                    for (let i = 1; i < remaining.length; i++) {
+                      const wi = getWidthForItem(remaining[i])
+                      if (wi <= rowRemaining) { foundIdx = i; break }
+                    }
+                    if (foundIdx !== -1) {
+                      const fit = remaining.splice(foundIdx, 1)[0]
+                      const wf = getWidthForItem(fit)
+                      output.push({ item: fit, className: spanClassForWidth(wf) })
+                      rowRemaining -= wf
+                      if (rowRemaining === 0) rowRemaining = 4
+                      continue
+                    }
+                    // Start a new row if nothing fits
+                    rowRemaining = 4
+                  }
+                  return output
+                }
+                const normalizedCategory = (this.state.selectedCategoryFilter || '').toString().trim().toLowerCase()
+                const matchesCategory = (project) => {
+                  if (!normalizedCategory) return true
+                  if (!project) return false
+                  const cats = Array.isArray(project.categories) ? project.categories : []
+                  const kws = Array.isArray(project.keywords) ? project.keywords : []
+                  const inCats = cats.some(c => String(c || '').toLowerCase() === normalizedCategory)
+                  const inKws = kws.some(k => String(k || '').toLowerCase() === normalizedCategory)
+                  const hay = [project.title, project.caption, project.client, ...cats, ...kws]
+                    .filter(Boolean).join(' ').toLowerCase()
+                  const has = (arr) => arr.some(token => hay.includes(token))
+                  let inferred = false
+                  switch (normalizedCategory) {
+                    case 'ai':
+                      inferred = has([' ai ', 'artificial intelligence', 'machine learning', ' llm', 'gpt', 'neural', 'algorithm']) || hay.startsWith('ai')
+                      break
+                    case 'healthcare':
+                      inferred = has(['healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'oncology'])
+                      break
+                    case 'government':
+                      inferred = has(['government', 'public sector', 'civic', 'municipal', 'federal', 'state', 'massachusetts department', 'snap'])
+                      break
+                    case 'enterprise':
+                      inferred = has(['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'])
+                      break
+                    default:
+                      inferred = false
+                  }
+                  return inCats || inKws || inferred
+                }
+
                 const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
                   if (!item) return null
                   const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
@@ -319,21 +345,34 @@ class IndexPage extends Component {
                   )
                 }
 
+                // Spotlight ordering and options
+                const defs = [
+                  { key: 'ipsos-facto', opts: { className: 'spotlight--span-2' } },
+                  { key: 'eligibility-engine', opts: {} },
+                  { key: 'visual-storytelling-with-genai', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' } },
+                  { key: 'determinants-of-health', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' } },
+                  { key: 'hgraph', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' } },
+                  { key: 'inspired-ehrs', opts: { className: 'spotlight--span-2' } },
+                  { key: 'prior-auth', opts: { className: 'spotlight--span-2' } },
+                  { key: 'precision-autism', opts: { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' } },
+                  { key: 'mass-snap', opts: { className: 'spotlight--span-4' } },
+                ]
+
+                // If a category filter is selected, show items from the entire work pool
+                if (normalizedCategory) {
+                  const filteredProjects = (this.state.allProjects || []).filter(matchesCategory)
+                  const arranged = layoutWithGreedy(filteredProjects).slice(0, 12)
+                  return (
+                    <div className="spotlights-grid spotlights-grid--four">
+                      {arranged.map(({ item, className }, idx) => renderCard(item, { className }))}
+                    </div>
+                  )
+                }
+                // Otherwise, show curated spotlights
+                const filtered = defs.filter(d => matchesCategory(findItem(d.key)))
                 return (
                   <div className="spotlights-grid spotlights-grid--four">
-                    {/* Row A */}
-                    {renderCard(findItem('ipsos-facto'), { className: 'spotlight--span-2' })}
-                    {renderCard(findItem('eligibility-engine'))}
-                    {renderCard(findItem('visual-storytelling-with-genai'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' })}
-                    {/* Row B */}
-                    {renderCard(findItem('determinants-of-health'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' })}
-                    {renderCard(findItem('hgraph'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' })}
-                    {renderCard(findItem('inspired-ehrs'), { className: 'spotlight--span-2' })}
-                    {/* Row C */}
-                    {renderCard(findItem('prior-auth'), { className: 'spotlight--span-2' })}
-                    {renderCard(findItem('precision-autism'), { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' })}
-                    {/* Row D */}
-                    {renderCard(findItem('mass-snap'), { className: 'spotlight--span-4' })}
+                    {filtered.map(d => renderCard(findItem(d.key), d.opts))}
                   </div>
                 )
               })()}

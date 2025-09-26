@@ -60,8 +60,6 @@ class IndexPage extends Component {
       allProjects,
       frontmatter,
       hideSpotlights: false,
-      // AI search controls driven by the orange section UI
-      aiEnabled: true,
       selectedPersona: null,
       homeSearchQuery: '',
       homeInputDefault: ''

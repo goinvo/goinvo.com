@@ -124,6 +124,9 @@ class IndexPage extends Component {
                     Our expertise in design covers...
                   </h2>
                 </div>
+                <div className="pure-u-1 pure-u-lg-4-4">
+                  <CategoriesList includeAll={false} columns={4} />
+                </div>
               </div>
               {/* Spotlights (custom layout in a single grid) */}
               {(() => {

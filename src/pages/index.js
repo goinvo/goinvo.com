@@ -134,7 +134,7 @@ class IndexPage extends Component {
                 const TEXT_OVERRIDES = {
                   'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
                   'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
-                  'visual-storytelling-with-genai': { title: 'Decision grade viz', subtitle: 'Workflow Research' },
+                  'visual-storytelling-with-genai': { title: 'Decision Grade Viz', subtitle: 'Workflow Research' },
                   'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Industry Analysis' },
                   'hgraph': { title: 'hGraph', subtitle: 'Clinical Decision Making' },
                   'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },

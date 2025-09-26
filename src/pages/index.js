@@ -139,7 +139,7 @@ class IndexPage extends Component {
                   'hgraph': { title: 'hGraph', subtitle: 'Clinical Decision Making' },
                   'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
                   'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
-                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
+                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Digital Transformation for All' },
                   'inspired-ehrs': { title: 'Healthcare Best Practices', subtitle: 'Enterprise Software' }
                 }
                 const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {

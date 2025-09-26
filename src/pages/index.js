@@ -111,7 +111,7 @@ class IndexPage extends Component {
             <span className="text--serif text--primary">.</span>
           </h1>
           <p className="hero-subtitle text--black">
-            We craft digital design through software, strategic thinking, data visualization, and illustration.
+            We craft digital design through software, strategic thinking, and data visualization.
           </p>
         </Hero>
         

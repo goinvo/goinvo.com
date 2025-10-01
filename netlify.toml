@@ -16,7 +16,6 @@
 # Function configuration
 [functions]
   node_bundler = "esbuild"
-  included_files = ["public/ai-preset-cache.json"]
 
 [dev]
   command = "npm run develop"

@@ -15,13 +15,15 @@ export const TEXT_OVERRIDES = {
 export const SPOTLIGHT_WIDTHS = {
   'ipsos-facto': 2,
   'eligibility-engine': 1,
-  'visual-storytelling-with-genai': 2,
-  'determinants-of-health': 2,
-  'hgraph': 2,
+  'visual-storytelling-with-genai': 1,
+  'determinants-of-health': 1,
+  'hgraph': 1,
   'inspired-ehrs': 2,
   'prior-auth': 2,
   'precision-autism': 2,
   'mass-snap': 4,
+  'maya-ehr': 2,
+  'national-cancer-navigation': 2,
 }
 
 

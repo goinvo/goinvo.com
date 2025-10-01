@@ -115,7 +115,6 @@ class IndexPage extends Component {
             We craft digital design through software, strategic thinking, data visualization, and illustration.
           </p>
         </Hero>
-        {/* Orange expertise section with category buttons */}
         <div className="expertise-section pad-vertical--double">
           <div className="max-width content-padding">
             <div className="pure-g expertise-row">
@@ -281,6 +280,7 @@ class IndexPage extends Component {
                   if (w >= 4) return 'spotlight--span-4'
                   if (w >= 3) return 'spotlight--span-3'
                   if (w >= 2) return 'spotlight--span-2'
+                  if (w >= 1) return 'spotlight--span-1'
                   return ''
                 }
 

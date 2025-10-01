@@ -320,8 +320,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-
   margin-top: 24px;
+
+  // Debug: Add border to see grid container
+  // border: 2px solid red;
 
   @include mq($from: large) {
     grid-template-columns: repeat(4, 1fr);
@@ -332,6 +334,30 @@
     grid-template-columns: 1fr;
   }
 
+  &--four {
+    // Force 4-column layout on desktop
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr) !important;
+      grid-auto-flow: dense;
+    }
+    
+    // Fallback for the mq mixin
+    @include mq($from: large) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: dense;
+    }
+  }
+}
+
+// More specific selector to ensure 4-column layout
+.spotlights-grid.spotlights-grid--four {
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-auto-flow: dense;
+  }
+}
+
+.spotlights-grid {
   .image-block__text {
     padding-left: $spacing;
     padding-right: $spacing;
@@ -352,6 +378,9 @@
 // Match AI search result grids to spotlight 4-column layout  
 .ai-enhanced-grid,
 .ai-results-grid {
+  display: grid;
+  gap: 24px;
+  
   @include mq($from: large) {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: dense;
@@ -360,6 +389,7 @@
 
 // 4-column control with spans
 
+// .spotlight--span-1 - Quarter width items don't need special CSS, they take up 1 column by default
 
 .spotlight--span-2 {
   @include mq($from: large) {

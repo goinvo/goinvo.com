@@ -22,11 +22,6 @@ export const SPOTLIGHT_WIDTHS = {
   'prior-auth': 2,
   'precision-autism': 2,
   'mass-snap': 4,
-  'maya-ehr': 2,
-  'national-cancer-navigation': 2,
-  'national-healthcare-stories': 2,
-  '3m-coderyte': 2,
-  'augmented-clinical-decision-support': 2
 }
 
 

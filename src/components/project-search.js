@@ -101,6 +101,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     if (w >= 4) return 'spotlight--span-4'
     if (w >= 3) return 'spotlight--span-3'
     if (w >= 2) return 'spotlight--span-2'
+    if (w >= 1) return 'spotlight--span-1'
     return ''
   }, [])
 

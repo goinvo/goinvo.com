@@ -843,6 +843,7 @@ OPENAI_API_KEY=your-api-key-here
 ```
 
 > **💡 API Key Setup**: Get your OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+> Internal (GoInvo): You can retrieve the OpenAI (ChatGPT) API key from 1Password and place it in your `.env` as `OPENAI_API_KEY`.
 
 ### Generate Search Index
 
@@ -902,6 +903,7 @@ npx --yes netlify-cli dev --target-port 8000 --port 8888 --functions netlify/fun
 - Visit `http://localhost:8888` for the full local experience with AI features enabled via the proxy.
 - Visiting `http://localhost:8000` (without the proxy) will run the application, but AI features will be inactive.
 - Ensure your `.env` contains a valid `OPENAI_API_KEY` as described in Environment Setup.
+ - Internal (GoInvo): Retrieve the OpenAI (ChatGPT) API key from 1Password and set it as `OPENAI_API_KEY`.
 
 Alternative (single command, requires Netlify CLI available for npm scripts):
 

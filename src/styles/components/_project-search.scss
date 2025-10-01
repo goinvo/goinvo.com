@@ -634,7 +634,34 @@
 
     // AI-Enhanced Results Section
     .ai-enhanced-section {
+      position: relative;
       margin-bottom: 3rem;
+      padding: 3rem 2rem;
+      background-color: $color-orange--lightest;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      // Decorative background pattern/gradient
+      .ai-enhanced-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.05;
+        background: 
+          radial-gradient(circle at 20% 50%, rgba(227, 98, 22, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(227, 98, 22, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 40% 20%, rgba(227, 98, 22, 0.15) 0%, transparent 40%);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      // Ensure content is above the decorative background
+      > * {
+        position: relative;
+        z-index: 1;
+      }
 
       .ai-section-header {
         text-align: center;
@@ -643,19 +670,19 @@
         h4 {
           margin: 0 0 0.5rem;
           font-size: 1.5rem;
-          color: var(--primary);
+          color: $color-gray--darkest;
         }
 
         p {
           margin: 0;
-          color: var(--gray-dark);
+          color: $color-gray--dark;
           font-size: 1rem;
         }
       }
 
       .ai-enhanced-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        // Grid columns defined in _landing-page.scss for consistency with spotlights
         gap: 1.5rem;
       }
 
@@ -709,17 +736,18 @@
       }
 
       .ai-enhanced-item {
-        background: var(--white);
-        border: 2px solid #e0e0e0;
+        background: #fff;
+        border: 1px solid rgba(227, 98, 22, 0.15);
         border-radius: 0.75rem;
         overflow: hidden;
         transition: all 0.3s ease;
         position: relative;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
         &:hover {
-          box-shadow: 0 8px 25px rgba(44, 90, 160, 0.15);
+          box-shadow: 0 8px 20px rgba(227, 98, 22, 0.15);
           transform: translateY(-4px);
-          border-color: var(--primary);
+          border-color: rgba(227, 98, 22, 0.3);
         }
 
         .ai-enhanced-link {
@@ -988,12 +1016,19 @@
 
     &__results {
       .ai-enhanced-section {
-        padding: 1rem;
+        padding: 2rem 1rem;
         margin-bottom: 2rem;
+        border-radius: 0.75rem;
 
         .ai-section-header {
+          margin-bottom: 1.5rem;
+
           h4 {
             font-size: 1.25rem;
+          }
+
+          p {
+            font-size: 0.9rem;
           }
         }
 
@@ -1003,6 +1038,8 @@
         }
 
         .ai-enhanced-item {
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
           .ai-enhanced-content {
             padding: 1rem;
 

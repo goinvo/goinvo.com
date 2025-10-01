@@ -115,23 +115,21 @@ class IndexPage extends Component {
             We craft digital design through software, strategic thinking, data visualization, and illustration.
           </p>
         </Hero>
-        {/* Expertise section (no orange background); labels below heading with orange underlines */}
-        <div className="max-width content-padding pad-top--double pad-bottom--none homepage-expertise">
-          <div className="margin-vertical--double pure-g expertise-row">
-            <div className="pure-u-1">
-              <h2 className="header--xl margin--none">Our expertise in design covers...</h2>
-            </div>
-          </div>
-          <div className="pure-g" style={{ marginTop: '18px' }}>
-            <div className="pure-u-1">
-              <div className="expertise-grid">
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}>
+        {/* Orange expertise section with category buttons */}
+        <div className="expertise-section pad-vertical--double">
+          <div className="max-width content-padding">
+            <div className="pure-g expertise-row">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--xl margin--none text--white">Our expertise in design covers...</h2>
+              </div>
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <div className="expertise-grid">
                   <button
                     type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}
+                    className="expertise-item button button--transparent"
                     onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'Enterprise' ? null : 'Enterprise'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
+                      const value = 'enterprise analytics platform'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -141,14 +139,12 @@ class IndexPage extends Component {
                   >
                     Enterprise
                   </button>
-                </div>
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}>
                   <button
                     type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}
+                    className="expertise-item button button--transparent"
                     onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'Healthcare' ? null : 'Healthcare'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
+                      const value = 'healthcare software'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -158,14 +154,12 @@ class IndexPage extends Component {
                   >
                     Healthcare
                   </button>
-                </div>
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}>
                   <button
                     type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}
+                    className="expertise-item button button--transparent"
                     onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'Government' ? null : 'Government'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
+                      const value = 'public sector service design'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -175,14 +169,12 @@ class IndexPage extends Component {
                   >
                     Government
                   </button>
-                </div>
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}>
                   <button
                     type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}
+                    className="expertise-item button button--transparent"
                     onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'AI' ? null : 'AI'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
+                      const value = 'AI LLM NLP healthcare'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
                           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -195,15 +187,89 @@ class IndexPage extends Component {
                 </div>
               </div>
             </div>
+            {/* AI-driven search: full-width search input */}
+            <div className="pure-g expertise-controls" style={{ marginTop: '1rem', alignItems: 'stretch' }}>
+              <div className="pure-u-1">
+                <div className="expertise-search">
+                  <form onSubmit={(e) => {
+                    e.preventDefault()
+                    const value = e.target.elements.homeSearch.value
+                    if (value && this.setState) {
+                      this.setState({ homeSearchQuery: value, lastSubmittedQuery: value, homeInputValue: value })
+                      // Smooth scroll to results
+                      setTimeout(() => {
+                        const el = document.querySelector('.project-search')
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }, 50)
+                    }
+                  }}>
+                    <input
+                      name="homeSearch"
+                      className="expertise-search__input"
+                      type="text"
+                      placeholder="How can we help your next project?"
+                      value={(this.state.homeInputValue || '')}
+                      onChange={(e) => this.setState({ homeInputValue: e.target.value })}
+                      onInput={(e) => this.setState({ homeInputValue: e.target.value })}
+                      aria-label="Search"
+                    />
+                    {(() => {
+                      const current = (this.state.homeInputValue || '').trim().toLowerCase()
+                      const last = (this.state.lastSubmittedQuery || '').trim().toLowerCase()
+                      const showClear = current.length > 0 && last.length > 0 && current === last
+                      if (showClear) {
+                        return (
+                          <button
+                            type="button"
+                            className="expertise-search__button"
+                            aria-label="Clear search"
+                            onClick={() => {
+                              this.setState({ homeInputValue: '', homeSearchQuery: '' })
+                              try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) { }
+                            }}
+                          >
+                            ×
+                          </button>
+                        )
+                      }
+                      return (
+                        <button type="submit" className="expertise-search__button" aria-label="Search">→</button>
+                      )
+                    })()}
+                  </form>
+                </div>
+                <div className="expertise-disclaimer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px' }}>
+                  <div className="expertise-disclaimer__tip" style={{ color: '#fff', opacity: 0.95, fontSize: '1rem' }}>Tip: Click a sector above to try example queries.</div>
+                  <div className="expertise-disclaimer__experimental" style={{ color: '#fff', opacity: 0.6, fontSize: '0.875rem', fontWeight: 400 }}>AI search is experimental.</div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        {/* Inject AI/Enhanced search component directly under the orange expertise section */}
+        <div className="max-width content-padding pad-vertical">
+          <ProjectSearch
+            projects={this.state.allProjects}
+            externalQuery={this.state.homeSearchQuery || ''}
+            aiEnabledOverride={this.state.aiEnabled}
+            selectedPersonaOverride={this.state.selectedPersona}
+            hideInput={true}
+            selectionMode="client"
+          />
         </div>
         {!this.state.hideSpotlights && (
           <div className="max-width content-padding pad-bottom--double" id="spotlights">
-            <div className="pad-vertical--double">
+            <div className="margin-vertical--double pad-vertical--double">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-1-3">
+                  <h2 className="header--xl margin--none pad-right--double spotlights-title">
+                    Spotlights
+                  </h2>
+                </div>
+              </div>
               {/* Spotlights (custom layout in a single grid) */}
               {(() => {
                 const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
-                
 
                 const getWidthForItem = (item) => {
                   if (!item) return 1
@@ -329,7 +395,6 @@ class IndexPage extends Component {
                   }
                   return inCats || inKws || inferred
                 }
-
                 const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
                   if (!item) return null
                   const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
@@ -397,11 +462,16 @@ class IndexPage extends Component {
                     </div>
                   )
                 }
-                // Otherwise, show curated spotlights
+                // Otherwise, show curated spotlights using greedy layout
                 const filtered = defs.filter(d => matchesCategory(findItem(d.key)))
+                const curatedItems = filtered.map(d => findItem(d.key)).filter(Boolean)
+                const arranged = layoutWithGreedy(curatedItems)
                 return (
                   <div className="spotlights-grid spotlights-grid--four">
-                    {filtered.map(d => renderCard(findItem(d.key), d.opts))}
+                    {arranged.map(({ item, className }, idx) => {
+                      const vid = getVideoOptsForItem(item)
+                      return renderCard(item, { className, ...vid })
+                    })}
                   </div>
                 )
               })()}

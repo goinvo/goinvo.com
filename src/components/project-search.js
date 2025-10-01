@@ -5,6 +5,7 @@ import Card from './card'
 import Image from './image'
 import config from '../../config'
 import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
+import { SPOTLIGHT_WIDTHS } from '../data/homepage-spotlights'
 
 // Helper to call Netlify Functions with graceful local fallback
 async function callFunction(name, payload) {
@@ -63,7 +64,7 @@ const STORAGE_KEYS = {
 // State expires after 1 hour
 const STATE_EXPIRY = 60 * 60 * 1000
 
-const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, selectedPersonaOverride = undefined, hideInput = false, selectionMode = 'client', categoryFilter = null }) => {
+const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, selectedPersonaOverride = undefined, hideInput = false, selectionMode = 'client' }) => {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState([])
@@ -88,44 +89,86 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const [expandedDescriptions, setExpandedDescriptions] = useState(new Set())
   const [usedFallback, setUsedFallback] = useState(false)
   const [fallbackReason, setFallbackReason] = useState(null)
-  const normalizedCategory = (categoryFilter || '').toString().trim().toLowerCase()
+  
+  // Spotlight layout helpers (match homepage behavior)
+  const getWidthForItem = useCallback((item) => {
+    if (!item) return 1
+    const key = item.slug || item.id || ''
+    return SPOTLIGHT_WIDTHS[key] || 1
+  }, [])
 
-  const matchesCategory = useCallback((project) => {
-    if (!normalizedCategory) return true
-    const cats = (project && project.categories) || []
-    const inCategories = cats.some(c => String(c || '').toLowerCase() === normalizedCategory)
-    // also check keywords as a loose signal
-    const kws = (project && project.keywords) || []
-    const inKeywords = kws.some(k => String(k || '').toLowerCase() === normalizedCategory)
+  const spanClassForWidth = useCallback((w) => {
+    if (w >= 4) return 'spotlight--span-4'
+    if (w >= 3) return 'spotlight--span-3'
+    if (w >= 2) return 'spotlight--span-2'
+    return ''
+  }, [])
 
-    // Heuristic matching on title/caption/client text
-    const haystack = [project?.title, project?.caption, project?.client, ...(cats || []), ...(kws || [])]
-      .filter(Boolean)
-      .join(' ')
-      .toLowerCase()
+  const layoutWithGreedy = useCallback((items) => {
+    const remaining = [...(items || [])]
+    const output = [] // { item, width }
+    let rowRemaining = 4
+    let rowStartIdx = 0 // index in output where current row starts
 
-    const has = (arr) => arr.some(token => haystack.includes(token))
+    while (remaining.length > 0) {
+      const candidate = remaining[0]
+      const w = getWidthForItem(candidate)
 
-    let inferred = false
-    switch (normalizedCategory) {
-      case 'ai':
-        inferred = has([' ai ', 'artificial intelligence', 'machine learning', 'ml ', ' llm', 'gpt', 'neural', 'algorithm']) || haystack.startsWith('ai')
-        break
-      case 'healthcare':
-        inferred = has(['health', 'healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'oncology'])
-        break
-      case 'government':
-        inferred = has(['government', 'public sector', 'civic', 'municipal', 'federal', 'state', 'massachusetts department', 'snap'])
-        break
-      case 'enterprise':
-        inferred = has(['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'])
-        break
-      default:
-        inferred = false
+      // If fits, place it
+      if (w <= rowRemaining) {
+        output.push({ item: candidate, width: w })
+        remaining.shift()
+        rowRemaining -= w
+        if (rowRemaining === 0) {
+          // row complete
+          rowRemaining = 4
+          rowStartIdx = output.length
+        }
+        continue
+      }
+
+      // Look ahead for any that fits
+      let foundIdx = -1
+      for (let i = 1; i < remaining.length; i++) {
+        const wi = getWidthForItem(remaining[i])
+        if (wi <= rowRemaining) { foundIdx = i; break }
+      }
+      if (foundIdx !== -1) {
+        const fit = remaining.splice(foundIdx, 1)[0]
+        const wf = getWidthForItem(fit)
+        output.push({ item: fit, width: wf })
+        rowRemaining -= wf
+        if (rowRemaining === 0) {
+          rowRemaining = 4
+          rowStartIdx = output.length
+        }
+        continue
+      }
+
+      // Nothing fits: expand the last item in the current row to fill remainder
+      if (output.length > rowStartIdx) {
+        const lastIdx = output.length - 1
+        output[lastIdx] = {
+          item: output[lastIdx].item,
+          width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+        }
+      }
+      // Start a new row
+      rowRemaining = 4
+      rowStartIdx = output.length
     }
 
-    return inCategories || inKeywords || inferred
-  }, [normalizedCategory])
+    // If last row isn't full, expand the last item of the row to fill remainder
+    if (rowRemaining !== 4 && output.length > rowStartIdx) {
+      const lastIdx = output.length - 1
+      output[lastIdx] = {
+        item: output[lastIdx].item,
+        width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+      }
+    }
+
+    return output.map(({ item, width }) => ({ item, className: spanClassForWidth(width || 1) }))
+  }, [getWidthForItem, spanClassForWidth])
   
   // Example search queries to rotate through
   const placeholderExamples = [
@@ -429,27 +472,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     } catch (_) {}
   }
 
-  // Execute search pipeline when query or filters change
+  // Execute search pipeline when query changes
   useEffect(() => {
-    const qlen = query.trim().length
-    const allProjects = (searchIndex && searchIndex.length > 0) ? searchIndex : projects
-
-    // If a category filter is set and no meaningful query, just filter locally without AI/services
-    if (normalizedCategory && qlen < 2) {
-      const filtered = (allProjects || []).filter(matchesCategory)
-      setResults(filtered)
-      setIsSearching(false)
-      setError(null)
-      setSuggestions([])
-      setSearchAnalysis(null)
-      setAiSearchInsight(null)
-      setSearchTriggered(false)
-      try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(filtered) && filtered.length > 0 } })) } catch(_) {}
-      return
-    }
-
-    // Don't search if query is too short (and no category filter-only mode)
-    if (qlen < 2) {
+    // Don't search if query is too short
+    if (query.trim().length < 2) {
       setResults([])
       setIsSearching(false)
       setError(null)
@@ -504,17 +530,9 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         let usedFb = !!fallbackUsed
         let fbReason = fallbackReason || null
 
-        // Apply category filter if provided
-        if (normalizedCategory) {
-          outResults = (outResults || []).filter(matchesCategory)
-        }
-
         // If we somehow have no results, try a simple local keyword fallback
         if ((!outResults || outResults.length === 0) && Array.isArray(allProjects) && allProjects.length > 0) {
           outResults = quickKeywordFallback(query, allProjects)
-          if (normalizedCategory) {
-            outResults = outResults.filter(matchesCategory)
-          }
           if (outResults && outResults.length > 0) {
             usedFb = true
             fbReason = fbReason || 'no-results'
@@ -554,7 +572,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     }, 200)
     
     return () => clearTimeout(timeoutId)
-  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled, effectiveSelectedPersona, normalizedCategory, matchesCategory])
+  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled, effectiveSelectedPersona])
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)
@@ -735,8 +753,9 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
             // Get AI-enhanced projects for featured section
             const aiEnhancedProjects = results
               .filter(project => project.aiDescription)
-              .slice(0, 4);
-            const isSingleEnhanced = aiEnhancedProjects.length === 1;
+              .slice(0, 4)
+            const arranged = layoutWithGreedy(aiEnhancedProjects)
+            const isSingleEnhanced = aiEnhancedProjects.length === 1
             
             return (
               <div className="ai-enhanced-section">
@@ -749,24 +768,25 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                 </div>
                 
                 <div className={`spotlights-grid ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
-                  {aiEnhancedProjects.map((project) => (
+                  {arranged.map(({ item, className }) => (
                     <Card
-                      key={`ai-${project.slug}`}
-                      link={`/work/${project.slug}/`}
+                      key={`ai-${item.slug}`}
+                      link={`/work/${item.slug}/`}
                       onClick={handleResultNavigate}
                       noShadow
+                      className={className}
                     >
                       <ImageBlock
-                        title={project.title}
-                        image={project.image}
-                        caption={project.aiDescription ? project.aiDescription : project.caption}
+                        title={item.title}
+                        image={item.image}
+                        caption={item.aiDescription ? item.aiDescription : item.caption}
                         sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
                       />
                     </Card>
                   ))}
                 </div>
               </div>
-            );
+            )
           })()}
           
           {/* All Results Section */}
@@ -788,7 +808,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
               const remainingCount = remainingResults.length;
 
               // If we used fallback search, still show the header even without AI descriptions
-              const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback || !!normalizedCategory
+              const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback
               const headerTitle = usedFallback ? 'Here are your results' : 'All Results'
 
               return (
@@ -801,12 +821,12 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
                   )}
 
                   <div className="spotlights-grid ai-results-grid">
-                    {remainingResults.map((project) => (
-                      <Card key={project.slug} link={`/work/${project.slug}/`} onClick={handleResultNavigate} noShadow>
+                    {layoutWithGreedy(remainingResults).map(({ item, className }) => (
+                      <Card key={item.slug} link={`/work/${item.slug}/`} onClick={handleResultNavigate} noShadow className={className}>
                         <ImageBlock
-                          title={project.title}
-                          image={project.image}
-                          caption={project.caption}
+                          title={item.title}
+                          image={item.image}
+                          caption={item.caption}
                           sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
                         />
                       </Card>

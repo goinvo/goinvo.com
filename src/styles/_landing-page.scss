@@ -172,7 +172,7 @@
     // Block spacing for each item (both mobile and desktop)
     .pure-g > .pure-u-1 { margin-bottom: $spacing * 2; }
     .pure-g > .pure-u-1 p { margin: 0 0 $spacing 0; }
-    .pure-g > .pure-u-1 a { display: inline-block; margin-top: math.div($spacing, 2); }
+    .pure-g > .pure-u-1 a { display: inline-block; margin-top: $spacing / 2; }
 
     @include mq($from: large) {
       .pure-u-lg-1-3 { margin-right: $spacing * 2; }
@@ -278,11 +278,11 @@
       padding-bottom: 8px;
       border-bottom: 1px solid $color-white;
       color: $color-white;
-      font-family: 'Adobe Jenson Pro', $font-family--serif, serif;
-      font-size: 1.5rem;
+      font-family: 'Open Sans', $font-family--sans-serif, sans-serif;
+      font-size: 1.125rem;
       font-weight: $font-weight--normal;
         letter-spacing: 0; // reduce tracking
-      text-transform: capitalize; // override button uppercase
+      text-transform: none; // override button uppercase
       text-align: left; // ensure left alignment
     }
   }
@@ -349,11 +349,12 @@
   }
 }
 
-// Force AI search result grids to 2 columns on desktop
+// Match AI search result grids to spotlight 4-column layout  
 .ai-enhanced-grid,
 .ai-results-grid {
   @include mq($from: large) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
   }
 }
 
@@ -465,59 +466,5 @@
   .we-are-body {
     font-family: $font-family--sans-serif;
     margin-top: 0;
-  }
-}
-
-// Homepage expertise filters (new layout outside the old orange section)
-.homepage-expertise {
-  .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0 24px;
-
-    @include mq($until: large) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 24px;
-    }
-
-    .expertise-col {
-      border-bottom: 1px solid #e8a06a; // orange underline
-      padding-bottom: 10px;
-      transition: border-bottom-width 0.2s ease;
-
-      &.is-selected {
-        border-bottom-width: 3px; // grow underline when selected
-      }
-    }
-
-    .expertise-item {
-      // override base .button styles
-      background: transparent;
-      border: none;
-      display: block;
-      width: 100%;
-      text-align: left;
-      padding: 0;
-      font-family: 'adobe jenson pro', 'Adobe Jenson Pro', serif;
-      font-weight: 300; 
-      font-size: 1.5rem !important;
-      letter-spacing: -0.02em; // tighter tracking
-      text-transform: capitalize; 
-      line-height: 1.2;
-
-      // ensure inherited button styles don't force uppercase/weight
-      &.button {
-        text-transform: capitalize;
-        font-weight: 400;
-      }
-
-      &:hover {
-        opacity: 0.85;
-      }
-
-      &.is-selected {
-        font-weight: 700; // bold when selected
-      }
-    }
   }
 }

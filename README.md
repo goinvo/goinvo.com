@@ -788,7 +788,7 @@ This website features an intelligent semantic search system that helps potential
 
 ### Search Features
 
-- **Natural Language Queries**: See examples in [docs/SEARCH_QUERY_EXAMPLES.md](docs/SEARCH_QUERY_EXAMPLES.md)
+- **Natural Language Queries**: "I need a UI for an AI platform for therapists"
 - **Intelligent Keyword Expansion**: Automatically maps related terms (e.g., "telemetry" → "monitoring", "vital signs")
 - **Buyer-Focused Descriptions**: AI explains why each project is relevant to your specific needs
 - **Smart Filtering**: Filter by project type, industry, and complexity
@@ -816,7 +816,7 @@ The search system recognizes and expands hundreds of related terms:
 
 ### Prerequisites
 
-1. **Node.js 18.18+** and npm
+1. **Node.js 16+** and npm
 2. **OpenAI API Key** for embedding generation
 3. **Gatsby CLI** (optional, for development commands)
 
@@ -872,7 +872,7 @@ This command will:
 
 ```bash
 # Start development server
-npm run develop
+npm start
 
 # Build for production
 npm run build
@@ -880,36 +880,6 @@ npm run build
 # Serve production build locally
 npm run serve
 ```
-
-> Note: You can also run `npm run develop` (or `yarn develop`) to start Gatsby directly on port 8000. The site will work, but the AI feature set will be inactive in this mode. To test AI features locally, use the Netlify proxy as described below.
-
-## AI Feature Development and Testing
-
-To test AI-powered features locally (e.g., semantic search with serverless functions), run the site together with a Netlify proxy. Use two terminals:
-
-1. Start the Gatsby client on port 8000:
-
-```bash
-npm run develop
-```
-
-2. In a second terminal, start the Netlify proxy on port 8888, forwarding to the Gatsby dev server and using local functions in `netlify/functions`:
-
-```bash
-npx --yes netlify-cli dev --target-port 8000 --port 8888 --functions netlify/functions
-```
-
-- Visit `http://localhost:8888` for the full local experience with AI features enabled via the proxy.
-- Visiting `http://localhost:8000` (without the proxy) will run the application, but AI features will be inactive.
-- Ensure your `.env` contains a valid `OPENAI_API_KEY` as described in Environment Setup.
-
-Alternative (single command, requires Netlify CLI available for npm scripts):
-
-```bash
-npm run dev:ai
-```
-
-Slugs correspond to the `slug`/`id` for each work item. Widths are used by the homepage greedy layout algorithm to produce balanced rows.
 
 ## 📝 Content Management
 
@@ -940,29 +910,6 @@ Slugs correspond to the `slug`/`id` for each work item. Widths are used by the h
    ```bash
    npm run generate-embeddings
    ```
-
-### Customizing Homepage Spotlights
-
-You can customize homepage Spotlight titles/subtitles and layout widths in `src/data/homepage-spotlights.js`.
-
-- Edit `TEXT_OVERRIDES` to change display titles or subtitles by project slug:
-
-```js
-export const TEXT_OVERRIDES = {
-  'your-project-slug': { title: 'Your Display Title', subtitle: 'Short subtitle' },
-  // ...
-}
-```
-
-- Edit `SPOTLIGHT_WIDTHS` to control card widths in the 4-column grid:
-  - 1 = quarter width, 2 = half width, 4 = full width
-
-```js
-export const SPOTLIGHT_WIDTHS = {
-  'your-project-slug': 2,
-  // ... other slugs
-}
-```
 
 ### Smart Caching
 
@@ -1023,13 +970,44 @@ static/
 - Adding one project: $0.003
 - Search queries: $0 (client-side)
 
+## 🎯 Search Query Examples
+
+The enhanced system now handles a much broader range of buyer queries:
+
+### Healthcare Queries
+- *"Need a telemetry dashboard to monitor ICU vitals remotely"*
+- *"Looking for an oncology treatment tracker that integrates genomic data"*
+- *"Self-guided CBT therapy app for veterans with PTSD"*
+- *"HIPAA-compliant radiology collaboration dashboard"*
+- *"AI-powered hematology results dashboard for lab technicians"*
+
+### Enterprise Queries
+- *"Enterprise expense-analysis dashboard for SaaS CFOs"*
+- *"Scalable data-ingest platform for IoT sensor fleets"*
+- *"Cross-team dashboard visualizing OKRs and KPIs"*
+- *"SOC-2 compliant customer analytics platform"*
+- *"Customer loyalty service that plugs into Shopify"*
+
+### Government Queries
+- *"Citizen complaint tracking dashboard for municipal services"*
+- *"Digital voter-registration tracker compliant with federal standards"*
+- *"Grant-management platform for federal research programs"*
+- *"FedRAMP authorized emergency response coordination system"*
+
+### Original Examples (Still Work)
+- *"I need a UI for an AI platform for therapists"*
+- *"Healthcare dashboard design for clinical workflows"*
+- *"Data visualization for government policy"*
+- *"Enterprise software user experience"*
+- *"Mobile health app interface design"*
+
 ## 🛠️ Development Workflow
 
 ### For Developers
 
 ```bash
 # Standard development
-npm run develop              # Start dev server
+npm start                    # Start dev server
 npm run build               # Build for production
 
 # Search system

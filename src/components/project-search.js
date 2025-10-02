@@ -847,7 +847,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       )}
       
       {/* Error State */}
-      {error && !isSearching && console.log('Error', error) && (
+      {error && !isSearching && (
         <div className="project-search__error">
           <p>{error}</p>
           {suggestions.length > 0 && (

@@ -21,7 +21,7 @@ const ContactForm = ({ showHeader = true }) => {
             frameBorder="0"
             scrolling="no"
             src="https://form.jotform.com/251276832519159"
-            style={{ width: '100%', height: '800px' }}
+            style={{ width: '100%', height: '700px' }}
           />
         </div>
       </Card>

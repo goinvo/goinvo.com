@@ -481,8 +481,8 @@ class AIPage extends Component {
   }
 }
 
-export const openSourcePageQuery = graphql`
-  query OpenSourcePageQuery {
+export const aiPageQuery = graphql`
+  query AIPageQuery {
     allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
       nodes {
         parent {

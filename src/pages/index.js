@@ -302,6 +302,12 @@ class IndexPage extends Component {
                 // Greedy packing to fill 4-unit rows
                 const layoutWithGreedy = (items) => {
                   const remaining = [...items]
+                  
+                  // Special case: if there are exactly 2 items, make them equal width (2 columns each)
+                  if (remaining.length === 2) {
+                    return remaining.map(item => ({ item, className: spanClassForWidth(2) }))
+                  }
+                  
                   const output = [] // { item, width }
                   let rowRemaining = 4
                   let rowStartIdx = 0 // index in output where current row starts

@@ -107,6 +107,12 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
   const layoutWithGreedy = useCallback((items) => {
     const remaining = [...(items || [])]
+    
+    // Special case: if there are exactly 2 items, make them equal width (2 columns each)
+    if (remaining.length === 2) {
+      return remaining.map(item => ({ item, className: spanClassForWidth(2) }))
+    }
+    
     const output = [] // { item, width }
     let rowRemaining = 4
     let rowStartIdx = 0 // index in output where current row starts
@@ -740,7 +746,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       )}
       
       {/* Search Results */}
-      {query && !isSearching && results.length > 0 && (
+      {query && !isSearching && results.length > 0 && results.some(project => project.aiDescription) && (
         <div className="project-search__results">
           {/* Fallback banner */}
           {usedFallback && (
@@ -814,8 +820,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         </div>
       )}
 
-      {/* No Results State */}
-      {query && !isSearching && results.length === 0 && (
+      {/* No Results State - show when there are no results OR when all results are filtered out */}
+      {query && !isSearching && (results.length === 0 || (results.length > 0 && !results.some(project => project.aiDescription))) && (
         <div className="project-search__no-results" style={{ textAlign: 'center' }}>
           <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>No Results...</h4>
           <p className="text--gray" style={{ fontSize: '1.125rem', marginBottom: '12px' }}>We couldn't find projects for your search.</p>
@@ -841,7 +847,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       )}
       
       {/* Error State */}
-      {error && !isSearching && (
+      {error && !isSearching && console.log('Error', error) && (
         <div className="project-search__error">
           <p>{error}</p>
           {suggestions.length > 0 && (

@@ -55,6 +55,420 @@ const BUYER_PERSONAS = {
   }
 };
 
+// Pre-generated "Design for ___" responses - now includes ALL projects for each category
+const DESIGN_FOR_PRESETS = {
+  'Design for Enterprise': {
+    searchInsight: 'Enterprise solutions that scale with your organization',
+    projectDescriptions: [
+      {
+        slug: 'inspired-ehrs',
+        description: 'Enterprise EHR platform designed for large healthcare systems, featuring advanced analytics and seamless integration capabilities.',
+        relevant: true
+      },
+      {
+        slug: 'ipsos-facto',
+        description: 'AI-powered research intelligence platform built for enterprise-scale data analysis and decision making.',
+        relevant: true
+      },
+      {
+        slug: 'prior-auth',
+        description: 'Enterprise prior authorization system that streamlines complex approval workflows for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'precision-autism',
+        description: 'Precision medicine platform designed for enterprise clinical workflows and large-scale patient management.',
+        relevant: true
+      },
+      {
+        slug: 'maya-ehr',
+        description: 'Enterprise-grade EHR system with comprehensive patient management and clinical workflow optimization.',
+        relevant: true
+      },
+      {
+        slug: 'partners-geneinsight',
+        description: 'Enterprise genomics platform that integrates with large healthcare systems for precision medicine workflows.',
+        relevant: true
+      },
+      {
+        slug: 'partners-insight',
+        description: 'Enterprise analytics platform providing comprehensive insights for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: '3m-coderyte',
+        description: 'Enterprise coding platform designed for large healthcare systems to improve clinical documentation accuracy.',
+        relevant: true
+      },
+      {
+        slug: 'ahrq-cds',
+        description: 'Enterprise clinical decision support system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'Enterprise-scale research platform designed for large-scale health data collection and analysis.',
+        relevant: true
+      },
+      {
+        slug: 'care-cards',
+        description: 'Enterprise patient engagement platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'commonhealth-smart-health-cards',
+        description: 'Enterprise digital health credential system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'Enterprise health data education platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'Enterprise health data visualization platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'infobionic-heart-monitoring',
+        description: 'Enterprise cardiac monitoring platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'insidetracker-nutrition-science',
+        description: 'Enterprise nutrition analytics platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-flux-notes',
+        description: 'Enterprise clinical note analysis system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-shr',
+        description: 'Enterprise shared health record system for large healthcare networks.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'Enterprise healthcare analytics platform for large organizations.',
+        relevant: true
+      },
+      {
+        slug: 'mount-sinai-consent',
+        description: 'Enterprise consent management system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'paintrackr',
+        description: 'Enterprise pain management platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'personal-genome-project-vision',
+        description: 'Enterprise genomics research platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'staffplan',
+        description: 'Enterprise workforce management platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'tabeeb-diagnostics',
+        description: 'Enterprise diagnostic platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'wuxi-nextcode-familycode',
+        description: 'Enterprise genomics platform for large healthcare organizations.',
+        relevant: true
+      }
+    ]
+  },
+  'Design for Healthcare': {
+    searchInsight: 'Healthcare solutions that improve patient outcomes and clinical workflows',
+    projectDescriptions: [
+      {
+        slug: 'inspired-ehrs',
+        description: 'Comprehensive EHR system designed specifically for healthcare providers, improving clinical documentation and patient care coordination.',
+        relevant: true
+      },
+      {
+        slug: 'prior-auth',
+        description: 'Prior authorization platform that reduces administrative burden for healthcare providers while ensuring proper coverage.',
+        relevant: true
+      },
+      {
+        slug: 'precision-autism',
+        description: 'Precision medicine platform for autism care, enabling personalized treatment approaches based on genetic and clinical data.',
+        relevant: true
+      },
+      {
+        slug: 'maya-ehr',
+        description: 'Modern EHR system designed for healthcare providers, featuring intuitive interfaces and comprehensive patient management tools.',
+        relevant: true
+      },
+      {
+        slug: 'partners-geneinsight',
+        description: 'Genomics platform designed for healthcare providers to deliver personalized medicine based on genetic data.',
+        relevant: true
+      },
+      {
+        slug: 'partners-insight',
+        description: 'Healthcare analytics platform that helps providers make data-driven clinical decisions.',
+        relevant: true
+      },
+      {
+        slug: '3m-coderyte',
+        description: 'Clinical coding platform that helps healthcare providers improve documentation accuracy and compliance.',
+        relevant: true
+      },
+      {
+        slug: 'ahrq-cds',
+        description: 'Clinical decision support system that helps healthcare providers make evidence-based treatment decisions.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'Research platform that enables healthcare providers to contribute to and benefit from large-scale health research.',
+        relevant: true
+      },
+      {
+        slug: 'care-cards',
+        description: 'Patient engagement platform that helps healthcare providers improve patient communication and care coordination.',
+        relevant: true
+      },
+      {
+        slug: 'commonhealth-smart-health-cards',
+        description: 'Digital health credential system that helps healthcare providers verify patient information securely.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'Educational platform that helps healthcare providers understand and utilize health data effectively.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'Health data visualization platform that helps healthcare providers understand complex patient data.',
+        relevant: true
+      },
+      {
+        slug: 'infobionic-heart-monitoring',
+        description: 'Cardiac monitoring platform that helps healthcare providers track and manage heart health.',
+        relevant: true
+      },
+      {
+        slug: 'insidetracker-nutrition-science',
+        description: 'Nutrition analytics platform that helps healthcare providers optimize patient nutrition and health outcomes.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-flux-notes',
+        description: 'Clinical note analysis system that helps healthcare providers extract insights from patient documentation.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-shr',
+        description: 'Shared health record system that enables healthcare providers to access comprehensive patient information.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'Healthcare analytics platform that helps providers understand and improve healthcare delivery.',
+        relevant: true
+      },
+      {
+        slug: 'mount-sinai-consent',
+        description: 'Consent management system that helps healthcare providers manage patient consent for research and treatment.',
+        relevant: true
+      },
+      {
+        slug: 'paintrackr',
+        description: 'Pain management platform that helps healthcare providers track and manage patient pain effectively.',
+        relevant: true
+      },
+      {
+        slug: 'personal-genome-project-vision',
+        description: 'Genomics research platform that helps healthcare providers advance personalized medicine.',
+        relevant: true
+      },
+      {
+        slug: 'staffplan',
+        description: 'Workforce management platform that helps healthcare organizations optimize staffing and patient care.',
+        relevant: true
+      },
+      {
+        slug: 'tabeeb-diagnostics',
+        description: 'Diagnostic platform that helps healthcare providers make accurate and timely diagnoses.',
+        relevant: true
+      },
+      {
+        slug: 'wuxi-nextcode-familycode',
+        description: 'Genomics platform that helps healthcare providers deliver family-based genetic medicine.',
+        relevant: true
+      }
+    ]
+  },
+  'Design for Government': {
+    searchInsight: 'Civic technology solutions that serve the public good',
+    projectDescriptions: [
+      {
+        slug: 'mass-snap',
+        description: 'Massachusetts SNAP benefits platform designed for government agencies, improving citizen access to essential services.',
+        relevant: true
+      },
+      {
+        slug: 'public-sector',
+        description: 'Public sector service design solutions that enhance citizen engagement and government efficiency.',
+        relevant: true
+      },
+      {
+        slug: 'determinants-of-health',
+        description: 'Public health data visualization platform that helps government agencies understand and address social determinants of health.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'Educational platform for government health officials to understand complex health data and policy implications.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'National research initiative platform that enables government agencies to conduct large-scale health research.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'Public health data visualization platform that helps government agencies understand population health trends.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'Healthcare analytics platform that helps government agencies understand and improve national healthcare delivery.',
+        relevant: true
+      }
+    ]
+  },
+  'Design for AI': {
+    searchInsight: 'AI-powered solutions that leverage machine learning and natural language processing',
+    projectDescriptions: [
+      {
+        slug: 'ipsos-facto',
+        description: 'AI and LLM-powered research intelligence platform that transforms how organizations analyze and understand complex data.',
+        relevant: true
+      },
+      {
+        slug: 'visual-storytelling-with-genai',
+        description: 'Generative AI platform for creating compelling visual narratives and storytelling in healthcare contexts.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-flux-notes',
+        description: 'AI-powered clinical note analysis system that helps healthcare providers extract insights from unstructured text data.',
+        relevant: true
+      },
+      {
+        slug: 'tabeeb-diagnostics',
+        description: 'AI-driven diagnostic platform that combines machine learning with clinical expertise to improve diagnostic accuracy.',
+        relevant: true
+      },
+      {
+        slug: 'partners-geneinsight',
+        description: 'AI-powered genomics platform that uses machine learning to analyze genetic data and provide personalized insights.',
+        relevant: true
+      },
+      {
+        slug: 'partners-insight',
+        description: 'AI-powered analytics platform that uses machine learning to provide healthcare insights and predictions.',
+        relevant: true
+      },
+      {
+        slug: '3m-coderyte',
+        description: 'AI-powered clinical coding platform that uses natural language processing to improve documentation accuracy.',
+        relevant: true
+      },
+      {
+        slug: 'ahrq-cds',
+        description: 'AI-powered clinical decision support system that uses machine learning to provide evidence-based recommendations.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'AI-powered research platform that uses machine learning to analyze large-scale health data and generate insights.',
+        relevant: true
+      },
+      {
+        slug: 'care-cards',
+        description: 'AI-powered patient engagement platform that uses machine learning to personalize patient communication.',
+        relevant: true
+      },
+      {
+        slug: 'commonhealth-smart-health-cards',
+        description: 'AI-powered digital health credential system that uses machine learning for secure verification.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'AI-powered educational platform that uses machine learning to help users understand complex health data.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'AI-powered health data visualization platform that uses machine learning to identify patterns and insights.',
+        relevant: true
+      },
+      {
+        slug: 'infobionic-heart-monitoring',
+        description: 'AI-powered cardiac monitoring platform that uses machine learning to detect and predict heart conditions.',
+        relevant: true
+      },
+      {
+        slug: 'insidetracker-nutrition-science',
+        description: 'AI-powered nutrition analytics platform that uses machine learning to optimize nutrition and health outcomes.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-shr',
+        description: 'AI-powered shared health record system that uses machine learning to provide comprehensive patient insights.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'AI-powered healthcare analytics platform that uses machine learning to understand and improve healthcare delivery.',
+        relevant: true
+      },
+      {
+        slug: 'mount-sinai-consent',
+        description: 'AI-powered consent management system that uses machine learning to optimize research participation.',
+        relevant: true
+      },
+      {
+        slug: 'paintrackr',
+        description: 'AI-powered pain management platform that uses machine learning to track and predict pain patterns.',
+        relevant: true
+      },
+      {
+        slug: 'personal-genome-project-vision',
+        description: 'AI-powered genomics research platform that uses machine learning to advance personalized medicine.',
+        relevant: true
+      },
+      {
+        slug: 'staffplan',
+        description: 'AI-powered workforce management platform that uses machine learning to optimize healthcare staffing.',
+        relevant: true
+      },
+      {
+        slug: 'wuxi-nextcode-familycode',
+        description: 'AI-powered genomics platform that uses machine learning to analyze family genetic data.',
+        relevant: true
+      }
+    ]
+  }
+};
+
 // Auto-detect persona based on query
 async function detectPersona(query) {
   const queryLower = query.toLowerCase();
@@ -328,6 +742,30 @@ exports.handler = async (event, context) => {
     // Validate input
     if (!query || !projects || !Array.isArray(projects)) {
       return jsonResponse(400, { error: 'Invalid request data' })
+    }
+    
+    // Check for "Design for ___" preset queries first
+    if (DESIGN_FOR_PRESETS[query]) {
+      const presetData = DESIGN_FOR_PRESETS[query];
+      
+      // Enhance ALL projects with preset descriptions where available
+      const enhancedResults = projects.map(project => {
+        const presetDesc = presetData.projectDescriptions.find(p => p.slug === project.slug);
+        return {
+          ...project,
+          aiDescription: presetDesc ? presetDesc.description : null,
+          aiRelevant: presetDesc ? true : false,
+          aiEnhanced: !!presetDesc
+        };
+      });
+      
+      return jsonResponse(200, {
+        results: enhancedResults,
+        aiGenerated: true,
+        searchInsight: presetData.searchInsight,
+        detectedPersona: null,
+        preset: query
+      });
     }
     
     // If not using AI, just return the projects as-is

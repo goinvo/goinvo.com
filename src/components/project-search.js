@@ -670,10 +670,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
   // Quick filter buttons for common searches
   const quickFilters = [
-    { label: 'AI/NLP tools', query: 'NLP artificial intelligence' },
-    { label: 'Clinical tools', query: 'clinical decision support' },
-    { label: 'Data visualization', query: 'hGraph visualization' },
-    { label: 'Research platforms', query: 'research intelligence' },
+    { label: 'Design for Enterprise', query: 'Design for Enterprise' },
+    { label: 'Design for Healthcare', query: 'Design for Healthcare' },
+    { label: 'Design for Government', query: 'Design for Government' },
+    { label: 'Design for AI', query: 'Design for AI' },
     { label: 'Patient data', query: 'health data capture' },
     { label: 'EHR systems', query: 'inspired EHRs' }
   ]
@@ -754,21 +754,17 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
             // Get AI-enhanced projects for featured section
             const aiEnhancedProjects = results
               .filter(project => project.aiDescription)
-              .slice(0, 4)
             const arranged = layoutWithGreedy(aiEnhancedProjects)
             const isSingleEnhanced = aiEnhancedProjects.length === 1
             
             return (
               <div className="ai-enhanced-section">
-                {/* Decorative background */}
-                <div className="ai-enhanced-background"></div>
-                
                 <div className="ai-section-header">
                   <h2 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>Recommended for You</h2>
                   <p>{isSingleEnhanced ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
                 </div>
                 
-                <div className={`spotlights-grid ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
+                <div className={`spotlights-grid spotlights-grid--four ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
                   {arranged.map(({ item, className }) => (
                     <Card
                       key={`ai-${item.slug}`}
@@ -790,63 +786,15 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
             )
           })()}
           
-          {/* All Results Section */}
-          <div className="all-results-section">
-            {(() => {
-              // Get AI-enhanced project slugs (up to 4) to filter out duplicates
-              const aiEnhancedSlugs = aiEnabled ?
-                results
-                  .filter(project => project.aiDescription)
-                  .slice(0, 4)
-                  .map(project => project.slug) : [];
-
-              // Filter out AI-enhanced projects from remaining results
-              const remainingResults = results.filter(project => !aiEnhancedSlugs.includes(project.slug));
-
-              // If there are no remaining results, don't render this section
-              if (!remainingResults || remainingResults.length === 0) return null;
-
-              const remainingCount = remainingResults.length;
-
-              // If we used fallback search, still show the header even without AI descriptions
-              const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback
-              const headerTitle = usedFallback ? 'Here are your results' : 'All Results'
-
-              return (
-                <>
-                  {showHeader && (
-                    <div className="all-results-header">
-                      <h4>{headerTitle}</h4>
-                      <p>Browse all {remainingCount} projects that match your search:</p>
-                    </div>
-                  )}
-
-                  <div className="spotlights-grid ai-results-grid">
-                    {layoutWithGreedy(remainingResults).map(({ item, className }) => (
-                      <Card key={item.slug} link={`/work/${item.slug}/`} onClick={handleResultNavigate} noShadow className={className}>
-                        <ImageBlock
-                          title={item.title}
-                          image={item.image}
-                          caption={item.caption}
-                          sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                        />
-                      </Card>
-                    ))}
-                  </div>
-
-                  {/* See all work CTA (match Spotlights section styles) */}
-                  <div className="container container--justify-center margin-top margin-bottom--double">
-                    <Link
-                      to="/work/?expanded=true"
-                      className="button button--outline-primary button--padded"
-                      aria-label="See all work page"
-                    >
-                      VIEW ALL WORK
-                    </Link>
-                  </div>
-                </>
-              );
-            })()}
+          {/* See all work CTA (match Spotlights section styles) */}
+          <div className="container container--justify-center margin-top margin-bottom--double">
+            <Link
+              to="/work/?expanded=true"
+              className="button button--outline-primary button--padded"
+              aria-label="See all work page"
+            >
+              VIEW ALL WORK
+            </Link>
           </div>
 
           {/* View Spotlights CTA */}

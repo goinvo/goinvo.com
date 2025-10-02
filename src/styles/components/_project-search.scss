@@ -1,8 +1,7 @@
 .project-search {
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 
   &__input-container {
     margin-bottom: 2rem;
@@ -224,7 +223,7 @@
     }
     
     .image-block__text {
-      padding: 1.5rem;
+      padding: 1.5rem 0;
       
       // Override ImageBlock's default title styling for search results
       p:first-child {
@@ -632,36 +631,9 @@
       }
     }
 
-    // AI-Enhanced Results Section
+    // AI-Enhanced Results Section - now matches spotlights layout
     .ai-enhanced-section {
-      position: relative;
       margin-bottom: 3rem;
-      padding: 3rem 2rem;
-      background-color: $color-orange--lightest;
-      border-radius: 1rem;
-      overflow: hidden;
-
-      // Decorative background pattern/gradient
-      .ai-enhanced-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.05;
-        background: 
-          radial-gradient(circle at 20% 50%, rgba(227, 98, 22, 0.3) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(227, 98, 22, 0.2) 0%, transparent 50%),
-          radial-gradient(circle at 40% 20%, rgba(227, 98, 22, 0.15) 0%, transparent 40%);
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      // Ensure content is above the decorative background
-      > * {
-        position: relative;
-        z-index: 1;
-      }
 
       .ai-section-header {
         text-align: center;
@@ -691,49 +663,6 @@
         grid-template-columns: 1fr; // one card
       }
 
-      .ai-enhanced-item.ai-enhanced-item--single {
-        display: grid;
-        grid-template-columns: 420px 1fr;
-        align-items: stretch;
-      }
-
-      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-link {
-        display: grid;
-        grid-template-columns: 420px 1fr;
-        gap: 1.25rem;
-        align-items: stretch;
-      }
-
-      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image {
-        aspect-ratio: auto;
-        height: 100%;
-        min-height: 260px;
-        overflow: hidden;
-      }
-
-      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image img,
-      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image picture {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @media (max-width: 1024px) {
-        .ai-enhanced-item.ai-enhanced-item--single,
-        .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-link {
-          grid-template-columns: 1fr;
-        }
-
-        .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-image {
-          height: auto;
-          aspect-ratio: 16 / 9;
-        }
-      }
-
-      // Constrain text width for readability in single mode
-      .ai-enhanced-item.ai-enhanced-item--single .ai-enhanced-content {
-        max-width: 70ch;
-      }
 
       .ai-enhanced-item {
         background: #fff;
@@ -764,7 +693,7 @@
         }
 
         .ai-enhanced-content {
-          padding: 1.5rem;
+          padding: 1.5rem 0;
 
           h5 {
             margin: 0 0 1rem;
@@ -806,7 +735,7 @@
           }
 
           .original-caption-section {
-            padding: 0.75rem;
+            padding: 0.75rem 0;
             background: var(--gray-lightest);
             border-radius: 0.5rem;
 
@@ -997,7 +926,7 @@
     
     &__image-block {
       .image-block__text {
-        padding: 1.25rem;
+        padding: 1.25rem 0;
       }
       
       .image-block__image-container {

@@ -127,7 +127,7 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      const value = 'enterprise analytics platform'
+                      const value = 'Design for Enterprise'
                       this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
@@ -142,7 +142,7 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      const value = 'healthcare software'
+                      const value = 'Design for Healthcare'
                       this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
@@ -157,7 +157,7 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      const value = 'public sector service design'
+                      const value = 'Design for Government'
                       this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')
@@ -172,7 +172,7 @@ class IndexPage extends Component {
                     type="button"
                     className="expertise-item button button--transparent"
                     onClick={() => {
-                      const value = 'AI LLM NLP healthcare'
+                      const value = 'Design for AI'
                       this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
                         setTimeout(() => {
                           const el = document.querySelector('.project-search')

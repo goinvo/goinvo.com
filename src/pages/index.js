@@ -63,7 +63,6 @@ class IndexPage extends Component {
       hideSpotlights: false,
       // AI search controls driven by the orange section UI
       aiEnabled: true,
-      selectedPersona: null,
       homeSearchQuery: '',
       homeInputDefault: ''
     }
@@ -251,7 +250,6 @@ class IndexPage extends Component {
             projects={this.state.allProjects}
             externalQuery={this.state.homeSearchQuery || ''}
             aiEnabledOverride={this.state.aiEnabled}
-            selectedPersonaOverride={this.state.selectedPersona}
             hideInput={true}
             selectionMode="client"
           />

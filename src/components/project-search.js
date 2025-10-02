@@ -41,22 +41,11 @@ function dedupeBySlug(items) {
   return out
 }
 
-// AI Persona options
-const AI_PERSONAS = [
-  { key: 'healthcare_executive', label: '🏥 Healthcare Executive', description: 'ROI & compliance focused' },
-  { key: 'product_manager', label: '📱 Product Manager', description: 'UX/UI best practices' },
-  { key: 'researcher', label: '🔬 Clinical Researcher', description: 'Research tools & data' },
-  { key: 'government_official', label: '🏛️ Government Official', description: 'Civic tech solutions' },
-  { key: 'startup_founder', label: '🚀 Startup Founder', description: 'Scalable innovations' }
-]
-
 // Storage keys for state persistence
 const STORAGE_KEYS = {
   searchQuery: 'ai_search_query',
   searchResults: 'ai_search_results',
   aiEnabled: 'ai_search_enabled',
-  selectedPersona: 'ai_search_persona',
-  detectedPersona: 'ai_search_detected_persona',
   aiSearchInsight: 'ai_search_insight',
   timestamp: 'ai_search_timestamp'
 }
@@ -64,7 +53,7 @@ const STORAGE_KEYS = {
 // State expires after 1 hour
 const STATE_EXPIRY = 60 * 60 * 1000
 
-const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, selectedPersonaOverride = undefined, hideInput = false, selectionMode = 'client' }) => {
+const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, hideInput = false, selectionMode = 'client' }) => {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState([])
@@ -78,15 +67,9 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   
   // AI-specific states
   const [aiEnabled, setAiEnabled] = useState(true) // Default to enabled
-  const [selectedPersona, setSelectedPersona] = useState(null)
-  const [detectedPersona, setDetectedPersona] = useState(null)
-  const [isLoadingAI, setIsLoadingAI] = useState(false)
-  const [aiError, setAiError] = useState(null)
   const [aiSearchInsight, setAiSearchInsight] = useState(null)
-  const [showPersonaSelector, setShowPersonaSelector] = useState(false)
   const [stateRestored, setStateRestored] = useState(false)
   const [searchTriggered, setSearchTriggered] = useState(false)
-  const [expandedDescriptions, setExpandedDescriptions] = useState(new Set())
   const [usedFallback, setUsedFallback] = useState(false)
   const [fallbackReason, setFallbackReason] = useState(null)
   
@@ -246,10 +229,9 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
   // Compute effective AI control from parent overrides if provided
   const effectiveAiEnabled = typeof aiEnabledOverride === 'boolean' ? aiEnabledOverride : aiEnabled
-  const effectiveSelectedPersona = selectedPersonaOverride || selectedPersona
 
-  // AI pipeline: server selection (ai-select) -> optional persona enhancement (ai-search)
-  const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag, personaKey }) => {
+  // AI pipeline: server selection (ai-select) -> optional AI enhancement (ai-search)
+  const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag }) => {
     // 1) Server-side selection (or keyword fallback)
     let baseResults = []
     let selectionFallback = false
@@ -279,10 +261,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
     // If AI enhancement disabled, return base results
     if (!aiEnabledFlag) {
-      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, fallbackUsed: selectionFallback }
     }
 
-    // 2) Persona enhancement via ai-search
+    // 2) AI enhancement via ai-search
     try {
       const payloadProjects = baseResults.slice(0, 10).map(p => ({
         slug: p.slug,
@@ -294,9 +276,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       const ai = await callFunction('ai-search', {
         query: queryText,
         projects: payloadProjects,
-        preset: personaKey || null,
-        useAI: true,
-        autoDetectPersona: !personaKey
+        useAI: true
       })
 
       const enhanced = (ai.results || []).map(er => {
@@ -314,14 +294,13 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       return {
         finalResults: dedupeBySlug(enhancedRelevant),
         aiInsight: ai.searchInsight || null,
-        detectedPersonaOut: ai.detectedPersona || null,
         // Treat missing AI generation as a fallback condition when AI is enabled
         fallbackUsed: selectionFallback || (aiEnabledFlag && !aiGenerated),
         fallbackReason: aiGenerated ? null : (ai && ai.disabled ? ai.disabled : 'ai-unavailable')
       }
     } catch (e) {
       // If enhancement fails, just return base results
-      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback, fallbackReason: 'ai-error' }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, fallbackUsed: selectionFallback, fallbackReason: 'ai-error' }
     }
   }, [])
 
@@ -383,8 +362,6 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           setQuery(savedState.searchQuery)
           setResults(savedState.searchResults || [])
           setAiEnabled(savedState.aiEnabled !== undefined ? savedState.aiEnabled : true)
-          setSelectedPersona(savedState.selectedPersona || null)
-          setDetectedPersona(savedState.detectedPersona || null)
           setAiSearchInsight(savedState.aiSearchInsight || null)
           // Inform homepage to hide spotlights
           try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(savedState.searchResults) && savedState.searchResults.length > 0 } })) } catch (_) {}
@@ -435,9 +412,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       setQuery('')
       setResults([])
       setAiSearchInsight(null)
-      setDetectedPersona(null)
       setSearchTriggered(false)
-      setExpandedDescriptions(new Set())
       clearSearchState()
       try { sessionStorage.removeItem('ai_search_expect_restore') } catch (_) {}
       try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) {}
@@ -513,12 +488,11 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         const indexVersion = allProjects && allProjects.length
           ? `${allProjects.length}:${allProjects[0]?.slug || allProjects[0]?.id || 'x'}:${allProjects[allProjects.length - 1]?.slug || allProjects[allProjects.length - 1]?.id || 'y'}`
           : 'none'
-        const cacheKey = `${query}|${effectiveAiEnabled ? 'ai' : 'plain'}|${effectiveSelectedPersona || 'auto'}|v=${indexVersion}`
+        const cacheKey = `${query}|${effectiveAiEnabled ? 'ai' : 'plain'}|v=${indexVersion}`
         const cached = readCache(cacheKey)
         if (cached && Array.isArray(cached.results)) {
           setResults(cached.results)
           setAiSearchInsight(cached.insight || null)
-          if (cached.detectedPersona) setDetectedPersona(cached.detectedPersona)
           setError(null)
           setIsSearching(false)
           // Ensure spotlights visibility is synced even on cache hits
@@ -526,11 +500,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           return
         }
 
-        const { finalResults, aiInsight, detectedPersonaOut, fallbackUsed, fallbackReason } = await performAISearch({
+        const { finalResults, aiInsight, fallbackUsed, fallbackReason } = await performAISearch({
           queryText: query,
           allProjects,
-          aiEnabledFlag: effectiveAiEnabled,
-          personaKey: effectiveSelectedPersona
+          aiEnabledFlag: effectiveAiEnabled
         })
 
         let outResults = finalResults
@@ -551,20 +524,17 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         setFallbackReason(fbReason)
         // Cache successful results to reduce API usage for repeated queries
         if (Array.isArray(finalResults) && finalResults.length > 0) {
-          writeCache(cacheKey, { results: finalResults, insight: aiInsight, detectedPersona: detectedPersonaOut })
+          writeCache(cacheKey, { results: finalResults, insight: aiInsight })
         }
         // Notify homepage to hide spotlights only when we truly have results
         try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(finalResults) && finalResults.length > 0 } })) } catch(_) {}
         setSuggestions([])
         setSearchAnalysis(null)
         setAiSearchInsight(aiInsight)
-        if (detectedPersonaOut) setDetectedPersona(detectedPersonaOut)
         saveSearchState({
           searchQuery: query,
           searchResults: finalResults,
           aiEnabled: effectiveAiEnabled,
-          selectedPersona: effectiveSelectedPersona,
-          detectedPersona: detectedPersonaOut || detectedPersona,
           aiSearchInsight: aiInsight
         })
         setError(null)
@@ -579,7 +549,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     }, 200)
     
     return () => clearTimeout(timeoutId)
-  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled, effectiveSelectedPersona])
+  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled])
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)
@@ -594,9 +564,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     setQuery('')
     setResults([])
     setAiSearchInsight(null)
-    setDetectedPersona(null)
     setSearchTriggered(false)
-    setExpandedDescriptions(new Set())
     clearSearchState()
     try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch(_) {}
   }
@@ -613,51 +581,6 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     })
   }
 
-  const handleToggleAI = () => {
-    const newAiEnabled = !aiEnabled
-    setAiEnabled(newAiEnabled)
-    if (!newAiEnabled) {
-      // When enabling AI, reset persona to trigger auto-detection
-      setSelectedPersona(null)
-    }
-    
-    // Clear results to trigger new search with updated AI settings
-    if (results.length > 0) {
-      setResults([])
-      setSearchTriggered(true)
-    }
-    
-    // Save updated AI preference
-    saveSearchState({
-      searchQuery: query,
-      searchResults: results,
-      aiEnabled: newAiEnabled,
-      selectedPersona,
-      detectedPersona,
-      aiSearchInsight
-    })
-  }
-
-  const handlePersonaSelect = (personaKey) => {
-    setSelectedPersona(personaKey)
-    setShowPersonaSelector(false)
-    
-    // Clear results to trigger new search with updated persona
-    if (results.length > 0) {
-      setResults([])
-      setSearchTriggered(true)
-    }
-    
-    // Save updated persona
-    saveSearchState({
-      searchQuery: query,
-      searchResults: results,
-      aiEnabled,
-      selectedPersona: personaKey,
-      detectedPersona,
-      aiSearchInsight
-    })
-  }
 
   // When navigating to a result, mark that we should restore on back and persist current state
   const handleResultNavigate = useCallback(() => {
@@ -667,12 +590,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         searchQuery: query,
         searchResults: results,
         aiEnabled,
-        selectedPersona,
-        detectedPersona,
         aiSearchInsight
       })
     } catch (_) {}
-  }, [query, results, aiEnabled, selectedPersona, detectedPersona, aiSearchInsight, saveSearchState])
+  }, [query, results, aiEnabled, aiSearchInsight, saveSearchState])
 
   // Quick filter buttons for common searches
   const quickFilters = [

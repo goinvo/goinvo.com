@@ -357,6 +357,13 @@
   }
 }
 
+// 2-column layout for AI search results (better text balance)
+.spotlights-grid.spotlights-grid--two {
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 .spotlights-grid {
   .image-block__text {
     padding-left: $spacing;
@@ -369,6 +376,12 @@
     }
     p.text--gray {
       font-family: $font-family--sans-serif;
+      
+      // Bold emphasis in AI-generated descriptions
+      strong {
+        font-weight: 600;
+        color: #333;
+      }
       font-size: 14px;
       color: $color-gray;
     }

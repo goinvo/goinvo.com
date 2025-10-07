@@ -103,6 +103,7 @@ function buildProjectText(project) {
     project.caption,
     project.client,
     ...(project.categories || []),
+    ...(project.keywords || []),
     buyerText,
     modularText
   ].filter(Boolean).join(' ')
@@ -227,6 +228,8 @@ exports.handler = async (event) => {
         title: p.title,
         caption: p.caption,
         categories: p.categories || [],
+        keywords: p.keywords || [],
+        client: p.client || '',
         image: p.image || '',
         score
       }))

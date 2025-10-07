@@ -24,6 +24,9 @@ export const SPOTLIGHT_WIDTHS = {
   'mass-snap': 4,
   'maya-ehr': 2,
   'national-cancer-navigation': 2,
+  'health-data-basics': 2,
+  'fastercures-health-data-basics': 2,
+  'mitre-flux-notes': 2,
 }
 
 

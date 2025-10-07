@@ -72,6 +72,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const [searchTriggered, setSearchTriggered] = useState(false)
   const [usedFallback, setUsedFallback] = useState(false)
   const [fallbackReason, setFallbackReason] = useState(null)
+  const [loadingDescriptions, setLoadingDescriptions] = useState(false)
   
   // Spotlight layout helpers (match homepage behavior)
   const getWidthForItem = useCallback((item) => {
@@ -231,7 +232,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const effectiveAiEnabled = typeof aiEnabledOverride === 'boolean' ? aiEnabledOverride : aiEnabled
 
   // AI pipeline: server selection (ai-select) -> optional AI enhancement (ai-search)
-  const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag }) => {
+  const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag, onIntermediateResults }) => {
     // 1) Server-side selection (or keyword fallback)
     let baseResults = []
     let selectionFallback = false
@@ -264,6 +265,11 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       return { finalResults: dedupeBySlug(baseResults), aiInsight: null, fallbackUsed: selectionFallback }
     }
 
+    // Show intermediate results with loading state
+    if (onIntermediateResults && baseResults.length > 0) {
+      onIntermediateResults(baseResults)
+    }
+
     // 2) AI enhancement via ai-search
     try {
       const payloadProjects = baseResults.slice(0, 10).map(p => ({
@@ -271,6 +277,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         title: p.title,
         caption: p.caption,
         categories: p.categories || [],
+        keywords: p.keywords || [],
+        client: p.client || '',
         score: p.score || 0
       }))
       const ai = await callFunction('ai-search', {
@@ -495,6 +503,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           setAiSearchInsight(cached.insight || null)
           setError(null)
           setIsSearching(false)
+          setLoadingDescriptions(false)
           // Ensure spotlights visibility is synced even on cache hits
           try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(cached.results) && cached.results.length > 0 } })) } catch(_) {}
           return
@@ -503,7 +512,14 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         const { finalResults, aiInsight, fallbackUsed, fallbackReason } = await performAISearch({
           queryText: query,
           allProjects,
-          aiEnabledFlag: effectiveAiEnabled
+          aiEnabledFlag: effectiveAiEnabled,
+          onIntermediateResults: (intermediateResults) => {
+            // Show results immediately with loading skeletons
+            setResults(intermediateResults)
+            setLoadingDescriptions(true)
+            setIsSearching(false)
+            try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: true } })) } catch(_) {}
+          }
         })
 
         let outResults = finalResults
@@ -522,6 +538,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         setResults(outResults)
         setUsedFallback(usedFb)
         setFallbackReason(fbReason)
+        setLoadingDescriptions(false)
         // Cache successful results to reduce API usage for repeated queries
         if (Array.isArray(finalResults) && finalResults.length > 0) {
           writeCache(cacheKey, { results: finalResults, insight: aiInsight })
@@ -541,6 +558,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       } catch (err) {
         setError('Search is temporarily unavailable. Please try again later.')
         setResults([])
+        setLoadingDescriptions(false)
         // Show spotlights on failure
         try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch(_) {}
       } finally {
@@ -568,19 +586,6 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     clearSearchState()
     try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch(_) {}
   }
-
-  const toggleDescriptionExpansion = (projectSlug) => {
-    setExpandedDescriptions(prev => {
-      const newExpanded = new Set(prev)
-      if (newExpanded.has(projectSlug)) {
-        newExpanded.delete(projectSlug)
-      } else {
-        newExpanded.add(projectSlug)
-      }
-      return newExpanded
-    })
-  }
-
 
   // When navigating to a result, mark that we should restore on back and persist current state
   const handleResultNavigate = useCallback(() => {
@@ -651,23 +656,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         </div>
       )}
       
-      {/* AI Loading State */}
-      {isLoadingAI && (
-        <div className="project-search__ai-loading">
-          <div className="ai-loading-spinner">🤖</div>
-          <p>AI is analyzing your search...</p>
-        </div>
-      )}
-      
-      {/* AI Error State */}
-      {aiError && (
-        <div className="project-search__ai-error">
-          <p>⚠️ AI enhancement unavailable: {aiError}</p>
-        </div>
-      )}
-      
       {/* Search Results */}
-      {query && !isSearching && results.length > 0 && results.some(project => project.aiDescription) && (
+      {query && !isSearching && results.length > 0 && (results.some(project => project.aiDescription) || loadingDescriptions) && (
         <div className="project-search__results">
           {/* Fallback banner */}
           {usedFallback && (
@@ -677,35 +667,47 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           )}
           
           {/* AI-Enhanced Results Section */}
-          {aiEnabled && results.some(project => project.aiDescription) && (() => {
-            // Get AI-enhanced projects for featured section
-            const aiEnhancedProjects = results
-              .filter(project => project.aiDescription)
-            const arranged = layoutWithGreedy(aiEnhancedProjects)
+          {aiEnabled && (results.some(project => project.aiDescription) || loadingDescriptions) && (() => {
+            // Get AI-enhanced projects for featured section (or show first few if loading)
+            const aiEnhancedProjects = loadingDescriptions 
+              ? results.slice(0, 4)
+              : results.filter(project => project.aiDescription)
             const isSingleEnhanced = aiEnhancedProjects.length === 1
             
             return (
               <div className="ai-enhanced-section">
                 <div className="ai-section-header">
-                  <h2 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>Recommended for You</h2>
+                  <h2 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>
+                    {loadingDescriptions ? 'Finding Relevant Projects...' : 'Recommended for You'}
+                  </h2>
                   <p>{isSingleEnhanced ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
                 </div>
                 
-                <div className={`spotlights-grid spotlights-grid--four ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
-                  {arranged.map(({ item, className }) => (
+                <div className={`spotlights-grid spotlights-grid--two ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
+                  {aiEnhancedProjects.map((item) => (
                     <Card
                       key={`ai-${item.slug}`}
                       link={`/work/${item.slug}/`}
                       onClick={handleResultNavigate}
                       noShadow
-                      className={className}
+                      className="spotlight--span-2"
                     >
                       <ImageBlock
                         title={item.title}
                         image={item.image}
-                        caption={item.aiDescription ? item.aiDescription : item.caption}
+                        caption={loadingDescriptions 
+                          ? '' 
+                          : (item.aiDescription ? item.aiDescription : item.caption)
+                        }
                         sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
                       />
+                      {loadingDescriptions && (
+                        <div className="skeleton-loader">
+                          <div className="skeleton-line skeleton-line--full"></div>
+                          <div className="skeleton-line skeleton-line--medium"></div>
+                          <div className="skeleton-line skeleton-line--short"></div>
+                        </div>
+                      )}
                     </Card>
                   ))}
                 </div>
@@ -760,7 +762,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       )}
       
       {/* Loading State */}
-      {isSearching && !isLoadingAI && (
+      {isSearching && (
         <div className="project-search__loading" style={{ textAlign: 'center', padding: '0 16px' }}>
           <h4 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>Searching projects...</h4>
           <div className="ai-spinner" style={{ margin: '8px auto 24px' }} />

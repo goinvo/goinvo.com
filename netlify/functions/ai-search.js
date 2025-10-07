@@ -1,4 +1,7 @@
 const OpenAI = require('openai');
+const fs = require('fs');
+const path = require('path');
+
 // CORS helper
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -6,6 +9,35 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
 }
 const jsonResponse = (statusCode, obj) => ({ statusCode, headers: CORS_HEADERS, body: JSON.stringify(obj || {}) })
+
+// Load project summaries (pre-generated detailed summaries of each project)
+let PROJECT_SUMMARIES = {};
+try {
+  // Try multiple paths to support both dev (netlify dev) and production
+  const possiblePaths = [
+    path.join(__dirname, '..', '..', 'src', 'data', 'project-summaries.json'), // Production
+    path.join(__dirname, '..', '..', '..', '..', '..', 'src', 'data', 'project-summaries.json'), // Netlify dev (bundled)
+    path.join(process.cwd(), 'src', 'data', 'project-summaries.json'), // Working directory fallback
+  ];
+  
+  let summariesPath = null;
+  for (const p of possiblePaths) {
+    if (fs.existsSync(p)) {
+      summariesPath = p;
+      break;
+    }
+  }
+  
+  if (summariesPath) {
+    PROJECT_SUMMARIES = JSON.parse(fs.readFileSync(summariesPath, 'utf-8'));
+    console.log(`✅ Loaded ${Object.keys(PROJECT_SUMMARIES).length} project summaries from ${summariesPath}`);
+  } else {
+    console.warn('⚠️  No project-summaries.json found. Run npm run generate-summaries to create it.');
+    console.warn('    Tried paths:', possiblePaths);
+  }
+} catch (error) {
+  console.warn('⚠️  Could not load project summaries:', error.message);
+}
 
 // In-memory cache for preset queries
 const presetCache = new Map();
@@ -25,6 +57,25 @@ const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toL
 
 // Initialize OpenAI client lazily/safely
 const openai = HAS_OPENAI_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null
+
+// Verify OpenAI connection on startup (best effort, non-blocking)
+if (openai) {
+  (async () => {
+    try {
+      console.log('🔍 Testing OpenAI API connection...');
+      const testResponse = await openai.chat.completions.create({
+        model: 'gpt-4.1-nano',
+        messages: [{ role: 'user', content: 'test' }],
+        max_completion_tokens: 5,
+      });
+      console.log('✅ OpenAI API connection successful');
+    } catch (error) {
+      console.error('⚠️ OpenAI API connection test failed:', error.message);
+      if (error.status) console.error('   Status:', error.status);
+      if (error.code) console.error('   Code:', error.code);
+    }
+  })();
+}
 
 // Preset buyer personas with optimized prompts
 const BUYER_PERSONAS = {
@@ -55,8 +106,65 @@ const BUYER_PERSONAS = {
   }
 };
 
-// Pre-generated "Design for ___" responses - now includes ALL projects for each category
-const DESIGN_FOR_PRESETS = {
+// Template-based description generator using structured data
+function generateTemplateDescription(project, category) {
+  const data = PROJECT_SUMMARIES[project.slug];
+  if (!data) return project.caption || '';
+  
+  const parts = [];
+  
+  // Add key metrics if available
+  if (data.keyMetrics && data.keyMetrics.length > 0) {
+    parts.push(data.keyMetrics.slice(0, 2).join(', '));
+  }
+  
+  // Add solution with deliverables
+  if (data.solutionStatement) {
+    parts.push(data.solutionStatement);
+  } else if (data.deliverables && data.deliverables.length > 0) {
+    parts.push(`Delivered ${data.deliverables.slice(0, 2).join(' and ')}.`);
+  }
+  
+  // Add business value or problem context
+  if (data.businessValue) {
+    parts.push(data.businessValue);
+  } else if (data.problemStatement) {
+    parts.push(data.problemStatement);
+  }
+  
+  return parts.join(' ').trim() || project.caption || '';
+}
+
+// Category-based search insights
+const CATEGORY_INSIGHTS = {
+  'enterprise': 'Enterprise solutions that scale with your organization',
+  'healthcare': 'Healthcare solutions that improve patient outcomes and clinical workflows',
+  'government': 'Civic technology solutions that serve the public good',
+  'ai': 'AI-powered solutions that leverage machine learning and natural language processing'
+};
+
+// Category filters for "Design for X" queries (uses templates instead of hardcoded descriptions)
+const DESIGN_FOR_CATEGORIES = {
+  'Design for Enterprise': {
+    keywords: ['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'],
+    insight: 'Enterprise solutions that scale with your organization'
+  },
+  'Design for Healthcare': {
+    keywords: ['healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'health'],
+    insight: 'Healthcare solutions that improve patient outcomes and clinical workflows'
+  },
+  'Design for Government': {
+    keywords: ['government', 'civic', 'public', 'citizen', 'municipal', 'federal', 'state', 'policy'],
+    insight: 'Civic technology solutions that serve the public good'
+  },
+  'Design for AI': {
+    keywords: ['ai', 'artificial intelligence', 'machine learning', 'llm', 'nlp', 'gpt', 'neural', 'algorithm'],
+    insight: 'AI-powered solutions that leverage machine learning and natural language processing'
+  }
+};
+
+// Old hardcoded presets (to be removed) - keeping for reference during transition
+const OLD_DESIGN_FOR_PRESETS = {
   'Design for Enterprise': {
     searchInsight: 'Enterprise solutions that scale with your organization',
     projectDescriptions: [
@@ -519,9 +627,7 @@ Respond with ONLY the persona key (e.g., "healthcare_executive").`
           role: 'user',
           content: query
         }
-      ],
-      temperature: 0.1, // Lower temperature for more deterministic results
-      max_tokens: 15 // Reduced from 20
+      ]
     }), 8000, 'persona-detect-timeout')
     
     const detectedPersona = response.choices[0].message.content.trim().toLowerCase();
@@ -591,25 +697,140 @@ async function getCachedPresetResponse(presetKey, query, projects) {
   return response;
 }
 
-// Promise timeout helper
+// Promise timeout helper with better error context
 function withTimeout(promise, ms, label) {
   let timer
   const timeout = new Promise((_, reject) => {
-    timer = setTimeout(() => reject(new Error(`${label || 'timeout'} after ${ms}ms`)), ms)
+    timer = setTimeout(() => {
+      const err = new Error(`${label || 'timeout'} after ${ms}ms`)
+      err.code = 'TIMEOUT'
+      reject(err)
+    }, ms)
   })
-  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer))
+  
+  // Race with actual promise, but preserve original error if it fails
+  return Promise.race([
+    promise.catch(err => {
+      clearTimeout(timer)
+      // Log the actual error before re-throwing
+      console.error(`${label} - Original error before timeout:`, {
+        message: err.message,
+        status: err.status,
+        code: err.code,
+        type: err.type,
+        error: err.error
+      })
+      throw err
+    }),
+    timeout
+  ]).finally(() => clearTimeout(timer))
 }
 
-// Generate AI response using OpenAI — returns JSON with per-project relevance flag
-async function generateAIResponse(query, projects, personaContext) {
-  // Take top 4 projects to generate descriptions for
-  const topProjects = projects.slice(0, 4);
+// Quick relevance check
+async function quickRelevanceCheck(query, projects) {
+  // Skip OpenAI call when missing key or previews without explicit allow
+  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
+    return projects.map(p => ({ ...p, relevant: true }));
+  }
+
+  try {
+    console.log(`Relevance check: querying ${projects.length} projects with query "${query}"`);
+    const response = await withTimeout(openai.chat.completions.create({
+      model: 'gpt-4.1-nano',
+      messages: [
+        {
+          role: 'system',
+          content: `You are filtering case study projects for relevance. Given a search query, determine which projects are relevant. 
+
+Be GENEROUS with relevance - consider:
+- Direct topic matches
+- Related design methodologies or processes
+- Similar problem domains
+- Overlapping techniques or approaches
+- Tangentially related concepts
+
+Only mark as NOT relevant if there's truly no connection whatsoever.
+
+Respond with JSON object with a "projects" array: {"projects": [{"slug": "project-slug", "relevant": true/false}]}`
+        },
+        {
+          role: 'user',
+          content: `Query: "${query}"\n\nProjects:\n${JSON.stringify(projects.map(p => ({ slug: p.slug, title: p.title, caption: p.caption, categories: p.categories, keywords: p.keywords, client: p.client })), null, 2)}`
+        }
+      ],
+      max_completion_tokens: 800,
+      reasoning_effort: 'low',
+      response_format: { type: "json_object" }
+    }), 10000, 'relevance-check-timeout');
+    
+    console.log('Relevance check completed successfully');
+    
+    const rawContent = response.choices[0].message.content;
+    console.log('OpenAI response content:', rawContent);
+    console.log('OpenAI response length:', rawContent?.length || 0);
+    
+    let result;
+    try {
+      result = JSON.parse(rawContent);
+    } catch (parseError) {
+      console.error('JSON parse error:', parseError.message);
+      console.error('Raw content that failed to parse:', JSON.stringify(rawContent));
+      throw parseError;
+    }
+    
+    const relevanceMap = new Map(result.projects?.map(p => [p.slug, p.relevant]) || []);
+    
+    return projects.map(p => ({
+      ...p,
+      relevant: relevanceMap.get(p.slug) !== false
+    }));
+  } catch (error) {
+    console.warn('Quick relevance check failed, assuming all relevant:', {
+      message: error.message,
+      code: error.code,
+      status: error.status,
+      type: error.type,
+      stack: error.stack?.split('\n')[0]
+    });
+    
+    // If it's a parse error, the API responded but with bad JSON
+    if (error.message.includes('JSON')) {
+      console.error('This suggests OpenAI returned malformed JSON - check model name and API status');
+    }
+    
+    return projects.map(p => ({ ...p, relevant: true }));
+  }
+}
+
+// Helper function to convert markdown bold (**text**) to HTML (<strong>text</strong>)
+function convertMarkdownBoldToHtml(text) {
+  if (!text || typeof text !== 'string') return text;
+  // Replace **text** with <strong>text</strong>
+  return text.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+}
+
+// Generate AI description for a single project
+async function generateSingleProjectDescription(query, project, personaContext) {
+  const projectData = PROJECT_SUMMARIES[project.slug];
+  const enhancedProject = {
+    ...project,
+    structuredData: projectData || null
+  };
   
   const systemPrompt = `You are an AI assistant helping users find relevant case studies. ${personaContext}
 
-CRITICAL: Only describe what is explicitly mentioned in the project data. Do NOT infer, assume, or add technologies, methods, or capabilities that are not specifically stated in the title, caption, or categories.
+CRITICAL: Use the structured project data provided to create compelling, specific descriptions. The data includes real metrics, technologies, deliverables, and outcomes.
 
-Your task is to write a compelling 2-3 sentence description for each project explaining why it's relevant to the user's search query and needs. Focus on the value proposition for the specific persona. If a project is not relevant to the query, set its relevant flag to false and provide an empty description string.
+Your task is to write a compelling 2-3 sentence description for each project explaining why it's relevant to the user's search query. Use specific details from the structured data:
+- Lead with keyMetrics when impressive numbers are available
+- Mention concrete technologies and deliverables
+- Reference businessValue and how it solved the problem
+- Use targetUsers to show who benefits
+- Use HTML <strong></strong> tags (NOT markdown **) to emphasize 2-4 key words or phrases per description (important metrics, outcomes, or relevant terms)
+
+IMPORTANT: Use HTML tags like <strong>text</strong>, NOT markdown like **text**.
+
+If a project is not relevant to the query, set its relevant flag to false and provide an empty description string.
 
 Guidelines:
 - ONLY highlight positive connections and relevance - never mention what projects lack or don't have
@@ -652,50 +873,93 @@ STRONG WRITING REQUIREMENTS (for convincing buyers):
 
   const userPrompt = `Search query: "${query}"
 
-Projects to describe (ONLY use information provided below - do not add details not explicitly mentioned). Each project object may include: slug, title, caption, client, categories, keywords, score.
-${JSON.stringify(topProjects, null, 2)}
+Project to describe (includes metadata AND structured data with metrics, technologies, deliverables, etc.):
+${JSON.stringify(enhancedProject, null, 2)}
 
-For each project, provide a description that:
-1. Connects the project to the search query based on ONLY what's explicitly described
-2. Highlights relevance to the persona's specific needs
-3. Emphasizes the value or insights they could gain, ideally with a concrete artifact or measurable impact if present in the data
-4. Does NOT mention technologies or methods not explicitly listed in the project data
-5. If no clear, explicit connection exists, mark the project as not relevant (relevant=false) and set description to an empty string
+Create a compelling 2-3 sentence description that:
+1. Uses specific details from structuredData (keyMetrics, technologies, deliverables, businessValue)
+2. Connects the project to the search query using the most relevant structured fields
+3. Leads with impressive metrics when available (e.g., "Serves 160M users...")
+4. Mentions concrete deliverables and technologies
+5. References the client for credibility when provided
+6. If no clear connection exists, mark as not relevant (relevant=false) and use empty description
 
 Format your response as JSON:
 {
-  "projectDescriptions": [
-    {
-      "slug": "project-slug",
-      "description": "Why this project is relevant to the search query and persona needs (using only explicit information provided). Start with outcome or artifact when available; keep it specific and concrete.",
-      "relevant": true
-    }
-  ],
-  "searchInsight": "Brief insight about what the user is looking for"
+  "slug": "${project.slug}",
+  "description": "Why this project is relevant to the search query (using only explicit information provided). Start with outcome or artifact when available; keep it specific and concrete.",
+  "relevant": true
 }`;
 
   // Skip OpenAI call when missing key or previews without explicit allow
   if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
-    return { projectDescriptions: [], searchInsight: null }
+    return null
   }
 
   try {
+    const startTime = Date.now();
     const response = await withTimeout(openai.chat.completions.create({
-      model: 'gpt-4.1',
+      model: 'gpt-4.1-nano',
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt }
       ],
-      temperature: 0.2, // Reduced from 0.3 for more consistent responses
-      max_tokens: 600, // Reduced from 800
+      max_completion_tokens: 1000,
+      reasoning_effort: 'low',
       response_format: { type: "json_object" }
-    }), 9000, 'ai-search-timeout')
+    }), 15000, `ai-search-timeout-${project.slug}`)
     
-    return JSON.parse(response.choices[0].message.content);
+    const elapsed = Date.now() - startTime;
+    console.log(`  ✓ ${project.slug}: ${elapsed}ms, ${response.usage?.total_tokens || '?'} tokens`);
+    
+    const result = JSON.parse(response.choices[0].message.content);
+    
+    // Convert markdown bold to HTML if AI returned markdown format
+    if (result.description) {
+      result.description = convertMarkdownBoldToHtml(result.description);
+    }
+    
+    return result;
   } catch (error) {
-    console.error('OpenAI API error:', error);
-    throw new Error('Failed to generate AI response');
+    console.error(`  ✗ ${project.slug} error:`, error.message);
+    return null;
   }
+}
+
+// Generate AI responses for multiple projects (processes individually)
+async function generateAIResponse(query, projects, personaContext) {
+  // Take top 4 projects to generate descriptions for
+  const topProjects = projects.slice(0, 4);
+  
+  console.log(`Generating AI descriptions for ${topProjects.length} projects individually...`);
+  
+  // Process all projects in parallel for speed
+  const startTime = Date.now();
+  const descriptionPromises = topProjects.map(project => 
+    generateSingleProjectDescription(query, project, personaContext)
+  );
+  
+  const descriptions = await Promise.all(descriptionPromises);
+  const elapsed = Date.now() - startTime;
+  
+  const successCount = descriptions.filter(d => d !== null).length;
+  console.log(`Completed ${successCount}/${topProjects.length} descriptions in ${elapsed}ms total`);
+  
+  // Filter out failed descriptions and format result
+  const projectDescriptions = descriptions
+    .filter(d => d !== null)
+    .map(d => ({
+      slug: d.slug,
+      description: d.description || '',
+      relevant: d.relevant !== false
+    }));
+  
+  return {
+    projectDescriptions,
+    searchInsight: projectDescriptions.length > 0 
+      ? 'Relevant projects based on your search criteria' 
+      : null
+  };
 }
 
 // Netlify Function handler
@@ -744,25 +1008,38 @@ exports.handler = async (event, context) => {
       return jsonResponse(400, { error: 'Invalid request data' })
     }
     
-    // Check for "Design for ___" preset queries first
-    if (DESIGN_FOR_PRESETS[query]) {
-      const presetData = DESIGN_FOR_PRESETS[query];
+    // Check for "Design for ___" category queries and use template-based descriptions
+    if (DESIGN_FOR_CATEGORIES[query]) {
+      const categoryConfig = DESIGN_FOR_CATEGORIES[query];
+      const keywords = categoryConfig.keywords;
       
-      // Enhance ALL projects with preset descriptions where available
+      // Filter projects by category keywords
+      const matchedProjects = projects.filter(project => {
+        const searchText = [
+          project.title,
+          project.caption,
+          ...(project.categories || []),
+          ...(project.keywords || [])
+        ].filter(Boolean).join(' ').toLowerCase();
+        
+        return keywords.some(keyword => searchText.includes(keyword));
+      });
+      
+      // Generate template-based descriptions for matched projects
       const enhancedResults = projects.map(project => {
-        const presetDesc = presetData.projectDescriptions.find(p => p.slug === project.slug);
+        const isMatched = matchedProjects.some(m => m.slug === project.slug);
         return {
           ...project,
-          aiDescription: presetDesc ? presetDesc.description : null,
-          aiRelevant: presetDesc ? true : false,
-          aiEnhanced: !!presetDesc
+          aiDescription: isMatched ? generateTemplateDescription(project, query) : null,
+          aiRelevant: isMatched,
+          aiEnhanced: isMatched
         };
       });
       
       return jsonResponse(200, {
         results: enhancedResults,
         aiGenerated: true,
-        searchInsight: presetData.searchInsight,
+        searchInsight: categoryConfig.insight,
         detectedPersona: null,
         preset: query
       });
@@ -773,49 +1050,80 @@ exports.handler = async (event, context) => {
       return jsonResponse(200, { results: projects, aiGenerated: false })
     }
     
-    let selectedPersona = preset;
+    // Step 1: Quick relevance check (fast, uses mini model, no summaries)
+    console.log(`Step 1: Relevance check for ${projects.length} projects...`);
+    const relevanceChecked = await quickRelevanceCheck(query, projects);
+    const relevantProjects = relevanceChecked.filter(p => p.relevant !== false);
+    console.log(`  Found ${relevantProjects.length}/${projects.length} relevant projects`);
     
-    // Auto-detect persona if requested
-    if (autoDetectPersona || !preset) {
-      selectedPersona = await detectPersona(query);
+    // If relevance check completely failed (all projects still marked as relevant due to fallback)
+    // or if no projects passed the check, skip expensive AI generation
+    if (relevantProjects.length === 0 || relevantProjects.length === projects.length) {
+      console.warn('  Relevance check failed or returned all projects - skipping AI generation');
+      // Don't waste API calls - return top projects without AI descriptions
+      return jsonResponse(200, {
+        results: projects.slice(0, 4).map(p => ({ ...p, aiRelevant: true, aiDescription: p.caption })),
+        aiGenerated: false,
+        searchInsight: null,
+        detectedPersona: null,
+        preset: null
+      });
     }
     
-    let aiResponse;
+    // Step 2: Generate detailed descriptions only for relevant projects (slower, uses summaries)
+    console.log(`Step 2: Generating AI descriptions...`);
+    const aiResponse = await generateAIResponse(
+      query, 
+      relevantProjects,
+      'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.'
+    );
     
-    // Use preset cache if available
-    if (selectedPersona && BUYER_PERSONAS[selectedPersona]) {
-      aiResponse = await getCachedPresetResponse(selectedPersona, query, projects);
-    } else {
-      // Custom query with default context
-      aiResponse = await generateAIResponse(
-        query, 
-        projects,
-        'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.'
-      );
-    }
+    console.log(`  Generated ${aiResponse.projectDescriptions?.length || 0} descriptions`);
     
-    // Enhance top 4 projects with AI descriptions
-    const enhancedResults = projects.map((project, index) => {
+    // Enhance projects with AI descriptions
+    // Be lenient: if AI generated a description, include it even if marked less relevant
+    const enhancedResults = projects.map((project) => {
       const aiData = aiResponse.projectDescriptions?.find(p => p.slug === project.slug);
-      const isRelevant = aiData && (typeof aiData.relevant === 'boolean' ? aiData.relevant : true)
+      // Default to relevant=true if AI returned a description
+      const hasDescription = aiData && aiData.description && aiData.description.trim().length > 0;
+      const isRelevant = hasDescription ? (aiData.relevant !== false) : false;
+      
       return {
         ...project,
-        aiDescription: isRelevant && aiData ? aiData.description : null,
+        aiDescription: hasDescription ? aiData.description : null,
         aiRelevant: isRelevant,
-        // First 4 get AI descriptions and priority
-        aiEnhanced: index < 4 && !!aiData && isRelevant
+        aiEnhanced: !!hasDescription
       };
     });
     
-    // Filter out projects marked not relevant when AI is enabled
-    const filteredResults = enhancedResults.filter(r => r.aiRelevant !== false)
+    // Only filter out projects that explicitly have no description
+    const filteredResults = enhancedResults.filter(r => r.aiDescription !== null && r.aiDescription.trim().length > 0);
+    
+    console.log(`  Enhanced results: ${enhancedResults.length} total, ${filteredResults.length} with descriptions`);
+    
+    // Debug: log which projects have descriptions
+    enhancedResults.forEach(r => {
+      console.log(`    ${r.slug}: ${r.aiDescription ? 'HAS' : 'NO'} description (${r.aiDescription?.length || 0} chars)`);
+    });
+    
+    // If we somehow ended up with no results, return original projects
+    if (filteredResults.length === 0) {
+      console.warn('  No projects after filtering! Returning original projects');
+      return jsonResponse(200, {
+        results: projects.slice(0, 4).map(p => ({ ...p, aiRelevant: true, aiDescription: p.caption })),
+        aiGenerated: false,
+        searchInsight: null,
+        detectedPersona: null,
+        preset: null
+      });
+    }
 
     return jsonResponse(200, {
       results: filteredResults,
       aiGenerated: true,
       searchInsight: aiResponse.searchInsight,
-      detectedPersona: selectedPersona,
-      preset: selectedPersona
+      detectedPersona: null,
+      preset: null
     })
     
   } catch (error) {

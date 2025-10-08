@@ -966,14 +966,15 @@ async function generateAIResponse(query, projects, personaContext) {
 // Netlify Function handler
 exports.handler = async (event, context) => {
   // Debug: Log environment variable status
-  console.log('🔍 Environment Check:', {
+  const envDebug = {
     HAS_OPENAI_KEY,
     IS_NETLIFY_PREVIEW,
     ALLOW_AI_IN_PREVIEWS,
     CONTEXT: process.env.CONTEXT,
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL ? 'set' : 'not set',
     hasOpenAIClient: !!openai
-  })
+  }
+  console.log('🔍 Environment Check:', envDebug)
   
   // Preflight
   if (event.httpMethod === 'OPTIONS') {
@@ -995,10 +996,15 @@ exports.handler = async (event, context) => {
   if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
     // Validate input shape minimally
     if (!query || !projects || !Array.isArray(projects)) {
-      return jsonResponse(200, { results: [], aiGenerated: false })
+      return jsonResponse(200, { results: [], aiGenerated: false, debug: envDebug })
     }
     // Return projects as-is; client will display without AI descriptions
-    return jsonResponse(200, { results: projects, aiGenerated: false, disabled: (!HAS_OPENAI_KEY || !openai) ? 'no-api-key' : (IS_NETLIFY_PREVIEW ? 'preview' : 'disabled') })
+    return jsonResponse(200, { 
+      results: projects, 
+      aiGenerated: false, 
+      disabled: (!HAS_OPENAI_KEY || !openai) ? 'no-api-key' : (IS_NETLIFY_PREVIEW ? 'preview' : 'disabled'),
+      debug: envDebug // Include debug info in response for troubleshooting
+    })
   }
 
   // Get client IP for rate limiting

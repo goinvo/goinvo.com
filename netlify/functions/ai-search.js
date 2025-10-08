@@ -742,7 +742,7 @@ async function quickRelevanceCheck(query, projects) {
           role: 'system',
           content: `You are filtering case study projects for relevance. Given a search query, determine which projects are relevant. 
 
-Be GENEROUS with relevance - consider:
+Be GENEROUS with relevance; consider:
 - Direct topic matches
 - Related design methodologies or processes
 - Similar problem domains

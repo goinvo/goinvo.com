@@ -53,7 +53,8 @@ const dailyUsage = new Map();
 // Environment flags
 const HAS_OPENAI_KEY = !!process.env.OPENAI_API_KEY
 const IS_NETLIFY_PREVIEW = (process.env.CONTEXT === 'deploy-preview') || (!!process.env.DEPLOY_PRIME_URL && String(process.env.DEPLOY_PRIME_URL).includes('deploy-preview'))
-const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toLowerCase() === 'true') || (process.env.ALLOW_AI_IN_PREVIEWS === '1')
+// const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toLowerCase() === 'true') || (process.env.ALLOW_AI_IN_PREVIEWS === '1')
+const ALLOW_AI_IN_PREVIEWS = true
 
 // Initialize OpenAI client lazily/safely
 const openai = HAS_OPENAI_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null

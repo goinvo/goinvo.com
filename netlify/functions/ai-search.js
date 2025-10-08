@@ -965,6 +965,16 @@ async function generateAIResponse(query, projects, personaContext) {
 
 // Netlify Function handler
 exports.handler = async (event, context) => {
+  // Debug: Log environment variable status
+  console.log('🔍 Environment Check:', {
+    HAS_OPENAI_KEY,
+    IS_NETLIFY_PREVIEW,
+    ALLOW_AI_IN_PREVIEWS,
+    CONTEXT: process.env.CONTEXT,
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL ? 'set' : 'not set',
+    hasOpenAIClient: !!openai
+  })
+  
   // Preflight
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 200, headers: CORS_HEADERS, body: '' }

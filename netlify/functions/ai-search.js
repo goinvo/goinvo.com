@@ -1067,32 +1067,11 @@ exports.handler = async (event, context) => {
       return jsonResponse(200, { results: projects, aiGenerated: false, debug: { ...envDebug, reason: 'useAI=false' } })
     }
     
-    // Step 1: Quick relevance check (fast, uses mini model, no summaries)
-    console.log(`Step 1: Relevance check for ${projects.length} projects...`);
-    const relevanceChecked = await quickRelevanceCheck(query, projects);
-    const relevantProjects = relevanceChecked.filter(p => p.relevant !== false);
-    console.log(`  Found ${relevantProjects.length}/${projects.length} relevant projects`);
-    
-    // If relevance check completely failed (all projects still marked as relevant due to fallback)
-    // or if no projects passed the check, skip expensive AI generation
-    if (relevantProjects.length === 0 || relevantProjects.length === projects.length) {
-      console.warn('  Relevance check failed or returned all projects - skipping AI generation');
-      // Don't waste API calls - return top projects without AI descriptions
-      return jsonResponse(200, {
-        results: projects.slice(0, 4).map(p => ({ ...p, aiRelevant: true, aiDescription: p.caption })),
-        aiGenerated: false,
-        searchInsight: null,
-        detectedPersona: null,
-        preset: null,
-        debug: { ...envDebug, reason: 'relevance-check-failed', relevantCount: relevantProjects.length, totalCount: projects.length }
-      });
-    }
-    
-    // Step 2: Generate detailed descriptions only for relevant projects (slower, uses summaries)
-    console.log(`Step 2: Generating AI descriptions...`);
+    // Generate AI descriptions for top projects directly (skip unreliable relevance check)
+    console.log(`Generating AI descriptions for top ${Math.min(4, projects.length)} projects...`);
     const aiResponse = await generateAIResponse(
       query, 
-      relevantProjects,
+      projects, // Pass all projects, generateAIResponse will take top 4
       'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.'
     );
     

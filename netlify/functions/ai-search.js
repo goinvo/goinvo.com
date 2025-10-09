@@ -1067,11 +1067,13 @@ exports.handler = async (event, context) => {
       return jsonResponse(200, { results: projects, aiGenerated: false, debug: { ...envDebug, reason: 'useAI=false' } })
     }
     
-    // Generate AI descriptions for top projects directly (skip unreliable relevance check)
+    // Skip the relevance check - it's unreliable and causing issues
+    // Just generate AI descriptions for all top projects
     console.log(`Generating AI descriptions for top ${Math.min(4, projects.length)} projects...`);
+    
     const aiResponse = await generateAIResponse(
       query, 
-      projects, // Pass all projects, generateAIResponse will take top 4
+      projects,
       'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.'
     );
     

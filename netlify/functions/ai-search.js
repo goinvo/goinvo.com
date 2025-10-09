@@ -1098,7 +1098,6 @@ exports.handler = async (event, context) => {
     console.log(`  Generated ${aiResponse.projectDescriptions?.length || 0} descriptions`);
     
     // Enhance projects with AI descriptions
-    // Be lenient: if AI generated a description, include it even if marked less relevant
     const enhancedResults = projects.map((project) => {
       const aiData = aiResponse.projectDescriptions?.find(p => p.slug === project.slug);
       // Default to relevant=true if AI returned a description

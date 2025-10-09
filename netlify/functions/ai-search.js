@@ -1064,7 +1064,7 @@ exports.handler = async (event, context) => {
     
     // If not using AI, just return the projects as-is
     if (!useAI) {
-      return jsonResponse(200, { results: projects, aiGenerated: false })
+      return jsonResponse(200, { results: projects, aiGenerated: false, debug: { ...envDebug, reason: 'useAI=false' } })
     }
     
     // Step 1: Quick relevance check (fast, uses mini model, no summaries)
@@ -1083,7 +1083,8 @@ exports.handler = async (event, context) => {
         aiGenerated: false,
         searchInsight: null,
         detectedPersona: null,
-        preset: null
+        preset: null,
+        debug: { ...envDebug, reason: 'relevance-check-failed', relevantCount: relevantProjects.length, totalCount: projects.length }
       });
     }
     
@@ -1130,7 +1131,8 @@ exports.handler = async (event, context) => {
         aiGenerated: false,
         searchInsight: null,
         detectedPersona: null,
-        preset: null
+        preset: null,
+        debug: { ...envDebug, reason: 'no-descriptions-generated', enhancedCount: enhancedResults.length, generatedCount: aiResponse.projectDescriptions?.length || 0 }
       });
     }
 
@@ -1144,6 +1146,6 @@ exports.handler = async (event, context) => {
     
   } catch (error) {
     console.error('AI search error:', error);
-    return jsonResponse(500, { error: 'Failed to process AI search', aiGenerated: false })
+    return jsonResponse(500, { error: 'Failed to process AI search', aiGenerated: false, debug: { ...envDebug, reason: 'exception', errorMessage: error.message } })
   }
 }; 

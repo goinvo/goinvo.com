@@ -970,9 +970,13 @@ exports.handler = async (event, context) => {
     HAS_OPENAI_KEY,
     IS_NETLIFY_PREVIEW,
     ALLOW_AI_IN_PREVIEWS,
-    CONTEXT: process.env.CONTEXT,
-    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL ? 'set' : 'not set',
-    hasOpenAIClient: !!openai
+    CONTEXT: process.env.CONTEXT || 'not set',
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || 'not set',
+    DEPLOY_URL: process.env.DEPLOY_URL || 'not set',
+    URL: process.env.URL || 'not set',
+    BRANCH: process.env.BRANCH || 'not set',
+    hasOpenAIClient: !!openai,
+    nodeEnv: process.env.NODE_ENV || 'not set'
   }
   console.log('🔍 Environment Check:', envDebug)
   

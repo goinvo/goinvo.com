@@ -68,24 +68,7 @@ function getOpenAI() {
   }
 }
 
-// Verify OpenAI connection on startup (best effort, non-blocking)
-if (openai) {
-  (async () => {
-    try {
-      console.log('🔍 Testing OpenAI API connection...');
-      const testResponse = await openai.chat.completions.create({
-        model: 'gpt-4.1-nano',
-        messages: [{ role: 'user', content: 'test' }],
-        max_completion_tokens: 5,
-      });
-      console.log('✅ OpenAI API connection successful');
-    } catch (error) {
-      console.error('⚠️ OpenAI API connection test failed:', error.message);
-      if (error.status) console.error('   Status:', error.status);
-      if (error.code) console.error('   Code:', error.code);
-    }
-  })();
-}
+// Note: OpenAI connection test removed - client is now initialized lazily at request time
 
 // Preset buyer personas with optimized prompts
 const BUYER_PERSONAS = {

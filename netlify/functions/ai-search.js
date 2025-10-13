@@ -50,14 +50,23 @@ const MAX_REQUESTS_PER_WINDOW = 3; // Max 3 requests per minute per IP
 const DAILY_LIMIT_PER_IP = 50; // Max 50 requests per day per IP
 const dailyUsage = new Map();
 
-// Environment flags
-const HAS_OPENAI_KEY = !!process.env.OPENAI_API_KEY
-const IS_NETLIFY_PREVIEW = (process.env.CONTEXT === 'deploy-preview') || (!!process.env.DEPLOY_PRIME_URL && String(process.env.DEPLOY_PRIME_URL).includes('deploy-preview'))
-// const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toLowerCase() === 'true') || (process.env.ALLOW_AI_IN_PREVIEWS === '1')
-const ALLOW_AI_IN_PREVIEWS = true
-
-// Initialize OpenAI client lazily/safely
-const openai = HAS_OPENAI_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null
+// Lazy initialization - read environment at request time, not module load time
+let openaiClient = null;
+function getOpenAI() {
+  if (openaiClient !== null) return openaiClient;
+  if (!process.env.OPENAI_API_KEY) {
+    openaiClient = false; // Mark as checked but unavailable
+    return null;
+  }
+  try {
+    openaiClient = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    return openaiClient;
+  } catch (error) {
+    console.error('Failed to initialize OpenAI client:', error);
+    openaiClient = false;
+    return null;
+  }
+}
 
 // Verify OpenAI connection on startup (best effort, non-blocking)
 if (openai) {
@@ -579,7 +588,7 @@ const OLD_DESIGN_FOR_PRESETS = {
 };
 
 // Auto-detect persona based on query
-async function detectPersona(query) {
+async function detectPersona(query, openai) {
   const queryLower = query.toLowerCase();
   
   // Simple keyword-based detection first (fast and free)
@@ -604,8 +613,8 @@ async function detectPersona(query) {
     return bestMatch;
   }
   
-  // Skip OpenAI call when missing key or previews without explicit allow
-  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
+  // Skip OpenAI call if client unavailable
+  if (!openai) {
     return bestMatch;
   }
 
@@ -672,7 +681,7 @@ function checkRateLimit(ip) {
 }
 
 // Get or generate cached response for preset
-async function getCachedPresetResponse(presetKey, query, projects) {
+async function getCachedPresetResponse(presetKey, query, projects, openai) {
   const cacheKey = `${presetKey}:${query}`;
   
   // Check in-memory cache first
@@ -687,7 +696,7 @@ async function getCachedPresetResponse(presetKey, query, projects) {
     throw new Error('Invalid preset');
   }
   
-  const response = await generateAIResponse(query, projects, persona.context);
+  const response = await generateAIResponse(query, projects, persona.context, openai);
   
   // Cache the response
   presetCache.set(cacheKey, {
@@ -811,7 +820,7 @@ function convertMarkdownBoldToHtml(text) {
 }
 
 // Generate AI description for a single project
-async function generateSingleProjectDescription(query, project, personaContext) {
+async function generateSingleProjectDescription(query, project, personaContext, openai) {
   const projectData = PROJECT_SUMMARIES[project.slug];
   const enhancedProject = {
     ...project,
@@ -892,8 +901,8 @@ Format your response as JSON:
   "relevant": true
 }`;
 
-  // Skip OpenAI call when missing key or previews without explicit allow
-  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
+  // Skip OpenAI call if client unavailable
+  if (!openai) {
     return null
   }
 
@@ -928,7 +937,7 @@ Format your response as JSON:
 }
 
 // Generate AI responses for multiple projects (processes individually)
-async function generateAIResponse(query, projects, personaContext) {
+async function generateAIResponse(query, projects, personaContext, openai) {
   // Take top 4 projects to generate descriptions for
   const topProjects = projects.slice(0, 4);
   
@@ -937,7 +946,7 @@ async function generateAIResponse(query, projects, personaContext) {
   // Process all projects in parallel for speed
   const startTime = Date.now();
   const descriptionPromises = topProjects.map(project => 
-    generateSingleProjectDescription(query, project, personaContext)
+    generateSingleProjectDescription(query, project, personaContext, openai)
   );
   
   const descriptions = await Promise.all(descriptionPromises);
@@ -965,6 +974,12 @@ async function generateAIResponse(query, projects, personaContext) {
 
 // Netlify Function handler
 exports.handler = async (event, context) => {
+  // Read environment at REQUEST time (not module load time)
+  const HAS_OPENAI_KEY = !!process.env.OPENAI_API_KEY;
+  const IS_NETLIFY_PREVIEW = (process.env.CONTEXT === 'deploy-preview') || (!!process.env.DEPLOY_PRIME_URL && String(process.env.DEPLOY_PRIME_URL).includes('deploy-preview'));
+  const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toLowerCase() === 'true') || (process.env.ALLOW_AI_IN_PREVIEWS === '1') || true;
+  const openai = getOpenAI();
+  
   // Debug: Log environment variable status
   const envDebug = {
     HAS_OPENAI_KEY,
@@ -1080,7 +1095,8 @@ exports.handler = async (event, context) => {
     const aiResponse = await generateAIResponse(
       query, 
       projects,
-      'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.'
+      'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.',
+      openai
     );
     
     console.log(`  Generated ${aiResponse.projectDescriptions?.length || 0} descriptions`);

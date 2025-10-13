@@ -2,6 +2,14 @@ const OpenAI = require('openai');
 const fs = require('fs');
 const path = require('path');
 
+// Debug: Log ALL environment variables at module load to diagnose Netlify issue
+console.log('=== MODULE LOAD - ALL ENV VARS ===');
+console.log('OPENAI_API_KEY exists?', !!process.env.OPENAI_API_KEY);
+console.log('CONTEXT:', process.env.CONTEXT);
+console.log('DEPLOY_PRIME_URL:', process.env.DEPLOY_PRIME_URL);
+console.log('All env keys:', Object.keys(process.env).filter(k => k.includes('NETLIFY') || k.includes('DEPLOY') || k.includes('CONTEXT') || k.includes('OPENAI')).join(', '));
+console.log('==================================');
+
 // CORS helper
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',

@@ -976,7 +976,9 @@ exports.handler = async (event, context) => {
     URL: process.env.URL || 'not set',
     BRANCH: process.env.BRANCH || 'not set',
     hasOpenAIClient: !!openai,
-    nodeEnv: process.env.NODE_ENV || 'not set'
+    nodeEnv: process.env.NODE_ENV || 'not set',
+    requestHost: event.headers.host || 'not set',
+    referer: event.headers.referer || 'not set'
   }
   console.log('🔍 Environment Check:', envDebug)
   

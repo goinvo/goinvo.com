@@ -26,3 +26,7 @@
 # Enable AI in deploy previews
 [context.deploy-preview.environment]
   ALLOW_AI_IN_PREVIEWS = "true"
+
+# Also enable for branch deploys (includes PR previews)
+[context.branch-deploy.environment]
+  ALLOW_AI_IN_PREVIEWS = "true"

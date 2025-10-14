@@ -1,4 +1,15 @@
 const OpenAI = require('openai');
+const fs = require('fs');
+const path = require('path');
+
+// Debug: Log ALL environment variables at module load to diagnose Netlify issue
+console.log('=== MODULE LOAD - ALL ENV VARS ===');
+console.log('OPENAI_API_KEY exists?', !!process.env.OPENAI_API_KEY);
+console.log('CONTEXT:', process.env.CONTEXT);
+console.log('DEPLOY_PRIME_URL:', process.env.DEPLOY_PRIME_URL);
+console.log('All env keys:', Object.keys(process.env).filter(k => k.includes('NETLIFY') || k.includes('DEPLOY') || k.includes('CONTEXT') || k.includes('OPENAI')).join(', '));
+console.log('==================================');
+
 // CORS helper
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -6,6 +17,35 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
 }
 const jsonResponse = (statusCode, obj) => ({ statusCode, headers: CORS_HEADERS, body: JSON.stringify(obj || {}) })
+
+// Load project summaries (pre-generated detailed summaries of each project)
+let PROJECT_SUMMARIES = {};
+try {
+  // Try multiple paths to support both dev (netlify dev) and production
+  const possiblePaths = [
+    path.join(__dirname, '..', '..', 'src', 'data', 'project-summaries.json'), // Production
+    path.join(__dirname, '..', '..', '..', '..', '..', 'src', 'data', 'project-summaries.json'), // Netlify dev (bundled)
+    path.join(process.cwd(), 'src', 'data', 'project-summaries.json'), // Working directory fallback
+  ];
+  
+  let summariesPath = null;
+  for (const p of possiblePaths) {
+    if (fs.existsSync(p)) {
+      summariesPath = p;
+      break;
+    }
+  }
+  
+  if (summariesPath) {
+    PROJECT_SUMMARIES = JSON.parse(fs.readFileSync(summariesPath, 'utf-8'));
+    console.log(`✅ Loaded ${Object.keys(PROJECT_SUMMARIES).length} project summaries from ${summariesPath}`);
+  } else {
+    console.warn('⚠️  No project-summaries.json found. Run npm run generate-summaries to create it.');
+    console.warn('    Tried paths:', possiblePaths);
+  }
+} catch (error) {
+  console.warn('⚠️  Could not load project summaries:', error.message);
+}
 
 // In-memory cache for preset queries
 const presetCache = new Map();
@@ -18,13 +58,25 @@ const MAX_REQUESTS_PER_WINDOW = 3; // Max 3 requests per minute per IP
 const DAILY_LIMIT_PER_IP = 50; // Max 50 requests per day per IP
 const dailyUsage = new Map();
 
-// Environment flags
-const HAS_OPENAI_KEY = !!process.env.OPENAI_API_KEY
-const IS_NETLIFY_PREVIEW = (process.env.CONTEXT === 'deploy-preview') || (!!process.env.DEPLOY_PRIME_URL && String(process.env.DEPLOY_PRIME_URL).includes('deploy-preview'))
-const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toLowerCase() === 'true') || (process.env.ALLOW_AI_IN_PREVIEWS === '1')
+// Lazy initialization - read environment at request time, not module load time
+let openaiClient = null;
+function getOpenAI() {
+  if (openaiClient !== null) return openaiClient;
+  if (!process.env.OPENAI_API_KEY) {
+    openaiClient = false; // Mark as checked but unavailable
+    return null;
+  }
+  try {
+    openaiClient = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    return openaiClient;
+  } catch (error) {
+    console.error('Failed to initialize OpenAI client:', error);
+    openaiClient = false;
+    return null;
+  }
+}
 
-// Initialize OpenAI client lazily/safely
-const openai = HAS_OPENAI_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null
+// Note: OpenAI connection test removed - client is now initialized lazily at request time
 
 // Preset buyer personas with optimized prompts
 const BUYER_PERSONAS = {
@@ -55,8 +107,479 @@ const BUYER_PERSONAS = {
   }
 };
 
+// Template-based description generator using structured data
+function generateTemplateDescription(project, category) {
+  const data = PROJECT_SUMMARIES[project.slug];
+  if (!data) return project.caption || '';
+  
+  const parts = [];
+  
+  // Add key metrics if available
+  if (data.keyMetrics && data.keyMetrics.length > 0) {
+    parts.push(data.keyMetrics.slice(0, 2).join(', '));
+  }
+  
+  // Add solution with deliverables
+  if (data.solutionStatement) {
+    parts.push(data.solutionStatement);
+  } else if (data.deliverables && data.deliverables.length > 0) {
+    parts.push(`Delivered ${data.deliverables.slice(0, 2).join(' and ')}.`);
+  }
+  
+  // Add business value or problem context
+  if (data.businessValue) {
+    parts.push(data.businessValue);
+  } else if (data.problemStatement) {
+    parts.push(data.problemStatement);
+  }
+  
+  return parts.join(' ').trim() || project.caption || '';
+}
+
+// Category-based search insights
+const CATEGORY_INSIGHTS = {
+  'enterprise': 'Enterprise solutions that scale with your organization',
+  'healthcare': 'Healthcare solutions that improve patient outcomes and clinical workflows',
+  'government': 'Civic technology solutions that serve the public good',
+  'ai': 'AI-powered solutions that leverage machine learning and natural language processing'
+};
+
+// Category filters for "Design for X" queries (uses templates instead of hardcoded descriptions)
+const DESIGN_FOR_CATEGORIES = {
+  'Design for Enterprise': {
+    keywords: ['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'],
+    insight: 'Enterprise solutions that scale with your organization'
+  },
+  'Design for Healthcare': {
+    keywords: ['healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'health'],
+    insight: 'Healthcare solutions that improve patient outcomes and clinical workflows'
+  },
+  'Design for Government': {
+    keywords: ['government', 'civic', 'public', 'citizen', 'municipal', 'federal', 'state', 'policy'],
+    insight: 'Civic technology solutions that serve the public good'
+  },
+  'Design for AI': {
+    keywords: ['ai', 'artificial intelligence', 'machine learning', 'llm', 'nlp', 'gpt', 'neural', 'algorithm'],
+    insight: 'AI-powered solutions that leverage machine learning and natural language processing'
+  }
+};
+
+// Old hardcoded presets (to be removed) - keeping for reference during transition
+const OLD_DESIGN_FOR_PRESETS = {
+  'Design for Enterprise': {
+    searchInsight: 'Enterprise solutions that scale with your organization',
+    projectDescriptions: [
+      {
+        slug: 'inspired-ehrs',
+        description: 'Enterprise EHR platform designed for large healthcare systems, featuring advanced analytics and seamless integration capabilities.',
+        relevant: true
+      },
+      {
+        slug: 'ipsos-facto',
+        description: 'AI-powered research intelligence platform built for enterprise-scale data analysis and decision making.',
+        relevant: true
+      },
+      {
+        slug: 'prior-auth',
+        description: 'Enterprise prior authorization system that streamlines complex approval workflows for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'precision-autism',
+        description: 'Precision medicine platform designed for enterprise clinical workflows and large-scale patient management.',
+        relevant: true
+      },
+      {
+        slug: 'maya-ehr',
+        description: 'Enterprise-grade EHR system with comprehensive patient management and clinical workflow optimization.',
+        relevant: true
+      },
+      {
+        slug: 'partners-geneinsight',
+        description: 'Enterprise genomics platform that integrates with large healthcare systems for precision medicine workflows.',
+        relevant: true
+      },
+      {
+        slug: 'partners-insight',
+        description: 'Enterprise analytics platform providing comprehensive insights for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: '3m-coderyte',
+        description: 'Enterprise coding platform designed for large healthcare systems to improve clinical documentation accuracy.',
+        relevant: true
+      },
+      {
+        slug: 'ahrq-cds',
+        description: 'Enterprise clinical decision support system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'Enterprise-scale research platform designed for large-scale health data collection and analysis.',
+        relevant: true
+      },
+      {
+        slug: 'care-cards',
+        description: 'Enterprise patient engagement platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'commonhealth-smart-health-cards',
+        description: 'Enterprise digital health credential system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'Enterprise health data education platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'Enterprise health data visualization platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'infobionic-heart-monitoring',
+        description: 'Enterprise cardiac monitoring platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'insidetracker-nutrition-science',
+        description: 'Enterprise nutrition analytics platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-flux-notes',
+        description: 'Enterprise clinical note analysis system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-shr',
+        description: 'Enterprise shared health record system for large healthcare networks.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'Enterprise healthcare analytics platform for large organizations.',
+        relevant: true
+      },
+      {
+        slug: 'mount-sinai-consent',
+        description: 'Enterprise consent management system for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'paintrackr',
+        description: 'Enterprise pain management platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'personal-genome-project-vision',
+        description: 'Enterprise genomics research platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'staffplan',
+        description: 'Enterprise workforce management platform for large healthcare organizations.',
+        relevant: true
+      },
+      {
+        slug: 'tabeeb-diagnostics',
+        description: 'Enterprise diagnostic platform for large healthcare systems.',
+        relevant: true
+      },
+      {
+        slug: 'wuxi-nextcode-familycode',
+        description: 'Enterprise genomics platform for large healthcare organizations.',
+        relevant: true
+      }
+    ]
+  },
+  'Design for Healthcare': {
+    searchInsight: 'Healthcare solutions that improve patient outcomes and clinical workflows',
+    projectDescriptions: [
+      {
+        slug: 'inspired-ehrs',
+        description: 'Comprehensive EHR system designed specifically for healthcare providers, improving clinical documentation and patient care coordination.',
+        relevant: true
+      },
+      {
+        slug: 'prior-auth',
+        description: 'Prior authorization platform that reduces administrative burden for healthcare providers while ensuring proper coverage.',
+        relevant: true
+      },
+      {
+        slug: 'precision-autism',
+        description: 'Precision medicine platform for autism care, enabling personalized treatment approaches based on genetic and clinical data.',
+        relevant: true
+      },
+      {
+        slug: 'maya-ehr',
+        description: 'Modern EHR system designed for healthcare providers, featuring intuitive interfaces and comprehensive patient management tools.',
+        relevant: true
+      },
+      {
+        slug: 'partners-geneinsight',
+        description: 'Genomics platform designed for healthcare providers to deliver personalized medicine based on genetic data.',
+        relevant: true
+      },
+      {
+        slug: 'partners-insight',
+        description: 'Healthcare analytics platform that helps providers make data-driven clinical decisions.',
+        relevant: true
+      },
+      {
+        slug: '3m-coderyte',
+        description: 'Clinical coding platform that helps healthcare providers improve documentation accuracy and compliance.',
+        relevant: true
+      },
+      {
+        slug: 'ahrq-cds',
+        description: 'Clinical decision support system that helps healthcare providers make evidence-based treatment decisions.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'Research platform that enables healthcare providers to contribute to and benefit from large-scale health research.',
+        relevant: true
+      },
+      {
+        slug: 'care-cards',
+        description: 'Patient engagement platform that helps healthcare providers improve patient communication and care coordination.',
+        relevant: true
+      },
+      {
+        slug: 'commonhealth-smart-health-cards',
+        description: 'Digital health credential system that helps healthcare providers verify patient information securely.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'Educational platform that helps healthcare providers understand and utilize health data effectively.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'Health data visualization platform that helps healthcare providers understand complex patient data.',
+        relevant: true
+      },
+      {
+        slug: 'infobionic-heart-monitoring',
+        description: 'Cardiac monitoring platform that helps healthcare providers track and manage heart health.',
+        relevant: true
+      },
+      {
+        slug: 'insidetracker-nutrition-science',
+        description: 'Nutrition analytics platform that helps healthcare providers optimize patient nutrition and health outcomes.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-flux-notes',
+        description: 'Clinical note analysis system that helps healthcare providers extract insights from patient documentation.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-shr',
+        description: 'Shared health record system that enables healthcare providers to access comprehensive patient information.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'Healthcare analytics platform that helps providers understand and improve healthcare delivery.',
+        relevant: true
+      },
+      {
+        slug: 'mount-sinai-consent',
+        description: 'Consent management system that helps healthcare providers manage patient consent for research and treatment.',
+        relevant: true
+      },
+      {
+        slug: 'paintrackr',
+        description: 'Pain management platform that helps healthcare providers track and manage patient pain effectively.',
+        relevant: true
+      },
+      {
+        slug: 'personal-genome-project-vision',
+        description: 'Genomics research platform that helps healthcare providers advance personalized medicine.',
+        relevant: true
+      },
+      {
+        slug: 'staffplan',
+        description: 'Workforce management platform that helps healthcare organizations optimize staffing and patient care.',
+        relevant: true
+      },
+      {
+        slug: 'tabeeb-diagnostics',
+        description: 'Diagnostic platform that helps healthcare providers make accurate and timely diagnoses.',
+        relevant: true
+      },
+      {
+        slug: 'wuxi-nextcode-familycode',
+        description: 'Genomics platform that helps healthcare providers deliver family-based genetic medicine.',
+        relevant: true
+      }
+    ]
+  },
+  'Design for Government': {
+    searchInsight: 'Civic technology solutions that serve the public good',
+    projectDescriptions: [
+      {
+        slug: 'mass-snap',
+        description: 'Massachusetts SNAP benefits platform designed for government agencies, improving citizen access to essential services.',
+        relevant: true
+      },
+      {
+        slug: 'public-sector',
+        description: 'Public sector service design solutions that enhance citizen engagement and government efficiency.',
+        relevant: true
+      },
+      {
+        slug: 'determinants-of-health',
+        description: 'Public health data visualization platform that helps government agencies understand and address social determinants of health.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'Educational platform for government health officials to understand complex health data and policy implications.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'National research initiative platform that enables government agencies to conduct large-scale health research.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'Public health data visualization platform that helps government agencies understand population health trends.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'Healthcare analytics platform that helps government agencies understand and improve national healthcare delivery.',
+        relevant: true
+      }
+    ]
+  },
+  'Design for AI': {
+    searchInsight: 'AI-powered solutions that leverage machine learning and natural language processing',
+    projectDescriptions: [
+      {
+        slug: 'ipsos-facto',
+        description: 'AI and LLM-powered research intelligence platform that transforms how organizations analyze and understand complex data.',
+        relevant: true
+      },
+      {
+        slug: 'visual-storytelling-with-genai',
+        description: 'Generative AI platform for creating compelling visual narratives and storytelling in healthcare contexts.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-flux-notes',
+        description: 'AI-powered clinical note analysis system that helps healthcare providers extract insights from unstructured text data.',
+        relevant: true
+      },
+      {
+        slug: 'tabeeb-diagnostics',
+        description: 'AI-driven diagnostic platform that combines machine learning with clinical expertise to improve diagnostic accuracy.',
+        relevant: true
+      },
+      {
+        slug: 'partners-geneinsight',
+        description: 'AI-powered genomics platform that uses machine learning to analyze genetic data and provide personalized insights.',
+        relevant: true
+      },
+      {
+        slug: 'partners-insight',
+        description: 'AI-powered analytics platform that uses machine learning to provide healthcare insights and predictions.',
+        relevant: true
+      },
+      {
+        slug: '3m-coderyte',
+        description: 'AI-powered clinical coding platform that uses natural language processing to improve documentation accuracy.',
+        relevant: true
+      },
+      {
+        slug: 'ahrq-cds',
+        description: 'AI-powered clinical decision support system that uses machine learning to provide evidence-based recommendations.',
+        relevant: true
+      },
+      {
+        slug: 'all-of-us',
+        description: 'AI-powered research platform that uses machine learning to analyze large-scale health data and generate insights.',
+        relevant: true
+      },
+      {
+        slug: 'care-cards',
+        description: 'AI-powered patient engagement platform that uses machine learning to personalize patient communication.',
+        relevant: true
+      },
+      {
+        slug: 'commonhealth-smart-health-cards',
+        description: 'AI-powered digital health credential system that uses machine learning for secure verification.',
+        relevant: true
+      },
+      {
+        slug: 'fastercures-health-data-basics',
+        description: 'AI-powered educational platform that uses machine learning to help users understand complex health data.',
+        relevant: true
+      },
+      {
+        slug: 'hgraph',
+        description: 'AI-powered health data visualization platform that uses machine learning to identify patterns and insights.',
+        relevant: true
+      },
+      {
+        slug: 'infobionic-heart-monitoring',
+        description: 'AI-powered cardiac monitoring platform that uses machine learning to detect and predict heart conditions.',
+        relevant: true
+      },
+      {
+        slug: 'insidetracker-nutrition-science',
+        description: 'AI-powered nutrition analytics platform that uses machine learning to optimize nutrition and health outcomes.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-shr',
+        description: 'AI-powered shared health record system that uses machine learning to provide comprehensive patient insights.',
+        relevant: true
+      },
+      {
+        slug: 'mitre-state-of-us-healthcare',
+        description: 'AI-powered healthcare analytics platform that uses machine learning to understand and improve healthcare delivery.',
+        relevant: true
+      },
+      {
+        slug: 'mount-sinai-consent',
+        description: 'AI-powered consent management system that uses machine learning to optimize research participation.',
+        relevant: true
+      },
+      {
+        slug: 'paintrackr',
+        description: 'AI-powered pain management platform that uses machine learning to track and predict pain patterns.',
+        relevant: true
+      },
+      {
+        slug: 'personal-genome-project-vision',
+        description: 'AI-powered genomics research platform that uses machine learning to advance personalized medicine.',
+        relevant: true
+      },
+      {
+        slug: 'staffplan',
+        description: 'AI-powered workforce management platform that uses machine learning to optimize healthcare staffing.',
+        relevant: true
+      },
+      {
+        slug: 'wuxi-nextcode-familycode',
+        description: 'AI-powered genomics platform that uses machine learning to analyze family genetic data.',
+        relevant: true
+      }
+    ]
+  }
+};
+
 // Auto-detect persona based on query
-async function detectPersona(query) {
+async function detectPersona(query, openai) {
   const queryLower = query.toLowerCase();
   
   // Simple keyword-based detection first (fast and free)
@@ -81,8 +604,8 @@ async function detectPersona(query) {
     return bestMatch;
   }
   
-  // Skip OpenAI call when missing key or previews without explicit allow
-  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
+  // Skip OpenAI call if client unavailable
+  if (!openai) {
     return bestMatch;
   }
 
@@ -105,9 +628,7 @@ Respond with ONLY the persona key (e.g., "healthcare_executive").`
           role: 'user',
           content: query
         }
-      ],
-      temperature: 0.1, // Lower temperature for more deterministic results
-      max_tokens: 15 // Reduced from 20
+      ]
     }), 8000, 'persona-detect-timeout')
     
     const detectedPersona = response.choices[0].message.content.trim().toLowerCase();
@@ -151,7 +672,7 @@ function checkRateLimit(ip) {
 }
 
 // Get or generate cached response for preset
-async function getCachedPresetResponse(presetKey, query, projects) {
+async function getCachedPresetResponse(presetKey, query, projects, openai) {
   const cacheKey = `${presetKey}:${query}`;
   
   // Check in-memory cache first
@@ -166,7 +687,7 @@ async function getCachedPresetResponse(presetKey, query, projects) {
     throw new Error('Invalid preset');
   }
   
-  const response = await generateAIResponse(query, projects, persona.context);
+  const response = await generateAIResponse(query, projects, persona.context, openai);
   
   // Cache the response
   presetCache.set(cacheKey, {
@@ -177,25 +698,140 @@ async function getCachedPresetResponse(presetKey, query, projects) {
   return response;
 }
 
-// Promise timeout helper
+// Promise timeout helper with better error context
 function withTimeout(promise, ms, label) {
   let timer
   const timeout = new Promise((_, reject) => {
-    timer = setTimeout(() => reject(new Error(`${label || 'timeout'} after ${ms}ms`)), ms)
+    timer = setTimeout(() => {
+      const err = new Error(`${label || 'timeout'} after ${ms}ms`)
+      err.code = 'TIMEOUT'
+      reject(err)
+    }, ms)
   })
-  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer))
+  
+  // Race with actual promise, but preserve original error if it fails
+  return Promise.race([
+    promise.catch(err => {
+      clearTimeout(timer)
+      // Log the actual error before re-throwing
+      console.error(`${label} - Original error before timeout:`, {
+        message: err.message,
+        status: err.status,
+        code: err.code,
+        type: err.type,
+        error: err.error
+      })
+      throw err
+    }),
+    timeout
+  ]).finally(() => clearTimeout(timer))
 }
 
-// Generate AI response using OpenAI — returns JSON with per-project relevance flag
-async function generateAIResponse(query, projects, personaContext) {
-  // Take top 4 projects to generate descriptions for
-  const topProjects = projects.slice(0, 4);
+// Quick relevance check
+async function quickRelevanceCheck(query, projects) {
+  // Skip OpenAI call when missing key or previews without explicit allow
+  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
+    return projects.map(p => ({ ...p, relevant: true }));
+  }
+
+  try {
+    console.log(`Relevance check: querying ${projects.length} projects with query "${query}"`);
+    const response = await withTimeout(openai.chat.completions.create({
+      model: 'gpt-4.1-nano',
+      messages: [
+        {
+          role: 'system',
+          content: `You are filtering case study projects for relevance. Given a search query, determine which projects are relevant. 
+
+Be GENEROUS with relevance; consider:
+- Direct topic matches
+- Related design methodologies or processes
+- Similar problem domains
+- Overlapping techniques or approaches
+- Tangentially related concepts
+
+Only mark as NOT relevant if there's truly no connection whatsoever.
+
+Respond with JSON object with a "projects" array: {"projects": [{"slug": "project-slug", "relevant": true/false}]}`
+        },
+        {
+          role: 'user',
+          content: `Query: "${query}"\n\nProjects:\n${JSON.stringify(projects.map(p => ({ slug: p.slug, title: p.title, caption: p.caption, categories: p.categories, keywords: p.keywords, client: p.client })), null, 2)}`
+        }
+      ],
+      max_completion_tokens: 800,
+      reasoning_effort: 'low',
+      response_format: { type: "json_object" }
+    }), 10000, 'relevance-check-timeout');
+    
+    console.log('Relevance check completed successfully');
+    
+    const rawContent = response.choices[0].message.content;
+    console.log('OpenAI response content:', rawContent);
+    console.log('OpenAI response length:', rawContent?.length || 0);
+    
+    let result;
+    try {
+      result = JSON.parse(rawContent);
+    } catch (parseError) {
+      console.error('JSON parse error:', parseError.message);
+      console.error('Raw content that failed to parse:', JSON.stringify(rawContent));
+      throw parseError;
+    }
+    
+    const relevanceMap = new Map(result.projects?.map(p => [p.slug, p.relevant]) || []);
+    
+    return projects.map(p => ({
+      ...p,
+      relevant: relevanceMap.get(p.slug) !== false
+    }));
+  } catch (error) {
+    console.warn('Quick relevance check failed, assuming all relevant:', {
+      message: error.message,
+      code: error.code,
+      status: error.status,
+      type: error.type,
+      stack: error.stack?.split('\n')[0]
+    });
+    
+    // If it's a parse error, the API responded but with bad JSON
+    if (error.message.includes('JSON')) {
+      console.error('This suggests OpenAI returned malformed JSON - check model name and API status');
+    }
+    
+    return projects.map(p => ({ ...p, relevant: true }));
+  }
+}
+
+// Helper function to convert markdown bold (**text**) to HTML (<strong>text</strong>)
+function convertMarkdownBoldToHtml(text) {
+  if (!text || typeof text !== 'string') return text;
+  // Replace **text** with <strong>text</strong>
+  return text.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+}
+
+// Generate AI description for a single project
+async function generateSingleProjectDescription(query, project, personaContext, openai) {
+  const projectData = PROJECT_SUMMARIES[project.slug];
+  const enhancedProject = {
+    ...project,
+    structuredData: projectData || null
+  };
   
   const systemPrompt = `You are an AI assistant helping users find relevant case studies. ${personaContext}
 
-CRITICAL: Only describe what is explicitly mentioned in the project data. Do NOT infer, assume, or add technologies, methods, or capabilities that are not specifically stated in the title, caption, or categories.
+CRITICAL: Use the structured project data provided to create compelling, specific descriptions. The data includes real metrics, technologies, deliverables, and outcomes.
 
-Your task is to write a compelling 2-3 sentence description for each project explaining why it's relevant to the user's search query and needs. Focus on the value proposition for the specific persona. If a project is not relevant to the query, set its relevant flag to false and provide an empty description string.
+Your task is to write a compelling 2-3 sentence description for each project explaining why it's relevant to the user's search query. Use specific details from the structured data:
+- Lead with keyMetrics when impressive numbers are available
+- Mention concrete technologies and deliverables
+- Reference businessValue and how it solved the problem
+- Use targetUsers to show who benefits
+- Use HTML <strong></strong> tags (NOT markdown **) to emphasize 2-4 key words or phrases per description (important metrics, outcomes, or relevant terms)
+
+IMPORTANT: Use HTML tags like <strong>text</strong>, NOT markdown like **text**.
+
+If a project is not relevant to the query, set its relevant flag to false and provide an empty description string.
 
 Guidelines:
 - ONLY highlight positive connections and relevance - never mention what projects lack or don't have
@@ -238,54 +874,120 @@ STRONG WRITING REQUIREMENTS (for convincing buyers):
 
   const userPrompt = `Search query: "${query}"
 
-Projects to describe (ONLY use information provided below - do not add details not explicitly mentioned). Each project object may include: slug, title, caption, client, categories, keywords, score.
-${JSON.stringify(topProjects, null, 2)}
+Project to describe (includes metadata AND structured data with metrics, technologies, deliverables, etc.):
+${JSON.stringify(enhancedProject, null, 2)}
 
-For each project, provide a description that:
-1. Connects the project to the search query based on ONLY what's explicitly described
-2. Highlights relevance to the persona's specific needs
-3. Emphasizes the value or insights they could gain, ideally with a concrete artifact or measurable impact if present in the data
-4. Does NOT mention technologies or methods not explicitly listed in the project data
-5. If no clear, explicit connection exists, mark the project as not relevant (relevant=false) and set description to an empty string
+Create a compelling 2-3 sentence description that:
+1. Uses specific details from structuredData (keyMetrics, technologies, deliverables, businessValue)
+2. Connects the project to the search query using the most relevant structured fields
+3. Leads with impressive metrics when available (e.g., "Serves 160M users...")
+4. Mentions concrete deliverables and technologies
+5. References the client for credibility when provided
+6. If no clear connection exists, mark as not relevant (relevant=false) and use empty description
 
 Format your response as JSON:
 {
-  "projectDescriptions": [
-    {
-      "slug": "project-slug",
-      "description": "Why this project is relevant to the search query and persona needs (using only explicit information provided). Start with outcome or artifact when available; keep it specific and concrete.",
-      "relevant": true
-    }
-  ],
-  "searchInsight": "Brief insight about what the user is looking for"
+  "slug": "${project.slug}",
+  "description": "Why this project is relevant to the search query (using only explicit information provided). Start with outcome or artifact when available; keep it specific and concrete.",
+  "relevant": true
 }`;
 
-  // Skip OpenAI call when missing key or previews without explicit allow
-  if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
-    return { projectDescriptions: [], searchInsight: null }
+  // Skip OpenAI call if client unavailable
+  if (!openai) {
+    return null
   }
 
   try {
+    const startTime = Date.now();
     const response = await withTimeout(openai.chat.completions.create({
-      model: 'gpt-4.1',
+      model: 'gpt-4.1-nano',
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt }
       ],
-      temperature: 0.2, // Reduced from 0.3 for more consistent responses
-      max_tokens: 600, // Reduced from 800
+      max_completion_tokens: 1000,
+      reasoning_effort: 'low',
       response_format: { type: "json_object" }
-    }), 9000, 'ai-search-timeout')
+    }), 15000, `ai-search-timeout-${project.slug}`)
     
-    return JSON.parse(response.choices[0].message.content);
+    const elapsed = Date.now() - startTime;
+    console.log(`  ✓ ${project.slug}: ${elapsed}ms, ${response.usage?.total_tokens || '?'} tokens`);
+    
+    const result = JSON.parse(response.choices[0].message.content);
+    
+    // Convert markdown bold to HTML if AI returned markdown format
+    if (result.description) {
+      result.description = convertMarkdownBoldToHtml(result.description);
+    }
+    
+    return result;
   } catch (error) {
-    console.error('OpenAI API error:', error);
-    throw new Error('Failed to generate AI response');
+    console.error(`  ✗ ${project.slug} error:`, error.message);
+    return null;
   }
+}
+
+// Generate AI responses for multiple projects (processes individually)
+async function generateAIResponse(query, projects, personaContext, openai) {
+  // Take top 4 projects to generate descriptions for
+  const topProjects = projects.slice(0, 4);
+  
+  console.log(`Generating AI descriptions for ${topProjects.length} projects individually...`);
+  
+  // Process all projects in parallel for speed
+  const startTime = Date.now();
+  const descriptionPromises = topProjects.map(project => 
+    generateSingleProjectDescription(query, project, personaContext, openai)
+  );
+  
+  const descriptions = await Promise.all(descriptionPromises);
+  const elapsed = Date.now() - startTime;
+  
+  const successCount = descriptions.filter(d => d !== null).length;
+  console.log(`Completed ${successCount}/${topProjects.length} descriptions in ${elapsed}ms total`);
+  
+  // Filter out failed descriptions and format result
+  const projectDescriptions = descriptions
+    .filter(d => d !== null)
+    .map(d => ({
+      slug: d.slug,
+      description: d.description || '',
+      relevant: d.relevant !== false
+    }));
+  
+  return {
+    projectDescriptions,
+    searchInsight: projectDescriptions.length > 0 
+      ? 'Relevant projects based on your search criteria' 
+      : null
+  };
 }
 
 // Netlify Function handler
 exports.handler = async (event, context) => {
+  // Read environment at REQUEST time (not module load time)
+  const HAS_OPENAI_KEY = !!process.env.OPENAI_API_KEY;
+  const IS_NETLIFY_PREVIEW = (process.env.CONTEXT === 'deploy-preview') || (!!process.env.DEPLOY_PRIME_URL && String(process.env.DEPLOY_PRIME_URL).includes('deploy-preview'));
+  const ALLOW_AI_IN_PREVIEWS = (String(process.env.ALLOW_AI_IN_PREVIEWS || '').toLowerCase() === 'true') || (process.env.ALLOW_AI_IN_PREVIEWS === '1') || true;
+  const openai = getOpenAI();
+  
+  // Debug: Log environment variable status
+  const envDebug = {
+    HAS_OPENAI_KEY,
+    IS_NETLIFY_PREVIEW,
+    ALLOW_AI_IN_PREVIEWS,
+    CONTEXT: process.env.CONTEXT || 'not set',
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || 'not set',
+    DEPLOY_URL: process.env.DEPLOY_URL || 'not set',
+    URL: process.env.URL || 'not set',
+    BRANCH: process.env.BRANCH || 'not set',
+    hasOpenAIClient: !!openai,
+    nodeEnv: process.env.NODE_ENV || 'not set',
+    requestHost: event.headers.host || 'not set',
+    referer: event.headers.referer || 'not set'
+  }
+  console.log('🔍 Environment Check:', envDebug)
+  
   // Preflight
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 200, headers: CORS_HEADERS, body: '' }
@@ -306,10 +1008,15 @@ exports.handler = async (event, context) => {
   if (!HAS_OPENAI_KEY || !openai || (IS_NETLIFY_PREVIEW && !ALLOW_AI_IN_PREVIEWS)) {
     // Validate input shape minimally
     if (!query || !projects || !Array.isArray(projects)) {
-      return jsonResponse(200, { results: [], aiGenerated: false })
+      return jsonResponse(200, { results: [], aiGenerated: false, debug: envDebug })
     }
     // Return projects as-is; client will display without AI descriptions
-    return jsonResponse(200, { results: projects, aiGenerated: false, disabled: (!HAS_OPENAI_KEY || !openai) ? 'no-api-key' : (IS_NETLIFY_PREVIEW ? 'preview' : 'disabled') })
+    return jsonResponse(200, { 
+      results: projects, 
+      aiGenerated: false, 
+      disabled: (!HAS_OPENAI_KEY || !openai) ? 'no-api-key' : (IS_NETLIFY_PREVIEW ? 'preview' : 'disabled'),
+      debug: envDebug // Include debug info in response for troubleshooting
+    })
   }
 
   // Get client IP for rate limiting
@@ -330,58 +1037,109 @@ exports.handler = async (event, context) => {
       return jsonResponse(400, { error: 'Invalid request data' })
     }
     
+    // Check for "Design for ___" category queries and use template-based descriptions
+    if (DESIGN_FOR_CATEGORIES[query]) {
+      const categoryConfig = DESIGN_FOR_CATEGORIES[query];
+      const keywords = categoryConfig.keywords;
+      
+      // Filter projects by category keywords
+      const matchedProjects = projects.filter(project => {
+        const searchText = [
+          project.title,
+          project.caption,
+          ...(project.categories || []),
+          ...(project.keywords || [])
+        ].filter(Boolean).join(' ').toLowerCase();
+        
+        return keywords.some(keyword => searchText.includes(keyword));
+      });
+      
+      // Generate template-based descriptions for matched projects
+      const enhancedResults = projects.map(project => {
+        const isMatched = matchedProjects.some(m => m.slug === project.slug);
+        return {
+          ...project,
+          aiDescription: isMatched ? generateTemplateDescription(project, query) : null,
+          aiRelevant: isMatched,
+          aiEnhanced: isMatched
+        };
+      });
+      
+      return jsonResponse(200, {
+        results: enhancedResults,
+        aiGenerated: true,
+        searchInsight: categoryConfig.insight,
+        detectedPersona: null,
+        preset: query
+      });
+    }
+    
     // If not using AI, just return the projects as-is
     if (!useAI) {
-      return jsonResponse(200, { results: projects, aiGenerated: false })
+      return jsonResponse(200, { results: projects, aiGenerated: false, debug: { ...envDebug, reason: 'useAI=false' } })
     }
     
-    let selectedPersona = preset;
+    // Skip the relevance check - it's unreliable and causing issues
+    // Just generate AI descriptions for all top projects
+    console.log(`Generating AI descriptions for top ${Math.min(4, projects.length)} projects...`);
     
-    // Auto-detect persona if requested
-    if (autoDetectPersona || !preset) {
-      selectedPersona = await detectPersona(query);
-    }
+    const aiResponse = await generateAIResponse(
+      query, 
+      projects,
+      'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.',
+      openai
+    );
     
-    let aiResponse;
+    console.log(`  Generated ${aiResponse.projectDescriptions?.length || 0} descriptions`);
     
-    // Use preset cache if available
-    if (selectedPersona && BUYER_PERSONAS[selectedPersona]) {
-      aiResponse = await getCachedPresetResponse(selectedPersona, query, projects);
-    } else {
-      // Custom query with default context
-      aiResponse = await generateAIResponse(
-        query, 
-        projects,
-        'You are helping users find relevant design case studies. Focus on innovation, design quality, and practical applications.'
-      );
-    }
-    
-    // Enhance top 4 projects with AI descriptions
-    const enhancedResults = projects.map((project, index) => {
+    // Enhance projects with AI descriptions
+    const enhancedResults = projects.map((project) => {
       const aiData = aiResponse.projectDescriptions?.find(p => p.slug === project.slug);
-      const isRelevant = aiData && (typeof aiData.relevant === 'boolean' ? aiData.relevant : true)
+      // Default to relevant=true if AI returned a description
+      const hasDescription = aiData && aiData.description && aiData.description.trim().length > 0;
+      const isRelevant = hasDescription ? (aiData.relevant !== false) : false;
+      
       return {
         ...project,
-        aiDescription: isRelevant && aiData ? aiData.description : null,
+        aiDescription: hasDescription ? aiData.description : null,
         aiRelevant: isRelevant,
-        // First 4 get AI descriptions and priority
-        aiEnhanced: index < 4 && !!aiData && isRelevant
+        aiEnhanced: !!hasDescription
       };
     });
     
-    // Filter out projects marked not relevant when AI is enabled
-    const filteredResults = enhancedResults.filter(r => r.aiRelevant !== false)
+    // Only filter out projects that explicitly have no description
+    const filteredResults = enhancedResults.filter(r => r.aiDescription !== null && r.aiDescription.trim().length > 0);
+    
+    console.log(`  Enhanced results: ${enhancedResults.length} total, ${filteredResults.length} with descriptions`);
+    
+    // Debug: log which projects have descriptions
+    enhancedResults.forEach(r => {
+      console.log(`    ${r.slug}: ${r.aiDescription ? 'HAS' : 'NO'} description (${r.aiDescription?.length || 0} chars)`);
+    });
+    
+    // If we somehow ended up with no results, return original projects
+    if (filteredResults.length === 0) {
+      console.warn('  No projects after filtering! Returning original projects');
+      return jsonResponse(200, {
+        results: projects.slice(0, 4).map(p => ({ ...p, aiRelevant: true, aiDescription: p.caption })),
+        aiGenerated: false,
+        searchInsight: null,
+        detectedPersona: null,
+        preset: null,
+        debug: { ...envDebug, reason: 'no-descriptions-generated', enhancedCount: enhancedResults.length, generatedCount: aiResponse.projectDescriptions?.length || 0 }
+      });
+    }
 
     return jsonResponse(200, {
       results: filteredResults,
       aiGenerated: true,
       searchInsight: aiResponse.searchInsight,
-      detectedPersona: selectedPersona,
-      preset: selectedPersona
+      detectedPersona: null,
+      preset: null
     })
     
   } catch (error) {
     console.error('AI search error:', error);
-    return jsonResponse(500, { error: 'Failed to process AI search', aiGenerated: false })
+    return jsonResponse(500, { error: 'Failed to process AI search', aiGenerated: false, debug: { ...envDebug, reason: 'exception', errorMessage: error.message } })
   }
 }; 

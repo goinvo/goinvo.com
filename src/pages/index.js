@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
-import CategoriesList from '../components/categories-list'
+// import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
@@ -19,6 +19,7 @@ import headerData from '../data/homepage-headers.json'
 import Marquee from 'react-fast-marquee'
 
 import config from '../../config'
+import { TEXT_OVERRIDES, SPOTLIGHT_WIDTHS } from '../data/homepage-spotlights'
 import {
   extractWorkItemLinkDetails,
   concatCaseStudiesAndFeatures,
@@ -60,7 +61,8 @@ class IndexPage extends Component {
       allProjects,
       frontmatter,
       hideSpotlights: false,
-      selectedPersona: null,
+      // AI search controls driven by the orange section UI
+      aiEnabled: true,
       homeSearchQuery: '',
       homeInputDefault: ''
     }
@@ -101,8 +103,6 @@ class IndexPage extends Component {
           className="hero--higher-text-contrast"
           link="/work/"
           image={this.state.frontmatter.heroImage}
-          button={frontmatter.heroButtonText}
-          buttonLink="/work/"
           isLarge
           position="top center"
         >
@@ -111,36 +111,293 @@ class IndexPage extends Component {
             <span className="text--serif text--primary">.</span>
           </h1>
           <p className="hero-subtitle text--black">
-            We craft digital design through software, strategic thinking, and data visualization.
+            We craft digital design through software, strategic thinking, data visualization, and illustration.
           </p>
         </Hero>
-        
+        <div className="expertise-section pad-vertical--double">
+          <div className="max-width content-padding">
+            <div className="pure-g expertise-row">
+              <div className="pure-u-1 pure-u-lg-1-3">
+                <h2 className="header--xl margin--none text--white">Our expertise in design covers...</h2>
+              </div>
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <div className="expertise-grid">
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      const value = 'Design for Enterprise'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Enterprise
+                  </button>
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      const value = 'Design for Healthcare'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Healthcare
+                  </button>
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      const value = 'Design for Government'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Government
+                  </button>
+                  <button
+                    type="button"
+                    className="expertise-item button button--transparent"
+                    onClick={() => {
+                      const value = 'Design for AI'
+                      this.setState({ homeSearchQuery: value, homeInputValue: value, lastSubmittedQuery: value, aiEnabled: true }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    AI
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* AI-driven search: full-width search input */}
+            <div className="pure-g expertise-controls" style={{ marginTop: '1rem', alignItems: 'stretch' }}>
+              <div className="pure-u-1">
+                <div className="expertise-search">
+                  <form onSubmit={(e) => {
+                    e.preventDefault()
+                    const value = e.target.elements.homeSearch.value
+                    if (value && this.setState) {
+                      this.setState({ homeSearchQuery: value, lastSubmittedQuery: value, homeInputValue: value })
+                      // Smooth scroll to results
+                      setTimeout(() => {
+                        const el = document.querySelector('.project-search')
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }, 50)
+                    }
+                  }}>
+                    <input
+                      name="homeSearch"
+                      className="expertise-search__input"
+                      type="text"
+                      placeholder="How can we help your next project?"
+                      value={(this.state.homeInputValue || '')}
+                      onChange={(e) => this.setState({ homeInputValue: e.target.value })}
+                      onInput={(e) => this.setState({ homeInputValue: e.target.value })}
+                      aria-label="Search"
+                    />
+                    {(() => {
+                      const current = (this.state.homeInputValue || '').trim().toLowerCase()
+                      const last = (this.state.lastSubmittedQuery || '').trim().toLowerCase()
+                      const showClear = current.length > 0 && last.length > 0 && current === last
+                      if (showClear) {
+                        return (
+                          <button
+                            type="button"
+                            className="expertise-search__button"
+                            aria-label="Clear search"
+                            onClick={() => {
+                              this.setState({ homeInputValue: '', homeSearchQuery: '' })
+                              try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) { }
+                            }}
+                          >
+                            ×
+                          </button>
+                        )
+                      }
+                      return (
+                        <button type="submit" className="expertise-search__button" aria-label="Search">→</button>
+                      )
+                    })()}
+                  </form>
+                </div>
+                <div className="expertise-disclaimer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px' }}>
+                  <div className="expertise-disclaimer__tip" style={{ color: '#fff', opacity: 0.95, fontSize: '1rem' }}>Tip: Click a sector above to try example queries.</div>
+                  <div className="expertise-disclaimer__experimental" style={{ color: '#fff', opacity: 0.6, fontSize: '0.875rem', fontWeight: 400 }}>AI search is experimental.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Inject AI/Enhanced search component directly under the orange expertise section */}
+        <div className="max-width content-padding pad-vertical">
+          <ProjectSearch
+            projects={this.state.allProjects}
+            externalQuery={this.state.homeSearchQuery || ''}
+            aiEnabledOverride={this.state.aiEnabled}
+            hideInput={true}
+            selectionMode="client"
+          />
+        </div>
         {!this.state.hideSpotlights && (
           <div className="max-width content-padding pad-bottom--double" id="spotlights">
             <div className="margin-vertical--double pad-vertical--double">
               <div className="pure-g">
-                <div className="pure-u-1">
+                <div className="pure-u-1 pure-u-lg-1-3">
                   <h2 className="header--xl margin--none pad-right--double spotlights-title">
-                    Our expertise in design covers...
+                    Spotlights
                   </h2>
-                </div>
-                <div className="pure-u-1 pure-u-lg-4-4">
-                  <CategoriesList includeAll={false} columns={4} />
                 </div>
               </div>
               {/* Spotlights (custom layout in a single grid) */}
               {(() => {
                 const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
-                const TEXT_OVERRIDES = {
-                  'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
-                  'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
-                  'visual-storytelling-with-genai': { title: 'Decision Grade Viz', subtitle: 'Workflow Research' },
-                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Industry Analysis' },
-                  'hgraph': { title: 'hGraph', subtitle: 'Clinical Decision Making' },
-                  'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
-                  'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
-                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Digital Transformation for All' },
-                  'inspired-ehrs': { title: 'Healthcare Best Practices', subtitle: 'Enterprise Software' }
+
+                const getWidthForItem = (item) => {
+                  if (!item) return 1
+                  const key = item.slug || item.id || ''
+                  return SPOTLIGHT_WIDTHS[key] || 1
+                }
+
+                const spanClassForWidth = (w) => {
+                  if (w >= 4) return 'spotlight--span-4'
+                  if (w >= 3) return 'spotlight--span-3'
+                  if (w >= 2) return 'spotlight--span-2'
+                  if (w >= 1) return 'spotlight--span-1'
+                  return ''
+                }
+
+                // Known animated banners per project slug
+                const VIDEO_BANNERS = {
+                  'visual-storytelling-with-genai': '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4',
+                  'determinants-of-health': '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4',
+                  'hgraph': '/images/homepage/animated%20covers/hgraph_trimmed.mp4',
+                  'precision-autism': '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4'
+                }
+
+                const getVideoOptsForItem = (item) => {
+                  if (!item) return {}
+                  const key = item.slug || item.id
+                  const src = VIDEO_BANNERS[key]
+                  return src ? { useVideo: true, videoSrc: src } : {}
+                }
+
+                // Greedy packing to fill 4-unit rows
+                const layoutWithGreedy = (items) => {
+                  const remaining = [...items]
+                  
+                  // Special case: if there are exactly 2 items, make them equal width (2 columns each)
+                  if (remaining.length === 2) {
+                    return remaining.map(item => ({ item, className: spanClassForWidth(2) }))
+                  }
+                  
+                  const output = [] // { item, width }
+                  let rowRemaining = 4
+                  let rowStartIdx = 0 // index in output where current row starts
+
+                  while (remaining.length > 0) {
+                    const candidate = remaining[0]
+                    const w = getWidthForItem(candidate)
+
+                    // If fits, place it
+                    if (w <= rowRemaining) {
+                      output.push({ item: candidate, width: w })
+                      remaining.shift()
+                      rowRemaining -= w
+                      if (rowRemaining === 0) {
+                        // row complete
+                        rowRemaining = 4
+                        rowStartIdx = output.length
+                      }
+                      continue
+                    }
+
+                    // Look ahead for any that fits
+                    let foundIdx = -1
+                    for (let i = 1; i < remaining.length; i++) {
+                      const wi = getWidthForItem(remaining[i])
+                      if (wi <= rowRemaining) { foundIdx = i; break }
+                    }
+                    if (foundIdx !== -1) {
+                      const fit = remaining.splice(foundIdx, 1)[0]
+                      const wf = getWidthForItem(fit)
+                      output.push({ item: fit, width: wf })
+                      rowRemaining -= wf
+                      if (rowRemaining === 0) {
+                        rowRemaining = 4
+                        rowStartIdx = output.length
+                      }
+                      continue
+                    }
+
+                    // Nothing fits: expand the last item in the current row to fill remainder
+                    if (output.length > rowStartIdx) {
+                      const lastIdx = output.length - 1
+                      output[lastIdx] = {
+                        item: output[lastIdx].item,
+                        width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+                      }
+                    }
+                    // Start a new row
+                    rowRemaining = 4
+                    rowStartIdx = output.length
+                  }
+
+                  // If last row isn't full, expand the last item of the row to fill remainder
+                  if (rowRemaining !== 4 && output.length > rowStartIdx) {
+                    const lastIdx = output.length - 1
+                    output[lastIdx] = {
+                      item: output[lastIdx].item,
+                      width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+                    }
+                  }
+
+                  return output.map(({ item, width }) => ({ item, className: spanClassForWidth(width || 1) }))
+                }
+                const normalizedCategory = (this.state.selectedCategoryFilter || '').toString().trim().toLowerCase()
+                const matchesCategory = (project) => {
+                  if (!normalizedCategory) return true
+                  if (!project) return false
+                  const cats = Array.isArray(project.categories) ? project.categories : []
+                  const kws = Array.isArray(project.keywords) ? project.keywords : []
+                  const inCats = cats.some(c => String(c || '').toLowerCase() === normalizedCategory)
+                  const inKws = kws.some(k => String(k || '').toLowerCase() === normalizedCategory)
+                  const hay = [project.title, project.caption, project.client, ...cats, ...kws]
+                    .filter(Boolean).join(' ').toLowerCase()
+                  const has = (arr) => arr.some(token => hay.includes(token))
+                  let inferred = false
+                  switch (normalizedCategory) {
+                    case 'ai':
+                      inferred = has([' ai ', 'artificial intelligence', 'machine learning', ' llm', 'gpt', 'neural', 'algorithm']) || hay.startsWith('ai')
+                      break
+                    case 'healthcare':
+                      inferred = has(['healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'oncology'])
+                      break
+                    case 'government':
+                      inferred = has(['government', 'public sector', 'civic', 'municipal', 'federal', 'state', 'massachusetts department', 'snap'])
+                      break
+                    case 'enterprise':
+                      inferred = has(['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'])
+                      break
+                    default:
+                      inferred = false
+                  }
+                  return inCats || inKws || inferred
                 }
                 const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
                   if (!item) return null
@@ -182,21 +439,43 @@ class IndexPage extends Component {
                   )
                 }
 
+                // Spotlight ordering and options
+                const defs = [
+                  { key: 'ipsos-facto', opts: { className: 'spotlight--span-2' } },
+                  { key: 'eligibility-engine', opts: {} },
+                  { key: 'visual-storytelling-with-genai', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' } },
+                  { key: 'determinants-of-health', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' } },
+                  { key: 'hgraph', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' } },
+                  { key: 'inspired-ehrs', opts: { className: 'spotlight--span-2' } },
+                  { key: 'prior-auth', opts: { className: 'spotlight--span-2' } },
+                  { key: 'precision-autism', opts: { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' } },
+                  { key: 'mass-snap', opts: { className: 'spotlight--span-4' } },
+                ]
+
+                // If a category filter is selected, show items from the entire work pool
+                if (normalizedCategory) {
+                  const filteredProjects = (this.state.allProjects || []).filter(matchesCategory)
+                  const firstPage = filteredProjects.slice(0, 12)
+                  const arranged = layoutWithGreedy(firstPage)
+                  return (
+                    <div className="spotlights-grid spotlights-grid--four">
+                      {arranged.map(({ item, className }, idx) => {
+                        const vid = getVideoOptsForItem(item)
+                        return renderCard(item, { className, ...vid })
+                      })}
+                    </div>
+                  )
+                }
+                // Otherwise, show curated spotlights using greedy layout
+                const filtered = defs.filter(d => matchesCategory(findItem(d.key)))
+                const curatedItems = filtered.map(d => findItem(d.key)).filter(Boolean)
+                const arranged = layoutWithGreedy(curatedItems)
                 return (
                   <div className="spotlights-grid spotlights-grid--four">
-                    {/* Row A */}
-                    {renderCard(findItem('ipsos-facto'), { className: 'spotlight--span-2' })}
-                    {renderCard(findItem('eligibility-engine'))}
-                    {renderCard(findItem('visual-storytelling-with-genai'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' })}
-                    {/* Row B */}
-                    {renderCard(findItem('determinants-of-health'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' })}
-                    {renderCard(findItem('hgraph'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' })}
-                    {renderCard(findItem('inspired-ehrs'), { className: 'spotlight--span-2' })}
-                    {/* Row C */}
-                    {renderCard(findItem('prior-auth'), { className: 'spotlight--span-2' })}
-                    {renderCard(findItem('precision-autism'), { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' })}
-                    {/* Row D */}
-                    {renderCard(findItem('mass-snap'), { className: 'spotlight--span-4' })}
+                    {arranged.map(({ item, className }, idx) => {
+                      const vid = getVideoOptsForItem(item)
+                      return renderCard(item, { className, ...vid })
+                    })}
                   </div>
                 )
               })()}
@@ -373,14 +652,12 @@ class IndexPage extends Component {
               <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
                 {TEAM.slice(0, 5).map(member => (
                   <div key={`top-${member.name}`} className="team-marquee__tile">
-                    <Link to="/about">
-                      <Image
-                        src={member.image}
-                        alt=""
-                        aria-hidden="true"
-                        className="team-marquee__img"
-                      />
-                    </Link>
+                    <Image
+                      src={member.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="team-marquee__img"
+                    />
                   </div>
                 ))}
               </Marquee>
@@ -407,14 +684,12 @@ class IndexPage extends Component {
               <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
                 {TEAM.slice(5, 10).map(member => (
                   <div key={`bottom-${member.name}`} className="team-marquee__tile">
-                    <Link to="/about">
-                      <Image
-                        src={member.image}
-                        alt=""
-                        aria-hidden="true"
-                        className="team-marquee__img"
-                      />
-                    </Link>
+                    <Image
+                      src={member.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="team-marquee__img"
+                    />
                   </div>
                 ))}
               </Marquee>

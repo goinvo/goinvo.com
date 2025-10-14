@@ -27,7 +27,7 @@
 
   .hero__title {
     width: 100%;
-    max-width: 550px;
+    max-width: 450px;
   }
 
   .LayoutCenter {
@@ -236,6 +236,38 @@
 
   .wrap {
     flex: 1 1 300px;
+  }
+}
+.about-ai {
+  .about-ai__options-box {
+    border-radius: 8px;
+    display: flex;
+    align-items: center; // vertical alignment with text block
+    height: 100%;
+  }
+
+  .about-ai__options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+
+    li {
+      color: $color-gray;
+      font-size: 0.95rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $color-teal;
+    }
   }
 }
 

@@ -107,11 +107,11 @@ class IndexPage extends Component {
           position="top center"
         >
           <h1 className="header--xl hero-title--lg">
-            Designing the Future
+          Designing for understanding, decision, and action
             <span className="text--serif text--primary">.</span>
           </h1>
           <p className="hero-subtitle text--black">
-            We craft digital design through software, strategic thinking, data visualization, and illustration.
+          Through human-centered research, design, visualization, and illustration, we turn complexity into clear, trustworthy experiences that improve how people work and live.
           </p>
         </Hero>
         <div className="expertise-section pad-vertical--double">

@@ -7,19 +7,25 @@ import config from '../../config'
 import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
 import { SPOTLIGHT_WIDTHS } from '../data/homepage-spotlights'
 
-// Helper to call Netlify Functions with graceful local fallback
+// Helper to call serverless functions across Netlify (/.netlify/functions/*)
+// and Vercel (/api/*). Tries hosts in order until one succeeds.
 async function callFunction(name, payload) {
   const opts = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload || {})
   }
-  // Try relative path (works in Netlify dev proxy or production)
+  // 1) Try Vercel-style API route
+  try {
+    const res = await fetch(`/api/${name}`, opts)
+    if (res.ok) return await res.json()
+  } catch {}
+  // 2) Try Netlify production path
   try {
     const res = await fetch(`/.netlify/functions/${name}`, opts)
     if (res.ok) return await res.json()
   } catch {}
-  // Fallback to local functions port if running Gatsby alone
+  // 3) Fallback to local Netlify dev server
   try {
     const res = await fetch(`http://localhost:8888/.netlify/functions/${name}`, opts)
     if (res.ok) return await res.json()

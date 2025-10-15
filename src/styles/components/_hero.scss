@@ -74,20 +74,26 @@
   }
 
   @include mq($from: large) {
-    #{$parent}__image-container {
-      height: 450px;
+    // Don't apply fixed height to heroes inside intro-stack
+    &:not(.intro-stack *) {
+      #{$parent}__image-container {
+        height: 450px;
+      }
     }
   }
 
   &--large {
-    #{$parent}__image-container {
-      min-height: 250px;
-    }
+    // Default styles for .hero--large (all pages except intro-stack)
+    &:not(.intro-stack *) {
+      #{$parent}__image-container {
+        min-height: 250px;
+      }
 
-    #{$parent}__image-container,
-    #{$parent}__video-container {
-      @include mq($from: large) {
-        height: $max-height;
+      #{$parent}__image-container,
+      #{$parent}__video-container {
+        @include mq($from: large) {
+          height: $max-height;
+        }
       }
     }
 

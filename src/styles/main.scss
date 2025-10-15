@@ -23,12 +23,14 @@
 @import 'images';
 @import 'case-study';
 @import 'utilities';
-@import 'landing-page';
-@import 'ai-landing-page';
 
 @import 'components/header';
 @import 'components/footer';
 @import 'components/hero';
+
+// Import landing-page AFTER hero so our overrides take precedence
+@import 'landing-page';
+@import 'ai-landing-page';
 @import 'components/divider';
 @import 'components/quote';
 @import 'components/image-block';

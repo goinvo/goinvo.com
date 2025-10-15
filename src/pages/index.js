@@ -99,22 +99,23 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout frontmatter={this.state.frontmatter} isHomepage>
-        <Hero
-          className="hero--higher-text-contrast"
-          link="/work/"
-          image={this.state.frontmatter.heroImage}
-          isLarge
-          position="top center"
-        >
-          <h1 className="header--xl hero-title--lg">
-          Designing for understanding, decision, and action
-            <span className="text--serif text--primary">.</span>
-          </h1>
-          <p className="hero-subtitle text--black">
-          Through human-centered research, design, visualization, and illustration, we turn complexity into clear, trustworthy experiences that improve how people work and live.
-          </p>
-        </Hero>
-        <div className="expertise-section pad-vertical--double">
+        <div className="intro-stack">
+          <Hero
+            className="hero--higher-text-contrast"
+            link="/work/"
+            image={this.state.frontmatter.heroImage}
+            isLarge
+            position="top center"
+          >
+            <h1 className="header--xl hero-title--lg">
+            Designing for understanding, decision, and action
+              <span className="text--serif text--primary">.</span>
+            </h1>
+            <p className="hero-subtitle text--black">
+            Through human-centered research, design, visualization, and illustration, we turn complexity into clear, trustworthy experiences that improve how people work and live.
+            </p>
+          </Hero>
+          <div className="expertise-section pad-vertical--double">
           <div className="max-width content-padding">
             <div className="pure-g expertise-row">
               <div className="pure-u-1 pure-u-lg-1-3">
@@ -242,6 +243,7 @@ class IndexPage extends Component {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
         {/* Inject AI/Enhanced search component directly under the orange expertise section */}

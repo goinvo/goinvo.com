@@ -760,7 +760,6 @@ Respond with JSON object with a "projects" array: {"projects": [{"slug": "projec
         }
       ],
       max_completion_tokens: 800,
-      reasoning_effort: 'low',
       response_format: { type: "json_object" }
     }), 10000, 'relevance-check-timeout');
     
@@ -906,7 +905,6 @@ Format your response as JSON:
         { role: 'user', content: userPrompt }
       ],
       max_completion_tokens: 1000,
-      reasoning_effort: 'low',
       response_format: { type: "json_object" }
     }), 15000, `ai-search-timeout-${project.slug}`)
     

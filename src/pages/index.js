@@ -64,7 +64,30 @@ class IndexPage extends Component {
       // AI search controls driven by the orange section UI
       aiEnabled: true,
       homeSearchQuery: '',
-      homeInputDefault: ''
+      homeInputDefault: '',
+      heroTitleBottom: null, // Dynamic positioning based on orange section height
+      heroTitleLeft: null // Dynamic horizontal positioning to align with orange section text
+    }
+    
+    // Refs for dynamic positioning
+    this.expertiseSectionRef = React.createRef()
+    this.expertiseContentRef = React.createRef()
+  }
+  
+  updateHeroTitlePosition = () => {
+    if (this.expertiseSectionRef.current) {
+      const expertiseHeight = this.expertiseSectionRef.current.offsetHeight
+      this.setState({ heroTitleBottom: expertiseHeight })
+    }
+    
+    // Calculate horizontal offset to align with orange section's text
+    if (this.expertiseContentRef.current) {
+      const rect = this.expertiseContentRef.current.getBoundingClientRect()
+      const containerRect = this.expertiseSectionRef.current?.getBoundingClientRect()
+      if (containerRect) {
+        const leftOffset = rect.left - containerRect.left
+        this.setState({ heroTitleLeft: leftOffset })
+      }
     }
   }
 
@@ -79,6 +102,11 @@ class IndexPage extends Component {
     }
     if (typeof window !== 'undefined') {
       window.addEventListener('ai-search-results', this._aiSearchHandler)
+      
+      // Update hero title position after initial render and on resize
+      // Use setTimeout to ensure layout has completed
+      setTimeout(this.updateHeroTitlePosition, 0)
+      window.addEventListener('resize', this.updateHeroTitlePosition)
     }
     try {
       // Prefer session restore flag path; otherwise, show last saved as input seed (but don't mark as submitted)
@@ -91,15 +119,27 @@ class IndexPage extends Component {
     }
   }
   componentWillUnmount() {
-    if (typeof window !== 'undefined' && this._aiSearchHandler) {
-      window.removeEventListener('ai-search-results', this._aiSearchHandler)
+    if (typeof window !== 'undefined') {
+      if (this._aiSearchHandler) {
+        window.removeEventListener('ai-search-results', this._aiSearchHandler)
+      }
+      window.removeEventListener('resize', this.updateHeroTitlePosition)
     }
   }
 
   render() {
+    // Inline style to pass dynamic positioning to CSS via custom property
+    const introStackStyle = {}
+    if (this.state.heroTitleBottom !== null) {
+      introStackStyle['--hero-title-bottom'] = `${this.state.heroTitleBottom}px`
+    }
+    if (this.state.heroTitleLeft !== null) {
+      introStackStyle['--hero-title-left'] = `${this.state.heroTitleLeft}px`
+    }
+      
     return (
       <Layout frontmatter={this.state.frontmatter} isHomepage>
-        <div className="intro-stack">
+        <div className="intro-stack" style={introStackStyle}>
           <Hero
             className="hero--higher-text-contrast"
             link="/work/"
@@ -115,8 +155,8 @@ class IndexPage extends Component {
             Through human-centered research, design, visualization, and illustration, we turn complexity into clear, trustworthy experiences that improve how people work and live.
             </p>
           </Hero>
-          <div className="expertise-section pad-vertical--double">
-          <div className="max-width content-padding">
+          <div ref={this.expertiseSectionRef} className="expertise-section pad-vertical--double">
+          <div ref={this.expertiseContentRef} className="max-width content-padding">
             <div className="pure-g expertise-row">
               <div className="pure-u-1 pure-u-lg-1-3">
                 <h2 className="header--xl margin--none text--white">Our expertise in design covers...</h2>

@@ -109,17 +109,21 @@
     z-index: 4; // Above the orange section to prevent overlap
     pointer-events: none; // allow clicks through to image/link behind
     
-    // Position in middle-ish area, leaving room for orange section at bottom
-    // The orange section is constrained to max 50vh, so position above that
-    bottom: 52vh; // Position above the max height of orange section (50vh + buffer)
+    // Use dynamic positioning based on actual orange section height
+    // Falls back to viewport units if JavaScript hasn't run yet
+    bottom: var(--hero-title-bottom, 52vh);
     
     @include mq($from: large) {
-      // On desktop, orange section max is 40vh, so position above that
-      bottom: 42vh; // Position above the max height of orange section (40vh + buffer)
+      bottom: var(--hero-title-bottom, 42vh);
     }
     
     .hero__title {
       pointer-events: auto; // re-enable clicks on the actual content
+      // Use dynamic horizontal offset to align with orange section's text
+      // Falls back to existing .content-padding if JavaScript hasn't run yet
+      @include mq($from: large) {
+        margin-left: var(--hero-title-left, 0);
+      }
     }
   }
 

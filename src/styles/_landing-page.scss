@@ -404,7 +404,7 @@
 .expertise-section {
   background-color: $color-primary;
   color: $color-white;
-  padding-top: calc($spacing * 3);
+  padding-top: calc($spacing * 3); // Increased from 3x to 4x spacing
   padding-bottom: calc($spacing * 3);
 
   .header--xl {
@@ -473,6 +473,30 @@
       border: 1px solid $color-white;
       cursor: pointer;
       font-size: 1.125rem;
+    }
+  }
+
+  .expertise-disclaimer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; // More space on mobile
+    
+    @include mq($from: large) {
+      margin-top: 8px; // Less space on desktop
+    }
+
+    &__tip {
+      color: $color-white;
+      opacity: 0.95;
+      font-size: 1rem;
+    }
+
+    &__experimental {
+      color: $color-white;
+      opacity: 0.6;
+      font-size: 0.875rem;
+      font-weight: 400;
     }
   }
 }

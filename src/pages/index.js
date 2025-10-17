@@ -277,9 +277,9 @@ class IndexPage extends Component {
                     })()}
                   </form>
                 </div>
-                <div className="expertise-disclaimer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px' }}>
-                  <div className="expertise-disclaimer__tip" style={{ color: '#fff', opacity: 0.95, fontSize: '1rem' }}>Tip: Click a sector above to try example queries.</div>
-                  <div className="expertise-disclaimer__experimental" style={{ color: '#fff', opacity: 0.6, fontSize: '0.875rem', fontWeight: 400 }}>AI search is experimental.</div>
+                <div className="expertise-disclaimer">
+                  <div className="expertise-disclaimer__tip">Tip: Click a sector above to try example queries.</div>
+                  <div className="expertise-disclaimer__experimental">AI search is experimental.</div>
                 </div>
               </div>
             </div>

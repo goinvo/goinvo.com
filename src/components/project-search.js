@@ -663,7 +663,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       )}
       
       {/* Search Results */}
-      {query && !isSearching && results.length > 0 && (results.some(project => project.aiDescription) || loadingDescriptions) && (
+      {query && !isSearching && results.length > 0 && (
         <div className="project-search__results">
           {/* Fallback banner */}
           {usedFallback && (
@@ -672,27 +672,30 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
             </div>
           )}
           
-          {/* AI-Enhanced Results Section */}
-          {aiEnabled && (results.some(project => project.aiDescription) || loadingDescriptions) && (() => {
-            // Get AI-enhanced projects for featured section (or show first few if loading)
-            const aiEnhancedProjects = loadingDescriptions 
+          {/* Results Section - AI-Enhanced or Fallback */}
+          {(() => {
+            // Determine which projects to show
+            const hasAiDescriptions = results.some(project => project.aiDescription)
+            const projectsToShow = loadingDescriptions 
               ? results.slice(0, 4)
-              : results.filter(project => project.aiDescription)
-            const isSingleEnhanced = aiEnhancedProjects.length === 1
+              : hasAiDescriptions 
+                ? results.filter(project => project.aiDescription)
+                : results.slice(0, 10) // Show top 10 for non-AI results
+            const isSingleResult = projectsToShow.length === 1
             
             return (
               <div className="ai-enhanced-section">
                 <div className="ai-section-header">
                   <h2 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>
-                    {loadingDescriptions ? 'Finding Relevant Projects...' : 'Recommended for You'}
+                    {loadingDescriptions ? 'Finding Relevant Projects...' : hasAiDescriptions ? 'Recommended for You' : 'Search Results'}
                   </h2>
-                  <p>{isSingleEnhanced ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
+                  <p>{isSingleResult ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
                 </div>
                 
-                <div className={`spotlights-grid spotlights-grid--two ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
-                  {aiEnhancedProjects.map((item) => (
+                <div className={`spotlights-grid spotlights-grid--two ${isSingleResult ? 'ai-enhanced-grid--single' : ''}`}>
+                  {projectsToShow.map((item) => (
                     <Card
-                      key={`ai-${item.slug}`}
+                      key={`result-${item.slug}`}
                       link={`/work/${item.slug}/`}
                       onClick={handleResultNavigate}
                       noShadow
@@ -749,8 +752,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         </div>
       )}
 
-      {/* No Results State - show when there are no results OR when all results are filtered out */}
-      {query && !isSearching && (results.length === 0 || (results.length > 0 && !results.some(project => project.aiDescription))) && (
+      {/* No Results State - show when there are no results */}
+      {query && !isSearching && results.length === 0 && (
         <div className="project-search__no-results" style={{ textAlign: 'center' }}>
           <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>No Results...</h4>
           <p className="text--gray" style={{ fontSize: '1.125rem', marginBottom: '12px' }}>We couldn't find projects for your search.</p>

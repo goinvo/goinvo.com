@@ -845,7 +845,9 @@ async function generateSingleProjectDescription(query, project, personaContext, 
   const systemPrompt = `You are a ONE-SHOT GENERATOR using LENS-BASED RELEVANCE to create GoInvo-style project summaries.
 
 # CORE TASK
-Generate a single 80-140 word summary that connects the project to the user's search query using relevant design lenses.
+Generate TWO parts:
+1. TL;DR: 15-25 word punchy summary (one sentence)
+2. DESCRIPTION: 60-100 word detailed explanation
 
 # LENSES (L1-L7)
 L1 Alignment — reconcile goals/teams into one path
@@ -871,27 +873,30 @@ L7 Efficiency — speed, reliability, resilience
 3. If metrics exist in project data, add +1 to L7
 4. Pick top 2-3 lenses (tie-breaker: L4 > L3 > L2 > L1 > L7 > L6 > L5)
 
-# STRUCTURE OPTIONS (choose best fit)
-A) Hook → Problem → Build → Outcome
-B) Problem → What Changed → How It Works → Outcome
-C) Outcome-first → Backstory → Design → Human impact
+# TL;DR RULES (15-25 words)
+* One sentence only
+* Lead with outcome or key capability
+* Use <strong> tags on 1-2 key terms
+* Example: "Built a <strong>consent management system</strong> that lets patients control their research data with <strong>clear, simple choices</strong>."
 
-# GRAMMAR PATTERNS
-Openers: "Our team created" | "This project delivers" | "Built for people who need" | "The result is" | "In collaboration with partners, we shaped" | "Designed to solve a simple but deep problem, this work"
-Verbs: helps | lets | gives | enables | allows
-Closings (optional): "Now people can see what was invisible before." | "It turns confusion into clarity." | "The outcome: faster decisions, calmer workflows, and more trust."
-
-# WRITING RULES
-* Plain English. Short sentences. Natural tone.
-* Show a human beneficiary (patient, nurse, analyst, policymaker, etc.)
+# DESCRIPTION RULES (60-100 words)
+* 2-3 sentences
+* Structure: Problem → What Changed → Impact OR Outcome-first → How It Works → Benefit
+* Show human beneficiary (patient, nurse, analyst, policymaker, etc.)
 * Include lens ideas implicitly (no lens names)
 * If metrics exist in project data, cite ONCE. Never invent numbers.
-* 80-140 words. No hype words ("innovative", "revolutionary", "game-changing", "unleash", "dive into")
-* Use HTML <strong></strong> tags to emphasize 2-4 key terms
-* ONLY highlight what the project DOES have - never mention what it lacks
+* Use <strong> tags on 2-3 key terms
+* Plain English. Natural tone. No hype words ("innovative", "revolutionary", "game-changing", "unleash", "dive into")
 
 # RELEVANCE CHECK
 If the project has no connection to the query (no matching lenses, no related problem space), mark as not relevant.`;
+
+  // Helper to safely convert arrays or strings to comma-separated strings
+  const toCommaSeparated = (value) => {
+    if (!value) return 'N/A';
+    if (Array.isArray(value)) return value.join(', ');
+    return String(value);
+  };
 
   const userPrompt = `USER QUERY: "${query}"
 
@@ -899,34 +904,35 @@ PROJECT DATA:
 Title: ${project.title}
 Client: ${project.client || 'N/A'}
 Caption: ${project.caption}
-Keywords: ${project.keywords?.join(', ') || 'N/A'}
+Keywords: ${toCommaSeparated(project.keywords)}
 
 STRUCTURED DATA (use these facts):
 ${projectData ? `
 Problem: ${projectData.problemStatement || 'N/A'}
 Solution: ${projectData.solutionStatement || 'N/A'}
-Technologies: ${projectData.technologies?.join(', ') || 'N/A'}
-Deliverables: ${projectData.deliverables?.join(', ') || 'N/A'}
-Target Users: ${projectData.targetUsers?.join(', ') || 'N/A'}
-Key Metrics: ${projectData.keyMetrics?.join(', ') || 'N/A'}
+Technologies: ${toCommaSeparated(projectData.technologies)}
+Deliverables: ${toCommaSeparated(projectData.deliverables)}
+Target Users: ${toCommaSeparated(projectData.targetUsers)}
+Key Metrics: ${toCommaSeparated(projectData.keyMetrics)}
 Business Value: ${projectData.businessValue || 'N/A'}
 ` : 'No structured data available - use title and caption only'}
 
 TASK:
 1. Score lenses based on query + keywords (top 2-3)
-2. Pick structure pattern (A, B, or C)
-3. Write 80-140 words connecting project to query through chosen lenses
+2. Generate TL;DR: 15-25 word punchy one-sentence summary
+3. Generate DESCRIPTION: 60-100 word detailed explanation (2-3 sentences)
 4. Show human impact; cite metrics if present (once only)
-5. Use plain language; emphasize 2-4 key terms with <strong> tags
+5. Use plain language; emphasize key terms with <strong> tags
 
 OUTPUT FORMAT (JSON):
 {
   "slug": "${project.slug}",
-  "description": "80-140 word paragraph (one paragraph only, HTML strong tags allowed)",
+  "tldr": "15-25 word one-sentence summary (HTML strong tags on 1-2 key terms)",
+  "description": "60-100 word detailed explanation (HTML strong tags on 2-3 key terms)",
   "relevant": true_or_false
 }
 
-If not relevant to query, return relevant=false with empty description.`;
+If not relevant to query, return relevant=false with empty tldr and description.`;
 
   // Skip OpenAI call if client unavailable
   if (!openai) {
@@ -951,6 +957,9 @@ If not relevant to query, return relevant=false with empty description.`;
     const result = JSON.parse(response.choices[0].message.content);
     
     // Convert markdown bold to HTML if AI returned markdown format
+    if (result.tldr) {
+      result.tldr = convertMarkdownBoldToHtml(result.tldr);
+    }
     if (result.description) {
       result.description = convertMarkdownBoldToHtml(result.description);
     }
@@ -1015,9 +1024,10 @@ async function generateAIResponse(query, projects, personaContext, openai) {
   
   // Filter out failed descriptions and format result
   const projectDescriptions = descriptions
-    .filter(d => d && d.description)
+    .filter(d => d && (d.description || d.tldr))
     .map(d => ({
       slug: d.slug,
+      tldr: d.tldr || '',
       description: d.description || '',
       relevant: d.relevant !== false
     }));
@@ -1127,6 +1137,7 @@ exports.handler = async (event, context) => {
         const isMatched = matchedProjects.some(m => m.slug === project.slug);
         return {
           ...project,
+          aiTldr: isMatched ? project.caption : null,
           aiDescription: isMatched ? generateTemplateDescription(project, query) : null,
           aiRelevant: isMatched,
           aiEnhanced: isMatched
@@ -1163,33 +1174,41 @@ exports.handler = async (event, context) => {
     // Enhance projects with AI descriptions
     const enhancedResults = projects.map((project) => {
       const aiData = aiResponse.projectDescriptions?.find(p => p.slug === project.slug);
-      // Default to relevant=true if AI returned a description
+      // Check if we have either tldr or description
+      const hasTldr = aiData && aiData.tldr && aiData.tldr.trim().length > 0;
       const hasDescription = aiData && aiData.description && aiData.description.trim().length > 0;
-      const isRelevant = hasDescription ? (aiData.relevant !== false) : false;
+      const hasContent = hasTldr || hasDescription;
+      const isRelevant = hasContent ? (aiData.relevant !== false) : false;
       
       return {
         ...project,
+        aiTldr: hasTldr ? aiData.tldr : null,
         aiDescription: hasDescription ? aiData.description : null,
         aiRelevant: isRelevant,
-        aiEnhanced: !!hasDescription
+        aiEnhanced: !!hasContent
       };
     });
     
-    // Only filter out projects that explicitly have no description
-    const filteredResults = enhancedResults.filter(r => r.aiDescription !== null && r.aiDescription.trim().length > 0);
+    // Only filter out projects that have neither tldr nor description
+    const filteredResults = enhancedResults.filter(r => r.aiTldr || r.aiDescription);
     
-    console.log(`  Enhanced results: ${enhancedResults.length} total, ${filteredResults.length} with descriptions`);
+    console.log(`  Enhanced results: ${enhancedResults.length} total, ${filteredResults.length} with content`);
     
-    // Debug: log which projects have descriptions
+    // Debug: log which projects have content
     enhancedResults.forEach(r => {
-      console.log(`    ${r.slug}: ${r.aiDescription ? 'HAS' : 'NO'} description (${r.aiDescription?.length || 0} chars)`);
+      console.log(`    ${r.slug}: ${r.aiTldr ? 'HAS tldr' : 'NO tldr'}, ${r.aiDescription ? 'HAS desc' : 'NO desc'}`);
     });
     
     // If we somehow ended up with no results, return original projects
     if (filteredResults.length === 0) {
       console.warn('  No projects after filtering! Returning original projects');
       return jsonResponse(200, {
-        results: projects.slice(0, 4).map(p => ({ ...p, aiRelevant: true, aiDescription: p.caption })),
+        results: projects.slice(0, 4).map(p => ({ 
+          ...p, 
+          aiRelevant: true, 
+          aiTldr: p.caption,
+          aiDescription: null
+        })),
         aiGenerated: false,
         searchInsight: null,
         detectedPersona: null,

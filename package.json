@@ -73,7 +73,8 @@
     "dev:ai": "netlify dev",
     "test:ai": "sh test-ai-local.sh",
     "test:ai:windows": "test-ai-local.bat",
-    "test:openai": "node test-openai-connection.js"
+    "test:openai": "node test-openai-connection.js",
+    "check:env": "node check-env-vars.js"
   },
   "husky": {
     "hooks": {

@@ -68,9 +68,26 @@ function getOpenAI() {
     return null;
   }
   try {
-    const keyPreview = process.env.OPENAI_API_KEY.substring(0, 8) + '...' + process.env.OPENAI_API_KEY.substring(process.env.OPENAI_API_KEY.length - 4);
+    // Clean the API key - remove newlines and trim whitespace
+    // This fixes issues where the env var accidentally includes multiple lines
+    let apiKey = process.env.OPENAI_API_KEY.trim();
+    
+    // Check if the key contains newlines (common copy-paste error from .env files)
+    if (apiKey.includes('\n') || apiKey.includes('\r')) {
+      console.warn('⚠️  API key contains newlines - extracting first line only');
+      apiKey = apiKey.split(/[\r\n]/)[0].trim();
+    }
+    
+    // Validate key format
+    if (!apiKey.startsWith('sk-')) {
+      console.error('❌ Invalid API key format - should start with "sk-"');
+      openaiClient = false;
+      return null;
+    }
+    
+    const keyPreview = apiKey.substring(0, 8) + '...' + apiKey.substring(apiKey.length - 4);
     console.log(`✅ Initializing OpenAI client with key: ${keyPreview}`);
-    openaiClient = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    openaiClient = new OpenAI({ apiKey });
     console.log('✅ OpenAI client initialized successfully');
     return openaiClient;
   } catch (error) {

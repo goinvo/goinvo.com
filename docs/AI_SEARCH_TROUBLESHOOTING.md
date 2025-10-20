@@ -69,6 +69,33 @@ The enhanced AI search now returns detailed error information in the debug secti
 
 ## Common Issues and Solutions
 
+### Issue 0: API Key Contains Newlines (Invalid Header Error)
+
+**Symptoms:**
+```json
+{
+  "error": "Headers.append: \"Bearer sk-proj-...\\nOTHER_VAR=...\" is an invalid header value."
+}
+```
+
+**Cause:**
+The `OPENAI_API_KEY` environment variable in Vercel contains extra content - typically the API key followed by a newline and another environment variable. This happens when copy-pasting multiple lines from a `.env` file.
+
+**Solutions:**
+1. **Fix in Vercel (Required):**
+   - Go to Project Settings → Environment Variables
+   - Edit `OPENAI_API_KEY`
+   - Ensure the value is ONLY the API key (starts with `sk-`)
+   - Remove any newlines, quotes, or additional text
+   - Should look like: `sk-proj-xxxxx...xxxx`
+   - Save and redeploy
+
+2. **Verify the fix:**
+   - The enhanced code now automatically strips newlines
+   - Check logs for: `⚠️ API key contains newlines - extracting first line only`
+   - If you see this warning, the code is working around the issue
+   - But you should still fix the environment variable properly
+
 ### Issue 1: Authentication Error (401)
 
 **Symptoms:**

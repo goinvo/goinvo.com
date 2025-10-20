@@ -842,79 +842,91 @@ async function generateSingleProjectDescription(query, project, personaContext, 
     structuredData: projectData || null
   };
   
-  const systemPrompt = `You are an AI assistant helping users find relevant case studies. ${personaContext}
+  const systemPrompt = `You are a ONE-SHOT GENERATOR using LENS-BASED RELEVANCE to create GoInvo-style project summaries.
 
-CRITICAL: Use the structured project data provided to create compelling, specific descriptions. The data includes real metrics, technologies, deliverables, and outcomes.
+# CORE TASK
+Generate a single 80-140 word summary that connects the project to the user's search query using relevant design lenses.
 
-Your task is to write a compelling 2-3 sentence description for each project explaining why it's relevant to the user's search query. Use specific details from the structured data:
-- Lead with keyMetrics when impressive numbers are available
-- Mention concrete technologies and deliverables
-- Reference businessValue and how it solved the problem
-- Use targetUsers to show who benefits
-- Use HTML <strong></strong> tags (NOT markdown **) to emphasize 2-4 key words or phrases per description (important metrics, outcomes, or relevant terms)
+# LENSES (L1-L7)
+L1 Alignment — reconcile goals/teams into one path
+L2 Learning — updates from real use/data; scales with feedback
+L3 Capability — what people can do now
+L4 Clarity — honest visuals; legibility; trust
+L5 Governance — shared ownership; coordination
+L6 Ethics — consent, privacy, dignity, fairness
+L7 Efficiency — speed, reliability, resilience
 
-IMPORTANT: Use HTML tags like <strong>text</strong>, NOT markdown like **text**.
+# RELEVANCE MAPPING (automatically select 2-3 lenses based on query + project keywords)
+* "data, visual, dashboard, transparency, map, chart" → L4
+* "update, real-time, open data, iteration, feedback" → L2
+* "multi-stakeholder, policy, agencies, community, partners" → L5, L1
+* "workflow, UX, software, process, operations" → L7, L3
+* "patient, clinical, consent, privacy, PHI, safety" → L6, L4
+* "tool, portal, platform, access, self-service" → L3
+* "cost, tradeoff, prioritization, constraints" → L7, L1
 
-If a project is not relevant to the query, set its relevant flag to false and provide an empty description string.
+# LENS SCORING (one pass)
+1. Combine user_query + project keywords + technologies into term_bag
+2. For each lens, add +2 per strong signal, +1 per weak synonym
+3. If metrics exist in project data, add +1 to L7
+4. Pick top 2-3 lenses (tie-breaker: L4 > L3 > L2 > L1 > L7 > L6 > L5)
 
-Guidelines:
-- ONLY highlight positive connections and relevance - never mention what projects lack or don't have
-- Only mention technologies/methods that are explicitly listed in the project data
-- If specific technical details aren't provided, focus on the general problem/solution fit and design insights
-- Focus on what the project DOES offer and how it connects to the user's needs
-- Never use phrases like "does not mention", "lacks", "doesn't include", "less relevant", or similar negative language
-- Base your relevance explanation on the problem space, user needs, and design patterns that ARE present
-- If a project doesn't directly match, find the most relevant aspect that IS present and focus on that value
+# STRUCTURE OPTIONS (choose best fit)
+A) Hook → Problem → Build → Outcome
+B) Problem → What Changed → How It Works → Outcome
+C) Outcome-first → Backstory → Design → Human impact
 
-Writing Style Instructions:
-- Use simple language: Write plainly with short sentences.
-  Example: "I need help with this issue."
-- Avoid AI-giveaway phrases: Don't use clichés like "dive into," "unleash your potential," etc.
-  Avoid: "Let's dive into this game-changing solution."
-  Use instead: "Here's how it works."
-- Be direct and concise: Get to the point; remove unnecessary words.
-  Example: "We should meet tomorrow."
-- Maintain a natural tone: Write as you normally speak; it's okay to start sentences with "and" or "but."
-  Example: "And that's why it matters."
-- Avoid marketing language: Don't use hype or promotional words.
-  Avoid: "This revolutionary product will transform your life."
-  Use instead: "This product can help you."
-- Keep it real: Be honest; don't force friendliness.
-  Example: "I don't think that's the best idea."
-- Simplify grammar: Don't stress about perfect grammar; it's fine not to capitalize "i" if that's your style.
-  Example: "i guess we can try that."
-- Stay away from fluff: Avoid unnecessary adjectives and adverbs.
-  Example: "We finished the task."
-- Focus on clarity: Make your message easy to understand.
-  Example: "Please send the file by Monday."
+# GRAMMAR PATTERNS
+Openers: "Our team created" | "This project delivers" | "Built for people who need" | "The result is" | "In collaboration with partners, we shaped" | "Designed to solve a simple but deep problem, this work"
+Verbs: helps | lets | gives | enables | allows
+Closings (optional): "Now people can see what was invisible before." | "It turns confusion into clarity." | "The outcome: faster decisions, calmer workflows, and more trust."
 
-STRONG WRITING REQUIREMENTS (for convincing buyers):
-- Lead with a concrete outcome or metric if present (e.g., adoption, speed, accuracy, user reach).
-- Name the buyer-relevant artifact we delivered (e.g., clinician dashboard, consent workflow, research repository, ROI model).
-- Mention the buyer context using the provided 'client' field when available to add credibility.
-- Use 1 buyer-specific benefit relevant to the persona (e.g., "cuts review time for payers", "reduces clinician clicks", "improves data quality for researchers").
-- Keep 2-3 sentences total; avoid generic words like "innovative", "powerful", "solution".
-`;
+# WRITING RULES
+* Plain English. Short sentences. Natural tone.
+* Show a human beneficiary (patient, nurse, analyst, policymaker, etc.)
+* Include lens ideas implicitly (no lens names)
+* If metrics exist in project data, cite ONCE. Never invent numbers.
+* 80-140 words. No hype words ("innovative", "revolutionary", "game-changing", "unleash", "dive into")
+* Use HTML <strong></strong> tags to emphasize 2-4 key terms
+* ONLY highlight what the project DOES have - never mention what it lacks
 
-  const userPrompt = `Search query: "${query}"
+# RELEVANCE CHECK
+If the project has no connection to the query (no matching lenses, no related problem space), mark as not relevant.`;
 
-Project to describe (includes metadata AND structured data with metrics, technologies, deliverables, etc.):
-${JSON.stringify(enhancedProject, null, 2)}
+  const userPrompt = `USER QUERY: "${query}"
 
-Create a compelling 2-3 sentence description that:
-1. Uses specific details from structuredData (keyMetrics, technologies, deliverables, businessValue)
-2. Connects the project to the search query using the most relevant structured fields
-3. Leads with impressive metrics when available (e.g., "Serves 160M users...")
-4. Mentions concrete deliverables and technologies
-5. References the client for credibility when provided
-6. If no clear connection exists, mark as not relevant (relevant=false) and use empty description
+PROJECT DATA:
+Title: ${project.title}
+Client: ${project.client || 'N/A'}
+Caption: ${project.caption}
+Keywords: ${project.keywords?.join(', ') || 'N/A'}
 
-Format your response as JSON:
+STRUCTURED DATA (use these facts):
+${projectData ? `
+Problem: ${projectData.problemStatement || 'N/A'}
+Solution: ${projectData.solutionStatement || 'N/A'}
+Technologies: ${projectData.technologies?.join(', ') || 'N/A'}
+Deliverables: ${projectData.deliverables?.join(', ') || 'N/A'}
+Target Users: ${projectData.targetUsers?.join(', ') || 'N/A'}
+Key Metrics: ${projectData.keyMetrics?.join(', ') || 'N/A'}
+Business Value: ${projectData.businessValue || 'N/A'}
+` : 'No structured data available - use title and caption only'}
+
+TASK:
+1. Score lenses based on query + keywords (top 2-3)
+2. Pick structure pattern (A, B, or C)
+3. Write 80-140 words connecting project to query through chosen lenses
+4. Show human impact; cite metrics if present (once only)
+5. Use plain language; emphasize 2-4 key terms with <strong> tags
+
+OUTPUT FORMAT (JSON):
 {
   "slug": "${project.slug}",
-  "description": "Why this project is relevant to the search query (using only explicit information provided). Start with outcome or artifact when available; keep it specific and concrete.",
-  "relevant": true
-}`;
+  "description": "80-140 word paragraph (one paragraph only, HTML strong tags allowed)",
+  "relevant": true_or_false
+}
+
+If not relevant to query, return relevant=false with empty description.`;
 
   // Skip OpenAI call if client unavailable
   if (!openai) {
@@ -929,9 +941,9 @@ Format your response as JSON:
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt }
       ],
-      max_completion_tokens: 1000,
+      max_completion_tokens: 300,
       response_format: { type: "json_object" }
-    }), 15000, `ai-search-timeout-${project.slug}`)
+    }), 20000, `ai-search-timeout-${project.slug}`)
     
     const elapsed = Date.now() - startTime;
     console.log(`  ✓ ${project.slug}: ${elapsed}ms, ${response.usage?.total_tokens || '?'} tokens`);

@@ -63,14 +63,22 @@ let openaiClient = null;
 function getOpenAI() {
   if (openaiClient !== null) return openaiClient;
   if (!process.env.OPENAI_API_KEY) {
+    console.error('❌ OpenAI API key not found in environment');
     openaiClient = false; // Mark as checked but unavailable
     return null;
   }
   try {
+    const keyPreview = process.env.OPENAI_API_KEY.substring(0, 8) + '...' + process.env.OPENAI_API_KEY.substring(process.env.OPENAI_API_KEY.length - 4);
+    console.log(`✅ Initializing OpenAI client with key: ${keyPreview}`);
     openaiClient = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    console.log('✅ OpenAI client initialized successfully');
     return openaiClient;
   } catch (error) {
-    console.error('Failed to initialize OpenAI client:', error);
+    console.error('❌ Failed to initialize OpenAI client:', {
+      message: error.message,
+      code: error.code,
+      type: error.type
+    });
     openaiClient = false;
     return null;
   }
@@ -893,7 +901,7 @@ Format your response as JSON:
 
   // Skip OpenAI call if client unavailable
   if (!openai) {
-    return null
+    return { slug: project.slug, error: 'OpenAI client not available', description: null, relevant: false }
   }
 
   try {
@@ -920,8 +928,24 @@ Format your response as JSON:
     
     return result;
   } catch (error) {
-    console.error(`  ✗ ${project.slug} error:`, error.message);
-    return null;
+    // Enhanced error logging with full details
+    console.error(`  ✗ ${project.slug} error:`, {
+      message: error.message,
+      status: error.status,
+      code: error.code,
+      type: error.type,
+      stack: error.stack?.split('\n').slice(0, 3).join('\n')
+    });
+    // Return error details so they can be included in debug output
+    return { 
+      slug: project.slug, 
+      error: error.message, 
+      errorCode: error.code,
+      errorStatus: error.status,
+      errorType: error.type,
+      description: null, 
+      relevant: false 
+    };
   }
 }
 
@@ -941,12 +965,28 @@ async function generateAIResponse(query, projects, personaContext, openai) {
   const descriptions = await Promise.all(descriptionPromises);
   const elapsed = Date.now() - startTime;
   
-  const successCount = descriptions.filter(d => d !== null).length;
-  console.log(`Completed ${successCount}/${topProjects.length} descriptions in ${elapsed}ms total`);
+  const successCount = descriptions.filter(d => d && d.description).length;
+  const errorCount = descriptions.filter(d => d && d.error).length;
+  console.log(`Completed ${successCount}/${topProjects.length} descriptions in ${elapsed}ms total (${errorCount} errors)`);
+  
+  // Collect errors for debugging
+  const errors = descriptions
+    .filter(d => d && d.error)
+    .map(d => ({
+      slug: d.slug,
+      error: d.error,
+      errorCode: d.errorCode,
+      errorStatus: d.errorStatus,
+      errorType: d.errorType
+    }));
+  
+  if (errors.length > 0) {
+    console.error('AI generation errors:', JSON.stringify(errors, null, 2));
+  }
   
   // Filter out failed descriptions and format result
   const projectDescriptions = descriptions
-    .filter(d => d !== null)
+    .filter(d => d && d.description)
     .map(d => ({
       slug: d.slug,
       description: d.description || '',
@@ -957,7 +997,8 @@ async function generateAIResponse(query, projects, personaContext, openai) {
     projectDescriptions,
     searchInsight: projectDescriptions.length > 0 
       ? 'Relevant projects based on your search criteria' 
-      : null
+      : null,
+    errors: errors.length > 0 ? errors : undefined
   };
 }
 
@@ -1124,7 +1165,13 @@ exports.handler = async (event, context) => {
         searchInsight: null,
         detectedPersona: null,
         preset: null,
-        debug: { ...envDebug, reason: 'no-descriptions-generated', enhancedCount: enhancedResults.length, generatedCount: aiResponse.projectDescriptions?.length || 0 }
+        debug: { 
+          ...envDebug, 
+          reason: 'no-descriptions-generated', 
+          enhancedCount: enhancedResults.length, 
+          generatedCount: aiResponse.projectDescriptions?.length || 0,
+          errors: aiResponse.errors || [] // Include error details
+        }
       });
     }
 

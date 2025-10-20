@@ -72,7 +72,8 @@
     "lint": "prettier --check \"**/*.{js,jsx,json,css,scss,md,mdx}\"",
     "dev:ai": "netlify dev",
     "test:ai": "sh test-ai-local.sh",
-    "test:ai:windows": "test-ai-local.bat"
+    "test:ai:windows": "test-ai-local.bat",
+    "test:openai": "node test-openai-connection.js"
   },
   "husky": {
     "hooks": {

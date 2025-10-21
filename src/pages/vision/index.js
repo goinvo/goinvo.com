@@ -484,41 +484,108 @@ const VisionPage = () => {
           </div>
         </div>
       </div>
-      <div className="background--gray pad-vertical--double">
-        <div className="max-width content-padding">
-          <h2 className="header--xl margin-bottom--double text--center">
-            What People Say
-          </h2>
-          <Carousel>
-          <Quote
-            quotee="Blackford Middleton"
-            quoteeSub="Former CTO, Vanderbilt University Medical Center"
-          >
-            Juhan and his team are one of the few groups that understand the
-            complexity of healthcare and the need for beautiful, functional
-            design. I go to them when I need to make sense of the hard
-            problems.
-          </Quote>
-          <Quote
-            quotee="Marla Erman"
-            quoteeSub="Former CMO, UnitedHealth Group"
-          >
-            GoInvo's approach to design and user experience is both
-            methodical and creative, and their work has been instrumental in
-            helping us create more engaging and effective digital health
-            solutions.
-          </Quote>
-          <Quote
-            quotee="David Feinberg"
-            quoteeSub="Former CEO, Google Health"
-          >
-            The team at GoInvo has a unique ability to translate complex
-            healthcare challenges into elegant, user-centered design
-            solutions that actually work in the real world.
-          </Quote>
-        </Carousel>
-        </div>
+      <div className="max-width content-padding pad-top--double">
+        <h2 className="header--xl margin-bottom--none">
+          Reviews for
+          <span className="text--serif text--primary">...</span>
+        </h2>
       </div>
+      <Carousel
+        menuItems={[
+          'Inspired EHRs',
+          'Designing for Emerging Technologies',
+          'Determinants of Health',
+          'Bathroom to Healthroom',
+        ]}
+      >
+        <GradientImageColumns
+          image="/images/services/inspired-ehrs-book.jpg"
+          backgroundColor="gray"
+          backgroundNotResponsive
+        >
+          <Quote
+            background="gray"
+            quotee="Janet Campbell"
+            quoteeSub="Epic"
+            small
+          >
+            I sent this around to our User Experience team here, and there was
+            a lot of discussion and appreciation for the work you've done.
+          </Quote>
+          <Link
+            to="/work/inspired-ehrs"
+            className="button button--primary button--lg button--block"
+          >
+            Read the Case Study
+          </Link>
+        </GradientImageColumns>
+        <GradientImageColumns
+          image="/images/vision/emerging-tech-wood.jpg"
+          backgroundColor="gray"
+          backgroundNotResponsive
+        >
+          <Quote
+            background="gray"
+            quotee="Dan Saffer"
+            quoteeSub="Author of Microinteractions"
+            small
+          >
+            If you're looking for insights into how to design the future
+            today, look no further.
+          </Quote>
+          <a
+            href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button--primary button--lg button--block"
+          >
+            Check out the Book
+          </a>
+        </GradientImageColumns>
+        <GradientImageColumns
+          image="/images/services/doh-preview.jpg"
+          backgroundColor="gray"
+          backgroundNotResponsive
+        >
+          <Quote
+            background="gray"
+            quotee="Toyin Ajayi"
+            quoteeSub="Chief Health Officer of Cityblock Health"
+            small
+          >
+            The SDoH poster stands taped to the giant whiteboard outside my
+            office [at Google Cityblock Health Labs], and will form the basis
+            of many rich conversations among my team. Thank you!
+          </Quote>
+          <Link
+            to="/vision/determinants-of-health/"
+            className="button button--primary button--lg button--block"
+          >
+            Read the Feature
+          </Link>
+        </GradientImageColumns>
+        <GradientImageColumns
+          image="/images/features/bathroom-to-healthroom/bathroom-to-healthroom-featured.jpg"
+          backgroundColor="gray"
+          backgroundNotResponsive
+        >
+          <Quote
+            background="gray"
+            quotee="Eric Topol"
+            quoteeSub="Scripps Translational Science Institute"
+            small
+          >
+            Designers at GoInvo have the right ideas for the smart medical
+            home of the future.
+          </Quote>
+          <a
+            href="https://www.goinvo.com/features/from-bathroom-to-healthroom/"
+            className="button button--primary button--lg button--block"
+          >
+            Read the Feature
+          </a>
+        </GradientImageColumns>
+      </Carousel>
       <div className="background--gray pad-vertical--double">
         <div className="max-width max-width--md content-padding">
           <SubscribeForm />

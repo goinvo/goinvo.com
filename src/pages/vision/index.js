@@ -484,12 +484,12 @@ const VisionPage = () => {
           </div>
         </div>
       </div>
-      <div className="max-width content-padding pad-top--double">
-        <h2 className="header--xl margin-bottom--none">
-          Reviews for
-          <span className="text--serif text--primary">...</span>
-        </h2>
-        <Carousel>
+      <div className="background--gray pad-vertical--double">
+        <div className="max-width content-padding">
+          <h2 className="header--xl margin-bottom--double text--center">
+            What People Say
+          </h2>
+          <Carousel>
           <Quote
             quotee="Blackford Middleton"
             quoteeSub="Former CTO, Vanderbilt University Medical Center"
@@ -517,6 +517,7 @@ const VisionPage = () => {
             solutions that actually work in the real world.
           </Quote>
         </Carousel>
+        </div>
       </div>
       <div className="background--gray pad-vertical--double">
         <div className="max-width max-width--md content-padding">

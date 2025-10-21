@@ -67,7 +67,7 @@ class Carousel extends Component {
             </ul>
           </div>
         ) : null}
-        <div className="carousel__carousel-container background--gray">
+        <div className="carousel__carousel-container">
           <SlickCarousel
             {...carouselSettings}
             ref={this.carousel}

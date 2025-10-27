@@ -34,7 +34,7 @@ const selectedCategory = categories[Math.floor(Math.random() * categories.length
 // console.log("Selected category: ", selectedCategory);
 const categoryData = headerData[selectedCategory];
 // Use a single consistent hero image
-const heroImage = '/images/features/digital-health-trends-2022/digital-health-trends-2022-hero.jpg'
+const heroImage = '/images/homepage/facto.jpg'
 
 const frontmatter = {
   metaTitle: 'Boston UX Design Agency | GoInvo Boston',

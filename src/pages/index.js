@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
 import Hero from '../components/hero'
-import CategoriesList from '../components/categories-list'
+// import CategoriesList from '../components/categories-list'
 import Columns from '../components/columns'
 import Card from '../components/card'
 import ImageBlock from '../components/image-block'
@@ -60,6 +60,8 @@ class IndexPage extends Component {
       allProjects,
       frontmatter,
       hideSpotlights: false,
+      // AI search controls driven by the orange section UI
+      aiEnabled: true,
       selectedPersona: null,
       homeSearchQuery: '',
       homeInputDefault: ''
@@ -101,8 +103,6 @@ class IndexPage extends Component {
           className="hero--higher-text-contrast"
           link="/work/"
           image={this.state.frontmatter.heroImage}
-          button={frontmatter.heroButtonText}
-          buttonLink="/work/"
           isLarge
           position="top center"
         >
@@ -111,37 +111,253 @@ class IndexPage extends Component {
             <span className="text--serif text--primary">.</span>
           </h1>
           <p className="hero-subtitle text--black">
-            We craft digital design through software, strategic thinking, and data visualization.
+            We craft digital design through software, strategic thinking, data visualization, and illustration.
           </p>
         </Hero>
-        
-        {!this.state.hideSpotlights && (
-          <div className="max-width content-padding pad-bottom--double" id="spotlights">
-            <div className="margin-vertical--double pad-vertical--double">
-              <div className="pure-g">
-                <div className="pure-u-1">
-                  <h2 className="header--xl margin--none pad-right--double spotlights-title">
-                    Our expertise in design covers...
-                  </h2>
+        {/* Expertise section (no orange background); labels below heading with orange underlines */}
+        <div className="max-width content-padding pad-top--double pad-bottom--none homepage-expertise">
+          <div className="margin-vertical--double pure-g expertise-row">
+            <div className="pure-u-1">
+              <h2 className="header--xl margin--none">Our expertise in design covers...</h2>
+            </div>
+          </div>
+          <div className="pure-g" style={{ marginTop: '18px' }}>
+            <div className="pure-u-1">
+              <div className="expertise-grid">
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}>
+                  <button
+                    type="button"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}
+                    onClick={() => {
+                      const selected = this.state.selectedCategoryFilter === 'Enterprise' ? null : 'Enterprise'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Enterprise
+                  </button>
                 </div>
-                <div className="pure-u-1 pure-u-lg-4-4">
-                  <CategoriesList includeAll={false} columns={4} />
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}>
+                  <button
+                    type="button"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}
+                    onClick={() => {
+                      const selected = this.state.selectedCategoryFilter === 'Healthcare' ? null : 'Healthcare'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Healthcare
+                  </button>
+                </div>
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}>
+                  <button
+                    type="button"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}
+                    onClick={() => {
+                      const selected = this.state.selectedCategoryFilter === 'Government' ? null : 'Government'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    Government
+                  </button>
+                </div>
+                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}>
+                  <button
+                    type="button"
+                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}
+                    onClick={() => {
+                      const selected = this.state.selectedCategoryFilter === 'AI' ? null : 'AI'
+                      this.setState({ selectedCategoryFilter: selected }, () => {
+                        setTimeout(() => {
+                          const el = document.querySelector('.project-search')
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }, 50)
+                      })
+                    }}
+                  >
+                    AI
+                  </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        {!this.state.hideSpotlights && (
+          <div className="max-width content-padding pad-bottom--double" id="spotlights">
+            <div className="pad-vertical--double">
               {/* Spotlights (custom layout in a single grid) */}
               {(() => {
                 const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
                 const TEXT_OVERRIDES = {
                   'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
                   'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
-                  'visual-storytelling-with-genai': { title: 'Decision Grade Viz', subtitle: 'Workflow Research' },
-                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Industry Analysis' },
-                  'hgraph': { title: 'hGraph', subtitle: 'Clinical Decision Making' },
+                  'visual-storytelling-with-genai': { title: 'Storytelling with GenAI', subtitle: 'Illustration' },
+                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Poster' },
+                  'hgraph': { title: 'hGraph', subtitle: 'Data Visualization' },
                   'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
                   'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
-                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Digital Transformation for All' },
-                  'inspired-ehrs': { title: 'Healthcare Best Practices', subtitle: 'Enterprise Software' }
+                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
+                  'inspired-ehrs': { title: 'Transforming Healthcare Analytics', subtitle: 'Enterprise Software' }
                 }
+                // Width map for aesthetically pleasing layouts (in 4-column grid)
+                // 1 = quarter width, 2 = half width, 4 = full width
+                const SPOTLIGHT_WIDTHS = {
+                  'ipsos-facto': 2,
+                  'eligibility-engine': 1,
+                  'visual-storytelling-with-genai': 2,
+                  'determinants-of-health': 2,
+                  'hgraph': 2,
+                  'inspired-ehrs': 2,
+                  'prior-auth': 2,
+                  'precision-autism': 2,
+                  'mass-snap': 4,
+                  // Additional items requested
+                  'maya-ehr': 2,
+                  'national-cancer-navigation': 2,
+                  'national-healthcare-stories': 2,
+                  '3m-coderyte': 2,
+                  'augmented-clinical-decision-support': 2
+                }
+
+                const getWidthForItem = (item) => {
+                  if (!item) return 1
+                  const key = item.slug || item.id || ''
+                  return SPOTLIGHT_WIDTHS[key] || 1
+                }
+
+                const spanClassForWidth = (w) => {
+                  if (w >= 4) return 'spotlight--span-4'
+                  if (w >= 3) return 'spotlight--span-3'
+                  if (w >= 2) return 'spotlight--span-2'
+                  return ''
+                }
+
+                // Known animated banners per project slug
+                const VIDEO_BANNERS = {
+                  'visual-storytelling-with-genai': '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4',
+                  'determinants-of-health': '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4',
+                  'hgraph': '/images/homepage/animated%20covers/hgraph_trimmed.mp4',
+                  'precision-autism': '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4'
+                }
+
+                const getVideoOptsForItem = (item) => {
+                  if (!item) return {}
+                  const key = item.slug || item.id
+                  const src = VIDEO_BANNERS[key]
+                  return src ? { useVideo: true, videoSrc: src } : {}
+                }
+
+                // Greedy packing to fill 4-unit rows
+                const layoutWithGreedy = (items) => {
+                  const remaining = [...items]
+                  const output = [] // { item, width }
+                  let rowRemaining = 4
+                  let rowStartIdx = 0 // index in output where current row starts
+
+                  while (remaining.length > 0) {
+                    const candidate = remaining[0]
+                    const w = getWidthForItem(candidate)
+
+                    // If fits, place it
+                    if (w <= rowRemaining) {
+                      output.push({ item: candidate, width: w })
+                      remaining.shift()
+                      rowRemaining -= w
+                      if (rowRemaining === 0) {
+                        // row complete
+                        rowRemaining = 4
+                        rowStartIdx = output.length
+                      }
+                      continue
+                    }
+
+                    // Look ahead for any that fits
+                    let foundIdx = -1
+                    for (let i = 1; i < remaining.length; i++) {
+                      const wi = getWidthForItem(remaining[i])
+                      if (wi <= rowRemaining) { foundIdx = i; break }
+                    }
+                    if (foundIdx !== -1) {
+                      const fit = remaining.splice(foundIdx, 1)[0]
+                      const wf = getWidthForItem(fit)
+                      output.push({ item: fit, width: wf })
+                      rowRemaining -= wf
+                      if (rowRemaining === 0) {
+                        rowRemaining = 4
+                        rowStartIdx = output.length
+                      }
+                      continue
+                    }
+
+                    // Nothing fits: expand the last item in the current row to fill remainder
+                    if (output.length > rowStartIdx) {
+                      const lastIdx = output.length - 1
+                      output[lastIdx] = {
+                        item: output[lastIdx].item,
+                        width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+                      }
+                    }
+                    // Start a new row
+                    rowRemaining = 4
+                    rowStartIdx = output.length
+                  }
+
+                  // If last row isn't full, expand the last item of the row to fill remainder
+                  if (rowRemaining !== 4 && output.length > rowStartIdx) {
+                    const lastIdx = output.length - 1
+                    output[lastIdx] = {
+                      item: output[lastIdx].item,
+                      width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
+                    }
+                  }
+
+                  return output.map(({ item, width }) => ({ item, className: spanClassForWidth(width || 1) }))
+                }
+                const normalizedCategory = (this.state.selectedCategoryFilter || '').toString().trim().toLowerCase()
+                const matchesCategory = (project) => {
+                  if (!normalizedCategory) return true
+                  if (!project) return false
+                  const cats = Array.isArray(project.categories) ? project.categories : []
+                  const kws = Array.isArray(project.keywords) ? project.keywords : []
+                  const inCats = cats.some(c => String(c || '').toLowerCase() === normalizedCategory)
+                  const inKws = kws.some(k => String(k || '').toLowerCase() === normalizedCategory)
+                  const hay = [project.title, project.caption, project.client, ...cats, ...kws]
+                    .filter(Boolean).join(' ').toLowerCase()
+                  const has = (arr) => arr.some(token => hay.includes(token))
+                  let inferred = false
+                  switch (normalizedCategory) {
+                    case 'ai':
+                      inferred = has([' ai ', 'artificial intelligence', 'machine learning', ' llm', 'gpt', 'neural', 'algorithm']) || hay.startsWith('ai')
+                      break
+                    case 'healthcare':
+                      inferred = has(['healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'oncology'])
+                      break
+                    case 'government':
+                      inferred = has(['government', 'public sector', 'civic', 'municipal', 'federal', 'state', 'massachusetts department', 'snap'])
+                      break
+                    case 'enterprise':
+                      inferred = has(['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'])
+                      break
+                    default:
+                      inferred = false
+                  }
+                  return inCats || inKws || inferred
+                }
+
                 const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
                   if (!item) return null
                   const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
@@ -182,21 +398,38 @@ class IndexPage extends Component {
                   )
                 }
 
+                // Spotlight ordering and options
+                const defs = [
+                  { key: 'ipsos-facto', opts: { className: 'spotlight--span-2' } },
+                  { key: 'eligibility-engine', opts: {} },
+                  { key: 'visual-storytelling-with-genai', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' } },
+                  { key: 'determinants-of-health', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' } },
+                  { key: 'hgraph', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' } },
+                  { key: 'inspired-ehrs', opts: { className: 'spotlight--span-2' } },
+                  { key: 'prior-auth', opts: { className: 'spotlight--span-2' } },
+                  { key: 'precision-autism', opts: { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' } },
+                  { key: 'mass-snap', opts: { className: 'spotlight--span-4' } },
+                ]
+
+                // If a category filter is selected, show items from the entire work pool
+                if (normalizedCategory) {
+                  const filteredProjects = (this.state.allProjects || []).filter(matchesCategory)
+                  const firstPage = filteredProjects.slice(0, 12)
+                  const arranged = layoutWithGreedy(firstPage)
+                  return (
+                    <div className="spotlights-grid spotlights-grid--four">
+                      {arranged.map(({ item, className }, idx) => {
+                        const vid = getVideoOptsForItem(item)
+                        return renderCard(item, { className, ...vid })
+                      })}
+                    </div>
+                  )
+                }
+                // Otherwise, show curated spotlights
+                const filtered = defs.filter(d => matchesCategory(findItem(d.key)))
                 return (
                   <div className="spotlights-grid spotlights-grid--four">
-                    {/* Row A */}
-                    {renderCard(findItem('ipsos-facto'), { className: 'spotlight--span-2' })}
-                    {renderCard(findItem('eligibility-engine'))}
-                    {renderCard(findItem('visual-storytelling-with-genai'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' })}
-                    {/* Row B */}
-                    {renderCard(findItem('determinants-of-health'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' })}
-                    {renderCard(findItem('hgraph'), { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' })}
-                    {renderCard(findItem('inspired-ehrs'), { className: 'spotlight--span-2' })}
-                    {/* Row C */}
-                    {renderCard(findItem('prior-auth'), { className: 'spotlight--span-2' })}
-                    {renderCard(findItem('precision-autism'), { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' })}
-                    {/* Row D */}
-                    {renderCard(findItem('mass-snap'), { className: 'spotlight--span-4' })}
+                    {filtered.map(d => renderCard(findItem(d.key), d.opts))}
                   </div>
                 )
               })()}
@@ -373,14 +606,12 @@ class IndexPage extends Component {
               <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
                 {TEAM.slice(0, 5).map(member => (
                   <div key={`top-${member.name}`} className="team-marquee__tile">
-                    <Link to="/about">
-                      <Image
-                        src={member.image}
-                        alt=""
-                        aria-hidden="true"
-                        className="team-marquee__img"
-                      />
-                    </Link>
+                    <Image
+                      src={member.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="team-marquee__img"
+                    />
                   </div>
                 ))}
               </Marquee>
@@ -407,14 +638,12 @@ class IndexPage extends Component {
               <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
                 {TEAM.slice(5, 10).map(member => (
                   <div key={`bottom-${member.name}`} className="team-marquee__tile">
-                    <Link to="/about">
-                      <Image
-                        src={member.image}
-                        alt=""
-                        aria-hidden="true"
-                        className="team-marquee__img"
-                      />
-                    </Link>
+                    <Image
+                      src={member.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="team-marquee__img"
+                    />
                   </div>
                 ))}
               </Marquee>

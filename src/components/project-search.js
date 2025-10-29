@@ -63,7 +63,7 @@ const STORAGE_KEYS = {
 // State expires after 1 hour
 const STATE_EXPIRY = 60 * 60 * 1000
 
-const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, selectedPersonaOverride = undefined, hideInput = false, selectionMode = 'client' }) => {
+const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, selectedPersonaOverride = undefined, hideInput = false, selectionMode = 'client', categoryFilter = null }) => {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState([])
@@ -88,6 +88,44 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   const [expandedDescriptions, setExpandedDescriptions] = useState(new Set())
   const [usedFallback, setUsedFallback] = useState(false)
   const [fallbackReason, setFallbackReason] = useState(null)
+  const normalizedCategory = (categoryFilter || '').toString().trim().toLowerCase()
+
+  const matchesCategory = useCallback((project) => {
+    if (!normalizedCategory) return true
+    const cats = (project && project.categories) || []
+    const inCategories = cats.some(c => String(c || '').toLowerCase() === normalizedCategory)
+    // also check keywords as a loose signal
+    const kws = (project && project.keywords) || []
+    const inKeywords = kws.some(k => String(k || '').toLowerCase() === normalizedCategory)
+
+    // Heuristic matching on title/caption/client text
+    const haystack = [project?.title, project?.caption, project?.client, ...(cats || []), ...(kws || [])]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase()
+
+    const has = (arr) => arr.some(token => haystack.includes(token))
+
+    let inferred = false
+    switch (normalizedCategory) {
+      case 'ai':
+        inferred = has([' ai ', 'artificial intelligence', 'machine learning', 'ml ', ' llm', 'gpt', 'neural', 'algorithm']) || haystack.startsWith('ai')
+        break
+      case 'healthcare':
+        inferred = has(['health', 'healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'oncology'])
+        break
+      case 'government':
+        inferred = has(['government', 'public sector', 'civic', 'municipal', 'federal', 'state', 'massachusetts department', 'snap'])
+        break
+      case 'enterprise':
+        inferred = has(['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'])
+        break
+      default:
+        inferred = false
+    }
+
+    return inCategories || inKeywords || inferred
+  }, [normalizedCategory])
   
   // Example search queries to rotate through
   const placeholderExamples = [
@@ -391,10 +429,27 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     } catch (_) {}
   }
 
-  // Execute search pipeline when query changes
+  // Execute search pipeline when query or filters change
   useEffect(() => {
-    // Don't search if query is too short
-    if (query.trim().length < 2) {
+    const qlen = query.trim().length
+    const allProjects = (searchIndex && searchIndex.length > 0) ? searchIndex : projects
+
+    // If a category filter is set and no meaningful query, just filter locally without AI/services
+    if (normalizedCategory && qlen < 2) {
+      const filtered = (allProjects || []).filter(matchesCategory)
+      setResults(filtered)
+      setIsSearching(false)
+      setError(null)
+      setSuggestions([])
+      setSearchAnalysis(null)
+      setAiSearchInsight(null)
+      setSearchTriggered(false)
+      try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(filtered) && filtered.length > 0 } })) } catch(_) {}
+      return
+    }
+
+    // Don't search if query is too short (and no category filter-only mode)
+    if (qlen < 2) {
       setResults([])
       setIsSearching(false)
       setError(null)
@@ -449,9 +504,17 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         let usedFb = !!fallbackUsed
         let fbReason = fallbackReason || null
 
+        // Apply category filter if provided
+        if (normalizedCategory) {
+          outResults = (outResults || []).filter(matchesCategory)
+        }
+
         // If we somehow have no results, try a simple local keyword fallback
         if ((!outResults || outResults.length === 0) && Array.isArray(allProjects) && allProjects.length > 0) {
           outResults = quickKeywordFallback(query, allProjects)
+          if (normalizedCategory) {
+            outResults = outResults.filter(matchesCategory)
+          }
           if (outResults && outResults.length > 0) {
             usedFb = true
             fbReason = fbReason || 'no-results'
@@ -491,7 +554,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     }, 200)
     
     return () => clearTimeout(timeoutId)
-  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled, effectiveSelectedPersona])
+  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled, effectiveSelectedPersona, normalizedCategory, matchesCategory])
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)
@@ -725,7 +788,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
               const remainingCount = remainingResults.length;
 
               // If we used fallback search, still show the header even without AI descriptions
-              const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback
+              const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback || !!normalizedCategory
               const headerTitle = usedFallback ? 'Here are your results' : 'All Results'
 
               return (

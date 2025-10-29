@@ -1,25 +1,154 @@
+// Homepage styles (uses .homepage class from Layout component)
+.homepage,
 .landing-page {
-  // Make the hero occupy full viewport height and pin the orange bar to bottom
-  .hero.hero--large {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto; // media takes available space, content bar at bottom
+  // Wrapper that holds hero + expertise section as a single 100vh unit
+  .intro-stack {
+    position: relative;
+    height: 100vh !important; // Exactly viewport height - force with !important
+    min-height: 100vh !important; // Fallback for older browsers
+    max-height: 100vh !important; // Prevent any expansion beyond viewport
+    overflow: hidden !important; // clip content - must hide anything that overflows
+    display: block; // Ensure it's a block container
+    
+    // Ensure desktop also respects viewport height
+    @include mq($from: large) {
+      height: 100vh !important;
+      max-height: 100vh !important;
+      overflow: hidden !important;
+    }
   }
 
-  .hero__image-container,
-  .hero__video-container {
-    grid-row: 1;
+  // Hero fills entire intro-stack with background image
+  .intro-stack .hero.hero--large {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important; // Fill entire 100vh
+    display: block !important; // no grid needed
+    
+    // Ensure desktop also gets full height
+    @include mq($from: large) {
+      height: 100% !important;
+      position: absolute !important;
+    }
   }
 
-  .hero__image {
+  .intro-stack .hero__image-container,
+  .intro-stack .hero__video-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important; // Fill entire container
+    min-height: unset !important; // Override min-height: 250px from _hero.scss
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+  
+  // Nuclear override for desktop - must override the 932px from _hero.scss line 90
+  // Using multiple selectors and extreme specificity
+  .intro-stack .hero.hero--large .hero__image-container,
+  .intro-stack .hero.hero--large .hero__video-container {
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  
+  // Additional desktop-specific overrides (must come after to ensure specificity)
+  // This specifically targets the nested media query rules in _hero.scss
+  @include mq($from: large) {
+    .intro-stack .hero.hero--large .hero__image-container,
+    .intro-stack .hero.hero--large .hero__video-container,
+    .intro-stack .hero__image-container,
+    .intro-stack .hero__video-container {
+      height: 100% !important; // Override height: 450px and height: 932px from _hero.scss
+      min-height: 0 !important;
+      max-height: none !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+    }
+  }
+  
+  .intro-stack .hero__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 
-  .hero__content {
-    grid-row: 2;
-    padding-bottom: 0; // rely on section padding
+  // The BackgroundImage component renders as: <div class="background-image hero__image">
+  .intro-stack .background-image.hero__image {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    
+    // Force background to truly cover the entire area
+    background-size: cover !important;
+    // Keep background-position as set by component (top center)
+  }
+
+  // Position hero content (white text box) over the hero image
+  .intro-stack .hero__content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 4; // Above the orange section to prevent overlap
+    pointer-events: none; // allow clicks through to image/link behind
+    
+    // Use dynamic positioning based on actual orange section height
+    // Falls back to viewport units if JavaScript hasn't run yet
+    bottom: var(--hero-title-bottom, 52vh);
+    
+    @include mq($from: large) {
+      bottom: var(--hero-title-bottom, 42vh);
+    }
+    
+    .hero__title {
+      pointer-events: auto; // re-enable clicks on the actual content
+      // Use dynamic horizontal offset to align with orange section's text
+      // Falls back to existing .content-padding if JavaScript hasn't run yet
+      @include mq($from: large) {
+        margin-left: var(--hero-title-left, 0);
+      }
+    }
+  }
+
+  // Position expertise section (orange bar) absolutely at bottom of viewport
+  .intro-stack .expertise-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3; // above hero content
+    // Constrain height so it doesn't exceed viewport or cause overflow
+    max-height: 50vh; // Allow up to half viewport for expertise section
+    overflow-y: auto; // Add scroll if content is too tall
+    
+    @include mq($from: large) {
+      max-height: 40vh; // Smaller on desktop since content is more compact
+    }
+  }
+  
+  // Ensure content after intro-stack (like Spotlights) doesn't overlap
+  // by starting below the intro-stack
+  .intro-stack + * {
+    position: relative; // Ensure it's in normal flow
+    z-index: 1; // Below the orange section
+    margin-top: 0; // No negative margins that could cause overlap
   }
   .textAlign {
     text-align: center;
@@ -27,7 +156,7 @@
 
   .hero__title {
     width: 100%;
-    max-width: 550px;
+    max-width: 450px;
   }
 
   .LayoutCenter {
@@ -172,7 +301,7 @@
     // Block spacing for each item (both mobile and desktop)
     .pure-g > .pure-u-1 { margin-bottom: $spacing * 2; }
     .pure-g > .pure-u-1 p { margin: 0 0 $spacing 0; }
-    .pure-g > .pure-u-1 a { display: inline-block; margin-top: calc($spacing / 2); }
+    .pure-g > .pure-u-1 a { display: inline-block; margin-top: $spacing / 2; }
 
     @include mq($from: large) {
       .pure-u-lg-1-3 { margin-right: $spacing * 2; }
@@ -238,12 +367,44 @@
     flex: 1 1 300px;
   }
 }
+.about-ai {
+  .about-ai__options-box {
+    border-radius: 8px;
+    display: flex;
+    align-items: center; // vertical alignment with text block
+    height: 100%;
+  }
+
+  .about-ai__options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+
+    li {
+      color: $color-gray;
+      font-size: 0.95rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $color-teal;
+    }
+  }
+}
 
 // New homepage sections
 .expertise-section {
   background-color: $color-primary;
   color: $color-white;
-  padding-top: calc($spacing * 3);
+  padding-top: calc($spacing * 3); // Increased from 3x to 4x spacing
   padding-bottom: calc($spacing * 3);
 
   .header--xl {
@@ -314,14 +475,40 @@
       font-size: 1.125rem;
     }
   }
+
+  .expertise-disclaimer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; // More space on mobile
+    
+    @include mq($from: large) {
+      margin-top: 8px; // Less space on desktop
+    }
+
+    &__tip {
+      color: $color-white;
+      opacity: 0.95;
+      font-size: 1rem;
+    }
+
+    &__experimental {
+      color: $color-white;
+      opacity: 0.6;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+  }
 }
 
 .spotlights-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-
   margin-top: 24px;
+
+  // Debug: Add border to see grid container
+  // border: 2px solid red;
 
   @include mq($from: large) {
     grid-template-columns: repeat(4, 1fr);
@@ -332,6 +519,37 @@
     grid-template-columns: 1fr;
   }
 
+  &--four {
+    // Force 4-column layout on desktop
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr) !important;
+      grid-auto-flow: dense;
+    }
+    
+    // Fallback for the mq mixin
+    @include mq($from: large) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: dense;
+    }
+  }
+}
+
+// More specific selector to ensure 4-column layout
+.spotlights-grid.spotlights-grid--four {
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-auto-flow: dense;
+  }
+}
+
+// 2-column layout for AI search results (better text balance)
+.spotlights-grid.spotlights-grid--two {
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.spotlights-grid {
   .image-block__text {
     padding-left: $spacing;
     padding-right: $spacing;
@@ -343,26 +561,43 @@
     }
     p.text--gray {
       font-family: $font-family--sans-serif;
+      
+      // Bold emphasis in AI-generated descriptions
+      strong {
+        font-weight: 600;
+        color: #333;
+      }
       font-size: 14px;
       color: $color-gray;
     }
   }
 }
 
-// Force AI search result grids to 2 columns on desktop
+// Match AI search result grids to spotlight 4-column layout  
 .ai-enhanced-grid,
 .ai-results-grid {
+  display: grid;
+  gap: 24px;
+  
   @include mq($from: large) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
   }
 }
 
 // 4-column control with spans
 
+// .spotlight--span-1 - Quarter width items don't need special CSS, they take up 1 column by default
 
 .spotlight--span-2 {
   @include mq($from: large) {
     grid-column: span 2;
+  }
+}
+
+.spotlight--span-3 {
+  @include mq($from: large) {
+    grid-column: span 3;
   }
 }
 
@@ -428,15 +663,15 @@
   to { transform: rotate(360deg); }
 }
 
-// Team photo strips
+// Team strips
 .team-marquee {
-  height: 300px;
+  height: 512px;
   overflow: hidden;
 }
 
 .team-marquee__img {
-  width: 300px;
-  height: 300px;
+  width: 512px;
+  height: 512px;
   object-fit: cover;
   filter: grayscale(100%);
   margin-right: 0;
@@ -444,8 +679,8 @@
 
 .team-marquee__tile {
   display: inline-block;
-  width: 300px;
-  height: 300px;
+  width: 512px;
+  height: 512px;
   margin-right: 8px;
 }
 

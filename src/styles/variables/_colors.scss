@@ -1,6 +1,8 @@
 $color-white: #fff;
 $color-black: #1d1b1a;
 $color-gray: #787473;
+$color-gray--dark: darken($color-gray, 10%);
+$color-gray--darkest: $color-black;
 $color-gray--medium: #d0cfce;
 $color-gray--light: #f6f6f6;
 $color-blue: #4a5e88;

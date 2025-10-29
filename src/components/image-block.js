@@ -84,7 +84,11 @@ class ImageBlock extends Component {
               {date ? <span>{date}</span> : null}
             </p> */
           ) : null}
-          <p className="text--gray">{caption}</p>
+          {caption && caption.includes('<') ? (
+            <p className="text--gray" dangerouslySetInnerHTML={{ __html: caption }} />
+          ) : (
+            <p className="text--gray">{caption}</p>
+          )}
           {this.props.children ? (
             <div className="margin-top">{this.props.children}</div>
           ) : null}

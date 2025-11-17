@@ -1,5 +1,22 @@
 [
   {
+    "id": "doodle-to-demo",
+    "title": "Doodle to Demo",
+    "date": "Nov.2025",
+    "client": "Feature",
+    "categories": [
+      "open-source",
+      "government",
+      "healthcare",
+      "AI"
+    ],
+    "caption": "Using generative AI as our storytelling partner",
+    "image": "/videos/features/doodle-to-demo/Video_R4-C.mp4",
+    "video": "/videos/features/doodle-to-demo/Video_R4-C.mp4",
+    "link": "https://doodletodemo.com/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "visual-storytelling-with-genai",
     "title": "Reimagining Visual Storytelling with GenAI",
     "date": "Jul.2025",

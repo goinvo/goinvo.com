@@ -24,7 +24,7 @@ import features from '../../data/features.json'
 import config from '../../../config'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'visual-storytelling-with-genai'
+  feature => feature.id === 'doodle-to-demo'
 )
 
 const frontmatter = {
@@ -103,7 +103,7 @@ const VisionPage = () => {
   const [currentChunk, setCurrentChunk] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [hasMoreFeatures, setHasMoreFeatures] = useState(true)
-  
+
   // Ref for intersection observer
   const loadMoreRef = useRef(null)
 
@@ -119,26 +119,26 @@ const VisionPage = () => {
     if (isLoading || !hasMoreFeatures) return
 
     setIsLoading(true)
-    
+
     // Simulate network delay for better UX (remove in production if not needed)
     await new Promise(resolve => setTimeout(resolve, 300))
 
     const nextChunk = currentChunk + 1
     const startIndex = INITIAL_CHUNK_SIZE + (nextChunk - 1) * CHUNK_SIZE
     const endIndex = startIndex + CHUNK_SIZE
-    
+
     const newFeatures = allFeatures.slice(startIndex, endIndex)
-    
+
     if (newFeatures.length > 0) {
       setVisibleFeatures(prev => [...prev, ...newFeatures])
       setCurrentChunk(nextChunk)
-      
+
       // Check if there are more features to load
       setHasMoreFeatures(endIndex < allFeatures.length)
     } else {
       setHasMoreFeatures(false)
     }
-    
+
     setIsLoading(false)
   }, [currentChunk, isLoading, hasMoreFeatures, allFeatures])
 
@@ -227,6 +227,7 @@ const VisionPage = () => {
               <ImageBlock
                 title={spotlightFeature.title}
                 image={spotlightFeature.image}
+                video={spotlightFeature.video}
                 client="Feature"
                 date={spotlightFeature.date}
                 caption={spotlightFeature.caption}
@@ -282,7 +283,7 @@ const VisionPage = () => {
                 </Card>
               )
             })}
-            
+
             {/* Loading skeletons */}
             {isLoading && (
               <>
@@ -294,15 +295,15 @@ const VisionPage = () => {
               </>
             )}
           </Columns>
-          
+
           {/* Load more trigger element */}
           {hasMoreFeatures && (
-            <div 
+            <div
               ref={loadMoreRef}
               className="load-more-trigger text--center pad-vertical--double"
             >
               {!isLoading && (
-                <button 
+                <button
                   onClick={loadMoreFeatures}
                   className="button button--secondary"
                   disabled={isLoading}
@@ -312,7 +313,7 @@ const VisionPage = () => {
               )}
             </div>
           )}
-          
+
           {/* End of content indicator */}
           {!hasMoreFeatures && visibleFeatures.length > INITIAL_CHUNK_SIZE && (
             <div className="text--center pad-vertical--double text--gray">

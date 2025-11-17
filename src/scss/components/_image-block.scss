@@ -1,0 +1,21 @@
+.image-block {
+  &__image-container {
+    position: relative;
+    overflow: hidden;
+
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      // Ensure video covers the container like background-image would
+      &::-webkit-media-controls {
+        display: none !important;
+      }
+
+      &::-webkit-media-controls-enclosure {
+        display: none !important;
+      }
+    }
+  }
+}

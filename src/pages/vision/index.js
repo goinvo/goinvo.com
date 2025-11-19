@@ -5,6 +5,7 @@ import Card from '../../components/card'
 import ImageBlock from '../../components/image-block'
 import Columns from '../../components/columns'
 import Image from '../../components/image'
+import Video from '../../components/video'
 import Quote from '../../components/quote'
 import SubscribeForm from '../../components/form-subscribe'
 import Carousel from '../../components/carousel'
@@ -217,30 +218,27 @@ const VisionPage = () => {
         <h3 className="header--md pad-vertical--double">Spotlight</h3>
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
-            <Card
-              link={spotlightFeature.link}
-              fillHeight
-              // NOTE: `externalLink` is optional based on where the spotlight feature is located
-              // externalLink
-              suppressNewTab={true}
-            >
-              <ImageBlock
-                title={spotlightFeature.title}
-                image={spotlightFeature.image}
-                video={spotlightFeature.video}
-                client="Feature"
-                date={spotlightFeature.date}
-                caption={spotlightFeature.caption}
-                sizes={config.sizes.fullToTwoThirdsAtLargeInsideMaxWidth}
-                hoverable
-              />
-            </Card>
-          </div>
+              <Card
+                link={spotlightFeature.link}
+                fillHeight
+                externalLink={spotlightFeature.externalLink}
+              >
+                <ImageBlock
+                  title={spotlightFeature.title}
+                  image={spotlightFeature.image}
+                  video={spotlightFeature.video}
+                  client="Feature"
+                  date={spotlightFeature.date}
+                  caption={spotlightFeature.caption}
+                  sizes={config.sizes.fullToTwoThirdsAtLargeInsideMaxWidth}
+                  hoverable
+                />
+              </Card>
+            </div>
           <div className="pure-u-1 pure-u-lg-1-3 margin-bottom">
             <Card
               link="/vision/health-visualizations"
               fillHeight
-              suppressNewTab={true}
             >
               <ImageBlock
                 title="Health Visualizations"
@@ -267,8 +265,7 @@ const VisionPage = () => {
                 <Card
                   link={feature.link}
                   key={feature.id}
-                  externalLink
-                  suppressNewTab={true}
+                  externalLink={feature.externalLink}
                 >
                   <ImageBlock
                     title={feature.title}

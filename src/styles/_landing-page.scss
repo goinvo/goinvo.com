@@ -1,4 +1,10 @@
 .landing-page {
+  .hero {
+      &__image-container {
+        height: 535px;
+        overflow: hidden;
+      }
+  }
 
   .LayoutCenter {
     @media screen and (min-width: 690px) {

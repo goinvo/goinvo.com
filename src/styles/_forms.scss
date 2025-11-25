@@ -24,15 +24,18 @@
   }
 }
 
-.card.form-card {
+.form-card {
   background: $color-white;
 }
+
 .form-header {
-    padding-top: 1px;
-    z-index: 3;
+  padding-top: 1px;
+  z-index: 3;
+
   &.hiring-form-header {
     margin-left: 38px;
   }
+
   &.contact-form-header {
     margin-left: 23px;
   }
@@ -44,11 +47,13 @@
     font-weight: 600;
     margin-bottom: 6px;
   }
+
   .form-control {
     border-radius: 6px;
     border: 1px solid $color-gray--light;
     background: #fff;
     transition: border-color .15s ease, box-shadow .15s ease;
+
     &:focus {
       outline: none;
       border-color: $color-primary;

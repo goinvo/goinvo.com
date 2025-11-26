@@ -23,8 +23,6 @@
 @import 'images';
 @import 'case-study';
 @import 'utilities';
-@import 'landing-page';
-@import 'ai-landing-page';
 
 @import 'components/header';
 @import 'components/footer';
@@ -47,6 +45,9 @@
 @import 'components/project-search';
 
 @import 'components/vision/primary-self-care-algorithms/psca-table';
+
+@import 'landing-page';
+@import 'ai-landing-page';
 
 @import 'vision/own-your-health-data';
 @import 'vision/determinants-of-health';

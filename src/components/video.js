@@ -10,12 +10,13 @@ class Video extends Component {
       <video
         height={this.props.height}
         width={this.props.width}
-        className={`video ${this.props.className || null}`}
+        className={`video ${this.props.className || ''}`}
         poster={mediaUrl(this.props.poster)}
         autoPlay
         muted
         playsInline
         loop={this.props.loop || false}
+        style={this.props.style || {}}
       >
         {this.props.sources.map(src => (
           <source
@@ -24,7 +25,7 @@ class Video extends Component {
             type={`video/${src.format}`}
           />
         ))}
-        <Image src={this.props.fallback} alt="" />
+        {this.props.fallback && <Image src={this.props.fallback} alt="" />}
       </video>
     )
   }

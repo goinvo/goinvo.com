@@ -5,6 +5,7 @@ import Card from '../../components/card'
 import ImageBlock from '../../components/image-block'
 import Columns from '../../components/columns'
 import Image from '../../components/image'
+import Video from '../../components/video'
 import Quote from '../../components/quote'
 import SubscribeForm from '../../components/form-subscribe'
 import Carousel from '../../components/carousel'
@@ -24,7 +25,7 @@ import features from '../../data/features.json'
 import config from '../../../config'
 
 const spotlightFeature = features.find(
-  feature => feature.id === 'visual-storytelling-with-genai'
+  feature => feature.id === 'doodle-to-demo'
 )
 
 const frontmatter = {
@@ -103,7 +104,7 @@ const VisionPage = () => {
   const [currentChunk, setCurrentChunk] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [hasMoreFeatures, setHasMoreFeatures] = useState(true)
-  
+
   // Ref for intersection observer
   const loadMoreRef = useRef(null)
 
@@ -119,26 +120,26 @@ const VisionPage = () => {
     if (isLoading || !hasMoreFeatures) return
 
     setIsLoading(true)
-    
+
     // Simulate network delay for better UX (remove in production if not needed)
     await new Promise(resolve => setTimeout(resolve, 300))
 
     const nextChunk = currentChunk + 1
     const startIndex = INITIAL_CHUNK_SIZE + (nextChunk - 1) * CHUNK_SIZE
     const endIndex = startIndex + CHUNK_SIZE
-    
+
     const newFeatures = allFeatures.slice(startIndex, endIndex)
-    
+
     if (newFeatures.length > 0) {
       setVisibleFeatures(prev => [...prev, ...newFeatures])
       setCurrentChunk(nextChunk)
-      
+
       // Check if there are more features to load
       setHasMoreFeatures(endIndex < allFeatures.length)
     } else {
       setHasMoreFeatures(false)
     }
-    
+
     setIsLoading(false)
   }, [currentChunk, isLoading, hasMoreFeatures, allFeatures])
 
@@ -217,29 +218,27 @@ const VisionPage = () => {
         <h3 className="header--md pad-vertical--double">Spotlight</h3>
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
-            <Card
-              link={spotlightFeature.link}
-              fillHeight
-              // NOTE: `externalLink` is optional based on where the spotlight feature is located
-              // externalLink
-              suppressNewTab={true}
-            >
-              <ImageBlock
-                title={spotlightFeature.title}
-                image={spotlightFeature.image}
-                client="Feature"
-                date={spotlightFeature.date}
-                caption={spotlightFeature.caption}
-                sizes={config.sizes.fullToTwoThirdsAtLargeInsideMaxWidth}
-                hoverable
-              />
-            </Card>
-          </div>
+              <Card
+                link={spotlightFeature.link}
+                fillHeight
+                externalLink={spotlightFeature.externalLink}
+              >
+                <ImageBlock
+                  title={spotlightFeature.title}
+                  image={spotlightFeature.image}
+                  video={spotlightFeature.video}
+                  client="Feature"
+                  date={spotlightFeature.date}
+                  caption={spotlightFeature.caption}
+                  sizes={config.sizes.fullToTwoThirdsAtLargeInsideMaxWidth}
+                  hoverable
+                />
+              </Card>
+            </div>
           <div className="pure-u-1 pure-u-lg-1-3 margin-bottom">
             <Card
               link="/vision/health-visualizations"
               fillHeight
-              suppressNewTab={true}
             >
               <ImageBlock
                 title="Health Visualizations"
@@ -266,8 +265,7 @@ const VisionPage = () => {
                 <Card
                   link={feature.link}
                   key={feature.id}
-                  externalLink
-                  suppressNewTab={true}
+                  externalLink={feature.externalLink}
                 >
                   <ImageBlock
                     title={feature.title}
@@ -282,7 +280,7 @@ const VisionPage = () => {
                 </Card>
               )
             })}
-            
+
             {/* Loading skeletons */}
             {isLoading && (
               <>
@@ -294,15 +292,15 @@ const VisionPage = () => {
               </>
             )}
           </Columns>
-          
+
           {/* Load more trigger element */}
           {hasMoreFeatures && (
-            <div 
+            <div
               ref={loadMoreRef}
               className="load-more-trigger text--center pad-vertical--double"
             >
               {!isLoading && (
-                <button 
+                <button
                   onClick={loadMoreFeatures}
                   className="button button--secondary"
                   disabled={isLoading}
@@ -312,7 +310,7 @@ const VisionPage = () => {
               )}
             </div>
           )}
-          
+
           {/* End of content indicator */}
           {!hasMoreFeatures && visibleFeatures.length > INITIAL_CHUNK_SIZE && (
             <div className="text--center pad-vertical--double text--gray">

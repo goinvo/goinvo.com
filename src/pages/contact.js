@@ -16,7 +16,7 @@ const frontmatter = {
 const ContactPage = () => (
   <Layout frontmatter={frontmatter}>
     <Hero image={frontmatter.heroImage} />
-    <div className="background--blue pad-vertical--double">
+    <div className="contact-page background--blue pad-vertical--double">
       <div
         className="max-width max-width--sm content-padding"
         style={{ marginTop: '-7rem' }}

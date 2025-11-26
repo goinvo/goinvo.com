@@ -103,7 +103,7 @@ const VisionPage = () => {
   const [currentChunk, setCurrentChunk] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [hasMoreFeatures, setHasMoreFeatures] = useState(true)
-  
+
   // Ref for intersection observer
   const loadMoreRef = useRef(null)
 
@@ -119,26 +119,26 @@ const VisionPage = () => {
     if (isLoading || !hasMoreFeatures) return
 
     setIsLoading(true)
-    
+
     // Simulate network delay for better UX (remove in production if not needed)
     await new Promise(resolve => setTimeout(resolve, 300))
 
     const nextChunk = currentChunk + 1
     const startIndex = INITIAL_CHUNK_SIZE + (nextChunk - 1) * CHUNK_SIZE
     const endIndex = startIndex + CHUNK_SIZE
-    
+
     const newFeatures = allFeatures.slice(startIndex, endIndex)
-    
+
     if (newFeatures.length > 0) {
       setVisibleFeatures(prev => [...prev, ...newFeatures])
       setCurrentChunk(nextChunk)
-      
+
       // Check if there are more features to load
       setHasMoreFeatures(endIndex < allFeatures.length)
     } else {
       setHasMoreFeatures(false)
     }
-    
+
     setIsLoading(false)
   }, [currentChunk, isLoading, hasMoreFeatures, allFeatures])
 
@@ -279,7 +279,7 @@ const VisionPage = () => {
                 </Card>
               )
             })}
-            
+
             {/* Loading skeletons */}
             {isLoading && (
               <>
@@ -291,15 +291,15 @@ const VisionPage = () => {
               </>
             )}
           </Columns>
-          
+
           {/* Load more trigger element */}
           {hasMoreFeatures && (
-            <div 
+            <div
               ref={loadMoreRef}
               className="load-more-trigger text--center pad-vertical--double"
             >
               {!isLoading && (
-                <button 
+                <button
                   onClick={loadMoreFeatures}
                   className="button button--secondary"
                   disabled={isLoading}
@@ -309,7 +309,7 @@ const VisionPage = () => {
               )}
             </div>
           )}
-          
+
           {/* End of content indicator */}
           {!hasMoreFeatures && visibleFeatures.length > INITIAL_CHUNK_SIZE && (
             <div className="text--center pad-vertical--double text--gray">
@@ -585,28 +585,23 @@ const VisionPage = () => {
           <SubscribeForm />
         </div>
       </div>
-      <GradientImageColumns
-        image="/images/vision/vision-collage.jpg"
-        backgroundColor="blue"
-      >
-        <div className="pad-vertical--double">
-          <h2 className="header--lg">
-            Designing the future of healthcare
-            <span className="text--primary text--serif">.</span>
-          </h2>
-          <p className="text--gray">
-            We're always looking for new ways to improve healthcare through
-            design. If you have an idea or want to collaborate, we'd love to
-            hear from you.
-          </p>
-          <Link
-            to="/contact/"
-            className="button button--secondary button--lg margin-top"
-          >
-            Get in touch
-          </Link>
-        </div>
-      </GradientImageColumns>
+      <div className="max-width max-width--sm content-padding pad-vertical--double">
+        <h2 className="header--lg">
+          Designing the future of healthcare
+          <span className="text--primary text--serif">.</span>
+        </h2>
+        <p className="text--gray ">
+          We're always looking for new ways to improve healthcare through
+          design. If you have an idea or want to collaborate, we'd love to
+          hear from you.
+        </p>
+        <Link
+          to="/contact/"
+          className="button button--secondary button--lg margin-top"
+        >
+          Get in touch
+        </Link>
+      </div>
     </Layout>
   )
 }

@@ -593,13 +593,13 @@ const VisionPage = () => {
         <p className="text--gray ">
           We're always looking for new ways to improve healthcare through
           design. If you have an idea or want to collaborate, we'd love to
-          hear from you.
+          hear from you!
         </p>
         <Link
           to="/contact/"
           className="button button--secondary button--lg margin-top"
         >
-          Get in touch
+          Get in Touch
         </Link>
       </div>
     </Layout>

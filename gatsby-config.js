@@ -6,7 +6,12 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        failOnError: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,6 +43,7 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/assets/images/`,
+        ignore: [`**/*.mp4`, `**/*.webm`, `**/*.ogg`, `**/*.mov`],
       },
     },
     {

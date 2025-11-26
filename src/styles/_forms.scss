@@ -24,7 +24,11 @@
   }
 }
 
-.form-card {
+.card.form-card {
+  background: transparent;
+}
+
+.contact-page .card.form-card {
   background: $color-white;
 }
 

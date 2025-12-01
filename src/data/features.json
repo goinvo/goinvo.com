@@ -1,5 +1,23 @@
 [
   {
+    "id": "doodle-to-demo",
+    "title": "Doodle to Demo",
+    "date": "Dec.2025",
+    "client": "Feature",
+    "categories": [
+      "open-source",
+      "government",
+      "healthcare",
+      "AI"
+    ],
+    "caption": "Using generative AI as our storytelling partner",
+    "image": "/videos/features/doodle-to-demo/Video_R4-C.mp4",
+    "video": "/videos/features/doodle-to-demo/Video_R4-C.mp4",
+    "link": "https://doodletodemo.com/",
+    "externalLink": true,
+    "hiddenWorkPage": true
+  },
+  {
     "id": "visual-storytelling-with-genai",
     "title": "Reimagining Visual Storytelling with GenAI",
     "date": "Jul.2025",
@@ -116,6 +134,7 @@
     ],
     "caption": "Healthcare principles and rights are essential in any healthcare system, as they provide a framework for guiding the delivery, quality, and ethical considerations of healthcare services.",
     "link": "https://www.healthcaremottos.com/",
+    "externalLink": true,
     "image": "/images/features/healthcare-mottos/hc-mottos-hero-02.jpg",
     "hiddenWorkPage": true
   },
@@ -203,6 +222,7 @@
     "caption": "This model is a representation of the system of services that can make up digital health software.",
     "image": "/images/features/digital-health-connections-model/digital-health-connections-model-hero.jpg",
     "link": "https://goinvo.github.io/DigitalHealthServiceComponents/",
+    "externalLink": true,
     "hiddenWorkPage": true
   },
   {
@@ -218,6 +238,7 @@
     "caption": "A map of the US healthcare system that describes the main actors and relationships between actors.",
     "image": "/images/features/us-healthcare-system-map/us-healthcare-system-map-hero.jpg",
     "link": "https://goinvo.github.io/healthcare-map/",
+    "externalLink": true,
     "hiddenWorkPage": true
   },
   {
@@ -233,6 +254,7 @@
     "caption": "What's on FHIR? — Are you a UX designer, developer, or product manager in digital healthcare and not quite sure what the heck FHIR is? Yeah, it can be tricky.",
     "image": "/images/features/whats-on-fhir/whats-on-fhir-hero.jpg",
     "link": "https://www.whatsonfhir.org/",
+    "externalLink": true,
     "hiddenWorkPage": true
   },
   {
@@ -526,7 +548,8 @@
     ],
     "caption": "Open source design guidelines for delivering digitized carrier testing results.",
     "image": "/images/features/carrier-testing/carrier-testing-featured.jpg",
-    "link": "http://www.genomicsdesign.com/",
+    "link": "https://goinvo.github.io/CarrierTestingDesignTenets/",
+    "externalLink": true,
     "hiddenWorkPage": true
   },
   {

@@ -86,6 +86,11 @@
     "prettier": "^3.1.1",
     "pretty-quick": "^3.1.3"
   },
+  "resolutions": {
+    "ansi-regex": "^5.0.1",
+    "strip-ansi": "^6.0.1",
+    "string-width": "^4.2.3"
+  },
   "engines": {
     "node": ">=18.18.*"
   }

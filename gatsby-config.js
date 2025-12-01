@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
-        failOnError: false,
+        failOn: 'none',
       },
     },
     {

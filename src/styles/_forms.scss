@@ -26,6 +26,10 @@
 
 .card.form-card {
   background: transparent;
+  border-radius: 2px;
+}
+.contact-page .card.form-card { 
+  background:$color-white;
 }
 .form-header {
     padding-top: 1px;

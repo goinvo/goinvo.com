@@ -12,7 +12,7 @@ const frontmatter = {
   metaDescription:
     '',
   heroImage:
-    '/images/features/virtual-primary-care/virtual-primary-care-hero-2.jpg',
+    '/images/features/human-centered-design-for-ai/human-centered-ai-hero.jpg',
 }
 
 class HumanCenteredAIFeature extends Component {

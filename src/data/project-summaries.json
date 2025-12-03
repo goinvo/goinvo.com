@@ -1,0 +1,817 @@
+{
+  "3m-coderyte": {
+    "keyMetrics": [
+      "200% increase in coding efficiency and productivity at Memorial Hermann Hospital",
+      "2 designers and 1 engineer for 15 months",
+      "8-week proof of concept",
+      "12-week working prototype project",
+      "2 months to an evolved prototype used by client and customer",
+      "Memorial Hermann: 12 hospitals",
+      "125-person CodeRyte Inc.",
+      "250 other major customers at launch",
+      "$146MM acquisition by 3M",
+      "$150M exit (caption)",
+      "$4B in revenues handled by the software",
+      "3-year partnership with 3M prior to acquisition",
+      "30 minutes to diagnose incident (no patients left to code)",
+      "Coders use the software 6 days a week, 9-to-5"
+    ],
+    "technologies": [
+      "Natural Language Processing (NLP)",
+      "NLP algorithm for evidence extraction in documents",
+      "Web-based software",
+      "HIPAA compliance",
+      "PHI security",
+      "Rapid prototyping with real-time user feedback",
+      "Design swarm method",
+      "Automation in hospital coding"
+    ],
+    "deliverables": [
+      "Proof of concept (8 weeks)",
+      "Working web-based prototype (12 weeks)",
+      "15+ interactive prototypes",
+      "Unified user experience for hospital coding",
+      "Coding panel UI (rewritten three times)",
+      "Document timeline interface",
+      "Comprehensive coding service with built-in automation",
+      "Sales demo tool"
+    ],
+    "problemStatement": "CodeRyte’s hospital coding product was perceived as a bolt-on tool; they needed to transform it into a complete end-to-end coding system to dominate the market while contending with legacy systems and compliance requirements.",
+    "solutionStatement": "GoInvo delivered an 8-week POC followed by a 12-week working web-based prototype, designing a unified UX with built-in automation powered by CodeRyte’s NLP and iterating rapidly with real user feedback from Memorial Hermann.",
+    "businessValue": "Achieved a 200% efficiency gain at Memorial Hermann and culminated in a $146MM acquisition by 3M.",
+    "targetUsers": "Hospital medical coders and coding teams responsible for tagging patient records for insurance reimbursement.",
+    "generatedAt": "2025-10-03T19:59:59.439Z",
+    "slug": "3m-coderyte"
+  },
+  "ahrq-cds": {
+    "keyMetrics": [
+      "Launched September 2017",
+      "2 designers for 5 months",
+      "Monthly workgroup meetings with 30 subject matter experts",
+      "Initial release: 1 publisher and 6 cardiovascular CDS tools",
+      "By Nov 2018: 7 publishers and more than 25 CDS tools"
+    ],
+    "technologies": [],
+    "deliverables": [
+      "CDS Connect national repository",
+      "Introductory onboarding pages with step-by-step visualizations",
+      "CDS Connect Dashboard UI",
+      "CDS Artifact UI",
+      "Cardiovascular Disease Prevention Artifacts UI",
+      "Artifact Creation and Usage UI",
+      "CDS Connect lifecycle/model visualization",
+      "Streamlined authorship experience",
+      "Human-readable clinical logic and evidence display"
+    ],
+    "problemStatement": "Clinicians lacked a common platform to share clinical decision support (CDS) tools, leading to inconsistent adherence to evidence-based standards and redundant tool development.",
+    "solutionStatement": "Designed CDS Connect, an AHRQ-funded national repository for providers, health IT vendors, and researchers to create, share, and explore CDS tools with transparent evidence and implementation-readiness information.",
+    "businessValue": "Delivered a national CDS repository that launched in Sept 2017 and grew from 1 publisher with 6 tools to 7 publishers and 25+ tools across multiple clinical domains by Nov 2018.",
+    "targetUsers": "Providers, health IT vendors, researchers, clinicians, and implementers in health organizations.",
+    "generatedAt": "2025-10-03T20:00:33.323Z",
+    "slug": "ahrq-cds"
+  },
+  "all-of-us": {
+    "keyMetrics": [
+      "90% of the U.S. patient population aren’t involved in research",
+      "Goal: enroll 1 million participants",
+      "Reach 700,000+ enrolled participants and growing",
+      "Impacting 750k (and growing) registered participants",
+      "2–4 designers over 3 years",
+      "Design leadership from 2020–2024",
+      "Program duration: 10+ years planned",
+      "More than 100 funded partner organizations",
+      "Launching a new activity can take several months to a year or more"
+    ],
+    "technologies": [
+      "HTML-based return of results",
+      "Electronic Health Records (EHR) data sharing",
+      "User interviews",
+      "Product validation (QA)",
+      "Prototyping",
+      "Design system and reusable UI components",
+      "Information architecture",
+      "Accessibility-focused design",
+      "Content and design guidelines",
+      "Requirements documentation and specifications",
+      "IRB approval process",
+      "Testing environment and debugging",
+      "Surveys and digital health connections"
+    ],
+    "deliverables": [
+      "Participant portal UX and designs (All of Us PTSC)",
+      "Design library with reusable UI components and style guides",
+      "Open illustration library and program-wide visual guidelines",
+      "HTML-based returns of results templates/process",
+      "Content and design guidelines for returns of results",
+      "Requirements lists and specifications",
+      "Prototypes and design patterns",
+      "Portal redesign with updated information architecture",
+      "Roadmap for new features and prioritization",
+      "Survey and form designs"
+    ],
+    "problemStatement": "Medical research participation lacks diversity, with 90% of U.S. patients not involved. The All of Us program needed participant-focused digital experiences to enroll and retain enough participants to reach its 1 million goal.",
+    "solutionStatement": "From 2020–2024, GoInvo led product design for the All of Us Participant Portal within PTSC under Vibrent Health, creating onboarding, consent, survey, and returns-of-results experiences and establishing program-wide design systems and guidelines.",
+    "businessValue": "Program-wide UX and design assets helped the program reach 700,000+ enrolled participants (impacting 750k registered participants) and create accessible pathways for more people to join.",
+    "targetUsers": "U.S. participants in the NIH All of Us Research Program—including those underrepresented in biomedical research—who use the portal to enroll, consent, contribute data, and view results.",
+    "generatedAt": "2025-10-03T20:01:49.599Z",
+    "slug": "all-of-us"
+  },
+  "care-cards": {
+    "keyMetrics": [
+      "An estimated 7,000 Care Cards decks in circulation",
+      "54 cards per deck",
+      "1 designer, part time, across 2 years"
+    ],
+    "technologies": [
+      "Open Source",
+      "Sketching",
+      "Digital illustrations",
+      "Papyrus (physical cards)"
+    ],
+    "deliverables": [
+      "54-card physical deck",
+      "Card illustrations",
+      "Written insights and tips on card backs"
+    ],
+    "problemStatement": "Improving and maintaining health is difficult; available advice is far-flung and temporal, and clinician guidance often fades after the visit.",
+    "solutionStatement": "A pocket-sized deck of 54 illustrated Care Cards delivers practical health axioms with concise tips to nudge everyday, sustainable habits.",
+    "businessValue": "Gained broad adoption with ~7,000 decks used in homes, clinics, and classes, featured by NPR and presented by leaders including Susannah Fox (CTO of HHS), Eric Topol, and Claudia Williams.",
+    "targetUsers": "Patients, clinicians, healthcare organizations, and everyday people using the cards in homes, clinics, and classes.",
+    "generatedAt": "2025-10-03T20:02:31.656Z",
+    "slug": "care-cards"
+  },
+  "commonhealth-smart-health-cards": {
+    "keyMetrics": [
+      "1.2 designers for 5 months",
+      "8-week exploration on verifiable vaccination/test records",
+      "Two to six week project bursts",
+      "User testing with 8–12 participants"
+    ],
+    "technologies": [
+      "Android",
+      "SMART Health Cards (SHC)",
+      "FHIR R4",
+      "Open source",
+      "GitHub",
+      "Google Wallet",
+      "Samsung Wallet",
+      "On-device data storage"
+    ],
+    "deliverables": [
+      "Designs and prototypes for informed patient data sharing",
+      "UI/UX design review of the CommonHealth app",
+      "Research and design concepts for presenting clinical notes and insurance data via FHIR R4",
+      "Groundwork designs for verifiable vaccination records and test results",
+      "SMART Health Cards UI workflow and key screens",
+      "SMART Health Cards sketches",
+      "System Map: SHC Delivery Ecosystem",
+      "Patient education content and FAQs for SMART Health Cards",
+      "Documentation and delivery handoff",
+      "SMART Health Cards walkthrough published on the CommonHealth website"
+    ],
+    "problemStatement": "The Commons Project needed an infusion of design across their product and services to explore and define the future of patient data access and use.",
+    "solutionStatement": "The team embedded via a flexible project model to deliver research, concepting, prototyping, user testing, iteration, and documentation across patient data sharing, app design review, FHIR R4 data presentation, and verifiable vaccination records, contributing feedback and designs to the SMART Health Cards initiative.",
+    "businessValue": "Positioned CommonHealth as the primary Android open source platform and reference implementation for accessing and storing digital vaccine records and adding them to Google or Samsung Wallet, contributing to SMART Health Cards’ global adoption.",
+    "targetUsers": "Patients using the CommonHealth Android app to gather, store, and share their health data and verifiable vaccination/test result records.",
+    "generatedAt": "2025-10-03T20:03:33.034Z",
+    "slug": "commonhealth-smart-health-cards"
+  },
+  "fastercures-health-data-basics": {
+    "keyMetrics": [
+      "12% of US adults are health literate",
+      "41% of individuals have accessed their medical record",
+      "30 patients in usability testing",
+      "29 of 30 patients correctly identified the five factors of health data",
+      "90% of patients engaged with an online quiz",
+      "Approximately 700 patients and caretakers surveyed",
+      "15 industry experts interviewed",
+      "Medical care composes 11% of health",
+      "30 concepts generated and prioritized",
+      "1 designer for 2.5 months",
+      "Year-long engagement with an advisory panel"
+    ],
+    "technologies": [
+      "Open source educational plug-ins",
+      "Gamification",
+      "Health Belief Model (HBM)",
+      "Behavior change frameworks",
+      "Interactive quizzes",
+      "Usability testing with patients",
+      "Surveys (~700 participants)",
+      "In-depth expert interviews",
+      "Web and mobile services"
+    ],
+    "deliverables": [
+      "Two open source educational plug-in prototypes",
+      "Open source designs and assets",
+      "Interactive quizzes within the prototypes",
+      "Health data definition grounded in determinants of health"
+    ],
+    "problemStatement": "Most patients lack the health literacy and access needed to understand and use their health data (only 12% health literate; 41% have accessed their medical record). FasterCures needed a way to educate and engage patients on what health data is and why it matters.",
+    "solutionStatement": "GoInvo created two open source educational plug-in prototypes for web and mobile, leveraging gamification and behavior change models (HBM) to teach the factors of health data. The prototypes use interactive quizzes and targeted messaging to improve comprehension and engagement.",
+    "businessValue": "The open source assets effectively educated patients (29/30 recalled key factors; 90% engaged with the quiz) and can be reused across services to scale health data education.",
+    "targetUsers": "Patients and caretakers using web or mobile health services to learn about and engage with their health data.",
+    "generatedAt": "2025-10-03T20:05:04.449Z",
+    "slug": "fastercures-health-data-basics"
+  },
+  "hgraph": {
+    "keyMetrics": [
+      "Healthcare data expected to grow 1.2–2.4 exabytes per year",
+      "About 1,000x the amount of data the human brain can store",
+      "US healthcare costs: $2.6 trillion (2011)",
+      "Healthcare expenses: 18.2% of GDP (2011)",
+      "$600 billion over expected benchmark (2011)",
+      "Potential cost reduction from early adoption of tools like hGraph: $160–220 billion",
+      "Savings from disease prevention/data adherence: $70–100 billion",
+      "Savings from coordinated care programs: $90–110 billion",
+      "37% of companies (>5,000 employees) offer on-site health clinics",
+      "15% plan to add on-site clinics within two years",
+      "62% cite enhanced worker productivity as top reason for onsite clinics",
+      "56% cite reduced medical costs as second reason",
+      "Estimated annual US deaths due to medical errors: 251,454 (2016)",
+      "hScore overall health score range: 1–100",
+      "Team/time: 1 designer for 9 months"
+    ],
+    "technologies": [],
+    "deliverables": [
+      "hGraph open-source health data visualization",
+      "hScore (1–100) overall health score metric",
+      "Open-source GitHub repository"
+    ],
+    "problemStatement": "Healthcare data is exploding (1.2–2.4 exabytes/year) and is big, disparate, and unstructured, making it difficult for patients and providers to identify useful information. Patients and healthcare providers need analytic tools that collect data and make sense of it.",
+    "solutionStatement": "hGraph aggregates and visualizes a patient's health data in a compact, color-coded shape that compares metrics to targeted ranges and highlights out-of-range values. It provides at-a-glance context, including an overall hScore (1–100), to help clinicians swiftly spot problem areas.",
+    "businessValue": "McKinsey estimates early adoption of tools like hGraph could reduce U.S. healthcare costs by $160–220 billion.",
+    "targetUsers": "Clinicians/medical professionals and patients; also used in corporate/onsite health clinics.",
+    "generatedAt": "2025-10-03T20:06:57.310Z",
+    "slug": "hgraph"
+  },
+  "infobionic-heart-monitoring": {
+    "keyMetrics": [
+      "$17M Series B financing",
+      "1 designer for 3 months"
+    ],
+    "technologies": [
+      "iPad application",
+      "Electrocardiograph (ECG) data processing and display",
+      "Real-time arrhythmia monitoring",
+      "Use of color in real-time charts",
+      "Timeline visualization of cardiac events, heart rate, and physical activity",
+      "Machine- and patient-detected arrhythmia indicators with metadata"
+    ],
+    "deliverables": [
+      "iPad application design",
+      "All patients monitoring view",
+      "Individual patient timeline view (events, heart rate, physical activity)",
+      "Real-time arrhythmia charts"
+    ],
+    "problemStatement": "InfoBionic built a patient‑worn device that reports arrhythmias in real time but needed a compelling way to demonstrate the product to doctors and investors.",
+    "solutionStatement": "GoInvo crafted an iPad application that visualizes real-time arrhythmia data so providers and investors could see how the product would be used in practice.",
+    "businessValue": "The design led to a patent on ECG data processing/display, received FDA approval and CE Mark for arrhythmia monitoring, and helped InfoBionic close $17M in Series B financing.",
+    "targetUsers": "Doctors and nurses who remotely monitor patients’ arrhythmias.",
+    "generatedAt": "2025-10-03T20:07:36.235Z",
+    "slug": "infobionic-heart-monitoring"
+  },
+  "insidetracker-nutrition-science": {
+    "keyMetrics": [
+      "1.25 designers for 2 months (in 2010 and 2020)",
+      "10 years live in use for bioassay results visualization",
+      "10x bigger company after 10 years",
+      "Blood draws occur yearly"
+    ],
+    "technologies": [],
+    "deliverables": [
+      "Return-of-information service for blood work and nutrition profile",
+      "Bioassay results visualization",
+      "Nutrition decision support service feeding suggestions from the InsideTracker science team to the patient food recommendation service",
+      "Information architecture for blood results",
+      "Software model for behavior and precision nutrition",
+      "Early mobile UX concepts for a nutrition agent/activity model"
+    ],
+    "problemStatement": "InsideTracker needed to clearly present patients’ bioassay information and resulting nutrition needs, and help them choose the right foods at the right time to improve health outcomes.",
+    "solutionStatement": "Designed an easy-to-read return-of-information experience that visualizes bioassay results and personalized food suggestions across first and subsequent blood draws. Delivered a nutrition decision support service that channels science team guidance into the patient food recommendation service.",
+    "businessValue": "Delivered a long-lived patient results visualization and the first nutrition decision support service, plus concepts that fed product and development teams’ next software iteration around goals and daily habits.",
+    "targetUsers": "InsideTracker patients seeking personalized nutrition guidance based on their blood work, DNA, habits, and lifestyle.",
+    "generatedAt": "2025-10-03T20:08:34.283Z",
+    "slug": "insidetracker-nutrition-science"
+  },
+  "inspired-ehrs": {
+    "keyMetrics": [
+      "1 designer and engineer over 18 months"
+    ],
+    "technologies": [
+      "HTML (web-based e-book)",
+      "iBooks Author",
+      "iBooks",
+      "Apache License 2.0",
+      "Workshops",
+      "Prototyping",
+      "Usability and HCI guidelines"
+    ],
+    "deliverables": [
+      "Open source web-based e-book (Inspired EHRs: Designing for Clinicians)",
+      "Lightweight design policy for electronic health records",
+      "Interactive prototypes and example EHR components embedded in chapters",
+      "Medication timeline and medication list designs",
+      "Code (publicly available; 'View the code')"
+    ],
+    "problemStatement": "Current EHRs have clumsy interfaces, poorly designed information, and cumbersome workflows that distance clinicians from quality care, contributing to clinician burnout and patient risk.",
+    "solutionStatement": "A team of physicians, nurses, health IT, and HCI experts co-authored and designed an open-source, HTML-based e-book with interactive prototypes to distribute evidence-based designs and techniques to EHR vendors.",
+    "businessValue": "Provided an open-source, accessible, lightweight design policy to jumpstart EHR design on a national level.",
+    "targetUsers": "Health IT and EHR vendors, along with designers and engineers building EHR systems.",
+    "generatedAt": "2025-10-03T20:09:12.685Z",
+    "slug": "inspired-ehrs"
+  },
+  "ipsos-facto": {
+    "keyMetrics": [
+      "90%+ adoption across Ipsos",
+      "75% of employees across 86 countries certified in Generative AI",
+      "700,000+ prompts per month",
+      "10M+ API calls",
+      "40+ years of market data analyzed",
+      "Insights delivered in hours instead of weeks",
+      "1.5 designers for 6 months",
+      "3 months to move from vendor to core contributor"
+    ],
+    "technologies": [
+      "Generative AI",
+      "AI agents",
+      "Guided workflows",
+      "Embedded prompts",
+      "Transparent AI logic",
+      "Citation metadata surfacing",
+      "Content curation tools",
+      "Meta-analysis templates",
+      "Transcript coding and translation tools",
+      "Permissions and data handling controls",
+      "Chat-based interface integrated with tools and templates"
+    ],
+    "deliverables": [
+      "Report wizard to convert insights into a client-ready deliverable",
+      "Clickable prototype",
+      "Guided workflows for research tasks",
+      "Templates for meta-analysis",
+      "Transcript coding and translation tools",
+      "Integrated chat with tool/template insertion",
+      "Client-facing AI agents",
+      "Ipsos Facto UX design for the research agent experience"
+    ],
+    "problemStatement": "The initial Ipsos Facto release was a basic generative-AI chatbot that lacked the UX and research-specific scaffolding needed for analytical work, with siloed chat/files/tools and no clear path from insight to action. These gaps led to low adoption and dissatisfaction with AI results.",
+    "solutionStatement": "GoInvo collaborated with Ipsos to rebuild Facto’s research agent experience with guided workflows, research-specific tools (content curation, meta-analysis, transcript coding), embedded prompts, and transparent AI logic, integrating chat with templates and tools. This enables analysis of 40+ years of proprietary data and delivery of cited, client-ready insights in hours instead of weeks.",
+    "businessValue": "Drove 90%+ adoption and 700,000+ prompts per month (10M+ API calls), moving Facto from internal experiment to client-ready product and increasing revenue potential.",
+    "targetUsers": "Ipsos market researchers, with client teams served via client-facing AI agents.",
+    "generatedAt": "2025-10-03T20:10:13.526Z",
+    "slug": "ipsos-facto"
+  },
+  "mass-snap": {
+    "keyMetrics": [
+      "50% increase in digital applications",
+      "1 in 10 MA households are food insecure",
+      "Nearly 800,000 residents receive SNAP monthly",
+      "$15–$352 per month for a family of two in SNAP benefits",
+      "$1 in new SNAP benefits generates $1.80 in total economic activity",
+      "Reduced questions from about 90 to 40 for a two-person household",
+      "77% of U.S. adults owned smartphones (Jan 10, 2018)",
+      "67% smartphone ownership among Americans earning under $30,000/year",
+      "2 designers for 12 weeks",
+      "2 engineers for 10 weeks",
+      "Deployed July 2018; online applications exceeded in-person for the first time at MA DTA"
+    ],
+    "technologies": [
+      "React",
+      "WCAG 2.0 AAA contrast compliance",
+      "Section 508 accessibility compliance",
+      "Mobile-first design",
+      "Multilingual support (application translation)",
+      "Screen reader optimization",
+      "Conditional logic to filter questions",
+      "Prototype-based stakeholder testing",
+      "Browser and accessibility testing outlines"
+    ],
+    "deliverables": [
+      "Redesigned online SNAP application (Massachusetts)",
+      "Reference UI implementation/sandbox in React",
+      "Front-end components used in production",
+      "Prototype for stakeholder feedback",
+      "Browser and accessibility testing outlines",
+      "Process diagram for SNAP applicants"
+    ],
+    "problemStatement": "The SNAP application process in Massachusetts was grueling and intimidating, with a two-person family facing about 90 questions just to get past the first step, hindering access to food assistance.",
+    "solutionStatement": "Redesigned the online application to be mobile-first, accessible (WCAG/508), multilingual, and streamlined, using conditional logic to remove irrelevant questions and reduce the burden from about 90 to 40 questions. Built a React reference implementation and front-end components used in production.",
+    "businessValue": "Drove a 50% increase in digital applications, and after the July 2018 launch, online applications surpassed in-person submissions at MA DTA for the first time.",
+    "targetUsers": "Massachusetts residents applying for SNAP benefits through the DTA’s online application.",
+    "generatedAt": "2025-10-03T20:10:56.618Z",
+    "slug": "mass-snap"
+  },
+  "maya-ehr": {
+    "keyMetrics": [
+      "2 designers/engineers for 6 months",
+      "20% projected employment growth in home healthcare over the next decade",
+      "Scheduling scale requirement: 50 nurses and 1,000 patient visits"
+    ],
+    "technologies": [
+      "Digital signatures",
+      "Mobile device support"
+    ],
+    "deliverables": [
+      "Working EHR service",
+      "Patient and employee scheduling",
+      "Billing module",
+      "Payroll module",
+      "Nursing notes",
+      "Consent with digital signatures",
+      "Patient profiles",
+      "Quality assurance tools",
+      "Scheduling interface mockup",
+      "Clinical note and assessment interface mockup"
+    ],
+    "problemStatement": "Home health agencies lack affordable EHRs tailored to field nursing and administrative needs; larger EHRs are expensive and don’t adequately support nurses in the field or at home.",
+    "solutionStatement": "Designed and shipped a clinically relevant, rules-compliant EHR that is straightforward to use on the go and in the office, with end-to-end workflows for intake, scheduling, care, and administration.",
+    "businessValue": "Delivered a deployed EHR with essential scheduling, documentation, and administrative capabilities that supports efficient patient management in home healthcare settings.",
+    "targetUsers": "Home health agency staff, including nurses/practitioners in the field and back-office/scheduling teams.",
+    "generatedAt": "2025-10-03T20:12:00.518Z",
+    "slug": "maya-ehr"
+  },
+  "mitre-flux-notes": {
+    "keyMetrics": [
+      "97% of cancer patients have fractured, uncoordinated, poor-quality data",
+      "2 designers for 10 months (ongoing)",
+      "Shadowed 4 oncologists at Dana Farber Cancer Institute",
+      "Conducted 3 subject matter expert interviews",
+      "Weekly feedback with 1–3 physicians, 2 key engineers, and a patient advocate",
+      "Patient encounter time: 15 minutes max",
+      "User testing planned for mid-2018 at Brigham and Women’s Hospital",
+      "Secured an additional year of funding for the SHR initiative",
+      "Voice interactions planned for 2019"
+    ],
+    "technologies": [
+      "Standard Health Record (SHR) oncology subset",
+      "Web application",
+      "Hashtag-based data capture in clinical notes",
+      "Narrative patient summary",
+      "Scrollable patient timeline visualization",
+      "Navigation ribbon/minimap",
+      "Note navigation",
+      "Voice interactions (planned)",
+      "Open source",
+      "GitHub"
+    ],
+    "deliverables": [
+      "Flux Notes web application",
+      "Prototype for interrogating the Standard Health Record (SHR)",
+      "Structured data capture interface (UI and hashtag input)",
+      "Personalized clinician views",
+      "Narrative patient summary",
+      "Patient timeline visualization",
+      "Navigation ribbon/minimap",
+      "Note navigation feature",
+      "Designs on GitHub",
+      "Conference presentations (HIMSS, Mass Bioinnovation)"
+    ],
+    "problemStatement": "Oncology providers rarely capture high-quality, standardized data, resulting in 97% of cancer patients having fractured, uncoordinated, poor-quality records that hinder care and research.",
+    "solutionStatement": "Designed Flux Notes, a web application built on the oncology subset of the Standard Health Record (SHR), to capture structured data at the point of care via hashtag-enhanced note authoring and a simplified, personalized interface.",
+    "businessValue": "Flux Notes helped secure an additional year of funding for the SHR initiative by demonstrating a clinical prototype using SHR.",
+    "targetUsers": "Oncologists and providers documenting patient encounters at the point of care.",
+    "generatedAt": "2025-10-03T20:12:30.363Z",
+    "slug": "mitre-flux-notes"
+  },
+  "mitre-shr": {
+    "keyMetrics": [
+      "$80 billion annual cost to the US healthcare system from lack of a health data standard",
+      "1 designer for 18 months (ongoing)",
+      "20+ MITRE engineers and clinicians collaborated",
+      "2018: SHR accepted into the international HL7 FHIR standard as an oncology profile",
+      "October 2016: State-level support from the Governor of Massachusetts"
+    ],
+    "technologies": [
+      "Standard Health Record (SHR)",
+      "HL7 FHIR",
+      "Oncology FHIR profile",
+      "Conversational UI",
+      "GitHub (open-source designs)"
+    ],
+    "deliverables": [
+      "System diagrams of the SHR ecosystem",
+      "Prototypes",
+      "Storyboards for care scenarios",
+      "Graphic visual language for the SHR",
+      "Health record snapshots (SHR completeness grids)",
+      "Outpatient journey map (data flow visualization)",
+      "Poster visualizations",
+      "System-level visualizations",
+      "Design concepts and SHR use cases",
+      "Flux Notes oncology data curation interface"
+    ],
+    "problemStatement": "The U.S. lacked a national health data standard, preventing efficient sharing and management of health data and costing the system $80B annually. MITRE needed a vision for SHR’s technical architecture and the services that could be built on it to drive development and policy.",
+    "solutionStatement": "GoInvo analyzed interoperability pain points and, collaborating with 20+ MITRE engineers and clinicians, produced system diagrams, a visual language, prototypes, and storyboards to clearly represent SHR and showcase SHR-enabled services.",
+    "businessValue": "The work contributed to SHR’s acceptance into the HL7 FHIR standard (2018) and led to hospital partnerships (Dana-Farber Cancer Institute and Brigham and Women’s Hospital) for real-world testing.",
+    "targetUsers": "Healthcare providers and hospital systems, MITRE engineers and clinicians, policymakers, and patients engaging with SHR-enabled personal and remote care tools.",
+    "generatedAt": "2025-10-03T20:13:29.600Z",
+    "slug": "mitre-shr"
+  },
+  "mitre-state-of-us-healthcare": {
+    "keyMetrics": [
+      "2.5 designers/engineers",
+      "12 weeks",
+      "12 LCD panels touchscreen data wall"
+    ],
+    "technologies": [
+      "Chrome browser (spanning 12 touchscreens)",
+      "Open web standards",
+      "Touchscreen data wall (12 LCD panels)",
+      "Open source"
+    ],
+    "deliverables": [
+      "Open source touchscreen service for public health information and stories",
+      "US Healthcare Dashboard (open sourced)",
+      "Custom browser-based experience spanning 12 touchscreens",
+      "Global Health Indicators List (repository)",
+      "Health Indicators spreadsheet"
+    ],
+    "problemStatement": "US healthcare issues and statistics are difficult to understand and visualize, even in data-rich environments. MITRE Health Lab needed a national-scale storytelling service to convey ground truth to public health officials, researchers, and policy makers.",
+    "solutionStatement": "Built an interactive healthcare story engine and a custom browser-based experience that spans a 12-panel touchscreen wall using open web standards and Chrome. The experience was designed to showcase research and stories in the context of national problem sets and was released as open source.",
+    "businessValue": "Open-sourcing the US Healthcare Dashboard enables government agencies and healthcare companies to use, update, and evolve interactive public health stories at lower cost and effort.",
+    "targetUsers": "Public health officials, researchers, policy makers, and scientists in the MITRE HealthLab and other government/healthcare organizations.",
+    "generatedAt": "2025-10-03T20:13:51.720Z",
+    "slug": "mitre-state-of-us-healthcare"
+  },
+  "mount-sinai-consent": {
+    "keyMetrics": [
+      "600,000+ individuals collected for The Resilience Project",
+      "1,000,000 entire human genomes target for The Resilience Project",
+      "77% of adults in the US have smartphones",
+      "1 designer for 3 months"
+    ],
+    "technologies": [
+      "Cloud-based open-source SaaS framework",
+      "Consent-as-a-Service (CaaS)",
+      "Mobile e-consent",
+      "Voice user interface (VUI)",
+      "Voice signatures (biometric signatures)",
+      "Expression comprehension via phone camera",
+      "Emotion and heart rate response detection",
+      "Analytics-driven adaptive content",
+      "Proxied data access controls (read/write privileges)"
+    ],
+    "deliverables": [
+      "Electronic consent platform/service (eConsent)",
+      "Mobile e-consent software",
+      "Result report for The Resilience Project",
+      "Sample genetic reports",
+      "Electronic consent workflow for The Resilience Project",
+      "System model of the Consent-as-a-Service (CaaS) software",
+      "Genetic report designs for IVF patients"
+    ],
+    "problemStatement": "Paper-based consent was cumbersome, labor-intensive, unscalable, non-transferable, and frequently abandoned by patients and staff.",
+    "solutionStatement": "Built a cloud-based, open-source SaaS e-consent service enabling patients to digitally consent and share data, with a mobile experience featuring interactive lessons, VUI, voice signatures, and adaptive content informed by real-time expression comprehension.",
+    "businessValue": "Replaced paper consent with a scalable digital workflow that enabled large-scale participant recruitment, contributing to over 600,000 individuals for The Resilience Project.",
+    "targetUsers": "Patients (including IVF patients) enrolling in genomics studies, and clinicians, nurses, administrators, doctors, and proxies who manage consent and interpret genetic results.",
+    "generatedAt": "2025-10-03T20:14:53.930Z",
+    "slug": "mount-sinai-consent"
+  },
+  "paintrackr": {
+    "keyMetrics": [
+      "1 designer and engineer for 6 months"
+    ],
+    "technologies": [],
+    "deliverables": [
+      "PainTrackr app",
+      "Human body pain map interface (shades of red by location and severity)",
+      "Pain history view",
+      "Early concept for tracking pain and intensity"
+    ],
+    "problemStatement": "Pain measurement is dominated by a simplistic 1–5 illustrated face scale, and there is no open-source human body model to pinpoint complaints. Pain is nuanced and requires more nuanced recording and measurement.",
+    "solutionStatement": "Designed and built PainTrackr, an open-source app that lets patients log pain by severity and location on a human body map and share their pain history with their PCP.",
+    "businessValue": "Enables easier digital pain logging and sharing to improve patient–provider communication and replace pen-and-paper tracking.",
+    "targetUsers": "Patients who need to track physical pain and primary care providers who receive the shared pain history.",
+    "generatedAt": "2025-10-03T20:15:31.703Z",
+    "slug": "paintrackr"
+  },
+  "partners-geneinsight": {
+    "keyMetrics": [
+      "2 designers over 4 months",
+      "more than two dozen key stakeholders"
+    ],
+    "technologies": [
+      "Usability reviews",
+      "Stakeholder interviews",
+      "Template builder",
+      "Variant database",
+      "Knowledge database"
+    ],
+    "deliverables": [
+      "Redesigned GeneInsight Suite",
+      "Report template builder",
+      "Patient-specific genetic reports",
+      "User manual (beginner’s guide)"
+    ],
+    "problemStatement": "Partners Healthcare needed to move GeneInsight out of a closed lab and make it commercially available to clinicians, but genomic data is difficult to interpret even for specialists.",
+    "solutionStatement": "GoInvo redesigned GeneInsight to let clinicians connect with labs, perform genetic analysis, receive clear, patient-specific reports, and get ongoing updates on detected variants; report drafting was streamlined via a template builder to reduce clicks and information overload.",
+    "businessValue": "Partners Healthcare launched the GeneInsight Suite as commercial-grade software used across multiple hospital systems in the United States.",
+    "targetUsers": "Clinicians, geneticists, laboratory technicians, genetic research scientists, and clinical specialists who create, access, and review patient-specific genetic reports.",
+    "generatedAt": "2025-10-03T20:16:11.084Z",
+    "slug": "partners-geneinsight"
+  },
+  "partners-insight": {
+    "keyMetrics": [
+      "91 individuals validated designs",
+      "65 individuals interviewed across 6 research facilities",
+      "6 major research institutions served by the portal",
+      "2–5 designers and engineers over 20 months",
+      "5 days/week, 8 hours/day typical reviewer usage"
+    ],
+    "technologies": [
+      "In-depth, in-person interviews",
+      "Participatory design",
+      "Design system",
+      "Versioning",
+      "User acceptance testing (UAT)",
+      "Quality assurance (QA)",
+      "Front-end engineering"
+    ],
+    "deliverables": [
+      "Foundational design system for Insight",
+      "Redesigned workflows for the Humans module",
+      "Redesigned protocol list grouped by study with status indicators",
+      "Navigable submission forms with clear language and contextual help",
+      "Transparent status and play-by-play history views",
+      "Inline, contextual reviewer commenting",
+      "Version history and change tracking views",
+      "Inventory of screens and catalog of base components and reusable styles",
+      "Consultation on front-end engineering, UAT, and QA"
+    ],
+    "problemStatement": "Insight, the PHRC electronic IRB portal used across six major research institutions, had serious usability issues that impeded turnaround times and delayed research for weeks.",
+    "solutionStatement": "The team redesigned the most complex module (Humans) to create a more efficient workflow using usability best practices and guided experiences, added clear status and history, navigable forms with contextual help, inline comments, and versioning, and established a foundational design system for the broader application.",
+    "businessValue": "Improved approval turnaround rates and reduced time to prepare, submit, and review protocols, with Insight 4.0 rolling out to all Partners research facilities.",
+    "targetUsers": "IRB reviewers and research teams at Partners-affiliated institutions, including analysts, admins, program chairs, principal investigators, and support staff.",
+    "generatedAt": "2025-10-03T20:16:42.846Z",
+    "slug": "partners-insight"
+  },
+  "personal-genome-project-vision": {
+    "keyMetrics": [
+      "100,000 genomes target",
+      "1-day exploratory workshop",
+      "2 designers for 2 weeks"
+    ],
+    "technologies": [
+      "Exploratory workshop facilitation",
+      "Ecosystem mapping",
+      "Live sketching",
+      "Organizational model redesign",
+      "Parallel strategy design (recruitment, data collection, member retention)"
+    ],
+    "deliverables": [
+      "Refocused mission and restructuring for PGP",
+      "Creation of new partner organization: OpenHumans",
+      "Concept for OpenHumans web portal for members",
+      "Concept for separate researcher interface",
+      "Ecosystem map of current state",
+      "Live sketch artifacts from workshop"
+    ],
+    "problemStatement": "The Personal Genome Project sought to sequence 100,000 genomes but lacked a clear, shared path among founders to realize the vision.",
+    "solutionStatement": "GoInvo led a one-day exploratory workshop, mapping the existing ecosystem and using live sketching to identify pain points, leading to a reimagined organizational model separating recruitment, data collection, and member retention.",
+    "businessValue": "The effort produced a refocused mission, organizational restructuring, and the creation of OpenHumans to better engage members and enable researcher access.",
+    "targetUsers": "PGP members who donate and manage their data via OpenHumans, and researchers (academic, independent, and citizen scientists) accessing genomes and medical histories through a separate interface.",
+    "generatedAt": "2025-10-03T20:17:05.033Z",
+    "slug": "personal-genome-project-vision"
+  },
+  "prior-auth": {
+    "keyMetrics": [
+      "Treatment delays up to two weeks",
+      "2 designers for 3 months"
+    ],
+    "technologies": [
+      "Natural Language Processing (NLP) model",
+      "Document classification",
+      "Information extraction from unstructured clinical reports",
+      "Rules-based automation for determinations"
+    ],
+    "deliverables": [
+      "Reviewer interface with flexible panels and clear information hierarchy",
+      "Organized case queue with periodic refresh and cross-access",
+      "NLP model to classify patient documents and extract structured data",
+      "Patient record view with timeline visualization",
+      "Protocol review drawer and actions panel (approve/adjust/deny)",
+      "Note capture widget/panel with reliable saving"
+    ],
+    "problemStatement": "Prior authorization for cancer care is lengthy and complex, causing treatment delays of up to two weeks and placing heavy administrative burden on providers, insurers, and reviewers.",
+    "solutionStatement": "Designed reviewer-focused tools that use NLP to extract structured data from unstructured records, reorganize information with a clear hierarchy and flexible panels, improve queues and note-taking, and automate straightforward determinations based on rules and guidelines.",
+    "businessValue": "Reduced wait times and administrative effort, enabling faster approvals and earlier treatment while saving time and money for providers, hospitals, and insurers.",
+    "targetUsers": "Clinical and prescribing experts who review prior authorization cases for insurers and specialized processing organizations; secondary users include provider administrative staff.",
+    "generatedAt": "2025-10-03T20:17:48.570Z",
+    "slug": "prior-auth"
+  },
+  "public-sector": {
+    "keyMetrics": [
+      "15 years public sector design experience",
+      "12 state and federal services designed",
+      "Every $1 invested in design results in government savings"
+    ],
+    "technologies": [
+      "WCAG",
+      "Section 508",
+      "SMART Health Cards",
+      "Journey mapping",
+      "User interviews",
+      "Caseworker shadowing",
+      "Prototyping",
+      "Screen reader compatibility",
+      "Color contrast compliance",
+      "Open standards",
+      "Open source components",
+      "Continuous testing and feedback loops"
+    ],
+    "deliverables": [
+      "Redesigned Mass SNAP application interface (digitized application process)",
+      "Future-state journey map for CMS's Medicaid Marketplace",
+      "Designs for SMART Health Cards for the CommonHealth application",
+      "MITRE Open Health Dashboard",
+      "Interactive prototypes for stakeholder feedback"
+    ],
+    "problemStatement": "Government services, including the Massachusetts SNAP application, were burdened by outdated, complex processes that were hard to navigate for diverse users, while being constrained by rigid policy and regulatory requirements.",
+    "solutionStatement": "GoInvo conducted user interviews and caseworker shadowing, engaged stakeholders through hands-on prototyping, and delivered an intuitive, accessible interface compliant with WCAG and Section 508, refined via iterative testing and feedback.",
+    "businessValue": "The digitized SNAP application increased accessibility so more Massachusetts residents could apply for food benefits, improving engagement and satisfaction while maintaining regulatory compliance.",
+    "targetUsers": "Low-income Massachusetts residents applying for SNAP benefits, including users with language differences and varying levels of digital literacy.",
+    "generatedAt": "2025-10-03T20:18:27.953Z",
+    "slug": "public-sector"
+  },
+  "staffplan": {
+    "keyMetrics": [],
+    "technologies": [
+      "Web-based service",
+      "Open source",
+      "GitHub",
+      "Apache 2 license"
+    ],
+    "deliverables": [
+      "StaffPlan web app",
+      "Reports and visualizations",
+      "Open-source GitHub repository"
+    ],
+    "problemStatement": "GoInvo lacked a lightweight, non-intrusive tool to plan, manage, and optimize team workflow and resource planning; ad hoc methods like spreadsheets and sticky notes were insufficient.",
+    "solutionStatement": "They built StaffPlan, a web-based service for quick entry of planned vs. actual time that enables bi-directional assignment and provides reports and visualizations for employees, managers, and resource managers.",
+    "businessValue": "Gave management actionable information to better run the firm and allowed leadership to focus on matching staff to assignments instead of basic organization.",
+    "targetUsers": "Employees, managers, resource managers, leadership, and project managers overseeing team plans and availability.",
+    "generatedAt": "2025-10-03T20:18:50.918Z",
+    "slug": "staffplan"
+  },
+  "tabeeb-diagnostics": {
+    "keyMetrics": [
+      "Version 1 release in 8 months",
+      "1 designer for 5 months"
+    ],
+    "technologies": [
+      "Telemedicine service",
+      "Telehealth software",
+      "Smartphone-based mobile strategy",
+      "Rapid prototyping",
+      "Rapid testing with clinicians",
+      "Agile sprints"
+    ],
+    "deliverables": [
+      "First-generation product",
+      "MVP",
+      "Designs",
+      "Work prototypes",
+      "Concept sketches for crowdsourcing a diagnosis",
+      "Comprehensive architecture"
+    ],
+    "problemStatement": "Rural doctors and nurses face complex cases without sufficient familiarity, experience, or equipment for confident diagnoses. Tabeeb needed healthcare design expertise to develop a telemedicine service.",
+    "solutionStatement": "GoInvo defined and designed a first-generation product, iterating with clinicians and stakeholders, and provided design, engineering, and product support to ship an MVP.",
+    "businessValue": "Accelerated Tabeeb from a draft business plan to a version 1 release in 8 months.",
+    "targetUsers": "Primary care clinicians (doctors and nurses) in rural and remote settings who need access to expert diagnosticians.",
+    "generatedAt": "2025-10-03T20:19:15.302Z",
+    "slug": "tabeeb-diagnostics"
+  },
+  "wuxi-nextcode-familycode": {
+    "keyMetrics": [
+      "14% of PCPs are confident in interpreting genetic test results",
+      "~3,800 genetic counselors in the US",
+      "Validated with 50+ individuals (genetic counselors, clinicians, patients, research scientists)",
+      "2 designers for 8 weeks",
+      "$2.2 billion genetic carrier screening market",
+      "User Advisory Group: 10 patients, 8 clinicians, 2 genetic counselors",
+      "30+ interviews"
+    ],
+    "technologies": [
+      "Competitive analysis",
+      "Grassroots participant recruitment",
+      "User interviews",
+      "User advisory group",
+      "Journey mapping",
+      "Guideline development",
+      "Saliva spit kit sample collection"
+    ],
+    "deliverables": [
+      "Carrier screening service (v1 launched abroad)",
+      "Journey map of the end-to-end carrier screening process",
+      "Industry-standard guidelines for delivering a carrier screening service",
+      "Competitive landscape assessment"
+    ],
+    "problemStatement": "Carrier screening results are difficult for patients and many clinicians to interpret, and a shortage of genetic counselors limits clinician adoption.",
+    "solutionStatement": "Designed a patient- and clinician-understandable carrier screening service that clearly communicates results and guides next steps, informed by interviews, a user advisory group, journey mapping, and validation.",
+    "businessValue": "Provided a validated direction that enabled leadership to begin production and launch the first version abroad.",
+    "targetUsers": "Patients undergoing carrier screening and clinicians offering and interpreting the test.",
+    "generatedAt": "2025-10-03T20:20:00.121Z",
+    "slug": "wuxi-nextcode-familycode"
+  }
+}

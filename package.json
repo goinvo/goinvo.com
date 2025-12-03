@@ -56,9 +56,9 @@
   "scripts": {
     "rework-css": "node ./src/rework-pure-grids.js",
     "gatsby-build": "gatsby build",
-    "build": "(npm run rework-css) && gatsby build --log-pages",
+    "build": "(npm run rework-css && node scripts/generate-project-summaries.js || exit 0) && gatsby build --log-pages",
     "gatsby-develop": "gatsby develop",
-    "develop": "(npm run rework-css) && gatsby develop",
+    "develop": "(npm run rework-css && node scripts/generate-project-summaries.js || exit 0) && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,css,scss,md,mdx}\"",
     "upload": "node upload.js",
     "redirect": "node redirect.js",
@@ -69,11 +69,13 @@
     "generate-embeddings": "node scripts/generate-embeddings.js",
     "generate-embeddings:force": "node scripts/generate-embeddings.js --force",
     "generate-embeddings:id": "node scripts/generate-embeddings.js",
+    "generate-summaries": "node scripts/generate-project-summaries.js",
     "lint": "prettier --check \"**/*.{js,jsx,json,css,scss,md,mdx}\"",
-    "generate-ai-cache": "node scripts/pre-generate-ai-presets.js",
     "dev:ai": "netlify dev",
     "test:ai": "sh test-ai-local.sh",
-    "test:ai:windows": "test-ai-local.bat"
+    "test:ai:windows": "test-ai-local.bat",
+    "test:openai": "node test-openai-connection.js",
+    "check:env": "node check-env-vars.js"
   },
   "husky": {
     "hooks": {

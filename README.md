@@ -81,6 +81,16 @@ $ yarn
 
 ### Start it up
 
+**For full experience with AI search features (Recommended):**
+
+```bash
+$ npm run dev:ai
+```
+
+Visit [http://localhost:8888/](http://localhost:8888/) - AI features will be active.
+
+**Or for basic development without AI features:**
+
 ```bash
 $ yarn develop
 ```
@@ -93,7 +103,7 @@ You can now view goinvo.com in the browser.
 http://localhost:8000/
 ```
 
-Head over to [http://localhost:8000/](http://localhost:8000/) and you should see the website.
+Head over to [http://localhost:8000/](http://localhost:8000/) - Note: AI search will be inactive at this URL.
 
 ### Code editor
 
@@ -774,26 +784,73 @@ Once approved changes are merged into master, then do the following in terminal 
 `yarn build`  
 `yarn upload`
 
-## 🔍 Semantic Search System
+## 🔍 AI-Enhanced Search System
 
-This website features an intelligent semantic search system that helps potential clients find relevant projects using natural language queries. The system uses enhanced keyword matching and semantic understanding to surface the most relevant existing projects for any buyer query.
+This website features an intelligent AI-enhanced search system that helps potential clients find relevant projects using natural language queries. The system uses pre-generated project summaries and semantic understanding to surface the most relevant projects with compelling, detailed descriptions.
 
 ### How It Works
 
-1. **AI-Powered Analysis**: Each project is analyzed by GPT-3.5-turbo to extract metadata and generate buyer-focused descriptions
+1. **Project Summaries**: Each case study is analyzed by GPT-5 to create detailed 3-4 paragraph summaries with specific statistics, methodologies, and outcomes
 2. **Semantic Embeddings**: OpenAI's text-embedding-3-small model creates vector representations of project content
-3. **Enhanced Keyword Matching**: 100+ semantic keyword mappings and domain-specific boosting algorithms
-4. **Client-Side Search**: Search runs entirely in the browser using intelligent keyword matching and concept mapping
+3. **AI-Generated Descriptions**: Search results include compelling 2-3 sentence descriptions generated from the detailed summaries
+4. **Enhanced Keyword Matching**: 100+ semantic keyword mappings and domain-specific boosting algorithms
 5. **Smart Caching**: Only changed content gets reprocessed, saving time and API costs
+
+### Two-Stage AI Pipeline
+
+#### Stage 1: Project Summaries (One-time Generation)
+```
+Case Study (.mdx) → Extract Full Text → AI Summary → Cache JSON
+```
+- Extracts full content from case study files
+- Uses GPT-5 to generate comprehensive summaries focusing on:
+  - Specific statistics and metrics
+  - Concrete technologies and methods
+  - Real challenges and solutions
+  - Key stakeholders and deliverables
+  - Business value and impact
+- Caches to `src/data/project-summaries.json`
+- Only regenerates for new or modified projects
+
+#### Stage 2: Search-Time Descriptions (Real-time)
+```
+User Query → Match Projects → Load Summaries → Generate Descriptions
+```
+- Matches projects using semantic embeddings
+- Enhances matched projects with cached summaries
+- Uses GPT-5 to generate query-specific descriptions
+- References real statistics and details from summaries
 
 ### Search Features
 
-- **Natural Language Queries**: "I need a UI for an AI platform for therapists"
+- **Natural Language Queries**: See examples in [docs/SEARCH_QUERY_EXAMPLES.md](docs/SEARCH_QUERY_EXAMPLES.md)
 - **Intelligent Keyword Expansion**: Automatically maps related terms (e.g., "telemetry" → "monitoring", "vital signs")
 - **Buyer-Focused Descriptions**: AI explains why each project is relevant to your specific needs
 - **Smart Filtering**: Filter by project type, industry, and complexity
 - **Real-Time Results**: Instant search with similarity scoring
 - **Domain-Specific Boosting**: Healthcare, enterprise, and government queries get specialized matching
+
+### Why Project Summaries?
+
+**Previous Approach (Metadata Only):**
+- AI only had access to: `title`, `caption`, `categories`, `keywords`
+- Limited context led to vague, formulaic descriptions
+- AI had to extrapolate or hallucinate details
+- Descriptions were generic and unconvincing
+
+**New Approach (Rich Summaries):**
+- AI has access to detailed summaries extracted from full case study content
+- Summaries include: specific statistics, methodologies, processes, outcomes, stakeholders
+- AI can reference concrete details and metrics in descriptions
+- Descriptions are specific, convincing, and grounded in actual project content
+
+**Example Improvement:**
+
+Without Summary:
+> "Enterprise EHR platform designed for large healthcare systems."
+
+With Summary (using real project details):
+> "Designed for Partners HealthCare, this EHR system serves 160 million US residents with advanced analytics and risk adjustment. The platform integrates care planning workflows and population health management, reducing clinician documentation time by 40%."
 
 ### Content Sources
 
@@ -802,6 +859,9 @@ Detailed completed projects with full descriptions, client information, and port
 
 #### Features (`src/data/features.json`)
 Portfolio highlights and quick project overviews used throughout the site.
+
+#### Project Summaries (`src/data/project-summaries.json`)
+AI-generated detailed summaries of each case study (auto-generated).
 
 ### Enhanced Keyword Understanding
 
@@ -816,7 +876,7 @@ The search system recognizes and expands hundreds of related terms:
 
 ### Prerequisites
 
-1. **Node.js 16+** and npm
+1. **Node.js 18.18+** and npm
 2. **OpenAI API Key** for embedding generation
 3. **Gatsby CLI** (optional, for development commands)
 
@@ -843,10 +903,41 @@ OPENAI_API_KEY=your-api-key-here
 ```
 
 > **💡 API Key Setup**: Get your OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+> Internal (GoInvo): You can retrieve the OpenAI (ChatGPT) API key from 1Password and place it in your `.env` as `OPENAI_API_KEY`.
 
-### Generate Search Index
+### Generate Search Index and Project Summaries
 
-**Required for search functionality**. Run this whenever you add or modify case studies:
+**Required for search functionality**. Run these commands whenever you add or modify case studies:
+
+#### 1. Generate Project Summaries (One-time per project)
+
+```bash
+# Generate detailed AI summaries for all case studies
+npm run generate-summaries
+```
+
+This command will:
+- ✅ Extract full text content from all `.mdx` case study files
+- 🧠 Generate comprehensive 3-4 paragraph summaries using GPT-5
+- 📊 Include specific statistics, methodologies, and outcomes
+- 🗂️ Cache results to `src/data/project-summaries.json`
+- 💰 Skip existing summaries (incremental updates only)
+- 💵 Estimated cost: ~$0.05-0.10 per new project (one-time)
+
+**Smart Features:**
+- ✅ Incremental updates - only generates for new projects
+- ✅ Saves after each summary - no lost progress if interrupted
+- ✅ Rate limited - 1 second between API calls
+- ✅ Error resilient - continues on errors
+
+**Force regeneration:**
+```bash
+# Delete cached summaries and regenerate all
+rm src/data/project-summaries.json
+npm run generate-summaries
+```
+
+#### 2. Generate Embeddings and Search Index
 
 ```bash
 # Generate embeddings and search index (uses cache for unchanged files)
@@ -857,22 +948,38 @@ npm run generate-embeddings:force
 ```
 
 **When to use force mode:**
-- 🔄 After upgrading the embedding system (like adding AI buyer descriptions)
+- 🔄 After upgrading the embedding system
 - 🧹 When you suspect cache corruption
 - ✨ To ensure all projects have the latest AI features
 
 This command will:
 - ✅ Analyze all case studies and features with AI
 - 🧠 Generate OpenAI embeddings for semantic search  
-- 💼 Create buyer-focused descriptions for each project
 - 🗂️ Cache results to avoid reprocessing unchanged content (unless `--force` used)
 - 💰 Show estimated API costs (typically $2-5 for full regeneration)
+
+#### 3. Auto-Generation During Development
+
+Both summaries and embeddings are automatically generated (if API key is present) when you run:
+```bash
+npm run develop  # Generates summaries + embeddings, then starts dev server
+npm run build    # Generates summaries + embeddings, then builds for production
+```
+
+**Skip auto-generation:**
+```bash
+npm run gatsby-develop  # Dev server only, no generation
+npm run gatsby-build    # Build only, no generation
+```
 
 ### Development
 
 ```bash
-# Start development server
-npm start
+# Start development server with AI features (RECOMMENDED)
+npm run dev:ai
+
+# Or start Gatsby only (AI features will be inactive)
+npm run develop
 
 # Build for production
 npm run build
@@ -880,6 +987,45 @@ npm run build
 # Serve production build locally
 npm run serve
 ```
+
+**Recommended Approach:**
+Use `npm run dev:ai` to run the full development environment with AI search features enabled. This starts both:
+- Gatsby dev server on port 8000
+- Netlify functions proxy on port 8888
+
+Then visit **http://localhost:8888** to test with AI features active.
+
+> **Note:** Running `npm run develop` alone starts Gatsby on port 8000 without the Netlify proxy. The site will work, but AI search features will be inactive. Use `npm run dev:ai` for the complete experience.
+
+## AI Feature Development and Testing
+
+**Quick Start (Recommended):**
+
+```bash
+npm run dev:ai
+```
+
+This single command starts both Gatsby and the Netlify functions proxy. Visit **http://localhost:8888** for the full experience with AI features enabled.
+
+**Manual Setup (Advanced):**
+
+If you need more control, use two separate terminals:
+
+1. Start the Gatsby client on port 8000:
+   ```bash
+   npm run develop
+   ```
+
+2. In a second terminal, start the Netlify proxy on port 8888:
+   ```bash
+   npx --yes netlify-cli dev --target-port 8000 --port 8888 --functions netlify/functions
+   ```
+
+**Important:**
+- ✅ Visit `http://localhost:8888` for AI features (Netlify proxy)
+- ⚠️ Visiting `http://localhost:8000` directly will disable AI features
+- 🔑 Ensure your `.env` contains a valid `OPENAI_API_KEY`
+  - Internal (GoInvo): Retrieve from 1Password and set as `OPENAI_API_KEY`
 
 ## 📝 Content Management
 
@@ -897,10 +1043,13 @@ npm run serve
    ---
    ```
 3. **Write content** in MDX format
-4. **Regenerate embeddings**:
+4. **Generate AI summary and embeddings**:
    ```bash
-   npm run generate-embeddings
+   npm run generate-summaries    # Creates detailed summary for search
+   npm run generate-embeddings   # Updates search index
    ```
+   
+   Or simply run `npm run develop` which will auto-generate both.
 
 ### Adding Features
 
@@ -910,6 +1059,29 @@ npm run serve
    ```bash
    npm run generate-embeddings
    ```
+
+### Customizing Homepage Spotlights
+
+You can customize homepage Spotlight titles/subtitles and layout widths in `src/data/homepage-spotlights.js`.
+
+- Edit `TEXT_OVERRIDES` to change display titles or subtitles by project slug:
+
+```js
+export const TEXT_OVERRIDES = {
+  'your-project-slug': { title: 'Your Display Title', subtitle: 'Short subtitle' },
+  // ...
+}
+```
+
+- Edit `SPOTLIGHT_WIDTHS` to control card widths in the 4-column grid:
+  - 1 = quarter width, 2 = half width, 4 = full width
+
+```js
+export const SPOTLIGHT_WIDTHS = {
+  'your-project-slug': 2,
+  // ... other slugs
+}
+```
 
 ### Smart Caching
 
@@ -944,7 +1116,14 @@ src/
     └── _project-search.scss      # Search component styles
 
 scripts/
-└── generate-embeddings.js        # Embedding generation script
+├── generate-embeddings.js        # Embedding generation script
+└── generate-project-summaries.js # Project summary generation script
+
+src/data/
+└── project-summaries.json        # AI-generated project summaries (generated)
+
+netlify/functions/
+└── ai-search.js                  # AI search function (loads summaries)
 
 static/
 └── search-index.json             # Public search index for browser
@@ -952,54 +1131,29 @@ static/
 
 ### Search Process
 
-1. **Load Index**: Browser fetches pre-generated search index
-2. **Extract Keywords**: Query is analyzed for relevant terms and concepts
-3. **Calculate Similarity**: Projects are scored using keyword matching and metadata
-4. **Add AI Descriptions**: Relevant buyer descriptions are attached to results
-5. **Rank Results**: Projects sorted by relevance with similarity scores
+1. **Load Index**: Browser fetches pre-generated search index and embeddings
+2. **Match Projects**: Query is analyzed and matched against project embeddings
+3. **Load Summaries**: Server loads detailed summaries for matched projects
+4. **Generate Descriptions**: AI creates compelling 2-3 sentence descriptions using summary details
+5. **Return Results**: Projects sorted by relevance with AI-generated descriptions
 
 ### Cost Optimization
 
-- **One-time Generation**: Embeddings created once per content change
-- **Smart Caching**: Only reprocess modified files
-- **Client-Side Search**: No runtime API costs
-- **Efficient Model**: Uses cost-effective text-embedding-3-small
+- **One-time Generation**: Both summaries and embeddings created once per content change
+- **Smart Caching**: Only reprocess new or modified files
+- **Persistent Cache**: Summaries and embeddings persist indefinitely
+- **Efficient Models**: 
+  - GPT-5 for summary generation (high quality)
+  - GPT-5-mini for search enhancements (cost-effective)
+  - text-embedding-3-small for embeddings (low cost)
 
 **Typical Costs**:
-- Initial setup: $2-5 (all projects)
-- Adding one project: $0.003
-- Search queries: $0 (client-side)
-
-## 🎯 Search Query Examples
-
-The enhanced system now handles a much broader range of buyer queries:
-
-### Healthcare Queries
-- *"Need a telemetry dashboard to monitor ICU vitals remotely"*
-- *"Looking for an oncology treatment tracker that integrates genomic data"*
-- *"Self-guided CBT therapy app for veterans with PTSD"*
-- *"HIPAA-compliant radiology collaboration dashboard"*
-- *"AI-powered hematology results dashboard for lab technicians"*
-
-### Enterprise Queries
-- *"Enterprise expense-analysis dashboard for SaaS CFOs"*
-- *"Scalable data-ingest platform for IoT sensor fleets"*
-- *"Cross-team dashboard visualizing OKRs and KPIs"*
-- *"SOC-2 compliant customer analytics platform"*
-- *"Customer loyalty service that plugs into Shopify"*
-
-### Government Queries
-- *"Citizen complaint tracking dashboard for municipal services"*
-- *"Digital voter-registration tracker compliant with federal standards"*
-- *"Grant-management platform for federal research programs"*
-- *"FedRAMP authorized emergency response coordination system"*
-
-### Original Examples (Still Work)
-- *"I need a UI for an AI platform for therapists"*
-- *"Healthcare dashboard design for clinical workflows"*
-- *"Data visualization for government policy"*
-- *"Enterprise software user experience"*
-- *"Mobile health app interface design"*
+- Initial setup: $5-10 (all projects, one-time)
+  - Summaries: ~$0.05-0.10 per project
+  - Embeddings: ~$0.003 per project
+- Adding one new project: ~$0.053-0.103 (one-time)
+- Search queries: ~$0.01-0.05 per query (real-time AI descriptions)
+- Zero cost once summaries/embeddings are cached
 
 ## 🛠️ Development Workflow
 
@@ -1007,7 +1161,7 @@ The enhanced system now handles a much broader range of buyer queries:
 
 ```bash
 # Standard development
-npm start                    # Start dev server
+npm run develop              # Start dev server
 npm run build               # Build for production
 
 # Search system
@@ -1018,7 +1172,11 @@ npm run generate-embeddings:force  # Force regenerate all (ignore cache)
 ### For Content Creators
 
 1. **Add/edit content** in `src/case-studies/` or `src/data/features.json`
-2. **Run embedding generation**:
+2. **Generate project summaries** (for new case studies):
+   ```bash
+   npm run generate-summaries
+   ```
+3. **Generate embeddings**:
    ```bash
    # Normal update (uses cache)
    npm run generate-embeddings
@@ -1026,7 +1184,9 @@ npm run generate-embeddings:force  # Force regenerate all (ignore cache)
    # Or force full regeneration
    npm run generate-embeddings:force
    ```
-3. **Test search** functionality on homepage
+4. **Test search** functionality on homepage
+
+**Note:** Running `npm run develop` or `npm run build` will automatically generate both summaries and embeddings if an API key is present.
 
 ### Performance Notes
 

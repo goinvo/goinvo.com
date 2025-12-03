@@ -1,4 +1,3 @@
-@use 'sass:math';
 @import '~purecss/build/base.css'; // This includes normalize.css
 @import '~purecss/build/grids.css';
 @import './vendor/pure-grids-responsive-reworked.css'; // Using rework to modify responsive grid breakpoints
@@ -28,6 +27,10 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/hero';
+
+// Import landing-page AFTER hero so our overrides take precedence
+@import 'landing-page';
+@import 'ai-landing-page';
 @import 'components/divider';
 @import 'components/quote';
 @import 'components/image-block';

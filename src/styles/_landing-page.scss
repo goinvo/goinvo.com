@@ -1,3 +1,5 @@
+// Homepage styles (uses .homepage class from Layout component)
+.homepage,
 .landing-page {
   .hero {
       &__image-container {
@@ -148,7 +150,7 @@
     // Block spacing for each item (both mobile and desktop)
     .pure-g > .pure-u-1 { margin-bottom: $spacing * 2; }
     .pure-g > .pure-u-1 p { margin: 0 0 $spacing 0; }
-    .pure-g > .pure-u-1 a { display: inline-block; margin-top: math.div($spacing, 2); }
+    .pure-g > .pure-u-1 a { display: inline-block; margin-top: $spacing / 2; }
 
     @include mq($from: large) {
       .pure-u-lg-1-3 { margin-right: $spacing * 2; }
@@ -214,12 +216,44 @@
     flex: 1 1 300px;
   }
 }
+.about-ai {
+  .about-ai__options-box {
+    border-radius: 8px;
+    display: flex;
+    align-items: center; // vertical alignment with text block
+    height: 100%;
+  }
+
+  .about-ai__options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+
+    li {
+      color: $color-gray;
+      font-size: 0.95rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $color-teal;
+    }
+  }
+}
 
 // New homepage sections
 .expertise-section {
   background-color: $color-primary;
   color: $color-white;
-  padding-top: calc($spacing * 3);
+  padding-top: calc($spacing * 3); // Increased from 3x to 4x spacing
   padding-bottom: calc($spacing * 3);
 
   .header--xl {
@@ -254,11 +288,11 @@
       padding-bottom: 8px;
       border-bottom: 1px solid $color-white;
       color: $color-white;
-      font-family: 'Adobe Jenson Pro', $font-family--serif, serif;
-      font-size: 1.5rem;
+      font-family: 'Open Sans', $font-family--sans-serif, sans-serif;
+      font-size: 1.125rem;
       font-weight: $font-weight--normal;
         letter-spacing: 0; // reduce tracking
-      text-transform: capitalize; // override button uppercase
+      text-transform: none; // override button uppercase
       text-align: left; // ensure left alignment
     }
   }
@@ -290,14 +324,40 @@
       font-size: 1.125rem;
     }
   }
+
+  .expertise-disclaimer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; // More space on mobile
+    
+    @include mq($from: large) {
+      margin-top: 8px; // Less space on desktop
+    }
+
+    &__tip {
+      color: $color-white;
+      opacity: 0.95;
+      font-size: 1rem;
+    }
+
+    &__experimental {
+      color: $color-white;
+      opacity: 0.6;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+  }
 }
 
 .spotlights-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-
   margin-top: 24px;
+
+  // Debug: Add border to see grid container
+  // border: 2px solid red;
 
   @include mq($from: large) {
     grid-template-columns: repeat(4, 1fr);
@@ -308,6 +368,37 @@
     grid-template-columns: 1fr;
   }
 
+  &--four {
+    // Force 4-column layout on desktop
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr) !important;
+      grid-auto-flow: dense;
+    }
+    
+    // Fallback for the mq mixin
+    @include mq($from: large) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: dense;
+    }
+  }
+}
+
+// More specific selector to ensure 4-column layout
+.spotlights-grid.spotlights-grid--four {
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-auto-flow: dense;
+  }
+}
+
+// 2-column layout for AI search results (better text balance)
+.spotlights-grid.spotlights-grid--two {
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.spotlights-grid {
   .image-block__text {
     padding-left: $spacing;
     padding-right: $spacing;
@@ -319,22 +410,33 @@
     }
     p.text--gray {
       font-family: $font-family--sans-serif;
+      
+      // Bold emphasis in AI-generated descriptions
+      strong {
+        font-weight: 600;
+        color: #333;
+      }
       font-size: 14px;
       color: $color-gray;
     }
   }
 }
 
-// Force AI search result grids to 2 columns on desktop
+// Match AI search result grids to spotlight 4-column layout  
 .ai-enhanced-grid,
 .ai-results-grid {
+  display: grid;
+  gap: 24px;
+  
   @include mq($from: large) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
   }
 }
 
 // 4-column control with spans
 
+// .spotlight--span-1 - Quarter width items don't need special CSS, they take up 1 column by default
 
 .spotlight--span-2 {
   @include mq($from: large) {
@@ -441,59 +543,5 @@
   .we-are-body {
     font-family: $font-family--sans-serif;
     margin-top: 0;
-  }
-}
-
-// Homepage expertise filters (new layout outside the old orange section)
-.homepage-expertise {
-  .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0 24px;
-
-    @include mq($until: large) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 24px;
-    }
-
-    .expertise-col {
-      border-bottom: 1px solid #e8a06a; // orange underline
-      padding-bottom: 10px;
-      transition: border-bottom-width 0.2s ease;
-
-      &.is-selected {
-        border-bottom-width: 3px; // grow underline when selected
-      }
-    }
-
-    .expertise-item {
-      // override base .button styles
-      background: transparent;
-      border: none;
-      display: block;
-      width: 100%;
-      text-align: left;
-      padding: 0;
-      font-family: 'adobe jenson pro', 'Adobe Jenson Pro', serif;
-      font-weight: 300; 
-      font-size: 1.5rem !important;
-      letter-spacing: -0.02em; // tighter tracking
-      text-transform: capitalize; 
-      line-height: 1.2;
-
-      // ensure inherited button styles don't force uppercase/weight
-      &.button {
-        text-transform: capitalize;
-        font-weight: 400;
-      }
-
-      &:hover {
-        opacity: 0.85;
-      }
-
-      &.is-selected {
-        font-weight: 700; // bold when selected
-      }
-    }
   }
 }

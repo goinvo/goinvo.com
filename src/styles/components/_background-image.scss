@@ -2,10 +2,8 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center center; // Ensure image is centered both ways
+  background-position: center;
   background-repeat: no-repeat;
-  display: block; // ensure it's a block element
-  position: relative; // Establish positioning context
 
   &__image {
     display: none !important;

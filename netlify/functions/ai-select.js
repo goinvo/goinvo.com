@@ -103,7 +103,6 @@ function buildProjectText(project) {
     project.caption,
     project.client,
     ...(project.categories || []),
-    ...(project.keywords || []),
     buyerText,
     modularText
   ].filter(Boolean).join(' ')
@@ -179,14 +178,6 @@ const CORS_HEADERS = {
 const json = (status, obj) => ({ statusCode: status, headers: CORS_HEADERS, body: JSON.stringify(obj || {}) })
 
 exports.handler = async (event) => {
-  // Debug: Log environment variable status
-  console.log('🔍 ai-select Environment Check:', {
-    hasOpenAIKey,
-    hasOpenAIClient: !!openai,
-    EMBEDDING_MODEL,
-    CONTEXT: process.env.CONTEXT
-  })
-  
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 200, headers: CORS_HEADERS, body: '' }
   }
@@ -236,8 +227,6 @@ exports.handler = async (event) => {
         title: p.title,
         caption: p.caption,
         categories: p.categories || [],
-        keywords: p.keywords || [],
-        client: p.client || '',
         image: p.image || '',
         score
       }))

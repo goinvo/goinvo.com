@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../../components/layouts/layout'
@@ -8,7 +8,6 @@ import TeamMember from '../../components/team-member'
 import Columns from '../../components/columns'
 import Card from '../../components/card'
 import ImageBlock from '../../components/image-block'
-import Collapsible from '../../components/collapsible'
 import team from '../../data/team.json'
 import SubscribeForm from '../../components/form-subscribe'
 
@@ -78,10 +77,7 @@ const frontmatter = {
   heroImage: '/images/about/care-cards-hand.jpg',
 }
 
-const AboutPage = () => {
-  const [bibliographyExpanded, setBibliographyExpanded] = useState(false);
-  
-  return (
+const AboutPage = () => (
   <Layout frontmatter={frontmatter}>
     <Hero image={frontmatter.heroImage}>
       <h1 className="header--xl">
@@ -92,201 +88,35 @@ const AboutPage = () => {
         <span className="text--serif text--primary">.</span>
       </h1>
     </Hero>
-    
-    {/* About GoInvo Section - Visual Layout */}
-    <div className="background--gray pad-vertical--double">
-      <div className="max-width content-padding">
-        <div className="pure-g">
-          <div className="pure-u-1 pure-u-lg-1-2">
-            <h2 className="header--lg pad-right--only-lg margin-top--none">
-              Crafting the future of software through strategy, creativity, and vision.
-            </h2>
-          </div>
-          <div className="pure-u-1 pure-u-lg-1-2">
-            <p className="text--gray pad-left--only-lg margin-top--none">
-              GoInvo is a digital design studio in Boston helping health, policy, and civic organizations turn complexity into clarity through research, UX design, illustration, data visualization, and ethical AI. With backgrounds in engineering, illustration, design, and software development, we share a foundational technical and creative expertise in the shared pursuit of impact for good.
-            </p>
-          </div>
+    <div className="max-width content-padding pad-vertical--double--only-lg">
+      <div className="pure-g">
+        <div className="pure-u-1 pure-u-lg-1-2">
+          <h2 className="header--lg pad-right--only-lg">
+            GoInvo is a digital design studio in Boston, crafting the future of
+            software through strategy, creativity, and vision.
+          </h2>
+        </div>
+        <div className="pure-u-1 pure-u-lg-1-2">
+          <p className="text--gray pad-left--only-lg">
+            With backgrounds in engineering, illustration, design, and software development, we share a foundational technical and creative expertise in the shared pursuit of impact for good.
+          </p>
         </div>
       </div>
     </div>
-
-    {/* Our Values - Visual Grid */}
-    <div className="pad-vertical--double">
-      <div className="max-width content-padding">
-        <h3 className="header--lg text--center margin-bottom--double">Our Values</h3>
-        <div className="pure-g">
-          <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5 pad-horizontal margin-bottom--double">
-            <div className="text--center">
-              <Image
-                src="/images/open_source/public-good.png"
-                alt="Ethics"
-                className="image--max-width-80 margin-bottom"
-                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-              />
-              <p className="text--bold margin-bottom--half">Ethics aren't optional</p>
-              <p className="text--gray text--sm">Every interface and policy we design touches real lives.</p>
-            </div>
-          </div>
-          <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5 pad-horizontal margin-bottom--double">
-            <div className="text--center">
-              <Image
-                src="/images/open_source/trust.png"
-                alt="Trust"
-                className="image--max-width-80 margin-bottom"
-                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-              />
-              <p className="text--bold margin-bottom--half">Clarity builds trust</p>
-              <p className="text--gray text--sm">When people can see how a system works, they can use it — and question it — better.</p>
-            </div>
-          </div>
-          <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5 pad-horizontal margin-bottom--double">
-            <div className="text--center">
-              <Image
-                src="/images/open_source/innovation.png"
-                alt="Craft"
-                className="image--max-width-80 margin-bottom"
-                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-              />
-              <p className="text--bold margin-bottom--half">Craft matters</p>
-              <p className="text--gray text--sm">Precision and beauty make complex ideas understandable.</p>
-            </div>
-          </div>
-          <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5 pad-horizontal margin-bottom--double">
-            <div className="text--center">
-              <Image
-                src="/images/open_source/innovation.png"
-                alt="Small teams"
-                className="image--max-width-80 margin-bottom"
-                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-              />
-              <p className="text--bold margin-bottom--half">Small scales smarter</p>
-              <p className="text--gray text--sm">Fewer layers mean faster learning and stronger relationships.</p>
-            </div>
-          </div>
-          <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5 pad-horizontal margin-bottom--double">
-            <div className="text--center">
-              <Image
-                src="/images/open_source/public-good.png"
-                alt="Human data"
-                className="image--max-width-80 margin-bottom"
-                sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-              />
-              <p className="text--bold margin-bottom--half">Data is human</p>
-              <p className="text--gray text--sm">Behind every dataset is someone's story. We design to keep that visible.</p>
-            </div>
-          </div>
-        </div>
+    <div className="max-width content-padding pad-vertical--double--only-lg">
+      <div className="pure-g margin-bottom--double">
+        <iframe
+          src="https://docs.google.com/presentation/d/e/2PACX-1vQbOnDhq-ObLQhYTayN-sWzlR5MVk_Y9O12_HYPlgPBVs0xop6wF3Bs2Q6smWkSHpCCJ8Xv1SHNBmmb/embed?start=false&loop=true&delayms=3000"
+          frameborder="0"
+          width="960"
+          height="569"
+          title="GoInvo Studio Plan"
+          allowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+        ></iframe>
       </div>
     </div>
-
-    {/* How We Work - Two Column */}
-    <div className="background--blue pad-vertical--double">
-      <div className="max-width content-padding">
-        <div className="pure-g">
-          <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-            <h3 className="header--lg margin-bottom">Our Approach</h3>
-            <p className="text--gray">
-              Each project runs as a self-contained studio: research, design, and engineering working together with the client.
-            </p>
-            <p className="text--gray">
-              That structure lets us adapt quickly, minimize overhead, and integrate seamlessly into teams much larger than ours.
-            </p>
-            <p className="text--gray">
-              Decisions happen where information is richest, close to the people doing the work and the users they serve.
-            </p>
-          </div>
-          <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-            <h3 className="header--lg margin-bottom">Why We Stay Small</h3>
-            <p className="text--gray">
-              We organize around <strong>knowledge, not hierarchy.</strong>
-            </p>
-            <p className="text--gray">
-              Each project functions as its own independent yet connected studio, collaborating through shared ethics and open communication.
-            </p>
-            <p className="text--gray">
-              Smaller, self-organizing teams consistently outperform large, centralized ones in both quality and adaptability.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* How We Use AI - Feature Section */}
-    <div className="pad-vertical--double about-ai">
-      <div className="max-width content-padding">
-        <h3 className="header--lg margin-bottom text--center">How We Use AI</h3>
-        <div className="pure-g">
-          <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg">
-            <p className="text--gray margin-bottom">
-              <strong>AI helps us see more, not decide for us.</strong>
-            </p>
-            <p className="text--gray">
-              We use it as an extension of research and synthesis to search and summarize faster, surface patterns and insights across data and interviews, and assist in visual communication.
-            </p>
-          </div>
-          <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg">
-            <div className="background--gray pad-vertical pad-horizontal about-ai__options-box">
-              <ul className="about-ai__options-list">
-                <li>Designers remain the authors of every insight</li>
-                <li>Transparency, privacy, and human oversight</li>
-                <li>AI amplifies judgment, not replaces it</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Collapsible Bibliography */}
-        <div className="pad-vertical--double">
-          <button
-            onClick={() => setBibliographyExpanded(!bibliographyExpanded)}
-            className="button button--link header--md margin-bottom"
-            style={{ padding: 0, textAlign: 'left', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#666' }}
-          >
-            <span>Bibliography & Research</span>
-            <span style={{ fontSize: '1.2rem', transition: 'transform 0.3s', transform: bibliographyExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-              ▼
-            </span>
-          </button>
-          <Collapsible collapsed={!bibliographyExpanded}>
-            <ul className="ul text--gray text--sm margin-top">
-              <li className="margin-bottom--half">
-                "Design Thinking and Teamwork — Measuring Impact: A Systematic Literature Review." <em>Journal of Organization Design</em> (2024).
-              </li>
-              <li className="margin-bottom--half">
-                "Failure or Success of Self-Organizing Teams in Long-Term Care Organizations." <em>BMC Health Services Research</em> (2025).
-              </li>
-              <li className="margin-bottom--half">
-                Friedrich Hayek. "The Use of Knowledge in Society." <em>American Economic Review</em> (1945).
-              </li>
-              <li className="margin-bottom--half">
-                Michael Beer & Russell A. Eisenstat. <em>High Commitment, High Performance: How to Build a Resilient Organization for Sustained Advantage.</em> Jossey-Bass (2009).
-              </li>
-              <li className="margin-bottom--half">
-                Herbert A. Simon. <em>The Sciences of the Artificial.</em> (1969).
-              </li>
-              <li className="margin-bottom--half">
-                "Scaling or Growing Agile? Proposing a Manifesto for Agile Organization Development." <em>Journal of Organization Design</em> (2025).
-              </li>
-              <li className="margin-bottom--half">
-                Elinor Ostrom. <em>Governing the Commons.</em> (1990).
-              </li>
-              <li className="margin-bottom--half">
-                Amartya Sen. <em>Development as Freedom.</em> (1999).
-              </li>
-              <li className="margin-bottom--half">
-                Edward Tufte. <em>The Visual Display of Quantitative Information.</em> (1983).
-              </li>
-              <li className="margin-bottom--half">
-                "The Power of Shared Positivity: Organizational Psychological Capital and Firm Performance During Exogenous Crises." <em>Small Business Economics</em> (2021).
-              </li>
-            </ul>
-          </Collapsible>
-        </div>
-      </div>
-    </div>
-
-    {/* Duplicate intro removed per request */}
     <div className="background--blue pad-vertical--quad--only-lg">
       <div className="max-width content-padding">
         <div className="pure-g">
@@ -503,7 +333,6 @@ const AboutPage = () => {
       </div>
     </div>
   </Layout>
-  );
-};
+)
 
 export default AboutPage

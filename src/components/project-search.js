@@ -5,27 +5,20 @@ import Card from './card'
 import Image from './image'
 import config from '../../config'
 import { performClientSideSemanticSearch, loadSearchIndex } from '../utils/semantic-search'
-import { SPOTLIGHT_WIDTHS } from '../data/homepage-spotlights'
 
-// Helper to call serverless functions across Netlify (/.netlify/functions/*)
-// and Vercel (/api/*). Tries hosts in order until one succeeds.
+// Helper to call Netlify Functions with graceful local fallback
 async function callFunction(name, payload) {
   const opts = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload || {})
   }
-  // 1) Try Vercel-style API route
-  try {
-    const res = await fetch(`/api/${name}`, opts)
-    if (res.ok) return await res.json()
-  } catch {}
-  // 2) Try Netlify production path
+  // Try relative path (works in Netlify dev proxy or production)
   try {
     const res = await fetch(`/.netlify/functions/${name}`, opts)
     if (res.ok) return await res.json()
   } catch {}
-  // 3) Fallback to local Netlify dev server
+  // Fallback to local functions port if running Gatsby alone
   try {
     const res = await fetch(`http://localhost:8888/.netlify/functions/${name}`, opts)
     if (res.ok) return await res.json()
@@ -47,11 +40,22 @@ function dedupeBySlug(items) {
   return out
 }
 
+// AI Persona options
+const AI_PERSONAS = [
+  { key: 'healthcare_executive', label: '🏥 Healthcare Executive', description: 'ROI & compliance focused' },
+  { key: 'product_manager', label: '📱 Product Manager', description: 'UX/UI best practices' },
+  { key: 'researcher', label: '🔬 Clinical Researcher', description: 'Research tools & data' },
+  { key: 'government_official', label: '🏛️ Government Official', description: 'Civic tech solutions' },
+  { key: 'startup_founder', label: '🚀 Startup Founder', description: 'Scalable innovations' }
+]
+
 // Storage keys for state persistence
 const STORAGE_KEYS = {
   searchQuery: 'ai_search_query',
   searchResults: 'ai_search_results',
   aiEnabled: 'ai_search_enabled',
+  selectedPersona: 'ai_search_persona',
+  detectedPersona: 'ai_search_detected_persona',
   aiSearchInsight: 'ai_search_insight',
   timestamp: 'ai_search_timestamp'
 }
@@ -59,7 +63,7 @@ const STORAGE_KEYS = {
 // State expires after 1 hour
 const STATE_EXPIRY = 60 * 60 * 1000
 
-const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, hideInput = false, selectionMode = 'client' }) => {
+const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride = undefined, selectedPersonaOverride = undefined, hideInput = false, selectionMode = 'client', categoryFilter = null }) => {
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState([])
@@ -73,99 +77,55 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
   
   // AI-specific states
   const [aiEnabled, setAiEnabled] = useState(true) // Default to enabled
+  const [selectedPersona, setSelectedPersona] = useState(null)
+  const [detectedPersona, setDetectedPersona] = useState(null)
+  const [isLoadingAI, setIsLoadingAI] = useState(false)
+  const [aiError, setAiError] = useState(null)
   const [aiSearchInsight, setAiSearchInsight] = useState(null)
+  const [showPersonaSelector, setShowPersonaSelector] = useState(false)
   const [stateRestored, setStateRestored] = useState(false)
   const [searchTriggered, setSearchTriggered] = useState(false)
+  const [expandedDescriptions, setExpandedDescriptions] = useState(new Set())
   const [usedFallback, setUsedFallback] = useState(false)
   const [fallbackReason, setFallbackReason] = useState(null)
-  const [loadingDescriptions, setLoadingDescriptions] = useState(false)
-  
-  // Spotlight layout helpers (match homepage behavior)
-  const getWidthForItem = useCallback((item) => {
-    if (!item) return 1
-    const key = item.slug || item.id || ''
-    return SPOTLIGHT_WIDTHS[key] || 1
-  }, [])
+  const normalizedCategory = (categoryFilter || '').toString().trim().toLowerCase()
 
-  const spanClassForWidth = useCallback((w) => {
-    if (w >= 4) return 'spotlight--span-4'
-    if (w >= 3) return 'spotlight--span-3'
-    if (w >= 2) return 'spotlight--span-2'
-    if (w >= 1) return 'spotlight--span-1'
-    return ''
-  }, [])
+  const matchesCategory = useCallback((project) => {
+    if (!normalizedCategory) return true
+    const cats = (project && project.categories) || []
+    const inCategories = cats.some(c => String(c || '').toLowerCase() === normalizedCategory)
+    // also check keywords as a loose signal
+    const kws = (project && project.keywords) || []
+    const inKeywords = kws.some(k => String(k || '').toLowerCase() === normalizedCategory)
 
-  const layoutWithGreedy = useCallback((items) => {
-    const remaining = [...(items || [])]
-    
-    // Special case: if there are exactly 2 items, make them equal width (2 columns each)
-    if (remaining.length === 2) {
-      return remaining.map(item => ({ item, className: spanClassForWidth(2) }))
-    }
-    
-    const output = [] // { item, width }
-    let rowRemaining = 4
-    let rowStartIdx = 0 // index in output where current row starts
+    // Heuristic matching on title/caption/client text
+    const haystack = [project?.title, project?.caption, project?.client, ...(cats || []), ...(kws || [])]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase()
 
-    while (remaining.length > 0) {
-      const candidate = remaining[0]
-      const w = getWidthForItem(candidate)
+    const has = (arr) => arr.some(token => haystack.includes(token))
 
-      // If fits, place it
-      if (w <= rowRemaining) {
-        output.push({ item: candidate, width: w })
-        remaining.shift()
-        rowRemaining -= w
-        if (rowRemaining === 0) {
-          // row complete
-          rowRemaining = 4
-          rowStartIdx = output.length
-        }
-        continue
-      }
-
-      // Look ahead for any that fits
-      let foundIdx = -1
-      for (let i = 1; i < remaining.length; i++) {
-        const wi = getWidthForItem(remaining[i])
-        if (wi <= rowRemaining) { foundIdx = i; break }
-      }
-      if (foundIdx !== -1) {
-        const fit = remaining.splice(foundIdx, 1)[0]
-        const wf = getWidthForItem(fit)
-        output.push({ item: fit, width: wf })
-        rowRemaining -= wf
-        if (rowRemaining === 0) {
-          rowRemaining = 4
-          rowStartIdx = output.length
-        }
-        continue
-      }
-
-      // Nothing fits: expand the last item in the current row to fill remainder
-      if (output.length > rowStartIdx) {
-        const lastIdx = output.length - 1
-        output[lastIdx] = {
-          item: output[lastIdx].item,
-          width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
-        }
-      }
-      // Start a new row
-      rowRemaining = 4
-      rowStartIdx = output.length
+    let inferred = false
+    switch (normalizedCategory) {
+      case 'ai':
+        inferred = has([' ai ', 'artificial intelligence', 'machine learning', 'ml ', ' llm', 'gpt', 'neural', 'algorithm']) || haystack.startsWith('ai')
+        break
+      case 'healthcare':
+        inferred = has(['health', 'healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'oncology'])
+        break
+      case 'government':
+        inferred = has(['government', 'public sector', 'civic', 'municipal', 'federal', 'state', 'massachusetts department', 'snap'])
+        break
+      case 'enterprise':
+        inferred = has(['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'])
+        break
+      default:
+        inferred = false
     }
 
-    // If last row isn't full, expand the last item of the row to fill remainder
-    if (rowRemaining !== 4 && output.length > rowStartIdx) {
-      const lastIdx = output.length - 1
-      output[lastIdx] = {
-        item: output[lastIdx].item,
-        width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
-      }
-    }
-
-    return output.map(({ item, width }) => ({ item, className: spanClassForWidth(width || 1) }))
-  }, [getWidthForItem, spanClassForWidth])
+    return inCategories || inKeywords || inferred
+  }, [normalizedCategory])
   
   // Example search queries to rotate through
   const placeholderExamples = [
@@ -236,9 +196,10 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
   // Compute effective AI control from parent overrides if provided
   const effectiveAiEnabled = typeof aiEnabledOverride === 'boolean' ? aiEnabledOverride : aiEnabled
+  const effectiveSelectedPersona = selectedPersonaOverride || selectedPersona
 
-  // AI pipeline: server selection (ai-select) -> optional AI enhancement (ai-search)
-  const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag, onIntermediateResults }) => {
+  // AI pipeline: server selection (ai-select) -> optional persona enhancement (ai-search)
+  const performAISearch = useCallback(async ({ queryText, allProjects, aiEnabledFlag, personaKey }) => {
     // 1) Server-side selection (or keyword fallback)
     let baseResults = []
     let selectionFallback = false
@@ -268,29 +229,24 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
 
     // If AI enhancement disabled, return base results
     if (!aiEnabledFlag) {
-      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, fallbackUsed: selectionFallback }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback }
     }
 
-    // Show intermediate results with loading state
-    if (onIntermediateResults && baseResults.length > 0) {
-      onIntermediateResults(baseResults)
-    }
-
-    // 2) AI enhancement via ai-search
+    // 2) Persona enhancement via ai-search
     try {
       const payloadProjects = baseResults.slice(0, 10).map(p => ({
         slug: p.slug,
         title: p.title,
         caption: p.caption,
         categories: p.categories || [],
-        keywords: p.keywords || [],
-        client: p.client || '',
         score: p.score || 0
       }))
       const ai = await callFunction('ai-search', {
         query: queryText,
         projects: payloadProjects,
-        useAI: true
+        preset: personaKey || null,
+        useAI: true,
+        autoDetectPersona: !personaKey
       })
 
       const enhanced = (ai.results || []).map(er => {
@@ -308,13 +264,14 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       return {
         finalResults: dedupeBySlug(enhancedRelevant),
         aiInsight: ai.searchInsight || null,
+        detectedPersonaOut: ai.detectedPersona || null,
         // Treat missing AI generation as a fallback condition when AI is enabled
         fallbackUsed: selectionFallback || (aiEnabledFlag && !aiGenerated),
         fallbackReason: aiGenerated ? null : (ai && ai.disabled ? ai.disabled : 'ai-unavailable')
       }
     } catch (e) {
       // If enhancement fails, just return base results
-      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, fallbackUsed: selectionFallback, fallbackReason: 'ai-error' }
+      return { finalResults: dedupeBySlug(baseResults), aiInsight: null, detectedPersonaOut: null, fallbackUsed: selectionFallback, fallbackReason: 'ai-error' }
     }
   }, [])
 
@@ -376,6 +333,8 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
           setQuery(savedState.searchQuery)
           setResults(savedState.searchResults || [])
           setAiEnabled(savedState.aiEnabled !== undefined ? savedState.aiEnabled : true)
+          setSelectedPersona(savedState.selectedPersona || null)
+          setDetectedPersona(savedState.detectedPersona || null)
           setAiSearchInsight(savedState.aiSearchInsight || null)
           // Inform homepage to hide spotlights
           try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(savedState.searchResults) && savedState.searchResults.length > 0 } })) } catch (_) {}
@@ -426,7 +385,9 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       setQuery('')
       setResults([])
       setAiSearchInsight(null)
+      setDetectedPersona(null)
       setSearchTriggered(false)
+      setExpandedDescriptions(new Set())
       clearSearchState()
       try { sessionStorage.removeItem('ai_search_expect_restore') } catch (_) {}
       try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch (_) {}
@@ -468,10 +429,27 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     } catch (_) {}
   }
 
-  // Execute search pipeline when query changes
+  // Execute search pipeline when query or filters change
   useEffect(() => {
-    // Don't search if query is too short
-    if (query.trim().length < 2) {
+    const qlen = query.trim().length
+    const allProjects = (searchIndex && searchIndex.length > 0) ? searchIndex : projects
+
+    // If a category filter is set and no meaningful query, just filter locally without AI/services
+    if (normalizedCategory && qlen < 2) {
+      const filtered = (allProjects || []).filter(matchesCategory)
+      setResults(filtered)
+      setIsSearching(false)
+      setError(null)
+      setSuggestions([])
+      setSearchAnalysis(null)
+      setAiSearchInsight(null)
+      setSearchTriggered(false)
+      try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(filtered) && filtered.length > 0 } })) } catch(_) {}
+      return
+    }
+
+    // Don't search if query is too short (and no category filter-only mode)
+    if (qlen < 2) {
       setResults([])
       setIsSearching(false)
       setError(null)
@@ -502,39 +480,41 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         const indexVersion = allProjects && allProjects.length
           ? `${allProjects.length}:${allProjects[0]?.slug || allProjects[0]?.id || 'x'}:${allProjects[allProjects.length - 1]?.slug || allProjects[allProjects.length - 1]?.id || 'y'}`
           : 'none'
-        const cacheKey = `${query}|${effectiveAiEnabled ? 'ai' : 'plain'}|v=${indexVersion}`
+        const cacheKey = `${query}|${effectiveAiEnabled ? 'ai' : 'plain'}|${effectiveSelectedPersona || 'auto'}|v=${indexVersion}`
         const cached = readCache(cacheKey)
         if (cached && Array.isArray(cached.results)) {
           setResults(cached.results)
           setAiSearchInsight(cached.insight || null)
+          if (cached.detectedPersona) setDetectedPersona(cached.detectedPersona)
           setError(null)
           setIsSearching(false)
-          setLoadingDescriptions(false)
           // Ensure spotlights visibility is synced even on cache hits
           try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(cached.results) && cached.results.length > 0 } })) } catch(_) {}
           return
         }
 
-        const { finalResults, aiInsight, fallbackUsed, fallbackReason } = await performAISearch({
+        const { finalResults, aiInsight, detectedPersonaOut, fallbackUsed, fallbackReason } = await performAISearch({
           queryText: query,
           allProjects,
           aiEnabledFlag: effectiveAiEnabled,
-          onIntermediateResults: (intermediateResults) => {
-            // Show results immediately with loading skeletons
-            setResults(intermediateResults)
-            setLoadingDescriptions(true)
-            setIsSearching(false)
-            try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: true } })) } catch(_) {}
-          }
+          personaKey: effectiveSelectedPersona
         })
 
         let outResults = finalResults
         let usedFb = !!fallbackUsed
         let fbReason = fallbackReason || null
 
+        // Apply category filter if provided
+        if (normalizedCategory) {
+          outResults = (outResults || []).filter(matchesCategory)
+        }
+
         // If we somehow have no results, try a simple local keyword fallback
         if ((!outResults || outResults.length === 0) && Array.isArray(allProjects) && allProjects.length > 0) {
           outResults = quickKeywordFallback(query, allProjects)
+          if (normalizedCategory) {
+            outResults = outResults.filter(matchesCategory)
+          }
           if (outResults && outResults.length > 0) {
             usedFb = true
             fbReason = fbReason || 'no-results'
@@ -544,27 +524,28 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         setResults(outResults)
         setUsedFallback(usedFb)
         setFallbackReason(fbReason)
-        setLoadingDescriptions(false)
         // Cache successful results to reduce API usage for repeated queries
         if (Array.isArray(finalResults) && finalResults.length > 0) {
-          writeCache(cacheKey, { results: finalResults, insight: aiInsight })
+          writeCache(cacheKey, { results: finalResults, insight: aiInsight, detectedPersona: detectedPersonaOut })
         }
         // Notify homepage to hide spotlights only when we truly have results
         try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: Array.isArray(finalResults) && finalResults.length > 0 } })) } catch(_) {}
         setSuggestions([])
         setSearchAnalysis(null)
         setAiSearchInsight(aiInsight)
+        if (detectedPersonaOut) setDetectedPersona(detectedPersonaOut)
         saveSearchState({
           searchQuery: query,
           searchResults: finalResults,
           aiEnabled: effectiveAiEnabled,
+          selectedPersona: effectiveSelectedPersona,
+          detectedPersona: detectedPersonaOut || detectedPersona,
           aiSearchInsight: aiInsight
         })
         setError(null)
       } catch (err) {
         setError('Search is temporarily unavailable. Please try again later.')
         setResults([])
-        setLoadingDescriptions(false)
         // Show spotlights on failure
         try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch(_) {}
       } finally {
@@ -573,7 +554,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     }, 200)
     
     return () => clearTimeout(timeoutId)
-  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled])
+  }, [query, searchIndex, indexLoaded, stateRestored, searchTriggered, effectiveAiEnabled, effectiveSelectedPersona, normalizedCategory, matchesCategory])
   
   const handleInputChange = (e) => {
     setQuery(e.target.value)
@@ -588,9 +569,69 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
     setQuery('')
     setResults([])
     setAiSearchInsight(null)
+    setDetectedPersona(null)
     setSearchTriggered(false)
+    setExpandedDescriptions(new Set())
     clearSearchState()
     try { window.dispatchEvent(new CustomEvent('ai-search-results', { detail: { hasResults: false } })) } catch(_) {}
+  }
+
+  const toggleDescriptionExpansion = (projectSlug) => {
+    setExpandedDescriptions(prev => {
+      const newExpanded = new Set(prev)
+      if (newExpanded.has(projectSlug)) {
+        newExpanded.delete(projectSlug)
+      } else {
+        newExpanded.add(projectSlug)
+      }
+      return newExpanded
+    })
+  }
+
+  const handleToggleAI = () => {
+    const newAiEnabled = !aiEnabled
+    setAiEnabled(newAiEnabled)
+    if (!newAiEnabled) {
+      // When enabling AI, reset persona to trigger auto-detection
+      setSelectedPersona(null)
+    }
+    
+    // Clear results to trigger new search with updated AI settings
+    if (results.length > 0) {
+      setResults([])
+      setSearchTriggered(true)
+    }
+    
+    // Save updated AI preference
+    saveSearchState({
+      searchQuery: query,
+      searchResults: results,
+      aiEnabled: newAiEnabled,
+      selectedPersona,
+      detectedPersona,
+      aiSearchInsight
+    })
+  }
+
+  const handlePersonaSelect = (personaKey) => {
+    setSelectedPersona(personaKey)
+    setShowPersonaSelector(false)
+    
+    // Clear results to trigger new search with updated persona
+    if (results.length > 0) {
+      setResults([])
+      setSearchTriggered(true)
+    }
+    
+    // Save updated persona
+    saveSearchState({
+      searchQuery: query,
+      searchResults: results,
+      aiEnabled,
+      selectedPersona: personaKey,
+      detectedPersona,
+      aiSearchInsight
+    })
   }
 
   // When navigating to a result, mark that we should restore on back and persist current state
@@ -601,17 +642,19 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         searchQuery: query,
         searchResults: results,
         aiEnabled,
+        selectedPersona,
+        detectedPersona,
         aiSearchInsight
       })
     } catch (_) {}
-  }, [query, results, aiEnabled, aiSearchInsight, saveSearchState])
+  }, [query, results, aiEnabled, selectedPersona, detectedPersona, aiSearchInsight, saveSearchState])
 
   // Quick filter buttons for common searches
   const quickFilters = [
-    { label: 'Design for Enterprise', query: 'Design for Enterprise' },
-    { label: 'Design for Healthcare', query: 'Design for Healthcare' },
-    { label: 'Design for Government', query: 'Design for Government' },
-    { label: 'Design for AI', query: 'Design for AI' },
+    { label: 'AI/NLP tools', query: 'NLP artificial intelligence' },
+    { label: 'Clinical tools', query: 'clinical decision support' },
+    { label: 'Data visualization', query: 'hGraph visualization' },
+    { label: 'Research platforms', query: 'research intelligence' },
     { label: 'Patient data', query: 'health data capture' },
     { label: 'EHR systems', query: 'inspired EHRs' }
   ]
@@ -662,6 +705,21 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         </div>
       )}
       
+      {/* AI Loading State */}
+      {isLoadingAI && (
+        <div className="project-search__ai-loading">
+          <div className="ai-loading-spinner">🤖</div>
+          <p>AI is analyzing your search...</p>
+        </div>
+      )}
+      
+      {/* AI Error State */}
+      {aiError && (
+        <div className="project-search__ai-error">
+          <p>⚠️ AI enhancement unavailable: {aiError}</p>
+        </div>
+      )}
+      
       {/* Search Results */}
       {query && !isSearching && results.length > 0 && (
         <div className="project-search__results">
@@ -672,67 +730,102 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
             </div>
           )}
           
-          {/* Results Section - AI-Enhanced or Fallback */}
-          {(() => {
-            // Determine which projects to show
-            const hasAiDescriptions = results.some(project => project.aiDescription)
-            const projectsToShow = loadingDescriptions 
-              ? results.slice(0, 4)
-              : hasAiDescriptions 
-                ? results.filter(project => project.aiDescription)
-                : results.slice(0, 10) // Show top 10 for non-AI results
-            const isSingleResult = projectsToShow.length === 1
+          {/* AI-Enhanced Results Section */}
+          {aiEnabled && results.some(project => project.aiDescription) && (() => {
+            // Get AI-enhanced projects for featured section
+            const aiEnhancedProjects = results
+              .filter(project => project.aiDescription)
+              .slice(0, 4);
+            const isSingleEnhanced = aiEnhancedProjects.length === 1;
             
             return (
               <div className="ai-enhanced-section">
+                {/* Decorative background */}
+                <div className="ai-enhanced-background"></div>
+                
                 <div className="ai-section-header">
-                  <h2 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>
-                    {loadingDescriptions ? 'Finding Relevant Projects...' : hasAiDescriptions ? 'Recommended for You' : 'Search Results'}
-                  </h2>
-                  <p>{isSingleResult ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
+                  <h2 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>Recommended for You</h2>
+                  <p>{isSingleEnhanced ? 'Here is a project that may interest you based on your search:' : 'Here are projects that may interest you based on your search:'}</p>
                 </div>
                 
-                <div className={`spotlights-grid spotlights-grid--two ${isSingleResult ? 'ai-enhanced-grid--single' : ''}`}>
-                  {projectsToShow.map((item) => (
+                <div className={`spotlights-grid ai-enhanced-grid ${isSingleEnhanced ? 'ai-enhanced-grid--single' : ''}`}>
+                  {aiEnhancedProjects.map((project) => (
                     <Card
-                      key={`result-${item.slug}`}
-                      link={`/work/${item.slug}/`}
+                      key={`ai-${project.slug}`}
+                      link={`/work/${project.slug}/`}
                       onClick={handleResultNavigate}
                       noShadow
-                      className="spotlight--span-2"
                     >
                       <ImageBlock
-                        title={item.title}
-                        image={item.image}
-                        caption={loadingDescriptions 
-                          ? '' 
-                          : (item.aiDescription ? item.aiDescription : item.caption)
-                        }
+                        title={project.title}
+                        image={project.image}
+                        caption={project.aiDescription ? project.aiDescription : project.caption}
                         sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
                       />
-                      {loadingDescriptions && (
-                        <div className="skeleton-loader">
-                          <div className="skeleton-line skeleton-line--full"></div>
-                          <div className="skeleton-line skeleton-line--medium"></div>
-                          <div className="skeleton-line skeleton-line--short"></div>
-                        </div>
-                      )}
                     </Card>
                   ))}
                 </div>
               </div>
-            )
+            );
           })()}
           
-          {/* See all work CTA (match Spotlights section styles) */}
-          <div className="container container--justify-center margin-top margin-bottom--double">
-            <Link
-              to="/work/?expanded=true"
-              className="button button--outline-primary button--padded"
-              aria-label="See all work page"
-            >
-              VIEW ALL WORK
-            </Link>
+          {/* All Results Section */}
+          <div className="all-results-section">
+            {(() => {
+              // Get AI-enhanced project slugs (up to 4) to filter out duplicates
+              const aiEnhancedSlugs = aiEnabled ?
+                results
+                  .filter(project => project.aiDescription)
+                  .slice(0, 4)
+                  .map(project => project.slug) : [];
+
+              // Filter out AI-enhanced projects from remaining results
+              const remainingResults = results.filter(project => !aiEnhancedSlugs.includes(project.slug));
+
+              // If there are no remaining results, don't render this section
+              if (!remainingResults || remainingResults.length === 0) return null;
+
+              const remainingCount = remainingResults.length;
+
+              // If we used fallback search, still show the header even without AI descriptions
+              const showHeader = (aiEnabled && aiEnhancedSlugs.length > 0) || usedFallback || !!normalizedCategory
+              const headerTitle = usedFallback ? 'Here are your results' : 'All Results'
+
+              return (
+                <>
+                  {showHeader && (
+                    <div className="all-results-header">
+                      <h4>{headerTitle}</h4>
+                      <p>Browse all {remainingCount} projects that match your search:</p>
+                    </div>
+                  )}
+
+                  <div className="spotlights-grid ai-results-grid">
+                    {remainingResults.map((project) => (
+                      <Card key={project.slug} link={`/work/${project.slug}/`} onClick={handleResultNavigate} noShadow>
+                        <ImageBlock
+                          title={project.title}
+                          image={project.image}
+                          caption={project.caption}
+                          sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
+                        />
+                      </Card>
+                    ))}
+                  </div>
+
+                  {/* See all work CTA (match Spotlights section styles) */}
+                  <div className="container container--justify-center margin-top margin-bottom--double">
+                    <Link
+                      to="/work/?expanded=true"
+                      className="button button--outline-primary button--padded"
+                      aria-label="See all work page"
+                    >
+                      VIEW ALL WORK
+                    </Link>
+                  </div>
+                </>
+              );
+            })()}
           </div>
 
           {/* View Spotlights CTA */}
@@ -752,7 +845,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
         </div>
       )}
 
-      {/* No Results State - show when there are no results */}
+      {/* No Results State */}
       {query && !isSearching && results.length === 0 && (
         <div className="project-search__no-results" style={{ textAlign: 'center' }}>
           <h4 className="header--xl" style={{ fontWeight: 700, marginBottom: '12px' }}>No Results...</h4>
@@ -771,7 +864,7 @@ const ProjectSearch = ({ projects = [], externalQuery = null, aiEnabledOverride 
       )}
       
       {/* Loading State */}
-      {isSearching && (
+      {isSearching && !isLoadingAI && (
         <div className="project-search__loading" style={{ textAlign: 'center', padding: '0 16px' }}>
           <h4 className="header--xl" style={{ fontWeight: 400, marginBottom: '12px' }}>Searching projects...</h4>
           <div className="ai-spinner" style={{ margin: '8px auto 24px' }} />

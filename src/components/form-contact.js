@@ -17,8 +17,8 @@ const ContactForm = ({ showHeader = true }) => {
             id="JotFormIFrame-251276832519159"
             className="jotform-form contact-form"
             title="Contact"
-            allowtransparency="true"
-            frameborder="0"
+            allowTransparency="true"
+            frameBorder="0"
             scrolling="no"
             src="https://form.jotform.com/251276832519159"
             style={{ width: '100%', height: '700px' }}

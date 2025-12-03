@@ -76,7 +76,7 @@ class HumanCenteredAIFeature extends Component {
               <p>Studies of AI decision support tools show that layered explainability improves acceptance without overwhelming users, especially when explanations use familiar clinical concepts instead of raw model internals. The goal is not to teach every user data science; it is to show enough reasoning that the decision feels reviewable and accountable.</p>
 
               <Image
-                src="/images/features/human-centered-design-for-ai/coderyte_hsc_UI_coding_v07.jpg"
+                src="/images/case-studies/coderyte/coderyte-mockup1.jpg"
                 className="image--max-width display--block"
                 sizes={
                   config.sizes.fullToHalfAtLargeInsideMediumMaxWidth
@@ -97,6 +97,14 @@ class HumanCenteredAIFeature extends Component {
               <p>Clinicians are more likely to trust a system that learns from them instead of lecturing them. Feedback loops that visibly update the system based on expert corrections change the relationship from black box to joint problem-solving partner.</p>
               <p>In the CodeRyte redesign, GoInvo made every override and correction part of the product’s learning pipeline. Similar patterns can work in diagnostic tools: when radiologists reclassify a finding or primary care clinicians correct a risk score, the system can surface how those changes inform future cases, even if only in aggregate. Over time, clinicians see their collective expertise shaping the tool, which reinforces both performance and perceived legitimacy.</p>
 
+              <Image
+                src="/images/case-studies/coderyte/coderyte-mockup3.jpg"
+                className="image--max-width display--block"
+                sizes={
+                  config.sizes.fullToHalfAtLargeInsideMediumMaxWidth
+                }
+              />
+
               <h4 className="header--sm margin-top--double text--gray numeral-gutter">4.  Integrate into real workflows, not idealized ones</h4>
               <p>Even the most transparent AI will fail if it adds friction to days already packed with alerts, documentation, and inbox messages. Studies of AI adoption in clinical environments repeatedly highlight usability and workflow fit as critical enablers of trust.</p>
               <p>For GoInvo’s enterprise healthcare clients, that has meant:</p>
@@ -106,6 +114,7 @@ class HumanCenteredAIFeature extends Component {
                 <li>Mobile and tablet experiences tuned for environments like home health or telehealth visits.</li>
               </ul>
               <p>AI co-pilots should feel like natural extensions of existing tools, not parallel systems that clinicians must remember to check. When well done, clinicians report lower cognitive load and better situational awareness, even as AI takes on more of the background analysis.</p>
+
               <div className="spacer margin-bottom--double" />
 
               <Divider />

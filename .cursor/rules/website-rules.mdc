@@ -1,0 +1,5 @@
+---
+description: If the user asks how to run the webpage/server/proxy
+alwaysApply: false
+---
+Please instruct the user to use 'npm run develop' to run the client and 'npx --yes netlify-cli dev --target-port 8000 --port 8888 --functions netlify/functions' to run the proxy when requested

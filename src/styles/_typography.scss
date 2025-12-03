@@ -115,6 +115,7 @@ body {
 }
 
 .header {
+
   &--lg,
   &--xl {
     font-family: $font-family--serif;
@@ -158,4 +159,8 @@ sup a {
     color: $color-black;
     text-decoration: underline;
   }
+}
+
+.numeral-gutter {
+  margin-left: -1rem;
 }

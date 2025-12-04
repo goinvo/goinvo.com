@@ -29,7 +29,7 @@ class HumanCenteredAIFeature extends Component {
               <h1 className="header--xl">The Human-Centered Design Behind AI Clinicians Can Trust</h1>
 
               <p>Healthcare has plenty of artificial intelligence, but not enough AI that clinicians actually use. Models can now flag sepsis hours earlier, spot subtle patterns in radiology images, and summarize dense charts in seconds, often matching or beating human performance on accuracy benchmarks. Yet adoption remains stubbornly uneven, and many tools sit idle once the pilot is over. The missing ingredient is not more algorithms. It is trust<sup><a href="#references">1</a></sup>.</p>
-              <p>The gap between what AI can do and what clinicians believe it can do is fundamentally a design problem. When interfaces treat AI like an oracle rather than a colleague, opaque, interruptive, and impossible to question, clinicians default back to the workflows they know. To unlock AI’s promise, healthcare needs something different: AI deliberately designed to earn trust at every interaction.</p>
+              <p>The gap between what AI can do and what clinicians believe it can do is fundamentally a design problem. When interfaces treat AI like an oracle rather than a colleague, opaque, interruptive, and impossible to question, clinicians default back to the workflows they know. To unlock AI’s promise, healthcare needs something different: AI deliberately designed to earn trust.</p>
               <div className="spacer margin-bottom--double" />
 
               <Divider />
@@ -45,7 +45,7 @@ class HumanCenteredAIFeature extends Component {
               <Divider />
 
               <h2 className="header--md margin-top--double">A real-world example: building trust into autonomous coding</h2>
-              <p>One early example of an AI “co-pilot” at scale comes from the world of medical coding, long a tedious and error-prone part of the revenue cycle. CodeRyte, later acquired by 3M, used natural language processing to read clinical notes and automatically generate billing codes, reducing the need for manual coding line-by-line. The technology promised major efficiency gains, but only if coders and clinicians trusted the system enough to let it work.</p>
+              <p>One early example of an AI co-pilot at scale comes from the world of medical coding, long a tedious and error-prone part of the revenue cycle. CodeRyte, later acquired by 3M, used natural language processing to read clinical notes and automatically generate billing codes, reducing the need for manual coding line-by-line. The technology promised major efficiency gains, but only if coders and clinicians trusted the system enough to let it work.</p>
               <p><a href="/work/3m-coderyte">GoInvo partnered with CodeRyte</a> to transform a powerful but “bolted-on” engine into a complete product that hospitals could rely on every day. User research made the trust problem clear: billing managers and coders did not just want correct codes; they wanted to see how the AI got there. They needed to audit specific phrases in the note, review confidence levels, and quickly spot where human intervention was still required.</p>
 
               <Image
@@ -91,7 +91,7 @@ class HumanCenteredAIFeature extends Component {
                 <li>Visual confidence bands that distinguish strong signals from weak suggestions.</li>
                 <li>Obvious controls for overriding, dismissing, or downgrading AI recommendations.</li>
               </ul>
-              <p>Research on AI-based decision support consistently finds that perceived honesty about limitations, combined with the ability to disagree, actually increases long-term trust and use. In other words, a good co-pilot knows when to say, “You should take the controls.”</p>
+              <p>Research on AI-based decision support consistently finds that perceived honesty about limitations, combined with the ability to disagree, actually increases long-term trust and use.</p>
 
               <h4 className="header--sm margin-top--double text--gray numeral-gutter">3.  Build real feedback loops, not suggestion boxes</h4>
               <p>Clinicians are more likely to trust a system that learns from them instead of lecturing them. Feedback loops that visibly update the system based on expert corrections change the relationship from black box to joint problem-solving partner.</p>
@@ -119,7 +119,7 @@ class HumanCenteredAIFeature extends Component {
 
               <Divider />
 
-              <h2 className="header--md margin-top--double">A consumer-facing shift: from black boxes to visible allies</h2>
+              <h2 className="header--md margin-top--double">From black box to transparent partner</h2>
               <p>For patients and the broader public, the co-pilot metaphor is just as important. Surveys show that both clinicians and patients worry about opaque AI making life-and-death calls, particularly if they cannot understand or challenge those decisions. At the same time, people are increasingly comfortable with AI helping behind the scenes: triaging messages, organizing visit summaries, or flagging unusual trends in wearable data, so long as a trusted clinician remains in the loop.</p>
               <p>Design plays a critical role in how that balance is communicated. Consumer-friendly visualizations can show, for example, how an AI-powered system monitors thousands of signals from electronic health records or devices but only surfaces a handful of high‑priority alerts to a physician. Clear language can explain that algorithms augment, rather than replace, human expertise, mirroring the way autopilot systems work in aviation. When AI is framed and experienced as an accountable, supervised co-pilot, public comfort and clinician trust tend to rise together.</p>
               <div className="spacer margin-bottom--double" />
@@ -134,7 +134,7 @@ class HumanCenteredAIFeature extends Component {
                 <li>Measuring success not just in model performance, but in sustained, real‑world use and satisfaction across clinical teams.</li>
               </ul>
               <p>GoInvo’s work across AI-enabled coding, clinical decision support, and data‑rich consumer health experiences shows that when design treats trust as a first-class problem, AI co‑pilots can move from lab demos to everyday practice. The result is not just efficiency gains, but a more resilient care system in which humans and machines each do what they do best.</p>
-              <p>Healthcare does not need more black boxes. It needs visible, accountable AI co‑pilots that clinicians are proud to fly with. Thoughtful design is how we get there.</p>
+              <p>Healthcare does not need more black boxes. It needs visible, accountable AI co‑pilots that clinicians are proud to work with. Thoughtful design is how we get there.</p>
 
             </div>
           </div>
@@ -174,15 +174,21 @@ class HumanCenteredAIFeature extends Component {
                 references={[
                   {
                     title:
-                      'Tun H, Rahman H, Naing L, Malik O. Trust in Artificial Intelligence–Based Clinical Decision Support Systems Among Health Care Workers: Systematic Review. J Med Internet Res 2025;27:e69678. DOI: 10.2196/69678',
+                      'Mathur H T, Rajan H A, Mongan O, Neumann L. Trust in Artificial Intelligence–Based Clinical Decision Support Systems in Health Care: Systematic Review. J Med Internet Res. 2025;27:e69678. doi:10.2196/69678. Available from: https://www.jmir.org/2025/1/e69678',
                     link:
                       'https://www.jmir.org/2025/1/e69678',
                   },
                   {
                     title:
-                      'Johannssen A, Chukhrova N. The crucial role of explainable artificial intelligence (XAI) in improving health care management. Health Care Manag Sci. 2025 Sep;28(3):565-570. doi: 10.1007/s10729-025-09720-y. Epub 2025 Sep 30. PMID: 41026402; PMCID: PMC12535480.',
+                      'Johannssen A, Chukhrova N. The crucial role of explainable artificial intelligence (XAI) in improving health care management. Health Care Manag Sci. 2025 Sep;28(3):565–570. doi:10.1007/s10729-025-09720-y. Available from: https://pmc.ncbi.nlm.nih.gov/articles/PMC12535480/',
                     link:
                       'https://pmc.ncbi.nlm.nih.gov/articles/PMC12535480/',
+                  },
+                  {
+                    title:
+                      'Gupta M, Bhardwaj A, Goyal N. Explainable Artificial Intelligence (XAI) for Healthcare: A Brief Review. International Journal of Advanced Research in Computer and Communication Engineering. 2025 Mar;14(3):65-72. Available from: https://ijarcce.com/wp-content/uploads/2025/03/IJARCCE.2025.14367.pdf',
+                    link:
+                      'https://ijarcce.com/wp-content/uploads/2025/03/IJARCCE.2025.14367.pdf',
                   },
                 ]}
               />

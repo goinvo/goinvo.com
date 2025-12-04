@@ -24,111 +24,73 @@ class PatientEngagementPage extends Component {
             className="hero--higher-text-contrast"
             link="/contact/"
             image="/images/case-studies/mass/snap/snap-cover.jpg"
-            caption="Beautiful software design for government and state services for smoother processes and happy residents."
+            caption="We craft impactful communication that drive adoption, trust, and outcomes."
             button="Let's discuss your project"
             buttonLink="/contact/"
             isLarge
             position="top center"
           >
             <h1 className="header--xl">
-              Software for goverment services is complicated
-              <span className="text--serif text--primary">.</span><br />
-              We know how to do it
+              Designing patient engagement experiences that connect, educate, and empower
               <span className="text--serif text--primary">.</span>
             </h1>
           </Hero>
           <div className="background--light-orange pad-horizontal">
-            <div className="max-width content-padding pad-vertical LayoutCenter text--teal">
-              <h2 className="header--xl">
-                What results are you looking for?
-              </h2>
+            <div className="max-width content-padding pad-vertical text--teal">
+
               <div className="margin-bottom--double">
-                <div className="resultsRow ul">
-                  <li><strong>Transformed outdated systems into cutting-edge solutions.</strong></li>
-                  <li><strong>Smoother processes for happier government employees and residents.</strong></li>
-                </div>
-                <div className="resultsRow ul">
-                  <li><strong>Re-imagined software and services to meet evolving needs at scale.</strong></li>
-                  <li><strong>Validated ideas before investing in a full development cycle.</strong></li>
-                </div>
-                <div className="resultsRow ul">
-                  <li><strong>Improved accessibility for wider resident needs.</strong></li>
-                  <li><strong>Strategy and vision to rally support.</strong></li>
-                </div>
+                <p className="p-max">At GoInvo, we focus on patient engagement through human-centered experiences that meet people where they are, whether they’re navigating a chronic condition, participating in medical research, or simply trying to better understand their health data. Our approach combines empathy and research to make complex healthcare information accessible. We create digital tools and resources that empower patients, caregivers, and healthcare providers to make informed decisions and take meaningful action.</p>
               </div>
             </div>
           </div>
 
-          <div className="max-width content-padding pad-vertical LayoutCenter">
+          <div className="max-width content-padding pad-vertical">
             <h2 className="header--xl center margin-bottom--half">
-              Why choose GoInvo?
+              Our Approach
             </h2>
 
             <div className="container--justify-center tileRow">
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
-                  src="/images/open_source/innovation.png"
-                  className="image--max-width-80"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text margin-top--none">
-                  <strong>Long Term Mission Support</strong><br />
-                  We support your long term mission and objectives with digital tools that are scalable and increase accessibility.
-                </p>
+
+              <div className="pad-horizontal pure-u-sm-1-2">
+                <div className="margin-top--none">
+                  <h3 className="header--sm margin-bottom--half">Human-Centered from the Start</h3>
+                  <p className="margin-top--none">
+                    We embed ourselves in the patient experience, becoming participants in the programs we design. We interview patients, caregivers, clinicians, and researchers to understand not just what people need, but why they need it and what barriers stand in their way.
+                  </p>
+                </div>
               </div>
 
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
-                  src="/images/open_source/public-good.png"
-                  className="image--max-width-80"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text margin-top--none">
-                  <strong>Transformative Change for the Public Good</strong><br />
-                  We design seamless, human-centered experiences that transform complex needs into seamless and equitable services, reducing burden and building trust.
-                </p>
+              <div className="pad-horizontal pure-u-sm-1-2">
+                <div className="margin-top--none">
+                  <h3 className="header--sm margin-bottom--half">Designing for Inclusivity</h3>
+                  <p className="margin-top--none">
+                    We design for the full spectrum of health literacy, cultural backgrounds, physical abilities, and life circumstances. Whether creating experiences for underrepresented populations in biomedical research or developing educational tools for the 88% of US adults who lack health literacy, we ensure our solutions work for everyone.
+                  </p>
+                </div>
               </div>
 
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <Image
-                  src="/images/open_source/trust.png"
-                  className="image--max-width-80"
-                  sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                />
-                <p className="text margin-top--none">
-                  <strong>Rapid Iteration and Testing</strong><br />
-                  Validated design, research, and rapid prototyping to showcase your agency's vision, build support, and prove value before investing time and budget.
-                </p>
-              </div>
             </div>
 
             <div className="container--justify-center tileRow">
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <p className="stat">
-                  <span className="number-large">33</span>
-                  <span>
-                    government-sponsored design projects since 2009
-                  </span>
-                </p>
+
+              <div className="pad-horizontal pure-u-sm-1-2">
+                <div className="margin-top--none">
+                  <h3 className="header--sm margin-bottom--half">Evidence-Based Design</h3>
+                  <p className="margin-top--none">
+                    Our work is grounded in behavioral science frameworks like the Health Belief Model, educational research, and accessibility standards. We don’t guess. We design based on what research tells us will create genuine behavior change and engagement.
+                  </p>
+                </div>
               </div>
 
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <p className="stat">
-                  <span className="number-large">160M+</span>
-                  <span>
-                    people impacted by GoInvo designs
-                  </span>
-                </p>
+              <div className="pad-horizontal pure-u-sm-1-2">
+                <div className="margin-top--none">
+                  <h3 className="header--sm margin-bottom--half">Collaborative Partnership</h3>
+                  <p className="margin-top--none">
+                    We work alongside clinical teams, program offices, research groups, and technology partners to translate complex requirements into human-friendly experiences. We advocate for the patient voice in every decision, balancing user needs with policy constraints, technical feasibility, and program goals.
+                  </p>
+                </div>
               </div>
 
-              <div className="pad-horizontal pure-u-sm-1-3 reason-tile">
-                <p className="stat">
-                  <span className="number-large">15</span>
-                  <span>
-                    agencies we've worked with
-                  </span>
-                </p>
-              </div>
             </div>
 
           </div>
@@ -136,10 +98,9 @@ class PatientEngagementPage extends Component {
           <div className="LayoutCenter text--teal">
             <div className="max-width content-padding pad-vertical">
               <div className="pad-vertical">
-                <div className="hr margin-bottom--double"></div>
-                <p className="center"><strong>Trusted by ambitious state agencies and for-public partners</strong></p>
+                <div className="hr margin-bottom--double" />
+                <h3 className="header--sm center">Trusted by ambitious startups, Fortune 500's, and government agencies</h3>
                 <ClientLogos government="true" />
-                <p>Our <strong>ITS81 contract</strong> with the Commonwealth of Massachusetts prequalifies us for IT professional services—streamlining government procurement and validating our expertise as a trusted vendor.</p>
               </div>
             </div>
 
@@ -150,7 +111,7 @@ class PatientEngagementPage extends Component {
               <div>
                 <div>
                   <h2 className="header--xl margin-bottom--double">
-                    Our work drives results for government services
+                    Driving results for patient engagement
                     <span className="text--serif text--primary">.</span>
                   </h2>
                   <Link
@@ -162,34 +123,6 @@ class PatientEngagementPage extends Component {
                 </div>
 
                 <div className="pure-u-1 marginTop">
-                  <Card link="/work/mass-snap/">
-                    <div className="flip-parent">
-                      <div className="pure-u-lg-1-2 text--teal textCard flip-child">
-                        <h4 className="header--xl headerCard margin-bottom--none">
-                          1,107,790 Massachusetts residents were recipients of SNAP food benefits in 2024.
-                        </h4>
-                        <p className="header--lg margin-bottom--none">
-                          Up from 750,000 residents in 2017. The redesigned application was deployed in July 2018, and for the first time ever at the MA DTA, the volume of online applications exceeded that of applications completed in person.
-                        </p>
-                        <p>
-                          <Link to="/work/mass-snap/">
-                            Read Case Study
-                          </Link>
-                        </p>
-                      </div>
-
-                      <div className=" pure-u-lg-1-2 flip-child imgMaxWidth caseStudyImg">
-                        <Image
-                          src="/images/case-studies/public-sector/pubDesign_SNAP.jpg"
-                          className="image--max-width"
-                          sizes={config.sizes.full}
-                        />
-                      </div>
-                    </div>
-                  </Card>
-                </div>
-
-                <div className="pure-u-1">
                   <Card link="/work/all-of-us/">
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 text--teal flip-child textCard">
@@ -219,18 +152,18 @@ class PatientEngagementPage extends Component {
                 </div>
 
                 <div className="pure-u-1">
-                  <Card link="/work/ahrq-cds/">
+                  <Card link="/work/fastercures-health-data-basics/">
                     <div className="flip-parent">
                       <div className="pure-u-md-1-2 text--teal flip-child textCard">
                         <h4 className="header--xl headerCard">
-                          National Clinical Decision Support Tool
+                          Understanding Health Data to Drive Patient Engagement
                         </h4>
                         <p className="header--lg margin-bottom--none">
-                          GoInvo designed CDS Connect, an AHRQ-funded (Agency for Healthcare Research and Quality) national repository for providers, health IT vendors, and researchers to create and share CDS tools (clinical decision support tools) to improve clinical decision making and quality of care.
+                          We helped FasterCures define what health data is and launch a patient-engagement experience that blends behavioral science and inclusive design to educate patients about their health data. Working closely with clinical and research teams, including patient advocacy groups, we created communication experiences that meet users where they are—regardless of literacy, language, or background.
                         </p>
                         <p>
                           <Link
-                            to="/work/ahrq-cds/"
+                            to="/work/fastercures-health-data-basics/"
                           >
                             Read Case Study
                           </Link>
@@ -238,7 +171,37 @@ class PatientEngagementPage extends Component {
                       </div>
                       <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
                         <Image
-                          src="/images/case-studies/ahrq/CDS_connect_hero-2.jpg"
+                          src="/images/patient-engagement/fastercures.jpg"
+                          className="image--max-width"
+                          sizes={config.sizes.full}
+                        />
+                      </div>
+
+                    </div>
+                  </Card>
+                </div>
+
+                <div className="pure-u-1">
+                  <Card link="/work/wuxi-nextcode-familycode/">
+                    <div className="flip-parent">
+                      <div className="pure-u-md-1-2 text--teal flip-child textCard">
+                        <h4 className="header--xl headerCard">
+                          Gently Communicating Carrier Status to New Parents
+                        </h4>
+                        <p className="header--lg margin-bottom--none">
+                          For genetic services, we've simplified highly technical content for audiences with varying levels of health literacy. Our carrier screening service for WuXi NextCODE transformed industry jargon and ambiguous clinical reports into clear, human-friendly information that both patients and clinicians could understand without requiring a genomics degree.
+                        </p>
+                        <p>
+                          <Link
+                            to="/work/wuxi-nextcode-familycode/"
+                          >
+                            Read Case Study
+                          </Link>
+                        </p>
+                      </div>
+                      <div className="pure-u-md-1-2 flip-child imgMaxWidth caseStudyImg">
+                        <Image
+                          src="/images/patient-engagement/wuxi-carrier-code.jpg"
                           className="image--max-width"
                           sizes={config.sizes.full}
                         />

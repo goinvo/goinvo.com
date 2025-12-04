@@ -100,7 +100,7 @@ class PatientEngagementPage extends Component {
               <div className="pad-vertical">
                 <div className="hr margin-bottom--double" />
                 <h3 className="header--sm center">Trusted by ambitious startups, Fortune 500's, and government agencies</h3>
-                <ClientLogos government="true" />
+                <ClientLogos patientEngagement="true" />
               </div>
             </div>
 

@@ -60,7 +60,8 @@ class Footer extends Component {
                   </li>
                   <li>
                     <a
-                      target="blank"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href="https://www.google.com/maps/place/661+Massachusetts+Ave,+Arlington,+MA+02476/@42.4161234,-71.1563006,17z/"
                     >
                       661 Mass Ave
@@ -83,12 +84,12 @@ class Footer extends Component {
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/goinvo/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/goinvo/">
                   <LinkedIn className="icon" />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/goinvo">
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/goinvo">
                   <Twitter className="icon" />
                 </a>
               </li>
@@ -96,17 +97,17 @@ class Footer extends Component {
                 <Logo className="logo" />
               </li>
               <li>
-                <a href="https://medium.com/@goinvo">
+                <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@goinvo">
                   <Medium className="icon" />
                 </a>
               </li>
               <li>
-                <a href="https://www.flickr.com/photos/juhansonin/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/juhansonin/">
                   <Flickr className="icon" />
                 </a>
               </li>
               <li>
-                <a href="https://soundcloud.com/involution-studios">
+                <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/involution-studios">
                   <SoundCloud className="icon" />
                 </a>
               </li>

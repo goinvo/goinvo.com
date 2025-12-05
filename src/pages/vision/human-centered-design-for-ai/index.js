@@ -14,7 +14,7 @@ import Quote from '../../../components/quote'
 const frontmatter = {
   metaTitle: 'The Human-Centered Design Behind AI Clinicians Can Trust',
   metaDescription:
-    '',
+    'Designing AI that people can understand, trust, and use through human-centered design.',
   heroImage:
     '/images/features/human-centered-design-for-ai/human-centered-ai-hero.jpg',
 }

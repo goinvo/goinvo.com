@@ -12,7 +12,7 @@ const frontmatter = {
   metaTitle: 'Designing patient engagement experiences that connect, educate, and empower',
   metaDescription:
     'We craft impactful communication that drive adoption, trust, and outcomes.',
-  heroImage: '/images/case-studies/mass/snap/snap-cover.jpg',
+  heroImage: '/images/patient-engagement/patient_hero.jpg',
 }
 
 class PatientEngagementPage extends Component {
@@ -23,7 +23,7 @@ class PatientEngagementPage extends Component {
           <Hero
             className="hero--higher-text-contrast"
             link="/contact/"
-            image="/images/case-studies/mass/snap/snap-cover.jpg"
+            image="/images/patient-engagement/patient_hero.jpg"
             caption="We craft impactful communication that drive adoption, trust, and outcomes."
             button="Let's discuss your project"
             buttonLink="/contact/"

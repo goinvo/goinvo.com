@@ -9,6 +9,7 @@ import SubscribeForm from '../../../components/form-subscribe'
 import Divider from '../../../components/divider'
 import References from '../../../components/references'
 import Author from '../../../components/author'
+import Quote from '../../../components/quote'
 
 const frontmatter = {
   metaTitle: 'The Human-Centered Design Behind AI Clinicians Can Trust',
@@ -40,6 +41,12 @@ class HumanCenteredAIFeature extends Component {
               <p>Research on AI-based clinical decision support shows that clinicians’ trust depends on a small set of factors: transparency, usability, alignment with clinical judgment, and clear evidence that the system actually reduces workload, not adds to it<sup><a href="#references">2</a></sup>. When those conditions are missing, even well-validated tools are viewed as black boxes that second-guess clinicians without offering enough context to feel safe.</p>
               <p>The stakes are high. Global spending on healthcare AI is projected in the tens of billions of dollars within a few years, yet organizations report slow rollouts, stalled adoption, and frontline skepticism. Clinicians are not resisting technology; they are protecting their patients and their own professional accountability. If an AI tool flags a high-risk patient, they need to know what data drove the alert, how confident the system is, and what would happen if they choose a different course. Without those answers, the safest choice is to ignore the AI.</p>
               <p>Design can change that dynamic by making AI decision-making visible rather than a mystery. </p>
+
+              <Quote
+                quotee=" "
+              >
+                To unlock AI's promise, healthcare needs something different: AI deliberately designed to earn trust.
+              </Quote>
               <div className="spacer margin-bottom--double" />
 
               <Divider />
@@ -105,6 +112,10 @@ class HumanCenteredAIFeature extends Component {
                 }
               />
 
+              <Quote>
+                Studies of AI decision support tools show that layered explainability improves acceptance without overwhelming users, especially when explanations use familiar clinical concepts instead of raw model internals.
+              </Quote>
+
               <h4 className="header--sm margin-top--double text--gray numeral-gutter">4.  Integrate into real workflows, not idealized ones</h4>
               <p>Even the most transparent AI will fail if it adds friction to days already packed with alerts, documentation, and inbox messages. Studies of AI adoption in clinical environments repeatedly highlight usability and workflow fit as critical enablers of trust.</p>
               <p>For GoInvo’s enterprise healthcare clients, that has meant:</p>
@@ -135,6 +146,12 @@ class HumanCenteredAIFeature extends Component {
               </ul>
               <p>GoInvo’s work across AI-enabled coding, clinical decision support, and data‑rich consumer health experiences shows that when design treats trust as a first-class problem, AI co‑pilots can move from lab demos to everyday practice. The result is not just efficiency gains, but a more resilient care system in which humans and machines each do what they do best.</p>
               <p>Healthcare does not need more black boxes. It needs visible, accountable AI co‑pilots that clinicians are proud to work with. Thoughtful design is how we get there.</p>
+
+              <Quote
+                quotee=" "
+              >
+                Trust grows when systems are candid about edge cases, uncertainty, and the boundaries of safe use.
+              </Quote>
 
             </div>
           </div>

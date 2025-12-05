@@ -49,7 +49,6 @@ class HumanCenteredAIFeature extends Component {
               </Quote>
               <div className="spacer margin-bottom--double" />
 
-              <Divider />
 
               <h2 className="header--md margin-top--double">A real-world example: building trust into autonomous coding</h2>
               <p>One early example of an AI co-pilot at scale comes from the world of medical coding, long a tedious and error-prone part of the revenue cycle. CodeRyte, later acquired by 3M, used natural language processing to read clinical notes and automatically generate billing codes, reducing the need for manual coding line-by-line. The technology promised major efficiency gains, but only if coders and clinicians trusted the system enough to let it work.</p>
@@ -160,7 +159,7 @@ class HumanCenteredAIFeature extends Component {
         <div className="pad-vertical--double">
           <div className="max-width max-width--md content-padding">
             <h2 className="header--xl text--center">Authors</h2>
-            <Author name="Jon Follett" />
+            <Author name="Jonathan Follett" />
 
             <div className=" pad-vertical--double">
               <h4 className="header--sm margin-bottom--half">

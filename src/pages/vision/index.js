@@ -218,23 +218,23 @@ const VisionPage = () => {
         <h3 className="header--md pad-vertical--double">Spotlight</h3>
         <div className="pure-g">
           <div className="pure-u-1 pure-u-lg-2-3 pad-right--only-lg margin-bottom">
-              <Card
-                link={spotlightFeature.link}
-                fillHeight
-                externalLink={spotlightFeature.externalLink}
-              >
-                <ImageBlock
-                  title={spotlightFeature.title}
-                  image={spotlightFeature.image}
-                  video={spotlightFeature.video}
-                  client="Feature"
-                  date={spotlightFeature.date}
-                  caption={spotlightFeature.caption}
-                  sizes={config.sizes.fullToTwoThirdsAtLargeInsideMaxWidth}
-                  hoverable
-                />
-              </Card>
-            </div>
+            <Card
+              link={spotlightFeature.link}
+              fillHeight
+              externalLink={spotlightFeature.externalLink}
+            >
+              <ImageBlock
+                title={spotlightFeature.title}
+                image={spotlightFeature.image}
+                video={spotlightFeature.video}
+                client="Feature"
+                date={spotlightFeature.date}
+                caption={spotlightFeature.caption}
+                sizes={config.sizes.fullToTwoThirdsAtLargeInsideMaxWidth}
+                hoverable
+              />
+            </Card>
+          </div>
           <div className="pure-u-1 pure-u-lg-1-3 margin-bottom">
             <Card
               link="/vision/health-visualizations"
@@ -384,14 +384,7 @@ const VisionPage = () => {
               </a>
             </div>
             <div className="margin-bottom--half">
-              <a
-                href="https://thedigitalife.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                The Digital Life
-              </a>{' '}
-              podcast, on{' '}
+              The Digital Life podcast, on{' '}
               <a
                 href="https://soundcloud.com/involution-studios"
                 target="_blank"

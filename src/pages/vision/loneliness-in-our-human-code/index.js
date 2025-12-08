@@ -1071,7 +1071,7 @@ class LonelinessFeature extends Component {
                       title:
                         'Minnesota Department of Health Community and Family Health Division Office of Public Health Practice. (2010). Social Connectedness: Evaluating the Healthy People 2020 Framework: The Minnesota Project. Office of Disease Prevention and Health Promotion, U.S. Department of Health and Human Services. Retrieved August 23, 2018',
                       link:
-                        'http://www.health.state.mn.us/divs/opi/resources/docs/1007socialconnectedness_report.pdf',
+                        'https://cwlibrary.childwelfare.gov/discovery/delivery/01CWIG_INST:01CWIG/1218212860007651',
                     },
                     {
                       title:
@@ -1157,7 +1157,7 @@ class LonelinessFeature extends Component {
                       title:
                         'Coile, C.C.; Levine, P.B. (2011). Recessions, Social Security, and Living Arrangements of the Elderly. Retrieved August 21, 2018',
                       link:
-                        'http://projects.nber.org/projects_backend/rrc/papers/orrc11-12',
+                        'https://www.nber.org/sites/default/files/2020-08/orrc11-12_0.pdf',
                     },
                     {
                       title:

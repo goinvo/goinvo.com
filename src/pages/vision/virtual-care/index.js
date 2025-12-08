@@ -565,8 +565,8 @@ class VirtualCareFeature extends Component {
                   visits could be virtual, how they could be conducted, and what
                   health information is necessary. The diagram examines the top
                   15 reasons for clinical office visits from Table 11 in the{' '}
-                  <a href="https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf">
-                    National Ambulatory Medical Care Survey in 2015
+                  <a href="https://web.archive.org/web/20190111060429/https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf">
+                    National Ambulatory Medical Care Survey in 2015 (archived link)
                   </a>
                   .
                 </p>
@@ -693,15 +693,15 @@ class VirtualCareFeature extends Component {
                   references={[
                     {
                       title:
-                        'National Ambulatory Medical Care Survey: 2015 State and National Summary Tables. (2015). Retrieved January 24, 2019',
+                        'National Ambulatory Medical Care Survey: 2015 State and National Summary Tables. (2015). Retrieved January 24, 2019. (archived link)',
                       link:
-                        'https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf',
+                        'https://web.archive.org/web/20190111060429/https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2015_namcs_web_tables.pdf',
                     },
                     {
                       title:
-                        'Why You Have to Wait Longer to Get a Doctor’s Appointment. (2017). Retrieved January 24, 2019',
+                        'Why You Have to Wait Longer to Get a Doctor’s Appointment. (2017). Healthline. Retrieved January 24, 2019. (archived link)',
                       link:
-                        'https://www.healthline.com/health-news/why-you-have-to-wait-longer-to-get-a-doctors-appointment',
+                        'https://web.archive.org/web/20180210005621/https://www.healthline.com/health-news/why-you-have-to-wait-longer-to-get-a-doctors-appointment',
                     },
                     {
                       title:

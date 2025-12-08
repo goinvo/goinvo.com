@@ -691,9 +691,9 @@ class HealthcareDollars extends Component {
                     },
                     {
                       title:
-                        'U.S. Investments in Medical and Health Research and Development. (n.d.). Retrieved Jan 2019',
+                        'U.S. Investments in Medical and Health Research and Development. (n.d.). Retrieved Jan 2019. (archived link).',
                       link:
-                        'https://www.researchamerica.org/sites/default/files/2016US_Invest_R&D_report.pdf',
+                        'https://web.archive.org/web/20190105092417/https://www.researchamerica.org/sites/default/files/2016US_Invest_R&D_report.pdf',
                     },
                     {
                       title:
@@ -703,33 +703,33 @@ class HealthcareDollars extends Component {
                     },
                     {
                       title:
-                        'Administrative costs of health insurance schemes: Exploring the reasons for their variability. World Health Organization. (2010). Retrieved Jan 2019',
+                        'Administrative costs of health insurance schemes: Exploring the reasons for their variability. World Health Organization. (2010). Retrieved Jan 2019. (archived link).',
                       link:
-                        'https://www.who.int/health_financing/documents/dp_e_10_08-admin_cost_hi.pdf',
+                        'https://web.archive.org/web/20190924164852/https://www.who.int/health_financing/documents/dp_e_10_08-admin_cost_hi.pdf',
                     },
                     {
                       title:
-                        'Data Lab - Budget Function – U.S. Treasury. (n.d.). Retrieved Jan 2019',
+                        'Data Lab - Budget Function - U.S. Treasury. (n.d.). Retrieved Jan 2019',
                       link:
                         'http://healthaffairs.org/healthpolicybriefs/brief_pdfs/healthpolicybrief_123.pdf',
                     },
                     {
                       title:
-                        'CMS Fast Facts - Centers for Medicare & Medicaid Services. (2018, August 1). Retrieved Jan 2019',
+                        'CMS Fast Facts - Centers for Medicare & Medicaid Services. (2018, August 1). Retrieved Jan 2019. (archived link).',
                       link:
-                        'https://www.cms.gov/research-statistics-data-and-systems/statistics-trends-and-reports/cms-fast-facts/index.html',
+                        'https://web.archive.org/web/20190101013028/https://www.cms.gov/research-statistics-data-and-systems/statistics-trends-and-reports/cms-fast-facts/index.html',
                     },
                     {
                       title:
-                        'Medicaid risk-based managed care: analysis of administrative costs for 2016. Milliman. (2017). Retrieved Jan 2019',
+                        'Medicaid risk-based managed care: analysis of administrative costs for 2016. Milliman. (2017). Retrieved Jan 2019. (archived link).',
                       link:
-                        'http://www.milliman.com/uploadedFiles/insight/2017/MedicaidAdminReport-2016.pdf',
+                        'https://web.archive.org/web/20180219002149/http://www.milliman.com/uploadedFiles/insight/2017/MedicaidAdminReport-2016.pdf',
                     },
                     {
                       title:
-                        'Office of Inspector General, Department of Health and Human Services. (n.d.). Management Challenge 2: Fighting Fraud, Waste, and Abuse in Medicare Parts A and B. Retrieved Jan 2019',
+                        'Office of Inspector General, Department of Health and Human Services. (n.d.). Management Challenge 2: Fighting Fraud, Waste, and Abuse in Medicare Parts A and B. Retrieved Jan 2019. (archived link).',
                       link:
-                        'https://oig.hhs.gov/reports-and-publications/top-challenges/2015/challenge02.asp',
+                        'https://web.archive.org/web/20190503220822/https://oig.hhs.gov/reports-and-publications/top-challenges/2015/challenge02.asp',
                     },
                     {
                       title:
@@ -756,9 +756,9 @@ class HealthcareDollars extends Component {
                     },
                     {
                       title:
-                        'FY 2018 Budget in Brief - Overview Tables. (2017, May 23). Retrieved Jan 2019',
+                        'FY 2018 Budget in Brief - Overview Tables. (2017, May 23). Retrieved Jan 2019. (archived link).',
                       link:
-                        'https://www.hhs.gov/about/budget/fy2018/budget-in-brief/overview-tables/index.html',
+                        'https://web.archive.org/web/20190109122345/https://www.hhs.gov/about/budget/fy2018/budget-in-brief/overview-tables/index.html',
                     },
                   ]}
                 />

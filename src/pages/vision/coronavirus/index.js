@@ -1465,7 +1465,7 @@ class CoronavirusFeature extends Component {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov"
+                    href="https://web.archive.org/web/20200318045606/https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/coronavirus-disease-2019-covid-19"
                   >
                     <Image
                       src="/images/features/coronavirus/logo-fda.jpg"
@@ -1484,9 +1484,9 @@ class CoronavirusFeature extends Component {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov"
+                      href="https://web.archive.org/web/20200318045606/https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/coronavirus-disease-2019-covid-19"
                     >
-                      https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov
+                      https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov (archived link)
                     </a>
                   </p>
                 </div>

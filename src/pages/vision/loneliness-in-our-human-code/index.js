@@ -1047,7 +1047,7 @@ class LonelinessFeature extends Component {
                     },
                     {
                       title:
-                        'Social Science 101: This is Your Brain on Social. (2017) Samuel Centre for Social Connectedness. Retrieved August 1, 2018',
+                        'Social Science 101: This is Your Brain on Social. (2017) Samuel Centre for Social Connectedness. Retrieved August 1, 2018 (original soure no longer available)',
                       link:
                         'https://www.socialconnectedness.org/social-science-101-this-is-your-brain-on-social',
                     },
@@ -1079,9 +1079,9 @@ class LonelinessFeature extends Component {
                     },
                     {
                       title:
-                        'Five Domains of Wellbeing: Social Connectedness (2013). The Fullframe Initiative. Retrieved August 12, 2018',
+                        'Five Domains of Wellbeing: Social Connectedness (2013). The Fullframe Initiative. Retrieved August 12, 2018 (archived link)',
                       link:
-                        'https://fullframeinitiative.org/wp-content/uploads/2011/05/SocialConnectedness_Factsheet.pdf',
+                        'https://web.archive.org/web/20180516193917/https://fullframeinitiative.org/wp-content/uploads/2011/05/SocialConnectedness_Factsheet.pdf',
                     },
                     {
                       title:
@@ -1144,14 +1144,14 @@ class LonelinessFeature extends Component {
                     },
                     {
                       title:
-                        'Hirsch, M. (2018). How can the death of a loved one affect me? Retrieved August 21, 2018',
+                        'Hirsch, M. (2018). How can the death of a loved one affect me? Retrieved August 21, 2018 (archived link)',
                       link:
-                        'https://www.sharecare.com/health/grief-emotional-health/how-death-loved-affect-me',
+                        'https://web.archive.org/web/20180107181610/https://www.sharecare.com/health/grief-emotional-health/how-death-loved-affect-me',
                     },
                     {
                       title:
-                        'Loneliness in Old Age. (nd) Retrieved August 31, 2018',
-                      link: 'https://www.extracare.org.uk/research/loneliness/',
+                        'Loneliness in Old Age. (nd) Retrieved August 31, 2018 (archived link)',
+                      link: 'https://web.archive.org/web/20190121154422/https://www.extracare.org.uk/research/loneliness/',
                     },
                     {
                       title:

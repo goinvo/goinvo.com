@@ -264,7 +264,7 @@ class DeterminantsOfHealthFeature extends Component {
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-2">
                   <a
-                    href="https://docs.google.com/spreadsheets/d/1_uY448KYzLdAXbbS7EzxHkpAukgWftsqt3gdIxJBGBk/edit?usp=sharing"
+                    href="https://github.com/goinvo/HealthDeterminants/blob/master/sdoh-spend/sdoh_to_spend.xlsx"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button button--secondary margin-top--half margin-bottom--half  button--block"
@@ -923,9 +923,9 @@ class DeterminantsOfHealthFeature extends Component {
                   references={[
                     {
                       title:
-                        'NCHHSTP Social Determinants of Health. (2014). Retrieved March 14, 2016',
+                        'NCHHSTP Social Determinants of Health. (2014). Retrieved March 14, 2016 (archived link)',
                       link:
-                        'http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html',
+                        'https://web.archive.org/web/20160306043016/http://www.cdc.gov/nchhstp/socialdeterminants/definitions.html',
                     },
                     {
                       title:
@@ -934,9 +934,9 @@ class DeterminantsOfHealthFeature extends Component {
                     },
                     {
                       title:
-                        'Social Determinants of Health. (n.d.). Retrieved March 14, 2016',
+                        'Social Determinants of Health. (n.d.). Retrieved March 14, 2016 (archived link)',
                       link:
-                        'https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health',
+                        'https://web.archive.org/web/20160304051014/https://www.healthypeople.gov/2020/topics-objectives/topic/social-determinants-of-health',
                     },
                     {
                       title:

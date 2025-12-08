@@ -1,5 +1,19 @@
 [
   {
+    "id": "human-centered-design-for-ai",
+    "title": "The Human-Centered Design Behind AI Clinicians Can Trust",
+    "date": "Dec.2025",
+    "client": "Feature",
+    "categories": [
+      "healthcare",
+      "AI"
+    ],
+    "caption": "Designing AI that people can understand, trust, and use through human-centered design.",
+    "image": "/images/features/human-centered-design-for-ai/human-centered-ai-hero.jpg",
+    "link": "/vision/human-centered-design-for-ai/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "doodle-to-demo",
     "title": "Doodle to Demo",
     "date": "Dec.2025",

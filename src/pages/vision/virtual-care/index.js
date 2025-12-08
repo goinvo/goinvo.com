@@ -705,9 +705,9 @@ class VirtualCareFeature extends Component {
                     },
                     {
                       title:
-                        '2017 Survey of Physician Appointment Wait Times. (2017). Retrieved January 24, 2019',
+                        '2017 Survey of Physician Appointment Wait Times. (2017). Retrieved January 24, 2019  (archived link)',
                       link:
-                        'https://www.merritthawkins.com/news-and-insights/thought-leadership/survey/survey-of-physician-appointment-wait-times/',
+                        'https://web.archive.org/web/20190323075759/https://www.merritthawkins.com/news-and-insights/thought-leadership/survey/survey-of-physician-appointment-wait-times/',
                     },
                     {
                       title:

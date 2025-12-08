@@ -204,144 +204,144 @@ class OwnYourHealthDataFeature extends Component {
                   references={[
                     {
                       title:
-                        'Durcevik, S. 18 Examples of Big Data Analytics in Healthcare That Can Save People. 2020',
+                        'Durcevik, S. 18 Examples of Big Data Analytics in Healthcare That Can Save People. 2020. Accessed Aug 2021 (archived link)',
                       link:
-                        'https://www.datapine.com/blog/big-data-examples-in-healthcare/',
+                        'https://web.archive.org/web/20210726133818/https://www.datapine.com/blog/big-data-examples-in-healthcare/',
                     },
                     {
                       title:
-                        'Price, N. D., Magis, A. T., Earls, J. C., Glusman, G., Levy, R., Lausted, C., McDonald, D. T., Kusebauch, U., Moss, C. L., Zhou, Y., Qin, S., Moritz, R. L., Brogaard, K., Omenn, G. S., Lovejoy, J. C., & Hood, L. (2017). A wellness study of 108 individuals using personal, dense, dynamic data clouds. Nature biotechnology, 35(8), 747–756',
+                        'Price, N. D., Magis, A. T., Earls, J. C., Glusman, G., Levy, R., Lausted, C., McDonald, D. T., Kusebauch, U., Moss, C. L., Zhou, Y., Qin, S., Moritz, R. L., Brogaard, K., Omenn, G. S., Lovejoy, J. C., & Hood, L. (2017). A wellness study of 108 individuals using personal, dense, dynamic data clouds. Nature biotechnology, 35(8), 747–756. Accessed Aug 2021',
                       link: 'https://doi.org/10.1038/nbt.3870',
                     },
                     {
                       title:
-                        'Felitti, V. J., Anda, R. F., Nordenberg, D., Williamson, D. F., Spitz, A. M., Edwards, V., Koss, M. P., & Marks, J. S. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults. The Adverse Childhood Experiences (ACE) Study. American journal of preventive medicine, 14(4), 245–258',
+                        'Felitti, V. J., Anda, R. F., Nordenberg, D., Williamson, D. F., Spitz, A. M., Edwards, V., Koss, M. P., & Marks, J. S. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults. The Adverse Childhood Experiences (ACE) Study. American journal of preventive medicine, 14(4), 245–258. Accessed Aug 2021',
                       link: 'https://doi.org/10.1016/s0749-3797(98)00017-8',
                     },
                     {
                       title:
-                        'Magnan S. Social Determinants of Health 101 for Health Care: Five Plus Five. Discussion Paper. October 9, 2017',
+                        'Magnan S. Social Determinants of Health 101 for Health Care: Five Plus Five. Discussion Paper. October 9, 2017. Accessed Aug 2021',
                       link:
                         'https://nam.edu/social-determinants-of-health-101-for-health-care-five-plus-five/',
                     },
                     {
                       title:
-                        'Liddell, K., Simon, D., & Lucassen, A. Patient Data Ownership: Who Owns Your Health?. Journal of Law and the Biosciences',
+                        'Liddell, K., Simon, D., & Lucassen, A. Patient Data Ownership: Who Owns Your Health?. Journal of Law and the Biosciences. Accessed Aug 2021',
                       link: 'https://doi.org/10.17863/CAM.68658',
                     },
                     {
                       title:
-                        'Inau, E. T., Sack, J., Waltemath, D., & Zeleke, A. A. (2021). Initiatives, Concepts, and Implementation Practices of FAIR (Findable, Accessible, Interoperable, and Reusable) Data Principles in Health Data Stewardship Practice: Protocol for a Scoping Review. JMIR research protocols, 10(2), e22505',
+                        'Inau, E. T., Sack, J., Waltemath, D., & Zeleke, A. A. (2021). Initiatives, Concepts, and Implementation Practices of FAIR (Findable, Accessible, Interoperable, and Reusable) Data Principles in Health Data Stewardship Practice: Protocol for a Scoping Review. JMIR research protocols, 10(2), e22505. Accessed Aug 2021',
                       link: 'https://doi.org/10.2196/22505',
                     },
                     {
                       title:
-                        ' Beyan, O., Choudhury, A., Van Soest, J., Kohlbacher, O., Zimmermann, L., Stenzhorn, H., Karim, M.R., Dumontier, M., Decker, S., da Silva Santos, L.O., Dekker, A. Distributed Analytics on Sensitive Medical Data: The Personal Health Train. Data Intelligence. 2020 Jan;2(1-2):96–107',
+                        ' Beyan, O., Choudhury, A., Van Soest, J., Kohlbacher, O., Zimmermann, L., Stenzhorn, H., Karim, M.R., Dumontier, M., Decker, S., da Silva Santos, L.O., Dekker, A. Distributed Analytics on Sensitive Medical Data: The Personal Health Train. Data Intelligence. 2020 Jan;2(1-2):96–107. Accessed Aug 2021',
                       link: 'https://doi.org/10.1162/dint_a_00032',
                     },
                     {
                       title:
-                        "Mifsud, M., Molines, M., Cases, A. S., & N'Goala, G. (2019). It's MY health care program: Enhancing patient adherence through psychological ownership. Social science & medicine (1982), 232, 307–315",
+                        "Mifsud, M., Molines, M., Cases, A. S., & N'Goala, G. (2019). It's MY health care program: Enhancing patient adherence through psychological ownership. Social science & medicine (1982), 232, 307–315. Accessed Aug 2021",
                       link: 'https://doi.org/10.1016/j.socscimed.2019.05.015',
                     },
                     {
                       title:
-                        'Rahimzadeh V. (2021). A Policy and Practice Review of Consumer Protections and Their Application to Hospital-Sourced Data Aggregation and Analytics by Third-Party Companies. Frontiers in big data, 3, 603044',
+                        'Rahimzadeh V. (2021). A Policy and Practice Review of Consumer Protections and Their Application to Hospital-Sourced Data Aggregation and Analytics by Third-Party Companies. Frontiers in big data, 3, 603044. Accessed Aug 2021',
                       link: 'https://doi.org/10.3389/fdata.2020.603044',
                     },
                     {
                       title:
-                        'Kadakia, K. T., Howell, M. D., & DeSalvo, K. B. (2021). Modernizing Public Health Data Systems: Lessons From the Health Information Technology for Economic and Clinical Health (HITECH) Act. JAMA, 326(5), 385–386',
+                        'Kadakia, K. T., Howell, M. D., & DeSalvo, K. B. (2021). Modernizing Public Health Data Systems: Lessons From the Health Information Technology for Economic and Clinical Health (HITECH) Act. JAMA, 326(5), 385–386. Accessed Aug 2021',
                       link: 'https://doi.org/10.1001/jama.2021.12000',
                     },
                     {
                       title:
-                        "Li, L., Novillo-Ortiz, D., Azzopardi-Muscat, N., & Kostkova, P. (2021). Digital Data Sources and Their Impact on People's Health: A Systematic Review of Systematic Reviews. Frontiers in public health, 9, 645260",
+                        "Li, L., Novillo-Ortiz, D., Azzopardi-Muscat, N., & Kostkova, P. (2021). Digital Data Sources and Their Impact on People's Health: A Systematic Review of Systematic Reviews. Frontiers in public health, 9, 645260. Accessed Aug 2021",
                       link: 'https://doi.org/10.3389/fpubh.2021.645260',
                     },
                     {
                       title:
-                        'Johnson, C., & Pylypchuck, Y. (2021). Use of Certified Health IT and Methods to Enable Interoperability by U.S. Non-Federal Acute Care Hospitals, 2019',
+                        'Johnson, C., & Pylypchuck, Y. (2021). Use of Certified Health IT and Methods to Enable Interoperability by U.S. Non-Federal Acute Care Hospitals, 2019. Accessed Aug 2021',
                       link:
                         'https://www.healthit.gov/sites/default/files/page/2018-12/Methods-Used-to-Enable-Interoperability-among-U.S.-NonFederal-Acute-Care-Hospitals-in-2017_0.pdf',
                     },
                     {
                       title:
-                        'Code of Massachusetts Regulations Title 243. 243 CMR 2.07(13), Licensing and the practice of medicine.((a)...A licensee shall maintain a medical record for each patient that is complete, timely, legible, and adequate to enable the licensee or any other health care provider to provider proper diagnosis and treatment….). April 2020',
+                        'Code of Massachusetts Regulations Title 243. 243 CMR 2.07(13), Licensing and the practice of medicine.((a)...A licensee shall maintain a medical record for each patient that is complete, timely, legible, and adequate to enable the licensee or any other health care provider to provider proper diagnosis and treatment….). April 2020. Accessed Aug 2021',
                       link:
                         'https://www.mass.gov/regulations/243-CMR-200-licensing-and-the-practice-of-medicine',
                     },
                     {
                       title:
-                        'Code of Massachusetts Regulations Title 105. 105 CMR 130.370, Hospital licensure. ((a) A hospital shall maintain records of the diagnosis and treatment of patients under its care for the retention period specified). July 2017',
+                        'Code of Massachusetts Regulations Title 105. 105 CMR 130.370, Hospital licensure. ((a) A hospital shall maintain records of the diagnosis and treatment of patients under its care for the retention period specified). July 2017. Accessed Aug 2021',
                       link:
                         'https://www.mass.gov/regulations/105-CMR-13000-hospital-licensure',
                     },
                     {
                       title:
-                        'George Washington University Health and the Law Project, Who Owns Medical Records: 50 State Comparison (2015)',
+                        'George Washington University Health and the Law Project, Who Owns Medical Records: 50 State Comparison (2015). Accessed Aug 2021',
                       link:
                         'http://www.healthinfolaw.org/comparative-analysis/who-owns-medical-records-50-state-comparison',
                     },
                     {
                       title:
-                        'Evans, B. J. (2011). Much ado about data ownership. Harvard Journal of Law & Technology, 25(1), 69-130.25 Harv. J. L. & Tech. 69 (2011-2012) Much Ado about Data Ownership',
+                        'Evans, B. J. (2011). Much ado about data ownership. Harvard Journal of Law & Technology, 25(1), 69-130.25 Harv. J. L. & Tech. 69 (2011-2012) Much Ado about Data Ownership. Accessed Aug 2021',
                       link:
                         'http://jolt.law.harvard.edu/articles/pdf/v25/25HarvJLTech69.pdf',
                     },
                     {
                       title:
-                        'Contreras, J., Health Data Ownership, 94 NYU Law Review 624 (October 2019)',
+                        'Contreras, J., Health Data Ownership, 94 NYU Law Review 624 (October 2019). Accessed Aug 2021',
                       link:
                         'https://www.nyulawreview.org/issues/volume-94-number-4/the-false-promise-of-health-data-ownership/',
                     },
                     {
                       title:
-                        'Perzanowski, A., Schultz, J.  The End of Ownership: Personal Property in the Digital Economy. Pub Res Q 34, 154–155 (2018)',
+                        'Perzanowski, A., Schultz, J.  The End of Ownership: Personal Property in the Digital Economy. Pub Res Q 34, 154–155 (2018). Accessed Aug 2021',
                       link: 'https://doi.org/10.7551/mitpress/10524.001.0001',
                     },
                     {
                       title:
-                        'McGuire, A. L., Roberts, J., Aas, S., & Evans, B. J. (2019). Who Owns the Data in a Medical Information Commons?. The Journal of law, medicine & ethics : a journal of the American Society of Law, Medicine & Ethics, 47(1), 62–69',
+                        'McGuire, A. L., Roberts, J., Aas, S., & Evans, B. J. (2019). Who Owns the Data in a Medical Information Commons?. The Journal of law, medicine & ethics : a journal of the American Society of Law, Medicine & Ethics, 47(1), 62–69. Accessed Aug 2021',
                       link: 'https://doi.org/10.1177/1073110519840485',
                     },
                     {
                       title:
-                        'Wakabayashi, D. Google and the University of Chicago Are Sued Over Data Sharing, N. Y. Times, March 26, 2020',
+                        'Wakabayashi, D. Google and the University of Chicago Are Sued Over Data Sharing, N. Y. Times, March 26, 2020. Accessed Aug 2021',
                       link:
                         'https://www.nytimes.com/2019/06/26/technology/google-university-chicago-data-sharing-lawsuit.html (last visited Feb 4, 2020)',
                     },
                     {
                       title:
-                        'Bass, D., & Tozzi, J. (2021, February 11). U.S. Health Giants Form Startup to Share, Analyze Patient Data. Retrieved from',
+                        'Bass, D., & Tozzi, J. (2021, February 11). U.S. Health Giants Form Startup to Share, Analyze Patient Data. Accessed Aug 2021',
                       link:
                         'https://www.bloomberg.com/news/articles/2021-02-11/startup-truveta-links-u-s-health-systems-to-share-patient-data',
                     },
                     {
                       title:
-                        'Ballantyne A. (2020). How should we think about clinical data ownership?. Journal of medical ethics, 46(5), 289–294',
+                        'Ballantyne A. (2020). How should we think about clinical data ownership?. Journal of medical ethics, 46(5), 289–294. Accessed Aug 2021',
                       link: 'https://doi.org/10.1136/medethics-2018-105340',
                     },
                     {
                       title:
-                        'https://www.iab.com/wp-content/uploads/2018/12/IAB_The-State-of-Data-2018_2018-12-05_Final.pdf, see page 5.',
+                        'The State of Data 2018. page 5. Winterberry Group. IAB.data. Accessed Aug 2021 (archived link)',
                       link:
-                        'https://www.iab.com/wp-content/uploads/2018/12/IAB_The-State-of-Data-2018_2018-12-05_Final.pdf',
+                        'https://web.archive.org/web/20210205015152/https://www.iab.com/wp-content/uploads/2018/12/IAB_The-State-of-Data-2018_2018-12-05_Final.pdf',
                     },
                     {
                       title:
-                        'What is an electronic health record (ehr)? HealthIT.gov. (2019, September 10)',
+                        'What is an electronic health record (ehr)? HealthIT.gov. (2019, September 10). Accessed Aug 2021',
                       link:
                         'https://www.healthit.gov/faq/what-electronic-health-record-ehr',
                     },
                     {
                       title:
-                        'Bates, D., Heitmueller, A., Kakad, M., Saria, S. Why policymakers should care about “big data” in healthcare, Health Policy and Technology, Volume 7, Issue 2, 2018, Pages 211-216,ISSN 2211-8837',
+                        'Bates, D., Heitmueller, A., Kakad, M., Saria, S. Why policymakers should care about “big data” in healthcare, Health Policy and Technology, Volume 7, Issue 2, 2018, Pages 211-216,ISSN 2211-8837. Accessed Aug 2021',
                       link: 'https://doi.org/10.1016/j.hlpt.2018.04.006',
                     },
                     {
                       title:
-                        'Rodwin, M. A. (2010). Patient data: Property, privacy & the public interest. American Journal of Law & Medicine, 36(4), 586–618',
+                        'Rodwin, M. A. (2010). Patient data: Property, privacy & the public interest. American Journal of Law & Medicine, 36(4), 586-618. Accessed Aug 2021',
                       link: 'https://doi.org/10.1177/009885881003600403',
                     },
                     {
@@ -352,34 +352,34 @@ class OwnYourHealthDataFeature extends Component {
                     },
                     {
                       title:
-                        "Health Information Privacy Division, O. for C. R. (OCR). (2016, January 5). Individuals' right under hipaa to access their health information. HHS.Gov.",
+                        "Health Information Privacy Division, O. for C. R. (OCR). (2016, January 5). Individuals' right under hipaa to access their health information. HHS.Gov. . Accessed Aug 2021",
                       link:
                         'https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html',
                     },
                     {
                       title:
-                        'Mirchev, M., Mircheva, I., & Kerekovska, A. (2020). The Academic Viewpoint on Patient Data Ownership in the Context of Big Data: Scoping Review. Journal of medical Internet research, 22(8), e22214',
+                        'Mirchev, M., Mircheva, I., & Kerekovska, A. (2020). The Academic Viewpoint on Patient Data Ownership in the Context of Big Data: Scoping Review. Journal of medical Internet research, 22(8), e22214. Accessed Aug 2021',
                       link: 'https://doi.org/10.2196/22214',
                     },
                     {
                       title:
-                        'Milne, R., Sorbie, A., & Dixon-Woods, M. (2021). What can data trusts for health research learn from participatory governance in biobanks?. Journal of medical ethics, medethics-2020-107020. Advance online publication',
+                        'Milne, R., Sorbie, A., & Dixon-Woods, M. (2021). What can data trusts for health research learn from participatory governance in biobanks?. Journal of medical ethics, medethics-2020-107020. Advance online publication. Accessed Aug 2021',
                       link: 'https://doi.org/10.1136/medethics-2020-107020',
                     },
                     {
                       title:
-                        'Kostyack P. T. (2002). The emergence of the Healthcare Information Trust. Health matrix (Cleveland, Ohio : 1991), 12(2), 393–447',
+                        'Kostyack P. T. (2002). The emergence of the Healthcare Information Trust. Health matrix (Cleveland, Ohio : 1991), 12(2), 393-447. Accessed Aug 2021',
                       link:
                         'https://scholarlycommons.law.case.edu/cgi/viewcontent.cgi?article=1419&context=healthmatrix',
                     },
                     {
                       title:
-                        'Rosenbaum, S. (2010), Data Governance and Stewardship: Designing Data Stewardship Entities and Advancing Data Access. Health Services Research, 45: 1442-1455',
+                        'Rosenbaum, S. (2010), Data Governance and Stewardship: Designing Data Stewardship Entities and Advancing Data Access. Health Services Research, 45: 1442-1455. Accessed Aug 2021',
                       link: 'https://doi.org/10.1111/j.1475-6773.2010.01140.x',
                     },
                     {
                       title:
-                        'Hibbard, J. H., & Greene, J. (2013). What the evidence shows about patient activation: better health outcomes and care experiences; fewer data on costs. Health affairs (Project Hope), 32(2), 207–214',
+                        'Hibbard, J. H., & Greene, J. (2013). What the evidence shows about patient activation: better health outcomes and care experiences; fewer data on costs. Health affairs (Project Hope), 32(2), 207–214. Accessed Aug 2021',
                       link: 'https://doi.org/10.1377/hlthaff.2012.1061',
                     },
                   ]}

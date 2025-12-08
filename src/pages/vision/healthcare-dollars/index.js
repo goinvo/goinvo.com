@@ -679,7 +679,7 @@ class HealthcareDollars extends Component {
                   references={[
                     {
                       title:
-                        'Historical - Centers for Medicare & Medicaid Services. (2018, December 11). Retrieved Jan 2019',
+                        'Historical - Centers for Medicare & Medicaid Services. (2018, December 11). Retrieved Jan 2019 (original source no longer available)',
                       link:
                         'https://www.cms.gov/research-statistics-data-and-systems/statistics-trends-and-reports/nationalhealthexpenddata/nationalhealthaccountshistorical.html',
                     },

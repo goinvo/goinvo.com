@@ -810,8 +810,8 @@ class openPro extends Component {
                     },
                     {
                       title:
-                        'Grossman, Cynthia. 2018. “Patient-Reported Outcomes: Design with the End in Mind.” Milken Institute.',
-                      link: 'https://www.fastercures.org/reports/view/70',
+                        'Grossman, Cynthia. 2018. “Patient-Reported Outcomes: Design with the End in Mind.” Milken Institute. (archived link)',
+                      link: 'https://web.archive.org/web/20180415122242/https://www.fastercures.org/reports/view/70',
                     },
                     {
                       title:

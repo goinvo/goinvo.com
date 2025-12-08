@@ -703,9 +703,9 @@ class BurnoutFeature extends Component {
                   references={[
                     {
                       title:
-                        'Ashish K. Jha, MD, MPH, et al., A Crisis in Health Care: A Call to Action on Physician Burnout, Partnership with the Massachusetts Medical Society, Massachusetts Health and Hospital Association, Harvard T.H. Chan School of Public Health, and Harvard Global Health Institute',
+                        'Ashish K. Jha, MD, MPH, et al., A Crisis in Health Care: A Call to Action on Physician Burnout, Partnership with the Massachusetts Medical Society, Massachusetts Health and Hospital Association, Harvard T.H. Chan School of Public Health, and Harvard Global Health Institute. Accessed Mar 2020 (archived link)',
                       link:
-                        'http://www.massmed.org/News-and-Publications/MMS-News-Releases/Physician-Burnout-Report-2018/',
+                        'https://web.archive.org/web/20200413051545/http://www.massmed.org/News-and-Publications/MMS-News-Releases/Physician-Burnout-Report-2018/',
                     },
                     {
                       title:
@@ -713,51 +713,51 @@ class BurnoutFeature extends Component {
                     },
                     {
                       title:
-                        'Paul Griner, Seth Bilazarian, Peter Moskowitz. May 2013. Medscape Physician Lifestyle Report 2013.',
+                        'Paul Griner, Seth Bilazarian, Peter Moskowitz. May 2013. Medscape Physician Lifestyle Report 2013.  Accessed Mar 2020',
                       link:
                         'https://www.medscape.com/sites/public/lifestyle/2013',
                     },
                     {
                       title:
-                        'Peckham C. Medscape Lifestyle Report 2017: race and ethnicity, bias and burnout. May 2018. Medscape Lifestyle Report 2017.',
+                        'Peckham C. Medscape Lifestyle Report 2017: race and ethnicity, bias and burnout. May 2018. Medscape Lifestyle Report 2017. Accessed Mar 2020.',
                       link:
                         'https://www.medscape.com/features/slideshow/lifestyle/2017/',
                     },
                     {
                       title:
-                        'Marcela Carmen. Factors Associated With Physician Burnout At an Academic Faculty Practice',
+                        'Marcela Carmen. Factors Associated With Physician Burnout At an Academic Faculty Practice. Accessed Mar 2020.',
                       link:
                         'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2727998',
                     },
                     {
                       title:
-                        "Hawkins M. 2018 Survey of America's Physicians: Practice Patterns & Perspectives. 2018.",
+                        "Hawkins M. 2018 Survey of America's Physicians: Practice Patterns & Perspectives. 2018. Accessed Mar 2020. (original source no longer available)",
                       link:
                         'https://www.merritthawkins.com/uploadedFiles/MerrittHawkins/Content/Pdf/MerrittHawkins_2018_Physician_Survey.pdf',
                     },
                     {
                       title:
-                        'Shanafelt, Tait D. et al. Changes in Burnout and Satisfaction With Work-Life Integration in Physicians and the General US Working Population Between 2011 and 2017. Mayo Clinic Proceedings, Volume 94, Issue 9, 1681 - 1694',
+                        'Shanafelt, Tait D. et al. Changes in Burnout and Satisfaction With Work-Life Integration in Physicians and the General US Working Population Between 2011 and 2017. Mayo Clinic Proceedings, Volume 94, Issue 9, 1681 - 1694. Accessed Mar 2020',
                       link:
                         'https://www.mayoclinicproceedings.org/article/S0025-6196(18)30938-8/fulltext',
                     },
                     {
                       title:
-                        'Aaron Young, et al. A Census of Actively Licensed Physicians  in the United States, 2016. 2017. Federation of State Medical Boards.',
+                        'Aaron Young, et al. A Census of Actively Licensed Physicians  in the United States, 2016. 2017. Federation of State Medical Boards. Accessed Mar 2020',
                       link:
                         'https://www.fsmb.org/siteassets/advocacy/publications/2016census.pdf',
                     },
                     {
                       title:
-                        'IHS Markit Ltd. The 2019 Update: The Complexities of Physician Supply and Demand: Projections from 2017 to 2032. April 2019. Association of American Medical Colleges.',
+                        'IHS Markit Ltd. The 2019 Update: The Complexities of Physician Supply and Demand: Projections from 2017 to 2032. April 2019. Association of American Medical Colleges. Accessed Mar 2020 (original link no longer available)',
                       link:
                         'https://www.aamc.org/system/files/c/2/31-2019_update_-_the_complexities_of_physician_supply_and_demand_-_projections_from_2017-2032.pdf',
                     },
                     {
                       title:
-                        'Shasha Han, et al. Estimating the Attributable Cost of Physician Burnout in the United States. June 2019. Annals of Internal Medicine.',
+                        'Shasha Han, et al. Estimating the Attributable Cost of Physician Burnout in the United States. June 2019. Annals of Internal Medicine. Accessed Mar 2020 (archived link)',
                       link:
-                        'https://annals.org/aim/article-abstract/2734784/estimating-attributable-cost-physician-burnout-united-states',
+                        'https://web.archive.org/web/20200308090207/https://annals.org/aim/article-abstract/2734784/estimating-attributable-cost-physician-burnout-united-states',
                     },
                     {
                       title:
@@ -765,7 +765,7 @@ class BurnoutFeature extends Component {
                     },
                     {
                       title:
-                        'Karolina Doulougeri, Katerina Georganta & Anthony Montgomery | Albert Lee (Reviewing Editor) (2016) "Diagnosing" burnout among healthcare professionals: Can we find consensus?, Cogent Medicine, 3:1, DOI: 10.1080/2331205X.2016.1237605',
+                        'Karolina Doulougeri, Katerina Georganta & Anthony Montgomery | Albert Lee (Reviewing Editor) (2016) "Diagnosing" burnout among healthcare professionals: Can we find consensus?, Cogent Medicine, 3:1, DOI: 10.1080/2331205X.2016.1237605. Accessed Mar 2020',
                       link:
                         'https://www.tandfonline.com/doi/full/10.1080/2331205X.2016.1237605',
                     },
@@ -775,25 +775,25 @@ class BurnoutFeature extends Component {
                     },
                     {
                       title:
-                        'Stehman CR, Testo Z, Gershaw RS, Kellogg AR. Burnout, Drop Out, Suicide: Physician Loss in Emergency Medicine, Part I [published correction appears in West J Emerg Med. 2019 Aug 21;20(5):840-841]. West J Emerg Med. 2019;20(3):485–494. doi:10.5811/westjem.2019.4.40970',
+                        'Stehman CR, Testo Z, Gershaw RS, Kellogg AR. Burnout, Drop Out, Suicide: Physician Loss in Emergency Medicine, Part I [published correction appears in West J Emerg Med. 2019 Aug 21;20(5):840-841]. West J Emerg Med. 2019;20(3):485-494. doi:10.5811/westjem.2019.4.40970. Accessed Mar 2020',
                       link:
                         'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6526882/ ',
                     },
                     {
                       title:
-                        'Kane, Leslie, MA. National Physician Bunout & Suicide Report 2020. Accessed March 2020.',
+                        'Kane, Leslie, MA. National Physician Burnout & Suicide Report 2020. Accessed March 2020',
                       link:
                         'https://www.medscape.com/slideshow/2020-lifestyle-burnout-6012460#5',
                     },
                     {
                       title:
-                        '2019 Lifestyle Burnout Depression slides. Medscape',
+                        '2019 Lifestyle Burnout Depression slides. Medscape. Accessed March 2020',
                       link:
                         'https://www.medscape.com/slideshow/2019-lifestyle-burnout-depression-6011056#2',
                     },
                     {
                       title:
-                        'Tuition and Student Fees Reports. Association of American Medical Colleges.',
+                        'Tuition and Student Fees Reports. Association of American Medical Colleges. Accessed Mar 2020',
                       link:
                         'https://www.aamc.org/data-reports/reporting-tools/report/tuition-and-student-fees-reports',
                     },
@@ -805,7 +805,7 @@ class BurnoutFeature extends Component {
                     },
                     {
                       title:
-                        'Pauline Anderson. Physicians Experience Highest Suicide Rate of Any Profession. Medscape Medical News.',
+                        'Pauline Anderson. Physicians Experience Highest Suicide Rate of Any Profession. Medscape Medical News. Accessed Mar 2020',
                       link: 'https://www.medscape.com/viewarticle/896257',
                     },
                   ]}

@@ -154,7 +154,7 @@ class FacesInHealthCommunicationFeature extends Component {
               Compared to those with proficient health literacy, adults who have
               low health literacy experience:
               <sup>
-                <a href="#reference">3</a>
+                <a href="#reference">2</a>
               </sup>
             </p>
             <Columns columns={3}>
@@ -198,7 +198,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   to $238B per year.
                 </span>
                 <sup>
-                  <a href="#references">4</a>
+                  <a href="#references">3</a>
                 </sup>
               </p>
             </div>
@@ -236,7 +236,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     communication, increases people’s understanding of
                     information significantly, from 70% to 95%.
                     <sup>
-                      <a href="#references">5</a>
+                      <a href="#references">4</a>
                     </sup>
                   </p>
                 </div>
@@ -256,7 +256,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     People following directions with text and illustration do
                     323% better than those without illustrations.
                     <sup>
-                      <a href="#references">6</a>
+                      <a href="#references">4</a>
                     </sup>
                   </p>
                 </div>
@@ -278,7 +278,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     seconds needed to understand an equal amount of written
                     information.
                     <sup>
-                      <a href="#references">7</a>
+                      <a href="#references">5</a>
                     </sup>
                   </p>
                 </div>
@@ -314,7 +314,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     </b>{' '}
                     than those without illustrations <b>(65% vs 43%)</b>.
                     <sup>
-                      <a href="#references">8</a>
+                      <a href="#references">6</a>
                     </sup>
                   </p>
                 </div>
@@ -346,7 +346,7 @@ class FacesInHealthCommunicationFeature extends Component {
                       for illustrations rather than instructions with no
                       illustrations.
                       <sup>
-                        <a href="#references">9</a>
+                        <a href="#references">7</a>
                       </sup>
                     </p>
                   </div>
@@ -411,7 +411,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   of faces.
                 </b>
                 <sup>
-                  <a href="#references">10</a>
+                  <a href="#references">8, 10</a>
                 </sup>
               </p>
             </div>
@@ -422,7 +422,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   Guides an infant’s preferences for facelike patterns from
                   birth.{' '}
                   <sup>
-                    <a href="#references">11, 12, 13, 14, 15, 16</a>
+                    <a href="#references">8, 9, 10, 11, 12, 13</a>
                   </sup>
                 </div>
               </div>
@@ -466,7 +466,7 @@ class FacesInHealthCommunicationFeature extends Component {
                   support the development of specialized cortical circuits that
                   we use as adults.{' '}
                   <sup>
-                    <a href="#references">17, 18, 19, 20, 21, 22</a>
+                    <a href="#references">14, 15, 16, 17, 18, 19</a>
                   </sup>
                 </div>
               </div>
@@ -579,7 +579,7 @@ class FacesInHealthCommunicationFeature extends Component {
                 </span>
               </span>
               <sup>
-                <a href="#references">23</a>
+                <a href="#references">20</a>
               </sup>
             </p>
             <div className="text--center margin-auto">
@@ -594,7 +594,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     Western Caucasians tend to fixate more on the eyes and
                     single details, forming a triangular scan of one’s face.
                     <sup>
-                      <a href="#references">24</a>
+                      <a href="#references">20</a>
                     </sup>
                   </p>
                 </div>
@@ -608,7 +608,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     East Asians tend to integrate information holistically by
                     focusing on the center of the face.
                     <sup>
-                      <a href="#references">25</a>
+                      <a href="#references">20</a>
                     </sup>
                   </p>
                 </div>
@@ -618,7 +618,7 @@ class FacesInHealthCommunicationFeature extends Component {
               Unsurprisingly, humans tend to gravitate towards faces similar to
               their own. Infants have shown the <b>own-race bias (ORB)</b>
               <sup>
-                <a href="#references">26</a>
+                <a href="#references">21</a>
               </sup>
               , recognizing their own faces better than the faces of another
               race.
@@ -635,7 +635,7 @@ class FacesInHealthCommunicationFeature extends Component {
               longer on their own-race face regardless of age, compared to a
               decline in fixation time as they age for other-race faces.
               <sup>
-                <a href="#references">27</a>
+                <a href="#references">22</a>
               </sup>
             </p>
             <p>
@@ -645,19 +645,19 @@ class FacesInHealthCommunicationFeature extends Component {
               been consistently found across different cultures and races,
               including individuals with Caucasian, African, and Asian ancestry
               <sup>
-                <a href="#references">28</a>
+                <a href="#references">23</a>
               </sup>{' '}
               and in both adults
               <sup>
-                <a href="#references">29</a>
+                <a href="#references">24</a>
               </sup>{' '}
               and children
               <sup>
-                <a href="#references">30</a>
+                <a href="#references">25</a>
               </sup>{' '}
               as young as 3-month old infants.
               <sup>
-                <a href="#references">31</a>
+                <a href="#references">26</a>
               </sup>
             </p>
             <div className="max-width--50 margin-auto">
@@ -710,7 +710,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     When individuals are exposed to these messages, they may
                     express three pathways of emotions
                     <sup>
-                      <a href="#references">32</a>
+                      <a href="#references">27</a>
                     </sup>{' '}
                     — plot-referent, message-referent, and self-referent.
                   </p>
@@ -819,7 +819,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     This emotion influences how we perceive the possible
                     outcomes and severity of consequences of an action.
                     <sup>
-                      <a href="#references">33</a>
+                      <a href="#references">27</a>
                     </sup>{' '}
                     <b>
                       There is a clear distinction between recognizing a risk
@@ -828,7 +828,7 @@ class FacesInHealthCommunicationFeature extends Component {
                       self-referential emotions.
                     </b>
                     <sup>
-                      <a href="#references">34</a>
+                      <a href="#references">27</a>
                     </sup>
                   </p>
                   <p>
@@ -836,7 +836,7 @@ class FacesInHealthCommunicationFeature extends Component {
                     increased intentions to quit when they could see themselves
                     reflected in the messaging.
                     <sup>
-                      <a href="#references">35</a>
+                      <a href="#references">28</a>
                     </sup>
                   </p>
                 </div>
@@ -1108,187 +1108,155 @@ class FacesInHealthCommunicationFeature extends Component {
                 <References
                   references={[
                     {
+                      //1
                       title:
                         'Center for Healthcare Strategies, Inc. (2013, October). What is Health Literacy? Center for Health Care Strategies . What is Health Literacy?',
                       link:
                         'https://www.chcs.org/media/CHCS_Health_Literacy_Fact_Sheets_2013_1.pdf',
                     },
                     {
+                      //2
+                      title:
+                        'Mahadevan, R. (2019, July 18). Health Literacy Fact Sheets. Center for Health Care Strategies.',
+                      link:
+                        'https://www.chcs.org/resource/health-literacy-fact-sheets/',
+                    },
+                    {
+                      //3
                       title:
                         'Angela Fagerlin, Brian J. Zikmund-Fisher, Peter A. Ubel, Helping Patients Decide: Ten Steps to Better Risk Communication, JNCI: Journal of the National Cancer Institute, Volume 103, Issue 19, 5 October 2011, Pages 1436–1443',
                       link: 'https://doi.org/10.1093/jnci/djr318',
                     },
                     {
-                      title:
-                        'Mahadevan, R. (2019, July 18). Health Literacy Fact Sheets. Center for Health Care Strategies.',
-                      link:
-                        'https://www.chcs.org/resource/health-literacy-fact-sheets/',
-                    },
-                    {
-                      title:
-                        'Mahadevan, R. (2019, July 18). Health Literacy Fact Sheets. Center for Health Care Strategies.',
-                      link:
-                        'https://www.chcs.org/resource/health-literacy-fact-sheets/',
-                    },
-                    {
+                      //4
                       title:
                         'Levie, W.H., Lentz, R. Effects of text illustrations: A review of research. ECTJ 30, 195–232 (1982).',
                       link: 'https://doi.org/10.1007/BF02765184',
                     },
                     {
-                      title:
-                        'Levie, W.H., Lentz, R. Effects of text illustrations: A review of research. ECTJ 30, 195–232 (1982).',
-                      link: 'https://doi.org/10.1007/BF02765184',
-                    },
-                    {
+                      //5
                       title:
                         'Ashton, D. (2019, December 16). 10 Reasons Why Visual Content Marketing Works. NeoMam Blog.',
                       link: 'https://neomam.com/blog/13reasons/',
                     },
                     {
+                      //6
                       title:
                         'Austin, P. E., Matlack, R., 2nd, Dunn, K. A., Kesler, C., & Brown, C. K. (1995). Discharge instructions: do illustrations help our patients understand them?. Annals of Emergency Medicine, 25(3), 317–320.',
                       link: 'https://doi.org/10.1016/s0196-0644(95)70286-5',
                     },
-                    {
+                    { //7
                       title:
                         'Delp, C., & Jones, J. (1996). Communicating information to patients: the use of cartoon illustrations to improve comprehension of instructions. Academic emergency medicine : official journal of the Society for Academic Emergency Medicine, 3(3), 264–270.',
                       link:
                         'https://doi.org/10.1111/j.1553-2712.1996.tb03431.x',
                     },
-                    {
+                    { //8
                       title:
                         "Johnson, M. H., Dziurawiec, S., Ellis, H., & Morton, J. (1991). Newborns' preferential tracking of face-like stimuli and its subsequent decline. Cognition, 40(1-2), 1–19.",
                       link: 'https://doi.org/10.1016/0010-0277(91)90045-6',
                     },
-                    {
-                      title:
-                        "Johnson, M. H., Dziurawiec, S., Ellis, H., & Morton, J. (1991). Newborns' preferential tracking of face-like stimuli and its subsequent decline. Cognition, 40(1-2), 1–19.",
-                      link: 'https://doi.org/10.1016/0010-0277(91)90045-6',
-                    },
-                    {
+                    { //9
                       title:
                         'Lewis, T. L., Mondloch, C., Budreau , D. R., Maurer, D., Dannemiller, J., Stephens, B., & Kleiner-Gathercoal, K. (1999, September 1). Face Perception During Early Infancy - Catherine J. Mondloch, Terri L. Lewis, D. Robert Budreau, Daphne Maurer, James L. Dannemiller, Benjamin R. Stephens, Kathleen A. Kleiner-Gathercoal, 1999. SAGE Journals.',
                       link:
                         'https://journals.sagepub.com/doi/pdf/10.1111/1467-9280.00179?casa_token=sbisAKlzWxYAAAAA%3A-eJ0Ei1-hA8HC700yL7eeXmS521boJTVO-ZZlFBNaXaMQIVqhWO8ijxiGvYwVZxlnwGNmmPTDqhTrw',
                     },
-                    {
+                    { //10
                       title:
                         'Morton, J., & Johnson, M. H. (1991). CONSPEC and CONLERN: a two-process theory of infant face recognition. Psychological review, 98(2), 164–181.',
                       link: 'https://doi.org/10.1037/0033-295x.98.2.164',
                     },
-                    {
+                    { //11
                       title:
                         'Looser, C. E., & Wheatley, T. (2010). The tipping point of animacy. How, when, and where we perceive life in a face. Psychological science, 21(12), 1854–1862.',
                       link: 'https://doi.org/10.1177/0956797610388044',
                     },
-                    {
+                    { //12
                       title:
                         "Turati, C., Simion, F., & Macchi, C. V. (2004, June 1). Can a Nonspecific Bias Toward Top-Heavy Patterns Explain Newborns' Face Preference? - Cassia Viola Macchi, Chiara Turati, Francesca Simion, 2004. SAGE Journals.",
                       link:
                         'https://journals.sagepub.com/doi/10.1111/j.0956-7976.2004.00688.x?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed',
                     },
-                    {
+                    { //13
                       title:
                         'Farroni, T., Csibra, G., Simion, F., & Johnson, M. (2002, May 16). Eye contact detection in humans from birth. Proceedings of the National Academy of Sciences of the United States of America.',
                       link: '',
                     },
-                    {
+                    { //14
                       title:
                         'Skrandies, W. (1987). The upper and lower visual field of man : Electrophysiological and functional differences. Core.Ac.Uk.',
                       link: 'https://core.ac.uk/download/pdf/56349616.pdf',
                     },
-                    {
+                    { //15
                       title:
                         'Chien, S. H.-L. (2012, March). No more top-heavy bias: On early specialization process for face and race in infants. ResearchGate.',
                       link:
                         'https://www.researchgate.net/publication/285295014_No_more_top-heavy_bias_On_early_specialization_process_for_face_and_race_in_infants',
                     },
-                    {
+                    { //16
                       title:
                         'De Schonen, S., & Mathivet, E. (1989). First come, first served: A scenario about the development of hemispheric specialization in face recognition during infancy. Cahiers de Psychologie Cognitive/Current Psychology of Cognition, 9(1), 3–44.',
                       link: '',
                     },
-                    {
+                    { //17
                       title:
                         "Frank, M. C., Vul, E., & Johnson, S. P. (2009). Development of infants' attention to faces during the first year. Cognition, 110(2), 160–170.",
                       link: 'https://doi.org/10.1016/j.cognition.2008.11.010',
                     },
-                    {
+                    { //18
                       title:
                         "Faraz Farzin, Chuan Hou, Anthony M. Norcia; Piecing it together: Infants' neural responses to face and object structure. Journal of Vision 2012;12(13):6. doi",
                       link: 'https://doi.org/10.1167/12.13.6',
                     },
-                    {
+                    { //19
                       title:
                         'Valley CoPA (Community of Practice in Autism). (2007, November). Joint Attention and Social Referencing . Infant VA.',
                       link:
                         'https://infantva.org/documents/CoPA-Nov-JointAttentionSocialRefer.pdf',
                     },
-                    {
+                    { //20
                       title:
                         'Blais, C. (2008, February). Culture shapes how we look at faces. ResearchGate.',
                       link:
                         'https://www.researchgate.net/publication/23181620_Culture_Shapes_How_We_Look_at_Faces',
                     },
-                    {
-                      title:
-                        'Blais, C. (2008, February). Culture shapes how we look at faces. ResearchGate.',
-                      link:
-                        'https://www.researchgate.net/publication/23181620_Culture_Shapes_How_We_Look_at_Faces',
-                    },
-                    {
-                      title:
-                        'Blais, C. (2008, February). Culture shapes how we look at faces. ResearchGate.',
-                      link:
-                        'https://www.researchgate.net/publication/23181620_Culture_Shapes_How_We_Look_at_Faces',
-                    },
-                    {
+                    { //21
                       title:
                         'Wong HK, Stephen ID and Keeble DRT (2020) The Own-Race Bias for Face Recognition in a Multiracial Society. Front. Psychol. 11:208. doi: 10.3389/fpsyg.2020.00208',
                       link: '',
                     },
-                    {
+                    { //22
                       title:
                         'Shaoying Liu, Paul C. Quinn, Andrea Wheeler, Naiqi Xiao, Liezhong Ge, Kang Lee, Similarity and difference in the processing of same- and other-race faces as revealed by eye tracking in 4- to 9-month-olds, Journal of Experimental Child Psychology,Volume 108, Issue 1, 2011, Pages 180-189, ISSN 0022-0965',
                       link: 'https://doi.org/10.1016/j.jecp.2010.06.008',
                     },
-                    {
+                    { //23
                       title:
                         'Meissner, C. A., & Brigham, J. C. (2001). Thirty years of investigating the own-race bias in memory for faces: A meta-analytic review. Psychology, Public Policy, and Law, 7(1), 3–35',
                       link: 'https://doi.org/10.1037/1076-8971.7.1.3',
                     },
-                    {
+                    { //24
                       title:
                         'Tanaka, J.W., Pierce, L.J. The neural plasticity of other-race face recognition. Cognitive, Affective, & Behavioral Neuroscience 9, 122–131 (2009).',
                       link: 'https://doi.org/10.3758/CABN.9.1.122',
                     },
-                    {
+                    { //25
                       title:
                         'Anzures, G., Kelly, D. J., Pascalis, O., Quinn, P. C., Slater, A. M., de Viviés, X., & Lee, K. (2014). Own- and other-race face identity recognition in children: The effects of pose and feature composition. Developmental Psychology, 50(2), 469–481.',
                       link: 'https://doi.org/10.1037/a0033166',
                     },
-                    {
+                    { //26
                       title:
                         'Kelly, D.J., Quinn, P.C., Slater, A.M., Lee, K., Gibson, A., Smith, M., Ge, L. and Pascalis, O. (2005), Three-month-olds, but not newborns, prefer own-race faces. Developmental Science, 8: F31-F36',
                       link: 'https://doi.org/10.1111/j.1467-7687.2005.0434a.x',
                     },
-                    {
+                    { //27
                       title:
                         'Sally Dunlop, Melanie Wakefield & Yoshi Kashima (2008) Can You Feel It? Negative Emotion, Risk, and Narrative in Health Communication, Media Psychology, 11:1, 52-75, DOI',
                       link: 'https://doi.org/10.1080/15213260701853112',
                     },
-                    {
-                      title:
-                        'Sally Dunlop, Melanie Wakefield & Yoshi Kashima (2008) Can You Feel It? Negative Emotion, Risk, and Narrative in Health Communication, Media Psychology, 11:1, 52-75, DOI',
-                      link: 'https://doi.org/10.1080/15213260701853112',
-                    },
-                    {
-                      title:
-                        'Sally Dunlop, Melanie Wakefield & Yoshi Kashima (2008) Can You Feel It? Negative Emotion, Risk, and Narrative in Health Communication, Media Psychology, 11:1, 52-75, DOI',
-                      link: 'https://doi.org/10.1080/15213260701853112',
-                    },
-                    {
+                    { //28
                       title:
                         'Romer, D., & Jamieson, P. (2001). The role of perceived risk in starting and stopping smoking. In P. Slovic (Ed.), Smoking: Risk, perception, & policy (pp. 64–80). Sage Publications, Inc.',
                       link: 'https://doi.org/10.4135/9781452232652.n4',

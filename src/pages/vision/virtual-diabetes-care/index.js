@@ -519,9 +519,9 @@ class VirtualDiabetesCareFeature extends Component {
                     },
                     {
                       title:
-                        'National Center for Chronic Disease Prevention and Health Promotion. About Chronic Diseases. Updated September 6, 2022. Accessed December 16, 2022',
+                        'National Center for Chronic Disease Prevention and Health Promotion. About Chronic Diseases. Updated September 6, 2022. Accessed December 16, 2022 (archived link)',
                       link:
-                        'https://www.cdc.gov/chronicdisease/about/index.htm',
+                        'https://web.archive.org/web/20221110152351/https://www.cdc.gov/chronicdisease/about/index.htm',
                     },
                     {
                       title:
@@ -530,9 +530,9 @@ class VirtualDiabetesCareFeature extends Component {
                     },
                     {
                       title:
-                        'Centers for Disease Control and Prevention. By the Numbers: Diabetes in America. Updated October 25, 2022. Accessed December 8, 2022',
+                        'Centers for Disease Control and Prevention. By the Numbers: Diabetes in America. Updated October 25, 2022. Accessed December 8, 2022 (archived link)',
                       link:
-                        'https://www.cdc.gov/diabetes/health-equity/diabetes-by-the-numbers.html#:~:text=37.3%20million%20people%20have%20diabetes,not%20know%20they%20have%20it',
+                        'https://web.archive.org/web/20221205193225/https://www.cdc.gov/diabetes/health-equity/diabetes-by-the-numbers.html',
                     },
                     {
                       title:
@@ -557,7 +557,7 @@ class VirtualDiabetesCareFeature extends Component {
                     {
                       title:
                         "Jain SR, Sui Y, Cheng HN. Patients and healthcare professionals' perspectives towards technology-assisted diabetes self-management education. A qualitative systematic review. PLoS One. 2020 Aug 17:15(8):e0237647. doi: 10.1371/journal.pone.0237647",
-                      link: '',
+                      link: 'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0237647',
                     },
                     {
                       title:
@@ -566,8 +566,8 @@ class VirtualDiabetesCareFeature extends Component {
                     },
                     {
                       title:
-                        'Centers for Disease Control and Prevention. National Diabetes Prevention Program. Updated December 27, 2022. Accessed October 14, 2022',
-                      link: '',
+                        'Centers for Disease Control and Prevention. National Diabetes Prevention Program. Updated December 27, 2022. Accessed October 14, 2022 (archived link)',
+                      link: 'https://web.archive.org/web/20221208174441/https://www.cdc.gov/diabetes/prevention/index.html',
                     },
                     {
                       title:

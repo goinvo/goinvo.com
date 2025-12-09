@@ -56,12 +56,12 @@ class DigitalHealthTrendsFeature extends Component {
                 The U.S. already has a significant shortage of doctors and
                 nurses — a problem that is not going away anytime soon.{'  '}
                 <a
-                  href="https://www.aamc.org/news-insights/press-releases/new-aamc-report-confirms-growing-physician-shortage"
+                  href="https://web.archive.org/web/20220414202858/https://www.aamc.org/news-insights/press-releases/new-aamc-report-confirms-growing-physician-shortage"
                   target="_blank"
                   rel="noreferrer"
                 >
                   A report from the AAMC (Association of American Medical
-                  Colleges)
+                  Colleges) (archived link, Apr 2022)
                 </a>{' '}
                 indicates that by 2033, the U.S. could see a projected shortfall
                 of 54,100 - 139,000 doctors in primary and specialty care.
@@ -231,11 +231,11 @@ class DigitalHealthTrendsFeature extends Component {
               </p>
               <p>
                 <a
-                  href="https://www.amazon.com/Alexa-Together/b?node=21390531011"
+                  href="https://web.archive.org/web/20220223125817/https://www.amazon.com/Alexa-Together/b?ie=UTF8&node=21390531011"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Alexa Together
+                  Alexa Together (archived link Apr 2022)
                 </a>
                 {'  '}
                 is Amazon's endeavor into remote monitoring and assistance for

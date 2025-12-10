@@ -810,8 +810,8 @@ class openPro extends Component {
                     },
                     {
                       title:
-                        'Grossman, Cynthia. 2018. “Patient-Reported Outcomes: Design with the End in Mind.” Milken Institute.',
-                      link: 'https://www.fastercures.org/reports/view/70',
+                        'Grossman, Cynthia. 2018. “Patient-Reported Outcomes: Design with the End in Mind.” Milken Institute. (archived link)',
+                      link: 'https://web.archive.org/web/20180415122242/https://www.fastercures.org/reports/view/70',
                     },
                     {
                       title:
@@ -833,9 +833,9 @@ class openPro extends Component {
                     },
                     {
                       title:
-                        '“Patient Reported Outcomes FHIR Implementation Guide.” n.d. Accessed March 13, 2019.',
+                        '“Patient Reported Outcomes FHIR Implementation Guide.” n.d. Accessed March 13, 2019. (archived link).',
                       link:
-                        'http://build.fhir.org/ig/HL7/patient-reported-outcomes/index.html',
+                        'https://web.archive.org/web/20190610172347/http://build.fhir.org/ig/HL7/patient-reported-outcomes/index.html',
                     },
                     {
                       title: '“Patient-Reported Outcome.” 2019. Wikipedia.',
@@ -873,9 +873,9 @@ class openPro extends Component {
                     },
                     {
                       title:
-                        '“Web-Based System for Self-Reporting Symptoms Helps Patients Live Longer.” 2017',
+                        '“Web-Based System for Self-Reporting Symptoms Helps Patients Live Longer.” 2017. (archived link).',
                       link:
-                        'https://www.asco.org/about-asco/press-center/news-releases/web-based-system-self-reporting-symptoms-helps-patients-live',
+                        'https://web.archive.org/web/20190408201335/https://www.asco.org/about-asco/press-center/news-releases/web-based-system-self-reporting-symptoms-helps-patients-live',
                     },
                   ]}
                 />

@@ -1047,7 +1047,7 @@ class LonelinessFeature extends Component {
                     },
                     {
                       title:
-                        'Social Science 101: This is Your Brain on Social. (2017) Samuel Centre for Social Connectedness. Retrieved August 1, 2018',
+                        'Social Science 101: This is Your Brain on Social. (2017) Samuel Centre for Social Connectedness. Retrieved August 1, 2018 (original soure no longer available)',
                       link:
                         'https://www.socialconnectedness.org/social-science-101-this-is-your-brain-on-social',
                     },
@@ -1071,7 +1071,7 @@ class LonelinessFeature extends Component {
                       title:
                         'Minnesota Department of Health Community and Family Health Division Office of Public Health Practice. (2010). Social Connectedness: Evaluating the Healthy People 2020 Framework: The Minnesota Project. Office of Disease Prevention and Health Promotion, U.S. Department of Health and Human Services. Retrieved August 23, 2018',
                       link:
-                        'http://www.health.state.mn.us/divs/opi/resources/docs/1007socialconnectedness_report.pdf',
+                        'https://cwlibrary.childwelfare.gov/discovery/delivery/01CWIG_INST:01CWIG/1218212860007651',
                     },
                     {
                       title:
@@ -1079,9 +1079,9 @@ class LonelinessFeature extends Component {
                     },
                     {
                       title:
-                        'Five Domains of Wellbeing: Social Connectedness (2013). The Fullframe Initiative. Retrieved August 12, 2018',
+                        'Five Domains of Wellbeing: Social Connectedness (2013). The Fullframe Initiative. Retrieved August 12, 2018 (archived link)',
                       link:
-                        'https://fullframeinitiative.org/wp-content/uploads/2011/05/SocialConnectedness_Factsheet.pdf',
+                        'https://web.archive.org/web/20180516193917/https://fullframeinitiative.org/wp-content/uploads/2011/05/SocialConnectedness_Factsheet.pdf',
                     },
                     {
                       title:
@@ -1144,20 +1144,20 @@ class LonelinessFeature extends Component {
                     },
                     {
                       title:
-                        'Hirsch, M. (2018). How can the death of a loved one affect me? Retrieved August 21, 2018',
+                        'Hirsch, M. (2018). How can the death of a loved one affect me? Retrieved August 21, 2018 (archived link)',
                       link:
-                        'https://www.sharecare.com/health/grief-emotional-health/how-death-loved-affect-me',
+                        'https://web.archive.org/web/20180107181610/https://www.sharecare.com/health/grief-emotional-health/how-death-loved-affect-me',
                     },
                     {
                       title:
-                        'Loneliness in Old Age. (nd) Retrieved August 31, 2018',
-                      link: 'https://www.extracare.org.uk/research/loneliness/',
+                        'Loneliness in Old Age. (nd) Retrieved August 31, 2018 (archived link)',
+                      link: 'https://web.archive.org/web/20190121154422/https://www.extracare.org.uk/research/loneliness/',
                     },
                     {
                       title:
                         'Coile, C.C.; Levine, P.B. (2011). Recessions, Social Security, and Living Arrangements of the Elderly. Retrieved August 21, 2018',
                       link:
-                        'http://projects.nber.org/projects_backend/rrc/papers/orrc11-12',
+                        'https://www.nber.org/sites/default/files/2020-08/orrc11-12_0.pdf',
                     },
                     {
                       title:

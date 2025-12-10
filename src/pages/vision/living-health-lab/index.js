@@ -892,7 +892,7 @@ class LivingHealthLabFeature extends Component {
                   title:
                     'IQVIA Institute for Human Data Science. Digital Health Trends 2021: Innovation, Evidence, Regulation, Adoption. 2021. Accessed June 7, 2022.',
                   link:
-                    'https://libguides.stkate.edu/ld.php?content_id=65768565',
+                    'https://www.iqvia.com/insights/the-iqvia-institute/reports/digital-health-trends-2021',
                 },
                 {
                   title:
@@ -913,9 +913,9 @@ class LivingHealthLabFeature extends Component {
                 },
                 {
                   title:
-                    'Centers for Disease Control and Prevention. Joint Pain and Arthritis. Updated April 22, 2022. Accessed June 26, 2022',
+                    'Centers for Disease Control and Prevention. Joint Pain and Arthritis. Updated April 22, 2022. Accessed June 26, 2022 (archived link)',
                   link:
-                    'https://www.cdc.gov/arthritis/pain/index.htm#:~:text=Chronic%20pain%20caused%20by%20arthritis,joint%20pain%20related%20to%20arthritis',
+                    'https://web.archive.org/web/20220409214441/https://www.cdc.gov/arthritis/pain/index.htms',
                 },
                 {
                   title:
@@ -966,9 +966,9 @@ class LivingHealthLabFeature extends Component {
                 },
                 {
                   title:
-                    'Centers for Disease Control and Prevention. Up to 40 percent of annual deaths from each of five leading causes are preventable. 2014. Accessed June 3, 2022.',
+                    'Centers for Disease Control and Prevention. Up to 40 percent of annual deaths from each of five leading causes are preventable. 2014. Accessed June 3, 2022. (archived link)',
                   link:
-                    'https://www.cdc.gov/media/releases/2014/p0501-preventable-deaths.html',
+                    'https://web.archive.org/web/20220526205537/https://www.cdc.gov/media/releases/2014/p0501-preventable-deaths.html',
                 },
               ]}
             />

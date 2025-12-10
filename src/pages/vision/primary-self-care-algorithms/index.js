@@ -299,9 +299,7 @@ class DigitalHealthTrendsFeature extends Component {
                 <h4 className="header--sm margin-bottom--none">Models</h4>
                 <ul className="margin-top--none margin-bottom--double">
                   <li>
-                    <a href="https://decisions.dynamed.com/shared-decision-making/covid-19-vaccine-options">
-                      COVID-19: Vaccine Options
-                    </a>
+                    COVID-19: Vaccine Options (Original source no longer available)
                     <sup>
                       <a href="#references">5</a>
                     </sup>
@@ -1572,215 +1570,215 @@ class DigitalHealthTrendsFeature extends Component {
                   references={[
                     {
                       title:
-                        ' Narasimhan, Manjulaa, et al. “Self Care Interventions to Advance Health and Wellbeing: A Conceptual Framework to Inform Normative Guidance.” BMJ (Clinical Research Ed.), BMJ Publishing Group Ltd., 1 Apr. 2019',
+                        ' Narasimhan, Manjulaa, et al. “Self Care Interventions to Advance Health and Wellbeing: A Conceptual Framework to Inform Normative Guidance.” BMJ (Clinical Research Ed.), BMJ Publishing Group Ltd., 1 Apr. 2019. Accessed Aug 2022',
                       link:
                         'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6441866/',
                     },
                     {
                       title:
-                        '“Who Coronavirus (COVID-19) Dashboard.” World Health Organization',
+                        '“WHO Coronavirus (COVID-19) Dashboard.” World Health Organization. Accessed Aug 2022',
                       link: 'https://covid19.who.int',
                     },
                     {
                       title:
-                        '“Immunization Agenda 2030.” World Health Organization',
+                        '“Immunization Agenda 2030.” World Health Organization. Accessed Aug 2022',
                       link:
                         'https://www.who.int/teams/immunization-vaccines-and-biologicals/strategies/ia2030',
                     },
                     {
                       title:
-                        'Bruel, S, et al. Patient Decision Aid in Vaccination: A Systematic Review of the Literature. U.S. National Library of Medicine',
+                        'Bruel, S, et al. Patient Decision Aid in Vaccination: A Systematic Review of the Literature. U.S. National Library of Medicine. Accessed Aug 2022',
                       link: 'https://pubmed.ncbi.nlm.nih.gov/32163307/',
                     },
                     {
-                      title: '“COVID-19: Vaccine Options.” Dynamed Decisions',
+                      title: '“COVID-19: Vaccine Options.” Dynamed Decisions. Accessed Aug 2022 (original source no longer available)',
                       link:
                         'https://decisions.dynamed.com/shared-decision-making/covid-19-vaccine-options',
                     },
                     {
                       title:
-                        '“Mental Illness.” National Institute of Mental Health, U.S. Department of Health and Human Services',
+                        '“Mental Illness.” National Institute of Mental Health, U.S. Department of Health and Human Services. Accessed Aug 2022',
                       link:
                         'https://www.nimh.nih.gov/health/statistics/mental-illness',
                     },
                     {
                       title:
-                        '“Suicide Statistics.” American Foundation for Suicide Prevention, 14 June 2022',
+                        '“Suicide Statistics.” American Foundation for Suicide Prevention, 14 June 2022. Accessed Aug 2022',
                       link: 'https://afsp.org/suicide-statistics/',
                     },
                     {
                       title:
-                        'Chinman, Matthew, et al. “Computer-Assisted Self-Assessment in Persons with Severe Mental Illness.” Psychiatrist.com, Physicians Postgraduate Press, Inc., 4 Feb. 2021',
+                        'Chinman, Matthew, et al. “Computer-Assisted Self-Assessment in Persons with Severe Mental Illness.” Psychiatrist.com, Physicians Postgraduate Press, Inc., 4 Feb. 2021. Accessed Aug 2022',
                       link:
                         'https://www.psychiatrist.com/jcp/bipolar/computer-assisted-self-assessment-persons-severe-mental/',
                     },
                     {
                       title:
-                        'Depp, Colin A, et al. “Technology to Assess and Support Self-Management in Serious Mental Illness.” Dialogues in Clinical Neuroscience, U.S. National Library of Medicine, 18 June 2018',
+                        'Depp, Colin A, et al. “Technology to Assess and Support Self-Management in Serious Mental Illness.” Dialogues in Clinical Neuroscience, U.S. National Library of Medicine, 18 June 2018. Accessed Aug 2022',
                       link: 'https://pubmed.ncbi.nlm.nih.gov/27489457/',
                     },
                     {
                       title:
-                        '“Heart Disease Facts.” Centers for Disease Control and Prevention, 15 July 2022',
-                      link: 'https://www.cdc.gov/heartdisease/facts.htm',
+                        '“Heart Disease Facts.” Centers for Disease Control and Prevention, 15 July 2022. Accessed Aug 2022 (archived link)',
+                      link: 'https://web.archive.org/web/20220823021352/https://www.cdc.gov/heartdisease/facts.htm',
                     },
                     {
-                      title: 'CDC National Health Report Highlights',
+                      title: 'CDC National Health Report Highlights. Accessed Aug 2022 (archived link)',
                       link:
-                        'https://www.cdc.gov/healthreport/publications/compendium.pdf',
+                        'https://web.archive.org/web/20220817004543/https://www.cdc.gov/healthreport/publications/compendium.pdf',
                     },
                     {
                       title:
-                        'Hypertension in Adults: Screening. US Preventive Services Taskforce, 27 Apr. 2021',
+                        'Hypertension in Adults: Screening. US Preventive Services Taskforce, 27 Apr. 2021. Accessed Aug 2022',
                       link:
                         'https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening',
                     },
                     {
                       title:
-                        'Tucker, Katherine L, et al. “Self-Monitoring of Blood Pressure in Hypertension: A Systematic Review and Individual Patient Data Meta-Analysis.” PLoS Medicine, Public Library of Science, 19 Sept. 2017',
+                        'Tucker, Katherine L, et al. “Self-Monitoring of Blood Pressure in Hypertension: A Systematic Review and Individual Patient Data Meta-Analysis.” PLoS Medicine, Public Library of Science, 19 Sept. 2017. Accessed Aug 2022',
                       link:
                         'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5604965/',
                     },
                     {
                       title:
-                        '“Kidney Basics.” National Kidney Foundation, 28 July 2022',
+                        '“Kidney Basics.” National Kidney Foundation, 28 July 2022. Accessed Aug 2022',
                       link: 'https://www.kidney.org/kidney-basics',
                     },
                     {
                       title:
-                        'Erez, Daniella Levy, et al. “Dipping at Home: Is It Better, Easier, and More Convenient? A Feasibility and Acceptability Study of a Novel Home Urinalysis Using a Smartphone Application - Pediatric Nephrology.” SpringerLink, Springer Berlin Heidelberg, 21 Apr. 2022',
+                        'Erez, Daniella Levy, et al. “Dipping at Home: Is It Better, Easier, and More Convenient? A Feasibility and Acceptability Study of a Novel Home Urinalysis Using a Smartphone Application - Pediatric Nephrology.” SpringerLink, Springer Berlin Heidelberg, 21 Apr. 2022. Accessed Aug 2022',
                       link:
                         'https://link.springer.com/article/10.1007/s00467-022-05556-8',
                     },
                     {
                       title:
-                        '“10 Parameter Urinalysis Test at Home.” Diagnox Health: Innovative Wellness and Healthcare Products',
+                        '“10 Parameter Urinalysis Test at Home.” Diagnox Health: Innovative Wellness and Healthcare Products. Accessed Aug 2022',
                       link:
                         'https://www.diagnoxhealth.com/blog/10-parameter-urinalysis-test-at-home',
                     },
                     {
-                      title: 'Olive Diagnostics',
+                      title: 'Olive Diagnostics. Accessed Aug 2022',
                       link: 'https://www.olive.earth/',
                     },
                     {
                       title:
-                        '“Breast Cancer Statistics: How Common Is Breast Cancer?” American Cancer Society, 2022',
+                        '“Breast Cancer Statistics: How Common Is Breast Cancer?” American Cancer Society, 2022. Accessed Aug 2022',
                       link:
                         'https://www.cancer.org/cancer/breast-cancer/about/how-common-is-breast-cancer.html',
                     },
                     {
                       title:
-                        'Boraas, Marcia, and Sameer Gupta. “Breast Self-Exam (BSE).” BreastCancer.org, 29 June 2022',
+                        'Boraas, Marcia, and Sameer Gupta. “Breast Self-Exam (BSE).” BreastCancer.org, 29 June 2022. Accessed Aug 2022',
                       link:
                         'https://www.breastcancer.org/screening-testing/breast-self-exam-bse',
                     },
                     {
                       title:
-                        '“The Breast Cancer Risk Assessment Tool.” The National Cancer Institute',
+                        '“The Breast Cancer Risk Assessment Tool.” The National Cancer Institute. Accessed Aug 2022',
                       link: 'https://bcrisktool.cancer.gov/index.html',
                     },
                     {
                       title:
-                        '“Vision Impairment and Blindness.” World Health Organization',
+                        '“Vision Impairment and Blindness.” World Health Organization. Accessed Aug 2022',
                       link:
                         'https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment',
                     },
                     {
                       title:
-                        '“Vision Impairment and Chronic Health Conditions.” Centers for Disease Control and Prevention, 17 June 2020',
+                        '“Vision Impairment and Chronic Health Conditions.” Centers for Disease Control and Prevention, 17 June 2020. Accessed Aug 2022 (archived link)',
                       link:
-                        'https://www.cdc.gov/visionhealth/living/index.html',
+                        'https://web.archive.org/web/20220706084819/https://www.cdc.gov/visionhealth/living/index.html',
                     },
                     {
                       title:
-                        'Yannuzzi, L A. A Modified Amsler Grid. A Self-Assessment Test for Patients with Macular Disease. U.S. National Library of Medicine',
+                        'Yannuzzi, L A. A Modified Amsler Grid. A Self-Assessment Test for Patients with Macular Disease. U.S. National Library of Medicine. Accessed Aug 2022',
                       link: 'https://pubmed.ncbi.nlm.nih.gov/6175935/',
                     },
                     {
-                      title: 'https://www.homeacuitytest.org',
+                      title: 'Home Acuity Test. Accessed Aug 2022',
                       link: 'https://www.homeacuitytest.org',
                     },
                     {
                       title:
-                        '“National Diabetes Statistics Report.” Centers for Disease Control and Prevention, 18 Jan. 2022',
+                        '“National Diabetes Statistics Report.” Centers for Disease Control and Prevention, 18 Jan. 2022. Accessed Aug 2022 (archived link)',
                       link:
-                        'https://www.cdc.gov/diabetes/data/statistics-report/index.html',
+                        'https://web.archive.org/web/20220825054140/https://www.cdc.gov/diabetes/data/statistics-report/index.html',
                     },
                     {
                       title:
-                        'Sia, Hon-Ke, et al. “Self-Monitoring of Blood Glucose in Association with Glycemic Control in Newly Diagnosed Non-Insulin-Treated Diabetes Patients: A Retrospective Cohort Study.” Nature News, Nature Publishing Group, 13 Jan. 2021',
+                        'Sia, Hon-Ke, et al. “Self-Monitoring of Blood Glucose in Association with Glycemic Control in Newly Diagnosed Non-Insulin-Treated Diabetes Patients: A Retrospective Cohort Study.” Nature News, Nature Publishing Group, 13 Jan. 2021. Accessed Aug 2022',
                       link:
                         'https://www.nature.com/articles/s41598-021-81024-x',
                     },
                     {
-                      title: '“What Is Nightscout?” Nightscout',
-                      link: 'https://nightscout.github.io/#:~:text=Nightscout',
+                      title: '“What Is Nightscout?” Nightscout. Accessed Aug 2022',
+                      link: 'https://nightscout.github.io/',
                     },
                     {
                       title:
-                        '“The U.S. Government and International Family Planning &amp; Reproductive Health Efforts.” KFF, 24 June 2022',
+                        '“The U.S. Government and International Family Planning &amp; Reproductive Health Efforts.” KFF, 24 June 2022. Accessed Aug 2022',
                       link:
                         'https://www.kff.org/global-health-policy/fact-sheet/the-u-s-government-and-international-family-planning-reproductive-health-efforts/',
                     },
                     {
                       title:
-                        'Stevenson, Amanda J, et al. The Impact of Contraceptive Access on High School Graduation. American Association for the Advancement of Science, 5 May 2021',
+                        'Stevenson, Amanda J, et al. The Impact of Contraceptive Access on High School Graduation. American Association for the Advancement of Science, 5 May 2021. Accessed Aug 2022',
                       link:
                         'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8099178/',
                     },
                     {
-                      title: '“Unmet Need for Contraception: Fact Sheet.” PRB',
+                      title: '“Unmet Need for Contraception: Fact Sheet.” PRB. Accessed Aug 2022',
                       link:
                         'https://www.prb.org/resources/unmet-need-for-contraception-fact-sheet/',
                     },
                     {
                       title:
-                        '“A Decision Aid to Help Women Choose and Use a Method of Birth Control.” PCORI, 4 Mar. 2022',
+                        '“A Decision Aid to Help Women Choose and Use a Method of Birth Control.” PCORI, 4 Mar. 2022. Accessed Aug 2022',
                       link:
                         'https://www.pcori.org/research-results/2013/decision-aid-help-women-choose-and-use-method-birth-control',
                     },
                     {
                       title:
-                        'Your Birth Control Choices - Reproductive Health Access Project. Reproductive Access Project, Oct. 2021',
+                        'Your Birth Control Choices - Reproductive Health Access Project. Reproductive Access Project, Oct. 2021. Accessed Aug 2022',
                       link:
                         'https://www.reproductiveaccess.org/wp-content/uploads/2014/06/2020-09-contra-choices.pdf',
                     },
                     {
                       title:
-                        'Ambrosino, Nicolino, and Enrica Bertella. Lifestyle Interventions in Prevention and Comprehensive Management of COPD. European Respiratory Society, Sept. 2018',
+                        'Ambrosino, Nicolino, and Enrica Bertella. Lifestyle Interventions in Prevention and Comprehensive Management of COPD. European Respiratory Society, Sept. 2018. Accessed Aug 2022',
                       link:
                         'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6118879/',
                     },
                     {
                       title:
-                        'Saini, Jagriti, et al. “A Comprehensive Review on Indoor Air Quality Monitoring Systems for Enhanced Public Health - Sustainable Environment Research.” BioMed Central, BioMed Central, 29 Jan. 2020',
+                        'Saini, Jagriti, et al. “A Comprehensive Review on Indoor Air Quality Monitoring Systems for Enhanced Public Health - Sustainable Environment Research.” BioMed Central, BioMed Central, 29 Jan. 2020. Accessed Aug 2022',
                       link:
                         'https://sustainenvironres.biomedcentral.com/articles/10.1186/s42834-020-0047-y',
                     },
                     {
-                      title: '“Pulse Oximetry.” Yale Medicine, 2 Mar. 2021',
+                      title: '“Pulse Oximetry.” Yale Medicine, 2 Mar. 2021. Accessed Aug 2022',
                       link:
-                        'https://www.yalemedicine.org/conditions/pulse-oximetry#:~:text=Basically%2C',
+                        'https://www.yalemedicine.org/conditions/pulse-oximetry',
                     },
                     {
                       title:
-                        'Hang, Liang-Wen, et al. “Validation of Overnight Oximetry to Diagnose Patients with Moderate to Severe Obstructive Sleep Apnea.” BMC Pulmonary Medicine, U.S. National Library of Medicine, 20 Mar. 2015',
+                        'Hang, Liang-Wen, et al. “Validation of Overnight Oximetry to Diagnose Patients with Moderate to Severe Obstructive Sleep Apnea.” BMC Pulmonary Medicine, U.S. National Library of Medicine, 20 Mar. 2015. Accessed Aug 2022',
                       link: 'https://pubmed.ncbi.nlm.nih.gov/25880649/',
                     },
                     {
                       title:
-                        'Luks, Andrew M, and Erik R Swenson. “Pulse Oximetry for Monitoring Patients with COVID-19 at Home. Potential Pitfalls and Practical Guidance.” Annals of the American Thoracic Society, U.S. National Library of Medicine, 17 Sept. 2020',
+                        'Luks, Andrew M, and Erik R Swenson. “Pulse Oximetry for Monitoring Patients with COVID-19 at Home. Potential Pitfalls and Practical Guidance.” Annals of the American Thoracic Society, U.S. National Library of Medicine, 17 Sept. 2020. Accessed Aug 2022',
                       link: 'https://pubmed.ncbi.nlm.nih.gov/32521167/',
                     },
                     {
                       title:
-                        '“Evaluating Clinical Decision Support.” Rethinking Clinical Trials, 27 Dec. 2021',
+                        '“Evaluating Clinical Decision Support.” Rethinking Clinical Trials, 27 Dec. 2021. Accessed Aug 2022',
                       link:
                         'https://rethinkingclinicaltrials.org/chapters/conduct/real-world-evidence-clinical-decision-support/evaluating-cds/',
                     },
                     {
                       title:
-                        '“Immunization Calculation Engine (ICE).” CDS Connect',
+                        '“Immunization Calculation Engine (ICE).” CDS Connect. Accessed Aug 2022',
                       link:
                         'https://cds.ahrq.gov/cdsconnect/artifact/immunization-calculation-engine-ice-0',
                     },

@@ -1465,7 +1465,7 @@ class CoronavirusFeature extends Component {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov"
+                    href="https://web.archive.org/web/20200318045606/https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/coronavirus-disease-2019-covid-19"
                   >
                     <Image
                       src="/images/features/coronavirus/logo-fda.jpg"
@@ -1484,9 +1484,9 @@ class CoronavirusFeature extends Component {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov"
+                      href="https://web.archive.org/web/20200318045606/https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/coronavirus-disease-2019-covid-19"
                     >
-                      https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov
+                      https://www.fda.gov/emergency-preparedness-and-response/mcm-issues/novel-coronavirus-2019-ncov (archived link)
                     </a>
                   </p>
                 </div>
@@ -1548,31 +1548,31 @@ class CoronavirusFeature extends Component {
                   },
                   {
                     title:
-                      'Centers for Disease Control and Prevention. (2020, January 29). Prevention, Treatment of Novel Coronavirus (2019-nCoV). Retrieved February 5, 2020',
+                      'Centers for Disease Control and Prevention. (2020, January 29). Prevention, Treatment of Novel Coronavirus (2019-nCoV). Retrieved February 5, 2020. (archived link)',
                     link:
-                      'https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html',
+                      'https://web.archive.org/web/20200205084838/https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html',
                   },
                   {
                     title:
-                      'Centers for Disease Control and Prevention. (2020, January 28). What to do if you are sick with 2019 Novel Coronavirus (2019-nCoV). Retrieved January 31, 2020',
+                      'Centers for Disease Control and Prevention. (2020, January 28). What to do if you are sick with 2019 Novel Coronavirus (2019-nCoV). Retrieved January 31, 2020. (archived link)',
                     link:
-                      'https://www.cdc.gov/coronavirus/2019-ncov/about/steps-when-sick.html',
+                      'https://web.archive.org/web/20200131050853/https://www.cdc.gov/coronavirus/2019-ncov/about/steps-when-sick.html',
                   },
                   {
                     title:
-                      'Centers for Disease Control and Prevention. (2020, January 29). Preventing 2019-nCoV from Spreading to Others. Retrieved January 31, 2020',
+                      'Centers for Disease Control and Prevention. (2020, January 29). Preventing 2019-nCoV from Spreading to Others. Retrieved January 31, 2020. (archived link)',
                     link:
-                      'https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-prevent-spread.html#steps-for-caregivers',
+                      'https://web.archive.org/web/20200131032657/https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-prevent-spread.html#steps-for-caregivers',
                   },
                   {
                     title:
-                      'Centers for Disease Control and Prevention. (2020, January 29). How 2019-nCoV Spreads. Retrieved February 6 2020',
+                      'Centers for Disease Control and Prevention. (2020, January 29). How 2019-nCoV Spreads. Retrieved February 6 2020. (archived link)',
                     link:
-                      'https://www.cdc.gov/coronavirus/2019-ncov/about/transmission.html',
+                      'https://web.archive.org/web/20200206092803/https://www.cdc.gov/coronavirus/2019-ncov/about/transmission.html',
                   },
                   {
                     title:
-                      'Day, T., Park, A., Madras, N., Gumel, A., & Wu, J. (2006). When Is Quarantine a Useful Control Strategy for Emerging Infectious Diseases? American Journal of Epidemiology, 163(5), 479–485. doi: 10.1093/aje/kwj056',
+                      'Day, T., Park, A., Madras, N., Gumel, A., & Wu, J. (2006). When Is Quarantine a Useful Control Strategy for Emerging Infectious Diseases? American Journal of Epidemiology, 163(5), 479-485. doi: 10.1093/aje/kwj056',
                   },
                   {
                     title:
@@ -1582,15 +1582,15 @@ class CoronavirusFeature extends Component {
                   },
                   {
                     title:
-                      'Li, Q., Zhu, N., Munster, V. J., Phan, L. T., & Chinese Center for Disease Control and Prevention. (2020, January 24). Early Transmission Dynamics in Wuhan, China, of Novel Coronavirus–Infected Pneumonia: NEJM. Retrieved January 31, 2020',
+                      'Li, Q., Zhu, N., Munster, V. J., Phan, L. T., & Chinese Center for Disease Control and Prevention. (2020, January 24). Early Transmission Dynamics in Wuhan, China, of Novel Coronavirus-Infected Pneumonia: NEJM. Retrieved January 31, 2020',
                     link:
                       'http://www.nejm.org/doi/full/10.1056/NEJMoa2001316?query=featured_home',
                   },
                   {
                     title:
-                      'New Hampshire CDC. State of New Hampshire Interim Severe Acute Respiratory Syndrome (SARS) Epidemic Preparedness Plan, State of New Hampshire Interim Severe Acute Respiratory Syndrome (SARS) Epidemic Preparedness Plan (2004).',
+                      'New Hampshire CDC. State of New Hampshire Interim Severe Acute Respiratory Syndrome (SARS) Epidemic Preparedness Plan, (2004). (archived link)',
                     link:
-                      'https://www.dhhs.nh.gov/dphs/cdcs/sars/documents/sarsplan.pdf',
+                      'https://web.archive.org/web/20200306204414/https://www.dhhs.nh.gov/dphs/cdcs/sars/documents/sarsplan.pdf',
                   },
                   {
                     title:
@@ -1600,7 +1600,7 @@ class CoronavirusFeature extends Component {
                   },
                   {
                     title:
-                      'Shenoy, E. (2020, January 24). Monitoring coronavirus. Retrieved February 1, 2020',
+                      'Shenoy, E. (2020, January 24). Monitoring coronavirus. Retrieved February 1, 2020. (original source no longer available)',
                     link:
                       'https://www.massgeneral.org/news/hotline/HTL012420/monitoring-coronavirus',
                   },
@@ -1633,9 +1633,9 @@ class CoronavirusFeature extends Component {
                   },
                   {
                     title:
-                      'Centers for Disease Control and Prevention. (2020,  February 13). Coronavirus Disease 2019 (COVID-19) Situation Summary. Retrieved February 14, 2020',
+                      'Centers for Disease Control and Prevention. (2020,  February 13). Coronavirus Disease 2019 (COVID-19) Situation Summary. Retrieved February 14, 2020. (archived link)',
                     link:
-                      'https://www.cdc.gov/coronavirus/2019-nCoV/summary.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fwhat-you-should-do.html#anchor_1580064337377',
+                      'https://web.archive.org/web/20200211031759/https://www.cdc.gov/coronavirus/2019-nCoV/summary.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fwhat-you-should-do.html#anchor_1580064337377',
                   },
                   {
                     title:
@@ -1649,9 +1649,9 @@ class CoronavirusFeature extends Component {
                   },
                   {
                     title:
-                      'Centers for Disease and Control (2020, April 4). Use cloth face coverings to help slow the spread of COVID-19. Retrieved from',
+                      'Centers for Disease and Control (2020, April 4). Use cloth face coverings to help slow the spread of COVID-19. Retrieved from (archived link)',
                     link:
-                      'https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html',
+                      'https://web.archive.org/web/20200404053838/https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html',
                   },
                 ]}
               />

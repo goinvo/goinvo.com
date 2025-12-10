@@ -33,13 +33,13 @@ class NationalCancerNavigationFeature extends Component {
                 The White House Calls for a Childhood Cancer Service
               </h2>
               <p>
-                Earlier this year, the Biden-Harris administration{' '}
+                Earlier this year (2023), the Biden-Harris administration{' '}
                 <a
-                  href="https://www.whitehouse.gov/briefing-room/statements-releases/2023/02/02/fact-sheet-on-one-year-anniversary-of-reignited-cancer-moonshot-biden-harris-administration-announces-new-actions-to-end-cancer-as-we-know-it/"
+                  href="https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/02/02/fact-sheet-on-one-year-anniversary-of-reignited-cancer-moonshot-biden-harris-administration-announces-new-actions-to-end-cancer-as-we-know-it/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  announced
+                  announced (archived link)
                 </a>{' '}
                 a handful of new actions relating to the Cancer Moonshot goals
                 to reduce cancer mortality rates and improve the lives of
@@ -356,7 +356,7 @@ class NationalCancerNavigationFeature extends Component {
                       title:
                         'Tong, Michelle, and 2022. “Racial Disparities in Cancer Outcomes, Screening, and Treatment.” KFF, 3 Feb. 2022',
                       link:
-                        'www.kff.org/racial-equity-and-health-policy/issue-brief/racial-disparities-in-cancer-outcomes-screening-and-treatment/',
+                        'https://www.kff.org/racial-equity-and-health-policy/issue-brief/racial-disparities-in-cancer-outcomes-screening-and-treatment/',
                     },
                     {
                       title:
@@ -447,13 +447,13 @@ class NationalCancerNavigationFeature extends Component {
                       title:
                         '“Survey: Majority of Cancer Patients Struggle to Afford Cancer Care.” American Cancer Society Cancer Action Network, 15 Dec. 2021',
                       link:
-                        'www.fightcancer.org/releases/survey-majority-cancer-patients-struggle-afford-cancer-care',
+                        'https://www.fightcancer.org/releases/survey-majority-cancer-patients-struggle-afford-cancer-care',
                     },
                     {
                       title:
                         'Robin Vanderpool, DrPH. “Availability and Accessibility of Cancer Care Delivery Approaches to Reduce Financial Toxicity of Rural and Urban Cancer Patients in Kentucky.” Www.jons-Online.com, vol. 13, no. 5, 1 June 2022. Accessed 31 May 2023',
                       link:
-                        'www.jons-online.com/issues/2022/may-2022-vol-13-no-5/4518-availability-and-accessibility-of-cancer-care-delivery-approaches-to-reduce-financial-toxicity-of-rural-and-urban-cancer-patients-in-kentucky',
+                        'https://www.jons-online.com/issues/2022/may-2022-vol-13-no-5/4518-availability-and-accessibility-of-cancer-care-delivery-approaches-to-reduce-financial-toxicity-of-rural-and-urban-cancer-patients-in-kentucky',
                     },
                     {
                       title:

@@ -296,7 +296,7 @@ class ConsentFeature extends Component {
               <p className="text--caption">
                 Above is Table 1 from "
                 <a
-                  href="https://poseidon01.ssrn.com/delivery.php?ID=722009025090070117080012101085114002000071009031061037125097088119009102109102119101099038107061010025028092092080122065098105007010093003076112103109116006085100029057035000100077107084125011002065028029127126094079096086083107104089069097105001078017&EXT=pdf"
+                  href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2769129"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -489,7 +489,7 @@ class ConsentFeature extends Component {
                   references={[
                     {
                       title:
-                        'Jr, W. C. (n.d.). Definition of Informed consent. Retrieved June 18, 2019',
+                        'Jr, W. C. (n.d.). Definition of Informed consent. Retrieved June 18, 2019. (original source no longer available)',
                       link:
                         'https://www.medicinenet.com/script/main/art.asp?articlekey=22414',
                     },
@@ -524,9 +524,9 @@ class ConsentFeature extends Component {
                     },
                     {
                       title:
-                        'State of eConsent 2017 Report. (n.d.). Retrieved June 18, 2019',
+                        'State of eConsent 2017 Report. (n.d.). Retrieved June 18, 2019. (archived link)',
                       link:
-                        'https://resources.crfhealth.com/electronic-informed-consent/state-of-econsent-2017-report ',
+                        'https://web.archive.org/web/20180126162335/http://resources.crfhealth.com/electronic-informed-consent/state-of-econsent-2017-report',
                     },
                     {
                       title:
@@ -538,13 +538,13 @@ class ConsentFeature extends Component {
                       title:
                         'Communicating with Patients Who Have Limited Literacy Skills. (1998). The Journal of Family Practice, 46(2), 168-175. Retrieved June 18, 2019',
                       link:
-                        'https://mdedge-files-live.s3.us-east-2.amazonaws.com/files/s3fs-public/jfp-archived-issues/1998-volume_46-47/JFP_1998-02_v46_i2_communicating-with-patients-who-have-lim.pdf',
+                        'https://cdn.mdedge.com/files/s3fs-public/jfp-archived-issues/1998-volume_46-47/JFP_1998-02_v46_i2_communicating-with-patients-who-have-lim.pdf',
                     },
                     {
                       title:
                         'Doerr, M., Suver, C., & Wilbanks, J. (2016). Developing a Transparent, Participant-Navigated Electronic Informed Consent for Mobile-Mediated Research. SSRN Electronic Journal. doi:10.2139/ssrn.2769129',
                       link:
-                        'https://poseidon01.ssrn.com/delivery.php?ID=722009025090070117080012101085114002000071009031061037125097088119009102109102119101099038107061010025028092092080122065098105007010093003076112103109116006085100029057035000100077107084125011002065028029127126094079096086083107104089069097105001078017&EXT=pdf',
+                        'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2769129',
                     },
                     {
                       title:

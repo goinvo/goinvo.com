@@ -368,7 +368,7 @@ class ServicesPage extends Component {
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
             >
               <div>
-                <a href="https://www.goinvo.com/features/determinants-of-health/">
+                <a href="/vision/determinants-of-health/">
                   Determinants of Health
                 </a>
               </div>

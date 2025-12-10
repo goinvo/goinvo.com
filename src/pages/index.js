@@ -519,7 +519,7 @@ class IndexPage extends Component {
               </div>
             </div>
           </div>
-        </div> 
+        </div>
         <Divider animated className="" />
         <div className="max-width content-padding pad-bottom--double">
           <div className="container container--justify-center margin-vertical">
@@ -537,9 +537,7 @@ class IndexPage extends Component {
               sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
             >
               <a
-                href="https://www.goinvo.com/features/determinants-of-health"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/vision/determinants-of-health"
               >
                 Determinants of health
               </a>

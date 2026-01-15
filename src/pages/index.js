@@ -112,7 +112,7 @@ class IndexPage extends Component {
                   </h2>
                   <p
                     className="text--serif header--lg text--gray"
-                    style={{ fontStyle: 'italic' }}
+                    style={{ fontStyle: 'italic', fontWeight: 'bold' }}
                   >
                     "The system is down."
                   </p>
@@ -210,10 +210,15 @@ class IndexPage extends Component {
         </div>
 
         {/* 6. 1 Million Served - SNAP Impact */}
-        <div className="impact-section pad-vertical--quad">
+        <div
+          className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
+          style={{
+            backgroundImage: 'url(/images/case-studies/mass/snap/snap-cover.jpg)'
+          }}
+        >
           <div className="max-width content-padding">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2 impact-section__stats">
+            <Card className="case-study-card case-study-card--compact" noShadow>
+              <div className="case-study-card__content">
                 <h2 className="header--xl">
                   1 Million Served
                   <span className="text--primary text--serif">.</span>
@@ -256,18 +261,12 @@ class IndexPage extends Component {
                   SNAP CASE STUDY
                 </Link>
               </div>
-              <div className="pure-u-1 pure-u-lg-1-2 impact-section__image">
-                <Image
-                  src="/images/case-studies/mass/snap/snap-cover.jpg"
-                  alt="SNAP application redesign"
-                />
-              </div>
-            </div>
+            </Card>
           </div>
         </div>
 
         {/* 7. Contact Form */}
-        <div className="background--blue pad-vertical--quad--only-lg">
+        <div className="pad-vertical--quad">
           <div className="max-width content-padding">
             <h2 className="header--xl">
               Let's work together
@@ -286,8 +285,8 @@ class IndexPage extends Component {
               allowTransparency="true"
               frameBorder="0"
               scrolling="no"
-              src="https://form.jotform.com/251276832519159"
-              style={{ width: '100%', height: '500px', border: 'none' }}
+              src="https://form.jotform.com/251276832519159?background=1"
+              style={{ width: '100%', height: '700px', border: 'none', background: 'transparent' }}
             />
           </div>
         </div>

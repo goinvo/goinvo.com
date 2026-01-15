@@ -572,6 +572,10 @@
       font-size: 3rem;
       line-height: 3.25rem;
     }
+
+    strong {
+      font-weight: $font-weight--bold;
+    }
   }
 
   .hero-buttons {
@@ -741,6 +745,24 @@
     background-repeat: no-repeat;
     position: relative;
 
+    // Black gradient from left edge
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.7) 25%,
+        rgba(0, 0, 0, 0.4) 50%,
+        transparent 80%
+      );
+      z-index: 0;
+    }
+
     .max-width {
       position: relative;
       z-index: 1;
@@ -755,12 +777,12 @@
     }
 
     .testimonial-attribution__title {
-      color: rgba($color-white, 0.8);
+      color: $color-white;
     }
   }
 
   .testimonial-quote {
-    font-family: $font-family--serif;
+    font-family: 'Georgia', serif; // Georgia has a proper italic variant
     font-style: italic;
     font-size: 1.25rem;
     line-height: 1.8;

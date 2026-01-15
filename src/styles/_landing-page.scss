@@ -665,21 +665,21 @@
     }
   }
 
-  // Compact card - white hugs content horizontally
+  // Compact card - thinner and taller
   &--compact {
     display: inline-block;
     width: auto;
     max-width: 100%;
 
     @include mq($from: large) {
-      max-width: 50%;
+      max-width: 380px;
     }
 
     .case-study-card__content {
       padding: $spacing * 2;
 
       @include mq($from: large) {
-        padding: $spacing * 3;
+        padding: $spacing * 2.5;
       }
 
       .header--xl {
@@ -810,6 +810,14 @@
 
     &__title {
       color: $color-gray;
+    }
+  }
+
+  // Override for image background - needs to come after defaults
+  &--with-image {
+    .testimonial-attribution__name,
+    .testimonial-attribution__title {
+      color: $color-white;
     }
   }
 }

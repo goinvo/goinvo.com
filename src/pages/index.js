@@ -7,6 +7,7 @@ import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import TEAM from '../data/team.json'
 import Marquee from 'react-fast-marquee'
+import { mediaUrl } from '../helpers'
 
 const frontmatter = {
   metaTitle: 'Boston UX Design Agency | GoInvo Boston',
@@ -82,7 +83,15 @@ class IndexPage extends Component {
     return (
       <Layout frontmatter={this.state.frontmatter} isHomepage>
         {/* 1. Hero Section - height calculated to position "The system is down" just above fold */}
-        <div className="hero--dynamic-height" style={heroStyle}>
+        <div
+          className="hero--dynamic-height"
+          style={{
+            ...heroStyle,
+            backgroundImage: `url(${mediaUrl('/images/homepage/bg-wavy-lines.jpg')})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
           <div className="max-width content-padding hero--dynamic-height__content">
             <h1 className="header--xl hero-title--lg">
               <strong>We design real software</strong>
@@ -102,7 +111,12 @@ class IndexPage extends Component {
         </div>
 
         {/* 2. Backlog: Zero - 3M Case Study */}
-        <div className="case-study-highlight pad-vertical--quad">
+        <div
+          className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
+          style={{
+            backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-3m.jpg')})`
+          }}
+        >
           <div className="max-width content-padding">
             <div ref={this.caseStudyCardRef}>
             <Card className="case-study-card case-study-card--compact" noShadow>
@@ -142,7 +156,7 @@ class IndexPage extends Component {
         <div
           className="testimonial-section testimonial-section--with-image pad-vertical--quad"
           style={{
-            backgroundImage: 'url(https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/4c2c9d38-bc10-4028-8969-950195aec704/EricTopol_2023S-embed.jpg?u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82w=640)'
+            backgroundImage: `url(${mediaUrl('/images/homepage/bg-topol.jpg')})`
           }}
         >
           <div className="max-width content-padding">
@@ -164,7 +178,7 @@ class IndexPage extends Component {
         <div
           className="case-study-highlight case-study-highlight--with-background case-study-highlight--align-right pad-vertical--quad"
           style={{
-            backgroundImage: 'url(/images/case-studies/ipsos/facto/cover-584KB.jpg)'
+            backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-ipsos.jpg')})`
           }}
         >
           <div className="max-width content-padding">
@@ -213,7 +227,7 @@ class IndexPage extends Component {
         <div
           className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
           style={{
-            backgroundImage: 'url(/images/case-studies/mass/snap/snap-cover.jpg)'
+            backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-snap.jpg')})`
           }}
         >
           <div className="max-width content-padding">

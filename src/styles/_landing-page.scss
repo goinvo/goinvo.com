@@ -782,8 +782,10 @@
   }
 
   .testimonial-quote {
-    font-family: 'Georgia', serif; // Georgia has a proper italic variant
+    font-family: 'adobe-jenson-pro', Georgia, serif;
+    font-weight: 400;
     font-style: italic;
+    font-synthesis: none; // Prevent faux italic
     font-size: 1.25rem;
     line-height: 1.8;
     margin: 0 0 $spacing * 1.5 0;

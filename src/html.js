@@ -58,11 +58,11 @@ export default class HTML extends React.Component {
           />
           <link
             rel="preload"
-            href="https://use.typekit.net/lcb6luw.css"
+            href="https://use.typekit.net/luw8hiq.css"
             as="style"
             crossOrigin="anonymous"
           />
-          <link rel="stylesheet" href="https://use.typekit.net/lcb6luw.css" crossOrigin="anonymous" />
+          <link rel="stylesheet" href="https://use.typekit.net/luw8hiq.css" crossOrigin="anonymous" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

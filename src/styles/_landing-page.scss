@@ -744,6 +744,7 @@
     background-position: center right;
     background-repeat: no-repeat;
     position: relative;
+    padding-top: $spacing * 4; // Extra top padding to prevent text cutoff
 
     // Black gradient from left edge
     &::before {

@@ -68,7 +68,7 @@ class IndexPage extends Component {
     const heroHeight = viewportHeight - HEADER_HEIGHT - caseStudySectionHeight
 
     // Set minimum height to prevent hero from being too small
-    const minHeight = 200
+    const minHeight = 300
     const finalHeight = Math.max(heroHeight, minHeight)
 
     this.setState({ heroHeight: finalHeight })

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run develop:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(npx gatsby develop:*)",
+      "WebFetch(domain:form.jotform.com)",
+      "WebFetch(domain:use.typekit.net)"
+    ]
+  }
+}

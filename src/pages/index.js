@@ -161,10 +161,10 @@ class IndexPage extends Component {
         >
           <div className="max-width content-padding">
             <p className="testimonial-quote">
-              The GoInvo studio is one of the most talented groups of designers I have
+              "The GoInvo studio is one of the most talented groups of designers I have
               ever met in the healthcare space. Not only are their ideas, designs, and
               graphics remarkable, but I haven't yet figured out how they know so much
-              about medicine and its future.
+              about medicine and its future."
             </p>
             <p className="testimonial-attribution">
               <span className="testimonial-attribution__name">Eric Topol, MD</span>

@@ -26,11 +26,36 @@ class IndexPage extends Component {
       heroHeight: null, // Will be calculated
     }
     this.caseStudyCardRef = createRef()
+    // Refs for alignment debugging
+    this.heroHeaderRef = createRef()
+    this.backlogZeroRef = createRef()
+    this.ericTopolRef = createRef()
+    this.millionServedRef = createRef()
   }
 
   componentDidMount() {
     this.calculateHeroHeight()
     window.addEventListener('resize', this.handleResize)
+    this.printLeftPositions()
+  }
+
+  printLeftPositions = () => {
+    // Print the x-position of the left edge of each text section
+    const sections = [
+      { name: 'Hero Header', ref: this.heroHeaderRef },
+      { name: 'Backlog: Zero', ref: this.backlogZeroRef },
+      { name: 'Eric Topol', ref: this.ericTopolRef },
+      { name: '1 Million Served', ref: this.millionServedRef },
+    ]
+
+    console.log('=== Left Edge X-Positions ===')
+    sections.forEach(({ name, ref }) => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect()
+        console.log(`${name}: x=${rect.left}px`)
+      }
+    })
+    console.log('=============================')
   }
 
   componentWillUnmount() {
@@ -95,7 +120,7 @@ class IndexPage extends Component {
           }}
         >
           <div className="max-width content-padding hero--dynamic-height__content">
-            <h1 className="header--xl hero-title--lg">
+            <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
               <strong>We design real software</strong>
               <span className="text--serif text--primary">.</span>
               <br />
@@ -123,7 +148,7 @@ class IndexPage extends Component {
             <div ref={this.caseStudyCardRef}>
             <Card className="case-study-card case-study-card--compact" noShadow>
               <div className="case-study-card__content">
-                  <h2 className="header--xl">
+                  <h2 ref={this.backlogZeroRef} className="header--xl">
                     Backlog: Zero
                   </h2>
                   <p
@@ -162,7 +187,7 @@ class IndexPage extends Component {
           }}
         >
           <div className="max-width content-padding">
-            <p className="testimonial-quote">
+            <p ref={this.ericTopolRef} className="testimonial-quote">
               "The GoInvo studio is one of the most talented groups of designers I have
               ever met in the healthcare space. Not only are their ideas, designs, and
               graphics remarkable, but I haven't yet figured out how they know so much
@@ -235,7 +260,7 @@ class IndexPage extends Component {
           <div className="max-width content-padding">
             <Card className="case-study-card case-study-card--compact" noShadow>
               <div className="case-study-card__content">
-                <h2 className="header--xl">
+                <h2 ref={this.millionServedRef} className="header--xl">
                   1 Million Served
                   <span className="text--primary text--serif">.</span>
                 </h2>
@@ -282,18 +307,20 @@ class IndexPage extends Component {
         </div>
 
         {/* 7. Contact Form */}
-        <div className="pad-vertical--quad">
+        <div className="pad-vertical--quad contact-section">
           <div className="max-width content-padding">
-            <h2 className="header--xl">
-              Let's work together
-              <span className="text--primary text--serif">.</span>
-            </h2>
-            <p className="text--gray">
-              Send us a message or{' '}
-              <a href="https://calendly.com/goinvo/open-office-hours" className="link" target="_blank" rel="noopener noreferrer">
-                visit our open office hours
-              </a>.
-            </p>
+            <div className="contact-section__content">
+              <h2 className="header--xl">
+                Let's work together
+                <span className="text--primary text--serif">.</span>
+              </h2>
+              <p className="text--gray">
+                Send us a message or{' '}
+                <a href="https://calendly.com/goinvo/open-office-hours" className="link" target="_blank" rel="noopener noreferrer">
+                  visit our open office hours
+                </a>.
+              </p>
+            </div>
             <iframe
               id="JotFormIFrame-contact-home"
               className="jotform-form contact-form"

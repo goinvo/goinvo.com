@@ -68,7 +68,9 @@ class IndexPage extends Component {
     const heroHeight = viewportHeight - HEADER_HEIGHT - caseStudySectionHeight
 
     // Set minimum height to prevent hero from being too small
-    const minHeight = 300
+    // Responsive: larger minimum on desktop, smaller on mobile/tablet
+    const viewportWidth = window.innerWidth
+    const minHeight = viewportWidth >= 1024 ? 300 : 200
     const finalHeight = Math.max(heroHeight, minHeight)
 
     this.setState({ heroHeight: finalHeight })
@@ -214,9 +216,9 @@ class IndexPage extends Component {
         {/* 5. Partner Logos */}
         <div className="partners-section pad-vertical--double">
           <div className="max-width content-padding">
-            <h3 className="header--md partners-section__title" style={{ marginTop: 0 }}>
-              We Design with...
-            </h3>
+            <p className="partners-section__title">
+              Trusted by ambitious startups and Fortune 500's:
+            </p>
             <div className="partners-section__logos">
               <ClientLogos />
             </div>
@@ -288,7 +290,7 @@ class IndexPage extends Component {
             </h2>
             <p className="text--gray">
               Send us a message or{' '}
-              <a href="/contact/#office-hours" className="link">
+              <a href="https://calendly.com/goinvo/open-office-hours" className="link" target="_blank" rel="noopener noreferrer">
                 visit our open office hours
               </a>.
             </p>

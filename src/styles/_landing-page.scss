@@ -404,11 +404,14 @@
   background-color: #F7FAFE;
 
   &__title {
-    font-family: $font-family--serif;
-    font-weight: $font-weight--bold;
-    color: $color-black;
+    font-family: $font-family--sans-serif;
+    font-size: 0.875rem;
+    font-weight: $font-weight--normal;
+    color: $color-gray;
     text-align: center;
-    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: $spacing;
   }
 
   &__logos {
@@ -557,6 +560,7 @@
   justify-content: flex-end;
   background-color: #ffffff;
   min-height: 300px; // Fallback before JS calculates
+  max-height: 27vh; // Cap hero height
 
   &__content {
     padding-top: $spacing * 2;
@@ -613,6 +617,13 @@
   }
 
   &--align-right {
+    min-height: 500px; // Ensure enough height to show background image
+    background-position: left center; // Position image on left side
+
+    @include mq($from: large) {
+      min-height: 600px;
+    }
+
     .max-width {
       display: flex;
       justify-content: flex-end;
@@ -741,10 +752,15 @@
 
   &--with-image {
     background-size: cover;
-    background-position: center right;
+    background-position: top right; // Anchor to top to center on face
     background-repeat: no-repeat;
     position: relative;
     padding-top: $spacing * 4; // Extra top padding to prevent text cutoff
+    min-height: 400px; // Ensure section is tall enough to show more of the image
+
+    @include mq($from: large) {
+      min-height: 500px;
+    }
 
     // Black gradient from left edge
     &::before {

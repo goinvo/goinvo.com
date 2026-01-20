@@ -65,7 +65,7 @@ class Layout extends Component {
         >
           <html lang="en" />
         </Helmet>
-        <Header transparent={this.props.isHomepage} />
+        <Header />
         <div className="app__body">{this.props.children}</div>
         <Footer />
       </div>

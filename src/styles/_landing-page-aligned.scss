@@ -83,6 +83,16 @@ $v2-max-width: 1020px;
         display: flex;
         justify-content: flex-end;
       }
+
+      // Right-align card on mobile too - override the negative margin
+      .case-study-card {
+        margin-left: auto !important;
+        margin-right: -$spacing * 2;
+
+        @include mq($from: large) {
+          margin-right: -$spacing * 2.5;
+        }
+      }
     }
   }
 

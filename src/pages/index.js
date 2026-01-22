@@ -93,10 +93,13 @@ class IndexPage extends Component {
     const heroHeight = viewportHeight - HEADER_HEIGHT - caseStudySectionHeight
 
     // Set minimum height to prevent hero from being too small
-    // Responsive: larger minimum on desktop, smaller on mobile/tablet
+    // Responsive: larger minimum on desktop, percentage-based on mobile
     const viewportWidth = window.innerWidth
-    const minHeight = viewportWidth >= 1024 ? 300 : 200
-    const finalHeight = Math.max(heroHeight, minHeight)
+    const minHeight = viewportWidth >= 1024 ? 300 : Math.max(400, viewportHeight * 0.40)
+
+    // Cap hero height: 40% on desktop, 50% on mobile
+    const maxHeight = viewportWidth >= 1024 ? viewportHeight * 0.4 : viewportHeight * 0.50
+    const finalHeight = Math.min(Math.max(heroHeight, minHeight), maxHeight)
 
     this.setState({ heroHeight: finalHeight })
   }

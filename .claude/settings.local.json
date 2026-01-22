@@ -8,7 +8,8 @@
       "WebFetch(domain:form.jotform.com)",
       "WebFetch(domain:use.typekit.net)",
       "Bash(dir \"C:\\\\Users\\\\quest\\\\Programming\\\\GoInvo\\\\goinvo.com\\\\src\\\\styles\\\\_forms.scss\")",
-      "Bash(dir /b:*)"
+      "Bash(dir /b:*)",
+      "Bash(ls:*)"
     ]
   }
 }

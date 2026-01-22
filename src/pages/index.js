@@ -55,7 +55,7 @@ class IndexPage extends Component {
         console.log(`${name}: x=${rect.left}px`)
       }
     })
-    console.log('=============================')
+    console.log('================================')
   }
 
   componentWillUnmount() {
@@ -112,278 +112,281 @@ class IndexPage extends Component {
 
     return (
       <Layout frontmatter={this.state.frontmatter} isHomepage>
-        {/* 1. Hero Section - height calculated to position "The system is down" just above fold */}
-        <div
-          className="hero--dynamic-height"
-          style={{
-            ...heroStyle,
-            backgroundImage: `url(${mediaUrl('/images/homepage/bg-wavy-lines.jpg')})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="max-width content-padding hero--dynamic-height__content">
-            <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
-              <strong>We design real software</strong>
-              <span className="text--serif text--primary">.</span>
-              <br />
-              <span className="text--gray">For complex systems and real constraints.</span>
-            </h1>
-            <div className="hero-buttons">
-              <Link to="/contact/" className="button button--primary">
-                START A CONVO
-              </Link>
-              <Link to="/work/" className="button button--outline-primary">
-                VIEW OUR WORK
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* 2. Backlog: Zero - 3M Case Study */}
-        <div
-          className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
-          style={{
-            backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-3m.jpg')})`
-          }}
-        >
-          <div className="max-width content-padding">
-            <div ref={this.caseStudyCardRef}>
-            <Card className="case-study-card case-study-card--compact" noShadow>
-              <div className="case-study-card__content">
-                  <h2 ref={this.backlogZeroRef} className="header--xl">
-                    Backlog: Zero
-                  </h2>
-                  <p
-                    className="text--serif header--lg text--gray"
-                    style={{ fontStyle: 'italic', fontWeight: 'bold' }}
-                  >
-                    "The system is down."
-                  </p>
-                  <p className="text--gray">
-                    That was the call we got two weeks after launch, from Memorial
-                    Hermann hospital in Houston, CodeRyte's largest customer.
-                  </p>
-                  <p className="text--gray">
-                    30 minutes later, we found the issue. The new system was operating so efficiently that there were zero patients left to code and for a brief period, zero work to do.
-                  </p>
-                  <p className="text--gray">
-                    A backlog that typically measured in thousands of charts and weeks of delay had been cleared. This had never happened before.
-                  </p>
-                  <Link to="/work/3m-coderyte" className="button button--primary" style={{ marginTop: '1rem' }}>
-                    3M CASE STUDY
-                  </Link>
-              </div>
-            </Card>
-            </div>
-          </div>
-        </div>
-
-        {/* 3. Eric Topol Testimonial */}
-        <div
-          className="testimonial-section testimonial-section--with-image pad-vertical--quad"
-          style={{
-            backgroundImage: `url(${mediaUrl('/images/homepage/bg-topol.jpg')})`
-          }}
-        >
-          <div className="max-width content-padding">
-            <p ref={this.ericTopolRef} className="testimonial-quote">
-              "The GoInvo studio is one of the most talented groups of designers I have
-              ever met in the healthcare space. Not only are their ideas, designs, and
-              graphics remarkable, but I haven't yet figured out how they know so much
-              about medicine and its future."
-            </p>
-            <p className="testimonial-attribution">
-              <span className="testimonial-attribution__name">Eric Topol, MD</span>
-              <br />
-              <span className="testimonial-attribution__title">Scripps Research Translational Institute</span>
-            </p>
-          </div>
-        </div>
-
-        {/* 4. Weeks to Hours - Ipsos Case Study */}
-        <div
-          className="case-study-highlight case-study-highlight--with-background case-study-highlight--align-right pad-vertical--quad"
-          style={{
-            backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-ipsos.jpg')})`
-          }}
-        >
-          <div className="max-width content-padding">
-            <Card className="case-study-card case-study-card--compact" noShadow>
-              <div className="case-study-card__content">
-                <h2 className="header--xl">
-                  Weeks to Hours
-                </h2>
-                <p className="text--gray">
-                  From Rube Goldberg workflows to enterprise info at your fingertips.
-                </p>
-                <p className="case-study-stats text--serif">
-                  <strong>90%+ adoption across Ipsos.</strong>
-                  <br />
-                  <strong>700,000+ prompts per month.</strong>
-                  <br />
-                  <strong>10M+ API calls</strong> <span className="text--normal">driving real research, not toys.</span>
-                </p>
-                <p className="text--gray">
-                  This wasn't novelty. <br />
-                  It was transformation. <br />
-                  Research that once took weeks now
-                  yields cited insights in hours.
-                </p>
-                <Link to="/work/ipsos-facto" className="button button--primary" style={{ marginTop: '1rem' }}>
-                  IPSOS CASE STUDY
+        {/* Page-level class for V2 alignment overrides */}
+        <div className="index-page">
+          {/* 1. Hero Section */}
+          <div
+            className="hero--dynamic-height"
+            style={{
+              ...heroStyle,
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-wavy-lines.jpg')})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="hero--dynamic-height__content">
+              <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
+                <strong>We design real software</strong>
+                <span className="text--serif text--primary">.</span>
+                <br />
+                <span className="text--gray">For complex systems and real constraints.</span>
+              </h1>
+              <div className="hero-buttons">
+                <Link to="/contact/" className="button button--primary">
+                  START A CONVO
+                </Link>
+                <Link to="/work/" className="button button--outline-primary">
+                  VIEW OUR WORK
                 </Link>
               </div>
-            </Card>
-          </div>
-        </div>
-
-        {/* 5. Partner Logos */}
-        <div className="partners-section pad-vertical--double">
-          <div className="max-width content-padding">
-            <p className="partners-section__title">
-              Trusted by ambitious startups and Fortune 500's:
-            </p>
-            <div className="partners-section__logos">
-              <ClientLogos />
             </div>
           </div>
-        </div>
 
-        {/* 6. 1 Million Served - SNAP Impact */}
-        <div
-          className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
-          style={{
-            backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-snap.jpg')})`
-          }}
-        >
-          <div className="max-width content-padding">
-            <Card className="case-study-card case-study-card--compact" noShadow>
-              <div className="case-study-card__content">
-                <h2 ref={this.millionServedRef} className="header--xl">
-                  1 Million Served
-                  <span className="text--primary text--serif">.</span>
-                </h2>
-                <div className="impact-timeline">
-                  <div className="impact-item">
-                    <p className="text--bold">In 2017:</p>
-                    <p className="text--gray">
-                      750,000 Massachusetts residents relied on SNAP.
-                      <br />
-                      Just 7% applied online.
+          {/* 2. Backlog: Zero - 3M Case Study */}
+          <div
+            className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-3m.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <div ref={this.caseStudyCardRef}>
+                <Card className="case-study-card case-study-card--compact" noShadow>
+                  <div className="case-study-card__content">
+                    <h2 ref={this.backlogZeroRef} className="header--xl">
+                      Backlog: Zero
+                    </h2>
+                    <p
+                      className="text--serif header--lg text--gray"
+                      style={{ fontStyle: 'italic', fontWeight: 'bold' }}
+                    >
+                      "The system is down."
                     </p>
-                  </div>
-                  <div className="impact-item">
-                    <p>Fax. Mail. Walk-ins.</p>
-                  </div>
-                  <div className="impact-item">
-                    <p className="text--bold">Two years after redesign:</p>
                     <p className="text--gray">
-                      Online applications hit ~44%.
+                      That was the call we got two weeks after launch, from Memorial
+                      Hermann hospital in Houston, CodeRyte's largest customer.
                     </p>
-                  </div>
-                  <div className="impact-item">
-                    <p className="text--bold">Today:</p>
                     <p className="text--gray">
-                      Nearly <strong>1,000,000</strong> people rely on SNAP.
-                      <br />
-                      <strong>70% apply online.</strong>
+                      30 minutes later, we found the issue. The new system was operating so efficiently that there were zero patients left to code and for a brief period, zero work to do.
                     </p>
-                  </div>
-                  <div className="impact-item">
                     <p className="text--gray">
-                      A million people didn't change.
-                      <br />
-                      <strong>The system did.</strong>
+                      A backlog that typically measured in thousands of charts and weeks of delay had been cleared. This had never happened before.
                     </p>
+                    <Link to="/work/3m-coderyte" className="button button--primary" style={{ marginTop: '1rem' }}>
+                      3M CASE STUDY
+                    </Link>
                   </div>
-                </div>
-                <Link to="/work/mass-snap" className="button button--primary" style={{ marginTop: '1.5rem' }}>
-                  SNAP CASE STUDY
-                </Link>
+                </Card>
               </div>
-            </Card>
+            </div>
           </div>
-        </div>
 
-        {/* 7. Contact Form */}
-        <div className="pad-vertical--quad contact-section">
-          <div className="max-width content-padding">
-            <div className="contact-section__content">
-              <h2 className="header--xl">
-                Let's work together
-                <span className="text--primary text--serif">.</span>
-              </h2>
-              <p className="text--gray">
-                Send us a message or{' '}
-                <a href="https://calendly.com/goinvo/open-office-hours" className="link" target="_blank" rel="noopener noreferrer">
-                  visit our open office hours
-                </a>.
+          {/* 3. Eric Topol Testimonial */}
+          <div
+            className="testimonial-section testimonial-section--with-image pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-topol.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <p ref={this.ericTopolRef} className="testimonial-quote">
+                "The GoInvo studio is one of the most talented groups of designers I have
+                ever met in the healthcare space. Not only are their ideas, designs, and
+                graphics remarkable, but I haven't yet figured out how they know so much
+                about medicine and its future."
+              </p>
+              <p className="testimonial-attribution">
+                <span className="testimonial-attribution__name">Eric Topol, MD</span>
+                <br />
+                <span className="testimonial-attribution__title">Scripps Research Translational Institute</span>
               </p>
             </div>
-            <iframe
-              id="JotFormIFrame-contact-home"
-              className="jotform-form contact-form"
-              title="Contact"
-              allowTransparency="true"
-              frameBorder="0"
-              scrolling="no"
-              src="https://form.jotform.com/251276832519159?background=1"
-              style={{ width: '100%', height: '700px', border: 'none', background: 'transparent' }}
-            />
           </div>
-        </div>
 
-        {/* 8. We are GoInvo */}
-        <div className="we-are-goinvo">
-          <div className="content-padding">
-            <div className="team-marquee" aria-hidden="true">
-              <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
-                {TEAM.slice(0, 5).map(member => (
-                  <div key={`top-${member.name}`} className="team-marquee__tile">
-                    <Image
-                      src={member.image}
-                      alt=""
-                      aria-hidden="true"
-                      className="team-marquee__img"
-                    />
-                  </div>
-                ))}
-              </Marquee>
+          {/* 4. Weeks to Hours - Ipsos Case Study */}
+          <div
+            className="case-study-highlight case-study-highlight--with-background case-study-highlight--align-right pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-ipsos.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <Card className="case-study-card case-study-card--compact" noShadow>
+                <div className="case-study-card__content">
+                  <h2 className="header--xl">
+                    Weeks to Hours
+                  </h2>
+                  <p className="text--gray">
+                    From Rube Goldberg workflows to enterprise info at your fingertips.
+                  </p>
+                  <p className="case-study-stats text--serif">
+                    <strong>90%+ adoption across Ipsos.</strong>
+                    <br />
+                    <strong>700,000+ prompts per month.</strong>
+                    <br />
+                    <strong>10M+ API calls</strong> <span className="text--normal">driving real research, not toys.</span>
+                  </p>
+                  <p className="text--gray">
+                    This wasn't novelty. <br />
+                    It was transformation. <br />
+                    Research that once took weeks now
+                    yields cited insights in hours.
+                  </p>
+                  <Link to="/work/ipsos-facto" className="button button--primary" style={{ marginTop: '1rem' }}>
+                    IPSOS CASE STUDY
+                  </Link>
+                </div>
+              </Card>
             </div>
           </div>
-          <div className="max-width content-padding pad-vertical--double">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <h2 className="we-are-title header--xl">
-                  We are <span className="text--primary text--serif">GoInvo</span>
+
+          {/* 5. Partner Logos */}
+          <div className="partners-section pad-vertical--double">
+            <div className="max-width content-padding">
+              <p className="partners-section__title">
+                Trusted by ambitious startups and Fortune 500's:
+              </p>
+              <div className="partners-section__logos">
+                <ClientLogos />
+              </div>
+            </div>
+          </div>
+
+          {/* 6. 1 Million Served - SNAP Impact */}
+          <div
+            className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-snap.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <Card className="case-study-card case-study-card--compact" noShadow>
+                <div className="case-study-card__content">
+                  <h2 ref={this.millionServedRef} className="header--xl">
+                    1 Million Served
+                    <span className="text--primary text--serif">.</span>
+                  </h2>
+                  <div className="impact-timeline">
+                    <div className="impact-item">
+                      <p className="text--bold">In 2017:</p>
+                      <p className="text--gray">
+                        750,000 Massachusetts residents relied on SNAP.
+                        <br />
+                        Just 7% applied online.
+                      </p>
+                    </div>
+                    <div className="impact-item">
+                      <p>Fax. Mail. Walk-ins.</p>
+                    </div>
+                    <div className="impact-item">
+                      <p className="text--bold">Two years after redesign:</p>
+                      <p className="text--gray">
+                        Online applications hit ~44%.
+                      </p>
+                    </div>
+                    <div className="impact-item">
+                      <p className="text--bold">Today:</p>
+                      <p className="text--gray">
+                        Nearly <strong>1,000,000</strong> people rely on SNAP.
+                        <br />
+                        <strong>70% apply online.</strong>
+                      </p>
+                    </div>
+                    <div className="impact-item">
+                      <p className="text--gray">
+                        A million people didn't change.
+                        <br />
+                        <strong>The system did.</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <Link to="/work/mass-snap" className="button button--primary" style={{ marginTop: '1.5rem' }}>
+                    SNAP CASE STUDY
+                  </Link>
+                </div>
+              </Card>
+            </div>
+          </div>
+
+          {/* 7. Contact Form */}
+          <div className="pad-vertical--quad contact-section">
+            <div className="max-width content-padding">
+              <div className="contact-section__content">
+                <h2 className="header--xl">
+                  Let's work together
                   <span className="text--primary text--serif">.</span>
                 </h2>
-                <p className="we-are-body text--gray">
-                  Small by design. Big thinkers. Sweat the details. Ethics not optional.
+                <p className="text--gray">
+                  Send us a message or{' '}
+                  <a href="https://calendly.com/goinvo/open-office-hours" className="link" target="_blank" rel="noopener noreferrer">
+                    visit our open office hours
+                  </a>.
                 </p>
               </div>
-              <div className="pure-u-1 pure-u-lg-1-3 display--flex display--flex--align-center display--flex--justify-center">
-                <Link to="/about/" className="button button--outline-primary button--padded">
-                  MEET OUR TEAM
-                </Link>
-              </div>
+              <iframe
+                id="JotFormIFrame-contact-home"
+                className="jotform-form contact-form"
+                title="Contact"
+                allowTransparency="true"
+                frameBorder="0"
+                scrolling="no"
+                src="https://form.jotform.com/251276832519159?background=1"
+                style={{ width: '100%', height: '700px', border: 'none', background: 'transparent' }}
+              />
             </div>
           </div>
-          <div className="content-padding">
-            <div className="team-marquee" aria-hidden="true">
-              <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
-                {TEAM.slice(5, 10).map(member => (
-                  <div key={`bottom-${member.name}`} className="team-marquee__tile">
-                    <Image
-                      src={member.image}
-                      alt=""
-                      aria-hidden="true"
-                      className="team-marquee__img"
-                    />
-                  </div>
-                ))}
-              </Marquee>
+
+          {/* 8. We are GoInvo */}
+          <div className="we-are-goinvo">
+            <div className="content-padding">
+              <div className="team-marquee" aria-hidden="true">
+                <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                  {TEAM.slice(0, 5).map(member => (
+                    <div key={`top-${member.name}`} className="team-marquee__tile">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
+            </div>
+            <div className="max-width content-padding pad-vertical--double">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-2-3">
+                  <h2 className="we-are-title header--xl">
+                    We are <span className="text--primary text--serif">GoInvo</span>
+                    <span className="text--primary text--serif">.</span>
+                  </h2>
+                  <p className="we-are-body text--gray">
+                    Small by design. Big thinkers. Sweat the details. Ethics not optional.
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-3 display--flex display--flex--align-center display--flex--justify-center">
+                  <Link to="/about/" className="button button--outline-primary button--padded">
+                    MEET OUR TEAM
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="content-padding">
+              <div className="team-marquee" aria-hidden="true">
+                <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                  {TEAM.slice(5, 10).map(member => (
+                    <div key={`bottom-${member.name}`} className="team-marquee__tile">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
             </div>
           </div>
         </div>

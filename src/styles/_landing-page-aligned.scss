@@ -1,0 +1,331 @@
+// =============================================
+// Landing Page V2 - Consistent Text Alignment
+// All text aligned at content-padding edge (32px on desktop, 16px on mobile)
+// =============================================
+
+// Max-width value used for centering (from _layout.scss)
+$v2-max-width: 1020px;
+
+.index-page {
+  // =============================================
+  // Hero Section
+  // =============================================
+  .hero--dynamic-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    min-height: 300px;
+    max-height: 27vh;
+  }
+
+  // Hero content - calculate left padding to align with max-width centered content
+  // On wide viewports: (viewport - 1020px) / 2 + content-padding
+  // On narrow viewports: just content-padding
+  .hero--dynamic-height__content {
+    padding-top: $spacing * 2;
+    padding-bottom: $spacing * 3;
+    // Mobile: just use content-padding equivalent
+    padding-left: $spacing;
+    text-align: left;
+
+    @include mq($from: large) {
+      // Calculate offset to match max-width centering + content-padding (32px)
+      // max() ensures we don't go below content-padding on narrow viewports
+      padding-left: max($spacing * 2, calc((100vw - #{$v2-max-width}) / 2 + #{$spacing * 2}));
+    }
+  }
+
+  .hero-title--lg {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 0;
+    text-align: left;
+
+    @include mq($from: large) {
+      font-size: 3rem;
+      line-height: 3.25rem;
+    }
+
+    strong {
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: $spacing;
+    margin-top: $spacing * 1.5;
+    flex-wrap: wrap;
+  }
+
+  // =============================================
+  // Case Study Highlight Sections
+  // =============================================
+  .case-study-highlight {
+    background-color: $color-gray--light;
+
+    &--with-background {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--align-right {
+      min-height: 500px;
+      background-position: left center;
+
+      @include mq($from: large) {
+        min-height: 600px;
+      }
+
+      .max-width {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  // Case Study Cards - keep internal padding but offset with negative margin
+  // so text inside aligns with content-padding edge
+  .case-study-card {
+    background-color: $color-white;
+    overflow: hidden;
+    // Negative margin to offset the internal padding, aligning text with content edge
+    margin-left: -$spacing * 2;
+
+    @include mq($from: large) {
+      margin-left: -$spacing * 2.5;
+    }
+
+    &--compact {
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+
+      @include mq($from: large) {
+        max-width: 380px;
+      }
+    }
+  }
+
+  .case-study-card__content {
+    padding: $spacing * 2;
+    text-align: left;
+
+    @include mq($from: large) {
+      padding: $spacing * 2.5;
+    }
+
+    .header--xl {
+      margin-top: 0;
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  // Case study stats - bold serif text
+  .case-study-stats {
+    font-family: $font-family--serif;
+    font-weight: $font-weight--bold;
+    line-height: 1.6;
+
+    .text--normal {
+      font-weight: $font-weight--normal;
+    }
+  }
+
+  // Impact timeline for SNAP section
+  .impact-timeline {
+    margin: $spacing * 2 0;
+
+    .impact-item {
+      margin-bottom: $spacing * 1.5;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin: 0;
+
+        &.text--bold {
+          margin-bottom: math.div($spacing, 4);
+        }
+      }
+    }
+  }
+
+  // Button style override for case study cards
+  .case-study-card .button--primary {
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: $color-primary--lightest;
+    }
+  }
+
+  // =============================================
+  // Testimonial Section
+  // =============================================
+  .testimonial-section {
+    background-color: $color-cream;
+
+    &--with-image {
+      background-size: cover;
+      background-position: top right;
+      background-repeat: no-repeat;
+      position: relative;
+      padding-top: $spacing * 4;
+      min-height: 400px;
+
+      @include mq($from: large) {
+        min-height: 500px;
+      }
+
+      // Black gradient from left edge
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.7) 25%,
+          rgba(0, 0, 0, 0.4) 50%,
+          transparent 80%
+        );
+        z-index: 0;
+      }
+
+      .max-width {
+        position: relative;
+        z-index: 1;
+      }
+
+      .testimonial-quote,
+      .testimonial-attribution__name,
+      .testimonial-attribution__title {
+        color: $color-white;
+      }
+    }
+  }
+
+  .testimonial-quote {
+    font-family: 'adobe-jenson-pro', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-synthesis: none;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin: 0 0 $spacing * 1.5 0;
+    max-width: 700px;
+    padding-left: 0 !important; // Align with content-padding edge
+
+    @include mq($from: medium) {
+      font-size: 1.5rem;
+      line-height: 1.8;
+    }
+
+    @include mq($from: large) {
+      font-size: 1.75rem;
+      line-height: 1.7;
+    }
+  }
+
+  .testimonial-attribution {
+    margin: 0;
+    padding-left: 0 !important; // Align with content-padding edge
+
+    &__name {
+      font-weight: $font-weight--bold;
+      color: $color-black;
+    }
+
+    &__title {
+      color: $color-gray;
+    }
+  }
+
+  // =============================================
+  // Partners Section
+  // =============================================
+  .partners-section {
+    background-color: #F7FAFE;
+
+    &__title {
+      font-family: $font-family--sans-serif;
+      font-size: 0.875rem;
+      font-weight: $font-weight--normal;
+      color: $color-gray;
+      text-align: left; // Left align instead of centered
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: $spacing;
+      padding-left: 0; // Align with content-padding edge
+    }
+
+    &__logos {
+      .client-logos li svg {
+        fill: #B2AFAF;
+        color: #B2AFAF;
+      }
+    }
+  }
+
+  // =============================================
+  // Contact Section
+  // =============================================
+  .contact-section {
+    &__content {
+      margin-left: 0 !important; // Align with content-padding edge
+      padding-left: 0 !important;
+    }
+  }
+
+  // =============================================
+  // We Are GoInvo Section
+  // =============================================
+  .we-are-goinvo {
+    .we-are-title {
+      font-family: $font-family--serif;
+      margin-top: calc($spacing * 2);
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+
+    .we-are-body {
+      font-family: $font-family--sans-serif;
+      margin-top: 0;
+      padding-left: 0;
+    }
+  }
+
+  // Team marquee strips
+  .team-marquee {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .team-marquee__img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    margin-right: 0;
+  }
+
+  .team-marquee__tile {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin-right: 8px;
+  }
+}

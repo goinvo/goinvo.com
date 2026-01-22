@@ -162,13 +162,10 @@ class IndexPage extends Component {
                     Hermann hospital in Houston, CodeRyte's largest customer.
                   </p>
                   <p className="text--gray">
-                    30 minutes later, we found the issue. There were <strong>zero patients left to
-                    code</strong>.
+                    30 minutes later, we found the issue. The new system was operating so efficiently that there were zero patients left to code and for a brief period, zero work to do.
                   </p>
                   <p className="text--gray">
-                    A backlog that typically measured in thousands of charts and weeks
-                    of delay had been cleared so fast the operation briefly ran out of work.
-                    This had never happened before.
+                    A backlog that typically measured in thousands of charts and weeks of delay had been cleared. This had never happened before.
                   </p>
                   <Link to="/work/3m-coderyte" className="button button--primary" style={{ marginTop: '1rem' }}>
                     3M CASE STUDY

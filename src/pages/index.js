@@ -185,7 +185,7 @@ class IndexPage extends Component {
           <div
             className="testimonial-section testimonial-section--with-image pad-vertical--quad"
             style={{
-              backgroundImage: `url(${mediaUrl('/images/homepage/bg-topol.jpg')})`
+              backgroundImage: `url(${mediaUrl('/images/homepage/eric-topol-2.jpg')})`
             }}
           >
             <div className="max-width content-padding">

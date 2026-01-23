@@ -126,7 +126,7 @@ class IndexPage extends Component {
           >
             <div className="hero--dynamic-height__content">
               <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
-                <strong>We design real software</strong>
+                <strong>We design the future of software</strong>
                 <span className="text--serif text--primary">.</span>
                 <br />
                 <span className="text--gray">For complex systems and real constraints.</span>

@@ -126,7 +126,7 @@ class IndexPage extends Component {
           >
             <div className="hero--dynamic-height__content">
               <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
-                <strong>We design real software</strong>
+                <strong>We design the future of software</strong>
                 <span className="text--serif text--primary">.</span>
                 <br />
                 <span className="text--gray">For complex systems and real constraints.</span>
@@ -185,7 +185,7 @@ class IndexPage extends Component {
           <div
             className="testimonial-section testimonial-section--with-image pad-vertical--quad"
             style={{
-              backgroundImage: `url(${mediaUrl('/images/homepage/bg-topol.jpg')})`
+              backgroundImage: `url(${mediaUrl('/images/homepage/eric-topol-2.jpg')})`
             }}
           >
             <div className="max-width content-padding">

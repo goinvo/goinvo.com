@@ -309,7 +309,7 @@ class IndexPage extends Component {
           </div>
 
           {/* 7. Contact Form */}
-          <div className="pad-vertical--quad contact-section">
+          <div className="pad-vertical--double contact-section">
             <div className="max-width content-padding">
               <div className="contact-section__content">
                 <h2 className="header--xl">

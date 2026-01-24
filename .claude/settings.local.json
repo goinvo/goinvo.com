@@ -9,7 +9,9 @@
       "WebFetch(domain:use.typekit.net)",
       "Bash(dir \"C:\\\\Users\\\\quest\\\\Programming\\\\GoInvo\\\\goinvo.com\\\\src\\\\styles\\\\_forms.scss\")",
       "Bash(dir /b:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Skill(plan)",
+      "Bash(npm run build:*)"
     ]
   }
 }

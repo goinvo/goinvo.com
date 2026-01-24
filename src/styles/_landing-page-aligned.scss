@@ -15,18 +15,18 @@ $v2-max-width: 1020px;
     flex-direction: column;
     justify-content: flex-end;
     background-color: #ffffff;
-    min-height: 300px;
-    max-height: 27vh;
+    min-height: 250px;
+    max-height: 20vh;
   }
 
   // Hero content - calculate left padding to align with max-width centered content
   // On wide viewports: (viewport - 1020px) / 2 + content-padding
   // On narrow viewports: just content-padding
   .hero--dynamic-height__content {
-    padding-top: $spacing * 2;
-    padding-bottom: $spacing * 3;
-    // Mobile: just use content-padding equivalent
-    padding-left: $spacing;
+    padding-top: $spacing;
+    padding-bottom: $spacing * 1.5;
+    // Mobile: match card text alignment (card has 24px internal padding)
+    padding-left: $spacing * 1.5;
     text-align: left;
 
     @include mq($from: large) {
@@ -81,15 +81,21 @@ $v2-max-width: 1020px;
 
       .max-width {
         display: flex;
-        justify-content: flex-end;
-      }
-
-      // Right-align card on mobile too - override the negative margin
-      .case-study-card {
-        margin-left: auto !important;
-        margin-right: -$spacing * 2;
+        justify-content: flex-start;
 
         @include mq($from: large) {
+          justify-content: flex-end;
+        }
+      }
+
+      // Mobile: same left-aligned style as other cards
+      // Desktop: right-align the card
+      .case-study-card {
+        margin-left: -$spacing;
+        margin-right: 0;
+
+        @include mq($from: large) {
+          margin-left: 0;
           margin-right: -$spacing * 2.5;
         }
       }
@@ -101,8 +107,9 @@ $v2-max-width: 1020px;
   .case-study-card {
     background-color: $color-white;
     overflow: hidden;
-    // Negative margin to offset the internal padding, aligning text with content edge
-    margin-left: -$spacing * 2;
+    // Mobile: flush to left edge with consistent width
+    margin-left: -$spacing;
+    margin-right: 0;
 
     @include mq($from: large) {
       margin-left: -$spacing * 2.5;
@@ -111,7 +118,8 @@ $v2-max-width: 1020px;
     &--compact {
       display: inline-block;
       width: auto;
-      max-width: 100%;
+      // Mobile: consistent max-width for all cards
+      max-width: calc(100% - #{$spacing});
 
       @include mq($from: large) {
         max-width: 380px;
@@ -120,7 +128,7 @@ $v2-max-width: 1020px;
   }
 
   .case-study-card__content {
-    padding: $spacing * 2;
+    padding: $spacing * 1.5;
     text-align: left;
 
     @include mq($from: large) {
@@ -237,7 +245,9 @@ $v2-max-width: 1020px;
     line-height: 1.8;
     margin: 0 0 $spacing * 1.5 0;
     max-width: 700px;
-    padding-left: 0 !important; // Align with content-padding edge
+    // Mobile: add padding to align with card text (24px total from viewport)
+    // content-padding adds 16px, so we need 8px more
+    padding-left: $spacing * 0.5;
 
     @include mq($from: medium) {
       font-size: 1.5rem;
@@ -247,12 +257,18 @@ $v2-max-width: 1020px;
     @include mq($from: large) {
       font-size: 1.75rem;
       line-height: 1.7;
+      padding-left: 0; // Reset on desktop
     }
   }
 
   .testimonial-attribution {
     margin: 0;
-    padding-left: 0 !important; // Align with content-padding edge
+    // Mobile: add padding to align with card text
+    padding-left: $spacing * 0.5;
+
+    @include mq($from: large) {
+      padding-left: 0; // Reset on desktop
+    }
 
     &__name {
       font-weight: $font-weight--bold;
@@ -297,6 +313,22 @@ $v2-max-width: 1020px;
     &__content {
       margin-left: 0 !important; // Align with content-padding edge
       padding-left: 0 !important;
+
+      .header--xl {
+        margin-top: 0;
+        margin-bottom: $spacing * 0.5;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: $spacing;
+      }
+    }
+
+    iframe {
+      margin-left: -12px;
+      margin-right: -12px;
+      width: calc(100% + 24px);
     }
   }
 

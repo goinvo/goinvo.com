@@ -24,7 +24,7 @@ $v2-max-width: 1020px;
   // On narrow viewports: just content-padding
   .hero--dynamic-height__content {
     padding-top: $spacing;
-    padding-bottom: $spacing * 1.5;
+    padding-bottom: $spacing * 2.5;
     // Mobile: match card text alignment (card has 24px internal padding)
     padding-left: $spacing * 1.5;
     text-align: left;

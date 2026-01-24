@@ -218,12 +218,12 @@ class IndexPage extends Component {
                   <p className="text--gray">
                     From Rube Goldberg workflows to enterprise info at your fingertips.
                   </p>
-                  <p className="case-study-stats text--serif">
+                  <p className="text--gray">
                     <strong>90%+ adoption across Ipsos.</strong>
                     <br />
                     <strong>700,000+ prompts per month.</strong>
                     <br />
-                    <strong>10M+ API calls</strong> <span className="text--normal">driving real research, not toys.</span>
+                    <strong>10M+ API calls</strong> driving real research, not toys.
                   </p>
                   <p className="text--gray">
                     This wasn't novelty. <br />
@@ -265,10 +265,10 @@ class IndexPage extends Component {
                     1 Million Served
                     <span className="text--primary text--serif">.</span>
                   </h2>
-                  <div className="impact-timeline">
+                  <div className="impact-timeline text--gray">
                     <div className="impact-item">
-                      <p className="text--bold">In 2017:</p>
-                      <p className="text--gray">
+                      <p><strong>In 2017:</strong></p>
+                      <p>
                         750,000 Massachusetts residents relied on SNAP.
                         <br />
                         Just 7% applied online.
@@ -278,21 +278,21 @@ class IndexPage extends Component {
                       <p>Fax. Mail. Walk-ins.</p>
                     </div>
                     <div className="impact-item">
-                      <p className="text--bold">Two years after redesign:</p>
-                      <p className="text--gray">
+                      <p><strong>Two years after redesign:</strong></p>
+                      <p>
                         Online applications hit ~44%.
                       </p>
                     </div>
                     <div className="impact-item">
-                      <p className="text--bold">Today:</p>
-                      <p className="text--gray">
+                      <p><strong>Today:</strong></p>
+                      <p>
                         Nearly <strong>1,000,000</strong> people rely on SNAP.
                         <br />
                         <strong>70% apply online.</strong>
                       </p>
                     </div>
                     <div className="impact-item">
-                      <p className="text--gray">
+                      <p>
                         A million people didn't change.
                         <br />
                         <strong>The system did.</strong>

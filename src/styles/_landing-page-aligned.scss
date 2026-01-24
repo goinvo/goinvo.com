@@ -155,6 +155,7 @@ $v2-max-width: 1020px;
   // Impact timeline for SNAP section
   .impact-timeline {
     margin: $spacing * 2 0;
+    font-family: $font-family--sans-serif;
 
     .impact-item {
       margin-bottom: $spacing * 1.5;
@@ -165,10 +166,7 @@ $v2-max-width: 1020px;
 
       p {
         margin: 0;
-
-        &.text--bold {
-          margin-bottom: math.div($spacing, 4);
-        }
+        margin-bottom: math.div($spacing, 4);
       }
     }
   }

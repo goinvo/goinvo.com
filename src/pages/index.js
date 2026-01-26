@@ -93,8 +93,10 @@ class IndexPage extends Component {
     const heroHeight = viewportHeight - HEADER_HEIGHT - caseStudySectionHeight
 
     // Set minimum height to prevent hero from being too small
+    // Desktop: greater of 250px or 20% of viewport
+    // Mobile: 200px
     const viewportWidth = window.innerWidth
-    const minHeight = viewportWidth >= 1024 ? 250 : 200
+    const minHeight = viewportWidth >= 1024 ? Math.max(250, viewportHeight * 0.2) : 200
 
     // Cap hero height: 30% of viewport on all devices
     const maxHeight = viewportHeight * 0.30
@@ -268,7 +270,7 @@ class IndexPage extends Component {
               <Card className="case-study-card case-study-card--compact" noShadow>
                 <div className="case-study-card__content">
                   <h2 ref={this.millionServedRef} className="header--xl">
-                    <em>10x increase</em>
+                    10x increase
                     <span className="text--primary text--serif">.</span>
                   </h2>
                   <div className="impact-timeline text--gray">
@@ -301,7 +303,7 @@ class IndexPage extends Component {
                       <p>
                         A million people didn't change.
                         <br />
-                        <strong><em>The digital system did.</em></strong>
+                        <strong>The digital system did.</strong>
                       </p>
                     </div>
                   </div>

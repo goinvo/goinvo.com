@@ -262,7 +262,7 @@ class IndexPage extends Component {
               <Card className="case-study-card case-study-card--compact" noShadow>
                 <div className="case-study-card__content">
                   <h2 ref={this.millionServedRef} className="header--xl">
-                    1 Million Served
+                    <em>10x increase</em>
                     <span className="text--primary text--serif">.</span>
                   </h2>
                   <div className="impact-timeline text--gray">
@@ -295,7 +295,7 @@ class IndexPage extends Component {
                       <p>
                         A million people didn't change.
                         <br />
-                        <strong>The system did.</strong>
+                        <strong><em>The digital system did.</em></strong>
                       </p>
                     </div>
                   </div>

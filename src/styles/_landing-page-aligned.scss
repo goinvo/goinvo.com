@@ -116,12 +116,14 @@ $v2-max-width: 1020px;
     }
 
     &--compact {
-      display: inline-block;
-      width: auto;
-      // Mobile: consistent max-width for all cards
-      max-width: calc(100% - #{$spacing});
+      display: block;
+      // Mobile: consistent width for all cards (85% of viewport)
+      width: 85vw;
+      max-width: 85vw;
 
       @include mq($from: large) {
+        display: inline-block;
+        width: auto;
         max-width: 380px;
       }
     }

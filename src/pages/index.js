@@ -198,6 +198,12 @@ class IndexPage extends Component {
                 <span className="testimonial-attribution__name">Eric Topol, MD</span>
                 <br />
                 <span className="testimonial-attribution__title">Scripps Research Translational Institute</span>
+                <br />
+                <span className="testimonial-attribution__title" style={{ opacity: 0.4 }}>
+                  <small>
+                    Photo by <a href="https://www.flickr.com/photos/euthman/8197577252/" style={{ color: 'white' }}>Ed Uthman</a>, licensed under <a href="https://creativecommons.org/licenses/by/2.0/" style={{ color: 'white' }}>CC BY 2.0</a>
+                  </small>
+                </span>
               </p>
             </div>
           </div>

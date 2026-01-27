@@ -31,6 +31,8 @@ class IndexPage extends Component {
     this.backlogZeroRef = createRef()
     this.ericTopolRef = createRef()
     this.millionServedRef = createRef()
+    // Ref for hero content to measure its height
+    this.heroContentRef = createRef()
   }
 
   componentDidMount() {
@@ -77,6 +79,7 @@ class IndexPage extends Component {
 
     const viewportHeight = window.innerHeight
     const caseStudyCard = this.caseStudyCardRef.current
+    const heroContent = this.heroContentRef.current
 
     if (!caseStudyCard) return
 
@@ -92,15 +95,41 @@ class IndexPage extends Component {
     // This positions the bottom of the card at the bottom of the viewport
     const heroHeight = viewportHeight - HEADER_HEIGHT - caseStudySectionHeight
 
+    // Measure actual content height to ensure it fits
+    let contentBasedMinHeight = 0
+    if (heroContent) {
+      const contentHeight = heroContent.offsetHeight
+      // Content needs to fit: content height + header padding (50px) + some buffer (20px)
+      contentBasedMinHeight = contentHeight + HEADER_HEIGHT + 20
+    }
+
+    // Detect mobile vs desktop
+    const viewportWidth = window.innerWidth
+    const isMobile = viewportWidth < 1024
+
     // Set minimum height to prevent hero from being too small
     // Desktop: greater of 250px or 20% of viewport
-    // Mobile: 200px
-    const viewportWidth = window.innerWidth
-    const minHeight = viewportWidth >= 1024 ? Math.max(250, viewportHeight * 0.2) : 200
+    // Mobile: Use content-based minimum or 250px, whichever is greater
+    const viewportBasedMinHeight = isMobile
+      ? Math.max(250, contentBasedMinHeight || 250)
+      : Math.max(250, viewportHeight * 0.2)
 
-    // Cap hero height: 30% of viewport on all devices
+    // Use the greater of: viewport-based min, content-based min, or calculated height
+    const minHeight = Math.max(viewportBasedMinHeight, contentBasedMinHeight)
+
+    // Cap hero height: 30% of viewport on desktop, but allow content-based height on mobile
     const maxHeight = viewportHeight * 0.30
-    const finalHeight = Math.min(Math.max(heroHeight, minHeight), maxHeight)
+    
+    // On mobile, prioritize content fit over max-height constraint
+    // If content needs more space than max-height allows, use content-based height
+    let finalHeight
+    if (isMobile && contentBasedMinHeight > maxHeight) {
+      // On mobile, allow hero to exceed 30vh if content requires it
+      finalHeight = Math.max(heroHeight, contentBasedMinHeight)
+    } else {
+      // Desktop or mobile with content that fits within max-height
+      finalHeight = Math.min(Math.max(heroHeight, minHeight), maxHeight)
+    }
 
     this.setState({ heroHeight: finalHeight })
   }
@@ -125,7 +154,7 @@ class IndexPage extends Component {
               backgroundPosition: 'center',
             }}
           >
-            <div className="hero--dynamic-height__content">
+            <div ref={this.heroContentRef} className="hero--dynamic-height__content">
               <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
                 <strong>We design the future of software</strong>
                 <span className="text--serif text--primary">.</span>

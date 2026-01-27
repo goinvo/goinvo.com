@@ -17,6 +17,13 @@ $v2-max-width: 1020px;
     background-color: #ffffff;
     min-height: 250px;
     max-height: 30vh;
+    padding-top: $header-height; // Account for fixed header overlap
+
+    // On mobile, remove max-height constraint to allow content-based sizing
+    // JavaScript will handle height calculation to fit content
+    @include mq($until: large) {
+      max-height: none;
+    }
   }
 
   // Hero content - calculate left padding to align with max-width centered content

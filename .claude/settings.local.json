@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run develop:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(npx gatsby develop:*)",
+      "WebFetch(domain:form.jotform.com)",
+      "WebFetch(domain:use.typekit.net)",
+      "Bash(dir \"C:\\\\Users\\\\quest\\\\Programming\\\\GoInvo\\\\goinvo.com\\\\src\\\\styles\\\\_forms.scss\")",
+      "Bash(dir /b:*)",
+      "Bash(ls:*)",
+      "Skill(plan)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

@@ -404,7 +404,14 @@
   background-color: #F7FAFE;
 
   &__title {
-    color: #B2AFAF;
+    font-family: $font-family--sans-serif;
+    font-size: 0.875rem;
+    font-weight: $font-weight--normal;
+    color: $color-gray;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: $spacing;
   }
 
   &__logos {
@@ -524,3 +531,390 @@
     }
   }
 }
+
+// =============================================
+// Homepage Redesign 2026 - New Styles
+// =============================================
+
+// Homepage button override - outline style, full width (for case study cards and impact section)
+.case-study-card,
+.impact-section {
+  .button--primary {
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: $color-primary--lightest;
+    }
+  }
+}
+
+// Dynamic height hero - calculated via JS to position content at fold
+.hero--dynamic-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #ffffff;
+  min-height: 300px; // Fallback before JS calculates
+  max-height: 27vh; // Cap hero height
+
+  &__content {
+    padding-top: $spacing * 2;
+    padding-bottom: $spacing * 3;
+    text-align: left; // Ensure header is left-aligned, not centered
+    // Add left padding to match case study card content padding
+    padding-left: $spacing * 2;
+
+    @include mq($from: large) {
+      padding-left: $spacing * 2.5;
+    }
+  }
+
+  .hero-title--lg {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 0;
+    text-align: left; // Explicitly left-align header
+
+    @include mq($from: large) {
+      font-size: 3rem;
+      line-height: 3.25rem;
+    }
+
+    strong {
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: $spacing;
+    margin-top: $spacing * 1.5;
+    flex-wrap: wrap;
+  }
+}
+
+// Hero with dual buttons
+.hero--redesign {
+  .hero-buttons {
+    display: flex;
+    gap: $spacing;
+    margin-top: $spacing * 1.5;
+    flex-wrap: wrap;
+  }
+
+  .hero__title {
+    @include mq($from: large) {
+      width: 550px;
+    }
+  }
+}
+
+// Case study highlight cards
+.case-study-highlight {
+  background-color: $color-gray--light;
+
+  &--with-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--align-right {
+    min-height: 500px; // Ensure enough height to show background image
+    background-position: left center; // Position image on left side
+
+    @include mq($from: large) {
+      min-height: 600px;
+    }
+
+    .max-width {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.case-study-card {
+  background-color: $color-white;
+  overflow: hidden;
+
+  &__content {
+    text-align: left;
+
+    // Ensure all children align to the same left edge
+    h2, h3, p, a, div {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  &--horizontal {
+    .pure-g {
+      align-items: stretch;
+    }
+
+    .case-study-card__content {
+      padding: $spacing * 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mq($from: large) {
+        padding: $spacing * 3;
+      }
+
+      .header--xl {
+        margin-top: 0;
+        font-weight: $font-weight--bold;
+      }
+    }
+
+    .case-study-card__image {
+      min-height: 300px;
+
+      img,
+      .image--max-width {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &--reversed {
+    .pure-g {
+      @include mq($from: large) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  // Compact card - thinner and taller
+  &--compact {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+
+    @include mq($from: large) {
+      max-width: 380px;
+    }
+
+    .case-study-card__content {
+      padding: $spacing * 2;
+
+      @include mq($from: large) {
+        padding: $spacing * 2.5;
+      }
+
+      .header--xl {
+        margin-top: 0;
+        font-weight: $font-weight--bold;
+      }
+    }
+  }
+}
+
+// Case study stats - bold serif text
+.case-study-stats {
+  font-family: $font-family--serif;
+  font-weight: $font-weight--bold;
+  line-height: 1.6;
+
+  .text--normal {
+    font-weight: $font-weight--normal;
+  }
+}
+
+// Stats grid for Ipsos card
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing;
+  margin: $spacing * 2 0;
+
+  @include mq($from: medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-item {
+  text-align: left;
+
+  .stat-number {
+    display: block;
+    font-family: $font-family--serif;
+    font-size: 1.5rem;
+    color: $color-primary;
+    font-weight: $font-weight--bold;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: $color-gray;
+  }
+}
+
+// Testimonial section
+.background--cream {
+  background-color: $color-cream;
+}
+
+.testimonial-section {
+  background-color: $color-cream;
+
+  &--with-image {
+    background-size: cover;
+    background-position: top right; // Anchor to top to center on face
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: $spacing * 4; // Extra top padding to prevent text cutoff
+    min-height: 400px; // Ensure section is tall enough to show more of the image
+
+    @include mq($from: large) {
+      min-height: 500px;
+    }
+
+    // Black gradient from left edge
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.7) 25%,
+        rgba(0, 0, 0, 0.4) 50%,
+        transparent 80%
+      );
+      z-index: 0;
+    }
+
+    .max-width {
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-quote {
+      color: $color-white;
+    }
+
+    .testimonial-attribution__name {
+      color: $color-white;
+    }
+
+    .testimonial-attribution__title {
+      color: $color-white;
+    }
+  }
+
+  .testimonial-quote {
+    font-family: 'adobe-jenson-pro', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-synthesis: none; // Prevent faux italic
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin: 0 0 $spacing * 1.5 0;
+    max-width: 700px;
+    // Add left padding to align with hero and case study sections
+    padding-left: $spacing * 4.5;
+
+    @include mq($from: medium) {
+      font-size: 1.5rem;
+      line-height: 1.8;
+    }
+
+    @include mq($from: large) {
+      font-size: 1.75rem;
+      line-height: 1.7;
+    }
+  }
+
+  .testimonial-attribution {
+    margin: 0;
+    // Add left padding to align with testimonial quote
+    padding-left: $spacing * 4.5;
+
+    &__name {
+      font-weight: $font-weight--bold;
+      color: $color-black;
+    }
+
+    &__title {
+      color: $color-gray;
+    }
+  }
+
+  // Override for image background - needs to come after defaults
+  &--with-image {
+    .testimonial-attribution__name,
+    .testimonial-attribution__title {
+      color: $color-white;
+    }
+  }
+}
+
+// Impact timeline for SNAP section
+.impact-section {
+  background-color: $color-white;
+
+  &__stats {
+    @include mq($from: large) {
+      padding-right: $spacing * 3;
+    }
+
+    @include mq($until: large) {
+      margin-bottom: $spacing * 2;
+    }
+  }
+
+  &__image {
+    img,
+    .image--max-width {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+.impact-timeline {
+  margin: $spacing * 2 0;
+
+  .impact-item {
+    margin-bottom: $spacing * 1.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+
+      &.text--bold {
+        margin-bottom: math.div($spacing, 4);
+      }
+    }
+  }
+}
+
+// Contact section - align text with case study cards
+.contact-section {
+  &__content {
+    margin-left: $spacing * 2;
+
+    @include mq($from: large) {
+      margin-left: $spacing * 2.5;
+    }
+  }
+}
+

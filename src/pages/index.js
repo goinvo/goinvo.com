@@ -1,650 +1,435 @@
-import React, { Component } from 'react'
-import { Link, graphql } from 'gatsby'
+import React, { Component, createRef } from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
-import Hero from '../components/hero'
-// import CategoriesList from '../components/categories-list'
-import Columns from '../components/columns'
 import Card from '../components/card'
-import ImageBlock from '../components/image-block'
-import Video from '../components/video'
-// import Quote from '../components/quote'
-import ContactForm from '../components/form-contact'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
-import Divider from '../components/divider'
 import TEAM from '../data/team.json'
-import ProjectSearch from '../components/project-search'
-import headerData from '../data/homepage-headers.json'
 import Marquee from 'react-fast-marquee'
-
-import config from '../../config'
-import {
-  extractWorkItemLinkDetails,
-  concatCaseStudiesAndFeatures,
-} from '../helpers'
-
-//Load the header data from the JSON file
-const categories = headerData ? Object.keys(headerData) : [];
-if (categories.length === 0) {
-  throw new Error("No categories found in headerData.");
-}
-// Select a random category
-const selectedCategory = categories[Math.floor(Math.random() * categories.length)];
-// console.log("Selected category: ", selectedCategory);
-const categoryData = headerData[selectedCategory];
-// Use a single consistent hero image
-const heroImage = '/images/homepage/facto-2.jpg'
+import { mediaUrl } from '../helpers'
 
 const frontmatter = {
   metaTitle: 'Boston UX Design Agency | GoInvo Boston',
   metaDescription:
     'GoInvo is a Boston area product and user experience design agency with deep expertise creating software for Enterprise, Government, Health, and AI services.',
-  category: selectedCategory,
-  title: categoryData.title, // Add title from the selected category
-  tagline: categoryData.tagline, // Add tagline from the selected category
-  heroImage: heroImage,
-  heroButtonText: 'See Our Work',
 }
+
+// Header height constant (matches $header-height in SCSS)
+const HEADER_HEIGHT = 50
 
 class IndexPage extends Component {
   constructor(props) {
     super(props)
-
-    const workItems = concatCaseStudiesAndFeatures({ caseStudies: props.data, filterFeatures: false }).slice(0, 4)
-    const allProjects = concatCaseStudiesAndFeatures({ caseStudies: props.data, filterFeatures: false })
-
     this.state = {
-      image: null,
-      workItems,
-      allProjects,
       frontmatter,
-      hideSpotlights: false,
-      // AI search controls driven by the orange section UI
-      aiEnabled: true,
-      selectedPersona: null,
-      homeSearchQuery: '',
-      homeInputDefault: ''
+      heroHeight: null, // Will be calculated
     }
+    this.caseStudyCardRef = createRef()
+    // Refs for alignment debugging
+    this.heroHeaderRef = createRef()
+    this.backlogZeroRef = createRef()
+    this.ericTopolRef = createRef()
+    this.millionServedRef = createRef()
+    // Ref for hero content to measure its height
+    this.heroContentRef = createRef()
   }
 
   componentDidMount() {
-    // Listen for AI search results to toggle Spotlights visibility
-    this._aiSearchHandler = (evt) => {
-      try {
-        const hasResults = !!(evt && evt.detail && evt.detail.hasResults)
-        // Keep spotlights visible when there are zero results (show no-results + spotlights)
-        this.setState({ hideSpotlights: hasResults })
-      } catch (_) { }
-    }
-    if (typeof window !== 'undefined') {
-      window.addEventListener('ai-search-results', this._aiSearchHandler)
-    }
-    try {
-      // Prefer session restore flag path; otherwise, show last saved as input seed (but don't mark as submitted)
-      const savedQuery = JSON.parse(localStorage.getItem('ai_search_query') || 'null')
-      if (savedQuery && typeof savedQuery === 'string') {
-        this.setState({ homeInputDefault: savedQuery, homeInputValue: savedQuery })
-      }
-    } catch (e) {
-      // ignore
-    }
+    this.calculateHeroHeight()
+    window.addEventListener('resize', this.handleResize)
+    this.printLeftPositions()
   }
+
+  printLeftPositions = () => {
+    // Print the x-position of the left edge of each text section
+    const sections = [
+      { name: 'Hero Header', ref: this.heroHeaderRef },
+      { name: 'Backlog: Zero', ref: this.backlogZeroRef },
+      { name: 'Eric Topol', ref: this.ericTopolRef },
+      { name: '1 Million Served', ref: this.millionServedRef },
+    ]
+
+    console.log('=== Left Edge X-Positions ===')
+    sections.forEach(({ name, ref }) => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect()
+        console.log(`${name}: x=${rect.left}px`)
+      }
+    })
+    console.log('================================')
+  }
+
   componentWillUnmount() {
-    if (typeof window !== 'undefined' && this._aiSearchHandler) {
-      window.removeEventListener('ai-search-results', this._aiSearchHandler)
+    window.removeEventListener('resize', this.handleResize)
+  }
+
+  handleResize = () => {
+    // Debounce resize calculations
+    if (this.resizeTimeout) {
+      clearTimeout(this.resizeTimeout)
     }
+    this.resizeTimeout = setTimeout(() => {
+      this.calculateHeroHeight()
+    }, 100)
+  }
+
+  calculateHeroHeight = () => {
+    if (typeof window === 'undefined') return
+
+    const viewportHeight = window.innerHeight
+    const caseStudyCard = this.caseStudyCardRef.current
+    const heroContent = this.heroContentRef.current
+
+    if (!caseStudyCard) return
+
+    // Get the full height of the case study card (including padding from parent section)
+    // We need to account for the section's padding-top (quad = 4rem = 64px)
+    const sectionPaddingTop = 64 // pad-vertical--quad top
+    const cardHeight = caseStudyCard.offsetHeight
+
+    // Total height needed for the case study section to show the full card
+    const caseStudySectionHeight = sectionPaddingTop + cardHeight
+
+    // Hero height = viewport - header - full case study card section
+    // This positions the bottom of the card at the bottom of the viewport
+    const heroHeight = viewportHeight - HEADER_HEIGHT - caseStudySectionHeight
+
+    // Measure actual content height to ensure it fits
+    let contentBasedMinHeight = 0
+    if (heroContent) {
+      const contentHeight = heroContent.offsetHeight
+      // Content needs to fit: content height + header padding (50px) + some buffer (20px)
+      contentBasedMinHeight = contentHeight + HEADER_HEIGHT + 20
+    }
+
+    // Detect mobile vs desktop
+    const viewportWidth = window.innerWidth
+    const isMobile = viewportWidth < 1024
+
+    // Set minimum height to prevent hero from being too small
+    // Desktop: greater of 250px or 20% of viewport
+    // Mobile: Use content-based minimum or 250px, whichever is greater
+    const viewportBasedMinHeight = isMobile
+      ? Math.max(250, contentBasedMinHeight || 250)
+      : Math.max(250, viewportHeight * 0.2)
+
+    // Use the greater of: viewport-based min, content-based min, or calculated height
+    const minHeight = Math.max(viewportBasedMinHeight, contentBasedMinHeight)
+
+    // Cap hero height: 30% of viewport, but always prioritize content fit
+    const maxHeight = viewportHeight * 0.30
+    
+    // Always prioritize content fit over max-height constraint
+    // If content needs more space than max-height allows, use content-based height
+    let finalHeight
+    if (contentBasedMinHeight > maxHeight) {
+      // Content needs more space than max-height allows - use content-based height
+      // This prevents cutoff when viewport height is constrained
+      finalHeight = Math.max(heroHeight, contentBasedMinHeight)
+    } else {
+      // Content fits within max-height - use standard calculation with clamping
+      finalHeight = Math.min(Math.max(heroHeight, minHeight), maxHeight)
+    }
+
+    // Final safeguard: ensure height is never smaller than what content needs
+    // This catches edge cases where calculation might have gone wrong
+    if (contentBasedMinHeight > 0) {
+      finalHeight = Math.max(finalHeight, contentBasedMinHeight)
+    }
+
+    this.setState({ heroHeight: finalHeight })
   }
 
   render() {
+    const { heroHeight } = this.state
+
+    // Style for dynamic hero height
+    const heroStyle = heroHeight ? { height: `${heroHeight}px`, minHeight: `${heroHeight}px` } : {}
+
     return (
       <Layout frontmatter={this.state.frontmatter} isHomepage>
-        <Hero
-          className="hero--higher-text-contrast"
-          link="/work/"
-          image={this.state.frontmatter.heroImage}
-          isLarge
-          position="top center"
-        >
-          <h1 className="header--xl hero-title--lg">
-            Designing the Future
-            <span className="text--serif text--primary">.</span>
-          </h1>
-          <p className="hero-subtitle text--black">
-            We craft digital design through software, strategic thinking, data visualization, and illustration.
-          </p>
-        </Hero>
-        {/* Expertise section (no orange background); labels below heading with orange underlines */}
-        <div className="max-width content-padding pad-top--double pad-bottom--none homepage-expertise">
-          <div className="margin-vertical--double pure-g expertise-row">
-            <div className="pure-u-1">
-              <h2 className="header--xl margin--none">Our expertise in design covers...</h2>
-            </div>
-          </div>
-          <div className="pure-g" style={{ marginTop: '18px' }}>
-            <div className="pure-u-1">
-              <div className="expertise-grid">
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}>
-                  <button
-                    type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Enterprise' ? 'is-selected' : ''}`}
-                    onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'Enterprise' ? null : 'Enterprise'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
-                        setTimeout(() => {
-                          const el = document.querySelector('.project-search')
-                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                        }, 50)
-                      })
-                    }}
-                  >
-                    Enterprise
-                  </button>
-                </div>
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}>
-                  <button
-                    type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Healthcare' ? 'is-selected' : ''}`}
-                    onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'Healthcare' ? null : 'Healthcare'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
-                        setTimeout(() => {
-                          const el = document.querySelector('.project-search')
-                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                        }, 50)
-                      })
-                    }}
-                  >
-                    Healthcare
-                  </button>
-                </div>
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}>
-                  <button
-                    type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'Government' ? 'is-selected' : ''}`}
-                    onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'Government' ? null : 'Government'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
-                        setTimeout(() => {
-                          const el = document.querySelector('.project-search')
-                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                        }, 50)
-                      })
-                    }}
-                  >
-                    Government
-                  </button>
-                </div>
-                <div className={`expertise-col ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}>
-                  <button
-                    type="button"
-                    className={`expertise-item button button--transparent ${this.state.selectedCategoryFilter === 'AI' ? 'is-selected' : ''}`}
-                    onClick={() => {
-                      const selected = this.state.selectedCategoryFilter === 'AI' ? null : 'AI'
-                      this.setState({ selectedCategoryFilter: selected }, () => {
-                        setTimeout(() => {
-                          const el = document.querySelector('.project-search')
-                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                        }, 50)
-                      })
-                    }}
-                  >
-                    AI
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {!this.state.hideSpotlights && (
-          <div className="max-width content-padding pad-bottom--double" id="spotlights">
-            <div className="pad-vertical--double">
-              {/* Spotlights (custom layout in a single grid) */}
-              {(() => {
-                const findItem = (key) => this.state.allProjects.find(p => p.slug === key || p.id === key)
-                const TEXT_OVERRIDES = {
-                  'ipsos-facto': { title: 'The Future of Research Intelligence', subtitle: 'AI, LLM Software' },
-                  'eligibility-engine': { title: 'Eligibility Engine', subtitle: 'Open Source' },
-                  'visual-storytelling-with-genai': { title: 'Storytelling with GenAI', subtitle: 'Illustration' },
-                  'determinants-of-health': { title: 'Determinants of Health', subtitle: 'Poster' },
-                  'hgraph': { title: 'hGraph', subtitle: 'Data Visualization' },
-                  'prior-auth': { title: 'Prior Authorization for Cancer Care', subtitle: 'Healthcare Software' },
-                  'precision-autism': { title: 'Precision Autism', subtitle: 'Precision Medicine & Genomics' },
-                  'mass-snap': { title: 'Closing the SNAP Gap', subtitle: 'Massachusetts Department of Transitional Assistance' },
-                  'inspired-ehrs': { title: 'Transforming Healthcare Analytics', subtitle: 'Enterprise Software' }
-                }
-                // Width map for aesthetically pleasing layouts (in 4-column grid)
-                // 1 = quarter width, 2 = half width, 4 = full width
-                const SPOTLIGHT_WIDTHS = {
-                  'ipsos-facto': 2,
-                  'eligibility-engine': 1,
-                  'visual-storytelling-with-genai': 2,
-                  'determinants-of-health': 2,
-                  'hgraph': 2,
-                  'inspired-ehrs': 2,
-                  'prior-auth': 2,
-                  'precision-autism': 2,
-                  'mass-snap': 4,
-                  // Additional items requested
-                  'maya-ehr': 2,
-                  'national-cancer-navigation': 2,
-                  'national-healthcare-stories': 2,
-                  '3m-coderyte': 2,
-                  'augmented-clinical-decision-support': 2
-                }
-
-                const getWidthForItem = (item) => {
-                  if (!item) return 1
-                  const key = item.slug || item.id || ''
-                  return SPOTLIGHT_WIDTHS[key] || 1
-                }
-
-                const spanClassForWidth = (w) => {
-                  if (w >= 4) return 'spotlight--span-4'
-                  if (w >= 3) return 'spotlight--span-3'
-                  if (w >= 2) return 'spotlight--span-2'
-                  return ''
-                }
-
-                // Known animated banners per project slug
-                const VIDEO_BANNERS = {
-                  'visual-storytelling-with-genai': '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4',
-                  'determinants-of-health': '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4',
-                  'hgraph': '/images/homepage/animated%20covers/hgraph_trimmed.mp4',
-                  'precision-autism': '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4'
-                }
-
-                const getVideoOptsForItem = (item) => {
-                  if (!item) return {}
-                  const key = item.slug || item.id
-                  const src = VIDEO_BANNERS[key]
-                  return src ? { useVideo: true, videoSrc: src } : {}
-                }
-
-                // Greedy packing to fill 4-unit rows
-                const layoutWithGreedy = (items) => {
-                  const remaining = [...items]
-                  const output = [] // { item, width }
-                  let rowRemaining = 4
-                  let rowStartIdx = 0 // index in output where current row starts
-
-                  while (remaining.length > 0) {
-                    const candidate = remaining[0]
-                    const w = getWidthForItem(candidate)
-
-                    // If fits, place it
-                    if (w <= rowRemaining) {
-                      output.push({ item: candidate, width: w })
-                      remaining.shift()
-                      rowRemaining -= w
-                      if (rowRemaining === 0) {
-                        // row complete
-                        rowRemaining = 4
-                        rowStartIdx = output.length
-                      }
-                      continue
-                    }
-
-                    // Look ahead for any that fits
-                    let foundIdx = -1
-                    for (let i = 1; i < remaining.length; i++) {
-                      const wi = getWidthForItem(remaining[i])
-                      if (wi <= rowRemaining) { foundIdx = i; break }
-                    }
-                    if (foundIdx !== -1) {
-                      const fit = remaining.splice(foundIdx, 1)[0]
-                      const wf = getWidthForItem(fit)
-                      output.push({ item: fit, width: wf })
-                      rowRemaining -= wf
-                      if (rowRemaining === 0) {
-                        rowRemaining = 4
-                        rowStartIdx = output.length
-                      }
-                      continue
-                    }
-
-                    // Nothing fits: expand the last item in the current row to fill remainder
-                    if (output.length > rowStartIdx) {
-                      const lastIdx = output.length - 1
-                      output[lastIdx] = {
-                        item: output[lastIdx].item,
-                        width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
-                      }
-                    }
-                    // Start a new row
-                    rowRemaining = 4
-                    rowStartIdx = output.length
-                  }
-
-                  // If last row isn't full, expand the last item of the row to fill remainder
-                  if (rowRemaining !== 4 && output.length > rowStartIdx) {
-                    const lastIdx = output.length - 1
-                    output[lastIdx] = {
-                      item: output[lastIdx].item,
-                      width: Math.min(4, (output[lastIdx].width || 1) + rowRemaining)
-                    }
-                  }
-
-                  return output.map(({ item, width }) => ({ item, className: spanClassForWidth(width || 1) }))
-                }
-                const normalizedCategory = (this.state.selectedCategoryFilter || '').toString().trim().toLowerCase()
-                const matchesCategory = (project) => {
-                  if (!normalizedCategory) return true
-                  if (!project) return false
-                  const cats = Array.isArray(project.categories) ? project.categories : []
-                  const kws = Array.isArray(project.keywords) ? project.keywords : []
-                  const inCats = cats.some(c => String(c || '').toLowerCase() === normalizedCategory)
-                  const inKws = kws.some(k => String(k || '').toLowerCase() === normalizedCategory)
-                  const hay = [project.title, project.caption, project.client, ...cats, ...kws]
-                    .filter(Boolean).join(' ').toLowerCase()
-                  const has = (arr) => arr.some(token => hay.includes(token))
-                  let inferred = false
-                  switch (normalizedCategory) {
-                    case 'ai':
-                      inferred = has([' ai ', 'artificial intelligence', 'machine learning', ' llm', 'gpt', 'neural', 'algorithm']) || hay.startsWith('ai')
-                      break
-                    case 'healthcare':
-                      inferred = has(['healthcare', 'medical', 'clinical', 'patient', 'hospital', 'ehr', 'emr', 'oncology'])
-                      break
-                    case 'government':
-                      inferred = has(['government', 'public sector', 'civic', 'municipal', 'federal', 'state', 'massachusetts department', 'snap'])
-                      break
-                    case 'enterprise':
-                      inferred = has(['enterprise', 'business', 'corporate', 'saas', 'platform', 'analytics', 'dashboard'])
-                      break
-                    default:
-                      inferred = false
-                  }
-                  return inCats || inKws || inferred
-                }
-
-                const renderCard = (item, { useVideo = false, videoSrc = null, className = '' } = {}) => {
-                  if (!item) return null
-                  const { link, externalLink, suppressNewTab } = extractWorkItemLinkDetails(item)
-                  const key = (item.slug || item.id)
-                  const override = TEXT_OVERRIDES[key] || {}
-                  const displayTitle = override.title || item.title
-                  const displaySubtitle = override.subtitle || item.caption
-                  return (
-                    <Card
-                      noShadow
-                      link={link}
-                      key={`spot-${(item.slug || item.id)}`}
-                      externalLink={externalLink}
-                      suppressNewTab={suppressNewTab}
-                      className={className}
-                    >
-                      {useVideo && videoSrc ? (
-                        <div className="spotlight-card">
-                          <div className="spotlight-media">
-                            <Video poster={item.image} loop sources={[{ format: 'mp4', src: videoSrc }]} />
-                          </div>
-                          <div className="image-block__text">
-                            <p className={'header--lg'}>{displayTitle}</p>
-                            <p className="text--gray">{displaySubtitle}</p>
-                          </div>
-                        </div>
-                      ) : (
-                        <ImageBlock
-                          title={displayTitle}
-                          image={item.image}
-                          client={null}
-                          categories={null}
-                          caption={displaySubtitle}
-                          sizes={config.sizes.fullToHalfAtMediumInsideMaxWidth}
-                        />
-                      )}
-                    </Card>
-                  )
-                }
-
-                // Spotlight ordering and options
-                const defs = [
-                  { key: 'ipsos-facto', opts: { className: 'spotlight--span-2' } },
-                  { key: 'eligibility-engine', opts: {} },
-                  { key: 'visual-storytelling-with-genai', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/storytelling_with_GenAI_trimmed.mp4' } },
-                  { key: 'determinants-of-health', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/sdoh_herov2_lg_trimmed.mp4' } },
-                  { key: 'hgraph', opts: { useVideo: true, videoSrc: '/images/homepage/animated%20covers/hgraph_trimmed.mp4' } },
-                  { key: 'inspired-ehrs', opts: { className: 'spotlight--span-2' } },
-                  { key: 'prior-auth', opts: { className: 'spotlight--span-2' } },
-                  { key: 'precision-autism', opts: { className: 'spotlight--span-2', useVideo: true, videoSrc: '/images/homepage/animated%20covers/austism_atmosphere_trimmed.mp4' } },
-                  { key: 'mass-snap', opts: { className: 'spotlight--span-4' } },
-                ]
-
-                // If a category filter is selected, show items from the entire work pool
-                if (normalizedCategory) {
-                  const filteredProjects = (this.state.allProjects || []).filter(matchesCategory)
-                  const firstPage = filteredProjects.slice(0, 12)
-                  const arranged = layoutWithGreedy(firstPage)
-                  return (
-                    <div className="spotlights-grid spotlights-grid--four">
-                      {arranged.map(({ item, className }, idx) => {
-                        const vid = getVideoOptsForItem(item)
-                        return renderCard(item, { className, ...vid })
-                      })}
-                    </div>
-                  )
-                }
-                // Otherwise, show curated spotlights
-                const filtered = defs.filter(d => matchesCategory(findItem(d.key)))
-                return (
-                  <div className="spotlights-grid spotlights-grid--four">
-                    {filtered.map(d => renderCard(findItem(d.key), d.opts))}
-                  </div>
-                )
-              })()}
-              <div className="container container--justify-center margin-top margin-bottom--double">
-                <Link
-                  to="/work/?expanded=true"
-                  className="button button--outline-primary button--padded"
-                >
-                  VIEW ALL WORK
+        {/* Page-level class for V2 alignment overrides */}
+        <div className="index-page">
+          {/* 1. Hero Section */}
+          <div
+            className="hero--dynamic-height"
+            style={{
+              ...heroStyle,
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-wavy-lines.jpg')})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div ref={this.heroContentRef} className="hero--dynamic-height__content">
+              <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
+                <strong>We design the future of software</strong>
+                <span className="text--serif text--primary">.</span>
+                <br />
+                <span className="text--gray">For complex systems and real constraints.</span>
+              </h1>
+              <div className="hero-buttons">
+                <Link to="/contact/" className="button button--primary">
+                  START A CONVO
+                </Link>
+                <Link to="/work/" className="button button--outline-primary">
+                  VIEW OUR WORK
                 </Link>
               </div>
             </div>
           </div>
-        )}
-        <div className="partners-section pad-vertical--double">
-          <div className="max-width content-padding">
-            <h3 className="header--md partners-section__title" style={{ marginTop: 0 }}>
-              PAST PARTNERS
-            </h3>
-            <div className="partners-section__logos">
-              <ClientLogos />
-            </div>
-          </div>
-        </div>
-        <div className="max-width content-padding pad-vertical--double--only-lg used-everyday">
-          <div className="pure-g margin-vertical--double" style={{ alignItems: 'flex-start' }}>
-            <div className="pure-u-1 pure-u-lg-1-3">
-              <h2 className="header--xl margin--bottom pad-right--double">
-                Our designs are used every day
-                <span className="text--serif text--primary">.</span>
-              </h2>
-            </div>
-            <div className="pure-u-1 pure-u-lg-2-3">
-              <div className="pure-g">
-                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
-                  <p className="margin--none pad-right--only-lg">
-                    <span className="text--bold">160 million US residents</span>
-                    <br />
-                    <span className="text--gray">
-                      are analyzed, care planned, and risk adjusted with the
-                      software we designed.
-                    </span>
-                    <br />
-                  </p>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
-                  <p className="margin--none pad-left--only-lg">
-                    <span className="text--bold">
-                      1M+ Massachusetts residents
-                    </span>
-                    <br />
-                    <span className="text--gray">
-                      count on our service design.
-                    </span>
-                    <br />
-                    <Link to="/work/mass-snap">Read the case study</Link>
-                  </p>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
-                  <p className="margin--none pad-right--only-lg">
-                    <span className="text--bold">Wikipedia</span>
-                    <br />
-                    <span className="text--gray">
-                      relies on our data visualization to explain complex health
-                      topics.
-                    </span>
-                    <br />
-                    <a
-                      href="https://en.wikipedia.org/wiki/Social_determinants_of_health"
-                      target="_blank"
-                      rel="noopener noreferrer"
+
+          {/* 2. Backlog: Zero - 3M Case Study */}
+          <div
+            className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-3m.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <div ref={this.caseStudyCardRef}>
+                <Card className="case-study-card case-study-card--compact" noShadow>
+                  <div className="case-study-card__content">
+                    <h2 ref={this.backlogZeroRef} className="header--xl">
+                      Backlog: Zero
+                    </h2>
+                    <p
+                      className="text--serif header--lg text--gray"
+                      style={{ fontStyle: 'italic', fontWeight: 'bold' }}
                     >
-                      Social determinants of health
-                    </a>
-                  </p>
-                </div>
-                <div className="pure-u-1 pure-u-lg-1-2 pad-bottom">
-                  <p className="margin--none pad-left--only-lg">
-                    <span className="text--bold">1 billion prescriptions</span>
-                    <br />
-                    <span className="text--gray">
-                      will flow through the software we've designed.
-                    </span>
-                    <br />
-                  </p>
-                </div>
+                      "The system is down."
+                    </p>
+                    <p className="text--gray">
+                      That was the call we got two weeks after launch, from Memorial
+                      Hermann hospital in Houston, CodeRyte's largest customer.
+                    </p>
+                    <p className="text--gray">
+                      30 minutes later, we found the issue. The new system was operating so efficiently that there were zero patients left to code and for a brief period, zero work to do.
+                    </p>
+                    <p className="text--gray">
+                      A backlog that typically measured in thousands of charts and weeks of delay had been cleared. This had never happened before.
+                    </p>
+                    <Link to="/work/3m-coderyte" className="button button--primary" style={{ marginTop: '1rem' }}>
+                      3M CASE STUDY
+                    </Link>
+                  </div>
+                </Card>
               </div>
             </div>
           </div>
-        </div>
-        <Divider animated className="" />
-        <div className="max-width content-padding pad-bottom--double">
-          <div className="container container--justify-center margin-vertical">
-            <h2 className="header--xl">
-              See the future
-              <span className="text--serif text--primary">.</span>
-            </h2>
+
+          {/* 3. Eric Topol Testimonial */}
+          <div
+            className="testimonial-section testimonial-section--with-image pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/eric-topol-2.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <p ref={this.ericTopolRef} className="testimonial-quote">
+                "The GoInvo studio is one of the most talented groups of designers I have
+                ever met in the healthcare space. Not only are their ideas, designs, and
+                graphics remarkable, but I haven't yet figured out how they know so much
+                about medicine and its future."
+              </p>
+              <p className="testimonial-attribution">
+                <span className="testimonial-attribution__name">Eric Topol, MD</span>
+                <br />
+                <span className="testimonial-attribution__title">Scripps Research Translational Institute</span>
+                <br />
+                <span className="testimonial-attribution__title" style={{ opacity: 0.4 }}>
+                  <small>
+                    Photo by <a href="https://www.flickr.com/photos/euthman/8197577252/" style={{ color: 'white' }}>Ed Uthman</a>, licensed under <a href="https://creativecommons.org/licenses/by/2.0/" style={{ color: 'white' }}>CC BY 2.0</a>
+                  </small>
+                </span>
+              </p>
+            </div>
           </div>
-          <Columns columns={3}>
-            <ImageBlock
-              key={'1'}
-              image="/images/homepage/standardized-health-data-preview-2.jpg"
-              title="Health Reports"
-              caption="Design concepts and objective analysis for grokking the evolving healthcare universe."
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-            >
-              <a
-                href="/vision/determinants-of-health"
-              >
-                Determinants of health
-              </a>
-              <br />
-              <Link to="/vision/">Explore all features</Link>
-            </ImageBlock>
-            <ImageBlock
-              key={'2'}
-              image="/images/vision/vision-hero.jpg"
-              title="Publications"
-              caption="Preview our books on product design, emerging technology, prototyping, and the internet of things."
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-            >
-              <a
-                href="https://www.amazon.com/Designing-Emerging-Technologies-Genomics-Robotics/dp/1449370519"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Designing for Emerging Technologies
-              </a>
-              <br />
-              <Link to="/vision/#books">View all books</Link>
-            </ImageBlock>
-            <ImageBlock
-              key={'3'}
-              image="/images/features/health-design-thinking/health-design-thinking-book-thumbnail.jpg"
-              title="Health Design Thinking Book"
-              caption="Work from the past decade of the GoInvo Studio's practice is highlighted in the diverse case studies that make up the book 'Health Design Thinking', co-written by Ellen Lupton and Dr. Bon Ku."
-              sizes={config.sizes.fullToThirdAtLargeInsideMaxWidth}
-            >
-              <a href="/vision/health-design-thinking/">
-                Health Design Thinking Book
-              </a>
-              <br />
-            </ImageBlock>
-          </Columns>
-        </div>
-        <div className="background--blue pad-vertical--quad--only-lg">
-          <div className="max-width content-padding">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <div className="pad-bottom--double pad-right--double">
+
+          {/* 4. Weeks to Hours - Ipsos Case Study */}
+          <div
+            className="case-study-highlight case-study-highlight--with-background case-study-highlight--align-right pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-ipsos.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <Card className="case-study-card case-study-card--compact" noShadow>
+                <div className="case-study-card__content">
                   <h2 className="header--xl">
-                    Let's work together
-                    <span className="text--primary text--serif">.</span>
+                    Weeks to Hours
                   </h2>
                   <p className="text--gray">
-                    We work across the entire production process, applying the
-                    design method to reimagine your software, system, or
-                    service.
+                    From Rube Goldberg workflows to enterprise info at your fingertips.
                   </p>
+                  <p className="text--gray">
+                    <strong>90%+ adoption across Ipsos.</strong>
+                    <br />
+                    <strong>700,000+ prompts per month.</strong>
+                    <br />
+                    <strong>10M+ API calls</strong> driving real research, not toys.
+                  </p>
+                  <p className="text--gray">
+                    This wasn't novelty. <br />
+                    It was transformation. <br />
+                    Research that once took weeks now
+                    yields cited insights in hours.
+                  </p>
+                  <Link to="/work/ipsos-facto" className="button button--primary" style={{ marginTop: '1rem' }}>
+                    IPSOS CASE STUDY
+                  </Link>
                 </div>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2">
-                <ContactForm showHeader={false} />
+              </Card>
+            </div>
+          </div>
+
+          {/* 5. Partner Logos */}
+          <div className="partners-section pad-vertical--double">
+            <div className="max-width content-padding">
+              <p className="partners-section__title">
+                Trusted by ambitious startups and Fortune 500's:
+              </p>
+              <div className="partners-section__logos">
+                <ClientLogos />
               </div>
             </div>
           </div>
-        </div>
-        {/* New We are GoInvo section */}
-        <div className="we-are-goinvo">
-          <div className="content-padding">
-            <div className="team-marquee" aria-hidden="true">
-              <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
-                {TEAM.slice(0, 5).map(member => (
-                  <div key={`top-${member.name}`} className="team-marquee__tile">
-                    <Image
-                      src={member.image}
-                      alt=""
-                      aria-hidden="true"
-                      className="team-marquee__img"
-                    />
+
+          {/* 6. 1 Million Served - SNAP Impact */}
+          <div
+            className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
+            style={{
+              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-snap.jpg')})`
+            }}
+          >
+            <div className="max-width content-padding">
+              <Card className="case-study-card case-study-card--compact" noShadow>
+                <div className="case-study-card__content">
+                  <h2 ref={this.millionServedRef} className="header--xl">
+                    10x increase
+                    <span className="text--primary text--serif">.</span>
+                  </h2>
+                  <div className="impact-timeline text--gray">
+                    <div className="impact-item">
+                      <p><strong>In 2017:</strong></p>
+                      <p>
+                        750,000 Massachusetts residents relied on SNAP.
+                        <br />
+                        Just 7% applied online.
+                      </p>
+                    </div>
+                    <div className="impact-item">
+                      <p>Fax. Mail. Walk-ins.</p>
+                    </div>
+                    <div className="impact-item">
+                      <p><strong>Two years after redesign:</strong></p>
+                      <p>
+                        Online applications hit ~44%.
+                      </p>
+                    </div>
+                    <div className="impact-item">
+                      <p><strong>Today:</strong></p>
+                      <p>
+                        Nearly <strong>1,000,000</strong> people rely on SNAP.
+                        <br />
+                        <strong>70% apply online.</strong>
+                      </p>
+                    </div>
+                    <div className="impact-item">
+                      <p>
+                        A million people didn't change.
+                        <br />
+                        <strong>The digital system did.</strong>
+                      </p>
+                    </div>
                   </div>
-                ))}
-              </Marquee>
+                  <Link to="/work/mass-snap" className="button button--primary" style={{ marginTop: '1.5rem' }}>
+                    SNAP CASE STUDY
+                  </Link>
+                </div>
+              </Card>
             </div>
           </div>
-          <div className="max-width content-padding pad-vertical--double">
-            <div className="pure-g">
-              <div className="pure-u-1 pure-u-lg-2-3">
-                <h2 className="we-are-title header--xl">
-                  We are <span className="text--primary text--serif">GoInvo</span>
+
+          {/* 7. Contact Form */}
+          <div className="pad-vertical--double contact-section">
+            <div className="max-width content-padding">
+              <div className="contact-section__content">
+                <h2 className="header--xl">
+                  Let's work together
                   <span className="text--primary text--serif">.</span>
                 </h2>
-                <p className="we-are-body text--gray">
-                  Small by design. Big thinkers. Sweat the details. Ethics not optional.
+                <p className="text--gray">
+                  Send us a message or{' '}
+                  <a href="https://calendly.com/goinvo/open-office-hours" className="link" target="_blank" rel="noopener noreferrer">
+                    visit our open office hours
+                  </a>.
                 </p>
               </div>
-              <div className="pure-u-1 pure-u-lg-1-3 display--flex display--flex--align-center display--flex--justify-center">
-                <Link to="/about/" className="button button--outline-primary button--padded">MEET OUR TEAM</Link>
-              </div>
+              <iframe
+                id="JotFormIFrame-contact-home"
+                className="jotform-form contact-form"
+                title="Contact"
+                allowTransparency="true"
+                frameBorder="0"
+                scrolling="no"
+                src="https://form.jotform.com/251276832519159?background=1"
+                style={{ width: '100%', height: '700px', border: 'none', background: 'transparent' }}
+              />
             </div>
           </div>
-          <div className="content-padding">
-            <div className="team-marquee" aria-hidden="true">
-              <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
-                {TEAM.slice(5, 10).map(member => (
-                  <div key={`bottom-${member.name}`} className="team-marquee__tile">
-                    <Image
-                      src={member.image}
-                      alt=""
-                      aria-hidden="true"
-                      className="team-marquee__img"
-                    />
-                  </div>
-                ))}
-              </Marquee>
+
+          {/* 8. We are GoInvo */}
+          <div className="we-are-goinvo">
+            <div className="content-padding">
+              <div className="team-marquee" aria-hidden="true">
+                <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                  {TEAM.slice(0, 5).map(member => (
+                    <div key={`top-${member.name}`} className="team-marquee__tile">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
+            </div>
+            <div className="max-width content-padding pad-vertical--double">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-2-3">
+                  <h2 className="we-are-title header--xl">
+                    We are <span className="text--primary text--serif">GoInvo</span>
+                    <span className="text--primary text--serif">.</span>
+                  </h2>
+                  <p className="we-are-body text--gray">
+                    Small by design. Big thinkers. Sweat the details. Ethics not optional.
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-3 display--flex display--flex--align-center display--flex--justify-center">
+                  <Link to="/about/" className="button button--outline-primary button--padded">
+                    MEET OUR TEAM
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="content-padding">
+              <div className="team-marquee" aria-hidden="true">
+                <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                  {TEAM.slice(5, 10).map(member => (
+                    <div key={`bottom-${member.name}`} className="team-marquee__tile">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="team-marquee__img"
+                      />
+                    </div>
+                  ))}
+                </Marquee>
+              </div>
             </div>
           </div>
         </div>
@@ -652,30 +437,5 @@ class IndexPage extends Component {
     )
   }
 }
-
-export const indexPageQuery = graphql`
-  query IndexQuery {
-    allMdx(filter: { frontmatter: { hidden: { eq: false } } }) {
-      nodes {
-        id
-        parent {
-          ... on File {
-            name
-          }
-        }
-        frontmatter {
-          title
-          image
-          client
-          categories
-          caption
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

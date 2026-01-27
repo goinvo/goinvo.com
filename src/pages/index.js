@@ -117,18 +117,25 @@ class IndexPage extends Component {
     // Use the greater of: viewport-based min, content-based min, or calculated height
     const minHeight = Math.max(viewportBasedMinHeight, contentBasedMinHeight)
 
-    // Cap hero height: 30% of viewport on desktop, but allow content-based height on mobile
+    // Cap hero height: 30% of viewport, but always prioritize content fit
     const maxHeight = viewportHeight * 0.30
     
-    // On mobile, prioritize content fit over max-height constraint
+    // Always prioritize content fit over max-height constraint
     // If content needs more space than max-height allows, use content-based height
     let finalHeight
-    if (isMobile && contentBasedMinHeight > maxHeight) {
-      // On mobile, allow hero to exceed 30vh if content requires it
+    if (contentBasedMinHeight > maxHeight) {
+      // Content needs more space than max-height allows - use content-based height
+      // This prevents cutoff when viewport height is constrained
       finalHeight = Math.max(heroHeight, contentBasedMinHeight)
     } else {
-      // Desktop or mobile with content that fits within max-height
+      // Content fits within max-height - use standard calculation with clamping
       finalHeight = Math.min(Math.max(heroHeight, minHeight), maxHeight)
+    }
+
+    // Final safeguard: ensure height is never smaller than what content needs
+    // This catches edge cases where calculation might have gone wrong
+    if (contentBasedMinHeight > 0) {
+      finalHeight = Math.max(finalHeight, contentBasedMinHeight)
     }
 
     this.setState({ heroHeight: finalHeight })

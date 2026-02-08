@@ -7,7 +7,6 @@ import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import TEAM from '../data/team.json'
 import Marquee from 'react-fast-marquee'
-import { mediaUrl } from '../helpers'
 
 const frontmatter = {
   metaTitle: 'Boston UX Design Agency | GoInvo Boston',
@@ -154,13 +153,9 @@ class IndexPage extends Component {
           {/* 1. Hero Section */}
           <div
             className="hero--dynamic-height"
-            style={{
-              ...heroStyle,
-              backgroundImage: `url(${mediaUrl('/images/homepage/bg-wavy-lines.jpg')})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
+            style={heroStyle}
           >
+            <Image src="/images/homepage/bg-wavy-lines.jpg" className="section-bg-img" sizes="100vw" alt="" aboveTheFold />
             <div ref={this.heroContentRef} className="hero--dynamic-height__content">
               <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
                 <strong>We design the future of software</strong>
@@ -182,10 +177,8 @@ class IndexPage extends Component {
           {/* 2. Backlog: Zero - 3M Case Study */}
           <div
             className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
-            style={{
-              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-3m.jpg')})`
-            }}
           >
+            <Image src="/images/homepage/bg-storycard-3m.jpg" className="section-bg-img" sizes="100vw" alt="" />
             <div className="max-width content-padding">
               <div ref={this.caseStudyCardRef}>
                 <Card className="case-study-card case-study-card--compact" noShadow>
@@ -221,10 +214,8 @@ class IndexPage extends Component {
           {/* 3. Eric Topol Testimonial */}
           <div
             className="testimonial-section testimonial-section--with-image pad-vertical--quad"
-            style={{
-              backgroundImage: `url(${mediaUrl('/images/homepage/eric-topol-2.jpg')})`
-            }}
           >
+            <Image src="/images/homepage/eric-topol-2.jpg" className="section-bg-img" sizes="100vw" alt="" style={{ objectPosition: 'top right' }} />
             <div className="max-width content-padding">
               <p ref={this.ericTopolRef} className="testimonial-quote">
                 "The GoInvo studio is one of the most talented groups of designers I have
@@ -249,10 +240,8 @@ class IndexPage extends Component {
           {/* 4. Weeks to Hours - Ipsos Case Study */}
           <div
             className="case-study-highlight case-study-highlight--with-background case-study-highlight--align-right pad-vertical--quad"
-            style={{
-              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-ipsos.jpg')})`
-            }}
           >
+            <Image src="/images/homepage/bg-storycard-ipsos.jpg" className="section-bg-img" sizes="100vw" alt="" style={{ objectPosition: 'left center' }} />
             <div className="max-width content-padding">
               <Card className="case-study-card case-study-card--compact" noShadow>
                 <div className="case-study-card__content">
@@ -298,10 +287,8 @@ class IndexPage extends Component {
           {/* 6. 1 Million Served - SNAP Impact */}
           <div
             className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
-            style={{
-              backgroundImage: `url(${mediaUrl('/images/homepage/bg-storycard-snap.jpg')})`
-            }}
           >
+            <Image src="/images/homepage/bg-storycard-snap.jpg" className="section-bg-img" sizes="100vw" alt="" />
             <div className="max-width content-padding">
               <Card className="case-study-card case-study-card--compact" noShadow>
                 <div className="case-study-card__content">
@@ -391,6 +378,7 @@ class IndexPage extends Component {
                         alt=""
                         aria-hidden="true"
                         className="team-marquee__img"
+                        sizes="300px"
                       />
                     </div>
                   ))}
@@ -425,6 +413,7 @@ class IndexPage extends Component {
                         alt=""
                         aria-hidden="true"
                         className="team-marquee__img"
+                        sizes="300px"
                       />
                     </div>
                   ))}

@@ -8,6 +8,21 @@ $v2-max-width: 1020px;
 
 .index-page {
   // =============================================
+  // Optimized background images (replaces CSS background-image for lazy loading + srcset)
+  // =============================================
+  .section-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  // =============================================
   // Hero Section
   // =============================================
   .hero--dynamic-height {
@@ -18,6 +33,8 @@ $v2-max-width: 1020px;
     min-height: 250px;
     max-height: 30vh;
     padding-top: $header-height; // Account for fixed header overlap
+    position: relative;
+    overflow: hidden;
 
     // On mobile, remove max-height constraint to allow content-based sizing
     // JavaScript will handle height calculation to fit content
@@ -35,6 +52,8 @@ $v2-max-width: 1020px;
     // Mobile: match card text alignment (card has 24px internal padding)
     padding-left: $spacing * 1.5;
     text-align: left;
+    position: relative;
+    z-index: 1;
 
     @include mq($from: large) {
       // Calculate offset to match max-width centering + content-padding (32px)
@@ -72,10 +91,14 @@ $v2-max-width: 1020px;
   .case-study-highlight {
     background-color: $color-gray--light;
 
+    > .max-width {
+      position: relative;
+      z-index: 1;
+    }
+
     &--with-background {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
     }
 
     &--align-right {
@@ -201,10 +224,8 @@ $v2-max-width: 1020px;
     background-color: $color-cream;
 
     &--with-image {
-      background-size: cover;
-      background-position: top right;
-      background-repeat: no-repeat;
       position: relative;
+      overflow: hidden;
       padding-top: $spacing * 4;
       min-height: 400px;
 
@@ -227,12 +248,12 @@ $v2-max-width: 1020px;
           rgba(0, 0, 0, 0.4) 50%,
           transparent 80%
         );
-        z-index: 0;
+        z-index: 1;
       }
 
       .max-width {
         position: relative;
-        z-index: 1;
+        z-index: 2;
       }
 
       .testimonial-quote,

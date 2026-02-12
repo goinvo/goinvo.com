@@ -5,6 +5,7 @@ import Layout from '../components/layouts/layout'
 import Card from '../components/card'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
+import SubscribeForm from '../components/form-subscribe'
 import TEAM from '../data/team.json'
 import Marquee from 'react-fast-marquee'
 
@@ -338,31 +339,10 @@ class IndexPage extends Component {
             </div>
           </div>
 
-          {/* 7. Contact Form */}
-          <div className="pad-vertical--double contact-section">
-            <div className="max-width content-padding">
-              <div className="contact-section__content">
-                <h2 className="header--xl">
-                  Let's work together
-                  <span className="text--primary text--serif">.</span>
-                </h2>
-                <p className="text--gray">
-                  Send us a message or{' '}
-                  <a href="https://calendly.com/goinvo/open-office-hours" className="link" target="_blank" rel="noopener noreferrer">
-                    visit our open office hours
-                  </a>.
-                </p>
-              </div>
-              <iframe
-                id="JotFormIFrame-contact-home"
-                className="jotform-form contact-form"
-                title="Contact"
-                allowTransparency="true"
-                frameBorder="0"
-                scrolling="no"
-                src="https://form.jotform.com/251276832519159?background=1"
-                style={{ width: '100%', height: '700px', border: 'none', background: 'transparent' }}
-              />
+          {/* 7. Newsletter Subscribe */}
+          <div className="pad-vertical--double">
+            <div className="max-width max-width--md content-padding">
+              <SubscribeForm />
             </div>
           </div>
 

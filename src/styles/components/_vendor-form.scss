@@ -1,6 +1,4 @@
 .contact-form-frame {
-  height: 700px;
-  overflow: hidden;
 }
 
 .jotform-form {
@@ -15,7 +13,6 @@
   }
 
   &.contact-form {
-    height: 700px;
     margin-bottom: 0;
   }
 
@@ -771,4 +768,41 @@
 
 .page-section {
   position: initial !important
+}
+
+// EmailOctopus form overrides
+.card .form-container,
+.card .inline-container,
+.card [data-form].inline-container {
+  max-width: 100% !important;
+}
+
+.card .btn-primary {
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+.card .emailoctopus-success-message {
+  background-color: $color-dark-teal--lightest;
+  color: $color-black;
+  padding: 20px !important;
+  max-width: 100% !important;
+  font-family: $font-family--sans-serif;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.card .emailoctopus-error-message {
+  background-color: #fdf2f1;
+  color: $color-black;
+  padding: 20px !important;
+  max-width: 100% !important;
+  font-family: $font-family--sans-serif;
+
+  &:empty {
+    display: none;
+  }
 }

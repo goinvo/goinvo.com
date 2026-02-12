@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Card from './card'
 
-// Restored embedded JotForm contact form (from commit b9660c1...)
+const JOTFORM_ID = '251276832519159'
+
 const ContactForm = ({ showHeader = true }) => {
+  const iframeRef = useRef(null)
+
+  useEffect(() => {
+    const handleMessage = (e) => {
+      if (typeof e.data !== 'string') return
+      const args = e.data.split(':')
+      if (args[0] === 'setHeight' && args.length > 2 && args[args.length - 1] === JOTFORM_ID) {
+        if (iframeRef.current) {
+          iframeRef.current.style.height = args[1] + 'px'
+        }
+      }
+    }
+
+    window.addEventListener('message', handleMessage)
+    return () => window.removeEventListener('message', handleMessage)
+  }, [])
+
   return (
     <div className="form-wrapper">
       <Card className="form-card">
@@ -14,14 +32,15 @@ const ContactForm = ({ showHeader = true }) => {
         ) : null}
         <div className="contact-form-frame">
           <iframe
-            id="JotFormIFrame-251276832519159"
+            ref={iframeRef}
+            id={`JotFormIFrame-${JOTFORM_ID}`}
             className="jotform-form contact-form"
             title="Contact"
             allowTransparency="true"
             frameBorder="0"
             scrolling="no"
-            src="https://form.jotform.com/251276832519159"
-            style={{ width: '100%', height: '700px' }}
+            src={`https://form.jotform.com/${JOTFORM_ID}`}
+            style={{ width: '100%', minHeight: '500px' }}
           />
         </div>
       </Card>

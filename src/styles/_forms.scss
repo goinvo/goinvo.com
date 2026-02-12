@@ -25,11 +25,8 @@
 }
 
 .card.form-card {
-  background: transparent;
+  background: $color-white;
   border-radius: 2px;
-}
-.contact-page .card.form-card { 
-  background:$color-white;
 }
 .form-header {
     padding-top: 1px;
@@ -38,7 +35,7 @@
     margin-left: 38px;
   }
   &.contact-form-header {
-    margin-left: 23px;
+    margin-left: 13px;
   }
 }
 

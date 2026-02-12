@@ -14,10 +14,10 @@ class SubscribeForm extends Component {
     return (
       <Card>
         <div className="form-subscribe-wrapper" style={{ marginLeft: '42px', marginRight: '42px', paddingTop: '10px' }}>
-        <h2 className="header--lg">Subscribe to our newsletter</h2>
-        <p>You'll receive our latest ideas, visualizations, and studio news delivered to your inbox twice a month.</p>
+          <h2 className="header--lg">Subscribe to our newsletter</h2>
+          <p>You'll receive our latest ideas, visualizations, and studio news delivered to your inbox twice a month.</p>
+          <div ref={el => (this.container = el)} />
         </div>
-        <div ref={el => (this.container = el)} />
       </Card>
     )
   }

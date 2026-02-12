@@ -772,3 +772,14 @@
 .page-section {
   position: initial !important
 }
+
+// EmailOctopus form overrides
+.card .form-container {
+  max-width: 100% !important;
+}
+
+.card .btn-primary {
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}

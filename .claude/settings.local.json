@@ -12,7 +12,8 @@
       "Bash(ls:*)",
       "Skill(plan)",
       "Bash(npm run build:*)",
-      "Bash(npx gatsby build:*)"
+      "Bash(npx gatsby build:*)",
+      "WebFetch(domain:eocampaign1.com)"
     ]
   }
 }

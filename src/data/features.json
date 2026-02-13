@@ -1,5 +1,18 @@
 [
   {
+    "id": "rethinking-ai-beyond-chat",
+    "title": "Rethinking AI Beyond Chat",
+    "date": "Feb.2026",
+    "client": "Feature",
+    "categories": [
+      "AI"
+    ],
+    "caption": "Exploring the potential of AI in design beyond conversational interfaces.",
+    "image": "/images/features/rethinking-ai-beyond-chat/hero.jpg",
+    "link": "/vision/rethinking-ai-beyond-chat/",
+    "hiddenWorkPage": true
+  },
+  {
     "id": "human-centered-design-for-ai",
     "title": "The Human-Centered Design Behind AI Clinicians Can Trust",
     "date": "Dec.2025",

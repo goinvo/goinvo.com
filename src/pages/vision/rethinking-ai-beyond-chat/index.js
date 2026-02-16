@@ -5,6 +5,7 @@ import Hero from '../../../components/hero'
 import Divider from '../../../components/divider'
 import SubscribeForm from '../../../components/form-subscribe'
 import Image from '../../../components/image'
+import Video from '../../../components/video'
 import Author from '../../../components/author'
 
 import { mediaUrl } from '../../../helpers'
@@ -31,6 +32,21 @@ class RethinkingAIFeature extends Component {
                 Rethinking AI Beyond Chat
               </h1>
               <p>This is the first instalment of a new design experiment series we’ve launched at the studio. We will explore emerging technologies by closely examining how today’s tools work and where they fall short. Through quick, week-long design sprints, each experiment seeks to reimagine how tools could be used, who they serve, and how they are designed, treating technology not as neutral or inevitable, but as something that we can actively shape.</p>
+
+              <Video
+                sources={[
+                  {
+                    src:
+                      '/videos/features/rethinking-ai-beyond-chat/design-experiments-01-final2.mp4',
+                    format: 'mp4',
+                  }
+                ]}
+                width="100%"
+                height="560"
+                fallback="/videos/features/rethinking-ai-beyond-chat/design-experiments-01-final.jpg"
+                loop
+              />
+
               <Divider />
               <h2 className="header--xl margin-top--double">Designing with words?</h2>
               <p>Our first experiment looks at the rapid rise of generative AI creation tools, like Cursor, Claude Code, and Loveable. The ability to turn an idea into a working prototype with just a few words is impressive.</p>

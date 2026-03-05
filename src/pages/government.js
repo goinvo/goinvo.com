@@ -139,7 +139,7 @@ class GovernmentPage extends Component {
                 <div className="hr margin-bottom--double"></div>
                 <p className="center"><strong>Trusted by ambitious state agencies and for-public partners</strong></p>
                 <ClientLogos government="true" />
-                <p>Our <strong>ITS81 contract</strong> with the Commonwealth of Massachusetts prequalifies us for IT professional services—streamlining government procurement and validating our expertise as a trusted vendor.</p>
+                <p>Our <strong>ITS81</strong> and <strong>GSA 47QTCA26D001W</strong> contracts prequalify us for IT professional services—streamlining government procurement and validating our expertise as a trusted vendor for both Massachusetts state and federal agencies.</p>
               </div>
             </div>
 
@@ -268,7 +268,7 @@ class GovernmentPage extends Component {
           </div>
 
           {/* This will look better with more contracts */}
-          {/*<div className="background--white ">
+          <div className="background--white ">
             <div className="max-width content-padding pad-vertical ">
               <div className="pure-u-md-1-2 margin-bottom--double">
                 <h2 className="header--xl">
@@ -276,11 +276,12 @@ class GovernmentPage extends Component {
                 </h2>
 
                 <ul className="ul margin-top--none">
-                  <li><strong>ITS81</strong></li>
+                  <li>State of MA: <strong>ITS81</strong></li>
+                  <li>Federal: <strong>GSA 47QTCA26D001W</strong></li>
                 </ul>
               </div>
             </div>
-          </div>*/}
+          </div>
 
         </div>
       </Layout >

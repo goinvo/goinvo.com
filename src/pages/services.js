@@ -259,6 +259,20 @@ class ServicesPage extends Component {
             <Divider />
           </div>
 
+          <div>
+            <h3 className="header--lg margin-bottom--none margin-top--double">
+              Our certifications and contracts
+            </h3>
+            <p className="text--gray">Our contracts prequalify us for IT professional services as a trusted vendor for state and federal agencies.</p>
+            <div className="pure-g pad-bottom--double">
+              <ul className="ul text--gray">
+                <li>State of MA: <strong>ITS81</strong></li>
+                <li>Federal: <strong>GSA 47QTCA26D001W</strong></li>
+              </ul>
+            </div>
+            <Divider />
+          </div>
+
           <div className="equal-height-rows">
             {services.map((service, i) => {
               return (

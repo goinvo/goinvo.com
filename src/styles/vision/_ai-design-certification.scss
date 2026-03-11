@@ -1,0 +1,56 @@
+.human-centered-ai {
+  .design-health-schema-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 1rem;
+
+    @include mq($from: medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq($from: large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .design-health-schema-card {
+    background-color: $color-white;
+    border: 1px solid lighten($color-gray--medium, 8%);
+    border-radius: 6px;
+    padding: 1rem;
+
+    strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9375rem;
+    }
+  }
+
+  .cert-principle {
+    margin-top: 2rem;
+
+    &__title {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      &::before {
+        content: '◆';
+        color: $color-orange;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        flex-shrink: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

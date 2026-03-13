@@ -136,4 +136,15 @@
       margin: 0;
     }
   }
+
+  .audit-trail-section {
+    &__text {
+      padding-top: 2rem;
+
+      @include mq($from: large) {
+        padding-top: 0;
+        padding-left: 3rem;
+      }
+    }
+  }
 }

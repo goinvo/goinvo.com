@@ -255,6 +255,24 @@ class AiDesignCertificationFeature extends Component {
                 </div>
               </div>
 
+              <div className="pure-g audit-trail-section margin-top--double">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                  <Image
+                    src="/images/features/ai-design-certification/certified-example-hand.jpg"
+                    alt="Certified artifact card with hand illustration showing artifact metadata"
+                    className="image--max-width"
+                  />
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2 audit-trail-section__text">
+                  <p>Any meaningful artifact change<br />
+                  invalidates the certificate<br />
+                  and triggers re-review,<br />
+                  preventing silent regression after approval.<br />
+                  This is not a one-time stamp<br />
+                  — <strong>it is a living audit trail.</strong></p>
+                </div>
+              </div>
+
               <h2 className="header--md margin-top--double text--primary">
                 7. The point
               </h2>

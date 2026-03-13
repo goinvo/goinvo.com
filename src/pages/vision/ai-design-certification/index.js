@@ -197,6 +197,19 @@ class AiDesignCertificationFeature extends Component {
                 4. Human review catches problems
               </h2>
 
+              <div className="review-result-card review-result-card--rejected">
+                <div className="review-result-card__header">
+                  <span className="review-result-card__status-dot" aria-hidden="true" />
+                  Review result — cardiac insight v1.2
+                </div>
+                <div className="review-result-card__body">
+                  <span className="review-result-card__badge">REJECTED</span>
+                  <p className="review-result-card__quote">"This suggests early atrial fibrillation."</p>
+                  <p className="review-result-card__why">Why it fails</p>
+                  <p className="review-result-card__explanation">Diagnostic language. High regulatory and patient-anxiety risk.</p>
+                </div>
+              </div>
+
               <p>If we're in the wellness world, this must be rewritten to a safe, non-diagnostic version before approval. If we're in the medical world, we'll need to:</p>
 
               <ul className="ul margin-top--none">
@@ -230,6 +243,18 @@ class AiDesignCertificationFeature extends Component {
                 6. What approval looks like
               </h2>
 
+              <div className="review-result-card review-result-card--certified">
+                <div className="review-result-card__header">
+                  <span className="review-result-card__status-dot" aria-hidden="true" />
+                  Review result — cardiac insight v1.5
+                </div>
+                <div className="review-result-card__body">
+                  <span className="review-result-card__badge">CERTIFIED</span>
+                  <p className="review-result-card__quote">"Your resting heart rate is higher this week and your sleep is down. Consider resting today."</p>
+                  <p className="review-result-card__explanation">Non-diagnostic. Actionable. Calm. Wellness scope confirmed. Data provenance tagged to Apple Watch HR sensor + sleep algorithm v3.1. Accessible at Grade 7 reading level.</p>
+                </div>
+              </div>
+
               <h2 className="header--md margin-top--double text--primary">
                 7. The point
               </h2>
@@ -258,6 +283,10 @@ class AiDesignCertificationFeature extends Component {
             <h2 className="header--xl text--center">Authors</h2>
             <Author name="Chloe Ma" />
             <Author name="Juhan Sonin" />
+
+            <h3 className="header--md">Contributors</h3>
+
+            <Author name="Eric Benoit" />
 
             <div className=" pad-vertical--double">
               <h4 className="header--sm margin-bottom--half">

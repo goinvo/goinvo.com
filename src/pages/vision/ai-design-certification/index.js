@@ -27,18 +27,19 @@ class AiDesignCertificationFeature extends Component {
         <div className="human-centered-ai">
           <div className="pad-vertical--double">
             <div className="max-width max-width--md content-padding">
-              <h1 className="header--xl">The Human-Centered Design Behind AI Clinicians Can Trust</h1>
+              <h1 className="header--xl">Human-Assisted AI Design Certification for Healthcare 
+              </h1>
 
               <p>Pilot v.01<br />
               13.Mar.2026</p>
 
-              <h2 className="header--md margin-top--double">
-                Why trust is the real rate-limiting step
-              </h2>
+              <h1 className="header--xl margin-top--double">
+                What is AI design certification?
+              </h1>
               <p>We certify outputs: discrete, versioned, viewable artifacts — screens, flows, diagrams, data visualizations. We are not certifying that "this AI is good," but that "this specific artifact is fit for purpose under these conditions."</p>
               <p>What passes and what fails is defined by a shared standard: safety, data integrity, regulatory fit, usability, language, bias, and how the flow works together. This is the certifiable surface layer.</p>
 
-              <p>The key distinction: Certification attaches to a specific artifact version and its intended use — not to the AI system that produced it. A screen, a flow, a piece of copy. Not a model.</p>
+              <p className="callout">The key distinction: Certification attaches to a specific artifact version and its intended use — not to the AI system that produced it. A screen, a flow, a piece of copy. Not a model.</p>
 
               <div className="pure-u-1 pure-u-lg-1-2">
                     <a
@@ -51,9 +52,9 @@ class AiDesignCertificationFeature extends Component {
                     </a>
               </div>
 
-              <h2 className="header--md margin-top--double">
+              <h1 className="header--xl margin-top--double">
                 Product vision
-              </h2>
+              </h1>
 
               <p>We certify AI-generated design outputs — screens, flows, copy, and visuals — through non-negotiable human review for safety, accessibility, bias, provenance, and regulatory fit. The result is a trusted design health layer that turns fast AI output into production-ready work teams can ship, defend, and buy.</p>
 
@@ -133,21 +134,21 @@ class AiDesignCertificationFeature extends Component {
                 <p>A simple badge teams can show externally, backed by a detailed internal record that stands up to scrutiny. <strong>Example:</strong> Project Crucible that measured EHR vendor compliance with FHIR.</p>
               </div>
 
-              <h2 className="header--md margin-top--double">
+              <h1 className="header--xl margin-top--double">
                 Why it matters now
-              </h2>
+              </h1>
 
               <p>AI tools are generating healthcare UX at unprecedented speed. Cursor, Claude, and similar systems can produce working screens in minutes. But speed without accountability is dangerous in healthcare — where a single poorly-worded insight could prompt a patient to ignore symptoms that need clinical attention.</p>
 
               <p>Existing review processes weren't designed for artifact-level AI output. They assume a human designer made intentional choices about language, logic, and display. When AI produces the artifact, those assumptions break down. Certification closes that gap.</p>
 
-              <h2 className="header--md margin-top--double">
+              <h1 className="header--xl margin-top--double">
                 Real-world example: Apple Health
-              </h2>
+              </h1>
 
               <p>Using Apple Health as a concrete summary.</p>
 
-              <h2 className="header--md margin-top--double">
+              <h2 className="header--md margin-top--double text--primary">
                 1. What the AI does
               </h2>
 
@@ -159,7 +160,7 @@ class AiDesignCertificationFeature extends Component {
 
               <p>This is copy + logic + UI, not "the model." And, this is medical advice delivered by software.</p>
 
-              <h2 className="header--md margin-top--double">
+              <h2 className="header--md margin-top--double text--primary">
                 2. What gets certified
               </h2>
 
@@ -173,7 +174,7 @@ class AiDesignCertificationFeature extends Component {
               </ul>
               <p>In this case, it's the medical artifact being approved.</p>
 
-              <h2 className="header--md margin-top--double">
+              <h2 className="header--md margin-top--double text--primary">
                 3. Non-negotiable checks
               </h2>
 
@@ -192,7 +193,7 @@ class AiDesignCertificationFeature extends Component {
 
               <p>Some checks are automated. All are human-verified.</p>
 
-              <h2 className="header--md margin-top--double">
+              <h2 className="header--md margin-top--double text--primary">
                 4. Human review catches problems
               </h2>
 
@@ -204,7 +205,7 @@ class AiDesignCertificationFeature extends Component {
                 <li>Trigger clinical follow-up — not just self-action</li>
               </ul>
 
-              <h2 className="header--md margin-top--double">
+              <h2 className="header--md margin-top--double text--primary">
                 5. What "Certified" means
               </h2>
 
@@ -225,11 +226,11 @@ class AiDesignCertificationFeature extends Component {
                 <li>If something goes wrong, you know what was approved and why</li>
               </ul>
 
-              <h2 className="header--md margin-top--double">
+              <h2 className="header--md margin-top--double text--primary">
                 6. What approval looks like
               </h2>
 
-              <h2 className="header--md margin-top--double">
+              <h2 className="header--md margin-top--double text--primary">
                 7. The point
               </h2>
 
@@ -239,15 +240,15 @@ class AiDesignCertificationFeature extends Component {
               the thing a human actually sees,<br />
               so teams can move fast and stay safe.</p>
 
-              <h2 className="header--md margin-top--double">
+              <h1 className="header--xl margin-top--double">
                 How it works in your workflow
-              </h2>
+              </h1>
 
               <p>Certification lives where work happens. A "Request Certification" button embedded in GitHub pull requests, Figma, design systems, and CMSs. Certification as a button, not a process.</p>
 
               <p>Risk-based gates scale thresholds with context: a marketing site and a clinical intake form are not the same artifact. Higher risk means stricter gates, named reviewers, and shorter certificate lifetimes.</p>
               
-              <p>Landing zone: github.com/goinvo/AIDesignCertification · Open source license: Apache 2.0</p>
+              <p className="callout">Landing zone: <a href="https://github.com/goinvo/AIDesignCertification" target="_blank" rel="noopener noreferrer">github.com/goinvo/AIDesignCertification</a> · Open source license: Apache 2.0</p>
             </div>
           </div>
         </div>

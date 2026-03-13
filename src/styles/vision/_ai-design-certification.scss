@@ -39,6 +39,7 @@
       align-items: flex-start;
       gap: 0.5rem;
       margin-bottom: 0.5rem;
+      margin-left: -1.25rem;
 
       &::before {
         content: '◆';
@@ -52,5 +53,12 @@
     p {
       margin: 0;
     }
+  }
+
+  .callout {
+    background-color: $color-orange--lightest;
+    border-left: 4px solid $color-orange;
+    padding: 1rem 1rem 1rem 1.25rem;
+    margin: 1rem 0;
   }
 }

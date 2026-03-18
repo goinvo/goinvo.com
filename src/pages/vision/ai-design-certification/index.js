@@ -16,7 +16,7 @@ const frontmatter = {
   metaDescription:
     'What passes and what fails is defined by a shared standard: safety, data integrity, regulatory fit, usability, language, bias, and how the flow works together. This is the certifiable surface layer.',
   heroImage:
-    '/images/features/ai-design-certification/ai-design-certification-hero-test.jpg',
+    '/images/features/ai-design-certification/ai-design-certification-hero.jpg',
 }
 
 class AiDesignCertificationFeature extends Component {

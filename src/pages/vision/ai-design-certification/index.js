@@ -31,7 +31,7 @@ class AiDesignCertificationFeature extends Component {
               </h1>
 
               <p>Pilot v.01<br />
-              13.Mar.2026</p>
+              20.Mar.2026</p>
 
               <h1 className="header--xl margin-top--double">
                 What is AI design certification?

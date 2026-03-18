@@ -1,6 +1,10 @@
 .human-centered-ai {
   h2.header--md.text--primary {
-    margin-left: -1.5rem;
+    margin-left: 0;
+
+    @include mq($from: medium) {
+      margin-left: -1.5rem;
+    }
   }
 
   .design-health-schema-grid {
@@ -72,6 +76,10 @@
     overflow: hidden;
     margin: 1.5rem 0;
     width: 100%;
+
+    @include mq($from: medium) {
+      margin-left: -1.25rem;
+    }
 
     &__header {
       background-color: #363636;

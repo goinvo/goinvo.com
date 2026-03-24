@@ -38,7 +38,7 @@ class AiDesignCertificationFeature extends Component {
 
               <p className="callout">The key distinction: Certification attaches to a specific artifact version and its intended use — not to the AI system that produced it. A screen, a flow, a piece of copy. Not a model.</p>
 
-              <div className="pure-u-1 pure-u-lg-1-2">
+              {/* <div className="pure-u-1 pure-u-lg-1-2">
                     <a
                       href="#"
                       target="_blank"
@@ -47,7 +47,7 @@ class AiDesignCertificationFeature extends Component {
                     >
                       Certify Your Health AI Today
                     </a>
-              </div>
+              </div> */}
 
               <h1 className="header--xl margin-top--double">
                 Product vision

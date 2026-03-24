@@ -30,9 +30,6 @@ class AiDesignCertificationFeature extends Component {
               <h1 className="header--xl">Human-Assisted AI Design Certification for Healthcare 
               </h1>
 
-              <p>Pilot v.01<br />
-              20.Mar.2026</p>
-
               <h1 className="header--xl margin-top--double">
                 What is AI design certification?
               </h1>

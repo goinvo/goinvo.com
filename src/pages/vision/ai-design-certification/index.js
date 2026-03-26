@@ -289,6 +289,10 @@ class AiDesignCertificationFeature extends Component {
               <p>Risk-based gates scale thresholds with context: a marketing site and a clinical intake form are not the same artifact. Higher risk means stricter gates, named reviewers, and shorter certificate lifetimes.</p>
               
               <p className="callout">Landing zone: <a href="https://github.com/goinvo/AIDesignCertification" target="_blank" rel="noopener noreferrer">github.com/goinvo/AIDesignCertification</a> · Open source license: Apache 2.0</p>
+
+              <h2 className="header--lg margin-top--quad">We're building this in the open:</h2>
+              <p>If you've got a real or prototype healthcare product, lets together run it through the cert so we can pressure-test it on reality.<br />
+              <a href="/contact">Contact Us</a></p>
             </div>
           </div>
         </div>
@@ -302,6 +306,12 @@ class AiDesignCertificationFeature extends Component {
             <h3 className="header--md">Contributors</h3>
 
             <Author name="Eric Benoit" />
+            
+            <h2 className="header--lg text--center margin-top--quad">Special thanks to...</h2>
+
+            <p className="text--gray">
+              Mark Begale for gently tapping the AI Certification idea into our skulls, and to <a href="https://www.linkedin.com/in/venus-wong-phd-bcba-199b8994/" target="_blank" rel="noopener noreferrer">Venus Wong</a> for volunteering as the brave first test subject. They're both continuing to poke holes in it... to make it better.
+            </p>
 
             <div className=" pad-vertical--double">
               <h4 className="header--sm margin-bottom--half">

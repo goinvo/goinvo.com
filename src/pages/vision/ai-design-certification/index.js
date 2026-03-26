@@ -38,16 +38,16 @@ class AiDesignCertificationFeature extends Component {
 
               <p className="callout">The key distinction: Certification attaches to a specific artifact version and its intended use — not to the AI system that produced it. A screen, a flow, a piece of copy. Not a model.</p>
 
-              {/* <div className="pure-u-1 pure-u-lg-1-2">
+              <div className="pure-u-1 pure-u-lg-1-2">
                     <a
-                      href="#"
+                      href="mailto:hello@goinvo.com?subject=Certify%20Health%20AI"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
                     >
                       Certify Your Health AI Today
                     </a>
-              </div> */}
+              </div>
 
               <h1 className="header--xl margin-top--double">
                 Product vision
@@ -291,8 +291,30 @@ class AiDesignCertificationFeature extends Component {
               <p className="callout">Landing zone: <a href="https://github.com/goinvo/AIDesignCertification" target="_blank" rel="noopener noreferrer">github.com/goinvo/AIDesignCertification</a> · Open source license: Apache 2.0</p>
 
               <h2 className="header--lg margin-top--quad">We're building this in the open:</h2>
-              <p>If you've got a real or prototype healthcare product, lets together run it through the cert so we can pressure-test it on reality.<br />
-              <a href="/contact">Contact Us</a></p>
+              <p>If you've got a real or prototype healthcare product, lets together run it through the cert so we can pressure-test it on reality.</p>
+
+              <div className="pure-g button-group margin-bottom">
+                <div className="pure-u-1 pure-u-lg-1-2">
+                      <a
+                        href="mailto:hello@goinvo.com?subject=Certify%20Health%20AI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
+                      >
+                        Certify Your Health AI Today
+                      </a>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-2">
+                      <a
+                        href="tel:617-504-3390"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button button--secondary margin-top--double margin-bottom--half button--block margin-right"
+                      >
+                        Call Juhan @ 617-504-3390
+                      </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

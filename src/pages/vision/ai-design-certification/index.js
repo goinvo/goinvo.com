@@ -310,7 +310,7 @@ class AiDesignCertificationFeature extends Component {
             <h2 className="header--lg text--center margin-top--quad">Special thanks to...</h2>
 
             <p className="text--gray">
-              Mark Begale for gently tapping the AI Certification idea into our skulls, and to <a href="https://www.linkedin.com/in/venus-wong-phd-bcba-199b8994/" target="_blank" rel="noopener noreferrer">Venus Wong</a> for volunteering as the brave first test subject. They're both continuing to poke holes in it... to make it better.
+              <a href="https://www.linkedin.com/in/mark-begale-7ab25814/" target="_blank" rel="noopener noreferrer">Mark Begale</a> for gently tapping the AI Certification idea into our skulls, and to <a href="https://www.linkedin.com/in/venus-wong-phd-bcba-199b8994/" target="_blank" rel="noopener noreferrer">Venus Wong</a> for volunteering as the brave first test subject. They're both continuing to poke holes in it... to make it better.
             </p>
 
             <div className=" pad-vertical--double">

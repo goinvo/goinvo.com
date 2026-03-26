@@ -1,0 +1,162 @@
+.human-centered-ai {
+  h2.header--md.text--primary {
+    margin-left: 0;
+
+    @include mq($from: medium) {
+      margin-left: -1.5rem;
+    }
+  }
+
+  .design-health-schema-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 1rem;
+
+    @include mq($from: medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq($from: large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .design-health-schema-card {
+    background-color: $color-white;
+    border: 1px solid lighten($color-gray--medium, 8%);
+    border-radius: 6px;
+    padding: 1rem;
+
+    strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9375rem;
+    }
+  }
+
+  .cert-principle {
+    margin-top: 2rem;
+
+    &__title {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      margin-left: -1.25rem;
+
+      &::before {
+        content: '◆';
+        color: $color-orange;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        flex-shrink: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .callout {
+    background-color: $color-orange--lightest;
+    border-left: 4px solid $color-orange;
+    padding: 1rem 1rem 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .review-result-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    margin: 1.5rem 0;
+    width: 100%;
+
+    @include mq($from: medium) {
+      margin-left: -1.25rem;
+    }
+
+    &__header {
+      background-color: #363636;
+      color: $color-white;
+      padding: 1rem 1.25rem;
+      font-size: 0.9375rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &__status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-red;
+      flex-shrink: 0;
+    }
+
+    &.review-result-card--certified .review-result-card__status-dot {
+      background-color: #64dd17;
+    }
+
+    &__body {
+      background-color: $color-white;
+      padding: 1.25rem;
+    }
+
+    &__badge {
+      display: inline-block;
+      background-color: #fdeaea;
+      color: $color-red;
+      font-weight: $font-weight--bold;
+      font-size: 0.875rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    &.review-result-card--certified .review-result-card__badge {
+      background-color: #e0ffef;
+      color: #00a000;
+    }
+
+    &__quote {
+      font-family: $font-family--serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      line-height: 1.35;
+      color: $color-black;
+      margin: 0 0 0.75rem;
+    }
+
+    &__why {
+      font-size: 0.875rem;
+      color: $color-gray;
+      font-weight: $font-weight--bold;
+      margin: 0 0 0.25rem;
+    }
+
+    &__explanation {
+      font-size: 0.875rem;
+      color: lighten($color-gray, 8%);
+      margin: 0;
+    }
+  }
+
+  .audit-trail-section {
+    &__text {
+      padding-top: 2rem;
+
+      @include mq($from: large) {
+        padding-top: 0;
+        padding-left: 3rem;
+      }
+    }
+  }
+}

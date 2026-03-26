@@ -114,3 +114,6 @@ jspm_packages/
 
 # Local Netlify folder
 .netlify
+
+# Claude Code
+.claude/

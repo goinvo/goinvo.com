@@ -314,22 +314,10 @@ $v2-max-width: 1020px;
   .partners-section {
     background-color: #F7FAFE;
 
-    &__title {
-      font-family: $font-family--sans-serif;
-      font-size: 0.875rem;
-      font-weight: $font-weight--normal;
-      color: $color-gray;
-      text-align: left; // Left align instead of centered
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: $spacing;
-      padding-left: 0; // Align with content-padding edge
-    }
-
-    &__logos {
-      .client-logos li svg {
-        fill: #B2AFAF;
-        color: #B2AFAF;
+    &__marquee {
+      .client-logos-marquee__item svg {
+        fill: #b2afaf;
+        color: #b2afaf;
       }
     }
   }

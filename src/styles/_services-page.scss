@@ -1,0 +1,314 @@
+.services-page {
+  &__hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 12% 24%, rgba(84, 170, 230, 0.12), transparent 34%),
+      radial-gradient(circle at 88% 18%, rgba(156, 180, 255, 0.12), transparent 32%),
+      linear-gradient(180deg, #f9fbfe 0%, #f2f7fc 100%);
+    border-bottom: 1px solid #dde7f1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 42%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 100%
+      );
+      pointer-events: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          115deg,
+          rgba(24, 74, 118, 0.08) 0px,
+          rgba(24, 74, 118, 0.08) 1px,
+          transparent 1px,
+          transparent 28px
+        );
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero__title {
+      width: 100%;
+      max-width: 760px;
+      padding-top: $spacing * 3;
+      padding-bottom: $spacing * 2.5;
+      background-color: transparent;
+
+      @include mq($from: large) {
+        position: static;
+        width: 100%;
+      }
+    }
+
+    .header--xl {
+      font-size: 2.35rem;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: $color-black;
+
+      @include mq($from: large) {
+        font-size: 3.65rem;
+      }
+    }
+
+    .hero-subtitle {
+      margin-top: $spacing;
+      margin-bottom: 0;
+      max-width: 44rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: $color-gray;
+
+      @include mq($from: large) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__intro {
+    p {
+      max-width: 48rem;
+    }
+  }
+
+  &__proof-strip {
+    padding: $spacing * 0.75 0;
+    background: #0f2438;
+  }
+
+  &__proof-item {
+    padding: $spacing 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+    @include mq($from: large) {
+      border-bottom: 0;
+      padding: $spacing * 1.25 0;
+    }
+  }
+
+  &__proof-value {
+    margin: 0;
+    color: $color-white;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: $font-weight--bold;
+    letter-spacing: -0.01em;
+  }
+
+  &__proof-label {
+    margin: 0.25rem 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.95rem;
+  }
+
+  &__cta-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing;
+    margin-top: $spacing * 1.5;
+  }
+
+  &__cta {
+    min-width: 210px;
+  }
+
+  &__value-band {
+    background: #f7fafc;
+    border-top: 1px solid #e8eef3;
+    border-bottom: 1px solid #e8eef3;
+
+    .pure-g {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+
+    .pure-g > [class*='pure-u-'] {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__value-card {
+    height: 100%;
+    margin-bottom: $spacing;
+    padding: $spacing * 1.25;
+    background: $color-white;
+    border: 1px solid #e6edf3;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(20, 40, 60, 0.05);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+
+    @include mq($from: large) {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(20, 40, 60, 0.08);
+    }
+  }
+
+  &__section-intro {
+    max-width: 42rem;
+  }
+
+  &__capabilities {
+    margin-top: $spacing * 1.5;
+
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    > [class*='pure-u-'] {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__capability-card {
+    height: calc(100% - #{$spacing});
+    margin-bottom: $spacing;
+    padding: $spacing * 1.25;
+    border: 1px solid #e6edf3;
+    background: $color-white;
+    border-radius: 14px;
+  }
+
+  &__links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing * 0.75;
+  }
+
+  &__service-rows {
+    padding-bottom: $spacing * 2;
+  }
+
+  &__service-card {
+    margin-bottom: $spacing * 1.5;
+    border: 1px solid #dfe7ee;
+    background: #fbfdff;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(20, 40, 60, 0.05);
+    overflow: hidden;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__service-content {
+    padding: $spacing * 1.25;
+
+    @include mq($from: large) {
+      padding: $spacing * 1.5;
+    }
+  }
+
+  &__service-kicker {
+    margin-top: 0;
+    margin-bottom: $spacing * 0.5;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-primary;
+    font-weight: $font-weight--bold;
+  }
+
+  &__service-image-wrap {
+    height: 100%;
+    min-height: 260px;
+
+    @include mq($from: large) {
+      min-height: 100%;
+    }
+  }
+
+  &__service-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__engagements {
+    padding-top: $spacing;
+
+    .pure-g {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+
+    .pure-g > [class*='pure-u-'] {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__engagement-card {
+    height: calc(100% - #{$spacing});
+    margin-bottom: $spacing;
+    padding: $spacing * 1.25;
+    border: 1px solid #dce7f0;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  }
+
+  &__conversion-panel {
+    padding: $spacing * 1.5;
+    border: 1px solid #d7e5f2;
+    border-radius: 16px;
+    background: linear-gradient(120deg, #f6fbff 0%, #eef6ff 100%);
+    box-shadow: 0 12px 28px rgba(20, 40, 60, 0.08);
+  }
+
+  &__conversion-actions {
+    margin-top: $spacing;
+    display: grid;
+    gap: $spacing * 0.75;
+
+    @include mq($from: large) {
+      margin-top: 0;
+      padding-left: $spacing;
+      align-content: center;
+    }
+  }
+
+  &__calendly {
+    margin-top: $spacing * 2;
+  }
+
+  &__calendly-title {
+    margin-bottom: $spacing * 1.5;
+  }
+
+  &__contracts {
+    background: #f8fcff;
+    border-top: 1px solid #dce7ef;
+    border-bottom: 1px solid #dce7ef;
+  }
+
+  &__contracts-title {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $color-primary;
+    font-size: 0.8125rem;
+    font-weight: $font-weight--bold;
+  }
+}

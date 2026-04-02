@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Marquee from 'react-fast-marquee'
 
 import ThreeM from '../assets/images/client-logos/logo-3m.inline.svg'
 import Bd from '../assets/images/client-logos/logo-bd.inline.svg'
@@ -26,8 +27,41 @@ import Whitehouse from '../assets/images/client-logos/logo-whitehouse.inline.svg
 import Wuxi from '../assets/images/client-logos/logo-wuxinextcode.inline.svg'
 
 
+// Homepage default set — single row for marquee (all logos, no responsive hiding)
+const HOMEPAGE_LOGO_COMPONENTS = [
+  ThreeM,
+  Partners,
+  Bd,
+  InfoBionic,
+  Mgh,
+  JohnsonAndJohnson,
+  MountSinai,
+  Wuxi,
+  Walgreens,
+  JournalOfParticipatoryMedicine,
+  NationalScienceFoundation,
+  Nih,
+  PersonalGenomeProject,
+  Mitre,
+  Mass,
+]
+
 class ClientLogos extends Component {
   render() {
+    if (this.props.marquee) {
+      return (
+        <div className="client-logos-marquee">
+          <Marquee speed={32} gradient={false} pauseOnHover autoFill>
+            {HOMEPAGE_LOGO_COMPONENTS.map((Logo, i) => (
+              <div key={i} className="client-logos-marquee__item">
+                <Logo />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      )
+    }
+
     return (
       <div>
         {this.props.openSource ? (

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
-import Card from '../components/card'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import SubscribeForm from '../components/form-subscribe'
@@ -115,109 +114,176 @@ class IndexPage extends Component {
           </section>
 
           <div className="home-case-spotlight pad-vertical--quad home-reveal">
-            <div className="home-case-spotlight__ambient" aria-hidden="true" />
             <div className="max-width content-padding">
               <div className="home-case-spotlight__grid">
-                <div className="home-case-spotlight__lead">
-                  <p className="home-case-spotlight__eyebrow">Case study · 3M CodeRyte</p>
-                  <h2 className="home-case-spotlight__title">Backlog: Zero</h2>
-                  <p className="home-case-spotlight__hook">&ldquo;The system is down.&rdquo;</p>
-                  <ul className="home-case-spotlight__meta">
-                    <li>Memorial Hermann</li>
-                    <li>Post-launch</li>
-                    <li>Clinical coding</li>
-                  </ul>
+                <div className="home-case-spotlight__visual">
+                  <div className="home-case-spotlight__frame">
+                    <Image
+                      src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
+                      className="home-case-spotlight__img"
+                      sizes="(max-width: 1023px) 100vw, 42vw"
+                      alt="CodeRyte clinical coding interface in use at scale."
+                    />
+                  </div>
+                </div>
+                <div className="home-case-spotlight__main">
+                  <p className="home-case-spotlight__eyebrow">3M · CodeRyte</p>
+                  <h2 className="home-case-spotlight__title">
+                    Backlog: Zero
+                    <span className="text--primary text--serif">.</span>
+                  </h2>
+                  <p className="home-case-spotlight__lede">
+                    Two weeks after launch, Memorial Hermann hospital in Houston—CodeRyte&apos;s
+                    largest customer—called with what sounded like a crisis. Here&apos;s what
+                    happened when clinical coding met a system fast enough to outrun the backlog.
+                  </p>
+                  <ol className="home-case-spotlight__timeline">
+                    <li className="home-case-spotlight__step">
+                      <span className="home-case-spotlight__step-label">Post-launch</span>
+                      <div className="home-case-spotlight__step-body">
+                        <p>
+                          The call came from Memorial Hermann—<strong>CodeRyte&apos;s largest</strong>{' '}
+                          customer.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-case-spotlight__step home-case-spotlight__step--accent">
+                      <span className="home-case-spotlight__step-label">The line</span>
+                      <div className="home-case-spotlight__step-body">
+                        <p>&ldquo;The system is down.&rdquo;</p>
+                      </div>
+                    </li>
+                    <li className="home-case-spotlight__step">
+                      <span className="home-case-spotlight__step-label">30 min</span>
+                      <div className="home-case-spotlight__step-body">
+                        <p>
+                          The new flow was running so efficiently there were{' '}
+                          <strong>zero patients left to code</strong>—and for a brief window,{' '}
+                          <strong>zero work</strong> in the queue.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-case-spotlight__step home-case-spotlight__step--closing">
+                      <div className="home-case-spotlight__step-body">
+                        <p>
+                          A backlog that typically measured in thousands of charts and weeks of
+                          delay had cleared. That had never happened before.
+                        </p>
+                      </div>
+                    </li>
+                  </ol>
                   <Link to="/work/3m-coderyte" className="button button--primary home-case-spotlight__cta">
                     Read the 3M story
                   </Link>
-                </div>
-                <div className="home-case-spotlight__panel">
-                  <p>
-                    That was the call we got two weeks after launch, from Memorial Hermann
-                    hospital in Houston, CodeRyte&apos;s largest customer.
-                  </p>
-                  <p>
-                    30 minutes later, we found the issue. The new system was operating so
-                    efficiently that there were zero patients left to code and for a brief
-                    period, zero work to do.
-                  </p>
-                  <p>
-                    A backlog that typically measured in thousands of charts and weeks of
-                    delay had been cleared. This had never happened before.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="testimonial-section testimonial-section--with-image pad-vertical--quad home-reveal">
-            <Image
-              src="/images/homepage/eric-topol-2.jpg"
-              className="section-bg-img"
-              sizes="100vw"
-              alt=""
-              style={{ objectPosition: 'top right' }}
-            />
+          <div className="home-testimonial pad-vertical--quad home-reveal">
+            <div className="home-testimonial__ambient" aria-hidden="true" />
             <div className="max-width content-padding">
-              <p className="testimonial-quote">
-                &ldquo;The GoInvo studio is one of the most talented groups of designers I
-                have ever met in the healthcare space. Not only are their ideas, designs,
-                and graphics remarkable, but I haven&apos;t yet figured out how they know so
-                much about medicine and its future.&rdquo;
-              </p>
-              <p className="testimonial-attribution">
-                <span className="testimonial-attribution__name">Eric Topol, MD</span>
-                <br />
-                <span className="testimonial-attribution__title">Scripps Research Translational Institute</span>
-                <br />
-                <span className="testimonial-attribution__title" style={{ opacity: 0.4 }}>
-                  <small>
+              <div className="home-testimonial__grid">
+                <div className="home-testimonial__panel">
+                  <p className="home-testimonial__eyebrow">What leaders say</p>
+                  <blockquote className="home-testimonial__quote">
+                    <p>
+                      &ldquo;The GoInvo studio is one of the most talented groups of designers I have
+                      ever met in the healthcare space. Not only are their ideas, designs, and
+                      graphics remarkable, but I haven&apos;t yet figured out how they know so much
+                      about medicine and its future.&rdquo;
+                    </p>
+                  </blockquote>
+                  <footer className="home-testimonial__footer">
+                    <cite className="home-testimonial__name">Eric Topol, MD</cite>
+                    <span className="home-testimonial__role">
+                      Scripps Research Translational Institute
+                    </span>
+                  </footer>
+                </div>
+                <figure className="home-testimonial__figure">
+                  <div className="home-testimonial__frame">
+                    <Image
+                      src="/images/homepage/eric-topol-2.jpg"
+                      className="home-testimonial__photo"
+                      sizes="(max-width: 1023px) 100vw, 38vw"
+                      alt="Eric Topol, MD"
+                    />
+                  </div>
+                  <figcaption className="home-testimonial__credit">
                     Photo by{' '}
-                    <a href="https://www.flickr.com/photos/euthman/8197577252/" style={{ color: 'white' }}>
-                      Ed Uthman
-                    </a>
-                    , licensed under{' '}
-                    <a href="https://creativecommons.org/licenses/by/2.0/" style={{ color: 'white' }}>
-                      CC BY 2.0
-                    </a>
-                  </small>
-                </span>
-              </p>
+                    <a href="https://www.flickr.com/photos/euthman/8197577252/">Ed Uthman</a>
+                    ,{' '}
+                    <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
 
-          <div className="case-study-highlight case-study-highlight--with-background case-study-highlight--align-right pad-vertical--quad home-reveal">
-            <Image
-              src="/images/homepage/bg-storycard-ipsos.jpg"
-              className="section-bg-img"
-              sizes="100vw"
-              alt=""
-              style={{ objectPosition: 'left center' }}
-            />
+          <div className="home-ipsos-feature pad-vertical--quad home-reveal">
             <div className="max-width content-padding">
-              <Card className="case-study-card case-study-card--compact" noShadow>
-                <div className="case-study-card__content">
-                  <h2 className="header--xl">Weeks to Hours</h2>
-                  <p className="text--gray">
-                    From Rube Goldberg workflows to enterprise info at your fingertips.
-                  </p>
-                  <p className="text--gray">
-                    <strong>90%+ adoption across Ipsos.</strong>
-                    <br />
-                    <strong>700,000+ prompts per month.</strong>
-                    <br />
-                    <strong>10M+ API calls</strong> driving real research, not toys.
-                  </p>
-                  <p className="text--gray">
-                    This wasn&apos;t novelty. <br />
-                    It was transformation. <br />
+              <div className="home-ipsos-feature__grid">
+                <div className="home-ipsos-feature__visual">
+                  <div className="home-ipsos-feature__frame">
+                    <Image
+                      src="/images/case-studies/ipsos/facto/cover-584KB.jpg"
+                      className="home-ipsos-feature__img"
+                      sizes="(max-width: 1023px) 100vw, 42vw"
+                      alt="Ipsos Facto research tools—enterprise AI for real-world insights."
+                    />
+                  </div>
+                  <p className="home-ipsos-feature__tagline">
                     Research that once took weeks now yields cited insights in hours.
                   </p>
-                  <Link to="/work/ipsos-facto" className="button button--primary" style={{ marginTop: '1rem' }}>
+                </div>
+                <div className="home-ipsos-feature__main">
+                  <p className="home-ipsos-feature__eyebrow">Ipsos · Research AI</p>
+                  <h2 className="home-ipsos-feature__title">
+                    Weeks to Hours
+                    <span className="text--primary text--serif">.</span>
+                  </h2>
+                  <p className="home-ipsos-feature__lede">
+                    From Rube Goldberg workflows to enterprise info at your fingertips.
+                  </p>
+                  <ol className="home-ipsos-feature__timeline">
+                    <li className="home-ipsos-feature__step">
+                      <span className="home-ipsos-feature__step-label">Adoption</span>
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          <strong>90%+ adoption</strong> across Ipsos.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-ipsos-feature__step home-ipsos-feature__step--accent">
+                      <span className="home-ipsos-feature__step-label">Volume</span>
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          <strong>700,000+ prompts</strong> per month.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-ipsos-feature__step">
+                      <span className="home-ipsos-feature__step-label">Scale</span>
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          <strong>10M+ API calls</strong> driving real research, not toys.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-ipsos-feature__step home-ipsos-feature__step--closing">
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          This wasn&apos;t novelty. It was transformation.
+                        </p>
+                      </div>
+                    </li>
+                  </ol>
+                  <Link to="/work/ipsos-facto" className="button button--primary home-ipsos-feature__cta">
                     Ipsos case study
                   </Link>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
 
@@ -243,9 +309,6 @@ class IndexPage extends Component {
                       alt="People shopping for fresh produce—SNAP helps families afford food."
                     />
                   </div>
-                  <p className="home-snap-feature__tagline">
-                    Food security starts with a dignified front door to benefits.
-                  </p>
                 </div>
                 <div className="home-snap-feature__main">
                   <p className="home-snap-feature__eyebrow">Massachusetts · SNAP access</p>

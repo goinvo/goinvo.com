@@ -7,14 +7,7 @@ import ImageBlock from '../components/image-block'
 import Quote from '../components/quote'
 import Columns from '../components/columns'
 import Image from '../components/image'
-import Divider from '../components/divider'
 import ContactForm from '../components/form-contact'
-
-import IconComplexity from '../assets/images/icon-complexity.inline.svg'
-import IconHealthcare from '../assets/images/icon-healthcare.inline.svg'
-import IconTeam from '../assets/images/icon-team.inline.svg'
-import IconVision from '../assets/images/icon-vision.inline.svg'
-
 import config from '../../config'
 
 const services = [
@@ -88,11 +81,106 @@ const services = [
   }
 ]
 
+const valueProps = [
+  {
+    title: 'Built for complexity',
+    body: '20+ years designing software in regulated, high-stakes environments with many stakeholders and real constraints.',
+  },
+  {
+    title: 'Delivery with momentum',
+    body: 'We embed with your team to unblock progress fast, de-risk decisions, and move from strategy to shipped product.',
+  },
+  {
+    title: 'Evidence over assumptions',
+    body: 'Research, prototyping, and validation are baked into the process so ideas are tested before they become expensive.',
+  },
+]
+
+const proofStats = [
+  { value: '20+ years', label: 'Designing complex digital systems' },
+  { value: '4 sectors', label: 'Healthcare, government, enterprise, and AI' },
+  { value: 'End-to-end', label: 'From strategy to shipped product' },
+]
+
+const capabilities = [
+  {
+    title: 'Clarify product strategy and vision',
+    description:
+      'Align leadership and teams around clear direction, informed tradeoffs, and a practical roadmap.',
+    links: [
+      { to: '/work/mitre-shr', label: 'Standard health record' },
+      {
+        to: '/vision/national-cancer-navigation',
+        label: 'National Cancer Navigation',
+      },
+    ],
+  },
+  {
+    title: 'De-risk execution',
+    description:
+      'Navigate org shifts, tight timelines, and moving priorities without losing product quality or momentum.',
+    links: [
+      { to: '/work/mitre-flux-notes', label: 'MITRE Flux Notes' },
+      {
+        to: '/work/insidetracker-nutrition-science',
+        label: 'InsideTracker',
+      },
+    ],
+  },
+  {
+    title: 'Find the right problems',
+    description:
+      'Uncover real user needs through field research, system mapping, and synthesis to focus investment where it matters.',
+    links: [
+      { to: '/work/3m-coderyte', label: '3M Coderyte' },
+      { to: '/work/mass-snap', label: 'Massachusetts SNAP' },
+    ],
+  },
+  {
+    title: 'Prototype, test, and iterate',
+    description:
+      'Rapid prototyping with users and data helps teams learn faster and make stronger product decisions.',
+    links: [
+      {
+        to: '/work/partners-insight',
+        label: 'Mass General Brigham IRB Insight',
+      },
+      {
+        to: '/work/wuxi-nextcode-familycode',
+        label: 'WuXi NextCODE FamilyCode',
+      },
+    ],
+  },
+  {
+    title: 'Deliver and scale',
+    description:
+      'We partner through launch and beyond so the product keeps improving as needs evolve.',
+    links: [
+      { to: '/work/all-of-us', label: 'All of Us Research Program' },
+      { to: '/work/3m-coderyte', label: '3M Coderyte' },
+    ],
+  },
+]
+
+const engagementModels = [
+  {
+    title: 'Embedded team',
+    body: 'A cross-functional product design team that plugs into your roadmap and delivery cycle.',
+  },
+  {
+    title: 'Focused sprint',
+    body: 'A 2-6 week sprint for high-risk decisions, discovery, prototyping, and validation.',
+  },
+  {
+    title: 'Advisory support',
+    body: 'Senior guidance for strategy, UX direction, and critical product decisions.',
+  },
+]
+
 const frontmatter = {
   metaTitle: 'UX Design Services in Boston - GoInvo',
   metaDescription:
     'Our UX design process is tailored to your project. Contact GoInvo today to get started in designing a beautiful UX for your product!',
-  heroImage: '/images/services/hand-drawing.jpg',
 }
 
 const calendlyScriptId = 'calendly-script'
@@ -119,199 +207,157 @@ class ServicesPage extends Component {
   render() {
     return (
       <Layout frontmatter={frontmatter}>
-        <Hero image={frontmatter.heroImage} position="center top">
-          <h1 className="header--xl">
-            Disrupt from within,
-            <br />
-            Reinvent your product,
-            <br />
-            Change the market
-            <span className="text--serif text--primary">.</span>
-          </h1>
-        </Hero>
-        <div className="max-width content-padding pad-vertical--double--only-lg">
-          <div className="container container--column container--align-center">
-            <div className="pure-u-1 pure-u-lg-1-2">
-              <p className="header--lg margin-bottom--half">
-                Why hire GoInvo
-              </p>
-              <p className="text--gray">
-                We help you move fast, reduce risk, and deliver better systems — across healthcare, government, enterprise, and AI. Let's talk about your project and how GoInvo can help.
-              </p>
-              <p className="text--gray">Drop us an email at <a href="mailto:info@goinvo.com">info@goinvo.com</a></p>
-              <p className="text--gray">Or, talk to us live on Zoom.</p>
-              <Link
-                to="#calendly-open-office-hours"
-                className="button button--secondary button--block margin-bottom--double  margin-top--double"
+        <div className="services-page">
+          <Hero className="services-page__hero">
+            <h1 className="header--xl">
+              Better software design for
+              <br />
+              high-stakes systems
+              <span className="text--serif text--primary">.</span>
+            </h1>
+            <p className="hero-subtitle text--gray">
+              We help ambitious teams launch products that improve outcomes, reduce
+              risk, and scale with confidence.
+            </p>
+          </Hero>
+
+          <div className="max-width content-padding pad-vertical--double services-page__intro">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <p className="header--lg margin-bottom--half">Why teams hire GoInvo</p>
+                <p className="text--gray margin-top--none">
+                  We help organizations ship better healthcare, government, enterprise,
+                  and AI products faster, with less risk and stronger user outcomes.
+                </p>
+              </div>
+            </div>
+
+            <div className="services-page__cta-cluster">
+              <a
+                href="#calendly-open-office-hours"
+                className="button button--primary services-page__cta"
               >
-                Schedule a chat
+                Book a strategy call
+              </a>
+              <Link to="/work/" className="button button--outline-primary services-page__cta">
+                See proof in our work
               </Link>
             </div>
+            <p className="text--gray margin-top--half">
+              Prefer email? <a href="mailto:info@goinvo.com">info@goinvo.com</a>
+            </p>
           </div>
 
-          <div>
-            <h3 className="header--lg margin-bottom--none margin-top--double">
-              What We Do
-            </h3>
-            <p className="text--gray">We design and deliver digital systems — from idea to execution. Our team joins where we're needed most, offering end-to-end product design or focused support to move things forward.</p>
-            <div className="pure-g pad-bottom--double">
-              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double pad-vertical--double--only-lg">
-                <h4 className="header--sm margin-top--none margin-bottom--half">
-                  Clarify Product Strategy & Vision
-                </h4>
-                <p className="text--gray margin-top--half">
-                  We help teams <strong>align around a clear product direction, providing experienced, unbiased input</strong> — whether you're evolving what exists, envisioning a new concept, or clarifying long-term goals.
-                </p>
-                <Link
-                  to="/work/mitre-shr"
-                  className="display--inline-block margin-right--double"
-                >
-                  Standard health record
-                </Link>
-                <Link
-                  to="/vision/national-cancer-navigation"
-                  className="display--inline-block margin-right--double"
-                >
-                  National Cancer Navigation
-                </Link>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double pad-vertical--double--only-lg">
-                <h4 className="header--sm margin-top--none margin-bottom--half">
-                  De-risking projects
-                </h4>
-                <p className="text--gray margin-top--half">
-                  We keep projects moving through the mess — <strong>navigating org changes, tight timelines, and shifting priorities</strong> so good ideas don't die on the whiteboard.
-                </p>
-                <Link
-                  to="/work/mitre-flux-notes"
-                  className="display--inline-block margin-right--double"
-                >
-                  MITRE Flux Notes
-                </Link>
-                <Link
-                  to="/work/insidetracker-nutrition-science"
-                  className="display--inline-block margin-right--double"
-                >
-                  InsideTracker
-                </Link>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
-                <h4 className="header--sm margin-top--none margin-bottom--half">
-                  Find the right problems to solve
-                </h4>
-                <p className="text--gray margin-top--half">
-                  Through <strong>user research, system mapping, and insight synthesis,</strong> we uncover real-world needs — guiding smarter investment and more focused solutions.
-                </p>
-                <Link
-                  to="/work/3m-coderyte"
-                  className="display--inline-block margin-right--double"
-                >
-                  3M Coderyte
-                </Link>
-                <Link
-                  to="/work/mass-snap"
-                  className="display--inline-block margin-right--double"
-                >
-                  Massachusetts SNAP
-                </Link>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2 pad-left--only-lg margin-bottom--double">
-                <h4 className="header--sm margin-top--none margin-bottom--half">
-                  Move fast and test often
-                </h4>
-                <p className="text--gray margin-top--half">
-                  We <strong>rapidly prototype and frequently test with real users and data</strong> — reducing risk, and informing decision-making for real-world use.
-                </p>
-                <Link
-                  to="/work/partners-insight"
-                  className="display--inline-block margin-right--double"
-                >
-                  Mass General Brigham IRB Insight
-                </Link>
-                <Link
-                  to="/work/wuxi-nextcode-familycode"
-                  className="display--inline-block margin-right--double"
-                >
-                  WuXi NextCODE FamilyCode
-                </Link>
-              </div>
-              <div className="pure-u-1 pure-u-lg-1-2 pad-right--only-lg margin-bottom--double">
-                <h4 className="header--sm margin-top--none margin-bottom--half">
-                  Deliver & ship
-                </h4>
-                <p className="text--gray margin-top--half">
-                  Our dedicated team will <strong>integrate seamlessly with yours to ship better tools, improve performance, and keep strategy evolving</strong> — from concept to launch to impact.
-                </p>
-                <Link
-                  to="/work/all-of-us"
-                  className="display--inline-block margin-right--double"
-                >
-                  All of Us Research Program
-                </Link>
-                <Link
-                  to="/work/3m-coderyte"
-                  className="display--inline-block margin-right--double"
-                >
-                  3M Coderyte
-                </Link>
+          <div className="services-page__proof-strip">
+            <div className="max-width content-padding">
+              <div className="pure-g">
+                {proofStats.map((stat) => (
+                  <div key={stat.value} className="pure-u-1 pure-u-lg-1-3">
+                    <div className="services-page__proof-item">
+                      <p className="services-page__proof-value">{stat.value}</p>
+                      <p className="services-page__proof-label">{stat.label}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <Divider />
           </div>
 
-          <div>
-            <h3 className="header--lg margin-bottom--none margin-top--double">
-              Our certifications and contracts
-            </h3>
-            <p className="text--gray">Our contracts prequalify us for IT professional services as a trusted vendor for state and federal agencies.</p>
-            <div className="pure-g pad-bottom--double">
-              <ul className="ul text--gray">
-                <li>State of MA: <strong>ITS81</strong></li>
-                <li>Federal: <strong>GSA 47QTCA26D001W</strong></li>
-              </ul>
+          <div className="background--gray-lightest services-page__value-band">
+            <div className="max-width content-padding pad-vertical--double">
+              <h3 className="header--lg margin-top--none">What you get</h3>
+              <div className="pure-g">
+                {valueProps.map((item) => (
+                  <div key={item.title} className="pure-u-1 pure-u-lg-1-3">
+                    <div className="services-page__value-card">
+                      <h4 className="header--sm margin-top--none margin-bottom--half">
+                        {item.title}
+                      </h4>
+                      <p className="text--gray margin-top--none margin-bottom--none">
+                        {item.body}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <Divider />
           </div>
 
-          <div className="equal-height-rows">
-            {services.map((service, i) => {
+          <div className="max-width content-padding pad-vertical--double">
+            <h3 className="header--lg margin-top--none margin-bottom--half">How we help</h3>
+            <p className="text--gray margin-top--none services-page__section-intro">
+              End-to-end product design support, from strategy and research to execution
+              and iteration.
+            </p>
+            <div className="pure-g services-page__capabilities">
+              {capabilities.map((capability) => (
+                <div key={capability.title} className="pure-u-1 pure-u-lg-1-2">
+                  <div className="services-page__capability-card">
+                    <h4 className="header--sm margin-top--none margin-bottom--half">
+                      {capability.title}
+                    </h4>
+                    <p className="text--gray margin-top--none">{capability.description}</p>
+                    <div className="services-page__links-row">
+                      {capability.links.map((item) => (
+                        <Link key={item.to} to={item.to}>
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="max-width content-padding pad-bottom--double services-page__engagements">
+            <h3 className="header--lg margin-top--none margin-bottom--half">
+              Engagement models
+            </h3>
+            <div className="pure-g">
+              {engagementModels.map((model) => (
+                <div key={model.title} className="pure-u-1 pure-u-lg-1-3">
+                  <div className="services-page__engagement-card">
+                    <h4 className="header--sm margin-top--none margin-bottom--half">
+                      {model.title}
+                    </h4>
+                    <p className="text--gray margin-top--none margin-bottom--none">
+                      {model.body}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="max-width content-padding services-page__service-rows">
+            {services.map((service) => {
               return (
-                <div key={service.title} className="pure-g">
-                  <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-right--only-lg margin-bottom">
-                      <div className="pad-bottom--double--only-lg">
-                        <h4 className="header--sm margin-bottom--none">
+                <div key={service.title} className="services-page__service-card">
+                  <div className="pure-g">
+                    <div className="pure-u-1 pure-u-lg-1-2">
+                      <div className="services-page__service-content">
+                        <p className="services-page__service-kicker">Service area</p>
+                        <h4 className="header--sm margin-top--none margin-bottom--half">
                           {service.title}
                         </h4>
-                        <hr
-                          className="hr hr--thick"
-                          style={{ backgroundColor: service.color }}
-                        />
                         <p className="text--gray margin-bottom--half">{service.description}</p>
                         <ul className="ul text--gray margin-top--half">
-                          {service.methods.map((method, i) => {
-                            return (
-                              <li key={i}>
-                                {method}
-                              </li>
-                            )
+                          {service.methods.map((method) => {
+                            return <li key={method}>{method}</li>
                           })}
                         </ul>
-                        <p className="text--gray">
-                          <Link to={service.example.link}>
-                            {service.example.title}
-                          </Link>
+                        <p className="margin-bottom--none">
+                          <Link to={service.example.link}>{service.example.title}</Link>
                         </p>
                       </div>
                     </div>
-                  </div>
-                  <div className="pure-u-1 pure-u-lg-1-2">
-                    <div className="pad-left--only-lg">
-                      <div className="pad-vertical--double">
+                    <div className="pure-u-1 pure-u-lg-1-2">
+                      <div className="services-page__service-image-wrap">
                         <Image
                           src={service.image}
                           sizes={config.sizes.fullToHalfAtLargeInsideMaxWidth}
-                          className="image--max-width"
+                          className="image--max-width services-page__service-image"
                         />
                       </div>
                     </div>
@@ -319,6 +365,30 @@ class ServicesPage extends Component {
                 </div>
               )
             })}
+          </div>
+
+          <div className="max-width content-padding pad-bottom--double">
+            <div className="services-page__conversion-panel">
+              <div className="pure-g">
+                <div className="pure-u-1 pure-u-lg-2-3">
+                  <p className="header--lg margin-top--none margin-bottom--half">
+                    Bring us your toughest product challenge.
+                  </p>
+                  <p className="text--gray margin-top--none margin-bottom--none">
+                    We can help you unblock delivery, reduce product risk, and launch with
+                    confidence.
+                  </p>
+                </div>
+                <div className="pure-u-1 pure-u-lg-1-3 services-page__conversion-actions">
+                  <a href="#calendly-open-office-hours" className="button button--primary button--block">
+                    Book a strategy call
+                  </a>
+                  <a href="mailto:info@goinvo.com" className="button button--secondary button--block">
+                    Email our team
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -331,13 +401,12 @@ class ServicesPage extends Component {
           changed our business.
         </Quote>
 
-        <div className="max-width content-padding pad-vertical--double margin-bottom--double">
+        <div className="max-width content-padding pad-vertical--double margin-bottom--double services-page__calendly">
           <div className="max-width content-padding pad-vertical--double">
             <h2
-              className="header--lg text--center"
-              style={{ marginBottom: '-50px' }}
+              className="header--lg text--center services-page__calendly-title"
             >
-              Choose a time to talk about your project.
+              Talk with our team about your project.
             </h2>
             <div
               id="calendly-open-office-hours"
@@ -345,6 +414,26 @@ class ServicesPage extends Component {
               data-url="https://calendly.com/goinvo/open-office-hours"
               style={{ minWidth: '320px', height: '950px' }}
             />
+          </div>
+        </div>
+
+        <div className="services-page__contracts">
+          <div className="max-width content-padding pad-vertical--double">
+            <div className="pure-g">
+              <div className="pure-u-1 pure-u-lg-2-3">
+                <p className="margin-top--none margin-bottom--half services-page__contracts-title">
+                  Trusted vendor credentials
+                </p>
+                <p className="text--gray margin-top--none">
+                  Our contracts prequalify us for IT professional services with state and
+                  federal agencies.
+                </p>
+              </div>
+            </div>
+            <ul className="ul text--gray margin-bottom--none">
+              <li>State of MA: <strong>ITS81</strong></li>
+              <li>Federal: <strong>GSA 47QTCA26D001W</strong></li>
+            </ul>
           </div>
         </div>
 

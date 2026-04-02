@@ -1,8 +1,7 @@
-import React, { Component, createRef } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layouts/layout'
-import Card from '../components/card'
 import Image from '../components/image'
 import ClientLogos from '../components/client-logos'
 import SubscribeForm from '../components/form-subscribe'
@@ -15,342 +14,372 @@ const frontmatter = {
     'GoInvo is a Boston area product and user experience design agency with deep expertise creating software for Enterprise, Government, Health, and AI services.',
 }
 
-// Header height constant (matches $header-height in SCSS)
-const HEADER_HEIGHT = 50
-
 class IndexPage extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      frontmatter,
-      heroHeight: null, // Will be calculated
-    }
-    this.caseStudyCardRef = createRef()
-    // Refs for alignment debugging
-    this.heroHeaderRef = createRef()
-    this.backlogZeroRef = createRef()
-    this.ericTopolRef = createRef()
-    this.millionServedRef = createRef()
-    // Ref for hero content to measure its height
-    this.heroContentRef = createRef()
+    this.state = { frontmatter }
+    this.sectionObserver = null
   }
 
   componentDidMount() {
-    this.calculateHeroHeight()
-    window.addEventListener('resize', this.handleResize)
-    this.printLeftPositions()
-  }
+    if (typeof window === 'undefined') return
 
-  printLeftPositions = () => {
-    // Print the x-position of the left edge of each text section
-    const sections = [
-      { name: 'Hero Header', ref: this.heroHeaderRef },
-      { name: 'Backlog: Zero', ref: this.backlogZeroRef },
-      { name: 'Eric Topol', ref: this.ericTopolRef },
-      { name: '1 Million Served', ref: this.millionServedRef },
-    ]
+    const nodes = document.querySelectorAll('.index-page .home-reveal')
+    if (!nodes.length) return
 
-    console.log('=== Left Edge X-Positions ===')
-    sections.forEach(({ name, ref }) => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect()
-        console.log(`${name}: x=${rect.left}px`)
-      }
-    })
-    console.log('================================')
+    const revealAll = () => {
+      nodes.forEach(el => el.classList.add('home-reveal--visible'))
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      revealAll()
+      return
+    }
+
+    this.sectionObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('home-reveal--visible')
+            this.sectionObserver.unobserve(entry.target)
+          }
+        })
+      },
+      { rootMargin: '0px 0px -6% 0px', threshold: 0.06 }
+    )
+
+    nodes.forEach(el => this.sectionObserver.observe(el))
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize)
-  }
-
-  handleResize = () => {
-    // Debounce resize calculations
-    if (this.resizeTimeout) {
-      clearTimeout(this.resizeTimeout)
+    if (this.sectionObserver) {
+      this.sectionObserver.disconnect()
     }
-    this.resizeTimeout = setTimeout(() => {
-      this.calculateHeroHeight()
-    }, 100)
-  }
-
-  calculateHeroHeight = () => {
-    if (typeof window === 'undefined') return
-
-    const viewportHeight = window.innerHeight
-    const caseStudyCard = this.caseStudyCardRef.current
-    const heroContent = this.heroContentRef.current
-
-    if (!caseStudyCard) return
-
-    // Get the full height of the case study card (including padding from parent section)
-    // We need to account for the section's padding-top (quad = 4rem = 64px)
-    const sectionPaddingTop = 64 // pad-vertical--quad top
-    const cardHeight = caseStudyCard.offsetHeight
-
-    // Total height needed for the case study section to show the full card
-    const caseStudySectionHeight = sectionPaddingTop + cardHeight
-
-    // Hero height = viewport - header - full case study card section
-    // This positions the bottom of the card at the bottom of the viewport
-    const heroHeight = viewportHeight - HEADER_HEIGHT - caseStudySectionHeight
-
-    // Measure actual content height to ensure it fits
-    let contentBasedMinHeight = 0
-    if (heroContent) {
-      const contentHeight = heroContent.offsetHeight
-      // Content needs to fit: content height + header padding (50px) + some buffer (20px)
-      contentBasedMinHeight = contentHeight + HEADER_HEIGHT + 20
-    }
-
-    // Detect mobile vs desktop
-    const viewportWidth = window.innerWidth
-    const isMobile = viewportWidth < 1024
-
-    // Set minimum height to prevent hero from being too small
-    // Desktop: greater of 250px or 20% of viewport
-    // Mobile: Use content-based minimum or 250px, whichever is greater
-    const viewportBasedMinHeight = isMobile
-      ? Math.max(250, contentBasedMinHeight || 250)
-      : Math.max(250, viewportHeight * 0.2)
-
-    // Use the greater of: viewport-based min, content-based min, or calculated height
-    const minHeight = Math.max(viewportBasedMinHeight, contentBasedMinHeight)
-
-    // Cap hero height: 30% of viewport, but always prioritize content fit
-    const maxHeight = viewportHeight * 0.30
-    
-    // Always prioritize content fit over max-height constraint
-    // If content needs more space than max-height allows, use content-based height
-    let finalHeight
-    if (contentBasedMinHeight > maxHeight) {
-      // Content needs more space than max-height allows - use content-based height
-      // This prevents cutoff when viewport height is constrained
-      finalHeight = Math.max(heroHeight, contentBasedMinHeight)
-    } else {
-      // Content fits within max-height - use standard calculation with clamping
-      finalHeight = Math.min(Math.max(heroHeight, minHeight), maxHeight)
-    }
-
-    // Final safeguard: ensure height is never smaller than what content needs
-    // This catches edge cases where calculation might have gone wrong
-    if (contentBasedMinHeight > 0) {
-      finalHeight = Math.max(finalHeight, contentBasedMinHeight)
-    }
-
-    this.setState({ heroHeight: finalHeight })
   }
 
   render() {
-    const { heroHeight } = this.state
-
-    // Style for dynamic hero height
-    const heroStyle = heroHeight ? { height: `${heroHeight}px`, minHeight: `${heroHeight}px` } : {}
-
     return (
       <Layout frontmatter={this.state.frontmatter} isHomepage>
-        {/* Page-level class for V2 alignment overrides */}
         <div className="index-page">
-          {/* 1. Hero Section */}
-          <div
-            className="hero--dynamic-height"
-            style={heroStyle}
-          >
-            <Image src="/images/homepage/bg-wavy-lines.jpg" className="section-bg-img" sizes="100vw" alt="" aboveTheFold />
-            <div ref={this.heroContentRef} className="hero--dynamic-height__content">
-              <h1 ref={this.heroHeaderRef} className="header--xl hero-title--lg">
-                <strong>We design the future of software</strong>
+          <section className="home-hero" aria-labelledby="home-hero-heading">
+            <div className="home-hero__bg" aria-hidden="true">
+              <div className="home-hero__mesh" />
+              <div className="home-hero__orbs" />
+              <Image
+                src="/images/homepage/bg-wavy-lines.jpg"
+                className="home-hero__photo"
+                sizes="100vw"
+                alt=""
+              />
+            </div>
+            <div className="home-hero__inner">
+              <p className="home-hero__eyebrow">Product &amp; UX · Boston</p>
+              <h1 id="home-hero-heading" className="home-hero__title">
+                Design to grow your business and de-risk your biggest bets
                 <span className="text--serif text--primary">.</span>
-                <br />
-                <span className="text--gray">For complex systems and real constraints.</span>
               </h1>
-              <div className="hero-buttons">
+              <p className="home-hero__lead">
+                Healthcare, enterprise, AI, and public-sector teams partner with us to ship
+                beautiful products—where stakes are high and the problem space is messy.
+              </p>
+              <ul className="home-hero__metrics">
+                <li className="home-hero__metric">
+                  <span className="home-hero__metric-value">15+ yrs</span>
+                  <span className="home-hero__metric-label">
+                    Shipping in regulated and high-stakes domains
+                  </span>
+                </li>
+                <li className="home-hero__metric">
+                  <span className="home-hero__metric-value">Gov &amp; Fortune 500</span>
+                  <span className="home-hero__metric-label">
+                    From research through delivery with your teams
+                  </span>
+                </li>
+                <li className="home-hero__metric">
+                  <span className="home-hero__metric-value">AI-ready UX</span>
+                  <span className="home-hero__metric-label">
+                    Interfaces and systems people trust in production
+                  </span>
+                </li>
+              </ul>
+              <div className="home-hero__actions">
                 <Link to="/contact/" className="button button--primary">
-                  START A CONVO
+                  Start a conversation
                 </Link>
                 <Link to="/work/" className="button button--outline-primary">
-                  VIEW OUR WORK
+                  View our work
                 </Link>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* 2. Backlog: Zero - 3M Case Study */}
-          <div
-            className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
-          >
-            <Image src="/images/homepage/bg-storycard-3m.jpg" className="section-bg-img" sizes="100vw" alt="" />
+          <div className="home-case-spotlight pad-vertical--quad home-reveal">
             <div className="max-width content-padding">
-              <div ref={this.caseStudyCardRef}>
-                <Card className="case-study-card case-study-card--compact" noShadow>
-                  <div className="case-study-card__content">
-                    <h2 ref={this.backlogZeroRef} className="header--xl">
-                      Backlog: Zero
-                    </h2>
-                    <p
-                      className="text--serif header--lg text--gray"
-                      style={{ fontStyle: 'italic', fontWeight: 'bold' }}
-                    >
-                      "The system is down."
-                    </p>
-                    <p className="text--gray">
-                      That was the call we got two weeks after launch, from Memorial
-                      Hermann hospital in Houston, CodeRyte's largest customer.
-                    </p>
-                    <p className="text--gray">
-                      30 minutes later, we found the issue. The new system was operating so efficiently that there were zero patients left to code and for a brief period, zero work to do.
-                    </p>
-                    <p className="text--gray">
-                      A backlog that typically measured in thousands of charts and weeks of delay had been cleared. This had never happened before.
-                    </p>
-                    <Link to="/work/3m-coderyte" className="button button--primary" style={{ marginTop: '1rem' }}>
-                      3M CASE STUDY
-                    </Link>
+              <div className="home-case-spotlight__grid">
+                <div className="home-case-spotlight__visual">
+                  <div className="home-case-spotlight__frame">
+                    <Image
+                      src="/images/case-studies/coderyte/coderyte-mockup2.jpg"
+                      className="home-case-spotlight__img"
+                      sizes="(max-width: 1023px) 100vw, 42vw"
+                      alt="CodeRyte clinical coding interface in use at scale."
+                    />
                   </div>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          {/* 3. Eric Topol Testimonial */}
-          <div
-            className="testimonial-section testimonial-section--with-image pad-vertical--quad"
-          >
-            <Image src="/images/homepage/eric-topol-2.jpg" className="section-bg-img" sizes="100vw" alt="" style={{ objectPosition: 'top right' }} />
-            <div className="max-width content-padding">
-              <p ref={this.ericTopolRef} className="testimonial-quote">
-                "The GoInvo studio is one of the most talented groups of designers I have
-                ever met in the healthcare space. Not only are their ideas, designs, and
-                graphics remarkable, but I haven't yet figured out how they know so much
-                about medicine and its future."
-              </p>
-              <p className="testimonial-attribution">
-                <span className="testimonial-attribution__name">Eric Topol, MD</span>
-                <br />
-                <span className="testimonial-attribution__title">Scripps Research Translational Institute</span>
-                <br />
-                <span className="testimonial-attribution__title" style={{ opacity: 0.4 }}>
-                  <small>
-                    Photo by <a href="https://www.flickr.com/photos/euthman/8197577252/" style={{ color: 'white' }}>Ed Uthman</a>, licensed under <a href="https://creativecommons.org/licenses/by/2.0/" style={{ color: 'white' }}>CC BY 2.0</a>
-                  </small>
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* 4. Weeks to Hours - Ipsos Case Study */}
-          <div
-            className="case-study-highlight case-study-highlight--with-background case-study-highlight--align-right pad-vertical--quad"
-          >
-            <Image src="/images/homepage/bg-storycard-ipsos.jpg" className="section-bg-img" sizes="100vw" alt="" style={{ objectPosition: 'left center' }} />
-            <div className="max-width content-padding">
-              <Card className="case-study-card case-study-card--compact" noShadow>
-                <div className="case-study-card__content">
-                  <h2 className="header--xl">
-                    Weeks to Hours
+                </div>
+                <div className="home-case-spotlight__main">
+                  <p className="home-case-spotlight__eyebrow">3M · CodeRyte</p>
+                  <h2 className="home-case-spotlight__title">
+                    Backlog: Zero
+                    <span className="text--primary text--serif">.</span>
                   </h2>
-                  <p className="text--gray">
-                    From Rube Goldberg workflows to enterprise info at your fingertips.
+                  <p className="home-case-spotlight__lede">
+                    Two weeks after launch, Memorial Hermann hospital in Houston—CodeRyte&apos;s
+                    largest customer—called with what sounded like a crisis. Here&apos;s what
+                    happened when clinical coding met a system fast enough to outrun the backlog.
                   </p>
-                  <p className="text--gray">
-                    <strong>90%+ adoption across Ipsos.</strong>
-                    <br />
-                    <strong>700,000+ prompts per month.</strong>
-                    <br />
-                    <strong>10M+ API calls</strong> driving real research, not toys.
-                  </p>
-                  <p className="text--gray">
-                    This wasn't novelty. <br />
-                    It was transformation. <br />
-                    Research that once took weeks now
-                    yields cited insights in hours.
-                  </p>
-                  <Link to="/work/ipsos-facto" className="button button--primary" style={{ marginTop: '1rem' }}>
-                    IPSOS CASE STUDY
+                  <ol className="home-case-spotlight__timeline">
+                    <li className="home-case-spotlight__step">
+                      <span className="home-case-spotlight__step-label">Post-launch</span>
+                      <div className="home-case-spotlight__step-body">
+                        <p>
+                          The call came from Memorial Hermann—<strong>CodeRyte&apos;s largest</strong>{' '}
+                          customer.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-case-spotlight__step home-case-spotlight__step--accent">
+                      <span className="home-case-spotlight__step-label">The line</span>
+                      <div className="home-case-spotlight__step-body">
+                        <p>&ldquo;The system is down.&rdquo;</p>
+                      </div>
+                    </li>
+                    <li className="home-case-spotlight__step">
+                      <span className="home-case-spotlight__step-label">30 min</span>
+                      <div className="home-case-spotlight__step-body">
+                        <p>
+                          The new flow was running so efficiently there were{' '}
+                          <strong>zero patients left to code</strong>—and for a brief window,{' '}
+                          <strong>zero work</strong> in the queue.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-case-spotlight__step home-case-spotlight__step--closing">
+                      <div className="home-case-spotlight__step-body">
+                        <p>
+                          A backlog that typically measured in thousands of charts and weeks of
+                          delay had cleared. That had never happened before.
+                        </p>
+                      </div>
+                    </li>
+                  </ol>
+                  <Link to="/work/3m-coderyte" className="button button--primary home-case-spotlight__cta">
+                    Read the 3M story
                   </Link>
                 </div>
-              </Card>
-            </div>
-          </div>
-
-          {/* 5. Partner Logos */}
-          <div className="partners-section pad-vertical--double">
-            <div className="max-width content-padding">
-              <p className="partners-section__title">
-                Trusted by ambitious startups and Fortune 500's:
-              </p>
-              <div className="partners-section__logos">
-                <ClientLogos />
               </div>
             </div>
           </div>
 
-          {/* 6. 1 Million Served - SNAP Impact */}
-          <div
-            className="case-study-highlight case-study-highlight--with-background pad-vertical--quad"
-          >
-            <Image src="/images/homepage/bg-storycard-snap.jpg" className="section-bg-img" sizes="100vw" alt="" />
+          <div className="home-testimonial pad-vertical--quad home-reveal">
+            <div className="home-testimonial__ambient" aria-hidden="true" />
             <div className="max-width content-padding">
-              <Card className="case-study-card case-study-card--compact" noShadow>
-                <div className="case-study-card__content">
-                  <h2 ref={this.millionServedRef} className="header--xl">
+              <div className="home-testimonial__grid">
+                <div className="home-testimonial__panel">
+                  <p className="home-testimonial__eyebrow">What leaders say</p>
+                  <blockquote className="home-testimonial__quote">
+                    <p>
+                      &ldquo;The GoInvo studio is one of the most talented groups of designers I have
+                      ever met in the healthcare space. Not only are their ideas, designs, and
+                      graphics remarkable, but I haven&apos;t yet figured out how they know so much
+                      about medicine and its future.&rdquo;
+                    </p>
+                  </blockquote>
+                  <footer className="home-testimonial__footer">
+                    <cite className="home-testimonial__name">Eric Topol, MD</cite>
+                    <span className="home-testimonial__role">
+                      Scripps Research Translational Institute
+                    </span>
+                  </footer>
+                </div>
+                <figure className="home-testimonial__figure">
+                  <div className="home-testimonial__frame">
+                    <Image
+                      src="/images/homepage/eric-topol-2.jpg"
+                      className="home-testimonial__photo"
+                      sizes="(max-width: 1023px) 100vw, 38vw"
+                      alt="Eric Topol, MD"
+                    />
+                  </div>
+                  <figcaption className="home-testimonial__credit">
+                    Photo by{' '}
+                    <a href="https://www.flickr.com/photos/euthman/8197577252/">Ed Uthman</a>
+                    ,{' '}
+                    <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div className="home-ipsos-feature pad-vertical--quad home-reveal">
+            <div className="max-width content-padding">
+              <div className="home-ipsos-feature__grid">
+                <div className="home-ipsos-feature__visual">
+                  <div className="home-ipsos-feature__frame">
+                    <Image
+                      src="/images/case-studies/ipsos/facto/cover-584KB.jpg"
+                      className="home-ipsos-feature__img"
+                      sizes="(max-width: 1023px) 100vw, 42vw"
+                      alt="Ipsos Facto research tools—enterprise AI for real-world insights."
+                    />
+                  </div>
+                  <p className="home-ipsos-feature__tagline">
+                    Research that once took weeks now yields cited insights in hours.
+                  </p>
+                </div>
+                <div className="home-ipsos-feature__main">
+                  <p className="home-ipsos-feature__eyebrow">Ipsos · Research AI</p>
+                  <h2 className="home-ipsos-feature__title">
+                    Weeks to Hours
+                    <span className="text--primary text--serif">.</span>
+                  </h2>
+                  <p className="home-ipsos-feature__lede">
+                    From Rube Goldberg workflows to enterprise info at your fingertips.
+                  </p>
+                  <ol className="home-ipsos-feature__timeline">
+                    <li className="home-ipsos-feature__step">
+                      <span className="home-ipsos-feature__step-label">Adoption</span>
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          <strong>90%+ adoption</strong> across Ipsos.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-ipsos-feature__step home-ipsos-feature__step--accent">
+                      <span className="home-ipsos-feature__step-label">Volume</span>
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          <strong>700,000+ prompts</strong> per month.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-ipsos-feature__step">
+                      <span className="home-ipsos-feature__step-label">Scale</span>
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          <strong>10M+ API calls</strong> driving real research, not toys.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-ipsos-feature__step home-ipsos-feature__step--closing">
+                      <div className="home-ipsos-feature__step-body">
+                        <p>
+                          This wasn&apos;t novelty. It was transformation.
+                        </p>
+                      </div>
+                    </li>
+                  </ol>
+                  <Link to="/work/ipsos-facto" className="button button--primary home-ipsos-feature__cta">
+                    Ipsos case study
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="partners-section home-reveal">
+            <div
+              className="partners-section__marquee"
+              role="region"
+              aria-label="Client and partner organizations"
+            >
+              <ClientLogos marquee />
+            </div>
+          </div>
+
+          <div className="home-snap-feature pad-vertical--quad home-reveal">
+            <div className="max-width content-padding">
+              <div className="home-snap-feature__grid">
+                <div className="home-snap-feature__visual">
+                  <div className="home-snap-feature__frame">
+                    <Image
+                      src="/images/case-studies/mass/snap/snap-cover.jpg"
+                      className="home-snap-feature__img"
+                      sizes="(max-width: 1023px) 100vw, 42vw"
+                      alt="People shopping for fresh produce—SNAP helps families afford food."
+                    />
+                  </div>
+                </div>
+                <div className="home-snap-feature__main">
+                  <p className="home-snap-feature__eyebrow">Massachusetts · SNAP access</p>
+                  <h2 className="home-snap-feature__title">
                     10x increase
                     <span className="text--primary text--serif">.</span>
                   </h2>
-                  <div className="impact-timeline text--gray">
-                    <div className="impact-item">
-                      <p><strong>In 2017:</strong></p>
-                      <p>
-                        750,000 Massachusetts residents relied on SNAP.
-                        <br />
-                        Just 7% applied online.
-                      </p>
-                    </div>
-                    <div className="impact-item">
-                      <p>Fax. Mail. Walk-ins.</p>
-                    </div>
-                    <div className="impact-item">
-                      <p><strong>Two years after redesign:</strong></p>
-                      <p>
-                        Online applications hit ~44%.
-                      </p>
-                    </div>
-                    <div className="impact-item">
-                      <p><strong>Today:</strong></p>
-                      <p>
-                        Nearly <strong>1,000,000</strong> people rely on SNAP.
-                        <br />
-                        <strong>70% apply online.</strong>
-                      </p>
-                    </div>
-                    <div className="impact-item">
-                      <p>
-                        A million people didn't change.
-                        <br />
-                        <strong>The digital system did.</strong>
-                      </p>
-                    </div>
-                  </div>
-                  <Link to="/work/mass-snap" className="button button--primary" style={{ marginTop: '1.5rem' }}>
-                    SNAP CASE STUDY
+                  <p className="home-snap-feature__lede">
+                    More people get groceries on the table when enrollment isn&apos;t buried in fax
+                    machines and mail-in forms. Here&apos;s what shifted when the experience met people
+                    where they already are—on their phones, in a hurry, often stressed.
+                  </p>
+                  <ol className="home-snap-feature__timeline">
+                    <li className="home-snap-feature__step">
+                      <span className="home-snap-feature__step-label">2017</span>
+                      <div className="home-snap-feature__step-body">
+                        <p>
+                          <strong>750,000</strong> Massachusetts residents relied on SNAP. Just{' '}
+                          <strong>7%</strong> applied online.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-snap-feature__step home-snap-feature__step--accent">
+                      <span className="home-snap-feature__step-label">Then</span>
+                      <div className="home-snap-feature__step-body">
+                        <p>Fax. Mail. Walk-ins.</p>
+                      </div>
+                    </li>
+                    <li className="home-snap-feature__step">
+                      <span className="home-snap-feature__step-label">+2 yrs</span>
+                      <div className="home-snap-feature__step-body">
+                        <p>
+                          Online applications hit <strong>~44%</strong>.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-snap-feature__step">
+                      <span className="home-snap-feature__step-label">Today</span>
+                      <div className="home-snap-feature__step-body">
+                        <p>
+                          Nearly <strong>1,000,000</strong> people rely on SNAP.{' '}
+                          <strong>70%</strong> apply online.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="home-snap-feature__step home-snap-feature__step--closing">
+                      <div className="home-snap-feature__step-body">
+                        <p>
+                          A million people didn&apos;t change. <strong>The digital system did.</strong>
+                        </p>
+                      </div>
+                    </li>
+                  </ol>
+                  <Link to="/work/mass-snap" className="button button--primary home-snap-feature__cta">
+                    SNAP case study
                   </Link>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
 
-          {/* 7. Newsletter Subscribe */}
-          <div className="pad-vertical--double">
+          <div className="home-newsletter pad-vertical--double home-reveal">
             <div className="max-width max-width--md content-padding">
               <SubscribeForm />
             </div>
           </div>
 
-          {/* 8. We are GoInvo */}
-          <div className="we-are-goinvo">
+          <div className="we-are-goinvo home-reveal">
             <div className="content-padding">
               <div className="team-marquee" aria-hidden="true">
-                <Marquee direction="right" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                <Marquee direction="right" speed={22} gradient={false} pauseOnHover={false} autoFill>
                   {TEAM.slice(0, 5).map(member => (
                     <div key={`top-${member.name}`} className="team-marquee__tile">
                       <Image
@@ -378,14 +407,14 @@ class IndexPage extends Component {
                 </div>
                 <div className="pure-u-1 pure-u-lg-1-3 display--flex display--flex--align-center display--flex--justify-center">
                   <Link to="/about/" className="button button--outline-primary button--padded">
-                    MEET OUR TEAM
+                    Meet our team
                   </Link>
                 </div>
               </div>
             </div>
             <div className="content-padding">
               <div className="team-marquee" aria-hidden="true">
-                <Marquee direction="left" speed={30} gradient={false} pauseOnHover={false} autoFill>
+                <Marquee direction="left" speed={22} gradient={false} pauseOnHover={false} autoFill>
                   {TEAM.slice(5, 10).map(member => (
                     <div key={`bottom-${member.name}`} className="team-marquee__tile">
                       <Image

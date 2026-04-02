@@ -21,3 +21,26 @@
     }
   }
 }
+
+.client-logos-marquee {
+  width: 100%;
+  overflow: hidden;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 104px;
+    min-width: 14rem;
+    padding: 0 1rem;
+    flex-shrink: 0;
+
+    svg {
+      display: block;
+      max-height: 72px;
+      width: auto;
+      max-width: 14rem;
+      height: auto;
+    }
+  }
+}
